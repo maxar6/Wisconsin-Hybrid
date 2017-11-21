@@ -1,0 +1,1206 @@
+ 
+#############################################
+###                                       ###
+###  Starting MotoHawk Build              ###
+###  MotoHawk version: 2011a_sp0.184      ###
+###    MATLAB version: 7.12.0.635 (R2011a)###
+###        20-Nov-2017 13:45:36           ###
+###                                       ###
+#############################################
+ 
+Target Module:   ECM-5554-112-0904-xD (DEV)
+DEV Executable:  Mooventure2016_Rev5_206.srz
+MotoTune DLL:    Mooventur_206.dll
+ 
+Project GUID:    0339744d-1465-4569-a1-b4-32-b1-a7-fa-5f
+Build GUID:      d75dda54-7249-4f71-be-33-4c-53-a5-c0-fd
+ 
+### Starting build procedure for model: Mooventure2016_Rev5
+### Generating code into build folder: C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build
+{Warning: In CAN message specification: 'Status'
+The maximum value for payload field 'Eaton_HV_Charger_Temperature' has been changed from
+210 to 87, to fit into the size of the field. (msg.fields{6}.maximum)} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Signals 1, 3 entering Bus Creator '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/Bus Creator')">Mooventure2016_Rev5/Foreground/Inputs/Driver
+Inputs/Bus Creator</a>' have duplicated names 'AgeCount'. These are being made unique by
+appending "(signal #)" to the signals within the resulting bus. Please update the labels
+of the signals such that they are all unique} 
+{Warning: Unconnected output line found on 'Mooventure2016_Rev5/Foreground/Control/Hybrid
+Control Code/Inputs' (output port: 1)} 
+{Warning: The initial output of Outport '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Control/Hybrid Control Code/IPT/Neutral/IPT_Torque')">Mooventure2016_Rev5/Foreground/Control/Hybrid
+Control Code/IPT/Neutral/IPT_Torque</a>' is set to [] which might cause unexpected
+initialization. If you want output port 1 of Subsystem
+'<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Control/Hybrid Control Code/IPT/Neutral')">Mooventure2016_Rev5/Foreground/Control/Hybrid Control Code/IPT/Neutral</a>' to have the same
+initial value as the Outport source, '<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Control/Hybrid Control Code/IPT/Neutral/Constant')">Mooventure2016_Rev5/Foreground/Control/Hybrid
+Control Code/IPT/Neutral/Constant</a>', please explicitly set this initial output value on
+'<a href="matlab:open_and_hilite_system ('Mooventure2016_Rev5/Foreground/Control/Hybrid Control Code/IPT/Neutral/IPT_Torque')">Mooventure2016_Rev5/Foreground/Control/Hybrid Control Code/IPT/Neutral/IPT_Torque</a>'. To
+turn off this warning message, uncheck the Data Validity option "Check undefined subsystem
+initial output" in the Diagnostics page of the Configuration Parameters dialog} 
+### Invoking Target Language Compiler on Mooventure2016_Rev5.rtw
+### Using System Target File: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_motocoder_ert_rtw.tlc
+### Loading TLC function libraries
+...................
+### Initial pass through model to cache user defined code
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...........................................................................
+### Caching model source code
+...............................................................................
+...............................................................................
+..................................
+Warning:  Calibratable I/O NOT supported for AnalogInput in MotoCoder yet
+....
+Warning:  Calibratable I/O NOT supported for AnalogInput in MotoCoder yet
+......................
+Warning:  Calibratable I/O NOT supported for AnalogInput in MotoCoder yet
+...........
+Warning:  Calibratable I/O NOT supported for AnalogInput in MotoCoder yet
+..
+Warning:  Calibratable I/O NOT supported for AnalogInput in MotoCoder yet
+...............................................................................
+........................
+Warning:  Calibratable I/O NOT supported for AnalogInput in MotoCoder yet
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................
+### Writing source file Mooventure2016_Rev5.c
+### Writing header file Mooventure2016_Rev5_private.h
+.
+### Writing header file Mooventure2016_Rev5.h
+### Writing header file Mooventure2016_Rev5_types.h
+.
+### Writing source file Mooventure2016_Rev5_Foreground.c
+### Writing header file Mooventure2016_Rev5_Foreground.h
+.
+### Writing header file rtwtypes.h
+### Writing header file rt_nonfinite.h
+.
+### Writing source file rt_nonfinite.c
+### Writing source file Mooventure2016_Rev5_data.c
+.
+### TLC code generation complete.
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+........................### Creating project marker file: rtw_proj.tmw
+.
+### Processing Template Makefile: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_motocoder_ert_rtw.tmf
+### Creating Mooventure2016_Rev5.mk from C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_motocoder_ert_rtw.tmf
+### Building Mooventure2016_Rev5: "C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_rtw_success.bat"
+### Created Code and Build Scripts.  Ready to Build ### 
+### Successful completion of build procedure for model: Mooventure2016_Rev5
+Creating Application Descriptor...
+{Warning: In CAN message specification: 'Status'
+The maximum value for payload field 'Eaton_HV_Charger_Temperature' has been changed from
+210 to 87, to fit into the size of the field. (msg.fields{6}.maximum)} 
+{Warning: In CAN message specification: 'Status'
+The maximum value for payload field 'Eaton_HV_Charger_Temperature' has been changed from
+210 to 87, to fit into the size of the field. (msg.fields{6}.maximum)} 
+...Finished Application Descriptor
+### Starting MotoCoder v0.12.4 ###
+Module: ECM-5554-112-0904-xD
+Module File: file:///C:/Program%20Files%20(x86)/Woodward/MCS/MotoHawk/2011a_sp0.184/MotoCoder/Modules/ECM-5554-112-0904-xD.xml
+Module Family: ComponentControlCore
+Module Family Directory: file:///C:/Program%20Files%20(x86)/Woodward/MCS/MotoHawk/2011a_sp0.184/MotoCoder/ModuleFamilies/ComponentControlCore
+Application Configuration File: .\MotoHawk_Extensions.xml
+### Parsing VarDecs in Source Code 
+Parser mode is C Source Code 
+Searching for files to parse 
+Writing Vardec Library C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB/ParsedVardecs.xml 
+### Generating MotoTune DLL 
+### Compiling and Linking 
+Buildfile: file:///C:/Users/maxar/Box Sync/Wisconsin Hybrid/Mooventure/Mooventure Code/Mooventure2016_Rev5/Mooventure2016_Rev5_Build/Mooventure2016_Rev5.build 
+Target framework: Microsoft .NET Framework 3.5 
+Target(s) specified: rebuild  
+ 
+ 
+rebuild: 
+ 
+ 
+clean: 
+ 
+   [delete] Deleting directory 'C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj'. 
+   [delete] Deleting directory 'C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Target'. 
+ 
+Mooventure2016_Rev5: 
+ 
+ 
+init: 
+ 
+    [mkdir] Creating directory 'C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Target'. 
+    [mkdir] Creating directory 'C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj'. 
+ 
+compile: 
+ 
+  [gcc-cpp] Compiling C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Application.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\CodeCoverage.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\FaultManager.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Mooventure2016_Rev5.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Mooventure2016_Rev5_data.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Mooventure2016_Rev5_Foreground.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\MotoCoder.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\MotoCoder_CAN.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\MotoCoder_DataStore.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\MotoCoder_Debug.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\MotoCoder_IO.c 
+  [gcc-cpp] C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\MotoCoder_IO.c: In function 'H1m_PWMOutput_PWMOutput_Set': 
+  [gcc-cpp] C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\MotoCoder_IO.c:1709: warning: control reaches end of non-void function 
+  [gcc-cpp] Compiling C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\MotoCoder_KeySuite.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\MotoCoder_ModuleSupport_CAN.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\MotoCoder_ModuleSupport_EngineeringClock.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\MotoCoder_ModuleSupport_INTC.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\MotoCoder_Services_CRC.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\MotoCoder_ToolInterface.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\MotoHawk_DataStores.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\rt_nonfinite.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TableLookupFunctions.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Trigger_BGND_BASE_PERIODIC_6596p0005.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Trigger_Fault_active_0_8.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Trigger_FGND_RTI_PERIODIC_6605p0005.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\VarDecs.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\TableDB.c 
+ 
+link: 
+ 
+   [gcc-ld] Linking Mooventure2016_Rev5.elf 
+ 
+application: 
+ 
+[gcc-objcopy] Generating Mooventure2016_Rev5.run from Mooventure2016_Rev5.elf 
+ 
+BUILD SUCCEEDED - 0 non-fatal error(s), 2 warning(s) 
+ 
+Total time: 13.8 seconds. 
+ 
+### Generating Symbol file and Processing Map file 
+Project format is MPC55xx 
+Toolchain format is GCC 
+Transforming range 0x00040000-0x002FFFFF into 64 byte pages... 
+Searching for Table Database address 'EriRequestTableList'...Found at 0x000681F8 
+Searching for CRC Table address 'g_pCRCBlockPtr' ...Found at 0x00040008 
+Calculating Application defined CRC's...OK. 
+Searching for initialised section '.cals' aliased to '.flashcals' ... 
+    Adding RAM[0x3FFE0000], ROM[0x001E0000], Length[0x000015A4] 
+Searching for initialised section '.fixed_ramcals' aliased to '.fixed_romcals' ... 
+Searching for initialised section '.ramcals' aliased to '.romcals' ... 
+    Adding RAM[0x40004890], ROM[0x0006F1EC], Length[0x00000088] 
+Complete. 
+Writing file sr://Target\Mooventure2016_Rev5.sr... 
+Encrypting 'sr://Target\Mooventure2016_Rev5.sr' into 'srz://Target\Mooventure2016_Rev5.srz' ... 
+Done. 
+### Copy Mooventur_206.dll and Mooventure2016_Rev5_206.srz 
+### Creating Build Statistics 
+Memory Summary:
+	FLASH_RCHW:                           4 bytes  100% of      4
+	FLASH_ENTRY:                          4 bytes  100% of      4
+	FLASH_CRCDEFNPTR:                     4 bytes  100% of      4
+	FLASH:                           189945 bytes   11% of  1664K
+	    Mooventure2016_Rev5_M:            4 bytes    0% of  1664K
+	    NonVolatileDefault:             136 bytes    0% of  1664K
+	    Mooventure2016_Rev5_Foreground:45984 bytes    3% of  1664K
+	FLASH_CALIBRATION:                 5540 bytes    4% of 131008
+	RAM_CALIBRATION:                   5540 bytes    4% of 131008
+	    ConstantWork:                  5540 bytes    4% of 131008
+	INTERNAL RAM:                     19085 bytes   29% of  65520
+	    Mooventure2016_Rev5_B:          956 bytes    1% of  65520
+	    Mooventure2016_Rev5_DWork:      412 bytes    1% of  65520
+	    Mooventure2016_Rev5_M_:          12 bytes    0% of  65520
+	    VolatileWork:                    52 bytes    0% of  65520
+	    NonVolatileWork:                136 bytes    0% of  65520
+	RAM_BOOTMAILBOX:                     16 bytes  100% of     16
+	SERIAL_EE:                          139 bytes    0% of  32768
+
+### Successful Build with MotoCoder 
+Elapsed Build Time: 3 minutes, 56.6 seconds  (236.6 seconds)
+{Warning: Block diagram 'Mooventure2016_Rev5' contains disabled library links.  Use Model
+Advisor to find the disabled links in non-library models.  The diagram has been saved but
+may not contain what you intended.} 
+ 
+#############################################################################
+###
+### Target Module: ECM-5554-112-0904-xD
+### Created Development Executable: Mooventure2016_Rev5_206.srz
+### Created MotoTune DLL: Mooventur_206.dll
+###
+### Successful MotoHawk Build for model: Mooventure2016_Rev5
+###
+#############################################################################
+ 

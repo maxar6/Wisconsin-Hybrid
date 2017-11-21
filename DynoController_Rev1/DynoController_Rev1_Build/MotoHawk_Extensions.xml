@@ -1,0 +1,2628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	Add Post RTW MotoHawk Hooks into MotoCoder
+-->
+<ApplicationConfigurations>
+	<Extension>	
+		<Add xpath="Application/Memory">
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>ProcessorReboot</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>uint16</DataType>
+               <Default>100U</Default>
+               <Name>ECUP_Threshold</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0.0</Default>
+               <Name>MPRD_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>MPRD_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>int16</DataType>
+               <Default>0</Default>
+               <Name>init_resource_MPRD</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>RestoreNVFactoryDefaults</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>StoreNV</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>MPRD</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>MPRD_KeepAlive</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>int16</DataType>
+               <Default>0</Default>
+               <Name>init_resource_COIL_Pos</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>int16</DataType>
+               <Default>0</Default>
+               <Name>init_resource_COIL_Neg</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>int16</DataType>
+               <Default>0</Default>
+               <Name>init_resource_Battery_Enable</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>int16</DataType>
+               <Default>0</Default>
+               <Name>init_resource_Load_Dump_Enable</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>int16</DataType>
+               <Default>0</Default>
+               <Name>init_resource_Genset_Enable</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>int16</DataType>
+               <Default>0</Default>
+               <Name>init_resource_Genset_Load</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0.0</Default>
+               <Name>Shutdown_ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Shutdown_ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>2.0</Default>
+               <Name>Load_Enable_Delay</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>PackState_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>PackState_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>StateOfCharge_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>StateOfCharge_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>20.0</Default>
+               <Name>SOC_Load_Dump</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0.0</Default>
+               <Name>LoadDumpEnable_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>LoadDumpEnable_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0.0</Default>
+               <Name>Engine_On_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Engine_On_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Coil_Neg_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0.0</Default>
+               <Name>Coil_Neg_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Coil_Pos_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0.0</Default>
+               <Name>Coil_Pos_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Battery_Enable_Light_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0.0</Default>
+               <Name>Battery_Enable_Light_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Load_Dump_Enable_Light_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0.0</Default>
+               <Name>Load_Dump_Enable_Light_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Genset_Enable_Light_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0.0</Default>
+               <Name>Genset_Enable_Light_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Genset_Load_Light_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0.0</Default>
+               <Name>Genset_Load_Light_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>int16</DataType>
+               <Default>0</Default>
+               <Name>init_resource_ACC1_Out</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0U</Default>
+               <Name>ACC1_Light_Prb</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>ACC1_Light_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0.0</Default>
+               <Name>ACC1_Light_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>int16</DataType>
+               <Default>0</Default>
+               <Name>init_resource_ACC2_Out</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0U</Default>
+               <Name>ACC2_Light_Prb</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>ACC2_Light_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0.0</Default>
+               <Name>ACC2_Light_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0.0</Default>
+               <Name>Batt_Connect_Cmd_ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Batt_Connect_Cmd_ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0.0</Default>
+               <Name>BatteryEnable_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>BatteryEnable_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0.0</Default>
+               <Name>Isolation_Measure_Enable_ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Isolation_Measure_Enable_ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.0</Default>
+               <Name>Batt_Isolation_det_Cal</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.0</Default>
+               <Name>Batt_Ign_Cal</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0.0</Default>
+               <Name>Gen_Enable_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Gen_Enable_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0.0</Default>
+               <Name>GensetEnable_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>GensetEnable_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0.0</Default>
+               <Name>Gen_Load_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Gen_Load_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>80.0</Default>
+               <Name>SOC_Off_Pt</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Vehicle_Speed_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Vehicle_Speed_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Vehicle_Speed</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Vehicle_Speed_Prb</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>int16</DataType>
+               <Default>0.0</Default>
+               <Name>RPM_Gauges_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>RPM_Gauges_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>int16</DataType>
+               <Default>0.0</Default>
+               <Name>RPM_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>RPM_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>int16</DataType>
+               <Default>0.0</Default>
+               <Name>SOC_Gauges_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>SOC_Gauges_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>int16</DataType>
+               <Default>0.0</Default>
+               <Name>OilPressure_Gauges_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>OilPressure_Gauges_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Oil_Pressure_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Oil_Pressure_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>int16</DataType>
+               <Default>0.0</Default>
+               <Name>CoolantTemp_Gauges_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>CoolantTemp_Gauges_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Temp_Guage_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Temp_Guage_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>boolean</DataType>
+               <Default>1</Default>
+               <Name>Automatic_Battery_Bootup</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>BatteryVoltage_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>BatteryVoltage_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>0.5</Default>
+               <Name>Contactor_Disable_Delay</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Contactor_Disable_Timer</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Solectria_Enable_timer</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Batt_Contactor_Status</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Batt_Load_Enable</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Auto_Battery_Startup</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Vehicle_Ready</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Torque_Enable</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Vehicle_Enable</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Shutdown_Req</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>GensetLoad_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0.0</Default>
+               <Name>GensetLoad_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>ACC1_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0.0</Default>
+               <Name>ACC1_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>ACC2_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0.0</Default>
+               <Name>ACC2_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>BatteryCurrent_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>BatteryCurrent_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>MaxCellTemperature_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>MaxCellTemperature_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Engine_Crank_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Engine_Crank_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Load_On_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Load_On_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Fault_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Fault_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="NonVolatile">
+               <DataType>uint8</DataType>
+               <Default>11</Default>
+               <Name>CityID_CAN_1</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>int16</DataType>
+               <Default>RES_INJ1D</Default>
+               <Name>COIL_Pos</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>int16</DataType>
+               <Default>RES_INJ2D</Default>
+               <Name>COIL_Neg</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>int16</DataType>
+               <Default>RES_INJ3D</Default>
+               <Name>Battery_Enable</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>int16</DataType>
+               <Default>RES_INJ4D</Default>
+               <Name>Load_Dump_Enable</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>int16</DataType>
+               <Default>RES_SPARE</Default>
+               <Name>Genset_Enable</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>int16</DataType>
+               <Default>RES_FUELP</Default>
+               <Name>Genset_Load</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>int16</DataType>
+               <Default>RES_HORN</Default>
+               <Name>ACC1_Out</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>int16</DataType>
+               <Default>RES_LIAC</Default>
+               <Name>ACC2_Out</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>int16</DataType>
+               <Default>0</Default>
+               <Name>init_resource_ECUP</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>int16</DataType>
+               <Default>RES_AN2M</Default>
+               <Name>LoadDumpEnable</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>int16</DataType>
+               <Default>0</Default>
+               <Name>init_resource_LoadDumpEnable</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>int16</DataType>
+               <Default>RES_AN1M</Default>
+               <Name>BatteryEnable</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>int16</DataType>
+               <Default>0</Default>
+               <Name>init_resource_BatteryEnable</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>int16</DataType>
+               <Default>RES_AN3M</Default>
+               <Name>GensetEnable</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>int16</DataType>
+               <Default>0</Default>
+               <Name>init_resource_GensetEnable</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>int16</DataType>
+               <Default>RES_AN4M</Default>
+               <Name>GensetLoad</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>int16</DataType>
+               <Default>0</Default>
+               <Name>init_resource_GensetLoad</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>int16</DataType>
+               <Default>RES_AN5M</Default>
+               <Name>ACC1</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>int16</DataType>
+               <Default>0</Default>
+               <Name>init_resource_ACC1</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>int16</DataType>
+               <Default>RES_AN9M</Default>
+               <Name>ACC2</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>int16</DataType>
+               <Default>0</Default>
+               <Name>init_resource_ACC2</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>uint32</DataType>
+               <Default>0</Default>
+               <Name>CAN_1_std_receive_count</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>uint32</DataType>
+               <Default>0</Default>
+               <Name>CAN_1_std_handled_count</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>uint32</DataType>
+               <Default>0</Default>
+               <Name>CAN_1_std_last_unhandled_id</Name>
+             </DataStore>
+            <DataStore ref="NonVolatile">
+               <DataType>uint32</DataType>
+               <Default>0</Default>
+               <Name>MotoHawkModelSecondsInUse</Name>
+             </DataStore>
+        
+        </Add>
+
+		<Add xpath="Application/Types">
+
+                <Enum>
+                    <Name>VarDecEnum_0</Name>
+                    <Item name="Run" value="0" symbol="VARDECENUM_0_RUN"/>
+                    <Item name="Reboot" value="1" symbol="VARDECENUM_0_REBOOT"/>
+                </Enum>
+                
+                <Enum>
+                    <Name>VarDecEnum_1</Name>
+                    <Item name="Off" value="0" symbol="VARDECENUM_1_OFF"/>
+                    <Item name="On" value="1" symbol="VARDECENUM_1_ON"/>
+                </Enum>
+                
+                <Enum>
+                    <Name>VarDecEnum_2</Name>
+                    <Item name="Pass-Through" value="0" symbol="VARDECENUM_2_PASSDASHTHROUGH"/>
+                    <Item name="Override" value="1" symbol="VARDECENUM_2_OVERRIDE"/>
+                </Enum>
+                
+                <Enum>
+                    <Name>VarDecEnum_3</Name>
+                    <Item name="Run" value="0" symbol="VARDECENUM_3_RUN"/>
+                    <Item name="Restore To Defaults" value="1" symbol="VARDECENUM_3_RESTORETODEFAULTS"/>
+                </Enum>
+                
+                <Enum>
+                    <Name>VarDecEnum_4</Name>
+                    <Item name="Run" value="0" symbol="VARDECENUM_4_RUN"/>
+                    <Item name="Store To EEPROM" value="1" symbol="VARDECENUM_4_STORETOEEPROM"/>
+                </Enum>
+                
+                <Enum>
+                    <Name>VarDecEnum_5</Name>
+                    <Item name="Disabled" value="0" symbol="VARDECENUM_5_DISABLED"/>
+                    <Item name="Enabled" value="1" symbol="VARDECENUM_5_ENABLED"/>
+                </Enum>
+                
+                <Enum>
+                    <Name>VarDecEnum_6</Name>
+                    <Item name="Disable on low ECUP" value="0" symbol="VARDECENUM_6_DISABLEONLOWECUP"/>
+                    <Item name="Keep alive" value="1" symbol="VARDECENUM_6_KEEPALIVE"/>
+                </Enum>
+                
+                <Enum>
+                    <Name>VarDecEnum_7</Name>
+                    <Item name="(None)" value="-1" symbol="VARDECENUM_7_OPENPARENNONECLOSEPAREN"/>
+                    <Item name="FUELP" value="0" symbol="VARDECENUM_7_FUELP"/>
+                    <Item name="EST 1" value="36" symbol="VARDECENUM_7_EST1"/>
+                    <Item name="MPRD" value="52" symbol="VARDECENUM_7_MPRD"/>
+                    <Item name="LIAC" value="7" symbol="VARDECENUM_7_LIAC"/>
+                    <Item name="HORN" value="8" symbol="VARDECENUM_7_HORN"/>
+                    <Item name="SPARE" value="9" symbol="VARDECENUM_7_SPARE"/>
+                    <Item name="FUEL 1" value="12" symbol="VARDECENUM_7_FUEL1"/>
+                    <Item name="FUEL 2" value="13" symbol="VARDECENUM_7_FUEL2"/>
+                    <Item name="FUEL 3" value="14" symbol="VARDECENUM_7_FUEL3"/>
+                    <Item name="FUEL 4" value="15" symbol="VARDECENUM_7_FUEL4"/>
+                    <Item name="TACH" value="24" symbol="VARDECENUM_7_TACH"/>
+                </Enum>
+                
+                <Enum>
+                    <Name>VarDecEnum_8</Name>
+                    <Item name="(None)" value="-1" symbol="VARDECENUM_8_OPENPARENNONECLOSEPAREN"/>
+                    <Item name="AN1M" value="56" symbol="VARDECENUM_8_AN1M"/>
+                    <Item name="AN15M" value="70" symbol="VARDECENUM_8_AN15M"/>
+                    <Item name="AN16M" value="71" symbol="VARDECENUM_8_AN16M"/>
+                    <Item name="AN17M" value="72" symbol="VARDECENUM_8_AN17M"/>
+                    <Item name="AN18M" value="73" symbol="VARDECENUM_8_AN18M"/>
+                    <Item name="AN19M" value="74" symbol="VARDECENUM_8_AN19M"/>
+                    <Item name="AN20M" value="75" symbol="VARDECENUM_8_AN20M"/>
+                    <Item name="DG1M" value="93" symbol="VARDECENUM_8_DG1M"/>
+                    <Item name="DG2M" value="94" symbol="VARDECENUM_8_DG2M"/>
+                    <Item name="DG4M" value="96" symbol="VARDECENUM_8_DG4M"/>
+                    <Item name="STOP" value="97" symbol="VARDECENUM_8_STOP"/>
+                    <Item name="AN2M" value="57" symbol="VARDECENUM_8_AN2M"/>
+                    <Item name="AN3M" value="58" symbol="VARDECENUM_8_AN3M"/>
+                    <Item name="AN4M" value="59" symbol="VARDECENUM_8_AN4M"/>
+                    <Item name="AN5M" value="60" symbol="VARDECENUM_8_AN5M"/>
+                    <Item name="AN9M" value="64" symbol="VARDECENUM_8_AN9M"/>
+                    <Item name="AN10M" value="65" symbol="VARDECENUM_8_AN10M"/>
+                    <Item name="AN11M" value="66" symbol="VARDECENUM_8_AN11M"/>
+                    <Item name="AN14M" value="69" symbol="VARDECENUM_8_AN14M"/>
+                </Enum>
+                
+        </Add>
+		
+		<Add xpath="Application">
+		
+		    <VarDecs>
+			    <DataStoreVarDec ref="ProcessorReboot">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_0</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>System | Main Power Relay</group>
+        		                <help>Reboots the processor when set.</help>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>ProcessorReboot</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="ECUP_Threshold">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>5.0</format>
+        		                <gain>1.0</gain>
+        		                <group>System | Main Power Relay | Main Power Relay Config</group>
+        		                <help>ADC voltage threshold above which ECU is considered powered</help>
+        		                <max>1023.000000</max>
+        		                <min>0.000000</min>
+        		                <name>ECUP_Threshold</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>ADC_counts</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="MPRD_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>System | Main Power Relay | MPRD Override</group>
+        		                <help>Directly Override Main Power Relay</help>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>MPRD_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <units>boolean</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="MPRD_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>System | Main Power Relay | MPRD Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>MPRD_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="RestoreNVFactoryDefaults">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_3</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>System | NonVolatile Storage</group>
+        		                <help>Restores NonVolatile Memory to Factory Defaults</help>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>RestoreNVFactoryDefaults</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="StoreNV">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_4</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>System | NonVolatile Storage</group>
+        		                <help>Stores RAM-Shadowed memory to serial EEPROM</help>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>StoreNV</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="MPRD">
+        		                <access>RO RO RO RO</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_5</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>System | Main Power Relay</group>
+        		                <help>Indicates whether the main power relay is active</help>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>MPRD</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="MPRD_KeepAlive">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_6</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>System | Main Power Relay</group>
+        		                <help>When enabled, keeps the MPRD output on and keeps the processor alive</help>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>MPRD_KeepAlive</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Shutdown_ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Control|Battery | Shutdown_ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Shutdown_ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Shutdown_ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Control|Battery | Shutdown_ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Shutdown_ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Load_Enable_Delay">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.2</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Control|Battery|Safe Shutdown Sequence</group>
+        		                <max>10.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Load_Enable_Delay</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="PackState_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY | PackState_Ovr Override</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>PackState_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="PackState_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY | PackState_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>PackState_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="StateOfCharge_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY | StateOfCharge_Ovr Override</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>StateOfCharge_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="StateOfCharge_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY | StateOfCharge_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>StateOfCharge_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="SOC_Load_Dump">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|Analog Outputs</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>SOC_Load_Dump</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="LoadDumpEnable_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | LoadDumpEnable_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>LoadDumpEnable_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="LoadDumpEnable_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | LoadDumpEnable_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>LoadDumpEnable_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Engine_On_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | Engine_On_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Engine_On_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Engine_On_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | Engine_On_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Engine_On_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Coil_Neg_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|Analog Outputs | Coil_Neg_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Coil_Neg_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Coil_Neg_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|Analog Outputs | Coil_Neg_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Coil_Neg_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Coil_Pos_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|Analog Outputs | Coil_Pos_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Coil_Pos_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Coil_Pos_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|Analog Outputs | Coil_Pos_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Coil_Pos_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Battery_Enable_Light_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|Analog Outputs | Battery_Enable_Light_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Battery_Enable_Light_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Battery_Enable_Light_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|Analog Outputs | Battery_Enable_Light_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Battery_Enable_Light_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Load_Dump_Enable_Light_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|Analog Outputs | Load_Dump_Enable_Light_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Load_Dump_Enable_Light_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Load_Dump_Enable_Light_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|Analog Outputs | Load_Dump_Enable_Light_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Load_Dump_Enable_Light_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Genset_Enable_Light_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|Analog Outputs | Genset_Enable_Light_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Genset_Enable_Light_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Genset_Enable_Light_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|Analog Outputs | Genset_Enable_Light_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Genset_Enable_Light_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Genset_Load_Light_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|Analog Outputs | Genset_Load_Light_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Genset_Load_Light_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Genset_Load_Light_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|Analog Outputs | Genset_Load_Light_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Genset_Load_Light_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="ACC1_Light_Prb">
+        		                <access>RO RO RO RO</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|Analog Outputs</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>ACC1_Light_Prb</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="ACC1_Light_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|Analog Outputs | ACC1_Light_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>ACC1_Light_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="ACC1_Light_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|Analog Outputs | ACC1_Light_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>ACC1_Light_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="ACC2_Light_Prb">
+        		                <access>RO RO RO RO</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|Analog Outputs</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>ACC2_Light_Prb</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="ACC2_Light_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|Analog Outputs | ACC2_Light_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>ACC2_Light_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="ACC2_Light_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|Analog Outputs | ACC2_Light_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>ACC2_Light_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Batt_Connect_Cmd_ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|BATTERY OUT | Batt_Connect_Cmd_ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Batt_Connect_Cmd_ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Batt_Connect_Cmd_ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|BATTERY OUT | Batt_Connect_Cmd_ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Batt_Connect_Cmd_ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="BatteryEnable_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | BatteryEnable_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>BatteryEnable_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="BatteryEnable_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | BatteryEnable_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>BatteryEnable_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Isolation_Measure_Enable_ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|BATTERY OUT | Isolation_Measure_Enable_ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Isolation_Measure_Enable_ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Isolation_Measure_Enable_ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|BATTERY OUT | Isolation_Measure_Enable_ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Isolation_Measure_Enable_ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Batt_Isolation_det_Cal">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|BATTERY OUT</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Batt_Isolation_det_Cal</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Batt_Ign_Cal">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|BATTERY OUT</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Batt_Ign_Cal</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Gen_Enable_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT | Gen_Enable_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Gen_Enable_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Gen_Enable_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT | Gen_Enable_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Gen_Enable_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="GensetEnable_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | GensetEnable_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>GensetEnable_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="GensetEnable_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | GensetEnable_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>GensetEnable_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Gen_Load_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT | Gen_Load_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Gen_Load_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Gen_Load_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT | Gen_Load_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Gen_Load_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="SOC_Off_Pt">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>SOC_Off_Pt</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Vehicle_Speed_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT | Vehicle_Speed_Ovr Override</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Vehicle_Speed_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Vehicle_Speed_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT | Vehicle_Speed_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Vehicle_Speed_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Vehicle_Speed">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Vehicle_Speed</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Vehicle_Speed_Prb">
+        		                <access>RO RO RO RO</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Vehicle_Speed_Prb</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="RPM_Gauges_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>5.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|Guages | RPM_Gauges_Ovr Override</group>
+        		                <max>32767.000000</max>
+        		                <min>-32768.000000</min>
+        		                <name>RPM_Gauges_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="RPM_Gauges_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|Guages | RPM_Gauges_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>RPM_Gauges_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="RPM_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>5.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | RPM_Ovr Override</group>
+        		                <max>32767.000000</max>
+        		                <min>-32768.000000</min>
+        		                <name>RPM_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="RPM_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | RPM_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>RPM_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="SOC_Gauges_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>5.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|Guages | SOC_Gauges_Ovr Override</group>
+        		                <max>32767.000000</max>
+        		                <min>-32768.000000</min>
+        		                <name>SOC_Gauges_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="SOC_Gauges_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|Guages | SOC_Gauges_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>SOC_Gauges_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="OilPressure_Gauges_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>5.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|Guages | OilPressure_Gauges_Ovr Override</group>
+        		                <max>32767.000000</max>
+        		                <min>-32768.000000</min>
+        		                <name>OilPressure_Gauges_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="OilPressure_Gauges_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|Guages | OilPressure_Gauges_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>OilPressure_Gauges_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Oil_Pressure_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | Oil_Pressure_Ovr Override</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Oil_Pressure_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Oil_Pressure_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | Oil_Pressure_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Oil_Pressure_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="CoolantTemp_Gauges_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>5.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|Guages | CoolantTemp_Gauges_Ovr Override</group>
+        		                <max>32767.000000</max>
+        		                <min>-32768.000000</min>
+        		                <name>CoolantTemp_Gauges_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="CoolantTemp_Gauges_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|Guages | CoolantTemp_Gauges_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>CoolantTemp_Gauges_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Temp_Guage_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | Temp_Guage_Ovr Override</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Temp_Guage_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Temp_Guage_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | Temp_Guage_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Temp_Guage_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Automatic_Battery_Bootup">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Control|Battery</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Automatic_Battery_Bootup</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="BatteryVoltage_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY | BatteryVoltage_Ovr Override</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>BatteryVoltage_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="BatteryVoltage_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY | BatteryVoltage_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>BatteryVoltage_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Contactor_Disable_Delay">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.2</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Control|Battery|Safe Shutdown Sequence</group>
+        		                <max>10.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Contactor_Disable_Delay</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Batt_Contactor_Status">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Control|Battery</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Batt_Contactor_Status</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Batt_Load_Enable">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Control|Battery</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Batt_Load_Enable</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Auto_Battery_Startup">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Control|Vehicle Run/Stop Determination</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Auto_Battery_Startup</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Vehicle_Ready">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Control|Vehicle Run/Stop Determination</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Vehicle_Ready</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Torque_Enable">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Control|Vehicle Run/Stop Determination</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Torque_Enable</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Vehicle_Enable">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Control|Vehicle Run/Stop Determination</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Vehicle_Enable</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Shutdown_Req">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Control|Vehicle Run/Stop Determination</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Shutdown_Req</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="GensetLoad_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | GensetLoad_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>GensetLoad_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="GensetLoad_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | GensetLoad_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>GensetLoad_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="ACC1_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | ACC1_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>ACC1_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="ACC1_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | ACC1_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>ACC1_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="ACC2_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | ACC2_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>ACC2_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="ACC2_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | ACC2_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>ACC2_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="BatteryCurrent_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY | BatteryCurrent_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>BatteryCurrent_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="BatteryCurrent_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY | BatteryCurrent_Ovr Override</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>BatteryCurrent_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="MaxCellTemperature_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY | MaxCellTemperature_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>MaxCellTemperature_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="MaxCellTemperature_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY | MaxCellTemperature_Ovr Override</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>MaxCellTemperature_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Engine_Crank_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | Engine_Crank_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Engine_Crank_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Engine_Crank_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | Engine_Crank_Ovr Override</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Engine_Crank_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Load_On_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | Load_On_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Load_On_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Load_On_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | Load_On_Ovr Override</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Load_On_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Fault_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | Fault_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Fault_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Fault_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | Fault_Ovr Override</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Fault_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="CityID_CAN_1">
+        		                <access>NA NA NA RW</access>
+        		                <class>VAR</class>
+        		                <group>System | System Config | Communication Config</group>
+        		                <help>City ID for CAN bus CAN_1</help>
+        		                <max>255.000000</max>
+        		                <min>0.000000</min>
+        		                <name>CityID_CAN_1</name>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="COIL_Pos">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_7</enum_name>
+        		                <exp>1</exp>
+        		                <format>5.0</format>
+        		                <gain>1</gain>
+        		                <group>System | I/O Pins | Outputs Config</group>
+        		                <help>Discrete output pin selection for COIL_Pos</help>
+        		                <max>32767.000000</max>
+        		                <min>-32768.000000</min>
+        		                <name>COIL_Pos</name>
+        		                <offset>0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="COIL_Neg">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_7</enum_name>
+        		                <exp>1</exp>
+        		                <format>5.0</format>
+        		                <gain>1</gain>
+        		                <group>System | I/O Pins | Outputs Config</group>
+        		                <help>Discrete output pin selection for COIL_Neg</help>
+        		                <max>32767.000000</max>
+        		                <min>-32768.000000</min>
+        		                <name>COIL_Neg</name>
+        		                <offset>0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Battery_Enable">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_7</enum_name>
+        		                <exp>1</exp>
+        		                <format>5.0</format>
+        		                <gain>1</gain>
+        		                <group>System | I/O Pins | Outputs Config</group>
+        		                <help>Discrete output pin selection for Battery_Enable</help>
+        		                <max>32767.000000</max>
+        		                <min>-32768.000000</min>
+        		                <name>Battery_Enable</name>
+        		                <offset>0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Load_Dump_Enable">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_7</enum_name>
+        		                <exp>1</exp>
+        		                <format>5.0</format>
+        		                <gain>1</gain>
+        		                <group>System | I/O Pins | Outputs Config</group>
+        		                <help>Discrete output pin selection for Load_Dump_Enable</help>
+        		                <max>32767.000000</max>
+        		                <min>-32768.000000</min>
+        		                <name>Load_Dump_Enable</name>
+        		                <offset>0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Genset_Enable">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_7</enum_name>
+        		                <exp>1</exp>
+        		                <format>5.0</format>
+        		                <gain>1</gain>
+        		                <group>System | I/O Pins | Outputs Config</group>
+        		                <help>Discrete output pin selection for Genset_Enable</help>
+        		                <max>32767.000000</max>
+        		                <min>-32768.000000</min>
+        		                <name>Genset_Enable</name>
+        		                <offset>0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Genset_Load">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_7</enum_name>
+        		                <exp>1</exp>
+        		                <format>5.0</format>
+        		                <gain>1</gain>
+        		                <group>System | I/O Pins | Outputs Config</group>
+        		                <help>Discrete output pin selection for Genset_Load</help>
+        		                <max>32767.000000</max>
+        		                <min>-32768.000000</min>
+        		                <name>Genset_Load</name>
+        		                <offset>0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="ACC1_Out">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_7</enum_name>
+        		                <exp>1</exp>
+        		                <format>5.0</format>
+        		                <gain>1</gain>
+        		                <group>System | I/O Pins | Outputs Config</group>
+        		                <help>Discrete output pin selection for ACC1_Out</help>
+        		                <max>32767.000000</max>
+        		                <min>-32768.000000</min>
+        		                <name>ACC1_Out</name>
+        		                <offset>0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="ACC2_Out">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_7</enum_name>
+        		                <exp>1</exp>
+        		                <format>5.0</format>
+        		                <gain>1</gain>
+        		                <group>System | I/O Pins | Outputs Config</group>
+        		                <help>Discrete output pin selection for ACC2_Out</help>
+        		                <max>32767.000000</max>
+        		                <min>-32768.000000</min>
+        		                <name>ACC2_Out</name>
+        		                <offset>0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="LoadDumpEnable">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_8</enum_name>
+        		                <exp>1</exp>
+        		                <format>5.0</format>
+        		                <gain>1</gain>
+        		                <group>System | I/O Pins | Inputs Config</group>
+        		                <help>Digital input pin selection for LoadDumpEnable</help>
+        		                <max>32767.000000</max>
+        		                <min>-32768.000000</min>
+        		                <name>LoadDumpEnable</name>
+        		                <offset>0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="BatteryEnable">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_8</enum_name>
+        		                <exp>1</exp>
+        		                <format>5.0</format>
+        		                <gain>1</gain>
+        		                <group>System | I/O Pins | Inputs Config</group>
+        		                <help>Digital input pin selection for BatteryEnable</help>
+        		                <max>32767.000000</max>
+        		                <min>-32768.000000</min>
+        		                <name>BatteryEnable</name>
+        		                <offset>0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="GensetEnable">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_8</enum_name>
+        		                <exp>1</exp>
+        		                <format>5.0</format>
+        		                <gain>1</gain>
+        		                <group>System | I/O Pins | Inputs Config</group>
+        		                <help>Digital input pin selection for GensetEnable</help>
+        		                <max>32767.000000</max>
+        		                <min>-32768.000000</min>
+        		                <name>GensetEnable</name>
+        		                <offset>0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="GensetLoad">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_8</enum_name>
+        		                <exp>1</exp>
+        		                <format>5.0</format>
+        		                <gain>1</gain>
+        		                <group>System | I/O Pins | Inputs Config</group>
+        		                <help>Digital input pin selection for GensetLoad</help>
+        		                <max>32767.000000</max>
+        		                <min>-32768.000000</min>
+        		                <name>GensetLoad</name>
+        		                <offset>0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="ACC1">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_8</enum_name>
+        		                <exp>1</exp>
+        		                <format>5.0</format>
+        		                <gain>1</gain>
+        		                <group>System | I/O Pins | Inputs Config</group>
+        		                <help>Digital input pin selection for ACC1</help>
+        		                <max>32767.000000</max>
+        		                <min>-32768.000000</min>
+        		                <name>ACC1</name>
+        		                <offset>0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="ACC2">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_8</enum_name>
+        		                <exp>1</exp>
+        		                <format>5.0</format>
+        		                <gain>1</gain>
+        		                <group>System | I/O Pins | Inputs Config</group>
+        		                <help>Digital input pin selection for ACC2</help>
+        		                <max>32767.000000</max>
+        		                <min>-32768.000000</min>
+        		                <name>ACC2</name>
+        		                <offset>0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="CAN_1_std_receive_count">
+        		                <access>RO RO RO RO</access>
+        		                <class>VAR</class>
+        		                <exp>1</exp>
+        		                <format>8.0</format>
+        		                <gain>1</gain>
+        		                <group>System | Debug | Resources | CAN</group>
+        		                <help>Total number of received std CAN messages on bus CAN_1</help>
+        		                <max>4294967295.000000</max>
+        		                <min>0.000000</min>
+        		                <name>CAN_1_std_receive_count</name>
+        		                <offset>0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="CAN_1_std_handled_count">
+        		                <access>RO RO RO RO</access>
+        		                <class>VAR</class>
+        		                <exp>1</exp>
+        		                <format>8.0</format>
+        		                <gain>1</gain>
+        		                <group>System | Debug | Resources | CAN</group>
+        		                <help>Total number of handled std CAN messages on bus CAN_1</help>
+        		                <max>4294967295.000000</max>
+        		                <min>0.000000</min>
+        		                <name>CAN_1_std_handled_count</name>
+        		                <offset>0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="CAN_1_std_last_unhandled_id">
+        		                <access>RO RO RO RO</access>
+        		                <class>VAR</class>
+        		                <exp>1</exp>
+        		                <format>8.0</format>
+        		                <gain>1</gain>
+        		                <group>System | Debug | Resources | CAN</group>
+        		                <help>Last received std CAN message on bus CAN_1, which was unhandled</help>
+        		                <max>4294967295.000000</max>
+        		                <min>0.000000</min>
+        		                <name>CAN_1_std_last_unhandled_id</name>
+        		                <offset>0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="MotoHawkModelSecondsInUse">
+        		                <access>RO RO RO RO</access>
+        		                <class>VAR</class>
+        		                <format>8.0</format>
+        		                <group>System | Version</group>
+        		                <help>Total runtime of this MotoHawk software model</help>
+        		                <max>4294967295.000000</max>
+        		                <min>0.000000</min>
+        		                <name>MotoHawkModelSecondsInUse</name>
+        		                <storage>RAM</storage>
+        		                <units>seconds</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+            </VarDecs>
+        </Add>
+    	<Add xpath="Application/Build">
+			<Compiler>
+			    <Define name="MODEL" value="DynoController_Rev1"/>
+			    <Define name="ERT"/>
+				<Define name="NUMST" value="1"/>
+				<Define name="NCSTATES" value="0"/>
+				<Define name="TID01EQ" value="0"/>
+				<Define name="MULTITASKING" value="0"/>
+				<Define name="MT" value="0"/>
+			</Compiler>
+		    <Library>
+			    <Directory>C:\PROGRA~2\Woodward\MCS\MotoHawk\2010A_~1.49\MOTOCO~1\..\ControlCoreClassic\Framework\MultiTask\Source\TPU\Generic\Archives\gcc-powerpc-eabi\4_4_0</Directory>
+			    <File>TPU_ISDL.a</File>
+		    </Library>
+        </Add>
+    
+	</Extension>
+</ApplicationConfigurations>

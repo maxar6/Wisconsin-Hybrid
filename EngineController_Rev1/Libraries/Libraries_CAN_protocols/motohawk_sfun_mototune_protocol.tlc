@@ -1,0 +1,895 @@
+/%---------------------------------------------------------
+ % 
+ % Copyright (c) 2005, MotoTron, Inc.
+ % All Rights Reserved
+ %
+ % Written by Eric Bradley
+ %
+ %-------------------------------------------------------%/
+%implements "motohawk_sfun_mototune_protocol" "C"
+
+%function BlockTypeSetup(block, system) void
+%endfunction
+
+%function BlockInstanceSetup(block, system) void
+%endfunction
+
+%function Start(block, system) Output
+	%assign uid = GetUID(block)
+	%openfile mhprot = "mh_mototune_protocol_%<uid>.c"
+	%assign result = LibAddToModelSources("mh_mototune_protocol_%<uid>")
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::
+::   Module      :   BEHAVIOUR TOUCAN support functions
+::   Copyright   :   (C)2003 MotoTron Corporation
+::   Platform(s) :   MPC5xx
+::   Dependants  :   MPC5xx Framework
+::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*! \internal
+    \file TouCANBehaviourSupport.c
+    \brief Interface methods to allow the BEHAVIOUR_TOUCAN to be utilised as the communication mechanism for
+           the protocols */
+
+#define __TOUCANBEHAVIOURSUPPORT_C
+
+/*---- INCLUDE FILES --------------------------------------------------------------------------------------*/
+#include <typedefn.h>
+#include <FrameworkError.h>
+#include <FreeStore.h>
+#include "Application.h"
+#include "%<CompiledModel.Name>.h"
+#include "%<CompiledModel.Name>_private.h"
+
+%%#include "TouCANBehaviourSupport.h"
+
+typedef struct
+{
+    uint1 u1MyCity;
+    E_ModuleResource eThisResource;
+    TouCANBufferHandle TXHandle;
+    TouCANBufferHandle RXHandle;
+} S_CANProtocolRuntimeData;
+
+/*---- DEFINES ----------------------------------------------------------------------------------------------*/
+#define MAX_DATA_LEN            64      /* Max data length for a Motprog (multiple) buffer slot */
+
+#define MAX_NUM_CITIES          255     /* Number of unique cities supported */
+#define UNALLOCATED_CITY        255     /* Reserved ID for unused city slot */
+
+/* Hard coded city identifiers are as follows */
+/* All others belong to CAN */
+#define CITY_SCI    1
+#define CITY_SCI2   3
+
+#define APP_DATA_IS_UNUSED 0
+#define NOTIFY_IS_UNUSED NULL
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: ResetPacketTimeout
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*! \internal
+    \brief  Clears the packet timeout for the specified protocol object
+    \param  inout_pProtocolObj Pointer to the protocol object. \c NULL is not a legal value. */
+#define ResetPacketTimeout(pProtocolObj) (pProtocolObj->u2PacketTimerInMilliSecs = 0)
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: ChangeToAccessLevel
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*! \internal
+    \brief Handles the changing of the access level.
+    \param  inout_pProtocolObj Pointer to the protocol object. \c NULL is not a legal value.
+    \param in_uAccessLevel The access level to apply. Assumed to be valid. */
+#define ChangeToAccessLevel(inout_pProtocolObj, in_uAccessLevel) (inout_pProtocolObj->CurrAccess = in_uAccessLevel)
+
+/*---- TYPEDEF ----------------------------------------------------------------------------------------------*/
+
+/* Name: E_ProtocolStatus ClassID:ENUMDEC EnumDflt:"Status Unknown" */
+typedef enum
+{
+    PROTOCOL_STATUS_BAD = 0,          /* EnumTxt:"Abnormal Protocol Operation!" */
+    PROTOCOL_STATUS_OK = 1            /* EnumTxt:"Protocols Operating Normally" */
+} E_ProtocolStatus;
+
+/* Name: E_ProtocolInternalErrorType ClassID:ENUMDEC EnumDflt:"Unknown Error" */
+typedef enum
+{
+    NO_PROTOCOL_ERROR,          /* EnumTxt:"NO_PROTOCOL_ERROR" */
+    CITY_NOT_FOUND,             /* EnumTxt:"CITY_NOT_FOUND" */
+    CITY_HAS_NO_TRANSPORT       /* EnumTxt:"CITY_HAS_NO_TRANSPORT" */
+} E_ProtocolInternalErrorType;
+
+typedef enum
+{
+    BLOCK_PU_LOCKED = 0,
+    BLOCK_RETRY_LOCKED,
+    ACCESS_LOCKED,
+    ACCESS_UNLOCKED
+} E_UnlockState;
+
+typedef enum {
+    CRC_WAIT_STATE,
+    CRC_INIT_STATE,
+    CRC_ACTIVE_STATE,
+    CRC_COMPLETE_STATE
+} E_CRCState;
+
+typedef struct
+{
+	uint1 TXPKT            :1;
+	uint1 FASTMAP_ENABLED  :1;
+	uint1 GOT_HEADER       :1;  
+	uint1 ECHO_ENABLED     :1;
+	uint1 UNUSED_BIT       :1;
+	uint1 MOTPROG_RX_ERR   :1;
+	uint1 MOTPROG_BYTETMO  :1;
+	uint1 MPROG_PURGE_BUFF :1;
+} S_StatusBits;
+
+typedef struct
+{
+    uint4 Address;
+    uint1 Data[MAX_DATA_LEN];
+    uint1 Length;
+} S_Buffer;
+
+typedef struct
+{
+    uint1 Table_ru1;            /* Table number for this request */
+    uint1 ParamNo_ru1;          /* Parameter number for this request */
+    uint2 Offset_ru2;           /* Offset for this request */
+} S_ERIReqestInfo;
+
+typedef struct
+{
+    uint4 Address_ru4;          /* Indirect address for this ERI request */
+} S_ERILongInfo;
+
+typedef struct
+{
+    uint4 Seed_ru4;             /* Seed supplied for this connection attempt */
+    uint1 RequestedProtocol;    /* Protocol this connection attempt is requesting */
+    uint1 RequestedAccess;      /* Access this connection attempt is requesting */
+} S_KeyInfo;
+
+typedef struct
+{
+    uint4 RecordCount_ru4;      /* Current record count */
+} S_MotProgInfo;
+
+typedef struct
+{
+    uint4 Seed_ru4;             /* Seed supplied for this connection attempt */
+    uint1 RequestedAuthority;   /* Requested authority level someone is wanting */
+} S_CanKingInfo;
+
+/* Union these together to save RAM.  They will be used mutually exclusively */
+typedef union
+{
+    S_KeyInfo       KEY;        /* Used while in KEY */
+    S_ERILongInfo   ERIL;       /* Used while an ERI Long request is in progress */
+    S_ERIReqestInfo ERIR;       /* Used while and ERI request table is in progress */
+    S_MotProgInfo   MOTPROG;    /* Used while in MOTPROG */
+    S_CanKingInfo   CANKING;    /* Used while in CANKING */
+} U_ProtocolSpecificData;
+
+/* State information about a city needed by the protocol */
+typedef struct tag_S_ProtocolCityState
+{
+    uint1 City;                         /* City this state info represents */
+    uint1 CurrProtocol;                 /* Current protocol this city is at */
+    uint1 CurrAccess;                   /* Current access level within the protocol this city is at */
+    uint1 CurrAuthority;                /* Current authority level canking is at */
+    uint1 *CurrPacketBufferPtr;         /* Packet buffer pointer */
+/*! Pointer to the transport functions that this protocol uses */
+    struct tag_S_TransportHandlers const* pTransportHandlerObj;
+
+    uint1 u1BytesCaptured;
+    uint1 u1BytesInPacket;
+    uint1 u1BytesSizeOfBuffer;
+    bool1 b1HadHeader;
+
+    uint1 CurrPacketType;               /* Current packet type this city is handling */
+    E_ModuleResource eModuleResource;
+/*! Is the pending or last baud rate */
+    uint4 u4LastBaudRateRequested;
+
+    /* Mutually exclusing protocol dependant data */
+    U_ProtocolSpecificData Info;        /* Protocol specific info */
+
+    /* Security items. Note that these must be available at all times (i.e. not overlaid with */
+    /* other "Info" as their value needs to remain constant during protocol changes */
+    uint2 UnlockTimer;                  /* Timer for timeout state machine */
+    E_UnlockState UnlockState;          /* Security state of the attempt */
+    uint1 UnlockAttemptCnt;             /* Attempts made to unlock without success */
+
+    /* CRC computation items */
+    uint4 CRCResult_ru4;                /* Accumulated CRC result */
+    bool1 CRCBusy_rb1;                  /* CRC busy */
+    E_CRCState CRCState_ru1;            /* Current CRC state */
+
+    S_StatusBits Status;                /* Protocol Status Info */
+/*! Timer used for the detection of packet timeout. Too long without receiving a packet results in timeout. */
+    uint2 u2PacketTimerInMilliSecs;
+
+} S_ProtocolCityState;
+
+/* Structure containg all handlers in a transport needed by a protocol */
+typedef struct tag_S_TransportHandlers
+{
+    void (*pfAlterBaudRate)(NativePtrSizedInt_U /* S_ProtocolCityState const* */ in_pProtocolObj);
+    void (*pfTransmitPacket)(S_ProtocolCityState* in_pProtocolObj, uint2 in_u2NumBytesToTransmit, const void *in_pTransmitDataArr,
+                             CommTxCompleteNotifyFuncPtrType in_pfNotifyOnComplete, NativePtrSizedInt_U in_uAppDataToSendWithNotify);
+    void (*pfResetTransport)(S_ProtocolCityState const* in_pProtocolObj);
+    void (*pfSetTransmissionDelay)(S_ProtocolCityState const* in_pProtocolObj, uint1 in_u1DelayInMilliSecs);
+    NativeBool (*pfIsBaudRateSupported)(S_ProtocolCityState const* in_pProtocolObj, uint4 in_u4BaudRate);
+} S_TransportHandlers;    
+
+typedef struct
+{
+    uint1 u1BytesToGo;
+    uint1 u1MaxBytesInTXResponse;
+} S_ProtocolHeaderInfo;
+
+/* Protocol dispatch handlers */
+typedef void (*InitProtocolPtr)(S_ProtocolCityState *city_state_ptr); 
+typedef E_Exceptions (*HeaderHandlerPtr)(S_ProtocolCityState *city_state_ptr, uint1 const* content_code, S_ProtocolHeaderInfo* out_pHeaderInfoObj);
+typedef void (*ProtocolHandlerPtr)(S_ProtocolCityState *city_state_ptr, uint1 *packet_ptr);
+typedef void (*ExceptionHandlerPtr)(S_ProtocolCityState *city_state_ptr, E_Exceptions exception);
+
+typedef E_Exceptions (*PacketHandlerPtr)(S_ProtocolCityState *city_state_ptr);
+
+
+/*---- EXTERNALS --------------------------------------------------------------------------------------------*/
+
+/*---- PROTOTYPES -------------------------------------------------------------------------------------------*/
+
+S_ProtocolCityState* RequestProtocolHandlerPtr(void);
+S_ProtocolCityState* GetProtocolHandlerPtrForCity(NativeVar_U in_uCity);
+
+void ExecuteProtocolTimers(void);
+NativeVar_U GetProtocolByteTimeOut(S_ProtocolCityState const* in_pProtocolObj);
+NativeVar_U GetProtocolHeaderSize(S_ProtocolCityState const* in_pProtocolObj);
+
+void SetProtocolOperationStatus(E_ProtocolStatus status);
+void LogProtocolInternalError(E_ProtocolInternalErrorType error_type);
+void ClearProtocolStatus(void);
+
+E_Exceptions HeaderHandler(S_ProtocolCityState*, uint1 const* in_pu1Header, S_ProtocolHeaderInfo* out_pHeaderInfo);
+void ProtocolHandler(S_ProtocolCityState*, uint1 *in_pu1PacketArr);
+NativeBool ChangeToProtocol(S_ProtocolCityState* inout_pProtocolObj, E_Protocols in_eNewProtocol);
+void ExceptionsHandler(S_ProtocolCityState* inout_pProtocolObj, E_Exceptions in_eException);
+bool1 ProtocolPktTMO(uint1 city, uint2 time);
+NativeBool ProtocolSupported(E_Protocols protocol, uint1 access_level, NativeBool restrict_acc);
+void PerformFunctionOnAllActiveProtocols(void (*in_pfMethod)(S_ProtocolCityState*,NativePtrSizedInt_U), NativePtrSizedInt_U in_uDataForMethod);
+
+void RegisterKeyProtocol(S_ProtocolCityState* inout_pProtocolObj);
+
+
+
+/*----- DEFINES -------------------------------------------------------------------------------------------*/
+
+/*----- TYPEDEFS ------------------------------------------------------------------------------------------*/
+/* State information about a city needed by the protocol */
+
+typedef struct
+{
+    bool1 bAllocatedOnHeap;
+    bool1 bObjectInUse;
+    CommTxCompleteNotifyFuncPtrType pfCback;
+    NativePtrSizedInt_U uAppDataToSendWithNotify;
+} S_TouCANUserCbackData;
+
+/*----- LOCAL FUNCTION PROTOTYPES -------------------------------------------------------------------------*/
+/*---- PROTOTYPES -------------------------------------------------------------------------------------------*/
+void mh_mototune_reply%<uid>(S_ProtocolCityState* in_pProtocolObj,
+                            uint2 in_u2NumBytesToTransmit,
+                            const void *in_pTransmitDataArr,
+                            CommTxCompleteNotifyFuncPtrType in_pfNotifyOnComplete,
+                            NativePtrSizedInt_U in_uAppDataToSendWithNotify);
+
+NativeBool BaudRateIsNotSupported%<uid>(S_ProtocolCityState const* in_pProtocolObj, uint4 in_u4BaudRate);
+void AlterBaudRateUnsupported%<uid>(NativePtrSizedInt_U /* S_ProtocolCityState const* */ in_pProtocolObj);
+void DoNothingOnTransportReset%<uid>(S_ProtocolCityState const* in_pProtocolObj);
+void SetTransmissionDelayUnsupported%<uid>(S_ProtocolCityState const* in_pProtocolObj, uint1 in_u1DelayInMilliSecs);
+INLINE S_CANProtocolRuntimeData* GetCANProtocolRuntimeDataPtr%<uid>(E_ModuleResource in_eResource);
+void CANProtocolReceiptNotify%<uid>(E_TouCANNotificationEventMask in_eEventMask,
+                              TouCANBufferHandle in_BufferHandle,
+                              NativePtrSizedInt_U /* S_CANProtocolRuntimeData* */ in_uRuntimeData);
+void OnCompletedCANPacket%<uid>(S_ProtocolCityState* inout_pProtocolStateObj);
+
+
+/*----- CONSTANT PARAMETERS -------------------------------------------------------------------------------*/
+#pragma ghs startsda 
+#pragma ghs section rosdata=".fwconstants"
+
+S_TransportHandlers const g_BehaviourTouCANTransportObj%<uid> =
+{
+    AlterBaudRateUnsupported%<uid>,    mh_mototune_reply%<uid>,    DoNothingOnTransportReset%<uid>,    SetTransmissionDelayUnsupported%<uid>,
+    BaudRateIsNotSupported%<uid>
+};
+
+#pragma ghs endsda 
+/*----- CALIBRATION ---------------------------------------------------------------------------------------*/
+#pragma ghs section rodata=".fwcals" 
+/*----- GLOBAL RAM PARAMETERS -----------------------------------------------------------------------------*/
+#pragma ghs startsda 
+#pragma ghs section sbss=".fwzerovars"
+
+/*----- STATIC RAM PARAMETERS -----------------------------------------------------------------------------*/
+S_CANProtocolRuntimeData g_CANProtocolRuntimeInfoForRES_CAN1_%<uid>;
+%%S_CANProtocolRuntimeData g_CANProtocolRuntimeInfoForRES_CAN2_%<uid>;
+S_TouCANUserCbackData g_TouCANCbackDataObj%<uid>;
+
+uint1 g_u1CANBufferArr%<uid>[16*8];
+S_ProtocolCityState* g_CANBufferOwner%<uid>;
+uint1 g_u1TouCANOverrunCnt%<uid>;
+
+#pragma ghs endsda 
+/*---- CODE SPACE -----------------------------------------------------------------------------------------*/
+#pragma ghs section text=".fwcode"
+
+/*---- INLINE FUNCTIONS -----------------------------------------------------------------------------------*/
+
+/*---- LOCAL FUNCTIONS ------------------------------------------------------------------------------------*/
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: GetCANProtocolRuntimeDataPtr%<uid>
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*! \internal
+    \brief Obtains a reference to the runtime data for a CAN Protocol resource
+    \param in_eResource The resource in question */
+S_CANProtocolRuntimeData* GetCANProtocolRuntimeDataPtr%<uid>(E_ModuleResource in_eResource)
+{
+    switch(in_eResource)
+    {
+        case RES_CAN1:
+            return(&g_CANProtocolRuntimeInfoForRES_CAN1_%<uid>);
+        case RES_CAN2:
+            return(&g_CANProtocolRuntimeInfoForRES_CAN1_%<uid>);
+        default:
+            return(NULL);
+    }
+}
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: OnCompletedCANPacket%<uid>
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*! \brief Operations to perform upon completing a CAN packet. Also called on exceptions to re-synchronise
+           to a fresh packet.
+    \return None
+    \param inout_pProtocolStateObj Pointer to the protocol state object that has just completed a packet
+	\remarks The header must be set to FALSE so that the next recieved packet can set it. Bytes captured must
+	         also be reset once we are done with the packet. */
+void OnCompletedCANPacket%<uid>(S_ProtocolCityState* inout_pProtocolStateObj)
+{
+    if (inout_pProtocolStateObj == g_CANBufferOwner%<uid>)
+    {	/* Detected that this state object had taken possession of the longer static buffer */
+        inout_pProtocolStateObj->CurrPacketBufferPtr = NULL;
+        g_CANBufferOwner%<uid> = NULL;
+    }
+    inout_pProtocolStateObj->u1BytesCaptured = 0;
+    inout_pProtocolStateObj->b1HadHeader = FALSE;
+}
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: WriteCANReceiptFrameToStaticBuffer%<uid>
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*! \brief Write a CAN Frame to a static buffer. Application will determine whether a heap buffer or a static
+           buffer can be employed.
+    \return None
+    \param inout_pProtocolStateObj Pointer to the protocol state object
+    \param in_MessageObj The CAN message
+    \param in_uFrameCnt The Frame number that describes this chunk */
+E_Exceptions WriteCANReceiptFrameToStaticBuffer%<uid>(S_ProtocolCityState* inout_pProtocolStateObj, S_CANMessage const* in_pMessageObj, NativeVar_U in_uFrameCnt)
+{
+    E_Exceptions eException;
+
+    if (inout_pProtocolStateObj->CurrPacketBufferPtr == NULL)
+    {   /* Don't have a full sized buffer for this packet yet */
+
+        if (g_CANBufferOwner%<uid> == NULL)
+        {
+            g_CANBufferOwner%<uid> = inout_pProtocolStateObj; 
+            inout_pProtocolStateObj->CurrPacketBufferPtr = g_u1CANBufferArr%<uid>;
+			inout_pProtocolStateObj->u1BytesSizeOfBuffer = sizeof(g_u1CANBufferArr%<uid>);
+        }
+    }
+
+    if (inout_pProtocolStateObj->CurrPacketBufferPtr == NULL)
+    {   /* There was insufficient memory to allocate the buffer */
+        eException = EXCEPTION_BUF_OVRUN;
+    }
+    else
+    {   /* Fill the buffer */
+        NativeVar_U i;
+
+        for (i = 0; i < in_pMessageObj->u1Length; i++)
+        {
+            inout_pProtocolStateObj->CurrPacketBufferPtr[in_uFrameCnt*8 + i] = in_pMessageObj->u1DataArr[i];
+        }
+        inout_pProtocolStateObj->u1BytesCaptured += i;
+        eException = EXCEPTION_NONE;
+    }
+    return(eException);
+}
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: OnCANFrameReceiptInMotoTronKey%<uid>
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*! \brief Handle the receipt of a CAN Frame when running the MOTOTRON_KEY_PROTOCOL. This protocol encompasses
+           the switching from KEY to ERI etc.
+    \return None
+    \param in_pCANRuntimeDataObj Pointer to the runtime data for this handler
+    \param in_BufferHandle The TouCAN buffer handle that received the message frame */
+void OnCANFrameReceiptInMotoTronKey%<uid>(S_CANMessage *CANMessageObj)
+{
+#if 1
+	    NativeError_S sErrorResult;
+        S_ProtocolCityState* pProtocolStateObj = NULL;
+        static const NativeVar_U uCity = %<uid>;
+    	E_Exceptions eException;
+ 
+ #if 1       
+        pProtocolStateObj = GetProtocolHandlerPtrForCity(uCity);
+        if (pProtocolStateObj == NULL)
+        {   /* Is a new city - request a handler */
+            pProtocolStateObj = RequestProtocolHandlerPtr();
+            if (pProtocolStateObj != NULL)
+            {   /* Obtained a handler */
+                pProtocolStateObj->City = uCity;
+                pProtocolStateObj->eModuleResource = RES_CAN1; %%inout_pCANRuntimeDataObj->eThisResource;
+                /* This is a BEHAVIOUR_TOUCAN Transport */
+                pProtocolStateObj->pTransportHandlerObj = &g_BehaviourTouCANTransportObj%<uid>;
+                RegisterKeyProtocol(pProtocolStateObj);
+            }
+        }
+        
+#else        
+        if(pProtocolStateObj->City != uCity) {
+            pProtocolStateObj->City = uCity;
+            pProtocolStateObj->eModuleResource = RES_CAN1; %%inout_pCANRuntimeDataObj->eThisResource;
+            /* This is a BEHAVIOUR_TOUCAN Transport */
+            pProtocolStateObj->pTransportHandlerObj = &g_BehaviourTouCANTransportObj%<uid>;
+            RegisterKeyProtocol(pProtocolStateObj);
+		}
+#endif
+        /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+          :: Handle the receipt of a packet
+          :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+        if (pProtocolStateObj != NULL)
+        {   /* Have an Object */
+            S_ProtocolHeaderInfo HeaderInfoObj;
+            NativeVar_U uProtocolHeaderSize;
+            NativeVar_U uBytesInPacket;
+            NativeVar_U uFrameCnt;
+
+            /* Obtain the packet index from the message ID */
+            uFrameCnt = (CANMessageObj->u4MessageID & 0x0070000) >> 16;
+            if (uFrameCnt != 0)
+            {   /* This is not the first frame that makes up this packet */
+                eException = WriteCANReceiptFrameToStaticBuffer%<uid>(pProtocolStateObj, CANMessageObj, uFrameCnt);
+            }
+            else
+            {   /* This is the first frame in a list of potential frames (and they can come in out of order too :( */
+                uProtocolHeaderSize = GetProtocolHeaderSize(pProtocolStateObj);
+                /* Obtain how many bytes in this packet */
+                eException = HeaderHandler(pProtocolStateObj,CANMessageObj->u1DataArr,&HeaderInfoObj);
+                if (eException == EXCEPTION_NONE)
+                {
+                    uBytesInPacket = pProtocolStateObj->u1BytesInPacket = HeaderInfoObj.u1BytesToGo + uProtocolHeaderSize;
+					/* We have processed the header, u1BytesInPacket and u1BytesCaptured now synchronised */ 
+                    pProtocolStateObj->b1HadHeader = TRUE;
+                    if ((uBytesInPacket <= 8) && (HeaderInfoObj.u1MaxBytesInTXResponse <= 8))
+                    {	/* Less bytes in this packet than in a CAN Frame, we can go now */
+					    pProtocolStateObj->u1BytesSizeOfBuffer = 8;
+                        ProtocolHandler(pProtocolStateObj, CANMessageObj->u1DataArr);
+                        return;
+                    }
+                    else
+                    {	/* More than one CAN Frame required or a bigger buffer is needed - write this Frame in a static buffer */
+                        eException = WriteCANReceiptFrameToStaticBuffer%<uid>(pProtocolStateObj, CANMessageObj, 0);
+						if (eException == EXCEPTION_NONE)
+						{
+							if (HeaderInfoObj.u1MaxBytesInTXResponse < pProtocolStateObj->u1BytesSizeOfBuffer)
+							{	/* Potential that the buffer will overrun during transmission */
+								eException = EXCEPTION_BUF_OVRUN;
+							}
+						}
+                    }
+                }
+            }
+            if (eException != EXCEPTION_NONE)
+            {   /* Had an exception that we must manage */
+                ExceptionsHandler(pProtocolStateObj, eException);
+            }
+            else if ((pProtocolStateObj->b1HadHeader == TRUE) && (pProtocolStateObj->u1BytesInPacket == pProtocolStateObj->u1BytesCaptured))
+            {	/* All CAN Frames have been received */
+                ProtocolHandler(pProtocolStateObj, pProtocolStateObj->CurrPacketBufferPtr);
+            }
+        }
+
+#else
+    %%S_CANMessage CANMessageObj;
+    NativeError_S sErrorResult;
+    E_Exceptions eException;
+
+    {   
+    	/* Successfully read that message */
+        S_ProtocolCityState* pProtocolStateObj;
+        NativeVar_U uCity;
+
+        /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+          :: Determine whether this is the 1st connection or an existing one 
+          :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+        /* The city is the lower byte */
+        uCity = 0x0b;
+        /* Obtain a pointer to the protocol handler for this city */
+        pProtocolStateObj = GetProtocolHandlerPtrForCity(uCity);
+        if (pProtocolStateObj == NULL)
+        {   /* Is a new city - request a handler */
+            pProtocolStateObj = GetProtocolHandlerPtrForCity(uCity);
+            if (pProtocolStateObj != NULL)
+            {   /* Obtained a handler */
+                pProtocolStateObj->City = uCity;
+                pProtocolStateObj->eModuleResource = RES_CAN2; %%inout_pCANRuntimeDataObj->eThisResource;
+                /* This is a BEHAVIOUR_TOUCAN Transport */
+                pProtocolStateObj->pTransportHandlerObj = &g_BehaviourTouCANTransportObj%<uid>;
+                RegisterKeyProtocol(pProtocolStateObj);
+            }
+        }
+
+        /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+          :: Handle the receipt of a packet
+          :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+        if (pProtocolStateObj != NULL)
+        {   /* Have an Object */
+            S_ProtocolHeaderInfo HeaderInfoObj;
+            NativeVar_U uProtocolHeaderSize;
+            NativeVar_U uBytesInPacket;
+            NativeVar_U uFrameCnt;
+
+            /* Obtain the packet index from the message ID */
+            uFrameCnt = (CANMessageObj->u4MessageID & 0x0070000) >> 16;
+            if (uFrameCnt != 0)
+            {   /* This is not the first frame that makes up this packet */
+                eException = WriteCANReceiptFrameToStaticBuffer%<uid>(pProtocolStateObj, CANMessageObj, uFrameCnt);
+            }
+            else
+            {   /* This is the first frame in a list of potential frames (and they can come in out of order too :( */
+                uProtocolHeaderSize = GetProtocolHeaderSize(pProtocolStateObj);
+                /* Obtain how many bytes in this packet */
+                eException = HeaderHandler(pProtocolStateObj,CANMessageObj->u1DataArr,&HeaderInfoObj);
+                if (eException == EXCEPTION_NONE)
+                {
+                    uBytesInPacket = pProtocolStateObj->u1BytesInPacket = HeaderInfoObj.u1BytesToGo + uProtocolHeaderSize;
+					/* We have processed the header, u1BytesInPacket and u1BytesCaptured now synchronised */ 
+                    pProtocolStateObj->b1HadHeader = TRUE;
+                    if ((uBytesInPacket <= 8) && (HeaderInfoObj.u1MaxBytesInTXResponse <= 8))
+                    {	/* Less bytes in this packet than in a CAN Frame, we can go now */
+					    pProtocolStateObj->u1BytesSizeOfBuffer = 8;
+                        ProtocolHandler(pProtocolStateObj, CANMessageObj->u1DataArr);
+                        return;
+                    }
+                    else
+                    {	/* More than one CAN Frame required or a bigger buffer is needed - write this Frame in a static buffer */
+                        eException = WriteCANReceiptFrameToStaticBuffer%<uid>(pProtocolStateObj, CANMessageObj, 0);
+						if (eException == EXCEPTION_NONE)
+						{
+							if (HeaderInfoObj.u1MaxBytesInTXResponse < pProtocolStateObj->u1BytesSizeOfBuffer)
+							{	/* Potential that the buffer will overrun during transmission */
+								eException = EXCEPTION_BUF_OVRUN;
+							}
+						}
+                    }
+                }
+            }
+            if (eException != EXCEPTION_NONE)
+            {   /* Had an exception that we must manage */
+                ExceptionsHandler(pProtocolStateObj, eException);
+            }
+            else if ((pProtocolStateObj->b1HadHeader == TRUE) && (pProtocolStateObj->u1BytesInPacket == pProtocolStateObj->u1BytesCaptured))
+            {	/* All CAN Frames have been received */
+                ProtocolHandler(pProtocolStateObj, pProtocolStateObj->CurrPacketBufferPtr);
+            }
+        }
+    }
+#endif
+}
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: CANProtocolReceiptNotify
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*! \brief Receipt notification function that executes upon the receipt of a CAN message
+    \return None
+    \param in_eEventMask The event mask (CAN_RECEIPT and/or CAN_RECEIPT_OVERRUN)
+    \param in_BufferHandle The TOU CAN buffer that issued this notification
+    \param in_uRuntimeData Holds a pointer to the S_CANProtocolRuntimeData data for this CAN resource */
+void CANProtocolReceiptNotify%<uid>(E_TouCANNotificationEventMask in_eEventMask,
+                              TouCANBufferHandle in_BufferHandle,
+                              NativePtrSizedInt_U /* S_CANProtocolRuntimeData* */ in_uRuntimeData)
+{
+#if 0
+    S_CANProtocolRuntimeData* pCANRuntimeInfoObj;
+
+    pCANRuntimeInfoObj = (S_CANProtocolRuntimeData*)in_uRuntimeData;
+    if ((in_eEventMask & CAN_RECEIPT) != 0)
+    {   /* We have a message */
+        OnCANFrameReceiptInMotoTronKey%<uid>(pCANRuntimeInfoObj, in_BufferHandle);
+    }
+    if ((in_eEventMask & CAN_RECEIPT_Q_OVERRUN) != 0)
+    {
+        g_u1TouCANOverrunCnt%<uid>++;
+    }
+#endif
+}
+
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: CANProtocolTXCback%<uid>
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*! \internal
+    \brief TouCAN Protocol TX complete notification callback handler.
+    \return None
+    \param  in_eEventMask The event (CAN_TRANSMIT_COMPLETE)
+    \param  in_BufferHandle The buffer that this event occurred on
+    \param  in_uAppSuppliedData A S_TouCANUserCbackData pointer. The memory is expected to exist on the heap */
+void CANProtocolTXCback%<uid>(E_TouCANNotificationEventMask in_eEventMask, TouCANBufferHandle in_BufferHandle, NativePtrSizedInt_U in_uAppSuppliedData)
+{
+#if 1
+    S_TouCANUserCbackData* pDataObj = (S_TouCANUserCbackData*)in_uAppSuppliedData;
+
+    pDataObj->pfCback(pDataObj->uAppDataToSendWithNotify);
+    pDataObj->bObjectInUse = FALSE;
+    if (pDataObj->bAllocatedOnHeap != FALSE)
+    {   /* Free this object as it is allocated on the heap */
+        ThreadSafeFree(pDataObj);
+    }
+#endif
+}
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: mh_mototune_reply%<uid>
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*! \internal
+    \brief Queue the transmission of the supplied data to a BEHAVIOUR_TOUCAN resource.
+    \return None
+    \param  in_pProtocolObj Protocol object which will allow the resource used for communication to be obtained
+    \param  in_pTransmitDataArr Read only pointer to the buffer of data that is to be transmitted
+    \param  in_pfNotifyOnComplete Optional notification function to execute upon completing the transmission
+    \param  in_uAppDataToSendWithNotify Data supplied when the \p in_pfNotifyOnComplete is executed
+    \remarks Assumes that in_pTransmitDataArr is not a \c NULL pointer.  */
+void mh_mototune_reply%<uid>(S_ProtocolCityState* in_pProtocolObj,
+                            uint2 in_u2NumBytesToTransmit,
+                            const void *in_pTransmitDataArr,
+                            CommTxCompleteNotifyFuncPtrType in_pfNotifyOnComplete,
+                            NativePtrSizedInt_U in_uAppDataToSendWithNotify)
+{
+    S_CANProtocolRuntimeData* pRuntimeDataObj;
+
+	%assign ch = ParamInt(0)
+	%assign txid = LibBlockInputSignal(7,"","",0)
+	%assign txext = LibBlockInputSignal(6,"","",0)
+	%assign city = LibBlockInputSignal(8,"","",0)
+
+	{
+		extern S_CANProtocolRuntimeData g_CANProtocolRuntimeInfoForRES_CAN%<ch>; 
+		g_CANProtocolRuntimeInfoForRES_CAN%<ch>.u1MyCity = %<city>;
+	}
+
+    pRuntimeDataObj = GetCANProtocolRuntimeDataPtr%<uid>(in_pProtocolObj->eModuleResource);
+    if (0)
+    {   /* The supplied resource is some how invalid ? */
+        ExceptionsHandler(in_pProtocolObj, EXCEPTION_ACC_DENIED);
+    }
+    else
+    {   /* We can Transmit this buffer */
+
+        S_CANMessage MessageObj;
+        NativeError_S sErrorResult = SUCCESS_OK;
+        NativeVar_U i = 0;
+        uint1* pu1DataBuffer = (uint1*)in_pTransmitDataArr;
+        uint4 u4BaseMessageId;
+
+        MessageObj.eFlags = CAN_MESSAGE_TRANSMIT | (%<txext>) ? CAN_MESSAGE_EXTENDED : CAN_MESSAGE_STANDARD;
+        u4BaseMessageId = %<txid>;
+        do
+        {
+            if (in_u2NumBytesToTransmit > 8)
+            {
+                /*:::::::::::::::::::::::::::::::::::::
+                  :: When there is more than one Frame
+                  :::::::::::::::::::::::::::::::::::*/
+                *((uint4*)&MessageObj.u1DataArr[0]) = *((uint4*)(&pu1DataBuffer[0]));
+                *((uint4*)&MessageObj.u1DataArr[4]) = *((uint4*)(&pu1DataBuffer[4]));
+                MessageObj.u4MessageID = u4BaseMessageId | i;
+                MessageObj.u1Length = 8;
+                in_u2NumBytesToTransmit -= 8;
+                /* Move the buffer ahead one frame's worth of data */
+                pu1DataBuffer += 8;
+                /* FrameCnt is LSNibble of the MSHalfWord */
+                i += (1 << 16);
+                sErrorResult = TransmitOnTouCAN(RES_CAN%<ch>, TOUCAN_BUFF0, &MessageObj, NULL, in_uAppDataToSendWithNotify);
+            }
+            else
+            {
+                /*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                  :: When this is the last frame (a zero byte frame is allowed)
+                  ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+                MessageObj.u4MessageID = u4BaseMessageId | i;
+                MessageObj.u1Length = in_u2NumBytesToTransmit;
+				#if 0 /* Don't need to update the Bytes to Transmit as we have already detected that this is the last frame */
+	                in_u2NumBytesToTransmit = 0;
+				#endif
+				/* Copy the data - fill the entire Frame, even if it is not needed */
+	            *((uint4*)&MessageObj.u1DataArr[0]) = *((uint4*)(&pu1DataBuffer[0]));
+	            *((uint4*)&MessageObj.u1DataArr[4]) = *((uint4*)(&pu1DataBuffer[4]));
+                if (in_pfNotifyOnComplete == NULL)
+                {   /* Can transmit directly as there is no callback attached */
+                    sErrorResult = TransmitOnTouCAN(RES_CAN%<ch>, TOUCAN_BUFF0,  &MessageObj, NULL, in_uAppDataToSendWithNotify);
+                }
+                else
+                {   /* Transmission with callback attached - the TX callback supplied by the TouCAN has a different prototype to 
+                       the one we have been supplied with so we will need to handle it internally */
+                    S_TouCANUserCbackData* pTouCANCbackData;
+
+                    /* Attempt to use the statically allocated object first */
+                    DISABLE();
+                    if (g_TouCANCbackDataObj%<uid>.bObjectInUse == FALSE)
+                    {   /* The static resource is not in use so we shall use it */
+                        g_TouCANCbackDataObj%<uid>.bObjectInUse = TRUE;
+                        UNDISABLE();
+                        g_TouCANCbackDataObj%<uid>.bAllocatedOnHeap = FALSE;
+                        pTouCANCbackData = &g_TouCANCbackDataObj%<uid>;
+                    }
+                    else
+                    {   /* The object is in use so attempt a dynamic memory allocation */
+                        UNDISABLE();
+                        pTouCANCbackData = ThreadSafeMalloc(sizeof(S_TouCANUserCbackData));
+                        if (pTouCANCbackData == NULL)
+                        {
+                            sErrorResult = ERROR_OUT_OF_MEMORY;
+                        }
+                        else
+                        {
+                            pTouCANCbackData->bAllocatedOnHeap = TRUE;
+                            pTouCANCbackData->bObjectInUse = TRUE;
+                        }
+                    }
+
+                    if (SUCCESS(sErrorResult))
+                    {
+                        pTouCANCbackData->uAppDataToSendWithNotify = in_uAppDataToSendWithNotify;
+                        pTouCANCbackData->pfCback = in_pfNotifyOnComplete;
+                        sErrorResult = TransmitOnTouCAN(RES_CAN%<ch>, TOUCAN_BUFF0,  &MessageObj, CANProtocolTXCback%<uid>, (NativePtrSizedInt_U)pTouCANCbackData);
+                    }
+                }
+				/* This was the last frame - we break out of the do while loop */
+				break;
+            }
+        } while (SUCCESS(sErrorResult));
+
+        if (FAILED(sErrorResult))
+        {	/* Could check for specific errors but the protocols don't currently need such info */
+            ExceptionsHandler(in_pProtocolObj, EXCEPTION_WRTE_FAIL);
+        }
+    }
+}
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: BaudRateIsNotSupported%<uid>
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*! \internal
+    \brief Function is meant to interrogates the resource to determine whether the supplied baud rate is supported.
+
+           The BEHAVIOUR_TOUCAN resources don't offer baud rate support and so will always return FALSE
+
+    \retval FALSE Always returned
+    \param  in_pProtocolObj Unused here
+    \param  in_u4BaudRate The baudrate that is to be checked */
+NativeBool BaudRateIsNotSupported%<uid>(S_ProtocolCityState const* in_pProtocolObj, uint4 in_u4BaudRate)
+{
+    return(FALSE);
+}
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: AlterBaudRateUnsupported%<uid>
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*! \internal
+    \brief Function would alter the baud rate on a device. This function called if such a method is not supported
+           on that resource
+    \return None
+    \param  in_pProtocolObj Protocol object which will allow the resource used for communication to be obtained */
+void AlterBaudRateUnsupported%<uid>(NativePtrSizedInt_U /* S_ProtocolCityState const* */ in_pProtocolObj)
+{
+
+}
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: DoNothingOnTransportReset%<uid>
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*! \internal
+    \brief Operations to perform upon reseting the resource. Called when the resource does not need to do anything
+    \param in_pProtocolObj Protocol object which will allow the resource used for communication to be obtained */
+void DoNothingOnTransportReset%<uid>(S_ProtocolCityState const* in_pProtocolObj)
+{
+
+}
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: SetTransmissionDelayUnsupported%<uid>
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*! \internal
+    \brief Used to globally apply an enforced transmission delay between issued transmissions. Call this function
+           when this behaviour is not supported.
+    \param in_pProtocolObj Protocol object which will allow the resource used for communication to be obtained
+    \param in_u1DelayInMilliSecs The delay to apply. Zero delay is a legal value. */
+void SetTransmissionDelayUnsupported%<uid>(S_ProtocolCityState const* in_pProtocolObj, uint1 in_u1DelayInMilliSecs)
+{
+    /* Unsupported */
+}
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: mh_init_mototune_security%<uid>
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+void mh_init_mototune_security%<uid>(void) 
+{
+		%if EXISTS("CustomSecurity")
+		extern NativeBool MotoHawkSecurity32Function(E_AccessLevel, E_Protocols,uint4 *);
+    	%endif
+ 	    extern ProtocolSecurityCbackFuncPtr* GetSecurityFuncPtrPtr(E_ModuleResource in_eResource);
+		extern CANKingAuthoritySecurityCbackFuncPtr* GetKingAuthorityFuncPtrPtr(E_ModuleResource in_eResource);
+		
+		CANKingAuthoritySecurityCbackFuncPtr* ppfAuthority = GetKingAuthorityFuncPtrPtr(RES_CAN1);
+	    ProtocolSecurityCbackFuncPtr* ppfSecurityFunction = GetSecurityFuncPtrPtr(RES_CAN1);
+  		*ppfAuthority = CanKingAuthoritySecurityFunction;
+		*ppfSecurityFunction = %<SecurityFunction()>;
+}
+
+/*---- END OF FILE ----------------------------------------------------------------------------------------*/
+
+%closefile mhprot
+	/* %<Name>: MotoTune Protocol */
+	{
+		extern void mh_init_mototune_security%<uid>(void);
+		mh_init_mototune_security%<uid>(); 
+	}
+
+%endfunction
+
+%function Outputs(block, system) Output
+	%assign uid = GetUID(block)
+	%assign avail = LibBlockInputSignal(0,"","",0)
+	%assign age = LibBlockInputSignal(1,"","",0)
+	%assign ext = LibBlockInputSignal(2,"","",0)
+	%assign id = LibBlockInputSignal(3,"","",0)
+	%assign len = LibBlockInputSignal(4,"","",0)
+	%assign data = LibBlockInputSignalAddr(5,"","",0)
+
+	/* %<Name>: MotoTune Protocol */
+	{
+		if(%<avail>)
+		{
+			extern void OnCANFrameReceiptInMotoTronKey%<uid>(S_CANMessage *CANMessageObj);
+		    S_CANMessage messageObj = {0};
+			unsigned char idx;
+			unsigned char len;
+			len = %<len>;
+			if (len > 8)
+			{
+				len = 8;
+			}
+			messageObj.eFlags = (%<ext>) ? CAN_MESSAGE_EXTENDED : CAN_MESSAGE_STANDARD;
+			messageObj.u4MessageID = %<id>;
+			messageObj.u1Length = len;
+			for (idx=0; idx < len; idx++)
+			{
+				messageObj.u1DataArr[idx] = (%<data>)[idx];
+			}
+		    	
+			OnCANFrameReceiptInMotoTronKey%<uid>( &messageObj);
+		}	
+	}
+	 
+%endfunction
+

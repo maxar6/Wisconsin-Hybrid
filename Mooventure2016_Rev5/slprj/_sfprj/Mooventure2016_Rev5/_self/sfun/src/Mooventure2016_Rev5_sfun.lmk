@@ -1,0 +1,219 @@
+CC     = "C:\Program Files (x86)\MATLAB\R2011a\sys\lcc\bin\lcc.exe"
+LD     = "C:\Program Files (x86)\MATLAB\R2011a\sys\lcc\bin\lcclnk.exe"
+LIBCMD = "C:\Program Files (x86)\MATLAB\R2011a\sys\lcc\bin\lcclib.exe"
+CFLAGS = -c -Zp8 -DMATLAB_MEX_FILE -noregistrylookup
+LDFLAGS = -s -dll -L"C:\Program Files (x86)\MATLAB\R2011a\sys\lcc\lib"
+LIBFLAGS = 
+
+OBJECTS = \
+	"Mooventure2016_Rev5_sfun.obj"\
+	"Mooventure2016_Rev5_sfun_registry.obj"\
+	"c1_Mooventure2016_Rev5.obj"\
+	"c2_Mooventure2016_Rev5.obj"\
+	"c3_Mooventure2016_Rev5.obj"\
+	"c4_Mooventure2016_Rev5.obj"\
+	"c5_Mooventure2016_Rev5.obj"\
+	"c6_Mooventure2016_Rev5.obj"\
+	"c7_Mooventure2016_Rev5.obj"\
+	"c8_Mooventure2016_Rev5.obj"\
+	"c9_Mooventure2016_Rev5.obj"\
+	"c10_Mooventure2016_Rev5.obj"\
+	"c11_Mooventure2016_Rev5.obj"\
+	"c12_Mooventure2016_Rev5.obj"\
+	"c13_Mooventure2016_Rev5.obj"\
+	"c14_Mooventure2016_Rev5.obj"\
+	"c15_Mooventure2016_Rev5.obj"\
+	"c16_Mooventure2016_Rev5.obj"\
+	"c17_Mooventure2016_Rev5.obj"\
+	"c18_Mooventure2016_Rev5.obj"\
+	"c19_Mooventure2016_Rev5.obj"\
+	"c20_Mooventure2016_Rev5.obj"\
+	"c21_Mooventure2016_Rev5.obj"\
+	"c22_Mooventure2016_Rev5.obj"\
+	"c23_Mooventure2016_Rev5.obj"\
+	"c24_Mooventure2016_Rev5.obj"\
+	"c25_Mooventure2016_Rev5.obj"\
+	"c26_Mooventure2016_Rev5.obj"\
+	"c27_Mooventure2016_Rev5.obj"\
+	"c28_Mooventure2016_Rev5.obj"\
+	"c29_Mooventure2016_Rev5.obj"\
+	"c30_Mooventure2016_Rev5.obj"\
+	"c31_Mooventure2016_Rev5.obj"\
+	"c32_Mooventure2016_Rev5.obj"\
+	"c33_Mooventure2016_Rev5.obj"\
+	"c34_Mooventure2016_Rev5.obj"\
+	"c35_Mooventure2016_Rev5.obj"\
+	"c36_Mooventure2016_Rev5.obj"\
+	"c37_Mooventure2016_Rev5.obj"\
+	"c38_Mooventure2016_Rev5.obj"\
+	"c39_Mooventure2016_Rev5.obj"\
+	"c40_Mooventure2016_Rev5.obj"\
+	"c41_Mooventure2016_Rev5.obj"\
+	"c42_Mooventure2016_Rev5.obj"\
+	"c43_Mooventure2016_Rev5.obj"\
+	"c44_Mooventure2016_Rev5.obj"\
+	"c45_Mooventure2016_Rev5.obj"\
+	"c46_Mooventure2016_Rev5.obj"\
+	"c47_Mooventure2016_Rev5.obj"\
+	"c48_Mooventure2016_Rev5.obj"\
+	"c49_Mooventure2016_Rev5.obj"\
+	"c50_Mooventure2016_Rev5.obj"\
+	"c51_Mooventure2016_Rev5.obj"\
+	"c52_Mooventure2016_Rev5.obj"\
+	"c53_Mooventure2016_Rev5.obj"\
+	"c54_Mooventure2016_Rev5.obj"\
+	"c55_Mooventure2016_Rev5.obj"\
+	"c56_Mooventure2016_Rev5.obj"\
+	"c57_Mooventure2016_Rev5.obj"\
+	"c58_Mooventure2016_Rev5.obj"\
+	"c59_Mooventure2016_Rev5.obj"\
+	"c60_Mooventure2016_Rev5.obj"\
+	"c61_Mooventure2016_Rev5.obj"\
+	"c62_Mooventure2016_Rev5.obj"\
+	"lccstub.obj"\
+	"C:\Program Files (x86)\MATLAB\R2011a\sys\lcc\mex\lccdef.def"\
+	"C:\Program Files (x86)\MATLAB\R2011a\stateflow\c\debugger\lib\win32\sfc_debuglcc.lib"\
+	"C:\Program Files (x86)\MATLAB\R2011a\stateflow\c\mex\lib\win32\sfc_mexlcc.lib"\
+	"C:\Program Files (x86)\MATLAB\R2011a\extern\lib\win32\lcc\libmex.lib"\
+	"C:\Program Files (x86)\MATLAB\R2011a\extern\lib\win32\lcc\libmx.lib"\
+	"C:\Program Files (x86)\MATLAB\R2011a\extern\lib\win32\lcc\libfixedpoint.lib"\
+	"C:\Program Files (x86)\MATLAB\R2011a\extern\lib\win32\lcc\libut.lib"\
+	"C:\Program Files (x86)\MATLAB\R2011a\extern\lib\win32\lcc\libmwmathutil.lib"\
+	"C:\Program Files (x86)\MATLAB\R2011a\extern\lib\win32\lcc\libemlrt.lib"\
+	"C:\Program Files (x86)\MATLAB\R2011a\extern\lib\win32\lcc\libmwblascompat32.lib"\
+
+INCLUDE_PATH= -I"C:\Program Files (x86)\MATLAB\R2011a\sys\lcc\include"  -I"C:\Program Files (x86)\MATLAB\R2011a\extern\include"  -I"C:\Program Files (x86)\MATLAB\R2011a\simulink\include"  -I"C:\Program Files (x86)\MATLAB\R2011a\stateflow\c\mex\include"  -I"C:\Program Files (x86)\MATLAB\R2011a\stateflow\c\debugger\include" 
+ 
+
+Mooventure2016_Rev5_sfun.mexw32 : $(MAKEFILE) $(OBJECTS)
+	$(LD) $(LDFLAGS) -o Mooventure2016_Rev5_sfun.mexw32 @Mooventure2016_Rev5_sfun.lmko
+Mooventure2016_Rev5_sfun.obj :	"Mooventure2016_Rev5_sfun.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "Mooventure2016_Rev5_sfun.c"
+Mooventure2016_Rev5_sfun_registry.obj :	"Mooventure2016_Rev5_sfun_registry.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "Mooventure2016_Rev5_sfun_registry.c"
+c1_Mooventure2016_Rev5.obj :	"c1_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c1_Mooventure2016_Rev5.c"
+c2_Mooventure2016_Rev5.obj :	"c2_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c2_Mooventure2016_Rev5.c"
+c3_Mooventure2016_Rev5.obj :	"c3_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c3_Mooventure2016_Rev5.c"
+c4_Mooventure2016_Rev5.obj :	"c4_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c4_Mooventure2016_Rev5.c"
+c5_Mooventure2016_Rev5.obj :	"c5_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c5_Mooventure2016_Rev5.c"
+c6_Mooventure2016_Rev5.obj :	"c6_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c6_Mooventure2016_Rev5.c"
+c7_Mooventure2016_Rev5.obj :	"c7_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c7_Mooventure2016_Rev5.c"
+c8_Mooventure2016_Rev5.obj :	"c8_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c8_Mooventure2016_Rev5.c"
+c9_Mooventure2016_Rev5.obj :	"c9_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c9_Mooventure2016_Rev5.c"
+c10_Mooventure2016_Rev5.obj :	"c10_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c10_Mooventure2016_Rev5.c"
+c11_Mooventure2016_Rev5.obj :	"c11_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c11_Mooventure2016_Rev5.c"
+c12_Mooventure2016_Rev5.obj :	"c12_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c12_Mooventure2016_Rev5.c"
+c13_Mooventure2016_Rev5.obj :	"c13_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c13_Mooventure2016_Rev5.c"
+c14_Mooventure2016_Rev5.obj :	"c14_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c14_Mooventure2016_Rev5.c"
+c15_Mooventure2016_Rev5.obj :	"c15_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c15_Mooventure2016_Rev5.c"
+c16_Mooventure2016_Rev5.obj :	"c16_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c16_Mooventure2016_Rev5.c"
+c17_Mooventure2016_Rev5.obj :	"c17_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c17_Mooventure2016_Rev5.c"
+c18_Mooventure2016_Rev5.obj :	"c18_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c18_Mooventure2016_Rev5.c"
+c19_Mooventure2016_Rev5.obj :	"c19_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c19_Mooventure2016_Rev5.c"
+c20_Mooventure2016_Rev5.obj :	"c20_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c20_Mooventure2016_Rev5.c"
+c21_Mooventure2016_Rev5.obj :	"c21_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c21_Mooventure2016_Rev5.c"
+c22_Mooventure2016_Rev5.obj :	"c22_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c22_Mooventure2016_Rev5.c"
+c23_Mooventure2016_Rev5.obj :	"c23_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c23_Mooventure2016_Rev5.c"
+c24_Mooventure2016_Rev5.obj :	"c24_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c24_Mooventure2016_Rev5.c"
+c25_Mooventure2016_Rev5.obj :	"c25_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c25_Mooventure2016_Rev5.c"
+c26_Mooventure2016_Rev5.obj :	"c26_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c26_Mooventure2016_Rev5.c"
+c27_Mooventure2016_Rev5.obj :	"c27_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c27_Mooventure2016_Rev5.c"
+c28_Mooventure2016_Rev5.obj :	"c28_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c28_Mooventure2016_Rev5.c"
+c29_Mooventure2016_Rev5.obj :	"c29_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c29_Mooventure2016_Rev5.c"
+c30_Mooventure2016_Rev5.obj :	"c30_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c30_Mooventure2016_Rev5.c"
+c31_Mooventure2016_Rev5.obj :	"c31_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c31_Mooventure2016_Rev5.c"
+c32_Mooventure2016_Rev5.obj :	"c32_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c32_Mooventure2016_Rev5.c"
+c33_Mooventure2016_Rev5.obj :	"c33_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c33_Mooventure2016_Rev5.c"
+c34_Mooventure2016_Rev5.obj :	"c34_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c34_Mooventure2016_Rev5.c"
+c35_Mooventure2016_Rev5.obj :	"c35_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c35_Mooventure2016_Rev5.c"
+c36_Mooventure2016_Rev5.obj :	"c36_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c36_Mooventure2016_Rev5.c"
+c37_Mooventure2016_Rev5.obj :	"c37_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c37_Mooventure2016_Rev5.c"
+c38_Mooventure2016_Rev5.obj :	"c38_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c38_Mooventure2016_Rev5.c"
+c39_Mooventure2016_Rev5.obj :	"c39_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c39_Mooventure2016_Rev5.c"
+c40_Mooventure2016_Rev5.obj :	"c40_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c40_Mooventure2016_Rev5.c"
+c41_Mooventure2016_Rev5.obj :	"c41_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c41_Mooventure2016_Rev5.c"
+c42_Mooventure2016_Rev5.obj :	"c42_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c42_Mooventure2016_Rev5.c"
+c43_Mooventure2016_Rev5.obj :	"c43_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c43_Mooventure2016_Rev5.c"
+c44_Mooventure2016_Rev5.obj :	"c44_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c44_Mooventure2016_Rev5.c"
+c45_Mooventure2016_Rev5.obj :	"c45_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c45_Mooventure2016_Rev5.c"
+c46_Mooventure2016_Rev5.obj :	"c46_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c46_Mooventure2016_Rev5.c"
+c47_Mooventure2016_Rev5.obj :	"c47_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c47_Mooventure2016_Rev5.c"
+c48_Mooventure2016_Rev5.obj :	"c48_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c48_Mooventure2016_Rev5.c"
+c49_Mooventure2016_Rev5.obj :	"c49_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c49_Mooventure2016_Rev5.c"
+c50_Mooventure2016_Rev5.obj :	"c50_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c50_Mooventure2016_Rev5.c"
+c51_Mooventure2016_Rev5.obj :	"c51_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c51_Mooventure2016_Rev5.c"
+c52_Mooventure2016_Rev5.obj :	"c52_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c52_Mooventure2016_Rev5.c"
+c53_Mooventure2016_Rev5.obj :	"c53_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c53_Mooventure2016_Rev5.c"
+c54_Mooventure2016_Rev5.obj :	"c54_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c54_Mooventure2016_Rev5.c"
+c55_Mooventure2016_Rev5.obj :	"c55_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c55_Mooventure2016_Rev5.c"
+c56_Mooventure2016_Rev5.obj :	"c56_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c56_Mooventure2016_Rev5.c"
+c57_Mooventure2016_Rev5.obj :	"c57_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c57_Mooventure2016_Rev5.c"
+c58_Mooventure2016_Rev5.obj :	"c58_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c58_Mooventure2016_Rev5.c"
+c59_Mooventure2016_Rev5.obj :	"c59_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c59_Mooventure2016_Rev5.c"
+c60_Mooventure2016_Rev5.obj :	"c60_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c60_Mooventure2016_Rev5.c"
+c61_Mooventure2016_Rev5.obj :	"c61_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c61_Mooventure2016_Rev5.c"
+c62_Mooventure2016_Rev5.obj :	"c62_Mooventure2016_Rev5.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c62_Mooventure2016_Rev5.c"
+lccstub.obj :	"C:\Program Files (x86)\MATLAB\R2011a\sys\lcc\mex\lccstub.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "C:\Program Files (x86)\MATLAB\R2011a\sys\lcc\mex\lccstub.c"

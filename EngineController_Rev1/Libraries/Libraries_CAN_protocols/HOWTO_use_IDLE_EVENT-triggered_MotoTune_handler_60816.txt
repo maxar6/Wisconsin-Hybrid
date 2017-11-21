@@ -1,0 +1,28 @@
+*********************************************************************************************************
+
+MotoTron Corporation, Chris Doyle, 16-Aug-2006.
+
+HOW TO USE the alternate IDLE_EVENT-triggered MotoTune handler block:
+
+1.  Open the 'Libraries_CAN_protocols_yyyy_mm_dd.zip' zipfile and drag the Libraries_CAN_protocols
+    folder into your project directory.
+
+2.  Add 'Libraries_CAN_protocols' to your MATLAB search path.  Usually, this should be done by adding
+    it to the [modelname]_setup.m file in the project directory.
+
+3.  As usual, use the 'MotoHawk CAN Definition' block ('MotoHawk_lib/CAN Blocks/CAN Definition')
+    to define mask parameters for a CAN bus's bit timing and transmit queue size, but UN-check the
+    'Install MotoTune Protocol' checkbox.
+
+4.  At the MATLAB prompt, open the alternate-MotoTune-handler library by typing:
+    >> motohawk_can_protocols_lib
+
+5.  Drag the IDLE_EVENT-triggered MotoTune handler block ('motohawk_can_protocols_lib/MotoTune
+    Standard CAN Protocol (IDLE_EVENT triggered)') into your model and set its mask parameters
+    appropriately.
+
+6.  Consume a beverage of your preference to celebrate your successful transition to the IDLE_EVENT-
+    triggered MotoTune handler.
+
+*********************************************************************************************************
+end-of-file.

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildStatsSymbols>
+   <BuildStatsSymbol>DynoController_Rev1_M</BuildStatsSymbol>
+   <BuildStatsSymbol>DynoController_Rev1_B</BuildStatsSymbol>
+   <BuildStatsSymbol>DynoController_Rev1_DWork</BuildStatsSymbol>
+   <BuildStatsSymbol>DynoController_Rev1_PrevZC</BuildStatsSymbol>
+   <BuildStatsSymbol>DynoController_Rev1_M_</BuildStatsSymbol>
+   <BuildStatsSymbol>VolatileWork</BuildStatsSymbol>
+   <BuildStatsSymbol>ConstantWork</BuildStatsSymbol>
+   <BuildStatsSymbol>NonVolatileWork</BuildStatsSymbol>
+   <BuildStatsSymbol>NonVolatileDefault</BuildStatsSymbol>
+   <BuildStatsSymbol>FgndTimeStack</BuildStatsSymbol>
+   <BuildStatsSymbol>FgndAngleStack</BuildStatsSymbol>
+   <BuildStatsSymbol>BgndStack</BuildStatsSymbol>
+   <BuildStatsSymbol>IdleStack</BuildStatsSymbol>
+   <BuildStatsSymbol>InterruptStack</BuildStatsSymbol>
+   <BuildStatsSymbol>Heap</BuildStatsSymbol>
+   <BuildStatsSymbol>Stack</BuildStatsSymbol>
+   <BuildStatsSymbol>DynoController_Rev1_Foreground</BuildStatsSymbol>
+</BuildStatsSymbols>

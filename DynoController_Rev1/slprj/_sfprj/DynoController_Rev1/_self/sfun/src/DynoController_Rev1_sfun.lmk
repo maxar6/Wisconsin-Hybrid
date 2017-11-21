@@ -1,0 +1,36 @@
+CC     = "e:\matlab\sys\lcc\bin\lcc.exe"
+LD     = "e:\matlab\sys\lcc\bin\lcclnk.exe"
+LIBCMD = "e:\matlab\sys\lcc\bin\lcclib.exe"
+CFLAGS = -c -Zp8 -DMATLAB_MEX_FILE -noregistrylookup
+LDFLAGS = -s -dll -L"e:\matlab\sys\lcc\lib"
+LIBFLAGS = 
+
+OBJECTS = \
+	"DynoController_Rev1_sfun.obj"\
+	"DynoController_Rev1_sfun_registry.obj"\
+	"c1_DynoController_Rev1.obj"\
+	"lccstub.obj"\
+	"e:\matlab\sys\lcc\mex\lccdef.def"\
+	"e:\matlab\stateflow\c\debugger\lib\win32\sfc_debuglcc.lib"\
+	"e:\matlab\stateflow\c\mex\lib\win32\sfc_mexlcc.lib"\
+	"e:\matlab\extern\lib\win32\lcc\libmex.lib"\
+	"e:\matlab\extern\lib\win32\lcc\libmx.lib"\
+	"e:\matlab\extern\lib\win32\lcc\libfixedpoint.lib"\
+	"e:\matlab\extern\lib\win32\lcc\libut.lib"\
+	"e:\matlab\extern\lib\win32\lcc\libmwmathutil.lib"\
+	"e:\matlab\extern\lib\win32\lcc\libemlrt.lib"\
+	"e:\matlab\extern\lib\win32\lcc\libmwblascompat32.lib"\
+
+INCLUDE_PATH= -I"e:\matlab\sys\lcc\include"  -I"e:\matlab\extern\include"  -I"e:\matlab\simulink\include"  -I"e:\matlab\stateflow\c\mex\include"  -I"e:\matlab\stateflow\c\debugger\include" 
+ 
+
+DynoController_Rev1_sfun.mexw32 : $(MAKEFILE) $(OBJECTS)
+	$(LD) $(LDFLAGS) -o DynoController_Rev1_sfun.mexw32 @DynoController_Rev1_sfun.lmko
+DynoController_Rev1_sfun.obj :	"DynoController_Rev1_sfun.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "DynoController_Rev1_sfun.c"
+DynoController_Rev1_sfun_registry.obj :	"DynoController_Rev1_sfun_registry.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "DynoController_Rev1_sfun_registry.c"
+c1_DynoController_Rev1.obj :	"c1_DynoController_Rev1.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c1_DynoController_Rev1.c"
+lccstub.obj :	"e:\matlab\sys\lcc\mex\lccstub.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "e:\matlab\sys\lcc\mex\lccstub.c"

@@ -1,0 +1,186 @@
+ 
+#############################################
+###                                       ###
+###  Starting MotoHawk Build              ###
+###  MotoHawk version: 2010a_sp1.49       ###
+###    MATLAB version: 7.10.0.499 (R2010a)###
+###        30-Oct-2017 23:30:39           ###
+###                                       ###
+#############################################
+ 
+Target Module:   ECU555-48-0707 (PROD)
+PROD Executable: BatteryController_Rev1_071.srz
+MotoTune DLL:    BatteryCo_071.dll
+ 
+Project GUID:    1c823790-94c1-4f9f-95-ed-5c-78-f7-df-2e
+Build GUID:      ae3cfb20-323a-4b0e-a1-50-a3-c1-82-35-7e
+ 
+### Starting Real-Time Workshop build procedure for model: BatteryController_Rev1
+### Generating code into build directory: C:\Users\Owner\Documents\MATLAB\Mooventure Code\BatteryController_Rev1\BatteryController_Rev1_Build
+{Warning: Output port 1 of 'BatteryController_Rev1/Foreground/Battery/Inputs/2G BMS/Read CAN Message' is not connected.} 
+{Warning: Output port 1 of 'BatteryController_Rev1/Foreground/Battery/Inputs/2G BMS/Read CAN Message1' is not connected.} 
+{Warning: Output port 3 of 'BatteryController_Rev1/Foreground/Battery/Inputs/2G BMS/Read CAN Message3' is not connected.} 
+{Warning: Output port 4 of 'BatteryController_Rev1/Foreground/Battery/Inputs/2G BMS/Read CAN Message3' is not connected.} 
+### Invoking Target Language Compiler on BatteryController_Rev1.rtw
+### Using System Target File: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2010a_sp1.49\Blocks\Build\motohawk_ert_rtw.tlc
+### Loading TLC function libraries
+.......
+### Initial pass through model to cache user defined code
+....................................................................
+### Caching model source code
+...............................................................................
+...............................................................................
+...................................
+### Writing source file BatteryController_Rev1.c
+.
+### Writing header file BatteryController_Rev1_private.h
+### Writing header file BatteryController_Rev1.h
+.
+### Writing header file BatteryController_Rev1_types.h
+### Writing source file BatteryController_Rev1_Foreground.c
+.
+### Writing header file BatteryController_Rev1_Foreground.h
+### Writing header file rtwtypes.h
+.
+### Writing header file rt_MAXd_snf.h
+### Writing header file rt_nonfinite.h
+.
+### Writing source file rt_nonfinite.c
+### Writing header file rt_SIGNd_snf.h
+.
+### TLC code generation complete.
+.....
+Warning:  Requested AnalogInput resolution for "Current_Sensor" ( 12 bits), 
+          is greater than maximum possible resolution, 10,
+          values will be padded with zeros (See AnalogInput Help).
+Warning:  Requested AnalogInput resolution for "V5V_Reference" ( 12 bits), 
+          is greater than maximum possible resolution, 10,
+          values will be padded with zeros (See AnalogInput Help).
+.......................................................................
+### Processing Template Makefile: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2010a_sp1.49\Blocks\Build\motohawk_ert_rtw.tmf
+### Creating BatteryController_Rev1.mk from C:\Program Files (x86)\Woodward\MCS\MotoHawk\2010a_sp1.49\Blocks\Build\motohawk_ert_rtw.tmf
+### Building BatteryController_Rev1: .\BatteryController_Rev1.bat
+### Created Code and Build Scripts.  Ready to Build ### 
+### Successful completion of Real-Time Workshop build procedure for model: BatteryController_Rev1
+Creating Application Descriptor...
+...Finished Application Descriptor
+### Starting MotoCoder v0.10.7 ###
+Module: ClassicModule-MPC555
+Module File: file:///C:/PROGRA~2/Woodward/MCS/MotoHawk/2010A_~1.49/MOTOCO~1/Modules/ClassicModule-MPC555.xml
+Module Family: ClassicControlCore
+Module Family Directory: file:///C:/PROGRA~2/Woodward/MCS/MotoHawk/2010A_~1.49/MOTOCO~1/ModuleFamilies/ClassicControlCore
+Application Configuration File: .\MotoHawk_Extensions.xml
+### Generating MotoTune DLL 
+Parser mode is C Source Code 
+Searching for files to parse 
+Writing Vardec Library C:\Users\Owner\Documents\MATLAB\Mooventure Code\BatteryController_Rev1\BatteryController_Rev1_Build\TDB/ParsedVardecs.xml 
+### Completed MotoTune DLL 
+### Compiling and Linking 
+Buildfile: file:///C:/Users/Owner/Documents/MATLAB/Mooventure Code/BatteryController_Rev1/BatteryController_Rev1_Build/BatteryController_Rev1.build 
+Target framework: Microsoft .NET Framework 3.5 
+Target(s) specified: rebuild  
+ 
+ 
+rebuild: 
+ 
+ 
+clean: 
+ 
+   [delete] Deleting directory 'C:\Users\Owner\Documents\MATLAB\Mooventure Code\BatteryController_Rev1\BatteryController_Rev1_Build\Build'. 
+   [delete] Deleting directory 'C:\Users\Owner\Documents\MATLAB\Mooventure Code\BatteryController_Rev1\BatteryController_Rev1_Build\Archive'. 
+ 
+all: 
+ 
+ 
+init: 
+ 
+    [mkdir] Creating directory 'C:\Users\Owner\Documents\MATLAB\Mooventure Code\BatteryController_Rev1\BatteryController_Rev1_Build\Build\Obj'. 
+    [mkdir] Creating directory 'C:\Users\Owner\Documents\MATLAB\Mooventure Code\BatteryController_Rev1\BatteryController_Rev1_Build\Archive'. 
+     [copy] Copying 4 files to 'C:\Users\Owner\Documents\MATLAB\Mooventure Code\BatteryController_Rev1\BatteryController_Rev1_Build\Archive'. 
+ 
+compile: 
+ 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\Mooventure Code\BatteryController_Rev1\BatteryController_Rev1_Build\Application.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\Mooventure Code\BatteryController_Rev1\BatteryController_Rev1_Build\ApplicationSecurity.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\Mooventure Code\BatteryController_Rev1\BatteryController_Rev1_Build\AppMonitor.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\Mooventure Code\BatteryController_Rev1\BatteryController_Rev1_Build\BatteryController_Rev1.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\Mooventure Code\BatteryController_Rev1\BatteryController_Rev1_Build\BatteryController_Rev1_Foreground.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\Mooventure Code\BatteryController_Rev1\BatteryController_Rev1_Build\CANReceiveDispatcher.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\Mooventure Code\BatteryController_Rev1\BatteryController_Rev1_Build\CodeCoverage.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\Mooventure Code\BatteryController_Rev1\BatteryController_Rev1_Build\MotoCoder_DataStore.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\Mooventure Code\BatteryController_Rev1\BatteryController_Rev1_Build\MotoCoder_Timer.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\Mooventure Code\BatteryController_Rev1\BatteryController_Rev1_Build\MotoHawk_CAN.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\Mooventure Code\BatteryController_Rev1\BatteryController_Rev1_Build\MotoHawk_DataStores.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\Mooventure Code\BatteryController_Rev1\BatteryController_Rev1_Build\MotoHawk_IO.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\Mooventure Code\BatteryController_Rev1\BatteryController_Rev1_Build\rt_nonfinite.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\Mooventure Code\BatteryController_Rev1\BatteryController_Rev1_Build\TableLookupFunctions.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\Mooventure Code\BatteryController_Rev1\BatteryController_Rev1_Build\Trigger_BGND_BASE_PERIODIC_2029p0004.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\Mooventure Code\BatteryController_Rev1\BatteryController_Rev1_Build\Trigger_CAN_RX_BusCAN_1_Buf1.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\Mooventure Code\BatteryController_Rev1\BatteryController_Rev1_Build\Trigger_FGND_RTI_PERIODIC_750p0004.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\Mooventure Code\BatteryController_Rev1\BatteryController_Rev1_Build\VarDecs.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\Mooventure Code\BatteryController_Rev1\BatteryController_Rev1_Build\TDB\TableDB.c 
+ 
+link: 
+ 
+   [gcc-ld] Linking BatteryController_Rev1.elf 
+ 
+s-records: 
+ 
+[gcc-objcopy] Generating BatteryController_Rev1.run from BatteryController_Rev1.elf 
+ 
+BUILD SUCCEEDED 
+ 
+Total time: 13 seconds. 
+ 
+### Call MotoConvert 
+Project format is MPC5xx 
+Toolchain format is GCC 
+Transforming range 0x00400000-0x0041FFFF into 64 byte pages... 
+Transforming range 0x00000000-0x0006FFFF into 64 byte pages... 
+Searching for Table Database address 'EriRequestTableList'...Found at 0x0002BB6C 
+Searching for CRC Table address 'g_pCRCBlockPtr' ...Found at 0x00008100 
+Calculating Application defined CRC's...OK. 
+Searching for initialised section '.fixed_ramcals' aliased to '.fixed_romcals' ... 
+Searching for initialised section '.ramcals' aliased to '.romcals' ... 
+    Adding RAM[0x003FB364], ROM[0x00031240], Length[0x00000394] 
+Searching for initialised section '.sdata' aliased to '.romsdata' ... 
+    Adding RAM[0x003F9800], ROM[0x00031604], Length[0x00000019] 
+Searching for initialised section '.data' aliased to '.romdata' ... 
+    Adding RAM[0x003FA898], ROM[0x00031620], Length[0x0000085C] 
+Complete. 
+Writing file sr://BatteryController_Rev1.sr... 
+Encrypting 'sr://BatteryController_Rev1.sr' into 'srz://.\Target\BatteryController_Rev1_071.srz' ... 
+Done. 
+### Creating Build Statistics 
+Memory Summary:
+	FLASH:                              167325 bytes   46% of 360184
+	    NonVolatileDefault:                916 bytes    0% of 360184
+	    BatteryController_Rev1_Foreground:8504 bytes    2% of 360184
+	INTERNAL_RAM:                        15487 bytes   58% of  26544
+	    BatteryController_Rev1_M:            4 bytes    0% of  26544
+	    BatteryController_Rev1_B:          100 bytes    0% of  26544
+	    BatteryController_Rev1_DWork:       60 bytes    0% of  26544
+	    BatteryController_Rev1_M_:           4 bytes    0% of  26544
+	    NonVolatileWork:                   916 bytes    3% of  26544
+	    FgndTimeStack:                    3072 bytes   12% of  26544
+	    BgndStack:                        2048 bytes    8% of  26544
+	    IdleStack:                        1024 bytes    4% of  26544
+	    InterruptStack:                   1536 bytes    6% of  26544
+	CAL_SPACE:                             276 bytes    0% of  65536
+	    ConstantWork:                      120 bytes    0% of  65536
+	EEPROM_SPACE:                          919 bytes   22% of   4096
+
+### Copy BatteryCo_071.dll and BatteryController_Rev1_071.srz 
+### Successful Build with MotoCoder 
+Elapsed Build Time: 1 minutes, 42.3 seconds  (102.3 seconds)
+ 
+#############################################################################
+###
+### Target Module: ECU555-48-0707
+### Created Production Executable:  BatteryController_Rev1_071.srz
+### Created MotoTune DLL: BatteryCo_071.dll
+###
+### Successful MotoHawk Build for model: BatteryController_Rev1
+###
+#############################################################################
+ 

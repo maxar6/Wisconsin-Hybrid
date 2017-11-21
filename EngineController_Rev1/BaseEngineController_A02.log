@@ -1,0 +1,330 @@
+ 
+#############################################
+###                                       ###
+###  Starting MotoHawk Build              ###
+###  MotoHawk version: 2010a_sp1.49       ###
+###    MATLAB version: 7.10.0.499 (R2010a)###
+###        19-Nov-2017 15:19:53           ###
+###                                       ###
+#############################################
+ 
+Target Module:   ECU555-80 (DEV)
+DEV Executable:  BaseEngineController_A02_111.srz
+MotoTune DLL:    BaseEngin_111.dll
+ 
+Project GUID:    34a85f28-21b7-4112-82-b0-87-11-cc-cb-8f
+Build GUID:      147bb130-0978-4531-a0-df-1e-52-60-b8-d9
+ 
+### Starting Real-Time Workshop build procedure for model: BaseEngineController_A02
+### Generating code into build directory: E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build
+{Warning: CAN message 'PD300_Status1' has channel 'CAN_1' defined in the message struct, but is set to
+send over physical channel 'CAN_2'} 
+{Warning: CAN message 'PD300_Status2' has channel 'CAN_1' defined in the message struct, but is set to
+send over physical channel 'CAN_2'} 
+{Warning: CAN message 'PD300_Status1' has channel 'CAN_1' defined in the message struct, but is set to
+send over physical channel 'CAN_2'} 
+{Warning: CAN message 'PD300_Status4' has channel 'CAN_1' defined in the message struct, but is set to
+send over physical channel 'CAN_2'} 
+{Warning: CAN message 'PD300_Command1' has channel 'CAN_1' defined in the message struct, but is set
+to send over physical channel 'CAN_2'} 
+{Warning: CAN message 'PD300_Command2' has channel 'CAN_1' defined in the message struct, but is set
+to send over physical channel 'CAN_2'} 
+{Warning: CAN message 'PD300_Command3' has channel 'CAN_1' defined in the message struct, but is set
+to send over physical channel 'CAN_2'} 
+{Warning: Unconnected output line found on
+'BaseEngineController_A02/Foreground/Control/VirtualSensors/RawProcessed/Bus Selector4' (output port:
+2)} 
+{Warning: Outport
+'BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/SequencyCutMachine/CylsToCut'
+and
+'BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/Out1'
+which are driven by the same signal must have the same setting for the "Output when disabled"
+parameter} 
+{Warning: Outport
+'BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/SequencyCutMachine/CylsToCut'
+and
+'BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/Out1'
+which are driven by the same signal must have the same setting for the "Output when disabled"
+parameter} 
+{Warning: Outport
+'BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/SequencyCutMachine/CylsToCut'
+and
+'BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/Out1'
+which are driven by the same signal must have the same setting for the "Output when disabled"
+parameter} 
+{Warning: Outport
+'BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/SequencyCutMachine/CylsToCut'
+and
+'BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/Out1'
+which are driven by the same signal must have the same setting for the "Output when disabled"
+parameter} 
+{Warning: Outport
+'BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/SequencyCutMachine/CylsToCut'
+and
+'BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/Out1'
+which are driven by the same signal must have the same setting for the "Output when disabled"
+parameter} 
+{Warning: Outport
+'BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/SequencyCutMachine/CylsToCut'
+and
+'BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/Out1'
+which are driven by the same signal must have the same setting for the "Output when disabled"
+parameter} 
+{Warning: Outport
+'BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/SequencyCutMachine/CylsToCut'
+and
+'BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/Out1'
+which are driven by the same signal must have the same setting for the "Output when disabled"
+parameter} 
+{Warning: Outport
+'BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/SequencyCutMachine/CylsToCut'
+and
+'BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/Out1'
+which are driven by the same signal must have the same setting for the "Output when disabled"
+parameter} 
+{Warning: The block diagram 'BaseEngineController_A02' improperly uses 1 Mux blocks as Bus Creators.
+This can lead to modeling errors (see the Mux block documentation for more information). Use the
+Model Advisor and slrepace_mux command to fix improper use of Mux blocks. Then enable strict bus
+modeling  by setting 'Mux blocks used to create bus signals' (in the Configuration Parameters dialog
+box -> Diagnostics -> Connectivity) to 'Error'. Please note that the 'None' and 'Warning' options for
+this diagnostic will be removed in a future version of Simulink.
+ Individual warnings (up to a maximum of 10) are reported below for each Mux block.} 
+{Warning: The output of Mux block 'BaseEngineController_A02/Foreground/Control/Diagnostics/Mux' is
+treated as a bus signal by block 'BaseEngineController_A02/Foreground/Control/Diagnostics/Freeze
+Frames/Freeze Frame Data Storage/Bus Selector'} 
+### Invoking Target Language Compiler on BaseEngineController_A02.rtw
+### Using System Target File: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2010a_sp1.49\Blocks\Build\motohawk_ert_rtw.tlc
+### Loading TLC function libraries
+..................
+### Initial pass through model to cache user defined code
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+................................................................
+### Caching model source code
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...
+### Writing source file BaseEngineController_A02.c
+.
+### Writing header file BaseEngineController_A02_private.h
+### Writing header file BaseEngineController_A02.h
+.
+### Writing header file BaseEngineController_A02_types.h
+### Writing source file BaseEngineController_A02_IdleStateMachine.c
+.
+### Writing source file Foreground.c
+### Writing header file Foreground.h
+.
+### Writing header file rtwtypes.h
+### Writing header file rt_ABS.h
+### Writing header file rt_MAXd_snf.h
+.
+### Writing header file rt_MINd_snf.h
+### Writing header file rt_zcfcn.h
+.
+### Writing source file rt_zcfcn.c
+### Writing header file rt_nonfinite.h
+.
+### Writing source file rt_nonfinite.c
+### Writing header file rt_SATURATE.h
+.
+### Writing header file BaseEngineController_A02_IdleStateMachine.h
+### Writing source file BaseEngineController_A02_data.c
+.
+### TLC code generation complete.
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+.....................................................................
+### Processing Template Makefile: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2010a_sp1.49\Blocks\Build\motohawk_ert_rtw.tmf
+### BaseEngineController_A02.mk which is generated from C:\Program Files (x86)\Woodward\MCS\MotoHawk\2010a_sp1.49\Blocks\Build\motohawk_ert_rtw.tmf is up to date
+### Building BaseEngineController_A02: .\BaseEngineController_A02.bat
+### Created Code and Build Scripts.  Ready to Build ### 
+### Successful completion of Real-Time Workshop build procedure for model: BaseEngineController_A02
+Creating Application Descriptor...
+...Finished Application Descriptor
+### Starting MotoCoder v0.10.7 ###
+Module: ClassicModule-MPC555
+Module File: file:///C:/PROGRA~2/Woodward/MCS/MotoHawk/2010A_~1.49/MOTOCO~1/Modules/ClassicModule-MPC555.xml
+Module Family: ClassicControlCore
+Module Family Directory: file:///C:/PROGRA~2/Woodward/MCS/MotoHawk/2010A_~1.49/MOTOCO~1/ModuleFamilies/ClassicControlCore
+Application Configuration File: .\MotoHawk_Extensions.xml
+### Generating MotoTune DLL 
+Parser mode is C Source Code 
+Searching for files to parse 
+Writing Vardec Library E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\TDB/ParsedVardecs.xml 
+### Completed MotoTune DLL 
+### Compiling and Linking 
+Buildfile: file:///E:/Box/Box Sync/Wisconsin Hybrid/Mooventure/Mooventure Code/EngineController_Rev1/BaseEngineController_A02_Build/BaseEngineController_A02.build 
+Target framework: Microsoft .NET Framework 3.5 
+Target(s) specified: rebuild  
+ 
+ 
+rebuild: 
+ 
+ 
+clean: 
+ 
+   [delete] Deleting directory 'E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\Build'. 
+   [delete] Deleting directory 'E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\Archive'. 
+ 
+all: 
+ 
+ 
+init: 
+ 
+    [mkdir] Creating directory 'E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\Build\Obj'. 
+    [mkdir] Creating directory 'E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\Archive'. 
+     [copy] Copying 4 files to 'E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\Archive'. 
+ 
+compile: 
+ 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\Application.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\ApplicationSecurity.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\AppMonitor.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\BaseEngineController_A02.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\BaseEngineController_A02_data.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\BaseEngineController_A02_IdleStateMachine.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\CANReceiveDispatcher.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\EncoderCallback.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\FaultManager.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\Foreground.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\InjectorSequenceCallback_41.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\IOCallbacks.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\MotoCoder_DataStore.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\MotoCoder_Timer.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\MotoHawk_CAN.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\MotoHawk_DataStores.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\MotoHawk_IO.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\rt_nonfinite.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\rt_zcfcn.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\TableLookupFunctions.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_BGND_BASEx20_PERIODIC_3052p0013.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_BGND_BASE_PERIODIC_6314p0009.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_CAN_RX_BusCAN_1_Buf1.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_CAN_RX_BusCAN_2_Buf14.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_Encoder_Fault_31.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_1327p0009.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_15456p0007.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_15457p0007.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_5248p0006.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_6042p0011.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_MID_TDC_EVENT_5065p0009.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_RTI_PERIODIC_6320p0009.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_TDC1_EVENT_14692p0002.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_TDC_EVENT_4171p001.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_TDC_EVENT_5531p0006.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_STARTUP_EVENT_5064p0009.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\VarDecs.c 
+  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\EngineController_Rev1\BaseEngineController_A02_Build\TDB\TableDB.c 
+ 
+link: 
+ 
+   [gcc-ld] Linking BaseEngineController_A02.elf 
+ 
+s-records: 
+ 
+[gcc-objcopy] Generating BaseEngineController_A02.run from BaseEngineController_A02.elf 
+ 
+BUILD SUCCEEDED 
+ 
+Total time: 8.3 seconds. 
+ 
+### Call MotoConvert 
+Project format is MPC5xx 
+Toolchain format is GCC 
+Transforming range 0x00400000-0x0041FFFF into 64 byte pages... 
+Transforming range 0x00000000-0x0006FFFF into 64 byte pages... 
+Searching for Table Database address 'EriRequestTableList'...Found at 0x0004CE97 
+Searching for CRC Table address 'g_pCRCBlockPtr' ...Found at 0x00008100 
+Calculating Application defined CRC's...OK. 
+Searching for initialised section '.fixed_ramcals' aliased to '.fixed_romcals' ... 
+Searching for initialised section '.ramcals' aliased to '.romcals' ... 
+    Adding RAM[0x003FC544], ROM[0x0005525C], Length[0x00000248] 
+Searching for initialised section '.sdata' aliased to '.romsdata' ... 
+    Adding RAM[0x003F9800], ROM[0x000554D4], Length[0x00000019] 
+Searching for initialised section '.data' aliased to '.romdata' ... 
+    Adding RAM[0x003FA8E4], ROM[0x000554F0], Length[0x000008F4] 
+Complete. 
+Writing file sr://BaseEngineController_A02.sr... 
+Encrypting 'sr://BaseEngineController_A02.sr' into 'srz://.\Target\BaseEngineController_A02_111.srz' ... 
+Done. 
+### Creating Build Statistics 
+Memory Summary:
+	FLASH:                                313759 bytes   87% of 360184
+	    NonVolatileDefault:                  584 bytes    0% of 360184
+	    BaseEngineController_A02_Foreground:62652 bytes   17% of 360184
+	INTERNAL_RAM:                          21258 bytes   80% of  26544
+	    BaseEngineController_A02_M:            4 bytes    0% of  26544
+	    BaseEngineController_A02_B:         1416 bytes    5% of  26544
+	    BaseEngineController_A02_DWork:      904 bytes    3% of  26544
+	    BaseEngineController_A02_M_:           8 bytes    0% of  26544
+	    VolatileWork:                         42 bytes    0% of  26544
+	    NonVolatileWork:                     584 bytes    2% of  26544
+	    FgndTimeStack:                      4096 bytes   15% of  26544
+	    FgndAngleStack:                     1024 bytes    4% of  26544
+	    BgndStack:                          2048 bytes    8% of  26544
+	    IdleStack:                          1024 bytes    4% of  26544
+	    InterruptStack:                     1024 bytes    4% of  26544
+	CAL_SPACE:                             17486 bytes   27% of  65536
+	    ConstantWork:                      17328 bytes   26% of  65536
+	EEPROM_SPACE:                            587 bytes    7% of   8192
+
+### Copy BaseEngin_111.dll and BaseEngineController_A02_111.srz 
+### Successful Build with MotoCoder 
+Elapsed Build Time: 1 minutes, 26.5 seconds  (86.5 seconds)
+{Warning: Block diagram 'BaseEngineController_A02' contains disabled library links.  Use Model Advisor
+to find the disabled links in non-library models.  The diagram has been saved but may not contain
+what you intended.} 
+ 
+#############################################################################
+###
+### Target Module: ECU555-80
+### Created Development Executable: BaseEngineController_A02_111.srz
+### Created MotoTune DLL: BaseEngin_111.dll
+###
+### Successful MotoHawk Build for model: BaseEngineController_A02
+###
+#############################################################################
+ 

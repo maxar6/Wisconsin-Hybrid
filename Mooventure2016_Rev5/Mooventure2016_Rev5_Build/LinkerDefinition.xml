@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinkerDefinition>
+   <MemoryRegions>
+      <MemoryRegion Name="FLASH_RCHW" SAddr="0x00040000" Size="4"/>
+      <MemoryRegion Name="FLASH_ENTRY" SAddr="0x00040004" Size="4"/>
+      <MemoryRegion Name="FLASH_CRCDEFNPTR" SAddr="0x00040008" Size="4"/>
+      <MemoryRegion Name="FLASH_BLOCKDEFNPTR" SAddr="0x00040010" Size="240"/>
+      <MemoryRegion Name="FLASH" SAddr="0x00040100" Size="1703680"/>
+      <MemoryRegion Name="FLASH_CALIBRATION" SAddr="0x001E0000" Size="131008"/>
+      <MemoryRegion Name="EXTERNAL RAM" SAddr="0x3ff80000" Size="393216"/>
+      <MemoryRegion Name="RAM_CALIBRATION" SAddr="0x3ffe0000" Size="131008"/>
+      <MemoryRegion Name="INTERNAL RAM" SAddr="0x40000000" Size="65520"/>
+      <MemoryRegion Name="RAM_BOOTMAILBOX" SAddr="1073807344" Size="16"/>
+      <MemoryRegion Name="SERIAL_EE" SAddr="0xFF000000" Size="32768"/>
+   </MemoryRegions>
+   <HiddenSymbols/>
+</LinkerDefinition>

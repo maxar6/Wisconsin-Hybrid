@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Application>
+	<GUID>6a27880e-8e62-404a-92-11-3b-ad-79-73-ba</GUID>
+	<Name>DynoController_Rev1</Name>
+	<Author>maxar</Author>
+	<Copyright>2017 Woodward.</Copyright>
+	<CreateDate>19-Nov-2017</CreateDate>
+	<MemoryLayout>DEV</MemoryLayout>
+	<Module>ClassicModule-MPC555</Module>
+	<Memory/>
+	<Types/>
+	<ToolInterface>
+		<KeySuite>
+			<CAN ref="CAN_1">
+				<CityID>11</CityID>
+			</CAN>
+		</KeySuite>
+		<VarDecs>
+			<TableDatabase>
+				<MaxTableSize>65535</MaxTableSize>
+				<Table0Revision>9</Table0Revision>
+				<HeaderFile>CommonInclude.h</HeaderFile>
+				<HeaderFile>DynoController_Rev1.h</HeaderFile>
+				<Include name="*" location="1,0"/>
+			</TableDatabase>
+			<ProjectID>6</ProjectID>
+			<ProductID>1</ProductID>
+			<SwIdTxt>DynoContr_000</SwIdTxt>
+			<SwRevisionTxt>DynoController_Rev1_000</SwRevisionTxt>
+			<CalIdTxt>DynoController_Rev1_000_000</CalIdTxt>
+		</VarDecs>
+		<DatabaseBuild>
+			<Toolchain>
+				<Vendor>gcc-win32-pe</Vendor>
+				<Product>win32-pe</Product>
+				<Version>4.4.0</Version>
+				<InstallDirectory>C:\Program Files (x86)\Woodward\DevelopmentTools\Toolchains\GCC\win32-pe\4_4_0\</InstallDirectory>
+			</Toolchain>
+		</DatabaseBuild>
+		<Command>
+			<Description>Copy DynoContr_000.dll and DynoController_Rev1_000.srz</Description>
+			<Order>99</Order>
+			<Execute>@if exist C:\ECUFiles\TDBDLL\\*.* copy /Y .\TDB\DynoContr_000.dll C:\ECUFiles\TDBDLL\ &gt; NUL</Execute>
+			<Execute>@if exist C:\ECUFiles\Programs\*.* copy /Y .\Target\DynoController_Rev1_000.srz C:\ECUFiles\Programs &gt; NUL</Execute>
+		</Command>
+	</ToolInterface>
+	<Build>
+		<Toolchain>
+			<Vendor>gcc-powerpc-eabi</Vendor>
+			<Product>powerpc-eabi</Product>
+			<Version>4.4.0</Version>
+			<ArchiveExtension>a</ArchiveExtension>
+			<InstallDirectory>C:\Program Files (x86)\Woodward\DevelopmentTools\Toolchains\GCC\powerpc-eabi\4_4_0\</InstallDirectory>
+		</Toolchain>
+		<Directory>.</Directory>
+		<Target>
+			<Directory>.\Target</Directory>
+		</Target>
+		<Source>
+			<File>AppMonitor.c</File>
+			<File>Application.c</File>
+			<File>ApplicationSecurity.c</File>
+			<File>CANReceiveDispatcher.c</File>
+			<File>CodeCoverage.c</File>
+			<File>DynoController_Rev1_Foreground.c</File>
+			<File>DynoController_Rev1_data.c</File>
+			<File>MotoHawk_CAN.c</File>
+			<File>MotoHawk_DataStores.c</File>
+			<File>MotoHawk_IO.c</File>
+			<File>Trigger_BGND_BASE_PERIODIC_632p0004.c</File>
+			<File>Trigger_CAN_RX_BusCAN_1_Buf1.c</File>
+			<File>Trigger_FGND_RTI_PERIODIC_643p0004.c</File>
+			<File>VarDecs.c</File>
+			<File>rt_nonfinite.c</File>
+			<File>DynoController_Rev1.c</File>
+		</Source>
+		<Header>
+			<Directory>.</Directory>
+		</Header>
+		<Header>
+			<Directory>C:\ProgramData\MotoHawk\2010a_sp1_49\Toolchains\7_10_0\rtw_lib_single\API</Directory>
+			<Directory>C:\ProgramData\MotoHawk\2010a_sp1_49\Toolchains\7_10_0\rtw_lib_single\API\MPC555</Directory>
+		</Header>
+		<Library>
+			<Directory>C:\Program Files (x86)\Woodward\MCS\MotoHawk\2010a_sp1.49\MotoCoder\..\ControlCoreClassic\Framework\MultiTask\Archives\gcc-powerpc-eabi\4_4_0</Directory>
+			<File>ECM</File>
+		</Library>
+		<Command>
+			<Execute>@copy "LinkerDefinition_DEV.xml" "LinkerDefinition.xml" &gt; NUL</Execute>
+			<Execute>@copy "DynoController_Rev1_DEV.ld" "DynoController_Rev1.ld" &gt; NUL</Execute>
+			<Order>0</Order>
+		</Command>
+		<Command>
+			<Description>Call MotoConvert</Description>
+			<Execute>@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\DynoController_Rev1.map -srec=.\Target\DynoController_Rev1.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=DynoController_Rev1.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x0006FFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\DynoController_Rev1_000.srz</Execute>
+			<Order>55</Order>
+		</Command>
+		<Compiler>
+			<Define name="REAL_T" value="float"/>
+			<Define name="TIME_T" value="float"/>
+			<Define name="DISALLOW_TDB_DEFINES" value="1"/>
+			<Define name="RES_NONE" value="-1"/>
+			<GenerateListFiles>false</GenerateListFiles>
+		</Compiler>
+		<BuildStats>
+			<Symbol>DynoController_Rev1_M</Symbol>
+			<Symbol>DynoController_Rev1_B</Symbol>
+			<Symbol>DynoController_Rev1_DWork</Symbol>
+			<Symbol>DynoController_Rev1_PrevZC</Symbol>
+			<Symbol>DynoController_Rev1_M_</Symbol>
+			<Symbol>VolatileWork</Symbol>
+			<Symbol>ConstantWork</Symbol>
+			<Symbol>NonVolatileWork</Symbol>
+			<Symbol>NonVolatileDefault</Symbol>
+			<Symbol>FgndTimeStack</Symbol>
+			<Symbol>FgndAngleStack</Symbol>
+			<Symbol>BgndStack</Symbol>
+			<Symbol>IdleStack</Symbol>
+			<Symbol>InterruptStack</Symbol>
+			<Symbol>Heap</Symbol>
+			<Symbol>Stack</Symbol>
+			<Symbol>DynoController_Rev1_Foreground</Symbol>
+		</BuildStats>
+		<Command>
+			<Order>-10000</Order>
+			<Execute>@if exist .\rtwtypes.h del /Q /F .\rtwtypes.h &gt; NUL</Execute>
+		</Command>
+	</Build>
+	<Signature>2e9e86bc-5082-42c7-af-28-d2-b9-b7-c1-7c</Signature>
+</Application>
