@@ -8,11 +8,11 @@
 #include "Mooventure2016_Rev5.h"
 
 /*---- DEFINES --------------------------------------------------------------------------------------------*/
-#define DLL_NAME                       "Mooventur_206"
-#define SRZ_NAME                       "Mooventure2016_Rev5_206"
+#define DLL_NAME                       "Mooventur_209"
+#define SRZ_NAME                       "Mooventure2016_Rev5_209"
 #define MODEL_NAME                     "Mooventure2016_Rev5"
 #define MODEL_GUID                     "0339744d-1465-4569-a1-b4-32-b1-a7-fa-5f"
-#define BUILD_GUID                     "d75dda54-7249-4f71-be-33-4c-53-a5-c0-fd"
+#define BUILD_GUID                     "89820a42-0a43-487b-9d-80-3a-72-d1-04-94"
 #define TOKEN_GUID                     "DD8AD11F95A6FC42BFF9AC780840E4B4"
 #define MOTOHAWK_VERSION               "MotoHawk 2011a_sp0.184"
 #define MATLAB_VERSION                 "MATLAB 7.12.0"

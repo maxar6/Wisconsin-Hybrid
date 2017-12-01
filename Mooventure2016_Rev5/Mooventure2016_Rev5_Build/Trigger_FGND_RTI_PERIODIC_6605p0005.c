@@ -3,9 +3,9 @@
  *
  * Code generation for model "Mooventure2016_Rev5.mdl".
  *
- * Model version              : 1.2015
+ * Model version              : 1.2026
  * Simulink Coder version : 8.0 (R2011a) 09-Mar-2011
- * C source code generated on : Mon Nov 20 13:47:00 2017
+ * C source code generated on : Wed Nov 29 16:58:34 2017
  *
  * Target selection: motohawk_motocoder_ert_rtw.tlc
  * Embedded hardware selection: Specified

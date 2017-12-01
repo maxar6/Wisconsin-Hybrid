@@ -573,7 +573,7 @@
       <format>8.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s198_AgeCount</struct>
+      <struct>Mooventure2016_Rev5_B.s199_AgeCount</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|ABS</group>
       <table>1</table>
       <item>2</item>
@@ -638,7 +638,7 @@
       <format>8.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s198_AgeCount_e</struct>
+      <struct>Mooventure2016_Rev5_B.s199_AgeCount_e</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|ABS</group>
       <table>1</table>
       <item>5</item>
@@ -703,7 +703,7 @@
       <format>8.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s198_AgeCount_n</struct>
+      <struct>Mooventure2016_Rev5_B.s199_AgeCount_n</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|ABS</group>
       <table>1</table>
       <item>8</item>
@@ -788,7 +788,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s79_Switch</struct>
+      <struct>Mooventure2016_Rev5_B.s80_Switch</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|ABS Outputs</group>
       <table>1</table>
       <item>12</item>
@@ -929,7 +929,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s200_ActiveDTC</struct>
+      <struct>Mooventure2016_Rev5_B.s201_ActiveDTC</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
       <item>19</item>
@@ -1073,7 +1073,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s194_SFunction</struct>
+      <struct>Mooventure2016_Rev5_B.s195_SFunction</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|MPGe Bar Calculations</group>
       <col_len>15</col_len>
       <row_len>1</row_len>
@@ -1285,7 +1285,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s368_ConnectCommand</struct>
+      <struct>Mooventure2016_Rev5_B.s367_ConnectCommand</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Battery Outputs</group>
       <table>1</table>
       <item>36</item>
@@ -1515,7 +1515,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s145_Add</struct>
+      <struct>Mooventure2016_Rev5_B.s146_Add</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Battery Calculations</group>
       <table>1</table>
       <item>47</item>
@@ -1580,7 +1580,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s371_Battery_Light</struct>
+      <struct>Mooventure2016_Rev5_B.s370_Battery_Light</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs</group>
       <table>1</table>
       <item>50</item>
@@ -1600,7 +1600,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s150_BatteryUsePCT</struct>
+      <struct>Mooventure2016_Rev5_B.s151_BatteryUsePCT</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Power Flow</group>
       <table>1</table>
       <item>51</item>
@@ -1705,7 +1705,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s150_Battery2Motor</struct>
+      <struct>Mooventure2016_Rev5_B.s151_Battery2Motor</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Power Flow</group>
       <table>1</table>
       <item>56</item>
@@ -1725,7 +1725,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s264_Merge</struct>
+      <struct>Mooventure2016_Rev5_B.s265_Merge</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
       <item>57</item>
@@ -1745,7 +1745,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s267_Merge</struct>
+      <struct>Mooventure2016_Rev5_B.s201_BatteryVoltage</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
       <item>58</item>
@@ -1935,7 +1935,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s168_motohawk_data_read2</struct>
+      <struct>Mooventure2016_Rev5_B.s169_motohawk_data_read2</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|MPGe Averages|Best Average</group>
       <table>1</table>
       <item>67</item>
@@ -2259,7 +2259,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s73_sf_BrakePedalScaling.s81_brakeOut</struct>
+      <struct>Mooventure2016_Rev5_B.s74_sf_BrakePedalScaling.s82_brakeOut</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|EcoMode</group>
       <table>1</table>
       <item>83</item>
@@ -2279,7 +2279,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s71_sf_BrakePedalScaling.s81_brakeOut</struct>
+      <struct>Mooventure2016_Rev5_B.s72_sf_BrakePedalScaling.s82_brakeOut</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|CrawlHomeMode</group>
       <table>1</table>
       <item>84</item>
@@ -2299,7 +2299,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s77_sf_BrakePedalScaling.s81_brakeOut</struct>
+      <struct>Mooventure2016_Rev5_B.s78_sf_BrakePedalScaling.s82_brakeOut</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|SUVMode</group>
       <table>1</table>
       <item>85</item>
@@ -2379,7 +2379,7 @@
       <format>8.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s203_AgeCount_j</struct>
+      <struct>Mooventure2016_Rev5_B.s204_AgeCount_j</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
       <table>1</table>
       <item>89</item>
@@ -2399,7 +2399,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s203_Brake_Position</struct>
+      <struct>Mooventure2016_Rev5_B.s204_Brake_Position</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
       <table>1</table>
       <item>90</item>
@@ -2479,7 +2479,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s200_BusVoltage</struct>
+      <struct>Mooventure2016_Rev5_B.s201_BusVoltage</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
       <item>94</item>
@@ -2499,7 +2499,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s203_Button_Pressed</struct>
+      <struct>Mooventure2016_Rev5_B.s204_Button_Pressed</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
       <table>1</table>
       <item>95</item>
@@ -2745,7 +2745,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s200_CellBalanceingActive</struct>
+      <struct>Mooventure2016_Rev5_B.s201_CellBalanceingActive</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
       <item>100</item>
@@ -2810,7 +2810,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s372_ChargeComplete</struct>
+      <struct>Mooventure2016_Rev5_B.s371_ChargeComplete</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|EatonCharger</group>
       <table>1</table>
       <item>103</item>
@@ -2875,7 +2875,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s372_ChargeEnable</struct>
+      <struct>Mooventure2016_Rev5_B.s371_ChargeEnable</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|EatonCharger</group>
       <table>1</table>
       <item>106</item>
@@ -2941,7 +2941,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s372_ChargeSystemFault</struct>
+      <struct>Mooventure2016_Rev5_B.s371_ChargeSystemFault</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|EatonCharger</group>
       <table>1</table>
       <item>109</item>
@@ -3141,7 +3141,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s204_ChargerState</struct>
+      <struct>Mooventure2016_Rev5_B.s205_ChargerState</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Eaton Charger</group>
       <table>1</table>
       <item>119</item>
@@ -3251,7 +3251,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s488_CEL</struct>
+      <struct>Mooventure2016_Rev5_B.s487_CEL</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs</group>
       <table>1</table>
       <item>124</item>
@@ -5937,7 +5937,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s464_Coil1State</struct>
+      <struct>Mooventure2016_Rev5_B.s463_Coil1State</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|DistributionBox</group>
       <table>1</table>
       <item>140</item>
@@ -6002,7 +6002,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s465_Coil2State</struct>
+      <struct>Mooventure2016_Rev5_B.s464_Coil2State</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|DistributionBox</group>
       <table>1</table>
       <item>143</item>
@@ -6067,7 +6067,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s466_Coil3State</struct>
+      <struct>Mooventure2016_Rev5_B.s465_Coil3State</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|DistributionBox</group>
       <table>1</table>
       <item>146</item>
@@ -6347,7 +6347,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s367_Commanded_mot_torq</struct>
+      <struct>Mooventure2016_Rev5_B.s366_Commanded_mot_torq</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|ABS Outputs</group>
       <table>1</table>
       <item>159</item>
@@ -6402,7 +6402,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s206_Confirm_Active_Trip</struct>
+      <struct>Mooventure2016_Rev5_B.s207_Confirm_Active_Trip</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs</group>
       <table>1</table>
       <item>162</item>
@@ -6512,7 +6512,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s206_Confirm_Reset_Trip_A</struct>
+      <struct>Mooventure2016_Rev5_B.s207_Confirm_Reset_Trip_A</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs</group>
       <table>1</table>
       <item>167</item>
@@ -6577,7 +6577,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s206_Confirm_Reset_Trip_B</struct>
+      <struct>Mooventure2016_Rev5_B.s207_Confirm_Reset_Trip_B</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs</group>
       <table>1</table>
       <item>170</item>
@@ -6797,7 +6797,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s263_Merge</struct>
+      <struct>Mooventure2016_Rev5_B.s264_Merge</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
       <item>181</item>
@@ -7054,7 +7054,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s202_RawSignal</struct>
+      <struct>Mooventure2016_Rev5_B.s203_RawSignal</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Cruise Control</group>
       <table>1</table>
       <item>193</item>
@@ -7138,7 +7138,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s289_Out</struct>
+      <struct>Mooventure2016_Rev5_B.s288_Out</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Cruise Control</group>
       <table>1</table>
       <item>197</item>
@@ -7203,7 +7203,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s90_System</struct>
+      <struct>Mooventure2016_Rev5_B.s91_System</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs</group>
       <table>1</table>
       <item>200</item>
@@ -7413,7 +7413,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s371_Current</struct>
+      <struct>Mooventure2016_Rev5_B.s370_Current</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs</group>
       <table>1</table>
       <item>210</item>
@@ -7858,7 +7858,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s243_motohawk_ain4_o1</struct>
+      <struct>Mooventure2016_Rev5_B.s244_motohawk_ain4_o1</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Analog Inputs|DCDC Converter</group>
       <table>1</table>
       <item>231</item>
@@ -7979,7 +7979,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s200_DPI_RollingCounter</struct>
+      <struct>Mooventure2016_Rev5_B.s201_DPI_RollingCounter</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
       <item>237</item>
@@ -8159,7 +8159,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s301_driverTemp</struct>
+      <struct>Mooventure2016_Rev5_B.s300_driverTemp</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
       <table>1</table>
       <item>246</item>
@@ -8179,7 +8179,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s73_sf_Chart.s82_driveTorque</struct>
+      <struct>Mooventure2016_Rev5_B.s74_sf_Chart.s83_driveTorque</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|EcoMode</group>
       <table>1</table>
       <item>247</item>
@@ -8199,7 +8199,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s71_sf_Chart.s82_driveTorque</struct>
+      <struct>Mooventure2016_Rev5_B.s72_sf_Chart.s83_driveTorque</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|CrawlHomeMode</group>
       <table>1</table>
       <item>248</item>
@@ -8219,7 +8219,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s77_sf_Chart.s82_driveTorque</struct>
+      <struct>Mooventure2016_Rev5_B.s78_sf_Chart.s83_driveTorque</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|SUVMode</group>
       <table>1</table>
       <item>249</item>
@@ -8284,7 +8284,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s204_Eaton_HV_Charger_Temperature</struct>
+      <struct>Mooventure2016_Rev5_B.s205_Eaton_HV_Charger_Temperature</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Eaton Charger</group>
       <table>1</table>
       <item>252</item>
@@ -8885,7 +8885,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s206_Electricity_Cost_Setting</struct>
+      <struct>Mooventure2016_Rev5_B.s207_Electricity_Cost_Setting</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs</group>
       <table>1</table>
       <item>281</item>
@@ -8950,7 +8950,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s487_engTemp</struct>
+      <struct>Mooventure2016_Rev5_B.s486_engTemp</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs</group>
       <table>1</table>
       <item>284</item>
@@ -9100,7 +9100,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s371_Engine_Speed</struct>
+      <struct>Mooventure2016_Rev5_B.s370_Engine_Speed</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs</group>
       <table>1</table>
       <item>291</item>
@@ -9244,7 +9244,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s100_Product</struct>
+      <struct>Mooventure2016_Rev5_B.s101_Product</struct>
       <help>PID Damper Term</help>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|Cruise Control|Speed Control</group>
       <table>1</table>
@@ -9308,7 +9308,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s102_Product</struct>
+      <struct>Mooventure2016_Rev5_B.s103_Product</struct>
       <help>PID Derivative Term</help>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|Cruise Control|Speed Control</group>
       <table>1</table>
@@ -9329,7 +9329,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s98_Sum2</struct>
+      <struct>Mooventure2016_Rev5_B.s99_Sum2</struct>
       <help>PID Error Term</help>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|Cruise Control|Speed Control</group>
       <table>1</table>
@@ -9436,7 +9436,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s103_Switch1</struct>
+      <struct>Mooventure2016_Rev5_B.s104_Switch1</struct>
       <help>PID Integrator Term</help>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|Cruise Control|Speed Control</group>
       <table>1</table>
@@ -9478,7 +9478,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s105_MinMax1</struct>
+      <struct>Mooventure2016_Rev5_B.s106_MinMax1</struct>
       <help>PID Final Output</help>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|Cruise Control|Speed Control</group>
       <table>1</table>
@@ -9521,7 +9521,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s98_Product2</struct>
+      <struct>Mooventure2016_Rev5_B.s99_Product2</struct>
       <help>PID Proportional Term</help>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|Cruise Control|Speed Control</group>
       <table>1</table>
@@ -9608,7 +9608,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s412_fan1</struct>
+      <struct>Mooventure2016_Rev5_B.s411_fan1</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Coolant Outputs</group>
       <table>1</table>
       <item>315</item>
@@ -9673,7 +9673,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s412_fan2</struct>
+      <struct>Mooventure2016_Rev5_B.s411_fan2</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Coolant Outputs</group>
       <table>1</table>
       <item>318</item>
@@ -9738,7 +9738,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s412_fan3</struct>
+      <struct>Mooventure2016_Rev5_B.s411_fan3</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Coolant Outputs</group>
       <table>1</table>
       <item>321</item>
@@ -12151,7 +12151,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s204_FaultSeverityIndicator</struct>
+      <struct>Mooventure2016_Rev5_B.s205_FaultSeverityIndicator</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Eaton Charger</group>
       <table>1</table>
       <item>326</item>
@@ -12367,7 +12367,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s198_Front_left_whl_speed</struct>
+      <struct>Mooventure2016_Rev5_B.s199_Front_left_whl_speed</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|ABS</group>
       <table>1</table>
       <item>335</item>
@@ -12432,7 +12432,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s198_Front_right_whl_speed</struct>
+      <struct>Mooventure2016_Rev5_B.s199_Front_right_whl_speed</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|ABS</group>
       <table>1</table>
       <item>338</item>
@@ -12497,7 +12497,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s206_Fuel_Cost_Setting</struct>
+      <struct>Mooventure2016_Rev5_B.s207_Fuel_Cost_Setting</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs</group>
       <table>1</table>
       <item>341</item>
@@ -12517,7 +12517,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s73_sf_GasPedalScaling.s83_throttleOut</struct>
+      <struct>Mooventure2016_Rev5_B.s74_sf_GasPedalScaling.s84_throttleOut</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|EcoMode</group>
       <table>1</table>
       <item>342</item>
@@ -12537,7 +12537,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s71_sf_GasPedalScaling.s83_throttleOut</struct>
+      <struct>Mooventure2016_Rev5_B.s72_sf_GasPedalScaling.s84_throttleOut</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|CrawlHomeMode</group>
       <table>1</table>
       <item>343</item>
@@ -12557,7 +12557,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s77_sf_GasPedalScaling.s83_throttleOut</struct>
+      <struct>Mooventure2016_Rev5_B.s78_sf_GasPedalScaling.s84_throttleOut</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|SUVMode</group>
       <table>1</table>
       <item>344</item>
@@ -12657,7 +12657,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s169_MPGeGlobalAverage</struct>
+      <struct>Mooventure2016_Rev5_B.s170_MPGeGlobalAverage</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|MPGe Averages|Global Average</group>
       <table>1</table>
       <item>349</item>
@@ -12742,7 +12742,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s369_LogicalOperator5</struct>
+      <struct>Mooventure2016_Rev5_B.s368_LogicalOperator5</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Coolant Outputs</group>
       <table>1</table>
       <item>353</item>
@@ -12827,7 +12827,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s369_LogicalOperator6</struct>
+      <struct>Mooventure2016_Rev5_B.s368_LogicalOperator6</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Coolant Outputs</group>
       <table>1</table>
       <item>357</item>
@@ -12912,7 +12912,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s369_LogicalOperator7</struct>
+      <struct>Mooventure2016_Rev5_B.s368_LogicalOperator7</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Coolant Outputs</group>
       <table>1</table>
       <item>361</item>
@@ -12997,7 +12997,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s369_LogicalOperator8</struct>
+      <struct>Mooventure2016_Rev5_B.s368_LogicalOperator8</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Coolant Outputs</group>
       <table>1</table>
       <item>365</item>
@@ -13082,7 +13082,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s242_motohawk_ain1_o1</struct>
+      <struct>Mooventure2016_Rev5_B.s243_motohawk_ain1_o1</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Analog Inputs|Coolant</group>
       <table>1</table>
       <item>369</item>
@@ -13147,7 +13147,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s369_DataTypeConversion2</struct>
+      <struct>Mooventure2016_Rev5_B.s368_DataTypeConversion2</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Coolant Outputs</group>
       <table>1</table>
       <item>372</item>
@@ -13212,7 +13212,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s369_DataTypeConversion1</struct>
+      <struct>Mooventure2016_Rev5_B.s368_DataTypeConversion1</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Coolant Outputs</group>
       <table>1</table>
       <item>375</item>
@@ -13232,7 +13232,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s20_HeaterCoreBlend</struct>
+      <struct>Mooventure2016_Rev5_B.s21_HeaterCoreBlend</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Coolant Outputs</group>
       <table>1</table>
       <item>376</item>
@@ -13342,7 +13342,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s24_Merge</struct>
+      <struct>Mooventure2016_Rev5_B.s25_Merge</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Coolant Outputs</group>
       <table>1</table>
       <item>381</item>
@@ -13382,7 +13382,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s244_temp_reading</struct>
+      <struct>Mooventure2016_Rev5_B.s245_temp_reading</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Analog Inputs|Coolant</group>
       <table>1</table>
       <item>383</item>
@@ -13447,7 +13447,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s242_motohawk_ain4_o1</struct>
+      <struct>Mooventure2016_Rev5_B.s243_motohawk_ain4_o1</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Analog Inputs|Coolant</group>
       <table>1</table>
       <item>386</item>
@@ -13814,7 +13814,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s371_HV_Elec_Sys_Warm</struct>
+      <struct>Mooventure2016_Rev5_B.s370_HV_Elec_Sys_Warm</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs</group>
       <table>1</table>
       <item>404</item>
@@ -13914,7 +13914,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s200_HVIL_Status</struct>
+      <struct>Mooventure2016_Rev5_B.s201_HVIL_Status</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
       <item>409</item>
@@ -13999,7 +13999,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s74_state</struct>
+      <struct>Mooventure2016_Rev5_B.s75_state</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code</group>
       <table>1</table>
       <item>413</item>
@@ -14061,7 +14061,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s204_IgnitionStatus</struct>
+      <struct>Mooventure2016_Rev5_B.s205_IgnitionStatus</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Eaton Charger</group>
       <table>1</table>
       <item>416</item>
@@ -14171,7 +14171,7 @@
       <format>8.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s206_AgeCount</struct>
+      <struct>Mooventure2016_Rev5_B.s207_AgeCount</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs</group>
       <table>1</table>
       <item>421</item>
@@ -14236,7 +14236,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s204_InputCurrentLimitMax</struct>
+      <struct>Mooventure2016_Rev5_B.s205_InputCurrentLimitMax</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Eaton Charger</group>
       <table>1</table>
       <item>424</item>
@@ -14453,7 +14453,7 @@
       <format>8.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s205_AgeCount_j</struct>
+      <struct>Mooventure2016_Rev5_B.s206_AgeCount_j</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs</group>
       <table>1</table>
       <item>434</item>
@@ -14473,7 +14473,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s205_Altitude</struct>
+      <struct>Mooventure2016_Rev5_B.s206_Altitude</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs</group>
       <table>1</table>
       <item>435</item>
@@ -14493,7 +14493,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s205_IPT_Antishudder</struct>
+      <struct>Mooventure2016_Rev5_B.s206_IPT_Antishudder</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs</group>
       <table>1</table>
       <item>436</item>
@@ -14513,7 +14513,7 @@
       <format>8.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s205_AgeCount_o</struct>
+      <struct>Mooventure2016_Rev5_B.s206_AgeCount_o</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs</group>
       <table>1</table>
       <item>437</item>
@@ -14533,7 +14533,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s205_IPT_CurrentLimit</struct>
+      <struct>Mooventure2016_Rev5_B.s206_IPT_CurrentLimit</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs</group>
       <table>1</table>
       <item>438</item>
@@ -14553,7 +14553,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s205_IPT_CurrentRequest</struct>
+      <struct>Mooventure2016_Rev5_B.s206_IPT_CurrentRequest</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs</group>
       <table>1</table>
       <item>439</item>
@@ -14573,7 +14573,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s205_IPT_CurrentUsed</struct>
+      <struct>Mooventure2016_Rev5_B.s206_IPT_CurrentUsed</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs</group>
       <table>1</table>
       <item>440</item>
@@ -14593,7 +14593,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s205_DateTime</struct>
+      <struct>Mooventure2016_Rev5_B.s206_DateTime</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs</group>
       <table>1</table>
       <item>441</item>
@@ -14613,7 +14613,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s205_IPT_DCErrorCategory</struct>
+      <struct>Mooventure2016_Rev5_B.s206_IPT_DCErrorCategory</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs</group>
       <table>1</table>
       <item>442</item>
@@ -14633,7 +14633,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s205_IPT_DCHVBusCurrent</struct>
+      <struct>Mooventure2016_Rev5_B.s206_IPT_DCHVBusCurrent</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs</group>
       <table>1</table>
       <item>443</item>
@@ -14653,7 +14653,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s205_IPT_DCLVBusCurrent</struct>
+      <struct>Mooventure2016_Rev5_B.s206_IPT_DCLVBusCurrent</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs</group>
       <table>1</table>
       <item>444</item>
@@ -14673,7 +14673,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s205_IPT_DCLVBusVoltage</struct>
+      <struct>Mooventure2016_Rev5_B.s206_IPT_DCLVBusVoltage</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs</group>
       <table>1</table>
       <item>445</item>
@@ -14693,7 +14693,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s205_IPT_DCLVGeneralError</struct>
+      <struct>Mooventure2016_Rev5_B.s206_IPT_DCLVGeneralError</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs</group>
       <table>1</table>
       <item>446</item>
@@ -14713,7 +14713,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s205_IPT_DCLVMaxPower</struct>
+      <struct>Mooventure2016_Rev5_B.s206_IPT_DCLVMaxPower</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs</group>
       <table>1</table>
       <item>447</item>
@@ -14733,7 +14733,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s205_IPT_DCLVOn</struct>
+      <struct>Mooventure2016_Rev5_B.s206_IPT_DCLVOn</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs</group>
       <table>1</table>
       <item>448</item>
@@ -14753,7 +14753,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s76_Torque_Direction</struct>
+      <struct>Mooventure2016_Rev5_B.s77_Torque_Direction</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|IPT</group>
       <table>1</table>
       <item>449</item>
@@ -14838,7 +14838,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s650_Merge</struct>
+      <struct>Mooventure2016_Rev5_B.s649_Merge</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|IPT Outputs</group>
       <table>1</table>
       <item>453</item>
@@ -14858,7 +14858,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s205_IPT_ErrorCategory</struct>
+      <struct>Mooventure2016_Rev5_B.s206_IPT_ErrorCategory</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs</group>
       <table>1</table>
       <item>454</item>
@@ -14923,7 +14923,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s649_Merge</struct>
+      <struct>Mooventure2016_Rev5_B.s648_Merge</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|IPT Outputs</group>
       <table>1</table>
       <item>457</item>
@@ -14963,7 +14963,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s205_GPSQuality</struct>
+      <struct>Mooventure2016_Rev5_B.s206_GPSQuality</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs</group>
       <table>1</table>
       <item>459</item>
@@ -14983,7 +14983,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s205_Heading</struct>
+      <struct>Mooventure2016_Rev5_B.s206_Heading</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs</group>
       <table>1</table>
       <item>460</item>
@@ -15003,7 +15003,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s205_IPT_HVDCVoltage</struct>
+      <struct>Mooventure2016_Rev5_B.s206_IPT_HVDCVoltage</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs</group>
       <table>1</table>
       <item>461</item>
@@ -15023,7 +15023,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s205_IPT_InverterTemperature</struct>
+      <struct>Mooventure2016_Rev5_B.s206_IPT_InverterTemperature</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs</group>
       <table>1</table>
       <item>462</item>
@@ -15043,7 +15043,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s205_IPT_IPTAwake</struct>
+      <struct>Mooventure2016_Rev5_B.s206_IPT_IPTAwake</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs</group>
       <table>1</table>
       <item>463</item>
@@ -15063,7 +15063,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s205_IPT_IPTReady</struct>
+      <struct>Mooventure2016_Rev5_B.s206_IPT_IPTReady</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs</group>
       <table>1</table>
       <item>464</item>
@@ -15083,7 +15083,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s205_IPT_MaxTorqueAvailGen</struct>
+      <struct>Mooventure2016_Rev5_B.s206_IPT_MaxTorqueAvailGen</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs</group>
       <table>1</table>
       <item>465</item>
@@ -15103,7 +15103,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s205_IPT_MaxTorqueAvailMotor</struct>
+      <struct>Mooventure2016_Rev5_B.s206_IPT_MaxTorqueAvailMotor</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs</group>
       <table>1</table>
       <item>466</item>
@@ -15123,7 +15123,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s205_IPT_MaxWasteAvailable</struct>
+      <struct>Mooventure2016_Rev5_B.s206_IPT_MaxWasteAvailable</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs</group>
       <table>1</table>
       <item>467</item>
@@ -15143,7 +15143,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s205_IPT_MotorReady</struct>
+      <struct>Mooventure2016_Rev5_B.s206_IPT_MotorReady</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs</group>
       <table>1</table>
       <item>468</item>
@@ -15163,7 +15163,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s205_IPT_MotorSpeed</struct>
+      <struct>Mooventure2016_Rev5_B.s206_IPT_MotorSpeed</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs</group>
       <table>1</table>
       <item>469</item>
@@ -15183,7 +15183,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s205_IPT_MotorTemperature</struct>
+      <struct>Mooventure2016_Rev5_B.s206_IPT_MotorTemperature</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs</group>
       <table>1</table>
       <item>470</item>
@@ -15203,7 +15203,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s205_Speed</struct>
+      <struct>Mooventure2016_Rev5_B.s206_Speed</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs</group>
       <table>1</table>
       <item>471</item>
@@ -15223,7 +15223,7 @@
       <format>8.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s205_AgeCount_m</struct>
+      <struct>Mooventure2016_Rev5_B.s206_AgeCount_m</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs</group>
       <table>1</table>
       <item>472</item>
@@ -15243,7 +15243,7 @@
       <format>8.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s205_AgeCount</struct>
+      <struct>Mooventure2016_Rev5_B.s206_AgeCount</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs</group>
       <table>1</table>
       <item>473</item>
@@ -15263,7 +15263,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s205_IPT_WheelTorqueDelivered</struct>
+      <struct>Mooventure2016_Rev5_B.s206_IPT_WheelTorqueDelivered</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs</group>
       <table>1</table>
       <item>474</item>
@@ -15328,7 +15328,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s368_IsolationMeasurementEnable</struct>
+      <struct>Mooventure2016_Rev5_B.s367_IsolationMeasurementEnable</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Battery Outputs</group>
       <table>1</table>
       <item>477</item>
@@ -15348,7 +15348,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s200_IsolationLevel</struct>
+      <struct>Mooventure2016_Rev5_B.s201_IsolationLevel</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
       <item>478</item>
@@ -15368,7 +15368,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s200_IsolationStatus</struct>
+      <struct>Mooventure2016_Rev5_B.s201_IsolationStatus</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
       <item>479</item>
@@ -15542,7 +15542,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s200_JCS_PackIdentifier</struct>
+      <struct>Mooventure2016_Rev5_B.s201_JCS_PackIdentifier</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
       <item>487</item>
@@ -15709,7 +15709,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s198_LF_Wheel_Rolling_Count</struct>
+      <struct>Mooventure2016_Rev5_B.s199_LF_Wheel_Rolling_Count</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|ABS</group>
       <table>1</table>
       <item>495</item>
@@ -15729,7 +15729,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s200_LifeTimeAmpHoursOut</struct>
+      <struct>Mooventure2016_Rev5_B.s201_LifeTimeAmpHoursOut</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
       <item>496</item>
@@ -15854,7 +15854,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s200_LTAHI_RollingCounter</struct>
+      <struct>Mooventure2016_Rev5_B.s201_LTAHI_RollingCounter</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
       <item>500</item>
@@ -15874,7 +15874,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s204_InputCurrent</struct>
+      <struct>Mooventure2016_Rev5_B.s205_InputCurrent</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Eaton Charger</group>
       <table>1</table>
       <item>501</item>
@@ -15894,7 +15894,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s204_InputVoltage</struct>
+      <struct>Mooventure2016_Rev5_B.s205_InputVoltage</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Eaton Charger</group>
       <table>1</table>
       <item>502</item>
@@ -16109,7 +16109,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s200_MaxCellTemperature</struct>
+      <struct>Mooventure2016_Rev5_B.s201_MaxCellTemperature</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
       <item>513</item>
@@ -16129,7 +16129,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s200_MaxCellVoltage</struct>
+      <struct>Mooventure2016_Rev5_B.s201_MaxCellVoltage</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
       <item>514</item>
@@ -16149,7 +16149,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s200_MaximumDischargePower_10s</struct>
+      <struct>Mooventure2016_Rev5_B.s201_MaximumDischargePower_10s</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
       <item>515</item>
@@ -16169,7 +16169,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s200_MaximumDischargePower_Continuous</struct>
+      <struct>Mooventure2016_Rev5_B.s201_MaximumDischargePower_Continuous</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
       <item>516</item>
@@ -16189,7 +16189,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s200_MaximumRegenPower_10s</struct>
+      <struct>Mooventure2016_Rev5_B.s201_MaximumRegenPower_10s</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
       <item>517</item>
@@ -16209,7 +16209,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s200_MaximumRegenPower_Continuous</struct>
+      <struct>Mooventure2016_Rev5_B.s201_MaximumRegenPower_Continuous</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
       <item>518</item>
@@ -16294,7 +16294,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s487_transTemp</struct>
+      <struct>Mooventure2016_Rev5_B.s486_transTemp</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs</group>
       <table>1</table>
       <item>522</item>
@@ -16354,7 +16354,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s204_MessageChecksum</struct>
+      <struct>Mooventure2016_Rev5_B.s205_MessageChecksum</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Eaton Charger</group>
       <table>1</table>
       <item>525</item>
@@ -16374,7 +16374,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s204_MessageCounter</struct>
+      <struct>Mooventure2016_Rev5_B.s205_MessageCounter</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Eaton Charger</group>
       <table>1</table>
       <item>526</item>
@@ -16414,7 +16414,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s200_MILState</struct>
+      <struct>Mooventure2016_Rev5_B.s201_MILState</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
       <item>528</item>
@@ -16454,7 +16454,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s200_MinCellTemperature</struct>
+      <struct>Mooventure2016_Rev5_B.s201_MinCellTemperature</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
       <item>530</item>
@@ -16474,7 +16474,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s200_MinCellVoltage</struct>
+      <struct>Mooventure2016_Rev5_B.s201_MinCellVoltage</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
       <item>531</item>
@@ -17153,7 +17153,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s150_Motor2Axle</struct>
+      <struct>Mooventure2016_Rev5_B.s151_Motor2Axle</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Power Flow</group>
       <table>1</table>
       <item>565</item>
@@ -17218,7 +17218,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s147_Saturation</struct>
+      <struct>Mooventure2016_Rev5_B.s148_Saturation</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|MPGe</group>
       <table>1</table>
       <item>568</item>
@@ -17553,7 +17553,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s371_ODO_Count</struct>
+      <struct>Mooventure2016_Rev5_B.s370_ODO_Count</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs</group>
       <table>1</table>
       <item>582</item>
@@ -17633,7 +17633,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s204_OutputCurrent</struct>
+      <struct>Mooventure2016_Rev5_B.s205_OutputCurrent</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Eaton Charger</group>
       <table>1</table>
       <item>586</item>
@@ -17698,7 +17698,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s204_OutputVoltage</struct>
+      <struct>Mooventure2016_Rev5_B.s205_OutputVoltage</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Eaton Charger</group>
       <table>1</table>
       <item>589</item>
@@ -17763,7 +17763,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s125_Sum1</struct>
+      <struct>Mooventure2016_Rev5_B.s126_Sum1</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|IPT|CurrentLimiting_TurboRequest</group>
       <table>1</table>
       <item>592</item>
@@ -17805,7 +17805,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s127_Switch1</struct>
+      <struct>Mooventure2016_Rev5_B.s128_Switch1</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|IPT|CurrentLimiting_TurboRequest</group>
       <table>1</table>
       <item>594</item>
@@ -17870,7 +17870,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s266_Merge</struct>
+      <struct>Mooventure2016_Rev5_B.s267_Merge</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
       <item>597</item>
@@ -17945,7 +17945,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s302_passengerTemp</struct>
+      <struct>Mooventure2016_Rev5_B.s301_passengerTemp</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
       <table>1</table>
       <item>601</item>
@@ -17965,7 +17965,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s367_Pct_whl_trq_desired</struct>
+      <struct>Mooventure2016_Rev5_B.s366_Pct_whl_trq_desired</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|ABS Outputs</group>
       <table>1</table>
       <item>602</item>
@@ -18197,7 +18197,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s367_sf_DataCorrectionMotorABS.s65_torqueOut</struct>
+      <struct>Mooventure2016_Rev5_B.s366_sf_DataCorrectionMotorABS.s66_torqueOut</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|ABS Outputs</group>
       <table>1</table>
       <item>613</item>
@@ -18243,7 +18243,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s200_PPL10s_RollingCounter</struct>
+      <struct>Mooventure2016_Rev5_B.s201_PPL10s_RollingCounter</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
       <item>615</item>
@@ -18263,7 +18263,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s200_PPLCont_RollingCounter</struct>
+      <struct>Mooventure2016_Rev5_B.s201_PPLCont_RollingCounter</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
       <item>616</item>
@@ -18283,7 +18283,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s76_IPT_Torque_Request</struct>
+      <struct>Mooventure2016_Rev5_B.s77_IPT_Torque_Request</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|IPT</group>
       <table>1</table>
       <item>617</item>
@@ -18303,7 +18303,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s200_PrechargeState</struct>
+      <struct>Mooventure2016_Rev5_B.s201_PrechargeState</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
       <item>618</item>
@@ -18323,7 +18323,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s170_motohawk_data_read1</struct>
+      <struct>Mooventure2016_Rev5_B.s171_motohawk_data_read1</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|MPGe Averages|Previous Average</group>
       <table>1</table>
       <item>619</item>
@@ -18388,7 +18388,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s376_dirOut</struct>
+      <struct>Mooventure2016_Rev5_B.s375_dirOut</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|ABS Outputs</group>
       <table>1</table>
       <item>622</item>
@@ -18434,7 +18434,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s200_PS_RollingCounter</struct>
+      <struct>Mooventure2016_Rev5_B.s201_PS_RollingCounter</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
       <item>624</item>
@@ -18499,7 +18499,7 @@
       <format>8.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s207_AgeCount</struct>
+      <struct>Mooventure2016_Rev5_B.s208_AgeCount</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Steering Wheel</group>
       <table>1</table>
       <item>627</item>
@@ -18559,7 +18559,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s200_PVC_RollingCounter</struct>
+      <struct>Mooventure2016_Rev5_B.s201_PVC_RollingCounter</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
       <item>630</item>
@@ -18624,7 +18624,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s242_motohawk_ain2_o1</struct>
+      <struct>Mooventure2016_Rev5_B.s243_motohawk_ain2_o1</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Analog Inputs|Coolant</group>
       <table>1</table>
       <item>633</item>
@@ -18689,7 +18689,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s369_DataTypeConversion4</struct>
+      <struct>Mooventure2016_Rev5_B.s368_DataTypeConversion4</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Coolant Outputs</group>
       <table>1</table>
       <item>636</item>
@@ -18754,7 +18754,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s369_DataTypeConversion5</struct>
+      <struct>Mooventure2016_Rev5_B.s368_DataTypeConversion5</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Coolant Outputs</group>
       <table>1</table>
       <item>639</item>
@@ -18819,7 +18819,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s21_radBlend</struct>
+      <struct>Mooventure2016_Rev5_B.s22_radBlend</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Coolant Outputs</group>
       <table>1</table>
       <item>642</item>
@@ -18884,7 +18884,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s25_Merge</struct>
+      <struct>Mooventure2016_Rev5_B.s26_Merge</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Coolant Outputs</group>
       <table>1</table>
       <item>645</item>
@@ -18971,7 +18971,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s492_VehicleReadyOutput</struct>
+      <struct>Mooventure2016_Rev5_B.s491_VehicleReadyOutput</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs</group>
       <table>1</table>
       <item>649</item>
@@ -19036,7 +19036,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s198_Rear_left_whl_speed</struct>
+      <struct>Mooventure2016_Rev5_B.s199_Rear_left_whl_speed</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|ABS</group>
       <table>1</table>
       <item>652</item>
@@ -19101,7 +19101,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s198_Rear_right_whl_speed</struct>
+      <struct>Mooventure2016_Rev5_B.s199_Rear_right_whl_speed</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|ABS</group>
       <table>1</table>
       <item>655</item>
@@ -19166,7 +19166,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s371_Regen_Brakes_Disabled</struct>
+      <struct>Mooventure2016_Rev5_B.s370_Regen_Brakes_Disabled</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs</group>
       <table>1</table>
       <item>658</item>
@@ -19431,7 +19431,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s73_sf_Chart.s82_regenTorque</struct>
+      <struct>Mooventure2016_Rev5_B.s74_sf_Chart.s83_regenTorque</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|EcoMode</group>
       <table>1</table>
       <item>671</item>
@@ -19451,7 +19451,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s71_sf_Chart.s82_regenTorque</struct>
+      <struct>Mooventure2016_Rev5_B.s72_sf_Chart.s83_regenTorque</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|CrawlHomeMode</group>
       <table>1</table>
       <item>672</item>
@@ -19471,7 +19471,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s77_sf_Chart.s82_regenTorque</struct>
+      <struct>Mooventure2016_Rev5_B.s78_sf_Chart.s83_regenTorque</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|SUVMode</group>
       <table>1</table>
       <item>673</item>
@@ -19536,7 +19536,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s207_RELATIVE_STR_WHL_ANGLE</struct>
+      <struct>Mooventure2016_Rev5_B.s208_RELATIVE_STR_WHL_ANGLE</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Steering Wheel</group>
       <table>1</table>
       <item>676</item>
@@ -19601,7 +19601,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s371_Repair_Wrench</struct>
+      <struct>Mooventure2016_Rev5_B.s370_Repair_Wrench</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs</group>
       <table>1</table>
       <item>679</item>
@@ -19832,7 +19832,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s198_RT_Wheel_Rolling_Count</struct>
+      <struct>Mooventure2016_Rev5_B.s199_RT_Wheel_Rolling_Count</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|ABS</group>
       <table>1</table>
       <item>690</item>
@@ -20362,30 +20362,10 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s200_SleepInhibited</struct>
+      <struct>Mooventure2016_Rev5_B.s201_SleepInhibited</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
       <item>713</item>
-   </VarDec>
-   <VarDec>
-      <name>SOC_Filter_Time</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs|SOC Filter</group>
-      <struct>ConstantWork.SOC_Filter_Time</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <table>1</table>
-      <item>714</item>
    </VarDec>
    <VarDec>
       <name>SOC_Multiplier</name>
@@ -20405,7 +20385,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>715</item>
+      <item>714</item>
    </VarDec>
    <VarDec>
       <name>SOC_Subtract</name>
@@ -20425,7 +20405,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>716</item>
+      <item>715</item>
    </VarDec>
    <VarDec>
       <name>SoC_Threshold</name>
@@ -20445,7 +20425,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>717</item>
+      <item>716</item>
    </VarDec>
    <VarDec>
       <name>SOCFilt</name>
@@ -20467,7 +20447,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>718</item>
+      <item>717</item>
    </VarDec>
    <VarDec>
       <name>Startup_Delay</name>
@@ -20487,7 +20467,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>719</item>
+      <item>718</item>
    </VarDec>
    <VarDec>
       <name>StateOfCharge</name>
@@ -20504,10 +20484,10 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s271_Sum1</struct>
+      <struct>Mooventure2016_Rev5_B.s201_StateOfCharge</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
-      <item>720</item>
+      <item>719</item>
    </VarDec>
    <VarDec>
       <name>StateOfChargeMax</name>
@@ -20524,10 +20504,10 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s200_StateOfChargeMax</struct>
+      <struct>Mooventure2016_Rev5_B.s201_StateOfChargeMax</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
-      <item>721</item>
+      <item>720</item>
    </VarDec>
    <VarDec>
       <name>StateOfChargeMin</name>
@@ -20544,10 +20524,10 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s200_StateOfChargeMin</struct>
+      <struct>Mooventure2016_Rev5_B.s201_StateOfChargeMin</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
-      <item>722</item>
+      <item>721</item>
    </VarDec>
    <VarDec>
       <name>StoreNV</name>
@@ -20573,7 +20553,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>723</item>
+      <item>722</item>
    </VarDec>
    <VarDec>
       <name>STR_WHL_ANGLE_CNTR_FND_Ovr_new</name>
@@ -20593,7 +20573,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>724</item>
+      <item>723</item>
    </VarDec>
    <VarDec>
       <name>STR_WHL_ANGLE_CNTR_FND_Ovr_ovr</name>
@@ -20618,7 +20598,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>725</item>
+      <item>724</item>
    </VarDec>
    <VarDec>
       <name>STR_WHL_ANGLE_CNTR_FND_Prb</name>
@@ -20635,10 +20615,10 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s207_STR_WHL_ANGLE_CNTR_FND</struct>
+      <struct>Mooventure2016_Rev5_B.s208_STR_WHL_ANGLE_CNTR_FND</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Steering Wheel</group>
       <table>1</table>
-      <item>726</item>
+      <item>725</item>
    </VarDec>
    <VarDec>
       <name>STR_WHL_ANGLE_Ovr_new</name>
@@ -20658,7 +20638,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>727</item>
+      <item>726</item>
    </VarDec>
    <VarDec>
       <name>STR_WHL_ANGLE_Ovr_ovr</name>
@@ -20683,7 +20663,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>728</item>
+      <item>727</item>
    </VarDec>
    <VarDec>
       <name>STR_WHL_ANGLE_Prb</name>
@@ -20700,10 +20680,10 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s207_STR_WHL_ANGLE</struct>
+      <struct>Mooventure2016_Rev5_B.s208_STR_WHL_ANGLE</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Steering Wheel</group>
       <table>1</table>
-      <item>729</item>
+      <item>728</item>
    </VarDec>
    <VarDec>
       <name>Subfunction_Select_Ovr_new</name>
@@ -20723,7 +20703,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>730</item>
+      <item>729</item>
    </VarDec>
    <VarDec>
       <name>Subfunction_Select_Ovr_ovr</name>
@@ -20748,7 +20728,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>731</item>
+      <item>730</item>
    </VarDec>
    <VarDec>
       <name>Subfunction_Select_Prb</name>
@@ -20765,10 +20745,10 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s206_Subfunction_Select</struct>
+      <struct>Mooventure2016_Rev5_B.s207_Subfunction_Select</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs</group>
       <table>1</table>
-      <item>732</item>
+      <item>731</item>
    </VarDec>
    <VarDec>
       <name>Suspension_Height_Sensor</name>
@@ -20788,7 +20768,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>733</item>
+      <item>732</item>
    </VarDec>
    <VarDec>
       <name>Suspension_Switch_Input</name>
@@ -20808,7 +20788,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>734</item>
+      <item>733</item>
    </VarDec>
    <VarDec>
       <name>Suspension_Threshold</name>
@@ -20828,7 +20808,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>735</item>
+      <item>734</item>
    </VarDec>
    <VarDec>
       <name>SUVMode_Accel_Map</name>
@@ -20848,7 +20828,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>736</item>
+      <item>735</item>
    </VarDec>
    <VarDec>
       <name>SUVMode_Accel_MapTbl</name>
@@ -20871,7 +20851,7 @@
       <output>SUVMode_Accel_Map</output>
       <prelookup>SUVMode_AccelIdxArr</prelookup>
       <table>1</table>
-      <item>737</item>
+      <item>736</item>
    </VarDec>
    <VarDec>
       <name>SUVMode_AccelIdx</name>
@@ -20892,7 +20872,7 @@
       <update>BACKGND</update>
       <type>uint16</type>
       <table>1</table>
-      <item>738</item>
+      <item>737</item>
    </VarDec>
    <VarDec>
       <name>SUVMode_AccelIdxArr</name>
@@ -20915,7 +20895,7 @@
       <input>SUVMode_AccelIn</input>
       <index>SUVMode_AccelIdx</index>
       <table>1</table>
-      <item>739</item>
+      <item>738</item>
    </VarDec>
    <VarDec>
       <name>SUVMode_AccelIn</name>
@@ -20935,7 +20915,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>740</item>
+      <item>739</item>
    </VarDec>
    <VarDec>
       <name>SUVMode_Brake_Map</name>
@@ -20955,7 +20935,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>741</item>
+      <item>740</item>
    </VarDec>
    <VarDec>
       <name>SUVMode_Brake_MapTbl</name>
@@ -20978,7 +20958,7 @@
       <output>SUVMode_Brake_Map</output>
       <prelookup>SUVMode_BrakeIdxArr</prelookup>
       <table>1</table>
-      <item>742</item>
+      <item>741</item>
    </VarDec>
    <VarDec>
       <name>SUVMode_BrakeIdx</name>
@@ -20999,7 +20979,7 @@
       <update>BACKGND</update>
       <type>uint16</type>
       <table>1</table>
-      <item>743</item>
+      <item>742</item>
    </VarDec>
    <VarDec>
       <name>SUVMode_BrakeIdxArr</name>
@@ -21022,7 +21002,7 @@
       <input>SUVMode_BrakeIn</input>
       <index>SUVMode_BrakeIdx</index>
       <table>1</table>
-      <item>744</item>
+      <item>743</item>
    </VarDec>
    <VarDec>
       <name>SUVMode_BrakeIn</name>
@@ -21042,7 +21022,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>745</item>
+      <item>744</item>
    </VarDec>
    <VarDec>
       <name>System_Cold_Prb</name>
@@ -21062,7 +21042,7 @@
       <struct>Mooventure2016_Rev5_B.s7_VeryCold</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Coolant Control</group>
       <table>1</table>
-      <item>746</item>
+      <item>745</item>
    </VarDec>
    <VarDec>
       <name>System_Warm_Prb</name>
@@ -21082,7 +21062,7 @@
       <struct>Mooventure2016_Rev5_B.s7_Warmed</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Coolant Control</group>
       <table>1</table>
-      <item>747</item>
+      <item>746</item>
    </VarDec>
    <VarDec>
       <name>TAH_RollingCounter</name>
@@ -21099,10 +21079,10 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s200_TAH_RollingCounter</struct>
+      <struct>Mooventure2016_Rev5_B.s201_TAH_RollingCounter</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
-      <item>748</item>
+      <item>747</item>
    </VarDec>
    <VarDec>
       <name>TCS_ENG_EVNT_IN_PROGRESS_Ovr_new</name>
@@ -21122,7 +21102,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>749</item>
+      <item>748</item>
    </VarDec>
    <VarDec>
       <name>TCS_ENG_EVNT_IN_PROGRESS_Ovr_ovr</name>
@@ -21147,7 +21127,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>750</item>
+      <item>749</item>
    </VarDec>
    <VarDec>
       <name>TCS_ENG_EVNT_IN_PROGRESS_Prb</name>
@@ -21164,10 +21144,10 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s198_TCS_ENG_EVNT_IN_PROGRESS</struct>
+      <struct>Mooventure2016_Rev5_B.s199_TCS_ENG_EVNT_IN_PROGRESS</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|ABS</group>
       <table>1</table>
-      <item>751</item>
+      <item>750</item>
    </VarDec>
    <VarDec>
       <name>Temp_Fault_Hyst</name>
@@ -21187,7 +21167,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>752</item>
+      <item>751</item>
    </VarDec>
    <VarDec>
       <name>Temp_Flash</name>
@@ -21207,7 +21187,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>753</item>
+      <item>752</item>
    </VarDec>
    <VarDec>
       <name>Throttle_Position_Prb</name>
@@ -21224,10 +21204,10 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s203_Throttle_Position</struct>
+      <struct>Mooventure2016_Rev5_B.s204_Throttle_Position</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
       <table>1</table>
-      <item>754</item>
+      <item>753</item>
    </VarDec>
    <VarDec>
       <name>Too_Cold_Temp</name>
@@ -21247,7 +21227,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>755</item>
+      <item>754</item>
    </VarDec>
    <VarDec>
       <name>Torque_Enable</name>
@@ -21267,7 +21247,7 @@
       <update>BACKGND</update>
       <type>uint8</type>
       <table>1</table>
-      <item>756</item>
+      <item>755</item>
    </VarDec>
    <VarDec>
       <name>Torque_Request_Override_new</name>
@@ -21287,7 +21267,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>757</item>
+      <item>756</item>
    </VarDec>
    <VarDec>
       <name>Torque_Request_Override_ovr</name>
@@ -21312,7 +21292,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>758</item>
+      <item>757</item>
    </VarDec>
    <VarDec>
       <name>Torque_Request_Probe</name>
@@ -21329,10 +21309,10 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s76_Saturation</struct>
+      <struct>Mooventure2016_Rev5_B.s77_Saturation</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|IPT</group>
       <table>1</table>
-      <item>759</item>
+      <item>758</item>
    </VarDec>
    <VarDec>
       <name>Torque_Reverse_Override_new</name>
@@ -21352,7 +21332,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>760</item>
+      <item>759</item>
    </VarDec>
    <VarDec>
       <name>Torque_Reverse_Override_ovr</name>
@@ -21377,7 +21357,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>761</item>
+      <item>760</item>
    </VarDec>
    <VarDec>
       <name>Torque_Reverse_Override69_new</name>
@@ -21397,7 +21377,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>762</item>
+      <item>761</item>
    </VarDec>
    <VarDec>
       <name>Torque_Reverse_Override69_ovr</name>
@@ -21422,7 +21402,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>763</item>
+      <item>762</item>
    </VarDec>
    <VarDec>
       <name>TorqueLimMultiplier</name>
@@ -21442,7 +21422,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>764</item>
+      <item>763</item>
    </VarDec>
    <VarDec>
       <name>TorqueLimMultiplierTbl</name>
@@ -21465,7 +21445,7 @@
       <output>TorqueLimMultiplier</output>
       <prelookup>ModifiedAmpSecIdxArr</prelookup>
       <table>1</table>
-      <item>765</item>
+      <item>764</item>
    </VarDec>
    <VarDec>
       <name>TorqueRecoveryValue</name>
@@ -21487,7 +21467,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>766</item>
+      <item>765</item>
    </VarDec>
    <VarDec>
       <name>Traction_Control_Enable</name>
@@ -21507,7 +21487,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>767</item>
+      <item>766</item>
    </VarDec>
    <VarDec>
       <name>Traction_Control_Max_Torque</name>
@@ -21527,7 +21507,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>768</item>
+      <item>767</item>
    </VarDec>
    <VarDec>
       <name>Traction_Control_System_Maulfunction_Fault</name>
@@ -21547,7 +21527,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>769</item>
+      <item>768</item>
    </VarDec>
    <VarDec>
       <name>Transmission_Age_Count_Probe</name>
@@ -21564,10 +21544,10 @@
       <format>8.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s203_AgeCount</struct>
+      <struct>Mooventure2016_Rev5_B.s204_AgeCount</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
       <table>1</table>
-      <item>770</item>
+      <item>769</item>
    </VarDec>
    <VarDec>
       <name>Transmission_Position_Probe</name>
@@ -21584,10 +21564,10 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s203_Shift_Position</struct>
+      <struct>Mooventure2016_Rev5_B.s204_Shift_Position</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
       <table>1</table>
-      <item>771</item>
+      <item>770</item>
    </VarDec>
    <VarDec>
       <name>Trip_A_Batt_Used_Prb</name>
@@ -21604,10 +21584,10 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s155_Switch1</struct>
+      <struct>Mooventure2016_Rev5_B.s156_Switch1</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Cost Calculations|Trip A</group>
       <table>1</table>
-      <item>772</item>
+      <item>771</item>
    </VarDec>
    <VarDec>
       <name>Trip_A_Cost_Prb</name>
@@ -21624,10 +21604,10 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s152_TripACost</struct>
+      <struct>Mooventure2016_Rev5_B.s153_TripACost</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Cost Calculations|Trip A</group>
       <table>1</table>
-      <item>773</item>
+      <item>772</item>
    </VarDec>
    <VarDec>
       <name>Trip_A_Fuel_Used</name>
@@ -21647,7 +21627,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>774</item>
+      <item>773</item>
    </VarDec>
    <VarDec>
       <name>Trip_A_Saving_Prb</name>
@@ -21664,10 +21644,10 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s152_TripASavings</struct>
+      <struct>Mooventure2016_Rev5_B.s153_TripASavings</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Cost Calculations|Trip A</group>
       <table>1</table>
-      <item>775</item>
+      <item>774</item>
    </VarDec>
    <VarDec>
       <name>Trip_B_Batt_Used_Prb</name>
@@ -21684,10 +21664,10 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s153_Add1</struct>
+      <struct>Mooventure2016_Rev5_B.s154_Add1</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Cost Calculations|Trip B</group>
       <table>1</table>
-      <item>776</item>
+      <item>775</item>
    </VarDec>
    <VarDec>
       <name>Trip_B_Cost_Prb</name>
@@ -21704,10 +21684,10 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s153_TripBCost</struct>
+      <struct>Mooventure2016_Rev5_B.s154_TripBCost</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Cost Calculations|Trip B</group>
       <table>1</table>
-      <item>777</item>
+      <item>776</item>
    </VarDec>
    <VarDec>
       <name>Trip_B_Dist_Traveled_Prb</name>
@@ -21724,10 +21704,10 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s153_Add</struct>
+      <struct>Mooventure2016_Rev5_B.s154_Add</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Cost Calculations|Trip B</group>
       <table>1</table>
-      <item>778</item>
+      <item>777</item>
    </VarDec>
    <VarDec>
       <name>Trip_B_Fuel_Used</name>
@@ -21747,7 +21727,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>779</item>
+      <item>778</item>
    </VarDec>
    <VarDec>
       <name>Trip_B_Savings_Prb</name>
@@ -21764,10 +21744,10 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s153_TripBSavings</struct>
+      <struct>Mooventure2016_Rev5_B.s154_TripBSavings</struct>
       <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Cost Calculations|Trip B</group>
       <table>1</table>
-      <item>780</item>
+      <item>779</item>
    </VarDec>
    <VarDec>
       <name>TripAmpHoursIn</name>
@@ -21784,10 +21764,10 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s200_TripAmpHoursIn</struct>
+      <struct>Mooventure2016_Rev5_B.s201_TripAmpHoursIn</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
-      <item>781</item>
+      <item>780</item>
    </VarDec>
    <VarDec>
       <name>TripAmpHoursOut</name>
@@ -21804,30 +21784,10 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s200_TripAmpHoursOut</struct>
+      <struct>Mooventure2016_Rev5_B.s201_TripAmpHoursOut</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
-      <item>782</item>
-   </VarDec>
-   <VarDec>
-      <name>V_Filter_Time</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs|Voltage Filter</group>
-      <struct>ConstantWork.V_Filter_Time</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <table>1</table>
-      <item>783</item>
+      <item>781</item>
    </VarDec>
    <VarDec>
       <name>V12_Battery_Erratic_Fault</name>
@@ -21847,7 +21807,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>784</item>
+      <item>782</item>
    </VarDec>
    <VarDec>
       <name>V12_High</name>
@@ -21867,7 +21827,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>785</item>
+      <item>783</item>
    </VarDec>
    <VarDec>
       <name>V12_Low</name>
@@ -21887,7 +21847,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>786</item>
+      <item>784</item>
    </VarDec>
    <VarDec>
       <name>VEH_ID</name>
@@ -21907,7 +21867,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>787</item>
+      <item>785</item>
    </VarDec>
    <VarDec>
       <name>VEH_ID_Ovr_new</name>
@@ -21927,7 +21887,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>788</item>
+      <item>786</item>
    </VarDec>
    <VarDec>
       <name>VEH_ID_Ovr_ovr</name>
@@ -21952,7 +21912,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>789</item>
+      <item>787</item>
    </VarDec>
    <VarDec>
       <name>VEH_ID_Prb</name>
@@ -21972,7 +21932,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>790</item>
+      <item>788</item>
    </VarDec>
    <VarDec>
       <name>Vehicle_Enable</name>
@@ -21992,7 +21952,7 @@
       <update>BACKGND</update>
       <type>uint8</type>
       <table>1</table>
-      <item>791</item>
+      <item>789</item>
    </VarDec>
    <VarDec>
       <name>Vehicle_Ready</name>
@@ -22012,7 +21972,7 @@
       <update>BACKGND</update>
       <type>uint8</type>
       <table>1</table>
-      <item>792</item>
+      <item>790</item>
    </VarDec>
    <VarDec>
       <name>Vehicle_Speed_Ovr_new</name>
@@ -22032,7 +21992,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>793</item>
+      <item>791</item>
    </VarDec>
    <VarDec>
       <name>Vehicle_Speed_Ovr_ovr</name>
@@ -22057,7 +22017,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>794</item>
+      <item>792</item>
    </VarDec>
    <VarDec>
       <name>Vehicle_Speed_Prb</name>
@@ -22074,10 +22034,10 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s371_Vehi_Speed</struct>
+      <struct>Mooventure2016_Rev5_B.s370_Vehi_Speed</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs</group>
       <table>1</table>
-      <item>795</item>
+      <item>793</item>
    </VarDec>
    <VarDec>
       <name>Vehicle_Speed_Sensor_Circuit_Low_Fault</name>
@@ -22097,7 +22057,29 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>796</item>
+      <item>794</item>
+   </VarDec>
+   <VarDec>
+      <name>VFilt</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>Constant_T</ctype>
+      <help>Filter time constant</help>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs|Voltage Filter</group>
+      <struct>ConstantWork.VFilt</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+      <table>1</table>
+      <item>795</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_1</name>
@@ -22117,7 +22099,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>797</item>
+      <item>796</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_1_Ovr_new</name>
@@ -22137,7 +22119,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>798</item>
+      <item>797</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_1_Ovr_ovr</name>
@@ -22162,7 +22144,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>799</item>
+      <item>798</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_1_Prb</name>
@@ -22182,7 +22164,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>800</item>
+      <item>799</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_10</name>
@@ -22202,7 +22184,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>801</item>
+      <item>800</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_10_Ovr_new</name>
@@ -22222,7 +22204,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>802</item>
+      <item>801</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_10_Ovr_ovr</name>
@@ -22247,7 +22229,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>803</item>
+      <item>802</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_10_Prb</name>
@@ -22267,7 +22249,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>804</item>
+      <item>803</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_11</name>
@@ -22287,7 +22269,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>805</item>
+      <item>804</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_11_Ovr_new</name>
@@ -22307,7 +22289,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>806</item>
+      <item>805</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_11_Ovr_ovr</name>
@@ -22332,7 +22314,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>807</item>
+      <item>806</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_11_Prb</name>
@@ -22352,7 +22334,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>808</item>
+      <item>807</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_12</name>
@@ -22372,7 +22354,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>809</item>
+      <item>808</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_12_Ovr_new</name>
@@ -22392,7 +22374,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>810</item>
+      <item>809</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_12_Ovr_ovr</name>
@@ -22417,7 +22399,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>811</item>
+      <item>810</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_12_Prb</name>
@@ -22437,7 +22419,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>812</item>
+      <item>811</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_13</name>
@@ -22457,7 +22439,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>813</item>
+      <item>812</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_13_Ovr_new</name>
@@ -22477,7 +22459,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>814</item>
+      <item>813</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_13_Ovr_ovr</name>
@@ -22502,7 +22484,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>815</item>
+      <item>814</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_13_Prb</name>
@@ -22522,7 +22504,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>816</item>
+      <item>815</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_14</name>
@@ -22542,7 +22524,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>817</item>
+      <item>816</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_14_Ovr_new</name>
@@ -22562,7 +22544,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>818</item>
+      <item>817</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_14_Ovr_ovr</name>
@@ -22587,7 +22569,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>819</item>
+      <item>818</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_14_Prb</name>
@@ -22607,7 +22589,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>820</item>
+      <item>819</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_15</name>
@@ -22627,7 +22609,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>821</item>
+      <item>820</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_15_Ovr_new</name>
@@ -22647,7 +22629,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>822</item>
+      <item>821</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_15_Ovr_ovr</name>
@@ -22672,7 +22654,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>823</item>
+      <item>822</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_15_Prb</name>
@@ -22692,7 +22674,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>824</item>
+      <item>823</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_16</name>
@@ -22712,7 +22694,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>825</item>
+      <item>824</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_16_Ovr_new</name>
@@ -22732,7 +22714,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>826</item>
+      <item>825</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_16_Ovr_ovr</name>
@@ -22757,7 +22739,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>827</item>
+      <item>826</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYte_16_Prb</name>
@@ -22777,7 +22759,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>828</item>
+      <item>827</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_17</name>
@@ -22797,7 +22779,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>829</item>
+      <item>828</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_17_Ovr_new</name>
@@ -22817,7 +22799,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>830</item>
+      <item>829</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_17_Ovr_ovr</name>
@@ -22842,7 +22824,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>831</item>
+      <item>830</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_17_Prb</name>
@@ -22862,7 +22844,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>832</item>
+      <item>831</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_2</name>
@@ -22882,7 +22864,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>833</item>
+      <item>832</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_2_Ovr_new</name>
@@ -22902,7 +22884,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>834</item>
+      <item>833</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_2_Ovr_ovr</name>
@@ -22927,7 +22909,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>835</item>
+      <item>834</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_2_Prb</name>
@@ -22947,7 +22929,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>836</item>
+      <item>835</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_3</name>
@@ -22967,7 +22949,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>837</item>
+      <item>836</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_3_Ovr_new</name>
@@ -22987,7 +22969,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>838</item>
+      <item>837</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_3_Ovr_ovr</name>
@@ -23012,7 +22994,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>839</item>
+      <item>838</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_3_Prb</name>
@@ -23032,7 +23014,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>840</item>
+      <item>839</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_4</name>
@@ -23052,7 +23034,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>841</item>
+      <item>840</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_4_Ovr_new</name>
@@ -23072,7 +23054,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>842</item>
+      <item>841</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_4_Ovr_ovr</name>
@@ -23097,7 +23079,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>843</item>
+      <item>842</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_4_Prb</name>
@@ -23117,7 +23099,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>844</item>
+      <item>843</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_5</name>
@@ -23137,7 +23119,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>845</item>
+      <item>844</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_5_Ovr_new</name>
@@ -23157,7 +23139,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>846</item>
+      <item>845</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_5_Ovr_ovr</name>
@@ -23182,7 +23164,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>847</item>
+      <item>846</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_5_Prb</name>
@@ -23202,7 +23184,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>848</item>
+      <item>847</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_6</name>
@@ -23222,7 +23204,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>849</item>
+      <item>848</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_6_Ovr_new</name>
@@ -23242,7 +23224,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>850</item>
+      <item>849</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_6_Ovr_ovr</name>
@@ -23267,7 +23249,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>851</item>
+      <item>850</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_6_Prb</name>
@@ -23287,7 +23269,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>852</item>
+      <item>851</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_7</name>
@@ -23307,7 +23289,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>853</item>
+      <item>852</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_7_Ovr_new</name>
@@ -23327,7 +23309,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>854</item>
+      <item>853</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_7_Ovr_ovr</name>
@@ -23352,7 +23334,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>855</item>
+      <item>854</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_7_Prb</name>
@@ -23372,7 +23354,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>856</item>
+      <item>855</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_8</name>
@@ -23392,7 +23374,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>857</item>
+      <item>856</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_8_Ovr_new</name>
@@ -23412,7 +23394,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>858</item>
+      <item>857</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_8_Ovr_ovr</name>
@@ -23437,7 +23419,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>859</item>
+      <item>858</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_8_Prb</name>
@@ -23457,7 +23439,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>860</item>
+      <item>859</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_9</name>
@@ -23477,7 +23459,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>861</item>
+      <item>860</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_9_Ovr_new</name>
@@ -23497,7 +23479,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>862</item>
+      <item>861</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_9_Ovr_ovr</name>
@@ -23522,7 +23504,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>863</item>
+      <item>862</item>
    </VarDec>
    <VarDec>
       <name>VIN_DATA_BYTE_9_Prb</name>
@@ -23539,6 +23521,26 @@
       <struct>VolatileWork_BSS.VIN_DATA_BYTE_9_Prb</struct>
       <class>var</class>
       <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+      <table>1</table>
+      <item>863</item>
+   </VarDec>
+   <VarDec>
+      <name>Voltage_Filt_Cal</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>10</max>
+      <min>0</min>
+      <format>1.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Constant_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Battery|Safe Shutdown Sequence</group>
+      <struct>ConstantWork.Voltage_Filt_Cal</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
@@ -23839,7 +23841,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s373_VSC_DCDCEnable</struct>
+      <struct>Mooventure2016_Rev5_B.s372_VSC_DCDCEnable</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|IPT Outputs</group>
       <table>1</table>
       <item>878</item>
@@ -23989,7 +23991,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s373_VSC_IPTEnable</struct>
+      <struct>Mooventure2016_Rev5_B.s372_VSC_IPTEnable</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|IPT Outputs</group>
       <table>1</table>
       <item>885</item>
@@ -24054,7 +24056,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s373_VSC_IPTEnable</struct>
+      <struct>Mooventure2016_Rev5_B.s372_VSC_IPTEnable</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|IPT Outputs</group>
       <table>1</table>
       <item>888</item>
@@ -24459,7 +24461,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s637_MotorEnable</struct>
+      <struct>Mooventure2016_Rev5_B.s636_MotorEnable</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|IPT Outputs</group>
       <table>1</table>
       <item>907</item>
@@ -24694,7 +24696,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s300_posOut</struct>
+      <struct>Mooventure2016_Rev5_B.s299_posOut</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|IPT Outputs</group>
       <table>1</table>
       <item>918</item>
@@ -24759,7 +24761,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s373_VSC_WheelTorqueRequest</struct>
+      <struct>Mooventure2016_Rev5_B.s372_VSC_WheelTorqueRequest</struct>
       <group>Mooventure2016_Rev5|Foreground|Outputs|IPT Outputs</group>
       <table>1</table>
       <item>921</item>
@@ -24779,7 +24781,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s200_WakeSignal</struct>
+      <struct>Mooventure2016_Rev5_B.s201_WakeSignal</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs</group>
       <table>1</table>
       <item>922</item>
@@ -24924,7 +24926,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_Mooventure2016_Rev5</ctype>
-      <struct>Mooventure2016_Rev5_B.s198_Wheel_Rolling_Timestamp</struct>
+      <struct>Mooventure2016_Rev5_B.s199_Wheel_Rolling_Timestamp</struct>
       <group>Mooventure2016_Rev5|Foreground|Inputs|ABS</group>
       <table>1</table>
       <item>929</item>

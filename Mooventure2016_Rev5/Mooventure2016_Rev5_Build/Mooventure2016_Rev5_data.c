@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'Mooventure2016_Rev5'.
  *
- * Model version                  : 1.2015
+ * Model version                  : 1.2026
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Mon Nov 20 13:47:00 2017
+ * C/C++ source code generated on : Wed Nov 29 16:58:34 2017
  *
  * Target selection: motohawk_motocoder_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -20,19 +20,19 @@
 /* Invariant block signals (auto storage) */
 const ConstBlockIO_Mooventure2016_Rev5 Mooventure2016_Rev5_ConstB = {
   16093.44
-  ,                                    /* '<S368>/To km' */
+  ,                                    /* '<S367>/To km' */
   0
-  ,                                    /* '<S127>/Data Type Conversion' */
+  ,                                    /* '<S128>/Data Type Conversion' */
   0
-  ,                                    /* '<S490>/Data Type Conversion' */
-  0
-  ,                                    /* '<S154>/Data Type Conversion' */
+  ,                                    /* '<S489>/Data Type Conversion' */
   0
   ,                                    /* '<S155>/Data Type Conversion' */
   0
-  ,                                    /* '<S159>/Data Type Conversion' */
+  ,                                    /* '<S156>/Data Type Conversion' */
   0
-  /* '<S160>/Data Type Conversion' */
+  ,                                    /* '<S160>/Data Type Conversion' */
+  0
+  /* '<S161>/Data Type Conversion' */
 };
 
 /*

@@ -1726,24 +1726,6 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>SOC_Filter_Time</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs|SOC Filter</group>
-      <struct>ConstantWork.SOC_Filter_Time</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
       <name>SOCFilt</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -2392,7 +2374,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>V_Filter_Time</name>
+      <name>VFilt</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -2401,9 +2383,11 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
       <ctype>Constant_T</ctype>
+      <help>Filter time constant</help>
       <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs|Voltage Filter</group>
-      <struct>ConstantWork.V_Filter_Time</struct>
+      <struct>ConstantWork.VFilt</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
@@ -2424,6 +2408,24 @@
       <struct>VolatileWork_BSS.Battery_Voltage_ovr_new</struct>
       <class>var</class>
       <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Voltage_Filt_Cal</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>10</max>
+      <min>0</min>
+      <format>1.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Constant_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Battery|Safe Shutdown Sequence</group>
+      <struct>ConstantWork.Voltage_Filt_Cal</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>

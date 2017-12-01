@@ -61,8 +61,6 @@
 #include "c58_Mooventure2016_Rev5.h"
 #include "c59_Mooventure2016_Rev5.h"
 #include "c60_Mooventure2016_Rev5.h"
-#include "c61_Mooventure2016_Rev5.h"
-#include "c62_Mooventure2016_Rev5.h"
 
 /* Type Definitions */
 
@@ -389,16 +387,6 @@ unsigned int sf_Mooventure2016_Rev5_method_dispatcher(SimStruct *simstructPtr,
     return 1;
   }
 
-  if (chartFileNumber==61) {
-    c61_Mooventure2016_Rev5_method_dispatcher(simstructPtr, method, data);
-    return 1;
-  }
-
-  if (chartFileNumber==62) {
-    c62_Mooventure2016_Rev5_method_dispatcher(simstructPtr, method, data);
-    return 1;
-  }
-
   return 0;
 }
 
@@ -432,10 +420,10 @@ unsigned int sf_Mooventure2016_Rev5_process_check_sum_call( int nlhs, mxArray *
       ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(0U);
       ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(0U);
     } else if (!strcmp(commandName,"makefile")) {
-      ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(398305368U);
-      ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(1989863222U);
-      ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(2948255383U);
-      ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(2199805573U);
+      ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(726631716U);
+      ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(3112437366U);
+      ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(3432957507U);
+      ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(3152220892U);
     } else if (nrhs==3 && !strcmp(commandName,"chart")) {
       unsigned int chartFileNumber;
       chartFileNumber = (unsigned int)mxGetScalar(prhs[2]);
@@ -860,20 +848,6 @@ unsigned int sf_Mooventure2016_Rev5_process_check_sum_call( int nlhs, mxArray *
           break;
         }
 
-       case 61:
-        {
-          extern void sf_c61_Mooventure2016_Rev5_get_check_sum(mxArray *plhs[]);
-          sf_c61_Mooventure2016_Rev5_get_check_sum(plhs);
-          break;
-        }
-
-       case 62:
-        {
-          extern void sf_c62_Mooventure2016_Rev5_get_check_sum(mxArray *plhs[]);
-          sf_c62_Mooventure2016_Rev5_get_check_sum(plhs);
-          break;
-        }
-
        default:
         ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(0.0);
         ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(0.0);
@@ -889,10 +863,10 @@ unsigned int sf_Mooventure2016_Rev5_process_check_sum_call( int nlhs, mxArray *
       return 0;
     }
   } else {
-    ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(2220602862U);
-    ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(2662534642U);
-    ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(2390813641U);
-    ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(1631787245U);
+    ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(2895225378U);
+    ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(2619091700U);
+    ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(920648005U);
+    ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(2187283491U);
   }
 
   return 1;
@@ -1342,20 +1316,6 @@ unsigned int sf_Mooventure2016_Rev5_autoinheritance_info( int nlhs, mxArray *
       {
         extern mxArray *sf_c60_Mooventure2016_Rev5_get_autoinheritance_info(void);
         plhs[0] = sf_c60_Mooventure2016_Rev5_get_autoinheritance_info();
-        break;
-      }
-
-     case 61:
-      {
-        extern mxArray *sf_c61_Mooventure2016_Rev5_get_autoinheritance_info(void);
-        plhs[0] = sf_c61_Mooventure2016_Rev5_get_autoinheritance_info();
-        break;
-      }
-
-     case 62:
-      {
-        extern mxArray *sf_c62_Mooventure2016_Rev5_get_autoinheritance_info(void);
-        plhs[0] = sf_c62_Mooventure2016_Rev5_get_autoinheritance_info();
         break;
       }
 
@@ -2054,28 +2014,6 @@ unsigned int sf_Mooventure2016_Rev5_get_eml_resolved_functions_info( int nlhs,
         break;
       }
 
-     case 61:
-      {
-        extern const mxArray
-          *sf_c61_Mooventure2016_Rev5_get_eml_resolved_functions_info(void);
-        mxArray *persistentMxArray = (mxArray *)
-          sf_c61_Mooventure2016_Rev5_get_eml_resolved_functions_info();
-        plhs[0] = mxDuplicateArray(persistentMxArray);
-        mxDestroyArray(persistentMxArray);
-        break;
-      }
-
-     case 62:
-      {
-        extern const mxArray
-          *sf_c62_Mooventure2016_Rev5_get_eml_resolved_functions_info(void);
-        mxArray *persistentMxArray = (mxArray *)
-          sf_c62_Mooventure2016_Rev5_get_eml_resolved_functions_info();
-        plhs[0] = mxDuplicateArray(persistentMxArray);
-        mxDestroyArray(persistentMxArray);
-        break;
-      }
-
      default:
       plhs[0] = mxCreateDoubleMatrix(0,0,mxREAL);
     }
@@ -2094,7 +2032,7 @@ unsigned int sf_Mooventure2016_Rev5_get_eml_resolved_functions_info( int nlhs,
 void Mooventure2016_Rev5_debug_initialize(void)
 {
   _Mooventure2016_Rev5MachineNumber_ = sf_debug_initialize_machine(
-    "Mooventure2016_Rev5","sfun",0,62,0,0,0);
+    "Mooventure2016_Rev5","sfun",0,60,0,0,0);
   sf_debug_set_machine_event_thresholds(_Mooventure2016_Rev5MachineNumber_,0,0);
   sf_debug_set_machine_data_thresholds(_Mooventure2016_Rev5MachineNumber_,0);
 }

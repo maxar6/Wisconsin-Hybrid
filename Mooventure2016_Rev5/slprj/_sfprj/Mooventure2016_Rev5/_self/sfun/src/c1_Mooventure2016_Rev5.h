@@ -8,21 +8,19 @@
 
 /* Type Definitions */
 typedef struct {
+  real_T c1_count;
   SimStruct *S;
   const mxArray *c1_setSimStateSideEffectsInfo;
   int32_T c1_sfEvent;
-  uint32_T c1_elapsedTicks;
-  uint32_T c1_presentTicks;
-  uint32_T c1_previousTicks;
   uint32_T chartNumber;
   uint32_T instanceNumber;
   boolean_T c1_isStable;
   uint8_T c1_doSetSimStateSideEffects;
   uint8_T c1_is_active_c1_Mooventure2016_Rev5;
   uint8_T c1_is_c1_Mooventure2016_Rev5;
-  uint8_T c1_temporalCounter_i1;
   uint8_T c1_tp_Batterybootup;
   uint8_T c1_tp_Charging_and_Temp;
+  uint8_T c1_tp_Counting;
   uint8_T c1_tp_Initial;
   uint8_T c1_tp_Kill_Component_Keyed;
   uint8_T c1_tp_Normal_Operation;

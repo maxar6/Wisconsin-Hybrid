@@ -68,8 +68,6 @@ OBJECTS = \
 	"c58_Mooventure2016_Rev5.obj"\
 	"c59_Mooventure2016_Rev5.obj"\
 	"c60_Mooventure2016_Rev5.obj"\
-	"c61_Mooventure2016_Rev5.obj"\
-	"c62_Mooventure2016_Rev5.obj"\
 	"lccstub.obj"\
 	"C:\Program Files (x86)\MATLAB\R2011a\sys\lcc\mex\lccdef.def"\
 	"C:\Program Files (x86)\MATLAB\R2011a\stateflow\c\debugger\lib\win32\sfc_debuglcc.lib"\
@@ -211,9 +209,5 @@ c59_Mooventure2016_Rev5.obj :	"c59_Mooventure2016_Rev5.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c59_Mooventure2016_Rev5.c"
 c60_Mooventure2016_Rev5.obj :	"c60_Mooventure2016_Rev5.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c60_Mooventure2016_Rev5.c"
-c61_Mooventure2016_Rev5.obj :	"c61_Mooventure2016_Rev5.c"
-	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c61_Mooventure2016_Rev5.c"
-c62_Mooventure2016_Rev5.obj :	"c62_Mooventure2016_Rev5.c"
-	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c62_Mooventure2016_Rev5.c"
 lccstub.obj :	"C:\Program Files (x86)\MATLAB\R2011a\sys\lcc\mex\lccstub.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "C:\Program Files (x86)\MATLAB\R2011a\sys\lcc\mex\lccstub.c"

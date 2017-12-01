@@ -132,7 +132,7 @@
    </target>
    <target name="link" depends="compile" description="Links the code">
       <gcc-ld installdir="${target.toolchain.installdir}" outputdir="${target.dir}"
-              linkerscript="C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Mooventure2016_Rev5.ld"
+              linkerscript="C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Mooventure2016_Rev5.ld"
               mapfile="Mooventure2016_Rev5.map"
               output="Mooventure2016_Rev5.elf">
          <options>

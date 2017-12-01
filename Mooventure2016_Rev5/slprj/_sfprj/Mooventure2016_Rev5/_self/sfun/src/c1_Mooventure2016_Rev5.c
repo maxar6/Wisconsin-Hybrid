@@ -3,7 +3,6 @@
 #include "blascompat32.h"
 #include "Mooventure2016_Rev5_sfun.h"
 #include "c1_Mooventure2016_Rev5.h"
-#include "mwmathutil.h"
 #define CHARTINSTANCE_CHARTNUMBER      (chartInstance->chartNumber)
 #define CHARTINSTANCE_INSTANCENUMBER   (chartInstance->instanceNumber)
 #include "Mooventure2016_Rev5_sfun_debug_macros.h"
@@ -12,12 +11,13 @@
 
 /* Named Constants */
 #define c1_IN_NO_ACTIVE_CHILD          (0U)
-#define c1_IN_Initial                  (3U)
+#define c1_IN_Initial                  (4U)
 #define c1_IN_Batterybootup            (1U)
 #define c1_IN_Charging_and_Temp        (2U)
-#define c1_IN_Normal_Operation         (5U)
-#define c1_IN_Shutdown_Sequence        (6U)
-#define c1_IN_Kill_Component_Keyed     (4U)
+#define c1_IN_Normal_Operation         (6U)
+#define c1_IN_Shutdown_Sequence        (7U)
+#define c1_IN_Kill_Component_Keyed     (5U)
+#define c1_IN_Counting                 (3U)
 
 /* Variable Declarations */
 
@@ -50,6 +50,8 @@ static void initSimStructsc1_Mooventure2016_Rev5
   (SFc1_Mooventure2016_Rev5InstanceStruct *chartInstance);
 static void c1_Batterybootup(SFc1_Mooventure2016_Rev5InstanceStruct
   *chartInstance);
+static void c1_Charging_and_Temp(SFc1_Mooventure2016_Rev5InstanceStruct
+  *chartInstance);
 static void init_script_number_translation(uint32_T c1_machineNumber, uint32_T
   c1_chartNumber);
 static const mxArray *c1_sf_marshallOut(void *chartInstanceVoid, void *c1_inData);
@@ -73,10 +75,14 @@ static boolean_T c1_e_emlrt_marshallIn(SFc1_Mooventure2016_Rev5InstanceStruct
   *chartInstance, const mxArray *c1_u, const emlrtMsgIdentifier *c1_parentId);
 static void c1_c_sf_marshallIn(void *chartInstanceVoid, const mxArray
   *c1_mxArrayInData, const char_T *c1_varName, void *c1_outData);
-static uint32_T c1_f_emlrt_marshallIn(SFc1_Mooventure2016_Rev5InstanceStruct
-  *chartInstance, const mxArray *c1_b_previousTicks, const char_T *c1_identifier);
-static uint32_T c1_g_emlrt_marshallIn(SFc1_Mooventure2016_Rev5InstanceStruct
+static const mxArray *c1_d_sf_marshallOut(void *chartInstanceVoid, void
+  *c1_inData);
+static real_T c1_f_emlrt_marshallIn(SFc1_Mooventure2016_Rev5InstanceStruct
+  *chartInstance, const mxArray *c1_b_count, const char_T *c1_identifier);
+static real_T c1_g_emlrt_marshallIn(SFc1_Mooventure2016_Rev5InstanceStruct
   *chartInstance, const mxArray *c1_u, const emlrtMsgIdentifier *c1_parentId);
+static void c1_d_sf_marshallIn(void *chartInstanceVoid, const mxArray
+  *c1_mxArrayInData, const char_T *c1_varName, void *c1_outData);
 static const mxArray *c1_h_emlrt_marshallIn
   (SFc1_Mooventure2016_Rev5InstanceStruct *chartInstance, const mxArray
    *c1_b_setSimStateSideEffectsInfo, const char_T *c1_identifier);
@@ -104,12 +110,14 @@ static void initialize_c1_Mooventure2016_Rev5
   chartInstance->c1_setSimStateSideEffectsInfo = NULL;
   chartInstance->c1_tp_Batterybootup = 0U;
   chartInstance->c1_tp_Charging_and_Temp = 0U;
+  chartInstance->c1_tp_Counting = 0U;
   chartInstance->c1_tp_Initial = 0U;
   chartInstance->c1_tp_Kill_Component_Keyed = 0U;
   chartInstance->c1_tp_Normal_Operation = 0U;
   chartInstance->c1_tp_Shutdown_Sequence = 0U;
   chartInstance->c1_is_active_c1_Mooventure2016_Rev5 = 0U;
   chartInstance->c1_is_c1_Mooventure2016_Rev5 = 0U;
+  chartInstance->c1_count = 0.0;
   if (!(cdrGetOutputPortReusable(chartInstance->S, 1) != 0)) {
     *c1_Vehicle_Enable = FALSE;
   }
@@ -125,10 +133,6 @@ static void initialize_c1_Mooventure2016_Rev5
   if (!(cdrGetOutputPortReusable(chartInstance->S, 4) != 0)) {
     *c1_Keyed_Relay = FALSE;
   }
-
-  chartInstance->c1_presentTicks = 0U;
-  chartInstance->c1_elapsedTicks = 0U;
-  chartInstance->c1_previousTicks = 0U;
 }
 
 static void initialize_params_c1_Mooventure2016_Rev5
@@ -139,30 +143,13 @@ static void initialize_params_c1_Mooventure2016_Rev5
 static void enable_c1_Mooventure2016_Rev5(SFc1_Mooventure2016_Rev5InstanceStruct
   *chartInstance)
 {
-  real_T c1_d0;
   _sfTime_ = (real_T)ssGetT(chartInstance->S);
-  c1_d0 = muDoubleScalarFloor(_sfTime_ / 0.2 + 0.5);
-  chartInstance->c1_presentTicks = (uint32_T)c1_d0;
-  chartInstance->c1_previousTicks = chartInstance->c1_presentTicks;
 }
 
 static void disable_c1_Mooventure2016_Rev5
   (SFc1_Mooventure2016_Rev5InstanceStruct *chartInstance)
 {
-  real_T c1_d1;
   _sfTime_ = (real_T)ssGetT(chartInstance->S);
-  c1_d1 = muDoubleScalarFloor(_sfTime_ / 0.2 + 0.5);
-  chartInstance->c1_presentTicks = (uint32_T)c1_d1;
-  chartInstance->c1_elapsedTicks = chartInstance->c1_presentTicks -
-    chartInstance->c1_previousTicks;
-  chartInstance->c1_previousTicks = chartInstance->c1_presentTicks;
-  if ((uint32_T)chartInstance->c1_temporalCounter_i1 +
-      chartInstance->c1_elapsedTicks <= 7U) {
-    chartInstance->c1_temporalCounter_i1 = (uint8_T)((uint32_T)
-      chartInstance->c1_temporalCounter_i1 + chartInstance->c1_elapsedTicks);
-  } else {
-    chartInstance->c1_temporalCounter_i1 = 7U;
-  }
 }
 
 static void c1_update_debugger_state_c1_Mooventure2016_Rev5
@@ -176,9 +163,9 @@ static void c1_update_debugger_state_c1_Mooventure2016_Rev5
   }
 
   if (chartInstance->c1_is_c1_Mooventure2016_Rev5 == c1_IN_Initial) {
-    _SFD_CS_CALL(STATE_ACTIVE_TAG, 2U, chartInstance->c1_sfEvent);
+    _SFD_CS_CALL(STATE_ACTIVE_TAG, 3U, chartInstance->c1_sfEvent);
   } else {
-    _SFD_CS_CALL(STATE_INACTIVE_TAG, 2U, chartInstance->c1_sfEvent);
+    _SFD_CS_CALL(STATE_INACTIVE_TAG, 3U, chartInstance->c1_sfEvent);
   }
 
   if (chartInstance->c1_is_c1_Mooventure2016_Rev5 == c1_IN_Batterybootup) {
@@ -194,22 +181,28 @@ static void c1_update_debugger_state_c1_Mooventure2016_Rev5
   }
 
   if (chartInstance->c1_is_c1_Mooventure2016_Rev5 == c1_IN_Normal_Operation) {
-    _SFD_CS_CALL(STATE_ACTIVE_TAG, 4U, chartInstance->c1_sfEvent);
-  } else {
-    _SFD_CS_CALL(STATE_INACTIVE_TAG, 4U, chartInstance->c1_sfEvent);
-  }
-
-  if (chartInstance->c1_is_c1_Mooventure2016_Rev5 == c1_IN_Shutdown_Sequence) {
     _SFD_CS_CALL(STATE_ACTIVE_TAG, 5U, chartInstance->c1_sfEvent);
   } else {
     _SFD_CS_CALL(STATE_INACTIVE_TAG, 5U, chartInstance->c1_sfEvent);
   }
 
+  if (chartInstance->c1_is_c1_Mooventure2016_Rev5 == c1_IN_Shutdown_Sequence) {
+    _SFD_CS_CALL(STATE_ACTIVE_TAG, 6U, chartInstance->c1_sfEvent);
+  } else {
+    _SFD_CS_CALL(STATE_INACTIVE_TAG, 6U, chartInstance->c1_sfEvent);
+  }
+
   if (chartInstance->c1_is_c1_Mooventure2016_Rev5 == c1_IN_Kill_Component_Keyed)
   {
-    _SFD_CS_CALL(STATE_ACTIVE_TAG, 3U, chartInstance->c1_sfEvent);
+    _SFD_CS_CALL(STATE_ACTIVE_TAG, 4U, chartInstance->c1_sfEvent);
   } else {
-    _SFD_CS_CALL(STATE_INACTIVE_TAG, 3U, chartInstance->c1_sfEvent);
+    _SFD_CS_CALL(STATE_INACTIVE_TAG, 4U, chartInstance->c1_sfEvent);
+  }
+
+  if (chartInstance->c1_is_c1_Mooventure2016_Rev5 == c1_IN_Counting) {
+    _SFD_CS_CALL(STATE_ACTIVE_TAG, 2U, chartInstance->c1_sfEvent);
+  } else {
+    _SFD_CS_CALL(STATE_INACTIVE_TAG, 2U, chartInstance->c1_sfEvent);
   }
 
   sf_debug_set_animation(c1_prevAniVal);
@@ -233,8 +226,8 @@ static const mxArray *get_sim_state_c1_Mooventure2016_Rev5
   boolean_T c1_d_hoistedGlobal;
   boolean_T c1_d_u;
   const mxArray *c1_e_y = NULL;
-  uint8_T c1_e_hoistedGlobal;
-  uint8_T c1_e_u;
+  real_T c1_e_hoistedGlobal;
+  real_T c1_e_u;
   const mxArray *c1_f_y = NULL;
   uint8_T c1_f_hoistedGlobal;
   uint8_T c1_f_u;
@@ -242,9 +235,6 @@ static const mxArray *get_sim_state_c1_Mooventure2016_Rev5
   uint8_T c1_g_hoistedGlobal;
   uint8_T c1_g_u;
   const mxArray *c1_h_y = NULL;
-  uint32_T c1_h_hoistedGlobal;
-  uint32_T c1_h_u;
-  const mxArray *c1_i_y = NULL;
   boolean_T *c1_Keyed_Relay;
   boolean_T *c1_Torque_Enable;
   boolean_T *c1_Vehicle_Enable;
@@ -256,7 +246,7 @@ static const mxArray *get_sim_state_c1_Mooventure2016_Rev5
   c1_st = NULL;
   c1_st = NULL;
   c1_y = NULL;
-  sf_mex_assign(&c1_y, sf_mex_createcellarray(8));
+  sf_mex_assign(&c1_y, sf_mex_createcellarray(7));
   c1_hoistedGlobal = *c1_Keyed_Relay;
   c1_u = c1_hoistedGlobal;
   c1_b_y = NULL;
@@ -277,26 +267,21 @@ static const mxArray *get_sim_state_c1_Mooventure2016_Rev5
   c1_e_y = NULL;
   sf_mex_assign(&c1_e_y, sf_mex_create("y", &c1_d_u, 11, 0U, 0U, 0U, 0));
   sf_mex_setcell(c1_y, 3, c1_e_y);
-  c1_e_hoistedGlobal = chartInstance->c1_is_active_c1_Mooventure2016_Rev5;
+  c1_e_hoistedGlobal = chartInstance->c1_count;
   c1_e_u = c1_e_hoistedGlobal;
   c1_f_y = NULL;
-  sf_mex_assign(&c1_f_y, sf_mex_create("y", &c1_e_u, 3, 0U, 0U, 0U, 0));
+  sf_mex_assign(&c1_f_y, sf_mex_create("y", &c1_e_u, 0, 0U, 0U, 0U, 0));
   sf_mex_setcell(c1_y, 4, c1_f_y);
-  c1_f_hoistedGlobal = chartInstance->c1_is_c1_Mooventure2016_Rev5;
+  c1_f_hoistedGlobal = chartInstance->c1_is_active_c1_Mooventure2016_Rev5;
   c1_f_u = c1_f_hoistedGlobal;
   c1_g_y = NULL;
   sf_mex_assign(&c1_g_y, sf_mex_create("y", &c1_f_u, 3, 0U, 0U, 0U, 0));
   sf_mex_setcell(c1_y, 5, c1_g_y);
-  c1_g_hoistedGlobal = chartInstance->c1_temporalCounter_i1;
+  c1_g_hoistedGlobal = chartInstance->c1_is_c1_Mooventure2016_Rev5;
   c1_g_u = c1_g_hoistedGlobal;
   c1_h_y = NULL;
   sf_mex_assign(&c1_h_y, sf_mex_create("y", &c1_g_u, 3, 0U, 0U, 0U, 0));
   sf_mex_setcell(c1_y, 6, c1_h_y);
-  c1_h_hoistedGlobal = chartInstance->c1_previousTicks;
-  c1_h_u = c1_h_hoistedGlobal;
-  c1_i_y = NULL;
-  sf_mex_assign(&c1_i_y, sf_mex_create("y", &c1_h_u, 7, 0U, 0U, 0U, 0));
-  sf_mex_setcell(c1_y, 7, c1_i_y);
   sf_mex_assign(&c1_st, c1_y);
   return c1_st;
 }
@@ -322,19 +307,17 @@ static void set_sim_state_c1_Mooventure2016_Rev5
     (sf_mex_getcell(c1_u, 2)), "Vehicle_Enable");
   *c1_Vehicle_Ready = c1_d_emlrt_marshallIn(chartInstance, sf_mex_dup
     (sf_mex_getcell(c1_u, 3)), "Vehicle_Ready");
+  chartInstance->c1_count = c1_f_emlrt_marshallIn(chartInstance, sf_mex_dup
+    (sf_mex_getcell(c1_u, 4)), "count");
   chartInstance->c1_is_active_c1_Mooventure2016_Rev5 = c1_b_emlrt_marshallIn
-    (chartInstance, sf_mex_dup(sf_mex_getcell(c1_u, 4)),
+    (chartInstance, sf_mex_dup(sf_mex_getcell(c1_u, 5)),
      "is_active_c1_Mooventure2016_Rev5");
   chartInstance->c1_is_c1_Mooventure2016_Rev5 = c1_b_emlrt_marshallIn
-    (chartInstance, sf_mex_dup(sf_mex_getcell(c1_u, 5)),
+    (chartInstance, sf_mex_dup(sf_mex_getcell(c1_u, 6)),
      "is_c1_Mooventure2016_Rev5");
-  chartInstance->c1_temporalCounter_i1 = c1_b_emlrt_marshallIn(chartInstance,
-    sf_mex_dup(sf_mex_getcell(c1_u, 6)), "temporalCounter_i1");
-  chartInstance->c1_previousTicks = c1_f_emlrt_marshallIn(chartInstance,
-    sf_mex_dup(sf_mex_getcell(c1_u, 7)), "previousTicks");
   sf_mex_assign(&chartInstance->c1_setSimStateSideEffectsInfo,
                 c1_h_emlrt_marshallIn(chartInstance, sf_mex_dup(sf_mex_getcell
-    (c1_u, 8)), "setSimStateSideEffectsInfo"));
+    (c1_u, 7)), "setSimStateSideEffectsInfo"));
   sf_mex_destroy(&c1_u);
   chartInstance->c1_doSetSimStateSideEffects = 1U;
   c1_update_debugger_state_c1_Mooventure2016_Rev5(chartInstance);
@@ -347,10 +330,6 @@ static void c1_set_sim_state_side_effects_c1_Mooventure2016_Rev5
   if (chartInstance->c1_doSetSimStateSideEffects != 0) {
     if (chartInstance->c1_is_c1_Mooventure2016_Rev5 == c1_IN_Batterybootup) {
       chartInstance->c1_tp_Batterybootup = 1U;
-      if (sf_mex_sub(chartInstance->c1_setSimStateSideEffectsInfo,
-                     "setSimStateSideEffectsInfo", 1, 2) == 0.0) {
-        chartInstance->c1_temporalCounter_i1 = 0U;
-      }
     } else {
       chartInstance->c1_tp_Batterybootup = 0U;
     }
@@ -362,12 +341,14 @@ static void c1_set_sim_state_side_effects_c1_Mooventure2016_Rev5
       chartInstance->c1_tp_Charging_and_Temp = 0U;
     }
 
+    if (chartInstance->c1_is_c1_Mooventure2016_Rev5 == c1_IN_Counting) {
+      chartInstance->c1_tp_Counting = 1U;
+    } else {
+      chartInstance->c1_tp_Counting = 0U;
+    }
+
     if (chartInstance->c1_is_c1_Mooventure2016_Rev5 == c1_IN_Initial) {
       chartInstance->c1_tp_Initial = 1U;
-      if (sf_mex_sub(chartInstance->c1_setSimStateSideEffectsInfo,
-                     "setSimStateSideEffectsInfo", 1, 4) == 0.0) {
-        chartInstance->c1_temporalCounter_i1 = 0U;
-      }
     } else {
       chartInstance->c1_tp_Initial = 0U;
     }
@@ -405,7 +386,6 @@ static void finalize_c1_Mooventure2016_Rev5
 static void sf_c1_Mooventure2016_Rev5(SFc1_Mooventure2016_Rev5InstanceStruct
   *chartInstance)
 {
-  real_T c1_d2;
   boolean_T *c1_Shutdown;
   boolean_T *c1_Batt_Load_Enable;
   boolean_T *c1_Vehicle_Enable;
@@ -425,19 +405,6 @@ static void sf_c1_Mooventure2016_Rev5(SFc1_Mooventure2016_Rev5InstanceStruct
   c1_Shutdown = (boolean_T *)ssGetInputPortSignal(chartInstance->S, 0);
   c1_set_sim_state_side_effects_c1_Mooventure2016_Rev5(chartInstance);
   _sfTime_ = (real_T)ssGetT(chartInstance->S);
-  c1_d2 = muDoubleScalarFloor(_sfTime_ / 0.2 + 0.5);
-  chartInstance->c1_presentTicks = (uint32_T)c1_d2;
-  chartInstance->c1_elapsedTicks = chartInstance->c1_presentTicks -
-    chartInstance->c1_previousTicks;
-  chartInstance->c1_previousTicks = chartInstance->c1_presentTicks;
-  if ((uint32_T)chartInstance->c1_temporalCounter_i1 +
-      chartInstance->c1_elapsedTicks <= 7U) {
-    chartInstance->c1_temporalCounter_i1 = (uint8_T)((uint32_T)
-      chartInstance->c1_temporalCounter_i1 + chartInstance->c1_elapsedTicks);
-  } else {
-    chartInstance->c1_temporalCounter_i1 = 7U;
-  }
-
   _SFD_CC_CALL(CHART_ENTER_SFUNCTION_TAG, 0U, chartInstance->c1_sfEvent);
   _SFD_DATA_RANGE_CHECK((real_T)*c1_Shutdown, 0U);
   _SFD_DATA_RANGE_CHECK((real_T)*c1_Batt_Load_Enable, 1U);
@@ -447,6 +414,7 @@ static void sf_c1_Mooventure2016_Rev5(SFc1_Mooventure2016_Rev5InstanceStruct
   _SFD_DATA_RANGE_CHECK((real_T)*c1_Keyed_Relay, 5U);
   _SFD_DATA_RANGE_CHECK((real_T)*c1_Batt_Contactor_Status, 6U);
   _SFD_DATA_RANGE_CHECK((real_T)*c1_Charging, 7U);
+  _SFD_DATA_RANGE_CHECK(chartInstance->c1_count, 8U);
   chartInstance->c1_sfEvent = CALL_EVENT;
   c1_chartstep_c1_Mooventure2016_Rev5(chartInstance);
   sf_debug_check_for_state_inconsistency(_Mooventure2016_Rev5MachineNumber_,
@@ -459,7 +427,6 @@ static void c1_chartstep_c1_Mooventure2016_Rev5
   boolean_T c1_b0;
   boolean_T c1_b1;
   boolean_T c1_b2;
-  boolean_T c1_temp;
   boolean_T c1_b3;
   boolean_T c1_b4;
   boolean_T c1_b5;
@@ -469,15 +436,12 @@ static void c1_chartstep_c1_Mooventure2016_Rev5
   boolean_T c1_b9;
   boolean_T c1_b10;
   boolean_T c1_b11;
-  boolean_T c1_b12;
-  boolean_T c1_b13;
-  boolean_T c1_b14;
   boolean_T *c1_Shutdown;
-  boolean_T *c1_Charging;
   boolean_T *c1_Vehicle_Enable;
   boolean_T *c1_Vehicle_Ready;
   boolean_T *c1_Torque_Enable;
   boolean_T *c1_Keyed_Relay;
+  boolean_T *c1_Charging;
   boolean_T *c1_Batt_Contactor_Status;
   c1_Charging = (boolean_T *)ssGetInputPortSignal(chartInstance->S, 3);
   c1_Batt_Contactor_Status = (boolean_T *)ssGetInputPortSignal(chartInstance->S,
@@ -495,8 +459,7 @@ static void c1_chartstep_c1_Mooventure2016_Rev5
     _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 0U, chartInstance->c1_sfEvent);
     _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 0U, chartInstance->c1_sfEvent);
     chartInstance->c1_is_c1_Mooventure2016_Rev5 = c1_IN_Initial;
-    _SFD_CS_CALL(STATE_ACTIVE_TAG, 2U, chartInstance->c1_sfEvent);
-    chartInstance->c1_temporalCounter_i1 = 0U;
+    _SFD_CS_CALL(STATE_ACTIVE_TAG, 3U, chartInstance->c1_sfEvent);
     chartInstance->c1_tp_Initial = 1U;
   } else {
     switch (chartInstance->c1_is_c1_Mooventure2016_Rev5) {
@@ -507,19 +470,25 @@ static void c1_chartstep_c1_Mooventure2016_Rev5
 
      case c1_IN_Charging_and_Temp:
       CV_CHART_EVAL(0, 0, 2);
-      _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 1U,
+      c1_Charging_and_Temp(chartInstance);
+      break;
+
+     case c1_IN_Counting:
+      CV_CHART_EVAL(0, 0, 3);
+      _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 2U,
                    chartInstance->c1_sfEvent);
-      _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 4U,
+      _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 10U,
                    chartInstance->c1_sfEvent);
-      if (CV_TRANSITION_EVAL(4U, (int32_T)_SFD_CCP_CALL(4U, 0, *c1_Shutdown !=
-            0U, chartInstance->c1_sfEvent))) {
+      if (CV_TRANSITION_EVAL(10U, (int32_T)_SFD_CCP_CALL(10U, 0,
+            chartInstance->c1_count >= 200.0 != 0U, chartInstance->c1_sfEvent)))
+      {
         if (sf_debug_transition_conflict_check_enabled()) {
           unsigned int transitionList[2];
           unsigned int numTransitions = 1;
-          transitionList[0] = 4;
+          transitionList[0] = 10;
           sf_debug_transition_conflict_check_begin();
-          if (!*c1_Charging) {
-            transitionList[numTransitions] = 2;
+          if (!*c1_Shutdown) {
+            transitionList[numTransitions] = 11;
             numTransitions++;
           }
 
@@ -529,30 +498,80 @@ static void c1_chartstep_c1_Mooventure2016_Rev5
           }
         }
 
-        _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 4U, chartInstance->c1_sfEvent);
-        chartInstance->c1_tp_Charging_and_Temp = 0U;
-        _SFD_CS_CALL(STATE_INACTIVE_TAG, 1U, chartInstance->c1_sfEvent);
+        _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 10U, chartInstance->c1_sfEvent);
+        chartInstance->c1_tp_Counting = 0U;
+        _SFD_CS_CALL(STATE_INACTIVE_TAG, 2U, chartInstance->c1_sfEvent);
         chartInstance->c1_is_c1_Mooventure2016_Rev5 = c1_IN_Shutdown_Sequence;
-        _SFD_CS_CALL(STATE_ACTIVE_TAG, 5U, chartInstance->c1_sfEvent);
+        _SFD_CS_CALL(STATE_ACTIVE_TAG, 6U, chartInstance->c1_sfEvent);
         chartInstance->c1_tp_Shutdown_Sequence = 1U;
       } else {
-        _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 2U,
+        _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 11U,
                      chartInstance->c1_sfEvent);
-        if (CV_TRANSITION_EVAL(2U, !(_SFD_CCP_CALL(2U, 0, *c1_Charging != 0U,
+        if (CV_TRANSITION_EVAL(11U, !(_SFD_CCP_CALL(11U, 0, *c1_Shutdown != 0U,
                chartInstance->c1_sfEvent) != 0))) {
-          _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 2U, chartInstance->c1_sfEvent);
-          chartInstance->c1_tp_Charging_and_Temp = 0U;
-          _SFD_CS_CALL(STATE_INACTIVE_TAG, 1U, chartInstance->c1_sfEvent);
+          _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 11U, chartInstance->c1_sfEvent);
+          chartInstance->c1_tp_Counting = 0U;
+          _SFD_CS_CALL(STATE_INACTIVE_TAG, 2U, chartInstance->c1_sfEvent);
           chartInstance->c1_is_c1_Mooventure2016_Rev5 = c1_IN_Normal_Operation;
-          _SFD_CS_CALL(STATE_ACTIVE_TAG, 4U, chartInstance->c1_sfEvent);
+          _SFD_CS_CALL(STATE_ACTIVE_TAG, 5U, chartInstance->c1_sfEvent);
           chartInstance->c1_tp_Normal_Operation = 1U;
         } else {
-          *c1_Vehicle_Enable = TRUE;
+          chartInstance->c1_count++;
+          _SFD_DATA_RANGE_CHECK(chartInstance->c1_count, 8U);
+        }
+      }
+
+      _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 2U, chartInstance->c1_sfEvent);
+      break;
+
+     case c1_IN_Initial:
+      CV_CHART_EVAL(0, 0, 4);
+      _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 3U,
+                   chartInstance->c1_sfEvent);
+      _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 1U,
+                   chartInstance->c1_sfEvent);
+      if (CV_TRANSITION_EVAL(1U, !(_SFD_CCP_CALL(1U, 0, *c1_Shutdown != 0U,
+             chartInstance->c1_sfEvent) != 0))) {
+        if (sf_debug_transition_conflict_check_enabled()) {
+          unsigned int transitionList[2];
+          unsigned int numTransitions = 1;
+          transitionList[0] = 1;
+          sf_debug_transition_conflict_check_begin();
+          if (*c1_Shutdown) {
+            transitionList[numTransitions] = 6;
+            numTransitions++;
+          }
+
+          sf_debug_transition_conflict_check_end();
+          if (numTransitions > 1) {
+            _SFD_TRANSITION_CONFLICT(&(transitionList[0]),numTransitions);
+          }
+        }
+
+        _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 1U, chartInstance->c1_sfEvent);
+        chartInstance->c1_tp_Initial = 0U;
+        _SFD_CS_CALL(STATE_INACTIVE_TAG, 3U, chartInstance->c1_sfEvent);
+        chartInstance->c1_is_c1_Mooventure2016_Rev5 = c1_IN_Batterybootup;
+        _SFD_CS_CALL(STATE_ACTIVE_TAG, 0U, chartInstance->c1_sfEvent);
+        chartInstance->c1_tp_Batterybootup = 1U;
+      } else {
+        _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 6U,
+                     chartInstance->c1_sfEvent);
+        if (CV_TRANSITION_EVAL(6U, (int32_T)_SFD_CCP_CALL(6U, 0, *c1_Shutdown !=
+              0U, chartInstance->c1_sfEvent))) {
+          _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 6U, chartInstance->c1_sfEvent);
+          chartInstance->c1_tp_Initial = 0U;
+          _SFD_CS_CALL(STATE_INACTIVE_TAG, 3U, chartInstance->c1_sfEvent);
+          chartInstance->c1_is_c1_Mooventure2016_Rev5 = c1_IN_Shutdown_Sequence;
+          _SFD_CS_CALL(STATE_ACTIVE_TAG, 6U, chartInstance->c1_sfEvent);
+          chartInstance->c1_tp_Shutdown_Sequence = 1U;
+        } else {
+          *c1_Vehicle_Enable = FALSE;
           _SFD_DATA_RANGE_CHECK((real_T)*c1_Vehicle_Enable, 2U);
           c1_b0 = *c1_Vehicle_Enable;
           sf_mex_printf("%s =\\n", "Vehicle_Enable");
           sf_mex_call_debug("disp", 0U, 1U, 3, c1_b0);
-          *c1_Vehicle_Ready = TRUE;
+          *c1_Vehicle_Ready = FALSE;
           _SFD_DATA_RANGE_CHECK((real_T)*c1_Vehicle_Ready, 3U);
           c1_b1 = *c1_Vehicle_Ready;
           sf_mex_printf("%s =\\n", "Vehicle_Ready");
@@ -567,121 +586,48 @@ static void c1_chartstep_c1_Mooventure2016_Rev5
         }
       }
 
-      _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 1U, chartInstance->c1_sfEvent);
-      break;
-
-     case c1_IN_Initial:
-      CV_CHART_EVAL(0, 0, 3);
-      _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 2U,
-                   chartInstance->c1_sfEvent);
-      _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 1U,
-                   chartInstance->c1_sfEvent);
-      c1_temp = !(_SFD_CCP_CALL(1U, 0, *c1_Shutdown != 0U,
-        chartInstance->c1_sfEvent) != 0);
-      if (c1_temp) {
-        c1_temp = (_SFD_CCP_CALL(1U, 1, (uint32_T)
-                    chartInstance->c1_temporalCounter_i1 >= 5U != 0U,
-                    chartInstance->c1_sfEvent) != 0);
-      }
-
-      if (CV_TRANSITION_EVAL(1U, (int32_T)c1_temp)) {
-        if (sf_debug_transition_conflict_check_enabled()) {
-          unsigned int transitionList[2];
-          unsigned int numTransitions = 1;
-          transitionList[0] = 1;
-          sf_debug_transition_conflict_check_begin();
-          if (*c1_Shutdown) {
-            transitionList[numTransitions] = 8;
-            numTransitions++;
-          }
-
-          sf_debug_transition_conflict_check_end();
-          if (numTransitions > 1) {
-            _SFD_TRANSITION_CONFLICT(&(transitionList[0]),numTransitions);
-          }
-        }
-
-        _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 1U, chartInstance->c1_sfEvent);
-        chartInstance->c1_tp_Initial = 0U;
-        _SFD_CS_CALL(STATE_INACTIVE_TAG, 2U, chartInstance->c1_sfEvent);
-        chartInstance->c1_is_c1_Mooventure2016_Rev5 = c1_IN_Batterybootup;
-        _SFD_CS_CALL(STATE_ACTIVE_TAG, 0U, chartInstance->c1_sfEvent);
-        chartInstance->c1_temporalCounter_i1 = 0U;
-        chartInstance->c1_tp_Batterybootup = 1U;
-      } else {
-        _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 8U,
-                     chartInstance->c1_sfEvent);
-        if (CV_TRANSITION_EVAL(8U, (int32_T)_SFD_CCP_CALL(8U, 0, *c1_Shutdown !=
-              0U, chartInstance->c1_sfEvent))) {
-          _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 8U, chartInstance->c1_sfEvent);
-          chartInstance->c1_tp_Initial = 0U;
-          _SFD_CS_CALL(STATE_INACTIVE_TAG, 2U, chartInstance->c1_sfEvent);
-          chartInstance->c1_is_c1_Mooventure2016_Rev5 = c1_IN_Shutdown_Sequence;
-          _SFD_CS_CALL(STATE_ACTIVE_TAG, 5U, chartInstance->c1_sfEvent);
-          chartInstance->c1_tp_Shutdown_Sequence = 1U;
-        } else {
-          *c1_Vehicle_Enable = FALSE;
-          _SFD_DATA_RANGE_CHECK((real_T)*c1_Vehicle_Enable, 2U);
-          c1_b3 = *c1_Vehicle_Enable;
-          sf_mex_printf("%s =\\n", "Vehicle_Enable");
-          sf_mex_call_debug("disp", 0U, 1U, 3, c1_b3);
-          *c1_Vehicle_Ready = FALSE;
-          _SFD_DATA_RANGE_CHECK((real_T)*c1_Vehicle_Ready, 3U);
-          c1_b4 = *c1_Vehicle_Ready;
-          sf_mex_printf("%s =\\n", "Vehicle_Ready");
-          sf_mex_call_debug("disp", 0U, 1U, 3, c1_b4);
-          *c1_Torque_Enable = FALSE;
-          _SFD_DATA_RANGE_CHECK((real_T)*c1_Torque_Enable, 4U);
-          c1_b5 = *c1_Torque_Enable;
-          sf_mex_printf("%s =\\n", "Torque_Enable");
-          sf_mex_call_debug("disp", 0U, 1U, 3, c1_b5);
-          *c1_Keyed_Relay = TRUE;
-          _SFD_DATA_RANGE_CHECK((real_T)*c1_Keyed_Relay, 5U);
-        }
-      }
-
-      _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 2U, chartInstance->c1_sfEvent);
-      break;
-
-     case c1_IN_Kill_Component_Keyed:
-      CV_CHART_EVAL(0, 0, 4);
-      _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 3U,
-                   chartInstance->c1_sfEvent);
-      *c1_Vehicle_Enable = FALSE;
-      _SFD_DATA_RANGE_CHECK((real_T)*c1_Vehicle_Enable, 2U);
-      c1_b6 = *c1_Vehicle_Enable;
-      sf_mex_printf("%s =\\n", "Vehicle_Enable");
-      sf_mex_call_debug("disp", 0U, 1U, 3, c1_b6);
-      *c1_Vehicle_Ready = FALSE;
-      _SFD_DATA_RANGE_CHECK((real_T)*c1_Vehicle_Ready, 3U);
-      c1_b7 = *c1_Vehicle_Ready;
-      sf_mex_printf("%s =\\n", "Vehicle_Ready");
-      sf_mex_call_debug("disp", 0U, 1U, 3, c1_b7);
-      *c1_Torque_Enable = FALSE;
-      _SFD_DATA_RANGE_CHECK((real_T)*c1_Torque_Enable, 4U);
-      c1_b8 = *c1_Torque_Enable;
-      sf_mex_printf("%s =\\n", "Torque_Enable");
-      sf_mex_call_debug("disp", 0U, 1U, 3, c1_b8);
-      *c1_Keyed_Relay = FALSE;
-      _SFD_DATA_RANGE_CHECK((real_T)*c1_Keyed_Relay, 5U);
       _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 3U, chartInstance->c1_sfEvent);
       break;
 
-     case c1_IN_Normal_Operation:
+     case c1_IN_Kill_Component_Keyed:
       CV_CHART_EVAL(0, 0, 5);
       _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 4U,
                    chartInstance->c1_sfEvent);
-      _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 5U,
+      *c1_Vehicle_Enable = FALSE;
+      _SFD_DATA_RANGE_CHECK((real_T)*c1_Vehicle_Enable, 2U);
+      c1_b3 = *c1_Vehicle_Enable;
+      sf_mex_printf("%s =\\n", "Vehicle_Enable");
+      sf_mex_call_debug("disp", 0U, 1U, 3, c1_b3);
+      *c1_Vehicle_Ready = FALSE;
+      _SFD_DATA_RANGE_CHECK((real_T)*c1_Vehicle_Ready, 3U);
+      c1_b4 = *c1_Vehicle_Ready;
+      sf_mex_printf("%s =\\n", "Vehicle_Ready");
+      sf_mex_call_debug("disp", 0U, 1U, 3, c1_b4);
+      *c1_Torque_Enable = FALSE;
+      _SFD_DATA_RANGE_CHECK((real_T)*c1_Torque_Enable, 4U);
+      c1_b5 = *c1_Torque_Enable;
+      sf_mex_printf("%s =\\n", "Torque_Enable");
+      sf_mex_call_debug("disp", 0U, 1U, 3, c1_b5);
+      *c1_Keyed_Relay = FALSE;
+      _SFD_DATA_RANGE_CHECK((real_T)*c1_Keyed_Relay, 5U);
+      _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 4U, chartInstance->c1_sfEvent);
+      break;
+
+     case c1_IN_Normal_Operation:
+      CV_CHART_EVAL(0, 0, 6);
+      _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 5U,
                    chartInstance->c1_sfEvent);
-      if (CV_TRANSITION_EVAL(5U, (int32_T)_SFD_CCP_CALL(5U, 0, *c1_Shutdown !=
+      _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 4U,
+                   chartInstance->c1_sfEvent);
+      if (CV_TRANSITION_EVAL(4U, (int32_T)_SFD_CCP_CALL(4U, 0, *c1_Charging !=
             0U, chartInstance->c1_sfEvent))) {
         if (sf_debug_transition_conflict_check_enabled()) {
           unsigned int transitionList[2];
           unsigned int numTransitions = 1;
-          transitionList[0] = 5;
+          transitionList[0] = 4;
           sf_debug_transition_conflict_check_begin();
-          if (*c1_Charging) {
-            transitionList[numTransitions] = 6;
+          if (*c1_Shutdown) {
+            transitionList[numTransitions] = 9;
             numTransitions++;
           }
 
@@ -691,83 +637,85 @@ static void c1_chartstep_c1_Mooventure2016_Rev5
           }
         }
 
-        _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 5U, chartInstance->c1_sfEvent);
+        _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 4U, chartInstance->c1_sfEvent);
         chartInstance->c1_tp_Normal_Operation = 0U;
-        _SFD_CS_CALL(STATE_INACTIVE_TAG, 4U, chartInstance->c1_sfEvent);
-        chartInstance->c1_is_c1_Mooventure2016_Rev5 = c1_IN_Shutdown_Sequence;
-        _SFD_CS_CALL(STATE_ACTIVE_TAG, 5U, chartInstance->c1_sfEvent);
-        chartInstance->c1_tp_Shutdown_Sequence = 1U;
+        _SFD_CS_CALL(STATE_INACTIVE_TAG, 5U, chartInstance->c1_sfEvent);
+        chartInstance->c1_is_c1_Mooventure2016_Rev5 = c1_IN_Charging_and_Temp;
+        _SFD_CS_CALL(STATE_ACTIVE_TAG, 1U, chartInstance->c1_sfEvent);
+        chartInstance->c1_tp_Charging_and_Temp = 1U;
       } else {
-        _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 6U,
+        _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 9U,
                      chartInstance->c1_sfEvent);
-        if (CV_TRANSITION_EVAL(6U, (int32_T)_SFD_CCP_CALL(6U, 0, *c1_Charging !=
+        if (CV_TRANSITION_EVAL(9U, (int32_T)_SFD_CCP_CALL(9U, 0, *c1_Shutdown !=
               0U, chartInstance->c1_sfEvent))) {
-          _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 6U, chartInstance->c1_sfEvent);
+          _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 9U, chartInstance->c1_sfEvent);
           chartInstance->c1_tp_Normal_Operation = 0U;
-          _SFD_CS_CALL(STATE_INACTIVE_TAG, 4U, chartInstance->c1_sfEvent);
-          chartInstance->c1_is_c1_Mooventure2016_Rev5 = c1_IN_Charging_and_Temp;
-          _SFD_CS_CALL(STATE_ACTIVE_TAG, 1U, chartInstance->c1_sfEvent);
-          chartInstance->c1_tp_Charging_and_Temp = 1U;
+          _SFD_CS_CALL(STATE_INACTIVE_TAG, 5U, chartInstance->c1_sfEvent);
+          chartInstance->c1_is_c1_Mooventure2016_Rev5 = c1_IN_Counting;
+          _SFD_CS_CALL(STATE_ACTIVE_TAG, 2U, chartInstance->c1_sfEvent);
+          chartInstance->c1_tp_Counting = 1U;
+          chartInstance->c1_count = 0.0;
+          _SFD_DATA_RANGE_CHECK(chartInstance->c1_count, 8U);
         } else {
           *c1_Vehicle_Enable = TRUE;
           _SFD_DATA_RANGE_CHECK((real_T)*c1_Vehicle_Enable, 2U);
-          c1_b9 = *c1_Vehicle_Enable;
+          c1_b6 = *c1_Vehicle_Enable;
           sf_mex_printf("%s =\\n", "Vehicle_Enable");
-          sf_mex_call_debug("disp", 0U, 1U, 3, c1_b9);
+          sf_mex_call_debug("disp", 0U, 1U, 3, c1_b6);
           *c1_Vehicle_Ready = TRUE;
           _SFD_DATA_RANGE_CHECK((real_T)*c1_Vehicle_Ready, 3U);
-          c1_b10 = *c1_Vehicle_Ready;
+          c1_b7 = *c1_Vehicle_Ready;
           sf_mex_printf("%s =\\n", "Vehicle_Ready");
-          sf_mex_call_debug("disp", 0U, 1U, 3, c1_b10);
+          sf_mex_call_debug("disp", 0U, 1U, 3, c1_b7);
           *c1_Torque_Enable = TRUE;
           _SFD_DATA_RANGE_CHECK((real_T)*c1_Torque_Enable, 4U);
-          c1_b11 = *c1_Torque_Enable;
+          c1_b8 = *c1_Torque_Enable;
           sf_mex_printf("%s =\\n", "Torque_Enable");
-          sf_mex_call_debug("disp", 0U, 1U, 3, c1_b11);
+          sf_mex_call_debug("disp", 0U, 1U, 3, c1_b8);
           *c1_Keyed_Relay = TRUE;
           _SFD_DATA_RANGE_CHECK((real_T)*c1_Keyed_Relay, 5U);
         }
       }
 
-      _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 4U, chartInstance->c1_sfEvent);
+      _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 5U, chartInstance->c1_sfEvent);
       break;
 
      case c1_IN_Shutdown_Sequence:
-      CV_CHART_EVAL(0, 0, 6);
-      _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 5U,
+      CV_CHART_EVAL(0, 0, 7);
+      _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 6U,
                    chartInstance->c1_sfEvent);
-      _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 7U,
+      _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 5U,
                    chartInstance->c1_sfEvent);
-      if (CV_TRANSITION_EVAL(7U, !(_SFD_CCP_CALL(7U, 0,
+      if (CV_TRANSITION_EVAL(5U, !(_SFD_CCP_CALL(5U, 0,
              *c1_Batt_Contactor_Status != 0U, chartInstance->c1_sfEvent) != 0)))
       {
-        _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 7U, chartInstance->c1_sfEvent);
+        _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 5U, chartInstance->c1_sfEvent);
         chartInstance->c1_tp_Shutdown_Sequence = 0U;
-        _SFD_CS_CALL(STATE_INACTIVE_TAG, 5U, chartInstance->c1_sfEvent);
+        _SFD_CS_CALL(STATE_INACTIVE_TAG, 6U, chartInstance->c1_sfEvent);
         chartInstance->c1_is_c1_Mooventure2016_Rev5 = c1_IN_Kill_Component_Keyed;
-        _SFD_CS_CALL(STATE_ACTIVE_TAG, 3U, chartInstance->c1_sfEvent);
+        _SFD_CS_CALL(STATE_ACTIVE_TAG, 4U, chartInstance->c1_sfEvent);
         chartInstance->c1_tp_Kill_Component_Keyed = 1U;
       } else {
         *c1_Vehicle_Enable = FALSE;
         _SFD_DATA_RANGE_CHECK((real_T)*c1_Vehicle_Enable, 2U);
-        c1_b12 = *c1_Vehicle_Enable;
+        c1_b9 = *c1_Vehicle_Enable;
         sf_mex_printf("%s =\\n", "Vehicle_Enable");
-        sf_mex_call_debug("disp", 0U, 1U, 3, c1_b12);
+        sf_mex_call_debug("disp", 0U, 1U, 3, c1_b9);
         *c1_Vehicle_Ready = FALSE;
         _SFD_DATA_RANGE_CHECK((real_T)*c1_Vehicle_Ready, 3U);
-        c1_b13 = *c1_Vehicle_Ready;
+        c1_b10 = *c1_Vehicle_Ready;
         sf_mex_printf("%s =\\n", "Vehicle_Ready");
-        sf_mex_call_debug("disp", 0U, 1U, 3, c1_b13);
+        sf_mex_call_debug("disp", 0U, 1U, 3, c1_b10);
         *c1_Torque_Enable = FALSE;
         _SFD_DATA_RANGE_CHECK((real_T)*c1_Torque_Enable, 4U);
-        c1_b14 = *c1_Torque_Enable;
+        c1_b11 = *c1_Torque_Enable;
         sf_mex_printf("%s =\\n", "Torque_Enable");
-        sf_mex_call_debug("disp", 0U, 1U, 3, c1_b14);
+        sf_mex_call_debug("disp", 0U, 1U, 3, c1_b11);
         *c1_Keyed_Relay = TRUE;
         _SFD_DATA_RANGE_CHECK((real_T)*c1_Keyed_Relay, 5U);
       }
 
-      _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 5U, chartInstance->c1_sfEvent);
+      _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 6U, chartInstance->c1_sfEvent);
       break;
 
      default:
@@ -790,10 +738,9 @@ static void initSimStructsc1_Mooventure2016_Rev5
 static void c1_Batterybootup(SFc1_Mooventure2016_Rev5InstanceStruct
   *chartInstance)
 {
-  boolean_T c1_temp;
-  boolean_T c1_b15;
-  boolean_T c1_b16;
-  boolean_T c1_b17;
+  boolean_T c1_b12;
+  boolean_T c1_b13;
+  boolean_T c1_b14;
   boolean_T *c1_Shutdown;
   boolean_T *c1_Batt_Load_Enable;
   boolean_T *c1_Vehicle_Enable;
@@ -810,24 +757,33 @@ static void c1_Batterybootup(SFc1_Mooventure2016_Rev5InstanceStruct
   _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 3U, chartInstance->c1_sfEvent);
   if (CV_TRANSITION_EVAL(3U, (int32_T)_SFD_CCP_CALL(3U, 0, *c1_Shutdown != 0U,
         chartInstance->c1_sfEvent))) {
+    if (sf_debug_transition_conflict_check_enabled()) {
+      unsigned int transitionList[2];
+      unsigned int numTransitions = 1;
+      transitionList[0] = 3;
+      sf_debug_transition_conflict_check_begin();
+      if (*c1_Batt_Load_Enable) {
+        transitionList[numTransitions] = 7;
+        numTransitions++;
+      }
+
+      sf_debug_transition_conflict_check_end();
+      if (numTransitions > 1) {
+        _SFD_TRANSITION_CONFLICT(&(transitionList[0]),numTransitions);
+      }
+    }
+
     _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 3U, chartInstance->c1_sfEvent);
     chartInstance->c1_tp_Batterybootup = 0U;
     _SFD_CS_CALL(STATE_INACTIVE_TAG, 0U, chartInstance->c1_sfEvent);
     chartInstance->c1_is_c1_Mooventure2016_Rev5 = c1_IN_Shutdown_Sequence;
-    _SFD_CS_CALL(STATE_ACTIVE_TAG, 5U, chartInstance->c1_sfEvent);
+    _SFD_CS_CALL(STATE_ACTIVE_TAG, 6U, chartInstance->c1_sfEvent);
     chartInstance->c1_tp_Shutdown_Sequence = 1U;
   } else {
-    _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 9U, chartInstance->c1_sfEvent);
-    c1_temp = (_SFD_CCP_CALL(9U, 0, *c1_Batt_Load_Enable != 0U,
-                chartInstance->c1_sfEvent) != 0);
-    if (c1_temp) {
-      c1_temp = (_SFD_CCP_CALL(9U, 1, (uint32_T)
-                  chartInstance->c1_temporalCounter_i1 >= 5U != 0U,
-                  chartInstance->c1_sfEvent) != 0);
-    }
-
-    if (CV_TRANSITION_EVAL(9U, (int32_T)c1_temp)) {
-      _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 9U, chartInstance->c1_sfEvent);
+    _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 7U, chartInstance->c1_sfEvent);
+    if (CV_TRANSITION_EVAL(7U, (int32_T)_SFD_CCP_CALL(7U, 0,
+          *c1_Batt_Load_Enable != 0U, chartInstance->c1_sfEvent))) {
+      _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 7U, chartInstance->c1_sfEvent);
       chartInstance->c1_tp_Batterybootup = 0U;
       _SFD_CS_CALL(STATE_INACTIVE_TAG, 0U, chartInstance->c1_sfEvent);
       chartInstance->c1_is_c1_Mooventure2016_Rev5 = c1_IN_Charging_and_Temp;
@@ -836,10 +792,90 @@ static void c1_Batterybootup(SFc1_Mooventure2016_Rev5InstanceStruct
     } else {
       *c1_Vehicle_Enable = TRUE;
       _SFD_DATA_RANGE_CHECK((real_T)*c1_Vehicle_Enable, 2U);
+      c1_b12 = *c1_Vehicle_Enable;
+      sf_mex_printf("%s =\\n", "Vehicle_Enable");
+      sf_mex_call_debug("disp", 0U, 1U, 3, c1_b12);
+      *c1_Vehicle_Ready = FALSE;
+      _SFD_DATA_RANGE_CHECK((real_T)*c1_Vehicle_Ready, 3U);
+      c1_b13 = *c1_Vehicle_Ready;
+      sf_mex_printf("%s =\\n", "Vehicle_Ready");
+      sf_mex_call_debug("disp", 0U, 1U, 3, c1_b13);
+      *c1_Torque_Enable = FALSE;
+      _SFD_DATA_RANGE_CHECK((real_T)*c1_Torque_Enable, 4U);
+      c1_b14 = *c1_Torque_Enable;
+      sf_mex_printf("%s =\\n", "Torque_Enable");
+      sf_mex_call_debug("disp", 0U, 1U, 3, c1_b14);
+      *c1_Keyed_Relay = TRUE;
+      _SFD_DATA_RANGE_CHECK((real_T)*c1_Keyed_Relay, 5U);
+    }
+  }
+
+  _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 0U, chartInstance->c1_sfEvent);
+}
+
+static void c1_Charging_and_Temp(SFc1_Mooventure2016_Rev5InstanceStruct
+  *chartInstance)
+{
+  boolean_T c1_b15;
+  boolean_T c1_b16;
+  boolean_T c1_b17;
+  boolean_T *c1_Charging;
+  boolean_T *c1_Shutdown;
+  boolean_T *c1_Vehicle_Enable;
+  boolean_T *c1_Vehicle_Ready;
+  boolean_T *c1_Torque_Enable;
+  boolean_T *c1_Keyed_Relay;
+  c1_Charging = (boolean_T *)ssGetInputPortSignal(chartInstance->S, 3);
+  c1_Keyed_Relay = (boolean_T *)ssGetOutputPortSignal(chartInstance->S, 4);
+  c1_Torque_Enable = (boolean_T *)ssGetOutputPortSignal(chartInstance->S, 3);
+  c1_Vehicle_Ready = (boolean_T *)ssGetOutputPortSignal(chartInstance->S, 2);
+  c1_Vehicle_Enable = (boolean_T *)ssGetOutputPortSignal(chartInstance->S, 1);
+  c1_Shutdown = (boolean_T *)ssGetInputPortSignal(chartInstance->S, 0);
+  _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 1U, chartInstance->c1_sfEvent);
+  _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 2U, chartInstance->c1_sfEvent);
+  if (CV_TRANSITION_EVAL(2U, !(_SFD_CCP_CALL(2U, 0, *c1_Charging != 0U,
+         chartInstance->c1_sfEvent) != 0))) {
+    if (sf_debug_transition_conflict_check_enabled()) {
+      unsigned int transitionList[2];
+      unsigned int numTransitions = 1;
+      transitionList[0] = 2;
+      sf_debug_transition_conflict_check_begin();
+      if (*c1_Shutdown) {
+        transitionList[numTransitions] = 8;
+        numTransitions++;
+      }
+
+      sf_debug_transition_conflict_check_end();
+      if (numTransitions > 1) {
+        _SFD_TRANSITION_CONFLICT(&(transitionList[0]),numTransitions);
+      }
+    }
+
+    _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 2U, chartInstance->c1_sfEvent);
+    chartInstance->c1_tp_Charging_and_Temp = 0U;
+    _SFD_CS_CALL(STATE_INACTIVE_TAG, 1U, chartInstance->c1_sfEvent);
+    chartInstance->c1_is_c1_Mooventure2016_Rev5 = c1_IN_Normal_Operation;
+    _SFD_CS_CALL(STATE_ACTIVE_TAG, 5U, chartInstance->c1_sfEvent);
+    chartInstance->c1_tp_Normal_Operation = 1U;
+  } else {
+    _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 8U, chartInstance->c1_sfEvent);
+    if (CV_TRANSITION_EVAL(8U, (int32_T)_SFD_CCP_CALL(8U, 0, *c1_Shutdown != 0U,
+          chartInstance->c1_sfEvent))) {
+      _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 8U, chartInstance->c1_sfEvent);
+      chartInstance->c1_tp_Charging_and_Temp = 0U;
+      _SFD_CS_CALL(STATE_INACTIVE_TAG, 1U, chartInstance->c1_sfEvent);
+      chartInstance->c1_is_c1_Mooventure2016_Rev5 = c1_IN_Counting;
+      _SFD_CS_CALL(STATE_ACTIVE_TAG, 2U, chartInstance->c1_sfEvent);
+      chartInstance->c1_tp_Counting = 1U;
+      chartInstance->c1_count = 0.0;
+      _SFD_DATA_RANGE_CHECK(chartInstance->c1_count, 8U);
+    } else {
+      *c1_Vehicle_Enable = TRUE;
+      _SFD_DATA_RANGE_CHECK((real_T)*c1_Vehicle_Enable, 2U);
       c1_b15 = *c1_Vehicle_Enable;
       sf_mex_printf("%s =\\n", "Vehicle_Enable");
       sf_mex_call_debug("disp", 0U, 1U, 3, c1_b15);
-      *c1_Vehicle_Ready = FALSE;
+      *c1_Vehicle_Ready = TRUE;
       _SFD_DATA_RANGE_CHECK((real_T)*c1_Vehicle_Ready, 3U);
       c1_b16 = *c1_Vehicle_Ready;
       sf_mex_printf("%s =\\n", "Vehicle_Ready");
@@ -854,7 +890,7 @@ static void c1_Batterybootup(SFc1_Mooventure2016_Rev5InstanceStruct
     }
   }
 
-  _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 0U, chartInstance->c1_sfEvent);
+  _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 1U, chartInstance->c1_sfEvent);
 }
 
 static void init_script_number_translation(uint32_T c1_machineNumber, uint32_T
@@ -1036,28 +1072,62 @@ static void c1_c_sf_marshallIn(void *chartInstanceVoid, const mxArray
   sf_mex_destroy(&c1_mxArrayInData);
 }
 
-static uint32_T c1_f_emlrt_marshallIn(SFc1_Mooventure2016_Rev5InstanceStruct
-  *chartInstance, const mxArray *c1_b_previousTicks, const char_T *c1_identifier)
+static const mxArray *c1_d_sf_marshallOut(void *chartInstanceVoid, void
+  *c1_inData)
 {
-  uint32_T c1_y;
+  const mxArray *c1_mxArrayOutData = NULL;
+  real_T c1_u;
+  const mxArray *c1_y = NULL;
+  SFc1_Mooventure2016_Rev5InstanceStruct *chartInstance;
+  chartInstance = (SFc1_Mooventure2016_Rev5InstanceStruct *)chartInstanceVoid;
+  c1_mxArrayOutData = NULL;
+  c1_u = *(real_T *)c1_inData;
+  c1_y = NULL;
+  sf_mex_assign(&c1_y, sf_mex_create("y", &c1_u, 0, 0U, 0U, 0U, 0));
+  sf_mex_assign(&c1_mxArrayOutData, c1_y);
+  return c1_mxArrayOutData;
+}
+
+static real_T c1_f_emlrt_marshallIn(SFc1_Mooventure2016_Rev5InstanceStruct
+  *chartInstance, const mxArray *c1_b_count, const char_T *c1_identifier)
+{
+  real_T c1_y;
   emlrtMsgIdentifier c1_thisId;
   c1_thisId.fIdentifier = c1_identifier;
   c1_thisId.fParent = NULL;
-  c1_y = c1_g_emlrt_marshallIn(chartInstance, sf_mex_dup(c1_b_previousTicks),
-    &c1_thisId);
-  sf_mex_destroy(&c1_b_previousTicks);
+  c1_y = c1_g_emlrt_marshallIn(chartInstance, sf_mex_dup(c1_b_count), &c1_thisId);
+  sf_mex_destroy(&c1_b_count);
   return c1_y;
 }
 
-static uint32_T c1_g_emlrt_marshallIn(SFc1_Mooventure2016_Rev5InstanceStruct
+static real_T c1_g_emlrt_marshallIn(SFc1_Mooventure2016_Rev5InstanceStruct
   *chartInstance, const mxArray *c1_u, const emlrtMsgIdentifier *c1_parentId)
 {
-  uint32_T c1_y;
-  uint32_T c1_u1;
-  sf_mex_import(c1_parentId, sf_mex_dup(c1_u), &c1_u1, 1, 7, 0U, 0, 0U, 0);
-  c1_y = c1_u1;
+  real_T c1_y;
+  real_T c1_d0;
+  sf_mex_import(c1_parentId, sf_mex_dup(c1_u), &c1_d0, 1, 0, 0U, 0, 0U, 0);
+  c1_y = c1_d0;
   sf_mex_destroy(&c1_u);
   return c1_y;
+}
+
+static void c1_d_sf_marshallIn(void *chartInstanceVoid, const mxArray
+  *c1_mxArrayInData, const char_T *c1_varName, void *c1_outData)
+{
+  const mxArray *c1_b_count;
+  const char_T *c1_identifier;
+  emlrtMsgIdentifier c1_thisId;
+  real_T c1_y;
+  SFc1_Mooventure2016_Rev5InstanceStruct *chartInstance;
+  chartInstance = (SFc1_Mooventure2016_Rev5InstanceStruct *)chartInstanceVoid;
+  c1_b_count = sf_mex_dup(c1_mxArrayInData);
+  c1_identifier = c1_varName;
+  c1_thisId.fIdentifier = c1_identifier;
+  c1_thisId.fParent = NULL;
+  c1_y = c1_g_emlrt_marshallIn(chartInstance, sf_mex_dup(c1_b_count), &c1_thisId);
+  sf_mex_destroy(&c1_b_count);
+  *(real_T *)c1_outData = c1_y;
+  sf_mex_destroy(&c1_mxArrayInData);
 }
 
 static const mxArray *c1_h_emlrt_marshallIn
@@ -1094,10 +1164,10 @@ static void init_dsm_address_info(SFc1_Mooventure2016_Rev5InstanceStruct
 /* SFunction Glue Code */
 void sf_c1_Mooventure2016_Rev5_get_check_sum(mxArray *plhs[])
 {
-  ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(231442283U);
-  ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(459387605U);
-  ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(3069860952U);
-  ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(227111869U);
+  ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(2617448867U);
+  ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(4246834531U);
+  ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(1905008781U);
+  ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(2776638251U);
 }
 
 mxArray *sf_c1_Mooventure2016_Rev5_get_autoinheritance_info(void)
@@ -1111,10 +1181,10 @@ mxArray *sf_c1_Mooventure2016_Rev5_get_autoinheritance_info(void)
   {
     mxArray *mxChecksum = mxCreateDoubleMatrix(4,1,mxREAL);
     double *pr = mxGetPr(mxChecksum);
-    pr[0] = (double)(2305089439U);
-    pr[1] = (double)(2496273415U);
-    pr[2] = (double)(649847304U);
-    pr[3] = (double)(831601936U);
+    pr[0] = (double)(3933523539U);
+    pr[1] = (double)(3622536145U);
+    pr[2] = (double)(1361694376U);
+    pr[3] = (double)(61076059U);
     mxSetField(mxAutoinheritanceInfo,0,"checksum",mxChecksum);
   }
 
@@ -1302,10 +1372,10 @@ static const mxArray *sf_get_sim_state_info_c1_Mooventure2016_Rev5(void)
 
   mxArray *mxInfo = mxCreateStructMatrix(1, 1, 2, infoFields);
   const char *infoEncStr[] = {
-    "100 S1x8'type','srcId','name','auxInfo'{{M[1],M[7],T\"Keyed_Relay\",},{M[1],M[6],T\"Torque_Enable\",},{M[1],M[4],T\"Vehicle_Enable\",},{M[1],M[5],T\"Vehicle_Ready\",},{M[8],M[0],T\"is_active_c1_Mooventure2016_Rev5\",},{M[9],M[0],T\"is_c1_Mooventure2016_Rev5\",},{M[11],M[0],T\"temporalCounter_i1\",S'et','os','ct'{{T\"at\",M1x2[9 13],M[1]}}},{M[13],M[0],T\"previousTicks\",}}"
+    "100 S1x7'type','srcId','name','auxInfo'{{M[1],M[7],T\"Keyed_Relay\",},{M[1],M[6],T\"Torque_Enable\",},{M[1],M[4],T\"Vehicle_Enable\",},{M[1],M[5],T\"Vehicle_Ready\",},{M[3],M[38],T\"count\",},{M[8],M[0],T\"is_active_c1_Mooventure2016_Rev5\",},{M[9],M[0],T\"is_c1_Mooventure2016_Rev5\",}}"
   };
 
-  mxArray *mxVarInfo = sf_mex_decode_encoded_mx_struct_array(infoEncStr, 8, 10);
+  mxArray *mxVarInfo = sf_mex_decode_encoded_mx_struct_array(infoEncStr, 7, 10);
   mxArray *mxChecksum = mxCreateDoubleMatrix(1, 4, mxREAL);
   sf_c1_Mooventure2016_Rev5_get_check_sum(&mxChecksum);
   mxSetField(mxInfo, 0, infoFields[0], mxChecksum);
@@ -1327,9 +1397,9 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
         chartAlreadyPresent = sf_debug_initialize_chart
           (_Mooventure2016_Rev5MachineNumber_,
            1,
-           6,
-           10,
-           8,
+           7,
+           12,
+           9,
            0,
            0,
            0,
@@ -1358,13 +1428,15 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
           _SFD_SET_DATA_PROPS(5,2,0,1,"Keyed_Relay");
           _SFD_SET_DATA_PROPS(6,1,1,0,"Batt_Contactor_Status");
           _SFD_SET_DATA_PROPS(7,1,1,0,"Charging");
+          _SFD_SET_DATA_PROPS(8,0,0,0,"count");
           _SFD_STATE_INFO(0,0,0);
           _SFD_STATE_INFO(1,0,0);
           _SFD_STATE_INFO(2,0,0);
           _SFD_STATE_INFO(3,0,0);
           _SFD_STATE_INFO(4,0,0);
           _SFD_STATE_INFO(5,0,0);
-          _SFD_CH_SUBSTATE_COUNT(6);
+          _SFD_STATE_INFO(6,0,0);
+          _SFD_CH_SUBSTATE_COUNT(7);
           _SFD_CH_SUBSTATE_DECOMP(0);
           _SFD_CH_SUBSTATE_INDEX(0,0);
           _SFD_CH_SUBSTATE_INDEX(1,1);
@@ -1372,15 +1444,17 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
           _SFD_CH_SUBSTATE_INDEX(3,3);
           _SFD_CH_SUBSTATE_INDEX(4,4);
           _SFD_CH_SUBSTATE_INDEX(5,5);
+          _SFD_CH_SUBSTATE_INDEX(6,6);
           _SFD_ST_SUBSTATE_COUNT(0,0);
           _SFD_ST_SUBSTATE_COUNT(1,0);
           _SFD_ST_SUBSTATE_COUNT(2,0);
           _SFD_ST_SUBSTATE_COUNT(3,0);
           _SFD_ST_SUBSTATE_COUNT(4,0);
           _SFD_ST_SUBSTATE_COUNT(5,0);
+          _SFD_ST_SUBSTATE_COUNT(6,0);
         }
 
-        _SFD_CV_INIT_CHART(6,1,0,0);
+        _SFD_CV_INIT_CHART(7,1,0,0);
 
         {
           _SFD_CV_INIT_STATE(0,0,0,0,0,0,NULL,NULL);
@@ -1406,16 +1480,20 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
           _SFD_CV_INIT_STATE(5,0,0,0,0,0,NULL,NULL);
         }
 
+        {
+          _SFD_CV_INIT_STATE(6,0,0,0,0,0,NULL,NULL);
+        }
+
         _SFD_CV_INIT_TRANS(0,0,NULL,NULL,0,NULL);
 
         {
-          static unsigned int sStartGuardMap[] = { 2, 14 };
+          static unsigned int sStartGuardMap[] = { 2 };
 
-          static unsigned int sEndGuardMap[] = { 10, 26 };
+          static unsigned int sEndGuardMap[] = { 10 };
 
-          static int sPostFixPredicateTree[] = { 0, -1, 1, -3 };
+          static int sPostFixPredicateTree[] = { 0, -1 };
 
-          _SFD_CV_INIT_TRANS(1,2,&(sStartGuardMap[0]),&(sEndGuardMap[0]),4,
+          _SFD_CV_INIT_TRANS(1,1,&(sStartGuardMap[0]),&(sEndGuardMap[0]),2,
                              &(sPostFixPredicateTree[0]));
         }
 
@@ -1426,7 +1504,7 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
 
           static int sPostFixPredicateTree[] = { 0 };
 
-          _SFD_CV_INIT_TRANS(8,1,&(sStartGuardMap[0]),&(sEndGuardMap[0]),1,
+          _SFD_CV_INIT_TRANS(6,1,&(sStartGuardMap[0]),&(sEndGuardMap[0]),1,
                              &(sPostFixPredicateTree[0]));
         }
 
@@ -1453,6 +1531,28 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
         }
 
         {
+          static unsigned int sStartGuardMap[] = { 2 };
+
+          static unsigned int sEndGuardMap[] = { 23 };
+
+          static int sPostFixPredicateTree[] = { 0, -1 };
+
+          _SFD_CV_INIT_TRANS(5,1,&(sStartGuardMap[0]),&(sEndGuardMap[0]),2,
+                             &(sPostFixPredicateTree[0]));
+        }
+
+        {
+          static unsigned int sStartGuardMap[] = { 1 };
+
+          static unsigned int sEndGuardMap[] = { 17 };
+
+          static int sPostFixPredicateTree[] = { 0 };
+
+          _SFD_CV_INIT_TRANS(7,1,&(sStartGuardMap[0]),&(sEndGuardMap[0]),1,
+                             &(sPostFixPredicateTree[0]));
+        }
+
+        {
           static unsigned int sStartGuardMap[] = { 1 };
 
           static unsigned int sEndGuardMap[] = { 9 };
@@ -1466,11 +1566,22 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
         {
           static unsigned int sStartGuardMap[] = { 1 };
 
-          static unsigned int sEndGuardMap[] = { 9 };
+          static unsigned int sEndGuardMap[] = { 11 };
 
           static int sPostFixPredicateTree[] = { 0 };
 
-          _SFD_CV_INIT_TRANS(5,1,&(sStartGuardMap[0]),&(sEndGuardMap[0]),1,
+          _SFD_CV_INIT_TRANS(10,1,&(sStartGuardMap[0]),&(sEndGuardMap[0]),1,
+                             &(sPostFixPredicateTree[0]));
+        }
+
+        {
+          static unsigned int sStartGuardMap[] = { 2 };
+
+          static unsigned int sEndGuardMap[] = { 10 };
+
+          static int sPostFixPredicateTree[] = { 0, -1 };
+
+          _SFD_CV_INIT_TRANS(11,1,&(sStartGuardMap[0]),&(sEndGuardMap[0]),2,
                              &(sPostFixPredicateTree[0]));
         }
 
@@ -1481,29 +1592,18 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
 
           static int sPostFixPredicateTree[] = { 0 };
 
-          _SFD_CV_INIT_TRANS(6,1,&(sStartGuardMap[0]),&(sEndGuardMap[0]),1,
+          _SFD_CV_INIT_TRANS(8,1,&(sStartGuardMap[0]),&(sEndGuardMap[0]),1,
                              &(sPostFixPredicateTree[0]));
         }
 
         {
-          static unsigned int sStartGuardMap[] = { 2 };
+          static unsigned int sStartGuardMap[] = { 1 };
 
-          static unsigned int sEndGuardMap[] = { 23 };
+          static unsigned int sEndGuardMap[] = { 9 };
 
-          static int sPostFixPredicateTree[] = { 0, -1 };
+          static int sPostFixPredicateTree[] = { 0 };
 
-          _SFD_CV_INIT_TRANS(7,1,&(sStartGuardMap[0]),&(sEndGuardMap[0]),2,
-                             &(sPostFixPredicateTree[0]));
-        }
-
-        {
-          static unsigned int sStartGuardMap[] = { 1, 21 };
-
-          static unsigned int sEndGuardMap[] = { 17, 33 };
-
-          static int sPostFixPredicateTree[] = { 0, 1, -3 };
-
-          _SFD_CV_INIT_TRANS(9,2,&(sStartGuardMap[0]),&(sEndGuardMap[0]),3,
+          _SFD_CV_INIT_TRANS(9,1,&(sStartGuardMap[0]),&(sEndGuardMap[0]),1,
                              &(sPostFixPredicateTree[0]));
         }
 
@@ -1516,26 +1616,26 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
                               0,NULL,NULL);
         }
 
-        _SFD_TRANS_COV_WTS(1,0,2,0,0);
+        _SFD_TRANS_COV_WTS(1,0,1,0,0);
         if (chartAlreadyPresent==0) {
-          static unsigned int sStartGuardMap[] = { 2, 14 };
+          static unsigned int sStartGuardMap[] = { 2 };
 
-          static unsigned int sEndGuardMap[] = { 10, 26 };
+          static unsigned int sEndGuardMap[] = { 10 };
 
           _SFD_TRANS_COV_MAPS(1,
                               0,NULL,NULL,
-                              2,&(sStartGuardMap[0]),&(sEndGuardMap[0]),
+                              1,&(sStartGuardMap[0]),&(sEndGuardMap[0]),
                               0,NULL,NULL,
                               0,NULL,NULL);
         }
 
-        _SFD_TRANS_COV_WTS(8,0,1,0,0);
+        _SFD_TRANS_COV_WTS(6,0,1,0,0);
         if (chartAlreadyPresent==0) {
           static unsigned int sStartGuardMap[] = { 1 };
 
           static unsigned int sEndGuardMap[] = { 9 };
 
-          _SFD_TRANS_COV_MAPS(8,
+          _SFD_TRANS_COV_MAPS(6,
                               0,NULL,NULL,
                               1,&(sStartGuardMap[0]),&(sEndGuardMap[0]),
                               0,NULL,NULL,
@@ -1568,6 +1668,32 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
                               0,NULL,NULL);
         }
 
+        _SFD_TRANS_COV_WTS(5,0,1,0,0);
+        if (chartAlreadyPresent==0) {
+          static unsigned int sStartGuardMap[] = { 2 };
+
+          static unsigned int sEndGuardMap[] = { 23 };
+
+          _SFD_TRANS_COV_MAPS(5,
+                              0,NULL,NULL,
+                              1,&(sStartGuardMap[0]),&(sEndGuardMap[0]),
+                              0,NULL,NULL,
+                              0,NULL,NULL);
+        }
+
+        _SFD_TRANS_COV_WTS(7,0,1,0,0);
+        if (chartAlreadyPresent==0) {
+          static unsigned int sStartGuardMap[] = { 1 };
+
+          static unsigned int sEndGuardMap[] = { 17 };
+
+          _SFD_TRANS_COV_MAPS(7,
+                              0,NULL,NULL,
+                              1,&(sStartGuardMap[0]),&(sEndGuardMap[0]),
+                              0,NULL,NULL,
+                              0,NULL,NULL);
+        }
+
         _SFD_TRANS_COV_WTS(4,0,1,0,0);
         if (chartAlreadyPresent==0) {
           static unsigned int sStartGuardMap[] = { 1 };
@@ -1581,54 +1707,54 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
                               0,NULL,NULL);
         }
 
-        _SFD_TRANS_COV_WTS(5,0,1,0,0);
+        _SFD_TRANS_COV_WTS(10,0,1,0,0);
         if (chartAlreadyPresent==0) {
           static unsigned int sStartGuardMap[] = { 1 };
 
-          static unsigned int sEndGuardMap[] = { 9 };
+          static unsigned int sEndGuardMap[] = { 11 };
 
-          _SFD_TRANS_COV_MAPS(5,
+          _SFD_TRANS_COV_MAPS(10,
                               0,NULL,NULL,
                               1,&(sStartGuardMap[0]),&(sEndGuardMap[0]),
                               0,NULL,NULL,
                               0,NULL,NULL);
         }
 
-        _SFD_TRANS_COV_WTS(6,0,1,0,0);
-        if (chartAlreadyPresent==0) {
-          static unsigned int sStartGuardMap[] = { 1 };
-
-          static unsigned int sEndGuardMap[] = { 9 };
-
-          _SFD_TRANS_COV_MAPS(6,
-                              0,NULL,NULL,
-                              1,&(sStartGuardMap[0]),&(sEndGuardMap[0]),
-                              0,NULL,NULL,
-                              0,NULL,NULL);
-        }
-
-        _SFD_TRANS_COV_WTS(7,0,1,0,0);
+        _SFD_TRANS_COV_WTS(11,0,1,0,0);
         if (chartAlreadyPresent==0) {
           static unsigned int sStartGuardMap[] = { 2 };
 
-          static unsigned int sEndGuardMap[] = { 23 };
+          static unsigned int sEndGuardMap[] = { 10 };
 
-          _SFD_TRANS_COV_MAPS(7,
+          _SFD_TRANS_COV_MAPS(11,
                               0,NULL,NULL,
                               1,&(sStartGuardMap[0]),&(sEndGuardMap[0]),
                               0,NULL,NULL,
                               0,NULL,NULL);
         }
 
-        _SFD_TRANS_COV_WTS(9,0,2,0,0);
+        _SFD_TRANS_COV_WTS(8,0,1,0,0);
         if (chartAlreadyPresent==0) {
-          static unsigned int sStartGuardMap[] = { 1, 21 };
+          static unsigned int sStartGuardMap[] = { 1 };
 
-          static unsigned int sEndGuardMap[] = { 17, 33 };
+          static unsigned int sEndGuardMap[] = { 9 };
+
+          _SFD_TRANS_COV_MAPS(8,
+                              0,NULL,NULL,
+                              1,&(sStartGuardMap[0]),&(sEndGuardMap[0]),
+                              0,NULL,NULL,
+                              0,NULL,NULL);
+        }
+
+        _SFD_TRANS_COV_WTS(9,0,1,0,0);
+        if (chartAlreadyPresent==0) {
+          static unsigned int sStartGuardMap[] = { 1 };
+
+          static unsigned int sEndGuardMap[] = { 9 };
 
           _SFD_TRANS_COV_MAPS(9,
                               0,NULL,NULL,
-                              2,&(sStartGuardMap[0]),&(sEndGuardMap[0]),
+                              1,&(sStartGuardMap[0]),&(sEndGuardMap[0]),
                               0,NULL,NULL,
                               0,NULL,NULL);
         }
@@ -1649,6 +1775,8 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
           (MexFcnForType)c1_c_sf_marshallOut,(MexInFcnForType)NULL);
         _SFD_SET_DATA_COMPILED_PROPS(7,SF_UINT8,0,NULL,0,0,0,0.0,1.0,0,0,
           (MexFcnForType)c1_c_sf_marshallOut,(MexInFcnForType)NULL);
+        _SFD_SET_DATA_COMPILED_PROPS(8,SF_DOUBLE,0,NULL,0,0,0,0.0,1.0,0,0,
+          (MexFcnForType)c1_d_sf_marshallOut,(MexInFcnForType)c1_d_sf_marshallIn);
 
         {
           boolean_T *c1_Shutdown;
@@ -1681,6 +1809,7 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
           _SFD_SET_DATA_VALUE_PTR(5U, c1_Keyed_Relay);
           _SFD_SET_DATA_VALUE_PTR(6U, c1_Batt_Contactor_Status);
           _SFD_SET_DATA_VALUE_PTR(7U, c1_Charging);
+          _SFD_SET_DATA_VALUE_PTR(8U, &chartInstance->c1_count);
         }
       }
     } else {
@@ -1823,7 +1952,6 @@ static void mdlProcessParameters_c1_Mooventure2016_Rev5(SimStruct *S)
 
 static void mdlSetWorkWidths_c1_Mooventure2016_Rev5(SimStruct *S)
 {
-  ssSetNeedAbsoluteTime(S,1);
   if (sim_mode_is_rtw_gen(S) || sim_mode_is_external(S)) {
     int_T chartIsInlinable =
       (int_T)sf_is_chart_inlinable(S,"Mooventure2016_Rev5","Mooventure2016_Rev5",
@@ -1831,6 +1959,8 @@ static void mdlSetWorkWidths_c1_Mooventure2016_Rev5(SimStruct *S)
     ssSetStateflowIsInlinable(S,chartIsInlinable);
     ssSetRTWCG(S,sf_rtw_info_uint_prop(S,"Mooventure2016_Rev5",
                 "Mooventure2016_Rev5",1,"RTWCG"));
+    ssSetEnableFcnIsTrivial(S,1);
+    ssSetDisableFcnIsTrivial(S,1);
     ssSetNotMultipleInlinable(S,sf_rtw_info_uint_prop(S,"Mooventure2016_Rev5",
       "Mooventure2016_Rev5",1,"gatewayCannotBeInlinedMultipleTimes"));
     if (chartIsInlinable) {
@@ -1850,10 +1980,10 @@ static void mdlSetWorkWidths_c1_Mooventure2016_Rev5(SimStruct *S)
   }
 
   ssSetOptions(S,ssGetOptions(S)|SS_OPTION_WORKS_WITH_CODE_REUSE);
-  ssSetChecksum0(S,(680569131U));
-  ssSetChecksum1(S,(701114913U));
-  ssSetChecksum2(S,(3581855583U));
-  ssSetChecksum3(S,(2787239672U));
+  ssSetChecksum0(S,(881729652U));
+  ssSetChecksum1(S,(2522012040U));
+  ssSetChecksum2(S,(684709519U));
+  ssSetChecksum3(S,(761851589U));
   ssSetmdlDerivatives(S, NULL);
   ssSetExplicitFCSSCtrl(S,1);
 }

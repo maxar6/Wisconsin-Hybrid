@@ -3,9 +3,9 @@
    <Application>
       <GUID>0339744d-1465-4569-a1-b4-32-b1-a7-fa-5f</GUID>
       <Name>Mooventure2016_Rev5</Name>
-      <Author>maxar</Author>
+      <Author>HYBRID</Author>
       <Copyright>2017 Woodward.</Copyright>
-      <CreateDate>20-Nov-2017</CreateDate>
+      <CreateDate>29-Nov-2017</CreateDate>
       <MemoryLayout>DEV</MemoryLayout>
       <Module>ECM-5554-112-0904-xD</Module>
       <OS>
@@ -724,12 +724,7 @@
          </DataStore>
          <DataStore ref="Constant">
             <DataType>real32</DataType>
-            <Default>1.0</Default>
-            <Name>SOC_Filter_Time</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>0.4</Default>
+            <Default>5.0</Default>
             <Name>SOCFilt</Name>
          </DataStore>
          <DataStore ref="Volatile">
@@ -894,13 +889,18 @@
          </DataStore>
          <DataStore ref="Constant">
             <DataType>real32</DataType>
-            <Default>1.0</Default>
-            <Name>V_Filter_Time</Name>
+            <Default>5.0</Default>
+            <Name>VFilt</Name>
          </DataStore>
          <DataStore ref="Volatile">
             <DataType>real32</DataType>
             <Default>0.0</Default>
             <Name>Battery_Voltage_ovr_new</Name>
+         </DataStore>
+         <DataStore ref="Constant">
+            <DataType>real32</DataType>
+            <Default>2.0</Default>
+            <Name>Voltage_Filt_Cal</Name>
          </DataStore>
          <DataStore ref="Volatile">
             <DataType>boolean</DataType>
@@ -3350,6 +3350,11 @@
          <DataStore ref="Volatile">
             <DataType>real32</DataType>
             <Default>0.0</Default>
+            <Name>Voltage_Filt</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>real32</DataType>
+            <Default>0.0</Default>
             <Name>Solectria_Enable_timer</Name>
          </DataStore>
          <DataStore ref="Volatile">
@@ -3541,16 +3546,6 @@
             <DataType>real32</DataType>
             <Default>0.0</Default>
             <Name>Bar_MPGe_Average_Sum</Name>
-         </DataStore>
-         <DataStore ref="Volatile">
-            <DataType>real32</DataType>
-            <Default>0.0</Default>
-            <Name>SOCTimer</Name>
-         </DataStore>
-         <DataStore ref="Volatile">
-            <DataType>real32</DataType>
-            <Default>0.0</Default>
-            <Name>VTimer</Name>
          </DataStore>
          <DataStore ref="Volatile">
             <DataType>real32</DataType>
@@ -8492,9 +8487,9 @@
             </TableDatabase>
             <ProjectID adjustable="true" adjust-data-type="uint8_T">6</ProjectID>
             <ProductID adjustable="true" adjust-data-type="uint32_T">1</ProductID>
-            <SwIdTxt>Mooventur_206</SwIdTxt>
-            <SwRevisionTxt>Mooventure2016_Rev5_206</SwRevisionTxt>
-            <CalIdTxt>Mooventure2016_Rev5_206_000</CalIdTxt>
+            <SwIdTxt>Mooventur_209</SwIdTxt>
+            <SwRevisionTxt>Mooventure2016_Rev5_209</SwRevisionTxt>
+            <CalIdTxt>Mooventure2016_Rev5_209_000</CalIdTxt>
          </VarDecs>
          <DatabaseBuild>
             <Toolchain>
@@ -8579,7 +8574,7 @@
             <Define name="MT" value="0"/>
          </Compiler>
       </Build>
-      <Signature>09440542-9b87-4b3f-91-94-55-92-3e-0b-2b</Signature>
+      <Signature>18babe7e-34c7-4785-92-4b-fa-45-db-20-c2</Signature>
       <VarDecs>
          <DataStoreVarDec ref="ProcessorReboot">
             <access>RW RW RW RW</access>
@@ -9869,21 +9864,6 @@
             <update>BACKGND</update>
             <vector_style>wide</vector_style>
          </DataStoreVarDec>
-         <DataStoreVarDec ref="SOC_Filter_Time">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs|SOC Filter</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>SOC_Filter_Time</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
          <DataStoreVarDec ref="SOCFilt">
             <access>RW RW RW RW</access>
             <class>VAR</class>
@@ -10393,18 +10373,20 @@
             <update>BACKGND</update>
             <vector_style>wide</vector_style>
          </DataStoreVarDec>
-         <DataStoreVarDec ref="V_Filter_Time">
+         <DataStoreVarDec ref="VFilt">
             <access>RW RW RW RW</access>
             <class>VAR</class>
             <exp>1.0</exp>
             <format>4.2</format>
             <gain>1.0</gain>
             <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs|Voltage Filter</group>
+            <help>Filter time constant</help>
             <max>100000000000000000.000000</max>
             <min>-100000000000000000.000000</min>
-            <name>V_Filter_Time</name>
+            <name>VFilt</name>
             <offset>0.0</offset>
             <storage>FLASH</storage>
+            <units>sec</units>
             <update>BACKGND</update>
             <vector_style>wide</vector_style>
          </DataStoreVarDec>
@@ -10420,6 +10402,21 @@
             <name>Battery_Voltage_ovr_new</name>
             <offset>0.0</offset>
             <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Voltage_Filt_Cal">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>1.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Control|Battery|Safe Shutdown Sequence</group>
+            <max>10.000000</max>
+            <min>0.000000</min>
+            <name>Voltage_Filt_Cal</name>
+            <offset>0.0</offset>
+            <storage>FLASH</storage>
             <update>BACKGND</update>
             <vector_style>wide</vector_style>
          </DataStoreVarDec>
@@ -25211,8 +25208,8 @@
       </Build>
       <Signature>f8c81d55-4871-4be9-88-8c-af-32-2b-73-36</Signature>
    </Module>
-   <Parameters ApplicationFile="file:///C:/Users/maxar/Box Sync/Wisconsin Hybrid/Mooventure/Mooventure Code/Mooventure2016_Rev5/Mooventure2016_Rev5_Build/ApplicationDescriptor.xml"
-               ApplicationDirectory="file:/C:/Users/maxar/Box%20Sync/Wisconsin%20Hybrid/Mooventure/Mooventure%20Code/Mooventure2016_Rev5/Mooventure2016_Rev5_Build/"
+   <Parameters ApplicationFile="file:///C:/Users/HYBRID/Documents/GitHub/Wisconsin-Hybrid/Mooventure2016_Rev5/Mooventure2016_Rev5_Build/ApplicationDescriptor.xml"
+               ApplicationDirectory="file:/C:/Users/HYBRID/Documents/GitHub/Wisconsin-Hybrid/Mooventure2016_Rev5/Mooventure2016_Rev5_Build/"
                Module="ECM-5554-112-0904-xD"
                ModuleDirectory="file:/C:/Program%20Files%20(x86)/Woodward/MCS/MotoHawk/2011a_sp0.184/MotoCoder/Modules"
                ModuleFile="ECM-5554-112-0904-xD.xml"
@@ -25282,7 +25279,7 @@
       <Define name="__TARGET_PROCESSOR_FAMILY" value="TARGET_PROCESSOR_FAMILY_MPC55XX"/>
    </Compiler>
    <Linker>
-      <File>C:\Users\maxar\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Mooventure2016_Rev5.ld</File>
+      <File>C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Mooventure2016_Rev5.ld</File>
    </Linker>
    <Command>
       <Description>Compiling and Linking</Description>

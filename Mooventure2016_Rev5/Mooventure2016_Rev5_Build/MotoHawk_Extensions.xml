@@ -627,12 +627,7 @@
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
-               <Default>1.0</Default>
-               <Name>SOC_Filter_Time</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>0.4</Default>
+               <Default>5.0</Default>
                <Name>SOCFilt</Name>
              </DataStore>
             <DataStore ref="Volatile">
@@ -797,13 +792,18 @@
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
-               <Default>1.0</Default>
-               <Name>V_Filter_Time</Name>
+               <Default>5.0</Default>
+               <Name>VFilt</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>Battery_Voltage_ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>2.0</Default>
+               <Name>Voltage_Filt_Cal</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>boolean</DataType>
@@ -3253,6 +3253,11 @@
             <DataStore ref="Volatile">
                <DataType>real32</DataType>
                <Default>0.0</Default>
+               <Name>Voltage_Filt</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
                <Name>Solectria_Enable_timer</Name>
              </DataStore>
             <DataStore ref="Volatile">
@@ -3444,16 +3449,6 @@
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>Bar_MPGe_Average_Sum</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>SOCTimer</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>VTimer</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>real32</DataType>
@@ -9092,21 +9087,6 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="SOC_Filter_Time">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs|SOC Filter</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>SOC_Filter_Time</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="SOCFilt">
         		                <access>RW RW RW RW</access>
         		                <class>VAR</class>
@@ -9616,18 +9596,20 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="V_Filter_Time">
+			    <DataStoreVarDec ref="VFilt">
         		                <access>RW RW RW RW</access>
         		                <class>VAR</class>
         		                <exp>1.0</exp>
         		                <format>4.2</format>
         		                <gain>1.0</gain>
         		                <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs|Voltage Filter</group>
+        		                <help>Filter time constant</help>
         		                <max>100000000000000000.000000</max>
         		                <min>-100000000000000000.000000</min>
-        		                <name>V_Filter_Time</name>
+        		                <name>VFilt</name>
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
+        		                <units>sec</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -9643,6 +9625,21 @@
         		                <name>Battery_Voltage_ovr_new</name>
         		                <offset>0.0</offset>
         		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Voltage_Filt_Cal">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.2</format>
+        		                <gain>1.0</gain>
+        		                <group>Mooventure2016_Rev5|Foreground|Control|Battery|Safe Shutdown Sequence</group>
+        		                <max>10.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Voltage_Filt_Cal</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
