@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.2027"
+    ComputedModelVersion    "1.2029"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -31,8 +31,8 @@ Model {
   "M',{0},'HeapRAM',{0},'BuildSuccessCount',{210},'BuildErrorCount',{54})"
   MotoHawkModelSavedName  "Mooventure2016_Rev5"
   MotoHawkModelGUID	  "0339744d-1465-4569-a1-b4-32-b1-a7-fa-5f"
-  MotoHawkModelOpenTime	  "2017 11 29 12 21 33.896 "
-  MotoHawkModelElapsedTime "207526726.378"
+  MotoHawkModelOpenTime	  "2017 12 31 14 43 26.734 "
+  MotoHawkModelElapsedTime "207529243.557"
   MotoHawkBuildInfo	  "struct('model_name',{'Mooventure2016_Rev5'},'motohawk_version',{'2011a_sp0.184'},'motohawk_comp"
   "onent_version',{'0.0.7'},'matlab_version',{'7.12.0'},'build_version',{'209'},'module_type',{'ECM-5554-112-0904-xD'},"
   "'layout_type',{'DEV'},'processor_family',{'MotoCoder'},'processor_type',{'MPC5554'},'toolchain_vendor',{'gcc-powerpc"
@@ -58,9 +58,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "HYBRID"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Nov 29 17:00:15 2017"
-  RTWModifiedTimeStamp	  433859779
-  ModelVersionFormat	  "1.%<AutoIncrement:2027>"
+  LastModifiedDate	  "Sun Dec 31 15:05:30 2017"
+  RTWModifiedTimeStamp	  436633395
+  ModelVersionFormat	  "1.%<AutoIncrement:2029>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -2136,7 +2136,7 @@ Model {
   }
   System {
     Name		    "Mooventure2016_Rev5"
-    Location		    [268, 82, 1331, 722]
+    Location		    [268, 74, 1331, 714]
     Open		    off
     ModelBrowserVisibility  on
     ModelBrowserWidth	    266
@@ -3703,8 +3703,9 @@ Model {
 		  Position		  [212, 573]
 		}
 		Annotation {
-		  Name			  "These are needed for motohawk data write blocks, \nwe're not sure why but it compiles now :)"
-		  Position		  [638, 554]
+		  Name			  "These are needed for motohawk data write blocks, \nwe're not sure why but it compiles now :)\nThink it m"
+		  "akes it so the controller doesn't cache these values, so it's always rechecked from the original source"
+		  Position		  [643, 659]
 		}
 		Annotation {
 		  Name			  "State 4 is battery is connected and ready"
@@ -3720,6 +3721,9 @@ Model {
 		}
 		Annotation {
 		  Position		  [208, 603]
+		}
+		Annotation {
+		  Position		  [1423, 324]
 		}
 	      }
 	    }
@@ -3758,7 +3762,7 @@ Model {
 	      System {
 		Name			"Coolant Control"
 		Location		[202, 82, 1265, 708]
-		Open			off
+		Open			on
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	266
 		ScreenColor		"white"
@@ -6985,7 +6989,7 @@ Model {
 		}
 		Annotation {
 		  Name			  "Temp that everything we think if warm enough"
-		  Position		  [360, 1356]
+		  Position		  [360, 1361]
 		}
 		Annotation {
 		  Name			  "Temp that components are too cold"
@@ -12688,7 +12692,7 @@ Model {
 		  MaskHideContents	  off
 		  System {
 		    Name		    "Battery"
-		    Location		    [433, 403, 931, 703]
+		    Location		    [202, 74, 1918, 1019]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -45742,9 +45746,9 @@ Model {
 	      System {
 		Name			"Vehicle Run/Stop Determination"
 		Location		[268, 82, 1910, 1027]
-		Open			on
+		Open			off
 		ModelBrowserVisibility	on
-		ModelBrowserWidth	200
+		ModelBrowserWidth	266
 		ScreenColor		"white"
 		PaperOrientation	"landscape"
 		PaperPositionMode	"auto"
@@ -76142,7 +76146,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"52"
+		ZoomFactor		"82"
 		Block {
 		  BlockType		  Inport
 		  Name			  "Inputs"
@@ -85093,7 +85097,7 @@ Model {
       SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
       SourceType	      "MotoHawk Function Trigger"
       trigger		      "FGND_RTI_PERIODIC"
-      function_name	      "Trigger_FGND_RTI_PERIODIC_6605p0005"
+      function_name	      "Trigger_FGND_RTI_PERIODIC_6130p0009"
       priority_order	      "0"
       inherited		      off
       run_disabled	      off
@@ -85316,7 +85320,7 @@ Stateflow {
     }
     midPoint		    [276.7987 228.59]
     chart		    2
-    linkNode		    [2 17 19]
+    linkNode		    [2 17 21]
     dataLimits		    [191.494 422.451 138.077 252.872]
     stampAngle		    NaN
     subviewer		    2
@@ -85467,8 +85471,6 @@ Stateflow {
     stampAngle		    NaN
     subviewer		    2
     drawStyle		    SMART
-    slide {
-    }
     executionOrder	    1
     ssIdNumber		    42
   }
@@ -85487,7 +85489,7 @@ Stateflow {
     }
     midPoint		    [934.5652 222.719]
     chart		    2
-    linkNode		    [2 12 21]
+    linkNode		    [2 21 20]
     dataLimits		    [880.832 952.175 141.563 266.364]
     stampAngle		    NaN
     subviewer		    2
@@ -85514,7 +85516,7 @@ Stateflow {
     }
     midPoint		    [751.9358 181.8958]
     chart		    2
-    linkNode		    [2 21 14]
+    linkNode		    [2 19 14]
     dataLimits		    [684.293 813.701 144.494 225.792]
     stampAngle		    NaN
     subviewer		    2
@@ -85541,7 +85543,7 @@ Stateflow {
     }
     midPoint		    [871.0666 181.178]
     chart		    2
-    linkNode		    [2 19 20]
+    linkNode		    [2 12 19]
     dataLimits		    [853.001 888.917 141.563 225.792]
     stampAngle		    NaN
     subviewer		    2
@@ -87280,7 +87282,7 @@ Stateflow {
     }
     midPoint		    [416.5214 83.9146]
     chart		    118
-    linkNode		    [118 0 123]
+    linkNode		    [118 0 122]
     dataLimits		    [414.121 418.921 73.167 101.933]
     subviewer		    118
     drawStyle		    SMART
@@ -87302,7 +87304,7 @@ Stateflow {
     }
     midPoint		    [409.0026 277.0817]
     chart		    118
-    linkNode		    [118 123 0]
+    linkNode		    [118 121 123]
     dataLimits		    [406.603 411.403 202.715 353.418]
     stampAngle		    NaN
     subviewer		    118
@@ -87329,7 +87331,7 @@ Stateflow {
     }
     midPoint		    [495.5317 279.0508]
     chart		    118
-    linkNode		    [118 121 122]
+    linkNode		    [118 122 0]
     dataLimits		    [493.128 497.928 202.715 353.418]
     stampAngle		    NaN
     subviewer		    118
