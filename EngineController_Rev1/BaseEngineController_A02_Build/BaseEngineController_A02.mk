@@ -55,9 +55,9 @@ SHELL           = cmd
 
 
 MODEL           = BaseEngineController_A02
-MODULES         = AppMonitor.c Application.c ApplicationSecurity.c BaseEngineController_A02_IdleStateMachine.c BaseEngineController_A02_data.c CANReceiveDispatcher.c EncoderCallback.c FaultManager.c Foreground.c IOCallbacks.c InjectorSequenceCallback_41.c MotoHawk_CAN.c MotoHawk_DataStores.c MotoHawk_IO.c TableLookupFunctions.c Trigger_BGND_BASE_PERIODIC_6314p0009.c Trigger_BGND_BASEx20_PERIODIC_3052p0013.c Trigger_CAN_RX_BusCAN_1_Buf1.c Trigger_CAN_RX_BusCAN_2_Buf14.c Trigger_Encoder_Fault_31.c Trigger_FGND_5XRTI_PERIODIC_1327p0009.c Trigger_FGND_5XRTI_PERIODIC_15456p0007.c Trigger_FGND_5XRTI_PERIODIC_15457p0007.c Trigger_FGND_5XRTI_PERIODIC_5248p0006.c Trigger_FGND_5XRTI_PERIODIC_6042p0011.c Trigger_FGND_MID_TDC_EVENT_5065p0009.c Trigger_FGND_RTI_PERIODIC_6320p0009.c Trigger_FGND_TDC1_EVENT_14692p0002.c Trigger_FGND_TDC_EVENT_4171p001.c Trigger_FGND_TDC_EVENT_5531p0006.c Trigger_STARTUP_EVENT_5064p0009.c VarDecs.c rt_zcfcn.c 
+MODULES         = AppMonitor.c Application.c ApplicationSecurity.c BaseEngineController_A02_IdleStateMachine.c BaseEngineController_A02_data.c CANReceiveDispatcher.c EncoderCallback.c FaultManager.c Foreground.c IOCallbacks.c InjectorSequenceCallback_38.c MotoHawk_CAN.c MotoHawk_DataStores.c MotoHawk_IO.c TableLookupFunctions.c Trigger_BGND_BASE_PERIODIC_9474p0004.c Trigger_BGND_BASEx20_PERIODIC_6201p0004.c Trigger_CAN_RX_BusCAN_1_Buf1.c Trigger_CAN_RX_BusCAN_2_Buf14.c Trigger_Encoder_Fault_28.c Trigger_FGND_5XRTI_PERIODIC_1407p0004.c Trigger_FGND_5XRTI_PERIODIC_1408p0004.c Trigger_FGND_5XRTI_PERIODIC_4476p0004.c Trigger_FGND_5XRTI_PERIODIC_8397p0001.c Trigger_FGND_5XRTI_PERIODIC_9202p0004.c Trigger_FGND_MID_TDC_EVENT_8214p0001.c Trigger_FGND_RTI_PERIODIC_9480p0004.c Trigger_FGND_TDC1_EVENT_1155p0004.c Trigger_FGND_TDC_EVENT_7320p0004.c Trigger_FGND_TDC_EVENT_8688p0001.c Trigger_STARTUP_EVENT_8213p0001.c VarDecs.c rt_zcfcn.c 
 MAKEFILE        = BaseEngineController_A02.mk
-MATLAB_ROOT     = E:\MATLAB
+MATLAB_ROOT     = C:\Program Files (x86)\MATLAB\R2011a
 S_FUNCTIONS     = 
 S_FUNCTIONS_LIB = 
 SOLVER          = 

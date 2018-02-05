@@ -1,13 +1,12 @@
 /*
  * File: DynoController_Rev1.c
  *
- * Real-Time Workshop code generated for Simulink model DynoController_Rev1.
+ * Code generated for Simulink model 'DynoController_Rev1'.
  *
- * Model version                        : 1.279
- * Real-Time Workshop file version      : 7.5  (R2010a)  25-Jan-2010
- * Real-Time Workshop file generated on : Sun Nov 19 19:40:13 2017
- * TLC version                          : 7.5 (Jan 19 2010)
- * C/C++ source code generated on       : Sun Nov 19 19:40:14 2017
+ * Model version                  : 1.298
+ * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
+ * TLC version                    : 8.0 (Feb  3 2011)
+ * C/C++ source code generated on : Mon Jan 15 12:10:05 2018
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -29,7 +28,8 @@ PrevZCSigStates_DynoController_Rev1 DynoController_Rev1_PrevZCSigState;
 
 /* Real-time model */
 RT_MODEL_DynoController_Rev1 DynoController_Rev1_M_;
-RT_MODEL_DynoController_Rev1 *DynoController_Rev1_M = &DynoController_Rev1_M_;
+RT_MODEL_DynoController_Rev1 *const DynoController_Rev1_M =
+  &DynoController_Rev1_M_;
 
 /* Model step function */
 void DynoController_Rev1_step(void)
@@ -55,16 +55,20 @@ void DynoController_Rev1_initialize(boolean_T firstTime)
                 sizeof(BlockIO_DynoController_Rev1));
 
   {
-    DynoController_Rev1_B.s36_PackState = 0.0;
-    DynoController_Rev1_B.s36_StateOfCharge = 0.0;
-    DynoController_Rev1_B.s37_ReadCANMessage_o2 = 0.0;
-    DynoController_Rev1_B.s37_ReadCANMessage_o3 = 0.0;
-    DynoController_Rev1_B.s37_ReadCANMessage_o4 = 0.0;
-    DynoController_Rev1_B.s37_ReadCANMessage_o6 = 0.0;
-    DynoController_Rev1_B.s37_ReadCANMessage_o7 = 0.0;
-    DynoController_Rev1_B.s36_BatteryVoltage = 0.0;
-    DynoController_Rev1_B.s36_BatteryCurrent = 0.0;
-    DynoController_Rev1_B.s36_MaxCellTemperature = 0.0;
+    DynoController_Rev1_B.s37_PackState = 0.0;
+    DynoController_Rev1_B.s37_StateOfCharge = 0.0;
+    DynoController_Rev1_B.s39_Merge = 0.0;
+    DynoController_Rev1_B.s38_ReadCANMessage_o2 = 0.0;
+    DynoController_Rev1_B.s38_ReadCANMessage_o3 = 0.0;
+    DynoController_Rev1_B.s38_ReadCANMessage_o4 = 0.0;
+    DynoController_Rev1_B.s38_ReadCANMessage_o6 = 0.0;
+    DynoController_Rev1_B.s38_ReadCANMessage_o7 = 0.0;
+    DynoController_Rev1_B.s37_BatteryVoltage = 0.0;
+    DynoController_Rev1_B.s37_BatteryCurrent = 0.0;
+    DynoController_Rev1_B.s37_MaxCellTemperature = 0.0;
+    DynoController_Rev1_B.s54_Merge = 0.0;
+    DynoController_Rev1_B.s56_Merge = 0.0;
+    DynoController_Rev1_B.s124_Sum = 0.0;
   }
 
   /* states (dwork) */
@@ -76,52 +80,15 @@ void DynoController_Rev1_initialize(boolean_T firstTime)
 
   /* Start for function-call system: '<S2>/Background' */
 
-  /* Start for trigger SubSystem: '<S130>/Post Shutdown two ticks before MPRD off' */
-
-  /* Start for S-Function (fcncallgen): '<S135>/Function-Call Generator' incorporates:
-   *  Start for SubSystem: '<S135>/Post Shutdown two ticks before MPRD off'
+  /* Start for Triggered SubSystem: '<S136>/Clear' incorporates:
+   *  Start for S-Function (fcncallgen): '<S146>/Function-Call Generator'
+   *  Start for SubSystem: '<S133>/motohawk_restore_nvmem'
    */
 
-  /* end of Start for SubSystem: '<S130>/Post Shutdown two ticks before MPRD off' */
-
-  /* Start for trigger SubSystem: '<S130>/Save NV Vars one tick before MPRD off' */
-
-  /* Start for S-Function (fcncallgen): '<S137>/Function-Call Generator' incorporates:
-   *  Start for SubSystem: '<S137>/Save NV Vars one tick before MPRD off'
+  /* Start for Triggered SubSystem: '<S137>/Clear' incorporates:
+   *  Start for S-Function (fcncallgen): '<S147>/Function-Call Generator'
+   *  Start for SubSystem: '<S133>/motohawk_store_nvmem'
    */
-
-  /* end of Start for SubSystem: '<S130>/Save NV Vars one tick before MPRD off' */
-
-  /* Start for trigger SubSystem: '<S130>/Shutdown power on ECU565-128' */
-
-  /* Start for S-Function (fcncallgen): '<S138>/Function-Call Generator' incorporates:
-   *  Start for SubSystem: '<S138>/Shutdown power on ECU565-128'
-   */
-
-  /* end of Start for SubSystem: '<S130>/Shutdown power on ECU565-128' */
-
-  /* Start for S-Function (motohawk_sfun_dout): '<S130>/motohawk_dout' */
-
-  /* S-Function Block: MPRD */
-  {
-    (init_resource_MPRD_DataStore()) = -1;
-  }
-
-  /* Start for trigger SubSystem: '<S133>/Clear' */
-
-  /* Start for S-Function (fcncallgen): '<S143>/Function-Call Generator' incorporates:
-   *  Start for SubSystem: '<S130>/motohawk_restore_nvmem'
-   */
-
-  /* end of Start for SubSystem: '<S133>/Clear' */
-
-  /* Start for trigger SubSystem: '<S134>/Clear' */
-
-  /* Start for S-Function (fcncallgen): '<S144>/Function-Call Generator' incorporates:
-   *  Start for SubSystem: '<S130>/motohawk_store_nvmem'
-   */
-
-  /* end of Start for SubSystem: '<S134>/Clear' */
   DynoController_Rev1_PrevZCSigState.ShutdownpoweronECU565128_Trig_ZCE =
     ZERO_ZCSIG;
   DynoController_Rev1_PrevZCSigState.SaveNVVarsonetickbeforeMPRDoff_Trig_ZCE =
@@ -143,7 +110,7 @@ void DynoController_Rev1_terminate(void)
 }
 
 /*
- * File trailer for Real-Time Workshop generated code.
+ * File trailer for generated code.
  *
  * [EOF]
  */

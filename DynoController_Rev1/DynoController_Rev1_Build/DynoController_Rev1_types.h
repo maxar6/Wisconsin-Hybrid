@@ -1,13 +1,12 @@
 /*
  * File: DynoController_Rev1_types.h
  *
- * Real-Time Workshop code generated for Simulink model DynoController_Rev1.
+ * Code generated for Simulink model 'DynoController_Rev1'.
  *
- * Model version                        : 1.279
- * Real-Time Workshop file version      : 7.5  (R2010a)  25-Jan-2010
- * Real-Time Workshop file generated on : Sun Nov 19 19:40:13 2017
- * TLC version                          : 7.5 (Jan 19 2010)
- * C/C++ source code generated on       : Sun Nov 19 19:40:14 2017
+ * Model version                  : 1.298
+ * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
+ * TLC version                    : 8.0 (Feb  3 2011)
+ * C/C++ source code generated on : Mon Jan 15 12:10:05 2018
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -24,7 +23,7 @@ typedef struct RT_MODEL_DynoController_Rev1 RT_MODEL_DynoController_Rev1;
 #endif                                 /* RTW_HEADER_DynoController_Rev1_types_h_ */
 
 /*
- * File trailer for Real-Time Workshop generated code.
+ * File trailer for generated code.
  *
  * [EOF]
  */

@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.2029"
+    ComputedModelVersion    "1.2030"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -31,8 +31,8 @@ Model {
   "M',{0},'HeapRAM',{0},'BuildSuccessCount',{210},'BuildErrorCount',{54})"
   MotoHawkModelSavedName  "Mooventure2016_Rev5"
   MotoHawkModelGUID	  "0339744d-1465-4569-a1-b4-32-b1-a7-fa-5f"
-  MotoHawkModelOpenTime	  "2017 12 31 14 43 26.734 "
-  MotoHawkModelElapsedTime "207529243.557"
+  MotoHawkModelOpenTime	  "2017 12 31 15 21 27.481 "
+  MotoHawkModelElapsedTime "207529323.792"
   MotoHawkBuildInfo	  "struct('model_name',{'Mooventure2016_Rev5'},'motohawk_version',{'2011a_sp0.184'},'motohawk_comp"
   "onent_version',{'0.0.7'},'matlab_version',{'7.12.0'},'build_version',{'209'},'module_type',{'ECM-5554-112-0904-xD'},"
   "'layout_type',{'DEV'},'processor_family',{'MotoCoder'},'processor_type',{'MPC5554'},'toolchain_vendor',{'gcc-powerpc"
@@ -58,9 +58,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "HYBRID"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sun Dec 31 15:05:30 2017"
-  RTWModifiedTimeStamp	  436633395
-  ModelVersionFormat	  "1.%<AutoIncrement:2029>"
+  LastModifiedDate	  "Sun Dec 31 15:22:47 2017"
+  RTWModifiedTimeStamp	  436634541
+  ModelVersionFormat	  "1.%<AutoIncrement:2030>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -3762,7 +3762,7 @@ Model {
 	      System {
 		Name			"Coolant Control"
 		Location		[202, 82, 1265, 708]
-		Open			on
+		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	266
 		ScreenColor		"white"
@@ -7051,9 +7051,9 @@ Model {
 	      System {
 		Name			"Faults"
 		Location		[202, 74, 1901, 1029]
-		Open			off
+		Open			on
 		ModelBrowserVisibility	on
-		ModelBrowserWidth	353
+		ModelBrowserWidth	266
 		ScreenColor		"white"
 		PaperOrientation	"landscape"
 		PaperPositionMode	"auto"
@@ -15040,7 +15040,7 @@ Model {
 		  MaskHideContents	  off
 		  System {
 		    Name		    "Power Train"
-		    Location		    [355, 82, 1347, 725]
+		    Location		    [202, 74, 1918, 1019]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -16983,7 +16983,7 @@ Model {
 		    MaskHideContents	    off
 		    System {
 		    Name		    "Electric Motor"
-		    Location		    [202, 82, 1885, 1037]
+		    Location		    [202, 74, 1901, 1019]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -18032,8 +18032,8 @@ Model {
 		    show_actions	    on
 		    action1_name	    "'Check_Engine_Light_Flashing'"
 		    action1_cond	    "Active"
-		    action2_name	    "'Dyno_Shutdown'"
-		    action2_cond	    "Active"
+		    action2_name	    "''"
+		    action2_cond	    "(None)"
 		    action3_name	    "''"
 		    action3_cond	    "(None)"
 		    action4_name	    "''"
@@ -85097,7 +85097,7 @@ Model {
       SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
       SourceType	      "MotoHawk Function Trigger"
       trigger		      "FGND_RTI_PERIODIC"
-      function_name	      "Trigger_FGND_RTI_PERIODIC_6130p0009"
+      function_name	      "Trigger_FGND_RTI_PERIODIC_4164p0011"
       priority_order	      "0"
       inherited		      off
       run_disabled	      off

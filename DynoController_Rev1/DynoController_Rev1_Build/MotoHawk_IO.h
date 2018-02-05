@@ -7,31 +7,76 @@
 #define MOTOHAWK_IO_H
 #include "CommonInclude.h"
 
-/* S-Function Block: <S130>/motohawk_ain5 Resource: ECUP */
+/* S-Function Block: <S133>/motohawk_ain5 Resource: ECUP */
 NativeError_S ECUP_AnalogInput_Get(uint16_T *adc, uint16_T *status);
 NativeError_S ECUP_AnalogInput_Create(void);
 
-/* S-Function Block: <S16>/motohawk_din1 Resource: LoadDumpEnable */
+/* S-Function Block: <S133>/motohawk_dout Resource: MPRD */
+extern NativeError_S DOut692p0001_DiscreteOutput_Set(boolean_T in);
+extern NativeError_S DOut692p0001_DiscreteOutputPushPull_Set(int8_T in);
+extern NativeError_S DOut692p0001_DiscreteOutput_Create(void);
+
+/* S-Function Block: <S75>/motohawk_dout Resource: FUEL 1 */
+extern NativeError_S DOut328p001_DiscreteOutput_Set(boolean_T in);
+extern NativeError_S DOut328p001_DiscreteOutputPushPull_Set(int8_T in);
+extern NativeError_S DOut328p001_DiscreteOutput_Create(void);
+
+/* S-Function Block: <S75>/motohawk_dout1 Resource: FUEL 2 */
+extern NativeError_S DOut329p001_DiscreteOutput_Set(boolean_T in);
+extern NativeError_S DOut329p001_DiscreteOutputPushPull_Set(int8_T in);
+extern NativeError_S DOut329p001_DiscreteOutput_Create(void);
+
+/* S-Function Block: <S75>/motohawk_dout2 Resource: FUEL 3 */
+extern NativeError_S DOut330p001_DiscreteOutput_Set(boolean_T in);
+extern NativeError_S DOut330p001_DiscreteOutputPushPull_Set(int8_T in);
+extern NativeError_S DOut330p001_DiscreteOutput_Create(void);
+
+/* S-Function Block: <S75>/motohawk_dout3 Resource: FUEL 4 */
+extern NativeError_S DOut331p001_DiscreteOutput_Set(boolean_T in);
+extern NativeError_S DOut331p001_DiscreteOutputPushPull_Set(int8_T in);
+extern NativeError_S DOut331p001_DiscreteOutput_Create(void);
+
+/* S-Function Block: <S75>/motohawk_dout4 Resource: SPARE */
+extern NativeError_S DOut332p001_DiscreteOutput_Set(boolean_T in);
+extern NativeError_S DOut332p001_DiscreteOutputPushPull_Set(int8_T in);
+extern NativeError_S DOut332p001_DiscreteOutput_Create(void);
+
+/* S-Function Block: <S75>/motohawk_dout5 Resource: FUELP */
+extern NativeError_S DOut333p001_DiscreteOutput_Set(boolean_T in);
+extern NativeError_S DOut333p001_DiscreteOutputPushPull_Set(int8_T in);
+extern NativeError_S DOut333p001_DiscreteOutput_Create(void);
+
+/* S-Function Block: <S17>/motohawk_din1 Resource: LoadDumpEnable */
 NativeError_S LoadDumpEnable_DigitalInput_Get(boolean_T *out, uint16_T *status);
 NativeError_S LoadDumpEnable_DigitalInput_Create(void);
 
-/* S-Function Block: <S16>/motohawk_din Resource: BatteryEnable */
+/* S-Function Block: <S75>/motohawk_dout6 Resource: HORN */
+extern NativeError_S DOut334p001_DiscreteOutput_Set(boolean_T in);
+extern NativeError_S DOut334p001_DiscreteOutputPushPull_Set(int8_T in);
+extern NativeError_S DOut334p001_DiscreteOutput_Create(void);
+
+/* S-Function Block: <S75>/motohawk_dout7 Resource: LIAC */
+extern NativeError_S DOut335p001_DiscreteOutput_Set(boolean_T in);
+extern NativeError_S DOut335p001_DiscreteOutputPushPull_Set(int8_T in);
+extern NativeError_S DOut335p001_DiscreteOutput_Create(void);
+
+/* S-Function Block: <S17>/motohawk_din Resource: BatteryEnable */
 NativeError_S BatteryEnable_DigitalInput_Get(boolean_T *out, uint16_T *status);
 NativeError_S BatteryEnable_DigitalInput_Create(void);
 
-/* S-Function Block: <S16>/motohawk_din2 Resource: GensetEnable */
+/* S-Function Block: <S17>/motohawk_din2 Resource: GensetEnable */
 NativeError_S GensetEnable_DigitalInput_Get(boolean_T *out, uint16_T *status);
 NativeError_S GensetEnable_DigitalInput_Create(void);
 
-/* S-Function Block: <S16>/motohawk_din3 Resource: GensetLoad */
+/* S-Function Block: <S17>/motohawk_din3 Resource: GensetLoad */
 NativeError_S GensetLoad_DigitalInput_Get(boolean_T *out, uint16_T *status);
 NativeError_S GensetLoad_DigitalInput_Create(void);
 
-/* S-Function Block: <S16>/motohawk_din4 Resource: ACC1 */
+/* S-Function Block: <S17>/motohawk_din4 Resource: ACC1 */
 NativeError_S ACC1_DigitalInput_Get(boolean_T *out, uint16_T *status);
 NativeError_S ACC1_DigitalInput_Create(void);
 
-/* S-Function Block: <S16>/motohawk_din5 Resource: ACC2 */
+/* S-Function Block: <S17>/motohawk_din5 Resource: ACC2 */
 NativeError_S ACC2_DigitalInput_Get(boolean_T *out, uint16_T *status);
 NativeError_S ACC2_DigitalInput_Create(void);
 

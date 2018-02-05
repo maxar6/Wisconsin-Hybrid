@@ -10,7 +10,6 @@
 /* Variable Declarations */
 
 /* Variable Definitions */
-int32_T _sfEvent_;
 uint32_T _DynoController_Rev1MachineNumber_;
 real_T _sfTime_;
 
@@ -19,7 +18,6 @@ real_T _sfTime_;
 /* Function Definitions */
 void DynoController_Rev1_initializer(void)
 {
-  _sfEvent_ = CALL_EVENT;
 }
 
 void DynoController_Rev1_terminator(void)
@@ -58,20 +56,20 @@ unsigned int sf_DynoController_Rev1_process_check_sum_call( int nlhs, mxArray *
     mxGetString(prhs[1], commandName,sizeof(commandName)/sizeof(char));
     commandName[(sizeof(commandName)/sizeof(char)-1)] = '\0';
     if (!strcmp(commandName,"machine")) {
-      ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(3401510095U);
-      ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(2056504696U);
-      ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(763756102U);
-      ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(1135745115U);
+      ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(1486376574U);
+      ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(3286259172U);
+      ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(2109759709U);
+      ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(3462912312U);
     } else if (!strcmp(commandName,"exportedFcn")) {
       ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(0U);
       ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(0U);
       ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(0U);
       ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(0U);
     } else if (!strcmp(commandName,"makefile")) {
-      ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(1815762660U);
-      ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(1383511394U);
-      ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(2239731323U);
-      ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(2769769040U);
+      ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(4065612682U);
+      ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(2050698078U);
+      ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(2400573560U);
+      ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(1521717247U);
     } else if (nrhs==3 && !strcmp(commandName,"chart")) {
       unsigned int chartFileNumber;
       chartFileNumber = (unsigned int)mxGetScalar(prhs[2]);
@@ -90,18 +88,18 @@ unsigned int sf_DynoController_Rev1_process_check_sum_call( int nlhs, mxArray *
         ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(0.0);
       }
     } else if (!strcmp(commandName,"target")) {
-      ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(2622892809U);
-      ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(895442978U);
-      ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(3670041804U);
-      ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(3683084495U);
+      ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(3176360410U);
+      ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(1862911626U);
+      ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(659157607U);
+      ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(1884031890U);
     } else {
       return 0;
     }
   } else {
-    ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(706327273U);
-    ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(295502223U);
-    ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(1011576853U);
-    ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(4059892770U);
+    ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(1135741932U);
+    ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(583902177U);
+    ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(2092604246U);
+    ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(3373989282U);
   }
 
   return 1;

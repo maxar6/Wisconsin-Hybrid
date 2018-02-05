@@ -9,14 +9,14 @@ typedef enum {
 
 /* Name: VarDecEnum_1 ClassID:ENUMDEC EnumDflt:"Unknown" */
 typedef enum {
-  VarDecEnum_1_0 = 0,                  /* EnumTxt:"Off" */
-  VarDecEnum_1_1 = 1,                  /* EnumTxt:"On" */
+  VarDecEnum_1_0 = 0,                  /* EnumTxt:"Pass-Through" */
+  VarDecEnum_1_1 = 1,                  /* EnumTxt:"Override" */
 } VarDecEnum_1;
 
 /* Name: VarDecEnum_2 ClassID:ENUMDEC EnumDflt:"Unknown" */
 typedef enum {
-  VarDecEnum_2_0 = 0,                  /* EnumTxt:"Pass-Through" */
-  VarDecEnum_2_1 = 1,                  /* EnumTxt:"Override" */
+  VarDecEnum_2_0 = 0,                  /* EnumTxt:"Off" */
+  VarDecEnum_2_1 = 1,                  /* EnumTxt:"On" */
 } VarDecEnum_2;
 
 /* Name: VarDecEnum_3 ClassID:ENUMDEC EnumDflt:"Unknown" */

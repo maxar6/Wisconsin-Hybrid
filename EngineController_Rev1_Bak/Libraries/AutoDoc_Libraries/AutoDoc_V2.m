@@ -1,0 +1,851 @@
+% --------------------
+% MotoTron Corporation
+% Joseph M. Morbitzer
+% 20 October 2006
+% AutoDoc script
+% --------------------
+
+% Note:  Copy file into same folder as model.
+% Note:  Change path, libpath, and dir as appropriate.
+
+% Note:  Before running, open model and library files, and update model.
+%        Also, if necessary, run motohawk_load_cals to update model with
+%        recent calibrations.
+% Note:  The print screens will be in a "Figs" folder in the project
+%        directory.  Delete previous files before running AutoDoc.
+%        With files in alphabetical order, insert all into document at once, starting
+%        with the first on page 1.
+% Note:  The table of contents will appear in the "AutoDocTOC.doc" Word document.
+%        Set right and left margins to 0.75" and set text to Arial, font size 10.
+%        Delete table of contents chapter headings that are not needed.
+
+
+clear all; close all; clc;
+
+
+% ------------------------------------ %
+% ------------------------------------ %
+path = 'MI07SECM48_028';
+libpath = 'None';    % Type 'None' if no library
+dir = 'C:\Documents and Settings\jason_tartt\My Documents\Woodward\Models\WoodwardMI07_024';
+% ------------------------------------ %
+% ------------------------------------ %
+
+
+disp('1.  Create Word document with table of contents and appendix');
+disp('2.  Number 1, plus print Simulink and Stateflow screen shots'); 
+choice = input('Enter a number to choose one of the above.');
+
+
+% --- Print Model Simulink Screens --- %
+% ------------------------------------ %
+
+blockpaths_all = find_system(path, 'LookUnderMasks', 'all', 'FollowLinks', 'on', 'ReferenceBlock', 'AutoDoc_lib/Documentation_Title_Block');
+
+% Only include those whose title block has "Include in documentation" selected
+count = 0;
+for i = 1:length(blockpaths_all)
+    UserData = get_param(char(blockpaths_all(i,1)), 'UserData');
+    if UserData.DocOption == 1
+        count = count + 1;
+        blockpaths(count, 1) = blockpaths_all(i,1);
+    end
+    clear UserData;
+end
+
+for i = 1:length(blockpaths)
+    
+    % Cell arrays
+    paths(i,1) = get_param(blockpaths(i,1), 'Parent');
+    UserData = get_param(char(blockpaths(i,1)), 'UserData');
+    docpaths(i,1) = cellstr(UserData.DocPath);
+    clear UserData;
+    filenames(i,1) = cellstr(strcat(char(docpaths(i,1)), '.emf'));
+    pathfilenames(i,1) = cellstr(strcat(dir, '\Figs\', char(filenames(i,1))));
+   
+    if choice == 2
+        % Open, print, and close
+        open_system(char(paths(i,1)), 'force');
+        h = get_param(paths{i,1}, 'Handle');
+        print(h, '-dmeta', char(pathfilenames(i,1)));
+        if strcmp(char(paths(i,1)), path) ~= 1    
+            close_system(char(paths(i,1)));
+        end
+    end
+    
+end
+
+
+% --- Print Model Cals and Probes Pages --- %
+% ----------------------------------------- %
+
+cpblockpaths = find_system(path, 'LookUnderMasks', 'all', 'ReferenceBlock', 'AutoDoc_lib/Cals_and_Probes_Page');
+cpfilenames = cellstr({});
+
+for i = 1:length(cpblockpaths)
+    
+    % Cell arrays
+    cppaths(i,1) = get_param(cpblockpaths(i), 'Parent');
+    UserData = get_param(strcat(char(cppaths(i,1)), '/Documentation_Title_Block'), 'UserData');
+    cpdocpaths(i,1) = cellstr(UserData.DocPath);
+    clear UserData
+    cpfilenames(i,1) = cellstr(strcat(char(cpdocpaths(i,1)), '.0cp.emf'));
+    cppathfilenames(i,1) = cellstr(strcat(dir, '\Figs\', char(cpfilenames(i,1))));
+   
+    if choice == 2
+        % Open, print, and close
+        open_system(char(cpblockpaths(i,1)), 'force');
+        h = get_param(cpblockpaths{i,1}, 'Handle');
+        print(h, '-dmeta', char(cppathfilenames(i,1)));    
+        close_system(char(cpblockpaths(i,1)));
+    end
+    
+end
+
+
+% --- Print Model Stateflow Screens --- %
+% ------------------------------------- %
+
+cd(strcat(dir, '\Figs'));
+sfblockpaths_all = find_system(path, 'LookUnderMasks', 'all', 'MaskType', 'Stateflow');
+% Only include those whose parent title block exists and has "Include in documentation" selected
+count = 0;
+for i = 1:length(sfblockpaths_all)
+    if length(find(strcmp(paths, get_param(sfblockpaths_all(i,1), 'Parent')))) ~= 0
+        UserData = get_param(strcat(char(get_param(sfblockpaths_all(i,1), 'Parent')), '/Documentation_Title_Block'), 'UserData');
+        if UserData.DocOption == 1
+            count = count + 1;
+            sfblockpaths(count, 1) = sfblockpaths_all(i,1);
+        end
+        clear UserData;
+    end
+end
+sffilenames = cellstr({});
+
+for i = 1:length(sfblockpaths)
+    
+    % Cell arrays
+    sfpaths(i,1) = get_param(sfblockpaths(i), 'Parent');
+    UserData = get_param(strcat(char(sfpaths(i,1)), '/Documentation_Title_Block'), 'UserData');
+    sfdocpaths(i,1) = cellstr(UserData.DocPath);
+    clear UserData
+    % Adjust name if more than one Stateflow in the same parent
+    count = 0;
+    if i >= 2
+        if strcmp(char(sfpaths(i,1)), char(sfpaths(i-1,1))) == 1
+            count  = count + 1;
+        else
+            count = 0;
+        end
+    end
+    sffilenames(i,1) = cellstr(strcat(char(sfdocpaths(i,1)), '.0sf', num2str(count), '.emf'));
+
+    if choice == 2
+        % Open, print, and close
+        open_system(char(sfblockpaths(i,1)));
+        sfprint(char(sfblockpaths(i,1)), 'meta', char(sffilenames(i,1)));
+        sfclose;
+        close_system(get_param(sfblockpaths(i,1), 'Parent'));
+    end
+
+end
+cd(dir)
+
+
+% --- Print Library Simulink Screens --- %
+% -------------------------------------- %
+
+if strcmp(libpath, 'None') ~= 1
+
+% Print top screen
+if choice == 2
+    h = get_param(libpath, 'Handle');
+    print(h, '-dmeta', strcat(dir, '\Figs\zzz000'));
+end
+
+% Find paths
+libblockpaths_all = find_system(libpath, 'LookUnderMasks', 'all', 'ReferenceBlock', 'AutoDoc_lib/Documentation_Title_Block');
+% Only include those whose title block has "Library Block: include in documentation appendix" selected
+count = 0;
+for i = 1:length(libblockpaths_all)
+    UserData = get_param(char(libblockpaths_all(i,1)), 'UserData');
+    if UserData.DocOption == 3
+        count = count + 1;
+        libblockpaths(count, 1) = libblockpaths_all(i,1);
+    end
+    clear UserData;
+end
+j = 1;
+k = 1;
+for i = 1:length(libblockpaths)
+    UserData = get_param(char(libblockpaths(i,1)), 'UserData');
+    level(i) = UserData.LowLevelPos;
+    clear UserData
+    if level(i) == 0
+        libblockpathstl(j,1) = libblockpaths(i,1);
+        j = j + 1;
+    else
+        libblockpathsll(k,1) = libblockpaths(i,1);
+        k = k + 1;
+    end
+end
+libblockpathstl = sort(libblockpathstl);
+libblockpathsll = sort(libblockpathsll);
+
+% Print top level screens
+for i = 1:length(libblockpathstl)
+    
+    % Filenames
+    libpathstl(i,1) = get_param(libblockpathstl(i,1), 'Parent');
+    if i < 10
+        libfilenamestl(i,1) = cellstr(strcat('zzz0', num2str(i)));
+    else
+        libfilenamestl(i,1) = cellstr(strcat('zzz', num2str(i)));
+    end
+    libpathfilenamestl(i,1) = cellstr(strcat(dir, '\Figs\', char(libfilenamestl(i,1)), '.emf'));
+    
+    if choice == 2
+        % Open, print, and close
+        open_system(char(libpathstl(i,1)), 'force');
+        h = get_param(libpathstl{i,1}, 'Handle');
+        print(h, '-dmeta', char(libpathfilenamestl(i,1)));
+        if strcmp(char(libpathstl(i,1)), libpath) ~= 1    
+            close_system(char(libpathstl(i,1)));
+        end
+    end
+    
+end
+
+% Print lower level screens
+
+% Top level matches
+for i = 1:length(libblockpathsll)
+    libpathsll(i,1) = get_param(libblockpathsll(i,1), 'Parent');
+    libpathslltl(i,1) = get_param(libpathsll(i,1), 'Parent');
+    index(i) = strmatch(libpathslltl(i,1), libpathstl, 'exact');
+end
+
+for i = 1:length(libblockpathsll)
+    
+    % Filenames
+    UserData = get_param(char(libblockpathsll(i,1)), 'UserData');
+    levelll(i) = UserData.LowLevelPos;
+    clear UserData
+    libfilenamesll(i,1) = cellstr(strcat(char(libfilenamestl(index(i))), '.', num2str(levelll(i))));
+    libpathfilenamesll(i,1) = cellstr(strcat(dir, '\Figs\', char(libfilenamesll(i,1)), '.emf'));
+    
+    if choice == 2
+        % Open, print, and close
+        open_system(char(libpathsll(i,1)), 'force');
+        h = get_param(libpathsll{i,1}, 'Handle');
+        print(h, '-dmeta', char(libpathfilenamesll(i,1)));   
+        close_system(char(libpathsll(i,1)));
+    end
+    
+end
+
+
+% --- Print Library Stateflow Screens --- %
+% --------------------------------------- %
+
+cd(strcat(dir, '\Figs'));
+libsfblockpaths_all = find_system(libpath, 'LookUnderMasks', 'all', 'MaskType','Stateflow');
+
+for i = 1:length(libsfblockpaths_all)
+    
+    % Filenames
+    libsfpaths_all(i,1) = get_param(libsfblockpaths_all(i,1), 'Parent');
+    index_tl = strmatch(libsfpaths_all(i,1), libpathstl, 'exact');
+    index_ll = strmatch(libsfpaths_all(i,1), libpathsll, 'exact');
+    if  length(index_tl) ~= 0
+        libsffilenames(i,1) = cellstr(strcat(char(libfilenamestl(index_tl)), '.0sf.emf'));
+    elseif length(index_ll) ~= 0
+        libsffilenames(i,1) = cellstr(strcat(char(libfilenamesll(index_ll)), '.0sf.emf'));
+    end
+    
+    if choice == 2
+        % Open, print, and close
+        open_system(char(libsfblockpaths_all(i,1)));
+        sfprint(char(libsfblockpaths_all(i,1)), 'meta', char(libsffilenames(i,1)));
+        sfclose;
+        close_system(get_param(libsfblockpaths_all(i,1), 'Parent'));
+    end
+     
+end
+
+cd(dir)
+
+end
+
+
+if strcmp(path, 'ExhSys') == 1
+    
+% --- Gather Fault Summary Data --- %
+% --------------------------------- %
+
+fltblockpaths = find_system(path, 'LookUnderMasks', 'all', 'FollowLinks', 'on', 'ReferenceBlock', 'ExhSys_lib/Fault');
+
+% Alphabatize
+for i = 1:length(fltblockpaths)
+    fltname{i,1} = motohawk_get_param_ws(fltblockpaths{i,1}, 'nam');
+end
+[fltname fltindex] = sort(fltname);
+
+for i = 1:length(fltname)
+        
+    % Model path
+    fltpath(i,1) = get_param(fltblockpaths(fltindex(i),1), 'Parent');
+    fltlibraryblock(i,1) = not(strcmp(get_param(fltpath(i,1), 'ReferenceBlock'), ''));
+    % Not a library block
+    if fltlibraryblock(i,1) == 0        
+        UserData = get_param(strcat(char(fltpath(i,1)), '/Documentation_Title_Block'), 'UserData');
+        fltpathtxt(i,1) = cellstr([UserData.DocPath '  ' char(fltpath(i,1))]);
+        clear UserData;
+    % Library block
+    elseif fltlibraryblock(i,1) == 1
+        found = 0;
+        fltlibpath = fltpath(i,1);
+        while found == 0
+           parent = get_param(fltlibpath, 'Parent');
+           found = strcmp(get_param(parent, 'ReferenceBlock'), '');
+           path_des = fltlibpath;
+           fltlibpath = parent;
+        end
+        UserData = get_param(strcat(char(fltlibpath), '/Documentation_Title_Block'), 'UserData');
+        fltpathtxt(i,1) = cellstr([UserData.DocPath '  ' char(path_des) '  ' 'Library Block']);
+        clear UserData;
+    end
+    fltpathtxt(i,1) = cellstr(strrep(char(fltpathtxt(i,1)), '/', ' / '));
+    
+    % Sample period of fault
+    fltlooprate(i,1) = motohawk_get_param_ws(char(fltblockpaths(fltindex(i),1)), 'fltlooprate');
+    
+    % Operation modes
+    fltopmode1(i,1) = cellstr('');
+    fltopmode2(i,1) = cellstr('');
+    fltopmode3(i,1) = cellstr('');
+    fltopmode4(i,1) = cellstr('');
+    if strcmp(get_param(fltblockpaths(fltindex(i),1), 'fltopmode1'), 'on') == 1
+        fltopmode1(i,1) = cellstr('X');
+    end
+    if strcmp(get_param(fltblockpaths(fltindex(i),1), 'fltopmode2'), 'on') == 1
+        fltopmode2(i,1) = cellstr('X');
+    end
+    if strcmp(get_param(fltblockpaths(fltindex(i),1), 'fltopmode3'), 'on') == 1
+        fltopmode3(i,1) = cellstr('X');
+    end
+    if strcmp(get_param(fltblockpaths(fltindex(i),1), 'fltopmode4'), 'on') == 1
+        fltopmode4(i,1) = cellstr('X');
+    end
+
+    % SPN
+    faultenum = ExhSys_cals.FaultManager_disp.row_enumeration;
+    for j = 1:length(faultenum)
+        faultenumarr(j,1) = cellstr(faultenum(j).name);
+    end
+    index = find(strcmp(faultenumarr, fltname(i)));
+    fltSPN(i,1) = ExhSys_cals.FaultManager_disp.value(index, 7);
+
+    % FMI number
+    fltFMInum(i,1) = ExhSys_cals.FaultManager_disp.value(index, 8);
+    
+    % DTC
+    DTCletternum = ExhSys_cals.FaultManager_disp.value(index, 10);
+    if DTCletternum == 0
+        fltDTCletter(i,1) = cellstr('P');
+    elseif DTCletternum == 1
+        fltDTCletter(i,1) = cellstr('C');
+    elseif DTCletternum == 2
+        fltDTCletter(i,1) = cellstr('B');
+    elseif DTCletternum == 3
+        fltDTCletter(i,1) = cellstr('U');
+    end
+    fltDTCnum(i,1) = ExhSys_cals.FaultManager_disp.value(index, 11);
+    
+end
+
+
+% --- Gather Calibration and Probe Summary Data --- %
+% ------------------------------------------------- %
+
+% Find calibration vardecs
+calblockpaths_all = find_system(path, 'LookUnderMasks', 'all', 'FollowLinks', 'on', 'FunctionName', 'motohawk_sfun_calibration');
+calblockpaths_all = [calblockpaths_all; find_system(path, 'LookUnderMasks', 'all', 'FollowLinks', 'on', 'FunctionName', 'motohawk_sfun_prelookup')];
+calblockpaths_all = [calblockpaths_all; find_system(path, 'LookUnderMasks', 'all', 'FollowLinks', 'on', 'FunctionName', 'motohawk_sfun_interpolation_1d')];
+calblockpaths_all = [calblockpaths_all; find_system(path, 'LookUnderMasks', 'all', 'FollowLinks', 'on', 'FunctionName', 'motohawk_sfun_interpolation_2d')];
+calblockpaths_all = [calblockpaths_all; find_system(path, 'LookUnderMasks', 'all', 'FollowLinks', 'on', 'FunctionName', 'motohawk_sfun_ain', 'use_vardec', 'on')];
+calblockpaths_all = [calblockpaths_all; find_system(path, 'LookUnderMasks', 'all', 'FollowLinks', 'on', 'FunctionName', 'motohawk_sfun_freq_in', 'use_vardec', 'on')];
+calblockpaths_all = [calblockpaths_all; find_system(path, 'LookUnderMasks', 'all', 'FollowLinks', 'on', 'FunctionName', 'motohawk_sfun_dout', 'use_vardec', 'on')];
+calblockpaths_all = [calblockpaths_all; find_system(path, 'LookUnderMasks', 'all', 'FollowLinks', 'on', 'FunctionName', 'motohawk_sfun_pwm', 'use_vardec', 'on')];
+
+% Find probe vardecs
+prbblockpaths_all = find_system(path, 'LookUnderMasks', 'all', 'FollowLinks', 'on', 'FunctionName', 'motohawk_sfun_probe');
+
+% Assign datadef vardecs to lists
+datadefblockpaths = find_system(path, 'LookUnderMasks', 'all', 'FollowLinks', 'on', 'FunctionName', 'motohawk_sfun_data_def');
+for i = 1:length(datadefblockpaths)
+    if strcmp(get_param(datadefblockpaths(i), 'typ'), 'struct') == 0
+        if strcmp(get_param(datadefblockpaths(i), 'window'), 'Calibration') == 1 & ...
+                strcmp(get_param(datadefblockpaths(i), 'use_vardec'), 'on') == 1
+            calblockpaths_all = [calblockpaths_all; datadefblockpaths(i)];
+        elseif strcmp(get_param(datadefblockpaths(i), 'window'), 'Display') == 1 & ...
+                strcmp(get_param(datadefblockpaths(i), 'use_vardec'), 'on') == 1
+            prbblockpaths_all = [prbblockpaths_all; datadefblockpaths(i)];
+        end
+    end
+end
+
+% Assign struct vardecs to lists
+structblockpaths = find_system(path, 'LookUnderMasks', 'all', 'FollowLinks', 'on', 'FunctionName', 'motohawk_sfun_struct_vardec');
+for i = 1:length(structblockpaths)
+    if strcmp(get_param(structblockpaths(i), 'window'), 'Calibration') == 1
+        calblockpaths_all = [calblockpaths_all; structblockpaths(i)];
+    elseif strcmp(get_param(structblockpaths(i), 'window'), 'Display') == 1
+        prbblockpaths_all = [prbblockpaths_all; structblockpaths(i)];
+    end
+end
+
+% Alphabatize
+calblockpaths = calblockpaths_all;
+prbblockpaths = prbblockpaths_all;
+for i = 1:length(calblockpaths)
+    if strcmp(get_param(calblockpaths(i), 'FunctionName'), 'motohawk_sfun_struct_vardec') == 1
+        calname{i,1} = motohawk_get_param_ws(calblockpaths{i,1}, 'struct_nam');
+    else
+        calname{i,1} = motohawk_get_param_ws(calblockpaths{i,1}, 'nam');
+    end
+end
+[calname calindex] = sort(calname);
+for i = 1:length(prbblockpaths)
+    if strcmp(get_param(prbblockpaths(i), 'FunctionName'), 'motohawk_sfun_struct_vardec') == 1
+        prbname{i,1} = motohawk_get_param_ws(prbblockpaths{i,1}, 'struct_nam');
+    else
+        prbname{i,1} = motohawk_get_param_ws(prbblockpaths{i,1}, 'nam');
+    end
+end
+[prbname prbindex] = sort(prbname);
+
+% Gather calibration data of interest
+for i = 1:length(calname)
+    
+    % Adjust name
+    if strcmp(get_param(calblockpaths{calindex(i),1}, 'ReferenceBlock'), 'MotoHawk_lib/Lookup Tables/motohawk_prelookup') == 1
+        calnam(i,1) = cellstr([motohawk_get_param_ws(calblockpaths{calindex(i),1}, 'nam') 'IdxArr']);
+    elseif strcmp(get_param(calblockpaths{calindex(i),1}, 'ReferenceBlock'), 'MotoHawk_lib/Lookup Tables/motohawk_interpolation_1d') == 1   
+        calnam(i,1) = cellstr([motohawk_get_param_ws(calblockpaths{calindex(i),1}, 'nam') 'Tbl']);
+    elseif strcmp(get_param(calblockpaths{calindex(i),1}, 'ReferenceBlock'), 'MotoHawk_lib/Lookup Tables/motohawk_interpolation_2d') == 1   
+        calnam(i,1) = cellstr([motohawk_get_param_ws(calblockpaths{calindex(i),1}, 'nam') 'Map']);
+    elseif strcmp(get_param(calblockpaths{calindex(i),1}, 'ReferenceBlock'), 'MotoHawk_lib/Data Storage Blocks/motohawk_struct_vardec') == 1
+        calnam(i,1) = cellstr(motohawk_get_param_ws(calblockpaths{calindex(i),1}, 'struct_nam'));
+    else
+        calnam(i,1) = cellstr(motohawk_get_param_ws(calblockpaths{calindex(i),1}, 'nam'));
+    end
+    
+    % Units, help, and MotoTune group
+    if strcmp(get_param(calblockpaths{calindex(i),1}, 'FunctionName'), 'motohawk_sfun_ain') == 1 | ...
+        strcmp(get_param(calblockpaths{calindex(i),1}, 'FunctionName'), 'motohawk_sfun_freq_in') == 1 | ...
+        strcmp(get_param(calblockpaths{calindex(i),1}, 'FunctionName'), 'motohawk_sfun_dout') == 1 | ...
+        strcmp(get_param(calblockpaths{calindex(i),1}, 'FunctionName'), 'motohawk_sfun_pwm') == 1
+        calunits(i,1) = cellstr('-');
+        calhelp(i,1) = cellstr('Controller resource pin');
+        calmototunegrp{i,1} = motohawk_get_param_ws(calblockpaths{calindex(i),1}, 'group');
+    else
+        calunits{i,1} = motohawk_get_param_ws(calblockpaths{calindex(i),1}, 'units');
+        if strcmp(char(calunits{i,1}), '') == 1
+            calunits(i,1) = cellstr('-');
+        end
+        calhelp{i,1} = motohawk_get_param_ws(calblockpaths{calindex(i),1}, 'help');
+        if strcmp(char(calhelp{i,1}), '') == 1
+            calhelp(i,1) = cellstr('-');
+        end
+        calmototunegrp{i,1} = motohawk_get_param_ws(calblockpaths{calindex(i),1}, 'mototune_group');  
+    end
+    
+    % Data type
+    if strcmp(get_param(calblockpaths{calindex(i),1}, 'ReferenceBlock'), 'MotoHawk_lib/Data Storage Blocks/motohawk_data_def') == 1   
+        caldatatyp{i,1} = get_param(calblockpaths{calindex(i),1}, 'typ');
+    elseif strcmp(get_param(calblockpaths{calindex(i),1}, 'ReferenceBlock'), 'MotoHawk_lib/Data Storage Blocks/motohawk_struct_vardec') == 1   
+        caldatatyp(i,1) = cellstr('struct');
+    else
+        caldatatyp{i,1} = get_param(calblockpaths{calindex(i),1}, 'data_type');
+    end
+    if strncmpi(caldatatyp{i,1}, 'Inherit', 7) == 1
+        caldatatyp(i,1) = cellstr('inherited');
+    end
+    if strcmp(get_param(calblockpaths{calindex(i),1}, 'ReferenceBlock'), 'MotoHawk_lib/Lookup Tables/motohawk_prelookup') ~= 1 & ...
+            strcmp(get_param(calblockpaths{calindex(i),1}, 'ReferenceBlock'), 'MotoHawk_lib/Lookup Tables/motohawk_interpolation_1d') ~= 1 & ...
+            strcmp(get_param(calblockpaths{calindex(i),1}, 'ReferenceBlock'), 'MotoHawk_lib/Lookup Tables/motohawk_interpolation_2d') ~= 1 & ...
+            strcmp(get_param(calblockpaths{calindex(i),1}, 'ReferenceBlock'), 'MotoHawk_lib/Data Storage Blocks/motohawk_struct_vardec') ~= 1
+        if strcmp(get_param(calblockpaths{calindex(i),1}, 'view_as'), 'Enumeration') == 1
+            caldatatyp(i,1) = cellstr([char(caldatatyp(i,1)) ' (enum.)']);
+        end
+    end            
+    
+    % Model path
+    calpath(i,1) = get_param(calblockpaths(calindex(i),1), 'Parent');
+    calpathtitleblockexist(i,1) = length(find_system(calpath(i,1), 'SearchDepth', 1, 'LookUnderMasks', 'all', 'FollowLinks', 'on', 'ReferenceBlock', 'AutoDoc_lib/Documentation_Title_Block'));
+    if strcmp(path, calpath(i,1)) == 1
+        callibraryblock(i,1) = 0;
+    else
+        callibraryblock(i,1) = not(strcmp(get_param(calpath(i,1), 'ReferenceBlock'), ''));
+    end
+        % Not a library block
+    if callibraryblock(i,1) == 0
+        UserData = get_param(strcat(char(calpath(i,1)), '/Documentation_Title_Block'), 'UserData');
+        calpathtxt(i,1) = cellstr([UserData.DocPath '  ' char(calpath(i,1))]);
+        clear UserData;
+       % Library block
+    elseif callibraryblock(i,1) == 1
+        found = 0;
+        path2 = calpath(i,1);
+        while found == 0
+           parent = get_param(path2, 'Parent');
+           if strcmp(path, parent) == 1
+               found = 1;
+           else
+               found = strcmp(get_param(parent, 'ReferenceBlock'), '');
+           end
+           path_des = path2;
+           path2 = parent;
+        end
+        UserData = get_param(strcat(char(path2), '/Documentation_Title_Block'), 'UserData');
+        calpathtxt(i,1) = cellstr([UserData.DocPath '  ' char(path_des) '  ' 'Library Block']);
+        clear UserData;
+    else
+       calpathtxt(i,1) = cellstr(''); 
+    end
+    calpathtxt(i,1) = cellstr(strrep(char(calpathtxt(i,1)), '/', ' / '));
+    
+end
+
+% Gather probe data of interest
+for i = 1:length(prbname)
+    
+    % Units, help, and MotoTune group
+    prbunits{i,1} = motohawk_get_param_ws(prbblockpaths{prbindex(i),1}, 'units');
+    if strcmp(char(prbunits{i,1}), '') == 1
+        prbunits(i,1) = cellstr('-');
+    end
+    prbhelp{i,1} = motohawk_get_param_ws(prbblockpaths{prbindex(i),1}, 'help');
+    if strcmp(char(prbhelp{i,1}), '') == 1
+        prbhelp(i,1) = cellstr('-');
+    end
+    prbmototunegrp{i,1} = motohawk_get_param_ws(prbblockpaths{prbindex(i),1}, 'mototune_group');
+    
+    % Data type
+    if strcmp(get_param(prbblockpaths{prbindex(i),1}, 'ReferenceBlock'), 'MotoHawk_lib/Data Storage Blocks/motohawk_data_def') == 1   
+        prbdatatyp{i,1} = get_param(prbblockpaths{prbindex(i),1}, 'typ');
+    else
+        prbdatatyp{i,1} = cellstr('inherited');
+    end
+    if strncmpi(prbdatatyp{i,1}, 'Inherit', 7) == 1
+        prbdatatyp(i,1) = cellstr('inherited');
+    end
+    if strcmp(get_param(prbblockpaths{prbindex(i),1}, 'view_as'), 'Enumeration') == 1
+        prbdatatyp(i,1) = cellstr([char(prbdatatyp(i,1)) ' (enum.)']);
+    end       
+    
+    % Storage type
+    if strcmp(get_param(prbblockpaths(prbindex(i),1), 'ReferenceBlock'), 'MotoHawk_lib/Data Storage Blocks/motohawk_data_def') == 1 & ...
+            strcmp(motohawk_get_param_ws(prbblockpaths{prbindex(i),1}, 'storage'), 'NonVolatile') == 1
+        prbstoragetyp(i,1) = cellstr('Nonvolatile');
+    else
+        prbstoragetyp(i,1) = cellstr('Volatile');
+    end
+    
+    % Model path
+    prbpath(i,1) = get_param(prbblockpaths(prbindex(i),1), 'Parent');
+    prbpathtitleblockexist(i,1) = length(find_system(prbpath(i,1), 'SearchDepth', 1, 'LookUnderMasks', 'all', 'FollowLinks', 'on', 'ReferenceBlock', 'AutoDoc_lib/Documentation_Title_Block'));
+    if strcmp(path, prbpath(i,1)) == 1
+        prblibraryblock(i,1) = 0;
+    else
+        prblibraryblock(i,1) = not(strcmp(get_param(prbpath(i,1), 'ReferenceBlock'), ''));
+    end
+        % Not a library block
+    if prblibraryblock(i,1) == 0
+        UserData = get_param(strcat(char(prbpath(i,1)), '/Documentation_Title_Block'), 'UserData');
+        prbpathtxt(i,1) = cellstr([UserData.DocPath '  ' char(prbpath(i,1))]);
+        clear UserData;
+       % Library block
+    elseif prblibraryblock(i,1) == 1
+        found = 0;
+        path2 = prbpath(i,1);
+        while found == 0
+           parent = get_param(path2, 'Parent');
+           if strcmp(path, parent) == 1
+               found = 1;
+           else
+               found = strcmp(get_param(parent, 'ReferenceBlock'), '');
+           end
+           path_des = path2;
+           path2 = parent;
+        end
+        UserData = get_param(strcat(char(path2), '/Documentation_Title_Block'), 'UserData');
+        prbpathtxt(i,1) = cellstr([UserData.DocPath '  ' char(path_des) '  ' 'Library Block']);
+        clear UserData;
+    else
+       prbpathtxt(i,1) = cellstr(''); 
+    end
+    prbpathtxt(i,1) = cellstr(strrep(char(prbpathtxt(i,1)), '/', ' / '));  
+    
+end
+
+
+% --- Gather CAN Data --- %
+% ----------------------- %
+
+CANblockpaths = find_system(path, 'LookUnderMasks', 'all', 'FollowLinks', 'on', 'ReferenceBlock', 'ExhSys_lib/CAN Msg Receive');
+
+% Alphabatize
+for i = 1:length(CANblockpaths)
+    CANPGN{i,1} = motohawk_get_param_ws(CANblockpaths{i,1}, 'pgn');
+end
+[CANPGN CANindex] = sort(CANPGN);
+
+% Gather data of interest
+for i = 1:length(CANPGN)
+    
+    % Adjust name
+    if strcmp(char(CANPGN(i,1)), 'EF00') == 1
+        CANPGN{i,1} = 'EF00 (Proprietary)';
+    end
+    
+    % Message ID
+    CANMsgID{i,1} = motohawk_get_param_ws(CANblockpaths{CANindex(i),1}, 'id');
+    
+    % Variable name and units
+    CANVarName{i,1} = [motohawk_get_param_ws(CANblockpaths{CANindex(i),1}, 'nam') 'CAN'];
+    CANVarUnits{i,1} = motohawk_get_param_ws(CANblockpaths{CANindex(i),1}, 'units');
+    
+    % Start bit, width, scale, and offset
+    [names, packed_data_types, start_bits, widths, little_endians, packed_width, scales, offsets, signal_data_types] = ...
+        feval(motohawk_get_param_ws(CANblockpaths{CANindex(i),1}, 'file'));
+    CANStartBit{i,1} = num2str(start_bits);
+    CANWidth{i,1} = num2str(widths);
+    CANScale{i,1} = num2str(scales);
+    CANOffset{i,1} = num2str(offsets);
+
+end
+
+end
+
+
+% --- Create Table of Contents --- %
+% -------------------------------- %
+
+dotsnum = 108*ones(1,13) + 13*[5 4 3 2 1 0 -1 -2 -3 -4 -5 -6 -7];
+for i = 1:length(dotsnum)
+    disp = '';
+    for j = 1:dotsnum(i)
+        disp = strcat(disp, '.');
+    end
+    dots(i,1) = cellstr(disp);
+end
+
+fid = fopen('AutoDocTOC.doc', 'w+');
+fprintf(fid, '%s\n%s   %s\n', 'A.  System Review', char(dots(1,1)), '??');
+fprintf(fid, '%s\n%s   %s\n', 'B.  Control Strategy Summary', char(dots(1,1)), '??');
+fprintf(fid, '%s\n%s   %s\n', 'C.  Memory Management', char(dots(1,1)), '??');
+fprintf(fid, '%s\n%s   %s\n', 'D.  MotoTron Tools', char(dots(1,1)), '??');
+fprintf(fid, '%s\n%s   %s\n', 'E.  Software Revision History', char(dots(1,1)), '??');
+
+% Model table of contents
+[toc_docpath, index] = sort(docpaths);
+count = 1;
+for i = 1:length(toc_docpath)
+    
+    % Find name
+    toc_name(i,1) = get_param(get_param(blockpaths(index(i)), 'Parent'), 'Name');
+    
+    % Find page numbering (adjust if accompanying Stateflow diagram or Cals and Probes page present)
+    toc_num(i) = count;
+    sfmatch = strmatch(cellstr(strcat(char(docpaths(index(i))), '.0sf')), sffilenames);
+    cpmatch = strmatch(cellstr(strcat(char(docpaths(index(i))), '.0cp.emf')), cpfilenames);
+    count = count + 1 + length(sfmatch) + length(cpmatch);
+    
+    % Print name and path
+    if i == 1
+        fprintf(fid, '%s\n', ['F.  Model-Based Controller: ' char(toc_name(i,1))]);
+    else
+        toc_nameformat = '\t';
+        for j = 1:length(strfind(char(toc_docpath(i,1)), '.'))
+            toc_nameformat = strcat(toc_nameformat, '\t');
+        end
+        toc_nameformat = strcat(toc_nameformat, '%s  %s\n');
+        fprintf(fid, toc_nameformat, char(toc_docpath(i,1)), char(toc_name(i,1)));
+    end
+    
+    % Print page number
+    toc_numformat = '';
+    if strncmp(char(toc_docpath(i,1)), '0', 1) == 1
+        dots_index = 1;
+    else
+        dots_index = length(strfind(char(toc_docpath(i,1)), '.')) + 2;
+    end
+    for j = 1:(dots_index - 1)
+        toc_numformat = strcat(toc_numformat, '\t');
+    end
+    toc_numformat = strcat(toc_numformat, '%s %3.0f\n');
+    fprintf(fid, toc_numformat, char(dots(dots_index,1)), toc_num(i));
+
+end
+
+% Appendix of library blocks table of contents
+if strcmp(libpath, 'None') ~= 1
+
+fprintf(fid, '%s\n%s %3.0f\n', 'Appendix A.  Library Blocks', char(dots(1,1)), count);
+count = count + 1;
+
+for i = 1:length(libpathstl)
+    
+    % Find name
+    libtoc_name(i,1) = get_param(libpathstl(i), 'Name');
+    
+    % Find page numbering (adjust if accompanying Stateflow diagram or Cals and Probes page present)
+    libtoc_num(i) = count;
+    libllmatch = strmatch(libfilenamestl(i), libfilenamesll);
+    libsfmatch = strmatch(libfilenamestl(i), libsffilenames);
+    count = count + 1 + length(libllmatch) + length(libsfmatch);
+    
+    % Print name and page number
+    fprintf(fid, '\t%s\n\t%s %3.0f\n', char(libtoc_name(i,1)), char(dots(2,1)), libtoc_num(i)); 
+
+end
+
+fprintf(fid, '%s\n%s %3.0f\n', 'Appendix B.  Simulink Block Descriptions', char(dots(1,1)), count);
+fprintf(fid, '%s\n%s %s\n', 'Appendix C.  MotoHawk Block Descriptions', char(dots(1,1)), '???');
+fprintf(fid, '%s\n%s %s\n', 'Appendix D.  Calibration Summary', char(dots(1,1)), '???');
+fprintf(fid, '%s\n%s %s\n', 'Appendix E.  Probe Summary', char(dots(1,1)), '???');
+fprintf(fid, '%s\n%s %s\n', 'Appendix F.  Fault Summary', char(dots(1,1)), '???');
+fprintf(fid, '%s\n%s %s\n', 'Appendix G.  J1939 CAN Summary', char(dots(1,1)), '???');
+
+end
+
+fclose(fid);
+
+
+% --- Create Fault/Cal/Probe/CAN Spreadsheets --- %
+% ----------------------------------------------- %
+
+if strcmp(path, 'ExhSys') == 1
+    
+% Fault summary
+fn = 'AutoDocData';
+xlswrite(fn, cellstr(''), 1, 'A1:M3000');
+flttxt(1,1) = cellstr('#');
+flttxt(1,2) = cellstr('Fault Name');
+flttxt(1,3) = cellstr('Loop Rate (sec)');
+flttxt(1,4) = cellstr('Diagnostics Enabled In:');
+flttxt(2,4) = cellstr('Vehicle Startup/Shutdown');
+flttxt(2,5) = cellstr('Normal Operation');
+flttxt(2,6) = cellstr('Regen Startup/Shutdown');
+flttxt(2,7) = cellstr('Regen');
+flttxt(1,8) = cellstr('FMI #');
+flttxt(1,9) = cellstr('SPN');
+flttxt(1,10) = cellstr('DTC');
+count = 2;
+for i = 1:length(fltblockpaths)
+    count = count + 1;
+    flttxt(count,1) = cellstr(num2str(i));
+    flttxt(count,2) = cellstr(fltname(i,1));
+    flttxt(count,3) = cellstr(num2str(fltlooprate(i,1)));
+    flttxt(count,4) = cellstr(fltopmode1(i,1));
+    flttxt(count,5) = cellstr(fltopmode2(i,1));
+    flttxt(count,6) = cellstr(fltopmode3(i,1));
+    flttxt(count,7) = cellstr(fltopmode4(i,1));
+    flttxt(count,8) = cellstr(['FMI ' num2str(fltFMInum(i,1))]);
+    flttxt(count,9) = cellstr(['SPN ' num2str(fltSPN(i,1))]);
+    if fltDTCnum(i,1) < 10
+        flttxttemp = ['000' num2str(fltDTCnum(i,1))];
+    elseif fltDTCnum(i,1) < 100
+        flttxttemp = ['00' num2str(fltDTCnum(i,1))];
+    elseif fltDTCnum(i,1) < 1000
+        flttxttemp = ['0' num2str(fltDTCnum(i,1))];
+    else
+        flttxttemp = num2str(fltDTCnum(i,1));
+    end
+    flttxt(count,10) = cellstr(['DTC ' char(fltDTCletter(i,1)) ' ' flttxttemp]);
+    count = count + 1;
+    flttxt(count,2) = cellstr(fltpathtxt(i,1));
+end
+xlswrite(fn, flttxt, 1, strcat('B2:K', num2str(count+1)));
+
+% Calibration summary
+xlswrite(fn, cellstr(''), 2, 'A1:G3000');
+caltxt(1,1) = cellstr('#');
+caltxt(1,2) = cellstr('Calibration Name');
+caltxt(1,3) = cellstr('Units');
+caltxt(1,4) = cellstr('Data Type');
+caltxt(2,2) = cellstr('Description');
+caltxt(3,2) = cellstr('Model Path');
+caltxt(4,2) = cellstr('MotoTune Path');
+count = 5;
+for i = 1:length(calname)
+    count = count + 1;
+    caltxt(count,1) = cellstr(num2str(i));
+    caltxt(count,2) = cellstr(calname(i,1));
+    caltxt(count,3) = cellstr(calunits(i,1));
+    caltxt(count,4) = cellstr(caldatatyp(i,1));
+    count = count + 1;
+    caltxt(count,2) = cellstr(calhelp(i,1));
+    count = count + 1;
+    caltxt(count,2) = cellstr(calpathtxt(i,1));
+    count = count + 1;
+    caltxt(count,2) = cellstr(calmototunegrp(i,1));
+end
+xlswrite(fn, caltxt, 2, strcat('B2:E', num2str(count+1)));
+
+% Probe summary
+xlswrite(fn, cellstr(''), 3, 'A1:G3000');
+prbtxt(1,1) = cellstr('#');
+prbtxt(1,2) = cellstr('Probe Name');
+prbtxt(1,3) = cellstr('Units');
+prbtxt(1,4) = cellstr('Data Type');
+prbtxt(1,5) = cellstr('Storage Type');
+prbtxt(2,2) = cellstr('Description');
+prbtxt(3,2) = cellstr('Model Path');
+prbtxt(4,2) = cellstr('MotoTune Path');
+count = 5;
+for i = 1:length(prbname)
+    count = count + 1;
+    prbtxt(count,1) = cellstr(num2str(i));
+    prbtxt(count,2) = cellstr(prbname(i,1));
+    prbtxt(count,3) = cellstr(prbunits(i,1));
+    prbtxt(count,4) = cellstr(prbdatatyp(i,1));
+    prbtxt(count,5) = cellstr(prbstoragetyp(i,1));
+    count = count + 1;
+    prbtxt(count,2) = cellstr(prbhelp(i,1));
+    count = count + 1;
+    prbtxt(count,2) = cellstr(prbpathtxt(i,1));
+    count = count + 1;
+    prbtxt(count,2) = cellstr(prbmototunegrp(i,1));
+end
+xlswrite(fn, prbtxt, 3, strcat('B2:F', num2str(count+1)));
+
+% CAN summary
+xlswrite(fn, cellstr(''), 4, 'A1:G3000');
+CANtxt(1,1) = cellstr('#');
+CANtxt(1,2) = cellstr('Variable Name');
+CANtxt(1,3) = cellstr('Units');
+CANtxt(1,4) = cellstr('Message PGN and ID');
+CANtxt(2,2) = cellstr('Start Bit');
+CANtxt(2,3) = cellstr('Width');
+CANtxt(2,4) = cellstr('Scale');
+CANtxt(2,5) = cellstr('Offset');
+count = 3;
+for i = 1:length(CANPGN)
+    count = count + 1;
+    CANtxt(count,1) = cellstr(num2str(i));
+    CANtxt(count,2) = cellstr(CANVarName(i,1));
+    CANtxt(count,3) = cellstr(CANVarUnits(i,1));
+    CANtxt(count,4) = cellstr(['PGN ' char(CANPGN(i,1)) '   (ID: ' char(CANMsgID(i,1)) ')']);
+    count = count + 1;
+    CANtxt(count,2) = cellstr(['Start Bit: ' char(CANStartBit(i,1))]);
+    CANtxt(count,3) = cellstr(['Width: ' char(CANWidth(i,1))]);
+    CANtxt(count,4) = cellstr(['Scale: ' char(CANScale(i,1))]);
+    CANtxt(count,5) = cellstr(['Offset: ' char(CANOffset(i,1))]);
+end
+
+xlswrite(fn, CANtxt, 4, strcat('B2:F', num2str(count+1)));
+
+end

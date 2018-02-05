@@ -45,6 +45,29 @@
       <type>uint16</type>
    </VarDec>
    <VarDec>
+      <name>MPRD_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>System | Main Power Relay | MPRD Override</group>
+      <struct>VolatileWork_BSS.MPRD_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
       <name>MPRD_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -66,29 +89,6 @@
       <enum>
          <item name="Off" value="0"/>
          <item name="On" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>MPRD_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>System | Main Power Relay | MPRD Override</group>
-      <struct>VolatileWork_BSS.MPRD_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
          <default>Unknown</default>
       </enum>
    </VarDec>
@@ -189,7 +189,25 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>Shutdown_ovr_new</name>
+      <name>VDO_Gauge_Brightness</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>7</max>
+      <min>0</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
+      <ctype>NonVolatile_T</ctype>
+      <group>DynoController_Rev1|Foreground|Outputs|Guages</group>
+      <struct>NonVolatileWork.VDO_Gauge_Brightness</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint16</type>
+   </VarDec>
+   <VarDec>
+      <name>RPM_Gauges_Ovr_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -199,12 +217,176 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Control|Battery | Shutdown_ovr Override</group>
-      <struct>VolatileWork_BSS.Shutdown_ovr_new</struct>
-      <class>var</class>
+      <group>DynoController_Rev1|Foreground|Outputs|Guages | RPM_Gauges_Ovr Override</group>
+      <struct>VolatileWork_BSS.RPM_Gauges_Ovr_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>RPM_Gauges_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Outputs|Guages | RPM_Gauges_Ovr Override</group>
+      <struct>VolatileWork_BSS.RPM_Gauges_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>int16</type>
+   </VarDec>
+   <VarDec>
+      <name>SOC_Gauges_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Outputs|Guages | SOC_Gauges_Ovr Override</group>
+      <struct>VolatileWork_BSS.SOC_Gauges_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>SOC_Gauges_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Outputs|Guages | SOC_Gauges_Ovr Override</group>
+      <struct>VolatileWork_BSS.SOC_Gauges_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>int16</type>
+   </VarDec>
+   <VarDec>
+      <name>OilPressure_Gauges_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Outputs|Guages | OilPressure_Gauges_Ovr Override</group>
+      <struct>VolatileWork_BSS.OilPressure_Gauges_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>OilPressure_Gauges_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Outputs|Guages | OilPressure_Gauges_Ovr Override</group>
+      <struct>VolatileWork_BSS.OilPressure_Gauges_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>int16</type>
+   </VarDec>
+   <VarDec>
+      <name>CoolantTemp_Gauges_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Outputs|Guages | CoolantTemp_Gauges_Ovr Override</group>
+      <struct>VolatileWork_BSS.CoolantTemp_Gauges_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>CoolantTemp_Gauges_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Outputs|Guages | CoolantTemp_Gauges_Ovr Override</group>
+      <struct>VolatileWork_BSS.CoolantTemp_Gauges_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>int16</type>
+   </VarDec>
+   <VarDec>
+      <name>VDO_Gauge_StartupDelay</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>7</max>
+      <min>0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>DynoController_Rev1|Foreground|Outputs|Guages</group>
+      <struct>ConstantWork.VDO_Gauge_StartupDelay</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>Shutdown_ovr_ovr</name>
@@ -230,6 +412,24 @@
       </enum>
    </VarDec>
    <VarDec>
+      <name>Shutdown_ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Control|Battery | Shutdown_ovr Override</group>
+      <struct>VolatileWork_BSS.Shutdown_ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
       <name>Load_Enable_Delay</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -246,6 +446,29 @@
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>PackState_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY | PackState_Ovr Override</group>
+      <struct>VolatileWork_BSS.PackState_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
    </VarDec>
    <VarDec>
       <name>PackState_Ovr_new</name>
@@ -266,7 +489,25 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>PackState_Ovr_ovr</name>
+      <name>SOC_Load_Dump</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>NonVolatile_T</ctype>
+      <group>DynoController_Rev1|Foreground|Outputs|Analog Outputs</group>
+      <struct>NonVolatileWork.SOC_Load_Dump</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>StateOfCharge_Ovr_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -276,8 +517,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY | PackState_Ovr Override</group>
-      <struct>VolatileWork_BSS.PackState_Ovr_ovr</struct>
+      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY | StateOfCharge_Ovr Override</group>
+      <struct>VolatileWork_BSS.StateOfCharge_Ovr_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -307,65 +548,6 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>StateOfCharge_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY | StateOfCharge_Ovr Override</group>
-      <struct>VolatileWork_BSS.StateOfCharge_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>SOC_Load_Dump</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>DynoController_Rev1|Foreground|Outputs|Analog Outputs</group>
-      <struct>ConstantWork.SOC_Load_Dump</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>LoadDumpEnable_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | LoadDumpEnable_Ovr Override</group>
-      <struct>VolatileWork_BSS.LoadDumpEnable_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-   </VarDec>
-   <VarDec>
       <name>LoadDumpEnable_Ovr_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -389,7 +571,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>Engine_On_Ovr_new</name>
+      <name>LoadDumpEnable_Ovr_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -399,8 +581,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | Engine_On_Ovr Override</group>
-      <struct>VolatileWork_BSS.Engine_On_Ovr_new</struct>
+      <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | LoadDumpEnable_Ovr Override</group>
+      <struct>VolatileWork_BSS.LoadDumpEnable_Ovr_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -428,6 +610,24 @@
          <item name="Override" value="1"/>
          <default>Unknown</default>
       </enum>
+   </VarDec>
+   <VarDec>
+      <name>Engine_On_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | Engine_On_Ovr Override</group>
+      <struct>VolatileWork_BSS.Engine_On_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>Coil_Neg_Ovr_ovr</name>
@@ -794,22 +994,22 @@
       <type>uint8</type>
    </VarDec>
    <VarDec>
-      <name>Batt_Connect_Cmd_ovr_new</name>
+      <name>Batt_Ign_Cal</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|BATTERY OUT | Batt_Connect_Cmd_ovr Override</group>
-      <struct>VolatileWork_BSS.Batt_Connect_Cmd_ovr_new</struct>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>NonVolatile_T</ctype>
+      <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|BATTERY OUT</group>
+      <struct>NonVolatileWork.Batt_Ign_Cal</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>uint8</type>
+      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>Batt_Connect_Cmd_ovr_ovr</name>
@@ -824,6 +1024,106 @@
       <ctype>Volatile_BSS_T</ctype>
       <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|BATTERY OUT | Batt_Connect_Cmd_ovr Override</group>
       <struct>VolatileWork_BSS.Batt_Connect_Cmd_ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Automatic_Battery_Bootup</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>NonVolatile_T</ctype>
+      <group>DynoController_Rev1|Foreground|Control|Battery</group>
+      <struct>NonVolatileWork.Automatic_Battery_Bootup</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
+      <name>BatteryVoltage_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY | BatteryVoltage_Ovr Override</group>
+      <struct>VolatileWork_BSS.BatteryVoltage_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>BatteryVoltage_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY | BatteryVoltage_Ovr Override</group>
+      <struct>VolatileWork_BSS.BatteryVoltage_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Contactor_Disable_Delay</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>10</max>
+      <min>0</min>
+      <format>1.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>DynoController_Rev1|Foreground|Control|Battery|Safe Shutdown Sequence</group>
+      <struct>ConstantWork.Contactor_Disable_Delay</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>BatteryEnable_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | BatteryEnable_Ovr Override</group>
+      <struct>VolatileWork_BSS.BatteryEnable_Ovr_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -853,7 +1153,7 @@
       <type>uint8</type>
    </VarDec>
    <VarDec>
-      <name>BatteryEnable_Ovr_ovr</name>
+      <name>Batt_Connect_Cmd_ovr_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -863,31 +1163,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | BatteryEnable_Ovr Override</group>
-      <struct>VolatileWork_BSS.BatteryEnable_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Isolation_Measure_Enable_ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|BATTERY OUT | Isolation_Measure_Enable_ovr Override</group>
-      <struct>VolatileWork_BSS.Isolation_Measure_Enable_ovr_new</struct>
+      <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|BATTERY OUT | Batt_Connect_Cmd_ovr Override</group>
+      <struct>VolatileWork_BSS.Batt_Connect_Cmd_ovr_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -926,34 +1203,16 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
+      <ctype>NonVolatile_T</ctype>
       <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|BATTERY OUT</group>
-      <struct>ConstantWork.Batt_Isolation_det_Cal</struct>
+      <struct>NonVolatileWork.Batt_Isolation_det_Cal</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Batt_Ign_Cal</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|BATTERY OUT</group>
-      <struct>ConstantWork.Batt_Ign_Cal</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Gen_Enable_Ovr_new</name>
+      <name>Isolation_Measure_Enable_ovr_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -963,90 +1222,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT | Gen_Enable_Ovr Override</group>
-      <struct>VolatileWork_BSS.Gen_Enable_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-   </VarDec>
-   <VarDec>
-      <name>Gen_Enable_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT | Gen_Enable_Ovr Override</group>
-      <struct>VolatileWork_BSS.Gen_Enable_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>GensetEnable_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | GensetEnable_Ovr Override</group>
-      <struct>VolatileWork_BSS.GensetEnable_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-   </VarDec>
-   <VarDec>
-      <name>GensetEnable_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | GensetEnable_Ovr Override</group>
-      <struct>VolatileWork_BSS.GensetEnable_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Gen_Load_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT | Gen_Load_Ovr Override</group>
-      <struct>VolatileWork_BSS.Gen_Load_Ovr_new</struct>
+      <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|BATTERY OUT | Isolation_Measure_Enable_ovr Override</group>
+      <struct>VolatileWork_BSS.Isolation_Measure_Enable_ovr_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -1076,6 +1253,47 @@
       </enum>
    </VarDec>
    <VarDec>
+      <name>GensetEnable_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | GensetEnable_Ovr Override</group>
+      <struct>VolatileWork_BSS.GensetEnable_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>GensetEnable_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | GensetEnable_Ovr Override</group>
+      <struct>VolatileWork_BSS.GensetEnable_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
       <name>SOC_Off_Pt</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -1094,22 +1312,63 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Vehicle_Speed_Ovr_new</name>
+      <name>Gen_Load_Ovr_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT | Vehicle_Speed_Ovr Override</group>
-      <struct>VolatileWork_BSS.Vehicle_Speed_Ovr_new</struct>
+      <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT | Gen_Load_Ovr Override</group>
+      <struct>VolatileWork_BSS.Gen_Load_Ovr_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
+      <name>Gen_Enable_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT | Gen_Enable_Ovr Override</group>
+      <struct>VolatileWork_BSS.Gen_Enable_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Gen_Enable_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT | Gen_Enable_Ovr Override</group>
+      <struct>VolatileWork_BSS.Gen_Enable_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>Vehicle_Speed_Ovr_ovr</name>
@@ -1153,6 +1412,24 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
+      <name>Vehicle_Speed_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT | Vehicle_Speed_Ovr Override</group>
+      <struct>VolatileWork_BSS.Vehicle_Speed_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
       <name>Vehicle_Speed_Prb</name>
       <access>RO RO RO RO</access>
       <gain>1</gain>
@@ -1171,406 +1448,6 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>RPM_Gauges_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>32767</max>
-      <min>-32768</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Outputs|Guages | RPM_Gauges_Ovr Override</group>
-      <struct>VolatileWork_BSS.RPM_Gauges_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>int16</type>
-   </VarDec>
-   <VarDec>
-      <name>RPM_Gauges_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Outputs|Guages | RPM_Gauges_Ovr Override</group>
-      <struct>VolatileWork_BSS.RPM_Gauges_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>RPM_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>32767</max>
-      <min>-32768</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | RPM_Ovr Override</group>
-      <struct>VolatileWork_BSS.RPM_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>int16</type>
-   </VarDec>
-   <VarDec>
-      <name>RPM_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | RPM_Ovr Override</group>
-      <struct>VolatileWork_BSS.RPM_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>SOC_Gauges_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>32767</max>
-      <min>-32768</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Outputs|Guages | SOC_Gauges_Ovr Override</group>
-      <struct>VolatileWork_BSS.SOC_Gauges_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>int16</type>
-   </VarDec>
-   <VarDec>
-      <name>SOC_Gauges_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Outputs|Guages | SOC_Gauges_Ovr Override</group>
-      <struct>VolatileWork_BSS.SOC_Gauges_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>OilPressure_Gauges_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>32767</max>
-      <min>-32768</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Outputs|Guages | OilPressure_Gauges_Ovr Override</group>
-      <struct>VolatileWork_BSS.OilPressure_Gauges_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>int16</type>
-   </VarDec>
-   <VarDec>
-      <name>OilPressure_Gauges_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Outputs|Guages | OilPressure_Gauges_Ovr Override</group>
-      <struct>VolatileWork_BSS.OilPressure_Gauges_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Oil_Pressure_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | Oil_Pressure_Ovr Override</group>
-      <struct>VolatileWork_BSS.Oil_Pressure_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Oil_Pressure_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | Oil_Pressure_Ovr Override</group>
-      <struct>VolatileWork_BSS.Oil_Pressure_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>CoolantTemp_Gauges_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>32767</max>
-      <min>-32768</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Outputs|Guages | CoolantTemp_Gauges_Ovr Override</group>
-      <struct>VolatileWork_BSS.CoolantTemp_Gauges_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>int16</type>
-   </VarDec>
-   <VarDec>
-      <name>CoolantTemp_Gauges_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Outputs|Guages | CoolantTemp_Gauges_Ovr Override</group>
-      <struct>VolatileWork_BSS.CoolantTemp_Gauges_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Temp_Guage_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | Temp_Guage_Ovr Override</group>
-      <struct>VolatileWork_BSS.Temp_Guage_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Temp_Guage_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | Temp_Guage_Ovr Override</group>
-      <struct>VolatileWork_BSS.Temp_Guage_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Automatic_Battery_Bootup</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>DynoController_Rev1|Foreground|Control|Battery</group>
-      <struct>ConstantWork.Automatic_Battery_Bootup</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-   </VarDec>
-   <VarDec>
-      <name>BatteryVoltage_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY | BatteryVoltage_Ovr Override</group>
-      <struct>VolatileWork_BSS.BatteryVoltage_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>BatteryVoltage_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY | BatteryVoltage_Ovr Override</group>
-      <struct>VolatileWork_BSS.BatteryVoltage_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Contactor_Disable_Delay</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>10</max>
-      <min>0</min>
-      <format>1.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>DynoController_Rev1|Foreground|Control|Battery|Safe Shutdown Sequence</group>
-      <struct>ConstantWork.Contactor_Disable_Delay</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Batt_Contactor_Status</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Control|Battery</group>
-      <struct>VolatileWork_BSS.Batt_Contactor_Status</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-   </VarDec>
-   <VarDec>
-      <name>Batt_Load_Enable</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Control|Battery</group>
-      <struct>VolatileWork_BSS.Batt_Load_Enable</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-   </VarDec>
-   <VarDec>
       <name>Auto_Battery_Startup</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -1580,85 +1457,13 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
+      <ctype>NonVolatile_T</ctype>
       <group>DynoController_Rev1|Foreground|Control|Vehicle Run/Stop Determination</group>
-      <struct>ConstantWork.Auto_Battery_Startup</struct>
+      <struct>NonVolatileWork.Auto_Battery_Startup</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Vehicle_Ready</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Control|Vehicle Run/Stop Determination</group>
-      <struct>VolatileWork_BSS.Vehicle_Ready</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-   </VarDec>
-   <VarDec>
-      <name>Torque_Enable</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Control|Vehicle Run/Stop Determination</group>
-      <struct>VolatileWork_BSS.Torque_Enable</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-   </VarDec>
-   <VarDec>
-      <name>Vehicle_Enable</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Control|Vehicle Run/Stop Determination</group>
-      <struct>VolatileWork_BSS.Vehicle_Enable</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-   </VarDec>
-   <VarDec>
-      <name>Shutdown_Req</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Control|Vehicle Run/Stop Determination</group>
-      <struct>VolatileWork_BSS.Shutdown_Req</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>GensetLoad_Ovr_ovr</name>
@@ -1743,47 +1548,6 @@
       <type>uint8</type>
    </VarDec>
    <VarDec>
-      <name>ACC2_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | ACC2_Ovr Override</group>
-      <struct>VolatileWork_BSS.ACC2_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>ACC2_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | ACC2_Ovr Override</group>
-      <struct>VolatileWork_BSS.ACC2_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-   </VarDec>
-   <VarDec>
       <name>BatteryCurrent_Ovr_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -1860,6 +1624,129 @@
       <ctype>Volatile_BSS_T</ctype>
       <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY | MaxCellTemperature_Ovr Override</group>
       <struct>VolatileWork_BSS.MaxCellTemperature_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Oil_Pressure_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | Oil_Pressure_Ovr Override</group>
+      <struct>VolatileWork_BSS.Oil_Pressure_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Oil_Pressure_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | Oil_Pressure_Ovr Override</group>
+      <struct>VolatileWork_BSS.Oil_Pressure_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>RPM_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | RPM_Ovr Override</group>
+      <struct>VolatileWork_BSS.RPM_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>RPM_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | RPM_Ovr Override</group>
+      <struct>VolatileWork_BSS.RPM_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>int16</type>
+   </VarDec>
+   <VarDec>
+      <name>Temp_Guage_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | Temp_Guage_Ovr Override</group>
+      <struct>VolatileWork_BSS.Temp_Guage_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Temp_Guage_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | Temp_Guage_Ovr Override</group>
+      <struct>VolatileWork_BSS.Temp_Guage_Ovr_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -1989,6 +1876,155 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
+      <name>Batt_Contactor_Status</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Control|Battery</group>
+      <struct>VolatileWork_BSS.Batt_Contactor_Status</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
+      <name>Batt_Load_Enable</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Control|Battery</group>
+      <struct>VolatileWork_BSS.Batt_Load_Enable</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
+      <name>Vehicle_Ready</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Control|Vehicle Run/Stop Determination</group>
+      <struct>VolatileWork_BSS.Vehicle_Ready</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
+      <name>Torque_Enable</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Control|Vehicle Run/Stop Determination</group>
+      <struct>VolatileWork_BSS.Torque_Enable</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
+      <name>Vehicle_Enable</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Control|Vehicle Run/Stop Determination</group>
+      <struct>VolatileWork_BSS.Vehicle_Enable</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
+      <name>Shutdown_Req</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Control|Vehicle Run/Stop Determination</group>
+      <struct>VolatileWork_BSS.Shutdown_Req</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
+      <name>ACC2_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | ACC2_Ovr Override</group>
+      <struct>VolatileWork_BSS.ACC2_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>ACC2_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | ACC2_Ovr Override</group>
+      <struct>VolatileWork_BSS.ACC2_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
       <name>CityID_CAN_1</name>
       <access>NA NA NA RW</access>
       <gain>1</gain>
@@ -2018,7 +2054,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Discrete output pin selection for COIL_Pos</help>
+      <help>Digital output pin selection for DOut328p001</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.COIL_Pos</struct>
       <storage>FLASH</storage>
@@ -2052,7 +2088,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Discrete output pin selection for COIL_Neg</help>
+      <help>Digital output pin selection for DOut329p001</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.COIL_Neg</struct>
       <storage>FLASH</storage>
@@ -2086,7 +2122,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Discrete output pin selection for Battery_Enable</help>
+      <help>Digital output pin selection for DOut330p001</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.Battery_Enable</struct>
       <storage>FLASH</storage>
@@ -2120,7 +2156,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Discrete output pin selection for Load_Dump_Enable</help>
+      <help>Digital output pin selection for DOut331p001</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.Load_Dump_Enable</struct>
       <storage>FLASH</storage>
@@ -2154,7 +2190,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Discrete output pin selection for Genset_Enable</help>
+      <help>Digital output pin selection for DOut332p001</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.Genset_Enable</struct>
       <storage>FLASH</storage>
@@ -2188,77 +2224,9 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Discrete output pin selection for Genset_Load</help>
+      <help>Digital output pin selection for DOut333p001</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.Genset_Load</struct>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>int16</type>
-      <class>enum</class>
-      <enum>
-         <item name="(None)" value="-1"/>
-         <item name="FUELP" value="0"/>
-         <item name="EST 1" value="36"/>
-         <item name="MPRD" value="52"/>
-         <item name="LIAC" value="7"/>
-         <item name="HORN" value="8"/>
-         <item name="SPARE" value="9"/>
-         <item name="FUEL 1" value="12"/>
-         <item name="FUEL 2" value="13"/>
-         <item name="FUEL 3" value="14"/>
-         <item name="FUEL 4" value="15"/>
-         <item name="TACH" value="24"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>ACC1_Out</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>32767</max>
-      <min>-32768</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <help>Discrete output pin selection for ACC1_Out</help>
-      <group>System | I/O Pins | Outputs Config</group>
-      <struct>ConstantWork.ACC1_Out</struct>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>int16</type>
-      <class>enum</class>
-      <enum>
-         <item name="(None)" value="-1"/>
-         <item name="FUELP" value="0"/>
-         <item name="EST 1" value="36"/>
-         <item name="MPRD" value="52"/>
-         <item name="LIAC" value="7"/>
-         <item name="HORN" value="8"/>
-         <item name="SPARE" value="9"/>
-         <item name="FUEL 1" value="12"/>
-         <item name="FUEL 2" value="13"/>
-         <item name="FUEL 3" value="14"/>
-         <item name="FUEL 4" value="15"/>
-         <item name="TACH" value="24"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>ACC2_Out</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>32767</max>
-      <min>-32768</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <help>Discrete output pin selection for ACC2_Out</help>
-      <group>System | I/O Pins | Outputs Config</group>
-      <struct>ConstantWork.ACC2_Out</struct>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>int16</type>
@@ -2318,6 +2286,74 @@
          <item name="AN10M" value="65"/>
          <item name="AN11M" value="66"/>
          <item name="AN14M" value="69"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>ACC1_Out</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Digital output pin selection for DOut334p001</help>
+      <group>System | I/O Pins | Outputs Config</group>
+      <struct>ConstantWork.ACC1_Out</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>int16</type>
+      <class>enum</class>
+      <enum>
+         <item name="(None)" value="-1"/>
+         <item name="FUELP" value="0"/>
+         <item name="EST 1" value="36"/>
+         <item name="MPRD" value="52"/>
+         <item name="LIAC" value="7"/>
+         <item name="HORN" value="8"/>
+         <item name="SPARE" value="9"/>
+         <item name="FUEL 1" value="12"/>
+         <item name="FUEL 2" value="13"/>
+         <item name="FUEL 3" value="14"/>
+         <item name="FUEL 4" value="15"/>
+         <item name="TACH" value="24"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>ACC2_Out</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Digital output pin selection for DOut335p001</help>
+      <group>System | I/O Pins | Outputs Config</group>
+      <struct>ConstantWork.ACC2_Out</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>int16</type>
+      <class>enum</class>
+      <enum>
+         <item name="(None)" value="-1"/>
+         <item name="FUELP" value="0"/>
+         <item name="EST 1" value="36"/>
+         <item name="MPRD" value="52"/>
+         <item name="LIAC" value="7"/>
+         <item name="HORN" value="8"/>
+         <item name="SPARE" value="9"/>
+         <item name="FUEL 1" value="12"/>
+         <item name="FUEL 2" value="13"/>
+         <item name="FUEL 3" value="14"/>
+         <item name="FUEL 4" value="15"/>
+         <item name="TACH" value="24"/>
          <default>Unknown</default>
       </enum>
    </VarDec>

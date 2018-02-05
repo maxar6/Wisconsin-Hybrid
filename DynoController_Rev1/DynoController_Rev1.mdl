@@ -1,12 +1,12 @@
 Model {
   Name			  "DynoController_Rev1"
-  Version		  7.5
+  Version		  7.7
   MdlSubVersion		  0
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.280"
+    ComputedModelVersion    "1.299"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -18,6 +18,7 @@ Model {
   OverrideScopeRefreshTime on
   DisableAllScopes	  off
   DataTypeOverride	  "UseLocalSettings"
+  DataTypeOverrideAppliesTo "AllNumericTypes"
   MinMaxOverflowLogging	  "UseLocalSettings"
   MinMaxOverflowArchiveMode "Overwrite"
   MaxMDLFileLineLength	  120
@@ -25,39 +26,39 @@ Model {
   InitFcn		  "try, eval([bdroot '_setup']); catch, eval('model_setup', ''); end"
   UserBdParams		  "MotoHawkBuildVersion;MotoHawkBuildStats;MotoHawkModelSavedName;MotoHawkModelGUID;MotoHawkModelOpenT"
   "ime;MotoHawkModelElapsedTime;MotoHawkBuildInfo;MotoHawkBuildGUID"
-  MotoHawkBuildVersion	  "001"
+  MotoHawkBuildVersion	  "009"
   MotoHawkBuildStats	  "struct('TotalFLASH',{0},'TotalEEPROM',{0},'TotalRAM',{0},'AppFLASH',{0},'AppEEPROM',{0},'AppRA"
-  "M',{0},'HeapRAM',{0},'BuildSuccessCount',{1},'BuildErrorCount',{1})"
+  "M',{0},'HeapRAM',{0},'BuildSuccessCount',{9},'BuildErrorCount',{1})"
   MotoHawkModelSavedName  "DynoController_Rev1"
   MotoHawkModelGUID	  "6a27880e-8e62-404a-92-11-3b-ad-79-73-ba"
-  MotoHawkModelOpenTime	  "2017 11 19 19 30 1.276 "
-  MotoHawkModelElapsedTime "165982.495"
-  MotoHawkBuildInfo	  "struct('model_name',{'DynoController_Rev1'},'motohawk_version',{'2010a_sp1.49'},'motohawk_compo"
-  "nent_version',{'0.0.7'},'matlab_version',{'7.10.0'},'build_version',{'000'},'module_type',{'ECU555-48-0708'},'layout"
-  "_type',{'DEV'},'processor_family',{'PPC'},'processor_type',{'MPC555'},'toolchain_vendor',{'gcc-powerpc-eabi'},'toolc"
-  "hain_version',{'4.4.0'},'component',{0},'archive_file',{'ECM.a'},'enable_build',{1},'fptype',{0},'flash_size',{36864"
-  "0},'ee_size',{4096},'ram_size',{26624},'decram_size',{0},'module_memory_def',{'MPC555_ModMemoryDef_4KEE_Dev'},'eri_t"
-  "able0_rev',{9},'max_eri_table_size',{65535},'use_debug_vardecs',{1},'use_info_vardecs',{1},'fgnd_base_period_ms',{5}"
-  ",'bgnd_base_period_ms',{50},'root_build_dir',{'E:\\Box\\Box Sync\\Wisconsin Hybrid\\Mooventure\\Mooventure Code\\Dyn"
-  "oController_Rev1'},'build_dir',{'E:\\Box\\Box Sync\\Wisconsin Hybrid\\Mooventure\\Mooventure Code\\DynoController_Re"
-  "v1\\DynoController_Rev1_Build'},'dll_name',{'DynoContr_000'},'srz_name',{'DynoController_Rev1_000'},'fgnd_stack_size"
-  "',{3072},'fgnd_angle_stack_size',{0},'bgnd_stack_size',{2048},'idle_stack_size',{1024},'irq_stack_size',{1536},'heap"
-  "_size',{4096},'heap_margin',{409},'install_dll_dir',{'C:\\ECUFiles\\TDBDLL\\'},'install_srz_dir',{'C:\\ECUFiles\\Pro"
-  "grams'},'app_int_stack_size',{1024},'shutdown_stack_size',{1024},'mingw_dir',{'C:\\PROGRA~2\\Woodward\\DEVELO~1\\TOO"
-  "LCH~1\\GCC\\win32-pe\\4_4_0\\'},'motohawk_dir',{'C:\\PROGRA~2\\Woodward\\MCS\\MotoHawk\\2010A_~1.49'},'toolchain_dir"
-  "',{'C:\\Program Files (x86)\\Woodward\\DevelopmentTools\\Toolchains\\GCC\\powerpc-eabi\\4_4_0\\'},'matlab_root',{'E:"
-  "\\MATLAB'},'model_guid',{'6a27880e-8e62-404a-92-11-3b-ad-79-73-ba'},'build_guid',{'cf95b2dd-9a54-4399-9c-49-d3-c9-18"
-  "-1d-3a'},'token_guid',{'no token'})"
-  MotoHawkBuildGUID	  "cf95b2dd-9a54-4399-9c-49-d3-c9-18-1d-3a"
+  MotoHawkModelOpenTime	  "2018 1 12 12 0 16.943 "
+  MotoHawkModelElapsedTime "1812631.685"
+  MotoHawkBuildInfo	  "struct('model_name',{'DynoController_Rev1'},'motohawk_version',{'2011a_sp0.184'},'motohawk_comp"
+  "onent_version',{'0.0.7'},'matlab_version',{'7.12.0'},'build_version',{'008'},'module_type',{'ECU555-48-0708'},'layou"
+  "t_type',{'PROD'},'processor_family',{'PPC'},'processor_type',{'MPC555'},'toolchain_vendor',{'gcc-powerpc-eabi'},'too"
+  "lchain_version',{'4.4.0'},'component',{0},'archive_file',{'ECM.a'},'enable_build',{1},'fptype',{0},'flash_size',{368"
+  "640},'ee_size',{4096},'ram_size',{26624},'decram_size',{0},'module_memory_def',{'MPC555_ModMemoryDef_4KEE_Prod'},'er"
+  "i_table0_rev',{9},'max_eri_table_size',{65535},'use_debug_vardecs',{1},'use_info_vardecs',{1},'fgnd_base_period_ms',"
+  "{5},'bgnd_base_period_ms',{50},'root_build_dir',{'C:\\Users\\HYBRID\\Documents\\GitHub\\Wisconsin-Hybrid\\DynoContro"
+  "ller_Rev1'},'build_dir',{'C:\\Users\\HYBRID\\Documents\\GitHub\\Wisconsin-Hybrid\\DynoController_Rev1\\DynoControlle"
+  "r_Rev1_Build'},'dll_name',{'DynoContr_008'},'srz_name',{'DynoController_Rev1_008'},'fgnd_stack_size',{3072},'fgnd_an"
+  "gle_stack_size',{0},'bgnd_stack_size',{2048},'idle_stack_size',{1024},'irq_stack_size',{1536},'heap_size',{4096},'he"
+  "ap_margin',{409},'install_dll_dir',{'C:\\ECUFiles\\TDBDLL\\'},'install_srz_dir',{'C:\\ECUFiles\\Programs'},'app_int_"
+  "stack_size',{1024},'shutdown_stack_size',{1024},'mingw_dir',{'C:\\PROGRA~2\\Woodward\\DEVELO~1\\TOOLCH~1\\GCC\\win32"
+  "-pe\\4_4_0\\'},'motohawk_dir',{'C:\\PROGRA~2\\Woodward\\MCS\\MotoHawk\\2011A_~1.184'},'toolchain_dir',{'C:\\Program "
+  "Files (x86)\\Woodward\\DevelopmentTools\\Toolchains\\GCC\\powerpc-eabi\\4_4_0\\'},'matlab_root',{'C:\\Program Files "
+  "(x86)\\MATLAB\\R2011a'},'model_guid',{'6a27880e-8e62-404a-92-11-3b-ad-79-73-ba'},'build_guid',{'197a6098-2946-4234-8"
+  "b-41-e9-0d-c0-c2-cc'},'token_guid',{'DD8AD11F95A6FC42BFF9AC780840E4B4'})"
+  MotoHawkBuildGUID	  "197a6098-2946-4234-8b-41-e9-0d-c0-c2-cc"
   Created		  "Mon May 16 15:00:08 2005"
   Creator		  "Owner"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "maxar"
+  LastModifiedBy	  "HYBRID"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sun Nov 19 19:40:34 2017"
-  RTWModifiedTimeStamp	  433021234
-  ModelVersionFormat	  "1.%<AutoIncrement:280>"
+  LastModifiedDate	  "Mon Jan 15 12:10:51 2018"
+  RTWModifiedTimeStamp	  437659461
+  ModelVersionFormat	  "1.%<AutoIncrement:299>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -132,13 +133,13 @@ Model {
     Dimension		    2
     Simulink.ConfigSet {
       $ObjectID		      1
-      Version		      "1.10.0"
+      Version		      "1.11.0"
       Array {
 	Type			"Handle"
 	Dimension		8
 	Simulink.SolverCC {
 	  $ObjectID		  2
-	  Version		  "1.10.0"
+	  Version		  "1.11.0"
 	  StartTime		  "0.0"
 	  StopTime		  "10.0"
 	  AbsTol		  "auto"
@@ -156,6 +157,7 @@ Model {
 	  MaxConsecutiveMinStep	  "1"
 	  RelTol		  "1e-3"
 	  SolverMode		  "Auto"
+	  ConcurrentTasks	  off
 	  Solver		  "FixedStepDiscrete"
 	  SolverName		  "FixedStepDiscrete"
 	  SolverJacobianMethodControl "auto"
@@ -171,7 +173,7 @@ Model {
 	}
 	Simulink.DataIOCC {
 	  $ObjectID		  3
-	  Version		  "1.10.0"
+	  Version		  "1.11.0"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
 	  FinalStateName	  "xFinal"
@@ -183,6 +185,7 @@ Model {
 	  SaveFinalState	  off
 	  SaveCompleteFinalSimState off
 	  SaveFormat		  "Array"
+	  SignalLoggingSaveFormat "ModelDataLogs"
 	  SaveOutput		  on
 	  SaveState		  off
 	  SignalLogging		  on
@@ -202,18 +205,18 @@ Model {
 	}
 	Simulink.OptimizationCC {
 	  $ObjectID		  4
-	  Version		  "1.10.0"
+	  Version		  "1.11.0"
 	  BlockReduction	  on
 	  BooleanDataType	  on
 	  ConditionallyExecuteInputs on
 	  InlineParams		  on
 	  UseIntDivNetSlope	  off
+	  UseSpecifiedMinMax	  off
 	  InlineInvariantSignals  off
 	  OptimizeBlockIOStorage  on
 	  BufferReuse		  on
 	  EnhancedBackFolding	  off
 	  StrengthReduction	  off
-	  EnforceIntegerDowncast  on
 	  ExpressionFolding	  on
 	  BooleansAsBitfields	  off
 	  BitfieldContainerType	  "uint_T"
@@ -240,10 +243,11 @@ Model {
 	  BufferReusableBoundary  on
 	  SimCompilerOptimization "Off"
 	  AccelVerboseBuild	  off
+	  AccelParallelForEachSubsystem	on
 	}
 	Simulink.DebuggingCC {
 	  $ObjectID		  5
-	  Version		  "1.10.0"
+	  Version		  "1.11.0"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
 	  ArrayBoundsChecking	  "none"
@@ -266,6 +270,8 @@ Model {
 	  MinStepSizeMsg	  "warning"
 	  TimeAdjustmentMsg	  "none"
 	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
 	  SolverPrmCheckMsg	  "none"
 	  InheritedTsInSrcMsg	  "none"
 	  DiscreteInheritContinuousMsg "warning"
@@ -302,6 +308,7 @@ Model {
 	  AssertControl		  "UseLocalSettings"
 	  EnableOverflowDetection off
 	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
 	  ModelReferenceVersionMismatchMessage "none"
 	  ModelReferenceIOMismatchMessage "none"
 	  ModelReferenceCSMismatchMessage "none"
@@ -311,19 +318,31 @@ Model {
 	  ModelReferenceExtraNoncontSigs "error"
 	  StateNameClashWarn	  "warning"
 	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  InitInArrayFormatMsg	  "warning"
 	  StrictBusMsg		  "None"
 	  BusNameAdapt		  "WarnAndRepair"
 	  NonBusSignalsTreatedAsBus "none"
 	  LoggingUnavailableSignals "error"
 	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
 	}
 	Simulink.HardwareCC {
 	  $ObjectID		  6
-	  Version		  "1.10.0"
+	  Version		  "1.11.0"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
 	  ProdBitPerInt		  32
 	  ProdBitPerLong	  32
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
 	  ProdIntDivRoundTo	  "Undefined"
 	  ProdEndianess		  "Unspecified"
 	  ProdWordSize		  32
@@ -333,6 +352,11 @@ Model {
 	  TargetBitPerShort	  16
 	  TargetBitPerInt	  32
 	  TargetBitPerLong	  32
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
 	  TargetShiftRightIntArith on
 	  TargetIntDivRoundTo	  "Undefined"
 	  TargetEndianess	  "Unspecified"
@@ -346,10 +370,11 @@ Model {
 	}
 	Simulink.ModelReferenceCC {
 	  $ObjectID		  7
-	  Version		  "1.10.0"
+	  Version		  "1.11.0"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
 	  CheckModelReferenceTargetMessage "error"
 	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
 	  ParallelModelReferenceMATLABWorkerInit "None"
 	  ModelReferenceNumInstancesAllowed "Multi"
 	  PropagateVarSize	  "Infer from blocks in model"
@@ -360,7 +385,7 @@ Model {
 	}
 	Simulink.SFSimCC {
 	  $ObjectID		  8
-	  Version		  "1.10.0"
+	  Version		  "1.11.0"
 	  SFSimEnableDebug	  on
 	  SFSimOverflowDetection  on
 	  SFSimEcho		  on
@@ -369,12 +394,13 @@ Model {
 	  SimExtrinsic		  on
 	  SimIntegrity		  on
 	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
 	  SimBuildMode		  "sf_incremental_build"
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
 	  $ObjectID		  9
-	  Version		  "1.10.0"
+	  Version		  "1.11.0"
 	  SystemTargetFile	  "motohawk_ert_rtw.tlc"
 	  GenCodeOnly		  off
 	  MakeCommand		  "motohawk_make_rtw"
@@ -405,6 +431,8 @@ Model {
 	  GenerateTraceReportSf	  off
 	  GenerateTraceReportEml  off
 	  GenerateCodeInfo	  off
+	  GenerateSLWebview	  off
+	  GenerateCodeMetricsReport off
 	  RTWCompilerOptimization "Off"
 	  CheckMdlBeforeBuild	  "Off"
 	  CustomRebuildMode	  "OnUpdate"
@@ -413,7 +441,7 @@ Model {
 	    Dimension		    2
 	    Simulink.CodeAppCC {
 	      $ObjectID		      10
-	      Version		      "1.10.0"
+	      Version		      "1.11.0"
 	      ForceParamTrailComments off
 	      GenerateComments	      on
 	      IgnoreCustomStorageClasses off
@@ -426,6 +454,7 @@ Model {
 	      IncAutoGenComments      off
 	      SimulinkDataObjDesc     off
 	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
 	      IncDataTypeInIds	      off
 	      MangleLength	      1
 	      CustomSymbolStrGlobalVar "$R$N$M"
@@ -440,7 +469,9 @@ Model {
 	      ParamNamingRule	      "None"
 	      SignalNamingRule	      "None"
 	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
 	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
 	      EnableCustomComments    off
 	      InlinedPrmAccess	      "Literals"
 	      ReqsInCode	      off
@@ -449,13 +480,15 @@ Model {
 	    Simulink.STFCustomTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
 	      $ObjectID		      11
-	      Version		      "1.10.0"
+	      Version		      "1.11.0"
 	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
 	      TargetLibSuffix	      ""
 	      TargetPreCompLibLocation ""
 	      TargetFunctionLibrary   "ANSI_C"
 	      UtilityFuncGeneration   "Auto"
 	      ERTMultiwordTypeDef     "System defined"
+	      FunctionExecutionProfile off
+	      CodeExecutionProfiling  off
 	      ERTCodeCoverageTool     "None"
 	      ERTMultiwordLength      256
 	      MultiwordLength	      2048
@@ -469,6 +502,7 @@ Model {
 	      IncludeMdlTerminateFcn  on
 	      GeneratePreprocessorConditionals "Use local settings"
 	      CombineOutputUpdateFcns on
+	      CombineSignalStateStructs	off
 	      SuppressErrorStatus     off
 	      ERTFirstTimeCompliant   off
 	      IncludeFileDelimiter    "Auto"
@@ -497,13 +531,15 @@ Model {
 		Simulink.ERTTargetCC {
 		  $BackupClass		  "Simulink.TargetCC"
 		  $ObjectID		  12
-		  Version		  "1.10.0"
+		  Version		  "1.11.0"
 		  TargetFcnLib		  "ansi_tfl_table_tmw.mat"
 		  TargetLibSuffix	  ""
 		  TargetPreCompLibLocation ""
 		  TargetFunctionLibrary	  "ANSI_C"
 		  UtilityFuncGeneration	  "Auto"
 		  ERTMultiwordTypeDef	  "System defined"
+		  FunctionExecutionProfile off
+		  CodeExecutionProfiling  off
 		  ERTCodeCoverageTool	  "None"
 		  ERTMultiwordLength	  256
 		  MultiwordLength	  2048
@@ -517,6 +553,7 @@ Model {
 		  IncludeMdlTerminateFcn  on
 		  GeneratePreprocessorConditionals "Use local settings"
 		  CombineOutputUpdateFcns on
+		  CombineSignalStateStructs off
 		  SuppressErrorStatus	  off
 		  ERTFirstTimeCompliant	  off
 		  IncludeFileDelimiter	  "Auto"
@@ -538,6 +575,8 @@ Model {
 		  CPPClassGenCompliant	  off
 		  AutosarCompliant	  off
 		  GenerateErtSFunction	  off
+		  CreateSILPILBlock	  "None"
+		  CodeExecutionProfileVariable "executionProfile"
 		  GenerateASAP2		  off
 		  ExtMode		  off
 		  ExtModeTransport	  0
@@ -554,6 +593,7 @@ Model {
 		  RTWCAPISignals	  off
 		  RTWCAPIParams		  off
 		  RTWCAPIStates		  off
+		  RTWCAPIRootIO		  off
 		  ERTSrcFileBannerTemplate "ert_code_template.cgt"
 		  ERTHdrFileBannerTemplate "ert_code_template.cgt"
 		  ERTDataSrcFileTemplate  "ert_code_template.cgt"
@@ -600,6 +640,7 @@ Model {
 		  MemSecDataParameters	  "Default"
 		  MemSecFuncInitTerm	  "Default"
 		  MemSecFuncExecute	  "Default"
+		  MemSecFuncSharedUtil	  "Default"
 		}
 		PropName		"Components"
 	      }
@@ -611,17 +652,17 @@ Model {
       }
       Name		      "Configuration"
       CurrentDlgPage	      "Solver"
-      ConfigPrmDlgPosition    " [ 243, 69, 1123, 699 ] "
+      ConfigPrmDlgPosition     [ 243, 69, 1123, 699 ] 
     }
     Simulink.ConfigSet {
       $ObjectID		      13
-      Version		      "1.10.0"
+      Version		      "1.11.0"
       Array {
 	Type			"Handle"
 	Dimension		8
 	Simulink.SolverCC {
 	  $ObjectID		  14
-	  Version		  "1.10.0"
+	  Version		  "1.11.0"
 	  StartTime		  "0.0"
 	  StopTime		  "10.0"
 	  AbsTol		  "auto"
@@ -639,6 +680,7 @@ Model {
 	  MaxConsecutiveMinStep	  "1"
 	  RelTol		  "1e-3"
 	  SolverMode		  "Auto"
+	  ConcurrentTasks	  off
 	  Solver		  "FixedStepDiscrete"
 	  SolverName		  "FixedStepDiscrete"
 	  SolverJacobianMethodControl "auto"
@@ -654,7 +696,7 @@ Model {
 	}
 	Simulink.DataIOCC {
 	  $ObjectID		  15
-	  Version		  "1.10.0"
+	  Version		  "1.11.0"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
 	  FinalStateName	  "xFinal"
@@ -666,6 +708,7 @@ Model {
 	  SaveFinalState	  off
 	  SaveCompleteFinalSimState off
 	  SaveFormat		  "Array"
+	  SignalLoggingSaveFormat "ModelDataLogs"
 	  SaveOutput		  on
 	  SaveState		  off
 	  SignalLogging		  on
@@ -685,18 +728,18 @@ Model {
 	}
 	Simulink.OptimizationCC {
 	  $ObjectID		  16
-	  Version		  "1.10.0"
+	  Version		  "1.11.0"
 	  BlockReduction	  on
 	  BooleanDataType	  on
 	  ConditionallyExecuteInputs on
 	  InlineParams		  on
 	  UseIntDivNetSlope	  off
+	  UseSpecifiedMinMax	  off
 	  InlineInvariantSignals  off
 	  OptimizeBlockIOStorage  on
 	  BufferReuse		  on
 	  EnhancedBackFolding	  off
 	  StrengthReduction	  off
-	  EnforceIntegerDowncast  on
 	  ExpressionFolding	  on
 	  BooleansAsBitfields	  off
 	  BitfieldContainerType	  "uint_T"
@@ -723,10 +766,11 @@ Model {
 	  BufferReusableBoundary  on
 	  SimCompilerOptimization "Off"
 	  AccelVerboseBuild	  off
+	  AccelParallelForEachSubsystem	on
 	}
 	Simulink.DebuggingCC {
 	  $ObjectID		  17
-	  Version		  "1.10.0"
+	  Version		  "1.11.0"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
 	  ArrayBoundsChecking	  "none"
@@ -749,6 +793,8 @@ Model {
 	  MinStepSizeMsg	  "warning"
 	  TimeAdjustmentMsg	  "none"
 	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
 	  SolverPrmCheckMsg	  "none"
 	  InheritedTsInSrcMsg	  "none"
 	  DiscreteInheritContinuousMsg "warning"
@@ -785,6 +831,7 @@ Model {
 	  AssertControl		  "UseLocalSettings"
 	  EnableOverflowDetection off
 	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
 	  ModelReferenceVersionMismatchMessage "none"
 	  ModelReferenceIOMismatchMessage "none"
 	  ModelReferenceCSMismatchMessage "none"
@@ -794,19 +841,31 @@ Model {
 	  ModelReferenceExtraNoncontSigs "error"
 	  StateNameClashWarn	  "warning"
 	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  InitInArrayFormatMsg	  "warning"
 	  StrictBusMsg		  "Warning"
 	  BusNameAdapt		  "WarnAndRepair"
 	  NonBusSignalsTreatedAsBus "none"
 	  LoggingUnavailableSignals "error"
 	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
 	}
 	Simulink.HardwareCC {
 	  $ObjectID		  18
-	  Version		  "1.10.0"
+	  Version		  "1.11.0"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
 	  ProdBitPerInt		  32
 	  ProdBitPerLong	  32
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
 	  ProdIntDivRoundTo	  "Undefined"
 	  ProdEndianess		  "BigEndian"
 	  ProdWordSize		  32
@@ -816,6 +875,11 @@ Model {
 	  TargetBitPerShort	  16
 	  TargetBitPerInt	  32
 	  TargetBitPerLong	  32
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
 	  TargetShiftRightIntArith on
 	  TargetIntDivRoundTo	  "Undefined"
 	  TargetEndianess	  "Unspecified"
@@ -829,10 +893,11 @@ Model {
 	}
 	Simulink.ModelReferenceCC {
 	  $ObjectID		  19
-	  Version		  "1.10.0"
+	  Version		  "1.11.0"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
 	  CheckModelReferenceTargetMessage "error"
 	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
 	  ParallelModelReferenceMATLABWorkerInit "None"
 	  ModelReferenceNumInstancesAllowed "Multi"
 	  PropagateVarSize	  "Infer from blocks in model"
@@ -843,7 +908,7 @@ Model {
 	}
 	Simulink.SFSimCC {
 	  $ObjectID		  20
-	  Version		  "1.10.0"
+	  Version		  "1.11.0"
 	  SFSimEnableDebug	  on
 	  SFSimOverflowDetection  on
 	  SFSimEcho		  on
@@ -852,12 +917,13 @@ Model {
 	  SimExtrinsic		  on
 	  SimIntegrity		  on
 	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
 	  SimBuildMode		  "sf_incremental_build"
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
 	  $ObjectID		  21
-	  Version		  "1.10.0"
+	  Version		  "1.11.0"
 	  SystemTargetFile	  "motohawk_ert_rtw.tlc"
 	  TLCOptions		  "-aCustomNonFinites=\"motohawk_genrtnonfinite.tlc\" "
 	  GenCodeOnly		  off
@@ -890,6 +956,8 @@ Model {
 	  GenerateTraceReportSf	  off
 	  GenerateTraceReportEml  off
 	  GenerateCodeInfo	  off
+	  GenerateSLWebview	  off
+	  GenerateCodeMetricsReport off
 	  RTWCompilerOptimization "Off"
 	  CheckMdlBeforeBuild	  "Off"
 	  CustomRebuildMode	  "OnUpdate"
@@ -898,7 +966,7 @@ Model {
 	    Dimension		    2
 	    Simulink.CodeAppCC {
 	      $ObjectID		      22
-	      Version		      "1.10.0"
+	      Version		      "1.11.0"
 	      ForceParamTrailComments off
 	      GenerateComments	      on
 	      IgnoreCustomStorageClasses off
@@ -911,6 +979,7 @@ Model {
 	      IncAutoGenComments      off
 	      SimulinkDataObjDesc     off
 	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
 	      IncDataTypeInIds	      off
 	      MangleLength	      1
 	      CustomSymbolStrGlobalVar "$R$N$M"
@@ -925,7 +994,9 @@ Model {
 	      ParamNamingRule	      "None"
 	      SignalNamingRule	      "None"
 	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
 	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
 	      EnableCustomComments    off
 	      InlinedPrmAccess	      "Literals"
 	      ReqsInCode	      off
@@ -934,13 +1005,15 @@ Model {
 	    Simulink.STFCustomTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
 	      $ObjectID		      23
-	      Version		      "1.10.0"
+	      Version		      "1.11.0"
 	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
 	      TargetLibSuffix	      ""
 	      TargetPreCompLibLocation ""
 	      TargetFunctionLibrary   "ANSI_C"
 	      UtilityFuncGeneration   "Auto"
 	      ERTMultiwordTypeDef     "System defined"
+	      FunctionExecutionProfile off
+	      CodeExecutionProfiling  off
 	      ERTCodeCoverageTool     "None"
 	      ERTMultiwordLength      256
 	      MultiwordLength	      2048
@@ -954,6 +1027,7 @@ Model {
 	      IncludeMdlTerminateFcn  on
 	      GeneratePreprocessorConditionals "Use local settings"
 	      CombineOutputUpdateFcns on
+	      CombineSignalStateStructs	off
 	      SuppressErrorStatus     off
 	      ERTFirstTimeCompliant   off
 	      IncludeFileDelimiter    "Auto"
@@ -982,13 +1056,15 @@ Model {
 		Simulink.ERTTargetCC {
 		  $BackupClass		  "Simulink.TargetCC"
 		  $ObjectID		  24
-		  Version		  "1.10.0"
+		  Version		  "1.11.0"
 		  TargetFcnLib		  "ansi_tfl_table_tmw.mat"
 		  TargetLibSuffix	  ""
 		  TargetPreCompLibLocation ""
 		  TargetFunctionLibrary	  "ANSI_C"
 		  UtilityFuncGeneration	  "Auto"
 		  ERTMultiwordTypeDef	  "System defined"
+		  FunctionExecutionProfile off
+		  CodeExecutionProfiling  off
 		  ERTCodeCoverageTool	  "None"
 		  ERTMultiwordLength	  256
 		  MultiwordLength	  2048
@@ -1002,6 +1078,7 @@ Model {
 		  IncludeMdlTerminateFcn  on
 		  GeneratePreprocessorConditionals "Use local settings"
 		  CombineOutputUpdateFcns on
+		  CombineSignalStateStructs off
 		  SuppressErrorStatus	  off
 		  ERTFirstTimeCompliant	  off
 		  IncludeFileDelimiter	  "Auto"
@@ -1023,6 +1100,8 @@ Model {
 		  CPPClassGenCompliant	  off
 		  AutosarCompliant	  off
 		  GenerateErtSFunction	  off
+		  CreateSILPILBlock	  "None"
+		  CodeExecutionProfileVariable "executionProfile"
 		  GenerateASAP2		  off
 		  ExtMode		  off
 		  ExtModeTransport	  0
@@ -1039,6 +1118,7 @@ Model {
 		  RTWCAPISignals	  off
 		  RTWCAPIParams		  off
 		  RTWCAPIStates		  off
+		  RTWCAPIRootIO		  off
 		  ERTSrcFileBannerTemplate "ert_code_template.cgt"
 		  ERTHdrFileBannerTemplate "ert_code_template.cgt"
 		  ERTDataSrcFileTemplate  "ert_code_template.cgt"
@@ -1085,6 +1165,7 @@ Model {
 		  MemSecDataParameters	  "Default"
 		  MemSecFuncInitTerm	  "Default"
 		  MemSecFuncExecute	  "Default"
+		  MemSecFuncSharedUtil	  "Default"
 		}
 		PropName		"Components"
 	      }
@@ -1098,7 +1179,7 @@ Model {
       ExtraOptions	      "-aGenerateTraceInfo=0 -aIgnoreTestpoints=0 -aCustomNonFinites=\"motohawk_genrtnonfinite.tlc\""
       " "
       CurrentDlgPage	      "Solver"
-      ConfigPrmDlgPosition    " [ 243, 69, 1123, 699 ] "
+      ConfigPrmDlgPosition     [ 243, 69, 1123, 699 ] 
     }
     PropName		    "ConfigurationSets"
   }
@@ -1142,8 +1223,7 @@ Model {
       BlockType		      BusCreator
       Inputs		      "4"
       DisplayOption	      "none"
-      UseBusObject	      off
-      BusObject		      "BusObject"
+      OutDataTypeStr	      "Inherit: auto"
       NonVirtualBus	      off
     }
     Block {
@@ -1157,10 +1237,6 @@ Model {
       SamplingMode	      "Sample based"
       OutMin		      "[]"
       OutMax		      "[]"
-      OutDataTypeMode	      "Inherit from 'Constant value'"
-      OutDataType	      "fixdt(1,16,0)"
-      ConRadixGroup	      "Use specified scaling"
-      OutScaling	      "[]"
       OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
       LockScale		      off
       SampleTime	      "inf"
@@ -1171,9 +1247,6 @@ Model {
       BlockType		      DataTypeConversion
       OutMin		      "[]"
       OutMax		      "[]"
-      OutDataTypeMode	      "Inherit via back propagation"
-      OutDataType	      "fixdt(1,16,0)"
-      OutScaling	      "[]"
       OutDataTypeStr	      "Inherit: Inherit via back propagation"
       LockScale		      off
       ConvertRealWorld	      "Real World Value (RWV)"
@@ -1205,16 +1278,9 @@ Model {
       Multiplication	      "Element-wise(K.*u)"
       ParamMin		      "[]"
       ParamMax		      "[]"
-      ParameterDataTypeMode   "Same as input"
-      ParameterDataType	      "fixdt(1,16,0)"
-      ParameterScalingMode    "Best Precision: Matrix-wise"
-      ParameterScaling	      "[]"
       ParamDataTypeStr	      "Inherit: Same as input"
       OutMin		      "[]"
       OutMax		      "[]"
-      OutDataTypeMode	      "Same as input"
-      OutDataType	      "fixdt(1,16,0)"
-      OutScaling	      "[]"
       OutDataTypeStr	      "Inherit: Same as input"
       LockScale		      off
       RndMeth		      "Floor"
@@ -1224,19 +1290,15 @@ Model {
     Block {
       BlockType		      Inport
       Port		      "1"
-      UseBusObject	      off
-      BusObject		      "BusObject"
+      OutputFunctionCall      off
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
       BusOutputAsStruct	      off
       PortDimensions	      "-1"
       VarSizeSig	      "Inherit"
       SampleTime	      "-1"
-      OutMin		      "[]"
-      OutMax		      "[]"
-      DataType		      "auto"
-      OutDataType	      "fixdt(1,16,0)"
-      OutScaling	      "[]"
-      OutDataTypeStr	      "Inherit: auto"
-      LockScale		      off
       SignalType	      "auto"
       SamplingMode	      "auto"
       LatchByDelayingOutsideSignal off
@@ -1249,27 +1311,20 @@ Model {
       Inputs		      "2"
       IconShape		      "rectangular"
       AllPortsSameDT	      on
-      OutDataTypeMode	      "Logical (see Configuration Parameters: Optimization)"
-      LogicDataType	      "uint(8)"
       OutDataTypeStr	      "Inherit: Logical (see Configuration Parameters: Optimization)"
       SampleTime	      "-1"
     }
     Block {
       BlockType		      Outport
       Port		      "1"
-      UseBusObject	      off
-      BusObject		      "BusObject"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
       BusOutputAsStruct	      off
       PortDimensions	      "-1"
       VarSizeSig	      "Inherit"
       SampleTime	      "-1"
-      OutMin		      "[]"
-      OutMax		      "[]"
-      DataType		      "auto"
-      OutDataType	      "fixdt(1,16,0)"
-      OutScaling	      "[]"
-      OutDataTypeStr	      "Inherit: auto"
-      LockScale		      off
       SignalType	      "auto"
       SamplingMode	      "auto"
       SourceOfInitialOutputValue "Dialog"
@@ -1280,14 +1335,12 @@ Model {
       BlockType		      RelationalOperator
       Operator		      ">="
       InputSameDT	      on
-      LogicOutDataTypeMode    "Logical (see Configuration Parameters: Optimization)"
-      LogicDataType	      "uint(8)"
       OutDataTypeStr	      "Inherit: Logical (see Configuration Parameters: Optimization)"
       ZeroCross		      on
       SampleTime	      "-1"
     }
     Block {
-      BlockType		      "S-Function"
+      BlockType		      S-Function
       FunctionName	      "system"
       SFunctionModules	      "''"
       PortCounts	      "[]"
@@ -1295,16 +1348,14 @@ Model {
     }
     Block {
       BlockType		      SignalSpecification
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
       Dimensions	      "-1"
       VarSizeSig	      "Inherit"
       SampleTime	      "-1"
-      OutMin		      "[]"
-      OutMax		      "[]"
-      DataType		      "auto"
-      OutDataType	      "fixdt(1,16,0)"
-      OutScaling	      "[]"
-      OutDataTypeStr	      "Inherit: auto"
-      LockScale		      off
       SignalType	      "auto"
       SamplingMode	      "auto"
     }
@@ -1325,7 +1376,10 @@ Model {
       RTWMemSecDataParameters "Inherit from model"
       SimViewingDevice	      off
       DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
       MinMaxOverflowLogging   "UseLocalSettings"
+      Variant		      off
+      GeneratePreprocessorConditionals off
     }
     Block {
       BlockType		      Sum
@@ -1337,9 +1391,6 @@ Model {
       AccumDataTypeStr	      "Inherit: Inherit via internal rule"
       OutMin		      "[]"
       OutMax		      "[]"
-      OutDataTypeMode	      "Same as first input"
-      OutDataType	      "fixdt(1,16,0)"
-      OutScaling	      "[]"
       OutDataTypeStr	      "Inherit: Same as first input"
       LockScale		      off
       RndMeth		      "Floor"
@@ -1353,9 +1404,6 @@ Model {
       InputSameDT	      on
       OutMin		      "[]"
       OutMax		      "[]"
-      OutDataTypeMode	      "Inherit via internal rule"
-      OutDataType	      "fixdt(1,16,0)"
-      OutScaling	      "[]"
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
       LockScale		      off
       RndMeth		      "Floor"
@@ -1387,6 +1435,7 @@ Model {
     Block {
       BlockType		      UnitDelay
       X0		      "0"
+      InputProcessing	      "Inherited"
       SampleTime	      "1"
       StateMustResolveToSignalObject off
       RTWStateStorageClass    "Auto"
@@ -1394,8 +1443,8 @@ Model {
   }
   System {
     Name		    "DynoController_Rev1"
-    Location		    [567, 221, 1696, 864]
-    Open		    off
+    Location		    [202, 74, 1331, 717]
+    Open		    on
     ModelBrowserVisibility  on
     ModelBrowserWidth	    200
     ScreenColor		    "white"
@@ -1406,13 +1455,13 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "73"
+    ZoomFactor		    "112"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    309
+    SIDHighWatermark	    "334"
     Block {
       BlockType		      Reference
       Name		      "CAN Definition"
-      SID		      16
+      SID		      "16"
       Ports		      []
       Position		      [994, 175, 1262, 375]
       ShowName		      off
@@ -1435,14 +1484,14 @@ Model {
       tx_queue_size	      "16"
       rx_queue_size	      "16"
       use_protocol	      on
-      city_id		      "hex2dec('B')"
+      city_id		      "hex2dec('C')"
       access_level	      "4"
       mototune_group	      "'System | System Config | Communication Config'"
     }
     Block {
       BlockType		      SubSystem
       Name		      "Foreground"
-      SID		      1
+      SID		      "1"
       Ports		      [0, 0, 0, 1]
       Position		      [630, 589, 730, 631]
       TreatAsAtomicUnit	      on
@@ -1480,7 +1529,7 @@ Model {
 	Block {
 	  BlockType		  TriggerPort
 	  Name			  "f"
-	  SID			  2
+	  SID			  "2"
 	  Ports			  []
 	  Position		  [455, 205, 475, 225]
 	  TriggerType		  "function-call"
@@ -1489,7 +1538,7 @@ Model {
 	Block {
 	  BlockType		  SubSystem
 	  Name			  "Control"
-	  SID			  17
+	  SID			  "17"
 	  Ports			  [1, 1]
 	  Position		  [455, 319, 555, 361]
 	  LibraryVersion	  "1.216"
@@ -1518,16 +1567,14 @@ Model {
 	    Block {
 	      BlockType		      Inport
 	      Name		      "In1"
-	      SID		      18
+	      SID		      "18"
 	      Position		      [110, 168, 140, 182]
 	      IconDisplay	      "Port number"
-	      OutDataType	      "fixdt(1, 16)"
-	      OutScaling	      "2^0"
 	    }
 	    Block {
 	      BlockType		      SubSystem
 	      Name		      "Battery"
-	      SID		      260
+	      SID		      "260"
 	      Ports		      [1, 1]
 	      Position		      [300, 151, 445, 199]
 	      LibraryVersion	      "1.216"
@@ -1548,7 +1595,7 @@ Model {
 	      System {
 		Name			"Battery"
 		Location		[567, 221, 1630, 844]
-		Open			on
+		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -1559,20 +1606,18 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"65"
+		ZoomFactor		"100"
 		Block {
 		  BlockType		  Inport
 		  Name			  "Inputs"
-		  SID			  261
+		  SID			  "261"
 		  Position		  [45, 148, 75, 162]
 		  IconDisplay		  "Port number"
-		  OutDataType		  "fixdt(1, 16)"
-		  OutScaling		  "2^0"
 		}
 		Block {
 		  BlockType		  BusCreator
 		  Name			  "Bus\nCreator"
-		  SID			  262
+		  SID			  "262"
 		  Ports			  [2, 1]
 		  Position		  [1590, 137, 1595, 228]
 		  ShowName		  off
@@ -1589,7 +1634,7 @@ Model {
 		Block {
 		  BlockType		  BusSelector
 		  Name			  "Bus\nSelector"
-		  SID			  263
+		  SID			  "263"
 		  Ports			  [1, 2]
 		  Position		  [120, 136, 125, 174]
 		  ShowName		  off
@@ -1610,11 +1655,11 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "Compare\nTo Constant"
-		  SID			  264
+		  SID			  "264"
 		  Ports			  [1, 1]
 		  Position		  [220, 405, 250, 435]
 		  ShowName		  off
-		  LibraryVersion	  "1.216"
+		  LibraryVersion	  "1.236"
 		  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
 		  SourceType		  "Compare To Constant"
 		  ShowPortLabels	  "FromPortIcon"
@@ -1625,6 +1670,7 @@ Model {
 		  RTWMemSecDataConstants  "Inherit from model"
 		  RTWMemSecDataInternal	  "Inherit from model"
 		  RTWMemSecDataParameters "Inherit from model"
+		  GeneratePreprocessorConditionals off
 		  relop			  "=="
 		  const			  "4"
 		  LogicOutDataTypeMode	  "boolean"
@@ -1633,68 +1679,58 @@ Model {
 		Block {
 		  BlockType		  Constant
 		  Name			  "Constant"
-		  SID			  265
+		  SID			  "265"
 		  Position		  [285, 155, 315, 185]
 		  ShowName		  off
 		  Value			  "50"
-		  OutDataType		  "fixdt(1, 16)"
-		  OutScaling		  "2^0"
 		}
 		Block {
 		  BlockType		  Logic
 		  Name			  "Logical\nOperator"
-		  SID			  266
+		  SID			  "266"
 		  Ports			  [2, 1]
 		  Position		  [435, 291, 465, 324]
 		  ShowName		  off
 		  Operator		  "OR"
 		  AllPortsSameDT	  off
-		  OutDataTypeMode	  "boolean"
-		  LogicDataType		  "fixdt(0, 8)"
 		  OutDataTypeStr	  "boolean"
 		}
 		Block {
 		  BlockType		  Logic
 		  Name			  "Logical\nOperator2"
-		  SID			  267
+		  SID			  "267"
 		  Ports			  [2, 1]
 		  Position		  [470, 132, 500, 163]
 		  ShowName		  off
 		  AllPortsSameDT	  off
-		  OutDataTypeMode	  "boolean"
-		  LogicDataType		  "fixdt(0, 8)"
 		  OutDataTypeStr	  "boolean"
 		}
 		Block {
 		  BlockType		  Logic
 		  Name			  "Logical\nOperator5"
-		  SID			  268
+		  SID			  "268"
 		  Ports			  [1, 1]
 		  Position		  [315, 284, 345, 316]
 		  ShowName		  off
 		  Operator		  "NOT"
 		  AllPortsSameDT	  off
-		  OutDataTypeMode	  "boolean"
-		  LogicDataType		  "fixdt(0, 8)"
 		  OutDataTypeStr	  "boolean"
 		}
 		Block {
 		  BlockType		  RelationalOperator
 		  Name			  "Relational\nOperator"
-		  SID			  269
+		  SID			  "269"
 		  Ports			  [2, 1]
 		  Position		  [360, 137, 390, 168]
 		  ShowName		  off
 		  Operator		  ">"
 		  InputSameDT		  off
-		  LogicOutDataTypeMode	  "boolean"
-		  LogicDataType		  "fixdt(0, 8)"
 		  OutDataTypeStr	  "boolean"
 		}
 		Block {
 		  BlockType		  SubSystem
 		  Name			  "Safe Shutdown Sequence"
-		  SID			  270
+		  SID			  "270"
 		  Ports			  [3, 2]
 		  Position		  [1105, 135, 1335, 225]
 		  MinAlgLoopOccurrences	  off
@@ -1734,135 +1770,117 @@ Model {
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Battery Present"
-		    SID			    271
+		    SID			    "271"
 		    Position		    [50, 68, 80, 82]
 		    IconDisplay		    "Port number"
-		    DataType		    "boolean"
-		    OutDataType		    "sfix(16)"
-		    OutScaling		    "2^0"
 		    OutDataTypeStr	    "boolean"
 		    }
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Shutdown Command"
-		    SID			    272
+		    SID			    "272"
 		    Position		    [50, 113, 80, 127]
 		    Port		    "2"
 		    IconDisplay		    "Port number"
-		    DataType		    "boolean"
-		    OutDataType		    "sfix(16)"
-		    OutScaling		    "2^0"
 		    OutDataTypeStr	    "boolean"
 		    }
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Batt Ready"
-		    SID			    273
+		    SID			    "273"
 		    Position		    [55, 393, 85, 407]
 		    Port		    "3"
 		    IconDisplay		    "Port number"
-		    DataType		    "boolean"
-		    OutDataType		    "sfix(16)"
-		    OutScaling		    "2^0"
 		    OutDataTypeStr	    "boolean"
 		    }
 		    Block {
 		    BlockType		    Logic
 		    Name		    "Logical\nOperator"
-		    SID			    274
+		    SID			    "274"
 		    Ports		    [2, 1]
 		    Position		    [680, 157, 710, 188]
 		    Operator		    "OR"
 		    AllPortsSameDT	    off
-		    OutDataTypeMode	    "boolean"
-		    LogicDataType	    "fixdt(0, 8)"
 		    OutDataTypeStr	    "boolean"
 		    }
 		    Block {
 		    BlockType		    Logic
 		    Name		    "Logical\nOperator2"
-		    SID			    275
+		    SID			    "275"
 		    Ports		    [2, 1]
 		    Position		    [530, 48, 565, 157]
 		    ShowName		    off
 		    AllPortsSameDT	    off
-		    OutDataTypeMode	    "boolean"
 		    OutDataTypeStr	    "boolean"
 		    }
 		    Block {
 		    BlockType		    Logic
 		    Name		    "Logical\nOperator3"
-		    SID			    276
+		    SID			    "276"
 		    Ports		    [1, 1]
 		    Position		    [405, 219, 435, 251]
 		    ShowName		    off
 		    Operator		    "NOT"
 		    AllPortsSameDT	    off
-		    OutDataTypeMode	    "boolean"
 		    OutDataTypeStr	    "boolean"
 		    }
 		    Block {
 		    BlockType		    Logic
 		    Name		    "Logical\nOperator4"
-		    SID			    277
+		    SID			    "277"
 		    Ports		    [3, 1]
 		    Position		    [530, 205, 565, 375]
 		    ShowName		    off
 		    Inputs		    "3"
 		    AllPortsSameDT	    off
-		    OutDataTypeMode	    "boolean"
 		    OutDataTypeStr	    "boolean"
 		    }
 		    Block {
 		    BlockType		    Logic
 		    Name		    "Logical\nOperator5"
-		    SID			    278
+		    SID			    "278"
 		    Ports		    [1, 1]
 		    Position		    [195, 264, 225, 296]
 		    ShowName		    off
 		    Operator		    "NOT"
 		    AllPortsSameDT	    off
-		    OutDataTypeMode	    "boolean"
 		    OutDataTypeStr	    "boolean"
 		    }
 		    Block {
 		    BlockType		    Logic
 		    Name		    "Logical\nOperator6"
-		    SID			    279
+		    SID			    "279"
 		    Ports		    [1, 1]
 		    Position		    [470, 114, 500, 146]
 		    ShowName		    off
 		    Operator		    "NOT"
 		    AllPortsSameDT	    off
-		    OutDataTypeMode	    "boolean"
 		    OutDataTypeStr	    "boolean"
 		    }
 		    Block {
 		    BlockType		    RelationalOperator
 		    Name		    "Relational\nOperator"
-		    SID			    280
+		    SID			    "280"
 		    Ports		    [2, 1]
 		    Position		    [410, 112, 440, 143]
 		    ShowName		    off
 		    InputSameDT		    off
-		    LogicOutDataTypeMode    "boolean"
 		    OutDataTypeStr	    "boolean"
 		    }
 		    Block {
 		    BlockType		    RelationalOperator
 		    Name		    "Relational\nOperator1"
-		    SID			    281
+		    SID			    "281"
 		    Ports		    [2, 1]
 		    Position		    [405, 272, 435, 303]
 		    ShowName		    off
 		    InputSameDT		    off
-		    LogicOutDataTypeMode    "boolean"
 		    OutDataTypeStr	    "boolean"
 		    }
 		    Block {
 		    BlockType		    Reference
 		    Name		    "Time Since Enabled (With Input)1"
-		    SID			    282
+		    SID			    "282"
 		    Ports		    [1, 1]
 		    Position		    [235, 92, 365, 148]
 		    BackgroundColor	    "[0.815686, 0.976471, 0.674510]"
@@ -1878,6 +1896,7 @@ Model {
 		    RTWMemSecDataConstants  "Inherit from model"
 		    RTWMemSecDataInternal   "Inherit from model"
 		    RTWMemSecDataParameters "Inherit from model"
+		    GeneratePreprocessorConditionals off
 		    nam			    "'Contactor_Disable_Timer'"
 		    samp_time		    "-1"
 		    init		    "0"
@@ -1886,7 +1905,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "Time Since Enabled (With Input)3"
-		    SID			    283
+		    SID			    "283"
 		    Ports		    [1, 1]
 		    Position		    [245, 252, 375, 308]
 		    BackgroundColor	    "[0.815686, 0.976471, 0.674510]"
@@ -1902,6 +1921,7 @@ Model {
 		    RTWMemSecDataConstants  "Inherit from model"
 		    RTWMemSecDataInternal   "Inherit from model"
 		    RTWMemSecDataParameters "Inherit from model"
+		    GeneratePreprocessorConditionals off
 		    nam			    "'Solectria_Enable_timer'"
 		    samp_time		    "-1"
 		    init		    "0"
@@ -1910,14 +1930,14 @@ Model {
 		    Block {
 		    BlockType		    From
 		    Name		    "VehicleReady"
-		    SID			    284
+		    SID			    "284"
 		    Position		    [605, 206, 645, 234]
 		    GotoTag		    "ReadyLight"
 		    }
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_calibration"
-		    SID			    285
+		    SID			    "285"
 		    Ports		    [0, 1]
 		    Position		    [215, 155, 365, 195]
 		    ShowName		    off
@@ -1956,7 +1976,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_calibration1"
-		    SID			    286
+		    SID			    "286"
 		    Ports		    [0, 1]
 		    Position		    [220, 335, 370, 375]
 		    ShowName		    off
@@ -1995,7 +2015,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_data_write"
-		    SID			    287
+		    SID			    "287"
 		    Ports		    [1]
 		    Position		    [755, 150, 915, 200]
 		    ShowName		    off
@@ -2018,24 +2038,18 @@ Model {
 		    Block {
 		    BlockType		    Outport
 		    Name		    "Contactor_Enable"
-		    SID			    288
+		    SID			    "288"
 		    Position		    [625, 98, 655, 112]
 		    IconDisplay		    "Port number"
-		    DataType		    "boolean"
-		    OutDataType		    "sfix(16)"
-		    OutScaling		    "2^0"
 		    OutDataTypeStr	    "boolean"
 		    }
 		    Block {
 		    BlockType		    Outport
 		    Name		    "Load_Enable"
-		    SID			    289
+		    SID			    "289"
 		    Position		    [655, 283, 685, 297]
 		    Port		    "2"
 		    IconDisplay		    "Port number"
-		    DataType		    "boolean"
-		    OutDataType		    "sfix(16)"
-		    OutScaling		    "2^0"
 		    OutDataTypeStr	    "boolean"
 		    }
 		    Line {
@@ -2183,7 +2197,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_calibration"
-		  SID			  291
+		  SID			  "291"
 		  Ports			  [0, 1]
 		  Position		  [275, 75, 425, 115]
 		  ShowName		  off
@@ -2192,7 +2206,7 @@ Model {
 		  SourceType		  "MotoHawk Calibration"
 		  nam			  "'Automatic_Battery_Bootup'"
 		  val			  "1"
-		  storage		  "Calibration"
+		  storage		  "Calibration NV"
 		  show_more		  on
 		  name_source		  "Use Parameter"
 		  data_type		  "boolean"
@@ -2222,7 +2236,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_data_def1"
-		  SID			  292
+		  SID			  "292"
 		  Ports			  []
 		  Position		  [495, 575, 630, 635]
 		  ShowName		  off
@@ -2268,7 +2282,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_data_def2"
-		  SID			  293
+		  SID			  "293"
 		  Ports			  []
 		  Position		  [655, 575, 790, 635]
 		  ShowName		  off
@@ -2314,7 +2328,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_data_read1"
-		  SID			  294
+		  SID			  "294"
 		  Ports			  [0, 1]
 		  Position		  [155, 270, 290, 330]
 		  ShowName		  off
@@ -2336,7 +2350,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_data_read3"
-		  SID			  295
+		  SID			  "295"
 		  Ports			  [0, 1]
 		  Position		  [160, 334, 335, 396]
 		  ShowName		  off
@@ -2358,7 +2372,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_data_write"
-		  SID			  296
+		  SID			  "296"
 		  Ports			  [1]
 		  Position		  [1485, 249, 1665, 311]
 		  ShowName		  off
@@ -2381,7 +2395,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_data_write1"
-		  SID			  297
+		  SID			  "297"
 		  Ports			  [1]
 		  Position		  [1055, 239, 1235, 301]
 		  ShowName		  off
@@ -2404,7 +2418,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_override_abs4"
-		  SID			  300
+		  SID			  "300"
 		  Ports			  [1, 1]
 		  Position		  [545, 167, 695, 193]
 		  ShowName		  off
@@ -2419,6 +2433,7 @@ Model {
 		  RTWMemSecDataConstants  "Inherit from model"
 		  RTWMemSecDataInternal	  "Inherit from model"
 		  RTWMemSecDataParameters "Inherit from model"
+		  GeneratePreprocessorConditionals off
 		  parent_name		  "'Shutdown_ovr'"
 		  parent_val		  "0"
 		  show_more		  on
@@ -2444,7 +2459,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_probe"
-		  SID			  301
+		  SID			  "301"
 		  Ports			  [1]
 		  Position		  [1420, 83, 1690, 107]
 		  ShowName		  off
@@ -2475,7 +2490,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_probe1"
-		  SID			  302
+		  SID			  "302"
 		  Ports			  [1]
 		  Position		  [780, 222, 930, 248]
 		  ShowName		  off
@@ -2506,7 +2521,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_probe2"
-		  SID			  303
+		  SID			  "303"
 		  Ports			  [1]
 		  Position		  [780, 187, 930, 213]
 		  NamePlacement		  "alternate"
@@ -2538,11 +2553,9 @@ Model {
 		Block {
 		  BlockType		  Outport
 		  Name			  "Outputs"
-		  SID			  304
+		  SID			  "304"
 		  Position		  [1695, 178, 1725, 192]
 		  IconDisplay		  "Port number"
-		  OutDataType		  "fixdt(1, 16)"
-		  OutScaling		  "2^0"
 		}
 		Line {
 		  Name			  "Batt_Boot_Request"
@@ -2742,7 +2755,7 @@ Model {
 	    Block {
 	      BlockType		      BusCreator
 	      Name		      "Bus\nCreator"
-	      SID		      305
+	      SID		      "305"
 	      Ports		      [2, 1]
 	      Position		      [550, 78, 560, 207]
 	      ShowName		      off
@@ -2752,7 +2765,7 @@ Model {
 	    Block {
 	      BlockType		      SubSystem
 	      Name		      "Vehicle Run/Stop Determination"
-	      SID		      158
+	      SID		      "158"
 	      Ports		      [0, 1]
 	      Position		      [300, 88, 445, 132]
 	      LibraryVersion	      "1.216"
@@ -2788,10 +2801,11 @@ Model {
 		Block {
 		  BlockType		  SubSystem
 		  Name			  "Chart"
-		  SID			  161
+		  SID			  "161"
 		  Ports			  [4, 4]
 		  Position		  [605, 213, 810, 792]
 		  LibraryVersion	  "1.234"
+		  ErrorFcn		  "Stateflow.Translate.translate"
 		  PermitHierarchicalResolution "ExplicitOnly"
 		  TreatAsAtomicUnit	  on
 		  MinAlgLoopOccurrences	  off
@@ -2803,9 +2817,9 @@ Model {
 		  MaskHideContents	  off
 		  MaskType		  "Stateflow"
 		  MaskDescription	  "Stateflow diagram"
+		  MaskSelfModifiable	  on
 		  MaskDisplay		  "plot(sf('Private','sfblk','xIcon'),sf('Private','sfblk','yIcon'));text(0.5,0,sf('Private', 'sfblk'"
 		  ", 'tIcon'),'HorizontalAl','Center','VerticalAl','Bottom');"
-		  MaskSelfModifiable	  on
 		  MaskIconFrame		  off
 		  MaskIconOpaque	  off
 		  MaskIconRotate	  "none"
@@ -2826,18 +2840,18 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    25
+		    SIDHighWatermark	    "29"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Shutdown"
-		    SID			    17
+		    SID			    "161::17"
 		    Position		    [20, 101, 40, 119]
 		    IconDisplay		    "Port number"
 		    }
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Batt_Load_Enable"
-		    SID			    18
+		    SID			    "161::18"
 		    Position		    [20, 136, 40, 154]
 		    Port		    "2"
 		    IconDisplay		    "Port number"
@@ -2845,7 +2859,7 @@ Model {
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Batt_Contactor_Status"
-		    SID			    25
+		    SID			    "161::25"
 		    Position		    [20, 171, 40, 189]
 		    Port		    "3"
 		    IconDisplay		    "Port number"
@@ -2853,7 +2867,7 @@ Model {
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Charging"
-		    SID			    19
+		    SID			    "161::19"
 		    Position		    [20, 206, 40, 224]
 		    Port		    "4"
 		    IconDisplay		    "Port number"
@@ -2861,15 +2875,15 @@ Model {
 		    Block {
 		    BlockType		    Demux
 		    Name		    " Demux "
-		    SID			    14
+		    SID			    "161::27"
 		    Ports		    [1, 1]
 		    Position		    [270, 245, 320, 285]
 		    Outputs		    "1"
 		    }
 		    Block {
-		    BlockType		    "S-Function"
+		    BlockType		    S-Function
 		    Name		    " SFunction "
-		    SID			    13
+		    SID			    "161::26"
 		    Tag			    "Stateflow S-Function DynoController_Rev1 1"
 		    Ports		    [4, 5]
 		    Position		    [180, 100, 230, 220]
@@ -2904,20 +2918,20 @@ Model {
 		    Block {
 		    BlockType		    Terminator
 		    Name		    " Terminator "
-		    SID			    16
+		    SID			    "161::29"
 		    Position		    [460, 256, 480, 274]
 		    }
 		    Block {
 		    BlockType		    Outport
 		    Name		    "Vehicle_Enable"
-		    SID			    20
+		    SID			    "161::20"
 		    Position		    [460, 101, 480, 119]
 		    IconDisplay		    "Port number"
 		    }
 		    Block {
 		    BlockType		    Outport
 		    Name		    "Vehicle_Ready"
-		    SID			    21
+		    SID			    "161::21"
 		    Position		    [460, 136, 480, 154]
 		    Port		    "2"
 		    IconDisplay		    "Port number"
@@ -2925,7 +2939,7 @@ Model {
 		    Block {
 		    BlockType		    Outport
 		    Name		    "Torque_Enable"
-		    SID			    22
+		    SID			    "161::22"
 		    Position		    [460, 171, 480, 189]
 		    Port		    "3"
 		    IconDisplay		    "Port number"
@@ -2933,31 +2947,41 @@ Model {
 		    Block {
 		    BlockType		    Outport
 		    Name		    "Keyed_Relay"
-		    SID			    24
+		    SID			    "161::24"
 		    Position		    [460, 206, 480, 224]
 		    Port		    "4"
 		    IconDisplay		    "Port number"
 		    }
 		    Line {
-		    SrcBlock		    " Demux "
+		    SrcBlock		    "Shutdown"
 		    SrcPort		    1
-		    DstBlock		    " Terminator "
+		    DstBlock		    " SFunction "
 		    DstPort		    1
 		    }
 		    Line {
-		    Name		    "Keyed_Relay"
-		    Labels		    [0, 0]
-		    SrcBlock		    " SFunction "
-		    SrcPort		    5
-		    DstBlock		    "Keyed_Relay"
-		    DstPort		    1
+		    SrcBlock		    "Batt_Load_Enable"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    2
 		    }
 		    Line {
-		    Name		    "Torque_Enable"
+		    SrcBlock		    "Batt_Contactor_Status"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    3
+		    }
+		    Line {
+		    SrcBlock		    "Charging"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    4
+		    }
+		    Line {
+		    Name		    "Vehicle_Enable"
 		    Labels		    [0, 0]
 		    SrcBlock		    " SFunction "
-		    SrcPort		    4
-		    DstBlock		    "Torque_Enable"
+		    SrcPort		    2
+		    DstBlock		    "Vehicle_Enable"
 		    DstPort		    1
 		    }
 		    Line {
@@ -2969,35 +2993,25 @@ Model {
 		    DstPort		    1
 		    }
 		    Line {
-		    Name		    "Vehicle_Enable"
+		    Name		    "Torque_Enable"
 		    Labels		    [0, 0]
 		    SrcBlock		    " SFunction "
-		    SrcPort		    2
-		    DstBlock		    "Vehicle_Enable"
+		    SrcPort		    4
+		    DstBlock		    "Torque_Enable"
 		    DstPort		    1
 		    }
 		    Line {
-		    SrcBlock		    "Charging"
-		    SrcPort		    1
-		    DstBlock		    " SFunction "
-		    DstPort		    4
+		    Name		    "Keyed_Relay"
+		    Labels		    [0, 0]
+		    SrcBlock		    " SFunction "
+		    SrcPort		    5
+		    DstBlock		    "Keyed_Relay"
+		    DstPort		    1
 		    }
 		    Line {
-		    SrcBlock		    "Batt_Contactor_Status"
+		    SrcBlock		    " Demux "
 		    SrcPort		    1
-		    DstBlock		    " SFunction "
-		    DstPort		    3
-		    }
-		    Line {
-		    SrcBlock		    "Batt_Load_Enable"
-		    SrcPort		    1
-		    DstBlock		    " SFunction "
-		    DstPort		    2
-		    }
-		    Line {
-		    SrcBlock		    "Shutdown"
-		    SrcPort		    1
-		    DstBlock		    " SFunction "
+		    DstBlock		    " Terminator "
 		    DstPort		    1
 		    }
 		    Line {
@@ -3011,30 +3025,25 @@ Model {
 		Block {
 		  BlockType		  Constant
 		  Name			  "Constant"
-		  SID			  178
+		  SID			  "178"
 		  Position		  [355, 705, 385, 735]
 		  Value			  "0"
-		  OutDataTypeMode	  "boolean"
-		  OutDataType		  "fixdt(1, 16)"
-		  OutScaling		  "2^0"
 		  OutDataTypeStr	  "boolean"
 		}
 		Block {
 		  BlockType		  Logic
 		  Name			  "Logical\nOperator1"
-		  SID			  163
+		  SID			  "163"
 		  Ports			  [2, 1]
 		  Position		  [455, 412, 485, 443]
 		  Operator		  "OR"
 		  AllPortsSameDT	  off
-		  OutDataTypeMode	  "boolean"
-		  LogicDataType		  "fixdt(0, 8)"
 		  OutDataTypeStr	  "boolean"
 		}
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_calibration1"
-		  SID			  166
+		  SID			  "166"
 		  Ports			  [0, 1]
 		  Position		  [180, 462, 385, 498]
 		  ShowName		  off
@@ -3043,7 +3052,7 @@ Model {
 		  SourceType		  "MotoHawk Calibration"
 		  nam			  "'Auto_Battery_Startup'"
 		  val			  "0"
-		  storage		  "Calibration"
+		  storage		  "Calibration NV"
 		  show_more		  off
 		  name_source		  "Use Parameter"
 		  data_type		  "Inherit from 'Default Value'"
@@ -3073,7 +3082,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_data_def1"
-		  SID			  257
+		  SID			  "257"
 		  Ports			  []
 		  Position		  [265, 20, 400, 80]
 		  ShowName		  off
@@ -3119,7 +3128,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_data_def2"
-		  SID			  258
+		  SID			  "258"
 		  Ports			  []
 		  Position		  [455, 20, 590, 80]
 		  ShowName		  off
@@ -3165,7 +3174,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_data_def3"
-		  SID			  259
+		  SID			  "259"
 		  Ports			  []
 		  Position		  [70, 20, 205, 80]
 		  ShowName		  off
@@ -3211,7 +3220,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_data_def4"
-		  SID			  309
+		  SID			  "309"
 		  Ports			  []
 		  Position		  [650, 20, 785, 80]
 		  ShowName		  off
@@ -3257,7 +3266,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_data_read"
-		  SID			  168
+		  SID			  "168"
 		  Ports			  [0, 1]
 		  Position		  [195, 389, 370, 451]
 		  ShowName		  off
@@ -3279,7 +3288,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_data_read1"
-		  SID			  169
+		  SID			  "169"
 		  Ports			  [0, 1]
 		  Position		  [195, 254, 370, 316]
 		  ShowName		  off
@@ -3301,7 +3310,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_data_read2"
-		  SID			  170
+		  SID			  "170"
 		  Ports			  [0, 1]
 		  Position		  [210, 544, 385, 606]
 		  ShowName		  off
@@ -3323,7 +3332,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_data_write"
-		  SID			  171
+		  SID			  "171"
 		  Ports			  [1]
 		  Position		  [890, 255, 1025, 315]
 		  ShowName		  off
@@ -3346,7 +3355,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_data_write1"
-		  SID			  172
+		  SID			  "172"
 		  Ports			  [1]
 		  Position		  [890, 544, 1025, 606]
 		  ShowName		  off
@@ -3369,7 +3378,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_data_write2"
-		  SID			  173
+		  SID			  "173"
 		  Ports			  [1]
 		  Position		  [890, 398, 1025, 462]
 		  ShowName		  off
@@ -3392,11 +3401,9 @@ Model {
 		Block {
 		  BlockType		  Outport
 		  Name			  "Component_Keyed"
-		  SID			  177
+		  SID			  "177"
 		  Position		  [945, 713, 975, 727]
 		  IconDisplay		  "Port number"
-		  OutDataType		  "fixdt(1, 16)"
-		  OutScaling		  "2^0"
 		}
 		Line {
 		  SrcBlock		  "motohawk_data_read2"
@@ -3459,16 +3466,17 @@ Model {
 		  DstBlock		  "Logical\nOperator1"
 		  DstPort		  2
 		}
+		Annotation {
+		  Position		  [574, 158]
+		}
 	      }
 	    }
 	    Block {
 	      BlockType		      Outport
 	      Name		      "Out1"
-	      SID		      19
+	      SID		      "19"
 	      Position		      [645, 138, 675, 152]
 	      IconDisplay	      "Port number"
-	      OutDataType	      "fixdt(1, 16)"
-	      OutScaling	      "2^0"
 	    }
 	    Line {
 	      SrcBlock		      "In1"
@@ -3503,7 +3511,7 @@ Model {
 	Block {
 	  BlockType		  SubSystem
 	  Name			  "Inputs"
-	  SID			  23
+	  SID			  "23"
 	  Ports			  [0, 1]
 	  Position		  [265, 319, 365, 361]
 	  LibraryVersion	  "1.216"
@@ -3532,7 +3540,7 @@ Model {
 	    Block {
 	      BlockType		      SubSystem
 	      Name		      "Analog Inputs"
-	      SID		      47
+	      SID		      "47"
 	      Ports		      [0, 1]
 	      Position		      [285, 159, 385, 201]
 	      LibraryVersion	      "1.216"
@@ -3546,7 +3554,7 @@ Model {
 	      Port {
 		PortNumber		1
 		Name			"Analog Inputs"
-		PropagatedSignals	"Battery Enable, Load Dump Enable, Genset Enable, Genset Load, ACC1, ACC2"
+		PropagatedSignals	"Battery Enable, Load Dump Enable, Genset Enable, Genset Load, ACC1, "
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
@@ -3568,7 +3576,7 @@ Model {
 		Block {
 		  BlockType		  BusCreator
 		  Name			  "Bus\nCreator"
-		  SID			  105
+		  SID			  "105"
 		  Ports			  [6, 1]
 		  Position		  [720, 80, 735, 1025]
 		  ShowName		  off
@@ -3576,9 +3584,19 @@ Model {
 		  DisplayOption		  "bar"
 		}
 		Block {
+		  BlockType		  Logic
+		  Name			  "Logical\nOperator"
+		  SID			  "334"
+		  Ports			  [1, 1]
+		  Position		  [645, 924, 675, 956]
+		  Operator		  "NOT"
+		  AllPortsSameDT	  off
+		  OutDataTypeStr	  "boolean"
+		}
+		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_din"
-		  SID			  99
+		  SID			  "99"
 		  Ports			  [0, 1]
 		  Position		  [130, 96, 365, 234]
 		  ShowName		  off
@@ -3603,7 +3621,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_din1"
-		  SID			  100
+		  SID			  "100"
 		  Ports			  [0, 1]
 		  Position		  [130, 251, 365, 389]
 		  ShowName		  off
@@ -3628,7 +3646,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_din2"
-		  SID			  101
+		  SID			  "101"
 		  Ports			  [0, 1]
 		  Position		  [130, 406, 365, 544]
 		  ShowName		  off
@@ -3653,7 +3671,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_din3"
-		  SID			  102
+		  SID			  "102"
 		  Ports			  [0, 1]
 		  Position		  [130, 561, 365, 699]
 		  ShowName		  off
@@ -3678,7 +3696,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_din4"
-		  SID			  103
+		  SID			  "103"
 		  Ports			  [0, 1]
 		  Position		  [130, 716, 365, 854]
 		  ShowName		  off
@@ -3703,7 +3721,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_din5"
-		  SID			  104
+		  SID			  "104"
 		  Ports			  [0, 1]
 		  Position		  [130, 871, 365, 1009]
 		  ShowName		  off
@@ -3728,7 +3746,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_override_abs1"
-		  SID			  108
+		  SID			  "108"
 		  Ports			  [1, 1]
 		  Position		  [425, 307, 575, 333]
 		  ShowName		  off
@@ -3743,6 +3761,7 @@ Model {
 		  RTWMemSecDataConstants  "Inherit from model"
 		  RTWMemSecDataInternal	  "Inherit from model"
 		  RTWMemSecDataParameters "Inherit from model"
+		  GeneratePreprocessorConditionals off
 		  parent_name		  "'LoadDumpEnable_Ovr'"
 		  parent_val		  "0"
 		  show_more		  off
@@ -3774,7 +3793,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_override_abs2"
-		  SID			  106
+		  SID			  "106"
 		  Ports			  [1, 1]
 		  Position		  [425, 152, 575, 178]
 		  ShowName		  off
@@ -3789,6 +3808,7 @@ Model {
 		  RTWMemSecDataConstants  "Inherit from model"
 		  RTWMemSecDataInternal	  "Inherit from model"
 		  RTWMemSecDataParameters "Inherit from model"
+		  GeneratePreprocessorConditionals off
 		  parent_name		  "'BatteryEnable_Ovr'"
 		  parent_val		  "0"
 		  show_more		  off
@@ -3820,7 +3840,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_override_abs3"
-		  SID			  110
+		  SID			  "110"
 		  Ports			  [1, 1]
 		  Position		  [425, 462, 575, 488]
 		  ShowName		  off
@@ -3835,6 +3855,7 @@ Model {
 		  RTWMemSecDataConstants  "Inherit from model"
 		  RTWMemSecDataInternal	  "Inherit from model"
 		  RTWMemSecDataParameters "Inherit from model"
+		  GeneratePreprocessorConditionals off
 		  parent_name		  "'GensetEnable_Ovr'"
 		  parent_val		  "0"
 		  show_more		  off
@@ -3866,7 +3887,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_override_abs4"
-		  SID			  112
+		  SID			  "112"
 		  Ports			  [1, 1]
 		  Position		  [425, 617, 575, 643]
 		  ShowName		  off
@@ -3881,6 +3902,7 @@ Model {
 		  RTWMemSecDataConstants  "Inherit from model"
 		  RTWMemSecDataInternal	  "Inherit from model"
 		  RTWMemSecDataParameters "Inherit from model"
+		  GeneratePreprocessorConditionals off
 		  parent_name		  "'GensetLoad_Ovr'"
 		  parent_val		  "0"
 		  show_more		  off
@@ -3912,7 +3934,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_override_abs5"
-		  SID			  114
+		  SID			  "114"
 		  Ports			  [1, 1]
 		  Position		  [425, 772, 575, 798]
 		  ShowName		  off
@@ -3927,6 +3949,7 @@ Model {
 		  RTWMemSecDataConstants  "Inherit from model"
 		  RTWMemSecDataInternal	  "Inherit from model"
 		  RTWMemSecDataParameters "Inherit from model"
+		  GeneratePreprocessorConditionals off
 		  parent_name		  "'ACC1_Ovr'"
 		  parent_val		  "0"
 		  show_more		  off
@@ -3958,7 +3981,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_override_abs6"
-		  SID			  116
+		  SID			  "116"
 		  Ports			  [1, 1]
 		  Position		  [425, 927, 575, 953]
 		  ShowName		  off
@@ -3973,6 +3996,7 @@ Model {
 		  RTWMemSecDataConstants  "Inherit from model"
 		  RTWMemSecDataInternal	  "Inherit from model"
 		  RTWMemSecDataParameters "Inherit from model"
+		  GeneratePreprocessorConditionals off
 		  parent_name		  "'ACC2_Ovr'"
 		  parent_val		  "0"
 		  show_more		  off
@@ -4004,7 +4028,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_probe1"
-		  SID			  109
+		  SID			  "109"
 		  Ports			  [1]
 		  Position		  [425, 277, 575, 303]
 		  ShowName		  off
@@ -4035,7 +4059,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_probe2"
-		  SID			  107
+		  SID			  "107"
 		  Ports			  [1]
 		  Position		  [425, 122, 575, 148]
 		  ShowName		  off
@@ -4066,7 +4090,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_probe3"
-		  SID			  111
+		  SID			  "111"
 		  Ports			  [1]
 		  Position		  [425, 432, 575, 458]
 		  ShowName		  off
@@ -4097,7 +4121,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_probe4"
-		  SID			  113
+		  SID			  "113"
 		  Ports			  [1]
 		  Position		  [425, 587, 575, 613]
 		  ShowName		  off
@@ -4128,7 +4152,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_probe5"
-		  SID			  115
+		  SID			  "115"
 		  Ports			  [1]
 		  Position		  [425, 742, 575, 768]
 		  ShowName		  off
@@ -4159,7 +4183,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_probe6"
-		  SID			  117
+		  SID			  "117"
 		  Ports			  [1]
 		  Position		  [425, 897, 575, 923]
 		  ShowName		  off
@@ -4190,11 +4214,9 @@ Model {
 		Block {
 		  BlockType		  Outport
 		  Name			  "Out1"
-		  SID			  48
+		  SID			  "48"
 		  Position		  [810, 548, 840, 562]
 		  IconDisplay		  "Port number"
-		  OutDataType		  "fixdt(1, 16)"
-		  OutScaling		  "2^0"
 		}
 		Line {
 		  SrcBlock		  "Bus\nCreator"
@@ -4314,8 +4336,8 @@ Model {
 		  Labels		  [0, 0]
 		  SrcBlock		  "motohawk_override_abs6"
 		  SrcPort		  1
-		  DstBlock		  "Bus\nCreator"
-		  DstPort		  6
+		  DstBlock		  "Logical\nOperator"
+		  DstPort		  1
 		}
 		Line {
 		  Name			  "ACC1"
@@ -4333,12 +4355,18 @@ Model {
 		  DstBlock		  "Bus\nCreator"
 		  DstPort		  4
 		}
+		Line {
+		  SrcBlock		  "Logical\nOperator"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  6
+		}
 	      }
 	    }
 	    Block {
 	      BlockType		      BusCreator
 	      Name		      "Bus\nCreator"
-	      SID		      49
+	      SID		      "49"
 	      Ports		      [2, 1]
 	      Position		      [535, 75, 540, 215]
 	      ShowName		      off
@@ -4348,7 +4376,7 @@ Model {
 	    Block {
 	      BlockType		      SubSystem
 	      Name		      "CAN Inputs"
-	      SID		      45
+	      SID		      "45"
 	      Ports		      [0, 1]
 	      Position		      [285, 89, 385, 131]
 	      LibraryVersion	      "1.216"
@@ -4384,7 +4412,7 @@ Model {
 		Block {
 		  BlockType		  SubSystem
 		  Name			  "BATTERY"
-		  SID			  52
+		  SID			  "52"
 		  Ports			  [0, 1]
 		  Position		  [155, 174, 255, 216]
 		  LibraryVersion	  "1.216"
@@ -4416,11 +4444,11 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "88"
+		    ZoomFactor		    "55"
 		    Block {
 		    BlockType		    BusCreator
 		    Name		    "Bus\nCreator"
-		    SID			    98
+		    SID			    "98"
 		    Ports		    [5, 1]
 		    Position		    [1225, 66, 1235, 354]
 		    ShowName		    off
@@ -4430,7 +4458,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "Read CAN Message"
-		    SID			    81
+		    SID			    "81"
 		    Ports		    [0, 11]
 		    Position		    [40, 25, 850, 495]
 		    ShowName		    off
@@ -4461,7 +4489,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "Read CAN Message1"
-		    SID			    95
+		    SID			    "95"
 		    Ports		    [0, 6]
 		    Position		    [40, 886, 845, 1244]
 		    ShowName		    off
@@ -4486,7 +4514,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "Read CAN Message3"
-		    SID			    82
+		    SID			    "82"
 		    Ports		    [0, 4]
 		    Position		    [40, 511, 845, 869]
 		    ShowName		    off
@@ -4517,7 +4545,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_override_abs1"
-		    SID			    85
+		    SID			    "85"
 		    Ports		    [1, 1]
 		    Position		    [925, 407, 1075, 433]
 		    ShowName		    off
@@ -4532,6 +4560,7 @@ Model {
 		    RTWMemSecDataConstants  "Inherit from model"
 		    RTWMemSecDataInternal   "Inherit from model"
 		    RTWMemSecDataParameters "Inherit from model"
+		    GeneratePreprocessorConditionals off
 		    parent_name		    "'StateOfCharge_Ovr'"
 		    parent_val		    "0"
 		    show_more		    off
@@ -4563,7 +4592,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_override_abs2"
-		    SID			    83
+		    SID			    "83"
 		    Ports		    [1, 1]
 		    Position		    [925, 87, 1075, 113]
 		    ShowName		    off
@@ -4578,6 +4607,7 @@ Model {
 		    RTWMemSecDataConstants  "Inherit from model"
 		    RTWMemSecDataInternal   "Inherit from model"
 		    RTWMemSecDataParameters "Inherit from model"
+		    GeneratePreprocessorConditionals off
 		    parent_name		    "'PackState_Ovr'"
 		    parent_val		    "0"
 		    show_more		    off
@@ -4609,7 +4639,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_override_abs3"
-		    SID			    87
+		    SID			    "87"
 		    Ports		    [1, 1]
 		    Position		    [925, 542, 1075, 568]
 		    ShowName		    off
@@ -4624,6 +4654,7 @@ Model {
 		    RTWMemSecDataConstants  "Inherit from model"
 		    RTWMemSecDataInternal   "Inherit from model"
 		    RTWMemSecDataParameters "Inherit from model"
+		    GeneratePreprocessorConditionals off
 		    parent_name		    "'BatteryVoltage_Ovr'"
 		    parent_val		    "0"
 		    show_more		    off
@@ -4655,7 +4686,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_override_abs4"
-		    SID			    91
+		    SID			    "91"
 		    Ports		    [1, 1]
 		    Position		    [925, 632, 1075, 658]
 		    ShowName		    off
@@ -4670,6 +4701,7 @@ Model {
 		    RTWMemSecDataConstants  "Inherit from model"
 		    RTWMemSecDataInternal   "Inherit from model"
 		    RTWMemSecDataParameters "Inherit from model"
+		    GeneratePreprocessorConditionals off
 		    parent_name		    "'BatteryCurrent_Ovr'"
 		    parent_val		    "0"
 		    show_more		    off
@@ -4701,7 +4733,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_override_abs5"
-		    SID			    96
+		    SID			    "96"
 		    Ports		    [1, 1]
 		    Position		    [925, 1022, 1075, 1048]
 		    ShowName		    off
@@ -4716,6 +4748,7 @@ Model {
 		    RTWMemSecDataConstants  "Inherit from model"
 		    RTWMemSecDataInternal   "Inherit from model"
 		    RTWMemSecDataParameters "Inherit from model"
+		    GeneratePreprocessorConditionals off
 		    parent_name		    "'MaxCellTemperature_Ovr'"
 		    parent_val		    "0"
 		    show_more		    off
@@ -4747,7 +4780,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_probe1"
-		    SID			    86
+		    SID			    "86"
 		    Ports		    [1]
 		    Position		    [925, 377, 1075, 403]
 		    ShowName		    off
@@ -4778,7 +4811,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_probe2"
-		    SID			    84
+		    SID			    "84"
 		    Ports		    [1]
 		    Position		    [925, 57, 1075, 83]
 		    ShowName		    off
@@ -4809,7 +4842,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_probe3"
-		    SID			    88
+		    SID			    "88"
 		    Ports		    [1]
 		    Position		    [925, 512, 1075, 538]
 		    ShowName		    off
@@ -4840,7 +4873,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_probe4"
-		    SID			    92
+		    SID			    "92"
 		    Ports		    [1]
 		    Position		    [925, 602, 1075, 628]
 		    ShowName		    off
@@ -4871,7 +4904,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_probe5"
-		    SID			    97
+		    SID			    "97"
 		    Ports		    [1]
 		    Position		    [925, 992, 1075, 1018]
 		    ShowName		    off
@@ -4902,11 +4935,9 @@ Model {
 		    Block {
 		    BlockType		    Outport
 		    Name		    "Out1"
-		    SID			    53
+		    SID			    "53"
 		    Position		    [1270, 203, 1300, 217]
 		    IconDisplay		    "Port number"
-		    OutDataType		    "fixdt(1, 16)"
-		    OutScaling		    "2^0"
 		    }
 		    Line {
 		    Name		    "PackState"
@@ -5033,12 +5064,16 @@ Model {
 		    DstBlock		    "Out1"
 		    DstPort		    1
 		    }
+		    Annotation {
+		    Name		    " "
+		    Position		    [9, 386]
+		    }
 		  }
 		}
 		Block {
 		  BlockType		  BusCreator
 		  Name			  "Bus\nCreator"
-		  SID			  54
+		  SID			  "54"
 		  Ports			  [2, 1]
 		  Position		  [385, 90, 390, 230]
 		  ShowName		  off
@@ -5048,7 +5083,7 @@ Model {
 		Block {
 		  BlockType		  SubSystem
 		  Name			  "DYNO"
-		  SID			  50
+		  SID			  "50"
 		  Ports			  [0, 1]
 		  Position		  [155, 104, 255, 146]
 		  LibraryVersion	  "1.216"
@@ -5084,7 +5119,7 @@ Model {
 		    Block {
 		    BlockType		    BusCreator
 		    Name		    "Bus\nCreator"
-		    SID			    80
+		    SID			    "80"
 		    Ports		    [7, 1]
 		    Position		    [1210, 49, 1230, 511]
 		    ShowName		    off
@@ -5094,7 +5129,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "Read CAN Message"
-		    SID			    65
+		    SID			    "65"
 		    Ports		    [0, 7]
 		    Position		    [25, 45, 835, 515]
 		    ShowName		    off
@@ -5113,7 +5148,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_override_abs1"
-		    SID			    66
+		    SID			    "66"
 		    Ports		    [1, 1]
 		    Position		    [910, 137, 1060, 163]
 		    ShowName		    off
@@ -5128,6 +5163,7 @@ Model {
 		    RTWMemSecDataConstants  "Inherit from model"
 		    RTWMemSecDataInternal   "Inherit from model"
 		    RTWMemSecDataParameters "Inherit from model"
+		    GeneratePreprocessorConditionals off
 		    parent_name		    "'Oil_Pressure_Ovr'"
 		    parent_val		    "0"
 		    show_more		    off
@@ -5159,7 +5195,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_override_abs2"
-		    SID			    67
+		    SID			    "67"
 		    Ports		    [1, 1]
 		    Position		    [910, 72, 1060, 98]
 		    ShowName		    off
@@ -5174,6 +5210,7 @@ Model {
 		    RTWMemSecDataConstants  "Inherit from model"
 		    RTWMemSecDataInternal   "Inherit from model"
 		    RTWMemSecDataParameters "Inherit from model"
+		    GeneratePreprocessorConditionals off
 		    parent_name		    "'RPM_Ovr'"
 		    parent_val		    "0"
 		    show_more		    off
@@ -5205,7 +5242,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_override_abs3"
-		    SID			    68
+		    SID			    "68"
 		    Ports		    [1, 1]
 		    Position		    [910, 202, 1060, 228]
 		    ShowName		    off
@@ -5220,6 +5257,7 @@ Model {
 		    RTWMemSecDataConstants  "Inherit from model"
 		    RTWMemSecDataInternal   "Inherit from model"
 		    RTWMemSecDataParameters "Inherit from model"
+		    GeneratePreprocessorConditionals off
 		    parent_name		    "'Temp_Guage_Ovr'"
 		    parent_val		    "0"
 		    show_more		    off
@@ -5251,7 +5289,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_override_abs4"
-		    SID			    69
+		    SID			    "69"
 		    Ports		    [1, 1]
 		    Position		    [910, 267, 1060, 293]
 		    ShowName		    off
@@ -5266,6 +5304,7 @@ Model {
 		    RTWMemSecDataConstants  "Inherit from model"
 		    RTWMemSecDataInternal   "Inherit from model"
 		    RTWMemSecDataParameters "Inherit from model"
+		    GeneratePreprocessorConditionals off
 		    parent_name		    "'Engine_Crank_Ovr'"
 		    parent_val		    "0"
 		    show_more		    off
@@ -5297,7 +5336,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_override_abs5"
-		    SID			    70
+		    SID			    "70"
 		    Ports		    [1, 1]
 		    Position		    [910, 332, 1060, 358]
 		    ShowName		    off
@@ -5312,6 +5351,7 @@ Model {
 		    RTWMemSecDataConstants  "Inherit from model"
 		    RTWMemSecDataInternal   "Inherit from model"
 		    RTWMemSecDataParameters "Inherit from model"
+		    GeneratePreprocessorConditionals off
 		    parent_name		    "'Engine_On_Ovr'"
 		    parent_val		    "0"
 		    show_more		    off
@@ -5343,7 +5383,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_override_abs6"
-		    SID			    71
+		    SID			    "71"
 		    Ports		    [1, 1]
 		    Position		    [910, 397, 1060, 423]
 		    ShowName		    off
@@ -5358,6 +5398,7 @@ Model {
 		    RTWMemSecDataConstants  "Inherit from model"
 		    RTWMemSecDataInternal   "Inherit from model"
 		    RTWMemSecDataParameters "Inherit from model"
+		    GeneratePreprocessorConditionals off
 		    parent_name		    "'Load_On_Ovr'"
 		    parent_val		    "0"
 		    show_more		    off
@@ -5389,7 +5430,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_override_abs7"
-		    SID			    72
+		    SID			    "72"
 		    Ports		    [1, 1]
 		    Position		    [910, 462, 1060, 488]
 		    ShowName		    off
@@ -5404,6 +5445,7 @@ Model {
 		    RTWMemSecDataConstants  "Inherit from model"
 		    RTWMemSecDataInternal   "Inherit from model"
 		    RTWMemSecDataParameters "Inherit from model"
+		    GeneratePreprocessorConditionals off
 		    parent_name		    "'Fault_Ovr'"
 		    parent_val		    "0"
 		    show_more		    off
@@ -5435,7 +5477,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_probe1"
-		    SID			    73
+		    SID			    "73"
 		    Ports		    [1]
 		    Position		    [910, 107, 1060, 133]
 		    ShowName		    off
@@ -5466,7 +5508,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_probe2"
-		    SID			    74
+		    SID			    "74"
 		    Ports		    [1]
 		    Position		    [910, 42, 1060, 68]
 		    ShowName		    off
@@ -5497,7 +5539,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_probe3"
-		    SID			    75
+		    SID			    "75"
 		    Ports		    [1]
 		    Position		    [910, 172, 1060, 198]
 		    ShowName		    off
@@ -5528,7 +5570,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_probe4"
-		    SID			    76
+		    SID			    "76"
 		    Ports		    [1]
 		    Position		    [910, 237, 1060, 263]
 		    ShowName		    off
@@ -5559,7 +5601,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_probe5"
-		    SID			    77
+		    SID			    "77"
 		    Ports		    [1]
 		    Position		    [910, 302, 1060, 328]
 		    ShowName		    off
@@ -5590,7 +5632,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_probe6"
-		    SID			    78
+		    SID			    "78"
 		    Ports		    [1]
 		    Position		    [910, 367, 1060, 393]
 		    ShowName		    off
@@ -5621,7 +5663,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_probe7"
-		    SID			    79
+		    SID			    "79"
 		    Ports		    [1]
 		    Position		    [910, 432, 1060, 458]
 		    ShowName		    off
@@ -5652,11 +5694,9 @@ Model {
 		    Block {
 		    BlockType		    Outport
 		    Name		    "Out1"
-		    SID			    51
+		    SID			    "51"
 		    Position		    [1310, 273, 1340, 287]
 		    IconDisplay		    "Port number"
-		    OutDataType		    "fixdt(1, 16)"
-		    OutScaling		    "2^0"
 		    }
 		    Line {
 		    SrcBlock		    "Read CAN Message"
@@ -5818,11 +5858,9 @@ Model {
 		Block {
 		  BlockType		  Outport
 		  Name			  "Out1"
-		  SID			  46
+		  SID			  "46"
 		  Position		  [520, 153, 550, 167]
 		  IconDisplay		  "Port number"
-		  OutDataType		  "fixdt(1, 16)"
-		  OutScaling		  "2^0"
 		}
 		Line {
 		  Name			  "BATTERY"
@@ -5851,11 +5889,9 @@ Model {
 	    Block {
 	      BlockType		      Outport
 	      Name		      "Out1"
-	      SID		      25
+	      SID		      "25"
 	      Position		      [650, 138, 680, 152]
 	      IconDisplay	      "Port number"
-	      OutDataType	      "fixdt(1, 16)"
-	      OutScaling	      "2^0"
 	    }
 	    Line {
 	      Name		      "Analog Inputs"
@@ -5884,7 +5920,7 @@ Model {
 	Block {
 	  BlockType		  SubSystem
 	  Name			  "Outputs"
-	  SID			  20
+	  SID			  "20"
 	  Ports			  [2]
 	  Position		  [615, 320, 720, 395]
 	  LibraryVersion	  "1.216"
@@ -5913,28 +5949,24 @@ Model {
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Control Inputs"
-	      SID		      21
-	      Position		      [110, 103, 140, 117]
+	      SID		      "21"
+	      Position		      [110, 203, 140, 217]
 	      IconDisplay	      "Port number"
-	      OutDataType	      "fixdt(1, 16)"
-	      OutScaling	      "2^0"
 	    }
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Sensor Inputs"
-	      SID		      26
-	      Position		      [110, 138, 140, 152]
+	      SID		      "26"
+	      Position		      [110, 238, 140, 252]
 	      Port		      "2"
 	      IconDisplay	      "Port number"
-	      OutDataType	      "fixdt(1, 16)"
-	      OutScaling	      "2^0"
 	    }
 	    Block {
 	      BlockType		      SubSystem
 	      Name		      "Analog Outputs"
-	      SID		      35
+	      SID		      "35"
 	      Ports		      [2]
-	      Position		      [285, 210, 390, 285]
+	      Position		      [285, 310, 390, 385]
 	      LibraryVersion	      "1.216"
 	      MinAlgLoopOccurrences   off
 	      PropExecContextOutsideSubsystem off
@@ -5961,26 +5993,22 @@ Model {
 		Block {
 		  BlockType		  Inport
 		  Name			  "Control Inputs"
-		  SID			  36
+		  SID			  "36"
 		  Position		  [110, 33, 140, 47]
 		  IconDisplay		  "Port number"
-		  OutDataType		  "fixdt(1, 16)"
-		  OutScaling		  "2^0"
 		}
 		Block {
 		  BlockType		  Inport
 		  Name			  "Sensor Inputs"
-		  SID			  37
+		  SID			  "37"
 		  Position		  [110, 118, 140, 132]
 		  Port			  "2"
 		  IconDisplay		  "Port number"
-		  OutDataType		  "fixdt(1, 16)"
-		  OutScaling		  "2^0"
 		}
 		Block {
 		  BlockType		  BusSelector
 		  Name			  "Bus\nSelector"
-		  SID			  221
+		  SID			  "221"
 		  Ports			  [1, 1]
 		  Position		  [305, 137, 310, 173]
 		  ShowName		  off
@@ -5995,7 +6023,7 @@ Model {
 		Block {
 		  BlockType		  BusSelector
 		  Name			  "Bus\nSelector1"
-		  SID			  248
+		  SID			  "248"
 		  Ports			  [1, 1]
 		  Position		  [325, 316, 330, 354]
 		  ShowName		  off
@@ -6010,7 +6038,7 @@ Model {
 		Block {
 		  BlockType		  BusSelector
 		  Name			  "Bus\nSelector2"
-		  SID			  250
+		  SID			  "250"
 		  Ports			  [1, 1]
 		  Position		  [325, 231, 330, 269]
 		  ShowName		  off
@@ -6025,7 +6053,7 @@ Model {
 		Block {
 		  BlockType		  BusSelector
 		  Name			  "Bus\nSelector3"
-		  SID			  254
+		  SID			  "254"
 		  Ports			  [1, 1]
 		  Position		  [325, 586, 330, 624]
 		  ShowName		  off
@@ -6040,7 +6068,7 @@ Model {
 		Block {
 		  BlockType		  BusSelector
 		  Name			  "Bus\nSelector4"
-		  SID			  308
+		  SID			  "308"
 		  Ports			  [1, 1]
 		  Position		  [305, 92, 310, 128]
 		  ShowName		  off
@@ -6055,94 +6083,76 @@ Model {
 		Block {
 		  BlockType		  Constant
 		  Name			  "Constant1"
-		  SID			  251
+		  SID			  "251"
 		  Position		  [365, 335, 395, 365]
 		  Value			  "4"
-		  OutDataType		  "fixdt(1, 16)"
-		  OutScaling		  "2^0"
 		}
 		Block {
 		  BlockType		  Constant
 		  Name			  "Constant2"
-		  SID			  255
+		  SID			  "255"
 		  Position		  [570, 670, 600, 700]
 		  Value			  "0"
-		  OutDataTypeMode	  "boolean"
-		  OutDataType		  "fixdt(1, 16)"
-		  OutScaling		  "2^0"
 		  OutDataTypeStr	  "boolean"
 		}
 		Block {
 		  BlockType		  Constant
 		  Name			  "Constant3"
-		  SID			  256
+		  SID			  "256"
 		  Position		  [570, 755, 600, 785]
 		  Value			  "0"
-		  OutDataTypeMode	  "boolean"
-		  OutDataType		  "fixdt(1, 16)"
-		  OutScaling		  "2^0"
 		  OutDataTypeStr	  "boolean"
 		}
 		Block {
 		  BlockType		  Logic
 		  Name			  "Logical\nOperator"
-		  SID			  241
+		  SID			  "241"
 		  Ports			  [2, 1]
 		  Position		  [510, 102, 540, 133]
 		  AllPortsSameDT	  off
-		  OutDataTypeMode	  "boolean"
-		  LogicDataType		  "fixdt(0, 8)"
 		  OutDataTypeStr	  "boolean"
 		}
 		Block {
 		  BlockType		  Logic
 		  Name			  "Logical\nOperator1"
-		  SID			  249
+		  SID			  "249"
 		  Ports			  [2, 1]
 		  Position		  [570, 112, 600, 143]
 		  AllPortsSameDT	  off
-		  OutDataTypeMode	  "boolean"
-		  LogicDataType		  "fixdt(0, 8)"
 		  OutDataTypeStr	  "boolean"
 		}
 		Block {
 		  BlockType		  Logic
 		  Name			  "Logical\nOperator2"
-		  SID			  253
+		  SID			  "253"
 		  Ports			  [2, 1]
 		  Position		  [570, 582, 600, 613]
 		  AllPortsSameDT	  off
-		  OutDataTypeMode	  "boolean"
-		  LogicDataType		  "fixdt(0, 8)"
 		  OutDataTypeStr	  "boolean"
 		}
 		Block {
 		  BlockType		  RelationalOperator
 		  Name			  "Relational\nOperator1"
-		  SID			  240
+		  SID			  "240"
 		  Ports			  [2, 1]
 		  Position		  [445, 147, 475, 178]
 		  InputSameDT		  off
-		  LogicOutDataTypeMode	  "boolean"
-		  LogicDataType		  "fixdt(0, 8)"
 		  OutDataTypeStr	  "boolean"
 		}
 		Block {
 		  BlockType		  RelationalOperator
 		  Name			  "Relational\nOperator2"
-		  SID			  252
+		  SID			  "252"
 		  Ports			  [2, 1]
 		  Position		  [425, 327, 455, 358]
 		  Operator		  "<="
 		  InputSameDT		  off
-		  LogicOutDataTypeMode	  "boolean"
-		  LogicDataType		  "fixdt(0, 8)"
 		  OutDataTypeStr	  "boolean"
 		}
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_calibration"
-		  SID			  242
+		  SID			  "242"
 		  Ports			  [0, 1]
 		  Position		  [250, 185, 400, 225]
 		  ShowName		  off
@@ -6151,7 +6161,7 @@ Model {
 		  SourceType		  "MotoHawk Calibration"
 		  nam			  "'SOC_Load_Dump'"
 		  val			  "20"
-		  storage		  "Calibration"
+		  storage		  "Calibration NV"
 		  show_more		  off
 		  name_source		  "Use Parameter"
 		  data_type		  "Inherit from 'Default Value'"
@@ -6181,19 +6191,16 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_dout"
-		  SID			  213
+		  SID			  "213"
 		  Ports			  [1]
 		  Position		  [835, 83, 1040, 157]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Digital I//O Blocks/motohawk_dout"
 		  SourceType		  "MotoHawk Discrete Output"
+		  resource_name		  "[]"
 		  text_resource		  "FUEL 1"
-		  code_resource		  "NONE"
-		  val_resource		  "-1"
 		  target		  "ECU555-48-0708"
-		  resource_enum_str	  "(None)=-1,FUELP=0,LIAC=7,HORN=8,SPARE=9,FUEL 1=12,FUEL 2=13,FUEL 3=14,FUEL 4=15,TACH=24,EST 1"
-		  "=36,MPRD=52"
 		  use_diag		  off
 		  use_vardec		  on
 		  nam			  "'COIL_Pos'"
@@ -6204,19 +6211,16 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_dout1"
-		  SID			  214
+		  SID			  "214"
 		  Ports			  [1]
 		  Position		  [835, 168, 1040, 242]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Digital I//O Blocks/motohawk_dout"
 		  SourceType		  "MotoHawk Discrete Output"
+		  resource_name		  "[]"
 		  text_resource		  "FUEL 2"
-		  code_resource		  "NONE"
-		  val_resource		  "-1"
 		  target		  "ECU555-48-0708"
-		  resource_enum_str	  "(None)=-1,FUELP=0,LIAC=7,HORN=8,SPARE=9,FUEL 1=12,FUEL 2=13,FUEL 3=14,FUEL 4=15,TACH=24,EST 1"
-		  "=36,MPRD=52"
 		  use_diag		  off
 		  use_vardec		  on
 		  nam			  "'COIL_Neg'"
@@ -6227,19 +6231,16 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_dout2"
-		  SID			  215
+		  SID			  "215"
 		  Ports			  [1]
 		  Position		  [835, 308, 1040, 382]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Digital I//O Blocks/motohawk_dout"
 		  SourceType		  "MotoHawk Discrete Output"
+		  resource_name		  "[]"
 		  text_resource		  "FUEL 3"
-		  code_resource		  "NONE"
-		  val_resource		  "-1"
 		  target		  "ECU555-48-0708"
-		  resource_enum_str	  "(None)=-1,FUELP=0,LIAC=7,HORN=8,SPARE=9,FUEL 1=12,FUEL 2=13,FUEL 3=14,FUEL 4=15,TACH=24,EST 1"
-		  "=36,MPRD=52"
 		  use_diag		  off
 		  use_vardec		  on
 		  nam			  "'Battery_Enable'"
@@ -6250,19 +6251,16 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_dout3"
-		  SID			  216
+		  SID			  "216"
 		  Ports			  [1]
 		  Position		  [835, 393, 1040, 467]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Digital I//O Blocks/motohawk_dout"
 		  SourceType		  "MotoHawk Discrete Output"
+		  resource_name		  "[]"
 		  text_resource		  "FUEL 4"
-		  code_resource		  "NONE"
-		  val_resource		  "-1"
 		  target		  "ECU555-48-0708"
-		  resource_enum_str	  "(None)=-1,FUELP=0,LIAC=7,HORN=8,SPARE=9,FUEL 1=12,FUEL 2=13,FUEL 3=14,FUEL 4=15,TACH=24,EST 1"
-		  "=36,MPRD=52"
 		  use_diag		  off
 		  use_vardec		  on
 		  nam			  "'Load_Dump_Enable'"
@@ -6273,19 +6271,16 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_dout4"
-		  SID			  217
+		  SID			  "217"
 		  Ports			  [1]
 		  Position		  [835, 478, 1040, 552]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Digital I//O Blocks/motohawk_dout"
 		  SourceType		  "MotoHawk Discrete Output"
+		  resource_name		  "[]"
 		  text_resource		  "SPARE"
-		  code_resource		  "NONE"
-		  val_resource		  "-1"
 		  target		  "ECU555-48-0708"
-		  resource_enum_str	  "(None)=-1,FUELP=0,LIAC=7,HORN=8,SPARE=9,FUEL 1=12,FUEL 2=13,FUEL 3=14,FUEL 4=15,TACH=24,EST 1"
-		  "=36,MPRD=52"
 		  use_diag		  off
 		  use_vardec		  on
 		  nam			  "'Genset_Enable'"
@@ -6296,19 +6291,16 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_dout5"
-		  SID			  218
+		  SID			  "218"
 		  Ports			  [1]
 		  Position		  [835, 563, 1040, 637]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Digital I//O Blocks/motohawk_dout"
 		  SourceType		  "MotoHawk Discrete Output"
+		  resource_name		  "[]"
 		  text_resource		  "FUELP"
-		  code_resource		  "NONE"
-		  val_resource		  "-1"
 		  target		  "ECU555-48-0708"
-		  resource_enum_str	  "(None)=-1,FUELP=0,LIAC=7,HORN=8,SPARE=9,FUEL 1=12,FUEL 2=13,FUEL 3=14,FUEL 4=15,TACH=24,EST 1"
-		  "=36,MPRD=52"
 		  use_diag		  off
 		  use_vardec		  on
 		  nam			  "'Genset_Load'"
@@ -6319,19 +6311,16 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_dout6"
-		  SID			  219
+		  SID			  "219"
 		  Ports			  [1]
 		  Position		  [835, 648, 1040, 722]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Digital I//O Blocks/motohawk_dout"
 		  SourceType		  "MotoHawk Discrete Output"
+		  resource_name		  "[]"
 		  text_resource		  "HORN"
-		  code_resource		  "NONE"
-		  val_resource		  "-1"
 		  target		  "ECU555-48-0708"
-		  resource_enum_str	  "(None)=-1,FUELP=0,LIAC=7,HORN=8,SPARE=9,FUEL 1=12,FUEL 2=13,FUEL 3=14,FUEL 4=15,TACH=24,EST 1"
-		  "=36,MPRD=52"
 		  use_diag		  off
 		  use_vardec		  on
 		  nam			  "'ACC1_Out'"
@@ -6342,19 +6331,16 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_dout7"
-		  SID			  220
+		  SID			  "220"
 		  Ports			  [1]
 		  Position		  [835, 733, 1040, 807]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Digital I//O Blocks/motohawk_dout"
 		  SourceType		  "MotoHawk Discrete Output"
+		  resource_name		  "[]"
 		  text_resource		  "LIAC"
-		  code_resource		  "NONE"
-		  val_resource		  "-1"
 		  target		  "ECU555-48-0708"
-		  resource_enum_str	  "(None)=-1,FUELP=0,LIAC=7,HORN=8,SPARE=9,FUEL 1=12,FUEL 2=13,FUEL 3=14,FUEL 4=15,TACH=24,EST 1"
-		  "=36,MPRD=52"
 		  use_diag		  off
 		  use_vardec		  on
 		  nam			  "'ACC2_Out'"
@@ -6365,7 +6351,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_override_abs1"
-		  SID			  224
+		  SID			  "224"
 		  Ports			  [1, 1]
 		  Position		  [635, 192, 785, 218]
 		  ShowName		  off
@@ -6380,6 +6366,7 @@ Model {
 		  RTWMemSecDataConstants  "Inherit from model"
 		  RTWMemSecDataInternal	  "Inherit from model"
 		  RTWMemSecDataParameters "Inherit from model"
+		  GeneratePreprocessorConditionals off
 		  parent_name		  "'Coil_Neg_Ovr'"
 		  parent_val		  "0"
 		  show_more		  off
@@ -6405,7 +6392,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_override_abs2"
-		  SID			  222
+		  SID			  "222"
 		  Ports			  [1, 1]
 		  Position		  [635, 107, 785, 133]
 		  ShowName		  off
@@ -6420,6 +6407,7 @@ Model {
 		  RTWMemSecDataConstants  "Inherit from model"
 		  RTWMemSecDataInternal	  "Inherit from model"
 		  RTWMemSecDataParameters "Inherit from model"
+		  GeneratePreprocessorConditionals off
 		  parent_name		  "'Coil_Pos_Ovr'"
 		  parent_val		  "0"
 		  show_more		  off
@@ -6445,7 +6433,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_override_abs3"
-		  SID			  226
+		  SID			  "226"
 		  Ports			  [1, 1]
 		  Position		  [635, 332, 785, 358]
 		  ShowName		  off
@@ -6460,6 +6448,7 @@ Model {
 		  RTWMemSecDataConstants  "Inherit from model"
 		  RTWMemSecDataInternal	  "Inherit from model"
 		  RTWMemSecDataParameters "Inherit from model"
+		  GeneratePreprocessorConditionals off
 		  parent_name		  "'Battery_Enable_Light_Ovr'"
 		  parent_val		  "0"
 		  show_more		  off
@@ -6485,7 +6474,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_override_abs4"
-		  SID			  228
+		  SID			  "228"
 		  Ports			  [1, 1]
 		  Position		  [635, 417, 785, 443]
 		  ShowName		  off
@@ -6500,6 +6489,7 @@ Model {
 		  RTWMemSecDataConstants  "Inherit from model"
 		  RTWMemSecDataInternal	  "Inherit from model"
 		  RTWMemSecDataParameters "Inherit from model"
+		  GeneratePreprocessorConditionals off
 		  parent_name		  "'Load_Dump_Enable_Light_Ovr'"
 		  parent_val		  "0"
 		  show_more		  off
@@ -6525,7 +6515,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_override_abs5"
-		  SID			  230
+		  SID			  "230"
 		  Ports			  [1, 1]
 		  Position		  [635, 502, 785, 528]
 		  ShowName		  off
@@ -6540,6 +6530,7 @@ Model {
 		  RTWMemSecDataConstants  "Inherit from model"
 		  RTWMemSecDataInternal	  "Inherit from model"
 		  RTWMemSecDataParameters "Inherit from model"
+		  GeneratePreprocessorConditionals off
 		  parent_name		  "'Genset_Enable_Light_Ovr'"
 		  parent_val		  "0"
 		  show_more		  off
@@ -6565,7 +6556,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_override_abs6"
-		  SID			  232
+		  SID			  "232"
 		  Ports			  [1, 1]
 		  Position		  [635, 587, 785, 613]
 		  ShowName		  off
@@ -6580,6 +6571,7 @@ Model {
 		  RTWMemSecDataConstants  "Inherit from model"
 		  RTWMemSecDataInternal	  "Inherit from model"
 		  RTWMemSecDataParameters "Inherit from model"
+		  GeneratePreprocessorConditionals off
 		  parent_name		  "'Genset_Load_Light_Ovr'"
 		  parent_val		  "0"
 		  show_more		  off
@@ -6605,7 +6597,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_override_abs7"
-		  SID			  234
+		  SID			  "234"
 		  Ports			  [1, 1]
 		  Position		  [635, 672, 785, 698]
 		  ShowName		  off
@@ -6620,6 +6612,7 @@ Model {
 		  RTWMemSecDataConstants  "Inherit from model"
 		  RTWMemSecDataInternal	  "Inherit from model"
 		  RTWMemSecDataParameters "Inherit from model"
+		  GeneratePreprocessorConditionals off
 		  parent_name		  "'ACC1_Light_Ovr'"
 		  parent_val		  "0"
 		  show_more		  off
@@ -6645,7 +6638,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_override_abs8"
-		  SID			  236
+		  SID			  "236"
 		  Ports			  [1, 1]
 		  Position		  [635, 757, 785, 783]
 		  ShowName		  off
@@ -6660,6 +6653,7 @@ Model {
 		  RTWMemSecDataConstants  "Inherit from model"
 		  RTWMemSecDataInternal	  "Inherit from model"
 		  RTWMemSecDataParameters "Inherit from model"
+		  GeneratePreprocessorConditionals off
 		  parent_name		  "'ACC2_Light_Ovr'"
 		  parent_val		  "0"
 		  show_more		  off
@@ -6685,7 +6679,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_probe1"
-		  SID			  225
+		  SID			  "225"
 		  Ports			  [1]
 		  Position		  [635, 162, 785, 188]
 		  ShowName		  off
@@ -6716,7 +6710,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_probe2"
-		  SID			  223
+		  SID			  "223"
 		  Ports			  [1]
 		  Position		  [635, 77, 785, 103]
 		  ShowName		  off
@@ -6747,7 +6741,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_probe3"
-		  SID			  227
+		  SID			  "227"
 		  Ports			  [1]
 		  Position		  [635, 302, 785, 328]
 		  ShowName		  off
@@ -6778,7 +6772,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_probe4"
-		  SID			  229
+		  SID			  "229"
 		  Ports			  [1]
 		  Position		  [635, 387, 785, 413]
 		  ShowName		  off
@@ -6809,7 +6803,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_probe5"
-		  SID			  231
+		  SID			  "231"
 		  Ports			  [1]
 		  Position		  [635, 472, 785, 498]
 		  ShowName		  off
@@ -6840,7 +6834,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_probe6"
-		  SID			  233
+		  SID			  "233"
 		  Ports			  [1]
 		  Position		  [635, 557, 785, 583]
 		  ShowName		  off
@@ -6871,7 +6865,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_probe7"
-		  SID			  235
+		  SID			  "235"
 		  Ports			  [1]
 		  Position		  [635, 642, 785, 668]
 		  ShowName		  off
@@ -6902,7 +6896,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_probe8"
-		  SID			  237
+		  SID			  "237"
 		  Ports			  [1]
 		  Position		  [635, 727, 785, 753]
 		  ShowName		  off
@@ -7206,9 +7200,9 @@ Model {
 	    Block {
 	      BlockType		      SubSystem
 	      Name		      "CAN Outputs"
-	      SID		      40
+	      SID		      "40"
 	      Ports		      [2]
-	      Position		      [285, 330, 390, 405]
+	      Position		      [285, 430, 390, 505]
 	      LibraryVersion	      "1.216"
 	      MinAlgLoopOccurrences   off
 	      PropExecContextOutsideSubsystem off
@@ -7235,26 +7229,22 @@ Model {
 		Block {
 		  BlockType		  Inport
 		  Name			  "Control Inputs"
-		  SID			  41
+		  SID			  "41"
 		  Position		  [110, 103, 140, 117]
 		  IconDisplay		  "Port number"
-		  OutDataType		  "fixdt(1, 16)"
-		  OutScaling		  "2^0"
 		}
 		Block {
 		  BlockType		  Inport
 		  Name			  "Sensor Inputs"
-		  SID			  42
+		  SID			  "42"
 		  Position		  [110, 138, 140, 152]
 		  Port			  "2"
 		  IconDisplay		  "Port number"
-		  OutDataType		  "fixdt(1, 16)"
-		  OutScaling		  "2^0"
 		}
 		Block {
 		  BlockType		  SubSystem
 		  Name			  "BATTERY OUT"
-		  SID			  60
+		  SID			  "60"
 		  Ports			  [2]
 		  Position		  [305, 215, 410, 290]
 		  LibraryVersion	  "1.216"
@@ -7279,30 +7269,26 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "100"
+		    ZoomFactor		    "106"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Control Inputs"
-		    SID			    61
+		    SID			    "61"
 		    Position		    [110, 103, 140, 117]
 		    IconDisplay		    "Port number"
-		    OutDataType		    "fixdt(1, 16)"
-		    OutScaling		    "2^0"
 		    }
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Sensor Inputs"
-		    SID			    62
+		    SID			    "62"
 		    Position		    [110, 148, 140, 162]
 		    Port		    "2"
 		    IconDisplay		    "Port number"
-		    OutDataType		    "fixdt(1, 16)"
-		    OutScaling		    "2^0"
 		    }
 		    Block {
 		    BlockType		    BusSelector
 		    Name		    "Bus\nSelector"
-		    SID			    180
+		    SID			    "180"
 		    Ports		    [1, 1]
 		    Position		    [295, 136, 300, 174]
 		    ShowName		    off
@@ -7317,14 +7303,14 @@ Model {
 		    Block {
 		    BlockType		    BusSelector
 		    Name		    "Bus\nSelector1"
-		    SID			    307
+		    SID			    "307"
 		    Ports		    [1, 1]
 		    Position		    [295, 91, 300, 129]
 		    ShowName		    off
-		    OutputSignals	    "Battery.Batt_Load_Enable"
+		    OutputSignals	    "Battery.Batt_Boot_Request"
 		    Port {
 		    PortNumber		    1
-		    Name		    "<Batt_Load_Enable>"
+		    Name		    "<Batt_Boot_Request>"
 		    RTWStorageClass	    "Auto"
 		    DataLoggingNameMode	    "SignalName"
 		    }
@@ -7332,11 +7318,9 @@ Model {
 		    Block {
 		    BlockType		    Constant
 		    Name		    "Constant"
-		    SID			    181
+		    SID			    "181"
 		    Position		    [250, 420, 305, 450]
 		    Value		    "10000"
-		    OutDataType		    "fixdt(1, 16)"
-		    OutScaling		    "2^0"
 		    Port {
 		    PortNumber		    1
 		    Name		    "OdometerValue"
@@ -7347,11 +7331,9 @@ Model {
 		    Block {
 		    BlockType		    Constant
 		    Name		    "Constant1"
-		    SID			    182
+		    SID			    "182"
 		    Position		    [250, 510, 305, 540]
 		    Value		    "10000"
-		    OutDataType		    "fixdt(1, 16)"
-		    OutScaling		    "2^0"
 		    Port {
 		    PortNumber		    1
 		    Name		    "EC_RollingCounter"
@@ -7362,14 +7344,12 @@ Model {
 		    Block {
 		    BlockType		    Logic
 		    Name		    "Logical\nOperator"
-		    SID			    184
+		    SID			    "184"
 		    Ports		    [1, 1]
 		    Position		    [400, 239, 430, 271]
 		    ShowName		    off
 		    Operator		    "NOT"
 		    AllPortsSameDT	    off
-		    OutDataTypeMode	    "boolean"
-		    LogicDataType	    "fixdt(0, 8)"
 		    OutDataTypeStr	    "boolean"
 		    Port {
 		    PortNumber		    1
@@ -7381,14 +7361,12 @@ Model {
 		    Block {
 		    BlockType		    Logic
 		    Name		    "Logical\nOperator1"
-		    SID			    185
+		    SID			    "185"
 		    Ports		    [1, 1]
 		    Position		    [400, 329, 430, 361]
 		    ShowName		    off
 		    Operator		    "NOT"
 		    AllPortsSameDT	    off
-		    OutDataTypeMode	    "boolean"
-		    LogicDataType	    "fixdt(0, 8)"
 		    OutDataTypeStr	    "boolean"
 		    Port {
 		    PortNumber		    1
@@ -7400,12 +7378,10 @@ Model {
 		    Block {
 		    BlockType		    Logic
 		    Name		    "Logical\nOperator2"
-		    SID			    306
+		    SID			    "306"
 		    Ports		    [2, 1]
 		    Position		    [420, 147, 450, 178]
 		    AllPortsSameDT	    off
-		    OutDataTypeMode	    "boolean"
-		    LogicDataType	    "fixdt(0, 8)"
 		    OutDataTypeStr	    "boolean"
 		    Port {
 		    PortNumber		    1
@@ -7417,7 +7393,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "Send CAN Messages"
-		    SID			    186
+		    SID			    "186"
 		    Ports		    [5]
 		    Position		    [840, 118, 1600, 572]
 		    ShowName		    off
@@ -7433,16 +7409,10 @@ Model {
 		    Block {
 		    BlockType		    Gain
 		    Name		    "To km"
-		    SID			    187
+		    SID			    "187"
 		    Position		    [365, 418, 465, 452]
 		    Gain		    "1.609344"
-		    ParameterDataTypeMode   "Inherit via internal rule"
-		    ParameterDataType	    "fixdt(1, 16)"
-		    ParameterScaling	    "2^0"
 		    ParamDataTypeStr	    "Inherit: Inherit via internal rule"
-		    OutDataTypeMode	    "Inherit via internal rule"
-		    OutDataType		    "fixdt(1, 16)"
-		    OutScaling		    "2^0"
 		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
 		    SaturateOnIntegerOverflow off
 		    Port {
@@ -7455,7 +7425,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_calibration"
-		    SID			    188
+		    SID			    "188"
 		    Ports		    [0, 1]
 		    Position		    [205, 235, 355, 275]
 		    ShowName		    off
@@ -7464,7 +7434,7 @@ Model {
 		    SourceType		    "MotoHawk Calibration"
 		    nam			    "'Batt_Isolation_det_Cal'"
 		    val			    "1"
-		    storage		    "Calibration"
+		    storage		    "Calibration NV"
 		    show_more		    off
 		    name_source		    "Use Parameter"
 		    data_type		    "Inherit from 'Default Value'"
@@ -7500,7 +7470,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_calibration1"
-		    SID			    189
+		    SID			    "189"
 		    Ports		    [0, 1]
 		    Position		    [205, 325, 355, 365]
 		    ShowName		    off
@@ -7509,7 +7479,7 @@ Model {
 		    SourceType		    "MotoHawk Calibration"
 		    nam			    "'Batt_Ign_Cal'"
 		    val			    "1"
-		    storage		    "Calibration"
+		    storage		    "Calibration NV"
 		    show_more		    off
 		    name_source		    "Use Parameter"
 		    data_type		    "Inherit from 'Default Value'"
@@ -7545,7 +7515,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_override_abs"
-		    SID			    190
+		    SID			    "190"
 		    Ports		    [1, 1]
 		    Position		    [610, 152, 760, 178]
 		    ShowName		    off
@@ -7560,6 +7530,7 @@ Model {
 		    RTWMemSecDataConstants  "Inherit from model"
 		    RTWMemSecDataInternal   "Inherit from model"
 		    RTWMemSecDataParameters "Inherit from model"
+		    GeneratePreprocessorConditionals off
 		    parent_name		    "'Batt_Connect_Cmd_ovr'"
 		    parent_val		    "0"
 		    show_more		    on
@@ -7591,7 +7562,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_override_abs1"
-		    SID			    191
+		    SID			    "191"
 		    Ports		    [1, 1]
 		    Position		    [610, 242, 760, 268]
 		    ShowName		    off
@@ -7606,6 +7577,7 @@ Model {
 		    RTWMemSecDataConstants  "Inherit from model"
 		    RTWMemSecDataInternal   "Inherit from model"
 		    RTWMemSecDataParameters "Inherit from model"
+		    GeneratePreprocessorConditionals off
 		    parent_name		    "'Isolation_Measure_Enable_ovr'"
 		    parent_val		    "0"
 		    show_more		    on
@@ -7637,7 +7609,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_probe"
-		    SID			    192
+		    SID			    "192"
 		    Ports		    [1]
 		    Position		    [610, 117, 760, 143]
 		    NamePlacement	    "alternate"
@@ -7669,7 +7641,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_probe1"
-		    SID			    193
+		    SID			    "193"
 		    Ports		    [1]
 		    Position		    [610, 207, 760, 233]
 		    NamePlacement	    "alternate"
@@ -7817,7 +7789,7 @@ Model {
 		    DstPort		    1
 		    }
 		    Line {
-		    Name		    "<Batt_Load_Enable>"
+		    Name		    "<Batt_Boot_Request>"
 		    Labels		    [0, 0]
 		    SrcBlock		    "Bus\nSelector1"
 		    SrcPort		    1
@@ -7830,7 +7802,7 @@ Model {
 		Block {
 		  BlockType		  SubSystem
 		  Name			  "DYNO OUT"
-		  SID			  55
+		  SID			  "55"
 		  Ports			  [2]
 		  Position		  [305, 93, 410, 162]
 		  LibraryVersion	  "1.216"
@@ -7859,26 +7831,22 @@ Model {
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Control Inputs"
-		    SID			    208
+		    SID			    "208"
 		    Position		    [110, 88, 140, 102]
 		    IconDisplay		    "Port number"
-		    OutDataType		    "fixdt(1, 16)"
-		    OutScaling		    "2^0"
 		    }
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Sensor Inputs"
-		    SID			    57
+		    SID			    "57"
 		    Position		    [110, 123, 140, 137]
 		    Port		    "2"
 		    IconDisplay		    "Port number"
-		    OutDataType		    "fixdt(1, 16)"
-		    OutScaling		    "2^0"
 		    }
 		    Block {
 		    BlockType		    BusSelector
 		    Name		    "Bus\nSelector"
-		    SID			    203
+		    SID			    "203"
 		    Ports		    [1, 2]
 		    Position		    [190, 111, 195, 149]
 		    ShowName		    off
@@ -7899,7 +7867,7 @@ Model {
 		    Block {
 		    BlockType		    BusSelector
 		    Name		    "Bus\nSelector1"
-		    SID			    207
+		    SID			    "207"
 		    Ports		    [1, 3]
 		    Position		    [190, 227, 195, 273]
 		    ShowName		    off
@@ -7926,21 +7894,17 @@ Model {
 		    Block {
 		    BlockType		    Constant
 		    Name		    "Constant"
-		    SID			    205
+		    SID			    "205"
 		    Position		    [210, 165, 240, 195]
 		    Value		    "4"
-		    OutDataType		    "fixdt(1, 16)"
-		    OutScaling		    "2^0"
 		    }
 		    Block {
 		    BlockType		    Logic
 		    Name		    "Logical\nOperator"
-		    SID			    196
+		    SID			    "196"
 		    Ports		    [2, 1]
 		    Position		    [415, 112, 445, 143]
 		    AllPortsSameDT	    off
-		    OutDataTypeMode	    "boolean"
-		    LogicDataType	    "fixdt(0, 8)"
 		    OutDataTypeStr	    "boolean"
 		    Port {
 		    PortNumber		    1
@@ -7952,13 +7916,11 @@ Model {
 		    Block {
 		    BlockType		    Logic
 		    Name		    "Logical\nOperator1"
-		    SID			    206
+		    SID			    "206"
 		    Ports		    [4, 1]
 		    Position		    [485, 212, 515, 273]
 		    Inputs		    "4"
 		    AllPortsSameDT	    off
-		    OutDataTypeMode	    "boolean"
-		    LogicDataType	    "fixdt(0, 8)"
 		    OutDataTypeStr	    "boolean"
 		    Port {
 		    PortNumber		    1
@@ -7970,31 +7932,27 @@ Model {
 		    Block {
 		    BlockType		    RelationalOperator
 		    Name		    "Relational\nOperator"
-		    SID			    204
+		    SID			    "204"
 		    Ports		    [2, 1]
 		    Position		    [295, 132, 325, 163]
 		    Operator		    "=="
 		    InputSameDT		    off
-		    LogicOutDataTypeMode    "boolean"
-		    LogicDataType	    "fixdt(0, 8)"
 		    OutDataTypeStr	    "boolean"
 		    }
 		    Block {
 		    BlockType		    RelationalOperator
 		    Name		    "Relational\nOperator1"
-		    SID			    209
+		    SID			    "209"
 		    Ports		    [2, 1]
 		    Position		    [340, 257, 370, 288]
 		    Operator		    "<="
 		    InputSameDT		    off
-		    LogicOutDataTypeMode    "boolean"
-		    LogicDataType	    "fixdt(0, 8)"
 		    OutDataTypeStr	    "boolean"
 		    }
 		    Block {
 		    BlockType		    Reference
 		    Name		    "Send CAN Messages"
-		    SID			    194
+		    SID			    "194"
 		    Ports		    [3]
 		    Position		    [760, 70, 1520, 420]
 		    ShowName		    off
@@ -8010,7 +7968,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_calibration"
-		    SID			    210
+		    SID			    "210"
 		    Ports		    [0, 1]
 		    Position		    [115, 290, 265, 330]
 		    ShowName		    off
@@ -8049,7 +8007,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_calibration1"
-		    SID			    211
+		    SID			    "211"
 		    Ports		    [0, 1]
 		    Position		    [365, 340, 515, 380]
 		    ShowName		    off
@@ -8094,7 +8052,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_override_abs1"
-		    SID			    199
+		    SID			    "199"
 		    Ports		    [1, 1]
 		    Position		    [560, 232, 710, 258]
 		    ShowName		    off
@@ -8109,6 +8067,7 @@ Model {
 		    RTWMemSecDataConstants  "Inherit from model"
 		    RTWMemSecDataInternal   "Inherit from model"
 		    RTWMemSecDataParameters "Inherit from model"
+		    GeneratePreprocessorConditionals off
 		    parent_name		    "'Gen_Load_Ovr'"
 		    parent_val		    "0"
 		    show_more		    off
@@ -8140,7 +8099,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_override_abs2"
-		    SID			    197
+		    SID			    "197"
 		    Ports		    [1, 1]
 		    Position		    [560, 117, 710, 143]
 		    ShowName		    off
@@ -8155,6 +8114,7 @@ Model {
 		    RTWMemSecDataConstants  "Inherit from model"
 		    RTWMemSecDataInternal   "Inherit from model"
 		    RTWMemSecDataParameters "Inherit from model"
+		    GeneratePreprocessorConditionals off
 		    parent_name		    "'Gen_Enable_Ovr'"
 		    parent_val		    "0"
 		    show_more		    off
@@ -8186,7 +8146,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_override_abs3"
-		    SID			    201
+		    SID			    "201"
 		    Ports		    [1, 1]
 		    Position		    [560, 347, 710, 373]
 		    ShowName		    off
@@ -8201,6 +8161,7 @@ Model {
 		    RTWMemSecDataConstants  "Inherit from model"
 		    RTWMemSecDataInternal   "Inherit from model"
 		    RTWMemSecDataParameters "Inherit from model"
+		    GeneratePreprocessorConditionals off
 		    parent_name		    "'Vehicle_Speed_Ovr'"
 		    parent_val		    "0"
 		    show_more		    off
@@ -8232,7 +8193,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_probe1"
-		    SID			    200
+		    SID			    "200"
 		    Ports		    [1]
 		    Position		    [560, 202, 710, 228]
 		    ShowName		    off
@@ -8263,7 +8224,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_probe2"
-		    SID			    198
+		    SID			    "198"
 		    Ports		    [1]
 		    Position		    [560, 87, 710, 113]
 		    ShowName		    off
@@ -8294,7 +8255,7 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_probe3"
-		    SID			    202
+		    SID			    "202"
 		    Ports		    [1]
 		    Position		    [560, 317, 710, 343]
 		    ShowName		    off
@@ -8521,9 +8482,9 @@ Model {
 	    Block {
 	      BlockType		      SubSystem
 	      Name		      "Guages"
-	      SID		      27
-	      Ports		      [2]
-	      Position		      [285, 90, 390, 165]
+	      SID		      "27"
+	      Ports		      [2, 0, 0, 1]
+	      Position		      [285, 190, 390, 265]
 	      LibraryVersion	      "1.216"
 	      MinAlgLoopOccurrences   off
 	      PropExecContextOutsideSubsystem off
@@ -8546,30 +8507,35 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"100"
+		ZoomFactor		"120"
 		Block {
 		  BlockType		  Inport
 		  Name			  "Control Inputs"
-		  SID			  28
+		  SID			  "28"
 		  Position		  [110, 103, 140, 117]
 		  IconDisplay		  "Port number"
-		  OutDataType		  "fixdt(1, 16)"
-		  OutScaling		  "2^0"
 		}
 		Block {
 		  BlockType		  Inport
 		  Name			  "Sensor Inputs"
-		  SID			  29
+		  SID			  "29"
 		  Position		  [110, 158, 140, 172]
 		  Port			  "2"
 		  IconDisplay		  "Port number"
-		  OutDataType		  "fixdt(1, 16)"
-		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  TriggerPort
+		  Name			  "Trigger"
+		  SID			  "327"
+		  Ports			  []
+		  Position		  [530, 60, 550, 80]
+		  TriggerType		  "function-call"
+		  StatesWhenEnabling	  "held"
 		}
 		Block {
 		  BlockType		  BusSelector
 		  Name			  "Bus\nSelector"
-		  SID			  118
+		  SID			  "118"
 		  Ports			  [1, 1]
 		  Position		  [220, 146, 225, 184]
 		  ShowName		  off
@@ -8584,7 +8550,7 @@ Model {
 		Block {
 		  BlockType		  BusSelector
 		  Name			  "Bus\nSelector1"
-		  SID			  124
+		  SID			  "124"
 		  Ports			  [1, 1]
 		  Position		  [230, 281, 235, 319]
 		  ShowName		  off
@@ -8599,7 +8565,7 @@ Model {
 		Block {
 		  BlockType		  BusSelector
 		  Name			  "Bus\nSelector2"
-		  SID			  129
+		  SID			  "129"
 		  Ports			  [1, 1]
 		  Position		  [230, 421, 235, 459]
 		  ShowName		  off
@@ -8614,7 +8580,7 @@ Model {
 		Block {
 		  BlockType		  BusSelector
 		  Name			  "Bus\nSelector3"
-		  SID			  134
+		  SID			  "134"
 		  Ports			  [1, 1]
 		  Position		  [230, 551, 235, 589]
 		  ShowName		  off
@@ -8627,63 +8593,218 @@ Model {
 		  }
 		}
 		Block {
+		  BlockType		  Constant
+		  Name			  "Constant6"
+		  SID			  "319"
+		  Position		  [1135, 345, 1165, 375]
+		  ShowName		  off
+		  OutDataTypeStr	  "int16"
+		}
+		Block {
+		  BlockType		  DataTypeConversion
+		  Name			  "Data Type Conversion5"
+		  SID			  "320"
+		  Position		  [1245, 308, 1320, 342]
+		  ShowName		  off
+		  OutDataTypeStr	  "uint16"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
 		  BlockType		  Gain
 		  Name			  "Gain"
-		  SID			  125
+		  SID			  "125"
 		  Position		  [275, 285, 305, 315]
-		  Gain			  "100"
-		  ParameterDataTypeMode	  "Inherit via internal rule"
-		  ParameterDataType	  "fixdt(1, 16)"
-		  ParameterScaling	  "2^0"
+		  Gain			  "10"
 		  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
-		  OutDataTypeMode	  "int16"
-		  OutDataType		  "fixdt(1, 16)"
-		  OutScaling		  "2^0"
 		  OutDataTypeStr	  "int16"
 		  SaturateOnIntegerOverflow off
 		}
 		Block {
 		  BlockType		  Gain
 		  Name			  "Gain1"
-		  SID			  130
+		  SID			  "130"
 		  Position		  [275, 425, 305, 455]
-		  Gain			  "100"
-		  ParameterDataTypeMode	  "Inherit via internal rule"
-		  ParameterDataType	  "fixdt(1, 16)"
-		  ParameterScaling	  "2^0"
+		  Gain			  "10"
 		  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
-		  OutDataTypeMode	  "int16"
-		  OutDataType		  "fixdt(1, 16)"
-		  OutScaling		  "2^0"
 		  OutDataTypeStr	  "int16"
 		  SaturateOnIntegerOverflow off
 		}
 		Block {
 		  BlockType		  Gain
 		  Name			  "Gain2"
-		  SID			  135
+		  SID			  "135"
 		  Position		  [275, 555, 305, 585]
-		  Gain			  "100"
-		  ParameterDataTypeMode	  "Inherit via internal rule"
-		  ParameterDataType	  "fixdt(1, 16)"
-		  ParameterScaling	  "2^0"
+		  Gain			  "10"
 		  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
-		  OutDataTypeMode	  "int16"
-		  OutDataType		  "fixdt(1, 16)"
-		  OutScaling		  "2^0"
 		  OutDataTypeStr	  "int16"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  RelationalOperator
+		  Name			  "Relational\nOperator"
+		  SID			  "322"
+		  Ports			  [2, 1]
+		  Position		  [1095, 307, 1125, 338]
+		  ShowName		  off
+		  InputSameDT		  off
+		  OutDataTypeStr	  "boolean"
+		}
+		Block {
+		  BlockType		  Switch
+		  Name			  "Switch1"
+		  SID			  "323"
+		  Position		  [1200, 310, 1230, 340]
+		  ShowName		  off
+		  Criteria		  "u2 ~= 0"
+		  InputSameDT		  off
 		  SaturateOnIntegerOverflow off
 		}
 		Block {
 		  BlockType		  Terminator
 		  Name			  "Terminator"
-		  SID			  179
+		  SID			  "179"
 		  Position		  [190, 100, 210, 120]
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "Time Since Key On"
+		  SID			  "329"
+		  Ports			  [0, 1]
+		  Position		  [955, 310, 1015, 350]
+		  BackgroundColor	  "[0.909804, 0.819608, 0.321569]"
+		  MinAlgLoopOccurrences	  off
+		  PropExecContextOutsideSubsystem off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  Opaque		  off
+		  RequestExecContextInheritance	off
+		  MaskHideContents	  off
+		  System {
+		    Name		    "Time Since Key On"
+		    Location		    [322, 110, 1330, 770]
+		    Open		    off
+		    ModelBrowserVisibility  on
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "186"
+		    Block {
+		    BlockType		    Constant
+		    Name		    "Constant"
+		    SID			    "330"
+		    Position		    [35, 85, 65, 115]
+		    ShowName		    off
+		    Value		    "true"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Time Since Enabled (With Input)2"
+		    SID			    "331"
+		    Ports		    [1, 1]
+		    Position		    [125, 72, 255, 128]
+		    BackgroundColor	    "[0.815686, 0.976471, 0.674510]"
+		    ShowName		    off
+		    LibraryVersion	    "1.491"
+		    SourceBlock		    "motohawk_control_primitives_lib/Time Since Enabled (With Input)1"
+		    SourceType		    "Time Since Enabled"
+		    ShowPortLabels	    "FromPortIcon"
+		    SystemSampleTime	    "-1"
+		    FunctionWithSeparateData off
+		    RTWMemSecFuncInitTerm   "Inherit from model"
+		    RTWMemSecFuncExecute    "Inherit from model"
+		    RTWMemSecDataConstants  "Inherit from model"
+		    RTWMemSecDataInternal   "Inherit from model"
+		    RTWMemSecDataParameters "Inherit from model"
+		    GeneratePreprocessorConditionals off
+		    nam			    "'TimeSinceKeyOnTimer'"
+		    samp_time		    "-1"
+		    init		    "0"
+		    upperlim		    "16000"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_probe"
+		    SID			    "332"
+		    Ports		    [1]
+		    Position		    [300, 42, 450, 68]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
+		    SourceType		    "MotoHawk Probe"
+		    nam			    "'TimeSinceKeyOn'"
+		    show_more		    on
+		    name_source		    "Use Parameter"
+		    read_level		    "1"
+		    view_as		    "Number"
+		    enum_struct		    "{'Disabled', 'Enabled'}"
+		    vector_style	    "Wide Row"
+		    use_help_units	    off
+		    help		    "''"
+		    units		    "''"
+		    use_header_enum	    off
+		    row_header_enum	    "{}"
+		    col_header_enum	    "{}"
+		    use_precision	    off
+		    precision		    "''"
+		    gain		    "1"
+		    offset		    "0"
+		    exp			    "1"
+		    use_mototune_group	    on
+		    mototune_group	    "motohawk_vardec_path(gcb)"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "Time"
+		    SID			    "333"
+		    Position		    [410, 93, 440, 107]
+		    BackgroundColor	    "orange"
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    SrcBlock		    "Constant"
+		    SrcPort		    1
+		    DstBlock		    "Time Since Enabled (With Input)2"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Time Since Enabled (With Input)2"
+		    SrcPort		    1
+		    Points		    [25, 0]
+		    Branch {
+		    DstBlock		    "Time"
+		    DstPort		    1
+		    }
+		    Branch {
+		    DstBlock		    "motohawk_probe"
+		    DstPort		    1
+		    }
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "VDO Gauge Brightness"
+		  SID			  "326"
+		  Ports			  [1]
+		  Position		  [1400, 270, 1680, 380]
+		  ShowName		  off
+		  LibraryVersion	  "1.74"
+		  SourceBlock		  "MotoHawk_VDOGauge_lib/VDO Gauge Brightness"
+		  SourceType		  "MotoHawk VDO Gauge Set Brightness"
+		  nam			  "'GaugeChain'"
+		  per			  "2000"
 		}
 		Block {
 		  BlockType		  Reference
 		  Name			  "VDO Gauge Interface"
-		  SID			  33
+		  SID			  "33"
 		  Ports			  []
 		  Position		  [865, 13, 1145, 118]
 		  ShowName		  off
@@ -8696,13 +8817,13 @@ Model {
 		  val_resource		  "-1"
 		  target		  "ECU555-48-0708"
 		  dly			  "1600"
-		  queue_size		  "10"
+		  queue_size		  "128"
 		  dyn_create		  off
 		}
 		Block {
 		  BlockType		  Reference
 		  Name			  "VDO Gauge Write"
-		  SID			  34
+		  SID			  "34"
 		  Ports			  [1]
 		  Position		  [560, 110, 840, 220]
 		  ShowName		  off
@@ -8716,7 +8837,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "VDO Gauge Write1"
-		  SID			  121
+		  SID			  "121"
 		  Ports			  [1]
 		  Position		  [560, 245, 840, 355]
 		  ShowName		  off
@@ -8730,7 +8851,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "VDO Gauge Write2"
-		  SID			  126
+		  SID			  "126"
 		  Ports			  [1]
 		  Position		  [560, 385, 840, 495]
 		  ShowName		  off
@@ -8744,7 +8865,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "VDO Gauge Write3"
-		  SID			  133
+		  SID			  "133"
 		  Ports			  [1]
 		  Position		  [560, 515, 840, 625]
 		  ShowName		  off
@@ -8757,8 +8878,86 @@ Model {
 		}
 		Block {
 		  BlockType		  Reference
+		  Name			  "motohawk_calibration1"
+		  SID			  "324"
+		  Ports			  [0, 1]
+		  Position		  [900, 259, 1075, 301]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
+		  SourceType		  "MotoHawk Calibration"
+		  nam			  "'VDO_Gauge_StartupDelay'"
+		  val			  "2"
+		  storage		  "Calibration"
+		  show_more		  on
+		  name_source		  "Use Parameter"
+		  data_type		  "double"
+		  read_level		  "1"
+		  write_level		  "1"
+		  ovr_cals		  on
+		  view_as		  "Number"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  vector_style		  "Wide Row"
+		  use_help_units	  off
+		  help			  "''"
+		  units			  "''"
+		  use_header_enum	  off
+		  row_header_enum	  "{}"
+		  col_header_enum	  "{}"
+		  use_min_max		  off
+		  min_val		  "0"
+		  max_val		  "7"
+		  use_precision		  off
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_mototune_group	  on
+		  mototune_group	  "motohawk_vardec_path(gcb)"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_calibration2"
+		  SID			  "325"
+		  Ports			  [0, 1]
+		  Position		  [975, 184, 1150, 226]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
+		  SourceType		  "MotoHawk Calibration"
+		  nam			  "'VDO_Gauge_Brightness'"
+		  val			  "5"
+		  storage		  "Calibration NV"
+		  show_more		  on
+		  name_source		  "Use Parameter"
+		  data_type		  "uint16"
+		  read_level		  "1"
+		  write_level		  "1"
+		  ovr_cals		  on
+		  view_as		  "Number"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  vector_style		  "Wide Row"
+		  use_help_units	  off
+		  help			  "''"
+		  units			  "''"
+		  use_header_enum	  off
+		  row_header_enum	  "{}"
+		  col_header_enum	  "{}"
+		  use_min_max		  on
+		  min_val		  "0"
+		  max_val		  "7"
+		  use_precision		  off
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_mototune_group	  on
+		  mototune_group	  "motohawk_vardec_path(gcb)"
+		}
+		Block {
+		  BlockType		  Reference
 		  Name			  "motohawk_override_abs1"
-		  SID			  122
+		  SID			  "122"
 		  Ports			  [1, 1]
 		  Position		  [355, 287, 505, 313]
 		  ShowName		  off
@@ -8773,6 +8972,7 @@ Model {
 		  RTWMemSecDataConstants  "Inherit from model"
 		  RTWMemSecDataInternal	  "Inherit from model"
 		  RTWMemSecDataParameters "Inherit from model"
+		  GeneratePreprocessorConditionals off
 		  parent_name		  "'SOC_Gauges_Ovr'"
 		  parent_val		  "0"
 		  show_more		  off
@@ -8798,7 +8998,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_override_abs2"
-		  SID			  119
+		  SID			  "119"
 		  Ports			  [1, 1]
 		  Position		  [355, 152, 505, 178]
 		  ShowName		  off
@@ -8813,6 +9013,7 @@ Model {
 		  RTWMemSecDataConstants  "Inherit from model"
 		  RTWMemSecDataInternal	  "Inherit from model"
 		  RTWMemSecDataParameters "Inherit from model"
+		  GeneratePreprocessorConditionals off
 		  parent_name		  "'RPM_Gauges_Ovr'"
 		  parent_val		  "0"
 		  show_more		  off
@@ -8838,7 +9039,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_override_abs3"
-		  SID			  131
+		  SID			  "131"
 		  Ports			  [1, 1]
 		  Position		  [355, 427, 505, 453]
 		  ShowName		  off
@@ -8853,6 +9054,7 @@ Model {
 		  RTWMemSecDataConstants  "Inherit from model"
 		  RTWMemSecDataInternal	  "Inherit from model"
 		  RTWMemSecDataParameters "Inherit from model"
+		  GeneratePreprocessorConditionals off
 		  parent_name		  "'OilPressure_Gauges_Ovr'"
 		  parent_val		  "0"
 		  show_more		  off
@@ -8878,7 +9080,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_override_abs4"
-		  SID			  136
+		  SID			  "136"
 		  Ports			  [1, 1]
 		  Position		  [355, 557, 505, 583]
 		  ShowName		  off
@@ -8893,9 +9095,10 @@ Model {
 		  RTWMemSecDataConstants  "Inherit from model"
 		  RTWMemSecDataInternal	  "Inherit from model"
 		  RTWMemSecDataParameters "Inherit from model"
+		  GeneratePreprocessorConditionals off
 		  parent_name		  "'CoolantTemp_Gauges_Ovr'"
 		  parent_val		  "0"
-		  show_more		  off
+		  show_more		  on
 		  name_source		  "Use Parameter"
 		  parent_read_level	  "1"
 		  parent_override_level	  "1"
@@ -8912,13 +9115,13 @@ Model {
 		  parent_gain		  "1"
 		  parent_offset		  "0"
 		  parent_exp		  "1"
-		  use_mototune_group	  off
+		  use_mototune_group	  on
 		  parent_group		  "motohawk_vardec_path(gcb)"
 		}
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_probe1"
-		  SID			  123
+		  SID			  "123"
 		  Ports			  [1]
 		  Position		  [355, 257, 505, 283]
 		  ShowName		  off
@@ -8949,7 +9152,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_probe2"
-		  SID			  120
+		  SID			  "120"
 		  Ports			  [1]
 		  Position		  [355, 122, 505, 148]
 		  ShowName		  off
@@ -8980,7 +9183,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_probe3"
-		  SID			  132
+		  SID			  "132"
 		  Ports			  [1]
 		  Position		  [355, 397, 505, 423]
 		  ShowName		  off
@@ -9011,7 +9214,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_probe4"
-		  SID			  137
+		  SID			  "137"
 		  Ports			  [1]
 		  Position		  [355, 527, 505, 553]
 		  ShowName		  off
@@ -9179,7 +9382,73 @@ Model {
 		  DstBlock		  "Terminator"
 		  DstPort		  1
 		}
+		Line {
+		  SrcBlock		  "Time Since Key On"
+		  SrcPort		  1
+		  DstBlock		  "Relational\nOperator"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Relational\nOperator"
+		  SrcPort		  1
+		  DstBlock		  "Switch1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Constant6"
+		  SrcPort		  1
+		  Points		  [0, -25]
+		  DstBlock		  "Switch1"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "Switch1"
+		  SrcPort		  1
+		  DstBlock		  "Data Type Conversion5"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "motohawk_calibration1"
+		  SrcPort		  1
+		  DstBlock		  "Relational\nOperator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "motohawk_calibration2"
+		  SrcPort		  1
+		  Points		  [30, 0]
+		  DstBlock		  "Switch1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Data Type Conversion5"
+		  SrcPort		  1
+		  DstBlock		  "VDO Gauge Brightness"
+		  DstPort		  1
+		}
 	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "motohawk_trigger1"
+	      SID		      "328"
+	      Tag		      "Trigger"
+	      Ports		      [0, 1]
+	      Position		      [245, 50, 425, 135]
+	      BlockRotation	      270
+	      BlockMirror	      on
+	      NamePlacement	      "alternate"
+	      ShowName		      off
+	      LibraryVersion	      "MotoHawk 0.2.3"
+	      SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
+	      SourceType	      "MotoHawk Function Trigger"
+	      trigger		      "FGND_20XRTI_PERIODIC"
+	      function_name	      "Trigger_FGND_20XRTI_PERIODIC_10837p0011"
+	      priority_order	      "200"
+	      inherited		      on
+	      run_disabled	      off
+	      override_app_monitor    off
+	      target		      "ECU555_48_0708"
 	    }
 	    Line {
 	      SrcBlock		      "Control Inputs"
@@ -9223,12 +9492,18 @@ Model {
 		}
 	      }
 	    }
+	    Line {
+	      SrcBlock		      "motohawk_trigger1"
+	      SrcPort		      1
+	      DstBlock		      "Guages"
+	      DstPort		      trigger
+	    }
 	  }
 	}
 	Block {
 	  BlockType		  Reference
 	  Name			  "motohawk_TitleBlock"
-	  SID			  5
+	  SID			  "5"
 	  Ports			  []
 	  Position		  [18, 14, 883, 174]
 	  ShowName		  off
@@ -9252,7 +9527,7 @@ Model {
 	Block {
 	  BlockType		  Reference
 	  Name			  "motohawk_code_coverage"
-	  SID			  6
+	  SID			  "6"
 	  Ports			  []
 	  Position		  [485, 202, 661, 232]
 	  ShowName		  off
@@ -9285,7 +9560,7 @@ Model {
     Block {
       BlockType		      SubSystem
       Name		      "Main Power Relay"
-      SID		      7
+      SID		      "7"
       Ports		      []
       Position		      [590, 335, 768, 401]
       ShowName		      off
@@ -9310,17 +9585,17 @@ Model {
       MaskHelp		      "eval('motohawk_block_help(get_param(gcb,''MaskType''))');"
       MaskPromptString	      "On Delay Count|Off Delay Count|ECUP High Threshold (ADC Counts)|MotoTune Group"
       MaskStyleString	      "edit,edit,edit,edit"
+      MaskVariables	      "on_delay_count=@1;off_delay_count=@2;ecup_threshold=@3;group=@4;"
       MaskTunableValueString  "on,off,off,off"
       MaskCallbackString      "|||"
       MaskEnableString	      "on,on,on,on"
       MaskVisibilityString    "on,on,on,on"
       MaskToolTipString	      "on,on,on,on"
-      MaskVariables	      "on_delay_count=@1;off_delay_count=@2;ecup_threshold=@3;group=@4;"
       MaskInitialization      "block = gcb;\n\nmotohawk_main_power_relay_initmask;\n"
+      MaskSelfModifiable      on
       MaskDisplay	      "patch([0 0 1 1], [0 1 1 0], [220/255 220/255 220/255]);\npatch([0 0 1 1], [0 0.075 0.075 0], "
       "[230/255 0/255 0/255]);\npatch([0 0 1 1], [0.025 0.05 0.05 0.025], [150/255 0/255 0/255]);\npatch([0 0 1 1], [0 "
       "0.025 0.025 0], [0/255 0/255 0/255]);\n\ndisp(['Main Power Relay' on_delay_lbl off_delay_lbl]);"
-      MaskSelfModifiable      on
       MaskIconFrame	      on
       MaskIconOpaque	      on
       MaskIconRotate	      "none"
@@ -9342,12 +9617,12 @@ Model {
 	TiledPageScale		1
 	ShowPageBoundaries	off
 	ZoomFactor		"100"
-	SIDHighWatermark	84
-	SIDPrevWatermark	81
+	SIDHighWatermark	"84"
+	SIDPrevWatermark	"81"
 	Block {
 	  BlockType		  SubSystem
 	  Name			  "Background"
-	  SID			  1
+	  SID			  "7:1"
 	  Ports			  [0, 0, 0, 1]
 	  Position		  [240, 255, 375, 315]
 	  MinAlgLoopOccurrences	  off
@@ -9375,7 +9650,7 @@ Model {
 	    Block {
 	      BlockType		      TriggerPort
 	      Name		      "f"
-	      SID		      2
+	      SID		      "7:2"
 	      Ports		      []
 	      Position		      [915, 35, 935, 55]
 	      BackgroundColor	      "red"
@@ -9385,7 +9660,7 @@ Model {
 	    Block {
 	      BlockType		      SubSystem
 	      Name		      "Delay"
-	      SID		      3
+	      SID		      "7:3"
 	      Ports		      [1, 1]
 	      Position		      [335, 188, 395, 232]
 	      BackgroundColor	      "[0.917647, 0.917647, 0.917647]"
@@ -9414,56 +9689,44 @@ Model {
 		Block {
 		  BlockType		  Inport
 		  Name			  "In"
-		  SID			  4
+		  SID			  "7:4"
 		  Position		  [55, 168, 85, 182]
 		  IconDisplay		  "Port number"
-		  OutDataType		  "sfix(16)"
-		  OutScaling		  "2^0"
 		}
 		Block {
 		  BlockType		  Constant
 		  Name			  "Constant1"
-		  SID			  5
+		  SID			  "7:5"
 		  Position		  [335, 220, 365, 250]
 		  Value			  "0"
-		  OutDataTypeMode	  "Inherit via back propagation"
-		  OutDataType		  "sfix(16)"
-		  OutScaling		  "2^0"
 		  OutDataTypeStr	  "Inherit: Inherit via back propagation"
 		}
 		Block {
 		  BlockType		  Constant
 		  Name			  "Constant2"
-		  SID			  6
+		  SID			  "7:6"
 		  Position		  [475, 222, 615, 238]
 		  Value			  "uint16( on_delay_count )"
-		  OutDataType		  "sfix(16)"
-		  OutScaling		  "2^0"
 		}
 		Block {
 		  BlockType		  Constant
 		  Name			  "Constant3"
-		  SID			  7
+		  SID			  "7:7"
 		  Position		  [335, 445, 365, 475]
 		  Value			  "0"
-		  OutDataTypeMode	  "Inherit via back propagation"
-		  OutDataType		  "sfix(16)"
-		  OutScaling		  "2^0"
 		  OutDataTypeStr	  "Inherit: Inherit via back propagation"
 		}
 		Block {
 		  BlockType		  Constant
 		  Name			  "Constant4"
-		  SID			  8
+		  SID			  "7:8"
 		  Position		  [475, 447, 615, 463]
 		  Value			  "uint16( off_delay_count )"
-		  OutDataType		  "sfix(16)"
-		  OutScaling		  "2^0"
 		}
 		Block {
 		  BlockType		  DataTypeConversion
 		  Name			  "Data Type Conversion"
-		  SID			  9
+		  SID			  "7:9"
 		  Position		  [215, 161, 270, 189]
 		  SaturateOnIntegerOverflow off
 		  Port {
@@ -9476,7 +9739,7 @@ Model {
 		Block {
 		  BlockType		  DataTypeConversion
 		  Name			  "Data Type Conversion1"
-		  SID			  10
+		  SID			  "7:10"
 		  Position		  [215, 386, 270, 414]
 		  SaturateOnIntegerOverflow off
 		  Port {
@@ -9489,35 +9752,32 @@ Model {
 		Block {
 		  BlockType		  Logic
 		  Name			  "Logical\nOperator"
-		  SID			  11
+		  SID			  "7:11"
 		  Ports			  [1, 1]
 		  Position		  [135, 384, 165, 416]
 		  Operator		  "NOT"
-		  OutDataTypeMode	  "boolean"
 		  OutDataTypeStr	  "boolean"
 		}
 		Block {
 		  BlockType		  Logic
 		  Name			  "Logical\nOperator1"
-		  SID			  12
+		  SID			  "7:12"
 		  Ports			  [2, 1]
 		  Position		  [750, 421, 780, 454]
-		  OutDataTypeMode	  "boolean"
 		  OutDataTypeStr	  "boolean"
 		}
 		Block {
 		  BlockType		  Logic
 		  Name			  "Logical\nOperator2"
-		  SID			  13
+		  SID			  "7:13"
 		  Ports			  [2, 1]
 		  Position		  [745, 196, 775, 229]
-		  OutDataTypeMode	  "boolean"
 		  OutDataTypeStr	  "boolean"
 		}
 		Block {
 		  BlockType		  SubSystem
 		  Name			  "MotoHawk\nS-R\nFlip-Flop"
-		  SID			  14
+		  SID			  "7:14"
 		  Ports			  [2, 2]
 		  Position		  [850, 263, 890, 332]
 		  BackgroundColor	  "[0.862745, 0.862745, 0.862745]"
@@ -9534,11 +9794,11 @@ Model {
 		  ")."
 		  MaskPromptString	  "Initial condition Q (boolean)"
 		  MaskStyleString	  "edit"
+		  MaskVariables		  "ic_bool=@1;"
 		  MaskTunableValueString  "off"
 		  MaskEnableString	  "on"
 		  MaskVisibilityString	  "on"
 		  MaskToolTipString	  "on"
-		  MaskVariables		  "ic_bool=@1;"
 		  MaskDisplay		  "patch([0 0 1 1], [0 0.075 0.075 0], [230/255 0/255 0/255]);\npatch([0 0 1 1], [0.025 0.05 0.05 0.0"
 		  "25], [150/255 0/255 0/255]);\npatch([0 0 1 1], [0 0.025 0.025 0], [0/255 0/255 0/255])"
 		  MaskIconFrame		  on
@@ -9565,98 +9825,84 @@ Model {
 		    Block {
 		    BlockType		    Inport
 		    Name		    "S"
-		    SID			    15
+		    SID			    "7:15"
 		    Position		    [25, 88, 55, 102]
 		    BackgroundColor	    "orange"
 		    NamePlacement	    "alternate"
 		    IconDisplay		    "Port number"
-		    OutDataType		    "sfix(16)"
-		    OutScaling		    "2^0"
 		    }
 		    Block {
 		    BlockType		    Inport
 		    Name		    "R"
-		    SID			    16
+		    SID			    "7:16"
 		    Position		    [25, 108, 55, 122]
 		    BackgroundColor	    "orange"
 		    Port		    "2"
 		    IconDisplay		    "Port number"
-		    OutDataType		    "sfix(16)"
-		    OutScaling		    "2^0"
 		    }
 		    Block {
 		    BlockType		    Logic
 		    Name		    "Logical\nOperator"
-		    SID			    17
+		    SID			    "7:17"
 		    Ports		    [2, 1]
 		    Position		    [175, 72, 205, 103]
 		    BackgroundColor	    "yellow"
 		    ShowName		    off
 		    Operator		    "OR"
-		    OutDataTypeMode	    "boolean"
 		    OutDataTypeStr	    "boolean"
 		    }
 		    Block {
 		    BlockType		    Logic
 		    Name		    "Logical\nOperator1"
-		    SID			    18
+		    SID			    "7:18"
 		    Ports		    [1, 1]
 		    Position		    [175, 107, 205, 123]
 		    BackgroundColor	    "yellow"
 		    ShowName		    off
 		    Operator		    "NOT"
-		    OutDataTypeMode	    "boolean"
 		    OutDataTypeStr	    "boolean"
 		    }
 		    Block {
 		    BlockType		    Logic
 		    Name		    "Logical\nOperator2"
-		    SID			    19
+		    SID			    "7:19"
 		    Ports		    [2, 1]
 		    Position		    [230, 75, 260, 130]
 		    BackgroundColor	    "yellow"
 		    ShowName		    off
-		    OutDataTypeMode	    "boolean"
 		    OutDataTypeStr	    "boolean"
 		    }
 		    Block {
 		    BlockType		    Logic
 		    Name		    "Logical\nOperator3"
-		    SID			    20
+		    SID			    "7:20"
 		    Ports		    [1, 1]
 		    Position		    [310, 97, 340, 113]
 		    BackgroundColor	    "yellow"
 		    ShowName		    off
 		    Operator		    "NOT"
-		    OutDataTypeMode	    "boolean"
 		    OutDataTypeStr	    "boolean"
 		    }
 		    Block {
 		    BlockType		    SignalSpecification
 		    Name		    "Signal Specification"
-		    SID			    21
+		    SID			    "7:21"
 		    Position		    [80, 107, 150, 123]
 		    ShowName		    off
-		    DataType		    "boolean"
-		    OutDataType		    "sfix(16)"
-		    OutScaling		    "2^0"
 		    OutDataTypeStr	    "boolean"
 		    }
 		    Block {
 		    BlockType		    SignalSpecification
 		    Name		    "Signal Specification1"
-		    SID			    22
+		    SID			    "7:22"
 		    Position		    [80, 87, 150, 103]
 		    ShowName		    off
-		    DataType		    "boolean"
-		    OutDataType		    "sfix(16)"
-		    OutScaling		    "2^0"
 		    OutDataTypeStr	    "boolean"
 		    }
 		    Block {
 		    BlockType		    UnitDelay
 		    Name		    "Unit Delay"
-		    SID			    23
+		    SID			    "7:23"
 		    Position		    [230, 47, 260, 63]
 		    BlockMirror		    on
 		    BackgroundColor	    "yellow"
@@ -9668,7 +9914,7 @@ Model {
 		    Block {
 		    BlockType		    Outport
 		    Name		    "Q"
-		    SID			    24
+		    SID			    "7:24"
 		    Position		    [365, 48, 395, 62]
 		    BackgroundColor	    "cyan"
 		    IconDisplay		    "Port number"
@@ -9676,7 +9922,7 @@ Model {
 		    Block {
 		    BlockType		    Outport
 		    Name		    "!Q"
-		    SID			    25
+		    SID			    "7:25"
 		    Position		    [365, 98, 395, 112]
 		    BackgroundColor	    "cyan"
 		    Port		    "2"
@@ -9763,35 +10009,30 @@ Model {
 		Block {
 		  BlockType		  RelationalOperator
 		  Name			  "Relational\nOperator1"
-		  SID			  26
+		  SID			  "7:26"
 		  Ports			  [2, 1]
 		  Position		  [645, 192, 675, 243]
-		  LogicOutDataTypeMode	  "boolean"
 		  OutDataTypeStr	  "boolean"
 		  ZeroCross		  off
 		}
 		Block {
 		  BlockType		  RelationalOperator
 		  Name			  "Relational\nOperator2"
-		  SID			  27
+		  SID			  "7:27"
 		  Ports			  [2, 1]
 		  Position		  [650, 417, 680, 468]
-		  LogicOutDataTypeMode	  "boolean"
 		  OutDataTypeStr	  "boolean"
 		  ZeroCross		  off
 		}
 		Block {
 		  BlockType		  Sum
 		  Name			  "Sum"
-		  SID			  28
+		  SID			  "7:28"
 		  Ports			  [2, 1]
 		  Position		  [320, 165, 340, 185]
 		  ShowName		  off
 		  IconShape		  "round"
 		  Inputs		  "++|"
-		  OutDataTypeMode	  "Inherit via internal rule"
-		  OutDataType		  "sfix(16)"
-		  OutScaling		  "2^0"
 		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
 		  RndMeth		  "Zero"
 		  Port {
@@ -9804,15 +10045,12 @@ Model {
 		Block {
 		  BlockType		  Sum
 		  Name			  "Sum1"
-		  SID			  29
+		  SID			  "7:29"
 		  Ports			  [2, 1]
 		  Position		  [320, 390, 340, 410]
 		  ShowName		  off
 		  IconShape		  "round"
 		  Inputs		  "++|"
-		  OutDataTypeMode	  "Inherit via internal rule"
-		  OutDataType		  "sfix(16)"
-		  OutScaling		  "2^0"
 		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
 		  RndMeth		  "Zero"
 		  Port {
@@ -9825,7 +10063,7 @@ Model {
 		Block {
 		  BlockType		  Switch
 		  Name			  "Switch"
-		  SID			  30
+		  SID			  "7:30"
 		  Position		  [410, 156, 445, 254]
 		  Criteria		  "u2 ~= 0"
 		  Threshold		  "1"
@@ -9842,7 +10080,7 @@ Model {
 		Block {
 		  BlockType		  Switch
 		  Name			  "Switch1"
-		  SID			  31
+		  SID			  "7:31"
 		  Position		  [410, 381, 445, 479]
 		  Criteria		  "u2 ~= 0"
 		  Threshold		  "1"
@@ -9859,13 +10097,13 @@ Model {
 		Block {
 		  BlockType		  Terminator
 		  Name			  "Terminator"
-		  SID			  32
+		  SID			  "7:32"
 		  Position		  [925, 305, 945, 325]
 		}
 		Block {
 		  BlockType		  UnitDelay
 		  Name			  "Unit Delay"
-		  SID			  33
+		  SID			  "7:33"
 		  Position		  [410, 95, 445, 135]
 		  BlockMirror		  on
 		  SampleTime		  "-1"
@@ -9879,7 +10117,7 @@ Model {
 		Block {
 		  BlockType		  UnitDelay
 		  Name			  "Unit Delay1"
-		  SID			  34
+		  SID			  "7:34"
 		  Position		  [410, 320, 445, 360]
 		  BlockMirror		  on
 		  SampleTime		  "-1"
@@ -9893,7 +10131,7 @@ Model {
 		Block {
 		  BlockType		  Outport
 		  Name			  "Out"
-		  SID			  35
+		  SID			  "7:35"
 		  Position		  [920, 273, 950, 287]
 		  IconDisplay		  "Port number"
 		}
@@ -10099,7 +10337,7 @@ Model {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Display Variable Event Boolean"
-	      SID		      36
+	      SID		      "7:36"
 	      Ports		      [0, 1]
 	      Position		      [35, 30, 220, 70]
 	      BackgroundColor	      "[0.862745, 0.862745, 0.862745]"
@@ -10115,6 +10353,7 @@ Model {
 	      RTWMemSecDataConstants  "Inherit from model"
 	      RTWMemSecDataInternal   "Inherit from model"
 	      RTWMemSecDataParameters "Inherit from model"
+	      GeneratePreprocessorConditionals off
 	      nam		      "'ProcessorReboot'"
 	      level		      "1"
 	      enum_str		      "{'Run', 'Reboot'}"
@@ -10124,7 +10363,7 @@ Model {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Display Variable Event Function-Call"
-	      SID		      37
+	      SID		      "7:37"
 	      Ports		      [0, 1]
 	      Position		      [740, 469, 950, 501]
 	      BackgroundColor	      "[0.862745, 0.862745, 0.862745]"
@@ -10140,6 +10379,7 @@ Model {
 	      RTWMemSecDataConstants  "Inherit from model"
 	      RTWMemSecDataInternal   "Inherit from model"
 	      RTWMemSecDataParameters "Inherit from model"
+	      GeneratePreprocessorConditionals off
 	      nam		      "'RestoreNVFactoryDefaults'"
 	      level		      "1"
 	      enum_str		      "{'Run', 'Restore To Defaults'}"
@@ -10149,7 +10389,7 @@ Model {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Display Variable Event Function-Call1"
-	      SID		      38
+	      SID		      "7:38"
 	      Ports		      [0, 1]
 	      Position		      [295, 470, 510, 500]
 	      BackgroundColor	      "[0.862745, 0.862745, 0.862745]"
@@ -10165,6 +10405,7 @@ Model {
 	      RTWMemSecDataConstants  "Inherit from model"
 	      RTWMemSecDataInternal   "Inherit from model"
 	      RTWMemSecDataParameters "Inherit from model"
+	      GeneratePreprocessorConditionals off
 	      nam		      "'StoreNV'"
 	      level		      "1"
 	      enum_str		      "{'Run', 'Store To EEPROM'}"
@@ -10174,63 +10415,57 @@ Model {
 	    Block {
 	      BlockType		      Logic
 	      Name		      "Logical\nOperator"
-	      SID		      39
+	      SID		      "7:39"
 	      Ports		      [2, 1]
 	      Position		      [515, 100, 540, 295]
 	      ShowName		      off
-	      OutDataTypeMode	      "boolean"
 	      OutDataTypeStr	      "boolean"
 	    }
 	    Block {
 	      BlockType		      Logic
 	      Name		      "Logical\nOperator1"
-	      SID		      40
+	      SID		      "7:40"
 	      Ports		      [1, 1]
 	      Position		      [350, 134, 380, 166]
 	      ShowName		      off
 	      Operator		      "NOT"
-	      OutDataTypeMode	      "boolean"
 	      OutDataTypeStr	      "boolean"
 	    }
 	    Block {
 	      BlockType		      Logic
 	      Name		      "Logical\nOperator2"
-	      SID		      41
+	      SID		      "7:41"
 	      Ports		      [2, 1]
 	      Position		      [460, 176, 485, 314]
 	      ShowName		      off
 	      Operator		      "OR"
-	      OutDataTypeMode	      "boolean"
 	      OutDataTypeStr	      "boolean"
 	    }
 	    Block {
 	      BlockType		      Logic
 	      Name		      "Logical\nOperator3"
-	      SID		      42
+	      SID		      "7:42"
 	      Ports		      [2, 1]
 	      Position		      [915, 96, 940, 234]
 	      ShowName		      off
 	      Operator		      "OR"
-	      OutDataTypeMode	      "boolean"
 	      OutDataTypeStr	      "boolean"
 	    }
 	    Block {
 	      BlockType		      Logic
 	      Name		      "Logical\nOperator4"
-	      SID		      84
+	      SID		      "7:84"
 	      Ports		      [1, 1]
 	      Position		      [314, 110, 346, 140]
 	      BlockRotation	      270
 	      Operator		      "NOT"
 	      AllPortsSameDT	      off
-	      OutDataTypeMode	      "boolean"
-	      LogicDataType	      "fixdt(0, 8)"
 	      OutDataTypeStr	      "boolean"
 	    }
 	    Block {
 	      BlockType		      SubSystem
 	      Name		      "Post Shutdown\ntwo ticks before\nMPRD off"
-	      SID		      43
+	      SID		      "7:43"
 	      Ports		      [0, 0, 0, 1]
 	      Position		      [560, 315, 620, 345]
 	      BackgroundColor	      "[0.000000, 1.000000, 0.000000]"
@@ -10259,7 +10494,7 @@ Model {
 		Block {
 		  BlockType		  TriggerPort
 		  Name			  "Trigger"
-		  SID			  44
+		  SID			  "7:44"
 		  Ports			  []
 		  Position		  [290, 20, 310, 40]
 		  TriggerType		  "falling"
@@ -10267,10 +10502,10 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "Function-Call\nGenerator"
-		  SID			  45
+		  SID			  "7:45"
 		  Ports			  [0, 1]
 		  Position		  [150, 90, 200, 110]
-		  LibraryVersion	  "1.216"
+		  LibraryVersion	  "1.236"
 		  SourceBlock		  "simulink/Ports &\nSubsystems/Function-Call\nGenerator"
 		  SourceType		  "Function-Call Generator"
 		  sample_time		  "-1"
@@ -10279,7 +10514,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "Post Shutdown two ticks before MPRD off"
-		  SID			  46
+		  SID			  "7:46"
 		  Ports			  [0, 0, 0, 1]
 		  Position		  [215, 155, 342, 236]
 		  LibraryVersion	  "MotoHawk 0.2.3"
@@ -10293,6 +10528,7 @@ Model {
 		  RTWMemSecDataConstants  "Inherit from model"
 		  RTWMemSecDataInternal	  "Inherit from model"
 		  RTWMemSecDataParameters "Inherit from model"
+		  GeneratePreprocessorConditionals off
 		  mode			  "Post Event"
 		  trigger		  "SHUTDOWN_EVENT"
 		  target		  "ECU555_48_0708"
@@ -10300,7 +10536,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_code_coverage"
-		  SID			  47
+		  SID			  "7:47"
 		  Ports			  []
 		  Position		  [315, 102, 491, 132]
 		  ShowName		  off
@@ -10320,7 +10556,7 @@ Model {
 	    Block {
 	      BlockType		      SubSystem
 	      Name		      "Processor Reboot"
-	      SID		      48
+	      SID		      "7:48"
 	      Ports		      [0, 0, 1, 1]
 	      Position		      [845, 315, 905, 345]
 	      BackgroundColor	      "[1.000000, 0.000000, 0.000000]"
@@ -10350,14 +10586,14 @@ Model {
 		Block {
 		  BlockType		  EnablePort
 		  Name			  "Enable"
-		  SID			  49
+		  SID			  "7:49"
 		  Ports			  []
 		  Position		  [210, 20, 230, 40]
 		}
 		Block {
 		  BlockType		  TriggerPort
 		  Name			  "Trigger"
-		  SID			  50
+		  SID			  "7:50"
 		  Ports			  []
 		  Position		  [105, 20, 125, 40]
 		  TriggerType		  "falling"
@@ -10365,7 +10601,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "Force Module Reset"
-		  SID			  51
+		  SID			  "7:51"
 		  Ports			  []
 		  Position		  [105, 100, 255, 150]
 		  ShowName		  off
@@ -10376,7 +10612,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_code_coverage"
-		  SID			  52
+		  SID			  "7:52"
 		  Ports			  []
 		  Position		  [265, 102, 441, 132]
 		  ShowName		  off
@@ -10389,18 +10625,17 @@ Model {
 	    Block {
 	      BlockType		      RelationalOperator
 	      Name		      "Relational\nOperator"
-	      SID		      53
+	      SID		      "7:53"
 	      Ports		      [2, 1]
 	      Position		      [270, 192, 300, 223]
 	      ShowName		      off
-	      LogicOutDataTypeMode    "boolean"
 	      OutDataTypeStr	      "boolean"
 	      ZeroCross		      off
 	    }
 	    Block {
 	      BlockType		      SubSystem
 	      Name		      "Save NV Vars\none tick before\nMPRD off"
-	      SID		      54
+	      SID		      "7:54"
 	      Ports		      [0, 0, 0, 1]
 	      Position		      [650, 315, 710, 345]
 	      BackgroundColor	      "[0.000000, 0.000000, 1.000000]"
@@ -10429,7 +10664,7 @@ Model {
 		Block {
 		  BlockType		  TriggerPort
 		  Name			  "Trigger"
-		  SID			  55
+		  SID			  "7:55"
 		  Ports			  []
 		  Position		  [155, 25, 175, 45]
 		  TriggerType		  "falling"
@@ -10437,10 +10672,10 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "Function-Call\nGenerator"
-		  SID			  56
+		  SID			  "7:56"
 		  Ports			  [0, 1]
 		  Position		  [100, 80, 150, 100]
-		  LibraryVersion	  "1.216"
+		  LibraryVersion	  "1.236"
 		  SourceBlock		  "simulink/Ports &\nSubsystems/Function-Call\nGenerator"
 		  SourceType		  "Function-Call Generator"
 		  sample_time		  "-1"
@@ -10449,7 +10684,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "Save NV Vars one tick before MPRD off"
-		  SID			  57
+		  SID			  "7:57"
 		  Ports			  [0, 0, 0, 1]
 		  Position		  [105, 135, 227, 195]
 		  LibraryVersion	  "MotoHawk 0.2.3"
@@ -10463,11 +10698,12 @@ Model {
 		  RTWMemSecDataConstants  "Inherit from model"
 		  RTWMemSecDataInternal	  "Inherit from model"
 		  RTWMemSecDataParameters "Inherit from model"
+		  GeneratePreprocessorConditionals off
 		}
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_code_coverage"
-		  SID			  58
+		  SID			  "7:58"
 		  Ports			  []
 		  Position		  [195, 87, 371, 117]
 		  ShowName		  off
@@ -10487,7 +10723,7 @@ Model {
 	    Block {
 	      BlockType		      SubSystem
 	      Name		      "Shutdown power\non ECU565-128"
-	      SID		      59
+	      SID		      "7:59"
 	      Ports		      [0, 0, 0, 1]
 	      Position		      [740, 315, 800, 345]
 	      BackgroundColor	      "[1.000000, 0.501961, 0.000000]"
@@ -10516,7 +10752,7 @@ Model {
 		Block {
 		  BlockType		  TriggerPort
 		  Name			  "Trigger"
-		  SID			  60
+		  SID			  "7:60"
 		  Ports			  []
 		  Position		  [170, 25, 190, 45]
 		  TriggerType		  "falling"
@@ -10524,10 +10760,10 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "Function-Call\nGenerator"
-		  SID			  61
+		  SID			  "7:61"
 		  Ports			  [0, 1]
 		  Position		  [55, 55, 105, 75]
-		  LibraryVersion	  "1.216"
+		  LibraryVersion	  "1.236"
 		  SourceBlock		  "simulink/Ports &\nSubsystems/Function-Call\nGenerator"
 		  SourceType		  "Function-Call Generator"
 		  sample_time		  "-1"
@@ -10536,7 +10772,7 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "Shutdown power on ECU565-128"
-		  SID			  62
+		  SID			  "7:62"
 		  Ports			  [0, 0, 0, 1]
 		  Position		  [65, 109, 174, 153]
 		  LibraryVersion	  "MotoHawk 0.2.3"
@@ -10550,11 +10786,12 @@ Model {
 		  RTWMemSecDataConstants  "Inherit from model"
 		  RTWMemSecDataInternal	  "Inherit from model"
 		  RTWMemSecDataParameters "Inherit from model"
+		  GeneratePreprocessorConditionals off
 		}
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_code_coverage"
-		  SID			  63
+		  SID			  "7:63"
 		  Ports			  []
 		  Position		  [205, 87, 381, 117]
 		  ShowName		  off
@@ -10574,7 +10811,7 @@ Model {
 	    Block {
 	      BlockType		      UnitDelay
 	      Name		      "Unit Delay"
-	      SID		      64
+	      SID		      "7:64"
 	      Position		      [625, 180, 660, 220]
 	      BackgroundColor	      "[0.917647, 0.917647, 0.917647]"
 	      ShowName		      off
@@ -10583,7 +10820,7 @@ Model {
 	    Block {
 	      BlockType		      UnitDelay
 	      Name		      "Unit Delay1"
-	      SID		      65
+	      SID		      "7:65"
 	      Position		      [715, 180, 750, 220]
 	      BackgroundColor	      "[0.917647, 0.917647, 0.917647]"
 	      ShowName		      off
@@ -10592,7 +10829,7 @@ Model {
 	    Block {
 	      BlockType		      UnitDelay
 	      Name		      "Unit Delay2"
-	      SID		      66
+	      SID		      "7:66"
 	      Position		      [805, 180, 840, 220]
 	      BackgroundColor	      "[0.917647, 0.917647, 0.917647]"
 	      ShowName		      off
@@ -10601,7 +10838,7 @@ Model {
 	    Block {
 	      BlockType		      UnitDelay
 	      Name		      "Unit Delay3"
-	      SID		      67
+	      SID		      "7:67"
 	      Position		      [625, 30, 660, 70]
 	      BackgroundColor	      "[0.917647, 0.917647, 0.917647]"
 	      ShowName		      off
@@ -10610,7 +10847,7 @@ Model {
 	    Block {
 	      BlockType		      UnitDelay
 	      Name		      "Unit Delay4"
-	      SID		      68
+	      SID		      "7:68"
 	      Position		      [715, 30, 750, 70]
 	      BackgroundColor	      "[0.917647, 0.917647, 0.917647]"
 	      ShowName		      off
@@ -10619,7 +10856,7 @@ Model {
 	    Block {
 	      BlockType		      UnitDelay
 	      Name		      "Unit Delay5"
-	      SID		      69
+	      SID		      "7:69"
 	      Position		      [805, 30, 840, 70]
 	      BackgroundColor	      "[0.917647, 0.917647, 0.917647]"
 	      ShowName		      off
@@ -10628,7 +10865,7 @@ Model {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "motohawk_ain5"
-	      SID		      70
+	      SID		      "7:70"
 	      Ports		      [0, 1]
 	      Position		      [15, 163, 220, 237]
 	      ShowName		      off
@@ -10655,7 +10892,7 @@ Model {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "motohawk_calibration"
-	      SID		      71
+	      SID		      "7:71"
 	      Ports		      [0, 1]
 	      Position		      [70, 250, 220, 290]
 	      ShowName		      off
@@ -10694,7 +10931,7 @@ Model {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "motohawk_code_coverage"
-	      SID		      72
+	      SID		      "7:72"
 	      Ports		      []
 	      Position		      [1110, 32, 1286, 62]
 	      ShowName		      off
@@ -10705,7 +10942,7 @@ Model {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "motohawk_data_def"
-	      SID		      73
+	      SID		      "7:73"
 	      Ports		      []
 	      Position		      [1100, 280, 1235, 327]
 	      ShowName		      off
@@ -10751,7 +10988,7 @@ Model {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "motohawk_data_def1"
-	      SID		      74
+	      SID		      "7:74"
 	      Ports		      []
 	      Position		      [295, 310, 430, 357]
 	      ShowName		      off
@@ -10797,7 +11034,7 @@ Model {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "motohawk_data_read"
-	      SID		      75
+	      SID		      "7:75"
 	      Ports		      [0, 1]
 	      Position		      [295, 256, 430, 304]
 	      ShowName		      off
@@ -10819,7 +11056,7 @@ Model {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "motohawk_data_write"
-	      SID		      76
+	      SID		      "7:76"
 	      Ports		      [1]
 	      Position		      [1100, 226, 1235, 274]
 	      ShowName		      off
@@ -10842,7 +11079,7 @@ Model {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "motohawk_data_write3"
-	      SID		      83
+	      SID		      "7:83"
 	      Ports		      [1]
 	      Position		      [375, 65, 510, 125]
 	      ShowName		      off
@@ -10865,19 +11102,16 @@ Model {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "motohawk_dout"
-	      SID		      77
+	      SID		      "7:77"
 	      Ports		      [1]
 	      Position		      [1100, 128, 1300, 202]
 	      ShowName		      off
 	      LibraryVersion	      "MotoHawk 0.2.3"
 	      SourceBlock	      "MotoHawk_lib/Digital I//O Blocks/motohawk_dout"
 	      SourceType	      "MotoHawk Discrete Output"
+	      resource_name	      "[]"
 	      text_resource	      "MPRD"
-	      code_resource	      "NONE"
-	      val_resource	      "-1"
 	      target		      "ECU555-48-0708"
-	      resource_enum_str	      "(None)=-1,FUELP=0,LIAC=7,HORN=8,SPARE=9,FUEL 1=12,FUEL 2=13,FUEL 3=14,FUEL 4=15,TACH=2"
-	      "4,EST 1=36,MPRD=52"
 	      use_diag		      off
 	      use_vardec	      off
 	      nam		      "'DOUT'"
@@ -10888,7 +11122,7 @@ Model {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "motohawk_override_abs"
-	      SID		      78
+	      SID		      "7:78"
 	      Ports		      [1, 1]
 	      Position		      [970, 152, 1050, 178]
 	      ShowName		      off
@@ -10903,6 +11137,7 @@ Model {
 	      RTWMemSecDataConstants  "Inherit from model"
 	      RTWMemSecDataInternal   "Inherit from model"
 	      RTWMemSecDataParameters "Inherit from model"
+	      GeneratePreprocessorConditionals off
 	      parent_name	      "'MPRD'"
 	      parent_val	      "0"
 	      show_more		      on
@@ -10928,7 +11163,7 @@ Model {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "motohawk_restore_nvmem"
-	      SID		      79
+	      SID		      "7:79"
 	      Ports		      [0, 0, 0, 1]
 	      Position		      [959, 520, 1096, 581]
 	      ShowName		      off
@@ -10943,11 +11178,12 @@ Model {
 	      RTWMemSecDataConstants  "Inherit from model"
 	      RTWMemSecDataInternal   "Inherit from model"
 	      RTWMemSecDataParameters "Inherit from model"
+	      GeneratePreprocessorConditionals off
 	    }
 	    Block {
 	      BlockType		      Reference
 	      Name		      "motohawk_store_nvmem"
-	      SID		      80
+	      SID		      "7:80"
 	      Ports		      [0, 0, 0, 1]
 	      Position		      [515, 520, 651, 581]
 	      ShowName		      off
@@ -10962,6 +11198,7 @@ Model {
 	      RTWMemSecDataConstants  "Inherit from model"
 	      RTWMemSecDataInternal   "Inherit from model"
 	      RTWMemSecDataParameters "Inherit from model"
+	      GeneratePreprocessorConditionals off
 	    }
 	    Line {
 	      SrcBlock		      "motohawk_override_abs"
@@ -11204,7 +11441,7 @@ Model {
 	Block {
 	  BlockType		  Reference
 	  Name			  "motohawk_trigger"
-	  SID			  81
+	  SID			  "7:81"
 	  Tag			  "Trigger"
 	  Ports			  [0, 1]
 	  Position		  [215, 130, 395, 215]
@@ -11217,7 +11454,7 @@ Model {
 	  SourceBlock		  "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 	  SourceType		  "MotoHawk Function Trigger"
 	  trigger		  "BGND_BASE_PERIODIC"
-	  function_name		  "Trigger_BGND_BASE_PERIODIC_632p0004"
+	  function_name		  "Trigger_BGND_BASE_PERIODIC_739p0001"
 	  priority_order	  "255"
 	  inherited		  on
 	  run_disabled		  on
@@ -11248,7 +11485,7 @@ Model {
     Block {
       BlockType		      Reference
       Name		      "motohawk_TitleBlock"
-      SID		      8
+      SID		      "8"
       Ports		      []
       Position		      [28, 14, 893, 174]
       ShowName		      off
@@ -11274,7 +11511,7 @@ Model {
     Block {
       BlockType		      Reference
       Name		      "motohawk_code_coverage_mgr"
-      SID		      9
+      SID		      "9"
       Ports		      []
       Position		      [85, 727, 412, 780]
       ShowName		      off
@@ -11287,7 +11524,7 @@ Model {
     Block {
       BlockType		      Reference
       Name		      "motohawk_notes2"
-      SID		      10
+      SID		      "10"
       Ports		      []
       Position		      [472, 668, 880, 939]
       ShowName		      off
@@ -11317,7 +11554,7 @@ Model {
     Block {
       BlockType		      Reference
       Name		      "motohawk_notescallout"
-      SID		      11
+      SID		      "11"
       Ports		      []
       Position		      [467, 343, 516, 390]
       ForegroundColor	      "[0.916667, 0.916667, 0.916667]"
@@ -11333,7 +11570,7 @@ Model {
     Block {
       BlockType		      Reference
       Name		      "motohawk_notescallout1"
-      SID		      12
+      SID		      "12"
       Ports		      []
       Position		      [787, 343, 836, 390]
       ForegroundColor	      "[0.916667, 0.916667, 0.916667]"
@@ -11349,7 +11586,7 @@ Model {
     Block {
       BlockType		      Reference
       Name		      "motohawk_notescallout2"
-      SID		      13
+      SID		      "13"
       Ports		      []
       Position		      [787, 523, 836, 570]
       ForegroundColor	      "[0.916667, 0.916667, 0.916667]"
@@ -11365,7 +11602,7 @@ Model {
     Block {
       BlockType		      Reference
       Name		      "motohawk_target_def1"
-      SID		      14
+      SID		      "14"
       Ports		      []
       Position		      [44, 326, 451, 700]
       ShowName		      off
@@ -11375,7 +11612,7 @@ Model {
       SourceBlock	      "MotoHawk_lib/motohawk_target_def"
       SourceType	      "MotoHawk Target Definition"
       target		      "ECU555-48-0708"
-      layout		      "DEV"
+      layout		      "PROD"
       fptype		      "single (32 bits)"
       fgnd_stack_size	      "3*1024"
       fgnd_angle_stack_size   "0"
@@ -11409,7 +11646,7 @@ Model {
     Block {
       BlockType		      Reference
       Name		      "motohawk_trigger"
-      SID		      15
+      SID		      "15"
       Tag		      "Trigger"
       Ports		      [0, 1]
       Position		      [590, 455, 770, 540]
@@ -11422,17 +11659,97 @@ Model {
       SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
       SourceType	      "MotoHawk Function Trigger"
       trigger		      "FGND_RTI_PERIODIC"
-      function_name	      "Trigger_FGND_RTI_PERIODIC_643p0004"
+      function_name	      "Trigger_FGND_RTI_PERIODIC_750p0001"
       priority_order	      "0"
       inherited		      off
       run_disabled	      off
       override_app_monitor    off
       target		      "ECU555_48_0708"
     }
+    Block {
+      BlockType		      Reference
+      Name		      "motohawk_trigger2"
+      SID		      "310"
+      Tag		      "Trigger"
+      Ports		      [0, 1]
+      Position		      [965, 455, 1145, 540]
+      BlockRotation	      270
+      BlockMirror	      on
+      NamePlacement	      "alternate"
+      ShowName		      off
+      LibraryVersion	      "MotoHawk 0.2.3"
+      SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
+      SourceType	      "MotoHawk Function Trigger"
+      trigger		      "STARTUP_EVENT"
+      function_name	      "Trigger_STARTUP_EVENT_10849p0004"
+      priority_order	      "0"
+      inherited		      off
+      run_disabled	      off
+      override_app_monitor    off
+      target		      "ECU555_48_0708"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "startup"
+      SID		      "311"
+      Ports		      [0, 0, 0, 1]
+      Position		      [1005, 574, 1105, 616]
+      TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"startup"
+	Location		[239, 82, 1356, 709]
+	Open			off
+	ModelBrowserVisibility	on
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"171"
+	Block {
+	  BlockType		  TriggerPort
+	  Name			  "function"
+	  SID			  "312"
+	  Ports			  []
+	  Position		  [210, 15, 230, 35]
+	  TriggerType		  "function-call"
+	  StatesWhenEnabling	  "held"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "VDO Gauge Reset"
+	  SID			  "315"
+	  Ports			  []
+	  Position		  [95, 88, 375, 193]
+	  ShowName		  off
+	  LibraryVersion	  "1.74"
+	  SourceBlock		  "MotoHawk_VDOGauge_lib/VDO Gauge Reset"
+	  SourceType		  "MotoHawk VDO Gauge Reset"
+	  nam			  "'GaugeChain'"
+	}
+      }
+    }
     Line {
       SrcBlock		      "motohawk_trigger"
       SrcPort		      1
       DstBlock		      "Foreground"
+      DstPort		      trigger
+    }
+    Line {
+      SrcBlock		      "motohawk_trigger2"
+      SrcPort		      1
+      DstBlock		      "startup"
       DstPort		      trigger
     }
     Annotation {
@@ -11461,7 +11778,7 @@ Model {
 }
 # Finite State Machines
 #
-#    Stateflow Version 7.5 (R2010a) dated Jan 19 2010, 19:48:30
+#    Stateflow Version 7.5 (R2010a) dated Mar  5 2011, 00:01:50
 #
 #
 
@@ -11473,7 +11790,7 @@ Stateflow {
     created		    "19-Nov-2017 15:51:52"
     isLibrary		    0
     firstTarget		    28
-    sfVersion		    75014000
+    sfVersion		    75014001
   }
   chart {
     id			    2

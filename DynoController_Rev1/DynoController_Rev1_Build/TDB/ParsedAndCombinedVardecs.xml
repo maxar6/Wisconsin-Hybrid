@@ -34,7 +34,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s37_ReadCANMessage_o3</struct>
+      <struct>DynoController_Rev1_B.s38_ReadCANMessage_o3</struct>
       <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO</group>
    </VarDec>
    <VarDec>
@@ -52,7 +52,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s74_LogicalOperator2</struct>
+      <struct>DynoController_Rev1_B.s75_LogicalOperator2</struct>
       <group>DynoController_Rev1|Foreground|Outputs|Analog Outputs</group>
    </VarDec>
    <VarDec>
@@ -108,7 +108,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s36_MaxCellTemperature</struct>
+      <struct>DynoController_Rev1_B.s37_MaxCellTemperature</struct>
       <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY</group>
    </VarDec>
    <VarDec>
@@ -126,7 +126,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s16_motohawk_din1</struct>
+      <struct>DynoController_Rev1_B.s17_motohawk_din1</struct>
       <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs</group>
    </VarDec>
    <VarDec>
@@ -144,7 +144,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s74_RelationalOperator2</struct>
+      <struct>DynoController_Rev1_B.s75_RelationalOperator2</struct>
       <group>DynoController_Rev1|Foreground|Outputs|Analog Outputs</group>
    </VarDec>
    <VarDec>
@@ -219,7 +219,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s16_motohawk_din4</struct>
+      <struct>DynoController_Rev1_B.s17_motohawk_din4</struct>
       <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs</group>
    </VarDec>
    <VarDec>
@@ -275,7 +275,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s37_ReadCANMessage_o5</struct>
+      <struct>DynoController_Rev1_B.s38_ReadCANMessage_o5</struct>
       <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO</group>
    </VarDec>
    <VarDec>
@@ -293,7 +293,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s16_motohawk_din5</struct>
+      <struct>DynoController_Rev1_B.s17_motohawk_din5</struct>
       <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs</group>
    </VarDec>
    <VarDec>
@@ -311,7 +311,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s74_LogicalOperator</struct>
+      <struct>DynoController_Rev1_B.s75_LogicalOperator</struct>
       <group>DynoController_Rev1|Foreground|Outputs|Analog Outputs</group>
    </VarDec>
    <VarDec>
@@ -329,7 +329,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s74_LogicalOperator1</struct>
+      <struct>DynoController_Rev1_B.s75_LogicalOperator1</struct>
       <group>DynoController_Rev1|Foreground|Outputs|Analog Outputs</group>
    </VarDec>
    <VarDec>
@@ -423,7 +423,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s37_ReadCANMessage_o4</struct>
+      <struct>DynoController_Rev1_B.s38_ReadCANMessage_o4</struct>
       <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO</group>
    </VarDec>
    <VarDec>
@@ -441,7 +441,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s36_BatteryVoltage</struct>
+      <struct>DynoController_Rev1_B.s37_BatteryVoltage</struct>
       <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY</group>
    </VarDec>
    <VarDec>
@@ -478,7 +478,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s36_PackState</struct>
+      <struct>DynoController_Rev1_B.s37_PackState</struct>
       <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY</group>
    </VarDec>
    <VarDec>
@@ -496,7 +496,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s16_motohawk_din</struct>
+      <struct>DynoController_Rev1_B.s17_motohawk_din</struct>
       <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs</group>
    </VarDec>
    <VarDec>
@@ -514,7 +514,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s102_Gen_Load</struct>
+      <struct>DynoController_Rev1_B.s103_Gen_Load</struct>
       <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT</group>
    </VarDec>
    <VarDec>
@@ -532,8 +532,27 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s101_IsolationMeasurementEnable</struct>
+      <struct>DynoController_Rev1_B.s102_IsolationMeasurementEnable</struct>
       <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|BATTERY OUT</group>
+   </VarDec>
+   <VarDec>
+      <name>FGND_20XRTI_PERIODIC_RunCnt</name>
+      <class>var</class>
+      <access>NA NA RW RW</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>int32</type>
+      <gain>1</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>2147483646</max>
+      <min>-1</min>
+      <format>5.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>int32_T</ctype>
+      <struct>FGND_20XRTI_PERIODIC_RunCnt</struct>
+      <help>The number of times to execute FGND_20XRTI_PERIODIC before pausing.  -1 means run forever</help>
+      <group>System | Debug | Event Pause Counters</group>
    </VarDec>
    <VarDec>
       <name>CPUMargin</name>
@@ -607,26 +626,8 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s37_ReadCANMessage_o1</struct>
+      <struct>DynoController_Rev1_B.s38_ReadCANMessage_o1</struct>
       <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO</group>
-   </VarDec>
-   <VarDec>
-      <name>OilPressure_Gauges_Prb</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>int16</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>32767.000000</max>
-      <min>-32768.000000</min>
-      <format>5.0</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s76_Gain1</struct>
-      <group>DynoController_Rev1|Foreground|Outputs|Guages</group>
    </VarDec>
    <VarDec>
       <name>Coil_Pos_Prb</name>
@@ -643,8 +644,26 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s74_LogicalOperator1</struct>
+      <struct>DynoController_Rev1_B.s75_LogicalOperator1</struct>
       <group>DynoController_Rev1|Foreground|Outputs|Analog Outputs</group>
+   </VarDec>
+   <VarDec>
+      <name>OilPressure_Gauges_Prb</name>
+      <class>var</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>int16</type>
+      <gain>1.0</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>32767.000000</max>
+      <min>-32768.000000</min>
+      <format>5.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>BlockIO_DynoController_Rev1</ctype>
+      <struct>DynoController_Rev1_B.s77_Gain1</struct>
+      <group>DynoController_Rev1|Foreground|Outputs|Guages</group>
    </VarDec>
    <VarDec>
       <name>table_7_rev</name>
@@ -680,7 +699,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s76_Gain</struct>
+      <struct>DynoController_Rev1_B.s77_Gain</struct>
       <group>DynoController_Rev1|Foreground|Outputs|Guages</group>
    </VarDec>
    <VarDec>
@@ -698,7 +717,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s10_Merge</struct>
+      <struct>DynoController_Rev1_B.s11_Merge</struct>
       <group>DynoController_Rev1|Foreground|Control|Battery</group>
    </VarDec>
    <VarDec>
@@ -735,7 +754,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s54_Merge</struct>
+      <struct>DynoController_Rev1_B.s55_Merge</struct>
       <group>DynoController_Rev1|Foreground|Outputs|Guages</group>
    </VarDec>
    <VarDec>
@@ -753,7 +772,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s102_Gen_Enable</struct>
+      <struct>DynoController_Rev1_B.s103_Gen_Enable</struct>
       <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT</group>
    </VarDec>
    <VarDec>
@@ -828,8 +847,27 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s36_StateOfCharge</struct>
+      <struct>DynoController_Rev1_B.s37_StateOfCharge</struct>
       <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY</group>
+   </VarDec>
+   <VarDec>
+      <name>STARTUP_EVENT_RunCnt</name>
+      <class>var</class>
+      <access>NA NA RW RW</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>int32</type>
+      <gain>1</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>2147483646</max>
+      <min>-1</min>
+      <format>5.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>int32_T</ctype>
+      <struct>STARTUP_EVENT_RunCnt</struct>
+      <help>The number of times to execute STARTUP_EVENT before pausing.  -1 means run forever</help>
+      <group>System | Debug | Event Pause Counters</group>
    </VarDec>
    <VarDec>
       <name>HeapMargin</name>
@@ -865,7 +903,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s101_ConnectCommand</struct>
+      <struct>DynoController_Rev1_B.s102_ConnectCommand</struct>
       <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|BATTERY OUT</group>
    </VarDec>
    <VarDec>
@@ -883,7 +921,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s74_LogicalOperator</struct>
+      <struct>DynoController_Rev1_B.s75_LogicalOperator</struct>
       <group>DynoController_Rev1|Foreground|Outputs|Analog Outputs</group>
    </VarDec>
    <VarDec>
@@ -920,7 +958,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s37_ReadCANMessage_o6</struct>
+      <struct>DynoController_Rev1_B.s38_ReadCANMessage_o6</struct>
       <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO</group>
    </VarDec>
    <VarDec>
@@ -958,8 +996,26 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s37_ReadCANMessage_o2</struct>
+      <struct>DynoController_Rev1_B.s38_ReadCANMessage_o2</struct>
       <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO</group>
+   </VarDec>
+   <VarDec>
+      <name>TimeSinceKeyOn</name>
+      <class>var</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+      <gain>1.0</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>100000000000000000.000000</max>
+      <min>-100000000000000000.000000</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>BlockIO_DynoController_Rev1</ctype>
+      <struct>DynoController_Rev1_B.s124_Sum</struct>
+      <group>DynoController_Rev1|Foreground|Outputs|Guages|Time Since Key On</group>
    </VarDec>
    <VarDec>
       <name>Fault_Prb</name>
@@ -976,7 +1032,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s37_ReadCANMessage_o7</struct>
+      <struct>DynoController_Rev1_B.s38_ReadCANMessage_o7</struct>
       <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO</group>
    </VarDec>
    <VarDec>
@@ -994,7 +1050,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s36_BatteryCurrent</struct>
+      <struct>DynoController_Rev1_B.s37_BatteryCurrent</struct>
       <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY</group>
    </VarDec>
    <VarDec>
@@ -1012,7 +1068,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s16_motohawk_din3</struct>
+      <struct>DynoController_Rev1_B.s17_motohawk_din3</struct>
       <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs</group>
    </VarDec>
    <VarDec>
@@ -1030,7 +1086,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s16_motohawk_din2</struct>
+      <struct>DynoController_Rev1_B.s17_motohawk_din2</struct>
       <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs</group>
    </VarDec>
    <VarDec>
@@ -1048,7 +1104,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s10_Merge</struct>
+      <struct>DynoController_Rev1_B.s11_Merge</struct>
       <group>DynoController_Rev1|Foreground|Control|Battery</group>
    </VarDec>
    <VarDec>
@@ -1066,7 +1122,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s9_LogicalOperator2</struct>
+      <struct>DynoController_Rev1_B.s10_LogicalOperator2</struct>
       <group>DynoController_Rev1|Foreground|Control|Battery</group>
    </VarDec>
    <VarDec>
@@ -1103,7 +1159,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_DynoController_Rev1</ctype>
-      <struct>DynoController_Rev1_B.s76_Gain2</struct>
+      <struct>DynoController_Rev1_B.s77_Gain2</struct>
       <group>DynoController_Rev1|Foreground|Outputs|Guages</group>
    </VarDec>
    <VarDec>
@@ -1973,7 +2029,7 @@
       <type>char</type>
       <text_len>80</text_len>
       <ctype>uint1</ctype>
-      <struct>MotoHawkTokenGUID[0]</struct>
+      <struct>MotoHawkBuildGUID[0]</struct>
       <help>GUID identifying the MotoHawk build session</help>
       <group>System | Version</group>
    </VarDec>
@@ -2129,7 +2185,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>dout_create_COIL_Pos</name>
+      <name>dout_create_DOut335p001</name>
       <class>enum</class>
       <access>RO RO RO RO</access>
       <storage>RAM</storage>
@@ -2143,119 +2199,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>E_NativeFWError</ctype>
-      <struct>dout_create_COIL_Pos</struct>
-      <help>Debug Variable</help>
-      <group>System | Debug | Resources | DiscreteOut</group>
-      <enum name="E_NativeFWError">
-         <item name="Normal Operation" value="0"/>
-         <item name="Bad Resource ID" value="1"/>
-         <item name="Hardware Not Supported" value="2"/>
-         <item name="Behaviour Not Supported" value="3"/>
-         <item name="Bad Attribute Data" value="4"/>
-         <item name="Fail On Create" value="5"/>
-         <item name="Fail On Set Attributes" value="6"/>
-         <item name="Resource Not Created" value="7"/>
-         <item name="Missing Attribute" value="8"/>
-         <item name="Behaviour Method Not Supported" value="9"/>
-         <item name="A Service Failed" value="10"/>
-         <item name="Failed to destroy a resource" value="11"/>
-         <item name="Resource Was Created" value="12"/>
-         <item name="Resource Conflict" value="13"/>
-         <item name="Invalid Encoder Type" value="14"/>
-         <item name="2-Strike Not Supported" value="15"/>
-         <item name="720degCA Pattern Not Supported" value="16"/>
-         <item name="CAM Pattern Not Supported" value="17"/>
-         <item name="Unknown CAM Pattern Supplied" value="18"/>
-         <item name="Engine Speed Present" value="19"/>
-         <item name="Hardware Interface Not Supported" value="20"/>
-         <item name="Service Already Started" value="21"/>
-         <item name="Register Write Failed to verify" value="22"/>
-         <item name="Register access was denied" value="23"/>
-         <item name="Out of free store memory" value="24"/>
-         <item name="Software Q Overrun" value="25"/>
-         <item name="Hardware Q Overrun" value="26"/>
-         <item name="Feature unsupported in archive" value="27"/>
-         <item name="Insufficient FW resource" value="28"/>
-         <item name="OS Resource conflict" value="29"/>
-         <item name="Driver Mode conflict" value="30"/>
-         <item name="RTC time is illegal" value="31"/>
-         <item name="FFS unmounted" value="32"/>
-         <item name="Access from an ISR" value="33"/>
-         <item name="FFS internal" value="34"/>
-         <item name="Operation timed out" value="35"/>
-         <item name="Task Kernel API Usage" value="36"/>
-         <item name="Operation aborted" value="37"/>
-         <item name="File not Found" value="38"/>
-         <item name="Invalid characters in filename" value="39"/>
-         <item name="Duplicate filename" value="40"/>
-         <item name="Filename is too long" value="41"/>
-         <item name="Dir not empty on remove" value="42"/>
-         <item name="Dir not found" value="43"/>
-         <item name="Dir name invalid" value="44"/>
-         <item name="Dir exists" value="45"/>
-         <item name="Dir too deep" value="46"/>
-         <item name="Illegal Handle" value="47"/>
-         <item name="End of File" value="48"/>
-         <item name="Media Full" value="49"/>
-         <item name="Media Write" value="50"/>
-         <item name="Media Read" value="51"/>
-         <item name="Media Write Protected" value="52"/>
-         <item name="File Read Only" value="53"/>
-         <item name="FS Media Changed" value="54"/>
-         <item name="Internal USB" value="55"/>
-         <item name="Voltage too high for USB IC" value="56"/>
-         <item name="Encoder not created" value="57"/>
-         <item name="TPU Chan Conflict" value="64"/>
-         <item name="TPU Func Unavailable" value="65"/>
-         <item name="TPU Config" value="66"/>
-         <item name="TPU Primative Usage" value="67"/>
-         <item name="TPU Primitive Count" value="68"/>
-         <item name="TPU Restricted TPU channel" value="69"/>
-         <item name="TPU Not Created" value="70"/>
-         <item name="TPU Self Modify constant write err" value="71"/>
-         <item name="TPU Error 0x48" value="72"/>
-         <item name="TPU Error 0x49" value="73"/>
-         <item name="TPU Error 0x4A" value="74"/>
-         <item name="TPU Error 0x4B" value="75"/>
-         <item name="TPU Error 0x4C" value="76"/>
-         <item name="TPU Error 0x4D" value="77"/>
-         <item name="TPU Error 0x4E" value="78"/>
-         <item name="TPU Error 0x4F" value="79"/>
-         <item name="TPU Error 0x50" value="80"/>
-         <item name="TPU Error 0x51" value="81"/>
-         <item name="TPU Error 0x52" value="82"/>
-         <item name="TPU Error 0x53" value="83"/>
-         <item name="TPU Error 0x54" value="84"/>
-         <item name="TPU Error 0x55" value="85"/>
-         <item name="TPU Error 0x56" value="86"/>
-         <item name="TPU Error 0x57" value="87"/>
-         <item name="TPU Error 0x58" value="88"/>
-         <item name="TPU Error 0x59" value="89"/>
-         <item name="TPU Error 0x5A" value="90"/>
-         <item name="TPU Error 0x5B" value="91"/>
-         <item name="TPU Error 0x5C" value="92"/>
-         <item name="TPU Error 0x5D" value="93"/>
-         <item name="TPU Error 0x5E" value="94"/>
-         <item name="TPU Error 0x5F" value="95"/>
-         <default>Illegal Error</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>dout_create_MPRD</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>0.0</max>
-      <min>0.0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>E_NativeFWError</ctype>
-      <struct>dout_create_MPRD</struct>
+      <struct>dout_create_DOut335p001</struct>
       <help>Debug Variable</help>
       <group>System | Debug | Resources | DiscreteOut</group>
       <enum name="E_NativeFWError">
@@ -2832,118 +2776,6 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>dout_create_Genset_Load</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>0.0</max>
-      <min>0.0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>E_NativeFWError</ctype>
-      <struct>dout_create_Genset_Load</struct>
-      <help>Debug Variable</help>
-      <group>System | Debug | Resources | DiscreteOut</group>
-      <enum name="E_NativeFWError">
-         <item name="Normal Operation" value="0"/>
-         <item name="Bad Resource ID" value="1"/>
-         <item name="Hardware Not Supported" value="2"/>
-         <item name="Behaviour Not Supported" value="3"/>
-         <item name="Bad Attribute Data" value="4"/>
-         <item name="Fail On Create" value="5"/>
-         <item name="Fail On Set Attributes" value="6"/>
-         <item name="Resource Not Created" value="7"/>
-         <item name="Missing Attribute" value="8"/>
-         <item name="Behaviour Method Not Supported" value="9"/>
-         <item name="A Service Failed" value="10"/>
-         <item name="Failed to destroy a resource" value="11"/>
-         <item name="Resource Was Created" value="12"/>
-         <item name="Resource Conflict" value="13"/>
-         <item name="Invalid Encoder Type" value="14"/>
-         <item name="2-Strike Not Supported" value="15"/>
-         <item name="720degCA Pattern Not Supported" value="16"/>
-         <item name="CAM Pattern Not Supported" value="17"/>
-         <item name="Unknown CAM Pattern Supplied" value="18"/>
-         <item name="Engine Speed Present" value="19"/>
-         <item name="Hardware Interface Not Supported" value="20"/>
-         <item name="Service Already Started" value="21"/>
-         <item name="Register Write Failed to verify" value="22"/>
-         <item name="Register access was denied" value="23"/>
-         <item name="Out of free store memory" value="24"/>
-         <item name="Software Q Overrun" value="25"/>
-         <item name="Hardware Q Overrun" value="26"/>
-         <item name="Feature unsupported in archive" value="27"/>
-         <item name="Insufficient FW resource" value="28"/>
-         <item name="OS Resource conflict" value="29"/>
-         <item name="Driver Mode conflict" value="30"/>
-         <item name="RTC time is illegal" value="31"/>
-         <item name="FFS unmounted" value="32"/>
-         <item name="Access from an ISR" value="33"/>
-         <item name="FFS internal" value="34"/>
-         <item name="Operation timed out" value="35"/>
-         <item name="Task Kernel API Usage" value="36"/>
-         <item name="Operation aborted" value="37"/>
-         <item name="File not Found" value="38"/>
-         <item name="Invalid characters in filename" value="39"/>
-         <item name="Duplicate filename" value="40"/>
-         <item name="Filename is too long" value="41"/>
-         <item name="Dir not empty on remove" value="42"/>
-         <item name="Dir not found" value="43"/>
-         <item name="Dir name invalid" value="44"/>
-         <item name="Dir exists" value="45"/>
-         <item name="Dir too deep" value="46"/>
-         <item name="Illegal Handle" value="47"/>
-         <item name="End of File" value="48"/>
-         <item name="Media Full" value="49"/>
-         <item name="Media Write" value="50"/>
-         <item name="Media Read" value="51"/>
-         <item name="Media Write Protected" value="52"/>
-         <item name="File Read Only" value="53"/>
-         <item name="FS Media Changed" value="54"/>
-         <item name="Internal USB" value="55"/>
-         <item name="Voltage too high for USB IC" value="56"/>
-         <item name="Encoder not created" value="57"/>
-         <item name="TPU Chan Conflict" value="64"/>
-         <item name="TPU Func Unavailable" value="65"/>
-         <item name="TPU Config" value="66"/>
-         <item name="TPU Primative Usage" value="67"/>
-         <item name="TPU Primitive Count" value="68"/>
-         <item name="TPU Restricted TPU channel" value="69"/>
-         <item name="TPU Not Created" value="70"/>
-         <item name="TPU Self Modify constant write err" value="71"/>
-         <item name="TPU Error 0x48" value="72"/>
-         <item name="TPU Error 0x49" value="73"/>
-         <item name="TPU Error 0x4A" value="74"/>
-         <item name="TPU Error 0x4B" value="75"/>
-         <item name="TPU Error 0x4C" value="76"/>
-         <item name="TPU Error 0x4D" value="77"/>
-         <item name="TPU Error 0x4E" value="78"/>
-         <item name="TPU Error 0x4F" value="79"/>
-         <item name="TPU Error 0x50" value="80"/>
-         <item name="TPU Error 0x51" value="81"/>
-         <item name="TPU Error 0x52" value="82"/>
-         <item name="TPU Error 0x53" value="83"/>
-         <item name="TPU Error 0x54" value="84"/>
-         <item name="TPU Error 0x55" value="85"/>
-         <item name="TPU Error 0x56" value="86"/>
-         <item name="TPU Error 0x57" value="87"/>
-         <item name="TPU Error 0x58" value="88"/>
-         <item name="TPU Error 0x59" value="89"/>
-         <item name="TPU Error 0x5A" value="90"/>
-         <item name="TPU Error 0x5B" value="91"/>
-         <item name="TPU Error 0x5C" value="92"/>
-         <item name="TPU Error 0x5D" value="93"/>
-         <item name="TPU Error 0x5E" value="94"/>
-         <item name="TPU Error 0x5F" value="95"/>
-         <default>Illegal Error</default>
-      </enum>
-   </VarDec>
-   <VarDec>
       <name>ApplicationStatus</name>
       <class>enum</class>
       <access>RO RO RW RW</access>
@@ -2970,7 +2802,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>dout_create_ACC1_Out</name>
+      <name>dout_create_DOut328p001</name>
       <class>enum</class>
       <access>RO RO RO RO</access>
       <storage>RAM</storage>
@@ -2984,7 +2816,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>E_NativeFWError</ctype>
-      <struct>dout_create_ACC1_Out</struct>
+      <struct>dout_create_DOut328p001</struct>
       <help>Debug Variable</help>
       <group>System | Debug | Resources | DiscreteOut</group>
       <enum name="E_NativeFWError">
@@ -3418,7 +3250,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>dout_create_ACC2_Out</name>
+      <name>dout_create_DOut329p001</name>
       <class>enum</class>
       <access>RO RO RO RO</access>
       <storage>RAM</storage>
@@ -3432,7 +3264,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>E_NativeFWError</ctype>
-      <struct>dout_create_ACC2_Out</struct>
+      <struct>dout_create_DOut329p001</struct>
       <help>Debug Variable</help>
       <group>System | Debug | Resources | DiscreteOut</group>
       <enum name="E_NativeFWError">
@@ -3547,118 +3379,6 @@
       <struct>FWModulesSetDisplayInfo.DisplayVar</struct>
       <help>This indicates the currently Active Errors within the Framework Glue module.</help>
       <group>System | Status | Framework</group>
-      <enum name="E_NativeFWError">
-         <item name="Normal Operation" value="0"/>
-         <item name="Bad Resource ID" value="1"/>
-         <item name="Hardware Not Supported" value="2"/>
-         <item name="Behaviour Not Supported" value="3"/>
-         <item name="Bad Attribute Data" value="4"/>
-         <item name="Fail On Create" value="5"/>
-         <item name="Fail On Set Attributes" value="6"/>
-         <item name="Resource Not Created" value="7"/>
-         <item name="Missing Attribute" value="8"/>
-         <item name="Behaviour Method Not Supported" value="9"/>
-         <item name="A Service Failed" value="10"/>
-         <item name="Failed to destroy a resource" value="11"/>
-         <item name="Resource Was Created" value="12"/>
-         <item name="Resource Conflict" value="13"/>
-         <item name="Invalid Encoder Type" value="14"/>
-         <item name="2-Strike Not Supported" value="15"/>
-         <item name="720degCA Pattern Not Supported" value="16"/>
-         <item name="CAM Pattern Not Supported" value="17"/>
-         <item name="Unknown CAM Pattern Supplied" value="18"/>
-         <item name="Engine Speed Present" value="19"/>
-         <item name="Hardware Interface Not Supported" value="20"/>
-         <item name="Service Already Started" value="21"/>
-         <item name="Register Write Failed to verify" value="22"/>
-         <item name="Register access was denied" value="23"/>
-         <item name="Out of free store memory" value="24"/>
-         <item name="Software Q Overrun" value="25"/>
-         <item name="Hardware Q Overrun" value="26"/>
-         <item name="Feature unsupported in archive" value="27"/>
-         <item name="Insufficient FW resource" value="28"/>
-         <item name="OS Resource conflict" value="29"/>
-         <item name="Driver Mode conflict" value="30"/>
-         <item name="RTC time is illegal" value="31"/>
-         <item name="FFS unmounted" value="32"/>
-         <item name="Access from an ISR" value="33"/>
-         <item name="FFS internal" value="34"/>
-         <item name="Operation timed out" value="35"/>
-         <item name="Task Kernel API Usage" value="36"/>
-         <item name="Operation aborted" value="37"/>
-         <item name="File not Found" value="38"/>
-         <item name="Invalid characters in filename" value="39"/>
-         <item name="Duplicate filename" value="40"/>
-         <item name="Filename is too long" value="41"/>
-         <item name="Dir not empty on remove" value="42"/>
-         <item name="Dir not found" value="43"/>
-         <item name="Dir name invalid" value="44"/>
-         <item name="Dir exists" value="45"/>
-         <item name="Dir too deep" value="46"/>
-         <item name="Illegal Handle" value="47"/>
-         <item name="End of File" value="48"/>
-         <item name="Media Full" value="49"/>
-         <item name="Media Write" value="50"/>
-         <item name="Media Read" value="51"/>
-         <item name="Media Write Protected" value="52"/>
-         <item name="File Read Only" value="53"/>
-         <item name="FS Media Changed" value="54"/>
-         <item name="Internal USB" value="55"/>
-         <item name="Voltage too high for USB IC" value="56"/>
-         <item name="Encoder not created" value="57"/>
-         <item name="TPU Chan Conflict" value="64"/>
-         <item name="TPU Func Unavailable" value="65"/>
-         <item name="TPU Config" value="66"/>
-         <item name="TPU Primative Usage" value="67"/>
-         <item name="TPU Primitive Count" value="68"/>
-         <item name="TPU Restricted TPU channel" value="69"/>
-         <item name="TPU Not Created" value="70"/>
-         <item name="TPU Self Modify constant write err" value="71"/>
-         <item name="TPU Error 0x48" value="72"/>
-         <item name="TPU Error 0x49" value="73"/>
-         <item name="TPU Error 0x4A" value="74"/>
-         <item name="TPU Error 0x4B" value="75"/>
-         <item name="TPU Error 0x4C" value="76"/>
-         <item name="TPU Error 0x4D" value="77"/>
-         <item name="TPU Error 0x4E" value="78"/>
-         <item name="TPU Error 0x4F" value="79"/>
-         <item name="TPU Error 0x50" value="80"/>
-         <item name="TPU Error 0x51" value="81"/>
-         <item name="TPU Error 0x52" value="82"/>
-         <item name="TPU Error 0x53" value="83"/>
-         <item name="TPU Error 0x54" value="84"/>
-         <item name="TPU Error 0x55" value="85"/>
-         <item name="TPU Error 0x56" value="86"/>
-         <item name="TPU Error 0x57" value="87"/>
-         <item name="TPU Error 0x58" value="88"/>
-         <item name="TPU Error 0x59" value="89"/>
-         <item name="TPU Error 0x5A" value="90"/>
-         <item name="TPU Error 0x5B" value="91"/>
-         <item name="TPU Error 0x5C" value="92"/>
-         <item name="TPU Error 0x5D" value="93"/>
-         <item name="TPU Error 0x5E" value="94"/>
-         <item name="TPU Error 0x5F" value="95"/>
-         <default>Illegal Error</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>dout_create_Load_Dump_Enable</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>0.0</max>
-      <min>0.0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>E_NativeFWError</ctype>
-      <struct>dout_create_Load_Dump_Enable</struct>
-      <help>Debug Variable</help>
-      <group>System | Debug | Resources | DiscreteOut</group>
       <enum name="E_NativeFWError">
          <item name="Normal Operation" value="0"/>
          <item name="Bad Resource ID" value="1"/>
@@ -4090,118 +3810,6 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>dout_create_Genset_Enable</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>0.0</max>
-      <min>0.0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>E_NativeFWError</ctype>
-      <struct>dout_create_Genset_Enable</struct>
-      <help>Debug Variable</help>
-      <group>System | Debug | Resources | DiscreteOut</group>
-      <enum name="E_NativeFWError">
-         <item name="Normal Operation" value="0"/>
-         <item name="Bad Resource ID" value="1"/>
-         <item name="Hardware Not Supported" value="2"/>
-         <item name="Behaviour Not Supported" value="3"/>
-         <item name="Bad Attribute Data" value="4"/>
-         <item name="Fail On Create" value="5"/>
-         <item name="Fail On Set Attributes" value="6"/>
-         <item name="Resource Not Created" value="7"/>
-         <item name="Missing Attribute" value="8"/>
-         <item name="Behaviour Method Not Supported" value="9"/>
-         <item name="A Service Failed" value="10"/>
-         <item name="Failed to destroy a resource" value="11"/>
-         <item name="Resource Was Created" value="12"/>
-         <item name="Resource Conflict" value="13"/>
-         <item name="Invalid Encoder Type" value="14"/>
-         <item name="2-Strike Not Supported" value="15"/>
-         <item name="720degCA Pattern Not Supported" value="16"/>
-         <item name="CAM Pattern Not Supported" value="17"/>
-         <item name="Unknown CAM Pattern Supplied" value="18"/>
-         <item name="Engine Speed Present" value="19"/>
-         <item name="Hardware Interface Not Supported" value="20"/>
-         <item name="Service Already Started" value="21"/>
-         <item name="Register Write Failed to verify" value="22"/>
-         <item name="Register access was denied" value="23"/>
-         <item name="Out of free store memory" value="24"/>
-         <item name="Software Q Overrun" value="25"/>
-         <item name="Hardware Q Overrun" value="26"/>
-         <item name="Feature unsupported in archive" value="27"/>
-         <item name="Insufficient FW resource" value="28"/>
-         <item name="OS Resource conflict" value="29"/>
-         <item name="Driver Mode conflict" value="30"/>
-         <item name="RTC time is illegal" value="31"/>
-         <item name="FFS unmounted" value="32"/>
-         <item name="Access from an ISR" value="33"/>
-         <item name="FFS internal" value="34"/>
-         <item name="Operation timed out" value="35"/>
-         <item name="Task Kernel API Usage" value="36"/>
-         <item name="Operation aborted" value="37"/>
-         <item name="File not Found" value="38"/>
-         <item name="Invalid characters in filename" value="39"/>
-         <item name="Duplicate filename" value="40"/>
-         <item name="Filename is too long" value="41"/>
-         <item name="Dir not empty on remove" value="42"/>
-         <item name="Dir not found" value="43"/>
-         <item name="Dir name invalid" value="44"/>
-         <item name="Dir exists" value="45"/>
-         <item name="Dir too deep" value="46"/>
-         <item name="Illegal Handle" value="47"/>
-         <item name="End of File" value="48"/>
-         <item name="Media Full" value="49"/>
-         <item name="Media Write" value="50"/>
-         <item name="Media Read" value="51"/>
-         <item name="Media Write Protected" value="52"/>
-         <item name="File Read Only" value="53"/>
-         <item name="FS Media Changed" value="54"/>
-         <item name="Internal USB" value="55"/>
-         <item name="Voltage too high for USB IC" value="56"/>
-         <item name="Encoder not created" value="57"/>
-         <item name="TPU Chan Conflict" value="64"/>
-         <item name="TPU Func Unavailable" value="65"/>
-         <item name="TPU Config" value="66"/>
-         <item name="TPU Primative Usage" value="67"/>
-         <item name="TPU Primitive Count" value="68"/>
-         <item name="TPU Restricted TPU channel" value="69"/>
-         <item name="TPU Not Created" value="70"/>
-         <item name="TPU Self Modify constant write err" value="71"/>
-         <item name="TPU Error 0x48" value="72"/>
-         <item name="TPU Error 0x49" value="73"/>
-         <item name="TPU Error 0x4A" value="74"/>
-         <item name="TPU Error 0x4B" value="75"/>
-         <item name="TPU Error 0x4C" value="76"/>
-         <item name="TPU Error 0x4D" value="77"/>
-         <item name="TPU Error 0x4E" value="78"/>
-         <item name="TPU Error 0x4F" value="79"/>
-         <item name="TPU Error 0x50" value="80"/>
-         <item name="TPU Error 0x51" value="81"/>
-         <item name="TPU Error 0x52" value="82"/>
-         <item name="TPU Error 0x53" value="83"/>
-         <item name="TPU Error 0x54" value="84"/>
-         <item name="TPU Error 0x55" value="85"/>
-         <item name="TPU Error 0x56" value="86"/>
-         <item name="TPU Error 0x57" value="87"/>
-         <item name="TPU Error 0x58" value="88"/>
-         <item name="TPU Error 0x59" value="89"/>
-         <item name="TPU Error 0x5A" value="90"/>
-         <item name="TPU Error 0x5B" value="91"/>
-         <item name="TPU Error 0x5C" value="92"/>
-         <item name="TPU Error 0x5D" value="93"/>
-         <item name="TPU Error 0x5E" value="94"/>
-         <item name="TPU Error 0x5F" value="95"/>
-         <default>Illegal Error</default>
-      </enum>
-   </VarDec>
-   <VarDec>
       <name>din_create_ACC2</name>
       <class>enum</class>
       <access>RO RO RO RO</access>
@@ -4443,118 +4051,6 @@
       <struct>din_create_GensetLoad</struct>
       <help>Debug Variable</help>
       <group>System | Debug | Resources | DigitalInput</group>
-      <enum name="E_NativeFWError">
-         <item name="Normal Operation" value="0"/>
-         <item name="Bad Resource ID" value="1"/>
-         <item name="Hardware Not Supported" value="2"/>
-         <item name="Behaviour Not Supported" value="3"/>
-         <item name="Bad Attribute Data" value="4"/>
-         <item name="Fail On Create" value="5"/>
-         <item name="Fail On Set Attributes" value="6"/>
-         <item name="Resource Not Created" value="7"/>
-         <item name="Missing Attribute" value="8"/>
-         <item name="Behaviour Method Not Supported" value="9"/>
-         <item name="A Service Failed" value="10"/>
-         <item name="Failed to destroy a resource" value="11"/>
-         <item name="Resource Was Created" value="12"/>
-         <item name="Resource Conflict" value="13"/>
-         <item name="Invalid Encoder Type" value="14"/>
-         <item name="2-Strike Not Supported" value="15"/>
-         <item name="720degCA Pattern Not Supported" value="16"/>
-         <item name="CAM Pattern Not Supported" value="17"/>
-         <item name="Unknown CAM Pattern Supplied" value="18"/>
-         <item name="Engine Speed Present" value="19"/>
-         <item name="Hardware Interface Not Supported" value="20"/>
-         <item name="Service Already Started" value="21"/>
-         <item name="Register Write Failed to verify" value="22"/>
-         <item name="Register access was denied" value="23"/>
-         <item name="Out of free store memory" value="24"/>
-         <item name="Software Q Overrun" value="25"/>
-         <item name="Hardware Q Overrun" value="26"/>
-         <item name="Feature unsupported in archive" value="27"/>
-         <item name="Insufficient FW resource" value="28"/>
-         <item name="OS Resource conflict" value="29"/>
-         <item name="Driver Mode conflict" value="30"/>
-         <item name="RTC time is illegal" value="31"/>
-         <item name="FFS unmounted" value="32"/>
-         <item name="Access from an ISR" value="33"/>
-         <item name="FFS internal" value="34"/>
-         <item name="Operation timed out" value="35"/>
-         <item name="Task Kernel API Usage" value="36"/>
-         <item name="Operation aborted" value="37"/>
-         <item name="File not Found" value="38"/>
-         <item name="Invalid characters in filename" value="39"/>
-         <item name="Duplicate filename" value="40"/>
-         <item name="Filename is too long" value="41"/>
-         <item name="Dir not empty on remove" value="42"/>
-         <item name="Dir not found" value="43"/>
-         <item name="Dir name invalid" value="44"/>
-         <item name="Dir exists" value="45"/>
-         <item name="Dir too deep" value="46"/>
-         <item name="Illegal Handle" value="47"/>
-         <item name="End of File" value="48"/>
-         <item name="Media Full" value="49"/>
-         <item name="Media Write" value="50"/>
-         <item name="Media Read" value="51"/>
-         <item name="Media Write Protected" value="52"/>
-         <item name="File Read Only" value="53"/>
-         <item name="FS Media Changed" value="54"/>
-         <item name="Internal USB" value="55"/>
-         <item name="Voltage too high for USB IC" value="56"/>
-         <item name="Encoder not created" value="57"/>
-         <item name="TPU Chan Conflict" value="64"/>
-         <item name="TPU Func Unavailable" value="65"/>
-         <item name="TPU Config" value="66"/>
-         <item name="TPU Primative Usage" value="67"/>
-         <item name="TPU Primitive Count" value="68"/>
-         <item name="TPU Restricted TPU channel" value="69"/>
-         <item name="TPU Not Created" value="70"/>
-         <item name="TPU Self Modify constant write err" value="71"/>
-         <item name="TPU Error 0x48" value="72"/>
-         <item name="TPU Error 0x49" value="73"/>
-         <item name="TPU Error 0x4A" value="74"/>
-         <item name="TPU Error 0x4B" value="75"/>
-         <item name="TPU Error 0x4C" value="76"/>
-         <item name="TPU Error 0x4D" value="77"/>
-         <item name="TPU Error 0x4E" value="78"/>
-         <item name="TPU Error 0x4F" value="79"/>
-         <item name="TPU Error 0x50" value="80"/>
-         <item name="TPU Error 0x51" value="81"/>
-         <item name="TPU Error 0x52" value="82"/>
-         <item name="TPU Error 0x53" value="83"/>
-         <item name="TPU Error 0x54" value="84"/>
-         <item name="TPU Error 0x55" value="85"/>
-         <item name="TPU Error 0x56" value="86"/>
-         <item name="TPU Error 0x57" value="87"/>
-         <item name="TPU Error 0x58" value="88"/>
-         <item name="TPU Error 0x59" value="89"/>
-         <item name="TPU Error 0x5A" value="90"/>
-         <item name="TPU Error 0x5B" value="91"/>
-         <item name="TPU Error 0x5C" value="92"/>
-         <item name="TPU Error 0x5D" value="93"/>
-         <item name="TPU Error 0x5E" value="94"/>
-         <item name="TPU Error 0x5F" value="95"/>
-         <default>Illegal Error</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>dout_create_Battery_Enable</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>0.0</max>
-      <min>0.0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>E_NativeFWError</ctype>
-      <struct>dout_create_Battery_Enable</struct>
-      <help>Debug Variable</help>
-      <group>System | Debug | Resources | DiscreteOut</group>
       <enum name="E_NativeFWError">
          <item name="Normal Operation" value="0"/>
          <item name="Bad Resource ID" value="1"/>
@@ -5012,7 +4508,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>dout_create_COIL_Neg</name>
+      <name>dout_create_DOut330p001</name>
       <class>enum</class>
       <access>RO RO RO RO</access>
       <storage>RAM</storage>
@@ -5026,7 +4522,231 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>E_NativeFWError</ctype>
-      <struct>dout_create_COIL_Neg</struct>
+      <struct>dout_create_DOut330p001</struct>
+      <help>Debug Variable</help>
+      <group>System | Debug | Resources | DiscreteOut</group>
+      <enum name="E_NativeFWError">
+         <item name="Normal Operation" value="0"/>
+         <item name="Bad Resource ID" value="1"/>
+         <item name="Hardware Not Supported" value="2"/>
+         <item name="Behaviour Not Supported" value="3"/>
+         <item name="Bad Attribute Data" value="4"/>
+         <item name="Fail On Create" value="5"/>
+         <item name="Fail On Set Attributes" value="6"/>
+         <item name="Resource Not Created" value="7"/>
+         <item name="Missing Attribute" value="8"/>
+         <item name="Behaviour Method Not Supported" value="9"/>
+         <item name="A Service Failed" value="10"/>
+         <item name="Failed to destroy a resource" value="11"/>
+         <item name="Resource Was Created" value="12"/>
+         <item name="Resource Conflict" value="13"/>
+         <item name="Invalid Encoder Type" value="14"/>
+         <item name="2-Strike Not Supported" value="15"/>
+         <item name="720degCA Pattern Not Supported" value="16"/>
+         <item name="CAM Pattern Not Supported" value="17"/>
+         <item name="Unknown CAM Pattern Supplied" value="18"/>
+         <item name="Engine Speed Present" value="19"/>
+         <item name="Hardware Interface Not Supported" value="20"/>
+         <item name="Service Already Started" value="21"/>
+         <item name="Register Write Failed to verify" value="22"/>
+         <item name="Register access was denied" value="23"/>
+         <item name="Out of free store memory" value="24"/>
+         <item name="Software Q Overrun" value="25"/>
+         <item name="Hardware Q Overrun" value="26"/>
+         <item name="Feature unsupported in archive" value="27"/>
+         <item name="Insufficient FW resource" value="28"/>
+         <item name="OS Resource conflict" value="29"/>
+         <item name="Driver Mode conflict" value="30"/>
+         <item name="RTC time is illegal" value="31"/>
+         <item name="FFS unmounted" value="32"/>
+         <item name="Access from an ISR" value="33"/>
+         <item name="FFS internal" value="34"/>
+         <item name="Operation timed out" value="35"/>
+         <item name="Task Kernel API Usage" value="36"/>
+         <item name="Operation aborted" value="37"/>
+         <item name="File not Found" value="38"/>
+         <item name="Invalid characters in filename" value="39"/>
+         <item name="Duplicate filename" value="40"/>
+         <item name="Filename is too long" value="41"/>
+         <item name="Dir not empty on remove" value="42"/>
+         <item name="Dir not found" value="43"/>
+         <item name="Dir name invalid" value="44"/>
+         <item name="Dir exists" value="45"/>
+         <item name="Dir too deep" value="46"/>
+         <item name="Illegal Handle" value="47"/>
+         <item name="End of File" value="48"/>
+         <item name="Media Full" value="49"/>
+         <item name="Media Write" value="50"/>
+         <item name="Media Read" value="51"/>
+         <item name="Media Write Protected" value="52"/>
+         <item name="File Read Only" value="53"/>
+         <item name="FS Media Changed" value="54"/>
+         <item name="Internal USB" value="55"/>
+         <item name="Voltage too high for USB IC" value="56"/>
+         <item name="Encoder not created" value="57"/>
+         <item name="TPU Chan Conflict" value="64"/>
+         <item name="TPU Func Unavailable" value="65"/>
+         <item name="TPU Config" value="66"/>
+         <item name="TPU Primative Usage" value="67"/>
+         <item name="TPU Primitive Count" value="68"/>
+         <item name="TPU Restricted TPU channel" value="69"/>
+         <item name="TPU Not Created" value="70"/>
+         <item name="TPU Self Modify constant write err" value="71"/>
+         <item name="TPU Error 0x48" value="72"/>
+         <item name="TPU Error 0x49" value="73"/>
+         <item name="TPU Error 0x4A" value="74"/>
+         <item name="TPU Error 0x4B" value="75"/>
+         <item name="TPU Error 0x4C" value="76"/>
+         <item name="TPU Error 0x4D" value="77"/>
+         <item name="TPU Error 0x4E" value="78"/>
+         <item name="TPU Error 0x4F" value="79"/>
+         <item name="TPU Error 0x50" value="80"/>
+         <item name="TPU Error 0x51" value="81"/>
+         <item name="TPU Error 0x52" value="82"/>
+         <item name="TPU Error 0x53" value="83"/>
+         <item name="TPU Error 0x54" value="84"/>
+         <item name="TPU Error 0x55" value="85"/>
+         <item name="TPU Error 0x56" value="86"/>
+         <item name="TPU Error 0x57" value="87"/>
+         <item name="TPU Error 0x58" value="88"/>
+         <item name="TPU Error 0x59" value="89"/>
+         <item name="TPU Error 0x5A" value="90"/>
+         <item name="TPU Error 0x5B" value="91"/>
+         <item name="TPU Error 0x5C" value="92"/>
+         <item name="TPU Error 0x5D" value="93"/>
+         <item name="TPU Error 0x5E" value="94"/>
+         <item name="TPU Error 0x5F" value="95"/>
+         <default>Illegal Error</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>dout_create_DOut331p001</name>
+      <class>enum</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <gain>1.0</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>0.0</max>
+      <min>0.0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>E_NativeFWError</ctype>
+      <struct>dout_create_DOut331p001</struct>
+      <help>Debug Variable</help>
+      <group>System | Debug | Resources | DiscreteOut</group>
+      <enum name="E_NativeFWError">
+         <item name="Normal Operation" value="0"/>
+         <item name="Bad Resource ID" value="1"/>
+         <item name="Hardware Not Supported" value="2"/>
+         <item name="Behaviour Not Supported" value="3"/>
+         <item name="Bad Attribute Data" value="4"/>
+         <item name="Fail On Create" value="5"/>
+         <item name="Fail On Set Attributes" value="6"/>
+         <item name="Resource Not Created" value="7"/>
+         <item name="Missing Attribute" value="8"/>
+         <item name="Behaviour Method Not Supported" value="9"/>
+         <item name="A Service Failed" value="10"/>
+         <item name="Failed to destroy a resource" value="11"/>
+         <item name="Resource Was Created" value="12"/>
+         <item name="Resource Conflict" value="13"/>
+         <item name="Invalid Encoder Type" value="14"/>
+         <item name="2-Strike Not Supported" value="15"/>
+         <item name="720degCA Pattern Not Supported" value="16"/>
+         <item name="CAM Pattern Not Supported" value="17"/>
+         <item name="Unknown CAM Pattern Supplied" value="18"/>
+         <item name="Engine Speed Present" value="19"/>
+         <item name="Hardware Interface Not Supported" value="20"/>
+         <item name="Service Already Started" value="21"/>
+         <item name="Register Write Failed to verify" value="22"/>
+         <item name="Register access was denied" value="23"/>
+         <item name="Out of free store memory" value="24"/>
+         <item name="Software Q Overrun" value="25"/>
+         <item name="Hardware Q Overrun" value="26"/>
+         <item name="Feature unsupported in archive" value="27"/>
+         <item name="Insufficient FW resource" value="28"/>
+         <item name="OS Resource conflict" value="29"/>
+         <item name="Driver Mode conflict" value="30"/>
+         <item name="RTC time is illegal" value="31"/>
+         <item name="FFS unmounted" value="32"/>
+         <item name="Access from an ISR" value="33"/>
+         <item name="FFS internal" value="34"/>
+         <item name="Operation timed out" value="35"/>
+         <item name="Task Kernel API Usage" value="36"/>
+         <item name="Operation aborted" value="37"/>
+         <item name="File not Found" value="38"/>
+         <item name="Invalid characters in filename" value="39"/>
+         <item name="Duplicate filename" value="40"/>
+         <item name="Filename is too long" value="41"/>
+         <item name="Dir not empty on remove" value="42"/>
+         <item name="Dir not found" value="43"/>
+         <item name="Dir name invalid" value="44"/>
+         <item name="Dir exists" value="45"/>
+         <item name="Dir too deep" value="46"/>
+         <item name="Illegal Handle" value="47"/>
+         <item name="End of File" value="48"/>
+         <item name="Media Full" value="49"/>
+         <item name="Media Write" value="50"/>
+         <item name="Media Read" value="51"/>
+         <item name="Media Write Protected" value="52"/>
+         <item name="File Read Only" value="53"/>
+         <item name="FS Media Changed" value="54"/>
+         <item name="Internal USB" value="55"/>
+         <item name="Voltage too high for USB IC" value="56"/>
+         <item name="Encoder not created" value="57"/>
+         <item name="TPU Chan Conflict" value="64"/>
+         <item name="TPU Func Unavailable" value="65"/>
+         <item name="TPU Config" value="66"/>
+         <item name="TPU Primative Usage" value="67"/>
+         <item name="TPU Primitive Count" value="68"/>
+         <item name="TPU Restricted TPU channel" value="69"/>
+         <item name="TPU Not Created" value="70"/>
+         <item name="TPU Self Modify constant write err" value="71"/>
+         <item name="TPU Error 0x48" value="72"/>
+         <item name="TPU Error 0x49" value="73"/>
+         <item name="TPU Error 0x4A" value="74"/>
+         <item name="TPU Error 0x4B" value="75"/>
+         <item name="TPU Error 0x4C" value="76"/>
+         <item name="TPU Error 0x4D" value="77"/>
+         <item name="TPU Error 0x4E" value="78"/>
+         <item name="TPU Error 0x4F" value="79"/>
+         <item name="TPU Error 0x50" value="80"/>
+         <item name="TPU Error 0x51" value="81"/>
+         <item name="TPU Error 0x52" value="82"/>
+         <item name="TPU Error 0x53" value="83"/>
+         <item name="TPU Error 0x54" value="84"/>
+         <item name="TPU Error 0x55" value="85"/>
+         <item name="TPU Error 0x56" value="86"/>
+         <item name="TPU Error 0x57" value="87"/>
+         <item name="TPU Error 0x58" value="88"/>
+         <item name="TPU Error 0x59" value="89"/>
+         <item name="TPU Error 0x5A" value="90"/>
+         <item name="TPU Error 0x5B" value="91"/>
+         <item name="TPU Error 0x5C" value="92"/>
+         <item name="TPU Error 0x5D" value="93"/>
+         <item name="TPU Error 0x5E" value="94"/>
+         <item name="TPU Error 0x5F" value="95"/>
+         <default>Illegal Error</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>dout_create_DOut692p0001</name>
+      <class>enum</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <gain>1.0</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>0.0</max>
+      <min>0.0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>E_NativeFWError</ctype>
+      <struct>dout_create_DOut692p0001</struct>
       <help>Debug Variable</help>
       <group>System | Debug | Resources | DiscreteOut</group>
       <enum name="E_NativeFWError">
@@ -5344,6 +5064,118 @@
       </enum>
    </VarDec>
    <VarDec>
+      <name>dout_create_DOut332p001</name>
+      <class>enum</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <gain>1.0</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>0.0</max>
+      <min>0.0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>E_NativeFWError</ctype>
+      <struct>dout_create_DOut332p001</struct>
+      <help>Debug Variable</help>
+      <group>System | Debug | Resources | DiscreteOut</group>
+      <enum name="E_NativeFWError">
+         <item name="Normal Operation" value="0"/>
+         <item name="Bad Resource ID" value="1"/>
+         <item name="Hardware Not Supported" value="2"/>
+         <item name="Behaviour Not Supported" value="3"/>
+         <item name="Bad Attribute Data" value="4"/>
+         <item name="Fail On Create" value="5"/>
+         <item name="Fail On Set Attributes" value="6"/>
+         <item name="Resource Not Created" value="7"/>
+         <item name="Missing Attribute" value="8"/>
+         <item name="Behaviour Method Not Supported" value="9"/>
+         <item name="A Service Failed" value="10"/>
+         <item name="Failed to destroy a resource" value="11"/>
+         <item name="Resource Was Created" value="12"/>
+         <item name="Resource Conflict" value="13"/>
+         <item name="Invalid Encoder Type" value="14"/>
+         <item name="2-Strike Not Supported" value="15"/>
+         <item name="720degCA Pattern Not Supported" value="16"/>
+         <item name="CAM Pattern Not Supported" value="17"/>
+         <item name="Unknown CAM Pattern Supplied" value="18"/>
+         <item name="Engine Speed Present" value="19"/>
+         <item name="Hardware Interface Not Supported" value="20"/>
+         <item name="Service Already Started" value="21"/>
+         <item name="Register Write Failed to verify" value="22"/>
+         <item name="Register access was denied" value="23"/>
+         <item name="Out of free store memory" value="24"/>
+         <item name="Software Q Overrun" value="25"/>
+         <item name="Hardware Q Overrun" value="26"/>
+         <item name="Feature unsupported in archive" value="27"/>
+         <item name="Insufficient FW resource" value="28"/>
+         <item name="OS Resource conflict" value="29"/>
+         <item name="Driver Mode conflict" value="30"/>
+         <item name="RTC time is illegal" value="31"/>
+         <item name="FFS unmounted" value="32"/>
+         <item name="Access from an ISR" value="33"/>
+         <item name="FFS internal" value="34"/>
+         <item name="Operation timed out" value="35"/>
+         <item name="Task Kernel API Usage" value="36"/>
+         <item name="Operation aborted" value="37"/>
+         <item name="File not Found" value="38"/>
+         <item name="Invalid characters in filename" value="39"/>
+         <item name="Duplicate filename" value="40"/>
+         <item name="Filename is too long" value="41"/>
+         <item name="Dir not empty on remove" value="42"/>
+         <item name="Dir not found" value="43"/>
+         <item name="Dir name invalid" value="44"/>
+         <item name="Dir exists" value="45"/>
+         <item name="Dir too deep" value="46"/>
+         <item name="Illegal Handle" value="47"/>
+         <item name="End of File" value="48"/>
+         <item name="Media Full" value="49"/>
+         <item name="Media Write" value="50"/>
+         <item name="Media Read" value="51"/>
+         <item name="Media Write Protected" value="52"/>
+         <item name="File Read Only" value="53"/>
+         <item name="FS Media Changed" value="54"/>
+         <item name="Internal USB" value="55"/>
+         <item name="Voltage too high for USB IC" value="56"/>
+         <item name="Encoder not created" value="57"/>
+         <item name="TPU Chan Conflict" value="64"/>
+         <item name="TPU Func Unavailable" value="65"/>
+         <item name="TPU Config" value="66"/>
+         <item name="TPU Primative Usage" value="67"/>
+         <item name="TPU Primitive Count" value="68"/>
+         <item name="TPU Restricted TPU channel" value="69"/>
+         <item name="TPU Not Created" value="70"/>
+         <item name="TPU Self Modify constant write err" value="71"/>
+         <item name="TPU Error 0x48" value="72"/>
+         <item name="TPU Error 0x49" value="73"/>
+         <item name="TPU Error 0x4A" value="74"/>
+         <item name="TPU Error 0x4B" value="75"/>
+         <item name="TPU Error 0x4C" value="76"/>
+         <item name="TPU Error 0x4D" value="77"/>
+         <item name="TPU Error 0x4E" value="78"/>
+         <item name="TPU Error 0x4F" value="79"/>
+         <item name="TPU Error 0x50" value="80"/>
+         <item name="TPU Error 0x51" value="81"/>
+         <item name="TPU Error 0x52" value="82"/>
+         <item name="TPU Error 0x53" value="83"/>
+         <item name="TPU Error 0x54" value="84"/>
+         <item name="TPU Error 0x55" value="85"/>
+         <item name="TPU Error 0x56" value="86"/>
+         <item name="TPU Error 0x57" value="87"/>
+         <item name="TPU Error 0x58" value="88"/>
+         <item name="TPU Error 0x59" value="89"/>
+         <item name="TPU Error 0x5A" value="90"/>
+         <item name="TPU Error 0x5B" value="91"/>
+         <item name="TPU Error 0x5C" value="92"/>
+         <item name="TPU Error 0x5D" value="93"/>
+         <item name="TPU Error 0x5E" value="94"/>
+         <item name="TPU Error 0x5F" value="95"/>
+         <default>Illegal Error</default>
+      </enum>
+   </VarDec>
+   <VarDec>
       <name>din_read_GensetLoad</name>
       <class>enum</class>
       <access>RO RO RO RO</access>
@@ -5361,6 +5193,118 @@
       <struct>din_read_GensetLoad</struct>
       <help>Debug Variable</help>
       <group>System | Debug | Resources | DigitalInput</group>
+      <enum name="E_NativeFWError">
+         <item name="Normal Operation" value="0"/>
+         <item name="Bad Resource ID" value="1"/>
+         <item name="Hardware Not Supported" value="2"/>
+         <item name="Behaviour Not Supported" value="3"/>
+         <item name="Bad Attribute Data" value="4"/>
+         <item name="Fail On Create" value="5"/>
+         <item name="Fail On Set Attributes" value="6"/>
+         <item name="Resource Not Created" value="7"/>
+         <item name="Missing Attribute" value="8"/>
+         <item name="Behaviour Method Not Supported" value="9"/>
+         <item name="A Service Failed" value="10"/>
+         <item name="Failed to destroy a resource" value="11"/>
+         <item name="Resource Was Created" value="12"/>
+         <item name="Resource Conflict" value="13"/>
+         <item name="Invalid Encoder Type" value="14"/>
+         <item name="2-Strike Not Supported" value="15"/>
+         <item name="720degCA Pattern Not Supported" value="16"/>
+         <item name="CAM Pattern Not Supported" value="17"/>
+         <item name="Unknown CAM Pattern Supplied" value="18"/>
+         <item name="Engine Speed Present" value="19"/>
+         <item name="Hardware Interface Not Supported" value="20"/>
+         <item name="Service Already Started" value="21"/>
+         <item name="Register Write Failed to verify" value="22"/>
+         <item name="Register access was denied" value="23"/>
+         <item name="Out of free store memory" value="24"/>
+         <item name="Software Q Overrun" value="25"/>
+         <item name="Hardware Q Overrun" value="26"/>
+         <item name="Feature unsupported in archive" value="27"/>
+         <item name="Insufficient FW resource" value="28"/>
+         <item name="OS Resource conflict" value="29"/>
+         <item name="Driver Mode conflict" value="30"/>
+         <item name="RTC time is illegal" value="31"/>
+         <item name="FFS unmounted" value="32"/>
+         <item name="Access from an ISR" value="33"/>
+         <item name="FFS internal" value="34"/>
+         <item name="Operation timed out" value="35"/>
+         <item name="Task Kernel API Usage" value="36"/>
+         <item name="Operation aborted" value="37"/>
+         <item name="File not Found" value="38"/>
+         <item name="Invalid characters in filename" value="39"/>
+         <item name="Duplicate filename" value="40"/>
+         <item name="Filename is too long" value="41"/>
+         <item name="Dir not empty on remove" value="42"/>
+         <item name="Dir not found" value="43"/>
+         <item name="Dir name invalid" value="44"/>
+         <item name="Dir exists" value="45"/>
+         <item name="Dir too deep" value="46"/>
+         <item name="Illegal Handle" value="47"/>
+         <item name="End of File" value="48"/>
+         <item name="Media Full" value="49"/>
+         <item name="Media Write" value="50"/>
+         <item name="Media Read" value="51"/>
+         <item name="Media Write Protected" value="52"/>
+         <item name="File Read Only" value="53"/>
+         <item name="FS Media Changed" value="54"/>
+         <item name="Internal USB" value="55"/>
+         <item name="Voltage too high for USB IC" value="56"/>
+         <item name="Encoder not created" value="57"/>
+         <item name="TPU Chan Conflict" value="64"/>
+         <item name="TPU Func Unavailable" value="65"/>
+         <item name="TPU Config" value="66"/>
+         <item name="TPU Primative Usage" value="67"/>
+         <item name="TPU Primitive Count" value="68"/>
+         <item name="TPU Restricted TPU channel" value="69"/>
+         <item name="TPU Not Created" value="70"/>
+         <item name="TPU Self Modify constant write err" value="71"/>
+         <item name="TPU Error 0x48" value="72"/>
+         <item name="TPU Error 0x49" value="73"/>
+         <item name="TPU Error 0x4A" value="74"/>
+         <item name="TPU Error 0x4B" value="75"/>
+         <item name="TPU Error 0x4C" value="76"/>
+         <item name="TPU Error 0x4D" value="77"/>
+         <item name="TPU Error 0x4E" value="78"/>
+         <item name="TPU Error 0x4F" value="79"/>
+         <item name="TPU Error 0x50" value="80"/>
+         <item name="TPU Error 0x51" value="81"/>
+         <item name="TPU Error 0x52" value="82"/>
+         <item name="TPU Error 0x53" value="83"/>
+         <item name="TPU Error 0x54" value="84"/>
+         <item name="TPU Error 0x55" value="85"/>
+         <item name="TPU Error 0x56" value="86"/>
+         <item name="TPU Error 0x57" value="87"/>
+         <item name="TPU Error 0x58" value="88"/>
+         <item name="TPU Error 0x59" value="89"/>
+         <item name="TPU Error 0x5A" value="90"/>
+         <item name="TPU Error 0x5B" value="91"/>
+         <item name="TPU Error 0x5C" value="92"/>
+         <item name="TPU Error 0x5D" value="93"/>
+         <item name="TPU Error 0x5E" value="94"/>
+         <item name="TPU Error 0x5F" value="95"/>
+         <default>Illegal Error</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>dout_create_DOut333p001</name>
+      <class>enum</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <gain>1.0</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>0.0</max>
+      <min>0.0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>E_NativeFWError</ctype>
+      <struct>dout_create_DOut333p001</struct>
+      <help>Debug Variable</help>
+      <group>System | Debug | Resources | DiscreteOut</group>
       <enum name="E_NativeFWError">
          <item name="Normal Operation" value="0"/>
          <item name="Bad Resource ID" value="1"/>
@@ -5523,6 +5467,118 @@
       <struct>din_read_ACC1</struct>
       <help>Debug Variable</help>
       <group>System | Debug | Resources | DigitalInput</group>
+      <enum name="E_NativeFWError">
+         <item name="Normal Operation" value="0"/>
+         <item name="Bad Resource ID" value="1"/>
+         <item name="Hardware Not Supported" value="2"/>
+         <item name="Behaviour Not Supported" value="3"/>
+         <item name="Bad Attribute Data" value="4"/>
+         <item name="Fail On Create" value="5"/>
+         <item name="Fail On Set Attributes" value="6"/>
+         <item name="Resource Not Created" value="7"/>
+         <item name="Missing Attribute" value="8"/>
+         <item name="Behaviour Method Not Supported" value="9"/>
+         <item name="A Service Failed" value="10"/>
+         <item name="Failed to destroy a resource" value="11"/>
+         <item name="Resource Was Created" value="12"/>
+         <item name="Resource Conflict" value="13"/>
+         <item name="Invalid Encoder Type" value="14"/>
+         <item name="2-Strike Not Supported" value="15"/>
+         <item name="720degCA Pattern Not Supported" value="16"/>
+         <item name="CAM Pattern Not Supported" value="17"/>
+         <item name="Unknown CAM Pattern Supplied" value="18"/>
+         <item name="Engine Speed Present" value="19"/>
+         <item name="Hardware Interface Not Supported" value="20"/>
+         <item name="Service Already Started" value="21"/>
+         <item name="Register Write Failed to verify" value="22"/>
+         <item name="Register access was denied" value="23"/>
+         <item name="Out of free store memory" value="24"/>
+         <item name="Software Q Overrun" value="25"/>
+         <item name="Hardware Q Overrun" value="26"/>
+         <item name="Feature unsupported in archive" value="27"/>
+         <item name="Insufficient FW resource" value="28"/>
+         <item name="OS Resource conflict" value="29"/>
+         <item name="Driver Mode conflict" value="30"/>
+         <item name="RTC time is illegal" value="31"/>
+         <item name="FFS unmounted" value="32"/>
+         <item name="Access from an ISR" value="33"/>
+         <item name="FFS internal" value="34"/>
+         <item name="Operation timed out" value="35"/>
+         <item name="Task Kernel API Usage" value="36"/>
+         <item name="Operation aborted" value="37"/>
+         <item name="File not Found" value="38"/>
+         <item name="Invalid characters in filename" value="39"/>
+         <item name="Duplicate filename" value="40"/>
+         <item name="Filename is too long" value="41"/>
+         <item name="Dir not empty on remove" value="42"/>
+         <item name="Dir not found" value="43"/>
+         <item name="Dir name invalid" value="44"/>
+         <item name="Dir exists" value="45"/>
+         <item name="Dir too deep" value="46"/>
+         <item name="Illegal Handle" value="47"/>
+         <item name="End of File" value="48"/>
+         <item name="Media Full" value="49"/>
+         <item name="Media Write" value="50"/>
+         <item name="Media Read" value="51"/>
+         <item name="Media Write Protected" value="52"/>
+         <item name="File Read Only" value="53"/>
+         <item name="FS Media Changed" value="54"/>
+         <item name="Internal USB" value="55"/>
+         <item name="Voltage too high for USB IC" value="56"/>
+         <item name="Encoder not created" value="57"/>
+         <item name="TPU Chan Conflict" value="64"/>
+         <item name="TPU Func Unavailable" value="65"/>
+         <item name="TPU Config" value="66"/>
+         <item name="TPU Primative Usage" value="67"/>
+         <item name="TPU Primitive Count" value="68"/>
+         <item name="TPU Restricted TPU channel" value="69"/>
+         <item name="TPU Not Created" value="70"/>
+         <item name="TPU Self Modify constant write err" value="71"/>
+         <item name="TPU Error 0x48" value="72"/>
+         <item name="TPU Error 0x49" value="73"/>
+         <item name="TPU Error 0x4A" value="74"/>
+         <item name="TPU Error 0x4B" value="75"/>
+         <item name="TPU Error 0x4C" value="76"/>
+         <item name="TPU Error 0x4D" value="77"/>
+         <item name="TPU Error 0x4E" value="78"/>
+         <item name="TPU Error 0x4F" value="79"/>
+         <item name="TPU Error 0x50" value="80"/>
+         <item name="TPU Error 0x51" value="81"/>
+         <item name="TPU Error 0x52" value="82"/>
+         <item name="TPU Error 0x53" value="83"/>
+         <item name="TPU Error 0x54" value="84"/>
+         <item name="TPU Error 0x55" value="85"/>
+         <item name="TPU Error 0x56" value="86"/>
+         <item name="TPU Error 0x57" value="87"/>
+         <item name="TPU Error 0x58" value="88"/>
+         <item name="TPU Error 0x59" value="89"/>
+         <item name="TPU Error 0x5A" value="90"/>
+         <item name="TPU Error 0x5B" value="91"/>
+         <item name="TPU Error 0x5C" value="92"/>
+         <item name="TPU Error 0x5D" value="93"/>
+         <item name="TPU Error 0x5E" value="94"/>
+         <item name="TPU Error 0x5F" value="95"/>
+         <default>Illegal Error</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>dout_create_DOut334p001</name>
+      <class>enum</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <gain>1.0</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>0.0</max>
+      <min>0.0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>E_NativeFWError</ctype>
+      <struct>dout_create_DOut334p001</struct>
+      <help>Debug Variable</help>
+      <group>System | Debug | Resources | DiscreteOut</group>
       <enum name="E_NativeFWError">
          <item name="Normal Operation" value="0"/>
          <item name="Bad Resource ID" value="1"/>
@@ -5810,6 +5866,8 @@
          <item name="X Plus 1 on Cnk with X Plus 1 Cam" value="35"/>
          <item name="X Plus 1 on Cnk with X Plus 1 Cam with Encoder Synthesizer" value="36"/>
          <item name="N-1/N-2 [XPlus1 Cam]" value="37"/>
+         <item name="X Shift 1 Retarded [ToothCam]" value="38"/>
+         <item name="N-1/N-2 [Tooth Cam] with MuxPSP" value="39"/>
          <default>Unsupported TPU Mask</default>
       </enum>
       <table>0</table>
@@ -6677,6 +6735,29 @@
       <type>uint16</type>
    </VarDec>
    <VarDec>
+      <name>MPRD_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>System | Main Power Relay | MPRD Override</group>
+      <struct>VolatileWork_BSS.MPRD_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
       <name>MPRD_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -6698,29 +6779,6 @@
       <enum>
          <item name="Off" value="0"/>
          <item name="On" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>MPRD_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>System | Main Power Relay | MPRD Override</group>
-      <struct>VolatileWork_BSS.MPRD_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
          <default>Unknown</default>
       </enum>
    </VarDec>
@@ -6821,7 +6879,25 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>Shutdown_ovr_new</name>
+      <name>VDO_Gauge_Brightness</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>7</max>
+      <min>0</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
+      <ctype>NonVolatile_T</ctype>
+      <group>DynoController_Rev1|Foreground|Outputs|Guages</group>
+      <struct>NonVolatileWork.VDO_Gauge_Brightness</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint16</type>
+   </VarDec>
+   <VarDec>
+      <name>RPM_Gauges_Ovr_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -6831,12 +6907,176 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Control|Battery | Shutdown_ovr Override</group>
-      <struct>VolatileWork_BSS.Shutdown_ovr_new</struct>
-      <class>var</class>
+      <group>DynoController_Rev1|Foreground|Outputs|Guages | RPM_Gauges_Ovr Override</group>
+      <struct>VolatileWork_BSS.RPM_Gauges_Ovr_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>RPM_Gauges_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Outputs|Guages | RPM_Gauges_Ovr Override</group>
+      <struct>VolatileWork_BSS.RPM_Gauges_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>int16</type>
+   </VarDec>
+   <VarDec>
+      <name>SOC_Gauges_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Outputs|Guages | SOC_Gauges_Ovr Override</group>
+      <struct>VolatileWork_BSS.SOC_Gauges_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>SOC_Gauges_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Outputs|Guages | SOC_Gauges_Ovr Override</group>
+      <struct>VolatileWork_BSS.SOC_Gauges_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>int16</type>
+   </VarDec>
+   <VarDec>
+      <name>OilPressure_Gauges_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Outputs|Guages | OilPressure_Gauges_Ovr Override</group>
+      <struct>VolatileWork_BSS.OilPressure_Gauges_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>OilPressure_Gauges_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Outputs|Guages | OilPressure_Gauges_Ovr Override</group>
+      <struct>VolatileWork_BSS.OilPressure_Gauges_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>int16</type>
+   </VarDec>
+   <VarDec>
+      <name>CoolantTemp_Gauges_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Outputs|Guages | CoolantTemp_Gauges_Ovr Override</group>
+      <struct>VolatileWork_BSS.CoolantTemp_Gauges_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>CoolantTemp_Gauges_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Outputs|Guages | CoolantTemp_Gauges_Ovr Override</group>
+      <struct>VolatileWork_BSS.CoolantTemp_Gauges_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>int16</type>
+   </VarDec>
+   <VarDec>
+      <name>VDO_Gauge_StartupDelay</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>7</max>
+      <min>0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>DynoController_Rev1|Foreground|Outputs|Guages</group>
+      <struct>ConstantWork.VDO_Gauge_StartupDelay</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>Shutdown_ovr_ovr</name>
@@ -6862,6 +7102,24 @@
       </enum>
    </VarDec>
    <VarDec>
+      <name>Shutdown_ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Control|Battery | Shutdown_ovr Override</group>
+      <struct>VolatileWork_BSS.Shutdown_ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
       <name>Load_Enable_Delay</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -6878,6 +7136,29 @@
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>PackState_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY | PackState_Ovr Override</group>
+      <struct>VolatileWork_BSS.PackState_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
    </VarDec>
    <VarDec>
       <name>PackState_Ovr_new</name>
@@ -6898,7 +7179,25 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>PackState_Ovr_ovr</name>
+      <name>SOC_Load_Dump</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>NonVolatile_T</ctype>
+      <group>DynoController_Rev1|Foreground|Outputs|Analog Outputs</group>
+      <struct>NonVolatileWork.SOC_Load_Dump</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>StateOfCharge_Ovr_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -6908,8 +7207,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY | PackState_Ovr Override</group>
-      <struct>VolatileWork_BSS.PackState_Ovr_ovr</struct>
+      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY | StateOfCharge_Ovr Override</group>
+      <struct>VolatileWork_BSS.StateOfCharge_Ovr_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -6939,65 +7238,6 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>StateOfCharge_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY | StateOfCharge_Ovr Override</group>
-      <struct>VolatileWork_BSS.StateOfCharge_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>SOC_Load_Dump</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>DynoController_Rev1|Foreground|Outputs|Analog Outputs</group>
-      <struct>ConstantWork.SOC_Load_Dump</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>LoadDumpEnable_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | LoadDumpEnable_Ovr Override</group>
-      <struct>VolatileWork_BSS.LoadDumpEnable_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-   </VarDec>
-   <VarDec>
       <name>LoadDumpEnable_Ovr_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -7021,7 +7261,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>Engine_On_Ovr_new</name>
+      <name>LoadDumpEnable_Ovr_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -7031,8 +7271,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | Engine_On_Ovr Override</group>
-      <struct>VolatileWork_BSS.Engine_On_Ovr_new</struct>
+      <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | LoadDumpEnable_Ovr Override</group>
+      <struct>VolatileWork_BSS.LoadDumpEnable_Ovr_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -7060,6 +7300,24 @@
          <item name="Override" value="1"/>
          <default>Unknown</default>
       </enum>
+   </VarDec>
+   <VarDec>
+      <name>Engine_On_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | Engine_On_Ovr Override</group>
+      <struct>VolatileWork_BSS.Engine_On_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>Coil_Neg_Ovr_ovr</name>
@@ -7426,22 +7684,22 @@
       <type>uint8</type>
    </VarDec>
    <VarDec>
-      <name>Batt_Connect_Cmd_ovr_new</name>
+      <name>Batt_Ign_Cal</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|BATTERY OUT | Batt_Connect_Cmd_ovr Override</group>
-      <struct>VolatileWork_BSS.Batt_Connect_Cmd_ovr_new</struct>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>NonVolatile_T</ctype>
+      <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|BATTERY OUT</group>
+      <struct>NonVolatileWork.Batt_Ign_Cal</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>uint8</type>
+      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>Batt_Connect_Cmd_ovr_ovr</name>
@@ -7456,6 +7714,106 @@
       <ctype>Volatile_BSS_T</ctype>
       <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|BATTERY OUT | Batt_Connect_Cmd_ovr Override</group>
       <struct>VolatileWork_BSS.Batt_Connect_Cmd_ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Automatic_Battery_Bootup</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>NonVolatile_T</ctype>
+      <group>DynoController_Rev1|Foreground|Control|Battery</group>
+      <struct>NonVolatileWork.Automatic_Battery_Bootup</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
+      <name>BatteryVoltage_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY | BatteryVoltage_Ovr Override</group>
+      <struct>VolatileWork_BSS.BatteryVoltage_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>BatteryVoltage_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY | BatteryVoltage_Ovr Override</group>
+      <struct>VolatileWork_BSS.BatteryVoltage_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Contactor_Disable_Delay</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>10</max>
+      <min>0</min>
+      <format>1.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>DynoController_Rev1|Foreground|Control|Battery|Safe Shutdown Sequence</group>
+      <struct>ConstantWork.Contactor_Disable_Delay</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>BatteryEnable_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | BatteryEnable_Ovr Override</group>
+      <struct>VolatileWork_BSS.BatteryEnable_Ovr_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -7485,7 +7843,7 @@
       <type>uint8</type>
    </VarDec>
    <VarDec>
-      <name>BatteryEnable_Ovr_ovr</name>
+      <name>Batt_Connect_Cmd_ovr_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -7495,31 +7853,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | BatteryEnable_Ovr Override</group>
-      <struct>VolatileWork_BSS.BatteryEnable_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Isolation_Measure_Enable_ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|BATTERY OUT | Isolation_Measure_Enable_ovr Override</group>
-      <struct>VolatileWork_BSS.Isolation_Measure_Enable_ovr_new</struct>
+      <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|BATTERY OUT | Batt_Connect_Cmd_ovr Override</group>
+      <struct>VolatileWork_BSS.Batt_Connect_Cmd_ovr_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -7558,34 +7893,16 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
+      <ctype>NonVolatile_T</ctype>
       <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|BATTERY OUT</group>
-      <struct>ConstantWork.Batt_Isolation_det_Cal</struct>
+      <struct>NonVolatileWork.Batt_Isolation_det_Cal</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Batt_Ign_Cal</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|BATTERY OUT</group>
-      <struct>ConstantWork.Batt_Ign_Cal</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Gen_Enable_Ovr_new</name>
+      <name>Isolation_Measure_Enable_ovr_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -7595,90 +7912,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT | Gen_Enable_Ovr Override</group>
-      <struct>VolatileWork_BSS.Gen_Enable_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-   </VarDec>
-   <VarDec>
-      <name>Gen_Enable_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT | Gen_Enable_Ovr Override</group>
-      <struct>VolatileWork_BSS.Gen_Enable_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>GensetEnable_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | GensetEnable_Ovr Override</group>
-      <struct>VolatileWork_BSS.GensetEnable_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-   </VarDec>
-   <VarDec>
-      <name>GensetEnable_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | GensetEnable_Ovr Override</group>
-      <struct>VolatileWork_BSS.GensetEnable_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Gen_Load_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT | Gen_Load_Ovr Override</group>
-      <struct>VolatileWork_BSS.Gen_Load_Ovr_new</struct>
+      <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|BATTERY OUT | Isolation_Measure_Enable_ovr Override</group>
+      <struct>VolatileWork_BSS.Isolation_Measure_Enable_ovr_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -7708,6 +7943,47 @@
       </enum>
    </VarDec>
    <VarDec>
+      <name>GensetEnable_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | GensetEnable_Ovr Override</group>
+      <struct>VolatileWork_BSS.GensetEnable_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>GensetEnable_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | GensetEnable_Ovr Override</group>
+      <struct>VolatileWork_BSS.GensetEnable_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
       <name>SOC_Off_Pt</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -7726,22 +8002,63 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Vehicle_Speed_Ovr_new</name>
+      <name>Gen_Load_Ovr_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT | Vehicle_Speed_Ovr Override</group>
-      <struct>VolatileWork_BSS.Vehicle_Speed_Ovr_new</struct>
+      <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT | Gen_Load_Ovr Override</group>
+      <struct>VolatileWork_BSS.Gen_Load_Ovr_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
+      <name>Gen_Enable_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT | Gen_Enable_Ovr Override</group>
+      <struct>VolatileWork_BSS.Gen_Enable_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Gen_Enable_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT | Gen_Enable_Ovr Override</group>
+      <struct>VolatileWork_BSS.Gen_Enable_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>Vehicle_Speed_Ovr_ovr</name>
@@ -7785,6 +8102,24 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
+      <name>Vehicle_Speed_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT | Vehicle_Speed_Ovr Override</group>
+      <struct>VolatileWork_BSS.Vehicle_Speed_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
       <name>Vehicle_Speed_Prb</name>
       <access>RO RO RO RO</access>
       <gain>1</gain>
@@ -7803,406 +8138,6 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>RPM_Gauges_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>32767</max>
-      <min>-32768</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Outputs|Guages | RPM_Gauges_Ovr Override</group>
-      <struct>VolatileWork_BSS.RPM_Gauges_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>int16</type>
-   </VarDec>
-   <VarDec>
-      <name>RPM_Gauges_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Outputs|Guages | RPM_Gauges_Ovr Override</group>
-      <struct>VolatileWork_BSS.RPM_Gauges_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>RPM_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>32767</max>
-      <min>-32768</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | RPM_Ovr Override</group>
-      <struct>VolatileWork_BSS.RPM_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>int16</type>
-   </VarDec>
-   <VarDec>
-      <name>RPM_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | RPM_Ovr Override</group>
-      <struct>VolatileWork_BSS.RPM_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>SOC_Gauges_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>32767</max>
-      <min>-32768</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Outputs|Guages | SOC_Gauges_Ovr Override</group>
-      <struct>VolatileWork_BSS.SOC_Gauges_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>int16</type>
-   </VarDec>
-   <VarDec>
-      <name>SOC_Gauges_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Outputs|Guages | SOC_Gauges_Ovr Override</group>
-      <struct>VolatileWork_BSS.SOC_Gauges_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>OilPressure_Gauges_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>32767</max>
-      <min>-32768</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Outputs|Guages | OilPressure_Gauges_Ovr Override</group>
-      <struct>VolatileWork_BSS.OilPressure_Gauges_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>int16</type>
-   </VarDec>
-   <VarDec>
-      <name>OilPressure_Gauges_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Outputs|Guages | OilPressure_Gauges_Ovr Override</group>
-      <struct>VolatileWork_BSS.OilPressure_Gauges_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Oil_Pressure_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | Oil_Pressure_Ovr Override</group>
-      <struct>VolatileWork_BSS.Oil_Pressure_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Oil_Pressure_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | Oil_Pressure_Ovr Override</group>
-      <struct>VolatileWork_BSS.Oil_Pressure_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>CoolantTemp_Gauges_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>32767</max>
-      <min>-32768</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Outputs|Guages | CoolantTemp_Gauges_Ovr Override</group>
-      <struct>VolatileWork_BSS.CoolantTemp_Gauges_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>int16</type>
-   </VarDec>
-   <VarDec>
-      <name>CoolantTemp_Gauges_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Outputs|Guages | CoolantTemp_Gauges_Ovr Override</group>
-      <struct>VolatileWork_BSS.CoolantTemp_Gauges_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Temp_Guage_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | Temp_Guage_Ovr Override</group>
-      <struct>VolatileWork_BSS.Temp_Guage_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Temp_Guage_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | Temp_Guage_Ovr Override</group>
-      <struct>VolatileWork_BSS.Temp_Guage_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Automatic_Battery_Bootup</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>DynoController_Rev1|Foreground|Control|Battery</group>
-      <struct>ConstantWork.Automatic_Battery_Bootup</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-   </VarDec>
-   <VarDec>
-      <name>BatteryVoltage_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY | BatteryVoltage_Ovr Override</group>
-      <struct>VolatileWork_BSS.BatteryVoltage_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>BatteryVoltage_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY | BatteryVoltage_Ovr Override</group>
-      <struct>VolatileWork_BSS.BatteryVoltage_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Contactor_Disable_Delay</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>10</max>
-      <min>0</min>
-      <format>1.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>DynoController_Rev1|Foreground|Control|Battery|Safe Shutdown Sequence</group>
-      <struct>ConstantWork.Contactor_Disable_Delay</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Batt_Contactor_Status</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Control|Battery</group>
-      <struct>VolatileWork_BSS.Batt_Contactor_Status</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-   </VarDec>
-   <VarDec>
-      <name>Batt_Load_Enable</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Control|Battery</group>
-      <struct>VolatileWork_BSS.Batt_Load_Enable</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-   </VarDec>
-   <VarDec>
       <name>Auto_Battery_Startup</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -8212,85 +8147,13 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
+      <ctype>NonVolatile_T</ctype>
       <group>DynoController_Rev1|Foreground|Control|Vehicle Run/Stop Determination</group>
-      <struct>ConstantWork.Auto_Battery_Startup</struct>
+      <struct>NonVolatileWork.Auto_Battery_Startup</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Vehicle_Ready</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Control|Vehicle Run/Stop Determination</group>
-      <struct>VolatileWork_BSS.Vehicle_Ready</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-   </VarDec>
-   <VarDec>
-      <name>Torque_Enable</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Control|Vehicle Run/Stop Determination</group>
-      <struct>VolatileWork_BSS.Torque_Enable</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-   </VarDec>
-   <VarDec>
-      <name>Vehicle_Enable</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Control|Vehicle Run/Stop Determination</group>
-      <struct>VolatileWork_BSS.Vehicle_Enable</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-   </VarDec>
-   <VarDec>
-      <name>Shutdown_Req</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Control|Vehicle Run/Stop Determination</group>
-      <struct>VolatileWork_BSS.Shutdown_Req</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>GensetLoad_Ovr_ovr</name>
@@ -8375,47 +8238,6 @@
       <type>uint8</type>
    </VarDec>
    <VarDec>
-      <name>ACC2_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | ACC2_Ovr Override</group>
-      <struct>VolatileWork_BSS.ACC2_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>ACC2_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | ACC2_Ovr Override</group>
-      <struct>VolatileWork_BSS.ACC2_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-   </VarDec>
-   <VarDec>
       <name>BatteryCurrent_Ovr_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -8492,6 +8314,129 @@
       <ctype>Volatile_BSS_T</ctype>
       <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|BATTERY | MaxCellTemperature_Ovr Override</group>
       <struct>VolatileWork_BSS.MaxCellTemperature_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Oil_Pressure_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | Oil_Pressure_Ovr Override</group>
+      <struct>VolatileWork_BSS.Oil_Pressure_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Oil_Pressure_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | Oil_Pressure_Ovr Override</group>
+      <struct>VolatileWork_BSS.Oil_Pressure_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>RPM_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | RPM_Ovr Override</group>
+      <struct>VolatileWork_BSS.RPM_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>RPM_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | RPM_Ovr Override</group>
+      <struct>VolatileWork_BSS.RPM_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>int16</type>
+   </VarDec>
+   <VarDec>
+      <name>Temp_Guage_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | Temp_Guage_Ovr Override</group>
+      <struct>VolatileWork_BSS.Temp_Guage_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Temp_Guage_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Inputs|CAN Inputs|DYNO | Temp_Guage_Ovr Override</group>
+      <struct>VolatileWork_BSS.Temp_Guage_Ovr_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -8621,6 +8566,155 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
+      <name>Batt_Contactor_Status</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Control|Battery</group>
+      <struct>VolatileWork_BSS.Batt_Contactor_Status</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
+      <name>Batt_Load_Enable</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Control|Battery</group>
+      <struct>VolatileWork_BSS.Batt_Load_Enable</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
+      <name>Vehicle_Ready</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Control|Vehicle Run/Stop Determination</group>
+      <struct>VolatileWork_BSS.Vehicle_Ready</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
+      <name>Torque_Enable</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Control|Vehicle Run/Stop Determination</group>
+      <struct>VolatileWork_BSS.Torque_Enable</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
+      <name>Vehicle_Enable</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Control|Vehicle Run/Stop Determination</group>
+      <struct>VolatileWork_BSS.Vehicle_Enable</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
+      <name>Shutdown_Req</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Control|Vehicle Run/Stop Determination</group>
+      <struct>VolatileWork_BSS.Shutdown_Req</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
+      <name>ACC2_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | ACC2_Ovr Override</group>
+      <struct>VolatileWork_BSS.ACC2_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>ACC2_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | ACC2_Ovr Override</group>
+      <struct>VolatileWork_BSS.ACC2_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
       <name>CityID_CAN_1</name>
       <access>NA NA NA RW</access>
       <gain>1</gain>
@@ -8650,7 +8744,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Discrete output pin selection for COIL_Pos</help>
+      <help>Digital output pin selection for DOut328p001</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.COIL_Pos</struct>
       <storage>FLASH</storage>
@@ -8684,7 +8778,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Discrete output pin selection for COIL_Neg</help>
+      <help>Digital output pin selection for DOut329p001</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.COIL_Neg</struct>
       <storage>FLASH</storage>
@@ -8718,7 +8812,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Discrete output pin selection for Battery_Enable</help>
+      <help>Digital output pin selection for DOut330p001</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.Battery_Enable</struct>
       <storage>FLASH</storage>
@@ -8752,7 +8846,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Discrete output pin selection for Load_Dump_Enable</help>
+      <help>Digital output pin selection for DOut331p001</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.Load_Dump_Enable</struct>
       <storage>FLASH</storage>
@@ -8786,7 +8880,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Discrete output pin selection for Genset_Enable</help>
+      <help>Digital output pin selection for DOut332p001</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.Genset_Enable</struct>
       <storage>FLASH</storage>
@@ -8820,77 +8914,9 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Discrete output pin selection for Genset_Load</help>
+      <help>Digital output pin selection for DOut333p001</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.Genset_Load</struct>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>int16</type>
-      <class>enum</class>
-      <enum>
-         <item name="(None)" value="-1"/>
-         <item name="FUELP" value="0"/>
-         <item name="EST 1" value="36"/>
-         <item name="MPRD" value="52"/>
-         <item name="LIAC" value="7"/>
-         <item name="HORN" value="8"/>
-         <item name="SPARE" value="9"/>
-         <item name="FUEL 1" value="12"/>
-         <item name="FUEL 2" value="13"/>
-         <item name="FUEL 3" value="14"/>
-         <item name="FUEL 4" value="15"/>
-         <item name="TACH" value="24"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>ACC1_Out</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>32767</max>
-      <min>-32768</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <help>Discrete output pin selection for ACC1_Out</help>
-      <group>System | I/O Pins | Outputs Config</group>
-      <struct>ConstantWork.ACC1_Out</struct>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>int16</type>
-      <class>enum</class>
-      <enum>
-         <item name="(None)" value="-1"/>
-         <item name="FUELP" value="0"/>
-         <item name="EST 1" value="36"/>
-         <item name="MPRD" value="52"/>
-         <item name="LIAC" value="7"/>
-         <item name="HORN" value="8"/>
-         <item name="SPARE" value="9"/>
-         <item name="FUEL 1" value="12"/>
-         <item name="FUEL 2" value="13"/>
-         <item name="FUEL 3" value="14"/>
-         <item name="FUEL 4" value="15"/>
-         <item name="TACH" value="24"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>ACC2_Out</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>32767</max>
-      <min>-32768</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <help>Discrete output pin selection for ACC2_Out</help>
-      <group>System | I/O Pins | Outputs Config</group>
-      <struct>ConstantWork.ACC2_Out</struct>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>int16</type>
@@ -8950,6 +8976,74 @@
          <item name="AN10M" value="65"/>
          <item name="AN11M" value="66"/>
          <item name="AN14M" value="69"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>ACC1_Out</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Digital output pin selection for DOut334p001</help>
+      <group>System | I/O Pins | Outputs Config</group>
+      <struct>ConstantWork.ACC1_Out</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>int16</type>
+      <class>enum</class>
+      <enum>
+         <item name="(None)" value="-1"/>
+         <item name="FUELP" value="0"/>
+         <item name="EST 1" value="36"/>
+         <item name="MPRD" value="52"/>
+         <item name="LIAC" value="7"/>
+         <item name="HORN" value="8"/>
+         <item name="SPARE" value="9"/>
+         <item name="FUEL 1" value="12"/>
+         <item name="FUEL 2" value="13"/>
+         <item name="FUEL 3" value="14"/>
+         <item name="FUEL 4" value="15"/>
+         <item name="TACH" value="24"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>ACC2_Out</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Digital output pin selection for DOut335p001</help>
+      <group>System | I/O Pins | Outputs Config</group>
+      <struct>ConstantWork.ACC2_Out</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>int16</type>
+      <class>enum</class>
+      <enum>
+         <item name="(None)" value="-1"/>
+         <item name="FUELP" value="0"/>
+         <item name="EST 1" value="36"/>
+         <item name="MPRD" value="52"/>
+         <item name="LIAC" value="7"/>
+         <item name="HORN" value="8"/>
+         <item name="SPARE" value="9"/>
+         <item name="FUEL 1" value="12"/>
+         <item name="FUEL 2" value="13"/>
+         <item name="FUEL 3" value="14"/>
+         <item name="FUEL 4" value="15"/>
+         <item name="TACH" value="24"/>
          <default>Unknown</default>
       </enum>
    </VarDec>

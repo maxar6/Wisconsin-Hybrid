@@ -26,11 +26,11 @@ boolean_T CAN_1_Transmit(boolean_T extended, uint32_T id, uint8_T length, const
   sErrorResult = TransmitOnTouCAN(RES_CAN1, TOUCAN_BUFF0, &messageObj, 0, 0);
 
   {
-    extern uint8_T can_tx_err_CAN_1_0_52;
+    extern uint8_T can_tx_err_CAN_1_0_49;
     if (SUCCESS(sErrorResult))
-      can_tx_err_CAN_1_0_52 = 0;
+      can_tx_err_CAN_1_0_49 = 0;
     else
-      can_tx_err_CAN_1_0_52 = (uint8_T) GetErrorCode(sErrorResult);
+      can_tx_err_CAN_1_0_49 = (uint8_T) GetErrorCode(sErrorResult);
   }
 
   return(SUCCESS(sErrorResult));
@@ -71,11 +71,11 @@ boolean_T CAN_2_Transmit(boolean_T extended, uint32_T id, uint8_T length, const
   sErrorResult = TransmitOnTouCAN(RES_CAN2, TOUCAN_BUFF0, &messageObj, 0, 0);
 
   {
-    extern uint8_T can_tx_err_CAN_2_0_53;
+    extern uint8_T can_tx_err_CAN_2_0_50;
     if (SUCCESS(sErrorResult))
-      can_tx_err_CAN_2_0_53 = 0;
+      can_tx_err_CAN_2_0_50 = 0;
     else
-      can_tx_err_CAN_2_0_53 = (uint8_T) GetErrorCode(sErrorResult);
+      can_tx_err_CAN_2_0_50 = (uint8_T) GetErrorCode(sErrorResult);
   }
 
   return(SUCCESS(sErrorResult));

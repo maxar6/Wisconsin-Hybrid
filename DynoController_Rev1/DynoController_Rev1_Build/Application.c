@@ -8,14 +8,14 @@
 #include "DynoController_Rev1.h"
 
 /*---- DEFINES --------------------------------------------------------------------------------------------*/
-#define DLL_NAME                       "DynoContr_000"
-#define SRZ_NAME                       "DynoController_Rev1_000"
+#define DLL_NAME                       "DynoContr_008"
+#define SRZ_NAME                       "DynoController_Rev1_008"
 #define MODEL_NAME                     "DynoController_Rev1"
 #define MODEL_GUID                     "6a27880e-8e62-404a-92-11-3b-ad-79-73-ba"
-#define BUILD_GUID                     "cf95b2dd-9a54-4399-9c-49-d3-c9-18-1d-3a"
-#define TOKEN_GUID                     "no token"
-#define MOTOHAWK_VERSION               "MotoHawk 2010a_sp1.49"
-#define MATLAB_VERSION                 "MATLAB 7.10.0"
+#define BUILD_GUID                     "197a6098-2946-4234-8b-41-e9-0d-c0-c2-cc"
+#define TOKEN_GUID                     "DD8AD11F95A6FC42BFF9AC780840E4B4"
+#define MOTOHAWK_VERSION               "MotoHawk 2011a_sp0.184"
+#define MATLAB_VERSION                 "MATLAB 7.12.0"
 #define COMPILER_VERSION               "gcc-powerpc-eabi 4.4.0"
 
 /*---- TYPEDEF --------------------------------------------------------------------------------------------*/
@@ -96,7 +96,7 @@ const uint1 MatlabVersionTxt[80] __SECTION_ROSDATA_CONSTANTS__ = MATLAB_VERSION;
 const uint1 MotoHawkModelGUID[80] __SECTION_ROSDATA_CONSTANTS__ = MODEL_GUID;
 
 /* Name: MotoHawkBuildGUID CType:uint1 ClassID:TEXT StorageID:CODE Access:RO4+RO3+RO2+RO1 UpdateID:ONCE TextLen:80
-   Struct:MotoHawkTokenGUID[0] Group:"System | Version" Help:"GUID identifying the MotoHawk build session" */
+   Struct:MotoHawkBuildGUID[0] Group:"System | Version" Help:"GUID identifying the MotoHawk build session" */
 const uint1 MotoHawkBuildGUID[80] __SECTION_ROSDATA_CONSTANTS__ = BUILD_GUID;
 
 /* Name: MotoHawkTokenGUID CType:uint1 ClassID:TEXT StorageID:CODE Access:RO4+RO3+RO2+RO1 UpdateID:ONCE TextLen:80
@@ -225,8 +225,8 @@ void ApplicationCallback(E_ExecutionEvent in_eEvent)
     {
       if (FGND_RTI_PERIODIC_RunCnt != 0) {
         if (ApplicationStatus == APPLICATION_RUN) {
-          extern void Trigger_FGND_RTI_PERIODIC_643p0004(void);
-          Trigger_FGND_RTI_PERIODIC_643p0004();
+          extern void Trigger_FGND_RTI_PERIODIC_750p0001(void);
+          Trigger_FGND_RTI_PERIODIC_750p0001();
         }
 
         if (FGND_RTI_PERIODIC_RunCnt > 0)
@@ -235,12 +235,40 @@ void ApplicationCallback(E_ExecutionEvent in_eEvent)
     }
     break;
 
+   case STARTUP_EVENT:
+    {
+      if (STARTUP_EVENT_RunCnt != 0) {
+        if (ApplicationStatus == APPLICATION_INIT) {
+          extern void Trigger_STARTUP_EVENT_10849p0004(void);
+          Trigger_STARTUP_EVENT_10849p0004();
+        }
+
+        if (STARTUP_EVENT_RunCnt > 0)
+          STARTUP_EVENT_RunCnt--;
+      }
+    }
+    break;
+
+   case FGND_20XRTI_PERIODIC:
+    {
+      if (FGND_20XRTI_PERIODIC_RunCnt != 0) {
+        if (ApplicationStatus == APPLICATION_RUN) {
+          extern void Trigger_FGND_20XRTI_PERIODIC_10837p0011(void);
+          Trigger_FGND_20XRTI_PERIODIC_10837p0011();
+        }
+
+        if (FGND_20XRTI_PERIODIC_RunCnt > 0)
+          FGND_20XRTI_PERIODIC_RunCnt--;
+      }
+    }
+    break;
+
    case BGND_BASE_PERIODIC:
     {
       if (BGND_BASE_PERIODIC_RunCnt != 0) {
         if (ApplicationStatus == APPLICATION_RUN) {
-          extern void Trigger_BGND_BASE_PERIODIC_632p0004(void);
-          Trigger_BGND_BASE_PERIODIC_632p0004();
+          extern void Trigger_BGND_BASE_PERIODIC_739p0001(void);
+          Trigger_BGND_BASE_PERIODIC_739p0001();
         }
 
         if (BGND_BASE_PERIODIC_RunCnt > 0)
@@ -341,6 +369,8 @@ void OpenApplication(E_OpenEventType open_type)
 
       { FGND_RTI_PERIODIC, RES_ENABLED },
 
+      { FGND_20XRTI_PERIODIC, RES_ENABLED },
+
       { BGND_BASE_PERIODIC, RES_ENABLED },
     };
 
@@ -349,7 +379,7 @@ void OpenApplication(E_OpenEventType open_type)
       USE_SCHD_CONDITION;
     SchedulerCreateAttribObj.DynamicObj.EventCondObj.pEventCondObjArr =
       EventCondObjArr;
-    SchedulerCreateAttribObj.DynamicObj.EventCondObj.uNumEventsInArray = 3;
+    SchedulerCreateAttribObj.DynamicObj.EventCondObj.uNumEventsInArray = 4;
     SchedulerCreateAttribObj.uValidAttributesMask = USE_SCHD_DYNAMIC_ON_CREATE |
       USE_SCHD_TASK_MANAGER;
     CreateResource(RES_SCHEDULER, &SchedulerCreateAttribObj, BEHAVIOUR_SCHEDULER);
@@ -478,7 +508,16 @@ void OpenApplication(E_OpenEventType open_type)
 
   {
     ECUP_AnalogInput_Create();
+    DOut692p0001_DiscreteOutput_Create();
+    DOut328p001_DiscreteOutput_Create();
+    DOut329p001_DiscreteOutput_Create();
+    DOut330p001_DiscreteOutput_Create();
+    DOut331p001_DiscreteOutput_Create();
+    DOut332p001_DiscreteOutput_Create();
+    DOut333p001_DiscreteOutput_Create();
     LoadDumpEnable_DigitalInput_Create();
+    DOut334p001_DiscreteOutput_Create();
+    DOut335p001_DiscreteOutput_Create();
     BatteryEnable_DigitalInput_Create();
     GensetEnable_DigitalInput_Create();
     GensetLoad_DigitalInput_Create();

@@ -19,7 +19,6 @@
 #define CALL_EVENT                     (-1)
 
 /* Variable Declarations */
-extern int32_T _sfEvent_;
 extern uint32_T _DynoController_Rev1MachineNumber_;
 extern real_T _sfTime_;
 

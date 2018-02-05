@@ -1,8 +1,8 @@
-CC     = "e:\matlab\sys\lcc\bin\lcc.exe"
-LD     = "e:\matlab\sys\lcc\bin\lcclnk.exe"
-LIBCMD = "e:\matlab\sys\lcc\bin\lcclib.exe"
+CC     = "C:\Program Files (x86)\MATLAB\R2011a\sys\lcc\bin\lcc.exe"
+LD     = "C:\Program Files (x86)\MATLAB\R2011a\sys\lcc\bin\lcclnk.exe"
+LIBCMD = "C:\Program Files (x86)\MATLAB\R2011a\sys\lcc\bin\lcclib.exe"
 CFLAGS = -c -Zp8 -DMATLAB_MEX_FILE -noregistrylookup
-LDFLAGS = -s -dll -L"e:\matlab\sys\lcc\lib"
+LDFLAGS = -s -dll -L"C:\Program Files (x86)\MATLAB\R2011a\sys\lcc\lib"
 LIBFLAGS = 
 
 OBJECTS = \
@@ -10,7 +10,6 @@ OBJECTS = \
 	"BaseEngineController_A02_sfun_registry.obj"\
 	"c1_BaseEngineController_A02.obj"\
 	"c2_BaseEngineController_A02.obj"\
-	"c4_BaseEngineController_A02.obj"\
 	"c5_BaseEngineController_A02.obj"\
 	"c6_BaseEngineController_A02.obj"\
 	"c7_BaseEngineController_A02.obj"\
@@ -22,18 +21,18 @@ OBJECTS = \
 	"c13_BaseEngineController_A02.obj"\
 	"c19_BaseEngineController_A02.obj"\
 	"lccstub.obj"\
-	"e:\matlab\sys\lcc\mex\lccdef.def"\
-	"e:\matlab\stateflow\c\debugger\lib\win32\sfc_debuglcc.lib"\
-	"e:\matlab\stateflow\c\mex\lib\win32\sfc_mexlcc.lib"\
-	"e:\matlab\extern\lib\win32\lcc\libmex.lib"\
-	"e:\matlab\extern\lib\win32\lcc\libmx.lib"\
-	"e:\matlab\extern\lib\win32\lcc\libfixedpoint.lib"\
-	"e:\matlab\extern\lib\win32\lcc\libut.lib"\
-	"e:\matlab\extern\lib\win32\lcc\libmwmathutil.lib"\
-	"e:\matlab\extern\lib\win32\lcc\libemlrt.lib"\
-	"e:\matlab\extern\lib\win32\lcc\libmwblascompat32.lib"\
+	"C:\Program Files (x86)\MATLAB\R2011a\sys\lcc\mex\lccdef.def"\
+	"C:\Program Files (x86)\MATLAB\R2011a\stateflow\c\debugger\lib\win32\sfc_debuglcc.lib"\
+	"C:\Program Files (x86)\MATLAB\R2011a\stateflow\c\mex\lib\win32\sfc_mexlcc.lib"\
+	"C:\Program Files (x86)\MATLAB\R2011a\extern\lib\win32\lcc\libmex.lib"\
+	"C:\Program Files (x86)\MATLAB\R2011a\extern\lib\win32\lcc\libmx.lib"\
+	"C:\Program Files (x86)\MATLAB\R2011a\extern\lib\win32\lcc\libfixedpoint.lib"\
+	"C:\Program Files (x86)\MATLAB\R2011a\extern\lib\win32\lcc\libut.lib"\
+	"C:\Program Files (x86)\MATLAB\R2011a\extern\lib\win32\lcc\libmwmathutil.lib"\
+	"C:\Program Files (x86)\MATLAB\R2011a\extern\lib\win32\lcc\libemlrt.lib"\
+	"C:\Program Files (x86)\MATLAB\R2011a\extern\lib\win32\lcc\libmwblascompat32.lib"\
 
-INCLUDE_PATH= -I"e:\matlab\sys\lcc\include"  -I"e:\matlab\extern\include"  -I"e:\matlab\simulink\include"  -I"e:\matlab\stateflow\c\mex\include"  -I"e:\matlab\stateflow\c\debugger\include" 
+INCLUDE_PATH= -I"C:\Program Files (x86)\MATLAB\R2011a\sys\lcc\include"  -I"C:\Program Files (x86)\MATLAB\R2011a\extern\include"  -I"C:\Program Files (x86)\MATLAB\R2011a\simulink\include"  -I"C:\Program Files (x86)\MATLAB\R2011a\stateflow\c\mex\include"  -I"C:\Program Files (x86)\MATLAB\R2011a\stateflow\c\debugger\include" 
  
 
 BaseEngineController_A02_sfun.mexw32 : $(MAKEFILE) $(OBJECTS)
@@ -46,8 +45,6 @@ c1_BaseEngineController_A02.obj :	"c1_BaseEngineController_A02.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c1_BaseEngineController_A02.c"
 c2_BaseEngineController_A02.obj :	"c2_BaseEngineController_A02.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c2_BaseEngineController_A02.c"
-c4_BaseEngineController_A02.obj :	"c4_BaseEngineController_A02.c"
-	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c4_BaseEngineController_A02.c"
 c5_BaseEngineController_A02.obj :	"c5_BaseEngineController_A02.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c5_BaseEngineController_A02.c"
 c6_BaseEngineController_A02.obj :	"c6_BaseEngineController_A02.c"
@@ -68,5 +65,5 @@ c13_BaseEngineController_A02.obj :	"c13_BaseEngineController_A02.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c13_BaseEngineController_A02.c"
 c19_BaseEngineController_A02.obj :	"c19_BaseEngineController_A02.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c19_BaseEngineController_A02.c"
-lccstub.obj :	"e:\matlab\sys\lcc\mex\lccstub.c"
-	$(CC) $(CFLAGS) $(INCLUDE_PATH) "e:\matlab\sys\lcc\mex\lccstub.c"
+lccstub.obj :	"C:\Program Files (x86)\MATLAB\R2011a\sys\lcc\mex\lccstub.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "C:\Program Files (x86)\MATLAB\R2011a\sys\lcc\mex\lccstub.c"

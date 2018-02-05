@@ -77,9 +77,17 @@ uint32_T ApplicationStopReasonBlock = 0;
    Format:5.0 UpdateID:BACKGND Group:"System | Debug | Event Pause Counters" Help:"The number of times to execute ONE_SECOND_EVENT before pausing.  -1 means run forever" */
 int32_T ONE_SECOND_EVENT_RunCnt = -1;
 
+/* Name: FGND_20XRTI_PERIODIC_RunCnt ClassID:VAR StorageID:RAM Access:RW4+RW3+NA2+NA1 TypeID:SINT4 CType:int32_T Struct:FGND_20XRTI_PERIODIC_RunCnt Gain:1 Min:-1 Max:2147483646
+   Format:5.0 UpdateID:BACKGND Group:"System | Debug | Event Pause Counters" Help:"The number of times to execute FGND_20XRTI_PERIODIC before pausing.  -1 means run forever" */
+int32_T FGND_20XRTI_PERIODIC_RunCnt = -1;
+
 /* Name: FGND_RTI_PERIODIC_RunCnt ClassID:VAR StorageID:RAM Access:RW4+RW3+NA2+NA1 TypeID:SINT4 CType:int32_T Struct:FGND_RTI_PERIODIC_RunCnt Gain:1 Min:-1 Max:2147483646
    Format:5.0 UpdateID:BACKGND Group:"System | Debug | Event Pause Counters" Help:"The number of times to execute FGND_RTI_PERIODIC before pausing.  -1 means run forever" */
 int32_T FGND_RTI_PERIODIC_RunCnt = -1;
+
+/* Name: STARTUP_EVENT_RunCnt ClassID:VAR StorageID:RAM Access:RW4+RW3+NA2+NA1 TypeID:SINT4 CType:int32_T Struct:STARTUP_EVENT_RunCnt Gain:1 Min:-1 Max:2147483646
+   Format:5.0 UpdateID:BACKGND Group:"System | Debug | Event Pause Counters" Help:"The number of times to execute STARTUP_EVENT before pausing.  -1 means run forever" */
+int32_T STARTUP_EVENT_RunCnt = -1;
 
 /* Name: BGND_BASE_PERIODIC_RunCnt ClassID:VAR StorageID:RAM Access:RW4+RW3+NA2+NA1 TypeID:SINT4 CType:int32_T Struct:BGND_BASE_PERIODIC_RunCnt Gain:1 Min:-1 Max:2147483646
    Format:5.0 UpdateID:BACKGND Group:"System | Debug | Event Pause Counters" Help:"The number of times to execute BGND_BASE_PERIODIC before pausing.  -1 means run forever" */
@@ -204,80 +212,6 @@ void CheckApplicationStatus(void)
   /* If the application should be stopped, execute stop code for each block, in priority order */
   if (stopApplication) {
     ApplicationStatus = APPLICATION_STOP;
-
-    /* Turn off discrete output */
-    {
-      if ((init_resource_MPRD_DataStore()) >= 0) {
-        SetDiscreteOutState((E_ModuleResource) ((init_resource_MPRD_DataStore())),
-                            RES_OFF);
-      }
-    }
-
-    /* Turn off discrete output */
-    {
-      if ((init_resource_COIL_Pos_DataStore()) >= 0) {
-        SetDiscreteOutState((E_ModuleResource)
-                            ((init_resource_COIL_Pos_DataStore())), RES_OFF);
-      }
-    }
-
-    /* Turn off discrete output */
-    {
-      if ((init_resource_COIL_Neg_DataStore()) >= 0) {
-        SetDiscreteOutState((E_ModuleResource)
-                            ((init_resource_COIL_Neg_DataStore())), RES_OFF);
-      }
-    }
-
-    /* Turn off discrete output */
-    {
-      if ((init_resource_Battery_Enable_DataStore()) >= 0) {
-        SetDiscreteOutState((E_ModuleResource)
-                            ((init_resource_Battery_Enable_DataStore())),
-                            RES_OFF);
-      }
-    }
-
-    /* Turn off discrete output */
-    {
-      if ((init_resource_Load_Dump_Enable_DataStore()) >= 0) {
-        SetDiscreteOutState((E_ModuleResource)
-                            ((init_resource_Load_Dump_Enable_DataStore())),
-                            RES_OFF);
-      }
-    }
-
-    /* Turn off discrete output */
-    {
-      if ((init_resource_Genset_Enable_DataStore()) >= 0) {
-        SetDiscreteOutState((E_ModuleResource)
-                            ((init_resource_Genset_Enable_DataStore())), RES_OFF);
-      }
-    }
-
-    /* Turn off discrete output */
-    {
-      if ((init_resource_Genset_Load_DataStore()) >= 0) {
-        SetDiscreteOutState((E_ModuleResource)
-                            ((init_resource_Genset_Load_DataStore())), RES_OFF);
-      }
-    }
-
-    /* Turn off discrete output */
-    {
-      if ((init_resource_ACC1_Out_DataStore()) >= 0) {
-        SetDiscreteOutState((E_ModuleResource)
-                            ((init_resource_ACC1_Out_DataStore())), RES_OFF);
-      }
-    }
-
-    /* Turn off discrete output */
-    {
-      if ((init_resource_ACC2_Out_DataStore()) >= 0) {
-        SetDiscreteOutState((E_ModuleResource)
-                            ((init_resource_ACC2_Out_DataStore())), RES_OFF);
-      }
-    }
   } else {
     boolean_T zeroSeen = 0;
     boolean_T countingSeen = 0;
@@ -288,9 +222,17 @@ void CheckApplicationStatus(void)
       zeroSeen = 1;
     if (ONE_SECOND_EVENT_RunCnt > 0)
       countingSeen = 1;
+    if (FGND_20XRTI_PERIODIC_RunCnt == 0)
+      zeroSeen = 1;
+    if (FGND_20XRTI_PERIODIC_RunCnt > 0)
+      countingSeen = 1;
     if (FGND_RTI_PERIODIC_RunCnt == 0)
       zeroSeen = 1;
     if (FGND_RTI_PERIODIC_RunCnt > 0)
+      countingSeen = 1;
+    if (STARTUP_EVENT_RunCnt == 0)
+      zeroSeen = 1;
+    if (STARTUP_EVENT_RunCnt > 0)
       countingSeen = 1;
     if (BGND_BASE_PERIODIC_RunCnt == 0)
       zeroSeen = 1;

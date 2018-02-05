@@ -57,7 +57,9 @@ typedef enum {
 } E_ApplicationInitStatus;
 
 extern int32_T ONE_SECOND_EVENT_RunCnt;
+extern int32_T FGND_20XRTI_PERIODIC_RunCnt;
 extern int32_T FGND_RTI_PERIODIC_RunCnt;
+extern int32_T STARTUP_EVENT_RunCnt;
 extern int32_T BGND_BASE_PERIODIC_RunCnt;
 extern void StepApplicationStartup(void);
 extern E_ApplicationInitStatus ApplicationInitStatus;

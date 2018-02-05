@@ -1,0 +1,573 @@
+Library {
+  Name			  "AutoDoc_lib"
+  Version		  6.3
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "ibm-5348_P100-1997"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  on
+  Created		  "Thu Nov 10 12:32:30 2005"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "jason_tartt"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Thu Oct 12 18:52:55 2006"
+  ModelVersionFormat	  "1.%<AutoIncrement:3382>"
+  ConfigurationManager	  "None"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  StrictBusMsg		  "None"
+  ProdHWDeviceType	  "32-bit Generic"
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      on
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "AutoDoc_lib"
+    Location		    [171, 80, 1289, 1022]
+    Open		    on
+    ModelBrowserVisibility  on
+    ModelBrowserWidth	    169
+    ScreenColor		    "[0.639216, 0.611765, 0.745098]"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "points"
+    ZoomFactor		    "65"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "Cals_and_Probes_Page"
+      Ports		      []
+      Position		      [1100, 340, 1200, 390]
+      BackgroundColor	      "[0.862750, 0.827450, 0.996080]"
+      ShowName		      off
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      MaskHideContents	      off
+      MaskInitialization      "% Color\nr = 220;\ng = 211;\nb = 254;\ncolor = "
+"strcat('[', num2str(r/255), ',', num2str(g/255), ',', num2str(b/255), ']');\n"
+"set_param(gcb, 'BackgroundColor', ...\n    color);\n\n% Size\np = get_param(g"
+"cb, 'Position');\nht = 50;\nwd = 100;\nset_param(gcb, 'Position', [p(1) p(2) "
+"(p(1) + wd) (p(2) + ht)]);"
+      MaskDisplay	      "disp('Calibrations &\\nProbes\\nDisplay')"
+      MaskSelfModifiable      on
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"Cals_and_Probes_Page"
+	Location		[202, 77, 1272, 1007]
+	Open			off
+	ModelBrowserVisibility	on
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "Documentation_Calibrations_Probes_Block_Sep"
+"_Page"
+	  Ports			  []
+	  Position		  [15, 15, 1075, 1465]
+	  ShowName		  off
+	  UserDataPersistent	  on
+	  UserData		  "DataTag0"
+	  FunctionName		  "sfuntmpl2"
+	  MaskInitialization	  "set_param(gcb, 'Position', [0 0 1060 1450])"
+";\nHts = [0 1450 1450 0 0];\nWds = [0 0 1060 1060 0];\n\nUserData = get_param"
+"(strcat(get_param(get_param(gcb, 'Parent')...\n    , 'Parent'), '/Documentati"
+"on_Calibrations_Probes_Block'), 'UserData');\n\n% --- Icon Display Strings\nD"
+"ispName = UserData.DispName;\nDispUnit = UserData.DispUnit;\nDispHelp = UserD"
+"ata.DispHelp;\nDispPath = UserData.DispPath;"
+	  MaskDisplay		  "plot(Wds, Hts);\n\ntext(10,Hts(2)-10,...\n "
+"   DispName ...\n    ,'verticalAlignment','Top','horizontalAlignment','Left',"
+"'texmode','on')\n\ntext(225,Hts(2)-10,...\n    DispUnit ...\n    ,'verticalAl"
+"ignment','Top','horizontalAlignment','Left','texmode','on')\n\ntext(325,Hts(2"
+")-10,...\n    DispHelp ...\n    ,'verticalAlignment','Top','horizontalAlignme"
+"nt','Left','texmode','on')\n\ntext(445,Hts(2)-10,...\n    DispPath ...\n    ,"
+"'verticalAlignment','Top','horizontalAlignment','Left','texmode','on')"
+	  MaskSelfModifiable	  on
+	  MaskIconFrame		  off
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "pixels"
+	}
+      }
+    }
+    Block {
+      BlockType		      "S-Function"
+      Name		      "Documentation_Calibrations_Probes_Block"
+      Ports		      []
+      Position		      [15, 1192, 1075, 1450]
+      ShowName		      off
+      UserDataPersistent      on
+      UserData		      "DataTag1"
+      OpenFcn		      "Documentation_Calibrations_Probes_gui;"
+      FunctionName	      "sfuntmpl2"
+      MaskInitialization      "UserData = get_param(gcb, 'UserData');\n\n% ---"
+" Icon Display Strings\nif UserData.DocOption == 1\n    DispName = UserData.Di"
+"spName;\n    DispUnit = UserData.DispUnit;\n    DispHelp = UserData.DispHelp;"
+"\n    DispPath = UserData.DispPath;\nelse\n    DispName = '';\n    DispUnit ="
+" '';\n    DispHelp = '';\n    DispPath = '';\nend\nHts = UserData.Hts;\nWds ="
+" UserData.Wds;"
+      MaskDisplay	      "plot(Wds, Hts);\n\ntext(10,Hts(2)-10,...\n    D"
+"ispName ...\n    ,'verticalAlignment','Top','horizontalAlignment','Left','tex"
+"mode','on')\n\ntext(225,Hts(2)-10,...\n    DispUnit ...\n    ,'verticalAlignm"
+"ent','Top','horizontalAlignment','Left','texmode','on')\n\ntext(325,Hts(2)-10"
+",...\n    DispHelp ...\n    ,'verticalAlignment','Top','horizontalAlignment',"
+"'Left','texmode','on')\n\ntext(445,Hts(2)-10,...\n    DispPath ...\n    ,'ver"
+"ticalAlignment','Top','horizontalAlignment','Left','texmode','on')"
+      MaskSelfModifiable      on
+      MaskIconFrame	      off
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "pixels"
+    }
+    Block {
+      BlockType		      "S-Function"
+      Name		      "Documentation_Left_Border"
+      Ports		      []
+      Position		      [15, 15, 15, 1450]
+      ShowName		      off
+      FunctionName	      "motohawk_sfun_annotation"
+      MaskPromptString	      "Page Layout"
+      MaskStyleString	      "popup(Portrait|Landscape)"
+      MaskTunableValueString  "off"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskVariables	      "layout=&1;"
+      MaskInitialization      "% --- Position\nif strcmp(layout, 'Portrait') ="
+"= 1\n    set_param(gcb, 'Position', [0 0 0 1435]);\nelse\n    set_param(gcb, "
+"'Position', [0 0 0 1045]);\nend\np = get_param(gcb, 'Position');\nwd = p(3) -"
+" p(1);\nht = p(4) - p(2);"
+      MaskDisplay	      "plot([0 0 wd wd 0],[0 ht ht 0 0])"
+      MaskSelfModifiable      on
+      MaskIconFrame	      off
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "pixels"
+      MaskValueString	      "Portrait"
+    }
+    Block {
+      BlockType		      "S-Function"
+      Name		      "Documentation_Right_Border"
+      Ports		      []
+      Position		      [1075, 15, 1075, 1450]
+      ShowName		      off
+      FunctionName	      "motohawk_sfun_annotation"
+      MaskPromptString	      "Page Layout"
+      MaskStyleString	      "popup(Portrait|Landscape)"
+      MaskTunableValueString  "off"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskVariables	      "layout=&1;"
+      MaskInitialization      "% --- Position\nif strcmp(layout, 'Portrait') ="
+"= 1\n    set_param(gcb, 'Position', [1075 0 1075 1435]);\nelse\n    set_param"
+"(gcb, 'Position', [1465 0 1465 1045]);\nend\np = get_param(gcb, 'Position');"
+"\nwd = p(3) - p(1);\nht = p(4) - p(2);"
+      MaskDisplay	      "plot([0 0 wd wd 0],[0 ht ht 0 0])"
+      MaskSelfModifiable      on
+      MaskIconFrame	      off
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "pixels"
+      MaskValueString	      "Portrait"
+    }
+    Block {
+      BlockType		      "S-Function"
+      Name		      "Documentation_Title_Block"
+      Ports		      []
+      Position		      [15, 15, 1075, 83]
+      ShowName		      off
+      UserDataPersistent      on
+      UserData		      "DataTag2"
+      OpenFcn		      "Documentation_Title_Block_gui;"
+      FunctionName	      "sfuntmpl2"
+      MaskInitialization      "UserData = get_param(gcb, 'UserData');\n\n% ---"
+" Name and System\nSubsysName = strrep(char(get_param(get_param(gcb, 'Parent')"
+", 'Name')), '_', '\\_');\nCurrentSystem = strrep(get_param(gcb, 'Parent'), '_"
+"', '\\_');\nCurrentSystem = strrep(CurrentSystem, '/', ' / ');\n\n% --- Docum"
+"entation Path and Display Variables\nif UserData.DocOption == 1\n    if strcm"
+"p(bdroot, get_param(gcb, 'Parent')) == 1\n        DocPathDisp = '';\n        "
+"Space = '';\n    else\n        PrevPathName = get_param(get_param(gcb, 'Paren"
+"t'),'Parent');\n        PrevUserData = get_param([PrevPathName, '/Documentati"
+"on_Title_Block'], 'UserData');\n        PrevDocPath = PrevUserData.DocPath;\n"
+"        if strcmp(PrevDocPath, '') == 1\n            DocPathDisp = num2str(Us"
+"erData.LowLevelPos);\n        else\n            DocPathDisp = [PrevDocPath, '"
+".', num2str(UserData.LowLevelPos)];\n        end\n        Space = ' ';\n    e"
+"nd\nelse\n    DocPathDisp = '';\n    Space = '';\nend\nUserData.DocPath = Doc"
+"PathDisp;\nset_param(gcb, 'UserData', UserData)"
+      MaskDisplay	      "plot(UserData.Wds, UserData.Hts);\n\ntext(10,Us"
+"erData.Hts(2)-3,['\\fontsize{32}\\fontname{Bitstream Vera Sans Mono}\\bf\\it'"
+" DocPathDisp, Space, SubsysName, ...\n    '\\fontsize{16}\\newline\\fontsize{"
+"14}\\rm\\fontname{Bitstream Vera Sans Mono}' CurrentSystem, ...\n    '\\fonts"
+"ize{12}\\newline\\fontname{Arial}' UserData.DispLines ...\n    '\\fontsize{5}"
+"\\newline\\fontsize{20}\\fontname{Bitstream Vera Sans Mono}\\bf\\it' UserData"
+".FirstLbl ...\n    '\\fontsize{16}\\newline\\fontsize{14}\\rm\\fontname{Bitst"
+"ream Vera Sans Mono}' UserData.FirstTxt '\\rm\\fontsize{12}\\newline\\fontnam"
+"e{Arial}' UserData.DispLines ...\n    '\\fontsize{5}\\newline\\fontsize{20}\\"
+"fontname{Bitstream Vera Sans Mono}\\bf\\it' UserData.SecondLbl ...\n    '\\fo"
+"ntsize{16}\\newline\\fontsize{14}\\rm\\fontname{Bitstream Vera Sans Mono}\\rm"
+"' UserData.SecondTxt], ...\n    'verticalAlignment','Top','horizontalAlignmen"
+"t','Left','texmode','on')"
+      MaskSelfModifiable      on
+      MaskIconFrame	      off
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "pixels"
+    }
+  }
+}
+MatData {
+  NumRecords		  3
+  DataRecord {
+    Tag			    DataTag2
+    Data		    "  %)30     .    > <   8    (     @         %    "
+"\"     $    !     0         %  0 #     $   #     1&]C3W!T:6]N    3&%Y;W5T    "
+"    3&]W3&5V96Q0;W, 3V)J0VAE8VL     3V)J5&5X=       1&5S8T-H96-K    1&5S8U1E>"
+"'0     17%N0VAE8VL     17%N5&5X=       1FER<W1,8FP     1FER<W14>'0     4V5C;V"
+"YD3&)L    4V5C;VYD5'AT    1&ES<$QI;F5S    5V1S            2'1S            #@ "
+"  #@    &    \"     8         !0    @    !     0    $         \"0    @       "
+"    #P/PX    X    !@    @    &          4    (     0    $    !          D    "
+"(            \\#\\.    .     8    (    !@         %    \"     $    !     0   "
+"      )    \"            / _#@   #@    &    \"     8         !0    @    !    "
+" 0    $         \"0    @               X   !8    !@    @    $          4    ("
+"     0   \"<    !         !     G    5W)I=&4@;V)J96-T:79E<R!A;F0@<F5Q=6ER96UE"
+";G1S(&AE<F4N  X    X    !@    @    &          4    (     0    $    !         "
+" D    (               .    2     8    (    !          %    \"     $    7     "
+"0         0    %P   %=R:71E(&1E<V-R:7!T:6]N(&AE<F4N  X    X    !@    @    &  "
+"        4    (     0    $    !          D    (               .    2     8    "
+"(    !          %    \"     $    5     0         0    %0   %=R:71E(&5Q=6%T:6]"
+"N<R!H97)E+@    X    P    !@    @    $          4    (               !        "
+" !          #@   #     &    \"     0         !0    @               $         "
+"$          .    ,     8    (    !          %    \"                0         0"
+"          X    P    !@    @    $          4    (               !         !   "
+"       #@   %@\"   &    \"     0         !0    @    !    * (   $         $   "
+" \"@\"  !<9F]N='-I>F5[.'TN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BX"
+"N+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN"
+"+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+"
+"BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+B"
+"XN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BX"
+"N+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN"
+"+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+"
+"BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+B"
+"XN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BX"
+"N+BXN+BXN+BXN+BXN+BXN+BY<9F]N='-I>F5[,3)]7&YE=VQI;F4.    6     8    (    !@  "
+"       %    \"     $    %     0         )    *                               "
+" )\"00       D)!            .    6     8    (    !@         %    \"     $    "
+"%     0         )    *                       44        !10                   "
+"   "
+  }
+  DataRecord {
+    Tag			    DataTag1
+    Data		    "  %)30     .    .!(   8    (     @         %    "
+"\"     $    !     0         %  0 \"@    $   !0    1&]C3W!T:6]N $QA>6]U=     !"
+"$:7-P3F%M90  1&ES<%5N:70  $1I<W!(96QP  !$:7-P4&%T:   5V1S         $AT<P      "
+"   .    .     8    (    !@         %    \"     $    !     0         )    \"  "
+"          / _#@   #@    &    \"     8         !0    @    !     0    $        "
+" \"0    @           #P/PX   \"P\"@  !@    @    $          4    (     0   ( * "
+"  !         !    \" \"@  7&9O;G1S:7IE>S(P?5QF;VYT;F%M97M\":71S=')E86T@5F5R82!"
+"386YS($UO;F]]7&)F7&ET0V%L:6)R871I;VYS7&9O;G1S:7IE>S$R?5QR;5QN97=L:6YE7&9O;G1N"
+"86UE>T%R:6%L?5QF;VYT<VEZ97LX?2XN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+"
+"BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+B"
+"XN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BX"
+"N+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN"
+"+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+"
+"BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+B"
+"XN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BX"
+"N+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN"
+"+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+"
+"BXN+BXN+BXN+BXN+BXN+BXN+BXN+EQF;VYT<VEZ97LQ-'U<;F5W;&EN95QF;VYT;F%M97M\":71S="
+"')E86T@5F5R82!386YS($UO;F]]7&9O;G1S:7IE>S$T?4-A;&EB<F%T:6]N7&YE=VQI;F5<;F5W;&"
+"EN95QF;VYT;F%M97M!<FEA;'U<9F]N='-I>F5[.'TN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BX"
+"N+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN"
+"+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+"
+"BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+B"
+"XN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BX"
+"N+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN"
+"+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+"
+"BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+B"
+"XN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BX"
+"N+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BY<9F]N='-I>F5[,31]7&YE=VQI;F5<9F]N='-I"
+">F5[-GU<;F5W;&EN95QF;VYT<VEZ97LR,'U<9F]N=&YA;65[0FET<W1R96%M(%9E<F$@4V%N<R!-;"
+"VYO?5QB9EQI=%!R;V)E<UQF;VYT<VEZ97LQ,GU<<FU<;F5W;&EN95QF;VYT;F%M97M!<FEA;'U<9F"
+"]N='-I>F5[.'TN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BX"
+"N+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN"
+"+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+"
+"BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+B"
+"XN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BX"
+"N+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN"
+"+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+"
+"BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+B"
+"XN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BX"
+"N+BXN+BXN+BY<9F]N='-I>F5[,31]7&YE=VQI;F5<9F]N=&YA;65[0FET<W1R96%M(%9E<F$@4V%N"
+"<R!-;VYO?5!R;V)E7&YE=VQI;F5<;F5W;&EN95QF;VYT;F%M97M!<FEA;'U<9F]N='-I>F5[.'TN+"
+"BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+B"
+"XN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BX"
+"N+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN"
+"+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+"
+"BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+B"
+"XN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BX"
+"N+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN"
+"+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+"
+"BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BY<9F"
+"]N='-I>F5[,31]7&YE=VQI;F5<9F]N=&YA;65[0FET<W1R96%M(%9E<F$@4V%N<R!-;VYO?41A=&%"
+"$969<;F5W;&EN95QN97=L:6YE7&9O;G1S:7IE>SA]7&9O;G1S:7IE>S$T?5QN97=L:6YE#@   , !"
+"   &    \"     0         !0    @    !    D $   $         $    ) !  !<9F]N='-I"
+">F5[,C!]7&9O;G1N86UE>T)I='-T<F5A;2!697)A(%-A;G,@36]N;WU<8F8@7&9O;G1S:7IE>S$R?"
+"5QR;5QN97=L:6YE7&9O;G1S:7IE>SA]7&9O;G1S:7IE>S$T?5QN97=L:6YE=6YI='-<;F5W;&EN95"
+"QN97=L:6YE7&9O;G1S:7IE>SA]7&9O;G1S:7IE>S$T?5QN97=L:6YE7&9O;G1S:7IE>S9]7&YE=VQ"
+"I;F5<9F]N='-I>F5[,C!]7&9O;G1N86UE>T)I='-T<F5A;2!697)A(%-A;G,@36]N;WU<8F8@7&9O"
+";G1S:7IE>S$R?5QR;5QN97=L:6YE7&9O;G1S:7IE>SA]7&9O;G1S:7IE>S$T?5QN97=L:6YE=6YI="
+"'-<;F5W;&EN95QN97=L:6YE7&9O;G1S:7IE>SA]7&9O;G1S:7IE>S$T?5QN97=L:6YE=6YI='-<;F"
+"5W;&EN95QN97=L:6YE7&9O;G1S:7IE>SA]7&9O;G1S:7IE>S$T?5QN97=L:6YE#@   /@!   &   "
+" \"     0         !0    @    !    Q@$   $         $    ,8!  !<9F]N='-I>F5[,C!"
+"]7&9O;G1N86UE>T)I='-T<F5A;2!697)A(%-A;G,@36]N;WU<8F8@7&9O;G1S:7IE>S$R?5QR;5QN"
+"97=L:6YE7&9O;G1S:7IE>SA]7&9O;G1S:7IE>S$T?5QN97=L:6YE:&5L<\"!T97AT7&YE=VQI;F5-"
+";W1O5'5N92!0871H.EQN97=L:6YE7&9O;G1S:7IE>SA]7&9O;G1S:7IE>S$T?5QN97=L:6YE7&9O;"
+"G1S:7IE>S9]7&YE=VQI;F5<9F]N='-I>F5[,C!]7&9O;G1N86UE>T)I='-T<F5A;2!697)A(%-A;G"
+",@36]N;WU<8F8@7&9O;G1S:7IE>S$R?5QR;5QN97=L:6YE7&9O;G1S:7IE>SA]7&9O;G1S:7IE>S$"
+"T?5QN97=L:6YE:&5L<\"!T97AT7&YE=VQI;F5-;W1O5'5N92!0871H.EQN97=L:6YE7&9O;G1S:7I"
+"E>SA]7&9O;G1S:7IE>S$T?5QN97=L:6YE:&5L<\"!T97AT7&YE=VQI;F5-;W1O5'5N92!0871H.EQ"
+"N97=L:6YE7&9O;G1S:7IE>SA]7&9O;G1S:7IE>S$T?5QN97=L:6YE   .    Z $   8    (    "
+"!          %    \"     $   \"Q 0   0         0    L0$  %QF;VYT<VEZ97LR,'U<9F]"
+"N=&YA;65[0FET<W1R96%M(%9E<F$@4V%N<R!-;VYO?5QB9B!<9F]N='-I>F5[,3)]7')M7&YE=VQI"
+";F5<9F]N='-I>F5[.'U<9F]N='-I>F5[,31]7&YE=VQI;F5<;F5W;&EN94=R;W5P('P@4W5B9W)O="
+"7!<;F5W;&EN95QF;VYT<VEZ97LX?5QF;VYT<VEZ97LQ-'U<;F5W;&EN95QF;VYT<VEZ97LV?5QN97"
+"=L:6YE7&9O;G1S:7IE>S(P?5QF;VYT;F%M97M\":71S=')E86T@5F5R82!386YS($UO;F]]7&)F(%"
+"QF;VYT<VEZ97LQ,GU<<FU<;F5W;&EN95QF;VYT<VEZ97LX?5QF;VYT<VEZ97LQ-'U<;F5W;&EN95Q"
+"N97=L:6YE1W)O=7 @?\"!3=6)G<F]U<%QN97=L:6YE7&9O;G1S:7IE>SA]7&9O;G1S:7IE>S$T?5Q"
+"N97=L:6YE7&YE=VQI;F5'<F]U<\"!\\(%-U8F=R;W5P7&YE=VQI;F5<9F]N='-I>F5[.'U<9F]N='"
+"-I>F5[,31]7&YE=VQI;F4         #@   %@    &    \"     8         !0    @    !  "
+"  !0    $         \"0   \"@                               \"0D$       )\"00  "
+"         #@   %@    &    \"     8         !0    @    !    !0    $         \"0"
+"   \"@                     ('!        @<$                      "
+  }
+  DataRecord {
+    Tag			    DataTag0
+    Data		    "  %)30     .    \\!$   8    (     @         %    "
+"\"     $    !     0         %  0 \"@    $   !&    1&]C3W!T:6]N $1I<W!.86UE  !"
+"$:7-P56YI=   1&ES<$AE;'   $1I<W!0871H  !79',         2'1S            #@   #@ "
+"   &    \"     8         !0    @    !     0    $         \"0    @           #"
+"P/PX   \"P\"@  !@    @    $          4    (     0   ( *   !         !    \" "
+"\"@  7&9O;G1S:7IE>S(P?5QF;VYT;F%M97M\":71S=')E86T@5F5R82!386YS($UO;F]]7&)F7&E"
+"T0V%L:6)R871I;VYS7&9O;G1S:7IE>S$R?5QR;5QN97=L:6YE7&9O;G1N86UE>T%R:6%L?5QF;VYT"
+"<VEZ97LX?2XN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+"
+"BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+B"
+"XN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BX"
+"N+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN"
+"+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+"
+"BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+B"
+"XN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BX"
+"N+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN"
+"+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+"
+"BXN+BXN+EQF;VYT<VEZ97LQ-'U<;F5W;&EN95QF;VYT;F%M97M\":71S=')E86T@5F5R82!386YS("
+"$UO;F]]7&9O;G1S:7IE>S$T?4-A;&EB<F%T:6]N7&YE=VQI;F5<;F5W;&EN95QF;VYT;F%M97M!<F"
+"EA;'U<9F]N='-I>F5[.'TN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BX"
+"N+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN"
+"+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+"
+"BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+B"
+"XN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BX"
+"N+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN"
+"+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+"
+"BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+B"
+"XN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BX"
+"N+BXN+BXN+BXN+BXN+BY<9F]N='-I>F5[,31]7&YE=VQI;F5<9F]N='-I>F5[-GU<;F5W;&EN95QF"
+";VYT<VEZ97LR,'U<9F]N=&YA;65[0FET<W1R96%M(%9E<F$@4V%N<R!-;VYO?5QB9EQI=%!R;V)E<"
+"UQF;VYT<VEZ97LQ,GU<<FU<;F5W;&EN95QF;VYT;F%M97M!<FEA;'U<9F]N='-I>F5[.'TN+BXN+B"
+"XN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BX"
+"N+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN"
+"+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+"
+"BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+B"
+"XN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BX"
+"N+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN"
+"+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+"
+"BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+B"
+"XN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BY<9F]N='-"
+"I>F5[,31]7&YE=VQI;F5<9F]N=&YA;65[0FET<W1R96%M(%9E<F$@4V%N<R!-;VYO?5!R;V)E7&YE"
+"=VQI;F5<;F5W;&EN95QF;VYT;F%M97M!<FEA;'U<9F]N='-I>F5[.'TN+BXN+BXN+BXN+BXN+BXN+"
+"BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+B"
+"XN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BX"
+"N+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN"
+"+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+"
+"BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+B"
+"XN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BX"
+"N+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN"
+"+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+"
+"BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BXN+BY<9F]N='-I>F5[,31]7&YE=V"
+"QI;F5<9F]N=&YA;65[0FET<W1R96%M(%9E<F$@4V%N<R!-;VYO?41A=&%$969<;F5W;&EN95QN97="
+"L:6YE7&9O;G1S:7IE>SA]7&9O;G1S:7IE>S$T?5QN97=L:6YE#@   , !   &    \"     0    "
+"     !0    @    !    D $   $         $    ) !  !<9F]N='-I>F5[,C!]7&9O;G1N86UE"
+">T)I='-T<F5A;2!697)A(%-A;G,@36]N;WU<8F8@7&9O;G1S:7IE>S$R?5QR;5QN97=L:6YE7&9O;"
+"G1S:7IE>SA]7&9O;G1S:7IE>S$T?5QN97=L:6YE=6YI='-<;F5W;&EN95QN97=L:6YE7&9O;G1S:7"
+"IE>SA]7&9O;G1S:7IE>S$T?5QN97=L:6YE7&9O;G1S:7IE>S9]7&YE=VQI;F5<9F]N='-I>F5[,C!"
+"]7&9O;G1N86UE>T)I='-T<F5A;2!697)A(%-A;G,@36]N;WU<8F8@7&9O;G1S:7IE>S$R?5QR;5QN"
+"97=L:6YE7&9O;G1S:7IE>SA]7&9O;G1S:7IE>S$T?5QN97=L:6YE=6YI='-<;F5W;&EN95QN97=L:"
+"6YE7&9O;G1S:7IE>SA]7&9O;G1S:7IE>S$T?5QN97=L:6YE=6YI='-<;F5W;&EN95QN97=L:6YE7&"
+"9O;G1S:7IE>SA]7&9O;G1S:7IE>S$T?5QN97=L:6YE#@   /@!   &    \"     0         !0"
+"    @    !    Q@$   $         $    ,8!  !<9F]N='-I>F5[,C!]7&9O;G1N86UE>T)I='-"
+"T<F5A;2!697)A(%-A;G,@36]N;WU<8F8@7&9O;G1S:7IE>S$R?5QR;5QN97=L:6YE7&9O;G1S:7IE"
+">SA]7&9O;G1S:7IE>S$T?5QN97=L:6YE:&5L<\"!T97AT7&YE=VQI;F5-;W1O5'5N92!0871H.EQN"
+"97=L:6YE7&9O;G1S:7IE>SA]7&9O;G1S:7IE>S$T?5QN97=L:6YE7&9O;G1S:7IE>S9]7&YE=VQI;"
+"F5<9F]N='-I>F5[,C!]7&9O;G1N86UE>T)I='-T<F5A;2!697)A(%-A;G,@36]N;WU<8F8@7&9O;G"
+"1S:7IE>S$R?5QR;5QN97=L:6YE7&9O;G1S:7IE>SA]7&9O;G1S:7IE>S$T?5QN97=L:6YE:&5L<\""
+"!T97AT7&YE=VQI;F5-;W1O5'5N92!0871H.EQN97=L:6YE7&9O;G1S:7IE>SA]7&9O;G1S:7IE>S$"
+"T?5QN97=L:6YE:&5L<\"!T97AT7&YE=VQI;F5-;W1O5'5N92!0871H.EQN97=L:6YE7&9O;G1S:7I"
+"E>SA]7&9O;G1S:7IE>S$T?5QN97=L:6YE   .    Z $   8    (    !          %    \"  "
+"   $   \"Q 0   0         0    L0$  %QF;VYT<VEZ97LR,'U<9F]N=&YA;65[0FET<W1R96%"
+"M(%9E<F$@4V%N<R!-;VYO?5QB9B!<9F]N='-I>F5[,3)]7')M7&YE=VQI;F5<9F]N='-I>F5[.'U<"
+"9F]N='-I>F5[,31]7&YE=VQI;F5<;F5W;&EN94=R;W5P('P@4W5B9W)O=7!<;F5W;&EN95QF;VYT<"
+"VEZ97LX?5QF;VYT<VEZ97LQ-'U<;F5W;&EN95QF;VYT<VEZ97LV?5QN97=L:6YE7&9O;G1S:7IE>S"
+"(P?5QF;VYT;F%M97M\":71S=')E86T@5F5R82!386YS($UO;F]]7&)F(%QF;VYT<VEZ97LQ,GU<<F"
+"U<;F5W;&EN95QF;VYT<VEZ97LX?5QF;VYT<VEZ97LQ-'U<;F5W;&EN95QN97=L:6YE1W)O=7 @?\""
+"!3=6)G<F]U<%QN97=L:6YE7&9O;G1S:7IE>SA]7&9O;G1S:7IE>S$T?5QN97=L:6YE7&YE=VQI;F5"
+"'<F]U<\"!\\(%-U8F=R;W5P7&YE=VQI;F5<9F]N='-I>F5[.'U<9F]N='-I>F5[,31]7&YE=VQI;F"
+"4         #@   %@    &    \"     8         !0    @    !    !0    $         \""
+"0   \"@                               \"0D$       )\"00           #@   %@    "
+"&    \"     8         !0    @    !    !0    $         \"0   \"@              "
+"       ('!        @<$                      "
+  }
+}
+
+# Finite State Machines
+#
+#    Stateflow Version 6.2 (R14SP2) dated Aug  4 2005, 10:13:39
+#
+#
+
+Stateflow {
+
+	machine {
+		id                   		1
+		name                 		"AutoDoc_lib"
+		created              		"28-Nov-2005 15:38:52"
+		isLibrary            		1
+		firstTarget          		2
+		sfVersion            		62014000
+	}
+
+	target {
+		id                        		2
+		name                      		"sfun"
+		description               		"Default Simulink S-Function Target."
+		machine                   		1
+		linkNode                  		[1 0 3]
+	}
+
+	target {
+		id                        		3
+		name                      		"rtw"
+		codeFlags                 		" comments=1 statebitsets=1 databitsets=1 emitlogicalops=1 el"
+						"seifdetection=1 constantfolding=1 redundantloadelimination=0"
+						" preservenames=0 preservenameswithparent=0 exportcharts=0"
+		machine                   		1
+		linkNode                  		[1 2 0]
+	}
+}

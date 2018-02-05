@@ -1,11 +1,11 @@
 /*
  * MotoHawk_IO.c
  *
- * Real-Time Workshop code generation for Simulink model "DynoController_Rev1.mdl".
+ * Code generation for model "DynoController_Rev1.mdl".
  *
- * Model version              : 1.279
- * Real-Time Workshop version : 7.5  (R2010a)  25-Jan-2010
- * C source code generated on : Sun Nov 19 19:40:14 2017
+ * Model version              : 1.298
+ * Simulink Coder version : 8.0 (R2011a) 09-Mar-2011
+ * C source code generated on : Mon Jan 15 12:10:05 2018
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -15,7 +15,7 @@
 
 #include "MotoHawk_IO.h"
 
-/* S-Function Block: <S130>/motohawk_ain5 Resource: ECUP */
+/* S-Function Block: <S133>/motohawk_ain5 Resource: ECUP */
 NativeError_S ECUP_AnalogInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -73,7 +73,388 @@ NativeError_S ECUP_AnalogInput_Get(uint16_T *adc, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S16>/motohawk_din1 Resource: LoadDumpEnable */
+/* S-Function Block: <S133>/motohawk_dout Resource: DOut692p0001 */
+NativeError_S DOut692p0001_DiscreteOutput_Create(void)
+{
+  NativeError_S sErrorResult;
+  S_DiscreteOutCreateAttributes CreateInfo;
+  CreateInfo.DynamicObj.eState = RES_OFF;
+  CreateInfo.DynamicObj.eResourceCondition = RES_ENABLED;
+  CreateInfo.DynamicObj.uValidAttributesMask = USE_DISCRETE_CONDITION |
+    USE_DISCRETE_STATE;
+  CreateInfo.uValidAttributesMask = USE_DISCRETE_DYNAMIC_ON_CREATE;
+  sErrorResult = CreateResource((E_ModuleResource) (((int16_T) 52)), &CreateInfo,
+    BEHAVIOUR_DISCRETE_OUT);
+  if (SUCCESS(sErrorResult)) {
+    (init_resource_DOut692p0001_DataStore()) = ((int16_T) 52);
+  } else {
+    (init_resource_DOut692p0001_DataStore()) = -1;
+    LogNativeError(sErrorResult);
+  }
+
+  {
+    extern uint8_T dout_create_DOut692p0001;
+    if (SUCCESS(sErrorResult))
+      dout_create_DOut692p0001 = 0;
+    else
+      dout_create_DOut692p0001 = (uint8_T) GetErrorCode(sErrorResult);
+  }
+
+  return sErrorResult;
+}
+
+NativeError_S DOut692p0001_DiscreteOutput_Set(boolean_T in)
+{
+  if ((init_resource_DOut692p0001_DataStore()) >= 0) {
+    return SetDiscreteOutState((E_ModuleResource)
+      ((init_resource_DOut692p0001_DataStore())), (in) ? RES_ON : RES_OFF);
+  }
+
+  return ERROR_FAIL;                   /* Return an error */
+}
+
+NativeError_S DOut692p0001_DiscreteOutputPushPull_Set(int8_T in)
+{
+  if ((init_resource_DOut692p0001_DataStore()) >= 0) {
+    return SetDiscreteOutState((E_ModuleResource)
+      ((init_resource_DOut692p0001_DataStore())), ((in) < 0) ? RES_ON_REVERSE :
+                               (((in) > 0) ? RES_ON : RES_OFF));
+  }
+
+  return ERROR_FAIL;                   /* Return an error */
+}
+
+/* S-Function Block: <S75>/motohawk_dout Resource: DOut328p001 */
+NativeError_S DOut328p001_DiscreteOutput_Create(void)
+{
+  NativeError_S sErrorResult;
+  if ((COIL_Pos_DataStore()) >= 0) {
+    S_DiscreteOutCreateAttributes CreateInfo;
+    CreateInfo.DynamicObj.eState = RES_OFF;
+    CreateInfo.DynamicObj.eResourceCondition = RES_ENABLED;
+    CreateInfo.DynamicObj.uValidAttributesMask = USE_DISCRETE_CONDITION |
+      USE_DISCRETE_STATE;
+    CreateInfo.uValidAttributesMask = USE_DISCRETE_DYNAMIC_ON_CREATE;
+    sErrorResult = CreateResource((E_ModuleResource) ((COIL_Pos_DataStore())),
+      &CreateInfo, BEHAVIOUR_DISCRETE_OUT);
+    if (SUCCESS(sErrorResult)) {
+      (init_resource_DOut328p001_DataStore()) = (COIL_Pos_DataStore());
+    } else {
+      (init_resource_DOut328p001_DataStore()) = -1;
+      LogNativeError(sErrorResult);
+    }
+
+    {
+      extern uint8_T dout_create_DOut328p001;
+      if (SUCCESS(sErrorResult))
+        dout_create_DOut328p001 = 0;
+      else
+        dout_create_DOut328p001 = (uint8_T) GetErrorCode(sErrorResult);
+    }
+  } else {
+    sErrorResult = ERROR_FAIL;
+  }
+
+  return sErrorResult;
+}
+
+NativeError_S DOut328p001_DiscreteOutput_Set(boolean_T in)
+{
+  if ((init_resource_DOut328p001_DataStore()) >= 0) {
+    return SetDiscreteOutState((E_ModuleResource)
+      ((init_resource_DOut328p001_DataStore())), (in) ? RES_ON : RES_OFF);
+  }
+
+  return ERROR_FAIL;                   /* Return an error */
+}
+
+NativeError_S DOut328p001_DiscreteOutputPushPull_Set(int8_T in)
+{
+  if ((init_resource_DOut328p001_DataStore()) >= 0) {
+    return SetDiscreteOutState((E_ModuleResource)
+      ((init_resource_DOut328p001_DataStore())), ((in) < 0) ? RES_ON_REVERSE :
+                               (((in) > 0) ? RES_ON : RES_OFF));
+  }
+
+  return ERROR_FAIL;                   /* Return an error */
+}
+
+/* S-Function Block: <S75>/motohawk_dout1 Resource: DOut329p001 */
+NativeError_S DOut329p001_DiscreteOutput_Create(void)
+{
+  NativeError_S sErrorResult;
+  if ((COIL_Neg_DataStore()) >= 0) {
+    S_DiscreteOutCreateAttributes CreateInfo;
+    CreateInfo.DynamicObj.eState = RES_OFF;
+    CreateInfo.DynamicObj.eResourceCondition = RES_ENABLED;
+    CreateInfo.DynamicObj.uValidAttributesMask = USE_DISCRETE_CONDITION |
+      USE_DISCRETE_STATE;
+    CreateInfo.uValidAttributesMask = USE_DISCRETE_DYNAMIC_ON_CREATE;
+    sErrorResult = CreateResource((E_ModuleResource) ((COIL_Neg_DataStore())),
+      &CreateInfo, BEHAVIOUR_DISCRETE_OUT);
+    if (SUCCESS(sErrorResult)) {
+      (init_resource_DOut329p001_DataStore()) = (COIL_Neg_DataStore());
+    } else {
+      (init_resource_DOut329p001_DataStore()) = -1;
+      LogNativeError(sErrorResult);
+    }
+
+    {
+      extern uint8_T dout_create_DOut329p001;
+      if (SUCCESS(sErrorResult))
+        dout_create_DOut329p001 = 0;
+      else
+        dout_create_DOut329p001 = (uint8_T) GetErrorCode(sErrorResult);
+    }
+  } else {
+    sErrorResult = ERROR_FAIL;
+  }
+
+  return sErrorResult;
+}
+
+NativeError_S DOut329p001_DiscreteOutput_Set(boolean_T in)
+{
+  if ((init_resource_DOut329p001_DataStore()) >= 0) {
+    return SetDiscreteOutState((E_ModuleResource)
+      ((init_resource_DOut329p001_DataStore())), (in) ? RES_ON : RES_OFF);
+  }
+
+  return ERROR_FAIL;                   /* Return an error */
+}
+
+NativeError_S DOut329p001_DiscreteOutputPushPull_Set(int8_T in)
+{
+  if ((init_resource_DOut329p001_DataStore()) >= 0) {
+    return SetDiscreteOutState((E_ModuleResource)
+      ((init_resource_DOut329p001_DataStore())), ((in) < 0) ? RES_ON_REVERSE :
+                               (((in) > 0) ? RES_ON : RES_OFF));
+  }
+
+  return ERROR_FAIL;                   /* Return an error */
+}
+
+/* S-Function Block: <S75>/motohawk_dout2 Resource: DOut330p001 */
+NativeError_S DOut330p001_DiscreteOutput_Create(void)
+{
+  NativeError_S sErrorResult;
+  if ((Battery_Enable_DataStore()) >= 0) {
+    S_DiscreteOutCreateAttributes CreateInfo;
+    CreateInfo.DynamicObj.eState = RES_OFF;
+    CreateInfo.DynamicObj.eResourceCondition = RES_ENABLED;
+    CreateInfo.DynamicObj.uValidAttributesMask = USE_DISCRETE_CONDITION |
+      USE_DISCRETE_STATE;
+    CreateInfo.uValidAttributesMask = USE_DISCRETE_DYNAMIC_ON_CREATE;
+    sErrorResult = CreateResource((E_ModuleResource) ((Battery_Enable_DataStore())),
+      &CreateInfo, BEHAVIOUR_DISCRETE_OUT);
+    if (SUCCESS(sErrorResult)) {
+      (init_resource_DOut330p001_DataStore()) = (Battery_Enable_DataStore());
+    } else {
+      (init_resource_DOut330p001_DataStore()) = -1;
+      LogNativeError(sErrorResult);
+    }
+
+    {
+      extern uint8_T dout_create_DOut330p001;
+      if (SUCCESS(sErrorResult))
+        dout_create_DOut330p001 = 0;
+      else
+        dout_create_DOut330p001 = (uint8_T) GetErrorCode(sErrorResult);
+    }
+  } else {
+    sErrorResult = ERROR_FAIL;
+  }
+
+  return sErrorResult;
+}
+
+NativeError_S DOut330p001_DiscreteOutput_Set(boolean_T in)
+{
+  if ((init_resource_DOut330p001_DataStore()) >= 0) {
+    return SetDiscreteOutState((E_ModuleResource)
+      ((init_resource_DOut330p001_DataStore())), (in) ? RES_ON : RES_OFF);
+  }
+
+  return ERROR_FAIL;                   /* Return an error */
+}
+
+NativeError_S DOut330p001_DiscreteOutputPushPull_Set(int8_T in)
+{
+  if ((init_resource_DOut330p001_DataStore()) >= 0) {
+    return SetDiscreteOutState((E_ModuleResource)
+      ((init_resource_DOut330p001_DataStore())), ((in) < 0) ? RES_ON_REVERSE :
+                               (((in) > 0) ? RES_ON : RES_OFF));
+  }
+
+  return ERROR_FAIL;                   /* Return an error */
+}
+
+/* S-Function Block: <S75>/motohawk_dout3 Resource: DOut331p001 */
+NativeError_S DOut331p001_DiscreteOutput_Create(void)
+{
+  NativeError_S sErrorResult;
+  if ((Load_Dump_Enable_DataStore()) >= 0) {
+    S_DiscreteOutCreateAttributes CreateInfo;
+    CreateInfo.DynamicObj.eState = RES_OFF;
+    CreateInfo.DynamicObj.eResourceCondition = RES_ENABLED;
+    CreateInfo.DynamicObj.uValidAttributesMask = USE_DISCRETE_CONDITION |
+      USE_DISCRETE_STATE;
+    CreateInfo.uValidAttributesMask = USE_DISCRETE_DYNAMIC_ON_CREATE;
+    sErrorResult = CreateResource((E_ModuleResource)
+      ((Load_Dump_Enable_DataStore())), &CreateInfo, BEHAVIOUR_DISCRETE_OUT);
+    if (SUCCESS(sErrorResult)) {
+      (init_resource_DOut331p001_DataStore()) = (Load_Dump_Enable_DataStore());
+    } else {
+      (init_resource_DOut331p001_DataStore()) = -1;
+      LogNativeError(sErrorResult);
+    }
+
+    {
+      extern uint8_T dout_create_DOut331p001;
+      if (SUCCESS(sErrorResult))
+        dout_create_DOut331p001 = 0;
+      else
+        dout_create_DOut331p001 = (uint8_T) GetErrorCode(sErrorResult);
+    }
+  } else {
+    sErrorResult = ERROR_FAIL;
+  }
+
+  return sErrorResult;
+}
+
+NativeError_S DOut331p001_DiscreteOutput_Set(boolean_T in)
+{
+  if ((init_resource_DOut331p001_DataStore()) >= 0) {
+    return SetDiscreteOutState((E_ModuleResource)
+      ((init_resource_DOut331p001_DataStore())), (in) ? RES_ON : RES_OFF);
+  }
+
+  return ERROR_FAIL;                   /* Return an error */
+}
+
+NativeError_S DOut331p001_DiscreteOutputPushPull_Set(int8_T in)
+{
+  if ((init_resource_DOut331p001_DataStore()) >= 0) {
+    return SetDiscreteOutState((E_ModuleResource)
+      ((init_resource_DOut331p001_DataStore())), ((in) < 0) ? RES_ON_REVERSE :
+                               (((in) > 0) ? RES_ON : RES_OFF));
+  }
+
+  return ERROR_FAIL;                   /* Return an error */
+}
+
+/* S-Function Block: <S75>/motohawk_dout4 Resource: DOut332p001 */
+NativeError_S DOut332p001_DiscreteOutput_Create(void)
+{
+  NativeError_S sErrorResult;
+  if ((Genset_Enable_DataStore()) >= 0) {
+    S_DiscreteOutCreateAttributes CreateInfo;
+    CreateInfo.DynamicObj.eState = RES_OFF;
+    CreateInfo.DynamicObj.eResourceCondition = RES_ENABLED;
+    CreateInfo.DynamicObj.uValidAttributesMask = USE_DISCRETE_CONDITION |
+      USE_DISCRETE_STATE;
+    CreateInfo.uValidAttributesMask = USE_DISCRETE_DYNAMIC_ON_CREATE;
+    sErrorResult = CreateResource((E_ModuleResource) ((Genset_Enable_DataStore())),
+      &CreateInfo, BEHAVIOUR_DISCRETE_OUT);
+    if (SUCCESS(sErrorResult)) {
+      (init_resource_DOut332p001_DataStore()) = (Genset_Enable_DataStore());
+    } else {
+      (init_resource_DOut332p001_DataStore()) = -1;
+      LogNativeError(sErrorResult);
+    }
+
+    {
+      extern uint8_T dout_create_DOut332p001;
+      if (SUCCESS(sErrorResult))
+        dout_create_DOut332p001 = 0;
+      else
+        dout_create_DOut332p001 = (uint8_T) GetErrorCode(sErrorResult);
+    }
+  } else {
+    sErrorResult = ERROR_FAIL;
+  }
+
+  return sErrorResult;
+}
+
+NativeError_S DOut332p001_DiscreteOutput_Set(boolean_T in)
+{
+  if ((init_resource_DOut332p001_DataStore()) >= 0) {
+    return SetDiscreteOutState((E_ModuleResource)
+      ((init_resource_DOut332p001_DataStore())), (in) ? RES_ON : RES_OFF);
+  }
+
+  return ERROR_FAIL;                   /* Return an error */
+}
+
+NativeError_S DOut332p001_DiscreteOutputPushPull_Set(int8_T in)
+{
+  if ((init_resource_DOut332p001_DataStore()) >= 0) {
+    return SetDiscreteOutState((E_ModuleResource)
+      ((init_resource_DOut332p001_DataStore())), ((in) < 0) ? RES_ON_REVERSE :
+                               (((in) > 0) ? RES_ON : RES_OFF));
+  }
+
+  return ERROR_FAIL;                   /* Return an error */
+}
+
+/* S-Function Block: <S75>/motohawk_dout5 Resource: DOut333p001 */
+NativeError_S DOut333p001_DiscreteOutput_Create(void)
+{
+  NativeError_S sErrorResult;
+  if ((Genset_Load_DataStore()) >= 0) {
+    S_DiscreteOutCreateAttributes CreateInfo;
+    CreateInfo.DynamicObj.eState = RES_OFF;
+    CreateInfo.DynamicObj.eResourceCondition = RES_ENABLED;
+    CreateInfo.DynamicObj.uValidAttributesMask = USE_DISCRETE_CONDITION |
+      USE_DISCRETE_STATE;
+    CreateInfo.uValidAttributesMask = USE_DISCRETE_DYNAMIC_ON_CREATE;
+    sErrorResult = CreateResource((E_ModuleResource) ((Genset_Load_DataStore())),
+      &CreateInfo, BEHAVIOUR_DISCRETE_OUT);
+    if (SUCCESS(sErrorResult)) {
+      (init_resource_DOut333p001_DataStore()) = (Genset_Load_DataStore());
+    } else {
+      (init_resource_DOut333p001_DataStore()) = -1;
+      LogNativeError(sErrorResult);
+    }
+
+    {
+      extern uint8_T dout_create_DOut333p001;
+      if (SUCCESS(sErrorResult))
+        dout_create_DOut333p001 = 0;
+      else
+        dout_create_DOut333p001 = (uint8_T) GetErrorCode(sErrorResult);
+    }
+  } else {
+    sErrorResult = ERROR_FAIL;
+  }
+
+  return sErrorResult;
+}
+
+NativeError_S DOut333p001_DiscreteOutput_Set(boolean_T in)
+{
+  if ((init_resource_DOut333p001_DataStore()) >= 0) {
+    return SetDiscreteOutState((E_ModuleResource)
+      ((init_resource_DOut333p001_DataStore())), (in) ? RES_ON : RES_OFF);
+  }
+
+  return ERROR_FAIL;                   /* Return an error */
+}
+
+NativeError_S DOut333p001_DiscreteOutputPushPull_Set(int8_T in)
+{
+  if ((init_resource_DOut333p001_DataStore()) >= 0) {
+    return SetDiscreteOutState((E_ModuleResource)
+      ((init_resource_DOut333p001_DataStore())), ((in) < 0) ? RES_ON_REVERSE :
+                               (((in) > 0) ? RES_ON : RES_OFF));
+  }
+
+  return ERROR_FAIL;                   /* Return an error */
+}
+
+/* S-Function Block: <S17>/motohawk_din1 Resource: LoadDumpEnable */
 NativeError_S LoadDumpEnable_DigitalInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -136,7 +517,117 @@ NativeError_S LoadDumpEnable_DigitalInput_Get(boolean_T *out, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S16>/motohawk_din Resource: BatteryEnable */
+/* S-Function Block: <S75>/motohawk_dout6 Resource: DOut334p001 */
+NativeError_S DOut334p001_DiscreteOutput_Create(void)
+{
+  NativeError_S sErrorResult;
+  if ((ACC1_Out_DataStore()) >= 0) {
+    S_DiscreteOutCreateAttributes CreateInfo;
+    CreateInfo.DynamicObj.eState = RES_OFF;
+    CreateInfo.DynamicObj.eResourceCondition = RES_ENABLED;
+    CreateInfo.DynamicObj.uValidAttributesMask = USE_DISCRETE_CONDITION |
+      USE_DISCRETE_STATE;
+    CreateInfo.uValidAttributesMask = USE_DISCRETE_DYNAMIC_ON_CREATE;
+    sErrorResult = CreateResource((E_ModuleResource) ((ACC1_Out_DataStore())),
+      &CreateInfo, BEHAVIOUR_DISCRETE_OUT);
+    if (SUCCESS(sErrorResult)) {
+      (init_resource_DOut334p001_DataStore()) = (ACC1_Out_DataStore());
+    } else {
+      (init_resource_DOut334p001_DataStore()) = -1;
+      LogNativeError(sErrorResult);
+    }
+
+    {
+      extern uint8_T dout_create_DOut334p001;
+      if (SUCCESS(sErrorResult))
+        dout_create_DOut334p001 = 0;
+      else
+        dout_create_DOut334p001 = (uint8_T) GetErrorCode(sErrorResult);
+    }
+  } else {
+    sErrorResult = ERROR_FAIL;
+  }
+
+  return sErrorResult;
+}
+
+NativeError_S DOut334p001_DiscreteOutput_Set(boolean_T in)
+{
+  if ((init_resource_DOut334p001_DataStore()) >= 0) {
+    return SetDiscreteOutState((E_ModuleResource)
+      ((init_resource_DOut334p001_DataStore())), (in) ? RES_ON : RES_OFF);
+  }
+
+  return ERROR_FAIL;                   /* Return an error */
+}
+
+NativeError_S DOut334p001_DiscreteOutputPushPull_Set(int8_T in)
+{
+  if ((init_resource_DOut334p001_DataStore()) >= 0) {
+    return SetDiscreteOutState((E_ModuleResource)
+      ((init_resource_DOut334p001_DataStore())), ((in) < 0) ? RES_ON_REVERSE :
+                               (((in) > 0) ? RES_ON : RES_OFF));
+  }
+
+  return ERROR_FAIL;                   /* Return an error */
+}
+
+/* S-Function Block: <S75>/motohawk_dout7 Resource: DOut335p001 */
+NativeError_S DOut335p001_DiscreteOutput_Create(void)
+{
+  NativeError_S sErrorResult;
+  if ((ACC2_Out_DataStore()) >= 0) {
+    S_DiscreteOutCreateAttributes CreateInfo;
+    CreateInfo.DynamicObj.eState = RES_OFF;
+    CreateInfo.DynamicObj.eResourceCondition = RES_ENABLED;
+    CreateInfo.DynamicObj.uValidAttributesMask = USE_DISCRETE_CONDITION |
+      USE_DISCRETE_STATE;
+    CreateInfo.uValidAttributesMask = USE_DISCRETE_DYNAMIC_ON_CREATE;
+    sErrorResult = CreateResource((E_ModuleResource) ((ACC2_Out_DataStore())),
+      &CreateInfo, BEHAVIOUR_DISCRETE_OUT);
+    if (SUCCESS(sErrorResult)) {
+      (init_resource_DOut335p001_DataStore()) = (ACC2_Out_DataStore());
+    } else {
+      (init_resource_DOut335p001_DataStore()) = -1;
+      LogNativeError(sErrorResult);
+    }
+
+    {
+      extern uint8_T dout_create_DOut335p001;
+      if (SUCCESS(sErrorResult))
+        dout_create_DOut335p001 = 0;
+      else
+        dout_create_DOut335p001 = (uint8_T) GetErrorCode(sErrorResult);
+    }
+  } else {
+    sErrorResult = ERROR_FAIL;
+  }
+
+  return sErrorResult;
+}
+
+NativeError_S DOut335p001_DiscreteOutput_Set(boolean_T in)
+{
+  if ((init_resource_DOut335p001_DataStore()) >= 0) {
+    return SetDiscreteOutState((E_ModuleResource)
+      ((init_resource_DOut335p001_DataStore())), (in) ? RES_ON : RES_OFF);
+  }
+
+  return ERROR_FAIL;                   /* Return an error */
+}
+
+NativeError_S DOut335p001_DiscreteOutputPushPull_Set(int8_T in)
+{
+  if ((init_resource_DOut335p001_DataStore()) >= 0) {
+    return SetDiscreteOutState((E_ModuleResource)
+      ((init_resource_DOut335p001_DataStore())), ((in) < 0) ? RES_ON_REVERSE :
+                               (((in) > 0) ? RES_ON : RES_OFF));
+  }
+
+  return ERROR_FAIL;                   /* Return an error */
+}
+
+/* S-Function Block: <S17>/motohawk_din Resource: BatteryEnable */
 NativeError_S BatteryEnable_DigitalInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -199,7 +690,7 @@ NativeError_S BatteryEnable_DigitalInput_Get(boolean_T *out, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S16>/motohawk_din2 Resource: GensetEnable */
+/* S-Function Block: <S17>/motohawk_din2 Resource: GensetEnable */
 NativeError_S GensetEnable_DigitalInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -262,7 +753,7 @@ NativeError_S GensetEnable_DigitalInput_Get(boolean_T *out, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S16>/motohawk_din3 Resource: GensetLoad */
+/* S-Function Block: <S17>/motohawk_din3 Resource: GensetLoad */
 NativeError_S GensetLoad_DigitalInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -325,7 +816,7 @@ NativeError_S GensetLoad_DigitalInput_Get(boolean_T *out, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S16>/motohawk_din4 Resource: ACC1 */
+/* S-Function Block: <S17>/motohawk_din4 Resource: ACC1 */
 NativeError_S ACC1_DigitalInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -388,7 +879,7 @@ NativeError_S ACC1_DigitalInput_Get(boolean_T *out, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S16>/motohawk_din5 Resource: ACC2 */
+/* S-Function Block: <S17>/motohawk_din5 Resource: ACC2 */
 NativeError_S ACC2_DigitalInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -502,7 +993,243 @@ typedef struct {
   uint8_T cmd;
 } S_GaugeQueueEntry;
 
-S_GaugeQueueEntry EZLinkTxQueue[10] = {
+S_GaugeQueueEntry EZLinkTxQueue[128] = {
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
+  { 0, 0, 0, 0, 0 },
+
   { 0, 0, 0, 0, 0 },
 
   { 0, 0, 0, 0, 0 },
@@ -556,9 +1283,9 @@ boolean_T GaugeChain_VDOGaugeService_AddToQueue(E_VDOGaugeMessage in_eMessage,
 {
   /* Check if queue is full */
   uint8_T tmp_EZLinkTxQueueTail = 0;
-  if (EZLinkTxQueueDepth < 10) {
+  if (EZLinkTxQueueDepth < 128) {
     tmp_EZLinkTxQueueTail = EZLinkTxQueueTail;
-    if (tmp_EZLinkTxQueueTail >= 9) {  /* Move to next message to transmit */
+    if (tmp_EZLinkTxQueueTail >= 127) {/* Move to next message to transmit */
       tmp_EZLinkTxQueueTail = 0;
     } else {
       tmp_EZLinkTxQueueTail++;
@@ -604,7 +1331,7 @@ boolean_T GaugeChain_VDOGaugeService_AddToQueue(E_VDOGaugeMessage in_eMessage,
       if (EZLinkTxQueue[EZLinkTxQueueHead].bFull) {
         error = GetEZLinkResourceStatus(RES_TACH, &status);
         if (status == 0 && SUCCESS(error)) {
-          static uint8_T buf[50];
+          static uint8_T buf[640];
           static S_EZLinkTransmitData data;
           data.pData = &buf[0];
           data.u1NumBytesToTX = 0;
@@ -628,7 +1355,7 @@ boolean_T GaugeChain_VDOGaugeService_AddToQueue(E_VDOGaugeMessage in_eMessage,
             EZLinkTxQueue[EZLinkTxQueueHead].high_byte = 0;
             EZLinkTxQueue[EZLinkTxQueueHead].low_byte = 0;
             EZLinkTxQueue[EZLinkTxQueueHead].PID = (E_VDOGaugeMessage) 0;
-            if (EZLinkTxQueueHead >= 9) {/* Move to next message to transmit */
+            if (EZLinkTxQueueHead >= 127) {/* Move to next message to transmit */
               EZLinkTxQueueHead = 0;
             } else {
               EZLinkTxQueueHead++;

@@ -19,14 +19,9 @@ Calconst E_ApplicationInitStatus ApplicationPausePoint __SECTION_CALS_RODATA__ =
   APP_INIT_RUN;
 
 /* Name: FgndTimeStackMargin CType:uint2 ClassID:VAR StorageID:FLASH Access:RW4+RW3+RO2+RO1 TypeID:UINT2 Gain:1
-   Min:0 Max:4096.0 Format:5.0 UpdateID:REMOTE Struct:FgndTimeStackMargin
+   Min:0 Max:3072.0 Format:5.0 UpdateID:REMOTE Struct:FgndTimeStackMargin
    Group:"System | Debug | Application Monitor Config" Help:"When the available stack space drops below this threshold, the application performs a safety stop" */
 Calconst uint2 FgndTimeStackMargin __SECTION_CALS_RODATA__ = 512;
-
-/* Name: FgndAngleStackMargin CType:uint2 ClassID:VAR StorageID:FLASH Access:RW4+RW3+RO2+RO1 TypeID:UINT2 Gain:1
-   Min:0 Max:1024.0 Format:5.0 UpdateID:REMOTE Struct:FgndAngleStackMargin
-   Group:"System | Debug | Application Monitor Config" Help:"When the available stack space drops below this threshold, the application performs a safety stop" */
-Calconst uint2 FgndAngleStackMargin __SECTION_CALS_RODATA__ = 256;
 
 /* Name: BgndStackMargin CType:uint2 ClassID:VAR StorageID:FLASH Access:RW4+RW3+RO2+RO1 TypeID:UINT2 Gain:1
    Min:0 Max:2048.0 Format:5.0 UpdateID:REMOTE Struct:BgndStackMargin
@@ -39,7 +34,7 @@ Calconst uint2 BgndStackMargin __SECTION_CALS_RODATA__ = 256;
 Calconst uint2 IdleStackMargin __SECTION_CALS_RODATA__ = 256;
 
 /* Name: InterruptStackMargin CType:uint2 ClassID:VAR StorageID:FLASH Access:RW4+RW3+RO2+RO1 TypeID:UINT2 Gain:1
-   Min:0 Max:1024.0 Format:5.0 UpdateID:REMOTE Struct:InterruptStackMargin
+   Min:0 Max:1536.0 Format:5.0 UpdateID:REMOTE Struct:InterruptStackMargin
    Group:"System | Debug | Application Monitor Config" Help:"When the available stack space drops below this threshold, the application performs a safety stop" */
 Calconst uint2 InterruptStackMargin __SECTION_CALS_RODATA__ = 128;
 
@@ -234,7 +229,7 @@ void CheckApplicationStatus(void)
   if (stopApplication) {
     ApplicationStatus = APPLICATION_STOP;
 
-    /* S-Function Block: <S407>/motohawk_encoder_pseudo */
+    /* S-Function Block: <S393>/motohawk_encoder_pseudo */
     {
       /* Turn off Pseudo-Encoder on Stop */
       S_EncoderResourceAttributes EncoderAttribsObj;
@@ -255,21 +250,21 @@ void CheckApplicationStatus(void)
               index), 1, SEQ_DISABLED);
           }
 
-          (&BaseEngineController_A02_DWork.s710_InjectorSequence_DWORK1[0])
+          (&BaseEngineController_A02_DWork.s696_InjectorSequence_DWORK1[0])
             [index] = SEQ_DISABLED;
         } else if ((INJ_SequenceType_DataStore()) == 1) {
           SetSeqOutCond((E_ModuleResource) ((INJ_InitialPin_DataStore()) + index),
                         0, SEQ_DISABLED);
           SetSeqOutCond((E_ModuleResource) ((INJ_InitialPin_DataStore()) + index),
                         1, SEQ_DISABLED);
-          (&BaseEngineController_A02_DWork.s710_InjectorSequence_DWORK1[0])
+          (&BaseEngineController_A02_DWork.s696_InjectorSequence_DWORK1[0])
             [index] = SEQ_DISABLED;
         } else if ((INJ_SequenceType_DataStore()) == 2) {
           SetSeqOutCond((E_ModuleResource) ((INJ_InitialPin_DataStore()) + index),
                         0, SEQ_DISABLED);
           SetSeqOutCond((E_ModuleResource) ((INJ_InitialPin_DataStore()) + index),
                         1, SEQ_DISABLED);
-          (&BaseEngineController_A02_DWork.s710_InjectorSequence_DWORK1[0])
+          (&BaseEngineController_A02_DWork.s696_InjectorSequence_DWORK1[0])
             [index] = SEQ_DISABLED;
         }
       }
@@ -299,42 +294,10 @@ void CheckApplicationStatus(void)
       }
     }
 
-    /* Turn off discrete output */
-    {
-      if ((init_resource_MPRD_DataStore()) >= 0) {
-        SetDiscreteOutState((E_ModuleResource) ((init_resource_MPRD_DataStore())),
-                            RES_OFF);
-      }
-    }
-
-    /* Turn off discrete output */
-    {
-      if ((init_resource_FuelPumpPin_DataStore()) >= 0) {
-        SetDiscreteOutState((E_ModuleResource)
-                            ((init_resource_FuelPumpPin_DataStore())), RES_OFF);
-      }
-    }
-
     {
       /* Turn off PWM output */
       extern void ETCPin_PWMOutput_PWMOutput_Stop(void);
       ETCPin_PWMOutput_PWMOutput_Stop();
-    }
-
-    /* Turn off discrete output */
-    {
-      if ((init_resource_OilPumpPin_DataStore()) >= 0) {
-        SetDiscreteOutState((E_ModuleResource)
-                            ((init_resource_OilPumpPin_DataStore())), RES_OFF);
-      }
-    }
-
-    /* Turn off discrete output */
-    {
-      if ((init_resource_O2_Heater_DataStore()) >= 0) {
-        SetDiscreteOutState((E_ModuleResource)
-                            ((init_resource_O2_Heater_DataStore())), RES_OFF);
-      }
     }
   } else {
     boolean_T zeroSeen = 0;

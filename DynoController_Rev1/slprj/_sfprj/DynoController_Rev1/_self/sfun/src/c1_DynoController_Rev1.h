@@ -5,14 +5,12 @@
 #include "sfc_sf.h"
 #include "sfc_mex.h"
 #include "rtwtypes.h"
-#include "rtw_capi.h"
-#include "rtw_modelmap.h"
 
 /* Type Definitions */
 typedef struct {
   SimStruct *S;
   const mxArray *c1_setSimStateSideEffectsInfo;
-  void *c1_testPointAddrMap[6];
+  int32_T c1_sfEvent;
   uint32_T chartNumber;
   uint32_T instanceNumber;
   boolean_T c1_isStable;
@@ -26,7 +24,6 @@ typedef struct {
   uint8_T c1_tp_Normal_Operation;
   uint8_T c1_tp_Shutdown_Sequence;
   ChartInfoStruct chartInfo;
-  rtwCAPI_ModelMappingInfo c1_testPointMappingInfo;
 } SFc1_DynoController_Rev1InstanceStruct;
 
 /* Named Constants */

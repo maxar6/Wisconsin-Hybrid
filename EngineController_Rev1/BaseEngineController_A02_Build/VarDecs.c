@@ -12,81 +12,81 @@
 /*---- RAM VARIABLES --------------------------------------------------------------------------------------*/
 #include <Pragma_Section_Start_sbss_zerovars.h>
 
-/* Name: ForcedShutDownTimer ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s856_Switch Mask:FFFFFFFF
+/* Name: ForcedShutDownTimer ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s838_Switch Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"System | Main Power Relay" Help:""   */
 
-/* Name: ECUP_Enabled ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s840_RelationalOperator Mask:FFFFFFFF
+/* Name: ECUP_Enabled ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s822_RelationalOperator Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"System | Main Power Relay" Help:""  EnumDec:VarDecEnum_3 */
 
 /* Name: ETC_ShutdownSetpointMode ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:SINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s25_SetpointMode Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-128.000000
-   Max:127.000000 Format:3.0 UpdateID:BACKGND Group:"Actuators | ETC" Help:"Shutdown mode for ETC setpoint. 0=Passthrough, 1=LoAdapt, 2=SpringTest."   */
+   Max:127.000000 Format:3.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|Electronic Throttle Controller|ETC Adapt Request" Help:"Shutdown mode for ETC setpoint. 0=Passthrough, 1=LoAdapt, 2=SpringTest."   */
 
 /* Name: ETCStallStateShutdown ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s26_LogicalOperator Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
-   Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"Actuators | ETC" Help:""  EnumDec:VarDecEnum_3 */
+   Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|Electronic Throttle Controller|ETCStallShutDown" Help:""  EnumDec:VarDecEnum_3 */
 
 /* Name: ETCOut ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s50_MinMax1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"Actuators | ETC" Help:"PID Final Output" Unit:%  */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|Electronic Throttle Controller|PID With Damper Terms (Tunable)" Help:"PID Final Output" Unit:%  */
 
 /* Name: ETCPTerm ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s37_Product2 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"Actuators | ETC" Help:"PID Proportional Term" Unit:%  */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|Electronic Throttle Controller|PID With Damper Terms (Tunable)" Help:"PID Proportional Term" Unit:%  */
 
 /* Name: ETCITerm ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s47_Switch1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"Actuators | ETC" Help:"PID Integrator Term" Unit:%  */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|Electronic Throttle Controller|PID With Damper Terms (Tunable)" Help:"PID Integrator Term" Unit:%  */
 
 /* Name: ETCDTerm ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s46_Product Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"Actuators | ETC" Help:"PID Derivative Term" Unit:%  */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|Electronic Throttle Controller|PID With Damper Terms (Tunable)" Help:"PID Derivative Term" Unit:%  */
 
 /* Name: ETCError ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s37_Sum2 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"Actuators | ETC" Help:"PID Error Term" Unit:%  */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|Electronic Throttle Controller|PID With Damper Terms (Tunable)" Help:"PID Error Term" Unit:%  */
 
 /* Name: ETCDampTerm ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s45_Product Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"Actuators | ETC" Help:"PID Damper Term" Unit:%  */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|Electronic Throttle Controller|PID With Damper Terms (Tunable)" Help:"PID Damper Term" Unit:%  */
 
 /* Name: ETC_Setpoint ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s29_MultiportSwitch Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"Actuators | ETC" Help:"Commanded electronic throttle position" Unit:%  */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|Electronic Throttle Controller|PID With Damper Terms (Tunable)" Help:"Commanded electronic throttle position" Unit:%  */
 
 /* Name: ETCDamperSwtichState ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s34_RelationalOperator Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
-   Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"Actuators | ETC" Help:""   */
+   Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|Electronic Throttle Controller|PID With Damper Terms (Tunable)|DamperSwitch" Help:""   */
 
 /* Name: ETCDamperTPSThresh ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s40_Switch2 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"Actuators | ETC" Help:""   */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|Electronic Throttle Controller|PID With Damper Terms (Tunable)|DamperSwitch" Help:""   */
 
 /* Name: ETCDamperTPS ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s41_Product Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"Actuators | ETC" Help:""   */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|Electronic Throttle Controller|PID With Damper Terms (Tunable)|DamperSwitch" Help:""   */
 
 /* Name: ETC_ShutDownTimer ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s62_Switch Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"Actuators | ETC" Help:""   */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|Electronic Throttle Controller|State  Manager" Help:""   */
 
 /* Name: ETC_ECUPState ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s30_LogicalOperator3 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
-   Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"Actuators | ETC" Help:""   */
+   Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|Electronic Throttle Controller|State  Manager" Help:""   */
 
 /* Name: SparkDwell ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s114_Sum Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"Actuators|Coils" Help:"Total electrical spark dwell time" Unit:ms  */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|Spark Coil Characterization" Help:"Total electrical spark dwell time" Unit:ms  */
 
 /* Name: SparkEnergyMonitor ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s120_SparkEnergy Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"Actuators|Coils" Help:"Commanded spark energy, before conversion to dwell time" Unit:mJ  */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|Spark Coil Characterization" Help:"Commanded spark energy, before conversion to dwell time" Unit:mJ  */
 
 /* Name: SparkEnabled ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s17_OnlyEnableSparkwhenEnergyisAboveZero Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
-   Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"Actuators|Coils" Help:"Enabled when spark energy is greater than zero" Unit:boolean  */
+   Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|Spark Coil Characterization" Help:"Enabled when spark energy is greater than zero" Unit:boolean  */
 
 /* Name: BaseEquivRatio ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s132_DesEquivRatio Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
@@ -150,7 +150,7 @@
 
 /* Name: Desired_AF_Ratio ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s160_Add Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:5.2 UpdateID:BACKGND Group:"Engine Control | Run | Fuel" Help:"Desired Air to Fuel Ratio based on Ethanol Percentage" Unit:ratio  */
+   Max:100000000000000000.000000 Format:5.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|Fuel System Manager|Fuel Calculation|Calculate Fuel Flow" Help:"Desired Air to Fuel Ratio based on Ethanol Percentage" Unit:ratio  */
 
 /* Name: O2TargetEquivRatio ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s242_Switch Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
@@ -158,31 +158,31 @@
 
 /* Name: LiquidO2Control_PTerm ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s249_Product2 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"Engine Control | Run | Fuel | O2 Control" Help:"Closed-loop O2 control P-Term" Unit:mult  */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|O2 Control|O2 PID Controller|Closed-Loop O2 PID Controller" Help:"Closed-loop O2 control P-Term" Unit:mult  */
 
 /* Name: LiquidO2Control_ITerm ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s251_Switch1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"Engine Control | Run | Fuel | O2 Control" Help:"Closed-loop O2 control I-Term" Unit:mult  */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|O2 Control|O2 PID Controller|Closed-Loop O2 PID Controller" Help:"Closed-loop O2 control I-Term" Unit:mult  */
 
 /* Name: LiquidO2Control_DTerm ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s250_Product Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"Engine Control | Run | Fuel | O2 Control" Help:"Closed-loop O2 control D-Term, for bank" Unit:mult  */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|O2 Control|O2 PID Controller|Closed-Loop O2 PID Controller" Help:"Closed-loop O2 control D-Term, for bank" Unit:mult  */
 
 /* Name: LiquidO2Control_ErrorTerm ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s249_Sum2 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"Engine Control | Run | Fuel | O2 Control" Help:"Closed-loop O2 control error-term, for bank" Unit:mult  */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|O2 Control|O2 PID Controller|Closed-Loop O2 PID Controller" Help:"Closed-loop O2 control error-term, for bank" Unit:mult  */
 
 /* Name: O2RichTime ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s247_Switch1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"Diagnostics & Protection | Fault Thresholds" Help:""   */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|O2 Control|O2 PID Controller|Equivalence Ratio Perturbation" Help:""   */
 
 /* Name: O2LeanTime ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s247_Switch3 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"Diagnostics & Protection | Fault Thresholds" Help:""   */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|O2 Control|O2 PID Controller|Equivalence Ratio Perturbation" Help:""   */
 
 /* Name: O2NotActiveTime ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s247_Switch4 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"Diagnostics & Protection | Fault Thresholds" Help:""   */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|O2 Control|O2 PID Controller|Equivalence Ratio Perturbation" Help:""   */
 
 /* Name: O2FuelMult ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s242_Multiplyby10ifnotyetenabled Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
@@ -196,7 +196,7 @@
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|O2 Control|O2 Control State Determination" Help:""  EnumDec:VarDecEnum_3 */
 
-/* Name: EnginSteadyState ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s336_LogicalOperator Mask:FFFFFFFF
+/* Name: EnginSteadyState ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s322_LogicalOperator Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|O2 Control|O2 Control State Determination" Help:""  EnumDec:VarDecEnum_3 */
 
@@ -214,7 +214,7 @@
 
 /* Name: BaseAirflowAdaptEnabled ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s203_LogicalOperator1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
-   Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"Engine Control | Run | RPM Control | Min Gov" Help:""  EnumDec:VarDecEnum_9 */
+   Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|MinGovernor|Base Airflow Table Adapt" Help:""  EnumDec:VarDecEnum_9 */
 
 /* Name: IdleHandOffMult ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s219_MinMax1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
@@ -234,11 +234,11 @@
 
 /* Name: RPMCtrlMode ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s222_RelOp Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
-   Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"Engine Control | Run | RPM Control | Min Gov" Help:""   */
+   Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|MinGovernor|Idle State Determination" Help:""   */
 
 /* Name: IdleState ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s221_IdleState Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
-   Max:255.000000 Format:3.0 UpdateID:BACKGND Group:"Engine Control | Run | RPM Control | Min Gov" Help:"The idle governor may be one of: Flaring, OnIdle, OffIdle"  EnumDec:VarDecEnum_11 */
+   Max:255.000000 Format:3.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|MinGovernor|Idle State Determination" Help:"The idle governor may be one of: Flaring, OnIdle, OffIdle"  EnumDec:VarDecEnum_11 */
 
 /* Name: RPMFalling ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s220_RelationalOperator Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
@@ -258,31 +258,31 @@
 
 /* Name: SpkMinGovPTerm ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s230_Product Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|MinGovernor" Help:"PID Proportional Term" Unit:degCA  */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|MinGovernor|Universal PD (Tunable & Scheduled)" Help:"PID Proportional Term" Unit:degCA  */
 
 /* Name: SpkMinGovDTerm ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s231_Product Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|MinGovernor" Help:"PID Derivative Term" Unit:degCA  */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|MinGovernor|Universal PD (Tunable & Scheduled)" Help:"PID Derivative Term" Unit:degCA  */
 
 /* Name: SpkMinGovError ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s230_Sum1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|MinGovernor" Help:"PID Error Term" Unit:degCA  */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|MinGovernor|Universal PD (Tunable & Scheduled)" Help:"PID Error Term" Unit:degCA  */
 
 /* Name: AirMinGovPTerm ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s235_Product2 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|MinGovernor" Help:"Air min governor P term"   */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|MinGovernor|Universal PID (Tunable & Scheduled)" Help:"Air min governor P term"   */
 
 /* Name: AirMinGovITerm ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s237_Switch1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|MinGovernor" Help:"Air min governor I term"   */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|MinGovernor|Universal PID (Tunable & Scheduled)" Help:"Air min governor I term"   */
 
 /* Name: AirMinGovDTerm ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s236_Product Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|MinGovernor" Help:"Air min governor D term"   */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|MinGovernor|Universal PID (Tunable & Scheduled)" Help:"Air min governor D term"   */
 
 /* Name: AirMinGovError ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s235_Sum2 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|MinGovernor" Help:"Air min governor P term"   */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|MinGovernor|Universal PID (Tunable & Scheduled)" Help:"Air min governor P term"   */
 
 /* Name: MaxGovIC ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s185_Sum Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
@@ -318,19 +318,19 @@
 
 /* Name: MaxGovPTerm ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s197_Product2 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|MaxGovernor" Help:""   */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|MaxGovernor|Universal PID (Tunable & Scheduled)" Help:""   */
 
 /* Name: MaxGovITerm ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s199_Switch1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|MaxGovernor" Help:""   */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|MaxGovernor|Universal PID (Tunable & Scheduled)" Help:""   */
 
 /* Name: MaxGovDTerm ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s198_Product Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|MaxGovernor" Help:""   */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|MaxGovernor|Universal PID (Tunable & Scheduled)" Help:""   */
 
 /* Name: MaxGovError ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s197_Sum2 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|MaxGovernor" Help:""   */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|MaxGovernor|Universal PID (Tunable & Scheduled)" Help:""   */
 
 /* Name: Spark_Adv_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s267_MinMax1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
@@ -358,23 +358,23 @@
 
 /* Name: ETCRequestFinal ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s131_MultiportSwitch Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:5.2 UpdateID:BACKGND Group:"Actuators | ETC" Help:"Final ETC request sent to ETC controller from Run state." Unit:%  */
+   Max:100000000000000000.000000 Format:5.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|AirFlow Manager" Help:"Final ETC request sent to ETC controller from Run state." Unit:%  */
 
 /* Name: PowerLimitETCSetpoint ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s140_Add Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"Diagnostics & Protection | Power Limit" Help:""   */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|AirFlow Manager|Power Limit Controller" Help:""   */
 
 /* Name: PowerLimitSetpoint ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s144_Setpoint Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"Diagnostics & Protection | Power Limit" Help:""   */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|AirFlow Manager|Power Limit Controller" Help:""   */
 
 /* Name: PowerLimitState ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s144_State Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"Diagnostics & Protection | Power Limit" Help:""   */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|AirFlow Manager|Power Limit Controller" Help:""   */
 
-/* Name: PowerLimitActual ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s348_TorquetoPower Mask:FFFFFFFF
+/* Name: PowerLimitActual ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s334_TorquetoPower Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"Diagnostics & Protection | Power Limit" Help:""   */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|AirFlow Manager|Power Limit Controller" Help:""   */
 
 /* Name: PowerLimt_PTerm ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s147_Product2 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
@@ -398,7 +398,7 @@
 
 /* Name: EGR_Percentage ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s133_Product Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"Engine Control | Run | Spark | Temp Comp" Help:"Total Spark Offset based on ECT, IAT2, engine speed and load" Unit:degCA  */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Run|EGR" Help:"Total Spark Offset based on ECT, IAT2, engine speed and load" Unit:degCA  */
 
 /* Name: Oxygen_Heater_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s258_HEATER Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
@@ -412,119 +412,119 @@
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Stall|Oil Pump at Startup" Help:""   */
 
-/* Name: ETCReqFilterConst ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s365_Merge Mask:FFFFFFFF
+/* Name: ETCReqFilterConst ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s351_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|RawProcessed|Base TPS Request" Help:""   */
 
-/* Name: FilteredETCRequest ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s382_Sum2 Mask:FFFFFFFF
+/* Name: FilteredETCRequest ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s368_Sum2 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|RawProcessed|Base TPS Request" Help:""   */
 
-/* Name: ETCRequestDirection ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s365_RelationalOperator3 Mask:FFFFFFFF
+/* Name: ETCRequestDirection ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s351_RelationalOperator3 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|RawProcessed|Base TPS Request" Help:""  EnumDec:VarDecEnum_18 */
 
-/* Name: ECT_KeyUp ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s384_Product Mask:FFFFFFFF
+/* Name: ECT_KeyUp ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s370_Product Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"Sensors | ECT" Help:"" Unit:C  */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|RawProcessed" Help:"" Unit:C  */
 
-/* Name: IAT_KeyUp ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s385_Product Mask:FFFFFFFF
+/* Name: IAT_KeyUp ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s371_Product Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|RawProcessed|Capture IAT At Startup" Help:"" Unit:C  */
 
-/* Name: CrankTDCs ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s391_Switch Mask:FFFFFFFF
+/* Name: CrankTDCs ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s377_Switch Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:255.000000 Format:3.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|RawProcessed|EngineState|TDC_Counter" Help:""   */
 
-/* Name: EngineHourInc ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s313_Switch Mask:FFFFFFFF
+/* Name: EngineHourInc ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s299_Switch Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:4294967295.000000 Format:8.0 UpdateID:BACKGND Group:"System | Hour Meter" Help:""   */
 
-/* Name: EngineHourMeter ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s313_Gain Mask:FFFFFFFF
+/* Name: EngineHourMeter ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s299_Gain Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:6.2 UpdateID:BACKGND Group:"System | Hour Meter" Help:""   */
 
-/* Name: EncoderFaultCount ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s555_Sum Mask:FFFFFFFF
+/* Name: EncoderFaultCount ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s541_Sum Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:4294967295.000000 Format:8.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|EngineSpeed|Encoder Diagnostics" Help:""   */
 
-/* Name: ECT ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s649_Merge Mask:FFFFFFFF
+/* Name: ECT ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s635_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|NonLinearSensors|Temp Sensors | ECT" Help:"Final value after Linear Sensor Characterization" Unit:C  */
 
-/* Name: ECTADC ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT2 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s633_motohawk_ain Mask:FFFFFFFF
+/* Name: ECTADC ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT2 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s619_motohawk_ain Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:65535.000000 Format:5.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|NonLinearSensors|Temp Sensors | ECT" Help:"Signal measured directly from sensor" Unit:ADC  */
 
-/* Name: ECTRaw ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s650_motohawk_interpolation_1d Mask:FFFFFFFF
+/* Name: ECTRaw ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s636_motohawk_interpolation_1d Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|NonLinearSensors|Temp Sensors | ECT" Help:"After conversion to engineering units, before range checking" Unit:C  */
 
-/* Name: IAT ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s658_Merge Mask:FFFFFFFF
+/* Name: IAT ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s644_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|NonLinearSensors|Temp Sensors | IAT" Help:"Final value after Linear Sensor Characterization" Unit:C  */
 
-/* Name: IATADC ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT2 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s633_motohawk_ain1 Mask:FFFFFFFF
+/* Name: IATADC ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT2 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s619_motohawk_ain1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:65535.000000 Format:5.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|NonLinearSensors|Temp Sensors | IAT" Help:"Signal measured directly from sensor" Unit:ADC  */
 
-/* Name: IATRaw ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s659_motohawk_interpolation_1d Mask:FFFFFFFF
+/* Name: IATRaw ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s645_motohawk_interpolation_1d Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|NonLinearSensors|Temp Sensors | IAT" Help:"After conversion to engineering units, before range checking" Unit:C  */
 
-/* Name: EST_TDCEnabled ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:SINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s783_DataTypeConversion Mask:FFFFFFFF
+/* Name: EST_TDCEnabled ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:SINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s769_DataTypeConversion Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-128.000000
    Max:127.000000 Format:3.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Outputs|Coil Control|Coil Enable Manager|EST Enable TDC Counter" Help:""  EnumDec:VarDecEnum_3 */
 
-/* Name: TDCCountThreshEnabled ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s783_RelationalOperator1 Mask:FFFFFFFF
+/* Name: TDCCountThreshEnabled ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s769_RelationalOperator1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Outputs|Coil Control|Coil Enable Manager|EST Enable TDC Counter" Help:""  EnumDec:VarDecEnum_3 */
 
-/* Name: TDCCount ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s785_Switch1 Mask:FFFFFFFF
+/* Name: TDCCount ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s771_Switch1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:255.000000 Format:3.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Outputs|Coil Control|Coil Enable Manager|EST Enable TDC Counter" Help:"Number of TDC events counted after stall.  This will reset once in Crank and Run."   */
 
-/* Name: ESTOpenADC ClassID:ARRAY StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT2 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s706_SparkSequence_o3 Mask:FFFFFFFF
+/* Name: ESTOpenADC ClassID:ARRAY StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT2 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s692_SparkSequence_o3 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000 Max:65535.000000
    XLen:8 YLen:1   Format:5.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Outputs|Coil Control|EST Fault Management" Help:"ADC counts of measured voltage feedback for diagnosing the ESTs during stall state."   */
 
-/* Name: EST_DiagDwell ClassID:ARRAY StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT2 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s706_SparkSequence_o4 Mask:FFFFFFFF
+/* Name: EST_DiagDwell ClassID:ARRAY StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT2 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s692_SparkSequence_o4 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000 Max:65535.000000
    XLen:8 YLen:1   Format:5.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Outputs|Coil Control|EST Fault Management" Help:"Dwell time used to diagnose ESTs during run-state." Unit:us  */
 
-/* Name: CoilStartAngle ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s780_Sum Mask:FFFFFFFF
+/* Name: CoilStartAngle ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s766_Sum Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Outputs|Coil Control" Help:"StartAngle for coils to establish dwell." Unit:degBTDC  */
 
-/* Name: CoilStopAngle ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s781_Sum Mask:FFFFFFFF
+/* Name: CoilStopAngle ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s767_Sum Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Outputs|Coil Control" Help:"Stop angle for coils to establish dwell." Unit:degBTDC  */
 
-/* Name: CoilEnabled ClassID:ARRAY StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s706_LogicalOperator1 Mask:FFFFFFFF
+/* Name: CoilEnabled ClassID:ARRAY StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s692_LogicalOperator1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000 Max:1.000000
    XLen:8 YLen:1   Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Outputs|Coil Control" Help:"Enable sate for coils." Unit:bool  */
 
-/* Name: Oil_Pressure_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s612_Merge Mask:FFFFFFFF
+/* Name: Oil_Pressure_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s598_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Outputs|CAN Out|112" Help:""   */
 
-/* Name: RPM_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s556_Sum1 Mask:FFFFFFFF
+/* Name: RPM_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s542_Sum1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Outputs|CAN Out|112" Help:""   */
 
-/* Name: Temp_Guage_Ovr ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s649_Merge Mask:FFFFFFFF
+/* Name: Temp_Guage_Ovr ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s635_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Outputs|CAN Out|112" Help:""   */
 
-/* Name: Engine_Crank_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s715_Compare Mask:FFFFFFFF
+/* Name: Engine_Crank_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s701_Compare Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Outputs|CAN Out|112" Help:""   */
 
-/* Name: Engine_On_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s716_Compare Mask:FFFFFFFF
+/* Name: Engine_On_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s702_Compare Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Outputs|CAN Out|112" Help:""   */
 
-/* Name: Load_On_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s717_Compare Mask:FFFFFFFF
+/* Name: Load_On_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s703_Compare Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Outputs|CAN Out|112" Help:""   */
 
@@ -548,77 +548,61 @@
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Outputs|EGR Out" Help:""   */
 
-/* Name: Duration_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:SINT4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s707_DataTypeConversion Mask:FFFFFFFF
+/* Name: Duration_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:SINT4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s693_DataTypeConversion Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-2147483647.000000
    Max:2147483647.000000 Format:8.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Outputs|EGR Out" Help:""   */
 
-/* Name: FuelPumpFaultState ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s708_motohawk_dout Mask:FFFFFFFF
-   Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
-   Max:255.000000 Format:3.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Outputs|FuelPump" Help:""  EnumDec:VarDecEnum_26 */
-
-/* Name: FUELP ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s801_LogicalOperator Mask:FFFFFFFF
+/* Name: FUELP ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s786_LogicalOperator Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Outputs|FuelPump | FUELP" Help:"Display output in engineering units" Unit:bool  */
 
-/* Name: ETC_Current ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:SINT2 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s709_motohawk_pwm1_o1 Mask:FFFFFFFF
+/* Name: ETC_Current ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:SINT2 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s695_motohawk_pwm1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-32768.000000
    Max:32767.000000 Format:5.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Outputs|HBridge" Help:"Current output of ETC duty cycle." Unit:mA  */
 
-/* Name: ETC_DutyCycle ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s709_ETC Mask:FFFFFFFF
+/* Name: ETC_DutyCycle ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s695_ETC Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Outputs|HBridge" Help:"Actual duty cycle of actuator" Unit:%  */
 
-/* Name: HBridgeFaultState ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s709_motohawk_pwm1_o2 Mask:FFFFFFFF
-   Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
-   Max:255.000000 Format:3.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Outputs|HBridge" Help:""  EnumDec:VarDecEnum_26 */
-
-/* Name: InjTransitionCount ClassID:ARRAY StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s710_InjectorSequence_o1 Mask:FFFFFFFF
+/* Name: InjTransitionCount ClassID:ARRAY StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s696_InjectorSequence_o1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000 Max:255.000000
    XLen:8 YLen:1   Format:3.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Outputs|Injector Control" Help:""   */
 
-/* Name: InjectorsEnabled ClassID:ARRAY StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s816_Merge Mask:FFFFFFFF
+/* Name: InjectorsEnabled ClassID:ARRAY StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s800_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000 Max:1.000000
    XLen:8 YLen:1   Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Outputs|Injector Control" Help:"Enable state for injectors." Unit:bool  */
 
-/* Name: OilPumpFaultState ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s711_motohawk_dout Mask:FFFFFFFF
-   Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
-   Max:255.000000 Format:3.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Outputs|OilPump" Help:""  EnumDec:VarDecEnum_26 */
-
-/* Name: OILP ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s831_LogicalOperator Mask:FFFFFFFF
+/* Name: OILP ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s814_LogicalOperator Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Outputs|OilPump | OILP" Help:"Display output in engineering units" Unit:bool  */
 
-/* Name: O2HeaterFaultState ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s712_motohawk_dout Mask:FFFFFFFF
-   Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
-   Max:255.000000 Format:3.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Outputs|Oxygen Heater" Help:""  EnumDec:VarDecEnum_26 */
-
-/* Name: Oxygen_Heater ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s836_LogicalOperator Mask:FFFFFFFF
+/* Name: Oxygen_Heater ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s818_LogicalOperator Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Outputs|Oxygen Heater | O2_Heater" Help:"Display output in engineering units" Unit:bool  */
 
 /* Name: InjEPW ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s14_Sum2 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"Actuators | Injectors" Help:""   */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|Injector Characterization" Help:""   */
 
 /* Name: InjMPW ClassID:ARRAY StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s14_MinMax Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000 Max:100000000000000000.000000
-   XLen:8 YLen:1   Format:4.2 UpdateID:BACKGND Group:"Actuators | Injectors" Help:""   */
+   XLen:8 YLen:1   Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|Injector Characterization" Help:""   */
 
 /* Name: MaxAllowableMPW ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s14_Sum1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"Actuators | Injectors" Help:""   */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|Injector Characterization" Help:""   */
 
 /* Name: FuelDeltaPress ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s63_constreftoatm Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"Actuators | Injectors" Help:"Fuel Delta Pressure - across the fuel injector" Unit:kPa  */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|Injector Characterization|DeltaPressureIndex" Help:"Fuel Delta Pressure - across the fuel injector" Unit:kPa  */
 
 /* Name: TotalFPC ClassID:ARRAY StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s71_Sum Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000 Max:100000000000000000.000000
-   XLen:8 YLen:1   Format:4.2 UpdateID:BACKGND Group:"Engine Control | Run | Fuel | Liquid" Help:"Total fuel per cylinder after application of transient algorithm" Unit:mg  */
+   XLen:8 YLen:1   Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|Injector Characterization|Fuel Inj Offsets" Help:"Total fuel per cylinder after application of transient algorithm" Unit:mg  */
 
 /* Name: RevLimiterState ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s15_DataTypeConversion5 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
-   Max:255.000000 Format:3.0 UpdateID:BACKGND Group:"Diagnostics & Protection | RevLimit" Help:""  EnumDec:VarDecEnum_27 */
+   Max:255.000000 Format:3.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|SequenceCutPattern" Help:""  EnumDec:VarDecEnum_24 */
 
 /* Name: cranking_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s127_cranking Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
@@ -648,479 +632,474 @@
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|Controller|Hybrid" Help:""   */
 
-/* Name: BARO ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s327_Sum Mask:FFFFFFFF
+/* Name: BARO ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s313_Sum Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|AirCalcs" Help:"" Unit:kPa  */
 
-/* Name: BaroDelayTime ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s324_Timer Mask:FFFFFFFF
+/* Name: BaroDelayTime ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s310_Timer Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|AirCalcs" Help:"" Unit:s  */
 
-/* Name: PressureRatio ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s326_PressureRatio Mask:FFFFFFFF
+/* Name: PressureRatio ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s312_PressureRatio Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|AirCalcs|SpeedDensityMAPReferenced" Help:""   */
 
-/* Name: MAFPort ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s326_Saturation1 Mask:FFFFFFFF
+/* Name: MAFPort ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s312_Saturation1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|AirCalcs|SpeedDensityMAPReferenced" Help:"" Unit:g/s  */
 
-/* Name: MAFPortModel ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s326_NominalAirFlowRate2 Mask:FFFFFFFF
+/* Name: MAFPortModel ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s312_NominalAirFlowRate2 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|AirCalcs|SpeedDensityMAPReferenced" Help:"" Unit:g/s  */
 
-/* Name: SSEngOpr ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s336_LogicalOperator Mask:FFFFFFFF
+/* Name: SSEngOpr ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s322_LogicalOperator Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
-   Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|LoadBasedCalcs|Engine Steady-State Flag" Help:"Steady-State Engine Operation"  EnumDec:VarDecEnum_28 */
+   Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|LoadBasedCalcs|Engine Steady-State Flag" Help:"Steady-State Engine Operation"  EnumDec:VarDecEnum_25 */
 
-/* Name: SSRPMFilterConst ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s339_Merge Mask:FFFFFFFF
+/* Name: SSRPMFilterConst ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s325_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|LoadBasedCalcs" Help:""   */
 
-/* Name: SSRPMFiltered ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s342_Sum1 Mask:FFFFFFFF
+/* Name: SSRPMFiltered ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s328_Sum1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|LoadBasedCalcs" Help:""   */
 
-/* Name: SSRPMDirection ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s339_RelationalOperator4 Mask:FFFFFFFF
-   Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
-   Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|LoadBasedCalcs" Help:""  EnumDec:VarDecEnum_18 */
-
-/* Name: SSLoadFilterConst ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s340_Merge Mask:FFFFFFFF
-   Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|LoadBasedCalcs" Help:""   */
-
-/* Name: SSLoadFiltered ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s345_Sum1 Mask:FFFFFFFF
-   Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|LoadBasedCalcs" Help:""   */
-
-/* Name: SSLoadDirection ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s340_RelationalOperator4 Mask:FFFFFFFF
+/* Name: SSRPMDirection ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s325_RelationalOperator4 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|LoadBasedCalcs" Help:""  EnumDec:VarDecEnum_18 */
 
-/* Name: APCPort ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s347_MultiplyandDivideavoidingdivdebyzero1.s168_chargemass Mask:FFFFFFFF
+/* Name: SSLoadFilterConst ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s326_Merge Mask:FFFFFFFF
+   Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|LoadBasedCalcs" Help:""   */
+
+/* Name: SSLoadFiltered ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s331_Sum1 Mask:FFFFFFFF
+   Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|LoadBasedCalcs" Help:""   */
+
+/* Name: SSLoadDirection ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s326_RelationalOperator4 Mask:FFFFFFFF
+   Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
+   Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|LoadBasedCalcs" Help:""  EnumDec:VarDecEnum_18 */
+
+/* Name: APCPort ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s333_MultiplyandDivideavoidingdivdebyzero1.s168_chargemass Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|LoadBasedCalcs|Load, Torque, Power, Work - Using APC" Help:"Air per cylinder per cycle." Unit:mg  */
 
-/* Name: IndPower ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s348_TorquetoPower Mask:FFFFFFFF
+/* Name: IndPower ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s334_TorquetoPower Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|LoadBasedCalcs|Load, Torque, Power, Work - Using APC|Calculate Power and Work" Help:"" Unit:kW  */
 
-/* Name: IndWork ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s351_Switch1 Mask:FFFFFFFF
+/* Name: IndWork ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s337_Switch1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|LoadBasedCalcs|Load, Torque, Power, Work - Using APC|Calculate Power and Work" Help:"" Unit:kJ  */
 
-/* Name: NECCT ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s356_MinMax1 Mask:FFFFFFFF
+/* Name: NECCT ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s342_MinMax1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|LoadBasedCalcs|Normalized Effective Combustion Chamber Temperature" Help:"Normalized effective combustion chamber temperature" Unit:degC  */
 
-/* Name: APPPcnt ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s368_Switch1 Mask:FFFFFFFF
+/* Name: APPPcnt ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s354_Switch1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|RawProcessed" Help:"APP used in controller (after power curve and CutThrottle limiting" Unit:%  */
 
-/* Name: APP_combined ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s378_APP_Out Mask:FFFFFFFF
+/* Name: APP_combined ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s364_APP_Out Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|RawProcessed|APP Sensor Management" Help:"Combined APP from both sensors"   */
 
-/* Name: APP_Mode ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s378_APP_Mode Mask:FFFFFFFF
+/* Name: APP_Mode ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s364_APP_Mode Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
-   Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|RawProcessed|APP Sensor Management" Help:"Indicates state of APP command - disabled if > 3% during Crank to Run transition."  EnumDec:VarDecEnum_29 */
+   Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|RawProcessed|APP Sensor Management" Help:"Indicates state of APP command - disabled if > 3% during Crank to Run transition."  EnumDec:VarDecEnum_26 */
 
-/* Name: EngineAccel ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s389_Sum1 Mask:FFFFFFFF
+/* Name: EngineAccel ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s375_Sum1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|RawProcessed|Engine Accel" Help:"Acceleration rate of engine" Unit:RPM/s  */
 
-/* Name: EngineStateRaw ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s390_State Mask:FFFFFFFF
+/* Name: EngineStateRaw ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s376_State Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:255.000000 Format:3.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|RawProcessed|EngineState" Help:""   */
 
-/* Name: CrankTrans ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s370_Crank Mask:FFFFFFFF
+/* Name: CrankTrans ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s356_Crank Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|RawProcessed|EngineState" Help:""   */
 
-/* Name: FuelDeltaPressure ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s371_Sum3 Mask:FFFFFFFF
+/* Name: FuelDeltaPressure ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s357_Sum3 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|RawProcessed|Fuel Delta Pressure Calculation" Help:"Fuel pressure across injector (rail - manifold)" Unit:kPa  */
 
-/* Name: PreO2Delag ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s372_Sum1 Mask:FFFFFFFF
+/* Name: PreO2Delag ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s358_Sum1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|RawProcessed|O2 De-lag" Help:""   */
 
-/* Name: PostO2Delag ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s372_Sum3 Mask:FFFFFFFF
+/* Name: PostO2Delag ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s358_Sum3 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|RawProcessed|O2 De-lag" Help:""   */
 
-/* Name: TimeSinceKeyOn ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s393_Sum Mask:FFFFFFFF
+/* Name: TimeSinceKeyOn ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s379_Sum Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|RawProcessed|Time Since Key On" Help:""   */
 
-/* Name: TimeSinceRun ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s395_Switch Mask:FFFFFFFF
+/* Name: TimeSinceRun ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s381_Switch Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|RawProcessed|Time Since Run" Help:""   */
 
-/* Name: TimeSinceStall ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s397_Switch Mask:FFFFFFFF
+/* Name: TimeSinceStall ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s383_Switch Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Control|VirtualSensors|RawProcessed|Time Since Stall" Help:"Indicates time since entering Stall State - saturates and disables at 2000 seconds" Unit:s  */
 
-/* Name: Genset_Enable_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s411_GensetEnable Mask:FFFFFFFF
+/* Name: Genset_Enable_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s397_GensetEnable Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|112" Help:""   */
 
-/* Name: Genset_Load_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s411_GensetEnable_g Mask:FFFFFFFF
+/* Name: Genset_Load_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s397_GensetEnable_g Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|112" Help:""   */
 
-/* Name: Vehicle_Speed_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s411_GensetEnable_a Mask:FFFFFFFF
+/* Name: Vehicle_Speed_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s397_GensetEnable_a Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|112" Help:""   */
 
-/* Name: ONTSE ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s417_UnitDelay Mask:FFFFFFFF
+/* Name: ONTSE ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s403_UnitDelay Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"Actuators | FUELP" Help:""   */
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|112|ESTOP at Startup" Help:""   */
 
-/* Name: Status1_Age_Count_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage_o1 Mask:FFFFFFFF
+/* Name: Status1_Age_Count_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage_o1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:4294967295.000000 Format:8.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: Est_Absolute_Torque_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage_o2 Mask:FFFFFFFF
+/* Name: Est_Absolute_Torque_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage_o2 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: Control_Mode_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage1_o7 Mask:FFFFFFFF
+/* Name: Control_Mode_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage1_o7 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: MotoringTq_Curve_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage1_o8 Mask:FFFFFFFF
+/* Name: MotoringTq_Curve_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage1_o8 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: GeneratingTq_Curve_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage1_o9 Mask:FFFFFFFF
+/* Name: GeneratingTq_Curve_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage1_o9 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: Est_Relative_Torque_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage1_o10 Mask:FFFFFFFF
+/* Name: Est_Relative_Torque_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage1_o10 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: Estimating_VBATT_Lv_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage1_o11 Mask:FFFFFFFF
+/* Name: Estimating_VBATT_Lv_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage1_o11 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: Motor_Temp_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage1_o12 Mask:FFFFFFFF
+/* Name: Motor_Temp_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage1_o12 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: Drive_Temp_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage1_o13 Mask:FFFFFFFF
+/* Name: Drive_Temp_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage1_o13 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: Status3_Age_Count_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage2_o1 Mask:FFFFFFFF
+/* Name: Status3_Age_Count_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage2_o1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:4294967295.000000 Format:8.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: AD_Input1_En_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage2_o2 Mask:FFFFFFFF
+/* Name: AD_Input1_En_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage2_o2 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: XDRP_State_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage2_o3 Mask:FFFFFFFF
+/* Name: XDRP_State_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage2_o3 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: Motor_Speed_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage_o3 Mask:FFFFFFFF
+/* Name: Motor_Speed_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage_o3 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: PWMOutput_State_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage2_o4 Mask:FFFFFFFF
+/* Name: PWMOutput_State_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage2_o4 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: AD_Input2_En_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage2_o5 Mask:FFFFFFFF
+/* Name: AD_Input2_En_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage2_o5 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: Bus_HVIL_Status_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage2_o6 Mask:FFFFFFFF
+/* Name: Bus_HVIL_Status_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage2_o6 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: ThreePhase_HVIL_Status_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage2_o7 Mask:FFFFFFFF
+/* Name: ThreePhase_HVIL_Status_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage2_o7 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: DPos_Sens1_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage2_o8 Mask:FFFFFFFF
+/* Name: DPos_Sens1_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage2_o8 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: DigPos_Sens2_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage2_o9 Mask:FFFFFFFF
+/* Name: DigPos_Sens2_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage2_o9 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: DigPos_Sens3_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage2_o10 Mask:FFFFFFFF
+/* Name: DigPos_Sens3_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage2_o10 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: DigPos_Sens4_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage2_o11 Mask:FFFFFFFF
+/* Name: DigPos_Sens4_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage2_o11 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: DigPos_Sens5_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage2_o12 Mask:FFFFFFFF
+/* Name: DigPos_Sens5_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage2_o12 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: CtrlBoard_Temp_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage2_o13 Mask:FFFFFFFF
+/* Name: CtrlBoard_Temp_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage2_o13 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: HVBus_Voltage_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage_o4 Mask:FFFFFFFF
+/* Name: HVBus_Voltage_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage_o4 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: Keyed_Voltage_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage2_o14 Mask:FFFFFFFF
+/* Name: Keyed_Voltage_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage2_o14 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: AD_Input1_Vin_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage2_o15 Mask:FFFFFFFF
+/* Name: AD_Input1_Vin_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage2_o15 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: AD_Input2_Vin_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage2_o16 Mask:FFFFFFFF
+/* Name: AD_Input2_Vin_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage2_o16 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: Status4_Age_Count_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage3_o1 Mask:FFFFFFFF
+/* Name: Status4_Age_Count_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage3_o1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:4294967295.000000 Format:8.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: An_PosSense1_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage3_o2 Mask:FFFFFFFF
+/* Name: An_PosSense1_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage3_o2 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: An_PosSense2_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage3_o3 Mask:FFFFFFFF
+/* Name: An_PosSense2_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage3_o3 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: XDRP_Internal_Meas_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage3_o4 Mask:FFFFFFFF
+/* Name: XDRP_Internal_Meas_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage3_o4 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: Status2_Age_Count_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage1_o1 Mask:FFFFFFFF
+/* Name: Status2_Age_Count_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage1_o1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:4294967295.000000 Format:8.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: Run_Enable_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage1_o2 Mask:FFFFFFFF
+/* Name: Run_Enable_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage1_o2 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: NegativeTq_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage1_o3 Mask:FFFFFFFF
+/* Name: NegativeTq_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage1_o3 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: Generating_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage1_o4 Mask:FFFFFFFF
+/* Name: Generating_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage1_o4 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: Phoenix_Fault_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage1_o5 Mask:FFFFFFFF
+/* Name: Phoenix_Fault_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage1_o5 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: TqLimiting_Reason_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s412_ReadCANMessage1_o6 Mask:FFFFFFFF
+/* Name: TqLimiting_Reason_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s398_ReadCANMessage1_o6 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix" Help:""   */
 
-/* Name: ESTOP_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s406_EStop Mask:FFFFFFFF
+/* Name: ESTOP_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s392_EStop Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|Digital" Help:""   */
 
-/* Name: MAF ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s541_Merge Mask:FFFFFFFF
+/* Name: MAF ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s527_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|Digital | MAF" Help:"Final value after Linear Sensor Characterization" Unit:g/s  */
 
-/* Name: MAFADC ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s406_Gain Mask:FFFFFFFF
+/* Name: MAFADC ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s392_Gain Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|Digital | MAF" Help:"Signal measured directly from sensor" Unit:Hz  */
 
-/* Name: MAFRaw ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s542_motohawk_interpolation_1d Mask:FFFFFFFF
+/* Name: MAFRaw ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s528_motohawk_interpolation_1d Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|Digital | MAF" Help:"After conversion to engineering units, before range checking" Unit:g/s  */
 
-/* Name: RPMInst ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s407_RPMInst Mask:FFFFFFFF
+/* Name: RPMInst ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s393_RPMInst Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|EngineSpeed" Help:""   */
 
-/* Name: RPM ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s556_Sum1 Mask:FFFFFFFF
+/* Name: RPM ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s542_Sum1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|EngineSpeed" Help:""   */
 
-/* Name: EncoderFault ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s407_motohawk_encoder_fault Mask:FFFFFFFF
+/* Name: EncoderFault ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s393_motohawk_encoder_fault Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
-   Max:255.000000 Format:3.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|EngineSpeed|Encoder Diagnostics" Help:""  EnumDec:VarDecEnum_32 */
+   Max:255.000000 Format:3.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|EngineSpeed|Encoder Diagnostics" Help:""  EnumDec:VarDecEnum_29 */
 
-/* Name: EncoderState ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s407_motohawk_encoder_state Mask:FFFFFFFF
+/* Name: EncoderState ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s393_motohawk_encoder_state Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
-   Max:255.000000 Format:3.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|EngineSpeed" Help:""  EnumDec:VarDecEnum_33 */
+   Max:255.000000 Format:3.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|EngineSpeed" Help:""  EnumDec:VarDecEnum_30 */
 
 /* Name: encoder_create ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
    CType:E_NativeFWError Struct:encoder_create Mask:FFFFFFFF EnumDec:E_NativeFWError
    UpdateID:BACKGND Group:"System | Debug | Resources | Encoder" Help:"Debug Variable" */
 uint8_T encoder_create = 7;
 
-/* Name: EGRSense ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s570_Merge Mask:FFFFFFFF
+/* Name: EGRSense ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s556_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|LinearSensors | EGRSense" Help:"Final value after Linear Sensor Characterization" Unit:%  */
 
-/* Name: EGRSenseADC ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT2 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s408_motohawk_ain4 Mask:FFFFFFFF
+/* Name: EGRSenseADC ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT2 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s394_motohawk_ain4 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:65535.000000 Format:5.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|LinearSensors | EGRSense" Help:"Singal measured directly from sensor" Unit:V  */
 
-/* Name: EGRSenseRaw ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s557_Sum1 Mask:FFFFFFFF
+/* Name: EGRSenseRaw ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s543_Sum1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|LinearSensors | EGRSense" Help:"After conversion to engineering units, before range checking" Unit:%  */
 
-/* Name: FuelSens ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s578_Merge Mask:FFFFFFFF
+/* Name: FuelSens ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s564_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|LinearSensors | FuelSens" Help:"Final value after Linear Sensor Characterization" Unit:%  */
 
-/* Name: FuelSensADC ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s408_Gain Mask:FFFFFFFF
+/* Name: FuelSensADC ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s394_Gain Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|LinearSensors | FuelSens" Help:"Singal measured directly from sensor" Unit:Hz  */
 
-/* Name: FuelSensRaw ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s558_Sum1 Mask:FFFFFFFF
+/* Name: FuelSensRaw ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s544_Sum1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|LinearSensors | FuelSens" Help:"After conversion to engineering units, before range checking" Unit:%  */
 
-/* Name: FuelPres ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s586_Merge Mask:FFFFFFFF
+/* Name: FuelPres ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s572_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|LinearSensors | FuelPres" Help:"Final value after Linear Sensor Characterization" Unit:kPaGauge  */
 
-/* Name: FuelPresADC ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT2 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s408_motohawk_ain2 Mask:FFFFFFFF
+/* Name: FuelPresADC ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT2 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s394_motohawk_ain2 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:65535.000000 Format:5.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|LinearSensors | FuelPres" Help:"Singal measured directly from sensor" Unit:ADC  */
 
-/* Name: FuelPresRaw ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s559_Sum1 Mask:FFFFFFFF
+/* Name: FuelPresRaw ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s545_Sum1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|LinearSensors | FuelPres" Help:"After conversion to engineering units, before range checking" Unit:kPaGauge  */
 
-/* Name: MAP ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s594_Merge Mask:FFFFFFFF
+/* Name: MAP ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s580_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|LinearSensors | MAP" Help:"Final value after Linear Sensor Characterization" Unit:kPa  */
 
-/* Name: MAPADC ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s562_Merge Mask:FFFFFFFF
+/* Name: MAPADC ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s548_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|LinearSensors | MAP" Help:"Singal measured directly from sensor" Unit:ADC  */
 
-/* Name: MAPRaw ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s560_Sum1 Mask:FFFFFFFF
+/* Name: MAPRaw ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s546_Sum1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|LinearSensors | MAP" Help:"After conversion to engineering units, before range checking" Unit:kPa  */
 
-/* Name: MAPTime ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s602_Merge Mask:FFFFFFFF
+/* Name: MAPTime ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s588_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|LinearSensors | MAPTime" Help:"Final value after Linear Sensor Characterization" Unit:kPa  */
 
-/* Name: MAPTimeADC ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT2 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s408_motohawk_ain_read1 Mask:FFFFFFFF
+/* Name: MAPTimeADC ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT2 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s394_motohawk_ain_read1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:65535.000000 Format:5.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|LinearSensors | MAPTime" Help:"Singal measured directly from sensor" Unit:ADC  */
 
-/* Name: MAPTimeRaw ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s561_Sum1 Mask:FFFFFFFF
+/* Name: MAPTimeRaw ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s547_Sum1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|LinearSensors | MAPTime" Help:"After conversion to engineering units, before range checking" Unit:kPa  */
 
-/* Name: OilPres ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s612_Merge Mask:FFFFFFFF
+/* Name: OilPres ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s598_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|LinearSensors | OilPres" Help:"Final value after Linear Sensor Characterization" Unit:psi  */
 
-/* Name: OilPresADC ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT2 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s408_motohawk_ain1 Mask:FFFFFFFF
+/* Name: OilPresADC ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT2 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s394_motohawk_ain1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:65535.000000 Format:5.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|LinearSensors | OilPres" Help:"Singal measured directly from sensor" Unit:ADC  */
 
-/* Name: OilPresRaw ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s563_Sum1 Mask:FFFFFFFF
+/* Name: OilPresRaw ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s549_Sum1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|LinearSensors | OilPres" Help:"After conversion to engineering units, before range checking" Unit:psi  */
 
-/* Name: SensVolt ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s620_Merge Mask:FFFFFFFF
+/* Name: SensVolt ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s606_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|LinearSensors | SensVolt" Help:"Final value after Linear Sensor Characterization" Unit:Volts  */
 
-/* Name: SensVoltADC ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT2 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s408_motohawk_ain3 Mask:FFFFFFFF
+/* Name: SensVoltADC ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT2 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s394_motohawk_ain3 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:65535.000000 Format:5.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|LinearSensors | SensVolt" Help:"Singal measured directly from sensor" Unit:ADC  */
 
-/* Name: SensVoltRaw ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s564_Sum1 Mask:FFFFFFFF
+/* Name: SensVoltRaw ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s550_Sum1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|LinearSensors | SensVolt" Help:"After conversion to engineering units, before range checking" Unit:Volts  */
 
-/* Name: SysVolt ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s628_Merge Mask:FFFFFFFF
+/* Name: SysVolt ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s614_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|LinearSensors | SysVolt" Help:"Final value after Linear Sensor Characterization" Unit:Volts  */
 
-/* Name: SysVoltADC ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT2 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s408_motohawk_ain14 Mask:FFFFFFFF
+/* Name: SysVoltADC ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT2 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s394_motohawk_ain14 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:65535.000000 Format:5.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|LinearSensors | SysVolt" Help:"Singal measured directly from sensor" Unit:ADC  */
 
-/* Name: SysVoltRaw ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s565_Sum1 Mask:FFFFFFFF
+/* Name: SysVoltRaw ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s551_Sum1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|LinearSensors | SysVolt" Help:"After conversion to engineering units, before range checking" Unit:Volts  */
 
-/* Name: O2_PostCat ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s638_Merge Mask:FFFFFFFF
+/* Name: O2_PostCat ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s624_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|NonLinearSensors | O2_PostCat" Help:"Final value after Linear Sensor Characterization" Unit:EquivRatio  */
 
-/* Name: O2_PostCatADC ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT2 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s409_motohawk_ain3 Mask:FFFFFFFF
+/* Name: O2_PostCatADC ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT2 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s395_motohawk_ain3 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:65535.000000 Format:5.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|NonLinearSensors | O2_PostCat" Help:"Signal measured directly from sensor" Unit:ADC  */
 
-/* Name: O2_PostCatRaw ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s639_motohawk_interpolation_1d Mask:FFFFFFFF
+/* Name: O2_PostCatRaw ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s625_motohawk_interpolation_1d Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|NonLinearSensors | O2_PostCat" Help:"After conversion to engineering units, before range checking" Unit:EquivRatio  */
 
-/* Name: APP2_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s410_motohawk_data_read1 Mask:FFFFFFFF
+/* Name: APP2_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s396_motohawk_data_read1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|PotentiometerSensors" Help:""   */
 
-/* Name: APP1_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s410_motohawk_data_read1 Mask:FFFFFFFF
+/* Name: APP1_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s396_motohawk_data_read1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|PotentiometerSensors" Help:""   */
 
-/* Name: TPS1Adapt_Low ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s667_MinMax Mask:FFFFFFFF
+/* Name: TPS1Adapt_Low ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s653_MinMax Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|PotentiometerSensors | TPS1" Help:""   */
 
-/* Name: TPS1Adapt_Hi ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s667_MinMax1 Mask:FFFFFFFF
+/* Name: TPS1Adapt_Hi ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s653_MinMax1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|PotentiometerSensors | TPS1" Help:""   */
 
-/* Name: TPS1Percent ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s681_Merge Mask:FFFFFFFF
+/* Name: TPS1Percent ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s667_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|PotentiometerSensors | TPS1" Help:""   */
 
-/* Name: TPS1ADC ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s663_Switch Mask:FFFFFFFF
+/* Name: TPS1ADC ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s649_Switch Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|PotentiometerSensors | TPS1" Help:""   */
 
-/* Name: TPS1PercentRaw ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s671_MinMax1 Mask:FFFFFFFF
+/* Name: TPS1PercentRaw ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s657_MinMax1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|PotentiometerSensors | TPS1" Help:""   */
 
-/* Name: TPS2Adapt_Low ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s684_MinMax Mask:FFFFFFFF
+/* Name: TPS2Adapt_Low ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s670_MinMax Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|PotentiometerSensors | TPS2" Help:""   */
 
-/* Name: TPS2Adapt_Hi ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s684_MinMax1 Mask:FFFFFFFF
+/* Name: TPS2Adapt_Hi ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s670_MinMax1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|PotentiometerSensors | TPS2" Help:""   */
 
-/* Name: TPS2Percent ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s698_Merge Mask:FFFFFFFF
+/* Name: TPS2Percent ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s684_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|PotentiometerSensors | TPS2" Help:""   */
 
-/* Name: TPS2ADC ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s664_Switch Mask:FFFFFFFF
+/* Name: TPS2ADC ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s650_Switch Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|PotentiometerSensors | TPS2" Help:""   */
 
-/* Name: TPS2PercentRaw ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s688_MinMax1 Mask:FFFFFFFF
+/* Name: TPS2PercentRaw ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s674_MinMax1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|PotentiometerSensors | TPS2" Help:""   */
-
-/* Name: dout_create_MPRD ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:dout_create_MPRD Mask:FFFFFFFF EnumDec:E_NativeFWError
-   UpdateID:BACKGND Group:"System | Debug | Resources | DiscreteOut" Help:"Debug Variable" */
-uint8_T dout_create_MPRD = 7;
 
 /* Name: EST_SparkCreate ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
    CType:E_NativeFWError Struct:EST_SparkCreate Mask:FFFFFFFF EnumDec:E_NativeFWError
@@ -1157,21 +1136,6 @@ real_T NextInjectorAngle = 0.0;
    UpdateID:BACKGND Group:"System | Debug | General | Injector Sequence" Help:"Debug Variable" */
 uint8_T NextCylinderToInject = 0;
 
-/* Name: dout_create_FuelPumpPin ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:dout_create_FuelPumpPin Mask:FFFFFFFF EnumDec:E_NativeFWError
-   UpdateID:BACKGND Group:"System | Debug | Resources | DiscreteOut" Help:"Debug Variable" */
-uint8_T dout_create_FuelPumpPin = 7;
-
-/* Name: dout_create_OilPumpPin ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:dout_create_OilPumpPin Mask:FFFFFFFF EnumDec:E_NativeFWError
-   UpdateID:BACKGND Group:"System | Debug | Resources | DiscreteOut" Help:"Debug Variable" */
-uint8_T dout_create_OilPumpPin = 7;
-
-/* Name: dout_create_O2_Heater ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:dout_create_O2_Heater Mask:FFFFFFFF EnumDec:E_NativeFWError
-   UpdateID:BACKGND Group:"System | Debug | Resources | DiscreteOut" Help:"Debug Variable" */
-uint8_T dout_create_O2_Heater = 7;
-
 /* Name: ain_create_ECUP ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
    CType:E_NativeFWError Struct:ain_create_ECUP Mask:FFFFFFFF EnumDec:E_NativeFWError
    UpdateID:BACKGND Group:"System | Debug | Resources | AnalogIn" Help:"Debug Variable" */
@@ -1181,6 +1145,11 @@ uint8_T ain_create_ECUP = RESOURCE_NOT_CREATED;
    CType:E_NativeFWError Struct:ain_read_ECUP Mask:FFFFFFFF EnumDec:E_NativeFWError
    UpdateID:BACKGND Group:"System | Debug | Resources | AnalogIn" Help:"Debug Variable" */
 uint8_T ain_read_ECUP = RESOURCE_NOT_CREATED;
+
+/* Name: dout_create_DOut9442p0004 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:dout_create_DOut9442p0004 Mask:FFFFFFFF EnumDec:E_NativeFWError
+   UpdateID:BACKGND Group:"System | Debug | Resources | DiscreteOut" Help:"Debug Variable" */
+uint8_T dout_create_DOut9442p0004 = 7;
 
 /* Name: ain_create_MAPSensorPin ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
    CType:E_NativeFWError Struct:ain_create_MAPSensorPin Mask:FFFFFFFF EnumDec:E_NativeFWError
@@ -1222,15 +1191,15 @@ uint8_T ain_create_OilPresPin = RESOURCE_NOT_CREATED;
    UpdateID:BACKGND Group:"System | Debug | Resources | AnalogIn" Help:"Debug Variable" */
 uint8_T ain_read_OilPresPin = RESOURCE_NOT_CREATED;
 
-/* Name: ain_create_TPS2AnalogInput ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:ain_create_TPS2AnalogInput Mask:FFFFFFFF EnumDec:E_NativeFWError
+/* Name: ain_create_SysVoltage ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:ain_create_SysVoltage Mask:FFFFFFFF EnumDec:E_NativeFWError
    UpdateID:BACKGND Group:"System | Debug | Resources | AnalogIn" Help:"Debug Variable" */
-uint8_T ain_create_TPS2AnalogInput = RESOURCE_NOT_CREATED;
+uint8_T ain_create_SysVoltage = RESOURCE_NOT_CREATED;
 
-/* Name: ain_read_TPS2AnalogInput ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:ain_read_TPS2AnalogInput Mask:FFFFFFFF EnumDec:E_NativeFWError
+/* Name: ain_read_SysVoltage ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:ain_read_SysVoltage Mask:FFFFFFFF EnumDec:E_NativeFWError
    UpdateID:BACKGND Group:"System | Debug | Resources | AnalogIn" Help:"Debug Variable" */
-uint8_T ain_read_TPS2AnalogInput = RESOURCE_NOT_CREATED;
+uint8_T ain_read_SysVoltage = RESOURCE_NOT_CREATED;
 
 /* Name: ain_create_TPS1AnalogInput ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
    CType:E_NativeFWError Struct:ain_create_TPS1AnalogInput Mask:FFFFFFFF EnumDec:E_NativeFWError
@@ -1242,25 +1211,15 @@ uint8_T ain_create_TPS1AnalogInput = RESOURCE_NOT_CREATED;
    UpdateID:BACKGND Group:"System | Debug | Resources | AnalogIn" Help:"Debug Variable" */
 uint8_T ain_read_TPS1AnalogInput = RESOURCE_NOT_CREATED;
 
-/* Name: freq_in_create_FuelSensorPin ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:freq_in_create_FuelSensorPin Mask:FFFFFFFF EnumDec:E_NativeFWError
-   UpdateID:BACKGND Group:"System | Debug | Resources | FrequencyIn" Help:"Debug Variable" */
-uint8_T freq_in_create_FuelSensorPin = 7;
-
-/* Name: freq_in_read_FuelSensorPin ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:freq_in_read_FuelSensorPin Mask:FFFFFFFF EnumDec:E_NativeFWError
-   UpdateID:BACKGND Group:"System | Debug | Resources | FrequencyIn" Help:"Debug Variable" */
-uint8_T freq_in_read_FuelSensorPin = 7;
-
-/* Name: ain_create_EGRPin ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:ain_create_EGRPin Mask:FFFFFFFF EnumDec:E_NativeFWError
+/* Name: ain_create_TPS2AnalogInput ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:ain_create_TPS2AnalogInput Mask:FFFFFFFF EnumDec:E_NativeFWError
    UpdateID:BACKGND Group:"System | Debug | Resources | AnalogIn" Help:"Debug Variable" */
-uint8_T ain_create_EGRPin = RESOURCE_NOT_CREATED;
+uint8_T ain_create_TPS2AnalogInput = RESOURCE_NOT_CREATED;
 
-/* Name: ain_read_EGRPin ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:ain_read_EGRPin Mask:FFFFFFFF EnumDec:E_NativeFWError
+/* Name: ain_read_TPS2AnalogInput ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:ain_read_TPS2AnalogInput Mask:FFFFFFFF EnumDec:E_NativeFWError
    UpdateID:BACKGND Group:"System | Debug | Resources | AnalogIn" Help:"Debug Variable" */
-uint8_T ain_read_EGRPin = RESOURCE_NOT_CREATED;
+uint8_T ain_read_TPS2AnalogInput = RESOURCE_NOT_CREATED;
 
 /* Name: ain_create_PostO2Pin ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
    CType:E_NativeFWError Struct:ain_create_PostO2Pin Mask:FFFFFFFF EnumDec:E_NativeFWError
@@ -1282,15 +1241,30 @@ uint8_T freq_in_create_MAF_Pin = 7;
    UpdateID:BACKGND Group:"System | Debug | Resources | FrequencyIn" Help:"Debug Variable" */
 uint8_T freq_in_read_MAF_Pin = 7;
 
-/* Name: ain_create_O2SensorPin ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:ain_create_O2SensorPin Mask:FFFFFFFF EnumDec:E_NativeFWError
+/* Name: ain_create_EGRPin ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:ain_create_EGRPin Mask:FFFFFFFF EnumDec:E_NativeFWError
    UpdateID:BACKGND Group:"System | Debug | Resources | AnalogIn" Help:"Debug Variable" */
-uint8_T ain_create_O2SensorPin = RESOURCE_NOT_CREATED;
+uint8_T ain_create_EGRPin = RESOURCE_NOT_CREATED;
 
-/* Name: ain_read_O2SensorPin ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:ain_read_O2SensorPin Mask:FFFFFFFF EnumDec:E_NativeFWError
+/* Name: ain_read_EGRPin ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:ain_read_EGRPin Mask:FFFFFFFF EnumDec:E_NativeFWError
    UpdateID:BACKGND Group:"System | Debug | Resources | AnalogIn" Help:"Debug Variable" */
-uint8_T ain_read_O2SensorPin = RESOURCE_NOT_CREATED;
+uint8_T ain_read_EGRPin = RESOURCE_NOT_CREATED;
+
+/* Name: freq_in_create_FuelSensorPin ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:freq_in_create_FuelSensorPin Mask:FFFFFFFF EnumDec:E_NativeFWError
+   UpdateID:BACKGND Group:"System | Debug | Resources | FrequencyIn" Help:"Debug Variable" */
+uint8_T freq_in_create_FuelSensorPin = 7;
+
+/* Name: freq_in_read_FuelSensorPin ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:freq_in_read_FuelSensorPin Mask:FFFFFFFF EnumDec:E_NativeFWError
+   UpdateID:BACKGND Group:"System | Debug | Resources | FrequencyIn" Help:"Debug Variable" */
+uint8_T freq_in_read_FuelSensorPin = 7;
+
+/* Name: dout_create_DOut8883p0004 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:dout_create_DOut8883p0004 Mask:FFFFFFFF EnumDec:E_NativeFWError
+   UpdateID:BACKGND Group:"System | Debug | Resources | DiscreteOut" Help:"Debug Variable" */
+uint8_T dout_create_DOut8883p0004 = 7;
 
 /* Name: pwm_create_ETCPin_PWMOutput ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
    CType:E_NativeFWError Struct:pwm_create_ETCPin_PWMOutput Mask:FFFFFFFF EnumDec:E_NativeFWError
@@ -1302,15 +1276,15 @@ uint8_T pwm_create_ETCPin_PWMOutput = 7;
    UpdateID:BACKGND Group:"System | Debug | Resources | PWM" Help:"Debug Variable" */
 uint8_T pwm_set_ETCPin_PWMOutput = 0;
 
-/* Name: ain_create_SensVoltSensorPin ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:ain_create_SensVoltSensorPin Mask:FFFFFFFF EnumDec:E_NativeFWError
-   UpdateID:BACKGND Group:"System | Debug | Resources | AnalogIn" Help:"Debug Variable" */
-uint8_T ain_create_SensVoltSensorPin = RESOURCE_NOT_CREATED;
+/* Name: dout_create_DOut9174p0004 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:dout_create_DOut9174p0004 Mask:FFFFFFFF EnumDec:E_NativeFWError
+   UpdateID:BACKGND Group:"System | Debug | Resources | DiscreteOut" Help:"Debug Variable" */
+uint8_T dout_create_DOut9174p0004 = 7;
 
-/* Name: ain_read_SensVoltSensorPin ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:ain_read_SensVoltSensorPin Mask:FFFFFFFF EnumDec:E_NativeFWError
-   UpdateID:BACKGND Group:"System | Debug | Resources | AnalogIn" Help:"Debug Variable" */
-uint8_T ain_read_SensVoltSensorPin = RESOURCE_NOT_CREATED;
+/* Name: dout_create_DOut9191p0004 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:dout_create_DOut9191p0004 Mask:FFFFFFFF EnumDec:E_NativeFWError
+   UpdateID:BACKGND Group:"System | Debug | Resources | DiscreteOut" Help:"Debug Variable" */
+uint8_T dout_create_DOut9191p0004 = 7;
 
 /* Name: ain_create_FuelPresPin ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
    CType:E_NativeFWError Struct:ain_create_FuelPresPin Mask:FFFFFFFF EnumDec:E_NativeFWError
@@ -1321,6 +1295,16 @@ uint8_T ain_create_FuelPresPin = RESOURCE_NOT_CREATED;
    CType:E_NativeFWError Struct:ain_read_FuelPresPin Mask:FFFFFFFF EnumDec:E_NativeFWError
    UpdateID:BACKGND Group:"System | Debug | Resources | AnalogIn" Help:"Debug Variable" */
 uint8_T ain_read_FuelPresPin = RESOURCE_NOT_CREATED;
+
+/* Name: ain_create_SensVoltSensorPin ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:ain_create_SensVoltSensorPin Mask:FFFFFFFF EnumDec:E_NativeFWError
+   UpdateID:BACKGND Group:"System | Debug | Resources | AnalogIn" Help:"Debug Variable" */
+uint8_T ain_create_SensVoltSensorPin = RESOURCE_NOT_CREATED;
+
+/* Name: ain_read_SensVoltSensorPin ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:ain_read_SensVoltSensorPin Mask:FFFFFFFF EnumDec:E_NativeFWError
+   UpdateID:BACKGND Group:"System | Debug | Resources | AnalogIn" Help:"Debug Variable" */
+uint8_T ain_read_SensVoltSensorPin = RESOURCE_NOT_CREATED;
 
 /* Name: oneshot_create_ONESHOT ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
    CType:E_NativeFWError Struct:oneshot_create_ONESHOT Mask:FFFFFFFF EnumDec:E_NativeFWError
@@ -1342,15 +1326,15 @@ uint8_T can_tx_err_CAN_1_0 = 0;
    UpdateID:BACKGND Group:"System | Debug | Resources | CAN" Help:"Debug Variable" */
 uint8_T can_tx_err_CAN_2_0 = 0;
 
-/* Name: can_tx_err_CAN_1_0_52 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:can_tx_err_CAN_1_0_52 Mask:FFFFFFFF EnumDec:E_NativeFWError
+/* Name: can_tx_err_CAN_1_0_49 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:can_tx_err_CAN_1_0_49 Mask:FFFFFFFF EnumDec:E_NativeFWError
    UpdateID:BACKGND Group:"System | Debug | Resources | CAN" Help:"Debug Variable" */
-uint8_T can_tx_err_CAN_1_0_52 = 0;
+uint8_T can_tx_err_CAN_1_0_49 = 0;
 
-/* Name: can_tx_err_CAN_2_0_53 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:can_tx_err_CAN_2_0_53 Mask:FFFFFFFF EnumDec:E_NativeFWError
+/* Name: can_tx_err_CAN_2_0_50 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:can_tx_err_CAN_2_0_50 Mask:FFFFFFFF EnumDec:E_NativeFWError
    UpdateID:BACKGND Group:"System | Debug | Resources | CAN" Help:"Debug Variable" */
-uint8_T can_tx_err_CAN_2_0_53 = 0;
+uint8_T can_tx_err_CAN_2_0_50 = 0;
 
 /* Name: can_create_CAN_1 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
    CType:E_NativeFWError Struct:can_create_CAN_1 Mask:FFFFFFFF EnumDec:E_NativeFWError

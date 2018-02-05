@@ -1,0 +1,7290 @@
+Library {
+  Name			  "miniview_lib"
+  Version		  5.1
+  SaveDefaultBlockParams  on
+  LibraryLinkDisplay	  "user"
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Tue Nov 07 08:55:03 2006"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Chris_Doyle"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Sun May 13 21:14:54 2007"
+  ModelVersionFormat	  "1.%<AutoIncrement:32>"
+  ConfigurationManager	  "None"
+  SimParamPage		  "Solver"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  SimulationMode	  "normal"
+  ConsistencyChecking	  "none"
+  ArrayBoundsChecking	  "none"
+  AlgebraicLoopMsg	  "warning"
+  BlockPriorityViolationMsg "warning"
+  MinStepSizeMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  DiscreteInheritContinuousMsg "warning"
+  MultiTaskRateTransMsg	  "error"
+  SingleTaskRateTransMsg  "none"
+  CheckForMatrixSingularity "none"
+  IntegerOverflowMsg	  "warning"
+  Int32ToFloatConvMsg	  "warning"
+  ParameterDowncastMsg	  "error"
+  ParameterOverflowMsg	  "error"
+  ParameterPrecisionLossMsg "warning"
+  UnderSpecifiedDataTypeMsg "none"
+  UnnecessaryDatatypeConvMsg "none"
+  VectorMatrixConversionMsg "none"
+  InvalidFcnCallConnMsg	  "error"
+  SignalLabelMismatchMsg  "none"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  SfunCompatibilityCheckMsg "none"
+  ProdHWDeviceType	  "Microprocessor"
+  ProdHWWordLengths	  "8,16,32,32"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  RTWRetainRTWFile	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  TLCAssertion		  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      ActionPort
+      InitializeStates	      "held"
+      ActionType	      "unset"
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      ShowAdditionalParam     off
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "sfix(16)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      DataType		      "auto"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      If
+      NumInputs		      "1"
+      IfExpression	      "u1 > 0"
+      ShowElse		      on
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      PortDimensions	      "-1"
+      ShowAdditionalParam     off
+      LatchInput	      off
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      ShowAdditionalParam     off
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Reference
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      PortCounts	      "[]"
+      SFunctionModules	      "''"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      on
+      Permissions	      "ReadWrite"
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      ShowAdditionalParam     off
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Terminator
+    }
+    Block {
+      BlockType		      TriggerPort
+      TriggerType	      "rising"
+      ShowOutputPort	      off
+      OutputDataType	      "auto"
+      ZeroCross		      on
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "miniview_lib"
+    Location		    [18, 76, 838, 741]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "[0.713725, 0.713725, 0.654902]"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "Clear Screen"
+      Ports		      [0, 1, 0, 1]
+      Position		      [25, 238, 160, 292]
+      BackgroundColor	      "yellow"
+      TreatAsAtomicUnit	      off
+      MaskType		      "MotoHawk MiniView Clear Screen"
+      MaskDescription	      "MotoHawk MiniView Clear Screen"
+      MaskPromptString	      "Physical CAN Channel"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "off"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskVariables	      "miniview_CAN_channel=@1;"
+      MaskDisplay	      "disp(['\\nMiniView\\nClear Screen\\nChannel:  C"
+"AN_' num2str(miniview_CAN_channel)])"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "2"
+      System {
+	Name			"Clear Screen"
+	Location		[181, 204, 735, 610]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  TriggerPort
+	  Name			  "Trigger"
+	  Ports			  []
+	  Position		  [255, 85, 275, 105]
+	  TriggerType		  "function-call"
+	  StatesWhenEnabling	  "held"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Clear Screen"
+	  Ports			  [0, 0, 0, 1]
+	  Position		  [225, 260, 307, 330]
+	  TreatAsAtomicUnit	  off
+	  System {
+	    Name		    "Clear Screen"
+	    Location		    [237, 221, 997, 711]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      TriggerPort
+	      Name		      "Trigger"
+	      Ports		      []
+	      Position		      [330, 50, 350, 70]
+	      TriggerType	      "function-call"
+	      StatesWhenEnabling      "held"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Send CAN Messages"
+	      Ports		      []
+	      Position		      [30, 116, 689, 395]
+	      ShowName		      off
+	      SourceBlock	      "MotoHawk_lib/CAN Blocks/Send CAN Messag"
+"es"
+	      SourceType	      "MotoHawk Send CAN Messages"
+	      bus		      "miniview_CAN_channel"
+	      msgl		      "miniview_clear_screen"
+	      pace		      "-1"
+	      labelwires	      "off"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  Ports			  [1, 2]
+	  Position		  [246, 205, 324, 225]
+	  Orientation		  "down"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Outputs		  "2"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Function-Call\nGenerator"
+	  Ports			  [0, 1]
+	  Position		  [135, 155, 185, 175]
+	  SourceBlock		  "simulink/Ports &\nSubsystems/Function-Call"
+"\nGenerator"
+	  SourceType		  "Function-Call Generator"
+	  sample_time		  "-1"
+	  numberOfIterations	  "1"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Next"
+	  Position		  [375, 238, 405, 252]
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  Points		  [0, 15]
+	  DstBlock		  "Next"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Function-Call\nGenerator"
+	  SrcPort		  1
+	  Points		  [95, 0]
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "Clear Screen"
+	  DstPort		  trigger
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Down Button"
+      Ports		      [0, 2]
+      Position		      [25, 538, 160, 627]
+      BackgroundColor	      "yellow"
+      TreatAsAtomicUnit	      off
+      MaskType		      "MotoHawk MiniView Down Button"
+      MaskDescription	      "MotoHawk MiniView Down Button"
+      MaskPromptString	      "Physical CAN Channel"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "off"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskVariables	      "miniview_CAN_channel=@1;"
+      MaskDisplay	      "disp(['MiniView \"Down\" Button\\nChannel:  CAN"
+"_' num2str(miniview_CAN_channel)])"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "2"
+      System {
+	Name			"Down Button"
+	Location		[190, 267, 849, 788]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Reference
+	  Name			  "CAN Receive Slot Trigger"
+	  Tag			  "Trigger"
+	  Ports			  [0, 1]
+	  Position		  [150, 30, 370, 130]
+	  Orientation		  "down"
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontWeight		  "bold"
+	  SourceBlock		  "MotoHawk_lib/CAN Blocks/CAN Receive Slot Tr"
+"igger"
+	  SourceType		  "MotoHawk CAN Receive Trigger"
+	  slot			  "'miniview_button_down'"
+	  inherited		  on
+	  function_name		  "Trigger_CAN_Slot_miniview_button_down_669p0"
+"004"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  Ports			  [1, 2]
+	  Position		  [229, 170, 291, 180]
+	  Orientation		  "down"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Outputs		  "2"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Subsystem"
+	  Ports			  [0, 2, 0, 1]
+	  Position		  [115, 244, 380, 446]
+	  TreatAsAtomicUnit	  off
+	  System {
+	    Name		    "Subsystem"
+	    Location		    [37, 172, 1291, 693]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      TriggerPort
+	      Name		      "Trigger"
+	      Ports		      []
+	      Position		      [910, 40, 930, 60]
+	      TriggerType	      "function-call"
+	      StatesWhenEnabling      "held"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Read CAN Message"
+	      Ports		      [0, 2]
+	      Position		      [25, 28, 835, 497]
+	      ShowName		      off
+	      SourceBlock	      "MotoHawk_lib/CAN Blocks/Read CAN Messag"
+"e"
+	      SourceType	      "MotoHawk Read CAN Message"
+	      bus		      "miniview_CAN_channel"
+	      msg		      "miniview_button_down"
+	      queue		      "1"
+	      slot		      "'miniview_button_down'"
+	      valid		      off
+	      stale		      off
+	      labelwires	      on
+	      Port {
+		PortNumber		1
+		Name			"down asserted"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"down count"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Signal Specification"
+	      Ports		      [1, 1]
+	      Position		      [915, 131, 1010, 159]
+	      SourceBlock	      "simulink/Signal\nAttributes/Signal Spec"
+"ification"
+	      SourceType	      "Signal Specification"
+	      D			      "-1"
+	      Ts		      "-1"
+	      DataType		      "boolean"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      SignalType	      "auto"
+	      SamplingMode	      "auto"
+	      Port {
+		PortNumber		1
+		Name			"down asserted"
+		PropagatedSignals	"down asserted"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Signal Specification1"
+	      Ports		      [1, 1]
+	      Position		      [915, 366, 1010, 394]
+	      SourceBlock	      "simulink/Signal\nAttributes/Signal Spec"
+"ification"
+	      SourceType	      "Signal Specification"
+	      D			      "-1"
+	      Ts		      "-1"
+	      DataType		      "uint8"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      SignalType	      "auto"
+	      SamplingMode	      "auto"
+	      Port {
+		PortNumber		1
+		Name			"down count"
+		PropagatedSignals	"down count"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      Position		      [1085, 138, 1115, 152]
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out2"
+	      Position		      [1085, 373, 1115, 387]
+	      Port		      "2"
+	    }
+	    Line {
+	      Name		      "down asserted"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Read CAN Message"
+	      SrcPort		      1
+	      DstBlock		      "Signal Specification"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "down count"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Read CAN Message"
+	      SrcPort		      2
+	      DstBlock		      "Signal Specification1"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "down asserted"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Signal Specification"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "down count"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Signal Specification1"
+	      SrcPort		      1
+	      DstBlock		      "Out2"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator"
+	  Position		  [485, 385, 505, 405]
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Update"
+	  Position		  [480, 193, 510, 207]
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Down Asserted"
+	  Position		  [480, 288, 510, 302]
+	  Port			  "2"
+	}
+	Line {
+	  SrcBlock		  "Subsystem"
+	  SrcPort		  1
+	  DstBlock		  "Down Asserted"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  trigger
+	}
+	Line {
+	  SrcBlock		  "CAN Receive Slot Trigger"
+	  SrcPort		  1
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  Points		  [0, 15]
+	  DstBlock		  "Update"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Subsystem"
+	  SrcPort		  2
+	  DstBlock		  "Terminator"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Draw Bitmap"
+      Ports		      [5, 1, 0, 1]
+      Position		      [180, 358, 315, 502]
+      BackgroundColor	      "yellow"
+      TreatAsAtomicUnit	      off
+      MaskType		      "MotoHawk MiniView Draw Bitmap"
+      MaskDescription	      "MotoHawk MiniView Draw Bitmap\n0:  \"Dialog\"\n"
+"1:  small down-arrow\n2:  large down-arrow\n3:  selector down-arrow\n4:  sele"
+"ctor up-arrow"
+      MaskPromptString	      "Physical CAN Channel"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "off"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskVariables	      "miniview_CAN_channel=@1;"
+      MaskDisplay	      "disp(['MiniView\\nDraw Bitmap\\nChannel:  CAN_'"
+" num2str(miniview_CAN_channel) '\\n\\n\\n\\n'])"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "2"
+      System {
+	Name			"Draw Bitmap"
+	Location		[184, 82, 772, 675]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "bitmap #"
+	  Position		  [110, 183, 140, 197]
+	  Port {
+	    PortNumber		    1
+	    Name		    "bitmap"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "x"
+	  Position		  [110, 258, 140, 272]
+	  Port			  "2"
+	  Port {
+	    PortNumber		    1
+	    Name		    "bitmap x"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "y"
+	  Position		  [110, 333, 140, 347]
+	  Port			  "3"
+	  Port {
+	    PortNumber		    1
+	    Name		    "bitmap y"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "line color"
+	  Position		  [110, 408, 140, 422]
+	  Port			  "4"
+	  Port {
+	    PortNumber		    1
+	    Name		    "bitmap line color"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "fill color"
+	  Position		  [110, 483, 140, 497]
+	  Port			  "5"
+	  Port {
+	    PortNumber		    1
+	    Name		    "bitmap fill color"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  TriggerPort
+	  Name			  "Trigger"
+	  Ports			  []
+	  Position		  [100, 50, 120, 70]
+	  TriggerType		  "function-call"
+	  StatesWhenEnabling	  "held"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  Ports			  [1, 2]
+	  Position		  [301, 95, 379, 115]
+	  Orientation		  "down"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Outputs		  "2"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Function-Call\nGenerator"
+	  Ports			  [0, 1]
+	  Position		  [190, 45, 240, 65]
+	  SourceBlock		  "simulink/Ports &\nSubsystems/Function-Call"
+"\nGenerator"
+	  SourceType		  "Function-Call Generator"
+	  sample_time		  "-1"
+	  numberOfIterations	  "1"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Subsystem"
+	  Ports			  [5, 0, 0, 1]
+	  Position		  [275, 148, 365, 532]
+	  TreatAsAtomicUnit	  off
+	  System {
+	    Name		    "Subsystem"
+	    Location		    [168, 147, 1078, 698]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "bitmap #"
+	      Position		      [25, 83, 55, 97]
+	      Port {
+		PortNumber		1
+		Name			"bitmap #"
+		PropagatedSignals	"bitmap"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "x"
+	      Position		      [25, 178, 55, 192]
+	      Port		      "2"
+	      Port {
+		PortNumber		1
+		Name			"bitmap x"
+		PropagatedSignals	"bitmap x"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "y"
+	      Position		      [25, 273, 55, 287]
+	      Port		      "3"
+	      Port {
+		PortNumber		1
+		Name			"bitmap y"
+		PropagatedSignals	"bitmap y"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "line color"
+	      Position		      [25, 368, 55, 382]
+	      Port		      "4"
+	      Port {
+		PortNumber		1
+		Name			"line color"
+		PropagatedSignals	"bitmap line color"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "fill color"
+	      Position		      [25, 463, 55, 477]
+	      Port		      "5"
+	      Port {
+		PortNumber		1
+		Name			"fill color"
+		PropagatedSignals	"bitmap fill color"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      TriggerPort
+	      Name		      "Trigger"
+	      Ports		      []
+	      Position		      [55, 15, 75, 35]
+	      TriggerType	      "function-call"
+	      StatesWhenEnabling      "held"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Send CAN Messages"
+	      Ports		      [5]
+	      Position		      [130, 45, 885, 515]
+	      ShowName		      off
+	      SourceBlock	      "MotoHawk_lib/CAN Blocks/Send CAN Messag"
+"es"
+	      SourceType	      "MotoHawk Send CAN Messages"
+	      bus		      "miniview_CAN_channel"
+	      msgl		      "miniview_draw_bitmap"
+	      pace		      "-1"
+	      labelwires	      "on"
+	    }
+	    Line {
+	      Name		      "fill color"
+	      Labels		      [0, 0]
+	      SrcBlock		      "fill color"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      5
+	    }
+	    Line {
+	      Name		      "line color"
+	      Labels		      [0, 0]
+	      SrcBlock		      "line color"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      4
+	    }
+	    Line {
+	      Name		      "bitmap #"
+	      Labels		      [0, 0]
+	      SrcBlock		      "bitmap #"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "bitmap x"
+	      Labels		      [0, 0]
+	      SrcBlock		      "x"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "bitmap y"
+	      Labels		      [0, 0]
+	      SrcBlock		      "y"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      3
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Next"
+	  Position		  [430, 128, 460, 142]
+	}
+	Line {
+	  Name			  "bitmap"
+	  SrcBlock		  "bitmap #"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "bitmap x"
+	  SrcBlock		  "x"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "bitmap y"
+	  SrcBlock		  "y"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "bitmap line color"
+	  SrcBlock		  "line color"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "bitmap fill color"
+	  SrcBlock		  "fill color"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  trigger
+	}
+	Line {
+	  SrcBlock		  "Function-Call\nGenerator"
+	  SrcPort		  1
+	  Points		  [95, 0]
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  Points		  [0, 15]
+	  DstBlock		  "Next"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Draw HLine"
+      Ports		      [5, 1, 0, 1]
+      Position		      [335, 158, 470, 302]
+      BackgroundColor	      "yellow"
+      TreatAsAtomicUnit	      off
+      MaskType		      "MotoHawk MiniView Draw Horizontal Line"
+      MaskDescription	      "MotoHawk MiniView Draw Horizontal Line"
+      MaskPromptString	      "Physical CAN Channel"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "off"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskVariables	      "miniview_CAN_channel=@1;"
+      MaskDisplay	      "disp(['MiniView\\nDraw Horiz Line\\nChannel:  C"
+"AN_' num2str(miniview_CAN_channel) '\\n\\n\\n\\n'])"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "2"
+      System {
+	Name			"Draw HLine"
+	Location		[207, 136, 829, 923]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "x0"
+	  Position		  [55, 288, 85, 302]
+	  Port {
+	    PortNumber		    1
+	    Name		    "hline x0"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "x1"
+	  Position		  [55, 383, 85, 397]
+	  Port			  "2"
+	  Port {
+	    PortNumber		    1
+	    Name		    "hline x1"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "y"
+	  Position		  [55, 478, 85, 492]
+	  Port			  "3"
+	  Port {
+	    PortNumber		    1
+	    Name		    "hline y"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "line color"
+	  Position		  [55, 573, 85, 587]
+	  Port			  "4"
+	  Port {
+	    PortNumber		    1
+	    Name		    "hline line color"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "fill color"
+	  Position		  [55, 668, 85, 682]
+	  Port			  "5"
+	  Port {
+	    PortNumber		    1
+	    Name		    "hline fill color"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  TriggerPort
+	  Name			  "Trigger"
+	  Ports			  []
+	  Position		  [380, 20, 400, 40]
+	  TriggerType		  "function-call"
+	  StatesWhenEnabling	  "held"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  Ports			  [1, 2]
+	  Position		  [316, 170, 394, 190]
+	  Orientation		  "down"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Outputs		  "2"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Function-Call\nGenerator"
+	  Ports			  [0, 1]
+	  Position		  [205, 120, 255, 140]
+	  SourceBlock		  "simulink/Ports &\nSubsystems/Function-Call"
+"\nGenerator"
+	  SourceType		  "Function-Call Generator"
+	  sample_time		  "-1"
+	  numberOfIterations	  "1"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Subsystem"
+	  Ports			  [5, 0, 0, 1]
+	  Position		  [285, 242, 385, 728]
+	  TreatAsAtomicUnit	  off
+	  System {
+	    Name		    "Subsystem"
+	    Location		    [258, 131, 1168, 685]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "x0"
+	      Position		      [25, 83, 55, 97]
+	      Port {
+		PortNumber		1
+		Name			"hline x0"
+		PropagatedSignals	"hline x0"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "x1"
+	      Position		      [25, 178, 55, 192]
+	      Port		      "2"
+	      Port {
+		PortNumber		1
+		Name			"hline x1"
+		PropagatedSignals	"hline x1"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "y"
+	      Position		      [25, 273, 55, 287]
+	      Port		      "3"
+	      Port {
+		PortNumber		1
+		Name			"hline y"
+		PropagatedSignals	"hline y"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "line color"
+	      Position		      [25, 368, 55, 382]
+	      Port		      "4"
+	      Port {
+		PortNumber		1
+		Name			"line color"
+		PropagatedSignals	"hline line color"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "fill color"
+	      Position		      [25, 463, 55, 477]
+	      Port		      "5"
+	      Port {
+		PortNumber		1
+		Name			"fill color"
+		PropagatedSignals	"hline fill color"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      TriggerPort
+	      Name		      "Trigger"
+	      Ports		      []
+	      Position		      [65, 15, 85, 35]
+	      TriggerType	      "function-call"
+	      StatesWhenEnabling      "held"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Send CAN Messages"
+	      Ports		      [5]
+	      Position		      [130, 45, 885, 515]
+	      ShowName		      off
+	      SourceBlock	      "MotoHawk_lib/CAN Blocks/Send CAN Messag"
+"es"
+	      SourceType	      "MotoHawk Send CAN Messages"
+	      bus		      "miniview_CAN_channel"
+	      msgl		      "miniview_draw_hline"
+	      pace		      "-1"
+	      labelwires	      "on"
+	    }
+	    Line {
+	      Name		      "hline y"
+	      Labels		      [0, 0]
+	      SrcBlock		      "y"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      3
+	    }
+	    Line {
+	      Name		      "hline x1"
+	      Labels		      [0, 0]
+	      SrcBlock		      "x1"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "hline x0"
+	      Labels		      [0, 0]
+	      SrcBlock		      "x0"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "line color"
+	      Labels		      [0, 0]
+	      SrcBlock		      "line color"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      4
+	    }
+	    Line {
+	      Name		      "fill color"
+	      Labels		      [0, 0]
+	      SrcBlock		      "fill color"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      5
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Next"
+	  Position		  [445, 213, 475, 227]
+	}
+	Line {
+	  Name			  "hline x0"
+	  SrcBlock		  "x0"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "hline x1"
+	  SrcBlock		  "x1"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "hline y"
+	  SrcBlock		  "y"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "hline line color"
+	  SrcBlock		  "line color"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "hline fill color"
+	  SrcBlock		  "fill color"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  trigger
+	}
+	Line {
+	  SrcBlock		  "Function-Call\nGenerator"
+	  SrcPort		  1
+	  Points		  [95, 0]
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  Points		  [0, 25]
+	  DstBlock		  "Next"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Draw Prompt Next"
+      Ports		      [4, 1, 0, 1]
+      Position		      [335, 528, 470, 642]
+      BackgroundColor	      "yellow"
+      TreatAsAtomicUnit	      off
+      MaskType		      "MotoHawk MiniView Draw Prompt Next"
+      MaskDescription	      "MotoHawk MiniView Draw Prompt Next\n\nstring # "
+"(0 to 15):  which string buffer to use.\n\ninit_str (F,T):  when TRUE, initia"
+"lize string buffer in gauge (by sending CAN message).  must be done first tim"
+"e prompt is drawn, and whenever buffer has been changed.\n\ntopbot (F,T):  wh"
+"en FALSE, prompt at \"top\" position; when TRUE, prompt at \"bottom\" positio"
+"n.\n\noffs_v (0 to 55 when topbot is FALSE, otherwise 0):  vertical offset (d"
+"ownwards) for prompt from \"top\" position."
+      MaskPromptString	      "Physical CAN Channel"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "off"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskVariables	      "miniview_CAN_channel=@1;"
+      MaskDisplay	      "disp(['\\nDraw\\nPrompt\\n[up]NEXT[dn]\\nChanne"
+"l:  CAN_' num2str(miniview_CAN_channel)])"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "2"
+      System {
+	Name			"Draw Prompt Next"
+	Location		[97, 83, 842, 958]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "string #"
+	  Position		  [20, 248, 50, 262]
+	  BackgroundColor	  "orange"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "init_str"
+	  Position		  [20, 78, 50, 92]
+	  BackgroundColor	  "orange"
+	  Port			  "2"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "topbot"
+	  Position		  [20, 328, 50, 342]
+	  BackgroundColor	  "orange"
+	  Port			  "3"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "offs_v"
+	  Position		  [20, 373, 50, 387]
+	  BackgroundColor	  "orange"
+	  Port			  "4"
+	}
+	Block {
+	  BlockType		  TriggerPort
+	  Name			  "Trigger"
+	  Ports			  []
+	  Position		  [25, 20, 45, 40]
+	  TriggerType		  "function-call"
+	  StatesWhenEnabling	  "held"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant"
+	  Position		  [345, 458, 445, 472]
+	  ShowName		  off
+	  Value			  "uint8( 1 )"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  Position		  [345, 488, 445, 502]
+	  ShowName		  off
+	  Value			  "uint8( 0 )"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant10"
+	  Position		  [345, 573, 445, 587]
+	  ShowName		  off
+	  Value			  "uint8( 17 )"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant11"
+	  Position		  [345, 748, 445, 762]
+	  ShowName		  off
+	  Value			  "uint8( 41 )"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant12"
+	  Position		  [345, 278, 445, 292]
+	  ShowName		  off
+	  Value			  "uint8( 25 )"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant2"
+	  Position		  [345, 153, 485, 167]
+	  ShowName		  off
+	  Value			  "uint8( [ 'NEXT' 0 0 0 ] )"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant4"
+	  Position		  [345, 543, 445, 557]
+	  ShowName		  off
+	  Value			  "uint8( 4 ) % UP-ptr"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant5"
+	  Position		  [345, 718, 445, 732]
+	  ShowName		  off
+	  Value			  "uint8( 3 ) % DN-ptr"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant6"
+	  Position		  [260, 348, 360, 362]
+	  ShowName		  off
+	  Value			  "uint8( 53 )"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant7"
+	  Position		  [260, 303, 360, 317]
+	  ShowName		  off
+	  Value			  "uint8( 3 )"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant8"
+	  Position		  [345, 428, 445, 442]
+	  ShowName		  off
+	  Value			  "uint8( 0 )"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant9"
+	  Position		  [345, 398, 445, 412]
+	  ShowName		  off
+	  Value			  "uint8( 1 )"
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion"
+	  Position		  [310, 328, 360, 342]
+	  ShowName		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Draw Bitmap"
+	  Ports			  [5, 1, 0, 1]
+	  Position		  [530, 538, 665, 682]
+	  BackgroundColor	  "yellow"
+	  ShowName		  off
+	  SourceBlock		  "miniview_lib/Draw Bitmap"
+	  SourceType		  "MotoHawk MiniView Draw Bitmap"
+	  miniview_CAN_channel	  "miniview_CAN_channel"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Draw Bitmap1"
+	  Ports			  [5, 1, 0, 1]
+	  Position		  [530, 713, 665, 857]
+	  BackgroundColor	  "yellow"
+	  ShowName		  off
+	  SourceBlock		  "miniview_lib/Draw Bitmap"
+	  SourceType		  "MotoHawk MiniView Draw Bitmap"
+	  miniview_CAN_channel	  "miniview_CAN_channel"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Draw String"
+	  Ports			  [9, 1, 0, 1]
+	  Position		  [530, 243, 665, 507]
+	  BackgroundColor	  "yellow"
+	  ShowName		  off
+	  SourceBlock		  "miniview_lib/Draw String"
+	  SourceType		  "MotoHawk MiniView Draw String"
+	  miniview_CAN_channel	  "miniview_CAN_channel"
+	}
+	Block {
+	  BlockType		  If
+	  Name			  "If"
+	  Ports			  [1, 2]
+	  Position		  [210, 18, 280, 147]
+	  IfExpression		  "u1"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [2, 1]
+	  Position		  [570, 201, 575, 234]
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1]
+	  Position		  [390, 324, 420, 366]
+	  BackgroundColor	  "yellow"
+	  ShowName		  off
+	  OutDataTypeMode	  "uint8"
+	  RndMeth		  "Zero"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Send Substring (page 0)"
+	  Ports			  [2, 1, 0, 1]
+	  Position		  [530, 108, 665, 177]
+	  BackgroundColor	  "yellow"
+	  ShowName		  off
+	  SourceBlock		  "miniview_lib/Send Substring (page 0)"
+	  SourceType		  "MotoHawk MiniView Send String (Page 0)"
+	  miniview_CAN_channel	  "miniview_CAN_channel"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Signal Specification"
+	  Ports			  [1, 1]
+	  Position		  [80, 78, 180, 92]
+	  ShowName		  off
+	  SourceBlock		  "simulink/Signal\nAttributes/Signal Specific"
+"ation"
+	  SourceType		  "Signal Specification"
+	  D			  "1"
+	  Ts			  "-1"
+	  DataType		  "boolean"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  SignalType		  "auto"
+	  SamplingMode		  "auto"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Signal Specification1"
+	  Ports			  [1, 1]
+	  Position		  [80, 328, 180, 342]
+	  ShowName		  off
+	  SourceBlock		  "simulink/Signal\nAttributes/Signal Specific"
+"ation"
+	  SourceType		  "Signal Specification"
+	  D			  "1"
+	  Ts			  "-1"
+	  DataType		  "boolean"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  SignalType		  "auto"
+	  SamplingMode		  "auto"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Signal Specification2"
+	  Ports			  [1, 1]
+	  Position		  [80, 373, 180, 387]
+	  ShowName		  off
+	  SourceBlock		  "simulink/Signal\nAttributes/Signal Specific"
+"ation"
+	  SourceType		  "Signal Specification"
+	  D			  "1"
+	  Ts			  "-1"
+	  DataType		  "uint8"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  SignalType		  "auto"
+	  SamplingMode		  "auto"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Signal Specification3"
+	  Ports			  [1, 1]
+	  Position		  [80, 248, 180, 262]
+	  ShowName		  off
+	  SourceBlock		  "simulink/Signal\nAttributes/Signal Specific"
+"ation"
+	  SourceType		  "Signal Specification"
+	  D			  "1"
+	  Ts			  "-1"
+	  DataType		  "uint8"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  SignalType		  "auto"
+	  SamplingMode		  "auto"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  Ports			  [3, 1]
+	  Position		  [450, 335, 470, 355]
+	  BackgroundColor	  "yellow"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "+++"
+	  RndMeth		  "Zero"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  Ports			  [2, 1]
+	  Position		  [475, 395, 495, 415]
+	  Orientation		  "down"
+	  BackgroundColor	  "yellow"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "++|"
+	  RndMeth		  "Zero"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "draw_only"
+	  Ports			  [0, 1, 0, 0, 0, 0, 0, 1]
+	  Position		  [300, 215, 365, 235]
+	  TreatAsAtomicUnit	  off
+	  System {
+	    Name		    "draw_only"
+	    Location		    [417, 74, 690, 191]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      ActionPort
+	      Name		      "Action Port"
+	      Position		      [20, 30, 79, 58]
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Function-Call\nGenerator"
+	      Ports		      [0, 1]
+	      Position		      [130, 35, 175, 55]
+	      ShowName		      off
+	      SourceBlock	      "simulink/Ports &\nSubsystems/Function-C"
+"all\nGenerator"
+	      SourceType	      "Function-Call Generator"
+	      sample_time	      "-1"
+	      numberOfIterations      "1"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "f()"
+	      Position		      [205, 38, 235, 52]
+	      BackgroundColor	      "cyan"
+	    }
+	    Line {
+	      SrcBlock		      "Function-Call\nGenerator"
+	      SrcPort		      1
+	      DstBlock		      "f()"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "init_string_and_draw"
+	  Ports			  [0, 1, 0, 0, 0, 0, 0, 1]
+	  Position		  [300, 75, 365, 95]
+	  TreatAsAtomicUnit	  off
+	  System {
+	    Name		    "init_string_and_draw"
+	    Location		    [417, 74, 690, 191]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      ActionPort
+	      Name		      "Action Port"
+	      Position		      [20, 30, 79, 58]
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Function-Call\nGenerator"
+	      Ports		      [0, 1]
+	      Position		      [130, 35, 175, 55]
+	      ShowName		      off
+	      SourceBlock	      "simulink/Ports &\nSubsystems/Function-C"
+"all\nGenerator"
+	      SourceType	      "Function-Call Generator"
+	      sample_time	      "-1"
+	      numberOfIterations      "1"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "f()"
+	      Position		      [205, 38, 235, 52]
+	      BackgroundColor	      "cyan"
+	    }
+	    Line {
+	      SrcBlock		      "Function-Call\nGenerator"
+	      SrcPort		      1
+	      DstBlock		      "f()"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Next"
+	  Position		  [690, 778, 720, 792]
+	  BackgroundColor	  "cyan"
+	}
+	Line {
+	  SrcBlock		  "Signal Specification3"
+	  SrcPort		  1
+	  Points		  [320, 0]
+	  Branch {
+	    DstBlock		    "Draw String"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -130]
+	    DstBlock		    "Send Substring (page 0)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "string #"
+	  SrcPort		  1
+	  DstBlock		  "Signal Specification3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Signal Specification"
+	  SrcPort		  1
+	  DstBlock		  "If"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "draw_only"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "init_string_and_draw"
+	  SrcPort		  1
+	  Points		  [225, 0]
+	  DstBlock		  "Send Substring (page 0)"
+	  DstPort		  trigger
+	}
+	Line {
+	  SrcBlock		  "If"
+	  SrcPort		  2
+	  Points		  [45, 0]
+	  DstBlock		  "draw_only"
+	  DstPort		  ifaction
+	}
+	Line {
+	  SrcBlock		  "If"
+	  SrcPort		  1
+	  Points		  [45, 0]
+	  DstBlock		  "init_string_and_draw"
+	  DstPort		  ifaction
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "Draw String"
+	  DstPort		  trigger
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  Points		  [0, 0; 10, 0]
+	  Branch {
+	    DstBlock		    "Sum1"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, -30]
+	    DstBlock		    "Draw String"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "Constant6"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant10"
+	  SrcPort		  1
+	  DstBlock		  "Draw Bitmap"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant11"
+	  SrcPort		  1
+	  DstBlock		  "Draw Bitmap1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant12"
+	  SrcPort		  1
+	  DstBlock		  "Draw String"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant9"
+	  SrcPort		  1
+	  DstBlock		  "Sum1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  Points		  [0, 0; 0, 190]
+	  Branch {
+	    DstBlock		    "Draw Bitmap"
+	    DstPort		    3
+	  }
+	  Branch {
+	    Points		    [0, 175]
+	    DstBlock		    "Draw Bitmap1"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "Constant8"
+	  SrcPort		  1
+	  Points		  [5, 0; 50, 0]
+	  Branch {
+	    Points		    [0, -30]
+	    Branch {
+	      Points		      [0, -30]
+	      Branch {
+		Points			[0, -30]
+		DstBlock		"Draw String"
+		DstPort			4
+	      }
+	      Branch {
+		DstBlock		"Draw String"
+		DstPort			5
+	      }
+	    }
+	    Branch {
+	      DstBlock		      "Draw String"
+	      DstPort		      6
+	    }
+	  }
+	  Branch {
+	    DstBlock		    "Draw String"
+	    DstPort		    7
+	  }
+	}
+	Line {
+	  SrcBlock		  "Signal Specification2"
+	  SrcPort		  1
+	  Points		  [275, 0]
+	  DstBlock		  "Sum"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant7"
+	  SrcPort		  1
+	  Points		  [95, 0]
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Signal Specification1"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "offs_v"
+	  SrcPort		  1
+	  DstBlock		  "Signal Specification2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "topbot"
+	  SrcPort		  1
+	  DstBlock		  "Signal Specification1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "init_str"
+	  SrcPort		  1
+	  DstBlock		  "Signal Specification"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Draw Bitmap"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, 78; -85, 0]
+	  DstBlock		  "Draw Bitmap1"
+	  DstPort		  trigger
+	}
+	Line {
+	  SrcBlock		  "Send Substring (page 0)"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, 45; -140, 0; 0, 20]
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Draw String"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, 140; -85, 0]
+	  DstBlock		  "Draw Bitmap"
+	  DstPort		  trigger
+	}
+	Line {
+	  SrcBlock		  "Draw Bitmap1"
+	  SrcPort		  1
+	  DstBlock		  "Next"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant4"
+	  SrcPort		  1
+	  DstBlock		  "Draw Bitmap"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant5"
+	  SrcPort		  1
+	  DstBlock		  "Draw Bitmap1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant2"
+	  SrcPort		  1
+	  DstBlock		  "Send Substring (page 0)"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  Points		  [5, 0; 10, 0]
+	  Branch {
+	    DstBlock		    "Draw String"
+	    DstPort		    9
+	  }
+	  Branch {
+	    Points		    [0, 175]
+	    Branch {
+	      Points		      [0, 175]
+	      DstBlock		      "Draw Bitmap1"
+	      DstPort		      5
+	    }
+	    Branch {
+	      DstBlock		      "Draw Bitmap"
+	      DstPort		      5
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  Points		  [5, 0; 20, 0]
+	  Branch {
+	    DstBlock		    "Draw String"
+	    DstPort		    8
+	  }
+	  Branch {
+	    Points		    [0, 175]
+	    Branch {
+	      Points		      [0, 175]
+	      DstBlock		      "Draw Bitmap1"
+	      DstPort		      4
+	    }
+	    Branch {
+	      DstBlock		      "Draw Bitmap"
+	      DstPort		      4
+	    }
+	  }
+	}
+	Annotation {
+	  Name			  "DRAW\n\"[up]NEXT[dn]\"\nPROMPT"
+	  Position		  [126, 182]
+	  FontName		  "Arial"
+	  FontSize		  24
+	  FontWeight		  "bold"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Draw Prompt Select"
+      Ports		      [4, 1, 0, 1]
+      Position		      [180, 528, 315, 642]
+      BackgroundColor	      "yellow"
+      TreatAsAtomicUnit	      off
+      MaskType		      "MotoHawk MiniView Draw Prompt Select"
+      MaskDescription	      "MotoHawk MiniView Draw Prompt Select\n\nstring "
+"# (0 to 15):  which string buffer to use.\n\ninit_str (F,T):  when TRUE, init"
+"ialize string buffer in gauge (by sending CAN message).  must be done first t"
+"ime prompt is drawn, and whenever buffer has been changed.\n\ntopbot (F,T):  "
+"when FALSE, prompt at \"top\" position; when TRUE, prompt at \"bottom\" posit"
+"ion.\n\noffs_v (0 to 55 when topbot is FALSE, otherwise 0):  vertical offset "
+"(downwards) for prompt from \"top\" position."
+      MaskPromptString	      "Physical CAN Channel"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "off"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskVariables	      "miniview_CAN_channel=@1;"
+      MaskDisplay	      "disp(['\\nDraw\\nPrompt\\n[up]SEL[dn]\\nChannel"
+":  CAN_' num2str(miniview_CAN_channel)])"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "2"
+      System {
+	Name			"Draw Prompt Select"
+	Location		[97, 83, 842, 958]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "string #"
+	  Position		  [20, 248, 50, 262]
+	  BackgroundColor	  "orange"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "init_str"
+	  Position		  [20, 78, 50, 92]
+	  BackgroundColor	  "orange"
+	  Port			  "2"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "topbot"
+	  Position		  [20, 328, 50, 342]
+	  BackgroundColor	  "orange"
+	  Port			  "3"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "offs_v"
+	  Position		  [20, 373, 50, 387]
+	  BackgroundColor	  "orange"
+	  Port			  "4"
+	}
+	Block {
+	  BlockType		  TriggerPort
+	  Name			  "Trigger"
+	  Ports			  []
+	  Position		  [25, 20, 45, 40]
+	  TriggerType		  "function-call"
+	  StatesWhenEnabling	  "held"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant"
+	  Position		  [345, 458, 445, 472]
+	  ShowName		  off
+	  Value			  "uint8( 1 )"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  Position		  [345, 488, 445, 502]
+	  ShowName		  off
+	  Value			  "uint8( 0 )"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant10"
+	  Position		  [345, 573, 445, 587]
+	  ShowName		  off
+	  Value			  "uint8( 19 )"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant11"
+	  Position		  [345, 748, 445, 762]
+	  ShowName		  off
+	  Value			  "uint8( 39 )"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant12"
+	  Position		  [345, 278, 445, 292]
+	  ShowName		  off
+	  Value			  "uint8( 27 )"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant2"
+	  Position		  [345, 153, 485, 167]
+	  ShowName		  off
+	  Value			  "uint8( [ 'SEL' 0 0 0 0 ] )"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant4"
+	  Position		  [345, 543, 445, 557]
+	  ShowName		  off
+	  Value			  "uint8( 4 ) % UP-ptr"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant5"
+	  Position		  [345, 718, 445, 732]
+	  ShowName		  off
+	  Value			  "uint8( 3 ) % DN-ptr"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant6"
+	  Position		  [260, 348, 360, 362]
+	  ShowName		  off
+	  Value			  "uint8( 55 )"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant7"
+	  Position		  [260, 303, 360, 317]
+	  ShowName		  off
+	  Value			  "uint8( 2 )"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant8"
+	  Position		  [345, 428, 445, 442]
+	  ShowName		  off
+	  Value			  "uint8( 0 )"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant9"
+	  Position		  [345, 398, 445, 412]
+	  ShowName		  off
+	  Value			  "uint8( 1 )"
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion"
+	  Position		  [310, 328, 360, 342]
+	  ShowName		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Draw Bitmap"
+	  Ports			  [5, 1, 0, 1]
+	  Position		  [530, 538, 665, 682]
+	  BackgroundColor	  "yellow"
+	  ShowName		  off
+	  SourceBlock		  "miniview_lib/Draw Bitmap"
+	  SourceType		  "MotoHawk MiniView Draw Bitmap"
+	  miniview_CAN_channel	  "miniview_CAN_channel"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Draw Bitmap1"
+	  Ports			  [5, 1, 0, 1]
+	  Position		  [530, 713, 665, 857]
+	  BackgroundColor	  "yellow"
+	  ShowName		  off
+	  SourceBlock		  "miniview_lib/Draw Bitmap"
+	  SourceType		  "MotoHawk MiniView Draw Bitmap"
+	  miniview_CAN_channel	  "miniview_CAN_channel"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Draw String"
+	  Ports			  [9, 1, 0, 1]
+	  Position		  [530, 243, 665, 507]
+	  BackgroundColor	  "yellow"
+	  ShowName		  off
+	  SourceBlock		  "miniview_lib/Draw String"
+	  SourceType		  "MotoHawk MiniView Draw String"
+	  miniview_CAN_channel	  "miniview_CAN_channel"
+	}
+	Block {
+	  BlockType		  If
+	  Name			  "If"
+	  Ports			  [1, 2]
+	  Position		  [210, 18, 280, 147]
+	  IfExpression		  "u1"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [2, 1]
+	  Position		  [570, 201, 575, 234]
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1]
+	  Position		  [390, 324, 420, 366]
+	  BackgroundColor	  "yellow"
+	  ShowName		  off
+	  OutDataTypeMode	  "uint8"
+	  RndMeth		  "Zero"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Send Substring (page 0)"
+	  Ports			  [2, 1, 0, 1]
+	  Position		  [530, 108, 665, 177]
+	  BackgroundColor	  "yellow"
+	  ShowName		  off
+	  SourceBlock		  "miniview_lib/Send Substring (page 0)"
+	  SourceType		  "MotoHawk MiniView Send String (Page 0)"
+	  miniview_CAN_channel	  "miniview_CAN_channel"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Signal Specification"
+	  Ports			  [1, 1]
+	  Position		  [80, 78, 180, 92]
+	  ShowName		  off
+	  SourceBlock		  "simulink/Signal\nAttributes/Signal Specific"
+"ation"
+	  SourceType		  "Signal Specification"
+	  D			  "1"
+	  Ts			  "-1"
+	  DataType		  "boolean"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  SignalType		  "auto"
+	  SamplingMode		  "auto"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Signal Specification1"
+	  Ports			  [1, 1]
+	  Position		  [80, 328, 180, 342]
+	  ShowName		  off
+	  SourceBlock		  "simulink/Signal\nAttributes/Signal Specific"
+"ation"
+	  SourceType		  "Signal Specification"
+	  D			  "1"
+	  Ts			  "-1"
+	  DataType		  "boolean"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  SignalType		  "auto"
+	  SamplingMode		  "auto"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Signal Specification2"
+	  Ports			  [1, 1]
+	  Position		  [80, 373, 180, 387]
+	  ShowName		  off
+	  SourceBlock		  "simulink/Signal\nAttributes/Signal Specific"
+"ation"
+	  SourceType		  "Signal Specification"
+	  D			  "1"
+	  Ts			  "-1"
+	  DataType		  "uint8"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  SignalType		  "auto"
+	  SamplingMode		  "auto"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Signal Specification3"
+	  Ports			  [1, 1]
+	  Position		  [80, 248, 180, 262]
+	  ShowName		  off
+	  SourceBlock		  "simulink/Signal\nAttributes/Signal Specific"
+"ation"
+	  SourceType		  "Signal Specification"
+	  D			  "1"
+	  Ts			  "-1"
+	  DataType		  "uint8"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  SignalType		  "auto"
+	  SamplingMode		  "auto"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  Ports			  [3, 1]
+	  Position		  [450, 335, 470, 355]
+	  BackgroundColor	  "yellow"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "+++"
+	  RndMeth		  "Zero"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  Ports			  [2, 1]
+	  Position		  [475, 395, 495, 415]
+	  Orientation		  "down"
+	  BackgroundColor	  "yellow"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "++|"
+	  RndMeth		  "Zero"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "draw_only"
+	  Ports			  [0, 1, 0, 0, 0, 0, 0, 1]
+	  Position		  [300, 215, 365, 235]
+	  TreatAsAtomicUnit	  off
+	  System {
+	    Name		    "draw_only"
+	    Location		    [417, 74, 690, 191]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      ActionPort
+	      Name		      "Action Port"
+	      Position		      [20, 30, 79, 58]
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Function-Call\nGenerator"
+	      Ports		      [0, 1]
+	      Position		      [130, 35, 175, 55]
+	      ShowName		      off
+	      SourceBlock	      "simulink/Ports &\nSubsystems/Function-C"
+"all\nGenerator"
+	      SourceType	      "Function-Call Generator"
+	      sample_time	      "-1"
+	      numberOfIterations      "1"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "f()"
+	      Position		      [205, 38, 235, 52]
+	      BackgroundColor	      "cyan"
+	    }
+	    Line {
+	      SrcBlock		      "Function-Call\nGenerator"
+	      SrcPort		      1
+	      DstBlock		      "f()"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "init_string_and_draw"
+	  Ports			  [0, 1, 0, 0, 0, 0, 0, 1]
+	  Position		  [300, 75, 365, 95]
+	  TreatAsAtomicUnit	  off
+	  System {
+	    Name		    "init_string_and_draw"
+	    Location		    [417, 74, 690, 191]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      ActionPort
+	      Name		      "Action Port"
+	      Position		      [20, 30, 79, 58]
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Function-Call\nGenerator"
+	      Ports		      [0, 1]
+	      Position		      [130, 35, 175, 55]
+	      ShowName		      off
+	      SourceBlock	      "simulink/Ports &\nSubsystems/Function-C"
+"all\nGenerator"
+	      SourceType	      "Function-Call Generator"
+	      sample_time	      "-1"
+	      numberOfIterations      "1"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "f()"
+	      Position		      [205, 38, 235, 52]
+	      BackgroundColor	      "cyan"
+	    }
+	    Line {
+	      SrcBlock		      "Function-Call\nGenerator"
+	      SrcPort		      1
+	      DstBlock		      "f()"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Next"
+	  Position		  [690, 778, 720, 792]
+	  BackgroundColor	  "cyan"
+	}
+	Line {
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  Points		  [5, 0; 20, 0]
+	  Branch {
+	    Points		    [0, 175]
+	    Branch {
+	      DstBlock		      "Draw Bitmap"
+	      DstPort		      4
+	    }
+	    Branch {
+	      Points		      [0, 175]
+	      DstBlock		      "Draw Bitmap1"
+	      DstPort		      4
+	    }
+	  }
+	  Branch {
+	    DstBlock		    "Draw String"
+	    DstPort		    8
+	  }
+	}
+	Line {
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  Points		  [5, 0; 10, 0]
+	  Branch {
+	    Points		    [0, 175]
+	    Branch {
+	      DstBlock		      "Draw Bitmap"
+	      DstPort		      5
+	    }
+	    Branch {
+	      Points		      [0, 175]
+	      DstBlock		      "Draw Bitmap1"
+	      DstPort		      5
+	    }
+	  }
+	  Branch {
+	    DstBlock		    "Draw String"
+	    DstPort		    9
+	  }
+	}
+	Line {
+	  SrcBlock		  "Constant2"
+	  SrcPort		  1
+	  DstBlock		  "Send Substring (page 0)"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant5"
+	  SrcPort		  1
+	  DstBlock		  "Draw Bitmap1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant4"
+	  SrcPort		  1
+	  DstBlock		  "Draw Bitmap"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Draw Bitmap1"
+	  SrcPort		  1
+	  DstBlock		  "Next"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Draw String"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, 140; -85, 0]
+	  DstBlock		  "Draw Bitmap"
+	  DstPort		  trigger
+	}
+	Line {
+	  SrcBlock		  "Send Substring (page 0)"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, 45; -140, 0; 0, 20]
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Draw Bitmap"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, 78; -85, 0]
+	  DstBlock		  "Draw Bitmap1"
+	  DstPort		  trigger
+	}
+	Line {
+	  SrcBlock		  "init_str"
+	  SrcPort		  1
+	  DstBlock		  "Signal Specification"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "topbot"
+	  SrcPort		  1
+	  DstBlock		  "Signal Specification1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "offs_v"
+	  SrcPort		  1
+	  DstBlock		  "Signal Specification2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Signal Specification1"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant7"
+	  SrcPort		  1
+	  Points		  [95, 0]
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Signal Specification2"
+	  SrcPort		  1
+	  Points		  [275, 0]
+	  DstBlock		  "Sum"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Constant8"
+	  SrcPort		  1
+	  Points		  [5, 0; 50, 0]
+	  Branch {
+	    DstBlock		    "Draw String"
+	    DstPort		    7
+	  }
+	  Branch {
+	    Points		    [0, -30]
+	    Branch {
+	      DstBlock		      "Draw String"
+	      DstPort		      6
+	    }
+	    Branch {
+	      Points		      [0, -30]
+	      Branch {
+		DstBlock		"Draw String"
+		DstPort			5
+	      }
+	      Branch {
+		Points			[0, -30]
+		DstBlock		"Draw String"
+		DstPort			4
+	      }
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  Points		  [0, 0; 0, 190]
+	  Branch {
+	    Points		    [0, 175]
+	    DstBlock		    "Draw Bitmap1"
+	    DstPort		    3
+	  }
+	  Branch {
+	    DstBlock		    "Draw Bitmap"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "Constant9"
+	  SrcPort		  1
+	  DstBlock		  "Sum1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant12"
+	  SrcPort		  1
+	  DstBlock		  "Draw String"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant11"
+	  SrcPort		  1
+	  DstBlock		  "Draw Bitmap1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant10"
+	  SrcPort		  1
+	  DstBlock		  "Draw Bitmap"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant6"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  Points		  [0, 0; 10, 0]
+	  Branch {
+	    Points		    [0, -30]
+	    DstBlock		    "Draw String"
+	    DstPort		    3
+	  }
+	  Branch {
+	    DstBlock		    "Sum1"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "Draw String"
+	  DstPort		  trigger
+	}
+	Line {
+	  SrcBlock		  "If"
+	  SrcPort		  1
+	  Points		  [45, 0]
+	  DstBlock		  "init_string_and_draw"
+	  DstPort		  ifaction
+	}
+	Line {
+	  SrcBlock		  "If"
+	  SrcPort		  2
+	  Points		  [45, 0]
+	  DstBlock		  "draw_only"
+	  DstPort		  ifaction
+	}
+	Line {
+	  SrcBlock		  "init_string_and_draw"
+	  SrcPort		  1
+	  Points		  [225, 0]
+	  DstBlock		  "Send Substring (page 0)"
+	  DstPort		  trigger
+	}
+	Line {
+	  SrcBlock		  "draw_only"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Signal Specification"
+	  SrcPort		  1
+	  DstBlock		  "If"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "string #"
+	  SrcPort		  1
+	  DstBlock		  "Signal Specification3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Signal Specification3"
+	  SrcPort		  1
+	  Points		  [320, 0]
+	  Branch {
+	    Points		    [0, -130]
+	    DstBlock		    "Send Substring (page 0)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Draw String"
+	    DstPort		    1
+	  }
+	}
+	Annotation {
+	  Name			  "DRAW\n\"[up]SEL[dn]\"\nPROMPT"
+	  Position		  [126, 182]
+	  FontName		  "Arial"
+	  FontSize		  24
+	  FontWeight		  "bold"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Draw Rect"
+      Ports		      [6, 1, 0, 1]
+      Position		      [180, 158, 315, 332]
+      BackgroundColor	      "yellow"
+      TreatAsAtomicUnit	      off
+      MaskType		      "MotoHawk MiniView Draw Rectangle"
+      MaskDescription	      "MotoHawk MiniView Draw Rectangle"
+      MaskPromptString	      "Physical CAN Channel"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "off"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskVariables	      "miniview_CAN_channel=@1;"
+      MaskDisplay	      "disp(['MiniView\\nDraw Rectangle\\nChannel:  CA"
+"N_' num2str(miniview_CAN_channel) '\\n\\n\\n\\n'])"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "2"
+      System {
+	Name			"Draw Rect"
+	Location		[169, 81, 912, 916]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "x0"
+	  Position		  [95, 208, 125, 222]
+	  Port {
+	    PortNumber		    1
+	    Name		    "rect x0"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "x1"
+	  Position		  [95, 313, 125, 327]
+	  Port			  "2"
+	  Port {
+	    PortNumber		    1
+	    Name		    "rect x1"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "y0"
+	  Position		  [95, 418, 125, 432]
+	  Port			  "3"
+	  Port {
+	    PortNumber		    1
+	    Name		    "rect y0"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "y1"
+	  Position		  [95, 523, 125, 537]
+	  Port			  "4"
+	  Port {
+	    PortNumber		    1
+	    Name		    "rect y1"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "line color"
+	  Position		  [95, 628, 125, 642]
+	  Port			  "5"
+	  Port {
+	    PortNumber		    1
+	    Name		    "rect line color"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "fill color"
+	  Position		  [95, 733, 125, 747]
+	  Port			  "6"
+	  Port {
+	    PortNumber		    1
+	    Name		    "rect fill color"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  TriggerPort
+	  Name			  "Trigger"
+	  Ports			  []
+	  Position		  [210, 40, 230, 60]
+	  TriggerType		  "function-call"
+	  StatesWhenEnabling	  "held"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  Ports			  [1, 2]
+	  Position		  [456, 85, 534, 105]
+	  Orientation		  "down"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Outputs		  "2"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Function-Call\nGenerator"
+	  Ports			  [0, 1]
+	  Position		  [345, 35, 395, 55]
+	  SourceBlock		  "simulink/Ports &\nSubsystems/Function-Call"
+"\nGenerator"
+	  SourceType		  "Function-Call Generator"
+	  sample_time		  "-1"
+	  numberOfIterations	  "1"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Subsystem"
+	  Ports			  [6, 0, 0, 1]
+	  Position		  [370, 155, 580, 800]
+	  TreatAsAtomicUnit	  off
+	  System {
+	    Name		    "Subsystem"
+	    Location		    [153, 122, 1063, 658]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "x0"
+	      Position		      [25, 78, 55, 92]
+	      Port {
+		PortNumber		1
+		Name			"rect x0"
+		PropagatedSignals	"rect x0"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "x1"
+	      Position		      [25, 153, 55, 167]
+	      Port		      "2"
+	      Port {
+		PortNumber		1
+		Name			"rect x1"
+		PropagatedSignals	"rect x1"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "y0"
+	      Position		      [25, 228, 55, 242]
+	      Port		      "3"
+	      Port {
+		PortNumber		1
+		Name			"rect y0"
+		PropagatedSignals	"rect y0"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "y1"
+	      Position		      [25, 303, 55, 317]
+	      Port		      "4"
+	      Port {
+		PortNumber		1
+		Name			"rect y1"
+		PropagatedSignals	"rect y1"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "line color"
+	      Position		      [25, 378, 55, 392]
+	      Port		      "5"
+	      Port {
+		PortNumber		1
+		Name			"line color"
+		PropagatedSignals	"rect line color"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "fill color"
+	      Position		      [25, 453, 55, 467]
+	      Port		      "6"
+	      Port {
+		PortNumber		1
+		Name			"fill color"
+		PropagatedSignals	"rect fill color"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      TriggerPort
+	      Name		      "Trigger"
+	      Ports		      []
+	      Position		      [85, 15, 105, 35]
+	      TriggerType	      "function-call"
+	      StatesWhenEnabling      "held"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Send CAN Messages"
+	      Ports		      [6]
+	      Position		      [130, 47, 885, 498]
+	      ShowName		      off
+	      SourceBlock	      "MotoHawk_lib/CAN Blocks/Send CAN Messag"
+"es"
+	      SourceType	      "MotoHawk Send CAN Messages"
+	      bus		      "miniview_CAN_channel"
+	      msgl		      "miniview_draw_rectangle"
+	      pace		      "-1"
+	      labelwires	      "on"
+	    }
+	    Line {
+	      Name		      "rect x0"
+	      Labels		      [0, 0]
+	      SrcBlock		      "x0"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "rect x1"
+	      Labels		      [0, 0]
+	      SrcBlock		      "x1"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "rect y0"
+	      Labels		      [0, 0]
+	      SrcBlock		      "y0"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      3
+	    }
+	    Line {
+	      Name		      "rect y1"
+	      Labels		      [0, 0]
+	      SrcBlock		      "y1"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      4
+	    }
+	    Line {
+	      Name		      "line color"
+	      Labels		      [0, 0]
+	      SrcBlock		      "line color"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      5
+	    }
+	    Line {
+	      Name		      "fill color"
+	      Labels		      [0, 0]
+	      SrcBlock		      "fill color"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      6
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Next"
+	  Position		  [585, 128, 615, 142]
+	}
+	Line {
+	  Name			  "rect x0"
+	  SrcBlock		  "x0"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "rect x1"
+	  SrcBlock		  "x1"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "rect y0"
+	  SrcBlock		  "y0"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "rect y1"
+	  SrcBlock		  "y1"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "rect line color"
+	  SrcBlock		  "line color"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  5
+	}
+	Line {
+	  Name			  "rect fill color"
+	  SrcBlock		  "fill color"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  6
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  trigger
+	}
+	Line {
+	  SrcBlock		  "Function-Call\nGenerator"
+	  SrcPort		  1
+	  Points		  [95, 0]
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  Points		  [0, 25]
+	  DstBlock		  "Next"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Draw String"
+      Ports		      [9, 1, 0, 1]
+      Position		      [645, 158, 780, 422]
+      BackgroundColor	      "yellow"
+      TreatAsAtomicUnit	      off
+      MaskType		      "MotoHawk MiniView Draw String"
+      MaskDescription	      "MotoHawk MiniView Draw String\n\nDraw string (#"
+"0 to #15) previously sent to gauge using \"Send String\"\nor \"Send Substring"
+" (Page 0/1/2)\" blocks.\n\nComment:  \"Font Fill Color\" input is ignored."
+      MaskPromptString	      "Physical CAN Channel"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "off"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskVariables	      "miniview_CAN_channel=@1;"
+      MaskDisplay	      "disp(['MiniView\\nDraw String\\nChannel:  CAN_'"
+" num2str(miniview_CAN_channel) '\\n\\n\\n\\n'])"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "2"
+      System {
+	Name			"Draw String"
+	Location		[204, 92, 758, 721]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "string #"
+	  Position		  [160, 178, 190, 192]
+	  Port {
+	    PortNumber		    1
+	    Name		    "string"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "x"
+	  Position		  [160, 223, 190, 237]
+	  Port			  "2"
+	  Port {
+	    PortNumber		    1
+	    Name		    "string x"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "y"
+	  Position		  [160, 268, 190, 282]
+	  Port			  "3"
+	  Port {
+	    PortNumber		    1
+	    Name		    "string y"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "font"
+	  Position		  [160, 313, 190, 327]
+	  Port			  "4"
+	  Port {
+	    PortNumber		    1
+	    Name		    "string font"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "horiz center"
+	  Position		  [160, 358, 190, 372]
+	  Port			  "5"
+	  Port {
+	    PortNumber		    1
+	    Name		    "string horiz center"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "vert center"
+	  Position		  [160, 403, 190, 417]
+	  Port			  "6"
+	  Port {
+	    PortNumber		    1
+	    Name		    "string vert center"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "string wrap"
+	  Position		  [160, 448, 190, 462]
+	  Port			  "7"
+	  Port {
+	    PortNumber		    1
+	    Name		    "string wrap"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "font line color"
+	  Position		  [160, 493, 190, 507]
+	  Port			  "8"
+	  Port {
+	    PortNumber		    1
+	    Name		    "bitmap line color"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "font fill color"
+	  Position		  [160, 538, 190, 552]
+	  Port			  "9"
+	  Port {
+	    PortNumber		    1
+	    Name		    "bitmap fill color"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  TriggerPort
+	  Name			  "Trigger"
+	  Ports			  []
+	  Position		  [95, 50, 115, 70]
+	  TriggerType		  "function-call"
+	  StatesWhenEnabling	  "held"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  Ports			  [1, 2]
+	  Position		  [316, 100, 394, 120]
+	  Orientation		  "down"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Outputs		  "2"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Function-Call\nGenerator"
+	  Ports			  [0, 1]
+	  Position		  [205, 50, 255, 70]
+	  SourceBlock		  "simulink/Ports &\nSubsystems/Function-Call"
+"\nGenerator"
+	  SourceType		  "Function-Call Generator"
+	  sample_time		  "-1"
+	  numberOfIterations	  "1"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Subsystem"
+	  Ports			  [9, 0, 0, 1]
+	  Position		  [285, 170, 385, 560]
+	  TreatAsAtomicUnit	  off
+	  System {
+	    Name		    "Subsystem"
+	    Location		    [203, 169, 1113, 743]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "string #"
+	      Position		      [25, 53, 55, 67]
+	      Port {
+		PortNumber		1
+		Name			"string #"
+		PropagatedSignals	"string"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "x"
+	      Position		      [25, 108, 55, 122]
+	      Port		      "2"
+	      Port {
+		PortNumber		1
+		Name			"string x"
+		PropagatedSignals	"string x"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "y"
+	      Position		      [25, 163, 55, 177]
+	      Port		      "3"
+	      Port {
+		PortNumber		1
+		Name			"string y"
+		PropagatedSignals	"string y"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "font"
+	      Position		      [25, 218, 55, 232]
+	      Port		      "4"
+	      Port {
+		PortNumber		1
+		Name			"font"
+		PropagatedSignals	"string font"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "horiz center"
+	      Position		      [25, 273, 55, 287]
+	      Port		      "5"
+	      Port {
+		PortNumber		1
+		Name			"horiz center"
+		PropagatedSignals	"string horiz center"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "vert center"
+	      Position		      [25, 328, 55, 342]
+	      Port		      "6"
+	      Port {
+		PortNumber		1
+		Name			"vert center"
+		PropagatedSignals	"string vert center"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "string wrap"
+	      Position		      [25, 383, 55, 397]
+	      Port		      "7"
+	      Port {
+		PortNumber		1
+		Name			"wrap"
+		PropagatedSignals	"string wrap"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "line color"
+	      Position		      [25, 438, 55, 452]
+	      Port		      "8"
+	      Port {
+		PortNumber		1
+		Name			"line color"
+		PropagatedSignals	"bitmap line color"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "fill color"
+	      Position		      [25, 493, 55, 507]
+	      Port		      "9"
+	      Port {
+		PortNumber		1
+		Name			"fill color"
+		PropagatedSignals	"bitmap fill color"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      TriggerPort
+	      Name		      "Trigger"
+	      Ports		      []
+	      Position		      [85, 15, 105, 35]
+	      TriggerType	      "function-call"
+	      StatesWhenEnabling      "held"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Send CAN Messages"
+	      Ports		      [9]
+	      Position		      [130, 25, 885, 535]
+	      ShowName		      off
+	      SourceBlock	      "MotoHawk_lib/CAN Blocks/Send CAN Messag"
+"es"
+	      SourceType	      "MotoHawk Send CAN Messages"
+	      bus		      "miniview_CAN_channel"
+	      msgl		      "miniview_draw_string"
+	      pace		      "-1"
+	      labelwires	      "on"
+	    }
+	    Line {
+	      Name		      "string y"
+	      Labels		      [0, 0]
+	      SrcBlock		      "y"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      3
+	    }
+	    Line {
+	      Name		      "string x"
+	      Labels		      [0, 0]
+	      SrcBlock		      "x"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "string #"
+	      Labels		      [0, 0]
+	      SrcBlock		      "string #"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "font"
+	      Labels		      [0, 0]
+	      SrcBlock		      "font"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      4
+	    }
+	    Line {
+	      Name		      "horiz center"
+	      Labels		      [0, 0]
+	      SrcBlock		      "horiz center"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      5
+	    }
+	    Line {
+	      Name		      "wrap"
+	      Labels		      [0, 0]
+	      SrcBlock		      "string wrap"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      7
+	    }
+	    Line {
+	      Name		      "vert center"
+	      Labels		      [0, 0]
+	      SrcBlock		      "vert center"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      6
+	    }
+	    Line {
+	      Name		      "line color"
+	      Labels		      [0, 0]
+	      SrcBlock		      "line color"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      8
+	    }
+	    Line {
+	      Name		      "fill color"
+	      Labels		      [0, 0]
+	      SrcBlock		      "fill color"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      9
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Next"
+	  Position		  [445, 143, 475, 157]
+	}
+	Line {
+	  Name			  "string"
+	  SrcBlock		  "string #"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "string x"
+	  SrcBlock		  "x"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "string y"
+	  SrcBlock		  "y"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "string font"
+	  SrcBlock		  "font"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "string horiz center"
+	  SrcBlock		  "horiz center"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  5
+	}
+	Line {
+	  Name			  "string vert center"
+	  SrcBlock		  "vert center"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  6
+	}
+	Line {
+	  Name			  "string wrap"
+	  SrcBlock		  "string wrap"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  7
+	}
+	Line {
+	  Name			  "bitmap line color"
+	  SrcBlock		  "font line color"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  8
+	}
+	Line {
+	  Name			  "bitmap fill color"
+	  SrcBlock		  "font fill color"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  9
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  trigger
+	}
+	Line {
+	  SrcBlock		  "Function-Call\nGenerator"
+	  SrcPort		  1
+	  Points		  [95, 0]
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  Points		  [0, 25]
+	  DstBlock		  "Next"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Draw Vline"
+      Ports		      [5, 1, 0, 1]
+      Position		      [335, 328, 470, 472]
+      BackgroundColor	      "yellow"
+      TreatAsAtomicUnit	      off
+      MaskType		      "MotoHawk MiniView Draw Vertical Line"
+      MaskDescription	      "MotoHawk MiniView Draw Vertical Line"
+      MaskPromptString	      "Physical CAN Channel"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "off"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskVariables	      "miniview_CAN_channel=@1;"
+      MaskDisplay	      "disp(['MiniView\\nDraw Vert Line\\nChannel:  CA"
+"N_' num2str(miniview_CAN_channel) '\\n\\n\\n\\n'])"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "2"
+      System {
+	Name			"Draw Vline"
+	Location		[128, 85, 799, 835]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "x"
+	  Position		  [125, 223, 155, 237]
+	  Port {
+	    PortNumber		    1
+	    Name		    "vline x0"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "y0"
+	  Position		  [125, 323, 155, 337]
+	  Port			  "2"
+	  Port {
+	    PortNumber		    1
+	    Name		    "vline y0"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "y1"
+	  Position		  [125, 423, 155, 437]
+	  Port			  "3"
+	  Port {
+	    PortNumber		    1
+	    Name		    "vline y1"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "line color"
+	  Position		  [125, 523, 155, 537]
+	  Port			  "4"
+	  Port {
+	    PortNumber		    1
+	    Name		    "vline line color"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "fill color"
+	  Position		  [125, 623, 155, 637]
+	  Port			  "5"
+	  Port {
+	    PortNumber		    1
+	    Name		    "vline fill color"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  TriggerPort
+	  Name			  "Trigger"
+	  Ports			  []
+	  Position		  [125, 75, 145, 95]
+	  TriggerType		  "function-call"
+	  StatesWhenEnabling	  "held"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  Ports			  [1, 2]
+	  Position		  [381, 125, 459, 145]
+	  Orientation		  "down"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Outputs		  "2"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Function-Call\nGenerator"
+	  Ports			  [0, 1]
+	  Position		  [265, 75, 315, 95]
+	  SourceBlock		  "simulink/Ports &\nSubsystems/Function-Call"
+"\nGenerator"
+	  SourceType		  "Function-Call Generator"
+	  sample_time		  "-1"
+	  numberOfIterations	  "1"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Subsystem"
+	  Ports			  [5, 0, 0, 1]
+	  Position		  [350, 185, 455, 675]
+	  TreatAsAtomicUnit	  off
+	  System {
+	    Name		    "Subsystem"
+	    Location		    [192, 141, 1102, 701]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "x"
+	      Position		      [25, 83, 55, 97]
+	      Port {
+		PortNumber		1
+		Name			"vline x"
+		PropagatedSignals	"vline x0"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "y0"
+	      Position		      [25, 178, 55, 192]
+	      Port		      "2"
+	      Port {
+		PortNumber		1
+		Name			"vline y0"
+		PropagatedSignals	"vline y0"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "y1"
+	      Position		      [25, 273, 55, 287]
+	      Port		      "3"
+	      Port {
+		PortNumber		1
+		Name			"vline y1"
+		PropagatedSignals	"vline y1"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "line color"
+	      Position		      [25, 368, 55, 382]
+	      Port		      "4"
+	      Port {
+		PortNumber		1
+		Name			"line color"
+		PropagatedSignals	"vline line color"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "fill color"
+	      Position		      [25, 463, 55, 477]
+	      Port		      "5"
+	      Port {
+		PortNumber		1
+		Name			"fill color"
+		PropagatedSignals	"vline fill color"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      TriggerPort
+	      Name		      "Trigger"
+	      Ports		      []
+	      Position		      [75, 20, 95, 40]
+	      TriggerType	      "function-call"
+	      StatesWhenEnabling      "held"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Send CAN Messages"
+	      Ports		      [5]
+	      Position		      [130, 45, 885, 515]
+	      ShowName		      off
+	      SourceBlock	      "MotoHawk_lib/CAN Blocks/Send CAN Messag"
+"es"
+	      SourceType	      "MotoHawk Send CAN Messages"
+	      bus		      "miniview_CAN_channel"
+	      msgl		      "miniview_draw_vline"
+	      pace		      "-1"
+	      labelwires	      "on"
+	    }
+	    Line {
+	      Name		      "fill color"
+	      Labels		      [0, 0]
+	      SrcBlock		      "fill color"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      5
+	    }
+	    Line {
+	      Name		      "line color"
+	      Labels		      [0, 0]
+	      SrcBlock		      "line color"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      4
+	    }
+	    Line {
+	      Name		      "vline x"
+	      Labels		      [0, 0]
+	      SrcBlock		      "x"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "vline y0"
+	      Labels		      [0, 0]
+	      SrcBlock		      "y0"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "vline y1"
+	      Labels		      [0, 0]
+	      SrcBlock		      "y1"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      3
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Next"
+	  Position		  [505, 168, 535, 182]
+	}
+	Line {
+	  Name			  "vline x0"
+	  SrcBlock		  "x"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "vline y0"
+	  SrcBlock		  "y0"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "vline y1"
+	  SrcBlock		  "y1"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "vline line color"
+	  SrcBlock		  "line color"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "vline fill color"
+	  SrcBlock		  "fill color"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  trigger
+	}
+	Line {
+	  SrcBlock		  "Function-Call\nGenerator"
+	  SrcPort		  1
+	  Points		  [100, 0]
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  Points		  [0, 25]
+	  DstBlock		  "Next"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Menu Button"
+      Ports		      [0, 2]
+      Position		      [25, 428, 160, 517]
+      BackgroundColor	      "yellow"
+      TreatAsAtomicUnit	      off
+      MaskType		      "MotoHawk MiniView Menu Button"
+      MaskDescription	      "MotoHawk MiniView Menu Button"
+      MaskPromptString	      "Physical CAN Channel"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "off"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskVariables	      "miniview_CAN_channel=@1;"
+      MaskDisplay	      "disp(['MiniView \"Menu\" Button\\nChannel:  CAN"
+"_' num2str(miniview_CAN_channel)])"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "2"
+      System {
+	Name			"Menu Button"
+	Location		[190, 267, 849, 788]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Reference
+	  Name			  "CAN Receive Slot Trigger"
+	  Tag			  "Trigger"
+	  Ports			  [0, 1]
+	  Position		  [150, 30, 370, 130]
+	  Orientation		  "down"
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontWeight		  "bold"
+	  SourceBlock		  "MotoHawk_lib/CAN Blocks/CAN Receive Slot Tr"
+"igger"
+	  SourceType		  "MotoHawk CAN Receive Trigger"
+	  slot			  "'miniview_button_menu'"
+	  inherited		  on
+	  function_name		  "Trigger_CAN_Slot_miniview_button_menu_667p0"
+"002"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  Ports			  [1, 2]
+	  Position		  [229, 170, 291, 180]
+	  Orientation		  "down"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Outputs		  "2"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Subsystem"
+	  Ports			  [0, 2, 0, 1]
+	  Position		  [115, 244, 380, 446]
+	  TreatAsAtomicUnit	  off
+	  System {
+	    Name		    "Subsystem"
+	    Location		    [37, 172, 1291, 693]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      TriggerPort
+	      Name		      "Trigger"
+	      Ports		      []
+	      Position		      [910, 40, 930, 60]
+	      TriggerType	      "function-call"
+	      StatesWhenEnabling      "held"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Read CAN Message"
+	      Ports		      [0, 2]
+	      Position		      [25, 28, 835, 497]
+	      ShowName		      off
+	      SourceBlock	      "MotoHawk_lib/CAN Blocks/Read CAN Messag"
+"e"
+	      SourceType	      "MotoHawk Read CAN Message"
+	      bus		      "miniview_CAN_channel"
+	      msg		      "miniview_button_menu"
+	      queue		      "1"
+	      slot		      "'miniview_button_menu'"
+	      valid		      off
+	      stale		      off
+	      labelwires	      on
+	      Port {
+		PortNumber		1
+		Name			"menu asserted"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"menu count"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Signal Specification"
+	      Ports		      [1, 1]
+	      Position		      [915, 131, 1010, 159]
+	      SourceBlock	      "simulink/Signal\nAttributes/Signal Spec"
+"ification"
+	      SourceType	      "Signal Specification"
+	      D			      "-1"
+	      Ts		      "-1"
+	      DataType		      "boolean"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      SignalType	      "auto"
+	      SamplingMode	      "auto"
+	      Port {
+		PortNumber		1
+		Name			"menu asserted"
+		PropagatedSignals	"menu asserted"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Signal Specification1"
+	      Ports		      [1, 1]
+	      Position		      [915, 366, 1010, 394]
+	      SourceBlock	      "simulink/Signal\nAttributes/Signal Spec"
+"ification"
+	      SourceType	      "Signal Specification"
+	      D			      "-1"
+	      Ts		      "-1"
+	      DataType		      "uint8"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      SignalType	      "auto"
+	      SamplingMode	      "auto"
+	      Port {
+		PortNumber		1
+		Name			"menu count"
+		PropagatedSignals	"menu count"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      Position		      [1085, 138, 1115, 152]
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out2"
+	      Position		      [1085, 373, 1115, 387]
+	      Port		      "2"
+	    }
+	    Line {
+	      Name		      "menu count"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Signal Specification1"
+	      SrcPort		      1
+	      DstBlock		      "Out2"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "menu asserted"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Signal Specification"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "menu count"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Read CAN Message"
+	      SrcPort		      2
+	      DstBlock		      "Signal Specification1"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "menu asserted"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Read CAN Message"
+	      SrcPort		      1
+	      DstBlock		      "Signal Specification"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator"
+	  Position		  [485, 385, 505, 405]
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Update"
+	  Position		  [480, 193, 510, 207]
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Menu Asserted"
+	  Position		  [480, 288, 510, 302]
+	  Port			  "2"
+	}
+	Line {
+	  SrcBlock		  "Subsystem"
+	  SrcPort		  2
+	  DstBlock		  "Terminator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  Points		  [0, 15]
+	  DstBlock		  "Update"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "CAN Receive Slot Trigger"
+	  SrcPort		  1
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  trigger
+	}
+	Line {
+	  SrcBlock		  "Subsystem"
+	  SrcPort		  1
+	  DstBlock		  "Menu Asserted"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Send String"
+      Ports		      [2, 1, 0, 1]
+      Position		      [490, 158, 625, 227]
+      BackgroundColor	      "yellow"
+      TreatAsAtomicUnit	      off
+      MaskType		      "MotoHawk MiniView Send String"
+      MaskDescription	      "MotoHawk MiniView Send String\n\nSend string (#"
+"0 to #15) to gauge."
+      MaskPromptString	      "Physical CAN Channel"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "off"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskVariables	      "miniview_CAN_channel=@1;"
+      MaskDisplay	      "disp(['MiniView\\nSend String\\nChannel:  CAN_'"
+" num2str(miniview_CAN_channel)])"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "2"
+      System {
+	Name			"Send String"
+	Location		[189, 126, 707, 428]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "string #"
+	  Position		  [45, 163, 75, 177]
+	  Port {
+	    PortNumber		    1
+	    Name		    "string"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "string"
+	  Position		  [45, 193, 75, 207]
+	  Port			  "2"
+	  Port {
+	    PortNumber		    1
+	    Name		    "b0"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  TriggerPort
+	  Name			  "Trigger"
+	  Ports			  []
+	  Position		  [100, 45, 120, 65]
+	  TriggerType		  "function-call"
+	  StatesWhenEnabling	  "held"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  Ports			  [1, 2]
+	  Position		  [271, 100, 349, 120]
+	  Orientation		  "down"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Outputs		  "2"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Function-Call\nGenerator"
+	  Ports			  [0, 1]
+	  Position		  [160, 50, 210, 70]
+	  SourceBlock		  "simulink/Ports &\nSubsystems/Function-Call"
+"\nGenerator"
+	  SourceType		  "Function-Call Generator"
+	  sample_time		  "-1"
+	  numberOfIterations	  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Signal Specification"
+	  Ports			  [1, 1]
+	  Position		  [140, 186, 235, 214]
+	  SourceBlock		  "simulink/Signal\nAttributes/Signal Specific"
+"ation"
+	  SourceType		  "Signal Specification"
+	  D			  "18"
+	  Ts			  "-1"
+	  DataType		  "uint8"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  SignalType		  "auto"
+	  SamplingMode		  "auto"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Subsystem"
+	  Ports			  [2, 0, 0, 1]
+	  Position		  [270, 155, 310, 215]
+	  TreatAsAtomicUnit	  off
+	  System {
+	    Name		    "Subsystem"
+	    Location		    [13, 81, 1160, 961]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "string #"
+	      Position		      [70, 28, 100, 42]
+	      Port {
+		PortNumber		1
+		Name			"string #"
+		PropagatedSignals	"string"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "string"
+	      Position		      [15, 628, 45, 642]
+	      Port		      "2"
+	      Port {
+		PortNumber		1
+		Name			"string"
+		PropagatedSignals	"b0"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      TriggerPort
+	      Name		      "Trigger"
+	      Ports		      []
+	      Position		      [35, 100, 55, 120]
+	      TriggerType	      "function-call"
+	      StatesWhenEnabling      "held"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant"
+	      Position		      [280, 1025, 300, 1045]
+	      Value		      "0"
+	      Port {
+		PortNumber		1
+		Name			"b17"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      Ports		      [1, 7]
+	      Position		      [180, 67, 190, 403]
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Outputs		      "7"
+	      Port {
+		PortNumber		1
+		Name			"b0"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"b1"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"b2"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	      Port {
+		PortNumber		4
+		Name			"b3"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	      Port {
+		PortNumber		5
+		Name			"b4"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	      Port {
+		PortNumber		6
+		Name			"b5"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	      Port {
+		PortNumber		7
+		Name			"b6"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux1"
+	      Ports		      [1, 7]
+	      Position		      [180, 467, 190, 803]
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Outputs		      "7"
+	      Port {
+		PortNumber		1
+		Name			"b7"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"b8"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"b9"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	      Port {
+		PortNumber		4
+		Name			"b10"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	      Port {
+		PortNumber		5
+		Name			"b11"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	      Port {
+		PortNumber		6
+		Name			"b12"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	      Port {
+		PortNumber		7
+		Name			"b13"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux2"
+	      Ports		      [1, 4]
+	      Position		      [180, 864, 190, 1056]
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Port {
+		PortNumber		1
+		Name			"b14"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"b15"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"b16"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	      Port {
+		PortNumber		4
+		Name			"b17"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux3"
+	      Ports		      [1, 3]
+	      Position		      [90, 577, 100, 693]
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Outputs		      "[7 7 4]"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Send CAN Messages"
+	      Ports		      [21]
+	      Position		      [340, 15, 1075, 1055]
+	      ShowName		      off
+	      SourceBlock	      "MotoHawk_lib/CAN Blocks/Send CAN Messag"
+"es"
+	      SourceType	      "MotoHawk Send CAN Messages"
+	      bus		      "miniview_CAN_channel"
+	      msgl		      "[miniview_string_xfer_page0 miniview_st"
+"ring_xfer_page1 miniview_string_xfer_page2]"
+	      pace		      "0"
+	      labelwires	      "on"
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator"
+	      Position		      [230, 1025, 250, 1045]
+	    }
+	    Line {
+	      Name		      "string #"
+	      Labels		      [0, 0]
+	      SrcBlock		      "string #"
+	      SrcPort		      1
+	      Points		      [0, 0; 40, 0]
+	      Branch {
+		Labels			[-1, 0]
+		DstBlock		"Send CAN Messages"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 400]
+		Branch {
+		  Labels		  [-1, 0]
+		  Points		  [0, 400]
+		  DstBlock		  "Send CAN Messages"
+		  DstPort		  17
+		}
+		Branch {
+		  Labels		  [-1, 0]
+		  DstBlock		  "Send CAN Messages"
+		  DstPort		  9
+		}
+	      }
+	    }
+	    Line {
+	      Name		      "b0"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "b1"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      3
+	    }
+	    Line {
+	      Name		      "b2"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      3
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      4
+	    }
+	    Line {
+	      Name		      "b3"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      4
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      5
+	    }
+	    Line {
+	      Name		      "b4"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      5
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      6
+	    }
+	    Line {
+	      Name		      "b5"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      6
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      7
+	    }
+	    Line {
+	      Name		      "b6"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      7
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      8
+	    }
+	    Line {
+	      Name		      "b7"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux1"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      10
+	    }
+	    Line {
+	      Name		      "b8"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux1"
+	      SrcPort		      2
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      11
+	    }
+	    Line {
+	      Name		      "b9"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux1"
+	      SrcPort		      3
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      12
+	    }
+	    Line {
+	      Name		      "b10"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux1"
+	      SrcPort		      4
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      13
+	    }
+	    Line {
+	      Name		      "b11"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux1"
+	      SrcPort		      5
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      14
+	    }
+	    Line {
+	      Name		      "b12"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux1"
+	      SrcPort		      6
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      15
+	    }
+	    Line {
+	      Name		      "b13"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux1"
+	      SrcPort		      7
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      16
+	    }
+	    Line {
+	      Name		      "b14"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux2"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      18
+	    }
+	    Line {
+	      Name		      "b15"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux2"
+	      SrcPort		      2
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      19
+	    }
+	    Line {
+	      Name		      "b16"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux2"
+	      SrcPort		      3
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      20
+	    }
+	    Line {
+	      Name		      "string"
+	      Labels		      [0, 0]
+	      SrcBlock		      "string"
+	      SrcPort		      1
+	      DstBlock		      "Demux3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux3"
+	      SrcPort		      1
+	      Points		      [20, 0; 0, -360]
+	      DstBlock		      "Demux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux3"
+	      SrcPort		      2
+	      DstBlock		      "Demux1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux3"
+	      SrcPort		      3
+	      Points		      [20, 0; 0, 285]
+	      DstBlock		      "Demux2"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "b17"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      21
+	    }
+	    Line {
+	      Name		      "b17"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux2"
+	      SrcPort		      4
+	      DstBlock		      "Terminator"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Next"
+	  Position		  [400, 143, 430, 157]
+	}
+	Line {
+	  Name			  "string"
+	  SrcBlock		  "string #"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "b0"
+	  SrcBlock		  "string"
+	  SrcPort		  1
+	  DstBlock		  "Signal Specification"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  trigger
+	}
+	Line {
+	  SrcBlock		  "Function-Call\nGenerator"
+	  SrcPort		  1
+	  Points		  [95, 0]
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  Points		  [0, 25]
+	  DstBlock		  "Next"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Signal Specification"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Send Substring (page 0)"
+      Ports		      [2, 1, 0, 1]
+      Position		      [490, 253, 625, 322]
+      BackgroundColor	      "yellow"
+      TreatAsAtomicUnit	      off
+      MaskType		      "MotoHawk MiniView Send String (Page 0)"
+      MaskDescription	      "MotoHawk MiniView Send String (Page 0)\n\nSend "
+"first seven characters (0 to 6) of string (#0 to #15) to gauge.\n\nBefore usi"
+"ng a string, all three pages (0/1/2) must be sent using either \"Send String"
+"\" block to send the entire string at once, or by sending each page using \"S"
+"end Substring (Page 0/1/2)\" blocks.\n\nThe \"Send Substring (Page 0/1/2)\" b"
+"locks may also be used to modify a previously-sent string."
+      MaskPromptString	      "Physical CAN Channel"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "off"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskVariables	      "miniview_CAN_channel=@1;"
+      MaskDisplay	      "disp(['MiniView\\nSend Substr Pg 0\\nChannel:  "
+"CAN_' num2str(miniview_CAN_channel)])"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "2"
+      System {
+	Name			"Send Substring (page 0)"
+	Location		[189, 126, 707, 428]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "string #"
+	  Position		  [45, 163, 75, 177]
+	  Port {
+	    PortNumber		    1
+	    Name		    "string"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "c0--6"
+	  Position		  [45, 193, 75, 207]
+	  Port			  "2"
+	  Port {
+	    PortNumber		    1
+	    Name		    "b0"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  TriggerPort
+	  Name			  "Trigger"
+	  Ports			  []
+	  Position		  [100, 45, 120, 65]
+	  TriggerType		  "function-call"
+	  StatesWhenEnabling	  "held"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  Ports			  [1, 2]
+	  Position		  [271, 100, 349, 120]
+	  Orientation		  "down"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Outputs		  "2"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Function-Call\nGenerator"
+	  Ports			  [0, 1]
+	  Position		  [160, 50, 210, 70]
+	  SourceBlock		  "simulink/Ports &\nSubsystems/Function-Call"
+"\nGenerator"
+	  SourceType		  "Function-Call Generator"
+	  sample_time		  "-1"
+	  numberOfIterations	  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Signal Specification"
+	  Ports			  [1, 1]
+	  Position		  [140, 186, 235, 214]
+	  SourceBlock		  "simulink/Signal\nAttributes/Signal Specific"
+"ation"
+	  SourceType		  "Signal Specification"
+	  D			  "7"
+	  Ts			  "-1"
+	  DataType		  "uint8"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  SignalType		  "auto"
+	  SamplingMode		  "auto"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Subsystem"
+	  Ports			  [2, 0, 0, 1]
+	  Position		  [270, 155, 310, 215]
+	  TreatAsAtomicUnit	  off
+	  System {
+	    Name		    "Subsystem"
+	    Location		    [13, 81, 1176, 655]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "string #"
+	      Position		      [70, 38, 100, 52]
+	      Port {
+		PortNumber		1
+		Name			"string #"
+		PropagatedSignals	"string"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "string"
+	      Position		      [40, 278, 70, 292]
+	      Port		      "2"
+	      Port {
+		PortNumber		1
+		Name			"string"
+		PropagatedSignals	"b0"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      TriggerPort
+	      Name		      "Trigger"
+	      Ports		      []
+	      Position		      [35, 100, 55, 120]
+	      TriggerType	      "function-call"
+	      StatesWhenEnabling      "held"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      Ports		      [1, 7]
+	      Position		      [180, 72, 190, 498]
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Outputs		      "7"
+	      Port {
+		PortNumber		1
+		Name			"b0"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"b1"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"b2"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	      Port {
+		PortNumber		4
+		Name			"b3"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	      Port {
+		PortNumber		5
+		Name			"b4"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	      Port {
+		PortNumber		6
+		Name			"b5"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	      Port {
+		PortNumber		7
+		Name			"b6"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Send CAN Messages"
+	      Ports		      [8]
+	      Position		      [340, 15, 1075, 495]
+	      ShowName		      off
+	      SourceBlock	      "MotoHawk_lib/CAN Blocks/Send CAN Messag"
+"es"
+	      SourceType	      "MotoHawk Send CAN Messages"
+	      bus		      "miniview_CAN_channel"
+	      msgl		      "miniview_string_xfer_page0"
+	      pace		      "0"
+	      labelwires	      "on"
+	    }
+	    Line {
+	      Name		      "string"
+	      Labels		      [0, 0]
+	      SrcBlock		      "string"
+	      SrcPort		      1
+	      DstBlock		      "Demux"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "b6"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      7
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      8
+	    }
+	    Line {
+	      Name		      "b5"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      6
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      7
+	    }
+	    Line {
+	      Name		      "b4"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      5
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      6
+	    }
+	    Line {
+	      Name		      "b3"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      4
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      5
+	    }
+	    Line {
+	      Name		      "b2"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      3
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      4
+	    }
+	    Line {
+	      Name		      "b1"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      3
+	    }
+	    Line {
+	      Name		      "b0"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "string #"
+	      Labels		      [0, 0]
+	      SrcBlock		      "string #"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Next"
+	  Position		  [400, 143, 430, 157]
+	}
+	Line {
+	  SrcBlock		  "Signal Specification"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  Points		  [0, 25]
+	  DstBlock		  "Next"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Function-Call\nGenerator"
+	  SrcPort		  1
+	  Points		  [95, 0]
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  trigger
+	}
+	Line {
+	  Name			  "b0"
+	  SrcBlock		  "c0--6"
+	  SrcPort		  1
+	  DstBlock		  "Signal Specification"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "string"
+	  SrcBlock		  "string #"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Send Substring (page 1)"
+      Ports		      [2, 1, 0, 1]
+      Position		      [490, 348, 625, 417]
+      BackgroundColor	      "yellow"
+      TreatAsAtomicUnit	      off
+      MaskType		      "MotoHawk MiniView Send String (Page 1)"
+      MaskDescription	      "MotoHawk MiniView Send String (Page 1)\n\nSend "
+"middle seven characters (7 to 13) of string (#0 to #15) to gauge.\n\nBefore u"
+"sing a string, all three pages (0/1/2) must be sent using either \"Send Strin"
+"g\" block to send the entire string at once, or by sending each page using \""
+"Send Substring (Page 0/1/2)\" blocks.\n\nThe \"Send Substring (Page 0/1/2)\" "
+"blocks may also be used to modify a previously-sent string."
+      MaskPromptString	      "Physical CAN Channel"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "off"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskVariables	      "miniview_CAN_channel=@1;"
+      MaskDisplay	      "disp(['MiniView\\nSend Substr Pg 1\\nChannel:  "
+"CAN_' num2str(miniview_CAN_channel)])"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "2"
+      System {
+	Name			"Send Substring (page 1)"
+	Location		[189, 126, 707, 428]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "string #"
+	  Position		  [45, 163, 75, 177]
+	  Port {
+	    PortNumber		    1
+	    Name		    "string"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "c7--13"
+	  Position		  [45, 193, 75, 207]
+	  Port			  "2"
+	  Port {
+	    PortNumber		    1
+	    Name		    "b0"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  TriggerPort
+	  Name			  "Trigger"
+	  Ports			  []
+	  Position		  [100, 45, 120, 65]
+	  TriggerType		  "function-call"
+	  StatesWhenEnabling	  "held"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  Ports			  [1, 2]
+	  Position		  [271, 100, 349, 120]
+	  Orientation		  "down"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Outputs		  "2"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Function-Call\nGenerator"
+	  Ports			  [0, 1]
+	  Position		  [160, 50, 210, 70]
+	  SourceBlock		  "simulink/Ports &\nSubsystems/Function-Call"
+"\nGenerator"
+	  SourceType		  "Function-Call Generator"
+	  sample_time		  "-1"
+	  numberOfIterations	  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Signal Specification"
+	  Ports			  [1, 1]
+	  Position		  [140, 186, 235, 214]
+	  SourceBlock		  "simulink/Signal\nAttributes/Signal Specific"
+"ation"
+	  SourceType		  "Signal Specification"
+	  D			  "7"
+	  Ts			  "-1"
+	  DataType		  "uint8"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  SignalType		  "auto"
+	  SamplingMode		  "auto"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Subsystem"
+	  Ports			  [2, 0, 0, 1]
+	  Position		  [270, 155, 310, 215]
+	  TreatAsAtomicUnit	  off
+	  System {
+	    Name		    "Subsystem"
+	    Location		    [13, 81, 1176, 655]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "string #"
+	      Position		      [70, 38, 100, 52]
+	      Port {
+		PortNumber		1
+		Name			"string #"
+		PropagatedSignals	"string"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "string"
+	      Position		      [40, 278, 70, 292]
+	      Port		      "2"
+	      Port {
+		PortNumber		1
+		Name			"string"
+		PropagatedSignals	"b0"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      TriggerPort
+	      Name		      "Trigger"
+	      Ports		      []
+	      Position		      [35, 100, 55, 120]
+	      TriggerType	      "function-call"
+	      StatesWhenEnabling      "held"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux1"
+	      Ports		      [1, 7]
+	      Position		      [180, 72, 190, 498]
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Outputs		      "7"
+	      Port {
+		PortNumber		1
+		Name			"b7"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"b8"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"b9"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	      Port {
+		PortNumber		4
+		Name			"b10"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	      Port {
+		PortNumber		5
+		Name			"b10"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	      Port {
+		PortNumber		6
+		Name			"b11"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	      Port {
+		PortNumber		7
+		Name			"b12"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Send CAN Messages"
+	      Ports		      [8]
+	      Position		      [340, 15, 1075, 495]
+	      ShowName		      off
+	      SourceBlock	      "MotoHawk_lib/CAN Blocks/Send CAN Messag"
+"es"
+	      SourceType	      "MotoHawk Send CAN Messages"
+	      bus		      "miniview_CAN_channel"
+	      msgl		      "miniview_string_xfer_page1"
+	      pace		      "0"
+	      labelwires	      "on"
+	    }
+	    Line {
+	      Name		      "string #"
+	      Labels		      [0, 0]
+	      SrcBlock		      "string #"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "b7"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux1"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "b8"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux1"
+	      SrcPort		      2
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      3
+	    }
+	    Line {
+	      Name		      "b9"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux1"
+	      SrcPort		      3
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      4
+	    }
+	    Line {
+	      Name		      "b10"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux1"
+	      SrcPort		      4
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      5
+	    }
+	    Line {
+	      Name		      "b10"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux1"
+	      SrcPort		      5
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      6
+	    }
+	    Line {
+	      Name		      "b11"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux1"
+	      SrcPort		      6
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      7
+	    }
+	    Line {
+	      Name		      "b12"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux1"
+	      SrcPort		      7
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      8
+	    }
+	    Line {
+	      Name		      "string"
+	      Labels		      [0, 0]
+	      SrcBlock		      "string"
+	      SrcPort		      1
+	      DstBlock		      "Demux1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Next"
+	  Position		  [400, 143, 430, 157]
+	}
+	Line {
+	  Name			  "string"
+	  SrcBlock		  "string #"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "b0"
+	  SrcBlock		  "c7--13"
+	  SrcPort		  1
+	  DstBlock		  "Signal Specification"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  trigger
+	}
+	Line {
+	  SrcBlock		  "Function-Call\nGenerator"
+	  SrcPort		  1
+	  Points		  [95, 0]
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  Points		  [0, 25]
+	  DstBlock		  "Next"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Signal Specification"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Send Substring (page 2)"
+      Ports		      [2, 1, 0, 1]
+      Position		      [490, 443, 625, 512]
+      BackgroundColor	      "yellow"
+      TreatAsAtomicUnit	      off
+      MaskType		      "MotoHawk MiniView Send String (Page 2)"
+      MaskDescription	      "MotoHawk MiniView Send String (Page 2)\n\nSend "
+"last three characters (14 to 16) of string (#0 to #15) to gauge.\n\nBefore us"
+"ing a string, all three pages (0/1/2) must be sent using either \"Send String"
+"\" block to send the entire string at once, or by sending each page using \"S"
+"end Substring (Page 0/1/2)\" blocks.\n\nThe \"Send Substring (Page 0/1/2)\" b"
+"locks may also be used to modify a previously-sent string."
+      MaskPromptString	      "Physical CAN Channel"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "off"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskVariables	      "miniview_CAN_channel=@1;"
+      MaskDisplay	      "disp(['MiniView\\nSend Substr Pg 2\\nChannel:  "
+"CAN_' num2str(miniview_CAN_channel)])"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "2"
+      System {
+	Name			"Send Substring (page 2)"
+	Location		[189, 126, 707, 428]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "string #"
+	  Position		  [45, 163, 75, 177]
+	  Port {
+	    PortNumber		    1
+	    Name		    "string"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "c14--16"
+	  Position		  [45, 193, 75, 207]
+	  Port			  "2"
+	  Port {
+	    PortNumber		    1
+	    Name		    "b0"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  TriggerPort
+	  Name			  "Trigger"
+	  Ports			  []
+	  Position		  [100, 45, 120, 65]
+	  TriggerType		  "function-call"
+	  StatesWhenEnabling	  "held"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  Ports			  [1, 2]
+	  Position		  [271, 100, 349, 120]
+	  Orientation		  "down"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Outputs		  "2"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Function-Call\nGenerator"
+	  Ports			  [0, 1]
+	  Position		  [160, 50, 210, 70]
+	  SourceBlock		  "simulink/Ports &\nSubsystems/Function-Call"
+"\nGenerator"
+	  SourceType		  "Function-Call Generator"
+	  sample_time		  "-1"
+	  numberOfIterations	  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Signal Specification"
+	  Ports			  [1, 1]
+	  Position		  [140, 186, 235, 214]
+	  SourceBlock		  "simulink/Signal\nAttributes/Signal Specific"
+"ation"
+	  SourceType		  "Signal Specification"
+	  D			  "3"
+	  Ts			  "-1"
+	  DataType		  "uint8"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  SignalType		  "auto"
+	  SamplingMode		  "auto"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Subsystem"
+	  Ports			  [2, 0, 0, 1]
+	  Position		  [270, 155, 310, 215]
+	  TreatAsAtomicUnit	  off
+	  System {
+	    Name		    "Subsystem"
+	    Location		    [13, 81, 1176, 655]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "string #"
+	      Position		      [70, 48, 100, 62]
+	      Port {
+		PortNumber		1
+		Name			"string #"
+		PropagatedSignals	"string"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "string"
+	      Position		      [40, 228, 70, 242]
+	      Port		      "2"
+	      Port {
+		PortNumber		1
+		Name			"string"
+		PropagatedSignals	"b0"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      TriggerPort
+	      Name		      "Trigger"
+	      Ports		      []
+	      Position		      [35, 100, 55, 120]
+	      TriggerType	      "function-call"
+	      StatesWhenEnabling      "held"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant"
+	      Position		      [255, 405, 275, 425]
+	      Value		      "0"
+	      Port {
+		PortNumber		1
+		Name			"b17"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux2"
+	      Ports		      [1, 3]
+	      Position		      [180, 99, 190, 371]
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Outputs		      "3"
+	      Port {
+		PortNumber		1
+		Name			"b14"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"b15"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"b16"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Send CAN Messages"
+	      Ports		      [5]
+	      Position		      [340, 14, 1075, 456]
+	      ShowName		      off
+	      SourceBlock	      "MotoHawk_lib/CAN Blocks/Send CAN Messag"
+"es"
+	      SourceType	      "MotoHawk Send CAN Messages"
+	      bus		      "miniview_CAN_channel"
+	      msgl		      "miniview_string_xfer_page2"
+	      pace		      "0"
+	      labelwires	      "on"
+	    }
+	    Line {
+	      Name		      "string #"
+	      Labels		      [0, 0; 1, 0]
+	      SrcBlock		      "string #"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "b14"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux2"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "b15"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux2"
+	      SrcPort		      2
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      3
+	    }
+	    Line {
+	      Name		      "b16"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux2"
+	      SrcPort		      3
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      4
+	    }
+	    Line {
+	      Name		      "string"
+	      Labels		      [0, 0]
+	      SrcBlock		      "string"
+	      SrcPort		      1
+	      DstBlock		      "Demux2"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "b17"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      5
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Next"
+	  Position		  [400, 143, 430, 157]
+	}
+	Line {
+	  Name			  "string"
+	  SrcBlock		  "string #"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "b0"
+	  SrcBlock		  "c14--16"
+	  SrcPort		  1
+	  DstBlock		  "Signal Specification"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  trigger
+	}
+	Line {
+	  SrcBlock		  "Function-Call\nGenerator"
+	  SrcPort		  1
+	  Points		  [95, 0]
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  Points		  [0, 25]
+	  DstBlock		  "Next"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Signal Specification"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Set GUI Mode"
+      Ports		      [1, 1, 0, 1]
+      Position		      [25, 158, 160, 212]
+      BackgroundColor	      "yellow"
+      TreatAsAtomicUnit	      off
+      MaskType		      "MotoHawk MiniView Set GUI Mode"
+      MaskDescription	      "MotoHawk MiniView Set GUI Mode"
+      MaskPromptString	      "Physical CAN Channel"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "off"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskVariables	      "miniview_CAN_channel=@1;"
+      MaskDisplay	      "disp(['\\nMiniView\\nSet GUI Mode\\nChannel:  C"
+"AN_' num2str(miniview_CAN_channel)])"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "2"
+      System {
+	Name			"Set GUI Mode"
+	Location		[177, 145, 571, 533]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "mode"
+	  Position		  [50, 288, 80, 302]
+	  Port {
+	    PortNumber		    1
+	    Name		    "mode"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  TriggerPort
+	  Name			  "Trigger"
+	  Ports			  []
+	  Position		  [165, 60, 185, 80]
+	  TriggerType		  "function-call"
+	  StatesWhenEnabling	  "held"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  Ports			  [1, 2]
+	  Position		  [151, 210, 229, 230]
+	  Orientation		  "down"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Outputs		  "2"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Function-Call\nGenerator"
+	  Ports			  [0, 1]
+	  Position		  [40, 160, 90, 180]
+	  SourceBlock		  "simulink/Ports &\nSubsystems/Function-Call"
+"\nGenerator"
+	  SourceType		  "Function-Call Generator"
+	  sample_time		  "-1"
+	  numberOfIterations	  "1"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Subsystem"
+	  Ports			  [1, 0, 0, 1]
+	  Position		  [150, 265, 190, 325]
+	  TreatAsAtomicUnit	  off
+	  System {
+	    Name		    "Subsystem"
+	    Location		    [179, 115, 1094, 550]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "mode"
+	      Position		      [25, 203, 55, 217]
+	      Port {
+		PortNumber		1
+		Name			"mode"
+		PropagatedSignals	"mode"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      TriggerPort
+	      Name		      "Trigger"
+	      Ports		      []
+	      Position		      [85, 25, 105, 45]
+	      TriggerType	      "function-call"
+	      StatesWhenEnabling      "held"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Send CAN Messages"
+	      Ports		      [1]
+	      Position		      [135, 25, 890, 395]
+	      ShowName		      off
+	      SourceBlock	      "MotoHawk_lib/CAN Blocks/Send CAN Messag"
+"es"
+	      SourceType	      "MotoHawk Send CAN Messages"
+	      bus		      "miniview_CAN_channel"
+	      msgl		      "miniview_set_gui_mode"
+	      pace		      "-1"
+	      labelwires	      "on"
+	    }
+	    Line {
+	      Name		      "mode"
+	      Labels		      [0, 0]
+	      SrcBlock		      "mode"
+	      SrcPort		      1
+	      DstBlock		      "Send CAN Messages"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Next"
+	  Position		  [280, 253, 310, 267]
+	}
+	Line {
+	  Name			  "mode"
+	  SrcBlock		  "mode"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  trigger
+	}
+	Line {
+	  SrcBlock		  "Function-Call\nGenerator"
+	  SrcPort		  1
+	  Points		  [95, 0]
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  Points		  [0, 25]
+	  DstBlock		  "Next"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Up Button"
+      Ports		      [0, 2]
+      Position		      [25, 318, 160, 407]
+      BackgroundColor	      "yellow"
+      TreatAsAtomicUnit	      off
+      MaskType		      "MotoHawk MiniView Up Button"
+      MaskDescription	      "MotoHawk MiniView Up Button"
+      MaskPromptString	      "Physical CAN Channel"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "off"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskVariables	      "miniview_CAN_channel=@1;"
+      MaskDisplay	      "disp(['MiniView \"Up\" Button\\nChannel:  CAN_'"
+" num2str(miniview_CAN_channel)])"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "2"
+      System {
+	Name			"Up Button"
+	Location		[190, 267, 849, 788]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Reference
+	  Name			  "CAN Receive Slot Trigger"
+	  Tag			  "Trigger"
+	  Ports			  [0, 1]
+	  Position		  [150, 30, 370, 130]
+	  Orientation		  "down"
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontWeight		  "bold"
+	  SourceBlock		  "MotoHawk_lib/CAN Blocks/CAN Receive Slot Tr"
+"igger"
+	  SourceType		  "MotoHawk CAN Receive Trigger"
+	  slot			  "'miniview_button_up'"
+	  inherited		  on
+	  function_name		  "Trigger_CAN_Slot_miniview_button_up_644p000"
+"1"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  Ports			  [1, 2]
+	  Position		  [229, 170, 291, 180]
+	  Orientation		  "down"
+	  BackgroundColor	  "black"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Outputs		  "2"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Subsystem"
+	  Ports			  [0, 2, 0, 1]
+	  Position		  [115, 244, 380, 446]
+	  TreatAsAtomicUnit	  off
+	  System {
+	    Name		    "Subsystem"
+	    Location		    [37, 172, 1291, 693]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      TriggerPort
+	      Name		      "Trigger"
+	      Ports		      []
+	      Position		      [910, 40, 930, 60]
+	      TriggerType	      "function-call"
+	      StatesWhenEnabling      "held"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Read CAN Message"
+	      Ports		      [0, 2]
+	      Position		      [25, 28, 835, 497]
+	      ShowName		      off
+	      SourceBlock	      "MotoHawk_lib/CAN Blocks/Read CAN Messag"
+"e"
+	      SourceType	      "MotoHawk Read CAN Message"
+	      bus		      "miniview_CAN_channel"
+	      msg		      "miniview_button_up"
+	      queue		      "1"
+	      slot		      "'miniview_button_up'"
+	      valid		      off
+	      stale		      off
+	      labelwires	      on
+	      Port {
+		PortNumber		1
+		Name			"up asserted"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"up count"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Signal Specification"
+	      Ports		      [1, 1]
+	      Position		      [915, 131, 1010, 159]
+	      SourceBlock	      "simulink/Signal\nAttributes/Signal Spec"
+"ification"
+	      SourceType	      "Signal Specification"
+	      D			      "-1"
+	      Ts		      "-1"
+	      DataType		      "boolean"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      SignalType	      "auto"
+	      SamplingMode	      "auto"
+	      Port {
+		PortNumber		1
+		Name			"up asserted"
+		PropagatedSignals	"up asserted"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Signal Specification1"
+	      Ports		      [1, 1]
+	      Position		      [915, 366, 1010, 394]
+	      SourceBlock	      "simulink/Signal\nAttributes/Signal Spec"
+"ification"
+	      SourceType	      "Signal Specification"
+	      D			      "-1"
+	      Ts		      "-1"
+	      DataType		      "uint8"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      SignalType	      "auto"
+	      SamplingMode	      "auto"
+	      Port {
+		PortNumber		1
+		Name			"up count"
+		PropagatedSignals	"up count"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+		DataLogging		off
+		DataLoggingNameMode	"SignalName"
+		DataLoggingDecimateData	off
+		DataLoggingDecimation	"2"
+		DataLoggingLimitDataPoints off
+		DataLoggingMaxPoints	"5000"
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      Position		      [1085, 138, 1115, 152]
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out2"
+	      Position		      [1085, 373, 1115, 387]
+	      Port		      "2"
+	    }
+	    Line {
+	      Name		      "up asserted"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Read CAN Message"
+	      SrcPort		      1
+	      DstBlock		      "Signal Specification"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "up count"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Read CAN Message"
+	      SrcPort		      2
+	      DstBlock		      "Signal Specification1"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "up asserted"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Signal Specification"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "up count"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Signal Specification1"
+	      SrcPort		      1
+	      DstBlock		      "Out2"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator"
+	  Position		  [485, 385, 505, 405]
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Update"
+	  Position		  [480, 193, 510, 207]
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Up Asserted"
+	  Position		  [480, 288, 510, 302]
+	  Port			  "2"
+	}
+	Line {
+	  SrcBlock		  "Subsystem"
+	  SrcPort		  1
+	  DstBlock		  "Up Asserted"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "Subsystem"
+	  DstPort		  trigger
+	}
+	Line {
+	  SrcBlock		  "CAN Receive Slot Trigger"
+	  SrcPort		  1
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  Points		  [0, 15]
+	  DstBlock		  "Update"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Subsystem"
+	  SrcPort		  2
+	  DstBlock		  "Terminator"
+	  DstPort		  1
+	}
+      }
+    }
+    Annotation {
+      Name		      "MotoHawk"
+      Position		      [335, 29]
+      BackgroundColor	      "[0.713725, 0.713725, 0.654902]"
+      FontName		      "Arial"
+      FontSize		      48
+      FontWeight	      "bold"
+    }
+    Annotation {
+      Name		      "-----------------------------------------------"
+"----------------------------\nCopyright 2006-2007 MotoTron Corp.  All Rights "
+"Reserved."
+      Position		      [328, 132]
+      BackgroundColor	      "[0.713725, 0.713725, 0.654902]"
+      FontName		      "Arial"
+      FontSize		      14
+    }
+    Annotation {
+      Name		      "Real Time Workshop (RTW)\nDevelopment Blocks"
+      Position		      [335, 101]
+      BackgroundColor	      "[0.713725, 0.713725, 0.654902]"
+      FontName		      "Arial"
+      FontSize		      12
+      FontWeight	      "bold"
+    }
+    Annotation {
+      Name		      "MiniView Code Generation Toolbox v0.03 (2007-05"
+"-13)"
+      Position		      [335, 66]
+      BackgroundColor	      "[0.713725, 0.713725, 0.654902]"
+      FontName		      "Arial"
+      FontSize		      18
+      FontWeight	      "bold"
+    }
+  }
+}

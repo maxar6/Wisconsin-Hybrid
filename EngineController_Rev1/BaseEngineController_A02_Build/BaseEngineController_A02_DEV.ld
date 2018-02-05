@@ -18,8 +18,6 @@ EXTERN(Entry)
 EXTERN(ExceptionBranchTable)
 EXTERN(g_pCRCBlockPtr)
 
-
-
 MEMORY
 {
     MODULECONFIG_SPACE    : ORIGIN = 0x00007000 ,     LENGTH = 0x00000FFF
@@ -294,7 +292,6 @@ SECTIONS
 	    PROVIDE (__dataextended_end = .);
 	    PROVIDE (__ghsbegin_endofExtendedRAM = .);
   	} > EXTENDED_RAM 
-	ASSERT(( __dataextended_start_lma + SIZEOF(.dataextended) <= 0x00060000), "Initialization of RAM variables do not fit in FLASH.")
 
     .cals :
     {
@@ -322,6 +319,7 @@ SECTIONS
     } > TPU_A_SPACE
     .tpubpararam :
     {
+        PROVIDE (__ghsbegin_tpubpararam = .);
   		*(.tpubpararam)
     } > TPU_B_SPACE
 

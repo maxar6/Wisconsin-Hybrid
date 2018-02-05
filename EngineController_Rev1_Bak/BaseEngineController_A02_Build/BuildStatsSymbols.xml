@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildStatsSymbols>
+   <BuildStatsSymbol>BaseEngineController_A02_M</BuildStatsSymbol>
+   <BuildStatsSymbol>BaseEngineController_A02_B</BuildStatsSymbol>
+   <BuildStatsSymbol>BaseEngineController_A02_DWork</BuildStatsSymbol>
+   <BuildStatsSymbol>BaseEngineController_A02_PrevZC</BuildStatsSymbol>
+   <BuildStatsSymbol>BaseEngineController_A02_M_</BuildStatsSymbol>
+   <BuildStatsSymbol>VolatileWork</BuildStatsSymbol>
+   <BuildStatsSymbol>ConstantWork</BuildStatsSymbol>
+   <BuildStatsSymbol>NonVolatileWork</BuildStatsSymbol>
+   <BuildStatsSymbol>NonVolatileDefault</BuildStatsSymbol>
+   <BuildStatsSymbol>FgndTimeStack</BuildStatsSymbol>
+   <BuildStatsSymbol>FgndAngleStack</BuildStatsSymbol>
+   <BuildStatsSymbol>BgndStack</BuildStatsSymbol>
+   <BuildStatsSymbol>IdleStack</BuildStatsSymbol>
+   <BuildStatsSymbol>InterruptStack</BuildStatsSymbol>
+   <BuildStatsSymbol>Heap</BuildStatsSymbol>
+   <BuildStatsSymbol>Stack</BuildStatsSymbol>
+   <BuildStatsSymbol>BaseEngineController_A02_Foreground</BuildStatsSymbol>
+</BuildStatsSymbols>

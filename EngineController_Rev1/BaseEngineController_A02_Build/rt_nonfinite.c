@@ -1,13 +1,12 @@
 /*
  * File: rt_nonfinite.c
  *
- * Real-Time Workshop code generated for Simulink model BaseEngineController_A02.
+ * Code generated for Simulink model 'BaseEngineController_A02'.
  *
- * Model version                        : 1.1510
- * Real-Time Workshop file version      : 7.5  (R2010a)  25-Jan-2010
- * Real-Time Workshop file generated on : Sun Nov 19 15:20:16 2017
- * TLC version                          : 7.5 (Jan 19 2010)
- * C/C++ source code generated on       : Sun Nov 19 15:20:17 2017
+ * Model version                  : 1.1553
+ * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
+ * TLC version                    : 8.0 (Feb  3 2011)
+ * C/C++ source code generated on : Wed Jan 24 11:43:49 2018
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -123,7 +122,7 @@ boolean_T rtIsNaNF(real32_T value)
 /* end rt_nonfinite.c */
 
 /*
- * File trailer for Real-Time Workshop generated code.
+ * File trailer for generated code.
  *
  * [EOF]
  */

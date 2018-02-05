@@ -2,9 +2,9 @@
 <Application>
 	<GUID>34a85f28-21b7-4112-82-b0-87-11-cc-cb-8f</GUID>
 	<Name>BaseEngineController_A02</Name>
-	<Author>maxar</Author>
-	<Copyright>2017 Woodward.</Copyright>
-	<CreateDate>19-Nov-2017</CreateDate>
+	<Author>HYBRID</Author>
+	<Copyright>2018 Woodward.</Copyright>
+	<CreateDate>24-Jan-2018</CreateDate>
 	<MemoryLayout>DEV</MemoryLayout>
 	<Module>ClassicModule-MPC555</Module>
 	<Memory/>
@@ -25,9 +25,9 @@
 			</TableDatabase>
 			<ProjectID>6</ProjectID>
 			<ProductID>1</ProductID>
-			<SwIdTxt>BaseEngin_111</SwIdTxt>
-			<SwRevisionTxt>BaseEngineController_A02_111</SwRevisionTxt>
-			<CalIdTxt>BaseEngineController_A02_111_000</CalIdTxt>
+			<SwIdTxt>BaseEngin_122</SwIdTxt>
+			<SwRevisionTxt>BaseEngineController_A02_122</SwRevisionTxt>
+			<CalIdTxt>BaseEngineController_A02_122_000</CalIdTxt>
 		</VarDecs>
 		<DatabaseBuild>
 			<Toolchain>
@@ -38,10 +38,10 @@
 			</Toolchain>
 		</DatabaseBuild>
 		<Command>
-			<Description>Copy BaseEngin_111.dll and BaseEngineController_A02_111.srz</Description>
+			<Description>Copy BaseEngin_122.dll and BaseEngineController_A02_122.srz</Description>
 			<Order>99</Order>
-			<Execute>@if exist C:\ECUFiles\TDBDLL\\*.* copy /Y .\TDB\BaseEngin_111.dll C:\ECUFiles\TDBDLL\ &gt; NUL</Execute>
-			<Execute>@if exist C:\ECUFiles\Programs\*.* copy /Y .\Target\BaseEngineController_A02_111.srz C:\ECUFiles\Programs &gt; NUL</Execute>
+			<Execute>@if exist C:\ECUFiles\TDBDLL\\*.* copy /Y .\TDB\BaseEngin_122.dll C:\ECUFiles\TDBDLL\ &gt; NUL</Execute>
+			<Execute>@if exist C:\ECUFiles\Programs\*.* copy /Y .\Target\BaseEngineController_A02_122.srz C:\ECUFiles\Programs &gt; NUL</Execute>
 		</Command>
 	</ToolInterface>
 	<Build>
@@ -67,27 +67,27 @@
 			<File>FaultManager.c</File>
 			<File>Foreground.c</File>
 			<File>IOCallbacks.c</File>
-			<File>InjectorSequenceCallback_41.c</File>
+			<File>InjectorSequenceCallback_38.c</File>
 			<File>MotoHawk_CAN.c</File>
 			<File>MotoHawk_DataStores.c</File>
 			<File>MotoHawk_IO.c</File>
 			<File>TableLookupFunctions.c</File>
-			<File>Trigger_BGND_BASE_PERIODIC_6314p0009.c</File>
-			<File>Trigger_BGND_BASEx20_PERIODIC_3052p0013.c</File>
+			<File>Trigger_BGND_BASE_PERIODIC_9474p0004.c</File>
+			<File>Trigger_BGND_BASEx20_PERIODIC_6201p0004.c</File>
 			<File>Trigger_CAN_RX_BusCAN_1_Buf1.c</File>
 			<File>Trigger_CAN_RX_BusCAN_2_Buf14.c</File>
-			<File>Trigger_Encoder_Fault_31.c</File>
-			<File>Trigger_FGND_5XRTI_PERIODIC_1327p0009.c</File>
-			<File>Trigger_FGND_5XRTI_PERIODIC_15456p0007.c</File>
-			<File>Trigger_FGND_5XRTI_PERIODIC_15457p0007.c</File>
-			<File>Trigger_FGND_5XRTI_PERIODIC_5248p0006.c</File>
-			<File>Trigger_FGND_5XRTI_PERIODIC_6042p0011.c</File>
-			<File>Trigger_FGND_MID_TDC_EVENT_5065p0009.c</File>
-			<File>Trigger_FGND_RTI_PERIODIC_6320p0009.c</File>
-			<File>Trigger_FGND_TDC1_EVENT_14692p0002.c</File>
-			<File>Trigger_FGND_TDC_EVENT_4171p001.c</File>
-			<File>Trigger_FGND_TDC_EVENT_5531p0006.c</File>
-			<File>Trigger_STARTUP_EVENT_5064p0009.c</File>
+			<File>Trigger_Encoder_Fault_28.c</File>
+			<File>Trigger_FGND_5XRTI_PERIODIC_1407p0004.c</File>
+			<File>Trigger_FGND_5XRTI_PERIODIC_1408p0004.c</File>
+			<File>Trigger_FGND_5XRTI_PERIODIC_4476p0004.c</File>
+			<File>Trigger_FGND_5XRTI_PERIODIC_8397p0001.c</File>
+			<File>Trigger_FGND_5XRTI_PERIODIC_9202p0004.c</File>
+			<File>Trigger_FGND_MID_TDC_EVENT_8214p0001.c</File>
+			<File>Trigger_FGND_RTI_PERIODIC_9480p0004.c</File>
+			<File>Trigger_FGND_TDC1_EVENT_1155p0004.c</File>
+			<File>Trigger_FGND_TDC_EVENT_7320p0004.c</File>
+			<File>Trigger_FGND_TDC_EVENT_8688p0001.c</File>
+			<File>Trigger_STARTUP_EVENT_8213p0001.c</File>
 			<File>VarDecs.c</File>
 			<File>rt_zcfcn.c</File>
 			<File>rt_nonfinite.c</File>
@@ -97,11 +97,11 @@
 			<Directory>.</Directory>
 		</Header>
 		<Header>
-			<Directory>C:\ProgramData\MotoHawk\2010a_sp1_49\Toolchains\7_10_0\rtw_lib_single\API</Directory>
-			<Directory>C:\ProgramData\MotoHawk\2010a_sp1_49\Toolchains\7_10_0\rtw_lib_single\API\MPC555</Directory>
+			<Directory>C:\ProgramData\MotoHawk\2011a_sp0_184\Toolchains\7_12_0\rtw_lib_single\API</Directory>
+			<Directory>C:\ProgramData\MotoHawk\2011a_sp0_184\Toolchains\7_12_0\rtw_lib_single\API\MPC555</Directory>
 		</Header>
 		<Library>
-			<Directory>C:\Program Files (x86)\Woodward\MCS\MotoHawk\2010a_sp1.49\MotoCoder\..\ControlCoreClassic\Framework\MultiTask\Archives\gcc-powerpc-eabi\4_4_0</Directory>
+			<Directory>C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\MotoCoder\..\ControlCoreClassic\Framework\MultiTask\Archives\gcc-powerpc-eabi\4_4_0</Directory>
 			<File>PCM</File>
 		</Library>
 		<Command>
@@ -111,7 +111,7 @@
 		</Command>
 		<Command>
 			<Description>Call MotoConvert</Description>
-			<Execute>@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\BaseEngineController_A02.map -srec=.\Target\BaseEngineController_A02.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=BaseEngineController_A02.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x0006FFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\BaseEngineController_A02_111.srz</Execute>
+			<Execute>@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\BaseEngineController_A02.map -srec=.\Target\BaseEngineController_A02.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=BaseEngineController_A02.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x0006FFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\BaseEngineController_A02_122.srz</Execute>
 			<Order>55</Order>
 		</Command>
 		<Compiler>
@@ -145,5 +145,5 @@
 			<Execute>@if exist .\rtwtypes.h del /Q /F .\rtwtypes.h &gt; NUL</Execute>
 		</Command>
 	</Build>
-	<Signature>9718b4dc-d082-4b03-b8-a8-fb-18-10-48-86</Signature>
+	<Signature>ce6caeb4-ff38-42cd-97-ae-05-c2-c1-4d-94</Signature>
 </Application>

@@ -3,7 +3,7 @@
    <MemoryRegions>
         <MemoryRegion Name="FLASH" SAddr="0x00008108" Size="360184"/>
         <MemoryRegion Name="INTERNAL_RAM" SAddr="0x003F9800" Size="26544"/>
-        <MemoryRegion Name="CAL_SPACE" SAddr="0x00400000" Size="65536"/>
+        <MemoryRegion Name="CAL_SPACE" SAddr="0x00060000" Size="65536"/>
         <MemoryRegion Name="EEPROM_SPACE" SAddr="0x00070000" Size="4096.0"/>
    </MemoryRegions>
    <HiddenSymbols/>

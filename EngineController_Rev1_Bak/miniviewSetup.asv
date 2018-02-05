@@ -1,0 +1,152 @@
+function output = miniviewSetup(param_name)
+% This function defines all the necessary strings to make the miniview
+% display work. Information is input in the info array, and is processed 
+% into the setup structure for use in simulink.
+%
+% INPUT
+% info.name - This is the name used anywhere the variable name is one line.
+%             Maxmimum length is 8 characters.
+% info.nameline1 - This is the name used for the upper line anywhere the
+%                  variable name is two lines.  Maximum length is 5
+%                  characters.
+% info.nameline2 - This is the name used for the lower line anywhere the
+%                  variable name is two lines.  Maximum length is 5
+%                  characters.
+% info.barGraphMode - Specifies the bargraph mode for the single variable
+%                     display.  0:Filled bar from left, 1:Filled bar from
+%                     right, 2:Filled bar from center; 3:Tick mark.
+% info.barMax - Engineering value of variable at right end of graph.
+% info.barMin - Engineering value of variable at left end of graph.
+%
+% PARAMNAME
+% name - single string with all variable names, each string is 10
+%        characters long.
+% nameline1 - single string with all variable names, each string is 7
+%             characters long.
+% nameline2 - single string with all variable names, each string is 7
+%             characters long.
+% namecount - number of variables.
+% barGraphMode - array of bar graph modes.
+% barMax - array of bar max values.
+% barMin - array of bar min values.
+
+index = 0;
+%% Input the informtation
+
+index = index+1;
+info(index).name = 'Eng RPM';
+info(index).nameline1 = 'Eng';
+info(index).nameline2 = 'RPM';
+info(index).barGraphMode = 0;
+info(index).barMax = 8000;
+info(index).barMin = 0;
+info(index).formatStr = '%4d';
+
+index = index+1;
+info(index).name = 'TPS';
+info(index).nameline1 = 'TPS';
+info(index).nameline2 = '';
+info(index).barGraphMode = 0;
+info(index).barMax = 100;
+info(index).barMin = 0;
+
+index = index+1;
+info(index).name = 'ClntTmp';
+info(index).nameline1 = 'Clnt';
+info(index).nameline2 = 'Temp';
+info(index).barGraphMode = 0;
+info(index).barMax = 120;
+info(index).barMin = 00;
+
+index = index+1;
+info(index).name = 'OilPres';
+info(index).nameline1 = 'Oil';
+info(index).nameline2 = 'Pres';
+info(index).barGraphMode = 0;
+info(index).barMax = 80;
+info(index).barMin = 10;
+
+index = index+1;
+info(index).name = 'IAT';
+info(index).nameline1 = 'InAir';
+info(index).nameline2 = 'Temp';
+info(index).barGraphMode = 0;
+info(index).barMax = 50;
+info(index).barMin = -10;
+
+index = index+1;
+info(index).name = 'MAP';
+info(index).nameline1 = 'MAP';
+info(index).nameline2 = '';
+info(index).barGraphMode = 0;
+info(index).barMax = 100;
+info(index).barMin = 0;
+
+index = index+1;
+info(index).name = 'O2PrCAT';
+info(index).nameline1 = 'O2Pre';
+info(index).nameline2 = 'CAT';
+info(index).barGraphMode = 0;
+info(index).barMax = 200;
+info(index).barMin = 0;
+
+index = index+1;
+info(index).name = 'FuelSens';
+info(index).nameline1 = 'Fuel';
+info(index).nameline2 = 'Sens';
+info(index).barGraphMode = 0;
+info(index).barMax = 100;
+info(index).barMin = 0;
+
+index = index+1;
+info(index).name = 'FuelPres';
+info(index).nameline1 = 'Fuel';
+info(index).nameline2 = 'Pres';
+info(index).barGraphMode = 0;
+info(index).barMax = 75;
+info(index).barMin = 0;
+%% manipulate the data into the setup structure
+
+setup.names = [];
+setup.namesline1 = [];
+setup.namesline2 = [];
+setup.namescount = length(info);
+
+for i = 1:1:length(info)
+    if(length(info(i).name) > 9)
+        info(i).name = info(i).name(1:9);
+    end
+    setup.names = [setup.names info(i).name zeros(1, 10-length(info(i).name))];
+
+    if(length(info(i).nameline1) > 6)
+        info(i).nameline1 = info(i).nameline1(1:6);
+    end
+    setup.namesline1 = [setup.namesline1 info(i).nameline1 zeros(1, 7-length(info(i).nameline1))];
+
+   if(length(info(i).nameline2) > 6)
+        info(i).nameline2 = info(i).nameline2(1:6);
+   end
+    setup.namesline2 = [setup.namesline2 info(i).nameline2 zeros(1, 7-length(info(i).nameline2))];
+
+    setup.barGraphMode(i) = info(i).barGraphMode;
+    setup.barMax(i) = info(i).barMax;
+    setup.barMin(i) = info(i).barMin;
+end
+
+switch(param_name)
+    case 'names'
+        output = setup.names;
+    case 'namesline1'
+        output = setup.namesline1;
+    case 'namesline2'
+        output = setup.namesline2;
+    case 'namescount'
+        output = setup.namescount;
+    case 'barGraphMode'
+        output = setup.barGraphMode;
+    case 'barMin'
+        output = setup.barMin;
+    case 'barMax'
+        output = setup.barMax;
+end
+

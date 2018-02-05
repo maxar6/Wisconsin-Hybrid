@@ -2,67 +2,67 @@
 #############################################
 ###                                       ###
 ###  Starting MotoHawk Build              ###
-###  MotoHawk version: 2010a_sp1.49       ###
-###    MATLAB version: 7.10.0.499 (R2010a)###
-###        19-Nov-2017 19:40:11           ###
+###  MotoHawk version: 2011a_sp0.184      ###
+###    MATLAB version: 7.12.0.635 (R2011a)###
+###        15-Jan-2018 12:09:37           ###
 ###                                       ###
 #############################################
  
-Target Module:   ECU555-48-0708 (DEV)
-DEV Executable:  DynoController_Rev1_000.srz
-MotoTune DLL:    DynoContr_000.dll
+Target Module:   ECU555-48-0708 (PROD)
+PROD Executable: DynoController_Rev1_008.srz
+MotoTune DLL:    DynoContr_008.dll
  
 Project GUID:    6a27880e-8e62-404a-92-11-3b-ad-79-73-ba
-Build GUID:      cf95b2dd-9a54-4399-9c-49-d3-c9-18-1d-3a
+Build GUID:      197a6098-2946-4234-8b-41-e9-0d-c0-c2-cc
  
-### Starting Real-Time Workshop build procedure for model: DynoController_Rev1
-### Generating code into build directory: E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\DynoController_Rev1\DynoController_Rev1_Build
-{Warning: Matching "Goto" for "From" 'DynoController_Rev1/Foreground/Control/Battery/Safe Shutdown
-Sequence/VehicleReady' not found} 
-{Warning: Output port 1 of 'DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN Message'
+### Starting build procedure for model: DynoController_Rev1
+### Generating code into build folder: C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\DynoController_Rev1\DynoController_Rev1_Build
+{Warning: Matching "Goto" for "From" '<a href="matlab:open_and_hilite_system ('DynoController_Rev1/Foreground/Control/Battery/Safe Shutdown Sequence/VehicleReady')">DynoController_Rev1/Foreground/Control/Battery/Safe Shutdown
+Sequence/VehicleReady</a>' not found} 
+{Warning: Output port 1 of '<a href="matlab:open_and_hilite_system ('DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN Message')">DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN Message</a>'
 is not connected.} 
-{Warning: Output port 3 of 'DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN Message'
+{Warning: Output port 3 of '<a href="matlab:open_and_hilite_system ('DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN Message')">DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN Message</a>'
 is not connected.} 
-{Warning: Output port 4 of 'DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN Message'
+{Warning: Output port 4 of '<a href="matlab:open_and_hilite_system ('DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN Message')">DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN Message</a>'
 is not connected.} 
-{Warning: Output port 5 of 'DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN Message'
+{Warning: Output port 5 of '<a href="matlab:open_and_hilite_system ('DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN Message')">DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN Message</a>'
 is not connected.} 
-{Warning: Output port 6 of 'DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN Message'
+{Warning: Output port 6 of '<a href="matlab:open_and_hilite_system ('DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN Message')">DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN Message</a>'
 is not connected.} 
-{Warning: Output port 7 of 'DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN Message'
+{Warning: Output port 7 of '<a href="matlab:open_and_hilite_system ('DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN Message')">DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN Message</a>'
 is not connected.} 
-{Warning: Output port 8 of 'DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN Message'
+{Warning: Output port 8 of '<a href="matlab:open_and_hilite_system ('DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN Message')">DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN Message</a>'
 is not connected.} 
-{Warning: Output port 9 of 'DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN Message'
+{Warning: Output port 9 of '<a href="matlab:open_and_hilite_system ('DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN Message')">DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN Message</a>'
 is not connected.} 
-{Warning: Output port 11 of 'DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN
-Message' is not connected.} 
-{Warning: Output port 1 of 'DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN
-Message1' is not connected.} 
-{Warning: Output port 2 of 'DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN
-Message1' is not connected.} 
-{Warning: Output port 4 of 'DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN
-Message1' is not connected.} 
-{Warning: Output port 5 of 'DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN
-Message1' is not connected.} 
-{Warning: Output port 6 of 'DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN
-Message1' is not connected.} 
-{Warning: Output port 3 of 'DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN
-Message3' is not connected.} 
-{Warning: Output port 4 of 'DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN
-Message3' is not connected.} 
-{Warning: Output port 1 of 'DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/Control
-Inputs' is not connected.} 
+{Warning: Output port 11 of '<a href="matlab:open_and_hilite_system ('DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN Message')">DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN
+Message</a>' is not connected.} 
+{Warning: Output port 1 of '<a href="matlab:open_and_hilite_system ('DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN Message1')">DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN
+Message1</a>' is not connected.} 
+{Warning: Output port 2 of '<a href="matlab:open_and_hilite_system ('DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN Message1')">DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN
+Message1</a>' is not connected.} 
+{Warning: Output port 4 of '<a href="matlab:open_and_hilite_system ('DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN Message1')">DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN
+Message1</a>' is not connected.} 
+{Warning: Output port 5 of '<a href="matlab:open_and_hilite_system ('DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN Message1')">DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN
+Message1</a>' is not connected.} 
+{Warning: Output port 6 of '<a href="matlab:open_and_hilite_system ('DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN Message1')">DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN
+Message1</a>' is not connected.} 
+{Warning: Output port 3 of '<a href="matlab:open_and_hilite_system ('DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN Message3')">DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN
+Message3</a>' is not connected.} 
+{Warning: Output port 4 of '<a href="matlab:open_and_hilite_system ('DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN Message3')">DynoController_Rev1/Foreground/Inputs/CAN Inputs/BATTERY/Read CAN
+Message3</a>' is not connected.} 
+{Warning: Output port 1 of '<a href="matlab:open_and_hilite_system ('DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/Control Inputs')">DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/Control
+Inputs</a>' is not connected.} 
 ### Invoking Target Language Compiler on DynoController_Rev1.rtw
-### Using System Target File: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2010a_sp1.49\Blocks\Build\motohawk_ert_rtw.tlc
+### Using System Target File: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tlc
 ### Loading TLC function libraries
-.......
+........
 ### Initial pass through model to cache user defined code
-...................................................................
+......................................................................
 ### Caching model source code
 ...............................................................................
 ...............................................................................
-........................
+.....................................
 ### Writing source file DynoController_Rev1.c
 .
 ### Writing header file DynoController_Rev1_private.h
@@ -73,35 +73,33 @@ Inputs' is not connected.}
 .
 ### Writing header file rtwtypes.h
 ### Writing header file rt_nonfinite.h
-### Writing source file rt_nonfinite.c
 .
-### Writing header file rt_SATURATE.h
+### Writing source file rt_nonfinite.c
 ### Writing header file DynoController_Rev1_Foreground.h
 .
 ### Writing source file DynoController_Rev1_data.c
 ### TLC code generation complete.
-.........................................................................### Creating project marker file: rtw_proj.tmw
-.
-### Processing Template Makefile: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2010a_sp1.49\Blocks\Build\motohawk_ert_rtw.tmf
-### Creating DynoController_Rev1.mk from C:\Program Files (x86)\Woodward\MCS\MotoHawk\2010a_sp1.49\Blocks\Build\motohawk_ert_rtw.tmf
+..............................................................................
+### Processing Template Makefile: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tmf
+### DynoController_Rev1.mk which is generated from C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tmf is up to date
 ### Building DynoController_Rev1: .\DynoController_Rev1.bat
 ### Created Code and Build Scripts.  Ready to Build ### 
-### Successful completion of Real-Time Workshop build procedure for model: DynoController_Rev1
+### Successful completion of build procedure for model: DynoController_Rev1
 Creating Application Descriptor...
 ...Finished Application Descriptor
-### Starting MotoCoder v0.10.7 ###
+### Starting MotoCoder v0.12.4 ###
 Module: ClassicModule-MPC555
-Module File: file:///C:/PROGRA~2/Woodward/MCS/MotoHawk/2010A_~1.49/MOTOCO~1/Modules/ClassicModule-MPC555.xml
+Module File: file:///C:/Program%20Files%20(x86)/Woodward/MCS/MotoHawk/2011a_sp0.184/MotoCoder/Modules/ClassicModule-MPC555.xml
 Module Family: ClassicControlCore
-Module Family Directory: file:///C:/PROGRA~2/Woodward/MCS/MotoHawk/2010A_~1.49/MOTOCO~1/ModuleFamilies/ClassicControlCore
+Module Family Directory: file:///C:/Program%20Files%20(x86)/Woodward/MCS/MotoHawk/2011a_sp0.184/MotoCoder/ModuleFamilies/ClassicControlCore
 Application Configuration File: .\MotoHawk_Extensions.xml
 ### Generating MotoTune DLL 
 Parser mode is C Source Code 
 Searching for files to parse 
-Writing Vardec Library E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\DynoController_Rev1\DynoController_Rev1_Build\TDB/ParsedVardecs.xml 
+Writing Vardec Library C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\DynoController_Rev1\DynoController_Rev1_Build\TDB/ParsedVardecs.xml 
 ### Completed MotoTune DLL 
 ### Compiling and Linking 
-Buildfile: file:///E:/Box/Box Sync/Wisconsin Hybrid/Mooventure/Mooventure Code/DynoController_Rev1/DynoController_Rev1_Build/DynoController_Rev1.build 
+Buildfile: file:///C:/Users/HYBRID/Documents/GitHub/Wisconsin-Hybrid/DynoController_Rev1/DynoController_Rev1_Build/DynoController_Rev1.build 
 Target framework: Microsoft .NET Framework 3.5 
 Target(s) specified: rebuild  
  
@@ -111,38 +109,41 @@ rebuild:
  
 clean: 
  
+   [delete] Deleting directory 'C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\DynoController_Rev1\DynoController_Rev1_Build\Build'. 
+   [delete] Deleting directory 'C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\DynoController_Rev1\DynoController_Rev1_Build\Archive'. 
  
 all: 
  
  
 init: 
  
-    [mkdir] Creating directory 'E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\DynoController_Rev1\DynoController_Rev1_Build\Target'. 
-    [mkdir] Creating directory 'E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\DynoController_Rev1\DynoController_Rev1_Build\Build\Obj'. 
-    [mkdir] Creating directory 'E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\DynoController_Rev1\DynoController_Rev1_Build\Archive'. 
-     [copy] Copying 4 files to 'E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\DynoController_Rev1\DynoController_Rev1_Build\Archive'. 
+    [mkdir] Creating directory 'C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\DynoController_Rev1\DynoController_Rev1_Build\Build\Obj'. 
+    [mkdir] Creating directory 'C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\DynoController_Rev1\DynoController_Rev1_Build\Archive'. 
+     [copy] Copying 4 files to 'C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\DynoController_Rev1\DynoController_Rev1_Build\Archive'. 
  
 compile: 
  
-  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\DynoController_Rev1\DynoController_Rev1_Build\Application.c 
-  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\DynoController_Rev1\DynoController_Rev1_Build\ApplicationSecurity.c 
-  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\DynoController_Rev1\DynoController_Rev1_Build\AppMonitor.c 
-  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\DynoController_Rev1\DynoController_Rev1_Build\CANReceiveDispatcher.c 
-  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\DynoController_Rev1\DynoController_Rev1_Build\CodeCoverage.c 
-  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\DynoController_Rev1\DynoController_Rev1_Build\DynoController_Rev1.c 
-  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\DynoController_Rev1\DynoController_Rev1_Build\DynoController_Rev1_data.c 
-  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\DynoController_Rev1\DynoController_Rev1_Build\DynoController_Rev1_Foreground.c 
-  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\DynoController_Rev1\DynoController_Rev1_Build\MotoCoder_DataStore.c 
-  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\DynoController_Rev1\DynoController_Rev1_Build\MotoCoder_Timer.c 
-  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\DynoController_Rev1\DynoController_Rev1_Build\MotoHawk_CAN.c 
-  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\DynoController_Rev1\DynoController_Rev1_Build\MotoHawk_DataStores.c 
-  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\DynoController_Rev1\DynoController_Rev1_Build\MotoHawk_IO.c 
-  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\DynoController_Rev1\DynoController_Rev1_Build\rt_nonfinite.c 
-  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\DynoController_Rev1\DynoController_Rev1_Build\Trigger_BGND_BASE_PERIODIC_632p0004.c 
-  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\DynoController_Rev1\DynoController_Rev1_Build\Trigger_CAN_RX_BusCAN_1_Buf1.c 
-  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\DynoController_Rev1\DynoController_Rev1_Build\Trigger_FGND_RTI_PERIODIC_643p0004.c 
-  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\DynoController_Rev1\DynoController_Rev1_Build\VarDecs.c 
-  [gcc-cpp] Compiling E:\Box\Box Sync\Wisconsin Hybrid\Mooventure\Mooventure Code\DynoController_Rev1\DynoController_Rev1_Build\TDB\TableDB.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\DynoController_Rev1\DynoController_Rev1_Build\Application.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\DynoController_Rev1\DynoController_Rev1_Build\ApplicationSecurity.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\DynoController_Rev1\DynoController_Rev1_Build\AppMonitor.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\DynoController_Rev1\DynoController_Rev1_Build\CANReceiveDispatcher.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\DynoController_Rev1\DynoController_Rev1_Build\CodeCoverage.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\DynoController_Rev1\DynoController_Rev1_Build\DynoController_Rev1.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\DynoController_Rev1\DynoController_Rev1_Build\DynoController_Rev1_data.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\DynoController_Rev1\DynoController_Rev1_Build\DynoController_Rev1_Foreground.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\DynoController_Rev1\DynoController_Rev1_Build\MotoCoder_DataStore.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\DynoController_Rev1\DynoController_Rev1_Build\MotoCoder_Timer.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\DynoController_Rev1\DynoController_Rev1_Build\MotoHawk_CAN.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\DynoController_Rev1\DynoController_Rev1_Build\MotoHawk_DataStores.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\DynoController_Rev1\DynoController_Rev1_Build\MotoHawk_IO.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\DynoController_Rev1\DynoController_Rev1_Build\rt_nonfinite.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\DynoController_Rev1\DynoController_Rev1_Build\Trigger_BGND_BASE_PERIODIC_739p0001.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\DynoController_Rev1\DynoController_Rev1_Build\Trigger_CAN_RX_BusCAN_1_Buf1.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\DynoController_Rev1\DynoController_Rev1_Build\Trigger_FGND_20XRTI_PERIODIC_10837p0011.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\DynoController_Rev1\DynoController_Rev1_Build\Trigger_FGND_RTI_PERIODIC_750p0001.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\DynoController_Rev1\DynoController_Rev1_Build\Trigger_STARTUP_EVENT_10849p0004.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\DynoController_Rev1\DynoController_Rev1_Build\VarDecs.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\DynoController_Rev1\DynoController_Rev1_Build\TDB\TableDB.c 
  
 link: 
  
@@ -154,49 +155,48 @@ s-records:
  
 BUILD SUCCEEDED 
  
-Total time: 2.8 seconds. 
+Total time: 3.9 seconds. 
  
 ### Call MotoConvert 
 Project format is MPC5xx 
 Toolchain format is GCC 
 Transforming range 0x00400000-0x0041FFFF into 64 byte pages... 
 Transforming range 0x00000000-0x0006FFFF into 64 byte pages... 
-Searching for Table Database address 'EriRequestTableList'...Found at 0x0002A3C0 
+Searching for Table Database address 'EriRequestTableList'...Found at 0x0002A1D8 
 Searching for CRC Table address 'g_pCRCBlockPtr' ...Found at 0x00008100 
 Calculating Application defined CRC's...OK. 
 Searching for initialised section '.fixed_ramcals' aliased to '.fixed_romcals' ... 
 Searching for initialised section '.ramcals' aliased to '.romcals' ... 
-    Adding RAM[0x003FB390], ROM[0x0002F910], Length[0x00000010] 
+    Adding RAM[0x003FB844], ROM[0x0002F898], Length[0x00000020] 
 Searching for initialised section '.sdata' aliased to '.romsdata' ... 
-    Adding RAM[0x003F9800], ROM[0x0002F950], Length[0x00000019] 
+    Adding RAM[0x003F9800], ROM[0x0002F8E8], Length[0x00000019] 
 Searching for initialised section '.data' aliased to '.romdata' ... 
-    Adding RAM[0x003FA898], ROM[0x0002F96C], Length[0x0000086C] 
+    Adding RAM[0x003FA894], ROM[0x0002F904], Length[0x00000870] 
 Complete. 
 Writing file sr://DynoController_Rev1.sr... 
-Encrypting 'sr://DynoController_Rev1.sr' into 'srz://.\Target\DynoController_Rev1_000.srz' ... 
+Encrypting 'sr://DynoController_Rev1.sr' into 'srz://.\Target\DynoController_Rev1_008.srz' ... 
 Done. 
 ### Creating Build Statistics 
 Memory Summary:
-	FLASH:                           160328 bytes   45% of 360184
-	    NonVolatileDefault:              16 bytes    0% of 360184
-	    DynoController_Rev1_Foreground:5924 bytes    2% of 360184
-	INTERNAL_RAM:                     14626 bytes   55% of  26544
-	    DynoController_Rev1_M:            4 bytes    0% of  26544
-	    DynoController_Rev1_B:           80 bytes    0% of  26544
-	    DynoController_Rev1_DWork:       24 bytes    0% of  26544
+	FLASH:                           160284 bytes   45% of 360184
+	    NonVolatileDefault:              32 bytes    0% of 360184
+	    DynoController_Rev1_Foreground:4212 bytes    1% of 360184
+	INTERNAL_RAM:                     15843 bytes   60% of  26544
+	    DynoController_Rev1_B:           96 bytes    0% of  26544
+	    DynoController_Rev1_DWork:       28 bytes    0% of  26544
 	    DynoController_Rev1_M_:           4 bytes    0% of  26544
-	    NonVolatileWork:                 16 bytes    0% of  26544
+	    NonVolatileWork:                 32 bytes    0% of  26544
 	    FgndTimeStack:                 3072 bytes   12% of  26544
 	    BgndStack:                     2048 bytes    8% of  26544
 	    IdleStack:                     1024 bytes    4% of  26544
 	    InterruptStack:                1536 bytes    6% of  26544
-	CAL_SPACE:                          220 bytes    0% of  65536
-	    ConstantWork:                    64 bytes    0% of  65536
-	EEPROM_SPACE:                        19 bytes    0% of   4096
+	CAL_SPACE:                          208 bytes    0% of  65536
+	    ConstantWork:                    52 bytes    0% of  65536
+	EEPROM_SPACE:                        35 bytes    1% of   4096
 
-### Copy DynoContr_000.dll and DynoController_Rev1_000.srz 
+### Copy DynoContr_008.dll and DynoController_Rev1_008.srz 
 ### Successful Build with MotoCoder 
-Elapsed Build Time: 26.0 seconds
+Elapsed Build Time: 1 minutes, 19.1 seconds  (79.1 seconds)
 {Warning: Block diagram 'DynoController_Rev1' contains disabled library links.  Use Model Advisor to
 find the disabled links in non-library models.  The diagram has been saved but may not contain what
 you intended.} 
@@ -204,8 +204,8 @@ you intended.}
 #############################################################################
 ###
 ### Target Module: ECU555-48-0708
-### Created Development Executable: DynoController_Rev1_000.srz
-### Created MotoTune DLL: DynoContr_000.dll
+### Created Production Executable:  DynoController_Rev1_008.srz
+### Created MotoTune DLL: DynoContr_008.dll
 ###
 ### Successful MotoHawk Build for model: DynoController_Rev1
 ###

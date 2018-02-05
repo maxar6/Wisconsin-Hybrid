@@ -1,0 +1,1754 @@
+Library {
+  Name			  "motohawk_can_protocols_lib"
+  Version		  5.1
+  SaveDefaultBlockParams  on
+  LibraryLinkDisplay	  "all"
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Wed Dec 07 08:13:18 2005"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Chris_Doyle"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Thu Mar 09 17:09:05 2006"
+  ModelVersionFormat	  "1.%<AutoIncrement:27>"
+  ConfigurationManager	  "None"
+  SimParamPage		  "Solver"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  SimulationMode	  "normal"
+  ConsistencyChecking	  "none"
+  ArrayBoundsChecking	  "none"
+  AlgebraicLoopMsg	  "warning"
+  BlockPriorityViolationMsg "warning"
+  MinStepSizeMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  DiscreteInheritContinuousMsg "warning"
+  MultiTaskRateTransMsg	  "error"
+  SingleTaskRateTransMsg  "none"
+  CheckForMatrixSingularity "none"
+  IntegerOverflowMsg	  "warning"
+  Int32ToFloatConvMsg	  "warning"
+  ParameterDowncastMsg	  "error"
+  ParameterOverflowMsg	  "error"
+  ParameterPrecisionLossMsg "warning"
+  UnderSpecifiedDataTypeMsg "none"
+  UnnecessaryDatatypeConvMsg "none"
+  VectorMatrixConversionMsg "none"
+  InvalidFcnCallConnMsg	  "error"
+  SignalLabelMismatchMsg  "none"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  SfunCompatibilityCheckMsg "none"
+  ProdHWDeviceType	  "Microprocessor"
+  ProdHWWordLengths	  "8,16,32,32"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  RTWRetainRTWFile	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  TLCAssertion		  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      ShowAdditionalParam     off
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "sfix(16)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      DataType		      "auto"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ShowAdditionalParam     off
+      ParameterDataTypeMode   "Same as input"
+      ParameterDataType	      "sfix(16)"
+      ParameterScalingMode    "Best Precision: Matrix-wise"
+      ParameterScaling	      "2^0"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Reference
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      PortCounts	      "[]"
+      SFunctionModules	      "''"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      on
+      Permissions	      "ReadWrite"
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      ShowAdditionalParam     off
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Terminator
+    }
+    Block {
+      BlockType		      TriggerPort
+      TriggerType	      "rising"
+      ShowOutputPort	      off
+      OutputDataType	      "auto"
+      ZeroCross		      on
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "motohawk_can_protocols_lib"
+    Location		    [223, 132, 1076, 753]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "MotoTune Custom CAN Protocol"
+      Ports		      []
+      Position		      [15, 328, 405, 573]
+      MoveFcn		      "motohawk_block_image(gcb, motohawk_get_param_ws"
+"(gcb, 'image_file'));"
+      TreatAsAtomicUnit	      off
+      MaskType		      "MotoTune CAN Protocol Handler"
+      MaskDescription	      "Handle a MotoTune connection via CAN.\n\nMotoTu"
+"ne Handler Instance Name: A unique valid c name \nthat identifies this instan"
+"ce of a MotoTune connection.\n\nCAN Channel:  The hardware channel on which t"
+"o make the\nconnection.\n\nReceive ID:  The nominal receive ID that MotoTune "
+"requests\nwill be received upon.\n\nReceive ID Type: Standard (11 bit) or Ext"
+"ended (29 bit) id.\n\nReceive ID Mask:  The bits of the Receive ID that must "
+"match.\n\nTransmit ID: The ID on which the module will reply to the\nMotoTune"
+" request.\n\nTransmit ID Type: Standard (11 bit) or Extended (29 bit) id.\n\n"
+"---------------------------------------------------------------------\nCopyri"
+"ght 2005 MotoTron, Corp.  All Rights Reserved."
+      MaskPromptString	      "imfileImage File|MotoTune Handler Instance Name"
+" (unique string)|CAN Channel (integer)|Receive ID |Receive ID Type (0=Std, 1="
+"Ext)|Receive ID Mask|Transmit ID|Transmit ID Type (0=Std, 1=Ext)|Reprogram Ci"
+"ty ID (uint8)"
+      MaskStyleString	      "edit,edit,edit,edit,edit,edit,edit,edit,edit"
+      MaskTunableValueString  "off,off,off,off,off,off,off,off,on"
+      MaskCallbackString      "||||||||"
+      MaskEnableString	      "on,on,on,on,on,on,on,on,on"
+      MaskVisibilityString    "off,on,on,on,on,on,on,on,on"
+      MaskToolTipString	      "on,on,on,on,on,on,on,on,on"
+      MaskVarAliasString      ",,,,,,,,"
+      MaskVariables	      "image_file=@1;mtninstance=@2;channel=@3;rxid=@4"
+";rxidtype=@5;rxidmasknom=@6;txid=@7;txidtype=@8;reprogcity=@9;"
+      MaskInitialization      "try,\n	img = imread(image_file);\n"
+"	motohawk_block_image(gcb, image_file);\ncatch,\n	img = imread("
+"'image_not_found.jpg');\nend\n\ne = {'(std)','(ext)'};\nreqbits = hex2dec('1f"
+"00ffff'); \nrxidmask = bitand(uint32(rxidmasknom),uint32(reqbits));\nrxlbl = "
+"sprintf('\\\\fontname{courier new}Chan  : CAN\\\\_%g\\\\newlineRx ID : 0x%08x"
+" %s\\\\newlineID Adj: 0x%08x', channel,rxid,e{rxidtype+1},double(bitxor(uint3"
+"2(rxidmask),uint32(reqbits))));\ntxlbl = sprintf('\\\\fontname{courier new}Ch"
+"an  : CAN\\\\_%g\\\\newlineTx ID : 0x%08x %s\\\\newlineProg City ID: 0x%02x',"
+" channel,txid,e{txidtype+1},double(uint8(reprogcity)));\n"
+      MaskDisplay	      "patch([0 0 1 1], [0 0.075 0.075 0], [230/255 0/"
+"255 0/255])\npatch([0 0 1 1], [0.025 0.05 0.05 0.025], [150/255 0/255 0/255])"
+"\npatch([0 0 1 1], [0 0.025 0.025 0], [0/255 0/255 0/255])\nimage(img,[0 0.25"
+" 0.75 0.75]);\n\ntext(0.99,0.57,['\\fontname{Arial}\\fontsize{18}\\bfMotoTune"
+" Handler\\fontsize{12}\\newline\\rmInstance: ' strrep(mtninstance,'_','\\_')]"
+",'texmode','on','HorizontalAlignment','Right')\n\ntext(0.01,0.22,['\\fontname"
+"{Arial}\\fontsize{18}\\bfRx\\fontsize{12}\\newline\\rm' rxlbl],'texmode','on'"
+",'HorizontalAlignment','Left')\ntext(0.99,0.22,['\\fontname{Arial}\\fontsize{"
+"18}\\bfTx\\fontsize{12}\\newline\\rm' txlbl],'texmode','on','HorizontalAlignm"
+"ent','Right')\n"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "normalized"
+      MaskValueString	      "'mototune.jpg'|'MotoTune1'|1|hex2dec('c02')|1|h"
+"ex2dec('1fff00ff')|hex2dec('020c')|1|hex2dec('c')"
+      System {
+	Name			"MotoTune Custom CAN Protocol"
+	Location		[327, 490, 614, 781]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Reference
+	  Name			  "CAN Receive Slot Trigger"
+	  Tag			  "Trigger"
+	  Ports			  [0, 1]
+	  Position		  [45, 15, 225, 115]
+	  Orientation		  "down"
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontWeight		  "bold"
+	  SourceBlock		  "MotoHawk_lib/CAN Blocks/CAN Receive Slot Tr"
+"igger"
+	  SourceType		  "MotoHawk CAN Receive Trigger"
+	  slot			  "mtninstance"
+	  inherited		  on
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "MotoTune"
+	  Ports			  [0, 0, 0, 1]
+	  Position		  [47, 160, 222, 252]
+	  TreatAsAtomicUnit	  off
+	  System {
+	    Name		    "MotoTune"
+	    Location		    [110, 331, 1125, 824]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      TriggerPort
+	      Name		      "f"
+	      Ports		      []
+	      Position		      [515, 25, 535, 45]
+	      TriggerType	      "function-call"
+	      StatesWhenEnabling      "held"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Adjust ID"
+	      Ports		      [0, 2, 0, 1]
+	      Position		      [220, 423, 330, 472]
+	      TreatAsAtomicUnit	      off
+	      System {
+		Name			"Adjust ID"
+		Location		[327, 490, 1153, 858]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  TriggerPort
+		  Name			  "f"
+		  Ports			  []
+		  Position		  [395, 30, 415, 50]
+		  TriggerType		  "function-call"
+		  StatesWhenEnabling	  "held"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "CAN Receive Slot Properties"
+		  Ports			  [2]
+		  Position		  [360, 75, 660, 190]
+		  ShowName		  off
+		  SourceBlock		  "MotoHawk_lib/CAN Blocks/CAN Receive"
+" Slot Properties"
+		  SourceType		  "MotoHawk Send CAN Raw"
+		  slot			  "mtninstance"
+		  id_filt		  "on"
+		  pay_filt		  "off"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_calibration"
+		  Ports			  [0, 1]
+		  Position		  [510, 215, 660, 255]
+		  ShowName		  off
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing "
+"Blocks/motohawk_calibration"
+		  SourceType		  "MotoHawk Calibration"
+		  nam			  "[mtninstance 'TxID']"
+		  val			  "txid"
+		  storage		  "Calibration NV"
+		  show_more		  "on"
+		  name_source		  "Use Parameter"
+		  data_type		  "Inherit via back propagation"
+		  read_level		  "1"
+		  write_level		  "1"
+		  ovr_cals		  "on"
+		  view_as		  "Number"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  use_help_units	  "on"
+		  help			  "['Transmit CAN ID for handler: ' mt"
+"ninstance]"
+		  units			  "''"
+		  use_min_max		  "off"
+		  min_val		  "-inf"
+		  max_val		  "inf"
+		  use_precision		  "off"
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_mototune_group	  "on"
+		  mototune_group	  "['MotoTune | ' mtninstance]"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_calibration1"
+		  Ports			  [0, 1]
+		  Position		  [135, 86, 325, 124]
+		  ShowName		  off
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing "
+"Blocks/motohawk_calibration"
+		  SourceType		  "MotoHawk Calibration"
+		  nam			  "[mtninstance 'RxID']"
+		  val			  "rxid"
+		  storage		  "Calibration NV"
+		  show_more		  "on"
+		  name_source		  "Use Parameter"
+		  data_type		  "Inherit via back propagation"
+		  read_level		  "1"
+		  write_level		  "1"
+		  ovr_cals		  "on"
+		  view_as		  "Number"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  use_help_units	  "on"
+		  help			  "['Receive CAN ID for handler: ' mtn"
+"instance]"
+		  units			  "''"
+		  use_min_max		  "off"
+		  min_val		  "-inf"
+		  max_val		  "inf"
+		  use_precision		  "off"
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_mototune_group	  "on"
+		  mototune_group	  "['MotoTune | ' mtninstance]"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_calibration2"
+		  Ports			  [0, 1]
+		  Position		  [135, 140, 325, 180]
+		  ShowName		  off
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing "
+"Blocks/motohawk_calibration"
+		  SourceType		  "MotoHawk Calibration"
+		  nam			  "[mtninstance 'RxIDMask']"
+		  val			  "bitxor(uint32(rxidmask),uint32(reqb"
+"its))"
+		  storage		  "Calibration NV"
+		  show_more		  "on"
+		  name_source		  "Use Parameter"
+		  data_type		  "Inherit via back propagation"
+		  read_level		  "1"
+		  write_level		  "1"
+		  ovr_cals		  "on"
+		  view_as		  "Number"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  use_help_units	  "on"
+		  help			  "['Receive CAN ID Mask for handler: "
+"' mtninstance]"
+		  units			  "''"
+		  use_min_max		  "off"
+		  min_val		  "-inf"
+		  max_val		  "inf"
+		  use_precision		  "off"
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_mototune_group	  "on"
+		  mototune_group	  "['MotoTune | ' mtninstance]"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_calibration3"
+		  Ports			  [0, 1]
+		  Position		  [510, 270, 660, 310]
+		  ShowName		  off
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing "
+"Blocks/motohawk_calibration"
+		  SourceType		  "MotoHawk Calibration"
+		  nam			  "[mtninstance 'ReProgCityID']"
+		  val			  "reprogcity"
+		  storage		  "Calibration NV"
+		  show_more		  "on"
+		  name_source		  "Use Parameter"
+		  data_type		  "Inherit via back propagation"
+		  read_level		  "1"
+		  write_level		  "1"
+		  ovr_cals		  "on"
+		  view_as		  "Number"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  use_help_units	  "on"
+		  help			  "['Reprogramming City ID for handler"
+": ' mtninstance]"
+		  units			  "''"
+		  use_min_max		  "off"
+		  min_val		  "-inf"
+		  max_val		  "inf"
+		  use_precision		  "off"
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_mototune_group	  "on"
+		  mototune_group	  "['MotoTune | ' mtninstance]"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_code_coverage"
+		  Ports			  []
+		  Position		  [435, 27, 611, 57]
+		  ShowName		  off
+		  SourceBlock		  "MotoHawk_lib/Extra Development Bloc"
+"ks/motohawk_code_coverage"
+		  SourceType		  "MotoHawk Code Coverage Test Manager"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "TX ID"
+		  Position		  [690, 228, 720, 242]
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Reprog City"
+		  Position		  [690, 283, 720, 297]
+		  Port			  "2"
+		}
+		Line {
+		  SrcBlock		  "motohawk_calibration3"
+		  SrcPort		  1
+		  DstBlock		  "Reprog City"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "motohawk_calibration"
+		  SrcPort		  1
+		  DstBlock		  "TX ID"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "motohawk_calibration2"
+		  SrcPort		  1
+		  DstBlock		  "CAN Receive Slot Properties"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "motohawk_calibration1"
+		  SrcPort		  1
+		  DstBlock		  "CAN Receive Slot Properties"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant"
+	      Position		      [490, 268, 560, 292]
+	      ShowName		      off
+	      Value		      "txidtype"
+	      ShowAdditionalParam     on
+	      OutDataTypeMode	      "Inherit via back propagation"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Read CAN Raw"
+	      Ports		      [0, 6]
+	      Position		      [35, 80, 470, 270]
+	      ShowName		      off
+	      SourceBlock	      "MotoHawk_lib/CAN Blocks/Read CAN Raw"
+	      SourceType	      "MotoHawk CAN Receive"
+	      bus		      "channel"
+	      id_ext		      "1"
+	      id		      "double(rxid)"
+	      id_mask		      "double(rxidmask)"
+	      pay		      "[]"
+	      pay_mask		      "[]"
+	      queue		      "4"
+	      slot		      "mtninstance"
+	      valid		      on
+	      stale		      on
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "motohawk_code_coverage"
+	      Ports		      []
+	      Position		      [550, 22, 726, 52]
+	      ShowName		      off
+	      SourceBlock	      "MotoHawk_lib/Extra Development Blocks/m"
+"otohawk_code_coverage"
+	      SourceType	      "MotoHawk Code Coverage Test Manager"
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "motohawk_sfun_mototune_protocol"
+	      Ports		      [9]
+	      Position		      [585, 83, 690, 357]
+	      ShowName		      off
+	      FunctionName	      "motohawk_sfun_mototune_protocol"
+	      Parameters	      "uint8(ch)"
+	      MaskType		      "MotoTune Control Core Interface"
+	      MaskDescription	      "Interface to Control Core MotoTune hand"
+"ler.\n\n---------------------------------------------------------------------"
+"\nCopyright 2005 MotoTron, Corp.  All Rights Reserved."
+	      MaskPromptString	      "CAN Channel"
+	      MaskStyleString	      "edit"
+	      MaskTunableValueString  "off"
+	      MaskEnableString	      "on"
+	      MaskVisibilityString    "on"
+	      MaskToolTipString	      "on"
+	      MaskVariables	      "ch=@1;"
+	      MaskInitialization      "lbl = 'MotoTune';"
+	      MaskDisplay	      "patch([0 0 1 1], [0 1 1 0], [220/255 22"
+"0/255 220/255]); \npatch([0 0 1 1], 0.5*[0 0.075 0.075 0], [230/255 0/255 0/2"
+"55]); \npatch([0 0 1 1], 0.5*[0.025 0.05 0.05 0.025], [150/255 0/255 0/255]);"
+" \npatch([0 0 1 1], 0.5*[0 0.025 0.025 0], [0/255 0/255 0/255]);\ntext(0.5, 0"
+".85, lbl, 'texmode','on','VerticalAlignment','Top','HorizontalAlignment','Cen"
+"ter');\n"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "normalized"
+	      MaskValueString	      "channel"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "motohawk_trigger"
+	      Tag		      "Trigger"
+	      Ports		      [0, 1]
+	      Position		      [185, 285, 365, 390]
+	      Orientation	      "down"
+	      NamePlacement	      "alternate"
+	      ShowName		      off
+	      SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_tr"
+"igger"
+	      SourceType	      "MotoHawk Function Trigger"
+	      trigger		      "STARTUP_EVENT"
+	      priority_order	      "0"
+	      inherited		      on
+	      run_disabled	      off
+	      override_app_monitor    off
+	      target		      "ECU555_80"
+	    }
+	    Line {
+	      SrcBlock		      "Adjust ID"
+	      SrcPort		      2
+	      Points		      [205, 0; 0, -120]
+	      DstBlock		      "motohawk_sfun_mototune_protocol"
+	      DstPort		      9
+	    }
+	    Line {
+	      SrcBlock		      "motohawk_trigger"
+	      SrcPort		      1
+	      DstBlock		      "Adjust ID"
+	      DstPort		      trigger
+	    }
+	    Line {
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      DstBlock		      "motohawk_sfun_mototune_protocol"
+	      DstPort		      7
+	    }
+	    Line {
+	      SrcBlock		      "Adjust ID"
+	      SrcPort		      1
+	      Points		      [170, 0; 0, -125]
+	      DstBlock		      "motohawk_sfun_mototune_protocol"
+	      DstPort		      8
+	    }
+	    Line {
+	      SrcBlock		      "Read CAN Raw"
+	      SrcPort		      6
+	      DstBlock		      "motohawk_sfun_mototune_protocol"
+	      DstPort		      6
+	    }
+	    Line {
+	      SrcBlock		      "Read CAN Raw"
+	      SrcPort		      5
+	      DstBlock		      "motohawk_sfun_mototune_protocol"
+	      DstPort		      5
+	    }
+	    Line {
+	      SrcBlock		      "Read CAN Raw"
+	      SrcPort		      4
+	      DstBlock		      "motohawk_sfun_mototune_protocol"
+	      DstPort		      4
+	    }
+	    Line {
+	      SrcBlock		      "Read CAN Raw"
+	      SrcPort		      3
+	      DstBlock		      "motohawk_sfun_mototune_protocol"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Read CAN Raw"
+	      SrcPort		      2
+	      DstBlock		      "motohawk_sfun_mototune_protocol"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Read CAN Raw"
+	      SrcPort		      1
+	      DstBlock		      "motohawk_sfun_mototune_protocol"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "CAN Receive Slot Trigger"
+	  SrcPort		  1
+	  DstBlock		  "MotoTune"
+	  DstPort		  trigger
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "MotoTune Standard CAN Protocol"
+      Ports		      []
+      Position		      [15, 28, 405, 273]
+      MoveFcn		      "motohawk_block_image(gcb, motohawk_get_param_ws"
+"(gcb, 'image_file'));"
+      TreatAsAtomicUnit	      off
+      MaskType		      "MotoTune CAN Protocol Handler"
+      MaskDescription	      "Handle a MotoTune connection via CAN.\n\nMotoTu"
+"ne Handler Instance Name: A unique valid c name \nthat identifies this instan"
+"ce of a MotoTune connection. For\nstandard operation use 'CAN_1' or 'CAN_2'\n"
+"\nCAN Channel:  The hardware channel on which to make the\nconnection.\n\nCit"
+"y ID: The Smartcraft City ID that identifies this module.\n0x0b = PCM-1\n0x0c"
+" = PCM-2\n0x91 = uCHI-1\n0x92 = uCHI-2\n\n-----------------------------------"
+"----------------------------------\nCopyright 2005 MotoTron, Corp.  All Right"
+"s Reserved."
+      MaskPromptString	      "imfileImage File|MotoTune Handler Instance Name"
+" (unique string)|CAN Channel (integer)|Default City ID (uint8)"
+      MaskStyleString	      "edit,edit,edit,edit"
+      MaskTunableValueString  "off,off,off,off"
+      MaskCallbackString      "|||"
+      MaskEnableString	      "on,on,on,on"
+      MaskVisibilityString    "off,on,on,on"
+      MaskToolTipString	      "on,on,on,on"
+      MaskVarAliasString      ",,,"
+      MaskVariables	      "image_file=@1;mtninstance=@2;channel=@3;reprogc"
+"ity=@4;"
+      MaskInitialization      "try,\n	img = imread(image_file);\n"
+"	motohawk_block_image(gcb, image_file);\ncatch,\n	img = imread("
+"'image_not_found.jpg');\nend\n\ne = {'(std)','(ext)'};\nreqbits = hex2dec('1f"
+"00ffff'); \ncitylbl = sprintf('City ID: 0x%02x', double(uint8(reprogcity)));"
+"\nchlbl = sprintf('Ch: CAN\\\\_%g', double(uint8(channel)));\n"
+      MaskDisplay	      "patch([0 0 1 1], [0 0.075 0.075 0], [230/255 0/"
+"255 0/255])\npatch([0 0 1 1], [0.025 0.05 0.05 0.025], [150/255 0/255 0/255])"
+"\npatch([0 0 1 1], [0 0.025 0.025 0], [0/255 0/255 0/255])\nimage(img,[0 0.25"
+" 0.75 0.75]);\n\ntext(0.99,0.50,['\\fontname{Arial}\\fontsize{18}\\bfMotoTune"
+" Handler\\fontsize{12}\\newline\\rmInstance: ' strrep(mtninstance,'_','\\_') "
+"'\\newline' citylbl '\\newline' chlbl],'texmode','on','HorizontalAlignment','"
+"Right')\n\n"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "normalized"
+      MaskValueString	      "'mototune.jpg'|'CAN_1'|1|hex2dec('b')"
+      System {
+	Name			"MotoTune Standard CAN Protocol"
+	Location		[327, 490, 614, 781]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Reference
+	  Name			  "CAN Receive Slot Trigger"
+	  Tag			  "Trigger"
+	  Ports			  [0, 1]
+	  Position		  [45, 15, 225, 115]
+	  Orientation		  "down"
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontWeight		  "bold"
+	  SourceBlock		  "MotoHawk_lib/CAN Blocks/CAN Receive Slot Tr"
+"igger"
+	  SourceType		  "MotoHawk CAN Receive Trigger"
+	  slot			  "mtninstance"
+	  inherited		  on
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "MotoTune"
+	  Ports			  [0, 0, 0, 1]
+	  Position		  [47, 160, 222, 252]
+	  TreatAsAtomicUnit	  off
+	  System {
+	    Name		    "MotoTune"
+	    Location		    [110, 331, 1125, 824]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      TriggerPort
+	      Name		      "f"
+	      Ports		      []
+	      Position		      [515, 25, 535, 45]
+	      TriggerType	      "function-call"
+	      StatesWhenEnabling      "held"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Adjust ID"
+	      Ports		      [0, 2, 0, 1]
+	      Position		      [220, 423, 330, 472]
+	      TreatAsAtomicUnit	      off
+	      System {
+		Name			"Adjust ID"
+		Location		[353, 228, 1179, 596]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  TriggerPort
+		  Name			  "f"
+		  Ports			  []
+		  Position		  [395, 30, 415, 50]
+		  TriggerType		  "function-call"
+		  StatesWhenEnabling	  "held"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "CAN Receive Slot Properties"
+		  Ports			  [2]
+		  Position		  [445, 75, 745, 190]
+		  ShowName		  off
+		  SourceBlock		  "MotoHawk_lib/CAN Blocks/CAN Receive"
+" Slot Properties"
+		  SourceType		  "MotoHawk Send CAN Raw"
+		  slot			  "mtninstance"
+		  id_filt		  on
+		  pay_filt		  off
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant"
+		  Position		  [300, 145, 405, 175]
+		  Value			  "hex2dec('ff00')"
+		  ShowAdditionalParam	  on
+		  OutDataTypeMode	  "Inherit via back propagation"
+		}
+		Block {
+		  BlockType		  DataTypeConversion
+		  Name			  "Data Type Conversion2"
+		  Position		  [210, 221, 265, 249]
+		  ShowName		  off
+		  DataType		  "uint32"
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Gain"
+		  Position		  [335, 90, 390, 120]
+		  Gain			  "256"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_calibration3"
+		  Ports			  [0, 1]
+		  Position		  [15, 270, 165, 310]
+		  ShowName		  off
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing "
+"Blocks/motohawk_calibration"
+		  SourceType		  "MotoHawk Calibration"
+		  nam			  "['CityID_' mtninstance]"
+		  val			  "reprogcity"
+		  storage		  "Calibration NV"
+		  show_more		  on
+		  name_source		  "Use Parameter"
+		  data_type		  "uint8"
+		  read_level		  "1"
+		  write_level		  "1"
+		  ovr_cals		  on
+		  view_as		  "Number"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  vector_style		  "Wide Row"
+		  use_help_units	  on
+		  help			  "['Reprogramming City ID for handler"
+": ' mtninstance]"
+		  units			  "''"
+		  use_header_enum	  off
+		  row_header_enum	  "{}"
+		  col_header_enum	  "{}"
+		  use_min_max		  off
+		  min_val		  "-inf"
+		  max_val		  "inf"
+		  use_precision		  off
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_mototune_group	  on
+		  mototune_group	  "['MotoTune | ' mtninstance]"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_code_coverage"
+		  Ports			  []
+		  Position		  [435, 27, 611, 57]
+		  ShowName		  off
+		  SourceBlock		  "MotoHawk_lib/Extra Development Bloc"
+"ks/motohawk_code_coverage"
+		  SourceType		  "MotoHawk Code Coverage Test Manager"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "TX ID"
+		  Position		  [690, 228, 720, 242]
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Reprog City"
+		  Position		  [690, 283, 720, 297]
+		  Port			  "2"
+		}
+		Line {
+		  SrcBlock		  "Data Type Conversion2"
+		  SrcPort		  1
+		  Points		  [15, 0]
+		  Branch {
+		    DstBlock		    "TX ID"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -130]
+		    DstBlock		    "Gain"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Constant"
+		  SrcPort		  1
+		  DstBlock		  "CAN Receive Slot Properties"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Gain"
+		  SrcPort		  1
+		  DstBlock		  "CAN Receive Slot Properties"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "motohawk_calibration3"
+		  SrcPort		  1
+		  Points		  [25, 0]
+		  Branch {
+		    DstBlock		    "Reprog City"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "Data Type Conversion2"
+		    DstPort		    1
+		  }
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Bitwise\nLogical Operator"
+	      Ports		      [1, 1]
+	      Position		      [520, 294, 590, 326]
+	      ShowName		      off
+	      SourceBlock	      "simulink/Math\nOperations/Bitwise\nLogi"
+"cal Operator"
+	      SourceType	      "BitwiseOperator"
+	      Operator		      "AND"
+	      Operand2		      "'000000FF'"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Bitwise\nLogical Operator1"
+	      Ports		      [1, 1]
+	      Position		      [520, 254, 590, 286]
+	      ShowName		      off
+	      SourceBlock	      "simulink/Math\nOperations/Bitwise\nLogi"
+"cal Operator"
+	      SourceType	      "BitwiseOperator"
+	      Operator		      "AND"
+	      Operand2		      "'1FFF0000'"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant"
+	      Position		      [750, 268, 820, 292]
+	      ShowName		      off
+	      ShowAdditionalParam     on
+	      OutDataTypeMode	      "Inherit via back propagation"
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain"
+	      Position		      [620, 295, 675, 325]
+	      Gain		      "256"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Read CAN Raw"
+	      Ports		      [0, 6]
+	      Position		      [35, 79, 470, 271]
+	      ShowName		      off
+	      SourceBlock	      "MotoHawk_lib/CAN Blocks/Read CAN Raw"
+	      SourceType	      "MotoHawk CAN Receive"
+	      bus		      "channel"
+	      id_ext		      "1"
+	      id		      "double(reprogcity*256+2)"
+	      id_mask		      "double(hex2dec('000000f0'))"
+	      pay		      "[]"
+	      pay_mask		      "[]"
+	      queue		      "4"
+	      slot		      "mtninstance"
+	      valid		      on
+	      stale		      on
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum"
+	      Ports		      [3, 1]
+	      Position		      [715, 300, 735, 320]
+	      ShowName		      off
+	      IconShape		      "round"
+	      Inputs		      "+++"
+	      InputSameDT	      off
+	      OutDataTypeMode	      "Inherit via internal rule"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "motohawk_code_coverage"
+	      Ports		      []
+	      Position		      [550, 22, 726, 52]
+	      ShowName		      off
+	      SourceBlock	      "MotoHawk_lib/Extra Development Blocks/m"
+"otohawk_code_coverage"
+	      SourceType	      "MotoHawk Code Coverage Test Manager"
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "motohawk_sfun_mototune_protocol"
+	      Ports		      [9]
+	      Position		      [865, 83, 970, 357]
+	      ShowName		      off
+	      FunctionName	      "motohawk_sfun_mototune_protocol"
+	      Parameters	      "uint8(ch)"
+	      MaskType		      "MotoTune Control Core Interface"
+	      MaskDescription	      "Interface to Control Core MotoTune hand"
+"ler.\n\n---------------------------------------------------------------------"
+"\nCopyright 2005 MotoTron, Corp.  All Rights Reserved."
+	      MaskPromptString	      "CAN Channel"
+	      MaskStyleString	      "edit"
+	      MaskTunableValueString  "off"
+	      MaskEnableString	      "on"
+	      MaskVisibilityString    "on"
+	      MaskToolTipString	      "on"
+	      MaskVariables	      "ch=@1;"
+	      MaskInitialization      "lbl = 'MotoTune';"
+	      MaskDisplay	      "patch([0 0 1 1], [0 1 1 0], [220/255 22"
+"0/255 220/255]); \npatch([0 0 1 1], 0.5*[0 0.075 0.075 0], [230/255 0/255 0/2"
+"55]); \npatch([0 0 1 1], 0.5*[0.025 0.05 0.05 0.025], [150/255 0/255 0/255]);"
+" \npatch([0 0 1 1], 0.5*[0 0.025 0.025 0], [0/255 0/255 0/255]);\ntext(0.5, 0"
+".85, lbl, 'texmode','on','VerticalAlignment','Top','HorizontalAlignment','Cen"
+"ter');\n"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "normalized"
+	      MaskValueString	      "channel"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "motohawk_trigger"
+	      Tag		      "Trigger"
+	      Ports		      [0, 1]
+	      Position		      [185, 285, 365, 390]
+	      Orientation	      "down"
+	      NamePlacement	      "alternate"
+	      ShowName		      off
+	      SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_tr"
+"igger"
+	      SourceType	      "MotoHawk Function Trigger"
+	      trigger		      "STARTUP_EVENT"
+	      priority_order	      "0"
+	      inherited		      on
+	      run_disabled	      off
+	      override_app_monitor    off
+	      target		      "ECU555_80"
+	    }
+	    Line {
+	      SrcBlock		      "Sum"
+	      SrcPort		      1
+	      DstBlock		      "motohawk_sfun_mototune_protocol"
+	      DstPort		      8
+	    }
+	    Line {
+	      SrcBlock		      "Bitwise\nLogical Operator1"
+	      SrcPort		      1
+	      Points		      [130, 0]
+	      DstBlock		      "Sum"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain"
+	      SrcPort		      1
+	      DstBlock		      "Sum"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Adjust ID"
+	      SrcPort		      1
+	      Points		      [390, 0]
+	      DstBlock		      "Sum"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Bitwise\nLogical Operator"
+	      SrcPort		      1
+	      DstBlock		      "Gain"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Read CAN Raw"
+	      SrcPort		      1
+	      DstBlock		      "motohawk_sfun_mototune_protocol"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Read CAN Raw"
+	      SrcPort		      2
+	      DstBlock		      "motohawk_sfun_mototune_protocol"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Read CAN Raw"
+	      SrcPort		      3
+	      DstBlock		      "motohawk_sfun_mototune_protocol"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Read CAN Raw"
+	      SrcPort		      4
+	      Points		      [15, 0]
+	      Branch {
+		Points			[0, 80]
+		Branch {
+		  DstBlock		  "Bitwise\nLogical Operator1"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [0, 40]
+		  DstBlock		  "Bitwise\nLogical Operator"
+		  DstPort		  1
+		}
+	      }
+	      Branch {
+		DstBlock		"motohawk_sfun_mototune_protocol"
+		DstPort			4
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Read CAN Raw"
+	      SrcPort		      5
+	      DstBlock		      "motohawk_sfun_mototune_protocol"
+	      DstPort		      5
+	    }
+	    Line {
+	      SrcBlock		      "Read CAN Raw"
+	      SrcPort		      6
+	      DstBlock		      "motohawk_sfun_mototune_protocol"
+	      DstPort		      6
+	    }
+	    Line {
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      DstBlock		      "motohawk_sfun_mototune_protocol"
+	      DstPort		      7
+	    }
+	    Line {
+	      SrcBlock		      "motohawk_trigger"
+	      SrcPort		      1
+	      DstBlock		      "Adjust ID"
+	      DstPort		      trigger
+	    }
+	    Line {
+	      SrcBlock		      "Adjust ID"
+	      SrcPort		      2
+	      Points		      [450, 0; 0, -120]
+	      DstBlock		      "motohawk_sfun_mototune_protocol"
+	      DstPort		      9
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "CAN Receive Slot Trigger"
+	  SrcPort		  1
+	  DstBlock		  "MotoTune"
+	  DstPort		  trigger
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "MotoTune Standard CAN Protocol (IDLE_EVENT trig"
+"gered)"
+      Ports		      []
+      Position		      [415, 328, 805, 573]
+      MoveFcn		      "motohawk_block_image(gcb, motohawk_get_param_ws"
+"(gcb, 'image_file'));"
+      TreatAsAtomicUnit	      off
+      MaskType		      "MotoTune CAN Protocol Handler"
+      MaskDescription	      "Handle a MotoTune connection via CAN.\n\nMotoTu"
+"ne Handler Instance Name: A unique valid c name \nthat identifies this instan"
+"ce of a MotoTune connection. For\nstandard operation use 'CAN_1' or 'CAN_2'\n"
+"\nCAN Channel:  The hardware channel on which to make the\nconnection.\n\nCit"
+"y ID: The Smartcraft City ID that identifies this module.\n0x0b = PCM-1\n0x0c"
+" = PCM-2\n0x91 = uCHI-1\n0x92 = uCHI-2\n\n-----------------------------------"
+"----------------------------------\nCopyright 2005 MotoTron, Corp.  All Right"
+"s Reserved."
+      MaskPromptString	      "imfileImage File|MotoTune Handler Instance Name"
+" (unique string)|CAN Channel (integer)|Default City ID (uint8)"
+      MaskStyleString	      "edit,edit,edit,edit"
+      MaskTunableValueString  "off,off,off,off"
+      MaskCallbackString      "|||"
+      MaskEnableString	      "on,on,on,on"
+      MaskVisibilityString    "off,on,on,on"
+      MaskToolTipString	      "on,on,on,on"
+      MaskVarAliasString      ",,,"
+      MaskVariables	      "image_file=@1;mtninstance=@2;channel=@3;reprogc"
+"ity=@4;"
+      MaskInitialization      "try,\n	img = imread(image_file);\n"
+"	motohawk_block_image(gcb, image_file);\ncatch,\n	img = imread("
+"'image_not_found.jpg');\nend\n\ne = {'(std)','(ext)'};\nreqbits = hex2dec('1f"
+"00ffff'); \ncitylbl = sprintf('City ID: 0x%02x', double(uint8(reprogcity)));"
+"\nchlbl = sprintf('Ch: CAN\\\\_%g', double(uint8(channel)));\n"
+      MaskDisplay	      "patch([0 0 1 1], [0 0.075 0.075 0], [230/255 0/"
+"255 0/255])\npatch([0 0 1 1], [0.025 0.05 0.05 0.025], [150/255 0/255 0/255])"
+"\npatch([0 0 1 1], [0 0.025 0.025 0], [0/255 0/255 0/255])\nimage(img,[0 0.25"
+" 0.75 0.75]);\n\ntext(0.99,0.50,['\\fontname{Arial}\\fontsize{18}\\bfMotoTune"
+" Handler\\fontsize{12}\\newline\\rmInstance: ' strrep(mtninstance,'_','\\_') "
+"'\\newline' citylbl '\\newline' chlbl '\\newlineIDLE\\_EVENT triggered'],'tex"
+"mode','on','HorizontalAlignment','Right')\n\n"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "normalized"
+      MaskValueString	      "'mototune.jpg'|'CAN_1'|1|hex2dec('b')"
+      System {
+	Name			"MotoTune Standard CAN Protocol (IDLE_EVENT tr"
+"iggered)"
+	Location		[327, 490, 614, 781]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "MotoTune"
+	  Ports			  [0, 0, 0, 1]
+	  Position		  [47, 160, 222, 252]
+	  TreatAsAtomicUnit	  off
+	  System {
+	    Name		    "MotoTune"
+	    Location		    [110, 331, 1125, 824]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      TriggerPort
+	      Name		      "f"
+	      Ports		      []
+	      Position		      [515, 25, 535, 45]
+	      TriggerType	      "function-call"
+	      StatesWhenEnabling      "held"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Adjust ID"
+	      Ports		      [0, 2, 0, 1]
+	      Position		      [220, 423, 330, 472]
+	      TreatAsAtomicUnit	      off
+	      System {
+		Name			"Adjust ID"
+		Location		[353, 228, 1179, 596]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  TriggerPort
+		  Name			  "f"
+		  Ports			  []
+		  Position		  [395, 30, 415, 50]
+		  TriggerType		  "function-call"
+		  StatesWhenEnabling	  "held"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "CAN Receive Slot Properties"
+		  Ports			  [2]
+		  Position		  [445, 75, 745, 190]
+		  ShowName		  off
+		  SourceBlock		  "MotoHawk_lib/CAN Blocks/CAN Receive"
+" Slot Properties"
+		  SourceType		  "MotoHawk Send CAN Raw"
+		  slot			  "mtninstance"
+		  id_filt		  "on"
+		  pay_filt		  "off"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant"
+		  Position		  [300, 145, 405, 175]
+		  Value			  "hex2dec('ff00')"
+		  ShowAdditionalParam	  on
+		  OutDataTypeMode	  "Inherit via back propagation"
+		}
+		Block {
+		  BlockType		  DataTypeConversion
+		  Name			  "Data Type Conversion2"
+		  Position		  [210, 221, 265, 249]
+		  ShowName		  off
+		  DataType		  "uint32"
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Gain"
+		  Position		  [335, 90, 390, 120]
+		  Gain			  "256"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_calibration3"
+		  Ports			  [0, 1]
+		  Position		  [15, 270, 165, 310]
+		  ShowName		  off
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing "
+"Blocks/motohawk_calibration"
+		  SourceType		  "MotoHawk Calibration"
+		  nam			  "['CityID_' mtninstance]"
+		  val			  "reprogcity"
+		  storage		  "Calibration NV"
+		  show_more		  "on"
+		  name_source		  "Use Parameter"
+		  data_type		  "uint8"
+		  read_level		  "1"
+		  write_level		  "1"
+		  ovr_cals		  "on"
+		  view_as		  "Number"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  use_help_units	  "on"
+		  help			  "['Reprogramming City ID for handler"
+": ' mtninstance]"
+		  units			  "''"
+		  use_min_max		  "off"
+		  min_val		  "-inf"
+		  max_val		  "inf"
+		  use_precision		  "off"
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_mototune_group	  "on"
+		  mototune_group	  "['MotoTune | ' mtninstance]"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_code_coverage"
+		  Ports			  []
+		  Position		  [435, 27, 611, 57]
+		  ShowName		  off
+		  SourceBlock		  "MotoHawk_lib/Extra Development Bloc"
+"ks/motohawk_code_coverage"
+		  SourceType		  "MotoHawk Code Coverage Test Manager"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "TX ID"
+		  Position		  [690, 228, 720, 242]
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Reprog City"
+		  Position		  [690, 283, 720, 297]
+		  Port			  "2"
+		}
+		Line {
+		  SrcBlock		  "Data Type Conversion2"
+		  SrcPort		  1
+		  Points		  [15, 0]
+		  Branch {
+		    DstBlock		    "TX ID"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -130]
+		    DstBlock		    "Gain"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Constant"
+		  SrcPort		  1
+		  DstBlock		  "CAN Receive Slot Properties"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Gain"
+		  SrcPort		  1
+		  DstBlock		  "CAN Receive Slot Properties"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "motohawk_calibration3"
+		  SrcPort		  1
+		  Points		  [25, 0]
+		  Branch {
+		    DstBlock		    "Reprog City"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "Data Type Conversion2"
+		    DstPort		    1
+		  }
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Bitwise\nLogical Operator"
+	      Ports		      [1, 1]
+	      Position		      [520, 294, 590, 326]
+	      ShowName		      off
+	      SourceBlock	      "simulink/Math\nOperations/Bitwise\nLogi"
+"cal Operator"
+	      SourceType	      "BitwiseOperator"
+	      Operator		      "AND"
+	      Operand2		      "'000000FF'"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Bitwise\nLogical Operator1"
+	      Ports		      [1, 1]
+	      Position		      [520, 254, 590, 286]
+	      ShowName		      off
+	      SourceBlock	      "simulink/Math\nOperations/Bitwise\nLogi"
+"cal Operator"
+	      SourceType	      "BitwiseOperator"
+	      Operator		      "AND"
+	      Operand2		      "'1FFF0000'"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant"
+	      Position		      [750, 268, 820, 292]
+	      ShowName		      off
+	      ShowAdditionalParam     on
+	      OutDataTypeMode	      "Inherit via back propagation"
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain"
+	      Position		      [620, 295, 675, 325]
+	      Gain		      "256"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Read CAN Raw"
+	      Ports		      [0, 6]
+	      Position		      [35, 79, 470, 271]
+	      ShowName		      off
+	      SourceBlock	      "MotoHawk_lib/CAN Blocks/Read CAN Raw"
+	      SourceType	      "MotoHawk CAN Receive"
+	      bus		      "channel"
+	      id_ext		      "1"
+	      id		      "double(reprogcity*256+2)"
+	      id_mask		      "double(hex2dec('00000000'))"
+	      pay		      "[]"
+	      pay_mask		      "[]"
+	      queue		      "4"
+	      slot		      "mtninstance"
+	      valid		      on
+	      stale		      on
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum"
+	      Ports		      [3, 1]
+	      Position		      [715, 300, 735, 320]
+	      ShowName		      off
+	      IconShape		      "round"
+	      Inputs		      "+++"
+	      InputSameDT	      off
+	      OutDataTypeMode	      "Inherit via internal rule"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "motohawk_code_coverage"
+	      Ports		      []
+	      Position		      [550, 22, 726, 52]
+	      ShowName		      off
+	      SourceBlock	      "MotoHawk_lib/Extra Development Blocks/m"
+"otohawk_code_coverage"
+	      SourceType	      "MotoHawk Code Coverage Test Manager"
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "motohawk_sfun_mototune_protocol"
+	      Ports		      [9]
+	      Position		      [865, 83, 970, 357]
+	      ShowName		      off
+	      FunctionName	      "motohawk_sfun_mototune_protocol"
+	      Parameters	      "uint8(ch)"
+	      MaskType		      "MotoTune Control Core Interface"
+	      MaskDescription	      "Interface to Control Core MotoTune hand"
+"ler.\n\n---------------------------------------------------------------------"
+"\nCopyright 2005 MotoTron, Corp.  All Rights Reserved."
+	      MaskPromptString	      "CAN Channel"
+	      MaskStyleString	      "edit"
+	      MaskTunableValueString  "off"
+	      MaskEnableString	      "on"
+	      MaskVisibilityString    "on"
+	      MaskToolTipString	      "on"
+	      MaskVariables	      "ch=@1;"
+	      MaskInitialization      "lbl = 'MotoTune';"
+	      MaskDisplay	      "patch([0 0 1 1], [0 1 1 0], [220/255 22"
+"0/255 220/255]); \npatch([0 0 1 1], 0.5*[0 0.075 0.075 0], [230/255 0/255 0/2"
+"55]); \npatch([0 0 1 1], 0.5*[0.025 0.05 0.05 0.025], [150/255 0/255 0/255]);"
+" \npatch([0 0 1 1], 0.5*[0 0.025 0.025 0], [0/255 0/255 0/255]);\ntext(0.5, 0"
+".85, lbl, 'texmode','on','VerticalAlignment','Top','HorizontalAlignment','Cen"
+"ter');\n"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "normalized"
+	      MaskValueString	      "channel"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "motohawk_trigger"
+	      Tag		      "Trigger"
+	      Ports		      [0, 1]
+	      Position		      [185, 285, 365, 390]
+	      Orientation	      "down"
+	      NamePlacement	      "alternate"
+	      ShowName		      off
+	      SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_tr"
+"igger"
+	      SourceType	      "MotoHawk Function Trigger"
+	      trigger		      "STARTUP_EVENT"
+	      priority_order	      "0"
+	      inherited		      on
+	      run_disabled	      off
+	      override_app_monitor    off
+	      target		      "ECU555_80"
+	    }
+	    Line {
+	      SrcBlock		      "Sum"
+	      SrcPort		      1
+	      DstBlock		      "motohawk_sfun_mototune_protocol"
+	      DstPort		      8
+	    }
+	    Line {
+	      SrcBlock		      "Bitwise\nLogical Operator1"
+	      SrcPort		      1
+	      Points		      [130, 0]
+	      DstBlock		      "Sum"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain"
+	      SrcPort		      1
+	      DstBlock		      "Sum"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Adjust ID"
+	      SrcPort		      1
+	      Points		      [390, 0]
+	      DstBlock		      "Sum"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Bitwise\nLogical Operator"
+	      SrcPort		      1
+	      DstBlock		      "Gain"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Read CAN Raw"
+	      SrcPort		      1
+	      DstBlock		      "motohawk_sfun_mototune_protocol"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Read CAN Raw"
+	      SrcPort		      2
+	      DstBlock		      "motohawk_sfun_mototune_protocol"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Read CAN Raw"
+	      SrcPort		      3
+	      DstBlock		      "motohawk_sfun_mototune_protocol"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Read CAN Raw"
+	      SrcPort		      4
+	      Points		      [15, 0]
+	      Branch {
+		Points			[0, 80]
+		Branch {
+		  DstBlock		  "Bitwise\nLogical Operator1"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [0, 40]
+		  DstBlock		  "Bitwise\nLogical Operator"
+		  DstPort		  1
+		}
+	      }
+	      Branch {
+		DstBlock		"motohawk_sfun_mototune_protocol"
+		DstPort			4
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Read CAN Raw"
+	      SrcPort		      5
+	      DstBlock		      "motohawk_sfun_mototune_protocol"
+	      DstPort		      5
+	    }
+	    Line {
+	      SrcBlock		      "Read CAN Raw"
+	      SrcPort		      6
+	      DstBlock		      "motohawk_sfun_mototune_protocol"
+	      DstPort		      6
+	    }
+	    Line {
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      DstBlock		      "motohawk_sfun_mototune_protocol"
+	      DstPort		      7
+	    }
+	    Line {
+	      SrcBlock		      "motohawk_trigger"
+	      SrcPort		      1
+	      DstBlock		      "Adjust ID"
+	      DstPort		      trigger
+	    }
+	    Line {
+	      SrcBlock		      "Adjust ID"
+	      SrcPort		      2
+	      Points		      [450, 0; 0, -120]
+	      DstBlock		      "motohawk_sfun_mototune_protocol"
+	      DstPort		      9
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "motohawk_trigger"
+	  Tag			  "Trigger"
+	  Ports			  [0, 1]
+	  Position		  [45, 15, 225, 120]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  SourceBlock		  "MotoHawk_lib/Trigger Blocks/motohawk_trigge"
+"r"
+	  SourceType		  "MotoHawk Function Trigger"
+	  trigger		  "IDLE_EVENT"
+	  priority_order	  "0"
+	  inherited		  on
+	  run_disabled		  on
+	  override_app_monitor	  on
+	  target		  "All"
+	}
+	Line {
+	  SrcBlock		  "motohawk_trigger"
+	  SrcPort		  1
+	  DstBlock		  "MotoTune"
+	  DstPort		  trigger
+	}
+      }
+    }
+    Annotation {
+      Name		      "2006-08-16 cmd."
+      Position		      [47, 12]
+    }
+    Annotation {
+      Name		      ""
+"*******************************************************************************************************\n"
+"HOW TO USE the alternate IDLE_EVENT-triggered MotoTune handler block:\n"
+"1.  Open the 'Libraries_CAN_protocols_yyyy_mm_dd.zip' zipfile and drag the\n"
+"     Libraries_CAN_protocols folder into your project directory.\n"
+"2.  Add 'Libraries_CAN_protocols' to your MATLAB search path.  Usually, this should\n"
+"     be done by adding it to the [modelname]_setup.m file in the project directory.\n"
+"3.  As usual, use the 'MotoHawk CAN Definition' block ('MotoHawk_lib/CAN Blocks/\n"
+"     CAN Definition') to define mask parameters for a CAN bus's bit timing and transmit\n"
+"     queue size, but UN-check the 'Install MotoTune Protocol' checkbox.\n"
+"4.  At the MATLAB prompt, open the alternate-MotoTune-handler library by typing:\n"
+"     >> motohawk_can_protocols_lib\n"
+"5.  Drag the IDLE_EVENT-triggered MotoTune handler block ('motohawk_can_\n"
+"     protocols_lib/MotoTune Standard CAN Protocol (IDLE_EVENT triggered)') into\n"
+"     your model and set its mask parameters appropriately.\n"
+"6.  Consume a beverage of your preference to celebrate your successful transition\n"
+"     to the IDLE_EVENT-triggered MotoTune handler.\n"
+"*******************************************************************************************************\n"
+"                                                       _|   |_\n"
+"                                                        \\    /\n"
+"                                                         \\  /\n"
+"                                                          \\/"
+      Position		      [420, 35]
+      FontSize		      11
+      HorizontalAlignment     "left"
+      VerticalAlignment       "top"
+    }
+  }
+}

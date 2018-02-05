@@ -141,7 +141,7 @@ static void enable_c4_Mooventure2016_Rev5(SFc4_Mooventure2016_Rev5InstanceStruct
 {
   real_T c4_d0;
   _sfTime_ = (real_T)ssGetT(chartInstance->S);
-  c4_d0 = muDoubleScalarFloor(_sfTime_ / 0.2 + 0.5);
+  c4_d0 = muDoubleScalarFloor(_sfTime_ / 0.005 + 0.5);
   chartInstance->c4_presentTicks = (uint32_T)c4_d0;
   chartInstance->c4_previousTicks = chartInstance->c4_presentTicks;
 }
@@ -151,17 +151,17 @@ static void disable_c4_Mooventure2016_Rev5
 {
   real_T c4_d1;
   _sfTime_ = (real_T)ssGetT(chartInstance->S);
-  c4_d1 = muDoubleScalarFloor(_sfTime_ / 0.2 + 0.5);
+  c4_d1 = muDoubleScalarFloor(_sfTime_ / 0.005 + 0.5);
   chartInstance->c4_presentTicks = (uint32_T)c4_d1;
   chartInstance->c4_elapsedTicks = chartInstance->c4_presentTicks -
     chartInstance->c4_previousTicks;
   chartInstance->c4_previousTicks = chartInstance->c4_presentTicks;
   if ((uint32_T)chartInstance->c4_temporalCounter_i1 +
-      chartInstance->c4_elapsedTicks <= 7U) {
+      chartInstance->c4_elapsedTicks <= 255U) {
     chartInstance->c4_temporalCounter_i1 = (uint8_T)((uint32_T)
       chartInstance->c4_temporalCounter_i1 + chartInstance->c4_elapsedTicks);
   } else {
-    chartInstance->c4_temporalCounter_i1 = 7U;
+    chartInstance->c4_temporalCounter_i1 = MAX_uint8_T;
   }
 }
 
@@ -428,17 +428,17 @@ static void sf_c4_Mooventure2016_Rev5(SFc4_Mooventure2016_Rev5InstanceStruct
   c4_MotorReady = (boolean_T *)ssGetInputPortSignal(chartInstance->S, 0);
   c4_set_sim_state_side_effects_c4_Mooventure2016_Rev5(chartInstance);
   _sfTime_ = (real_T)ssGetT(chartInstance->S);
-  c4_d2 = muDoubleScalarFloor(_sfTime_ / 0.2 + 0.5);
+  c4_d2 = muDoubleScalarFloor(_sfTime_ / 0.005 + 0.5);
   chartInstance->c4_presentTicks = (uint32_T)c4_d2;
   chartInstance->c4_elapsedTicks = chartInstance->c4_presentTicks -
     chartInstance->c4_previousTicks;
   chartInstance->c4_previousTicks = chartInstance->c4_presentTicks;
   if ((uint32_T)chartInstance->c4_temporalCounter_i1 +
-      chartInstance->c4_elapsedTicks <= 7U) {
+      chartInstance->c4_elapsedTicks <= 255U) {
     chartInstance->c4_temporalCounter_i1 = (uint8_T)((uint32_T)
       chartInstance->c4_temporalCounter_i1 + chartInstance->c4_elapsedTicks);
   } else {
-    chartInstance->c4_temporalCounter_i1 = 7U;
+    chartInstance->c4_temporalCounter_i1 = MAX_uint8_T;
   }
 
   _SFD_CC_CALL(CHART_ENTER_SFUNCTION_TAG, 3U, chartInstance->c4_sfEvent);
@@ -492,7 +492,7 @@ static void c4_chartstep_c4_Mooventure2016_Rev5
       _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 7U,
                    chartInstance->c4_sfEvent);
       if (CV_TRANSITION_EVAL(7U, (int32_T)_SFD_CCP_CALL(7U, 0, (uint32_T)
-            chartInstance->c4_temporalCounter_i1 >= 3U != 0U,
+            chartInstance->c4_temporalCounter_i1 >= 100U != 0U,
             chartInstance->c4_sfEvent))) {
         _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 7U, chartInstance->c4_sfEvent);
         chartInstance->c4_tp_IPTAwake = 0U;
@@ -523,7 +523,7 @@ static void c4_chartstep_c4_Mooventure2016_Rev5
                   chartInstance->c4_sfEvent) != 0);
       if (c4_temp) {
         c4_temp = (_SFD_CCP_CALL(9U, 1, (uint32_T)
-                    chartInstance->c4_temporalCounter_i1 >= 5U != 0U,
+                    chartInstance->c4_temporalCounter_i1 >= 200U != 0U,
                     chartInstance->c4_sfEvent) != 0);
       }
 
@@ -558,7 +558,7 @@ static void c4_chartstep_c4_Mooventure2016_Rev5
         chartInstance->c4_sfEvent) != 0);
       if (c4_b_temp) {
         c4_b_temp = (_SFD_CCP_CALL(8U, 1, (uint32_T)
-          chartInstance->c4_temporalCounter_i1 >= 5U != 0U,
+          chartInstance->c4_temporalCounter_i1 >= 200U != 0U,
           chartInstance->c4_sfEvent) != 0);
       }
 
@@ -1027,10 +1027,10 @@ static void init_dsm_address_info(SFc4_Mooventure2016_Rev5InstanceStruct
 /* SFunction Glue Code */
 void sf_c4_Mooventure2016_Rev5_get_check_sum(mxArray *plhs[])
 {
-  ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(1523926662U);
-  ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(2780226198U);
-  ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(3705983952U);
-  ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(2510469325U);
+  ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(3818219655U);
+  ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(2729209191U);
+  ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(4151867680U);
+  ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(333966465U);
 }
 
 mxArray *sf_c4_Mooventure2016_Rev5_get_autoinheritance_info(void)
@@ -1740,10 +1740,10 @@ static void mdlSetWorkWidths_c4_Mooventure2016_Rev5(SimStruct *S)
   }
 
   ssSetOptions(S,ssGetOptions(S)|SS_OPTION_WORKS_WITH_CODE_REUSE);
-  ssSetChecksum0(S,(3245576231U));
-  ssSetChecksum1(S,(3070730270U));
-  ssSetChecksum2(S,(1210744026U));
-  ssSetChecksum3(S,(381326087U));
+  ssSetChecksum0(S,(919837949U));
+  ssSetChecksum1(S,(1488562831U));
+  ssSetChecksum2(S,(4070576309U));
+  ssSetChecksum3(S,(518334417U));
   ssSetmdlDerivatives(S, NULL);
   ssSetExplicitFCSSCtrl(S,1);
 }

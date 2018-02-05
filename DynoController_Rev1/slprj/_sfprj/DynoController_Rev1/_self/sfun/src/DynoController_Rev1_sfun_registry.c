@@ -17,8 +17,28 @@ unsigned int sf_process_autoinheritance_call( int nlhs, mxArray * plhs[], int
 {
   extern unsigned int sf_DynoController_Rev1_autoinheritance_info( int nlhs,
     mxArray * plhs[], int nrhs, const mxArray * prhs[] );
-  if (sf_DynoController_Rev1_autoinheritance_info(nlhs,plhs,nrhs,prhs))
-    return 1;
+  char commandName[64];
+  char machineName[128];
+  if (nrhs < 3) {
+    return 0;
+  }
+
+  if (!mxIsChar(prhs[0]) || !mxIsChar(prhs[1]))
+    return 0;
+  mxGetString(prhs[0], commandName,sizeof(commandName)/sizeof(char));
+  commandName[(sizeof(commandName)/sizeof(char)-1)] = '\0';
+  if (strcmp(commandName,"get_autoinheritance_info"))
+    return 0;
+  mxGetString(prhs[1], machineName,sizeof(machineName)/sizeof(char));
+  machineName[(sizeof(machineName)/sizeof(char)-1)] = '\0';
+  if (strcmp(machineName, "DynoController_Rev1") == 0) {
+    const mxArray *newRhs[2] = { NULL, NULL };
+
+    newRhs[0] = prhs[0];
+    newRhs[1] = prhs[2];
+    return sf_DynoController_Rev1_autoinheritance_info(nlhs,plhs,2,newRhs);
+  }
+
   return 0;
 }
 

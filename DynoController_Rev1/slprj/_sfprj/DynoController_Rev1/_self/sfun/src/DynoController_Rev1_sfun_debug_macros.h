@@ -1,9 +1,6 @@
 #ifndef __SF_DEBUG_MACROS_H__
 #define __SF_DEBUG_MACROS_H__
 
-#define _SFD_MACHINE_CALL(v1,v2,v3) sf_debug_call(_DynoController_Rev1MachineNumber_,UNREASONABLE_NUMBER,UNREASONABLE_NUMBER,MACHINE_OBJECT,v1,v2,v3,(unsigned int) _sfEvent_,-1,NULL,_sfTime_,1)
-#define _SFD_ME_CALL(v2,v3) _SFD_MACHINE_CALL(EVENT_OBJECT,v2,v3)
-#define _SFD_MD_CALL(v2,v3) _SFD_MACHINE_CALL(EVENT_OBJECT,v2,v3)
 extern unsigned int _DynoController_Rev1MachineNumber_;
 #define _SFD_SET_DATA_VALUE_PTR(v1,v2)\
 	sf_debug_set_instance_data_value_ptr(_DynoController_Rev1MachineNumber_,CHARTINSTANCE_CHARTNUMBER,CHARTINSTANCE_INSTANCENUMBER,v1,(void *)(v2),NULL);
@@ -103,39 +100,31 @@ v1,v2)
 #define _SFD_ANIMATE() sf_debug_animate(_DynoController_Rev1MachineNumber_,\
 CHARTINSTANCE_CHARTNUMBER,\
 CHARTINSTANCE_INSTANCENUMBER)
-#define _SFD_CHART_CALL(v1,v2,v3) sf_debug_call(_DynoController_Rev1MachineNumber_,\
+#define _SFD_CHART_CALL(v1,v2,v3,v4) sf_debug_call(_DynoController_Rev1MachineNumber_,\
 CHARTINSTANCE_CHARTNUMBER,\
 CHARTINSTANCE_INSTANCENUMBER,\
-CHART_OBJECT,v1,v2,v3,(unsigned int)_sfEvent_,\
+CHART_OBJECT,v1,v2,v3,v4,\
 0,NULL,_sfTime_,1)
-#define _SFD_CC_CALL(v2,v3) _SFD_CHART_CALL(CHART_OBJECT,v2,v3)
-#define _SFD_CS_CALL(v2,v3) _SFD_CHART_CALL(STATE_OBJECT,v2,v3)
-#define _SFD_CT_CALL(v2,v3) _SFD_CHART_CALL(TRANSITION_OBJECT,v2,v3)
-#define _SFD_CE_CALL(v2,v3) _SFD_CHART_CALL(EVENT_OBJECT,v2,v3)
-#define _SFD_CD_CALL(v2,v3) _SFD_CHART_CALL(EVENT_OBJECT,v2,v3)
-#define _SFD_EML_CALL(v1,v2) eml_debug_line_call(_DynoController_Rev1MachineNumber_,\
+#define _SFD_CC_CALL(v2,v3,v4) _SFD_CHART_CALL(CHART_OBJECT,v2,v3,v4)
+#define _SFD_CS_CALL(v2,v3,v4) _SFD_CHART_CALL(STATE_OBJECT,v2,v3,v4)
+#define _SFD_CT_CALL(v2,v3,v4) _SFD_CHART_CALL(TRANSITION_OBJECT,v2,v3,v4)
+#define _SFD_CE_CALL(v2,v3,v4) _SFD_CHART_CALL(EVENT_OBJECT,v2,v3,v4)
+#define _SFD_EML_CALL(v1,v2,v3) eml_debug_line_call(_DynoController_Rev1MachineNumber_,\
 CHARTINSTANCE_CHARTNUMBER,\
 CHARTINSTANCE_INSTANCENUMBER,\
-v1,(unsigned int)_sfEvent_,\
-v2,_sfTime_,0)
+v1,v2,\
+v3,_sfTime_,0)
 #define _SFD_SCRIPT_TRANSLATION(v1,v2,v3) sf_debug_set_script_translation(_DynoController_Rev1MachineNumber_,\
 v1,v2,v3)
-#define _SFD_SCRIPT_CALL(v1,v2) eml_debug_line_call(_DynoController_Rev1MachineNumber_,\
+#define _SFD_SCRIPT_CALL(v1,v2,v3) eml_debug_line_call(_DynoController_Rev1MachineNumber_,\
 CHARTINSTANCE_CHARTNUMBER,\
 CHARTINSTANCE_INSTANCENUMBER,\
-v1,(unsigned int)_sfEvent_,\
-v2,_sfTime_,1)
-#define _SFD_CHART_COVERAGE_CALL(v1,v2,v3,v4) sf_debug_call(_DynoController_Rev1MachineNumber_,\
+v1,v2,\
+v3,_sfTime_,1)
+#define _SFD_CCP_CALL(v3,v4,v5,v6) sf_debug_call(_DynoController_Rev1MachineNumber_,\
 CHARTINSTANCE_CHARTNUMBER,\
 CHARTINSTANCE_INSTANCENUMBER,\
-CHART_OBJECT,v1,v2,v3,(unsigned int) _sfEvent_,\
-v4,NULL,_sfTime_,1)
-#define _SFD_CCS_CALL(v2,v3,v4) _SFD_CHART_COVERAGE_CALL(STATE_OBJECT,v2,v3,v4)
-#define _SFD_CCT_CALL(v2,v3,v4) _SFD_CHART_COVERAGE_CALL(TRANSITION_OBJECT,v2,v3,v4)
-#define _SFD_CCP_CALL(v3,v4,v5) sf_debug_call(_DynoController_Rev1MachineNumber_,\
-CHARTINSTANCE_CHARTNUMBER,\
-CHARTINSTANCE_INSTANCENUMBER,\
-CHART_OBJECT,TRANSITION_OBJECT,TRANSITION_GUARD_COVERAGE_TAG,v3,(unsigned int) _sfEvent_,\
+CHART_OBJECT,TRANSITION_OBJECT,TRANSITION_GUARD_COVERAGE_TAG,v3,v6,\
 v4,NULL,_sfTime_,(unsigned int)(v5))
 #define _SFD_STATE_TEMPORAL_THRESHOLD(v1,v2,v4) sf_debug_temporal_threshold(_DynoController_Rev1MachineNumber_,\
 CHARTINSTANCE_CHARTNUMBER,\
@@ -156,7 +145,7 @@ CHARTINSTANCE_INSTANCENUMBER,\
 		  CHARTINSTANCE_INSTANCENUMBER,\
 		  TRANSITION_OBJECT,(v1),0,((v2)!=0))
 
-/* Coverage EML Macros */
+/* Coverage Macros for MATLAB  */
 #define CV_EML_EVAL(v1,v2,v3,v4) cv_eml_eval(_DynoController_Rev1MachineNumber_,\
 		  CHARTINSTANCE_CHARTNUMBER,\
 		  CHARTINSTANCE_INSTANCENUMBER,\
@@ -279,10 +268,12 @@ CHARTINSTANCE_INSTANCENUMBER,\
 		  (v1),(v2),(v3),(v4),(v5),(v6),(v7),(v8))
 
 
-#define _SFD_SET_DATA_PROPS(dataNumber,dataScope,isInputData,isOutputData,dataType,numDims,dimArray,isFixedPoint,isSigned,wordLength,bias,slope,exponent,dataName,complexity,mexFcn)\
+#define _SFD_SET_DATA_PROPS(dataNumber,dataScope,isInputData,isOutputData,dataName)\
  sf_debug_set_chart_data_props(_DynoController_Rev1MachineNumber_,CHARTINSTANCE_CHARTNUMBER,\
-	(dataNumber),(dataScope),(isInputData),(isOutputData),\
-	(dataType),(numDims),(dimArray),(isFixedPoint),(isSigned),(wordLength),(bias),(slope),(exponent),(dataName),(complexity),(mexFcn))
+	(dataNumber),(dataScope),(isInputData),(isOutputData),(dataName))
+#define _SFD_SET_DATA_COMPILED_PROPS(dataNumber,dataType,numDims,dimArray,isFixedPoint,isSigned,wordLength,bias,slope,exponent,complexity,mexOutFcn, mexInFcn)\
+ sf_debug_set_chart_data_compiled_props(_DynoController_Rev1MachineNumber_,CHARTINSTANCE_CHARTNUMBER,CHARTINSTANCE_INSTANCENUMBER,\
+	(dataNumber),(dataType),(numDims),(dimArray),(isFixedPoint),(isSigned),(wordLength),(bias),(slope),(exponent),(complexity),(mexOutFcn),(mexInFcn))
 #define _SFD_STATE_INFO(v1,v2,v3)\
 	sf_debug_set_chart_state_info(_DynoController_Rev1MachineNumber_,CHARTINSTANCE_CHARTNUMBER,(v1),(v2),(v3))
 #define _SFD_CH_SUBSTATE_INDEX(v1,v2)\

@@ -1,0 +1,307 @@
+
+%function motohawk_build_template(layout) Output
+%% Generates the first part of the build file.
+%% The rest is filled in by the generated Makefile.
+%%
+%assign component = ISEQUAL(layout, "Component")
+%%
+%switch(::BuildInfo.processor_family)
+	%case "MotoCoder"
+		%break
+	%case "HCS12"
+		%break
+	%default
+%%
+%% Get CompiledModel settings to pass into #defines, as required by RTW
+%%
+%assign MODEL		= ::CompiledModel.Name
+%assign NUMST		= ::CompiledModel.NumSampleTimes
+%assign NCSTATES	= ::CompiledModel.ContStates.NumContStates
+%assign TID01EQ		= ::CompiledModel.FixedStepOpts.TID01EQ
+%assign MULTITASKING	= ISEQUAL(::CompiledModel.FixedStepOpts.SolverMode, "MultiTasking")
+%%
+%% Get additional parameters from BuildInfo
+%%
+%assign extra_defines = ""
+%assign extra_libraries = ""
+%assign GHS_DIR = ::BuildInfo.ghs_dir
+%%
+%if (!component)
+	%assign FW_ARCHIVE = ::BuildInfo.archive_file
+	%switch (::BuildInfo.module_type)
+	%case "ECU565-128"
+		%openfile extra_defines
+		:defines=__TARGET_MODULE=PCMRACE_MODULE
+		%closefile extra_defines
+		%break
+	%case "GCM-0565-024-0602-Fxx"
+		%openfile extra_defines
+		:defines=__TARGET_MODULE=ISDL_MODULE
+		%closefile extra_defines
+		%openfile extra_libraries
+		:libraries=.\ControlCore\Archives\smxFFS.a
+		:libraries=.\ControlCore\Archives\ucFS.a
+		:libraries=.\ControlCore\Archives\UniversalSerialBus_MotoStack.a
+		:libraries=.\ControlCore\Archives\UniversalSerialBus_MotoStackClassDrivers.a
+		%closefile extra_libraries
+		%break
+	%case "GCU565-80"
+		%openfile extra_defines
+		:defines=__TARGET_MODULE=AIM_MODULE_HWMAJ
+		%closefile extra_defines
+		%break
+	%case "ECU563-48i"
+		%openfile extra_defines
+		:defines=__TARGET_MODULE=ECM48_MODULE_HWMAJ
+		%closefile extra_defines
+		%break
+	%case "ECU563-48m"
+		%openfile extra_defines
+		:defines=__TARGET_MODULE=ECM48_MODULE_HWMAJ
+		%closefile extra_defines
+		%break
+	%case "GCU563-48-CCM"
+	%case "GCU563-48-SIM"
+		%openfile extra_defines
+		:defines=__TARGET_MODULE=FIRE48_MODULE_HWMAJ
+		%closefile extra_defines
+		%break
+	%case "GCU563-48-HLA"
+	%case "GCU563-48-MII"
+	%case "GCU563-48-TVM"
+		%openfile extra_defines
+		:defines=__TARGET_MODULE=TVM48_MODULE_HWMAJ
+		%closefile extra_defines
+		%break
+	%endswitch
+%endif
+%%
+#!build
+default:
+%if (component)
+	library
+%else
+	program
+%endif
+# :opt_inlines THIS IS A PLACE MARKER. Do not remove if inlining may be required
+	:ec_option=no_slash_comment
+	:ec_option=nounsafe_predefines
+	:ec_option=no_common
+	:ec_option=nojapanese_automotive_c
+	:e_option=noinclude_once
+	:e_option=nokeep_comments
+	:e_option=nono_ansi_aliasing_rules
+	:e_option=nomultibyte_chars
+	:e_option=nomicrosoft
+	:e_option=keep_static_symbols
+	:e_option=nosigned_char
+	:e_option=nosigned_field
+	:e_option=nosigned_enum_field
+	:e_option=nosigned_ptr
+	:e_option=nounique_strings
+	:e_option=noalternative_tokens
+	:cx_e_option=msgnumbers
+	:language=noada
+	:language=c
+	:language=nocxx
+	:language=nofortran
+	:language=nopascal
+	:optimize=standard
+	:optimize=small
+	:optimize=noinline
+	:optimize=noloop
+	:minoroptimize=peep
+	:minoroptimize=cse
+	:minoroptimize=constprop
+	:minoroptimize=unroll
+	:minoroptimize=minmax
+	:minoroptimize=pipeline
+	:minoroptimize=nostrfunc
+	:minoroptimize=nomemfunc
+	:minoroptimize=tailrecursion
+	:minoroptimize=nounroll8
+	:minoroptimize=nounrollbig
+	:minoroptimize=autoregister
+	:minoroptimize=overload
+	:minoroptimize=nopipelinesourceline
+	:minoroptimize=nopeepholesourceline
+	:check=nobounds
+	:check=noassignbound
+	:check=nonilderef
+	:check=noswitch
+	:check=nozerodivide
+	:check=nousevariable
+	:check=novariant
+	:check=nowatchpoint
+	:check=noreturn
+	:asm_list_option=nolisting
+	:asm_list_option=no_gen
+	:asm_list_option=nocref
+	:assembler_list_dir=Objs
+	:elxr_option=delete
+	:ppc_option=constant_data_section
+	:ppc_option=noendfunclabel
+	:ppc_option=disable_altivec
+	:ppc_option=disable_vrsave
+	:ppc_option=rsc_fp_precise
+	:config_setting=nopic
+	:config_setting=nopid
+	:config_setting=nobyteorder
+	:config_setting=nolonglong
+	:config_setting=nofarcalls
+	:config_setting=inline_prologue
+	:build_option=noinclude_sa
+	:build_option=noone_pass
+	:dependency=nonodepend
+	:dependency=nonoauto
+	:coverage=false
+	:no_misra_runtime=true
+	:dual_debug=true
+	:dwarf=true
+	:add_output_ext=true
+	:use_make=false
+	:auto_mvc=false
+	:target_os=standalone
+	:packing=none
+	:objectformat=elf
+	:outputmode=srec
+	:processor=ppc
+	:xfputype=hard
+	:xda_thresholdkind=small
+%if (component)
+	:ppc_cputype=ppc555
+%else
+%switch (::BuildInfo.processor_type)
+%case "MPC555"
+	:ppc_cputype=ppc555
+	%break
+%case "MPC565"
+	:ppc_cputype=ppc565
+	%break
+%case "MPC563"
+	:ppc_cputype=ppc563
+	%break
+%default
+	%error Processor not supported: %<::BuildInfo.processor_type>
+	%break
+%endswitch
+%endif
+	:toolchain=ghs
+%if (component)
+	:stage=archive
+%else
+	:stage=program
+%endif
+	:wchartype=wchar_short
+	:sourcekanji=none
+	:targetkanji=none
+	:c_mode=ansi
+	:ec_mode=ansi
+	:prototype_mode=error
+	:asm_mode=silent
+	:unknown_pragma=warn
+	:incorrect_pragma=warn
+	:misra_required_diag_level=silent
+	:misra_advisory_diag_level=silent
+	:compilation=assembly
+	:debuglevel=plain
+	:profilelevel=none
+	:showlevel=warnings
+	:memcheck=none
+	:optimizestrategy=space
+	:cx_enum=small
+	:elxr_overlap=strict_error
+	:xda_threshold=0
+	:driver_opts=-I-
+	:driver_opts=--inline_complexity=5000
+	:cx_silent=68
+	:cx_silent=111
+	:cx_silent=177
+	:cx_silent=186
+	:cx_silent=550
+	:cx_silent=1544
+	:cx_silent=1545
+	:linker_opts=-Mxan
+	:linker_opts=-Qn
+	:linker_opts=-keepmap
+	:linker_opts=-ignore_debug_references
+	:object_dir=Objs
+	:start_address=Entry
+%foreach i = ListSize("source_dirs")
+	:sourcedirs=%<ListGet("source_dirs", i)>
+%endforeach
+%foreach i = ListSize("include_dirs")
+	:sysincdirs=%<ListGet("include_dirs", i)>
+%endforeach
+%if (!component)
+	%foreach i = ListSize("library_dirs")
+	:libdirs=%<ListGet("library_dirs", i)>
+	%endforeach
+	%foreach i = ListSize("library_files")
+	:libraries=%<ListGet("library_files", i)>
+	%endforeach
+%endif
+	:outputname=.\Target\%<MODEL>
+	:sourcedirs=.
+	:sysincdirs=.
+	:sysincdirs=%<GHS_DIR>\ansi
+	:sysincdirs=.\RTW
+	:sysincdirs=.\ControlCore\API
+	:sysincdirs=.\ControlCore\API\MotoTronProtocol
+	:sysincdirs=.\ControlCore\API\MotoTronSpecific
+	:sysincdirs=.\ControlCore\API\Framework
+	:sysincdirs=c:\Program Files\Matlab\R2007b\simulink\include
+%if (!component)
+	:libdirs=.
+	:libdirs=.\RTW
+	:libdirs=.\ControlCore\Archives
+%if ::BuildInfo.max_eri_table_size > 255
+	%assign archive = "MPC5xxKeySuite_K10E15M6C255CK2BB1.a" %%ERI15!
+%else
+	%assign archive = "MotoTronProtocol.a"
+%endif
+	:libraries=.\ControlCore\Archives\%<archive>
+	:libraries=.\ControlCore\Archives\MotoTronSpecific.a
+	:libraries=.\ControlCore\Archives\%<FW_ARCHIVE>
+	%<extra_libraries>\
+%endif
+	:defines=__DEFINES_INSERTING_POINT
+	:defines=__FLOATING_POINT=1
+	:defines=__LAYOUT="ECM"
+	:defines=MODEL=%<MODEL>
+%if ::BuildInfo.max_eri_table_size > 255
+	:defines=__ERI_REV=15
+%else
+	:defines=__ERI_REV=14
+%endif
+	:defines=ERT
+	:defines=NUMST=%<NUMST>
+	:defines=TID01EQ=%<TID01EQ>
+	:defines=NCSTATES=%<NCSTATES>
+	:defines=MT=%<MULTITASKING>
+%switch (::BuildInfo.fptype) 
+%case 0
+	:libraries=.\RTW\rtw_lib_float.a
+	:defines=REAL_T=float
+	:defines=TIME_T=float
+%break
+%case 1
+	:libraries=.\RTW\rtw_lib_double.a
+	:defines=REAL_T=double
+	:defines=TIME_T=double
+%break
+%endswitch
+	%<extra_defines>\
+
+%if (!component)
+	.\%<MODEL>_%<layout>.ld
+	linker_file
+	.\TDB\TableDB.c
+	C
+	:depends=TableDB.tdb
+%endif
+	:dependency=nonodepend
+	:dependency=nonoauto
+
+%endswitch  %% %switch(::BuildInfo.processor_family)
+%endfunction
