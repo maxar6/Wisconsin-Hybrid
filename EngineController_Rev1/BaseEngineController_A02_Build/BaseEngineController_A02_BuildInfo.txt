@@ -4,7 +4,7 @@
 % motohawk_version             2011a_sp0.184
 % motohawk_component_version   0.0.7
 % matlab_version               7.12.0
-% build_version                122
+% build_version                123
 % module_type                  ECU555-80
 % layout_type                  DEV
 % processor_family             PPC
@@ -28,8 +28,8 @@
 % bgnd_base_period_ms          50
 % root_build_dir               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1
 % build_dir                    C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build
-% dll_name                     BaseEngin_122
-% srz_name                     BaseEngineController_A02_122
+% dll_name                     BaseEngin_123
+% srz_name                     BaseEngineController_A02_123
 % fgnd_stack_size              3072
 % fgnd_angle_stack_size        0
 % bgnd_stack_size              2048
@@ -46,5 +46,5 @@
 % toolchain_dir                C:\Program Files (x86)\Woodward\DevelopmentTools\Toolchains\GCC\powerpc-eabi\4_4_0\
 % matlab_root                  C:\Program Files (x86)\MATLAB\R2011a
 % model_guid                   34a85f28-21b7-4112-82-b0-87-11-cc-cb-8f
-% build_guid                   e4812674-b6d7-43a3-8a-e5-ab-a4-04-70-49
+% build_guid                   e66c35c2-9ffd-4751-98-6d-48-ed-1e-7f-fb
 % token_guid                   DD8AD11F95A6FC42BFF9AC780840E4B4

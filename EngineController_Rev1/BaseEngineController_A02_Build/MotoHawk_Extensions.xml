@@ -1696,6 +1696,16 @@
                <Name>OilPumpStartTime</Name>
              </DataStore>
             <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Constant_Fuel_Pump</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Constant_Oil_Pump</Name>
+             </DataStore>
+            <DataStore ref="Constant">
                <DataType>int8</DataType>
                <Default>5</Default>
                <Name>BARO_Count</Name>
@@ -4690,6 +4700,11 @@
                <Default>5.0</Default>
                <Name>ONTime</Name>
              </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.0</Default>
+               <Name>Disable_ESTOP</Name>
+             </DataStore>
             <DataStore ref="Volatile">
                <DataType>boolean</DataType>
                <Default>0</Default>
@@ -5058,7 +5073,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut9442p0004</Name>
+               <Name>init_resource_DOut8356p0002</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -5263,7 +5278,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut8883p0004</Name>
+               <Name>init_resource_DOut7823p0004</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
@@ -5283,7 +5298,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut9174p0004</Name>
+               <Name>init_resource_DOut8101p0004</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -5293,7 +5308,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut9191p0004</Name>
+               <Name>init_resource_DOut8111p0004</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -10623,6 +10638,36 @@
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
         		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Constant_Fuel_Pump">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Control|Controller|Stall|Fuel Pump at Startup</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Constant_Fuel_Pump</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Constant_Oil_Pump">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Control|Controller|Stall|Oil Pump at Startup</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Constant_Oil_Pump</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -18105,6 +18150,21 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Disable_ESTOP">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|112</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Disable_ESTOP</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="ESTOP">
         		                <access>RW RW RW RW</access>
         		                <class>VAR</class>
@@ -24632,7 +24692,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut8883p0004</help>
+        		                <help>Digital output pin selection for DOut7823p0004</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>FuelPumpPin</name>
@@ -24666,7 +24726,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut9174p0004</help>
+        		                <help>Digital output pin selection for DOut8101p0004</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>OilPumpPin</name>
@@ -24683,7 +24743,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut9191p0004</help>
+        		                <help>Digital output pin selection for DOut8111p0004</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>O2_Heater</name>

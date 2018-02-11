@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BaseEngineController_A02'.
  *
- * Model version                  : 1.1553
+ * Model version                  : 1.1560
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Wed Jan 24 11:43:49 2018
+ * C/C++ source code generated on : Sat Feb 10 00:15:12 2018
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -17,7 +17,7 @@
 #include "BaseEngineController_A02.h"
 #include "BaseEngineController_A02_private.h"
 
-/* Named constants for Stateflow: '<S822>/ECUP Latch' */
+/* Named constants for Stateflow: '<S823>/ECUP Latch' */
 #define BaseEngineController_A02_IN_PowerDown (1U)
 #define BaseEngineController_A02_IN_PowerUp (2U)
 
@@ -74,45 +74,45 @@ void BaseEngineController_A02_initialize(boolean_T firstTime)
       BaseEngineController_A02_B.s14_MinMax[i] = 0.0;
     }
 
-    BaseEngineController_A02_B.s549_Sum1 = 0.0;
-    BaseEngineController_A02_B.s598_Merge = 0.0;
-    BaseEngineController_A02_B.s542_Sum1 = 0.0;
+    BaseEngineController_A02_B.s550_Sum1 = 0.0;
+    BaseEngineController_A02_B.s599_Merge = 0.0;
+    BaseEngineController_A02_B.s543_Sum1 = 0.0;
     BaseEngineController_A02_B.s393_RPMInst = 0.0;
     BaseEngineController_A02_B.s397_GensetEnable = 0.0;
     BaseEngineController_A02_B.s397_GensetEnable_g = 0.0;
     BaseEngineController_A02_B.s397_GensetEnable_a = 0.0;
     BaseEngineController_A02_B.s119_generatingTQ = 0.0;
-    BaseEngineController_A02_B.s551_Sum1 = 0.0;
-    BaseEngineController_A02_B.s614_Merge = 0.0;
-    BaseEngineController_A02_B.s649_Switch = 0.0;
-    BaseEngineController_A02_B.s653_MinMax = 0.0;
-    BaseEngineController_A02_B.s653_MinMax1 = 0.0;
-    BaseEngineController_A02_B.s657_MinMax1 = 0.0;
+    BaseEngineController_A02_B.s552_Sum1 = 0.0;
+    BaseEngineController_A02_B.s615_Merge = 0.0;
     BaseEngineController_A02_B.s650_Switch = 0.0;
-    BaseEngineController_A02_B.s670_MinMax = 0.0;
-    BaseEngineController_A02_B.s670_MinMax1 = 0.0;
-    BaseEngineController_A02_B.s674_MinMax1 = 0.0;
-    BaseEngineController_A02_B.s667_Merge = 0.0;
-    BaseEngineController_A02_B.s684_Merge = 0.0;
+    BaseEngineController_A02_B.s654_MinMax = 0.0;
+    BaseEngineController_A02_B.s654_MinMax1 = 0.0;
+    BaseEngineController_A02_B.s658_MinMax1 = 0.0;
+    BaseEngineController_A02_B.s651_Switch = 0.0;
+    BaseEngineController_A02_B.s671_MinMax = 0.0;
+    BaseEngineController_A02_B.s671_MinMax1 = 0.0;
+    BaseEngineController_A02_B.s675_MinMax1 = 0.0;
+    BaseEngineController_A02_B.s668_Merge = 0.0;
+    BaseEngineController_A02_B.s685_Merge = 0.0;
     BaseEngineController_A02_B.s360_Switch2 = 0.0;
     BaseEngineController_A02_B.s396_motohawk_data_read1 = 0.0;
-    BaseEngineController_A02_B.s652_Merge = 0.0;
+    BaseEngineController_A02_B.s653_Merge = 0.0;
     BaseEngineController_A02_B.s354_Switch1 = 0.0;
-    BaseEngineController_A02_B.s625_motohawk_interpolation_1d = 0.0;
-    BaseEngineController_A02_B.s624_Merge = 0.0;
+    BaseEngineController_A02_B.s626_motohawk_interpolation_1d = 0.0;
+    BaseEngineController_A02_B.s625_Merge = 0.0;
     BaseEngineController_A02_B.s358_Sum1 = 0.0;
     BaseEngineController_A02_B.s381_Switch = 0.0;
     BaseEngineController_A02_B.s305_motohawk_delta_time = 0.0;
-    BaseEngineController_A02_B.s547_Sum1 = 0.0;
+    BaseEngineController_A02_B.s548_Sum1 = 0.0;
     BaseEngineController_A02_B.s313_Sum = 0.0;
-    BaseEngineController_A02_B.s548_Merge = 0.0;
-    BaseEngineController_A02_B.s546_Sum1 = 0.0;
-    BaseEngineController_A02_B.s580_Merge = 0.0;
+    BaseEngineController_A02_B.s549_Merge = 0.0;
+    BaseEngineController_A02_B.s547_Sum1 = 0.0;
+    BaseEngineController_A02_B.s581_Merge = 0.0;
     BaseEngineController_A02_B.s312_NominalAirFlowRate2 = 0.0;
     BaseEngineController_A02_B.s312_PressureRatio = 0.0;
     BaseEngineController_A02_B.s392_Gain = 0.0;
-    BaseEngineController_A02_B.s528_motohawk_interpolation_1d = 0.0;
-    BaseEngineController_A02_B.s527_Merge = 0.0;
+    BaseEngineController_A02_B.s529_motohawk_interpolation_1d = 0.0;
+    BaseEngineController_A02_B.s528_Merge = 0.0;
     BaseEngineController_A02_B.s312_Saturation1 = 0.0;
     BaseEngineController_A02_B.s334_TorquetoPower = 0.0;
     BaseEngineController_A02_B.s325_Merge = 0.0;
@@ -121,17 +121,17 @@ void BaseEngineController_A02_initialize(boolean_T firstTime)
     BaseEngineController_A02_B.s331_Sum1 = 0.0;
     BaseEngineController_A02_B.s342_MinMax1 = 0.0;
     BaseEngineController_A02_B.s375_Sum1 = 0.0;
-    BaseEngineController_A02_B.s543_Sum1 = 0.0;
-    BaseEngineController_A02_B.s394_Gain = 0.0;
     BaseEngineController_A02_B.s544_Sum1 = 0.0;
-    BaseEngineController_A02_B.s556_Merge = 0.0;
-    BaseEngineController_A02_B.s564_Merge = 0.0;
+    BaseEngineController_A02_B.s394_Gain = 0.0;
+    BaseEngineController_A02_B.s545_Sum1 = 0.0;
+    BaseEngineController_A02_B.s557_Merge = 0.0;
+    BaseEngineController_A02_B.s565_Merge = 0.0;
     BaseEngineController_A02_B.s120_SparkEnergy = 0.0;
     BaseEngineController_A02_B.s120_SparkAdv = 0.0;
     BaseEngineController_A02_B.s120_EGR = 0.0;
     BaseEngineController_A02_B.s383_Switch = 0.0;
     BaseEngineController_A02_B.s120_Throttle = 0.0;
-    BaseEngineController_A02_B.s695_ETC = 0.0;
+    BaseEngineController_A02_B.s696_ETC = 0.0;
     BaseEngineController_A02_B.s120_SOI = 0.0;
     BaseEngineController_A02_B.s63_constreftoatm = 0.0;
     BaseEngineController_A02_B.s120_FuelMult = 0.0;
@@ -141,9 +141,9 @@ void BaseEngineController_A02_initialize(boolean_T firstTime)
     BaseEngineController_A02_B.s337_Switch1 = 0.0;
     BaseEngineController_A02_B.s379_Sum = 0.0;
     BaseEngineController_A02_B.s358_Sum3 = 0.0;
-    BaseEngineController_A02_B.s545_Sum1 = 0.0;
-    BaseEngineController_A02_B.s572_Merge = 0.0;
-    BaseEngineController_A02_B.s588_Merge = 0.0;
+    BaseEngineController_A02_B.s546_Sum1 = 0.0;
+    BaseEngineController_A02_B.s573_Merge = 0.0;
+    BaseEngineController_A02_B.s589_Merge = 0.0;
     BaseEngineController_A02_B.s357_Sum3 = 0.0;
     BaseEngineController_A02_B.s398_ReadCANMessage_o2 = 0.0;
     BaseEngineController_A02_B.s398_ReadCANMessage_o3 = 0.0;
@@ -178,18 +178,18 @@ void BaseEngineController_A02_initialize(boolean_T firstTime)
     BaseEngineController_A02_B.s398_ReadCANMessage3_o2 = 0.0;
     BaseEngineController_A02_B.s398_ReadCANMessage3_o3 = 0.0;
     BaseEngineController_A02_B.s398_ReadCANMessage3_o4 = 0.0;
-    BaseEngineController_A02_B.s550_Sum1 = 0.0;
-    BaseEngineController_A02_B.s606_Merge = 0.0;
-    BaseEngineController_A02_B.s403_UnitDelay = 0.0;
-    BaseEngineController_A02_B.s766_Sum = 0.0;
+    BaseEngineController_A02_B.s551_Sum1 = 0.0;
+    BaseEngineController_A02_B.s607_Merge = 0.0;
+    BaseEngineController_A02_B.s404_UnitDelay = 0.0;
     BaseEngineController_A02_B.s767_Sum = 0.0;
-    BaseEngineController_A02_B.s769_CrankCounter = 0.0;
-    BaseEngineController_A02_B.s636_motohawk_interpolation_1d = 0.0;
-    BaseEngineController_A02_B.s629_Merge = 0.0;
-    BaseEngineController_A02_B.s635_Merge = 0.0;
-    BaseEngineController_A02_B.s645_motohawk_interpolation_1d = 0.0;
+    BaseEngineController_A02_B.s768_Sum = 0.0;
+    BaseEngineController_A02_B.s770_CrankCounter = 0.0;
+    BaseEngineController_A02_B.s637_motohawk_interpolation_1d = 0.0;
     BaseEngineController_A02_B.s630_Merge = 0.0;
-    BaseEngineController_A02_B.s644_Merge = 0.0;
+    BaseEngineController_A02_B.s636_Merge = 0.0;
+    BaseEngineController_A02_B.s646_motohawk_interpolation_1d = 0.0;
+    BaseEngineController_A02_B.s631_Merge = 0.0;
+    BaseEngineController_A02_B.s645_Merge = 0.0;
     BaseEngineController_A02_B.s299_Gain = 0.0;
     BaseEngineController_A02_B.s371_Product = 0.0;
     BaseEngineController_A02_B.s370_Product = 0.0;
@@ -298,7 +298,7 @@ void BaseEngineController_A02_initialize(boolean_T firstTime)
     BaseEngineController_A02_B.s51_In1 = 0.0;
     BaseEngineController_A02_B.s25_TestTime = 0.0;
     BaseEngineController_A02_B.s20_enout = 0.0;
-    BaseEngineController_A02_B.s838_Switch = 0.0;
+    BaseEngineController_A02_B.s839_Switch = 0.0;
     BaseEngineController_A02_B.s333_MultiplyandDivideavoidingdivdebyzero1.s168_chargemass
       = 0.0;
     BaseEngineController_A02_B.s162_MultiplyandDivideavoidingdivdebyzero.s168_chargemass
@@ -308,24 +308,24 @@ void BaseEngineController_A02_initialize(boolean_T firstTime)
   /* states (dwork) */
   (void) memset((void *)&BaseEngineController_A02_DWork, 0,
                 sizeof(D_Work_BaseEngineController_A02));
-  BaseEngineController_A02_DWork.s549_UnitDelay1_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s599_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s542_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s551_UnitDelay1_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s615_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s663_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s656_UnitDelay1_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s680_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s673_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s550_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s600_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s543_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s552_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s616_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s664_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s657_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s681_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s674_UnitDelay1_DSTATE = 0.0;
   BaseEngineController_A02_DWork.s358_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s618_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s626_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s547_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s619_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s627_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s548_UnitDelay1_DSTATE = 0.0;
   BaseEngineController_A02_DWork.s313_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s546_UnitDelay1_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s581_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s521_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s529_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s547_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s582_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s522_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s530_UnitDelay_DSTATE = 0.0;
   BaseEngineController_A02_DWork.s325_UnitDelay2_DSTATE = 0.0;
   BaseEngineController_A02_DWork.s328_UnitDelay_DSTATE = 0.0;
   BaseEngineController_A02_DWork.s326_UnitDelay2_DSTATE = 0.0;
@@ -333,10 +333,10 @@ void BaseEngineController_A02_initialize(boolean_T firstTime)
   BaseEngineController_A02_DWork.s324_UnitDelay_DSTATE = 0.0;
   BaseEngineController_A02_DWork.s373_UnitDelay_DSTATE = 0.0;
   BaseEngineController_A02_DWork.s375_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s543_UnitDelay1_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s557_UnitDelay_DSTATE = 0.0;
   BaseEngineController_A02_DWork.s544_UnitDelay1_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s565_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s558_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s545_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s566_UnitDelay_DSTATE = 0.0;
   BaseEngineController_A02_DWork.s73_UnitDelay_DSTATE = 0.0;
   BaseEngineController_A02_DWork.s72_UnitDelay_DSTATE = 0.0;
   BaseEngineController_A02_DWork.s70_UnitDelay_DSTATE = 0.0;
@@ -355,33 +355,33 @@ void BaseEngineController_A02_initialize(boolean_T firstTime)
 
   BaseEngineController_A02_DWork.s337_UnitDelay_DSTATE = 0.0;
   BaseEngineController_A02_DWork.s358_UnitDelay1_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s545_UnitDelay1_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s573_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s589_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s550_UnitDelay1_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s607_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s546_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s574_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s590_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s551_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s608_UnitDelay_DSTATE = 0.0;
   BaseEngineController_A02_DWork.s325_UnitDelay1_DSTATE = 0.0;
   BaseEngineController_A02_DWork.s325_UnitDelay3_DSTATE = 0.0;
   BaseEngineController_A02_DWork.s325_UnitDelay4_DSTATE = 0.0;
   BaseEngineController_A02_DWork.s326_UnitDelay1_DSTATE = 0.0;
   BaseEngineController_A02_DWork.s326_UnitDelay3_DSTATE = 0.0;
   BaseEngineController_A02_DWork.s326_UnitDelay4_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s403_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s660_UnitDelay1_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s660_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s660_UnitDelay3_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s660_UnitDelay4_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s677_UnitDelay1_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s677_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s677_UnitDelay3_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s677_UnitDelay4_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s766_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s404_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s661_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s661_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s661_UnitDelay3_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s661_UnitDelay4_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s678_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s678_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s678_UnitDelay3_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s678_UnitDelay4_DSTATE = 0.0;
   BaseEngineController_A02_DWork.s767_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s769_CrankCounter_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s629_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s637_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s768_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s770_CrankCounter_DSTATE = 0.0;
   BaseEngineController_A02_DWork.s630_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s646_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s638_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s631_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s647_UnitDelay_DSTATE = 0.0;
   BaseEngineController_A02_DWork.s371_UnitDelay1_DSTATE = 0.0;
   BaseEngineController_A02_DWork.s370_UnitDelay1_DSTATE = 0.0;
   BaseEngineController_A02_DWork.s351_UnitDelay2_DSTATE = 0.0;
@@ -428,8 +428,8 @@ void BaseEngineController_A02_initialize(boolean_T firstTime)
   BaseEngineController_A02_DWork.s43_UnitDelay_DSTATE = 0.0;
   BaseEngineController_A02_DWork.s46_UnitDelay_DSTATE = 0.0;
   BaseEngineController_A02_DWork.s47_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s828_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s828_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s829_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s829_UnitDelay1_DSTATE = 0.0;
   BaseEngineController_A02_DWork.s310_TOld = 0.0;
   BaseEngineController_A02_DWork.s127_count = 0.0;
   BaseEngineController_A02_DWork.s25_TimerOld = 0.0;
@@ -439,14 +439,14 @@ void BaseEngineController_A02_initialize(boolean_T firstTime)
 
   /* Start for function-call system: '<S2>/Main Power Relay' */
 
-  /* Start for Triggered SubSystem: '<S824>/Clear' incorporates:
-   *  Start for S-Function (fcncallgen): '<S832>/Function-Call Generator'
-   *  Start for SubSystem: '<S822>/motohawk_restore_nvmem'
-   */
-
   /* Start for Triggered SubSystem: '<S825>/Clear' incorporates:
    *  Start for S-Function (fcncallgen): '<S833>/Function-Call Generator'
-   *  Start for SubSystem: '<S822>/motohawk_store_nvmem'
+   *  Start for SubSystem: '<S823>/motohawk_restore_nvmem'
+   */
+
+  /* Start for Triggered SubSystem: '<S826>/Clear' incorporates:
+   *  Start for S-Function (fcncallgen): '<S834>/Function-Call Generator'
+   *  Start for SubSystem: '<S823>/motohawk_store_nvmem'
    */
   BaseEngineController_A02_PrevZCSigState.HitCrossing1_Input_ZCE =
     UNINITIALIZED_ZCSIG;
@@ -477,7 +477,7 @@ void BaseEngineController_A02_initialize(boolean_T firstTime)
 
   /* Initial conditions for function-call system: '<S2>/Main Power Relay' */
 
-  /* S-Function Block: <S838>/motohawk_delta_time */
+  /* S-Function Block: <S839>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -485,19 +485,19 @@ void BaseEngineController_A02_initialize(boolean_T firstTime)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_A02_DWork.s838_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_A02_DWork.s839_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
   }
 
-  /* InitializeConditions for Stateflow: '<S822>/ECUP Latch' */
+  /* InitializeConditions for Stateflow: '<S823>/ECUP Latch' */
 
   /* Entry: Main Power Relay/Main Power Relay/ECUP Latch */
-  /* Transition: '<S826>:3' */
-  BaseEngineController_A02_DWork.s826_is_c8_BaseEngineController_A02 =
+  /* Transition: '<S827>:3' */
+  BaseEngineController_A02_DWork.s827_is_c8_BaseEngineController_A02 =
     BaseEngineController_A02_IN_PowerDown;
 
-  /* Entry 'PowerDown': '<S826>:1' */
-  BaseEngineController_A02_B.s826_MPRDState = FALSE;
+  /* Entry 'PowerDown': '<S827>:1' */
+  BaseEngineController_A02_B.s827_MPRDState = FALSE;
 
   /* set "at time zero" to false */
   if (rtmIsFirstInitCond(BaseEngineController_A02_M)) {

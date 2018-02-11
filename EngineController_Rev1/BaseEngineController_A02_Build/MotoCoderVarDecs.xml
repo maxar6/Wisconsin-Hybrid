@@ -3142,6 +3142,42 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
+      <name>Constant_Fuel_Pump</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|Controller|Stall|Fuel Pump at Startup</group>
+      <struct>ConstantWork.Constant_Fuel_Pump</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Constant_Oil_Pump</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|Controller|Stall|Oil Pump at Startup</group>
+      <struct>ConstantWork.Constant_Oil_Pump</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
       <name>BARO_Count</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -12884,6 +12920,24 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
+      <name>Disable_ESTOP</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|112</group>
+      <struct>ConstantWork.Disable_ESTOP</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
       <name>ESTOP</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -22288,7 +22342,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut8883p0004</help>
+      <help>Digital output pin selection for DOut7823p0004</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.FuelPumpPin</struct>
       <storage>FLASH</storage>
@@ -22392,7 +22446,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut9174p0004</help>
+      <help>Digital output pin selection for DOut8101p0004</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.OilPumpPin</struct>
       <storage>FLASH</storage>
@@ -22444,7 +22498,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut9191p0004</help>
+      <help>Digital output pin selection for DOut8111p0004</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.O2_Heater</struct>
       <storage>FLASH</storage>
