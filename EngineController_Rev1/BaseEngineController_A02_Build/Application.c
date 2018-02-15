@@ -8,11 +8,11 @@
 #include "BaseEngineController_A02.h"
 
 /*---- DEFINES --------------------------------------------------------------------------------------------*/
-#define DLL_NAME                       "BaseEngin_123"
-#define SRZ_NAME                       "BaseEngineController_A02_123"
+#define DLL_NAME                       "BaseEngin_125"
+#define SRZ_NAME                       "BaseEngineController_A02_125"
 #define MODEL_NAME                     "BaseEngineController_A02"
 #define MODEL_GUID                     "34a85f28-21b7-4112-82-b0-87-11-cc-cb-8f"
-#define BUILD_GUID                     "e66c35c2-9ffd-4751-98-6d-48-ed-1e-7f-fb"
+#define BUILD_GUID                     "e25520c6-903f-4234-8e-44-67-b0-f4-a2-4c"
 #define TOKEN_GUID                     "DD8AD11F95A6FC42BFF9AC780840E4B4"
 #define MOTOHAWK_VERSION               "MotoHawk 2011a_sp0.184"
 #define MATLAB_VERSION                 "MATLAB 7.12.0"
@@ -215,13 +215,13 @@ void ApplicationCallback(E_ExecutionEvent in_eEvent)
     {
       if (FGND_TDC_EVENT_RunCnt != 0) {
         if (ApplicationStatus == APPLICATION_RUN) {
-          extern void Trigger_FGND_TDC_EVENT_7629p0001(void);
-          Trigger_FGND_TDC_EVENT_7629p0001();
+          extern void Trigger_FGND_TDC_EVENT_7664p0001(void);
+          Trigger_FGND_TDC_EVENT_7664p0001();
         }
 
         if (ApplicationStatus == APPLICATION_RUN) {
-          extern void Trigger_FGND_TDC_EVENT_6261p0004(void);
-          Trigger_FGND_TDC_EVENT_6261p0004();
+          extern void Trigger_FGND_TDC_EVENT_6273p0004(void);
+          Trigger_FGND_TDC_EVENT_6273p0004();
         }
 
         if (FGND_TDC_EVENT_RunCnt > 0)
@@ -234,8 +234,8 @@ void ApplicationCallback(E_ExecutionEvent in_eEvent)
     {
       if (STARTUP_EVENT_RunCnt != 0) {
         if (ApplicationStatus == APPLICATION_INIT) {
-          extern void Trigger_STARTUP_EVENT_7154p0005(void);
-          Trigger_STARTUP_EVENT_7154p0005();
+          extern void Trigger_STARTUP_EVENT_7189p0001(void);
+          Trigger_STARTUP_EVENT_7189p0001();
         }
 
         if (STARTUP_EVENT_RunCnt > 0)
@@ -248,8 +248,8 @@ void ApplicationCallback(E_ExecutionEvent in_eEvent)
     {
       if (FGND_MID_TDC_EVENT_RunCnt != 0) {
         if (ApplicationStatus == APPLICATION_RUN) {
-          extern void Trigger_FGND_MID_TDC_EVENT_7155p0005(void);
-          Trigger_FGND_MID_TDC_EVENT_7155p0005();
+          extern void Trigger_FGND_MID_TDC_EVENT_7190p0001(void);
+          Trigger_FGND_MID_TDC_EVENT_7190p0001();
         }
 
         if (FGND_MID_TDC_EVENT_RunCnt > 0)
@@ -276,8 +276,8 @@ void ApplicationCallback(E_ExecutionEvent in_eEvent)
     {
       if (FGND_RTI_PERIODIC_RunCnt != 0) {
         if (ApplicationStatus == APPLICATION_RUN) {
-          extern void Trigger_FGND_RTI_PERIODIC_8394p0002(void);
-          Trigger_FGND_RTI_PERIODIC_8394p0002();
+          extern void Trigger_FGND_RTI_PERIODIC_8429p0004(void);
+          Trigger_FGND_RTI_PERIODIC_8429p0004();
         }
 
         if (FGND_RTI_PERIODIC_RunCnt > 0)
@@ -309,8 +309,8 @@ void ApplicationCallback(E_ExecutionEvent in_eEvent)
     {
       if (FGND_5XRTI_PERIODIC_RunCnt != 0) {
         if (ApplicationStatus == APPLICATION_RUN) {
-          extern void Trigger_FGND_5XRTI_PERIODIC_7338p0001(void);
-          Trigger_FGND_5XRTI_PERIODIC_7338p0001();
+          extern void Trigger_FGND_5XRTI_PERIODIC_7373p0001(void);
+          Trigger_FGND_5XRTI_PERIODIC_7373p0001();
         }
 
         if (ApplicationStatus == APPLICATION_RUN) {
@@ -329,8 +329,8 @@ void ApplicationCallback(E_ExecutionEvent in_eEvent)
         }
 
         if (ApplicationStatus == APPLICATION_RUN) {
-          extern void Trigger_FGND_5XRTI_PERIODIC_8116p0004(void);
-          Trigger_FGND_5XRTI_PERIODIC_8116p0004();
+          extern void Trigger_FGND_5XRTI_PERIODIC_8151p0004(void);
+          Trigger_FGND_5XRTI_PERIODIC_8151p0004();
         }
 
         if (FGND_5XRTI_PERIODIC_RunCnt > 0)
@@ -339,26 +339,12 @@ void ApplicationCallback(E_ExecutionEvent in_eEvent)
     }
     break;
 
-   case BGND_BASEx20_PERIODIC:
-    {
-      if (BGND_BASEx20_PERIODIC_RunCnt != 0) {
-        if (ApplicationStatus == APPLICATION_RUN) {
-          extern void Trigger_BGND_BASEx20_PERIODIC_5152p0006(void);
-          Trigger_BGND_BASEx20_PERIODIC_5152p0006();
-        }
-
-        if (BGND_BASEx20_PERIODIC_RunCnt > 0)
-          BGND_BASEx20_PERIODIC_RunCnt--;
-      }
-    }
-    break;
-
    case BGND_BASE_PERIODIC:
     {
       if (BGND_BASE_PERIODIC_RunCnt != 0) {
         if (ApplicationStatus == APPLICATION_RUN) {
-          extern void Trigger_BGND_BASE_PERIODIC_8388p0002(void);
-          Trigger_BGND_BASE_PERIODIC_8388p0002();
+          extern void Trigger_BGND_BASE_PERIODIC_8423p0004(void);
+          Trigger_BGND_BASE_PERIODIC_8423p0004();
         }
 
         if (BGND_BASE_PERIODIC_RunCnt > 0)
@@ -435,7 +421,7 @@ void OpenApplication(E_OpenEventType open_type)
     ResourceAllocateFW.uNumDiscreteOutsToAllocate = 4;
     ResourceAllocateFW.uNumFreqInsToAllocate = 2;
     ResourceAllocateFW.uNumSwitchesToAllocate = 0;
-    ResourceAllocateFW.uNumOneshotsToAllocate = 1;
+    ResourceAllocateFW.uNumOneshotsToAllocate = 0;
     ResourceAllocateFW.uNumVarCamsToAllocate = 0;
     ResourceAllocateFW.uNumTransCountToAllocate = 0;
     sErrorResult = AllocateResourcesInFW(&ResourceAllocateFW);
@@ -502,8 +488,6 @@ void OpenApplication(E_OpenEventType open_type)
 
       { FGND_5XRTI_PERIODIC, RES_ENABLED },
 
-      { BGND_BASEx20_PERIODIC, RES_ENABLED },
-
       { BGND_BASE_PERIODIC, RES_ENABLED },
     };
 
@@ -512,7 +496,7 @@ void OpenApplication(E_OpenEventType open_type)
       USE_SCHD_CONDITION;
     SchedulerCreateAttribObj.DynamicObj.EventCondObj.pEventCondObjArr =
       EventCondObjArr;
-    SchedulerCreateAttribObj.DynamicObj.EventCondObj.uNumEventsInArray = 8;
+    SchedulerCreateAttribObj.DynamicObj.EventCondObj.uNumEventsInArray = 7;
     SchedulerCreateAttribObj.uValidAttributesMask = USE_SCHD_DYNAMIC_ON_CREATE |
       USE_SCHD_TASK_MANAGER;
     CreateResource(RES_SCHEDULER, &SchedulerCreateAttribObj, BEHAVIOUR_SCHEDULER);
@@ -739,7 +723,7 @@ void OpenApplication(E_OpenEventType open_type)
     }
   }
 
-  /* S-Function Block: <S393>/motohawk_encoder_def */
+  /* S-Function Block: <S355>/motohawk_encoder_def */
   {
     extern void EncoderStateCallback(E_EncoderStatus, NativePtrSizedInt_U);
     extern void EncoderDiagnosticsCallback(E_EncoderError, NativePtrSizedInt_U);
@@ -829,7 +813,7 @@ void OpenApplication(E_OpenEventType open_type)
 
   {
     ECUP_AnalogInput_Create();
-    DOut8356p0002_DiscreteOutput_Create();
+    DOut8391p0004_DiscreteOutput_Create();
     MAPSensorPin_AnalogInput_Create();
     ECTSensorPin_AnalogInput_Create();
     IATSensorPin_AnalogInput_Create();
@@ -839,15 +823,14 @@ void OpenApplication(E_OpenEventType open_type)
     TPS2AnalogInput_AnalogInput_Create();
     PostO2Pin_AnalogInput_Create();
     MAF_Pin_FrequencyInput_Create();
-    EGRPin_AnalogInput_Create();
     FuelSensorPin_FrequencyInput_Create();
-    DOut7823p0004_DiscreteOutput_Create();
+    DOut7858p0004_DiscreteOutput_Create();
     ETCPin_PWMOutput_PWMOutput_Create();
-    DOut8101p0004_DiscreteOutput_Create();
-    DOut8111p0004_DiscreteOutput_Create();
+    DOut8136p0004_DiscreteOutput_Create();
+    DOut8146p0004_DiscreteOutput_Create();
     FuelPresPin_AnalogInput_Create();
+    EGRPin_AnalogInput_Create();
     SensVoltSensorPin_AnalogInput_Create();
-    ONESHOT_OneShotOutput_Create();
   }
 
   StepApplicationStartup();

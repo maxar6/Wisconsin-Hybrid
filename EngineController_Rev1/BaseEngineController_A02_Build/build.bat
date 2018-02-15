@@ -26,11 +26,11 @@
 							@if ERRORLEVEL 1 exit junk
 					@"%MOTOCODER_DIR%\bin\Transform" -o TDB/ParsedAndCombinedVardecs.xml TDB/ParsedAndCCVardecs.xml "%MOTOCODER_DIR%\Transforms\VarDecs_Merge.xsl" AdditionalVardecsXML="%cd%\MotoCoderVarDecs.xml"
 							@if ERRORLEVEL 1 exit junk
-					@"%MOTOCODER_DIR%\bin\Transform" -o TDB/BaseEngin_123.xml TDB/ParsedAndCombinedVardecs.xml "%MOTOCODER_DIR%\Transforms\VarDecs_Reorder.xsl" application-url="%CD%\ApplicationDescriptor.xml" maxTableSize=65535
+					@"%MOTOCODER_DIR%\bin\Transform" -o TDB/BaseEngin_125.xml TDB/ParsedAndCombinedVardecs.xml "%MOTOCODER_DIR%\Transforms\VarDecs_Reorder.xsl" application-url="%CD%\ApplicationDescriptor.xml" maxTableSize=65535
 							@if ERRORLEVEL 1 exit junk
-					@"%MOTOCODER_DIR%\bin\Transform" TDB/BaseEngin_123.xml "%MOTOCODER_DIR%\Transforms\VarDecs_Transform.xsl" includeFiles="CommonInclude.h,BaseEngineController_A02.h,TDB_Includes.h" GenDLL=1 GenTDB=1
+					@"%MOTOCODER_DIR%\bin\Transform" TDB/BaseEngin_125.xml "%MOTOCODER_DIR%\Transforms\VarDecs_Transform.xsl" includeFiles="CommonInclude.h,BaseEngineController_A02.h,TDB_Includes.h" GenDLL=1 GenTDB=1
 							@if ERRORLEVEL 1 exit junk
-					@"%MOTOCODER_DIR%\bin\nant\bin\nant.exe" -buildfile:TDB\Database.build -D:required.installdir="C:\Program Files (x86)\Woodward\DevelopmentTools\Toolchains\GCC\win32-pe\4_4_0" -D:database.basename=BaseEngin_123 -q -nologo rebuild
+					@"%MOTOCODER_DIR%\bin\nant\bin\nant.exe" -buildfile:TDB\Database.build -D:required.installdir="C:\Program Files (x86)\Woodward\DevelopmentTools\Toolchains\GCC\win32-pe\4_4_0" -D:database.basename=BaseEngin_125 -q -nologo rebuild
 							@if ERRORLEVEL 1 exit junk
 					@echo ### Completed MotoTune DLL
 							@if ERRORLEVEL 1 exit junk
@@ -42,7 +42,7 @@
 					
 				
 					@echo ### Call MotoConvert
-					@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\BaseEngineController_A02.map -srec=.\Target\BaseEngineController_A02.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=BaseEngineController_A02.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x0006FFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\BaseEngineController_A02_123.srz
+					@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\BaseEngineController_A02.map -srec=.\Target\BaseEngineController_A02.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=BaseEngineController_A02.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x0006FFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\BaseEngineController_A02_125.srz
 							@if ERRORLEVEL 1 exit junk
 					
 				
@@ -55,10 +55,10 @@
 							@if ERRORLEVEL 1 exit junk
 					
 				
-					@echo ### Copy BaseEngin_123.dll and BaseEngineController_A02_123.srz
-					@if exist C:\ECUFiles\TDBDLL\\*.* copy /Y .\TDB\BaseEngin_123.dll C:\ECUFiles\TDBDLL\ > NUL
+					@echo ### Copy BaseEngin_125.dll and BaseEngineController_A02_125.srz
+					@if exist C:\ECUFiles\TDBDLL\\*.* copy /Y .\TDB\BaseEngin_125.dll C:\ECUFiles\TDBDLL\ > NUL
 							@if ERRORLEVEL 1 exit junk
-					@if exist C:\ECUFiles\Programs\*.* copy /Y .\Target\BaseEngineController_A02_123.srz C:\ECUFiles\Programs > NUL
+					@if exist C:\ECUFiles\Programs\*.* copy /Y .\Target\BaseEngineController_A02_125.srz C:\ECUFiles\Programs > NUL
 							@if ERRORLEVEL 1 exit junk
 					
 				@"C:\Program Files (x86)\Woodward\DevelopmentTools\Toolchains\GCC\powerpc-eabi\4_4_0\\bin\nm.exe" -f sysv .\Target\BaseEngineController_A02.elf > .\Target\BaseEngineController_A02.sym

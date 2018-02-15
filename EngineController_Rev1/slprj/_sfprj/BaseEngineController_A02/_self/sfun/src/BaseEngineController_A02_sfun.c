@@ -1,18 +1,14 @@
 /* Include files */
 
 #include "BaseEngineController_A02_sfun.h"
-#include "c1_BaseEngineController_A02.h"
 #include "c2_BaseEngineController_A02.h"
 #include "c3_BaseEngineController_A02.h"
 #include "c5_BaseEngineController_A02.h"
-#include "c6_BaseEngineController_A02.h"
 #include "c7_BaseEngineController_A02.h"
 #include "c8_BaseEngineController_A02.h"
 #include "c9_BaseEngineController_A02.h"
-#include "c10_BaseEngineController_A02.h"
 #include "c11_BaseEngineController_A02.h"
 #include "c12_BaseEngineController_A02.h"
-#include "c13_BaseEngineController_A02.h"
 #include "c19_BaseEngineController_A02.h"
 
 /* Type Definitions */
@@ -41,11 +37,6 @@ unsigned int sf_BaseEngineController_A02_method_dispatcher(SimStruct
   *simstructPtr, unsigned int chartFileNumber, const char* specsCksum, int_T
   method, void *data)
 {
-  if (chartFileNumber==1) {
-    c1_BaseEngineController_A02_method_dispatcher(simstructPtr, method, data);
-    return 1;
-  }
-
   if (chartFileNumber==2) {
     c2_BaseEngineController_A02_method_dispatcher(simstructPtr, method, data);
     return 1;
@@ -58,11 +49,6 @@ unsigned int sf_BaseEngineController_A02_method_dispatcher(SimStruct
 
   if (chartFileNumber==5) {
     c5_BaseEngineController_A02_method_dispatcher(simstructPtr, method, data);
-    return 1;
-  }
-
-  if (chartFileNumber==6) {
-    c6_BaseEngineController_A02_method_dispatcher(simstructPtr, method, data);
     return 1;
   }
 
@@ -81,11 +67,6 @@ unsigned int sf_BaseEngineController_A02_method_dispatcher(SimStruct
     return 1;
   }
 
-  if (chartFileNumber==10) {
-    c10_BaseEngineController_A02_method_dispatcher(simstructPtr, method, data);
-    return 1;
-  }
-
   if (chartFileNumber==11) {
     c11_BaseEngineController_A02_method_dispatcher(simstructPtr, method, data);
     return 1;
@@ -93,11 +74,6 @@ unsigned int sf_BaseEngineController_A02_method_dispatcher(SimStruct
 
   if (chartFileNumber==12) {
     c12_BaseEngineController_A02_method_dispatcher(simstructPtr, method, data);
-    return 1;
-  }
-
-  if (chartFileNumber==13) {
-    c13_BaseEngineController_A02_method_dispatcher(simstructPtr, method, data);
     return 1;
   }
 
@@ -139,22 +115,14 @@ unsigned int sf_BaseEngineController_A02_process_check_sum_call( int nlhs,
       ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(0U);
       ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(0U);
     } else if (!strcmp(commandName,"makefile")) {
-      ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(3236895094U);
-      ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(2233067458U);
-      ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(3495241349U);
-      ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(2900815256U);
+      ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(489224510U);
+      ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(4061605438U);
+      ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(1278948975U);
+      ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(146894828U);
     } else if (nrhs==3 && !strcmp(commandName,"chart")) {
       unsigned int chartFileNumber;
       chartFileNumber = (unsigned int)mxGetScalar(prhs[2]);
       switch (chartFileNumber) {
-       case 1:
-        {
-          extern void sf_c1_BaseEngineController_A02_get_check_sum(mxArray *
-            plhs[]);
-          sf_c1_BaseEngineController_A02_get_check_sum(plhs);
-          break;
-        }
-
        case 2:
         {
           extern void sf_c2_BaseEngineController_A02_get_check_sum(mxArray *
@@ -176,14 +144,6 @@ unsigned int sf_BaseEngineController_A02_process_check_sum_call( int nlhs,
           extern void sf_c5_BaseEngineController_A02_get_check_sum(mxArray *
             plhs[]);
           sf_c5_BaseEngineController_A02_get_check_sum(plhs);
-          break;
-        }
-
-       case 6:
-        {
-          extern void sf_c6_BaseEngineController_A02_get_check_sum(mxArray *
-            plhs[]);
-          sf_c6_BaseEngineController_A02_get_check_sum(plhs);
           break;
         }
 
@@ -211,14 +171,6 @@ unsigned int sf_BaseEngineController_A02_process_check_sum_call( int nlhs,
           break;
         }
 
-       case 10:
-        {
-          extern void sf_c10_BaseEngineController_A02_get_check_sum(mxArray
-            *plhs[]);
-          sf_c10_BaseEngineController_A02_get_check_sum(plhs);
-          break;
-        }
-
        case 11:
         {
           extern void sf_c11_BaseEngineController_A02_get_check_sum(mxArray
@@ -232,14 +184,6 @@ unsigned int sf_BaseEngineController_A02_process_check_sum_call( int nlhs,
           extern void sf_c12_BaseEngineController_A02_get_check_sum(mxArray
             *plhs[]);
           sf_c12_BaseEngineController_A02_get_check_sum(plhs);
-          break;
-        }
-
-       case 13:
-        {
-          extern void sf_c13_BaseEngineController_A02_get_check_sum(mxArray
-            *plhs[]);
-          sf_c13_BaseEngineController_A02_get_check_sum(plhs);
           break;
         }
 
@@ -266,10 +210,10 @@ unsigned int sf_BaseEngineController_A02_process_check_sum_call( int nlhs,
       return 0;
     }
   } else {
-    ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(1092634962U);
-    ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(1542858329U);
-    ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(2453918945U);
-    ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(1014174040U);
+    ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(27642471U);
+    ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(2142932807U);
+    ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(193009620U);
+    ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(1942470585U);
   }
 
   return 1;
@@ -302,14 +246,6 @@ unsigned int sf_BaseEngineController_A02_autoinheritance_info( int nlhs, mxArray
     unsigned int chartFileNumber;
     chartFileNumber = (unsigned int)mxGetScalar(prhs[1]);
     switch (chartFileNumber) {
-     case 1:
-      {
-        extern mxArray *sf_c1_BaseEngineController_A02_get_autoinheritance_info
-          (void);
-        plhs[0] = sf_c1_BaseEngineController_A02_get_autoinheritance_info();
-        break;
-      }
-
      case 2:
       {
         extern mxArray *sf_c2_BaseEngineController_A02_get_autoinheritance_info
@@ -331,14 +267,6 @@ unsigned int sf_BaseEngineController_A02_autoinheritance_info( int nlhs, mxArray
         extern mxArray *sf_c5_BaseEngineController_A02_get_autoinheritance_info
           (void);
         plhs[0] = sf_c5_BaseEngineController_A02_get_autoinheritance_info();
-        break;
-      }
-
-     case 6:
-      {
-        extern mxArray *sf_c6_BaseEngineController_A02_get_autoinheritance_info
-          (void);
-        plhs[0] = sf_c6_BaseEngineController_A02_get_autoinheritance_info();
         break;
       }
 
@@ -366,14 +294,6 @@ unsigned int sf_BaseEngineController_A02_autoinheritance_info( int nlhs, mxArray
         break;
       }
 
-     case 10:
-      {
-        extern mxArray *sf_c10_BaseEngineController_A02_get_autoinheritance_info
-          (void);
-        plhs[0] = sf_c10_BaseEngineController_A02_get_autoinheritance_info();
-        break;
-      }
-
      case 11:
       {
         extern mxArray *sf_c11_BaseEngineController_A02_get_autoinheritance_info
@@ -387,14 +307,6 @@ unsigned int sf_BaseEngineController_A02_autoinheritance_info( int nlhs, mxArray
         extern mxArray *sf_c12_BaseEngineController_A02_get_autoinheritance_info
           (void);
         plhs[0] = sf_c12_BaseEngineController_A02_get_autoinheritance_info();
-        break;
-      }
-
-     case 13:
-      {
-        extern mxArray *sf_c13_BaseEngineController_A02_get_autoinheritance_info
-          (void);
-        plhs[0] = sf_c13_BaseEngineController_A02_get_autoinheritance_info();
         break;
       }
 
@@ -441,17 +353,6 @@ unsigned int sf_BaseEngineController_A02_get_eml_resolved_functions_info( int
     unsigned int chartFileNumber;
     chartFileNumber = (unsigned int)mxGetScalar(prhs[1]);
     switch (chartFileNumber) {
-     case 1:
-      {
-        extern const mxArray
-          *sf_c1_BaseEngineController_A02_get_eml_resolved_functions_info(void);
-        mxArray *persistentMxArray = (mxArray *)
-          sf_c1_BaseEngineController_A02_get_eml_resolved_functions_info();
-        plhs[0] = mxDuplicateArray(persistentMxArray);
-        mxDestroyArray(persistentMxArray);
-        break;
-      }
-
      case 2:
       {
         extern const mxArray
@@ -480,17 +381,6 @@ unsigned int sf_BaseEngineController_A02_get_eml_resolved_functions_info( int
           *sf_c5_BaseEngineController_A02_get_eml_resolved_functions_info(void);
         mxArray *persistentMxArray = (mxArray *)
           sf_c5_BaseEngineController_A02_get_eml_resolved_functions_info();
-        plhs[0] = mxDuplicateArray(persistentMxArray);
-        mxDestroyArray(persistentMxArray);
-        break;
-      }
-
-     case 6:
-      {
-        extern const mxArray
-          *sf_c6_BaseEngineController_A02_get_eml_resolved_functions_info(void);
-        mxArray *persistentMxArray = (mxArray *)
-          sf_c6_BaseEngineController_A02_get_eml_resolved_functions_info();
         plhs[0] = mxDuplicateArray(persistentMxArray);
         mxDestroyArray(persistentMxArray);
         break;
@@ -529,17 +419,6 @@ unsigned int sf_BaseEngineController_A02_get_eml_resolved_functions_info( int
         break;
       }
 
-     case 10:
-      {
-        extern const mxArray
-          *sf_c10_BaseEngineController_A02_get_eml_resolved_functions_info(void);
-        mxArray *persistentMxArray = (mxArray *)
-          sf_c10_BaseEngineController_A02_get_eml_resolved_functions_info();
-        plhs[0] = mxDuplicateArray(persistentMxArray);
-        mxDestroyArray(persistentMxArray);
-        break;
-      }
-
      case 11:
       {
         extern const mxArray
@@ -557,17 +436,6 @@ unsigned int sf_BaseEngineController_A02_get_eml_resolved_functions_info( int
           *sf_c12_BaseEngineController_A02_get_eml_resolved_functions_info(void);
         mxArray *persistentMxArray = (mxArray *)
           sf_c12_BaseEngineController_A02_get_eml_resolved_functions_info();
-        plhs[0] = mxDuplicateArray(persistentMxArray);
-        mxDestroyArray(persistentMxArray);
-        break;
-      }
-
-     case 13:
-      {
-        extern const mxArray
-          *sf_c13_BaseEngineController_A02_get_eml_resolved_functions_info(void);
-        mxArray *persistentMxArray = (mxArray *)
-          sf_c13_BaseEngineController_A02_get_eml_resolved_functions_info();
         plhs[0] = mxDuplicateArray(persistentMxArray);
         mxDestroyArray(persistentMxArray);
         break;
@@ -602,7 +470,7 @@ unsigned int sf_BaseEngineController_A02_get_eml_resolved_functions_info( int
 void BaseEngineController_A02_debug_initialize(void)
 {
   _BaseEngineController_A02MachineNumber_ = sf_debug_initialize_machine(
-    "BaseEngineController_A02","sfun",0,13,0,0,0);
+    "BaseEngineController_A02","sfun",0,9,0,0,0);
   sf_debug_set_machine_event_thresholds(_BaseEngineController_A02MachineNumber_,
     0,0);
   sf_debug_set_machine_data_thresholds(_BaseEngineController_A02MachineNumber_,0);

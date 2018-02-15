@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BaseEngineController_A02'.
  *
- * Model version                  : 1.1560
+ * Model version                  : 1.1566
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Sat Feb 10 00:15:12 2018
+ * C/C++ source code generated on : Thu Feb 15 13:55:33 2018
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -63,10 +63,6 @@
 #endif                                 /* __RTWTYPES_H__ */
 
 extern boolean_T GetFaultActionStatus(uint32_T action);
-extern boolean_T GetFaultActionStatus(uint32_T action);
-extern boolean_T GetFaultActionStatus(uint32_T action);
-extern boolean_T GetFaultActionStatus(uint32_T action);
-extern boolean_T GetFaultActionStatus(uint32_T action);
 extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
@@ -140,13 +136,13 @@ extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultSuspected(uint32_T fault);
 extern boolean_T IsFaultSuspected(uint32_T fault);
+extern boolean_T GetFaultActionStatus(uint32_T action);
+extern boolean_T GetFaultActionStatus(uint32_T action);
+extern boolean_T GetFaultActionStatus(uint32_T action);
 extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultSuspected(uint32_T fault);
 extern boolean_T IsFaultSuspected(uint32_T fault);
-extern boolean_T GetFaultActionStatus(uint32_T action);
-extern boolean_T GetFaultActionStatus(uint32_T action);
-extern boolean_T GetFaultActionStatus(uint32_T action);
 extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultSuspected(uint32_T fault);

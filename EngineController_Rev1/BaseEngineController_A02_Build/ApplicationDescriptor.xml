@@ -4,7 +4,7 @@
 	<Name>BaseEngineController_A02</Name>
 	<Author>HYBRID</Author>
 	<Copyright>2018 Woodward.</Copyright>
-	<CreateDate>10-Feb-2018</CreateDate>
+	<CreateDate>15-Feb-2018</CreateDate>
 	<MemoryLayout>DEV</MemoryLayout>
 	<Module>ClassicModule-MPC555</Module>
 	<Memory/>
@@ -25,9 +25,9 @@
 			</TableDatabase>
 			<ProjectID>6</ProjectID>
 			<ProductID>1</ProductID>
-			<SwIdTxt>BaseEngin_123</SwIdTxt>
-			<SwRevisionTxt>BaseEngineController_A02_123</SwRevisionTxt>
-			<CalIdTxt>BaseEngineController_A02_123_000</CalIdTxt>
+			<SwIdTxt>BaseEngin_125</SwIdTxt>
+			<SwRevisionTxt>BaseEngineController_A02_125</SwRevisionTxt>
+			<CalIdTxt>BaseEngineController_A02_125_000</CalIdTxt>
 		</VarDecs>
 		<DatabaseBuild>
 			<Toolchain>
@@ -38,10 +38,10 @@
 			</Toolchain>
 		</DatabaseBuild>
 		<Command>
-			<Description>Copy BaseEngin_123.dll and BaseEngineController_A02_123.srz</Description>
+			<Description>Copy BaseEngin_125.dll and BaseEngineController_A02_125.srz</Description>
 			<Order>99</Order>
-			<Execute>@if exist C:\ECUFiles\TDBDLL\\*.* copy /Y .\TDB\BaseEngin_123.dll C:\ECUFiles\TDBDLL\ &gt; NUL</Execute>
-			<Execute>@if exist C:\ECUFiles\Programs\*.* copy /Y .\Target\BaseEngineController_A02_123.srz C:\ECUFiles\Programs &gt; NUL</Execute>
+			<Execute>@if exist C:\ECUFiles\TDBDLL\\*.* copy /Y .\TDB\BaseEngin_125.dll C:\ECUFiles\TDBDLL\ &gt; NUL</Execute>
+			<Execute>@if exist C:\ECUFiles\Programs\*.* copy /Y .\Target\BaseEngineController_A02_125.srz C:\ECUFiles\Programs &gt; NUL</Execute>
 		</Command>
 	</ToolInterface>
 	<Build>
@@ -67,27 +67,26 @@
 			<File>FaultManager.c</File>
 			<File>Foreground.c</File>
 			<File>IOCallbacks.c</File>
-			<File>InjectorSequenceCallback_38.c</File>
+			<File>InjectorSequenceCallback_36.c</File>
 			<File>MotoHawk_CAN.c</File>
 			<File>MotoHawk_DataStores.c</File>
 			<File>MotoHawk_IO.c</File>
 			<File>TableLookupFunctions.c</File>
-			<File>Trigger_BGND_BASE_PERIODIC_8388p0002.c</File>
-			<File>Trigger_BGND_BASEx20_PERIODIC_5152p0006.c</File>
+			<File>Trigger_BGND_BASE_PERIODIC_8423p0004.c</File>
 			<File>Trigger_CAN_RX_BusCAN_1_Buf1.c</File>
 			<File>Trigger_CAN_RX_BusCAN_2_Buf14.c</File>
-			<File>Trigger_Encoder_Fault_28.c</File>
+			<File>Trigger_Encoder_Fault_26.c</File>
 			<File>Trigger_FGND_5XRTI_PERIODIC_1408p0004.c</File>
 			<File>Trigger_FGND_5XRTI_PERIODIC_1409p0004.c</File>
 			<File>Trigger_FGND_5XRTI_PERIODIC_4477p0005.c</File>
-			<File>Trigger_FGND_5XRTI_PERIODIC_7338p0001.c</File>
-			<File>Trigger_FGND_5XRTI_PERIODIC_8116p0004.c</File>
-			<File>Trigger_FGND_MID_TDC_EVENT_7155p0005.c</File>
-			<File>Trigger_FGND_RTI_PERIODIC_8394p0002.c</File>
+			<File>Trigger_FGND_5XRTI_PERIODIC_7373p0001.c</File>
+			<File>Trigger_FGND_5XRTI_PERIODIC_8151p0004.c</File>
+			<File>Trigger_FGND_MID_TDC_EVENT_7190p0001.c</File>
+			<File>Trigger_FGND_RTI_PERIODIC_8429p0004.c</File>
 			<File>Trigger_FGND_TDC1_EVENT_1156p0004.c</File>
-			<File>Trigger_FGND_TDC_EVENT_6261p0004.c</File>
-			<File>Trigger_FGND_TDC_EVENT_7629p0001.c</File>
-			<File>Trigger_STARTUP_EVENT_7154p0005.c</File>
+			<File>Trigger_FGND_TDC_EVENT_6273p0004.c</File>
+			<File>Trigger_FGND_TDC_EVENT_7664p0001.c</File>
+			<File>Trigger_STARTUP_EVENT_7189p0001.c</File>
 			<File>VarDecs.c</File>
 			<File>rt_zcfcn.c</File>
 			<File>rt_nonfinite.c</File>
@@ -111,7 +110,7 @@
 		</Command>
 		<Command>
 			<Description>Call MotoConvert</Description>
-			<Execute>@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\BaseEngineController_A02.map -srec=.\Target\BaseEngineController_A02.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=BaseEngineController_A02.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x0006FFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\BaseEngineController_A02_123.srz</Execute>
+			<Execute>@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\BaseEngineController_A02.map -srec=.\Target\BaseEngineController_A02.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=BaseEngineController_A02.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x0006FFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\BaseEngineController_A02_125.srz</Execute>
 			<Order>55</Order>
 		</Command>
 		<Compiler>
@@ -145,5 +144,5 @@
 			<Execute>@if exist .\rtwtypes.h del /Q /F .\rtwtypes.h &gt; NUL</Execute>
 		</Command>
 	</Build>
-	<Signature>a611fed0-ddc7-41b8-a8-33-34-37-3c-9b-2a</Signature>
+	<Signature>31bed77a-9cea-4d23-bb-8f-22-0b-65-e6-7a</Signature>
 </Application>

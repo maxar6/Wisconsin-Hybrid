@@ -62,7 +62,7 @@ void RefreshFaultActionReferenceCounts(void)
   int32_T fault;
   uint16_T action;
   uint16_T index;
-  for (action=0; action < 11; action++) {
+  for (action=0; action < 7; action++) {
     Actions_DataStore_ByIndex(action).reference_count = 0;
   }
 
@@ -83,7 +83,7 @@ void RefreshFaultActionReferenceCounts(void)
       {
         cond = FaultManager_DataStore_ByIndex(fault).action1_condition;
         action = FaultManager_DataStore_ByIndex(fault).action1;
-        if (action < 11) {
+        if (action < 7) {
           if (s && (cond & FAULT_COND_SUSPECTED)) {
             Actions_DataStore_ByIndex(action).reference_count++;
           }
@@ -101,7 +101,7 @@ void RefreshFaultActionReferenceCounts(void)
       {
         cond = FaultManager_DataStore_ByIndex(fault).action2_condition;
         action = FaultManager_DataStore_ByIndex(fault).action2;
-        if (action < 11) {
+        if (action < 7) {
           if (s && (cond & FAULT_COND_SUSPECTED)) {
             Actions_DataStore_ByIndex(action).reference_count++;
           }
@@ -119,7 +119,7 @@ void RefreshFaultActionReferenceCounts(void)
       {
         cond = FaultManager_DataStore_ByIndex(fault).action3_condition;
         action = FaultManager_DataStore_ByIndex(fault).action3;
-        if (action < 11) {
+        if (action < 7) {
           if (s && (cond & FAULT_COND_SUSPECTED)) {
             Actions_DataStore_ByIndex(action).reference_count++;
           }
@@ -137,7 +137,7 @@ void RefreshFaultActionReferenceCounts(void)
       {
         cond = FaultManager_DataStore_ByIndex(fault).action4_condition;
         action = FaultManager_DataStore_ByIndex(fault).action4;
-        if (action < 11) {
+        if (action < 7) {
           if (s && (cond & FAULT_COND_SUSPECTED)) {
             Actions_DataStore_ByIndex(action).reference_count++;
           }
@@ -168,7 +168,7 @@ void AdjustFaultActionReferenceCount(uint32_T fault, boolean_T val, uint8_T
   {
     if (pFlt->action1_condition & condition) {
       action = pFlt->action1;
-      if (action < 11) {
+      if (action < 7) {
         if (val) {
           Actions_DataStore_ByIndex(action).reference_count++;
         } else if (Actions_DataStore_ByIndex(action).reference_count) {
@@ -181,7 +181,7 @@ void AdjustFaultActionReferenceCount(uint32_T fault, boolean_T val, uint8_T
   {
     if (pFlt->action2_condition & condition) {
       action = pFlt->action2;
-      if (action < 11) {
+      if (action < 7) {
         if (val) {
           Actions_DataStore_ByIndex(action).reference_count++;
         } else if (Actions_DataStore_ByIndex(action).reference_count) {
@@ -194,7 +194,7 @@ void AdjustFaultActionReferenceCount(uint32_T fault, boolean_T val, uint8_T
   {
     if (pFlt->action3_condition & condition) {
       action = pFlt->action3;
-      if (action < 11) {
+      if (action < 7) {
         if (val) {
           Actions_DataStore_ByIndex(action).reference_count++;
         } else if (Actions_DataStore_ByIndex(action).reference_count) {
@@ -207,7 +207,7 @@ void AdjustFaultActionReferenceCount(uint32_T fault, boolean_T val, uint8_T
   {
     if (pFlt->action4_condition & condition) {
       action = pFlt->action4;
-      if (action < 11) {
+      if (action < 7) {
         if (val) {
           Actions_DataStore_ByIndex(action).reference_count++;
         } else if (Actions_DataStore_ByIndex(action).reference_count) {
@@ -666,7 +666,7 @@ const char *GetFaultName(uint32_T fault)
 uint8_T GetActionCondForFaultAction(uint32_T fault, uint8_T action)
 {
   S_ConstFault_T const* pFlt;
-  if (fault >= 66 || action >= 11)
+  if (fault >= 66 || action >= 7)
     return 0;
   pFlt = &(FaultManager_DataStore_ByIndex(fault));
   if ((pFlt->action1 == action) && (pFlt->action1_condition > 0)) {
@@ -684,7 +684,7 @@ uint8_T GetActionCondForFaultAction(uint32_T fault, uint8_T action)
 
 boolean_T GetFaultActionStatus(uint32_T action)
 {
-  if (action >= 11)
+  if (action >= 7)
     return 0;
   return (Actions_DataStore_ByIndex(action).reference_count > 0);
 }
@@ -706,7 +706,7 @@ void GlobalFaultClear(void)
 
   {
     uint32_T action;
-    for (action=0; action < 11; action++) {
+    for (action=0; action < 7; action++) {
       Actions_DataStore_ByIndex(action).reference_count = 0;
     }
   }
@@ -748,7 +748,7 @@ static void UpdateActionReasonMarquee(uint32_T fault_action_index)
     uint8_T fault_index;
   } fault_action_marquee_state_t;
 
-  static fault_action_marquee_state_t fault_action_marquee_state[11] = { { 0 } };
+  static fault_action_marquee_state_t fault_action_marquee_state[7] = { { 0 } };
 
   uint8_T fault;
   uint8_T count;
@@ -896,7 +896,7 @@ void FaultManagerPeriodicTick(void)
 
   {
     uint32_T i;
-    for (i=0; i < 11; i++) {
+    for (i=0; i < 7; i++) {
       UpdateActionReasonMarquee(i);
     }
   }

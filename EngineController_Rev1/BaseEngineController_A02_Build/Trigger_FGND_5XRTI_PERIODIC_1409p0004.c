@@ -3,9 +3,9 @@
  *
  * Code generation for model "BaseEngineController_A02.mdl".
  *
- * Model version              : 1.1560
+ * Model version              : 1.1566
  * Simulink Coder version : 8.0 (R2011a) 09-Mar-2011
- * C source code generated on : Sat Feb 10 00:15:12 2018
+ * C source code generated on : Thu Feb 15 13:55:33 2018
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -18,7 +18,7 @@
 
 void Trigger_FGND_5XRTI_PERIODIC_1409p0004(void)
 {
-  /* Named constants for Stateflow: '<S823>/ECUP Latch' */
+  /* Named constants for Stateflow: '<S778>/ECUP Latch' */
 #define BaseEngineController_A02_IN_PowerDown (1U)
 #define BaseEngineController_A02_IN_PowerUp (2U)
 
@@ -30,74 +30,74 @@ void Trigger_FGND_5XRTI_PERIODIC_1409p0004(void)
       index_T rtb_SpkEnergy09Idx;
       real_T rtb_Merge_e;
 
-      /* S-Function Block: <S17>/motohawk_prelookup */
+      /* S-Function Block: <S16>/motohawk_prelookup */
       {
         extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
           ordarr[], uint32_T sz, uint16_T prev);
         (SpkEnergy09In_DataStore()) =
-          BaseEngineController_A02_B.s120_SparkEnergy;
+          BaseEngineController_A02_B.s114_SparkEnergy;
         (SpkEnergy09Idx_DataStore()) = TablePrelookup_real_T
-          (BaseEngineController_A02_B.s120_SparkEnergy,
+          (BaseEngineController_A02_B.s114_SparkEnergy,
            (SpkEnergy09IdxArr_DataStore()), 9, (SpkEnergy09Idx_DataStore()));
         rtb_SpkEnergy09Idx = (SpkEnergy09Idx_DataStore());
       }
 
-      /* S-Function Block: <S17>/motohawk_interpolation_2d1 */
+      /* S-Function Block: <S16>/motohawk_interpolation_2d1 */
       {
         extern real_T TableInterpolation2D_real_T(uint16_T row_in, uint16_T
           col_in, real_T *map_data, uint32_T row_sz, uint32_T col_sz);
         rtb_motohawk_interpolation_2d1 = TableInterpolation2D_real_T
           (rtb_SpkEnergy09Idx,
-           BaseEngineController_A02_B.s348_motohawk_prelookup, (real_T *)
+           BaseEngineController_A02_B.s312_motohawk_prelookup, (real_T *)
            ((CoilDwellMap_DataStore())), 9, 9);
         (CoilDwell_DataStore()) = rtb_motohawk_interpolation_2d1;
       }
 
-      /* If: '<S114>/If' incorporates:
-       *  Constant: '<S17>/Constant'
-       *  Inport: '<S115>/In1'
-       *  Inport: '<S116>/In1'
-       *  Product: '<S17>/Product'
-       *  S-Function (motohawk_sfun_calibration): '<S114>/override_enable'
-       *  S-Function (motohawk_sfun_calibration): '<S17>/motohawk_calibration'
-       *  S-Function (motohawk_sfun_interpolation_2d): '<S17>/motohawk_interpolation_2d1'
-       *  S-Function (motohawk_sfun_prelookup): '<S17>/motohawk_prelookup'
-       *  Sum: '<S17>/Sum'
-       *  UnitDelay: '<S114>/Unit Delay'
+      /* If: '<S108>/If' incorporates:
+       *  Constant: '<S16>/Constant'
+       *  Inport: '<S109>/In1'
+       *  Inport: '<S110>/In1'
+       *  Product: '<S16>/Product'
+       *  S-Function (motohawk_sfun_calibration): '<S108>/override_enable'
+       *  S-Function (motohawk_sfun_calibration): '<S16>/motohawk_calibration'
+       *  S-Function (motohawk_sfun_interpolation_2d): '<S16>/motohawk_interpolation_2d1'
+       *  S-Function (motohawk_sfun_prelookup): '<S16>/motohawk_prelookup'
+       *  Sum: '<S16>/Sum'
+       *  UnitDelay: '<S108>/Unit Delay'
        */
       if ((SparkDwell_ovr_DataStore())) {
-        /* Outputs for IfAction SubSystem: '<S114>/NewValue' incorporates:
-         *  ActionPort: '<S115>/Action Port'
+        /* Outputs for IfAction SubSystem: '<S108>/NewValue' incorporates:
+         *  ActionPort: '<S109>/Action Port'
          */
-        rtb_Merge_e = BaseEngineController_A02_DWork.s114_UnitDelay_DSTATE;
+        rtb_Merge_e = BaseEngineController_A02_DWork.s108_UnitDelay_DSTATE;
 
-        /* End of Outputs for SubSystem: '<S114>/NewValue' */
+        /* End of Outputs for SubSystem: '<S108>/NewValue' */
       } else {
-        /* Outputs for IfAction SubSystem: '<S114>/OldValue' incorporates:
-         *  ActionPort: '<S116>/Action Port'
+        /* Outputs for IfAction SubSystem: '<S108>/OldValue' incorporates:
+         *  ActionPort: '<S110>/Action Port'
          */
         rtb_Merge_e = (CoilDrvrDlyTime_DataStore()) / 1000.0 +
           rtb_motohawk_interpolation_2d1;
 
-        /* End of Outputs for SubSystem: '<S114>/OldValue' */
+        /* End of Outputs for SubSystem: '<S108>/OldValue' */
       }
 
-      /* End of If: '<S114>/If' */
+      /* End of If: '<S108>/If' */
 
-      /* Sum: '<S114>/Sum' incorporates:
-       *  S-Function (motohawk_sfun_calibration): '<S114>/offset'
+      /* Sum: '<S108>/Sum' incorporates:
+       *  S-Function (motohawk_sfun_calibration): '<S108>/offset'
        */
-      BaseEngineController_A02_B.s114_Sum = rtb_Merge_e +
+      BaseEngineController_A02_B.s108_Sum = rtb_Merge_e +
         (SparkDwell_offset_DataStore());
 
-      /* RelationalOperator: '<S17>/Only Enable Spark when Energy is Above Zero' incorporates:
-       *  Constant: '<S17>/Constant1'
+      /* RelationalOperator: '<S16>/Only Enable Spark when Energy is Above Zero' incorporates:
+       *  Constant: '<S16>/Constant1'
        */
-      BaseEngineController_A02_B.s17_OnlyEnableSparkwhenEnergyisAboveZero =
-        ((BaseEngineController_A02_B.s120_SparkEnergy > 0.0));
+      BaseEngineController_A02_B.s16_OnlyEnableSparkwhenEnergyisAboveZero =
+        ((BaseEngineController_A02_B.s114_SparkEnergy > 0.0));
 
-      /* Update for UnitDelay: '<S114>/Unit Delay' */
-      BaseEngineController_A02_DWork.s114_UnitDelay_DSTATE = rtb_Merge_e;
+      /* Update for UnitDelay: '<S108>/Unit Delay' */
+      BaseEngineController_A02_DWork.s108_UnitDelay_DSTATE = rtb_Merge_e;
     }
   }
 }

@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BaseEngineController_A02'.
  *
- * Model version                  : 1.1560
+ * Model version                  : 1.1566
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Sat Feb 10 00:15:12 2018
+ * C/C++ source code generated on : Thu Feb 15 13:55:33 2018
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -20,100 +20,100 @@
 #include "BaseEngineController_A02.h"
 #include "BaseEngineController_A02_private.h"
 
-/* Named constants for Stateflow: '<S206>/IdleStateMachine' */
+/* Named constants for Stateflow: '<S180>/IdleStateMachine' */
 #define BaseEngineController_A02_IN_Flaring (1U)
 #define BaseEngineController_A02_IN_OffIdle (2U)
 #define BaseEngineController_A02_IN_OnIdle (3U)
 
-/* Initial conditions for atomic system: '<S206>/IdleStateMachine' */
+/* Initial conditions for atomic system: '<S180>/IdleStateMachine' */
 void BaseEngineController_A02_IdleStateMachine_Init(void)
 {
-  BaseEngineController_A02_DWork.s221_is_active_c12_BaseEngineController_A02 =
+  BaseEngineController_A02_DWork.s195_is_active_c12_BaseEngineController_A02 =
     0U;
-  BaseEngineController_A02_DWork.s221_is_c12_BaseEngineController_A02 = 0U;
-  BaseEngineController_A02_B.s221_IdleState = 0U;
+  BaseEngineController_A02_DWork.s195_is_c12_BaseEngineController_A02 = 0U;
+  BaseEngineController_A02_B.s195_IdleState = 0U;
 }
 
-/* Output and update for atomic system: '<S206>/IdleStateMachine' */
+/* Output and update for atomic system: '<S180>/IdleStateMachine' */
 void BaseEngineController_A02_IdleStateMachine(void)
 {
   /* Gateway: Foreground/Control/Controller/Run/MinGovernor/Idle State Determination/IdleStateMachine */
   /* During: Foreground/Control/Controller/Run/MinGovernor/Idle State Determination/IdleStateMachine */
-  if (BaseEngineController_A02_DWork.s221_is_active_c12_BaseEngineController_A02
+  if (BaseEngineController_A02_DWork.s195_is_active_c12_BaseEngineController_A02
       == 0) {
     /* Entry: Foreground/Control/Controller/Run/MinGovernor/Idle State Determination/IdleStateMachine */
-    BaseEngineController_A02_DWork.s221_is_active_c12_BaseEngineController_A02 =
+    BaseEngineController_A02_DWork.s195_is_active_c12_BaseEngineController_A02 =
       1U;
 
-    /* Transition: '<S221>:4' */
-    BaseEngineController_A02_DWork.s221_is_c12_BaseEngineController_A02 =
+    /* Transition: '<S195>:4' */
+    BaseEngineController_A02_DWork.s195_is_c12_BaseEngineController_A02 =
       BaseEngineController_A02_IN_Flaring;
 
-    /* Entry 'Flaring': '<S221>:2' */
-    BaseEngineController_A02_B.s221_IdleState = 1U;
+    /* Entry 'Flaring': '<S195>:2' */
+    BaseEngineController_A02_B.s195_IdleState = 1U;
   } else {
-    switch (BaseEngineController_A02_DWork.s221_is_c12_BaseEngineController_A02)
+    switch (BaseEngineController_A02_DWork.s195_is_c12_BaseEngineController_A02)
     {
      case BaseEngineController_A02_IN_Flaring:
-      /* During 'Flaring': '<S221>:2' */
-      if (BaseEngineController_A02_B.s206_LogicalOperator ||
+      /* During 'Flaring': '<S195>:2' */
+      if (BaseEngineController_A02_B.s180_LogicalOperator ||
           (!(EnableRPMFalling_DataStore()))) {
-        /* Transition: '<S221>:5' */
-        BaseEngineController_A02_DWork.s221_is_c12_BaseEngineController_A02 =
+        /* Transition: '<S195>:5' */
+        BaseEngineController_A02_DWork.s195_is_c12_BaseEngineController_A02 =
           BaseEngineController_A02_IN_OffIdle;
 
-        /* Entry 'OffIdle': '<S221>:1' */
-        BaseEngineController_A02_B.s221_IdleState = 3U;
+        /* Entry 'OffIdle': '<S195>:1' */
+        BaseEngineController_A02_B.s195_IdleState = 3U;
       } else {
-        if (BaseEngineController_A02_B.s220_RelationalOperator &&
-            BaseEngineController_A02_B.s206_RelationalOperator1) {
-          /* Transition: '<S221>:7' */
-          BaseEngineController_A02_DWork.s221_is_c12_BaseEngineController_A02 =
+        if (BaseEngineController_A02_B.s194_RelationalOperator &&
+            BaseEngineController_A02_B.s180_RelationalOperator1) {
+          /* Transition: '<S195>:7' */
+          BaseEngineController_A02_DWork.s195_is_c12_BaseEngineController_A02 =
             BaseEngineController_A02_IN_OnIdle;
 
-          /* Entry 'OnIdle': '<S221>:3' */
-          BaseEngineController_A02_B.s221_IdleState = 2U;
+          /* Entry 'OnIdle': '<S195>:3' */
+          BaseEngineController_A02_B.s195_IdleState = 2U;
         }
       }
       break;
 
      case BaseEngineController_A02_IN_OffIdle:
-      /* During 'OffIdle': '<S221>:1' */
+      /* During 'OffIdle': '<S195>:1' */
       if (((EnableRPMFalling_DataStore()) &&
-           (BaseEngineController_A02_B.s206_RelationalOperator3 ||
-            (BaseEngineController_A02_B.s206_RelationalOperator &&
-             BaseEngineController_A02_B.s206_RelationalOperator1))) ||
-          BaseEngineController_A02_B.s206_RelationalOperator5) {
-        /* Transition: '<S221>:6' */
-        BaseEngineController_A02_DWork.s221_is_c12_BaseEngineController_A02 =
+           (BaseEngineController_A02_B.s180_RelationalOperator3 ||
+            (BaseEngineController_A02_B.s180_RelationalOperator &&
+             BaseEngineController_A02_B.s180_RelationalOperator1))) ||
+          BaseEngineController_A02_B.s180_RelationalOperator5) {
+        /* Transition: '<S195>:6' */
+        BaseEngineController_A02_DWork.s195_is_c12_BaseEngineController_A02 =
           BaseEngineController_A02_IN_OnIdle;
 
-        /* Entry 'OnIdle': '<S221>:3' */
-        BaseEngineController_A02_B.s221_IdleState = 2U;
+        /* Entry 'OnIdle': '<S195>:3' */
+        BaseEngineController_A02_B.s195_IdleState = 2U;
       }
       break;
 
      case BaseEngineController_A02_IN_OnIdle:
-      /* During 'OnIdle': '<S221>:3' */
-      if ((!BaseEngineController_A02_B.s206_RelationalOperator3) &&
-          (BaseEngineController_A02_B.s206_LogicalOperator ||
+      /* During 'OnIdle': '<S195>:3' */
+      if ((!BaseEngineController_A02_B.s180_RelationalOperator3) &&
+          (BaseEngineController_A02_B.s180_LogicalOperator ||
            (!(EnableRPMFalling_DataStore())))) {
-        /* Transition: '<S221>:8' */
-        BaseEngineController_A02_DWork.s221_is_c12_BaseEngineController_A02 =
+        /* Transition: '<S195>:8' */
+        BaseEngineController_A02_DWork.s195_is_c12_BaseEngineController_A02 =
           BaseEngineController_A02_IN_OffIdle;
 
-        /* Entry 'OffIdle': '<S221>:1' */
-        BaseEngineController_A02_B.s221_IdleState = 3U;
+        /* Entry 'OffIdle': '<S195>:1' */
+        BaseEngineController_A02_B.s195_IdleState = 3U;
       }
       break;
 
      default:
-      /* Transition: '<S221>:4' */
-      BaseEngineController_A02_DWork.s221_is_c12_BaseEngineController_A02 =
+      /* Transition: '<S195>:4' */
+      BaseEngineController_A02_DWork.s195_is_c12_BaseEngineController_A02 =
         BaseEngineController_A02_IN_Flaring;
 
-      /* Entry 'Flaring': '<S221>:2' */
-      BaseEngineController_A02_B.s221_IdleState = 1U;
+      /* Entry 'Flaring': '<S195>:2' */
+      BaseEngineController_A02_B.s195_IdleState = 1U;
       break;
     }
   }

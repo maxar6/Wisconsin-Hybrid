@@ -97,10 +97,6 @@ int32_T FGND_TDC1_EVENT_RunCnt = -1;
    Format:5.0 UpdateID:BACKGND Group:"System | Debug | Event Pause Counters" Help:"The number of times to execute FGND_5XRTI_PERIODIC before pausing.  -1 means run forever" */
 int32_T FGND_5XRTI_PERIODIC_RunCnt = -1;
 
-/* Name: BGND_BASEx20_PERIODIC_RunCnt ClassID:VAR StorageID:RAM Access:RW4+RW3+NA2+NA1 TypeID:SINT4 CType:int32_T Struct:BGND_BASEx20_PERIODIC_RunCnt Gain:1 Min:-1 Max:2147483646
-   Format:5.0 UpdateID:BACKGND Group:"System | Debug | Event Pause Counters" Help:"The number of times to execute BGND_BASEx20_PERIODIC before pausing.  -1 means run forever" */
-int32_T BGND_BASEx20_PERIODIC_RunCnt = -1;
-
 /* Name: FGND_RTI_PERIODIC_RunCnt ClassID:VAR StorageID:RAM Access:RW4+RW3+NA2+NA1 TypeID:SINT4 CType:int32_T Struct:FGND_RTI_PERIODIC_RunCnt Gain:1 Min:-1 Max:2147483646
    Format:5.0 UpdateID:BACKGND Group:"System | Debug | Event Pause Counters" Help:"The number of times to execute FGND_RTI_PERIODIC before pausing.  -1 means run forever" */
 int32_T FGND_RTI_PERIODIC_RunCnt = -1;
@@ -229,7 +225,7 @@ void CheckApplicationStatus(void)
   if (stopApplication) {
     ApplicationStatus = APPLICATION_STOP;
 
-    /* S-Function Block: <S393>/motohawk_encoder_pseudo */
+    /* S-Function Block: <S355>/motohawk_encoder_pseudo */
     {
       /* Turn off Pseudo-Encoder on Stop */
       S_EncoderResourceAttributes EncoderAttribsObj;
@@ -250,21 +246,21 @@ void CheckApplicationStatus(void)
               index), 1, SEQ_DISABLED);
           }
 
-          (&BaseEngineController_A02_DWork.s697_InjectorSequence_DWORK1[0])
+          (&BaseEngineController_A02_DWork.s658_InjectorSequence_DWORK1[0])
             [index] = SEQ_DISABLED;
         } else if ((INJ_SequenceType_DataStore()) == 1) {
           SetSeqOutCond((E_ModuleResource) ((INJ_InitialPin_DataStore()) + index),
                         0, SEQ_DISABLED);
           SetSeqOutCond((E_ModuleResource) ((INJ_InitialPin_DataStore()) + index),
                         1, SEQ_DISABLED);
-          (&BaseEngineController_A02_DWork.s697_InjectorSequence_DWORK1[0])
+          (&BaseEngineController_A02_DWork.s658_InjectorSequence_DWORK1[0])
             [index] = SEQ_DISABLED;
         } else if ((INJ_SequenceType_DataStore()) == 2) {
           SetSeqOutCond((E_ModuleResource) ((INJ_InitialPin_DataStore()) + index),
                         0, SEQ_DISABLED);
           SetSeqOutCond((E_ModuleResource) ((INJ_InitialPin_DataStore()) + index),
                         1, SEQ_DISABLED);
-          (&BaseEngineController_A02_DWork.s697_InjectorSequence_DWORK1[0])
+          (&BaseEngineController_A02_DWork.s658_InjectorSequence_DWORK1[0])
             [index] = SEQ_DISABLED;
         }
       }
@@ -328,10 +324,6 @@ void CheckApplicationStatus(void)
     if (FGND_5XRTI_PERIODIC_RunCnt == 0)
       zeroSeen = 1;
     if (FGND_5XRTI_PERIODIC_RunCnt > 0)
-      countingSeen = 1;
-    if (BGND_BASEx20_PERIODIC_RunCnt == 0)
-      zeroSeen = 1;
-    if (BGND_BASEx20_PERIODIC_RunCnt > 0)
       countingSeen = 1;
     if (FGND_RTI_PERIODIC_RunCnt == 0)
       zeroSeen = 1;
