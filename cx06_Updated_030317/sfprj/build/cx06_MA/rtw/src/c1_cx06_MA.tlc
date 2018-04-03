@@ -1,0 +1,233 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDefines(block,system) void
+   %openfile chartConstBuf
+         #define %<block.SymbolMapping.IN_Off> (2)
+         #define %<block.SymbolMapping.IN_PreCharge> (5)
+         #define %<block.SymbolMapping.IN_PowerUp> (4)
+         #define %<block.SymbolMapping.IN_On> (3)
+         #define %<block.SymbolMapping.IN_SoftFault> (6)
+         #define %<block.SymbolMapping.IN_HardFault> (1)
+         #define %<block.SymbolMapping.IN_Startup> (7)
+   %closefile chartConstBuf
+   %return chartConstBuf
+%endfunction %% ChartDefines
+%function ChartFunctions(block,system) void
+   %openfile chartFcnsBuf
+     %assign junkVal = LibGenMathFcnCall("abs",FcnGetDataTypeIdFromName("double"),"0.0","")
+            
+            
+            
+   %closefile chartFcnsBuf
+   %return chartFcnsBuf
+%endfunction %% ChartFunctions
+%function ChartFunctionProtos(block,system,oFile) void
+   %openfile prototypesBuf
+   %closefile prototypesBuf
+   %<SLibSetModelFileAttribute(oFile,"FcnPrototypes",prototypesBuf)>
+%endfunction %% ChartFunctionProtos
+%function ChartSharedFunctions(block,system) void
+   %openfile chartFcnsBuf
+   %closefile chartFcnsBuf
+   %return chartFcnsBuf
+%endfunction %% ChartSharedFunctions
+%function Outputs(block,system) void
+   %openfile codeBuf
+      
+{
+int32_T sf_mainState;
+int32_T sf_y;
+if(%<LibSFChartInstance(block)>is_active_c1_cx06_MA == 0) {
+%<LibSFChartInstance(block)>is_active_c1_cx06_MA = 1U;
+%<LibSFChartInstance(block)>is_c1_cx06_MA = (uint8_T)%<block.SymbolMapping.IN_Startup>;
+} else {
+switch(%<LibSFChartInstance(block)>is_c1_cx06_MA) {
+case %<block.SymbolMapping.IN_HardFault>:
+%<LibSFAssignOutput(block, 7, "0", "0U")>
+%<LibSFAssignOutput(block, 8, "0", "0U")>
+%<LibSFAssignOutput(block, 6, "0", "5U")>
+%<LibSFAssignOutput(block, 9, "0", "0U")>
+break;
+case %<block.SymbolMapping.IN_Off>:
+if(%<LibSFInputs(block, 7, 0)> == 1) {
+%<LibSFChartInstance(block)>is_c1_cx06_MA = (uint8_T)%<block.SymbolMapping.IN_SoftFault>;
+%<LibSFAssignOutput(block, 5, "0", "0U")>
+} else if((%<LibSFInputs(block, 0, 0)> == 1) && (%<LibSFInputs(block, 3, 0)> == 1.0) && (%<LibSFInputs(block, 5, 0)> == 0.0) && (%<LibSFInputs(block, 7, 0)> == 0)) {
+%<LibSFChartInstance(block)>is_c1_cx06_MA = (uint8_T)%<block.SymbolMapping.IN_PreCharge>;
+%<LibSFAssignOutput(block, 4, "0", "0U")>
+} else if((real_T)%<LibSFOutput(block, 3, "0")> > %<LibSFInputs(block, 11, 0)>) {
+%<LibSFChartInstance(block)>is_c1_cx06_MA = (uint8_T)%<block.SymbolMapping.IN_HardFault>;
+} else {
+%<LibSFAssignOutput(block, 7, "0", "0U")>
+%<LibSFAssignOutput(block, 8, "0", "0U")>
+%<LibSFAssignOutput(block, 6, "0", "7U")>
+%<LibSFAssignOutput(block, 9, "0", "0U")>
+}
+break;
+case %<block.SymbolMapping.IN_On>:
+if((%<LibSFInputs(block, 7, 0)> == 1) && ((real_T)%<LibSFOutput(block, 1, "0")> > %<LibSFInputs(block, 12, 0)>)) {
+%<LibSFChartInstance(block)>is_c1_cx06_MA = (uint8_T)%<block.SymbolMapping.IN_SoftFault>;
+%<LibSFAssignOutput(block, 5, "0", "0U")>
+} else if((%<LibSFInputs(block, 1, 0)> == 1) && ((real_T)%<LibSFOutput(block, 1, "0")> > %<LibSFInputs(block, 12, 0)>)) {
+%<LibSFChartInstance(block)>is_c1_cx06_MA = (uint8_T)%<block.SymbolMapping.IN_HardFault>;
+} else if((real_T)%<LibSFOutput(block, 1, "0")> > %<LibSFInputs(block, 12, 0)>) {
+%<LibSFChartInstance(block)>is_c1_cx06_MA = (uint8_T)%<block.SymbolMapping.IN_Off>;
+} else {
+sf_mainState = (int32_T)%<LibSFInputs(block, 0, 0)>;
+sf_y = 0;
+if((sf_mainState == 1) && (%<LibSFInputs(block, 7, 0)> == 0) && (%<LibSFInputs(block, 1, 0)> == 0)) {
+sf_y = 0;
+} else if((sf_mainState != 1) || (%<LibSFInputs(block, 7, 0)> == 1) || (%<LibSFInputs(block, 1, 0)> == 1)) {
+sf_y = %<LibSFOutput(block, 1, "0")> + 1;
+}
+%<LibSFAssignOutput(block, 1, "0", "(uint16_T)sf_y")>
+%<LibSFAssignOutput(block, 7, "0", "0U")>
+%<LibSFAssignOutput(block, 8, "0", "1U")>
+%<LibSFAssignOutput(block, 6, "0", "3U")>
+%<LibSFAssignOutput(block, 9, "0", "%<LibSFOutput(block, 1, "0")> == 0")>
+}
+break;
+case %<block.SymbolMapping.IN_PowerUp>:
+if((%<LibSFInputs(block, 7, 0)> == 1) && ((real_T)%<LibSFOutput(block, 1, "0")> > %<LibSFInputs(block, 12, 0)>)) {
+%<LibSFChartInstance(block)>is_c1_cx06_MA = (uint8_T)%<block.SymbolMapping.IN_SoftFault>;
+%<LibSFAssignOutput(block, 5, "0", "0U")>
+} else if(%<LibSFInputs(block, 4, 0)> == 1) {
+%<LibSFChartInstance(block)>is_c1_cx06_MA = (uint8_T)%<block.SymbolMapping.IN_On>;
+%<LibSFAssignOutput(block, 3, "0", "0U")>
+} else if(((real_T)%<LibSFOutput(block, 1, "0")> > %<LibSFInputs(block, 12, 0)>) || (%<LibSFInputs(block, 5, 0)> == 1.0) || ((real_T)%<LibSFOutput(block, 2, "0")> > %<LibSFInputs(block, 8, 0)>)) {
+%<LibSFAssignOutput(block, 3, "0", "(uint8_T)(%<LibSFOutput(block, 3, "0")> + 1)")>
+%<LibSFChartInstance(block)>is_c1_cx06_MA = (uint8_T)%<block.SymbolMapping.IN_Off>;
+} else if((%<LibSFInputs(block, 1, 0)> == 1) && ((real_T)%<LibSFOutput(block, 1, "0")> > %<LibSFInputs(block, 12, 0)>)) {
+%<LibSFChartInstance(block)>is_c1_cx06_MA = (uint8_T)%<block.SymbolMapping.IN_HardFault>;
+} else {
+%<LibSFAssignOutput(block, 2, "0", "(uint16_T)(%<LibSFOutput(block, 2, "0")> + 1)")>
+sf_mainState = (int32_T)%<LibSFInputs(block, 0, 0)>;
+sf_y = 0;
+if((sf_mainState == 1) && (%<LibSFInputs(block, 7, 0)> == 0) && (%<LibSFInputs(block, 1, 0)> == 0)) {
+sf_y = 0;
+} else if((sf_mainState != 1) || (%<LibSFInputs(block, 7, 0)> == 1) || (%<LibSFInputs(block, 1, 0)> == 1)) {
+sf_y = %<LibSFOutput(block, 1, "0")> + 1;
+}
+%<LibSFAssignOutput(block, 1, "0", "(uint16_T)sf_y")>
+%<LibSFAssignOutput(block, 7, "0", "1U")>
+%<LibSFAssignOutput(block, 8, "0", "1U")>
+%<LibSFAssignOutput(block, 6, "0", "2U")>
+%<LibSFAssignOutput(block, 9, "0", "%<LibSFOutput(block, 1, "0")> == 0")>
+}
+break;
+case %<block.SymbolMapping.IN_PreCharge>:
+if(%<LibSFInputs(block, 7, 0)> == 1) {
+%<LibSFChartInstance(block)>is_c1_cx06_MA = (uint8_T)%<block.SymbolMapping.IN_SoftFault>;
+%<LibSFAssignOutput(block, 5, "0", "0U")>
+} else if(((real_T)%<LibSFOutput(block, 4, "0")> > %<LibSFInputs(block, 10, 0)>) && (fabs(%<LibSFInputs(block, 2, 0)> - %<LibSFInputs(block, 6, 0)>) < %<LibSFInputs(block, 9, 0)>)) {
+%<LibSFChartInstance(block)>is_c1_cx06_MA = (uint8_T)%<block.SymbolMapping.IN_PowerUp>;
+%<LibSFAssignOutput(block, 2, "0", "0U")>
+} else if(%<LibSFInputs(block, 1, 0)> == 1) {
+%<LibSFChartInstance(block)>is_c1_cx06_MA = (uint8_T)%<block.SymbolMapping.IN_HardFault>;
+} else if((%<LibSFInputs(block, 5, 0)> == 1.0) || (%<LibSFInputs(block, 0, 0)> != 1)) {
+%<LibSFAssignOutput(block, 3, "0", "(uint8_T)(%<LibSFOutput(block, 3, "0")> + 1)")>
+%<LibSFChartInstance(block)>is_c1_cx06_MA = (uint8_T)%<block.SymbolMapping.IN_Off>;
+} else {
+%<LibSFAssignOutput(block, 4, "0", "(uint16_T)(%<LibSFOutput(block, 4, "0")> + 1)")>
+%<LibSFAssignOutput(block, 7, "0", "0U")>
+%<LibSFAssignOutput(block, 8, "0", "1U")>
+%<LibSFAssignOutput(block, 6, "0", "1U")>
+%<LibSFAssignOutput(block, 9, "0", "0U")>
+}
+break;
+case %<block.SymbolMapping.IN_SoftFault>:
+if(((real_T)%<LibSFOutput(block, 5, "0")> > %<LibSFInputs(block, 13, 0)>) && (%<LibSFInputs(block, 7, 0)> == 0)) {
+%<LibSFChartInstance(block)>is_c1_cx06_MA = (uint8_T)%<block.SymbolMapping.IN_Off>;
+} else {
+%<LibSFAssignOutput(block, 5, "0", "(uint16_T)(%<LibSFOutput(block, 5, "0")> + 1)")>
+%<LibSFAssignOutput(block, 7, "0", "0U")>
+%<LibSFAssignOutput(block, 8, "0", "0U")>
+%<LibSFAssignOutput(block, 6, "0", "4U")>
+%<LibSFAssignOutput(block, 9, "0", "0U")>
+}
+break;
+case %<block.SymbolMapping.IN_Startup>:
+if((%<LibSFInputs(block, 7, 0)> == 0) && (%<LibSFInputs(block, 0, 0)> == 1) && (%<LibSFInputs(block, 3, 0)> == 1.0)) {
+%<LibSFChartInstance(block)>is_c1_cx06_MA = (uint8_T)%<block.SymbolMapping.IN_Off>;
+} else {
+%<LibSFAssignOutput(block, 7, "0", "0U")>
+%<LibSFAssignOutput(block, 8, "0", "0U")>
+%<LibSFAssignOutput(block, 6, "0", "6U")>
+%<LibSFAssignOutput(block, 9, "0", "0U")>
+}
+break;
+default:
+%<LibSFChartInstance(block)>is_c1_cx06_MA = (uint8_T)%<block.SymbolMapping.IN_Startup>;
+break;
+}
+}
+}
+   %closefile codeBuf
+   %return codeBuf
+%endfunction  %% Outputs
+%function InlinedInitializerCode(block,system) Output
+   %<SLibResetSFChartInstanceAccessed(block)>\
+   %openfile initBodyBuf
+      %<LibSFChartInstance(block)>is_active_c1_cx06_MA = 0U;
+%<LibSFChartInstance(block)>is_c1_cx06_MA = 0U;
+%<LibSFAssignOutput(block, 1, "0", "0U")>
+%<LibSFAssignOutput(block, 2, "0", "0U")>
+%<LibSFAssignOutput(block, 3, "0", "0U")>
+%<LibSFAssignOutput(block, 4, "0", "0U")>
+%<LibSFAssignOutput(block, 5, "0", "0U")>
+%<LibSFAssignOutput(block, 6, "0", "0U")>
+%<LibSFAssignOutput(block, 7, "0", "0U")>
+%<LibSFAssignOutput(block, 8, "0", "0U")>
+%<LibSFAssignOutput(block, 9, "0", "0U")>
+
+   %closefile initBodyBuf
+   %if !WHITE_SPACE(initBodyBuf)
+      /* Initialize code for chart: '%<LibGetBlockName(block)>' */
+      %<initBodyBuf>\
+   %endif
+%endfunction
+
+
+%function EnableUnboundOutputEventsCode(block,system) Output
+   %openfile initBodyBuf
+      
+   %closefile initBodyBuf
+   %if !WHITE_SPACE(initBodyBuf)
+      /* Enable code for chart: '%<LibGetBlockName(block)>' */
+      %<initBodyBuf>\
+   %endif
+%endfunction
+
+%function DisableUnboundOutputEventsCode(block,system) Output
+   %openfile initBodyBuf
+      
+   %closefile initBodyBuf
+   %if !WHITE_SPACE(initBodyBuf)
+      /* Disable code for chart: '%<LibGetBlockName(block)>' */
+      %<initBodyBuf>\
+   %endif
+%endfunction
+
+%function DumpSharedUtils(block,system) void
+%endfunction
+
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    UnifiedDWork   0\
+    NumChartData   0 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      DataTypeIdx  0\
+      IsComplex    0\
+      IsFixPoint   0\
+      With         1\
+      Dimensions   []\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

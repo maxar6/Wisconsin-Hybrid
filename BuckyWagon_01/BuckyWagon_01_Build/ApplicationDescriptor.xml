@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Application>
+	<GUID>3c32a120-d49a-4164-87-fe-ac-4b-55-ed-6f</GUID>
+	<Name>BuckyWagon_01</Name>
+	<Author>Owner</Author>
+	<Copyright>2018 Woodward.</Copyright>
+	<CreateDate>21-Jan-2018</CreateDate>
+	<MemoryLayout>DEV</MemoryLayout>
+	<Module>ClassicModule-MPC565</Module>
+	<Memory/>
+	<Types/>
+	<ToolInterface>
+		<KeySuite>
+			<CAN ref="CAN_1">
+				<CityID>11</CityID>
+			</CAN>
+		</KeySuite>
+		<VarDecs>
+			<TableDatabase>
+				<MaxTableSize>65535</MaxTableSize>
+				<Table0Revision>9</Table0Revision>
+				<HeaderFile>CommonInclude.h</HeaderFile>
+				<HeaderFile>BuckyWagon_01.h</HeaderFile>
+				<Include name="*" location="1,0"/>
+			</TableDatabase>
+			<ProjectID>6</ProjectID>
+			<ProductID>1</ProductID>
+			<SwIdTxt>BuckyWago_170</SwIdTxt>
+			<SwRevisionTxt>BuckyWagon_01_170</SwRevisionTxt>
+			<CalIdTxt>BuckyWagon_01_170_000</CalIdTxt>
+		</VarDecs>
+		<DatabaseBuild>
+			<Toolchain>
+				<Vendor>gcc-win32-pe</Vendor>
+				<Product>win32-pe</Product>
+				<Version>4.4.0</Version>
+				<InstallDirectory>C:\Program Files (x86)\Woodward\DevelopmentTools\Toolchains\GCC\win32-pe\4_4_0\</InstallDirectory>
+			</Toolchain>
+		</DatabaseBuild>
+		<Command>
+			<Description>Copy BuckyWago_170.dll and BuckyWagon_01_170.srz</Description>
+			<Order>99</Order>
+			<Execute>@if exist C:\ECUFiles\TDBDLL\\*.* copy /Y .\TDB\BuckyWago_170.dll C:\ECUFiles\TDBDLL\ &gt; NUL</Execute>
+			<Execute>@if exist C:\ECUFiles\Programs\\*.* copy /Y .\Target\BuckyWagon_01_170.srz C:\ECUFiles\Programs\ &gt; NUL</Execute>
+		</Command>
+	</ToolInterface>
+	<Build>
+		<Toolchain>
+			<Name>MyToolChain</Name>
+			<Vendor>gcc-powerpc-eabi</Vendor>
+			<Product>powerpc-eabi</Product>
+			<Version>4.4.0</Version>
+			<ArchiveExtension>a</ArchiveExtension>
+			<InstallDirectory>C:\Program Files (x86)\Woodward\DevelopmentTools\Toolchains\GCC\powerpc-eabi\4_4_0\</InstallDirectory>
+		</Toolchain>
+		<Directory>.</Directory>
+		<Target>
+			<Directory>.\Target</Directory>
+		</Target>
+		<Source>
+			<File>AppMonitor.c</File>
+			<File>Application.c</File>
+			<File>ApplicationSecurity.c</File>
+			<File>BuckyWagon_01_Foreground.c</File>
+			<File>BuckyWagon_01_MiniViewDisplay.c</File>
+			<File>BuckyWagon_01_data.c</File>
+			<File>CANReceiveDispatcher.c</File>
+			<File>CodeCoverage.c</File>
+			<File>FaultManager.c</File>
+			<File>MotoHawk_CAN.c</File>
+			<File>MotoHawk_DataStores.c</File>
+			<File>MotoHawk_IO.c</File>
+			<File>TableLookupFunctions.c</File>
+			<File>Trigger_BGND_BASE_PERIODIC_4167p0001.c</File>
+			<File>Trigger_BGND_BASEx20_PERIODIC_4177p0001.c</File>
+			<File>Trigger_CAN_RX_BusCAN_1_Buf1.c</File>
+			<File>Trigger_CAN_RX_BusCAN_1_Buf14.c</File>
+			<File>Trigger_CAN_RX_BusCAN_2_Buf1.c</File>
+			<File>Trigger_CAN_RX_BusCAN_2_Buf14.c</File>
+			<File>Trigger_CAN_Slot_miniview_button_down_2043p0004.c</File>
+			<File>Trigger_CAN_Slot_miniview_button_menu_2301p0001.c</File>
+			<File>Trigger_CAN_Slot_miniview_button_up_2552p0001.c</File>
+			<File>Trigger_FGND_20XRTI_PERIODIC_3974p0001.c</File>
+			<File>Trigger_FGND_RTI_PERIODIC_3973p0004.c</File>
+			<File>Trigger_FGND_RTI_PERIODIC_4175p0001.c</File>
+			<File>Trigger_SHUTDOWN_EVENT_4178p0001.c</File>
+			<File>Trigger_STARTUP_EVENT_4176p0001.c</File>
+			<File>VarDecs.c</File>
+			<File>rt_nonfinite.c</File>
+			<File>BuckyWagon_01.c</File>
+		</Source>
+		<Header>
+			<Directory>.</Directory>
+		</Header>
+		<Header>
+			<Directory>C:\ProgramData\MotoHawk\2010a_sp1_49\Toolchains\7_10_0\rtw_lib_single\API</Directory>
+			<Directory>C:\ProgramData\MotoHawk\2010a_sp1_49\Toolchains\7_10_0\rtw_lib_single\API\MPC565</Directory>
+		</Header>
+		<Library>
+			<Directory>C:\Program Files (x86)\Woodward\MCS\MotoHawk\2010a_sp1.49\MotoCoder\..\ControlCoreClassic\Framework\MultiTask\Archives\gcc-powerpc-eabi\4_4_0</Directory>
+			<File>PCM128</File>
+		</Library>
+		<Command>
+			<Execute>@copy "LinkerDefinition_DEV.xml" "LinkerDefinition.xml" &gt; NUL</Execute>
+			<Execute>@copy "BuckyWagon_01_DEV.ld" "BuckyWagon_01.ld" &gt; NUL</Execute>
+			<Order>0</Order>
+		</Command>
+		<Command>
+			<Description>Call MotoConvert</Description>
+			<Execute>@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\BuckyWagon_01.map -srec=.\Target\BuckyWagon_01.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=BuckyWagon_01.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x000FFFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\BuckyWagon_01_170.srz</Execute>
+			<Order>55</Order>
+		</Command>
+		<Compiler>
+			<Define name="REAL_T" value="float"/>
+			<Define name="TIME_T" value="float"/>
+			<Define name="DISALLOW_TDB_DEFINES" value="1"/>
+			<Define name="RES_NONE" value="-1"/>
+			<GenerateListFiles>false</GenerateListFiles>
+		</Compiler>
+		<BuildStats>
+			<Symbol>BuckyWagon_01_M</Symbol>
+			<Symbol>BuckyWagon_01_B</Symbol>
+			<Symbol>BuckyWagon_01_DWork</Symbol>
+			<Symbol>BuckyWagon_01_PrevZC</Symbol>
+			<Symbol>BuckyWagon_01_M_</Symbol>
+			<Symbol>VolatileWork</Symbol>
+			<Symbol>ConstantWork</Symbol>
+			<Symbol>NonVolatileWork</Symbol>
+			<Symbol>NonVolatileDefault</Symbol>
+			<Symbol>FgndTimeStack</Symbol>
+			<Symbol>FgndAngleStack</Symbol>
+			<Symbol>BgndStack</Symbol>
+			<Symbol>IdleStack</Symbol>
+			<Symbol>InterruptStack</Symbol>
+			<Symbol>Heap</Symbol>
+			<Symbol>Stack</Symbol>
+			<Symbol>BuckyWagon_01_Foreground</Symbol>
+		</BuildStats>
+		<Command>
+			<Order>-10000</Order>
+			<Execute>@if exist .\rtwtypes.h del /Q /F .\rtwtypes.h &gt; NUL</Execute>
+		</Command>
+	</Build>
+	<Signature>6c54bae1-8b3c-4e1f-ae-33-c7-77-1e-44-b0</Signature>
+</Application>

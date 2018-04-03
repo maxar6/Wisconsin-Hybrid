@@ -3,9 +3,9 @@
  *
  * Code generation for model "BaseEngineController_A02.mdl".
  *
- * Model version              : 1.1566
+ * Model version              : 1.1579
  * Simulink Coder version : 8.0 (R2011a) 09-Mar-2011
- * C source code generated on : Thu Feb 15 13:55:33 2018
+ * C source code generated on : Fri Feb 16 15:06:38 2018
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified

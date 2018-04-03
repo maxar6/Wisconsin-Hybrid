@@ -1,0 +1,208 @@
+ 
+#############################################
+###                                       ###
+###  Starting MotoHawk Build              ###
+###  MotoHawk version: 2010a_sp1.49       ###
+###    MATLAB version: 7.10.0.499 (R2010a)###
+###        08-Mar-2017 22:41:02           ###
+###                                       ###
+#############################################
+ 
+Target Module:   ECU555-80 (DEV)
+DEV Executable:  cx06_MA_181.srz
+MotoTune DLL:    cx06_MA_181.dll
+ 
+Project GUID:    951679d1-661d-497d-a4-11-04-59-f9-a7-20
+Build GUID:      fa4a9f3b-1218-4ceb-af-04-0c-06-13-21-16
+ 
+### Starting Real-Time Workshop build procedure for model: cx06_MA
+### Generating code into build directory: C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build
+### Invoking Target Language Compiler on cx06_MA.rtw
+### Using System Target File: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2010a_sp1.49\Blocks\Build\motohawk_ert_rtw.tlc
+### Loading TLC function libraries
+.............
+### Initial pass through model to cache user defined code
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...................................
+### Caching model source code
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+.........................................................
+### Writing source file cx06_MA.c
+### Writing header file cx06_MA_private.h
+.
+### Writing header file cx06_MA.h
+### Writing header file cx06_MA_types.h
+.
+### Writing source file cx06_MA_Strategy.c
+### Writing source file cx06_MA_Outputs.c
+### Writing source file cx06_MA_MainState.c
+.
+### Writing header file cx06_MA_Outputs.h
+### Writing header file rtwtypes.h
+.
+### Writing header file rt_MAXf_snf.h
+### Writing header file rt_MAXd_snf.h
+.
+### Writing header file rt_MINf_snf.h
+### Writing header file rt_MINd_snf.h
+.
+### Writing header file rt_nonfinite.h
+### Writing source file rt_nonfinite.c
+.
+### Writing header file rt_SATURATE.h
+### Writing header file rt_SIGNd_snf.h
+.
+### Writing header file cx06_MA_Strategy.h
+### Writing header file cx06_MA_MainState.h
+.
+### Writing source file cx06_MA_data.c
+### TLC code generation complete.
+...............................................................................
+...............................................................................
+...............................................................................
+.........
+### Processing Template Makefile: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2010a_sp1.49\Blocks\Build\motohawk_ert_rtw.tmf
+### cx06_MA.mk which is generated from C:\Program Files (x86)\Woodward\MCS\MotoHawk\2010a_sp1.49\Blocks\Build\motohawk_ert_rtw.tmf is up to date
+### Building cx06_MA: .\cx06_MA.bat
+### Created Code and Build Scripts.  Ready to Build ### 
+### Successful completion of Real-Time Workshop build procedure for model: cx06_MA
+Creating Application Descriptor...
+...Finished Application Descriptor
+### Starting MotoCoder v0.10.7 ###
+Module: ClassicModule-MPC555
+Module File: file:///C:/PROGRA~2/Woodward/MCS/MotoHawk/2010A_~1.49/MOTOCO~1/Modules/ClassicModule-MPC555.xml
+Module Family: ClassicControlCore
+Module Family Directory: file:///C:/PROGRA~2/Woodward/MCS/MotoHawk/2010A_~1.49/MOTOCO~1/ModuleFamilies/ClassicControlCore
+Application Configuration File: .\MotoHawk_Extensions.xml
+### Generating MotoTune DLL 
+Parser mode is C Source Code 
+Searching for files to parse 
+Writing Vardec Library C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build\TDB/ParsedVardecs.xml 
+### Completed MotoTune DLL 
+### Compiling and Linking 
+Buildfile: file:///C:/Users/Owner/Documents/MATLAB/MoovadaCode2016/cx06_Updated_030317/cx06_MA_Build/cx06_MA.build 
+Target framework: Microsoft .NET Framework 3.5 
+Target(s) specified: rebuild  
+ 
+ 
+rebuild: 
+ 
+ 
+clean: 
+ 
+   [delete] Deleting directory 'C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build\Build'. 
+   [delete] Deleting directory 'C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build\Archive'. 
+ 
+all: 
+ 
+ 
+init: 
+ 
+    [mkdir] Creating directory 'C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build\Build\Obj'. 
+    [mkdir] Creating directory 'C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build\Archive'. 
+     [copy] Copying 4 files to 'C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build\Archive'. 
+ 
+compile: 
+ 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build\Application.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build\ApplicationSecurity.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build\AppMonitor.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build\CANReceiveDispatcher.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build\cx06_MA.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build\cx06_MA_data.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build\cx06_MA_MainState.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build\cx06_MA_Outputs.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build\cx06_MA_Strategy.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build\FaultManager.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build\MotoCoder_DataStore.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build\MotoCoder_Timer.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build\MotoHawk_CAN.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build\MotoHawk_DataStores.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build\MotoHawk_IO.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build\rt_nonfinite.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build\TableLookupFunctions.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build\Trigger_BGND_BASE_PERIODIC_3106p1123.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build\Trigger_CAN_RX_BusCAN_1_Buf1.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build\Trigger_CAN_RX_BusCAN_2_Buf1.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build\Trigger_FGND_RTI_PERIODIC_3103p1123.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build\Trigger_FGND_RTI_PERIODIC_3104p1123.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build\Trigger_FGND_RTI_PERIODIC_3105p1123.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build\Trigger_FGND_RTI_PERIODIC_3107p1123.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build\VarDecs.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\MoovadaCode2016\cx06_Updated_030317\cx06_MA_Build\TDB\TableDB.c 
+ 
+link: 
+ 
+   [gcc-ld] Linking cx06_MA.elf 
+ 
+s-records: 
+ 
+[gcc-objcopy] Generating cx06_MA.run from cx06_MA.elf 
+ 
+BUILD SUCCEEDED 
+ 
+Total time: 14.3 seconds. 
+ 
+### Call MotoConvert 
+Project format is MPC5xx 
+Toolchain format is GCC 
+Transforming range 0x00400000-0x0041FFFF into 64 byte pages... 
+Transforming range 0x00000000-0x0006FFFF into 64 byte pages... 
+Searching for Table Database address 'EriRequestTableList'...Found at 0x0003CE64 
+Searching for CRC Table address 'g_pCRCBlockPtr' ...Found at 0x00008100 
+Calculating Application defined CRC's...OK. 
+Searching for initialised section '.fixed_ramcals' aliased to '.fixed_romcals' ... 
+Searching for initialised section '.ramcals' aliased to '.romcals' ... 
+    Adding RAM[0x003FBE28], ROM[0x00043C9C], Length[0x000000A0] 
+Searching for initialised section '.sdata' aliased to '.romsdata' ... 
+    Adding RAM[0x003F9800], ROM[0x00043D6C], Length[0x00000019] 
+Searching for initialised section '.data' aliased to '.romdata' ... 
+    Adding RAM[0x003FA8E4], ROM[0x00043D88], Length[0x00000898] 
+Complete. 
+Writing file sr://cx06_MA.sr... 
+Encrypting 'sr://cx06_MA.sr' into 'srz://.\Target\cx06_MA_181.srz' ... 
+Done. 
+### Creating Build Statistics 
+Memory Summary:
+	FLASH:               242697 bytes   67% of 360184
+	    NonVolatileDefault: 160 bytes    0% of 360184
+	INTERNAL_RAM:         17460 bytes   66% of  26544
+	    cx06_MA_M:            4 bytes    0% of  26544
+	    cx06_MA_B:         1492 bytes    6% of  26544
+	    cx06_MA_DWork:      264 bytes    1% of  26544
+	    cx06_MA_M_:          12 bytes    0% of  26544
+	    VolatileWork:        16 bytes    0% of  26544
+	    NonVolatileWork:    160 bytes    1% of  26544
+	    FgndTimeStack:     3072 bytes   12% of  26544
+	    BgndStack:         2048 bytes    8% of  26544
+	    IdleStack:         1024 bytes    4% of  26544
+	    InterruptStack:    1536 bytes    6% of  26544
+	CAL_SPACE:             1544 bytes    2% of  65536
+	    ConstantWork:      1388 bytes    2% of  65536
+	EEPROM_SPACE:           163 bytes    2% of   8192
+
+### Copy cx06_MA_181.dll and cx06_MA_181.srz 
+### Successful Build with MotoCoder 
+Elapsed Build Time: 2 minutes, 26.8 seconds  (146.8 seconds)
+ 
+#############################################################################
+###
+### Target Module: ECU555-80
+### Created Development Executable: cx06_MA_181.srz
+### Created MotoTune DLL: cx06_MA_181.dll
+###
+### Successful MotoHawk Build for model: cx06_MA
+###
+#############################################################################
+ 

@@ -1,0 +1,2120 @@
+
+
+Symbols from .\Target\cx06_MA.elf:
+
+Name                  Value   Class        Type         Size     Line  Section
+
+AC_Pres_AnalogInput_Create|0002bab4|   T  |              FUNC|000000d4|     |.text
+AC_Pres_AnalogInput_Get|0002b110|   T  |              FUNC|000000a4|     |.text
+AC_Pres_ain_create_err|003fbb60|   B  |            OBJECT|00000001|     |.bss
+ADCISRs             |00011728|   T  |              FUNC|00000008|     |.text
+ADCQueueAccess      |0004016c|   G  |            OBJECT|00000020|     |.sdata2
+ADCSettleTime_fu1   |003fa8e4|   D  |            OBJECT|00000001|     |.data
+ADCSwitchMethods    |000421f8|   G  |            OBJECT|00000008|     |.sdata2
+AN10M_AnalogInput_Create|0002b244|   T  |              FUNC|00000090|     |.text
+AN10M_AnalogInput_Get|0002aa24|   T  |              FUNC|00000084|     |.text
+AN11M_AnalogInput_Create|0002b1b4|   T  |              FUNC|00000090|     |.text
+AN11M_AnalogInput_Get|0002a9a0|   T  |              FUNC|00000084|     |.text
+Accel1_AnalogInput_Create|0002b90c|   T  |              FUNC|000000d4|     |.text
+Accel1_AnalogInput_Get|0002afc8|   T  |              FUNC|000000a4|     |.text
+Accel1_ain_create_err|003fbb54|   B  |            OBJECT|00000001|     |.bss
+Accel2_AnalogInput_Create|0002b838|   T  |              FUNC|000000d4|     |.text
+Accel2_AnalogInput_Get|0002af24|   T  |              FUNC|000000a4|     |.text
+Accel2_ain_create_err|003fbb5f|   B  |            OBJECT|00000001|     |.bss
+AccessSimpleSPIEECback|0000c018|   t  |              FUNC|000000c8|     |.text
+AccumulateCRC32     |00039d50|   T  |              FUNC|0000009c|     |.text
+ActivateTaskWithTaskDefn|0000f818|   T  |              FUNC|00000120|     |.text
+AddADCChanToTrigger |00011730|   T  |              FUNC|00000120|     |.text
+AddNewEventToQueue  |00015b4c|   T  |              FUNC|00000198|     |.text
+AddTaskToSyncWaitingList|0000ed94|   T  |              FUNC|0000001c|     |.text
+AddToAccessQueueHead|0000ba18|   T  |              FUNC|00000060|     |.text
+AddToAccessQueueTail|0000b944|   T  |              FUNC|000000d4|     |.text
+AddToCANReceiptQueue|0001d9b4|   T  |              FUNC|000000b8|     |.text
+AddToCANTransmitQueue|0001d80c|   T  |              FUNC|000000d8|     |.text
+AddToReadyList      |0000edb0|   T  |              FUNC|00000030|     |.text
+AddToReceiveQueue   |00012a30|   T  |              FUNC|000000e4|     |.text
+AdjustFaultActionReferenceCount|00029624|   T  |              FUNC|0000016c|     |.text
+AlignmentISR        |00008bd8|   T  |              FUNC|00000010|     |.text
+AllocateEncoderTPUChannels|00014e3c|   T  |              FUNC|00000088|     |.text
+AllocateFreqInResourceMemory|00018230|   T  |              FUNC|00000084|     |.text
+AllocateOneShotResourceMemory|000195c0|   T  |              FUNC|000000a0|     |.text
+AllocatePWMResourceMemory|0000a988|   T  |              FUNC|00000084|     |.text
+AllocateRelayResourceMemory|0001ecf0|   T  |              FUNC|00000084|     |.text
+AllocateResourcesInFW|0001e510|   T  |              FUNC|000001a8|     |.text
+AllocateSwitchResourceMemory|0001c2b4|   T  |              FUNC|00000088|     |.text
+AlterBaudRateUnsupported|00036874|   T  |              FUNC|00000004|     |.text
+AlterESCHBridgeOneShot|0001e0e4|   T  |              FUNC|00000024|     |.text
+AlterMDAOneShot     |0001e14c|   T  |              FUNC|00000044|     |.text
+AlterMDARelay       |0001f248|   T  |              FUNC|00000040|     |.text
+AlterMPRDRelay      |0001ec54|   T  |              FUNC|00000028|     |.text
+AlterMPWMOneShot    |0001e108|   T  |              FUNC|00000044|     |.text
+AlterMPWM_Relay     |0001f17c|   T  |              FUNC|00000044|     |.text
+AlterMultiplexedSequenceOutForEncPhase|0000dc58|   T  |              FUNC|00000030|     |.text
+AlterRelayUnsupported|0001ec84|   t  |              FUNC|00000004|     |.text
+AlterSequencesForEncoderPhase|0000d814|   T  |              FUNC|00000078|     |.text
+AlterSwitchState    |0001e6b8|   t  |              FUNC|00000068|     |.text
+AlterTPUOneShot     |0001dfa4|   T  |              FUNC|00000140|     |.text
+AlterTPURelay       |0001f1c0|   T  |              FUNC|00000038|     |.text
+Am29BL162State      |003fa390|   S  |            OBJECT|00000012|     |.sbss
+AnalogCurrentTransformFnArr|00043540|   G  |            OBJECT|00000004|     |.sdata2
+AnalogTemperatureTransformFnArr|00043558|   G  |            OBJECT|00000008|     |.sdata2
+AnalogVoltageTransformFnArr|00043544|   G  |            OBJECT|00000014|     |.sdata2
+AngleEventDataArr   |003fa56d|   S  |            OBJECT|00000012|     |.sbss
+AngleEventISR_AE1   |0001c508|   t  |              FUNC|00000054|     |.text
+AppAssertBase_      |003fa8f0|   D  |            OBJECT|00000004|     |.data
+AppOpen_rb1         |003f9a65|   S  |            OBJECT|00000001|     |.sbss
+AppSPIEECallback    |0000b3a0|   T  |              FUNC|00000068|     |.text
+ApplicationCallback |0002185c|   T  |              FUNC|00000188|     |.text
+ApplicationCompatibilityArr|000434a4|   G  |            OBJECT|00000064|     |.sdata2
+ApplicationInitStatus|003fb1a9|   B  |            OBJECT|00000001|     |.bss
+ApplicationMonitorEnable|00400088|   D  |            OBJECT|00000001|     |.cals
+ApplicationPausePoint|00400096|   D  |            OBJECT|00000001|     |.cals
+ApplicationStatus   |003fb1ac|   B  |            OBJECT|00000001|     |.bss
+ApplicationStopReason|003fb1b0|   B  |            OBJECT|00000004|     |.bss
+ApplicationStopReasonBlock|003fb1b4|   B  |            OBJECT|00000004|     |.bss
+ApplyBankedModeToSequenceSystem|0000dc50|   T  |              FUNC|00000008|     |.text
+BGND_BASE_PERIODIC_RunCnt|003fa8e8|   D  |            OBJECT|00000004|     |.data
+BaudRateIsNotSupported|0003686c|   T  |              FUNC|00000008|     |.text
+BgndAngleScheduler  |0000c878|   T  |              FUNC|000000dc|     |.text
+BgndProcessPeriod_ru2|003f9a28|   S  |            OBJECT|00000002|     |.sbss
+BgndStack           |003fcec8|   B  |            OBJECT|00000800|     |.bss_zerovars
+BgndStackMargin     |0040008c|   D  |            OBJECT|00000002|     |.cals
+BgndTask            |00011cfc|   T  |              FUNC|00000048|     |.text
+BgndTimeScheduler   |0000ca94|   T  |              FUNC|00000250|     |.text
+BlackBoxExceptionHandler|000382b4|   T  |              FUNC|00000024|     |.text
+BlackBoxHeaderHandler|00038348|   T  |              FUNC|000000d4|     |.text
+BlackBoxPacketHandlers|00043650|   G  |            OBJECT|00000018|     |.sdata2
+BlackBoxProtocolHandler|000382d8|   T  |              FUNC|00000070|     |.text
+BrakeBackUp_AnalogInput_Create|0002b690|   T  |              FUNC|000000d4|     |.text
+BrakeBackUp_AnalogInput_Get|0002addc|   T  |              FUNC|000000a4|     |.text
+BrakeBackUp_ain_create_err|003fbb58|   B  |            OBJECT|00000001|     |.bss
+Brake_AnalogInput_Create|0002b764|   T  |              FUNC|000000d4|     |.text
+Brake_AnalogInput_Get|0002ae80|   T  |              FUNC|000000a4|     |.text
+Brake_ain_create_err|003fbb56|   B  |            OBJECT|00000001|     |.bss
+C.15.7813           |0003cc54|   t  |            OBJECT|00000006|     |.text
+CANISRs             |00011f18|   T  |              FUNC|00000154|     |.text
+CANInit             |0001206c|   T  |              FUNC|000000f4|     |.text
+CANInitWithPredefinedBaud|0001219c|   T  |              FUNC|0000005c|     |.text
+CANProtocolReceiptNotify|00036c84|   T  |              FUNC|0000004c|     |.text
+CANProtocolTXCback  |00036abc|   T  |              FUNC|00000054|     |.text
+CAN_1_Transmit      |0002a784|   T  |              FUNC|000000c0|     |.text
+CAN_2_Transmit      |0002a6c4|   T  |              FUNC|000000c0|     |.text
+CPUIdleTimeISRService|0000a7b8|   T  |              FUNC|00000024|     |.text
+CPUMargin           |00400094|   D  |            OBJECT|00000002|     |.cals
+CRCCalcRequest      |000375f4|   T  |              FUNC|000000dc|     |.text
+CRCDataRequest      |000377e8|   T  |              FUNC|0000005c|     |.text
+CRCStatusRequest    |00037520|   T  |              FUNC|000000d4|     |.text
+CRCTableArr         |00043d3c|   R  |            OBJECT|00000030|     |.crcconstants
+CSWTCH.10           |0003c9b4|   t  |            OBJECT|00000014|     |.text
+CSWTCH.10           |0003eec0|   t  |            OBJECT|00000002|     |.text
+CSWTCH.13           |0003eec4|   t  |            OBJECT|00000040|     |.text
+CSWTCH.15           |0003cbf4|   t  |            OBJECT|00000060|     |.text
+CSWTCH.17           |0003ca6c|   t  |            OBJECT|0000000c|     |.text
+CSWTCH.19           |0003c9c8|   t  |            OBJECT|00000006|     |.text
+CSWTCH.19           |0003ee84|   t  |            OBJECT|0000003c|     |.text
+CSWTCH.34           |0003c9d0|   t  |            OBJECT|00000003|     |.text
+CSWTCH.37           |0003cbe8|   t  |            OBJECT|0000000c|     |.text
+CSWTCH.37           |0003c9ec|   t  |            OBJECT|0000000f|     |.text
+CSWTCH.40           |0003c9d4|   t  |            OBJECT|00000016|     |.text
+CSWTCH.43           |0003c9fc|   t  |            OBJECT|00000005|     |.text
+CSWTCH.46           |0003cb44|   t  |            OBJECT|0000002c|     |.text
+CSWTCH.46           |0003ca04|   t  |            OBJECT|00000012|     |.text
+CSWTCH.49           |0003cb70|   t  |            OBJECT|00000028|     |.text
+CSWTCH.49           |0003ca1c|   t  |            OBJECT|00000008|     |.text
+CSWTCH.52           |0003ca18|   t  |            OBJECT|00000003|     |.text
+CSWTCH.55           |0003ca24|   t  |            OBJECT|00000011|     |.text
+CSWTCH.58           |0003ca4c|   t  |            OBJECT|00000017|     |.text
+CSWTCH.61           |0003ca38|   t  |            OBJECT|00000012|     |.text
+CSWTCH.64           |0003ca64|   t  |            OBJECT|00000008|     |.text
+CSWTCH.73           |0003c970|   t  |            OBJECT|00000010|     |.text
+CSWTCH.76           |0003c980|   t  |            OBJECT|00000014|     |.text
+CSWTCH.79           |0003c99c|   t  |            OBJECT|00000015|     |.text
+CSWTCH.82           |0003c994|   t  |            OBJECT|00000008|     |.text
+CalIdTxt            |00400000|   D  |            OBJECT|00000036|     |.cals
+CalcPrimarySPIEEPROMAddr|0000e78c|   t  |              FUNC|00000014|     |.text
+CalcRPMRaw          |00013e7c|   T  |              FUNC|00000118|     |.text
+CalcTouCANBitRate   |00012160|   T  |              FUNC|0000003c|     |.text
+CanKingAuthoritySecurityFunction|00039b3c|   T  |              FUNC|0000011c|     |.text
+CanKingExceptionHandler|00038428|   T  |              FUNC|00000048|     |.text
+CanKingExceptionNotify|00036758|   T  |              FUNC|0000000c|     |.text
+CanKingHeaderHandler|000384e4|   T  |              FUNC|000000c4|     |.text
+CanKingPacketHandlers|00043668|   G  |            OBJECT|00000010|     |.sdata2
+CanKingProtocolHandler|00038470|   T  |              FUNC|00000074|     |.text
+ChangeToProtocol    |00037f14|   T  |              FUNC|00000070|     |.text
+CheckApplicationStatus|00021a28|   T  |              FUNC|00000428|     |.text
+CheckForAsyncReadEvent|0000e2ec|   T  |              FUNC|00000058|     |.text
+CheckSpeedZero      |000138f4|   T  |              FUNC|000000b8|     |.text
+ClearFault          |00029b20|   T  |              FUNC|00000080|     |.text
+ClearOSInternalError|0000e98c|   T  |              FUNC|00000020|     |.text
+ClearUnsignedLongBit|0001c6cc|   T  |              FUNC|0000005c|     |.text
+ClockISR            |00012790|   T  |              FUNC|00000098|     |.text
+CloseEncoders       |00013d8c|   T  |              FUNC|00000024|     |.text
+CloseFlashFileSystem|0001b418|   T  |              FUNC|00000004|     |.text
+ClrMIOS1IntEnable   |00009570|   T  |              FUNC|00000034|     |.text
+ClrMIOS1IntStatus   |000097c0|   T  |              FUNC|0000003c|     |.text
+ClrTPUHostSeqBit0WithPtr|00010f98|   T  |              FUNC|00000050|     |.text
+ClrTPUIntEnableWithPtr|00011008|   T  |              FUNC|00000050|     |.text
+ClrTPUIntStatusWithPtr|00011058|   T  |              FUNC|00000020|     |.text
+ClutchBackup_AnalogInput_Create|0002b4e8|   T  |              FUNC|000000d4|     |.text
+ClutchBackup_AnalogInput_Get|0002ac94|   T  |              FUNC|000000a4|     |.text
+ClutchBackup_ain_create_err|003fbb55|   B  |            OBJECT|00000001|     |.bss
+Clutch_AnalogInput_Create|0002b5bc|   T  |              FUNC|000000d4|     |.text
+Clutch_AnalogInput_Get|0002ad38|   T  |              FUNC|000000a4|     |.text
+Clutch_ain_create_err|003fbb59|   B  |            OBJECT|00000001|     |.bss
+CompilerVersion     |000432ac|   G  |            OBJECT|00000050|     |.sdata2
+ConfigureEncoderOnTPUModule|00014ec4|   t  |              FUNC|00000170|     |.text
+ConstantWork        |00400098|   D  |            OBJECT|0000056c|     |.cals
+ControlCoreSDKRelease|00043470|   G  |            OBJECT|00000032|     |.sdata2
+CopyTPUMaskAToEmulationRAM|000110e4|   T  |              FUNC|0000004c|     |.text
+CopyTPUMaskCToEmulationRAM|000110e0|   T  |              FUNC|00000004|     |.text
+CreateADCSwitch     |0001e720|   T  |              FUNC|00000008|     |.text
+CreateAnalogueInput |00011698|   T  |              FUNC|00000090|     |.text
+CreateCANReceiptQueueOnHeap|0001db70|   T  |              FUNC|000000c8|     |.text
+CreateCANTransmitQueueOnHeap|0001dc38|   T  |              FUNC|0000007c|     |.text
+CreateESCHBridgeOneShot|0001e364|   T  |              FUNC|00000064|     |.text
+CreateETCEnablePin  |00019bfc|   T  |              FUNC|00000048|     |.text
+CreateEvent         |00010190|   T  |              FUNC|0000000c|     |.text
+CreateFrequencyIn   |0003566c|   T  |              FUNC|00000078|     |.text
+CreateHBridgeDiagPinOnMDA|00019ff4|   T  |              FUNC|00000054|     |.text
+CreateHBridgeDirectionPinOnMDA|00019f34|   T  |              FUNC|00000054|     |.text
+CreateHBridgeEnablePinOnMDA|00019f88|   T  |              FUNC|0000006c|     |.text
+CreateIgnDiagOnMDA29|00018780|   T  |              FUNC|00000064|     |.text
+CreateInjDiagOnTPUA |00018988|   T  |              FUNC|0000002c|     |.text
+CreateInjDiagOnTPUB |0001895c|   T  |              FUNC|0000002c|     |.text
+CreateMC3388xOnMPWM_HBridge|0001a048|   T  |              FUNC|00000120|     |.text
+CreateMDAFreqIn     |00017e70|   T  |              FUNC|0000025c|     |.text
+CreateMDAInputPeriodPin|0000967c|   T  |              FUNC|0000005c|     |.text
+CreateMDAInputPin   |000095d8|   T  |              FUNC|00000048|     |.text
+CreateMDAInputPulseWidthPin|000096d8|   T  |              FUNC|0000005c|     |.text
+CreateMDAOneShot    |0001e428|   T  |              FUNC|00000074|     |.text
+CreateMDAOutputDisablePin|00009748|   T  |              FUNC|00000014|     |.text
+CreateMDAOutputPWMPin|00009734|   T  |              FUNC|00000014|     |.text
+CreateMDARelay      |0001f288|   T  |              FUNC|00000064|     |.text
+CreateMDASwitch     |0001e784|   T  |              FUNC|0000007c|     |.text
+CreateMDA_PWM       |0001a40c|   T  |              FUNC|00000104|     |.text
+CreateMPIOOutputPin |00009520|   T  |              FUNC|00000050|     |.text
+CreateMPRDRelay     |0001ec88|   T  |              FUNC|0000002c|     |.text
+CreateMPWMOneShot   |0001e3c8|   T  |              FUNC|00000060|     |.text
+CreateMPWM_PWM      |0001a7c4|   T  |              FUNC|00000098|     |.text
+CreateMPWM_Relay    |0001f2ec|   T  |              FUNC|0000008c|     |.text
+CreateOneShot       |00035b54|   T  |              FUNC|000000d4|     |.text
+CreatePCMSeqOutDiagMuxAddr|0000d594|   t  |              FUNC|000000a4|     |.text
+CreatePWM           |0003606c|   T  |              FUNC|00000068|     |.text
+CreateRelay         |00036280|   T  |              FUNC|000000d4|     |.text
+CreateRelayUnsupported|0001ec7c|   t  |              FUNC|00000008|     |.text
+CreateResourceBEHAVIOUR_ANALOGIN|00034018|   T  |              FUNC|000000ac|     |.text
+CreateResourceBEHAVIOUR_DISCRETE_OUT|000345dc|   T  |              FUNC|00000110|     |.text
+CreateResourceBEHAVIOUR_FREQIN|00034830|   T  |              FUNC|00000140|     |.text
+CreateResourceBEHAVIOUR_ONESHOT|00034a7c|   T  |              FUNC|0000013c|     |.text
+CreateResourceBEHAVIOUR_PWM|00034d64|   T  |              FUNC|000002d0|     |.text
+CreateResourceBEHAVIOUR_SCHEDULER|0000c6e4|   T  |              FUNC|000000b4|     |.text
+CreateResourceBEHAVIOUR_SWITCH|000350f8|   T  |              FUNC|000000ec|     |.text
+CreateResourceBEHAVIOUR_TOUCAN|00034458|   T  |              FUNC|00000090|     |.text
+CreateSemaphore     |00010108|   T  |              FUNC|00000088|     |.text
+CreateStandardEncoderHW|00015034|   T  |              FUNC|00000118|     |.text
+CreateSwitch        |0001f070|   T  |              FUNC|00000098|     |.text
+CreateTPUFreqIn     |000178f8|   T  |              FUNC|00000234|     |.text
+CreateTPUOneShot    |0001e1ec|   T  |              FUNC|0000013c|     |.text
+CreateTPUPWM        |0000ace8|   T  |              FUNC|00000250|     |.text
+CreateTPURelay      |0001f378|   T  |              FUNC|0000005c|     |.text
+CreateTask          |0000f938|   T  |              FUNC|000003f4|     |.text
+CreateTaskFromPreCompiledBlock|0000fd2c|   T  |              FUNC|00000064|     |.text
+CreateTouCANDevice  |0001d648|   T  |              FUNC|000001c4|     |.text
+CruiseButtons_AnalogInput_Create|0002b9e0|   T  |              FUNC|000000d4|     |.text
+CruiseButtons_AnalogInput_Get|0002b06c|   T  |              FUNC|000000a4|     |.text
+CruiseButtons_ain_create_err|003fbb5e|   B  |            OBJECT|00000001|     |.bss
+CurrentMPRDAlterFuncPtr|003fa664|   S  |            OBJECT|00000004|     |.sbss
+CurrentTDC_ru1      |003f9a1c|   S  |            OBJECT|00000001|     |.sbss
+DFMAbortRequest     |000379b4|   T  |              FUNC|00000060|     |.text
+DFMCommandCback     |00037844|   T  |              FUNC|00000044|     |.text
+DFMInitRequest      |00037894|   T  |              FUNC|00000060|     |.text
+DFMStatusRequest    |00037954|   T  |              FUNC|00000060|     |.text
+DFMUpdateRequest    |000378f4|   T  |              FUNC|00000060|     |.text
+DPTMCR_init_val     |0003fa56|   G  |            OBJECT|00000002|     |.sdata2
+DRVP_AnalogInput_Create|0002b2d4|   T  |              FUNC|000000a0|     |.text
+DRVP_AnalogInput_Get|0002aaa8|   T  |              FUNC|000000a4|     |.text
+DRVP_ain_create_err |003fbb5c|   B  |            OBJECT|00000001|     |.bss
+DataBPISR           |00008e34|   T  |              FUNC|00000010|     |.text
+DataProtectISR      |00008e24|   T  |              FUNC|00000010|     |.text
+DataStorageISR      |00008bb8|   T  |              FUNC|00000010|     |.text
+DeallocTPUChannelWithPtr|000110b8|   T  |              FUNC|00000018|     |.text
+DeallocateEncoderTPUChannels|00014df0|   T  |              FUNC|0000004c|     |.text
+DecrementerISR      |00008c08|   T  |              FUNC|00000008|     |.text
+DefaultISRIRM_0     |0000926c|   T  |              FUNC|00000018|     |.text
+DefaultISRIRM_1     |00009284|   T  |              FUNC|00000018|     |.text
+DefaultISRIRM_2     |0000929c|   T  |              FUNC|00000018|     |.text
+DefaultISRIRM_3     |000092b4|   T  |              FUNC|00000018|     |.text
+DefaultISRIRM_4     |000092cc|   T  |              FUNC|00000018|     |.text
+DefaultISRIRM_5     |000092e4|   T  |              FUNC|00000018|     |.text
+DefaultISRIRM_7     |000092fc|   T  |              FUNC|00000018|     |.text
+DefaultISRLevel_0   |00009254|   T  |              FUNC|00000018|     |.text
+DeregisterTPUFreqAvg|0001f984|   T  |              FUNC|00000040|     |.text
+DeregisterTPUPWM    |00020360|   T  |              FUNC|00000040|     |.text
+DestroyMDAFreqIn    |00017dd8|   T  |              FUNC|00000098|     |.text
+DestroyStandardEncoderHW|00013f94|   T  |              FUNC|00000038|     |.text
+DestroyTPUFreqIn    |00017d5c|   T  |              FUNC|0000007c|     |.text
+DestroyTPUPWM       |0000ac68|   T  |              FUNC|00000050|     |.text
+DestroyTask         |0000f710|   T  |              FUNC|0000008c|     |.text
+DisableAllAngleEvents|0001c660|   T  |              FUNC|00000010|     |.text
+DisableAngleEvent   |0001c5f0|   t  |              FUNC|00000070|     |.text
+DisableDiagnosisOnMux|0000d250|   T  |              FUNC|00000054|     |.text
+DisableMC3388xOnMPWM_HBridge|00019cd0|   T  |              FUNC|000000b0|     |.text
+DisableMDAAliasFreqIn|00041e83|   G  |            OBJECT|00000001|     |.sdata2
+DisableMDAFreqIn    |00041e81|   G  |            OBJECT|00000001|     |.sdata2
+DisableMDA_PWM      |0001a3e0|   T  |              FUNC|0000002c|     |.text
+DisableMPWM_PWM     |0001a62c|   T  |              FUNC|00000044|     |.text
+DisableProSAK       |00019884|   T  |              FUNC|00000074|     |.text
+DisableTPUPWM       |0000aae8|   T  |              FUNC|0000004c|     |.text
+DoCRCMapCheck       |000376d0|   t  |              FUNC|00000118|     |.text
+DoNothingOnQueueEmpty|0001569c|   T  |              FUNC|00000004|     |.text
+DoNothingOnTransportReset|00036878|   T  |              FUNC|00000004|     |.text
+DoneOn1stISR        |00008418|   t  |            NOTYPE|        |     |.text
+DriveHBridge        |000182ec|   T  |              FUNC|00000028|     |.text
+ECUP_AnalogInput_Create|0002b374|   T  |              FUNC|000000a0|     |.text
+ECUP_AnalogInput_Get|0002ab4c|   T  |              FUNC|000000a4|     |.text
+ECUP_ain_create_err |003fbb5b|   B  |            OBJECT|00000001|     |.bss
+ESCBridge_MSMethods |00041f0a|   G  |            OBJECT|00000008|     |.sdata2
+EST6_PWMOutput_PWMOutput_Create|0002a85c|   T  |              FUNC|00000010|     |.text
+EST6_PWMOutput_PWMOutput_Set|0002bf94|   T  |              FUNC|00000108|     |.text
+EST6_PWMOutput_PWMOutput_Stop|0002bc48|   T  |              FUNC|00000040|     |.text
+ESTDiag_CreateHardwareFromResource|000187e4|   T  |              FUNC|00000054|     |.text
+ESTDiag_CreateHardwareFromSeqOutID|000185c0|   T  |              FUNC|0000008c|     |.text
+ESTDiag_LS_ModeRequest|000183dc|   T  |              FUNC|00000100|     |.text
+ESTDiag_LS_StateUpdate|000184dc|   T  |              FUNC|00000088|     |.text
+ESTOP_DigitalInput_Create|0002c250|   T  |              FUNC|000000c8|     |.text
+ESTOP_DigitalInput_Get|0002c09c|   T  |              FUNC|0000007c|     |.text
+EZLinkQueueEntryArr |003fa251|   S  |            OBJECT|00000013|     |.sbss
+EZLinkTacho         |003fa244|   S  |            OBJECT|0000000d|     |.sbss
+EcuRevReqCCHandler  |00038b18|   T  |              FUNC|00000010|     |.text
+EcuRevReqCback      |00038b28|   T  |              FUNC|00000040|     |.text
+EcuRevReqPktHandler |00038b68|   T  |              FUNC|000000e4|     |.text
+EnableAllAngleEvents|0001c5cc|   T  |              FUNC|00000024|     |.text
+EnableAngleEvent    |0001c55c|   t  |              FUNC|00000070|     |.text
+EnableDiagnosisOnMux|0000d2a4|   T  |              FUNC|00000090|     |.text
+EnableMC3388xOnMPWM_HBridge|00019c44|   T  |              FUNC|0000008c|     |.text
+EnableMDAAliasFreqIn|00041e82|   G  |            OBJECT|00000001|     |.sdata2
+EnableMDAFreqIn     |00041e80|   G  |            OBJECT|00000001|     |.sdata2
+EnableMDA_PWM       |0001a39c|   T  |              FUNC|00000044|     |.text
+EnableMPWM_PWM      |0001a5f4|   T  |              FUNC|00000038|     |.text
+EnableProSAK        |000198f8|   T  |              FUNC|00000074|     |.text
+EnableRX            |0000dc88|   T  |              FUNC|00000090|     |.text
+EnableTPUPWM        |0000aa9c|   T  |              FUNC|0000004c|     |.text
+Enc12Tooth_SchedulerObjArr|0004252c|   G  |            OBJECT|00000030|     |.sdata2
+Enc18Tooth_SchedulerObjArr|000423f4|   G  |            OBJECT|00000048|     |.sdata2
+Enc20Tooth_SchedulerObjArr|000426d0|   G  |            OBJECT|00000050|     |.sdata2
+Enc24Tooth_SchedulerObjArr|000424cc|   G  |            OBJECT|00000060|     |.sdata2
+Enc30Tooth_SchedulerObjArr|0004237c|   G  |            OBJECT|00000078|     |.sdata2
+Enc32Tooth_SchedulerObjArr|000425c8|   G  |            OBJECT|00000080|     |.sdata2
+Enc34Tooth_SchedulerObjArr|00042648|   G  |            OBJECT|00000088|     |.sdata2
+Enc36Tooth_SchedulerObjArr|0004243c|   G  |            OBJECT|00000090|     |.sdata2
+Enc3Tooth_SchedulerObjArr|000425bc|   G  |            OBJECT|0000000c|     |.sdata2
+Enc3XTooth_SchedulerObjArr|000425a4|   G  |            OBJECT|00000018|     |.sdata2
+Enc4Tooth_SchedulerObjArr|00042574|   G  |            OBJECT|00000010|     |.sdata2
+Enc4XTooth_SchedulerObjArr|00042584|   G  |            OBJECT|00000020|     |.sdata2
+Enc60Tooth_SchedulerObjArr|0004228c|   G  |            OBJECT|000000f0|     |.sdata2
+Enc6Tooth_SchedulerObjArr|0004255c|   G  |            OBJECT|00000018|     |.sdata2
+EncCnk720ReportHandler|000136cc|   t  |              FUNC|00000030|     |.text
+EncDual_2StrokeEncoderEdgeReport|000140bc|   T  |              FUNC|00000094|     |.text
+EncDual_ConfigureOnTPUModule|000143d0|   t  |              FUNC|0000021c|     |.text
+EncDual_CreateEncoderHW|000145ec|   T  |              FUNC|0000013c|     |.text
+EncDual_DestroyDualRedundantEncoderHW|00014194|   T  |              FUNC|00000040|     |.text
+EncDual_GetEncoderEngTDC|00013fcc|   T  |              FUNC|00000020|     |.text
+EncDual_OnLossOfPrimaryEncoderSource|00014728|   t  |              FUNC|000000e8|     |.text
+EncDual_OnSetSpeedZero_DualSrc|00013fec|   T  |              FUNC|000000d0|     |.text
+EncDual_PrimarySourceISR|00014810|   T  |              FUNC|00000374|     |.text
+EncDual_Ps2StrokeEncoderEdgeReport|00014150|   T  |              FUNC|00000044|     |.text
+EncDual_ResetRedundantEncLoss|000143a4|   t  |              FUNC|0000002c|     |.text
+EncDual_SecondarySourceISR|00014b84|   T  |              FUNC|000000f0|     |.text
+EncDual_SetEncoderCond|000141d4|   T  |              FUNC|000001d0|     |.text
+EncEmulator_OSRefresh|0001514c|   T  |              FUNC|00000004|     |.text
+EncGenericReportHandler|00013810|   t  |              FUNC|000000e4|     |.text
+EncHyundaiReportHandler|00013744|   t  |              FUNC|0000003c|     |.text
+EncNoMissingTooth   |00012fcc|   t  |              FUNC|00000008|     |.text
+EncOS_ExecuteEncoderReSyncOperations|000131f0|   T  |              FUNC|00000038|     |.text
+EncOS_GetCamDelayVolatile|00012fdc|   T  |              FUNC|00000008|     |.text
+EncOS_GetStandardEncoderEngTDC|00013034|   t  |              FUNC|00000008|     |.text
+EncOS_GetToothRatio |0001306c|   T  |              FUNC|0000000c|     |.text
+EncOS_IgnoreDelay_IsIgnoreState|00013a14|   T  |              FUNC|000000a4|     |.text
+EncOS_IgnoreDelay_OnTimerTick|00012cf0|   T  |              FUNC|00000060|     |.text
+EncOS_IgnoreTeeth_Get|00013078|   T  |              FUNC|00000008|     |.text
+EncOS_IgnoreTeeth_Set|00013080|   T  |              FUNC|00000008|     |.text
+EncOS_OnSetSpeedZero_SingleSrc|00013228|   t  |              FUNC|00000050|     |.text
+EncOS_ReqestISROnPrimaryEncoder|000130d4|   T  |              FUNC|0000005c|     |.text
+EncOS_RequestToothLink|00013088|   T  |              FUNC|0000004c|     |.text
+EncOS_SetCamDelayVolatile|00012fd4|   T  |              FUNC|00000008|     |.text
+EncOS_SetToothRatio |0001303c|   T  |              FUNC|00000030|     |.text
+EncSynthesizer_OnError|00015150|   T  |              FUNC|00000004|     |.text
+EncVCam_AllocateEncoderTPUChannels|00015154|   T  |              FUNC|00000008|     |.text
+EncVCam_CamISR      |000155d0|   t  |              FUNC|000000cc|     |.text
+EncVCam_ConfigureOnTPUModule|00015204|   t  |              FUNC|00000324|     |.text
+EncVCam_CreateEncoderHW|00015528|   T  |              FUNC|000000a8|     |.text
+EncVCam_DestroyEncoderHW|000151bc|   T  |              FUNC|00000048|     |.text
+EncVCam_WinSyncGetSettings|0001515c|   T  |              FUNC|00000060|     |.text
+EncoderDefnArr      |00040290|   G  |            OBJECT|000019e6|     |.sdata2
+EncoderErrorCback   |0001b3ac|   T  |              FUNC|00000034|     |.text
+EncoderISR          |00013ab8|   t  |              FUNC|000001ec|     |.text
+EncoderReportCback  |0001b3e0|   T  |              FUNC|00000034|     |.text
+EncoderUsesCam      |0001302c|   T  |              FUNC|00000008|     |.text
+EndCWP_ru1          |003fa228|   S  |            OBJECT|00000001|     |.sbss
+Entry               |00008270|   T  |              FUNC|00000058|     |.text
+EraseManagerExtFlashAM29BL162|0001668c|   T  |              FUNC|000000e8|     |.text
+EraseSectorAM29BL162|00015ce4|   T  |              FUNC|00000200|     |.text
+EriExceptionHandler |000385a8|   T  |              FUNC|00000048|     |.text
+EriExceptionNotify  |00036740|   T  |              FUNC|0000000c|     |.text
+EriExtended2CCHandler|00038f98|   T  |              FUNC|00000010|     |.text
+EriExtended2PktHandler|00038fe8|   T  |              FUNC|000001a4|     |.text
+EriExtendedCCHandler|0003918c|   T  |              FUNC|00000028|     |.text
+EriExtendedCback    |000391b4|   T  |              FUNC|00000040|     |.text
+EriExtendedCback    |00038fa8|   t  |              FUNC|00000040|     |.text
+EriExtendedPktHandler|00039470|   T  |              FUNC|000000a8|     |.text
+EriFastMapEnablePktHandler|00039518|   T  |              FUNC|0000007c|     |.text
+EriHeaderHandler    |00038664|   T  |              FUNC|0000009c|     |.text
+EriKeyPktHandler    |000397d4|   T  |              FUNC|00000008|     |.text
+EriLongCallback     |00039594|   T  |              FUNC|00000074|     |.text
+EriLongPktHandler   |00039608|   T  |              FUNC|000000dc|     |.text
+EriPacketHandlers   |00043678|   G  |            OBJECT|00000018|     |.sdata2
+EriProtocolHandler  |000385f0|   T  |              FUNC|00000074|     |.text
+EriRequestCCHandler |00038724|   T  |              FUNC|00000028|     |.text
+EriRequestCallback  |0003874c|   T  |              FUNC|00000040|     |.text
+EriRequestPktHandler|0003878c|   T  |              FUNC|00000138|     |.text
+EriRequestTableList |0003ce64|   T  |            OBJECT|00000030|     |.text
+EventCondObjArr.5286|0003ee60|   t  |            OBJECT|00000022|     |.text
+EventQueue_PreStartOSInit|0001594c|   T  |              FUNC|0000001c|     |.text
+EventQueue_PreStartOSProcess|00015968|   T  |              FUNC|00000040|     |.text
+EventQueue_SetFgndAngleEventPriority|00015944|   T  |              FUNC|00000008|     |.text
+Except_EnableInterruptLevel|000091e8|   T  |              FUNC|00000058|     |.text
+ExceptionBranchTable|00008000|   T  |            NOTYPE|        |     |.exceptionbranchtable
+ExceptionData       |003f9864|   S  |            OBJECT|0000009a|     |.sbss
+ExceptionsHandler   |00038050|   T  |              FUNC|00000054|     |.text
+ExecuteCommProtocol |00036620|   T  |              FUNC|0000004c|     |.text
+ExecuteCommWakeNotify|0000df44|   T  |              FUNC|00000068|     |.text
+ExecuteLevelShiftedCommWakeNotify|0000dddc|   T  |              FUNC|0000003c|     |.text
+ExecuteLevelShiftedCommsErrorNotify|0000dd60|   T  |              FUNC|0000003c|     |.text
+ExecuteLevelShiftedRXNotificationISR|0001c7e8|   T  |              FUNC|00000044|     |.text
+ExecuteLevelShiftedSCIAsyncNotify|0000e044|   T  |              FUNC|00000060|     |.text
+ExecuteLevelShiftedTXCompleteNotify|0000deb0|   T  |              FUNC|0000002c|     |.text
+ExecuteLevelShiftedTouCANErrorNotificationISR|0001c8c8|   T  |              FUNC|0000003c|     |.text
+ExecuteLevelShiftedTouCANTXCompleteISR|0001d244|   T  |              FUNC|00000088|     |.text
+ExecuteNativeErrorSupport|000192fc|   T  |              FUNC|0000005c|     |.text
+ExecuteOneShotCallback|00019490|   T  |              FUNC|00000064|     |.text
+ExecuteProtocolTimers|00038230|   T  |              FUNC|0000003c|     |.text
+ExecuteSCIAsyncNotify|0000e0a4|   T  |              FUNC|0000005c|     |.text
+ExecuteSeqDiagOn50ms|0000d534|   T  |              FUNC|00000034|     |.text
+ExecuteTransmitNotification|00012bc0|   T  |              FUNC|000000dc|     |.text
+ExtFlashEraseManager|00016774|   T  |              FUNC|00000004|     |.text
+ExtFlashWriteManager|00016890|   T  |              FUNC|00000004|     |.text
+ExtParallelEEPROMEnd_ru4|003f9e4c|   S  |            OBJECT|00000004|     |.sbss
+ExternalISRHandler  |00008310|   T  |              FUNC|000002d4|     |.text
+ExternalISRHandlers |0003f114|   G  |            OBJECT|00000040|     |.sdata2
+FGND_RTI_PERIODIC_RunCnt|003fa8ec|   D  |            OBJECT|00000004|     |.data
+FIHW_CreateCamInterface|00018114|   T  |              FUNC|00000034|     |.text
+FIHW_CreateCnkInterface|00018148|   T  |              FUNC|00000034|     |.text
+FIHW_CreateFreqInInterface|00016b20|   t  |              FUNC|0000003c|     |.text
+FIHW_DestroyCamInterface|000180cc|   T  |              FUNC|00000024|     |.text
+FIHW_DestroyCnkInterface|000180f0|   T  |              FUNC|00000024|     |.text
+FIHW_FreeFreqInNotifyDataMemory|00017b2c|   t  |              FUNC|00000048|     |.text
+FIHW_IPMModeISR     |00016f9c|   t  |              FUNC|000001ac|     |.text
+FIHW_IPMModeISRForNotify|00017510|   t  |              FUNC|000000f0|     |.text
+FIHW_IPWMModeISR    |00017148|   t  |              FUNC|00000130|     |.text
+FIHW_MDALevelShiftedEdgeNotify|00017600|   t  |              FUNC|000000d4|     |.text
+FIHW_MDAPeriod_Period_Raw_Get|00016c2c|   t  |              FUNC|00000094|     |.text
+FIHW_NotificationHandler|00016db8|   T  |              FUNC|000000ac|     |.text
+FIHW_RequestFreqInNotifyDataMemory|00017828|   t  |              FUNC|000000d0|     |.text
+FIHW_SetMDAEdgeReportNumSamples|0001735c|   T  |              FUNC|000000b0|     |.text
+FIHW_SetTPUEdgeReportNumSamples|000172a8|   T  |              FUNC|000000b4|     |.text
+FIHW_TPUISR         |00017b74|   t  |              FUNC|00000128|     |.text
+FIHW_TPULevelShiftedEdgeNotify|00017c9c|   t  |              FUNC|000000c0|     |.text
+FPAssistContinue    |00008cac|   t  |            NOTYPE|        |     |.text
+FPAssistGenericHandler|00008f2c|   T  |              FUNC|00000058|     |.text
+FPAssistISR         |00008c20|   T  |              FUNC|000001e4|     |.text
+FPAssistUnroll      |00008df8|   t  |            NOTYPE|        |     |.text
+FPUnavailableISR    |00008bf8|   T  |              FUNC|00000010|     |.text
+FWErrorArr          |003fa460|   S  |            OBJECT|0000000c|     |.sbss
+FWModulesSetDisplayInfo|003fa46c|   S  |            OBJECT|0000000e|     |.sbss
+FWSchedulerCreate   |0000c64c|   t  |              FUNC|00000098|     |.text
+FWSchedulerSetAttributes|0000c4fc|   t  |              FUNC|00000100|     |.text
+FaultManagerPeriodicTick|00029e60|   T  |              FUNC|000002b0|     |.text
+FgndAngleScheduler  |0000ced8|   T  |              FUNC|000002c8|     |.text
+FgndAngleTask       |0000f59c|   T  |              FUNC|00000024|     |.text
+FgndProcessPeriod_ru1|003f9a1e|   S  |            OBJECT|00000001|     |.sbss
+FgndRTIScheduler    |0000c9ec|   T  |              FUNC|000000a8|     |.text
+FgndTimeStack       |003fc2c8|   B  |            OBJECT|00000c00|     |.bss_zerovars
+FgndTimeStackMargin |0040008a|   D  |            OBJECT|00000002|     |.cals
+FgndTimeTask        |0000f5c0|   T  |              FUNC|00000024|     |.text
+FillFP0WithDoubleValue|00008a38|   t  |              FUNC|0000000c|     |.text
+FirstADCISR_rb1     |003fa227|   S  |            OBJECT|00000001|     |.sbss
+FlagCAMLossFault_rb1|003fa2aa|   S  |            OBJECT|00000001|     |.sbss
+FlagCamLossFault    |00012cac|   T  |              FUNC|0000000c|     |.text
+FlagConnectionAttempt|00037b8c|   T  |              FUNC|00000094|     |.text
+FlagTouCANBufferUsage|0001c728|   T  |              FUNC|00000090|     |.text
+FrameworkVersionTxt |00043508|   G  |            OBJECT|00000037|     |.sdata2
+FreeFreqInResource  |00018218|   T  |              FUNC|00000018|     |.text
+FreeMIOS1Channel    |0000989c|   T  |              FUNC|00000034|     |.text
+FreeOneShotResource |00019660|   T  |              FUNC|00000050|     |.text
+FreePWMResource     |0000a948|   T  |              FUNC|00000040|     |.text
+FreeRelayResource   |0001ecb4|   T  |              FUNC|0000003c|     |.text
+FreeRunningUpCountPtr|0003f20c|   G  |            OBJECT|00000004|     |.sdata2
+FreeSwitchResource  |0001c29c|   T  |              FUNC|00000018|     |.text
+FreeTPUISR          |00011360|   T  |              FUNC|0000002c|     |.text
+FreeTPUISRWithPtr   |0001138c|   T  |              FUNC|00000030|     |.text
+FreeTaskKernelSyncObject|0000fed8|   T  |              FUNC|0000004c|     |.text
+FreeTaskMemoryContextSwitchOnTaskDestroy|0000f674|   T  |              FUNC|0000009c|     |.text
+FreqInDefnArr       |00041dc0|   G  |            OBJECT|000000c0|     |.sdata2
+FreqInOnCam         |003fa404|   S  |            OBJECT|00000004|     |.sbss
+FreqInOnCnk         |003fa400|   S  |            OBJECT|00000004|     |.sbss
+FreqInOnDG1M        |003fa3d0|   S  |            OBJECT|0000000c|     |.sbss
+FreqInOnDG2M        |003fa3dc|   S  |            OBJECT|0000000c|     |.sbss
+FreqInOnDG3M        |003fa3e8|   S  |            OBJECT|0000000c|     |.sbss
+FreqInOnDG4M        |003fa3f4|   S  |            OBJECT|0000000c|     |.sbss
+FreqMDA_Methods     |00041ea0|   G  |            OBJECT|0000001c|     |.sdata2
+FreqTPU_Methods     |00041e84|   G  |            OBJECT|0000001c|     |.sdata2
+FriendlyName        |0040005c|   D  |            OBJECT|00000021|     |.cals
+FuelLevel_AnalogInput_Create|0002b414|   T  |              FUNC|000000d4|     |.text
+FuelLevel_AnalogInput_Get|0002abf0|   T  |              FUNC|000000a4|     |.text
+FuelLevel_ain_create_err|003fbb5d|   B  |            OBJECT|00000001|     |.bss
+FuncCodeFor4KMaskArr|000431dc|   G  |            OBJECT|00000034|     |.sdata2
+FuncCodeFor6KMaskArr|000431a8|   G  |            OBJECT|00000034|     |.sdata2
+FunctionThatReturnsFALSE|0000a064|   T  |              FUNC|00000008|     |.text
+FunctionThatReturnsTRUE|0000a06c|   T  |              FUNC|00000008|     |.text
+GenericCamISR       |00013444|   t  |              FUNC|00000094|     |.text
+GetADCChanDefPtr    |0001187c|   T  |              FUNC|00000010|     |.text
+GetADCTimeBasedResult|0001188c|   T  |              FUNC|00000058|     |.text
+GetADCTriggerBasedResult|000118e4|   T  |              FUNC|00000188|     |.text
+GetAlterOneShotFuncPtr|00019460|   T  |              FUNC|00000018|     |.text
+GetAlterRelayStateFuncPtr|0001ec2c|   T  |              FUNC|00000014|     |.text
+GetAnalogueInputTriggerSlot|000115c0|   T  |              FUNC|00000034|     |.text
+GetBgndBaseRate     |0001078c|   T  |              FUNC|00000008|     |.text
+GetBgndTimeLateMonCnt|0001075c|   T  |              FUNC|00000008|     |.text
+GetBgndx10TimeLateMonCnt|0001077c|   T  |              FUNC|00000008|     |.text
+GetBgndx2TimeLateMonCnt|0001076c|   T  |              FUNC|00000008|     |.text
+GetBootStatus       |00019818|   T  |              FUNC|0000006c|     |.text
+GetBufferDataCCHandler|00036dac|   T  |              FUNC|00000018|     |.text
+GetBufferDataFlagsInfoCCHandler|00036dc4|   T  |              FUNC|00000018|     |.text
+GetBufferDataFlagsInfoPktHandler|00037004|   T  |              FUNC|00000098|     |.text
+GetBufferDataPktHandler|00036f58|   T  |              FUNC|000000ac|     |.text
+GetBufferElementInfoCCHandler|00036d94|   T  |              FUNC|00000018|     |.text
+GetBufferElementInfoPktHandler|00036ec4|   T  |              FUNC|00000094|     |.text
+GetBufferInfoCCHandler|00036d7c|   T  |              FUNC|00000018|     |.text
+GetBufferInfoPktHandler|00036e38|   T  |              FUNC|0000008c|     |.text
+GetCANProtocolRuntimeDataPtr|00036798|   T  |              FUNC|00000028|     |.text
+GetCANReadAttributes|0001cb74|   T  |              FUNC|000001b4|     |.text
+GetCamTPUChanPtr    |000115a4|   T  |              FUNC|00000018|     |.text
+GetCrankEncEdgeSetup|00013308|   T  |              FUNC|00000088|     |.text
+GetCreateOneShotFuncPtr|00019478|   T  |              FUNC|00000018|     |.text
+GetCreatePWMFuncPtr |0000a8bc|   T  |              FUNC|00000014|     |.text
+GetCreatePullupInterfaceFuncPtr|0001c294|   T  |              FUNC|00000008|     |.text
+GetCreateRelayFuncPtr|0001ec40|   T  |              FUNC|00000014|     |.text
+GetCreateSwitchFuncPtr|0001c19c|   T  |              FUNC|00000014|     |.text
+GetDefaultKeyBaudRate|000388c4|   T  |              FUNC|0000000c|     |.text
+GetDevelopmentMemorySize|00009b7c|   T  |              FUNC|00000020|     |.text
+GetDisablePWMFuncPtr|0000a90c|   T  |              FUNC|00000014|     |.text
+GetERIRequestTablePtr|0002c6d4|   T  |              FUNC|00000014|     |.text
+GetEnablePWMFuncPtr |0000a8f8|   T  |              FUNC|00000014|     |.text
+GetEncoderDefnInfoPtr|00012cc0|   T  |              FUNC|0000000c|     |.text
+GetEncoderIDFromDefnInfoPtr|00012ccc|   T  |              FUNC|00000024|     |.text
+GetEncoderRPMToothInline|00013db0|   T  |              FUNC|000000cc|     |.text
+GetEncoderRuntimeDataPtr|00012cb8|   T  |              FUNC|00000008|     |.text
+GetEncoderTPUChanPtr|0001158c|   T  |              FUNC|00000018|     |.text
+GetExtParallelEEPROMEnd|0000ea64|   T  |              FUNC|00000008|     |.text
+GetFaultActionStatus|00029d74|   T  |              FUNC|0000002c|     |.text
+GetFreeRunningCounter32Bits|0000c240|   T  |              FUNC|00000010|     |.text
+GetFreeRunningCounter64Bits|0000c250|   T  |              FUNC|00000054|     |.text
+GetFreqInAttribPtr  |000181d8|   T  |              FUNC|00000040|     |.text
+GetFrequencyInDutyCycle|000354bc|   T  |              FUNC|00000088|     |.text
+GetFrequencyInFrequency|00035544|   T  |              FUNC|00000074|     |.text
+GetFrequencyInState |000355b8|   T  |              FUNC|00000050|     |.text
+GetFromCANTransmitQueue|0001d8e4|   T  |              FUNC|000000d0|     |.text
+GetFromReceiveQueue |00012b14|   T  |              FUNC|000000ac|     |.text
+GetFromTransmitQueue|0001299c|   T  |              FUNC|00000094|     |.text
+GetHardwareBootEntryAddress|00009a84|   T  |              FUNC|00000044|     |.text
+GetHighestPriorityWaitingTask|0000ed50|   T  |              FUNC|0000001c|     |.text
+GetKingAuthorityFuncPtrPtr|00037170|   T  |              FUNC|00000028|     |.text
+GetModuleConfig     |00009a7c|   T  |              FUNC|00000008|     |.text
+GetModuleConfigDefnStructAddress|00009b14|   T  |              FUNC|00000040|     |.text
+GetNextActiveFault  |00029a30|   T  |              FUNC|00000078|     |.text
+GetNextIntTooth     |0000cdd0|   T  |              FUNC|00000108|     |.text
+GetNextOccurredFault|00029aa8|   T  |              FUNC|00000078|     |.text
+GetNextSuspectedFault|000299b8|   T  |              FUNC|00000078|     |.text
+GetNumBuffersCCHandler|00036d64|   T  |              FUNC|00000018|     |.text
+GetNumBuffersPktHandler|00036df4|   T  |              FUNC|00000044|     |.text
+GetOneShotAttribPtr |0001935c|   T  |              FUNC|00000040|     |.text
+GetOpenEventType    |0000e890|   T  |              FUNC|00000008|     |.text
+GetPSPStateDataWithPtr|00010c14|   T  |              FUNC|00000020|     |.text
+GetPWMAttribPtr     |0000a7dc|   T  |              FUNC|0000004c|     |.text
+GetPWMCond          |00035c84|   T  |              FUNC|00000034|     |.text
+GetPWMHardwareResourceIndex|0001a16c|   T  |              FUNC|00000010|     |.text
+GetPWMLoadCurrent   |00035d40|   T  |              FUNC|000000bc|     |.text
+GetPWMResourceCurrent|00034bb8|   T  |              FUNC|00000080|     |.text
+GetPersonalInfoCCHandler|00036ddc|   T  |              FUNC|00000018|     |.text
+GetPersonalInfoPktHandler|0003709c|   T  |              FUNC|00000094|     |.text
+GetProSAKDevicePtrUsingMemory|0001e49c|   T  |              FUNC|0000002c|     |.text
+GetProcessPeriod    |0000c7d8|   T  |              FUNC|00000044|     |.text
+GetProcessPeriodTime_ms|0000c850|   T  |              FUNC|00000028|     |.text
+GetProcessPeriodTime_us|0000c81c|   T  |              FUNC|00000034|     |.text
+GetProcessTime      |0000a7a0|   T  |              FUNC|00000018|     |.text
+GetProtocolHandlerPtrForCity|00037e44|   T  |              FUNC|00000030|     |.text
+GetProtocolHeaderSize|00037f84|   T  |              FUNC|00000018|     |.text
+GetQSPIDeviceRxBufAddr|0000b078|   T  |              FUNC|00000018|     |.text
+GetRTIPeriod        |00010794|   T  |              FUNC|00000024|     |.text
+GetRandomNumber     |0001b380|   T  |              FUNC|0000002c|     |.text
+GetRawTPUChannelWithPtr|000110d0|   T  |              FUNC|00000008|     |.text
+GetRefreshSwitchStateFuncPtr|0001c1b0|   T  |              FUNC|00000014|     |.text
+GetRelayAttribPtr   |0001ebec|   T  |              FUNC|00000040|     |.text
+GetResourceAttribPtr|0001e4d8|   T  |              FUNC|00000020|     |.text
+GetResourceAttribPtrUnprotected|0001e4c8|   T  |              FUNC|00000010|     |.text
+GetResourceAttributesBEHAVIOUR_COMM|00039f30|   T  |              FUNC|000000e8|     |.text
+GetResourceAttributesBEHAVIOUR_FREQIN|000346ec|   T  |              FUNC|000000a0|     |.text
+GetResourceAttributesBEHAVIOUR_TOUCAN|00034324|   T  |              FUNC|0000005c|     |.text
+GetResourceInterfaceTypeUnprotected|0001e4f8|   T  |              FUNC|00000018|     |.text
+GetResourceStatus   |0001b50c|   T  |              FUNC|000000bc|     |.text
+GetResourceValueBEHAVIOUR_ANALOGIN|00033ef0|   T  |              FUNC|00000128|     |.text
+GetRuntimeQueryAddress|00009ac8|   T  |              FUNC|0000004c|     |.text
+GetSCIActualBaudRate|0000dd30|   T  |              FUNC|00000030|     |.text
+GetSCIMinRXQueueFree|0000de80|   T  |              FUNC|00000018|     |.text
+GetSCIMinTXQueueFree|0000de50|   T  |              FUNC|00000018|     |.text
+GetSCIRXQueueDepth  |0000de98|   T  |              FUNC|00000018|     |.text
+GetSCIRecommendedMaxBaudRate|0000de18|   T  |              FUNC|00000038|     |.text
+GetSCIRequestedBaudRate|0000dd18|   T  |              FUNC|00000018|     |.text
+GetSCITXQueueFree   |0000de68|   T  |              FUNC|00000018|     |.text
+GetSPIDevicePtr     |0000e724|   T  |              FUNC|00000008|     |.text
+GetSecurityFuncPtrPtr|00037a54|   T  |              FUNC|00000028|     |.text
+GetSeqOutDataPtrFromResource|0000d7e4|   T  |              FUNC|00000030|     |.text
+GetSeqOutDefnPtr    |0000d7bc|   T  |              FUNC|00000010|     |.text
+GetSeqOutRuntimeDataPtr|0000d7cc|   T  |              FUNC|00000018|     |.text
+GetSetPWMDutyFuncPtr|0000a8e4|   T  |              FUNC|00000014|     |.text
+GetSetPWMFreqFuncPtr|0000a8d0|   T  |              FUNC|00000014|     |.text
+GetSetPWMPeakTimeFuncPtr|0000a920|   T  |              FUNC|00000014|     |.text
+GetSetPWMPhaseFuncPtr|0000a934|   T  |              FUNC|00000014|     |.text
+GetSetPullupStrengthFuncPtr|0001c28c|   T  |              FUNC|00000008|     |.text
+GetSwitchAttribPtr  |0001c15c|   T  |              FUNC|00000040|     |.text
+GetSwitchResourceState|00035034|   T  |              FUNC|00000050|     |.text
+GetSwitchState      |0001ef38|   T  |              FUNC|00000088|     |.text
+GetTCR1Frequency    |00020dd0|   T  |              FUNC|0000000c|     |.text
+GetTCR1FrequencyX60 |00020ddc|   T  |              FUNC|0000000c|     |.text
+GetTCR1TicksPerMicroSec|00020de8|   T  |              FUNC|00000008|     |.text
+GetTPICMaskArr      |0000c0e0|   T  |              FUNC|0000000c|     |.text
+GetTPUChanFuncCodeWithPtr|00010db4|   T  |              FUNC|000000c8|     |.text
+GetTPUChannelPtr    |0001152c|   T  |              FUNC|00000010|     |.text
+GetTPUFreeRunningTCR1|0001f428|   T  |              FUNC|0000000c|     |.text
+GetTPUFreqAvgAvgFreq|0001f7c4|   T  |              FUNC|00000098|     |.text
+GetTPUFreqAvgDuty   |0001f5a8|   T  |              FUNC|00000100|     |.text
+GetTPUFreqAvgInstantFreq|0001f6d4|   T  |              FUNC|00000064|     |.text
+GetTPUFreqAvgPinState|0001f738|   T  |              FUNC|00000060|     |.text
+GetTPUFuncCodeForMask|00020d94|   T  |              FUNC|00000034|     |.text
+GetTPUISRHandlerData|00011320|   T  |              FUNC|00000010|     |.text
+GetTPUMaskType      |00020dc8|   T  |              FUNC|00000008|     |.text
+GetTPUPWMParentChannelObj|0001fe98|   t  |              FUNC|00000048|     |.text
+GetTPUPWMSlaveChannelObj|0001fee0|   t  |              FUNC|00000044|     |.text
+GetTPUParamAddressWithPtr|000110d8|   T  |              FUNC|00000008|     |.text
+GetTPURedundantEncoderTrackingStatus|0001f3f0|   T  |              FUNC|00000008|     |.text
+GetTaskID           |0000ee44|   T  |              FUNC|0000000c|     |.text
+GetThreadPriority   |0000ee50|   T  |              FUNC|00000028|     |.text
+GetTouCANHandle     |000341b0|   T  |              FUNC|00000078|     |.text
+GetTouCANMessageBufferFlagsWithHandle|000340c4|   T  |              FUNC|00000044|     |.text
+GlobalFaultClear    |00029da0|   T  |              FUNC|000000c0|     |.text
+HBridgeAllocation_rb1|003fa414|   S  |            OBJECT|00000001|     |.sbss
+HBridgeExist_rb1    |003fa415|   S  |            OBJECT|00000001|     |.sbss
+HBridgeModuleDefnArr|00041f12|   G  |            OBJECT|00000062|     |.sdata2
+HBridgeModuleRuntimeDataArr|003fa488|   S  |            OBJECT|00000016|     |.sbss
+HSD_DiagPoll        |0001a168|   T  |              FUNC|00000004|     |.text
+HandleClockEvents   |0001273c|   T  |              FUNC|00000054|     |.text
+HandleESTSeqOpenCircutDiagnostics|00018654|   T  |              FUNC|000000a8|     |.text
+HandleFreqInOverflow|00016e64|   T  |              FUNC|00000138|     |.text
+HandleFurtherTransmissionFromAnISR|0001d13c|   T  |              FUNC|00000108|     |.text
+HandleHardwareCallbackSetup|0001dfa0|   T  |              FUNC|00000004|     |.text
+HandleNotification  |00036670|   T  |              FUNC|00000098|     |.text
+HandleOneShotCommonCreate|0001e190|   t  |              FUNC|0000005c|     |.text
+HandlePostedEvents  |0000c348|   T  |              FUNC|000000a0|     |.text
+HandleRelayTPICSetup|0001f1f8|   t  |              FUNC|00000050|     |.text
+HandleSnooperNotification|0001c7b8|   T  |              FUNC|00000030|     |.text
+HandleTPICOnPWMCreate|0001a1e8|   T  |              FUNC|0000004c|     |.text
+HandleTXNotify      |0000dedc|   T  |              FUNC|00000068|     |.text
+HaveCurrentTask     |00008518|   t  |            NOTYPE|        |     |.text
+HeaderHandler       |00037ed4|   T  |              FUNC|00000040|     |.text
+HeapMargin          |00400092|   D  |            OBJECT|00000002|     |.cals
+HyundaiCamISR       |000133c4|   t  |              FUNC|00000080|     |.text
+INJ11D_PWMOutput_PWMOutput_Create|0002a88c|   T  |              FUNC|00000010|     |.text
+INJ11D_PWMOutput_PWMOutput_Set|0002bc88|   T  |              FUNC|000000fc|     |.text
+INJ11D_PWMOutput_PWMOutput_Stop|0002bb88|   T  |              FUNC|00000040|     |.text
+INJ5D_PWMOutput_PWMOutput_Create|0002a87c|   T  |              FUNC|00000010|     |.text
+INJ5D_PWMOutput_PWMOutput_Set|0002bd84|   T  |              FUNC|000000fc|     |.text
+INJ5D_PWMOutput_PWMOutput_Stop|0002bbc8|   T  |              FUNC|00000040|     |.text
+IPT_EPO_PWMOutput_PWMOutput_Create|0002a86c|   T  |              FUNC|00000010|     |.text
+IPT_EPO_PWMOutput_PWMOutput_Set|0002be80|   T  |              FUNC|00000114|     |.text
+IPT_EPO_PWMOutput_PWMOutput_Stop|0002bc08|   T  |              FUNC|00000040|     |.text
+ISRHandlerExecuted  |00008488|   t  |            NOTYPE|        |     |.text
+IdleStack           |003fbec8|   B  |            OBJECT|00000400|     |.bss_zerovars
+IdleStackMargin     |0040008e|   D  |            OBJECT|00000002|     |.cals
+IdleTask            |0000fd90|   t  |              FUNC|000000a0|     |.text
+IllegalPWM_Methods  |0003f2b6|   G  |            OBJECT|00000020|     |.sdata2
+InitBlackBoxProtocol|000382b0|   T  |              FUNC|00000004|     |.text
+InitCanKingProtocol |0003841c|   T  |              FUNC|0000000c|     |.text
+InitEriProtocol     |00038700|   T  |              FUNC|00000024|     |.text
+InitKeyProtocol     |000388d0|   T  |              FUNC|00000064|     |.text
+InitMotProgProtocol |00038eb4|   T  |              FUNC|000000e4|     |.text
+InitialiseCRC32     |00039d38|   T  |              FUNC|0000000c|     |.text
+InitializeTaskControlBlock|0000f79c|   T  |              FUNC|0000007c|     |.text
+InputCapture_MDA_Create|00009620|   T  |              FUNC|0000005c|     |.text
+InstBPISR           |00008e44|   T  |              FUNC|00000010|     |.text
+InstProtectISR      |00008e14|   T  |              FUNC|00000010|     |.text
+InstructionStorageISR|00008bc8|   T  |              FUNC|00000010|     |.text
+InterruptStack      |003fd6c8|   B  |            OBJECT|00000600|     |.bss_zerovars
+InterruptStackMargin|00400090|   D  |            OBJECT|00000002|     |.cals
+InterruptStackOverrun|0000830c|   T  |              FUNC|00000004|     |.text
+IsAddressInExtEEPROM|0001ded4|   T  |              FUNC|00000060|     |.text
+IsAddressInExternalFlashAM29BL162|00016658|   T  |              FUNC|00000034|     |.text
+IsAddressInExternalRAM|000082c8|   T  |              FUNC|0000002c|     |.text
+IsAddressInInternalRAM|00018c74|   T  |              FUNC|00000034|     |.text
+IsAddressInProSAKReadSpace|00033db0|   T  |              FUNC|0000005c|     |.text
+IsAddressInProSAKWriteSpace|00033e0c|   T  |              FUNC|0000006c|     |.text
+IsAddressInSPIEE    |00018ca8|   T  |              FUNC|00000030|     |.text
+IsAddressInTargetAdaptor|00019218|   T  |              FUNC|00000070|     |.text
+IsAnalogueTriggerCreated|000115f4|   T  |              FUNC|00000020|     |.text
+IsAppOpen           |0000c7a4|   T  |              FUNC|00000008|     |.text
+IsBgndTimeDue       |0001074c|   T  |              FUNC|00000008|     |.text
+IsCRCBusy           |000374cc|   T  |              FUNC|00000010|     |.text
+IsCamRiseEdgeSync   |00012fe4|   T  |              FUNC|00000048|     |.text
+IsCapableIfVCM03    |0000a034|   T  |              FUNC|00000018|     |.text
+IsDualPulsePSPEventATheLastActive|00010c34|   T  |              FUNC|00000024|     |.text
+IsECUAN16MCapable   |00009f74|   T  |              FUNC|00000060|     |.text
+IsECUAN18MCapable   |00009fd4|   T  |              FUNC|00000060|     |.text
+IsECUDG3MCapable    |00009e84|   T  |              FUNC|00000018|     |.text
+IsECUDevelopmentMemoryCapable|00009b54|   T  |              FUNC|00000028|     |.text
+IsECUDiscreteHBridgeCapable|00009e00|   T  |              FUNC|0000006c|     |.text
+IsECUETC1Capable    |00009c94|   T  |              FUNC|00000050|     |.text
+IsECUETCCapable     |00009ce4|   T  |              FUNC|000000ac|     |.text
+IsECUETCHwSignedMagnitude|00009e6c|   T  |              FUNC|00000018|     |.text
+IsECUExtNORFlashCapable|00009ecc|   T  |              FUNC|00000030|     |.text
+IsECUHSOLCapable    |00009d90|   T  |              FUNC|00000070|     |.text
+IsECUInvertingTheEncVRInput|00009e9c|   T  |              FUNC|00000030|     |.text
+IsECUO2Capable      |00009c04|   T  |              FUNC|00000090|     |.text
+IsECUProSAKCapable  |00009bbc|   T  |              FUNC|00000048|     |.text
+IsECUTargetAdaptorMemoryCapable|00009b9c|   T  |              FUNC|00000020|     |.text
+IsECUXDRP_BCapable  |0000a04c|   T  |              FUNC|00000018|     |.text
+IsEcuCan2Capable    |00009efc|   T  |              FUNC|00000078|     |.text
+IsElementInSet      |00011e18|   T  |              FUNC|0000003c|     |.text
+IsEncoderZeroSpeed  |0001f3d4|   T  |              FUNC|0000001c|     |.text
+IsFaultActive       |00029370|   T  |              FUNC|00000040|     |.text
+IsFirstApplicationBoot|00070144|   D  |            OBJECT|00000001|     |.ee_engcode
+IsKernelStateLegalForWait|0000ef48|   T  |              FUNC|0000003c|     |.text
+IsPrimarySPIEEAddress|0000e758|   t  |              FUNC|00000034|     |.text
+IsTDCToothMatch     |0000cce4|   T  |              FUNC|000000ec|     |.text
+IsTPUCamPrimitiveFlaggingAnError|0001f434|   T  |              FUNC|0000002c|     |.text
+IsTPUFuncCodeAvailableInMask|00020d58|   T  |              FUNC|0000003c|     |.text
+IsTasksOtherThanIdleActive|0000ee78|   T  |              FUNC|00000008|     |.text
+IsToothMissingFor30Minus5_V2Arr|00041c78|   G  |            OBJECT|0000003c|     |.sdata2
+IsTransmitBuffer    |0001c878|   T  |              FUNC|00000050|     |.text
+IsTriggerADCCreated |00011850|   T  |              FUNC|0000002c|     |.text
+IsWithinStack       |0000f000|   T  |              FUNC|00000090|     |.text
+IssueAngleEventNotify|000158dc|   T  |              FUNC|00000030|     |.text
+IssueAppRTIHandler  |00015b04|   T  |              FUNC|00000024|     |.text
+IssueBackgroundServiceRequest|00011cd4|   T  |              FUNC|00000028|     |.text
+IssueBadCreateSwitch|0001c104|   t  |              FUNC|00000008|     |.text
+IssueBadPWMCreate   |0000a884|   t  |              FUNC|0000000c|     |.text
+IssueBadPWMDestroy  |0000a8a8|   t  |              FUNC|00000008|     |.text
+IssueBadPWMDuty     |0000a8b4|   t  |              FUNC|00000004|     |.text
+IssueBadPWMMode     |0000a8b8|   t  |              FUNC|00000004|     |.text
+IssueBadRefreshSwitchState|0001c10c|   t  |              FUNC|00000008|     |.text
+IssueBadSetPWMFreq  |0000a8b0|   t  |              FUNC|00000004|     |.text
+IssueEZLinkNotify   |00015874|   T  |              FUNC|00000038|     |.text
+IssueEncErrorCback  |00015ae0|   T  |              FUNC|00000024|     |.text
+IssueEncReportCback |000159a8|   T  |              FUNC|00000024|     |.text
+IssueEncoderErrorSWISR|00013390|   T  |              FUNC|00000034|     |.text
+IssueEncoderReportSWISR|00013574|   T  |              FUNC|00000158|     |.text
+IssueIgnSeqCback    |000159f0|   T  |              FUNC|00000050|     |.text
+IssueInjSeqCback    |00015a40|   T  |              FUNC|00000050|     |.text
+IssueOneShotNotify  |000158ac|   T  |              FUNC|00000030|     |.text
+IssueRPMVectorNotify|0001590c|   T  |              FUNC|00000038|     |.text
+IssueSPIEECback     |000159cc|   T  |              FUNC|00000024|     |.text
+IssueSchdTaskCback  |00015b28|   T  |              FUNC|00000024|     |.text
+IssueSeqDiagReportCback|00015a90|   T  |              FUNC|00000050|     |.text
+IssueUserEventCback |00015844|   T  |              FUNC|00000030|     |.text
+KeyConnected        |00036720|   T  |              FUNC|00000014|     |.text
+KeyExceptionHandler |00038934|   T  |              FUNC|00000048|     |.text
+KeyExceptionNotify  |00036734|   T  |              FUNC|0000000c|     |.text
+KeyHeaderHandler    |000389f0|   T  |              FUNC|00000128|     |.text
+KeyKeyCCHandler     |000397b4|   T  |              FUNC|00000010|     |.text
+KeyKeyNotify        |00036764|   T  |              FUNC|0000000c|     |.text
+KeyKeyPktHandler    |000397dc|   T  |              FUNC|0000006c|     |.text
+KeyNotify           |00036708|   T  |              FUNC|00000018|     |.text
+KeyPacketHandlers   |00043690|   G  |            OBJECT|00000028|     |.sdata2
+KeyProtocolHandler  |0003897c|   T  |              FUNC|00000074|     |.text
+KnkAddrArr          |00041ff6|   G  |            OBJECT|00000200|     |.sdata2
+L_115               |0000c264|   t  |            NOTYPE|        |     |.text
+LastCWP_ru1         |003fa229|   S  |            OBJECT|00000001|     |.sbss
+LastRandomNumber_ru4|003fa4a0|   S  |            OBJECT|00000004|     |.sbss
+LastTxtime32.7733   |003fb8ec|   b  |            OBJECT|00000004|     |.bss
+LastTxtime32.7752   |003fb8d8|   b  |            OBJECT|00000004|     |.bss
+LastTxtime32.7766   |003fb8c0|   b  |            OBJECT|00000004|     |.bss
+LastTxtime32.7787   |003fb8e4|   b  |            OBJECT|00000004|     |.bss
+LastTxtime32.7807   |003fb8b8|   b  |            OBJECT|00000004|     |.bss
+LastTxtime32.7823   |003fb8c8|   b  |            OBJECT|00000004|     |.bss
+LastTxtime32.7842   |003fb8f4|   b  |            OBJECT|00000004|     |.bss
+LastTxtime32.7879   |003fb8dc|   b  |            OBJECT|00000004|     |.bss
+LastTxtime32.7897   |003fb8e0|   b  |            OBJECT|00000004|     |.bss
+LastTxtime32.7915   |003fb8b4|   b  |            OBJECT|00000004|     |.bss
+LastTxtime32.7934   |003fb8ac|   b  |            OBJECT|00000004|     |.bss
+LastTxtime32.7949   |003fb8e8|   b  |            OBJECT|00000004|     |.bss
+LastTxtime32.7965   |003fb8f8|   b  |            OBJECT|00000004|     |.bss
+LastTxtime32.7980   |003fb8b0|   b  |            OBJECT|00000004|     |.bss
+LastTxtime32.7994   |003fb8c4|   b  |            OBJECT|00000004|     |.bss
+LastTxtime32.8006   |003fb8d0|   b  |            OBJECT|00000004|     |.bss
+LastTxtime32.8026   |003fb8cc|   b  |            OBJECT|00000004|     |.bss
+LastTxtime32.8041   |003fb8bc|   b  |            OBJECT|00000004|     |.bss
+LastTxtime32.8056   |003fb8d4|   b  |            OBJECT|00000004|     |.bss
+LastTxtime32.8068   |003fb8f0|   b  |            OBJECT|00000004|     |.bss
+LevelShiftedOneShotNotify|000193e8|   T  |              FUNC|00000078|     |.text
+LinkStatus_ru1      |003fa670|   S  |            OBJECT|00000001|     |.sbss
+LoadTouCANBuffer    |00012540|   T  |              FUNC|000001bc|     |.text
+LoadTouCANTXBuffer  |000121f8|   T  |              FUNC|000000f4|     |.text
+LogNativeError      |000192a8|   T  |              FUNC|00000054|     |.text
+LogOSInternalError  |0000e898|   T  |              FUNC|0000004c|     |.text
+LogTaskKernelError  |0000f2a0|   T  |              FUNC|00000030|     |.text
+MAF_Input_FrequencyInput_Create|0002c560|   T  |              FUNC|000000bc|     |.text
+MAF_Input_FrequencyInput_Get|0002c4c8|   T  |              FUNC|00000098|     |.text
+MC3388xOnMPWM_Methods|0003f2d6|   G  |            OBJECT|00000020|     |.sdata2
+MDAFreeRunCntISR    |00009a38|   t  |              FUNC|00000044|     |.text
+MDASMConfigToDisable|0003f20a|   G  |            OBJECT|00000002|     |.sdata2
+MDASMConfigToIPMFallEdge|0003f200|   G  |            OBJECT|00000002|     |.sdata2
+MDASMConfigToIPMRiseEdge|0003f202|   G  |            OBJECT|00000002|     |.sdata2
+MDASMConfigToIPWMFallEdge|0003f206|   G  |            OBJECT|00000002|     |.sdata2
+MDASMConfigToIPWMRiseEdge|0003f204|   G  |            OBJECT|00000002|     |.sdata2
+MDASMConfigToITCFallEdge|0003f1fe|   G  |            OBJECT|00000002|     |.sdata2
+MDASMConfigToITCRiseEdge|0003f1fc|   G  |            OBJECT|00000002|     |.sdata2
+MDASMConfigToPWM    |0003f208|   G  |            OBJECT|00000002|     |.sdata2
+MDASMConfigToSetPinHi|0003f1f6|   G  |            OBJECT|00000002|     |.sdata2
+MDASMConfigToSetPinLow|0003f1f4|   G  |            OBJECT|00000002|     |.sdata2
+MDASwitchMethods    |00042200|   G  |            OBJECT|00000008|     |.sdata2
+MDA_MSMethods       |00041f02|   G  |            OBJECT|00000008|     |.sdata2
+MDA_Methods         |0003f2f6|   G  |            OBJECT|00000020|     |.sdata2
+MDA_Relay           |000430e6|   G  |            OBJECT|00000008|     |.sdata2
+MHCAN_consumers_0x000007FF|0003edb4|   t  |            OBJECT|00000020|     |.text
+MHCAN_consumers_0x000007FF|0003ecf4|   t  |            OBJECT|000000b0|     |.text
+MHCAN_dequeue       |00021fa8|   T  |              FUNC|00000064|     |.text
+MHCAN_directslot_RxSlot_10248p0009|003fbdb8|   B  |            OBJECT|0000000f|     |.bss
+MHCAN_directslot_RxSlot_10416p0017|003fbbea|   B  |            OBJECT|0000000f|     |.bss
+MHCAN_directslot_RxSlot_10417p0017|003fbc3a|   B  |            OBJECT|0000000f|     |.bss
+MHCAN_directslot_RxSlot_10418p0017|003fbc2b|   B  |            OBJECT|0000000f|     |.bss
+MHCAN_directslot_RxSlot_10419p0012|003fbb8b|   B  |            OBJECT|0000000f|     |.bss
+MHCAN_directslot_RxSlot_10420p0016|003fbb7c|   B  |            OBJECT|0000000f|     |.bss
+MHCAN_directslot_RxSlot_10421p0018|003fbc1c|   B  |            OBJECT|0000000f|     |.bss
+MHCAN_directslot_RxSlot_10422p0018|003fbbcc|   B  |            OBJECT|0000000f|     |.bss
+MHCAN_directslot_RxSlot_10423p0016|003fbbdb|   B  |            OBJECT|0000000f|     |.bss
+MHCAN_directslot_RxSlot_6480p0046|003fbcb8|   B  |            OBJECT|0000000f|     |.bss
+MHCAN_directslot_RxSlot_6481p0011|003fbd48|   B  |            OBJECT|0000000f|     |.bss
+MHCAN_directslot_RxSlot_7065p0012|003fbd87|   B  |            OBJECT|0000000f|     |.bss
+MHCAN_directslot_RxSlot_7066p002|003fbd78|   B  |            OBJECT|0000000f|     |.bss
+MHCAN_directslot_RxSlot_9759p0005|003fbc49|   B  |            OBJECT|0000000f|     |.bss
+MHCAN_directslot_RxSlot_9760p0005|003fbb9a|   B  |            OBJECT|0000000f|     |.bss
+MHCAN_enqueue       |00021f5c|   T  |              FUNC|0000004c|     |.text
+MHCAN_getdirect     |0002200c|   T  |              FUNC|0000003c|     |.text
+MHCAN_handler_RxSlot_10248p0009|0002d4e8|   t  |              FUNC|00000064|     |.text
+MHCAN_handler_RxSlot_10249p0007|0002d698|   t  |              FUNC|0000005c|     |.text
+MHCAN_handler_RxSlot_10416p0017|0002cc1c|   t  |              FUNC|00000064|     |.text
+MHCAN_handler_RxSlot_10417p0017|0002cc80|   t  |              FUNC|00000064|     |.text
+MHCAN_handler_RxSlot_10418p0017|0002ce10|   t  |              FUNC|00000064|     |.text
+MHCAN_handler_RxSlot_10419p0012|0002cce4|   t  |              FUNC|00000064|     |.text
+MHCAN_handler_RxSlot_10420p0016|0002ce74|   t  |              FUNC|00000064|     |.text
+MHCAN_handler_RxSlot_10421p0018|0002cd48|   t  |              FUNC|00000064|     |.text
+MHCAN_handler_RxSlot_10422p0018|0002ced8|   t  |              FUNC|00000064|     |.text
+MHCAN_handler_RxSlot_10423p0016|0002cdac|   t  |              FUNC|00000064|     |.text
+MHCAN_handler_RxSlot_6480p0046|0002caf0|   t  |              FUNC|00000064|     |.text
+MHCAN_handler_RxSlot_6481p0011|0002ca8c|   t  |              FUNC|00000064|     |.text
+MHCAN_handler_RxSlot_6628p0022|0002d368|   t  |              FUNC|0000005c|     |.text
+MHCAN_handler_RxSlot_6629p0026|0002d3c4|   t  |              FUNC|0000005c|     |.text
+MHCAN_handler_RxSlot_6630p0013|0002d30c|   t  |              FUNC|0000005c|     |.text
+MHCAN_handler_RxSlot_6631p0016|0002d2b0|   t  |              FUNC|0000005c|     |.text
+MHCAN_handler_RxSlot_6632p0015|0002d254|   t  |              FUNC|0000005c|     |.text
+MHCAN_handler_RxSlot_6633p0013|0002d1f8|   t  |              FUNC|0000005c|     |.text
+MHCAN_handler_RxSlot_6634p0016|0002d19c|   t  |              FUNC|0000005c|     |.text
+MHCAN_handler_RxSlot_6635p0016|0002d140|   t  |              FUNC|0000005c|     |.text
+MHCAN_handler_RxSlot_7065p0012|0002d484|   t  |              FUNC|00000064|     |.text
+MHCAN_handler_RxSlot_7066p002|0002d420|   t  |              FUNC|00000064|     |.text
+MHCAN_handler_RxSlot_9757p0005|0002d0e4|   t  |              FUNC|0000005c|     |.text
+MHCAN_handler_RxSlot_9758p0005|0002d088|   t  |              FUNC|0000005c|     |.text
+MHCAN_handler_RxSlot_9759p0005|0002cb54|   t  |              FUNC|00000064|     |.text
+MHCAN_handler_RxSlot_9760p0005|0002cbb8|   t  |              FUNC|00000064|     |.text
+MHCAN_queue_RxSlot_10249p0007|003fbd98|   B  |            OBJECT|00000020|     |.bss
+MHCAN_queue_RxSlot_6628p0022|003fbcc8|   B  |            OBJECT|00000020|     |.bss
+MHCAN_queue_RxSlot_6629p0026|003fbd08|   B  |            OBJECT|00000020|     |.bss
+MHCAN_queue_RxSlot_6630p0013|003fbd28|   B  |            OBJECT|00000020|     |.bss
+MHCAN_queue_RxSlot_6631p0016|003fbce8|   B  |            OBJECT|00000020|     |.bss
+MHCAN_queue_RxSlot_6632p0015|003fbc98|   B  |            OBJECT|00000020|     |.bss
+MHCAN_queue_RxSlot_6633p0013|003fbd58|   B  |            OBJECT|00000020|     |.bss
+MHCAN_queue_RxSlot_6634p0016|003fbc58|   B  |            OBJECT|00000020|     |.bss
+MHCAN_queue_RxSlot_6635p0016|003fbbfc|   B  |            OBJECT|00000020|     |.bss
+MHCAN_queue_RxSlot_9757p0005|003fbc78|   B  |            OBJECT|00000020|     |.bss
+MHCAN_queue_RxSlot_9758p0005|003fbbac|   B  |            OBJECT|00000020|     |.bss
+MIOS1ISRs           |00009378|   T  |              FUNC|00000090|     |.text
+MPRD_Relay          |000430d6|   G  |            OBJECT|00000008|     |.sdata2
+MPWMSMConfigToSetPinHi|0003f1fa|   G  |            OBJECT|00000002|     |.sdata2
+MPWMSMConfigToSetPinLow|0003f1f8|   G  |            OBJECT|00000002|     |.sdata2
+MPWM_MSMethods      |00041ef2|   G  |            OBJECT|00000008|     |.sdata2
+MPWM_Methods        |0003f276|   G  |            OBJECT|00000020|     |.sdata2
+MPWM_Relay          |000430ce|   G  |            OBJECT|00000008|     |.sdata2
+MSTPU_GetMaxSupportedDuration|00020f14|   T  |              FUNC|00000008|     |.text
+MSTPU_ISR           |000212d8|   t  |              FUNC|000000e0|     |.text
+MSTPU_Register      |00021164|   T  |              FUNC|00000174|     |.text
+MSTPU_SetPWM        |00020f1c|   T  |              FUNC|000000e0|     |.text
+MSTPU_SetPeriod     |00020ffc|   T  |              FUNC|000000a4|     |.text
+MSTPU_SetState      |000210a0|   T  |              FUNC|000000c4|     |.text
+MachineChkISR       |00008ba8|   T  |              FUNC|00000010|     |.text
+MallocTouCANDataBuffer|0001ce68|   T  |              FUNC|0000005c|     |.text
+MapDataRequest      |000392f0|   T  |              FUNC|00000180|     |.text
+MapInitRequest      |000391f4|   T  |              FUNC|000000fc|     |.text
+MaskExtBPISR        |00008e54|   T  |              FUNC|00000010|     |.text
+MatlabVersionTxt    |00043330|   G  |            OBJECT|00000050|     |.sdata2
+MemClose            |000189c4|   T  |              FUNC|00000008|     |.text
+MemExtEE_WriteX28C512|0001dcb4|   t  |              FUNC|0000013c|     |.text
+MemInit             |000189b4|   T  |              FUNC|00000008|     |.text
+MemInitStatus       |000189bc|   T  |              FUNC|00000008|     |.text
+MemRead             |00018b8c|   T  |              FUNC|000000e8|     |.text
+MemReadExtFlashAM29BL162|00015ee4|   T  |              FUNC|000002a8|     |.text
+MemReadSPIEE        |00018e60|   T  |              FUNC|00000074|     |.text
+MemReadSynch        |00033b64|   T  |              FUNC|000000f0|     |.text
+MemReadSynchAM29BL162Notify|00033c54|   T  |              FUNC|00000030|     |.text
+MemReadSynchProSAK  |00033d78|   T  |              FUNC|00000038|     |.text
+MemReadSynchSPIEE   |00018d50|   T  |              FUNC|00000110|     |.text
+MemWrite            |000189cc|   T  |              FUNC|000001c0|     |.text
+MemWriteExtFlashAM29BL162|00016894|   T  |              FUNC|00000198|     |.text
+MemWriteSPIEE       |00019154|   T  |              FUNC|00000068|     |.text
+MemWriteSynch       |00033c84|   T  |              FUNC|000000f4|     |.text
+MemWriteSynchProSAK |00033e78|   T  |              FUNC|00000078|     |.text
+MemWriteSynchSPIEE  |0001903c|   T  |              FUNC|00000118|     |.text
+MemWriteX28C512     |0001ddf0|   T  |              FUNC|000000e4|     |.text
+MissToothFunc12M1   |00012db4|   t  |              FUNC|00000020|     |.text
+MissToothFunc24M1   |00012df4|   t  |              FUNC|00000020|     |.text
+MissToothFunc24M2   |00012dd4|   t  |              FUNC|00000020|     |.text
+MissToothFunc2N18M2 |00012f3c|   t  |              FUNC|00000038|     |.text
+MissToothFunc30M5_V2|00012e14|   t  |              FUNC|0000000c|     |.text
+MissToothFunc32M2   |00012e54|   t  |              FUNC|00000020|     |.text
+MissToothFunc34M2   |00012e74|   t  |              FUNC|00000020|     |.text
+MissToothFunc36M1   |00012eb4|   t  |              FUNC|00000020|     |.text
+MissToothFunc36M2   |00012e94|   t  |              FUNC|00000020|     |.text
+MissToothFunc36M6   |00012f74|   t  |              FUNC|00000058|     |.text
+MissToothFunc58X    |00012ed4|   t  |              FUNC|00000020|     |.text
+MissToothFunc60M6   |00012ef4|   t  |              FUNC|00000034|     |.text
+MissToothFuncN4M2   |00012f28|   t  |              FUNC|00000014|     |.text
+MissToothHyundai60  |00012e20|   t  |              FUNC|00000034|     |.text
+ModuleConfig_ApplyInputSelectProcess|0000a074|   t  |              FUNC|0000007c|     |.text
+ModuleConfig_CreateCamEncInputSelect|0000a178|   T  |              FUNC|0000004c|     |.text
+ModuleConfig_CreateCnkEncInputSelect|0000a0f0|   T  |              FUNC|00000088|     |.text
+ModuleConfig_DestroyCamEncInputSelect|0000a1d8|   T  |              FUNC|00000014|     |.text
+ModuleConfig_DestroyCnkEncInputSelect|0000a1c4|   T  |              FUNC|00000014|     |.text
+MotProgAckReply     |00038c4c|   T  |              FUNC|00000040|     |.text
+MotProgBeginPktHandler|00039a3c|   T  |              FUNC|00000074|     |.text
+MotProgBufferControlHandler|00039894|   T  |              FUNC|00000008|     |.text
+MotProgBufferInitHandler|00039884|   T  |              FUNC|00000008|     |.text
+MotProgBufferRecordHandler|0003988c|   T  |              FUNC|00000008|     |.text
+MotProgCCHandler    |00039848|   T  |              FUNC|00000018|     |.text
+MotProgDataCback    |00039998|   T  |              FUNC|00000038|     |.text
+MotProgDataPktHandler|000399f8|   T  |              FUNC|00000044|     |.text
+MotProgExceptionHandler|00038c8c|   T  |              FUNC|000000c8|     |.text
+MotProgExceptionNotify|0003674c|   T  |              FUNC|0000000c|     |.text
+MotProgHeaderHandler|00038e18|   T  |              FUNC|0000009c|     |.text
+MotProgHeaderPktHandler|000399d0|   T  |              FUNC|00000028|     |.text
+MotProgPacketHandlers|000436b8|   G  |            OBJECT|00000024|     |.sdata2
+MotProgProtocolHandler|00038d54|   T  |              FUNC|000000c4|     |.text
+MotProgRecCntPkt32Handler|00039910|   T  |              FUNC|00000044|     |.text
+MotProgRecCntPktHandler|00039954|   T  |              FUNC|00000044|     |.text
+MotProgTermCback    |00039860|   T  |              FUNC|00000024|     |.text
+MotProgTermPktHandler|0003989c|   T  |              FUNC|00000074|     |.text
+MotoHFB_CreateChannel|0001fd48|   T  |              FUNC|00000150|     |.text
+MotoHFB_Enable      |0001fcb4|   T  |              FUNC|00000094|     |.text
+MotoHFB_SetFrequencyAndDuty|0001fbac|   T  |              FUNC|00000108|     |.text
+MotoHawkBuildGUID   |000433d0|   G  |            OBJECT|00000050|     |.sdata2
+MotoHawkModelGUID   |00043380|   G  |            OBJECT|00000050|     |.sdata2
+MotoHawkModelName   |0004325c|   G  |            OBJECT|00000050|     |.sdata2
+MotoHawkModelSecondsInUseTick|0002a844|   T  |              FUNC|00000018|     |.text
+MotoHawkTokenGUID   |00043420|   G  |            OBJECT|00000050|     |.sdata2
+MotoHawkVersionTxt  |000432fc|   G  |            OBJECT|00000032|     |.sdata2
+MotoRPMVector_CreateTPUChannel|00020ba8|   T  |              FUNC|00000118|     |.text
+MotoRPMVector_Enable|00020b3c|   T  |              FUNC|0000006c|     |.text
+MotoRPMVector_ISR   |00020cc0|   t  |              FUNC|00000098|     |.text
+MotoRPMVector_IsEnabled|00020b04|   T  |              FUNC|00000038|     |.text
+MotoSecurity32Function|00039ab0|   T  |              FUNC|0000008c|     |.text
+NMaskExtBPISR       |00008e64|   T  |              FUNC|00000010|     |.text
+NativeErrorServiceArr|003fa42c|   S  |            OBJECT|00000034|     |.sbss
+Neutral_DigitalInput_Create|0002c3f0|   T  |              FUNC|000000d8|     |.text
+Neutral_DigitalInput_Get|0002c1b4|   T  |              FUNC|0000009c|     |.text
+Neutral_din_create_err|003fbb5a|   B  |            OBJECT|00000001|     |.bss
+NoDFMSupported      |00037888|   T  |              FUNC|0000000c|     |.text
+NoMIOS1_ISR         |00009434|   T  |              FUNC|00000044|     |.text
+No_TPU_ISR          |00011470|   t  |              FUNC|0000004c|     |.text
+NonVolatileDefault  |00043c9c|   R  |            OBJECT|000000a0|     |.romcals
+NonVolatileRestoreOnFirstStartup|00070146|   D  |            OBJECT|00000001|     |.ee_engcode
+NonVolatileRestoreOnStartup|00070145|   D  |            OBJECT|00000001|     |.ee_engcode
+NonVolatileStorage  |000700a4|   D  |            OBJECT|000000a0|     |.ee_engcode
+NonVolatileWork     |003fbe28|   B  |            OBJECT|000000a0|     |.ramcals
+NonVolatile_NonVolatileCRC|003fb908|   B  |            OBJECT|00000004|     |.bss
+NonVolatile_NonVolatileStatus|003fbb4c|   B  |            OBJECT|00000001|     |.bss
+NonVolatile_NonVolatileStatus_Reset|0002a110|   T  |              FUNC|00000010|     |.text
+NonVolatile_OpenNonVolatile|0002a218|   T  |              FUNC|00000244|     |.text
+NonVolatile_RestoreDefaultNonVolatile|0002a18c|   T  |              FUNC|0000008c|     |.text
+NonVolatile_StoreNonVolatile|0002a45c|   T  |              FUNC|00000164|     |.text
+ONE_SECOND_EVENT_RunCnt|003fa8f4|   D  |            OBJECT|00000004|     |.data
+OSClosing_rb1       |003f9e36|   S  |            OBJECT|00000001|     |.sbss
+OSErrorDisplay      |003f9e31|   S  |            OBJECT|00000001|     |.sbss
+OSInternalErrorArr  |003f9e3c|   S  |            OBJECT|0000000c|     |.sbss
+OSInternalErrorCnt_ru1|003f9e39|   S  |            OBJECT|00000001|     |.sbss
+OSMain              |0000a46c|   T  |              FUNC|00000068|     |.text
+OSOpen              |0000a590|   T  |              FUNC|000000d0|     |.text
+OSOpenInit          |0000a660|   T  |              FUNC|00000050|     |.text
+OSStatus            |003f9e37|   S  |            OBJECT|00000001|     |.sbss
+OnAddEventToFgndAngleQueue|0000f578|   T  |              FUNC|00000024|     |.text
+OnAddEventToFgndTimeQueue|0000f554|   T  |              FUNC|00000024|     |.text
+OnAddEventToSWISRQueue|0000e7bc|   T  |              FUNC|0000001c|     |.text
+OnCANFrameReceiptInMotoTronKey|00036b10|   T  |              FUNC|00000174|     |.text
+OnChangeFaultActive |000297f0|   T  |              FUNC|00000060|     |.text
+OnChangeFaultOccurred|00029850|   T  |              FUNC|00000054|     |.text
+OnChangeFaultSuspected|00029790|   T  |              FUNC|00000060|     |.text
+OnCompletedCANPacket|000367c0|   T  |              FUNC|00000028|     |.text
+OnESTDiagnosticHardwareEnable|00018584|   t  |              FUNC|0000003c|     |.text
+OnFPDenormalizedNumberException|00008e74|   T  |              FUNC|0000008c|     |.text
+OnFPDivideByZeroException|00008f00|   T  |              FUNC|0000002c|     |.text
+OnFPZeroDivideByZeroException|00008a44|   T  |              FUNC|00000084|     |.text
+OnFgndPeriodicADC   |000115bc|   T  |              FUNC|00000004|     |.text
+OnIDLETaskExecutionLoop|000107b8|   T  |              FUNC|0000000c|     |.text
+OnOneShotTPUComplete|0001e328|   T  |              FUNC|0000003c|     |.text
+OnPWMPeakEvent      |0000acb8|   T  |              FUNC|00000030|     |.text
+OnSWISRQueueEmpty   |0000e7a0|   T  |              FUNC|0000001c|     |.text
+OnSeqDiag50msTick   |0000d67c|   T  |              FUNC|00000074|     |.text
+OnSeqOutDiagSamplePeriodExpiry|0000d334|   T  |              FUNC|00000200|     |.text
+OnSerialCommError   |0000dfac|   T  |              FUNC|00000074|     |.text
+OnSerialCommErrorWithNativeError|0000e020|   T  |              FUNC|00000024|     |.text
+OnTaskKernelTimerTick|0000ee80|   T  |              FUNC|000000c8|     |.text
+OnTouCANFrameReceiptISR|0001cd28|   T  |              FUNC|00000140|     |.text
+OnTouCANTXCompleteISR|0001d2cc|   T  |              FUNC|00000150|     |.text
+OnTransmissionDone  |0000dd9c|   T  |              FUNC|00000040|     |.text
+OnZeroSpeedDetectedFromCheckSpeedZero|000139ac|   T  |              FUNC|00000068|     |.text
+OneShotDiagReportCback|0001df34|   t  |              FUNC|0000006c|     |.text
+OneShotMapArr       |00042730|   G  |            OBJECT|000000a0|     |.sdata2
+OneShotResourceHandlerDataArr|0003cb98|   T  |            OBJECT|00000050|     |.text
+OpenAdc             |00011a78|   T  |              FUNC|0000025c|     |.text
+OpenApplication     |0002142c|   T  |              FUNC|00000430|     |.text
+OpenApplicationSecurity|000219e4|   T  |              FUNC|00000044|     |.text
+OpenBankedSequences |0000db88|   T  |              FUNC|00000020|     |.text
+OpenCANTransport    |000126fc|   T  |              FUNC|00000040|     |.text
+OpenCRC             |000374e4|   T  |              FUNC|00000010|     |.text
+OpenClock           |00012828|   T  |              FUNC|00000100|     |.text
+OpenDevelopmentMemory|0000ea6c|   T  |              FUNC|000000e4|     |.text
+OpenESTDiagnosticSystem|00018564|   T  |              FUNC|00000020|     |.text
+OpenEasyLink        |00012c9c|   T  |              FUNC|00000010|     |.text
+OpenEncoders        |00013130|   T  |              FUNC|00000078|     |.text
+OpenEventCback      |0000c2b8|   T  |              FUNC|0000002c|     |.text
+OpenEventQueue      |000156a0|   T  |              FUNC|0000006c|     |.text
+OpenEventType       |003f9e38|   S  |            OBJECT|00000001|     |.sbss
+OpenExtFlashMemory  |000161e4|   T  |              FUNC|0000004c|     |.text
+OpenExtNORFlashMemoryCS|0001618c|   T  |              FUNC|00000058|     |.text
+OpenExtendedRAMChipSelect|000082f4|   T  |              FUNC|00000008|     |.text
+OpenFlashFileSystem |0001b414|   T  |              FUNC|00000004|     |.text
+OpenFreqIn          |0001817c|   T  |              FUNC|00000004|     |.text
+OpenHBridgeHW       |0001835c|   T  |              FUNC|00000080|     |.text
+OpenHBridgeHardware |00019ba4|   T  |              FUNC|00000058|     |.text
+OpenMIOS1           |000098d0|   T  |              FUNC|00000168|     |.text
+OpenMIOS1Disp       |00009350|   T  |              FUNC|00000028|     |.text
+OpenMPWMHardware    |0001a5d4|   T  |              FUNC|00000020|     |.text
+OpenModuleConfig    |0000a1ec|   T  |              FUNC|00000280|     |.text
+OpenNativeErrorSupport|00019288|   T  |              FUNC|00000020|     |.text
+OpenOneShots        |00019358|   T  |              FUNC|00000004|     |.text
+OpenPWMs            |0000aa0c|   T  |              FUNC|00000020|     |.text
+OpenPeakPins        |0000a6f8|   T  |              FUNC|00000090|     |.text
+OpenPerfMon         |0000a788|   T  |              FUNC|00000004|     |.text
+OpenProtocolNotifications|00036770|   T  |              FUNC|00000028|     |.text
+OpenQSPI            |0000b344|   T  |              FUNC|00000030|     |.text
+OpenQSPIEEDevice    |0000b63c|   t  |              FUNC|00000208|     |.text
+OpenQSPI_QSMCMModule|0000af64|   T  |              FUNC|00000114|     |.text
+OpenRAMChipSelectBeforeRuntimeStartup|000082fc|   T  |              FUNC|00000004|     |.text
+OpenRealTimeClock   |0000c798|   T  |              FUNC|00000004|     |.text
+OpenSIU             |0000eb50|   T  |              FUNC|00000200|     |.text
+OpenSPI_EEPROM      |0000b408|   T  |              FUNC|00000028|     |.text
+OpenSPI_TPIC        |0000c158|   T  |              FUNC|00000068|     |.text
+OpenSWInterruptSystem|0000e800|   T  |              FUNC|00000088|     |.text
+OpenSeqDiag         |0000d6f0|   T  |              FUNC|000000cc|     |.text
+OpenSequenceOut     |0000db68|   T  |              FUNC|00000020|     |.text
+OpenSerialTransport |0000e354|   T  |              FUNC|0000005c|     |.text
+OpenStackDepthStatus|0000e9ac|   T  |              FUNC|00000004|     |.text
+OpenTPU             |00011210|   T  |              FUNC|00000088|     |.text
+OpenTPUDisp         |00011298|   T  |              FUNC|00000028|     |.text
+OpenTPUModuleRegisters|00010c58|   t  |              FUNC|00000024|     |.text
+OpenTPUParamRAM     |000114bc|   T  |              FUNC|00000030|     |.text
+OpenTimer           |000109f8|   T  |              FUNC|00000170|     |.text
+PWMCondition_rb1    |003fa49e|   S  |            OBJECT|00000001|     |.sbss
+PWMDiagReportCback  |0001a17c|   T  |              FUNC|0000006c|     |.text
+PWMResourceMapArr   |00041f74|   G  |            OBJECT|00000072|     |.sdata2
+PWM_MPWM_Create     |0001a6f4|   T  |              FUNC|000000d0|     |.text
+PWM_MPWM_SetDuty    |0001a580|   T  |              FUNC|00000030|     |.text
+PWM_MPWM_SetFreq    |0001a510|   T  |              FUNC|00000070|     |.text
+PWM_MPWM_SetPolarity|0001a5b0|   T  |              FUNC|00000024|     |.text
+PasswordTxt         |00400038|   D  |            OBJECT|00000021|     |.cals
+PeakONMaskArr       |0003f236|   G  |            OBJECT|00000040|     |.sdata2
+PeakPinOnMaskArrPtr |003f99bc|   S  |            OBJECT|00000004|     |.sbss
+PerformFunctionOnAllActiveProtocols|00037e74|   T  |              FUNC|00000060|     |.text
+PerformOnAllQSMCMModules|0000b374|   T  |              FUNC|0000002c|     |.text
+PerformOperationOnAllSerialEEDevices|0000e72c|   T  |              FUNC|0000002c|     |.text
+PerformOperationOnAllTPUModules|000114ec|   T  |              FUNC|00000040|     |.text
+PollETCDiagHW       |00019ae8|   T  |              FUNC|00000084|     |.text
+PollHBridgeDiagHW   |00018314|   T  |              FUNC|00000048|     |.text
+PollMIOS1IntStatus  |000097fc|   T  |              FUNC|00000040|     |.text
+PollSPIEEPROM       |0000b430|   T  |              FUNC|00000028|     |.text
+PollSPIEEPROMDevice |0000bdec|   t  |              FUNC|0000022c|     |.text
+PollTPUIntStatusWithPtr|00011078|   T  |              FUNC|00000018|     |.text
+PopFPandIntegerContext|00008520|   t  |            NOTYPE|        |     |.text
+PopIntegerContext   |000085ac|   t  |            NOTYPE|        |     |.text
+PostEvent           |0000c1c0|   T  |              FUNC|00000080|     |.text
+PostISRHook         |00008944|   t  |              FUNC|0000003c|     |.text
+PostTaskHook        |00008994|   t  |              FUNC|00000048|     |.text
+PreISRHook          |000088fc|   t  |              FUNC|00000048|     |.text
+PreStartOS          |000213b8|   T  |              FUNC|00000074|     |.text
+PreStartOSInit      |0000d1f8|   T  |              FUNC|00000058|     |.text
+PreStartOSProcess   |0000d1a0|   T  |              FUNC|00000058|     |.text
+PreTaskHook         |00008980|   t  |              FUNC|00000014|     |.text
+PrimSPIEEDeviceData |003f9de1|   S  |            OBJECT|00000050|     |.sbss
+PrimSPIEEReadQueueAccessData|003f9dd1|   S  |            OBJECT|00000008|     |.sbss
+PrimSPIEEReadQueueEntryArr|003f9b64|   S  |            OBJECT|000000e6|     |.sbss
+PrimSPIEEReadSyncEntry|003f9da3|   S  |            OBJECT|00000017|     |.sbss
+PrimSPIEEWriteQueueAccessData|003f9dd9|   S  |            OBJECT|00000008|     |.sbss
+PrimSPIEEWriteQueueEntryArr|003f9c4a|   S  |            OBJECT|00000159|     |.sbss
+PrimSPIEEWriteSyncEntry|003f9dba|   S  |            OBJECT|00000017|     |.sbss
+PrimarySPIEE        |0003f8bd|   G  |            OBJECT|00000078|     |.sdata2
+ProSAK1DeviceData   |003fa640|   S  |            OBJECT|00000010|     |.sbss
+ProSAK1DeviceDefn   |00042812|   G  |            OBJECT|00000074|     |.sdata2
+ProSAK1SPISemaphore |003fa650|   S  |            OBJECT|00000004|     |.sbss
+ProSAKAngleSupport  |000199dc|   T  |              FUNC|0000002c|     |.text
+ProSAKBgndAQSPIDevice|0003f477|   G  |            OBJECT|0000000e|     |.sdata2
+ProSAKBgndBQSPIDevice|0003f485|   G  |            OBJECT|0000000e|     |.sdata2
+ProSAKBgndQSPIDevice|0003f469|   G  |            OBJECT|0000000e|     |.sdata2
+ProSAKDevicePtrArr  |003fa484|   S  |            OBJECT|00000004|     |.sbss
+ProSAKFgndAQSPIDevice|0003f4a1|   G  |            OBJECT|0000000e|     |.sdata2
+ProSAKFgndBQSPIDevice|0003f4af|   G  |            OBJECT|0000000e|     |.sdata2
+ProSAKFgndQSPIDevice|0003f493|   G  |            OBJECT|0000000e|     |.sdata2
+ProSAKMemoryDefnArr |00042886|   G  |            OBJECT|00000010|     |.sdata2
+ProSAKQSPIConfig    |0003f449|   G  |            OBJECT|00000004|     |.sdata2
+ProSAKQSPIDevice    |0003f45b|   G  |            OBJECT|0000000e|     |.sdata2
+ProSAKReSyncCallback|00019a08|   T  |              FUNC|00000058|     |.text
+ProSAKReSyncTxDataArr|00041fea|   G  |            OBJECT|0000000c|     |.sdata2
+ProSAKWr16bitCmdOnPCS3_0|000427d0|   G  |            OBJECT|00000002|     |.sdata2
+ProSAKWr16bitCmdOnPCS3_1|000427d4|   G  |            OBJECT|00000003|     |.sdata2
+ProSAKWr16bitCmdOnPCS3_2|000427d8|   G  |            OBJECT|00000004|     |.sdata2
+ProSAKWr16bitCmdOnPCS3_3|000427dc|   G  |            OBJECT|00000005|     |.sdata2
+ProSAKWr16bitCmdOnPCS3_4|000427e4|   G  |            OBJECT|00000006|     |.sdata2
+ProSAKWr16bitCmdOnPCS3_5|000427ec|   G  |            OBJECT|00000007|     |.sdata2
+ProSAKWr16bitCmdOnPCS3_6|000427f4|   G  |            OBJECT|00000008|     |.sdata2
+ProSAKWr16bitCmdOnPCS3_7|000427fc|   G  |            OBJECT|00000009|     |.sdata2
+ProSAKWr16bitCmdOnPCS3_8|00042808|   G  |            OBJECT|0000000a|     |.sdata2
+ProcessEventQueue   |0001570c|   T  |              FUNC|00000138|     |.text
+ProcessProSAKResync |0001996c|   T  |              FUNC|00000070|     |.text
+ProcessSPIEEAccessManager|0000bca8|   T  |              FUNC|00000144|     |.text
+ProcessSPIEEReadAccessManager|0000bba8|   t  |              FUNC|00000100|     |.text
+ProgKeyPktHandler   |000397c4|   T  |              FUNC|00000008|     |.text
+ProgramISR          |00008be8|   T  |              FUNC|00000010|     |.text
+Prot_SetERIPktTimeout|00038010|   T  |              FUNC|00000020|     |.text
+Prot_SetKEYPktTimeout|00038030|   T  |              FUNC|00000020|     |.text
+ProtocolArchiveSchdTaskCback|0003666c|   T  |              FUNC|00000004|     |.text
+ProtocolHandler     |000380f8|   T  |              FUNC|00000054|     |.text
+ProtocolSupported   |00037f9c|   T  |              FUNC|00000074|     |.text
+PsEncGenericReportHandler|00013780|   t  |              FUNC|00000090|     |.text
+PsEncHyundaiReportHandler|000136fc|   t  |              FUNC|00000048|     |.text
+QSMCM_A_Config      |0003f435|   G  |            OBJECT|0000000c|     |.sdata2
+QSPIAddrDummy_cu2   |00041fe6|   G  |            OBJECT|00000002|     |.sdata2
+QSPIAllTPICsCmdData |0003f4f8|   G  |            OBJECT|00000003|     |.sdata2
+Queue1Size_ru1      |003fa214|   S  |            OBJECT|00000001|     |.sbss
+QueueSPIEEMemRead   |00018cd8|   t  |              FUNC|00000078|     |.text
+QueueSPIEEMemWrite  |00018f04|   t  |              FUNC|00000138|     |.text
+RPMVector_OS_Create |0001bcf8|   T  |              FUNC|00000164|     |.text
+RPMVector_OS_Enable |0001bc5c|   T  |              FUNC|0000009c|     |.text
+RPMVector_OS_ISR    |0001befc|   t  |              FUNC|0000018c|     |.text
+RPMVector_OS_IsEnabled|0001bc28|   T  |              FUNC|00000034|     |.text
+RPMVector_OS_Request|0001be5c|   t  |              FUNC|000000a0|     |.text
+ReadFromSPIEEPROM   |0000b844|   T  |              FUNC|00000100|     |.text
+ReadFromTouCANBuffer|0001ca1c|   T  |              FUNC|00000158|     |.text
+ReadMDAInputPin     |0000975c|   T  |              FUNC|00000014|     |.text
+ReadPeriodSum       |00013ca4|   T  |              FUNC|000000e8|     |.text
+ReadQSPIRxBufferDATA_AS_BYTES|0000b090|   T  |              FUNC|0000003c|     |.text
+ReadQSPIRxBufferDATA_AS_HALFWORD|0000b0cc|   T  |              FUNC|00000038|     |.text
+ReadQSPITPICs       |0000c0ec|   T  |              FUNC|0000006c|     |.text
+ReadSPIEEPROM       |0000ba78|   t  |              FUNC|00000130|     |.text
+ReadSPIEEPROMStatus |0000b5bc|   t  |              FUNC|00000080|     |.text
+ReadSPIProSAK       |0001a974|   T  |              FUNC|0000022c|     |.text
+ReadTouCANMessageBufferUsage|0001c82c|   T  |              FUNC|0000004c|     |.text
+ReadTouCANRXBuffer  |000122ec|   T  |              FUNC|0000014c|     |.text
+RebootFramework     |00039dec|   T  |              FUNC|00000144|     |.text
+RebootHard          |000196b0|   T  |              FUNC|00000080|     |.text
+RebootMotoTronV0    |0001978c|   T  |              FUNC|0000008c|     |.text
+RebootMotoTronV2    |00019730|   T  |              FUNC|0000005c|     |.text
+RefreshADCSwitchState|0001e800|   T  |              FUNC|00000078|     |.text
+RefreshAsynchRXTimeout|0000e100|   T  |              FUNC|0000007c|     |.text
+RefreshCRCMapCheck  |000374f4|   T  |              FUNC|0000002c|     |.text
+RefreshEncAndCAMTPUChan|00020e6c|   T  |              FUNC|00000044|     |.text
+RefreshFaultActionReferenceCounts|000293b0|   T  |              FUNC|00000274|     |.text
+RefreshISRPerformance|000089dc|   T  |              FUNC|0000005c|     |.text
+RefreshInterruptStackDepthMetric|0000f1a8|   T  |              FUNC|00000054|     |.text
+RefreshMDAFreqInDuty|00016b90|   T  |              FUNC|0000009c|     |.text
+RefreshMDAFreqInFreq|00016cc0|   T  |              FUNC|000000f8|     |.text
+RefreshMDAFreqInState|000177d8|   T  |              FUNC|00000050|     |.text
+RefreshMDASwitchState|0001e728|   T  |              FUNC|0000005c|     |.text
+RefreshOSErrorDisplay|0000e8e4|   T  |              FUNC|000000a8|     |.text
+RefreshOSSchdEventCond|0000c494|   T  |              FUNC|00000068|     |.text
+RefreshOneShotTimers|000194f4|   T  |              FUNC|000000cc|     |.text
+RefreshProtocolPacketTimeout|000380a4|   T  |              FUNC|00000054|     |.text
+RefreshProtocolTimers|0003826c|   T  |              FUNC|00000044|     |.text
+RefreshResetSource  |0000e9b0|   T  |              FUNC|000000b4|     |.text
+RefreshSequenceTimers|0000d9fc|   T  |              FUNC|0000016c|     |.text
+RefreshStackMetrics |0000f1fc|   T  |              FUNC|000000a4|     |.text
+RefreshSwitchStates |0001c1c4|   T  |              FUNC|000000c8|     |.text
+RefreshTPICDiags    |00010b88|   T  |              FUNC|0000008c|     |.text
+RefreshTPUFreqInDuty|000176d4|   T  |              FUNC|0000005c|     |.text
+RefreshTPUFreqInFreq|00017730|   T  |              FUNC|0000004c|     |.text
+RefreshTPUFreqInState|0001777c|   T  |              FUNC|0000005c|     |.text
+RefreshTXBytesFree  |00012928|   T  |              FUNC|00000074|     |.text
+RefreshTaskPerformance|0000ef84|   T  |              FUNC|00000038|     |.text
+RefreshUnlockTimers |00037dd0|   T  |              FUNC|00000074|     |.text
+RegisterBlackBoxHandlers|00036cd0|   T  |              FUNC|00000094|     |.text
+RegisterCANProtocol |00036354|   T  |              FUNC|0000018c|     |.text
+RegisterDriverMode  |000356e4|   T  |              FUNC|00000088|     |.text
+RegisterForCANKing  |000373e0|   T  |              FUNC|00000054|     |.text
+RegisterKeyProtocol |000364e0|   T  |              FUNC|00000050|     |.text
+RegisterMotoTronProtocolArchive|00036530|   T  |              FUNC|000000f0|     |.text
+RegisterMotoTronSecurity|00039c58|   T  |              FUNC|00000068|     |.text
+RegisterMotoTronSpecificArchive|00039cc0|   T  |              FUNC|00000078|     |.text
+RegisterTPICDiagnostic|00010b68|   T  |              FUNC|00000020|     |.text
+RegisterTPUFreq     |0001f85c|   t  |              FUNC|00000118|     |.text
+RegisterTPUFreqAvg  |0001f97c|   T  |              FUNC|00000008|     |.text
+RegisterTPUFreqDuty |0001f974|   T  |              FUNC|00000008|     |.text
+RegisterTPUInjDiag  |0001fa28|   T  |              FUNC|00000110|     |.text
+RegisterTPUPWM      |00020584|   T  |              FUNC|00000008|     |.text
+RegisterTPUPWMChild |0002058c|   T  |              FUNC|00000204|     |.text
+RegisterTPUPWMParent|00020790|   T  |              FUNC|000000a0|     |.text
+RegisterTPUPWMWithPeak|000203a0|   T  |              FUNC|000001e4|     |.text
+RegisterTPUPWMWithSync|00020830|   T  |              FUNC|00000264|     |.text
+RegisterTPUVarCam_EVO9|0001f410|   T  |              FUNC|0000000c|     |.text
+RegisterTPUVarCam_PX_MOON|0001f3f8|   T  |              FUNC|0000000c|     |.text
+RegisterTPUVarCam_T6M2P2|0001f404|   T  |              FUNC|0000000c|     |.text
+RegisterTPUVarCam_WinSync|0001f41c|   T  |              FUNC|0000000c|     |.text
+RelayDiagReportCback|0001f108|   T  |              FUNC|00000074|     |.text
+RelayMapArr         |0004316a|   G  |            OBJECT|0000003e|     |.sdata2
+RelayResourceHandlerDataArr|000430ee|   G  |            OBJECT|0000007c|     |.sdata2
+ReleaseSemaphore    |00010030|   T  |              FUNC|000000d4|     |.text
+ReleaseTask         |0000ffd0|   T  |              FUNC|00000060|     |.text
+RemoveFromCANReceiptQueue|0001da6c|   T  |              FUNC|000000ac|     |.text
+RemoveFromReadyList |0000ede0|   T  |              FUNC|0000002c|     |.text
+RemoveOldestFromCANReceiptQueue|0001db18|   T  |              FUNC|00000058|     |.text
+RemoveTaskFromSyncWaitingList|0000ed6c|   T  |              FUNC|00000028|     |.text
+ReqAcc4ByteCCHandler|00037a34|   T  |              FUNC|00000010|     |.text
+ReqAcc4BytePktHandler|00037c20|   T  |              FUNC|000001b0|     |.text
+ReqAccCCHandler     |00037a1c|   T  |              FUNC|00000008|     |.text
+ReqAccCback         |00037a7c|   T  |              FUNC|0000002c|     |.text
+ReqAccPktHandler    |00037a4c|   T  |              FUNC|00000008|     |.text
+ReqAuthorityAccessCCHandler|00037140|   T  |              FUNC|00000010|     |.text
+ReqAuthorityAccessPktHandler|00037198|   T  |              FUNC|00000124|     |.text
+ReqAuthoritySeedCCHandler|00037130|   T  |              FUNC|00000010|     |.text
+ReqAuthoritySeedPktHandler|00037434|   T  |              FUNC|00000098|     |.text
+ReqBaudCCHandler    |000396e4|   T  |              FUNC|00000010|     |.text
+ReqBaudPktHandler   |000396f4|   T  |              FUNC|000000c0|     |.text
+ReqControlCCHandler |00037150|   T  |              FUNC|00000010|     |.text
+ReqControlPktHandler|000372bc|   T  |              FUNC|00000094|     |.text
+ReqDataCCHandler    |00037160|   T  |              FUNC|00000010|     |.text
+ReqDataPktHandler   |00037350|   T  |              FUNC|00000090|     |.text
+ReqSeed4ByteCCHandler|00037a24|   T  |              FUNC|00000010|     |.text
+ReqSeed4BytePktHandler|00037aa8|   T  |              FUNC|000000e4|     |.text
+ReqSeedCCHandler    |00037a14|   T  |              FUNC|00000008|     |.text
+ReqSeedPktHandler   |00037a44|   T  |              FUNC|00000008|     |.text
+RequestEvent        |0001c088|   T  |              FUNC|00000044|     |.text
+RequestFreqInResource|00018180|   T  |              FUNC|00000058|     |.text
+RequestHBridgeResource|000182b4|   T  |              FUNC|00000038|     |.text
+RequestMIOS1Channel |0000983c|   T  |              FUNC|00000060|     |.text
+RequestMIOS1ISR     |00009408|   T  |              FUNC|0000002c|     |.text
+RequestOneShotResource|0001939c|   T  |              FUNC|0000004c|     |.text
+RequestPWMResource  |0000a828|   T  |              FUNC|0000005c|     |.text
+RequestProtocolHandlerPtr|0003814c|   T  |              FUNC|000000e4|     |.text
+RequestRelayResource|0001eba4|   T  |              FUNC|00000048|     |.text
+RequestSwitchResource|0001c114|   T  |              FUNC|00000048|     |.text
+RequestTPUChannelWithPtr|00011090|   T  |              FUNC|00000028|     |.text
+RequestTPUISR       |000112c0|   T  |              FUNC|0000002c|     |.text
+RequestTPUISRWithData|000112ec|   T  |              FUNC|00000034|     |.text
+RequestTPUISRWithPtr|00011330|   T  |              FUNC|00000030|     |.text
+RequestTaskKernelSyncObject|0000ff24|   T  |              FUNC|000000ac|     |.text
+RequestTouCANFilterMask|00012438|   T  |              FUNC|00000108|     |.text
+RescheduleFromTask  |0000ee0c|   T  |              FUNC|00000038|     |.text
+ResetExceptionData  |00009324|   T  |              FUNC|0000002c|     |.text
+ResetExternalExceptionData|00009314|   T  |              FUNC|00000010|     |.text
+ResetFreeRunningCounter64Bits|0000c2a4|   T  |              FUNC|00000014|     |.text
+ResetScanning       |00011e00|   T  |              FUNC|00000018|     |.text
+ResetStatus_rp2     |003f9e34|   S  |            OBJECT|00000002|     |.sbss
+ResetTPUFreqAvgAccumPeriod|0001f798|   T  |              FUNC|0000002c|     |.text
+ResourceCreateStatusArr|003fa4c8|   S  |            OBJECT|00000090|     |.sbss
+ResourcesAttribArr  |00042896|   G  |            OBJECT|00000750|     |.sdata2
+ReturnCRC32Value    |00039d44|   T  |              FUNC|0000000c|     |.text
+Reverse_DigitalInput_Create|0002c318|   T  |              FUNC|000000d8|     |.text
+Reverse_DigitalInput_Get|0002c118|   T  |              FUNC|0000009c|     |.text
+Reverse_din_create_err|003fbb57|   B  |            OBJECT|00000001|     |.bss
+RflctdCRC32Tbl      |0004389c|   G  |            OBJECT|00000400|     |.sdata2
+SPI_EEPROMErrorAddr |003f99cc|   S  |            OBJECT|00000004|     |.sbss
+SPI_EEPROMErrorCnt_ru1|003f99d0|   S  |            OBJECT|00000001|     |.sbss
+ScaleDutyForMPWMHBridge|00019a60|   t  |              FUNC|00000088|     |.text
+SchdTaskCback       |0000c3e8|   T  |              FUNC|000000ac|     |.text
+ScheduleSchdTaskCback|0000c954|   T  |              FUNC|00000098|     |.text
+SearchForNextElement|00011d44|   T  |              FUNC|000000bc|     |.text
+SendCloseOSMessage  |0001c0cc|   T  |              FUNC|00000038|     |.text
+SendEvent           |0000c2e4|   T  |              FUNC|00000064|     |.text
+SeqDiagEncoderEventCallback|0000d638|   T  |              FUNC|00000044|     |.text
+SeqDiagTPUAISR      |000188d0|   t  |              FUNC|00000008|     |.text
+SeqDiagTPUBISR      |000188c8|   t  |              FUNC|00000008|     |.text
+SeqDiagTPUISR       |00018838|   t  |              FUNC|00000090|     |.text
+SeqOutDefnArr       |0003f600|   G  |            OBJECT|00000280|     |.sdata2
+SeqOutIDWithTPUCrossRefArr|0003f880|   G  |            OBJECT|00000020|     |.sdata2
+SerialEEQSPIConfig  |0003f441|   G  |            OBJECT|00000004|     |.sdata2
+SerialEEQSPIDevice  |0003f44d|   G  |            OBJECT|0000000e|     |.sdata2
+SerialISR           |0000e3b0|   T  |              FUNC|00000374|     |.text
+SerialTimersWithRate|0000e17c|   T  |              FUNC|00000010|     |.text
+ServiceAsyncReadRequest|0000e344|   T  |              FUNC|00000010|     |.text
+SetADCZeroCurrent   |000352d0|   T  |              FUNC|00000054|     |.text
+SetAllSequencesBankMode|0000d88c|   T  |              FUNC|00000080|     |.text
+SetAnalogInputAltRef|00011a6c|   T  |              FUNC|0000000c|     |.text
+SetAppOpenState     |0000c79c|   T  |              FUNC|00000008|     |.text
+SetBankedSequenceBankMode|0000dba8|   T  |              FUNC|000000a8|     |.text
+SetBgndTimeDueStatus|00010754|   T  |              FUNC|00000008|     |.text
+SetBgndTimeLateMonCnt|00010764|   T  |              FUNC|00000008|     |.text
+SetBgndTimerValue   |0000c7ac|   T  |              FUNC|00000008|     |.text
+SetBgndx10TimeLateMonCnt|00010784|   T  |              FUNC|00000008|     |.text
+SetBgndx2TimeLateMonCnt|00010774|   T  |              FUNC|00000008|     |.text
+SetCRCState         |000374dc|   T  |              FUNC|00000008|     |.text
+SetDiscreteOutState |000344e8|   T  |              FUNC|00000044|     |.text
+SetDutyMC3388xOnMPWM_HBridge|00019d80|   T  |              FUNC|00000090|     |.text
+SetDutyMDA_PWM      |0001a234|   T  |              FUNC|00000074|     |.text
+SetDutyMPWM_PWM     |0001a670|   T  |              FUNC|00000028|     |.text
+SetDutyTPUPWM       |0000abbc|   T  |              FUNC|00000008|     |.text
+SetDutyTPUPWMWithMode|0000ab34|   t  |              FUNC|00000088|     |.text
+SetESTDiagnosticMode|0001864c|   T  |              FUNC|00000008|     |.text
+SetETCEnablePin     |00019b6c|   T  |              FUNC|00000038|     |.text
+SetEncoderCond      |00014c74|   T  |              FUNC|00000060|     |.text
+SetEvent            |00010104|   T  |              FUNC|00000004|     |.text
+SetFaultActive      |00029900|   T  |              FUNC|0000005c|     |.text
+SetFaultOccurred    |0002995c|   T  |              FUNC|0000005c|     |.text
+SetFaultSuspected   |000298a4|   T  |              FUNC|0000005c|     |.text
+SetFixedAngSchdMask |0000c7d0|   T  |              FUNC|00000008|     |.text
+SetFreqInBadFreqMaskCond|0003546c|   T  |              FUNC|00000004|     |.text
+SetFreqInDetectThresh|00016b5c|   t  |              FUNC|00000034|     |.text
+SetFreqInEdgeNumSamples|00035470|   T  |              FUNC|0000004c|     |.text
+SetFreqMC3388xOnMPWM_HBridge|00019e10|   T  |              FUNC|0000009c|     |.text
+SetFreqMDA_PWM      |0001a2a8|   T  |              FUNC|000000f4|     |.text
+SetFreqMPWM_PWM     |0001a698|   T  |              FUNC|0000005c|     |.text
+SetFreqTPUPWM       |0000ac60|   T  |              FUNC|00000008|     |.text
+SetFreqTPUPWMWithMode|0000abc4|   t  |              FUNC|0000009c|     |.text
+SetFrequencyInCond  |00035608|   T  |              FUNC|00000064|     |.text
+SetHBridgeEnablePinOnMDA|00019f00|   T  |              FUNC|00000034|     |.text
+SetIgnDiagCondOnMDA |000186fc|   T  |              FUNC|0000007c|     |.text
+SetIgnDiagCondOnMDA29|00018778|   T  |              FUNC|00000008|     |.text
+SetInjDiagCondOnTPU |000188d8|   T  |              FUNC|00000074|     |.text
+SetInjDiagCondOnTPUA|00018954|   T  |              FUNC|00000008|     |.text
+SetInjDiagCondOnTPUB|0001894c|   T  |              FUNC|00000008|     |.text
+SetMDAFreqInCond    |0001740c|   T  |              FUNC|00000104|     |.text
+SetMDAOutputPinHigh |00009784|   T  |              FUNC|00000014|     |.text
+SetMDAOutputPinLow  |00009770|   T  |              FUNC|00000014|     |.text
+SetMIOS1IntEnable   |000095a4|   T  |              FUNC|00000034|     |.text
+SetMPIOOutputPin    |000094c4|   T  |              FUNC|0000005c|     |.text
+SetMPIOOutputValue  |00009478|   T  |              FUNC|0000004c|     |.text
+SetMPWMOutputPinHigh|000097ac|   T  |              FUNC|00000014|     |.text
+SetMPWMOutputPinLow |00009798|   T  |              FUNC|00000014|     |.text
+SetMPWM_HBridgeDirectionPinOnMDA|00019eac|   T  |              FUNC|00000054|     |.text
+SetMidTDCEventCond  |0000c7b4|   T  |              FUNC|0000001c|     |.text
+SetOSEncoderPhaseState|000132c0|   T  |              FUNC|00000048|     |.text
+SetOneShotCbackCond |000358b0|   T  |              FUNC|00000054|     |.text
+SetOneShotCond      |00035ac0|   T  |              FUNC|00000094|     |.text
+SetOneShotDuration  |00035848|   T  |              FUNC|00000068|     |.text
+SetOneShotDuration2 |000357f0|   T  |              FUNC|00000058|     |.text
+SetOneShotPWM       |0003576c|   T  |              FUNC|00000084|     |.text
+SetOneShotState     |00035904|   T  |              FUNC|000001bc|     |.text
+SetOpenEventType    |0000e888|   T  |              FUNC|00000008|     |.text
+SetPCMSeqOutDiagMuxAddr|0000d568|   t  |              FUNC|0000002c|     |.text
+SetPWMCbackFuncs    |00035c28|   T  |              FUNC|0000005c|     |.text
+SetPWMCond          |00036018|   T  |              FUNC|00000054|     |.text
+SetPWMCondAlways    |00035fa8|   T  |              FUNC|00000070|     |.text
+SetPWMDriveMode     |00035e98|   T  |              FUNC|0000008c|     |.text
+SetPWMDutyCycle     |00035dfc|   T  |              FUNC|0000009c|     |.text
+SetPWMFrequency     |00035f24|   T  |              FUNC|00000084|     |.text
+SetPWMPeakTime      |00035cfc|   T  |              FUNC|00000044|     |.text
+SetPWMPhase         |00035cb8|   T  |              FUNC|00000044|     |.text
+SetPeakPinOff       |0000a6d4|   T  |              FUNC|00000024|     |.text
+SetPeakPinOn        |0000a6b0|   T  |              FUNC|00000024|     |.text
+SetPeakUnsupported  |0000a890|   t  |              FUNC|0000000c|     |.text
+SetPhaseUnsupported |0000a89c|   t  |              FUNC|0000000c|     |.text
+SetRPMToZero        |00012d50|   T  |              FUNC|00000064|     |.text
+SetRelayCond        |000361c8|   T  |              FUNC|000000b8|     |.text
+SetRelayDiagCond    |000360d4|   T  |              FUNC|00000074|     |.text
+SetRelayState       |00036148|   T  |              FUNC|00000080|     |.text
+SetResourceAttributesBEHAVIOUR_DISCRETE_OUT|0003452c|   T  |              FUNC|000000b0|     |.text
+SetResourceAttributesBEHAVIOUR_FREQIN|0003478c|   T  |              FUNC|000000a4|     |.text
+SetResourceAttributesBEHAVIOUR_ONESHOT|00034970|   T  |              FUNC|0000010c|     |.text
+SetResourceAttributesBEHAVIOUR_PWM|00034c38|   T  |              FUNC|0000012c|     |.text
+SetResourceAttributesBEHAVIOUR_SCHEDULER|0000c5fc|   T  |              FUNC|00000050|     |.text
+SetResourceAttributesBEHAVIOUR_SWITCH|00035084|   T  |              FUNC|00000074|     |.text
+SetResourceAttributesBEHAVIOUR_TOUCAN|00034380|   T  |              FUNC|000000d8|     |.text
+SetResourceStatus   |0001b41c|   T  |              FUNC|000000f0|     |.text
+SetSeqDiagCondInPSP |0000d90c|   T  |              FUNC|000000f0|     |.text
+SetStandardEncoderCond|00014cd4|   T  |              FUNC|0000011c|     |.text
+SetSwitchCond       |0001efc0|   T  |              FUNC|000000b0|     |.text
+SetSwitchPolarity   |0001eee8|   T  |              FUNC|00000050|     |.text
+SetSwitchThreshold  |0001ee50|   T  |              FUNC|00000098|     |.text
+SetTPUEncoderTeethPerCycle|0001f460|   T  |              FUNC|00000058|     |.text
+SetTPUFreqInCond    |00017278|   T  |              FUNC|00000030|     |.text
+SetTPUHostSeqBit0WithPtr|00010f48|   T  |              FUNC|00000050|     |.text
+SetTPUInjDiagCond   |0001f9c4|   T  |              FUNC|00000064|     |.text
+SetTPUIntEnableWithPtr|00010fe8|   T  |              FUNC|00000020|     |.text
+SetTPUModuleFor1MHzOperation|00010c7c|   t  |              FUNC|00000010|     |.text
+SetTPUModuleFor2MHzOperation|00010c9c|   t  |              FUNC|00000010|     |.text
+SetTPUModuleFor4MHzOperation|00010c8c|   t  |              FUNC|00000010|     |.text
+SetTPUModulesCamChan|00011560|   T  |              FUNC|0000002c|     |.text
+SetTPUModulesEncoderChan|0001153c|   T  |              FUNC|00000024|     |.text
+SetTPUPWMCond       |0002030c|   T  |              FUNC|00000054|     |.text
+SetTPUPWMDutySync   |00020068|   T  |              FUNC|000000d8|     |.text
+SetTPUPWMFreq       |00020140|   T  |              FUNC|000000d0|     |.text
+SetTPUPWMOff        |00020210|   t  |              FUNC|00000094|     |.text
+SetTPUPWMPeak       |0000af38|   T  |              FUNC|0000002c|     |.text
+SetTPUPWMPeakTime   |0001fff8|   T  |              FUNC|00000070|     |.text
+SetTPUPWMPhase      |0000aa2c|   T  |              FUNC|00000070|     |.text
+SetTPUPWMPhaseTime  |0001ff24|   T  |              FUNC|000000d4|     |.text
+SetTPUPWMPin        |000202a4|   T  |              FUNC|00000068|     |.text
+SetTouCANErrorNotification|0001c904|   T  |              FUNC|0000008c|     |.text
+SetTouCANMessageBuffer|00034228|   T  |              FUNC|00000044|     |.text
+SetTouCANMessageBufferWithHandle|00034108|   T  |              FUNC|00000038|     |.text
+SetTransmissionDelayUnsupported|0003687c|   T  |              FUNC|00000004|     |.text
+SetUnsignedLongBit  |0001c670|   T  |              FUNC|0000005c|     |.text
+SetupTouCANMessageBuffer|0001d470|   T  |              FUNC|000001d8|     |.text
+SleepTask           |0000f090|   T  |              FUNC|00000118|     |.text
+SoftwareEmulationISR|00008e04|   T  |              FUNC|00000010|     |.text
+SoftwareISR         |0000e7d8|   T  |              FUNC|00000028|     |.text
+StackCorruptOnDestroy|0000f6ec|   t  |            NOTYPE|        |     |.text
+StartMultitasking   |000085e4|   T  |              FUNC|000000e4|     |.text
+StartMultitaskingKernel|00008300|   T  |              FUNC|0000000c|     |.text
+StartMultitaskingKernelWork|0000fe30|   T  |              FUNC|000000a8|     |.text
+StartOSOpenWork     |0000a538|   T  |              FUNC|00000024|     |.text
+StartProcessTimer   |0000a78c|   T  |              FUNC|00000014|     |.text
+StartQSPITransfer   |0000b178|   T  |              FUNC|00000180|     |.text
+StepApplicationStartup|00021e50|   T  |              FUNC|0000010c|     |.text
+SwIdTxt             |00043210|   G  |            OBJECT|0000000d|     |.sdata2
+SwRevisionTxt       |00043220|   G  |            OBJECT|00000032|     |.sdata2
+SwitchDefnObjArr    |00042fe6|   G  |            OBJECT|000000e0|     |.sdata2
+SwitchResourceHandlerDataArr|00042210|   G  |            OBJECT|00000070|     |.sdata2
+Switch_CreatePullupInterface|0001ed74|   T  |              FUNC|00000048|     |.text
+Switch_SetDebounceSampleRate|0001ee0c|   T  |              FUNC|00000044|     |.text
+Switch_SetPullupStrength|0001edbc|   T  |              FUNC|00000050|     |.text
+SyncSPIEEAccessCback|00018ed4|   t  |              FUNC|00000030|     |.text
+SynchReadFromTouCAN |0003426c|   T  |              FUNC|00000054|     |.text
+SynchReadFromTouCANWithHandle|00034140|   T  |              FUNC|00000038|     |.text
+SystemCallISR       |00008724|   T  |              FUNC|000001d8|     |.text
+SystemFrequency_cu4 |0003cac8|   T  |            OBJECT|00000004|     |.text
+TPICAllQSPIDevice   |0003f4bd|   G  |            OBJECT|0000000e|     |.sdata2
+TPICQSPIConfig      |0003f445|   G  |            OBJECT|00000004|     |.sdata2
+TPICSPIRes_ru4      |003f99d8|   S  |            OBJECT|00000004|     |.sbss
+TPICTxData_ru4      |003f99d4|   S  |            OBJECT|00000004|     |.sbss
+TPIC_1_QSPIDevice   |0003f4cb|   G  |            OBJECT|0000000e|     |.sdata2
+TPIC_2_QSPIDevice   |0003f4d9|   G  |            OBJECT|0000000e|     |.sdata2
+TPIC_3_QSPIDevice   |0003f4e7|   G  |            OBJECT|0000000e|     |.sdata2
+TPIC_4_6_ReadBitMaskArr|0003f4fc|   G  |            OBJECT|00000030|     |.sdata2
+TPIC_4_6_WriteBitMaskArr|0003f52c|   G  |            OBJECT|0000003c|     |.sdata2
+TPUA_Module         |0003faf8|   G  |            OBJECT|00000008|     |.sdata2
+TPUA_RuntimeData    |003fa200|   S  |            OBJECT|0000000a|     |.sbss
+TPUB_Module         |0003fb00|   G  |            OBJECT|00000008|     |.sdata2
+TPUB_RuntimeData    |003fa20a|   S  |            OBJECT|0000000a|     |.sbss
+TPUChannelDefnArr   |0003fb08|   G  |            OBJECT|00000400|     |.sdata2
+TPUFuncCodeForSeqBehaviourArr|0003f8a0|   G  |            OBJECT|00000007|     |.sdata2
+TPUHAL_DisableISR   |0000a55c|   t  |              FUNC|00000014|     |.text
+TPUHAL_UndisableISR |0000a570|   t  |              FUNC|00000020|     |.text
+TPUISRs             |000113bc|   T  |              FUNC|000000b4|     |.text
+TPUInjDiagISR       |0001fb38|   t  |              FUNC|00000074|     |.text
+TPUMCR2_init_val    |0003fa4e|   G  |            OBJECT|00000002|     |.sdata2
+TPUMCR3_1MHz_init_val|0003fa54|   G  |            OBJECT|00000002|     |.sdata2
+TPUMCR3_2MHz_init_val|0003fa52|   G  |            OBJECT|00000002|     |.sdata2
+TPUMCR3_4MHz_init_val|0003fa50|   G  |            OBJECT|00000002|     |.sdata2
+TPUMCR_init_val     |0003fa4c|   G  |            OBJECT|00000002|     |.sdata2
+TPUMask_4K          |0003a138|   T  |            OBJECT|00001000|     |.text
+TPUMask_6K          |0003b138|   T  |            OBJECT|00001800|     |.text
+TPUPWMPeakISR       |00020a94|   T  |              FUNC|00000070|     |.text
+TPU_FreqAvg_Period_PulseWidth_Raw_Get|0001f4b8|   T  |              FUNC|000000c8|     |.text
+TPU_FreqAvg_Period_Raw_Get|0001f6a8|   T  |              FUNC|0000002c|     |.text
+TPU_InstantPulseWidth_Raw_Get|0001f580|   T  |              FUNC|00000028|     |.text
+TPU_MSMethods       |00041efa|   G  |            OBJECT|00000008|     |.sdata2
+TPU_Methods         |0003f296|   G  |            OBJECT|00000020|     |.sdata2
+TPU_Relay           |000430de|   G  |            OBJECT|00000008|     |.sdata2
+TPUuCode_Init       |00020eb0|   T  |              FUNC|00000064|     |.text
+TPUuCode_Open       |00020e2c|   T  |              FUNC|00000040|     |.text
+TPUuCode_SelfModify_CamDelay|00020df0|   T  |              FUNC|0000000c|     |.text
+TPUuCode_SelfModify_IgnoreTeeth|00020e08|   T  |              FUNC|00000018|     |.text
+TPUuCode_SelfModify_PeriodSumAddr|00020e20|   T  |              FUNC|0000000c|     |.text
+TPUuCode_SelfModify_ToothRatio|00020dfc|   T  |              FUNC|0000000c|     |.text
+Table0              |0003ce94|   T  |            OBJECT|00000110|     |.text
+Table0Rev_cu1       |00043252|   G  |            OBJECT|00000001|     |.sdata2
+Table1              |0003cfa4|   T  |            OBJECT|00001d08|     |.text
+Table1Rev_cu1       |00043253|   G  |            OBJECT|00000001|     |.sdata2
+Table2              |0003ecac|   T  |            OBJECT|00000008|     |.text
+Table2Rev_cu1       |00043254|   G  |            OBJECT|00000001|     |.sdata2
+Table3              |0003ecb4|   T  |            OBJECT|00000008|     |.text
+Table3Rev_cu1       |00043255|   G  |            OBJECT|00000001|     |.sdata2
+Table4              |0003ecbc|   T  |            OBJECT|00000008|     |.text
+Table4Rev_cu1       |00043256|   G  |            OBJECT|00000001|     |.sdata2
+Table5              |0003ecc4|   T  |            OBJECT|00000008|     |.text
+Table5Rev_cu1       |00043257|   G  |            OBJECT|00000001|     |.sdata2
+Table6              |0003eccc|   T  |            OBJECT|00000008|     |.text
+Table6Rev_cu1       |00043258|   G  |            OBJECT|00000001|     |.sdata2
+Table7              |0003ecd4|   T  |            OBJECT|00000008|     |.text
+Table7Rev_cu1       |00043259|   G  |            OBJECT|00000001|     |.sdata2
+TableInterpolation1D_real_T|0002c810|   T  |              FUNC|00000078|     |.text
+TablePrelookup_real_T|0002c888|   T  |              FUNC|000001bc|     |.text
+TablePrelookup_uint16_T|0002c6e8|   T  |              FUNC|00000128|     |.text
+TargetAdaptorMemCopy|000191bc|   T  |              FUNC|0000005c|     |.text
+TaskKernel_PreStartOSInit|0000efbc|   T  |              FUNC|00000044|     |.text
+TaskKernel_PreStartOSProcess|0000f378|   T  |              FUNC|000001dc|     |.text
+TaskKernel_StackInit|0000f2d0|   t  |              FUNC|000000a8|     |.text
+TaskStackInit       |000086c8|   T  |              FUNC|0000005c|     |.text
+TerminateTask       |0000f5e4|   T  |              FUNC|00000090|     |.text
+TestAndModifySet    |00011e54|   T  |              FUNC|00000058|     |.text
+ThreadSafeFree      |00016a2c|   T  |              FUNC|00000074|     |.text
+ThreadSafeMalloc    |00016aa0|   T  |              FUNC|00000080|     |.text
+TimerISR            |00010828|   T  |              FUNC|000001d0|     |.text
+Timer_FreeRunningCounter_GetDeltaUpdateReference_us|0002a644|   T  |              FUNC|00000080|     |.text
+Timer_FreeRunningCounter_GetTime|0002a5e0|   T  |              FUNC|00000064|     |.text
+Timer_FreeRunningCounter_ResetTime|0002a5c0|   T  |              FUNC|00000020|     |.text
+Timer_PreStartOSInit|000107c4|   T  |              FUNC|0000002c|     |.text
+Timer_PreStartOSProcess|000107f0|   T  |              FUNC|00000038|     |.text
+ToothCamSyncISR     |000134d8|   T  |              FUNC|0000009c|     |.text
+TouCANBufferISRDisp |0001d41c|   T  |              FUNC|00000054|     |.text
+TouCANModuleISRDisp |0001c990|   T  |              FUNC|0000008c|     |.text
+TouCAN_A_RuntimeDataObj|003fa608|   S  |            OBJECT|00000010|     |.sbss
+TouCAN_B_RuntimeDataObj|003fa618|   S  |            OBJECT|00000010|     |.sbss
+TraceISR            |00008c10|   T  |              FUNC|00000010|     |.text
+TransCountOS_AllocateResourceMemory|0001e8f0|   T  |              FUNC|00000084|     |.text
+TransCountOS_FreeResource|0001e898|   T  |              FUNC|00000058|     |.text
+TransCount_AllocateResourceMemory|0001e878|   T  |              FUNC|00000020|     |.text
+TransformADCToCurrent|00035324|   T  |              FUNC|0000005c|     |.text
+TransformADCToMilliVolts|00035268|   t  |              FUNC|00000018|     |.text
+TransformADC_BATT_ToMilliVolts|00035298|   t  |              FUNC|00000018|     |.text
+TransformADC_ModuleTempScaledDegC|000352b0|   t  |              FUNC|00000020|     |.text
+TransformADC_XDRP_ToMilliVolts|00035280|   t  |              FUNC|00000018|     |.text
+TransformAnalogueInput|00035380|   T  |              FUNC|000000ec|     |.text
+TransformUnsupported|0003525c|   t  |              FUNC|0000000c|     |.text
+TransmitMessageOnTouCAN|0001cec4|   T  |              FUNC|00000140|     |.text
+TransmitOnTouCAN    |000342c0|   T  |              FUNC|00000064|     |.text
+TransmitOnTouCANBuffer|0001d004|   T  |              FUNC|00000138|     |.text
+TransmitOnTouCANWithHandle|00034178|   T  |              FUNC|00000038|     |.text
+TransmitPacketOnTouCAN|00036884|   T  |              FUNC|00000238|     |.text
+TransmitPacketUnsupported|00036880|   T  |              FUNC|00000004|     |.text
+TransmitQueuedPacketUsingQueuedTX|0000e18c|   t  |              FUNC|00000160|     |.text
+TriggerRuntimeData  |003fa215|   S  |            OBJECT|00000012|     |.sbss
+Trigger_BGND_BASE_PERIODIC_3106p1123|0002ca44|   T  |              FUNC|00000048|     |.text
+Trigger_CAN_RX_BusCAN_1_Buf1|0002cf3c|   T  |              FUNC|0000014c|     |.text
+Trigger_CAN_RX_BusCAN_2_Buf1|0002d54c|   T  |              FUNC|0000014c|     |.text
+Trigger_FGND_RTI_PERIODIC_3103p1123|0002d6f4|   T  |              FUNC|000040c4|     |.text
+Trigger_FGND_RTI_PERIODIC_3104p1123|000317b8|   T  |              FUNC|00000048|     |.text
+Trigger_FGND_RTI_PERIODIC_3105p1123|00031800|   T  |              FUNC|00000048|     |.text
+Trigger_FGND_RTI_PERIODIC_3107p1123|00031848|   T  |              FUNC|000005e0|     |.text
+UnexpectedExtISR    |003f9862|   S  |            OBJECT|00000001|     |.sbss
+UnexpectedExtISRCnt |003f9863|   S  |            OBJECT|00000001|     |.sbss
+UnexpectedExtISRHandler|00009240|   T  |              FUNC|00000014|     |.text
+UnexpectedMIOS1ISRSourceArr|0003f154|   G  |            OBJECT|00000020|     |.sdata2
+UnexpectedTPUISRSourceArr|0003fa58|   G  |            OBJECT|00000020|     |.sdata2
+UnhandledISR        |00008ac8|   T  |              FUNC|000000e0|     |.text
+UnlockProSAKData_cu2|00041fe8|   G  |            OBJECT|00000002|     |.sdata2
+UnsupportedSwitch   |00042208|   G  |            OBJECT|00000008|     |.sdata2
+Unsupported_Relay   |000430c6|   G  |            OBJECT|00000008|     |.sdata2
+Unused_ru1          |0004325a|   G  |            OBJECT|00000001|     |.sdata2
+UpdateFault         |00029ba0|   T  |              FUNC|000001d4|     |.text
+UpdateSetStatus     |00011eac|   T  |              FUNC|0000006c|     |.text
+Urea_Injector_OneShotOutput_Create|0002a8fc|   T  |              FUNC|000000a4|     |.text
+Urea_Injector_OneShotOutput_Set|0002a89c|   T  |              FUNC|00000060|     |.text
+VCamHW_CamTPUISRHandler|0001c3f8|   T  |              FUNC|00000110|     |.text
+VCamHW_ResyncCallback|0001c33c|   T  |              FUNC|00000034|     |.text
+ValidateCreatedResource|0001b5c8|   t  |              FUNC|0000007c|     |.text
+ValidateCreatedResourceBEHAVIOUR_ANALOGIN|0001b798|   T  |              FUNC|0000004c|     |.text
+ValidateCreatedResourceBEHAVIOUR_COMM|0001b690|   T  |              FUNC|0000006c|     |.text
+ValidateCreatedResourceBEHAVIOUR_DISCRETE_OUT|0001b830|   T  |              FUNC|0000004c|     |.text
+ValidateCreatedResourceBEHAVIOUR_FREQIN|0001b6fc|   T  |              FUNC|00000050|     |.text
+ValidateCreatedResourceBEHAVIOUR_ONESHOT|0001b7e4|   T  |              FUNC|0000004c|     |.text
+ValidateCreatedResourceBEHAVIOUR_PWM|0001b87c|   T  |              FUNC|0000004c|     |.text
+ValidateCreatedResourceBEHAVIOUR_SWITCH|0001b74c|   T  |              FUNC|0000004c|     |.text
+ValidateCreatedResourceBEHAVIOUR_TOUCAN|0001b644|   T  |              FUNC|0000004c|     |.text
+ValidateCreatedTriggerId|00011614|   T  |              FUNC|00000084|     |.text
+ValidateResource    |0001b8c8|   t  |              FUNC|000000cc|     |.text
+ValidateResourceBEHAVIOUR_ANALOGIN|0001bab8|   T  |              FUNC|0000005c|     |.text
+ValidateResourceBEHAVIOUR_DISCRETE_OUT|0001bb70|   T  |              FUNC|0000005c|     |.text
+ValidateResourceBEHAVIOUR_FREQIN|0001b9f8|   T  |              FUNC|00000064|     |.text
+ValidateResourceBEHAVIOUR_ONESHOT|0001bb14|   T  |              FUNC|0000005c|     |.text
+ValidateResourceBEHAVIOUR_PWM|0001bbcc|   T  |              FUNC|0000005c|     |.text
+ValidateResourceBEHAVIOUR_SWITCH|0001ba5c|   T  |              FUNC|0000005c|     |.text
+ValidateResourceBEHAVIOUR_TOUCAN|0001b994|   T  |              FUNC|00000064|     |.text
+VarCam_AllocateResourceMemory|0001c370|   T  |              FUNC|00000088|     |.text
+VarCam_CalcVelocity |0001e974|   T  |              FUNC|0000007c|     |.text
+VarCam_HandleEdgeNotification|0001ea3c|   T  |              FUNC|00000168|     |.text
+VarCam_LevelShiftedEdgeNotification|0001e9f0|   t  |              FUNC|0000004c|     |.text
+VolatileWork        |003fa8fc|   D  |            OBJECT|00000010|     |.data
+VolatileWork_BSS    |003fb90c|   B  |            OBJECT|00000240|     |.bss
+WaitForQSPIToBeFree |0000b2f8|   T  |              FUNC|00000014|     |.text
+WaitOnMutex         |00010434|   T  |              FUNC|0000021c|     |.text
+WaitOnSempahore     |00010258|   T  |              FUNC|000001dc|     |.text
+WaitOnSyncObject    |00010650|   T  |              FUNC|000000fc|     |.text
+WaitOnTask          |0001019c|   T  |              FUNC|000000bc|     |.text
+WoodwardKeyPktHandler|000397cc|   T  |              FUNC|00000008|     |.text
+WriteAM29BL162      |00016230|   T  |              FUNC|00000428|     |.text
+WriteCANReceiptFrameToStaticBuffer|000367e8|   T  |              FUNC|00000084|     |.text
+WriteCrankEncoderTPUChPriority|00013278|   T  |              FUNC|00000048|     |.text
+WriteCrankEncoderTPUHostSrvReg|000131a8|   T  |              FUNC|00000048|     |.text
+WriteManagerExtFlashAM29BL162|00016778|   T  |              FUNC|00000118|     |.text
+WriteQSPICmdBuffer  |0000b30c|   T  |              FUNC|00000038|     |.text
+WriteQSPITxBufferDATA_AS_BYTES|0000b104|   T  |              FUNC|0000003c|     |.text
+WriteQSPITxBufferDATA_AS_HALFWORD|0000b140|   T  |              FUNC|00000038|     |.text
+WriteReSyncData     |0001a85c|   T  |              FUNC|00000118|     |.text
+WriteSPIEEPROMDevice|0000b458|   t  |              FUNC|00000164|     |.text
+WriteSPIProSAK16Bit |0001af94|   T  |              FUNC|000003ec|     |.text
+WriteSPIProSAK8Bit  |0001aba0|   T  |              FUNC|000003f4|     |.text
+WriteTPUChPriorityWithPtr|00011130|   T  |              FUNC|00000098|     |.text
+WriteTPUChanFuncCodeWithPtr|00010cac|   T  |              FUNC|00000108|     |.text
+WriteTPUChanFuncWithPtr|000111c8|   T  |              FUNC|00000048|     |.text
+WriteTPUHostSeqRegWithPtr|00010ef0|   T  |              FUNC|00000058|     |.text
+WriteTPUHostSrvRegWithPtr|00010e7c|   T  |              FUNC|00000074|     |.text
+Zero                |0003ee50|   t  |            OBJECT|00000010|     |.text
+_Jv_RegisterClasses |        |   w  |            NOTYPE|        |     |*UND*
+_SDA2_BASE_         |0003f0b0|   V  |            OBJECT|        |     |.sdata2
+_SDA_BASE_          |003f9800|   V  |            OBJECT|        |     |.sdata
+__CTOR_END__        |0003efd0|   D  |            OBJECT|        |     |.ctors
+__CTOR_END__        |0003efd0|   d  |            OBJECT|        |     |.ctors
+__CTOR_LIST__       |0003efcc|   d  |            OBJECT|        |     |.ctors
+__CTOR_LIST__       |0003efd0|   D  |            OBJECT|        |     |.ctors
+__DTOR_END__        |0003efd8|   D  |            OBJECT|        |     |.dtors
+__DTOR_LIST__       |0003efd4|   d  |            OBJECT|        |     |.dtors
+__DTOR_LIST__       |0003efd8|   D  |            OBJECT|        |     |.dtors
+__JCR_END__         |0003efdc|   d  |            OBJECT|        |     |.jcr
+__JCR_LIST__        |0003efdc|   d  |            OBJECT|        |     |.jcr
+__SBSS2_END__       |00043c9c|   R  |            OBJECT|        |     |.romcals
+__SBSS_END__        |003fa8e1|   S  |            OBJECT|        |     |.sbss
+__SDATA2_START__    |0003f0b0|   G  |            OBJECT|        |     |.sdata2
+__SDATA_START__     |003f9800|   G  |            OBJECT|        |     |.sdata
+__bss_start         |003fb17c|   B  |            NOTYPE|        |     |.bss
+__bssextended_end   |02000000|   ?  |            NOTYPE|        |     |.heap
+__bssextended_start |02000000|   ?  |            NOTYPE|        |     |.heap
+__call_exitprocs    |00032e34|   T  |              FUNC|000001e0|     |.text
+__data_end          |003fb17c|   D  |            NOTYPE|        |     |.data
+__data_start        |003fa8e4|   D  |            NOTYPE|        |     |.data
+__data_start_lma    |00043d88|   A  |            NOTYPE|        |     |*ABS*
+__dataextended_end  |02000000|   ?  |            NOTYPE|        |     |.heap
+__dataextended_start|02000000|   ?  |            NOTYPE|        |     |.heap
+__dataextended_start_lma|00044620|   A  |            NOTYPE|        |     |*ABS*
+__deregister_frame_info|        |   w  |            NOTYPE|        |     |*UND*
+__do_global_ctors_aux|0003a0cc|   t  |              FUNC|        |     |.text
+__do_global_dtors_aux|00008108|   t  |              FUNC|        |     |.text
+__eabi              |0003a018|   T  |              FUNC|00000048|     |.text
+__eabi_convert      |0003a060|   T  |              FUNC|00000034|     |.text
+__eabi_uconvert     |0003a094|   T  |              FUNC|00000038|     |.text
+__errno             |00033018|   T  |              FUNC|0000003c|     |.text
+__fdlib_version     |003f9810|   G  |            OBJECT|00000004|     |.sdata
+__fini              |0003efac|   T  |              FUNC|        |     |.fini
+__ghsbegin_ee_spi_end|00070147|   N  |            NOTYPE|        |     |.debug_aranges
+__ghsbegin_ee_spi_start|00070000|   B  |            NOTYPE|        |     |.ee_testcode_status
+__ghsbegin_endofRAM |003fecd0|   A  |            NOTYPE|        |     |*ABS*
+__ghsbegin_endofcals|00400618|   D  |            NOTYPE|        |     |.cals
+__ghsbegin_endofexcepttable|00008100|   T  |            NOTYPE|        |     |.exceptionbranchtable
+__ghsbegin_endofflash|00043c9c|   A  |            NOTYPE|        |     |*ABS*
+__ghsbegin_endofruntimestack|00302800|   B  |            NOTYPE|        |     |.stack
+__ghsbegin_heap     |003fdcd0|   ?  |            NOTYPE|        |     |.heap
+__ghsbegin_startofRAM|003f9800|   G  |            NOTYPE|        |     |.sdata
+__ghsbegin_startofcals|00400000|   D  |            NOTYPE|        |     |.cals
+__ghsbegin_startofexcepttable|00008000|   T  |            NOTYPE|        |     |.exceptionbranchtable
+__ghsbegin_startofflash|00008108|   T  |            NOTYPE|        |     |.text
+__ghsbegin_tpuapararam|00304100|   B  |            NOTYPE|        |     |.ee_testcode_status
+__ghsend_endofcals  |00400618|   D  |            NOTYPE|        |     |.cals
+__ghsend_heap       |003fecd0|   ?  |            NOTYPE|        |     |.heap
+__heap_end          |003fecd0|   ?  |            NOTYPE|        |     |.heap
+__heap_start        |003fdcd0|   ?  |            NOTYPE|        |     |.heap
+__ieee754_fmod      |000337ac|   T  |              FUNC|00000378|     |.text
+__init              |0003ef88|   T  |              FUNC|        |     |.init
+__isnand            |00033b24|   T  |              FUNC|00000038|     |.text
+__malloc_av_        |003fad70|   D  |            OBJECT|00000408|     |.data
+__malloc_current_mallinfo|003fbdfc|   B  |            OBJECT|00000028|     |.bss
+__malloc_lock       |00032aec|   T  |              FUNC|00000004|     |.text
+__malloc_max_sbrked_mem|003fa678|   S  |            OBJECT|00000004|     |.sbss
+__malloc_max_total_mem|003fa67c|   S  |            OBJECT|00000004|     |.sbss
+__malloc_sbrk_base  |003f980c|   G  |            OBJECT|00000004|     |.sdata
+__malloc_top_pad    |003fa674|   S  |            OBJECT|00000004|     |.sbss
+__malloc_trim_threshold|003f9808|   G  |            OBJECT|00000004|     |.sdata
+__malloc_unlock     |00032af0|   T  |              FUNC|00000004|     |.text
+__register_frame_info|        |   w  |            NOTYPE|        |     |*UND*
+__sbss_end          |003fa8e1|   S  |            NOTYPE|        |     |.sbss
+__sbss_start        |003f981c|   S  |            NOTYPE|        |     |.sbss
+__sdata_end         |003f9819|   G  |            NOTYPE|        |     |.sdata
+__sdata_start       |003f9800|   G  |            NOTYPE|        |     |.sdata
+__sdata_start_lma   |00043d6c|   A  |            NOTYPE|        |     |*ABS*
+__stack             |00000000|   A  |            NOTYPE|        |     |*ABS*
+_end                |003fecd0|   A  |            NOTYPE|        |     |*ABS*
+_exit               |000351e4|   T  |              FUNC|00000004|     |.text
+_free_r             |000331ac|   T  |              FUNC|000002a8|     |.text
+_global_impure_ptr  |003f9804|   G  |            OBJECT|00000004|     |.sdata
+_impure_ptr         |003f9800|   G  |            OBJECT|00000004|     |.sdata
+_malloc_r           |00031f14|   T  |              FUNC|000008c0|     |.text
+_malloc_trim_r      |00033058|   T  |              FUNC|00000150|     |.text
+_sbrk_r             |00032da0|   T  |              FUNC|00000090|     |.text
+_start              |00008f88|   T  |              FUNC|00000260|     |.text
+ain_create_AC_Pres  |003fa937|   D  |            OBJECT|00000001|     |.data
+ain_create_AN10M    |003fa92f|   D  |            OBJECT|00000001|     |.data
+ain_create_AN11M    |003fa932|   D  |            OBJECT|00000001|     |.data
+ain_create_Accel1   |003fa912|   D  |            OBJECT|00000001|     |.data
+ain_create_Accel2   |003fa90d|   D  |            OBJECT|00000001|     |.data
+ain_create_Brake    |003fa938|   D  |            OBJECT|00000001|     |.data
+ain_create_BrakeBackUp|003fa929|   D  |            OBJECT|00000001|     |.data
+ain_create_Clutch   |003fa923|   D  |            OBJECT|00000001|     |.data
+ain_create_ClutchBackup|003fa926|   D  |            OBJECT|00000001|     |.data
+ain_create_CruiseButtons|003fa93a|   D  |            OBJECT|00000001|     |.data
+ain_create_DRVP     |003fa917|   D  |            OBJECT|00000001|     |.data
+ain_create_ECUP     |003fa910|   D  |            OBJECT|00000001|     |.data
+ain_create_FuelLevel|003fa925|   D  |            OBJECT|00000001|     |.data
+ain_read_AC_Pres    |003fa939|   D  |            OBJECT|00000001|     |.data
+ain_read_AN10M      |003fa92e|   D  |            OBJECT|00000001|     |.data
+ain_read_AN11M      |003fa914|   D  |            OBJECT|00000001|     |.data
+ain_read_Accel1     |003fa93d|   D  |            OBJECT|00000001|     |.data
+ain_read_Accel2     |003fa93e|   D  |            OBJECT|00000001|     |.data
+ain_read_Brake      |003fa921|   D  |            OBJECT|00000001|     |.data
+ain_read_BrakeBackUp|003fa91e|   D  |            OBJECT|00000001|     |.data
+ain_read_Clutch     |003fa92b|   D  |            OBJECT|00000001|     |.data
+ain_read_ClutchBackup|003fa936|   D  |            OBJECT|00000001|     |.data
+ain_read_CruiseButtons|003fa93c|   D  |            OBJECT|00000001|     |.data
+ain_read_DRVP       |003fa927|   D  |            OBJECT|00000001|     |.data
+ain_read_ECUP       |003fa90e|   D  |            OBJECT|00000001|     |.data
+ain_read_FuelLevel  |003fa919|   D  |            OBJECT|00000001|     |.data
+array_entry_ru1.4855|003fb1a0|   b  |            OBJECT|00000001|     |.bss
+b1BATTLoss          |003f9e50|   S  |            OBJECT|00000001|     |.sbss
+bit_number_ru1.4856 |003fb19f|   b  |            OBJECT|00000001|     |.bss
+calculate_crc       |0002a120|   T  |              FUNC|0000006c|     |.text
+call___do_global_ctors_aux|0003a11c|   t  |              FUNC|        |     |.text
+call___do_global_dtors_aux|000081cc|   t  |              FUNC|        |     |.text
+call_frame_dummy    |00008254|   t  |              FUNC|        |     |.text
+can_create_CAN_1    |003fa930|   D  |            OBJECT|00000001|     |.data
+can_create_CAN_2    |003fa935|   D  |            OBJECT|00000001|     |.data
+can_tx_err_CAN_1_0  |003fbdf9|   B  |            OBJECT|00000001|     |.bss
+can_tx_err_CAN_1_0_33|003fbdf7|   B  |            OBJECT|00000001|     |.bss
+can_tx_err_CAN_2_0  |003fbdf4|   B  |            OBJECT|00000001|     |.bss
+can_tx_err_CAN_2_0_34|003fbdfb|   B  |            OBJECT|00000001|     |.bss
+completed.3529      |003fb17c|   b  |            OBJECT|00000001|     |.bss
+copysign            |00033454|   T  |              FUNC|00000040|     |.text
+cx06_MA_B           |003fb1b8|   B  |            OBJECT|000005d4|     |.bss
+cx06_MA_ConstB      |003fb8a8|   B  |            OBJECT|00000002|     |.bss
+cx06_MA_ConstP      |0003cc5c|   T  |            OBJECT|00000064|     |.text
+cx06_MA_DWork       |003fb7a0|   B  |            OBJECT|00000108|     |.bss
+cx06_MA_M           |003fa8f8|   D  |            OBJECT|00000004|     |.data
+cx06_MA_M_          |003fb794|   B  |            OBJECT|0000000c|     |.bss
+cx06_MA_MainState   |000221c8|   T  |              FUNC|000004d4|     |.text
+cx06_MA_MainState_Init|00022174|   T  |              FUNC|00000044|     |.text
+cx06_MA_MainState_Start|000221b8|   T  |              FUNC|00000010|     |.text
+cx06_MA_Outputs     |00022738|   T  |              FUNC|00003e54|     |.text
+cx06_MA_Outputs_Init|0002269c|   T  |              FUNC|00000068|     |.text
+cx06_MA_Outputs_Start|00022704|   T  |              FUNC|00000034|     |.text
+cx06_MA_PrevZCSigState|003fb78c|   B  |            OBJECT|00000006|     |.bss
+cx06_MA_Strategy    |00026674|   T  |              FUNC|00002cfc|     |.text
+cx06_MA_Strategy_Init|0002658c|   T  |              FUNC|000000e8|     |.text
+cx06_MA_initialize  |0002207c|   T  |              FUNC|000000f8|     |.text
+cx06_MA_step        |00022048|   T  |              FUNC|00000034|     |.text
+din_create_ESTOP    |003fa918|   D  |            OBJECT|00000001|     |.data
+din_create_Neutral  |003fa92c|   D  |            OBJECT|00000001|     |.data
+din_create_Reverse  |003fa91b|   D  |            OBJECT|00000001|     |.data
+din_read_ESTOP      |003fa931|   D  |            OBJECT|00000001|     |.data
+din_read_Neutral    |003fa916|   D  |            OBJECT|00000001|     |.data
+din_read_Reverse    |003fa913|   D  |            OBJECT|00000001|     |.data
+dout_create_AC_Clutch|003fa90c|   D  |            OBJECT|00000001|     |.data
+dout_create_AC_Fan  |003fa91d|   D  |            OBJECT|00000001|     |.data
+dout_create_INJ10D  |003fa91a|   D  |            OBJECT|00000001|     |.data
+dout_create_INJ1D   |003fa91c|   D  |            OBJECT|00000001|     |.data
+dout_create_INJ2D   |003fa93b|   D  |            OBJECT|00000001|     |.data
+dout_create_INJ3D   |003fa91f|   D  |            OBJECT|00000001|     |.data
+dout_create_INJ6D   |003fa940|   D  |            OBJECT|00000001|     |.data
+dout_create_INJ8D   |003fa90f|   D  |            OBJECT|00000001|     |.data
+dout_create_MPRD    |003fa924|   D  |            OBJECT|00000001|     |.data
+dout_create_Urea_Power|003fa920|   D  |            OBJECT|00000001|     |.data
+dtor_idx.3531       |003fb180|   b  |            OBJECT|00000004|     |.bss
+ee_app_status       |0007000c|   B  |            NOTYPE|        |     |.ee_app_status
+ee_crypto           |00070010|   B  |            NOTYPE|        |     |.ee_crypto
+ee_mot_mfgr_data    |00070004|   B  |            NOTYPE|        |     |.ee_mot_mfgr_data
+ee_testcode_status_start|00070000|   B  |            NOTYPE|        |     |.ee_testcode_status
+errno               |003fa680|   S  |            OBJECT|00000004|     |.sbss
+exit                |00031e2c|   T  |              FUNC|00000054|     |.text
+fault_action_marquee_state.7326|003fb8fc|   b  |            OBJECT|00000009|     |.bss
+finite              |00033494|   T  |              FUNC|00000020|     |.text
+floor               |000334b8|   T  |              FUNC|000001c0|     |.text
+fmod                |0003367c|   T  |              FUNC|0000012c|     |.text
+frame_dummy         |000081e8|   t  |              FUNC|        |     |.text
+free                |00031e84|   T  |              FUNC|00000044|     |.text
+freq_in_create_MAF_Input|003fa928|   D  |            OBJECT|00000001|     |.data
+freq_in_read_MAF_Input|003fa92a|   D  |            OBJECT|00000001|     |.data
+g_ADCChanDefnArr    |0003ff0c|   G  |            OBJECT|00000260|     |.sdata2
+g_AM29BL162EraseInfo|003fa3bd|   S  |            OBJECT|00000009|     |.sbss
+g_AM29BL162State    |003fa3a2|   S  |            OBJECT|00000002|     |.sbss
+g_AM29BL162WriteInfo|003fa3a4|   S  |            OBJECT|00000019|     |.sbss
+g_Am29BL162DefnArr  |00041d60|   G  |            OBJECT|00000058|     |.sdata2
+g_AngleEventDefnArr |00042280|   G  |            OBJECT|0000000c|     |.sdata2
+g_AngleEventHasSync |003fa57f|   S  |            OBJECT|00000001|     |.sbss
+g_AngleSchdLateFlagObj|003f9a64|   S  |            OBJECT|00000001|     |.sbss
+g_BehaviourTouCANTransportObj|00043560|   G  |            OBJECT|00000014|     |.sdata2
+g_BehaviourUnsupportedTransportObj|00043578|   G  |            OBJECT|00000014|     |.sdata2
+g_BgndTaskCtrlBlock |003f9ea6|   S  |            OBJECT|00000028|     |.sbss
+g_BgndTaskDefn      |0003f9fb|   G  |            OBJECT|0000001c|     |.sdata2
+g_BlackBoxPropertiesObj|003fa784|   S  |            OBJECT|00000018|     |.sbss
+g_CANBufferOwner    |003fa77c|   S  |            OBJECT|00000004|     |.sbss
+g_CANProtocolRuntimeInfoForRES_CAN1|003fa6e8|   S  |            OBJECT|00000004|     |.sbss
+g_CANProtocolRuntimeInfoForRES_CAN2|003fa6ec|   S  |            OBJECT|00000004|     |.sbss
+g_CRCBlockInfo      |0003f0b0|   G  |            OBJECT|00000008|     |.sdata2
+g_ConfigCopyObj     |003f9988|   S  |            OBJECT|00000020|     |.sbss
+g_CreatedEncoderAttributesObj|003fa4a4|   S  |            OBJECT|00000012|     |.sbss
+g_DefaultTPU_ISRPtrArr|0003fa78|   G  |            OBJECT|00000080|     |.sdata2
+g_ESTDiagObjArr     |003fa420|   S  |            OBJECT|00000004|     |.sbss
+g_EncoderRuntimeDataObj|003fa264|   S  |            OBJECT|0000003f|     |.sbss
+g_EventQueueDefnArr |00041cb4|   G  |            OBJECT|00000060|     |.sdata2
+g_FgndAngleQueue    |003fa313|   S  |            OBJECT|0000000b|     |.sbss
+g_FgndAngleQueueArr |003fa31e|   S  |            OBJECT|00000044|     |.sbss
+g_FgndTimeQueue     |003fa363|   S  |            OBJECT|0000000b|     |.sbss
+g_FgndTimeQueueArr  |003fa36e|   S  |            OBJECT|00000022|     |.sbss
+g_FgndTimeTaskCtrlBlock|003f9e7e|   S  |            OBJECT|00000028|     |.sbss
+g_FgndTimeTaskDefn  |0003fa17|   G  |            OBJECT|0000001c|     |.sdata2
+g_FreqInResourceHandlerDataArr|00041ebc|   G  |            OBJECT|00000018|     |.sdata2
+g_HardwareBootstrapPointerArr|003f99b4|   S  |            OBJECT|00000004|     |.sbss
+g_IdleTaskCtrlBlock |003f9e56|   S  |            OBJECT|00000028|     |.sbss
+g_IdleTaskDefn      |0003f9df|   G  |            OBJECT|0000001c|     |.sdata2
+g_IgnDiagOnMDA29Obj |00041ed4|   G  |            OBJECT|00000006|     |.sdata2
+g_InitSPCR2_NoInterruptsNoWrap|0003f433|   G  |            OBJECT|00000002|     |.sdata2
+g_LegacyConfig      |003f99a8|   S  |            OBJECT|0000000c|     |.sbss
+g_MPIOSubSystemDefn |0003f210|   G  |            OBJECT|0000000c|     |.sdata2
+g_MotoTronProjectSeedKeyObjArr|000436dc|   G  |            OBJECT|00000180|     |.sdata2
+g_PCMMuxAddressDefnObjArr|0003f5e4|   G  |            OBJECT|00000012|     |.sdata2
+g_PCMMuxDefnObjArr  |0003f5b4|   G  |            OBJECT|00000030|     |.sdata2
+g_PCMSeqOutDiagnosticSystemDefnObj|0003f5f6|   G  |            OBJECT|00000009|     |.sdata2
+g_PSPMuxChanAlloc   |0003f224|   G  |            OBJECT|0000000a|     |.sdata2
+g_PWMResourceHandlerDataArr|0003f316|   G  |            OBJECT|0000011d|     |.sdata2
+g_ProtocolLinkListEntryObjArr|003fa7d4|   S  |            OBJECT|00000104|     |.sbss
+g_ProtocolsObjArr   |00043590|   G  |            OBJECT|000000c0|     |.sdata2
+g_QSMCM_A_SCI1RuntimeObj|003f9b08|   S  |            OBJECT|00000058|     |.sbss
+g_RegisteredNotificationsArr|003fa688|   S  |            OBJECT|00000060|     |.sbss
+g_RequestedTXTransactionCnt|003fa240|   S  |            OBJECT|00000004|     |.sbss
+g_SCIDeviceDefnObjArr|0003f8a7|   G  |            OBJECT|00000010|     |.sdata2
+g_SWISRQueue        |003fa2b3|   S  |            OBJECT|0000000b|     |.sbss
+g_SWISRQueueArr     |003fa2be|   S  |            OBJECT|00000055|     |.sbss
+g_SchedulerObjArr   |003f99e4|   S  |            OBJECT|00000027|     |.sbss
+g_SerialTXCompleteCnt|003fa23c|   S  |            OBJECT|00000004|     |.sbss
+g_SmartCraftMerCruiserProjectSeedKeyObj|0004385c|   G  |            OBJECT|00000020|     |.sdata2
+g_SmartCraftMercuryProjectSeedKeyObj|0004387c|   G  |            OBJECT|00000020|     |.sdata2
+g_TDCConfigObjArr   |003f9a30|   S  |            OBJECT|00000020|     |.sbss
+g_TPICDefnArr       |0003f568|   G  |            OBJECT|00000020|     |.sdata2
+g_TPICSObjArr       |003fa098|   S  |            OBJECT|00000060|     |.sbss
+g_TPUAInjDiagObj    |00041eda|   G  |            OBJECT|0000000c|     |.sdata2
+g_TPUAInjDiagRuntimeDataObj|003fa428|   S  |            OBJECT|00000002|     |.sbss
+g_TPUAModuleSeqOutDataObj|003f9ad8|   S  |            OBJECT|00000010|     |.sbss
+g_TPUBInjDiagObj    |00041ee6|   G  |            OBJECT|0000000c|     |.sdata2
+g_TPUBInjDiagRuntimeDataObj|003fa42a|   S  |            OBJECT|00000002|     |.sbss
+g_TPUBModuleSeqOutDataObj|003f9ae8|   S  |            OBJECT|00000010|     |.sbss
+g_TPU_ISRDataArr    |003fa180|   S  |            OBJECT|00000080|     |.sbss
+g_TPU_ISRPtrArr     |003fa100|   S  |            OBJECT|00000080|     |.sbss
+g_TaskSyncObjArr    |003f9f7c|   S  |            OBJECT|000000f0|     |.sbss
+g_TouCANAGlobalFilterMaskOwner|003fa230|   S  |            OBJECT|00000004|     |.sbss
+g_TouCANBGlobalFilterMaskOwner|003fa22c|   S  |            OBJECT|00000004|     |.sbss
+g_TouCANCbackDataObj|003fa6f0|   S  |            OBJECT|0000000c|     |.sbss
+g_TouCANDefnObjArr  |00042720|   G  |            OBJECT|00000010|     |.sdata2
+g_ZeroPulseObj      |003f9afd|   S  |            OBJECT|00000009|     |.sbss
+g_b1BgndTDC1Request |003f9a63|   S  |            OBJECT|00000001|     |.sbss
+g_b1BgndTDCRequest  |003f9a62|   S  |            OBJECT|00000001|     |.sbss
+g_b1BgndTimeDue     |003fa078|   S  |            OBJECT|00000001|     |.sbss
+g_b1FgndTDC1Request |003f9a61|   S  |            OBJECT|00000001|     |.sbss
+g_b1FgndTDCRequest  |003f9a60|   S  |            OBJECT|00000001|     |.sbss
+g_b1HadZeroSpeedEvent|003f9a87|   S  |            OBJECT|00000001|     |.sbss
+g_b1IsMidTDCEnabled |003f9a22|   S  |            OBJECT|00000001|     |.sbss
+g_b1LowSideESTDisableState|003fa425|   S  |            OBJECT|00000001|     |.sbss
+g_b1MotoTronProtocolArchiveRegistered|003fa686|   S  |            OBJECT|00000001|     |.sbss
+g_b1MotoTronSpecificArchiveRegistered|003fa8e0|   S  |            OBJECT|00000001|     |.sbss
+g_b1SupportedResourcesConfigured|003fa558|   S  |            OBJECT|00000001|     |.sbss
+g_b1TasksOtherThanIdleActive|003f9ee2|   S  |            OBJECT|00000001|     |.sbss
+g_b1TimerISREvent   |003f9a1f|   S  |            OBJECT|00000001|     |.sbss
+g_bFPAssistDenormLogged|003f9861|   S  |            OBJECT|00000001|     |.sbss
+g_bOneMinuteDue     |003fa23a|   S  |            OBJECT|00000001|     |.sbss
+g_bOneSecondDue     |003fa239|   S  |            OBJECT|00000001|     |.sbss
+g_eAngleEventIdArr  |0003f588|   G  |            OBJECT|00000010|     |.sdata2
+g_eBankedMode       |003f9afc|   S  |            OBJECT|00000001|     |.sbss
+g_eClkOutDriveStrength|0040060b|   D  |            OBJECT|00000001|     |.cals
+g_eESTDiagMode      |003fa424|   S  |            OBJECT|00000001|     |.sbss
+g_eEncoder_IgnoreDelayState|003fa2a4|   S  |            OBJECT|00000001|     |.sbss
+g_eEngClkDriveStrength|0040060a|   D  |            OBJECT|00000001|     |.cals
+g_eISRPriority      |003f9ed6|   S  |            OBJECT|00000001|     |.sbss
+g_ePostedEventArr   |003f9a0c|   S  |            OBJECT|0000000a|     |.sbss
+g_eProjectID        |00400080|   D  |            OBJECT|00000001|     |.cals
+g_eRegisteredProjectID|003f9818|   G  |            OBJECT|00000001|     |.sdata
+g_eScanRate         |0040060c|   D  |            OBJECT|00000001|     |.cals
+g_eSeqOutIDForPCMESTMuxArr|0003f5ac|   G  |            OBJECT|00000008|     |.sdata2
+g_eSeqOutIDForPCMEvenMuxArr|0003f5a4|   G  |            OBJECT|00000008|     |.sdata2
+g_eSeqOutIDForPCMOddMuxArr|0003f59c|   G  |            OBJECT|00000008|     |.sdata2
+g_eTPUMaskType      |003fa669|   S  |            OBJECT|00000001|     |.sbss
+g_eTaskPriorityArr  |0003f9d0|   G  |            OBJECT|0000000f|     |.sdata2
+g_hBgndEvent        |003f9ef0|   S  |            OBJECT|00000004|     |.sbss
+g_hFgndAngleEvent   |003f9eec|   S  |            OBJECT|00000004|     |.sbss
+g_hFgndTimeEvent    |003f9ee8|   S  |            OBJECT|00000004|     |.sbss
+g_nAllocatedSyncObj |003fa06c|   S  |            OBJECT|00000001|     |.sbss
+g_nMaxAllocatedSyncObj|003fa06d|   S  |            OBJECT|00000001|     |.sbss
+g_pBgndStackMinBytesFree|0003fa3c|   G  |            OBJECT|00000004|     |.sdata2
+g_pCPUTime_AppISR   |0003f0b8|   G  |            OBJECT|00000004|     |.sdata2
+g_pCPUTime_CAN      |0003f0c8|   G  |            OBJECT|00000004|     |.sdata2
+g_pCPUTime_MIOS     |0003f0c0|   G  |            OBJECT|00000004|     |.sdata2
+g_pCPUTime_Serial   |0003f0c4|   G  |            OBJECT|00000004|     |.sdata2
+g_pCPUTime_TPU      |0003f0bc|   G  |            OBJECT|00000004|     |.sdata2
+g_pCPUTime_TimerISR |0003f0cc|   G  |            OBJECT|00000004|     |.sdata2
+g_pCRCBlockPtr      |00008100|   R  |            OBJECT|00000004|     |.applicationcrc
+g_pCurrentTaskDefn  |003f9edc|   S  |            OBJECT|00000004|     |.sbss
+g_pEndOfInterruptStack|003f9f78|   S  |            OBJECT|00000004|     |.sbss
+g_pFgndAngleMaxQueueSize|00041d50|   G  |            OBJECT|00000004|     |.sdata2
+g_pFgndTimeMaxQueueSize|00041d54|   G  |            OBJECT|00000004|     |.sdata2
+g_pFgndTimeStackMinBytesFree|0003fa38|   G  |            OBJECT|00000004|     |.sdata2
+g_pFreqInAttribArr  |003fa40c|   S  |            OBJECT|00000004|     |.sbss
+g_pHeadOfProtocolLinkList|003fa7cc|   S  |            OBJECT|00000004|     |.sbss
+g_pHighestPriorityTaskDefn|003f9ed8|   S  |            OBJECT|00000004|     |.sbss
+g_pIdleStackMinBytesFree|0003fa34|   G  |            OBJECT|00000004|     |.sdata2
+g_pLastExceptionAddress|0003f110|   G  |            OBJECT|00000004|     |.sdata2
+g_pOneShotAttribArr |003fa47c|   S  |            OBJECT|00000004|     |.sbss
+g_pPWMAttributeArr  |003f99c0|   S  |            OBJECT|00000004|     |.sbss
+g_pRPMVectorRuntime |003fa55c|   S  |            OBJECT|00000004|     |.sbss
+g_pRelayObjArr      |003fa65c|   S  |            OBJECT|00000004|     |.sbss
+g_pSIMASKReg        |0003f0f0|   G  |            OBJECT|00000004|     |.sdata2
+g_pSIVEC            |0003f0f4|   G  |            OBJECT|00000004|     |.sdata2
+g_pSWISRCurrQueueSize|00041d4c|   G  |            OBJECT|00000004|     |.sdata2
+g_pSWISRMaxQueueSize|00041d48|   G  |            OBJECT|00000004|     |.sdata2
+g_pSchedulerLinkedListHead|003f99e0|   S  |            OBJECT|00000004|     |.sbss
+g_pSeqOutDiagSystemDefnObj|003f9a78|   S  |            OBJECT|00000004|     |.sbss
+g_pStartOfInterruptStack|003f9f74|   S  |            OBJECT|00000004|     |.sbss
+g_pSwitchArr        |003fa560|   S  |            OBJECT|00000004|     |.sbss
+g_pTPICDefn         |003f99dc|   S  |            OBJECT|00000004|     |.sbss
+g_pTPUHAL           |003fa66c|   S  |            OBJECT|00000004|     |.sbss
+g_pTailOfProtocolLinkList|003fa7d0|   S  |            OBJECT|00000004|     |.sbss
+g_pTaskDefnPriorityArr|003f9ef8|   S  |            OBJECT|0000003c|     |.sbss
+g_pTouCANBufferDataObjArr|003fa580|   S  |            OBJECT|00000080|     |.sbss
+g_pTouCANModuleObjArr|0004018c|   G  |            OBJECT|00000008|     |.sdata2
+g_pTransCountOS_RuntimeObjArr|003fa654|   S  |            OBJECT|00000004|     |.sbss
+g_pfCANKingAuthorityIncreasedCback|003fa7a4|   S  |            OBJECT|00000004|     |.sbss
+g_pfCANKingAuthorityOnRES_CAN1|003fa7a8|   S  |            OBJECT|00000004|     |.sbss
+g_pfCANKingAuthorityOnRES_CAN2|003fa7ac|   S  |            OBJECT|00000004|     |.sbss
+g_pfCANKingConnectCback|003fa7a0|   S  |            OBJECT|00000004|     |.sbss
+g_pfCANKingControlRequestCback|003fa7b0|   S  |            OBJECT|00000004|     |.sbss
+g_pfCANKingDataRequestCbackFuncPtr|003fa7b4|   S  |            OBJECT|00000004|     |.sbss
+g_pfDefaultMIOS1_ISRArr|0003f174|   G  |            OBJECT|00000080|     |.sdata2
+g_pfDiagCback       |003fa4bc|   S  |            OBJECT|00000004|     |.sbss
+g_pfDiagnosticFunctionManager|003fa7b8|   S  |            OBJECT|00000004|     |.sbss
+g_pfEndTaskMethodsArr|0003f940|   G  |            OBJECT|00000008|     |.sdata2
+g_pfEventDispatcherArr|00041d14|   G  |            OBJECT|00000034|     |.sdata2
+g_pfHBridgeCallback |003fa41c|   S  |            OBJECT|00000004|     |.sbss
+g_pfMIOS1_ISRArr    |003f9900|   S  |            OBJECT|00000080|     |.sbss
+g_pfPostISRHook     |0003f0fc|   G  |            OBJECT|00000004|     |.sdata2
+g_pfPostTaskHook    |0003f104|   G  |            OBJECT|00000004|     |.sdata2
+g_pfPreISRHook      |0003f0f8|   G  |            OBJECT|00000004|     |.sdata2
+g_pfPreTaskHook     |0003f100|   G  |            OBJECT|00000004|     |.sdata2
+g_pfReportCback     |003fa4b8|   S  |            OBJECT|00000004|     |.sbss
+g_pfSecurityForRES_CAN1|003fa7c4|   S  |            OBJECT|00000004|     |.sbss
+g_pfSecurityForRES_CAN2|003fa7c8|   S  |            OBJECT|00000004|     |.sbss
+g_pfSecurityForRES_ISO9141|003fa7c0|   S  |            OBJECT|00000004|     |.sbss
+g_pfSecurityForRES_RS485|003fa7bc|   S  |            OBJECT|00000004|     |.sbss
+g_ppSeqOutRuntimeDataObjArr|003f9a88|   S  |            OBJECT|00000050|     |.sbss
+g_pu2BgndPerfTimerValue|0003fa48|   G  |            OBJECT|00000004|     |.sdata2
+g_pu2FgndAnglePerfValue|003f9f34|   S  |            OBJECT|00000004|     |.sbss
+g_pu2FgndTimePerfTimerValue|0003fa44|   G  |            OBJECT|00000004|     |.sdata2
+g_pu2IdlePerfTimerValue|0003fa40|   G  |            OBJECT|00000004|     |.sdata2
+g_pu4FgndAngleStackMinBytesFree|003f9f38|   S  |            OBJECT|00000004|     |.sbss
+g_sBgndTaskName     |0003f9c0|   G  |            OBJECT|00000010|     |.sdata2
+g_sFgndAngleTaskName|0003f9a8|   G  |            OBJECT|00000016|     |.sdata2
+g_sFgndTimeTaskName |0003f990|   G  |            OBJECT|00000015|     |.sdata2
+g_sIdleTaskName     |0003f984|   G  |            OBJECT|0000000a|     |.sdata2
+g_sUnknownTxt       |0003f21c|   G  |            OBJECT|00000008|     |.sdata2
+g_u1BgndAngSchdLateFlags|003f9a25|   S  |            OBJECT|00000001|     |.sbss
+g_u1BgndAngSchdRequest|003f9a26|   S  |            OBJECT|00000001|     |.sbss
+g_u1BgndTimeLateMonCnt|003fa079|   S  |            OBJECT|00000001|     |.sbss
+g_u1BgndTimeSchdLateFlags|003f9a2a|   S  |            OBJECT|00000001|     |.sbss
+g_u1Bgndx10TimeLateMonCnt|003fa07b|   S  |            OBJECT|00000001|     |.sbss
+g_u1Bgndx2TimeLateMonCnt|003fa07a|   S  |            OBJECT|00000001|     |.sbss
+g_u1CANBufferArr    |003fa6fc|   S  |            OBJECT|00000080|     |.sbss
+g_u1CANKingdomAuthorityLevel|003fa79c|   S  |            OBJECT|00000001|     |.sbss
+g_u1CriticalSectionCnt|003f9ed5|   S  |            OBJECT|00000001|     |.sbss
+g_u1CurrentMidTDC   |003f9a1d|   S  |            OBJECT|00000001|     |.sbss
+g_u1EriRev          |00043575|   G  |            OBJECT|00000001|     |.sdata2
+g_u1FgndAngSchdLateFlags|003f9a23|   S  |            OBJECT|00000001|     |.sbss
+g_u1FgndAngSchdRequest|003f9a24|   S  |            OBJECT|00000001|     |.sbss
+g_u1FgndPeriodicBaseRate_ms|003fa097|   S  |            OBJECT|00000001|     |.sbss
+g_u1FgndTimerCounter|003fa080|   S  |            OBJECT|00000001|     |.sbss
+g_u1ISRNestingCnt   |003f9ed4|   S  |            OBJECT|00000001|     |.sbss
+g_u1KeyRev          |00043574|   G  |            OBJECT|00000001|     |.sdata2
+g_u1LastIssuedTDCIndex|003f9a2e|   S  |            OBJECT|00000001|     |.sbss
+g_u1MidTDCToothArr  |003f9a50|   S  |            OBJECT|00000010|     |.sbss
+g_u1MotProgRev      |00043576|   G  |            OBJECT|00000001|     |.sdata2
+g_u1Mux1Addr        |003f9a84|   S  |            OBJECT|00000001|     |.sbss
+g_u1Mux2Addr        |003f9a85|   S  |            OBJECT|00000001|     |.sbss
+g_u1NumTDCs         |003f9a2f|   S  |            OBJECT|00000001|     |.sbss
+g_u1PITCBaseRate_ms |003fa096|   S  |            OBJECT|00000001|     |.sbss
+g_u1ProtocolLinkListEntryCnt|003fa8da|   S  |            OBJECT|00000001|     |.sbss
+g_u1RTIIndex        |003fa070|   S  |            OBJECT|00000001|     |.sbss
+g_u1RunningDiagSamplePeriodIn50msTicks|0003f598|   G  |            OBJECT|00000001|     |.sdata2
+g_u1SamplePeriodExpiryCnt50msTick|003f9a86|   S  |            OBJECT|00000001|     |.sbss
+g_u1SecCount        |003fa238|   S  |            OBJECT|00000001|     |.sbss
+g_u1StallDiagSamplePeriodIn50msTicks|0003f599|   G  |            OBJECT|00000001|     |.sdata2
+g_u1TDCReferenceArr |003f9a68|   S  |            OBJECT|00000010|     |.sbss
+g_u1TPUMaskVers     |003fa668|   S  |            OBJECT|00000001|     |.sbss
+g_u1TaskKernelErrorCnt|003f9ef4|   S  |            OBJECT|00000001|     |.sbss
+g_u1TaskKernelVersion|0003f938|   G  |            OBJECT|00000001|     |.sdata2
+g_u1ToothRatio      |003fa8e5|   D  |            OBJECT|00000001|     |.data
+g_u1TouCANOverrunCnt|003fa780|   S  |            OBJECT|00000001|     |.sbss
+g_u2BgndPeriodicBaseRTIMultipleCalCopy|00400608|   D  |            OBJECT|00000002|     |.cals
+g_u2BgndTimerIndex  |003f9a2c|   S  |            OBJECT|00000002|     |.sbss
+g_u2CAMDelayRAM     |003fa2ac|   S  |            OBJECT|00000002|     |.sbss
+g_u2DummPerfValue   |0003f93a|   G  |            OBJECT|00000002|     |.sdata2
+g_u2ERIPktTimeout   |0040060e|   D  |            OBJECT|00000002|     |.cals
+g_u2Encoder_DelayBeforeSynch|003fa2a8|   S  |            OBJECT|00000002|     |.sbss
+g_u2Encoder_IgnoreTimer|003fa2a6|   S  |            OBJECT|00000002|     |.sbss
+g_u2EraseFlashValueArr|00041db8|   G  |            OBJECT|00000008|     |.sdata2
+g_u2FgndPeriodicBaseRTIMultiple|003fa094|   S  |            OBJECT|00000002|     |.sbss
+g_u2FgndPeriodicBaseRTIMultipleCalCopy|00400606|   D  |            OBJECT|00000002|     |.cals
+g_u2FixedAngSchdMask|003f9a20|   S  |            OBJECT|00000002|     |.sbss
+g_u2IMMRMaskVersion |003f9e48|   S  |            OBJECT|00000002|     |.sbss
+g_u2ISRPerfTimerSumArr|003f981c|   S  |            OBJECT|00000020|     |.sbss
+g_u2ISRPerfTimerValueArr|003f983c|   S  |            OBJECT|00000020|     |.sbss
+g_u2InterruptStackMaxBytesFree|003f9ee0|   S  |            OBJECT|00000002|     |.sbss
+g_u2KEYPktTimeout   |00400610|   D  |            OBJECT|00000002|     |.cals
+g_u2MinSeqOverflowRPM|003f9af8|   S  |            OBJECT|00000002|     |.sbss
+g_u2NoRatioOverflowRPM|003f9afa|   S  |            OBJECT|00000002|     |.sbss
+g_u2PITCBaseRate    |003fa092|   S  |            OBJECT|00000002|     |.sbss
+g_u2PITCBaseRateCalCopy|00400604|   D  |            OBJECT|00000002|     |.cals
+g_u2PassSIMASKForEachLevelArr|0003f0d0|   G  |            OBJECT|00000020|     |.sdata2
+g_u2PerfTimeStamp   |003f985e|   S  |            OBJECT|00000002|     |.sbss
+g_u2TaskKernelTimerPeriodInMicroSecs|003f9ee4|   S  |            OBJECT|00000002|     |.sbss
+g_u2ZeroPktTimeout  |0004358c|   G  |            OBJECT|00000002|     |.sdata2
+g_u4BaseBgndPeriodicTime|003fa07c|   S  |            OBJECT|00000004|     |.sbss
+g_u4BytesOnHeap     |003fa3cc|   S  |            OBJECT|00000004|     |.sbss
+g_u4DummyValue      |0003f93c|   G  |            OBJECT|00000004|     |.sdata2
+g_u4FgndPeriodicBaseRate|003fa084|   S  |            OBJECT|00000004|     |.sbss
+g_u4FgndTimer       |003fa074|   S  |            OBJECT|00000004|     |.sbss
+g_u4FreqHasDutyEnabledMask|003fa408|   S  |            OBJECT|00000004|     |.sbss
+g_u4KeyBaudRate     |00400614|   D  |            OBJECT|00000004|     |.cals
+g_u4MIOS1Allocation |003f9980|   S  |            OBJECT|00000004|     |.sbss
+g_u4MPIOAllocation  |003f9984|   S  |            OBJECT|00000004|     |.sbss
+g_u4PeakHeapBytesUsed|003fa3c8|   S  |            OBJECT|00000004|     |.sbss
+g_u4ProductID       |00400084|   D  |            OBJECT|00000004|     |.cals
+g_u4RegisteredProductID|003f9814|   G  |            OBJECT|00000004|     |.sdata
+g_u4SeqOutDiagHWCondFlags|003f9a7c|   S  |            OBJECT|00000004|     |.sbss
+g_u4SeqOutDiagSWCondFlags|003f9a80|   S  |            OBJECT|00000004|     |.sbss
+g_u4SerialTransportSysFrequency|003f9b60|   S  |            OBJECT|00000004|     |.sbss
+g_u4TPICData        |003fa0f8|   S  |            OBJECT|00000004|     |.sbss
+g_u4TouCANSystemFrequency|003fa234|   S  |            OBJECT|00000004|     |.sbss
+g_u4TouCAN_A_Usage  |003fa604|   S  |            OBJECT|00000004|     |.sbss
+g_u4TouCAN_B_Usage  |003fa600|   S  |            OBJECT|00000004|     |.sbss
+g_u8CANFrameReceiptFlag|003fa628|   S  |            OBJECT|00000008|     |.sbss
+g_u8IgnoreTeeth     |003fa2a3|   S  |            OBJECT|00000001|     |.sbss
+g_uDiagCbackUserData|003fa4c4|   S  |            OBJECT|00000004|     |.sbss
+g_uESTDiagSystemHWCreateStatus|003fa426|   S  |            OBJECT|00000002|     |.sbss
+g_uFPAssistNest     |003f9860|   S  |            OBJECT|00000001|     |.sbss
+g_uHBridgeResUserData|003fa418|   S  |            OBJECT|00000004|     |.sbss
+g_uLastIndex        |003f985c|   S  |            OBJECT|00000001|     |.sbss
+g_uNextPostedEventInIndex|003f9a16|   S  |            OBJECT|00000001|     |.sbss
+g_uNextPostedEventOutIndex|003f9a17|   S  |            OBJECT|00000001|     |.sbss
+g_uNumFreqInsSupported|003fa410|   S  |            OBJECT|00000001|     |.sbss
+g_uNumOneshotsSupported|003fa480|   S  |            OBJECT|00000001|     |.sbss
+g_uNumPWMsSupported |003f99c4|   S  |            OBJECT|00000001|     |.sbss
+g_uNumRelaysSupported|003fa660|   S  |            OBJECT|00000001|     |.sbss
+g_uNumSwitchesSupported|003fa564|   S  |            OBJECT|00000001|     |.sbss
+g_uPostedEventCnt   |003f9a18|   S  |            OBJECT|00000001|     |.sbss
+g_uReadyListMask    |003f9e54|   S  |            OBJECT|00000002|     |.sbss
+g_uReportCbackUserData|003fa4c0|   S  |            OBJECT|00000004|     |.sbss
+g_uStackEntryTagArr |0003f948|   G  |            OBJECT|0000003c|     |.sdata2
+g_uTransCountOS_NumSupported|003fa658|   S  |            OBJECT|00000001|     |.sbss
+heap_ptr.1476       |003fbe24|   b  |            OBJECT|00000004|     |.bss
+idleCpuSeenNonZero  |003fb1aa|   B  |            OBJECT|00000001|     |.bss
+impure_data         |003fa948|   d  |            OBJECT|00000428|     |.data
+inCheckApplicationStatus|003fb1ab|   B  |            OBJECT|00000001|     |.bss
+inStepApplicationStartup|003fb1a8|   B  |            OBJECT|00000001|     |.bss
+ldexp               |00032af8|   T  |              FUNC|000000c8|     |.text
+main                |0000a4d4|   T  |              FUNC|00000064|     |.text
+malloc              |00031ecc|   T  |              FUNC|00000044|     |.text
+masks               |0003eda4|   t  |            OBJECT|00000010|     |.text
+masks               |0003ece4|   t  |            OBJECT|00000010|     |.text
+matherr             |00033b5c|   T  |              FUNC|00000008|     |.text
+memcmp              |000327d4|   T  |              FUNC|000000d4|     |.text
+memcpy              |000328a8|   T  |              FUNC|00000118|     |.text
+memset              |000329c0|   T  |              FUNC|0000012c|     |.text
+object.3558         |003fb184|   b  |            OBJECT|00000018|     |.bss
+oneshot_create_Urea_Injector|003fa92d|   D  |            OBJECT|00000001|     |.data
+pCmdAm29BL162_2AA   |00041d5c|   G  |            OBJECT|00000004|     |.sdata2
+pCmdAm29BL162_555   |00041d58|   G  |            OBJECT|00000004|     |.sdata2
+prevApplicationStatus|003fb1a7|   B  |            OBJECT|00000001|     |.bss
+prevOSInternalErrorCnt|003fb1a6|   B  |            OBJECT|00000001|     |.bss
+protocol_register_CAN_1|003fa93f|   D  |            OBJECT|00000001|     |.data
+pwm_create_EST6_PWMOutput|003fa934|   D  |            OBJECT|00000001|     |.data
+pwm_create_INJ11D_PWMOutput|003fa911|   D  |            OBJECT|00000001|     |.data
+pwm_create_INJ5D_PWMOutput|003fa922|   D  |            OBJECT|00000001|     |.data
+pwm_create_IPT_EPO_PWMOutput|003fa915|   D  |            OBJECT|00000001|     |.data
+pwm_set_EST6_PWMOutput|003fbdf5|   B  |            OBJECT|00000001|     |.bss
+pwm_set_INJ11D_PWMOutput|003fbdf8|   B  |            OBJECT|00000001|     |.bss
+pwm_set_INJ5D_PWMOutput|003fbdf6|   B  |            OBJECT|00000001|     |.bss
+pwm_set_IPT_EPO_PWMOutput|003fbdfa|   B  |            OBJECT|00000001|     |.bss
+queue_tail.7844     |003fbdd0|   b  |            OBJECT|00000004|     |.bss
+queue_tail.7866     |003fbde0|   b  |            OBJECT|00000004|     |.bss
+queue_tail.7886     |003fbdc8|   b  |            OBJECT|00000004|     |.bss
+queue_tail.7905     |003fbddc|   b  |            OBJECT|00000004|     |.bss
+queue_tail.7955     |003fbdd4|   b  |            OBJECT|00000004|     |.bss
+queue_tail.7985     |003fbde4|   b  |            OBJECT|00000004|     |.bss
+queue_tail.8002     |003fbdcc|   b  |            OBJECT|00000004|     |.bss
+queue_tail.8022     |003fbdd8|   b  |            OBJECT|00000004|     |.bss
+queue_tail.8073     |003fbdec|   b  |            OBJECT|00000004|     |.bss
+queue_tail.8094     |003fbdf0|   b  |            OBJECT|00000004|     |.bss
+queue_tail.8203     |003fbde8|   b  |            OBJECT|00000004|     |.bss
+resource_allocation |003fa933|   D  |            OBJECT|00000001|     |.data
+rtInf               |003fbb78|   B  |            OBJECT|00000004|     |.bss
+rtInfF              |003fbb74|   B  |            OBJECT|00000004|     |.bss
+rtIsInf             |0002c680|   T  |              FUNC|0000002c|     |.text
+rtIsNaN             |0002c6ac|   T  |              FUNC|00000014|     |.text
+rtIsNaNF            |0002c6c0|   T  |              FUNC|00000014|     |.text
+rtMinusInf          |003fbb6c|   B  |            OBJECT|00000004|     |.bss
+rtMinusInfF         |003fbb68|   B  |            OBJECT|00000004|     |.bss
+rtNaN               |003fbb64|   B  |            OBJECT|00000004|     |.bss
+rtNaNF              |003fbb70|   B  |            OBJECT|00000004|     |.bss
+rt_InitInfAndNaN    |0002c61c|   T  |              FUNC|00000064|     |.text
+s_CANBusParamsFor40MHzArr|00040194|   G  |            OBJECT|0000002d|     |.sdata2
+s_CANBusParamsFor56MHzArr|000401c1|   G  |            OBJECT|0000002d|     |.sdata2
+s_CamInputSelectStateObj|003f99b9|   S  |            OBJECT|00000001|     |.sbss
+s_CamToothSyncEncMethods|00040210|   G  |            OBJECT|00000020|     |.sdata2
+s_CnkInputSelectStateObj|003f99b8|   S  |            OBJECT|00000001|     |.sbss
+s_DestroyTaskStackArr|003f9f3c|   S  |            OBJECT|00000038|     |.sbss
+s_EndOfQueueEntry   |0003ff0a|   G  |            OBJECT|00000002|     |.sdata2
+s_HyundaiEncMethods |00040230|   G  |            OBJECT|00000020|     |.sdata2
+s_InitUnusedQueueEntry|0003ff08|   G  |            OBJECT|00000002|     |.sdata2
+s_RedundantDualEncMethods|00040250|   G  |            OBJECT|00000020|     |.sdata2
+s_StandardEncMethods|000401f0|   G  |            OBJECT|00000020|     |.sdata2
+s_TPUHALObj         |0003f22e|   G  |            OBJECT|00000008|     |.sdata2
+s_VarCamEncMethods  |00040270|   G  |            OBJECT|00000020|     |.sdata2
+s_b1InUseSemaphore.6222|003fb19e|   b  |            OBJECT|00000001|     |.bss
+s_bDetectedZeroSpeed.8782|003fb1a2|   b  |            OBJECT|00000001|     |.bss
+s_bExecutionStarvationCounting|003fa090|   S  |            OBJECT|00000001|     |.sbss
+s_bProcessActive.5443|003fb1a5|   b  |            OBJECT|00000001|     |.bss
+s_bProcessActive.5498|003fb1a4|   b  |            OBJECT|00000001|     |.bss
+s_eAlterMethodArr   |003fa630|   S  |            OBJECT|0000000d|     |.sbss
+s_eFgndAngleEventPriority|003fa362|   S  |            OBJECT|00000001|     |.sbss
+s_pTaskKernelFgndTaskCreateObj|003f9ed0|   S  |            OBJECT|00000004|     |.sbss
+s_pVarCamRuntimeDataArr|003fa568|   S  |            OBJECT|00000004|     |.sbss
+s_pfPrePost_QSPIA   |003f99c8|   S  |            OBJECT|00000004|     |.sbss
+s_s4COPStarvationResetTime|003fa08c|   S  |            OBJECT|00000004|     |.sbss
+s_s4COPStarvationTimer|003fa088|   S  |            OBJECT|00000004|     |.sbss
+s_sRedundantEncoderTrackingCnt|003fa2ae|   S  |            OBJECT|00000001|     |.sbss
+s_u1CANISRLevel     |003fb1a1|   B  |            OBJECT|00000001|     |.bss
+s_u1LoByteOfISRToothConfig|003fa2af|   S  |            OBJECT|00000001|     |.sbss
+s_u1NumSupportedVarCams|003fa56c|   S  |            OBJECT|00000001|     |.sbss
+s_u1PrevTooth.8737  |003fb1a3|   b  |            OBJECT|00000001|     |.bss
+s_u1TPUISRLvl       |003fa0fc|   S  |            OBJECT|00000001|     |.sbss
+s_u2ActiveERIPktTimeout|003fa8de|   S  |            OBJECT|00000002|     |.sbss
+s_u2ActiveKEYPktTimeout|003fa8dc|   S  |            OBJECT|00000002|     |.sbss
+s_u2BaseBgndProcessPeriod.8933|003fb19c|   b  |            OBJECT|00000002|     |.bss
+s_u2EncErr_TCR2     |003fa2b0|   S  |            OBJECT|00000002|     |.sbss
+s_u2RateInMilliSecs |003fa8d8|   S  |            OBJECT|00000002|     |.sbss
+s_uRegisterVarCamCnt|003fa2b2|   S  |            OBJECT|00000001|     |.sbss
+sbrk                |000351e8|   T  |              FUNC|00000074|     |.text
+scalbn              |00032bc4|   T  |              FUNC|000001d8|     |.text
+tmp_word2.5744      |003fbb50|   b  |            OBJECT|00000004|     |.bss
+u1NM25C160ReadOpcode|0003f8bb|   G  |            OBJECT|00000001|     |.sdata2
+u1NM25C160ReadStatusOpcode|0003f8b9|   G  |            OBJECT|00000001|     |.sdata2
+u1NM25C160WriteDisableOpcode|0003f8b8|   G  |            OBJECT|00000001|     |.sdata2
+u1NM25C160WriteEnableOpcode|0003f8b7|   G  |            OBJECT|00000001|     |.sdata2
+u1NM25C160WriteOpcode|0003f8bc|   G  |            OBJECT|00000001|     |.sdata2
+u1NM25C160WriteStatusOpcode|0003f8ba|   G  |            OBJECT|00000001|     |.sdata2
+u8QNaN              |0003f108|   G  |            OBJECT|00000008|     |.sdata2
+uZeroADC            |003fa684|   S  |            OBJECT|00000002|     |.sbss
+wait_for_COP        |00008ba0|   t  |            NOTYPE|        |     |.text

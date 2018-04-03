@@ -1,0 +1,3 @@
+EXPORTS
+  GetProjectData@0
+  GetProjectData=GetProjectData@0

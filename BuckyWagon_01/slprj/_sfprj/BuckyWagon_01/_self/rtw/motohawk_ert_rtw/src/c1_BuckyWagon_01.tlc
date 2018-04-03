@@ -1,0 +1,53 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   7 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c1_BuckyWagon_01"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "is_c1_BuckyWagon_01"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "is_active_ButtonDebounce"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "is_ButtonDebounce"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "is_active_ReverseLogic"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "is_ReverseLogic"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "timer"\
+      SFName       ""\
+      Path         ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

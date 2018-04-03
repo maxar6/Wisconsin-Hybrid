@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Application>
+	<GUID>951679d1-661d-497d-a4-11-04-59-f9-a7-20</GUID>
+	<Name>cx06_MA</Name>
+	<Author>Owner</Author>
+	<Copyright>2017 Woodward.</Copyright>
+	<CreateDate>08-Mar-2017</CreateDate>
+	<MemoryLayout>DEV</MemoryLayout>
+	<Module>ClassicModule-MPC555</Module>
+	<Memory/>
+	<Types/>
+	<ToolInterface>
+		<KeySuite>
+			<CAN ref="CAN_1">
+				<CityID>11</CityID>
+			</CAN>
+		</KeySuite>
+		<VarDecs>
+			<TableDatabase>
+				<MaxTableSize>65535</MaxTableSize>
+				<Table0Revision>9</Table0Revision>
+				<HeaderFile>CommonInclude.h</HeaderFile>
+				<HeaderFile>cx06_MA.h</HeaderFile>
+				<Include name="*" location="1,0"/>
+			</TableDatabase>
+			<ProjectID>6</ProjectID>
+			<ProductID>1</ProductID>
+			<SwIdTxt>cx06_MA_181</SwIdTxt>
+			<SwRevisionTxt>cx06_MA_181</SwRevisionTxt>
+			<CalIdTxt>cx06_MA_181_000</CalIdTxt>
+		</VarDecs>
+		<DatabaseBuild>
+			<Toolchain>
+				<Vendor>gcc-win32-pe</Vendor>
+				<Product>win32-pe</Product>
+				<Version>4.4.0</Version>
+				<InstallDirectory>C:\Program Files (x86)\Woodward\DevelopmentTools\Toolchains\GCC\win32-pe\4_4_0\</InstallDirectory>
+			</Toolchain>
+		</DatabaseBuild>
+		<Command>
+			<Description>Copy cx06_MA_181.dll and cx06_MA_181.srz</Description>
+			<Order>99</Order>
+			<Execute>@if exist C:\ECUFiles\TDBDLL\\*.* copy /Y .\TDB\cx06_MA_181.dll C:\ECUFiles\TDBDLL\ &gt; NUL</Execute>
+			<Execute>@if exist C:\ECUFiles\Programs\\*.* copy /Y .\Target\cx06_MA_181.srz C:\ECUFiles\Programs\ &gt; NUL</Execute>
+		</Command>
+	</ToolInterface>
+	<Build>
+		<Toolchain>
+			<Vendor>gcc-powerpc-eabi</Vendor>
+			<Product>powerpc-eabi</Product>
+			<Version>4.4.0</Version>
+			<ArchiveExtension>a</ArchiveExtension>
+			<InstallDirectory>C:\Program Files (x86)\Woodward\DevelopmentTools\Toolchains\GCC\powerpc-eabi\4_4_0\</InstallDirectory>
+		</Toolchain>
+		<Directory>.</Directory>
+		<Target>
+			<Directory>.\Target</Directory>
+		</Target>
+		<Source>
+			<File>AppMonitor.c</File>
+			<File>Application.c</File>
+			<File>ApplicationSecurity.c</File>
+			<File>CANReceiveDispatcher.c</File>
+			<File>FaultManager.c</File>
+			<File>MotoHawk_CAN.c</File>
+			<File>MotoHawk_DataStores.c</File>
+			<File>MotoHawk_IO.c</File>
+			<File>TableLookupFunctions.c</File>
+			<File>Trigger_BGND_BASE_PERIODIC_3106p1123.c</File>
+			<File>Trigger_CAN_RX_BusCAN_1_Buf1.c</File>
+			<File>Trigger_CAN_RX_BusCAN_2_Buf1.c</File>
+			<File>Trigger_FGND_RTI_PERIODIC_3103p1123.c</File>
+			<File>Trigger_FGND_RTI_PERIODIC_3104p1123.c</File>
+			<File>Trigger_FGND_RTI_PERIODIC_3105p1123.c</File>
+			<File>Trigger_FGND_RTI_PERIODIC_3107p1123.c</File>
+			<File>VarDecs.c</File>
+			<File>cx06_MA_MainState.c</File>
+			<File>cx06_MA_Outputs.c</File>
+			<File>cx06_MA_Strategy.c</File>
+			<File>cx06_MA_data.c</File>
+			<File>rt_nonfinite.c</File>
+			<File>cx06_MA.c</File>
+		</Source>
+		<Header>
+			<Directory>.</Directory>
+		</Header>
+		<Header>
+			<Directory>C:\ProgramData\MotoHawk\2010a_sp1_49\Toolchains\7_10_0\rtw_lib_single\API</Directory>
+			<Directory>C:\ProgramData\MotoHawk\2010a_sp1_49\Toolchains\7_10_0\rtw_lib_single\API\MPC555</Directory>
+		</Header>
+		<Library>
+			<Directory>C:\Program Files (x86)\Woodward\MCS\MotoHawk\2010a_sp1.49\MotoCoder\..\ControlCoreClassic\Framework\MultiTask\Archives\gcc-powerpc-eabi\4_4_0</Directory>
+			<File>PCM</File>
+		</Library>
+		<Command>
+			<Execute>@copy "LinkerDefinition_DEV.xml" "LinkerDefinition.xml" &gt; NUL</Execute>
+			<Execute>@copy "cx06_MA_DEV.ld" "cx06_MA.ld" &gt; NUL</Execute>
+			<Order>0</Order>
+		</Command>
+		<Command>
+			<Description>Call MotoConvert</Description>
+			<Execute>@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\cx06_MA.map -srec=.\Target\cx06_MA.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=cx06_MA.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x0006FFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\cx06_MA_181.srz</Execute>
+			<Order>55</Order>
+		</Command>
+		<Compiler>
+			<Define name="REAL_T" value="float"/>
+			<Define name="TIME_T" value="float"/>
+			<Define name="DISALLOW_TDB_DEFINES" value="1"/>
+			<Define name="RES_NONE" value="-1"/>
+			<GenerateListFiles>false</GenerateListFiles>
+		</Compiler>
+		<BuildStats>
+			<Symbol>cx06_MA_M</Symbol>
+			<Symbol>cx06_MA_B</Symbol>
+			<Symbol>cx06_MA_DWork</Symbol>
+			<Symbol>cx06_MA_PrevZC</Symbol>
+			<Symbol>cx06_MA_M_</Symbol>
+			<Symbol>VolatileWork</Symbol>
+			<Symbol>ConstantWork</Symbol>
+			<Symbol>NonVolatileWork</Symbol>
+			<Symbol>NonVolatileDefault</Symbol>
+			<Symbol>FgndTimeStack</Symbol>
+			<Symbol>FgndAngleStack</Symbol>
+			<Symbol>BgndStack</Symbol>
+			<Symbol>IdleStack</Symbol>
+			<Symbol>InterruptStack</Symbol>
+			<Symbol>Heap</Symbol>
+			<Symbol>Stack</Symbol>
+			<Symbol>cx06_MA_Foreground</Symbol>
+		</BuildStats>
+		<Command>
+			<Order>-10000</Order>
+			<Execute>@if exist .\rtwtypes.h del /Q /F .\rtwtypes.h &gt; NUL</Execute>
+		</Command>
+	</Build>
+	<Signature>e89a7562-a9ba-40bd-84-b6-a7-17-c4-26-60</Signature>
+</Application>

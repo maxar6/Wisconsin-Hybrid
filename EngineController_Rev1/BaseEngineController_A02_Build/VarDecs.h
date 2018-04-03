@@ -125,233 +125,205 @@ typedef enum {
 
 /* Name: VarDecEnum_21 ClassID:ENUMDEC EnumDflt:"Unknown" */
 typedef enum {
-  VarDecEnum_21_0 = 0,                 /* EnumTxt:"Enable" */
-  VarDecEnum_21_1 = 1,                 /* EnumTxt:"Cut" */
+  VarDecEnum_21_0 = 0,                 /* EnumTxt:"Rate Limiter" */
+  VarDecEnum_21_1 = 1,                 /* EnumTxt:"Low Pass" */
+  VarDecEnum_21_2 = 2,                 /* EnumTxt:"Moving Average" */
 } VarDecEnum_21;
 
 /* Name: VarDecEnum_22 ClassID:ENUMDEC EnumDflt:"Unknown" */
 typedef enum {
-  VarDecEnum_22_0 = 0,                 /* EnumTxt:"Cut Spark" */
-  VarDecEnum_22_1 = 1,                 /* EnumTxt:"Cut Fuel" */
-  VarDecEnum_22_2 = 2,                 /* EnumTxt:"Cut Spark and Fuel" */
+  VarDecEnum_22_0 = 0,                 /* EnumTxt:"Enable" */
+  VarDecEnum_22_1 = 1,                 /* EnumTxt:"Cut" */
 } VarDecEnum_22;
 
 /* Name: VarDecEnum_23 ClassID:ENUMDEC EnumDflt:"Unknown" */
 typedef enum {
-  VarDecEnum_23_0 = 0,                 /* EnumTxt:"Disabled" */
-  VarDecEnum_23_1 = 1,                 /* EnumTxt:"Soft" */
-  VarDecEnum_23_2 = 2,                 /* EnumTxt:"Medium" */
-  VarDecEnum_23_3 = 3,                 /* EnumTxt:"Hard" */
+  VarDecEnum_23_0 = 0,                 /* EnumTxt:"Cut Spark" */
+  VarDecEnum_23_1 = 1,                 /* EnumTxt:"Cut Fuel" */
+  VarDecEnum_23_2 = 2,                 /* EnumTxt:"Cut Spark and Fuel" */
 } VarDecEnum_23;
 
 /* Name: VarDecEnum_24 ClassID:ENUMDEC EnumDflt:"Unknown" */
 typedef enum {
-  VarDecEnum_24_0 = 0,                 /* EnumTxt:"Transient" */
-  VarDecEnum_24_1 = 1,                 /* EnumTxt:"Steady" */
+  VarDecEnum_24_0 = 0,                 /* EnumTxt:"Disabled" */
+  VarDecEnum_24_1 = 1,                 /* EnumTxt:"Soft" */
+  VarDecEnum_24_2 = 2,                 /* EnumTxt:"Medium" */
+  VarDecEnum_24_3 = 3,                 /* EnumTxt:"Hard" */
 } VarDecEnum_24;
 
 /* Name: VarDecEnum_25 ClassID:ENUMDEC EnumDflt:"Unknown" */
 typedef enum {
-  VarDecEnum_25_0 = 0,                 /* EnumTxt:"-" */
-  VarDecEnum_25_1 = 1,                 /* EnumTxt:"Stall" */
-  VarDecEnum_25_2 = 2,                 /* EnumTxt:"Crank" */
-  VarDecEnum_25_3 = 3,                 /* EnumTxt:"Run" */
+  VarDecEnum_25_0 = 0,                 /* EnumTxt:"Transient" */
+  VarDecEnum_25_1 = 1,                 /* EnumTxt:"Steady" */
 } VarDecEnum_25;
 
-/* Name: VarDecEnum_27 ClassID:ENUMDEC EnumDflt:"Unknown" */
+/* Name: VarDecEnum_26 ClassID:ENUMDEC EnumDflt:"Unknown" */
 typedef enum {
-  VarDecEnum_27_0 = 0,                 /* EnumTxt:"No Fault" */
-  VarDecEnum_27_1 = 1,                 /* EnumTxt:"Crank Sync Fault" */
-  VarDecEnum_27_2 = 2,                 /* EnumTxt:"Reverse Rotation Fault" */
-  VarDecEnum_27_3 = 3,                 /* EnumTxt:"No Crank Edges Fault" */
-  VarDecEnum_27_4 = 4,                 /* EnumTxt:"No CAM edges fault" */
-  VarDecEnum_27_5 = 5,                 /* EnumTxt:"Cam Sync Fault" */
-} VarDecEnum_27;
+  VarDecEnum_26_0 = 0,                 /* EnumTxt:"-" */
+  VarDecEnum_26_1 = 1,                 /* EnumTxt:"Stall" */
+  VarDecEnum_26_2 = 2,                 /* EnumTxt:"Crank" */
+  VarDecEnum_26_3 = 3,                 /* EnumTxt:"Run" */
+} VarDecEnum_26;
 
 /* Name: VarDecEnum_28 ClassID:ENUMDEC EnumDflt:"Unknown" */
 typedef enum {
-  VarDecEnum_28_0 = 0,                 /* EnumTxt:"zero" */
-  VarDecEnum_28_1 = 1,                 /* EnumTxt:"ZERO_SPEED" */
-  VarDecEnum_28_2 = 2,                 /* EnumTxt:"POSN_UNKNOWN" */
-  VarDecEnum_28_3 = 3,                 /* EnumTxt:"ENC_SYNC_CAM_UNKNOWN" */
-  VarDecEnum_28_4 = 4,                 /* EnumTxt:"ENC_SYNC_CAM_SYNC" */
+  VarDecEnum_28_0 = 0,                 /* EnumTxt:"No Fault" */
+  VarDecEnum_28_1 = 1,                 /* EnumTxt:"Crank Sync Fault" */
+  VarDecEnum_28_2 = 2,                 /* EnumTxt:"Reverse Rotation Fault" */
+  VarDecEnum_28_3 = 3,                 /* EnumTxt:"No Crank Edges Fault" */
+  VarDecEnum_28_4 = 4,                 /* EnumTxt:"No CAM edges fault" */
+  VarDecEnum_28_5 = 5,                 /* EnumTxt:"Cam Sync Fault" */
 } VarDecEnum_28;
 
 /* Name: VarDecEnum_29 ClassID:ENUMDEC EnumDflt:"Unknown" */
 typedef enum {
-  VarDecEnum_29_0 = 0,                 /* EnumTxt:"Rising Edge" */
-  VarDecEnum_29_1 = 1,                 /* EnumTxt:"Falling Edge" */
+  VarDecEnum_29_0 = 0,                 /* EnumTxt:"zero" */
+  VarDecEnum_29_1 = 1,                 /* EnumTxt:"ZERO_SPEED" */
+  VarDecEnum_29_2 = 2,                 /* EnumTxt:"POSN_UNKNOWN" */
+  VarDecEnum_29_3 = 3,                 /* EnumTxt:"ENC_SYNC_CAM_UNKNOWN" */
+  VarDecEnum_29_4 = 4,                 /* EnumTxt:"ENC_SYNC_CAM_SYNC" */
 } VarDecEnum_29;
 
 /* Name: VarDecEnum_30 ClassID:ENUMDEC EnumDflt:"Unknown" */
 typedef enum {
-  VarDecEnum_30_0 = 0,                 /* EnumTxt:"Weak Pullup" */
-  VarDecEnum_30_1 = 1,                 /* EnumTxt:"Strong Pullup" */
+  VarDecEnum_30_0 = 0,                 /* EnumTxt:"Rising Edge" */
+  VarDecEnum_30_1 = 1,                 /* EnumTxt:"Falling Edge" */
 } VarDecEnum_30;
 
 /* Name: VarDecEnum_31 ClassID:ENUMDEC EnumDflt:"Unknown" */
 typedef enum {
-  VarDecEnum_31__1 = -1,               /* EnumTxt:"(None)" */
-  VarDecEnum_31_36 = 36,               /* EnumTxt:"EST 1" */
-  VarDecEnum_31_37 = 37,               /* EnumTxt:"EST 2" */
-  VarDecEnum_31_38 = 38,               /* EnumTxt:"EST 3" */
-  VarDecEnum_31_39 = 39,               /* EnumTxt:"EST 4" */
-  VarDecEnum_31_40 = 40,               /* EnumTxt:"EST 5" */
-  VarDecEnum_31_41 = 41,               /* EnumTxt:"EST 6" */
-  VarDecEnum_31_42 = 42,               /* EnumTxt:"EST 7" */
-  VarDecEnum_31_43 = 43,               /* EnumTxt:"EST 8" */
+  VarDecEnum_31_0 = 0,                 /* EnumTxt:"Weak Pullup" */
+  VarDecEnum_31_1 = 1,                 /* EnumTxt:"Strong Pullup" */
 } VarDecEnum_31;
 
 /* Name: VarDecEnum_32 ClassID:ENUMDEC EnumDflt:"Unknown" */
 typedef enum {
-  VarDecEnum_32_0 = 0,                 /* EnumTxt:"Standard (Coil per cylinder)" */
-  VarDecEnum_32_1 = 1,                 /* EnumTxt:"Banked (Fire on both phases until CAM sync)" */
-  VarDecEnum_32_2 = 2,                 /* EnumTxt:"Batch (Wasted spark)" */
-  VarDecEnum_32_3 = 3,                 /* EnumTxt:"Muxed (Distributed)" */
+  VarDecEnum_32__1 = -1,               /* EnumTxt:"(None)" */
+  VarDecEnum_32_36 = 36,               /* EnumTxt:"EST 1" */
+  VarDecEnum_32_37 = 37,               /* EnumTxt:"EST 2" */
+  VarDecEnum_32_38 = 38,               /* EnumTxt:"EST 3" */
+  VarDecEnum_32_39 = 39,               /* EnumTxt:"EST 4" */
+  VarDecEnum_32_40 = 40,               /* EnumTxt:"EST 5" */
+  VarDecEnum_32_41 = 41,               /* EnumTxt:"EST 6" */
+  VarDecEnum_32_42 = 42,               /* EnumTxt:"EST 7" */
+  VarDecEnum_32_43 = 43,               /* EnumTxt:"EST 8" */
 } VarDecEnum_32;
 
 /* Name: VarDecEnum_33 ClassID:ENUMDEC EnumDflt:"Unknown" */
 typedef enum {
-  VarDecEnum_33__1 = -1,               /* EnumTxt:"(None)" */
-  VarDecEnum_33_12 = 12,               /* EnumTxt:"FINJ1" */
-  VarDecEnum_33_13 = 13,               /* EnumTxt:"FINJ2" */
-  VarDecEnum_33_14 = 14,               /* EnumTxt:"FINJ3" */
-  VarDecEnum_33_15 = 15,               /* EnumTxt:"FINJ4" */
-  VarDecEnum_33_16 = 16,               /* EnumTxt:"FINJ5" */
-  VarDecEnum_33_17 = 17,               /* EnumTxt:"FINJ6" */
-  VarDecEnum_33_18 = 18,               /* EnumTxt:"AINJ1" */
-  VarDecEnum_33_19 = 19,               /* EnumTxt:"AINJ2" */
-  VarDecEnum_33_20 = 20,               /* EnumTxt:"AINJ3" */
-  VarDecEnum_33_21 = 21,               /* EnumTxt:"AINJ4" */
-  VarDecEnum_33_22 = 22,               /* EnumTxt:"AINJ5" */
-  VarDecEnum_33_23 = 23,               /* EnumTxt:"AINJ6" */
+  VarDecEnum_33_0 = 0,                 /* EnumTxt:"Standard (Coil per cylinder)" */
+  VarDecEnum_33_1 = 1,                 /* EnumTxt:"Banked (Fire on both phases until CAM sync)" */
+  VarDecEnum_33_2 = 2,                 /* EnumTxt:"Batch (Wasted spark)" */
+  VarDecEnum_33_3 = 3,                 /* EnumTxt:"Muxed (Distributed)" */
 } VarDecEnum_33;
 
 /* Name: VarDecEnum_34 ClassID:ENUMDEC EnumDflt:"Unknown" */
 typedef enum {
-  VarDecEnum_34_0 = 0,                 /* EnumTxt:"Standard (Injector per cylinder)" */
-  VarDecEnum_34_1 = 1,                 /* EnumTxt:"Batch (Fire half fuel on half of the injectors every rev)" */
-  VarDecEnum_34_2 = 2,                 /* EnumTxt:" Wasted (Fire half fuel on all injectors every rev)" */
+  VarDecEnum_34__1 = -1,               /* EnumTxt:"(None)" */
+  VarDecEnum_34_12 = 12,               /* EnumTxt:"FINJ1" */
+  VarDecEnum_34_13 = 13,               /* EnumTxt:"FINJ2" */
+  VarDecEnum_34_14 = 14,               /* EnumTxt:"FINJ3" */
+  VarDecEnum_34_15 = 15,               /* EnumTxt:"FINJ4" */
+  VarDecEnum_34_16 = 16,               /* EnumTxt:"FINJ5" */
+  VarDecEnum_34_17 = 17,               /* EnumTxt:"FINJ6" */
+  VarDecEnum_34_18 = 18,               /* EnumTxt:"AINJ1" */
+  VarDecEnum_34_19 = 19,               /* EnumTxt:"AINJ2" */
+  VarDecEnum_34_20 = 20,               /* EnumTxt:"AINJ3" */
+  VarDecEnum_34_21 = 21,               /* EnumTxt:"AINJ4" */
+  VarDecEnum_34_22 = 22,               /* EnumTxt:"AINJ5" */
+  VarDecEnum_34_23 = 23,               /* EnumTxt:"AINJ6" */
 } VarDecEnum_34;
 
 /* Name: VarDecEnum_35 ClassID:ENUMDEC EnumDflt:"Unknown" */
 typedef enum {
-  VarDecEnum_35_0 = 0,                 /* EnumTxt:"Standard" */
-  VarDecEnum_35_1 = 1,                 /* EnumTxt:"Transient" */
+  VarDecEnum_35_0 = 0,                 /* EnumTxt:"Standard (Injector per cylinder)" */
+  VarDecEnum_35_1 = 1,                 /* EnumTxt:"Batch (Fire half fuel on half of the injectors every rev)" */
+  VarDecEnum_35_2 = 2,                 /* EnumTxt:" Wasted (Fire half fuel on all injectors every rev)" */
 } VarDecEnum_35;
 
-/* Name: VarDecEnum_37 ClassID:ENUMDEC EnumDflt:"Unknown" */
+/* Name: VarDecEnum_36 ClassID:ENUMDEC EnumDflt:"Unknown" */
 typedef enum {
-  VarDecEnum_37_0 = 0,                 /* EnumTxt:"CutThrottle" */
-  VarDecEnum_37_1 = 1,                 /* EnumTxt:"DelayedEngineShutdown" */
-  VarDecEnum_37_2 = 2,                 /* EnumTxt:"DisableO2Ctrl" */
-  VarDecEnum_37_3 = 3,                 /* EnumTxt:"EngineShutdown" */
-  VarDecEnum_37_4 = 4,                 /* EnumTxt:"HardRevLimit" */
-  VarDecEnum_37_5 = 5,                 /* EnumTxt:"MediumRevLimit" */
-  VarDecEnum_37_6 = 6,                 /* EnumTxt:"SoftRevLimit" */
-} VarDecEnum_37;
+  VarDecEnum_36_0 = 0,                 /* EnumTxt:"Standard" */
+  VarDecEnum_36_1 = 1,                 /* EnumTxt:"Transient" */
+} VarDecEnum_36;
 
 /* Name: VarDecEnum_38 ClassID:ENUMDEC EnumDflt:"Unknown" */
 typedef enum {
-  VarDecEnum_38_0 = 0,                 /* EnumTxt:"-" */
+  VarDecEnum_38_0 = 0,                 /* EnumTxt:"CutThrottle" */
+  VarDecEnum_38_1 = 1,                 /* EnumTxt:"DelayedEngineShutdown" */
+  VarDecEnum_38_2 = 2,                 /* EnumTxt:"DisableO2Ctrl" */
+  VarDecEnum_38_3 = 3,                 /* EnumTxt:"EngineShutdown" */
+  VarDecEnum_38_4 = 4,                 /* EnumTxt:"HardRevLimit" */
+  VarDecEnum_38_5 = 5,                 /* EnumTxt:"MediumRevLimit" */
+  VarDecEnum_38_6 = 6,                 /* EnumTxt:"SoftRevLimit" */
 } VarDecEnum_38;
 
 /* Name: VarDecEnum_39 ClassID:ENUMDEC EnumDflt:"Unknown" */
 typedef enum {
-  VarDecEnum_39__1 = -1,               /* EnumTxt:"(None)" */
-  VarDecEnum_39_53 = 53,               /* EnumTxt:"ECUP" */
-  VarDecEnum_39_54 = 54,               /* EnumTxt:"DRVP" */
-  VarDecEnum_39_55 = 55,               /* EnumTxt:"XDRP" */
-  VarDecEnum_39_56 = 56,               /* EnumTxt:"AN1M" */
-  VarDecEnum_39_57 = 57,               /* EnumTxt:"AN2M" */
-  VarDecEnum_39_58 = 58,               /* EnumTxt:"AN3M" */
-  VarDecEnum_39_59 = 59,               /* EnumTxt:"AN4M" */
-  VarDecEnum_39_60 = 60,               /* EnumTxt:"AN5M" */
-  VarDecEnum_39_61 = 61,               /* EnumTxt:"AN6M" */
-  VarDecEnum_39_62 = 62,               /* EnumTxt:"AN7M" */
-  VarDecEnum_39_63 = 63,               /* EnumTxt:"AN8M" */
-  VarDecEnum_39_64 = 64,               /* EnumTxt:"AN9M" */
-  VarDecEnum_39_65 = 65,               /* EnumTxt:"AN10M" */
-  VarDecEnum_39_66 = 66,               /* EnumTxt:"AN11M" */
-  VarDecEnum_39_67 = 67,               /* EnumTxt:"AN12M" */
-  VarDecEnum_39_68 = 68,               /* EnumTxt:"AN13M" */
-  VarDecEnum_39_69 = 69,               /* EnumTxt:"AN14M" */
-  VarDecEnum_39_70 = 70,               /* EnumTxt:"AN15M" */
-  VarDecEnum_39_71 = 71,               /* EnumTxt:"AN16M" */
-  VarDecEnum_39_72 = 72,               /* EnumTxt:"AN17M" */
-  VarDecEnum_39_73 = 73,               /* EnumTxt:"AN18M" */
-  VarDecEnum_39_74 = 74,               /* EnumTxt:"AN19M" */
-  VarDecEnum_39_90 = 90,               /* EnumTxt:"O2A" */
-  VarDecEnum_39_91 = 91,               /* EnumTxt:"O2B" */
-  VarDecEnum_39_92 = 92,               /* EnumTxt:"XDRP_B" */
+  VarDecEnum_39_0 = 0,                 /* EnumTxt:"-" */
 } VarDecEnum_39;
 
 /* Name: VarDecEnum_40 ClassID:ENUMDEC EnumDflt:"Unknown" */
 typedef enum {
-  VarDecEnum_40_0 = 0,                 /* EnumTxt:"5V" */
-  VarDecEnum_40_1 = 1,                 /* EnumTxt:"2.7V" */
+  VarDecEnum_40__1 = -1,               /* EnumTxt:"(None)" */
+  VarDecEnum_40_53 = 53,               /* EnumTxt:"ECUP" */
+  VarDecEnum_40_54 = 54,               /* EnumTxt:"DRVP" */
+  VarDecEnum_40_55 = 55,               /* EnumTxt:"XDRP" */
+  VarDecEnum_40_56 = 56,               /* EnumTxt:"AN1M" */
+  VarDecEnum_40_57 = 57,               /* EnumTxt:"AN2M" */
+  VarDecEnum_40_58 = 58,               /* EnumTxt:"AN3M" */
+  VarDecEnum_40_59 = 59,               /* EnumTxt:"AN4M" */
+  VarDecEnum_40_60 = 60,               /* EnumTxt:"AN5M" */
+  VarDecEnum_40_61 = 61,               /* EnumTxt:"AN6M" */
+  VarDecEnum_40_62 = 62,               /* EnumTxt:"AN7M" */
+  VarDecEnum_40_63 = 63,               /* EnumTxt:"AN8M" */
+  VarDecEnum_40_64 = 64,               /* EnumTxt:"AN9M" */
+  VarDecEnum_40_65 = 65,               /* EnumTxt:"AN10M" */
+  VarDecEnum_40_66 = 66,               /* EnumTxt:"AN11M" */
+  VarDecEnum_40_67 = 67,               /* EnumTxt:"AN12M" */
+  VarDecEnum_40_68 = 68,               /* EnumTxt:"AN13M" */
+  VarDecEnum_40_69 = 69,               /* EnumTxt:"AN14M" */
+  VarDecEnum_40_70 = 70,               /* EnumTxt:"AN15M" */
+  VarDecEnum_40_71 = 71,               /* EnumTxt:"AN16M" */
+  VarDecEnum_40_72 = 72,               /* EnumTxt:"AN17M" */
+  VarDecEnum_40_73 = 73,               /* EnumTxt:"AN18M" */
+  VarDecEnum_40_74 = 74,               /* EnumTxt:"AN19M" */
+  VarDecEnum_40_90 = 90,               /* EnumTxt:"O2A" */
+  VarDecEnum_40_91 = 91,               /* EnumTxt:"O2B" */
+  VarDecEnum_40_92 = 92,               /* EnumTxt:"XDRP_B" */
 } VarDecEnum_40;
 
 /* Name: VarDecEnum_41 ClassID:ENUMDEC EnumDflt:"Unknown" */
 typedef enum {
-  VarDecEnum_41__1 = -1,               /* EnumTxt:"(None)" */
-  VarDecEnum_41_93 = 93,               /* EnumTxt:"DG1M" */
-  VarDecEnum_41_94 = 94,               /* EnumTxt:"DG2M" */
-  VarDecEnum_41_96 = 96,               /* EnumTxt:"DG4M" */
-  VarDecEnum_41_100 = 100,             /* EnumTxt:"CNK" */
+  VarDecEnum_41_0 = 0,                 /* EnumTxt:"5V" */
+  VarDecEnum_41_1 = 1,                 /* EnumTxt:"2.7V" */
 } VarDecEnum_41;
 
 /* Name: VarDecEnum_42 ClassID:ENUMDEC EnumDflt:"Unknown" */
 typedef enum {
-  VarDecEnum_42_0 = 0,                 /* EnumTxt:"No Alias Protect" */
-  VarDecEnum_42_1 = 1,                 /* EnumTxt:"Use Alias Protect" */
+  VarDecEnum_42__1 = -1,               /* EnumTxt:"(None)" */
+  VarDecEnum_42_93 = 93,               /* EnumTxt:"DG1M" */
+  VarDecEnum_42_94 = 94,               /* EnumTxt:"DG2M" */
+  VarDecEnum_42_96 = 96,               /* EnumTxt:"DG4M" */
+  VarDecEnum_42_100 = 100,             /* EnumTxt:"CNK" */
 } VarDecEnum_42;
 
 /* Name: VarDecEnum_43 ClassID:ENUMDEC EnumDflt:"Unknown" */
 typedef enum {
-  VarDecEnum_43_0 = 0,                 /* EnumTxt:"Digital Input" */
-  VarDecEnum_43_1 = 1,                 /* EnumTxt:"VR Input" */
+  VarDecEnum_43_0 = 0,                 /* EnumTxt:"No Alias Protect" */
+  VarDecEnum_43_1 = 1,                 /* EnumTxt:"Use Alias Protect" */
 } VarDecEnum_43;
 
 /* Name: VarDecEnum_44 ClassID:ENUMDEC EnumDflt:"Unknown" */
 typedef enum {
-  VarDecEnum_44__1 = -1,               /* EnumTxt:"(None)" */
-  VarDecEnum_44_0 = 0,                 /* EnumTxt:"FUELP" */
-  VarDecEnum_44_2 = 2,                 /* EnumTxt:"HSOL1" */
-  VarDecEnum_44_3 = 3,                 /* EnumTxt:"HSOL2" */
-  VarDecEnum_44_4 = 4,                 /* EnumTxt:"HSOL3" */
-  VarDecEnum_44_5 = 5,                 /* EnumTxt:"HSOL4" */
-  VarDecEnum_44_6 = 6,                 /* EnumTxt:"START" */
-  VarDecEnum_44_11 = 11,               /* EnumTxt:"OILP" */
-  VarDecEnum_44_12 = 12,               /* EnumTxt:"FINJ1" */
-  VarDecEnum_44_13 = 13,               /* EnumTxt:"FINJ2" */
-  VarDecEnum_44_14 = 14,               /* EnumTxt:"FINJ3" */
-  VarDecEnum_44_15 = 15,               /* EnumTxt:"FINJ4" */
-  VarDecEnum_44_16 = 16,               /* EnumTxt:"FINJ5" */
-  VarDecEnum_44_17 = 17,               /* EnumTxt:"FINJ6" */
-  VarDecEnum_44_18 = 18,               /* EnumTxt:"AINJ1" */
-  VarDecEnum_44_19 = 19,               /* EnumTxt:"AINJ2" */
-  VarDecEnum_44_20 = 20,               /* EnumTxt:"AINJ3" */
-  VarDecEnum_44_21 = 21,               /* EnumTxt:"AINJ4" */
-  VarDecEnum_44_22 = 22,               /* EnumTxt:"AINJ5" */
-  VarDecEnum_44_23 = 23,               /* EnumTxt:"AINJ6" */
-  VarDecEnum_44_24 = 24,               /* EnumTxt:"TACH" */
-  VarDecEnum_44_36 = 36,               /* EnumTxt:"EST 1" */
-  VarDecEnum_44_37 = 37,               /* EnumTxt:"EST 2" */
-  VarDecEnum_44_38 = 38,               /* EnumTxt:"EST 3" */
-  VarDecEnum_44_39 = 39,               /* EnumTxt:"EST 4" */
-  VarDecEnum_44_40 = 40,               /* EnumTxt:"EST 5" */
-  VarDecEnum_44_41 = 41,               /* EnumTxt:"EST 6" */
-  VarDecEnum_44_42 = 42,               /* EnumTxt:"EST 7" */
-  VarDecEnum_44_43 = 43,               /* EnumTxt:"EST 8" */
-  VarDecEnum_44_52 = 52,               /* EnumTxt:"MPRD" */
+  VarDecEnum_44_0 = 0,                 /* EnumTxt:"Digital Input" */
+  VarDecEnum_44_1 = 1,                 /* EnumTxt:"VR Input" */
 } VarDecEnum_44;
 
 /* Name: VarDecEnum_45 ClassID:ENUMDEC EnumDflt:"Unknown" */
 typedef enum {
   VarDecEnum_45__1 = -1,               /* EnumTxt:"(None)" */
   VarDecEnum_45_0 = 0,                 /* EnumTxt:"FUELP" */
-  VarDecEnum_45_1 = 1,                 /* EnumTxt:"ETC" */
   VarDecEnum_45_2 = 2,                 /* EnumTxt:"HSOL1" */
   VarDecEnum_45_3 = 3,                 /* EnumTxt:"HSOL2" */
   VarDecEnum_45_4 = 4,                 /* EnumTxt:"HSOL3" */
@@ -379,6 +351,41 @@ typedef enum {
   VarDecEnum_45_41 = 41,               /* EnumTxt:"EST 6" */
   VarDecEnum_45_42 = 42,               /* EnumTxt:"EST 7" */
   VarDecEnum_45_43 = 43,               /* EnumTxt:"EST 8" */
+  VarDecEnum_45_52 = 52,               /* EnumTxt:"MPRD" */
 } VarDecEnum_45;
+
+/* Name: VarDecEnum_46 ClassID:ENUMDEC EnumDflt:"Unknown" */
+typedef enum {
+  VarDecEnum_46__1 = -1,               /* EnumTxt:"(None)" */
+  VarDecEnum_46_0 = 0,                 /* EnumTxt:"FUELP" */
+  VarDecEnum_46_1 = 1,                 /* EnumTxt:"ETC" */
+  VarDecEnum_46_2 = 2,                 /* EnumTxt:"HSOL1" */
+  VarDecEnum_46_3 = 3,                 /* EnumTxt:"HSOL2" */
+  VarDecEnum_46_4 = 4,                 /* EnumTxt:"HSOL3" */
+  VarDecEnum_46_5 = 5,                 /* EnumTxt:"HSOL4" */
+  VarDecEnum_46_6 = 6,                 /* EnumTxt:"START" */
+  VarDecEnum_46_11 = 11,               /* EnumTxt:"OILP" */
+  VarDecEnum_46_12 = 12,               /* EnumTxt:"FINJ1" */
+  VarDecEnum_46_13 = 13,               /* EnumTxt:"FINJ2" */
+  VarDecEnum_46_14 = 14,               /* EnumTxt:"FINJ3" */
+  VarDecEnum_46_15 = 15,               /* EnumTxt:"FINJ4" */
+  VarDecEnum_46_16 = 16,               /* EnumTxt:"FINJ5" */
+  VarDecEnum_46_17 = 17,               /* EnumTxt:"FINJ6" */
+  VarDecEnum_46_18 = 18,               /* EnumTxt:"AINJ1" */
+  VarDecEnum_46_19 = 19,               /* EnumTxt:"AINJ2" */
+  VarDecEnum_46_20 = 20,               /* EnumTxt:"AINJ3" */
+  VarDecEnum_46_21 = 21,               /* EnumTxt:"AINJ4" */
+  VarDecEnum_46_22 = 22,               /* EnumTxt:"AINJ5" */
+  VarDecEnum_46_23 = 23,               /* EnumTxt:"AINJ6" */
+  VarDecEnum_46_24 = 24,               /* EnumTxt:"TACH" */
+  VarDecEnum_46_36 = 36,               /* EnumTxt:"EST 1" */
+  VarDecEnum_46_37 = 37,               /* EnumTxt:"EST 2" */
+  VarDecEnum_46_38 = 38,               /* EnumTxt:"EST 3" */
+  VarDecEnum_46_39 = 39,               /* EnumTxt:"EST 4" */
+  VarDecEnum_46_40 = 40,               /* EnumTxt:"EST 5" */
+  VarDecEnum_46_41 = 41,               /* EnumTxt:"EST 6" */
+  VarDecEnum_46_42 = 42,               /* EnumTxt:"EST 7" */
+  VarDecEnum_46_43 = 43,               /* EnumTxt:"EST 8" */
+} VarDecEnum_46;
 
 #endif

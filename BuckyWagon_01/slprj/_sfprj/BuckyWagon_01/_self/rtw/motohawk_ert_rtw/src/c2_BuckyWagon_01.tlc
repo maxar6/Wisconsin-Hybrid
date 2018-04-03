@@ -1,0 +1,89 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   14 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c2_BuckyWagon_01"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "is_c2_BuckyWagon_01"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "is_List"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "is_Single"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "is_Setup"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "is_Dual"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "is_Quad"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "is_select_var"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "timer"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "oldData"\
+      SFName       ""\
+      Path         ""\
+      Dimensions   [6]\
+    }\
+    ChartData {\
+      Name         "setupIndex"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "setupVIndex"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "selectIndex"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "selectVIndex"\
+      SFName       ""\
+      Path         ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

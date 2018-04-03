@@ -1680,6 +1680,26 @@
                <Default>20.0 20.0 20.0 20.0 30.0 30.0 40.0 40.0 50.0 </Default>
                <Name>MinOilPressure_WarnTbl</Name>
              </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>0.2</Default>
+               <Name>Gain3</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>0.3</Default>
+               <Name>Gain2</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>0.5</Default>
+               <Name>Gain1</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>2.0</Default>
+               <Name>Gain4</Name>
+             </DataStore>
             <DataStore ref="Volatile">
                <DataType>boolean</DataType>
                <Default>0</Default>
@@ -2881,9 +2901,9 @@
                <Name>FuelSens_ovr</Name>
              </DataStore>
             <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>0.005</Default>
-               <Name>FuelSensFilterConst</Name>
+               <DataType>uint8</DataType>
+               <Default>0U</Default>
+               <Name>Filter_Type_Selection</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
@@ -2899,6 +2919,21 @@
                <DataType>real32</DataType>
                <Default>1.0</Default>
                <Name>FuelSensDfltValue</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>0.025</Default>
+               <Name>Fall_Rate</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>0.025</Default>
+               <Name>Rise_Rate</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>0.005</Default>
+               <Name>FuelSensFilterConst</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>real32</DataType>
@@ -3853,16 +3888,6 @@
             <DataStore ref="Volatile">
                <DataType>boolean</DataType>
                <Default>0</Default>
-               <Name>Est_Absolute_Torque_Ovr_ovr</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>Est_Absolute_Torque_Ovr_new</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>boolean</DataType>
-               <Default>0</Default>
                <Name>Control_Mode_Ovr_ovr</Name>
              </DataStore>
             <DataStore ref="Volatile">
@@ -4337,6 +4362,21 @@
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
+               <Default>0.005</Default>
+               <Name>Torque_Filter</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Est_Absolute_Torque_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Est_Absolute_Torque_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
                <Default>1020.0</Default>
                <Name>MAFMax</Name>
              </DataStore>
@@ -4698,7 +4738,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut8391p0004</Name>
+               <Name>init_resource_DOut7800p0005</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -4888,7 +4928,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut7858p0004</Name>
+               <Name>init_resource_DOut7269p0001</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
@@ -4908,7 +4948,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut8136p0004</Name>
+               <Name>init_resource_DOut7547p0001</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -4918,7 +4958,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut8146p0004</Name>
+               <Name>init_resource_DOut7557p0001</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -7337,29 +7377,30 @@
                 
                 <Enum>
                     <Name>VarDecEnum_21</Name>
-                    <Item name="Enable" value="0" symbol="VARDECENUM_21_ENABLE"/>
-                    <Item name="Cut" value="1" symbol="VARDECENUM_21_CUT"/>
+                    <Item name="Rate Limiter" value="0" symbol="VARDECENUM_21_RATELIMITER"/>
+                    <Item name="Low Pass" value="1" symbol="VARDECENUM_21_LOWPASS"/>
+                    <Item name="Moving Average" value="2" symbol="VARDECENUM_21_MOVINGAVERAGE"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_22</Name>
-                    <Item name="Cut Spark" value="0" symbol="VARDECENUM_22_CUTSPARK"/>
-                    <Item name="Cut Fuel" value="1" symbol="VARDECENUM_22_CUTFUEL"/>
-                    <Item name="Cut Spark and Fuel" value="2" symbol="VARDECENUM_22_CUTSPARKANDFUEL"/>
+                    <Item name="Enable" value="0" symbol="VARDECENUM_22_ENABLE"/>
+                    <Item name="Cut" value="1" symbol="VARDECENUM_22_CUT"/>
                 </Enum>
                 
                 <Enum>
-                    <Name>VarDecEnum_25</Name>
-                    <Item name="-" value="0" symbol="VARDECENUM_25_DASH"/>
-                    <Item name="Stall" value="1" symbol="VARDECENUM_25_STALL"/>
-                    <Item name="Crank" value="2" symbol="VARDECENUM_25_CRANK"/>
-                    <Item name="Run" value="3" symbol="VARDECENUM_25_RUN"/>
+                    <Name>VarDecEnum_23</Name>
+                    <Item name="Cut Spark" value="0" symbol="VARDECENUM_23_CUTSPARK"/>
+                    <Item name="Cut Fuel" value="1" symbol="VARDECENUM_23_CUTFUEL"/>
+                    <Item name="Cut Spark and Fuel" value="2" symbol="VARDECENUM_23_CUTSPARKANDFUEL"/>
                 </Enum>
                 
                 <Enum>
-                    <Name>VarDecEnum_29</Name>
-                    <Item name="Rising Edge" value="0" symbol="VARDECENUM_29_RISINGEDGE"/>
-                    <Item name="Falling Edge" value="1" symbol="VARDECENUM_29_FALLINGEDGE"/>
+                    <Name>VarDecEnum_26</Name>
+                    <Item name="-" value="0" symbol="VARDECENUM_26_DASH"/>
+                    <Item name="Stall" value="1" symbol="VARDECENUM_26_STALL"/>
+                    <Item name="Crank" value="2" symbol="VARDECENUM_26_CRANK"/>
+                    <Item name="Run" value="3" symbol="VARDECENUM_26_RUN"/>
                 </Enum>
                 
                 <Enum>
@@ -7370,105 +7411,81 @@
                 
                 <Enum>
                     <Name>VarDecEnum_30</Name>
-                    <Item name="Weak Pullup" value="0" symbol="VARDECENUM_30_WEAKPULLUP"/>
-                    <Item name="Strong Pullup" value="1" symbol="VARDECENUM_30_STRONGPULLUP"/>
+                    <Item name="Rising Edge" value="0" symbol="VARDECENUM_30_RISINGEDGE"/>
+                    <Item name="Falling Edge" value="1" symbol="VARDECENUM_30_FALLINGEDGE"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_31</Name>
-                    <Item name="(None)" value="-1" symbol="VARDECENUM_31_OPENPARENNONECLOSEPAREN"/>
-                    <Item name="EST 1" value="36" symbol="VARDECENUM_31_EST1"/>
-                    <Item name="EST 2" value="37" symbol="VARDECENUM_31_EST2"/>
-                    <Item name="EST 3" value="38" symbol="VARDECENUM_31_EST3"/>
-                    <Item name="EST 4" value="39" symbol="VARDECENUM_31_EST4"/>
-                    <Item name="EST 5" value="40" symbol="VARDECENUM_31_EST5"/>
-                    <Item name="EST 6" value="41" symbol="VARDECENUM_31_EST6"/>
-                    <Item name="EST 7" value="42" symbol="VARDECENUM_31_EST7"/>
-                    <Item name="EST 8" value="43" symbol="VARDECENUM_31_EST8"/>
+                    <Item name="Weak Pullup" value="0" symbol="VARDECENUM_31_WEAKPULLUP"/>
+                    <Item name="Strong Pullup" value="1" symbol="VARDECENUM_31_STRONGPULLUP"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_32</Name>
-                    <Item name="Standard (Coil per cylinder)" value="0" symbol="VARDECENUM_32_STANDARDOPENPARENCOILPERCYLINDERCLOSEPAREN"/>
-                    <Item name="Banked (Fire on both phases until CAM sync)" value="1" symbol="VARDECENUM_32_BANKEDOPENPARENFIREONBOTHPHASESUNTILCAMSYNCCLOSEPAREN"/>
-                    <Item name="Batch (Wasted spark)" value="2" symbol="VARDECENUM_32_BATCHOPENPARENWASTEDSPARKCLOSEPAREN"/>
-                    <Item name="Muxed (Distributed)" value="3" symbol="VARDECENUM_32_MUXEDOPENPARENDISTRIBUTEDCLOSEPAREN"/>
+                    <Item name="(None)" value="-1" symbol="VARDECENUM_32_OPENPARENNONECLOSEPAREN"/>
+                    <Item name="EST 1" value="36" symbol="VARDECENUM_32_EST1"/>
+                    <Item name="EST 2" value="37" symbol="VARDECENUM_32_EST2"/>
+                    <Item name="EST 3" value="38" symbol="VARDECENUM_32_EST3"/>
+                    <Item name="EST 4" value="39" symbol="VARDECENUM_32_EST4"/>
+                    <Item name="EST 5" value="40" symbol="VARDECENUM_32_EST5"/>
+                    <Item name="EST 6" value="41" symbol="VARDECENUM_32_EST6"/>
+                    <Item name="EST 7" value="42" symbol="VARDECENUM_32_EST7"/>
+                    <Item name="EST 8" value="43" symbol="VARDECENUM_32_EST8"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_33</Name>
-                    <Item name="(None)" value="-1" symbol="VARDECENUM_33_OPENPARENNONECLOSEPAREN"/>
-                    <Item name="FINJ1" value="12" symbol="VARDECENUM_33_FINJ1"/>
-                    <Item name="AINJ4" value="21" symbol="VARDECENUM_33_AINJ4"/>
-                    <Item name="AINJ5" value="22" symbol="VARDECENUM_33_AINJ5"/>
-                    <Item name="AINJ6" value="23" symbol="VARDECENUM_33_AINJ6"/>
-                    <Item name="FINJ2" value="13" symbol="VARDECENUM_33_FINJ2"/>
-                    <Item name="FINJ3" value="14" symbol="VARDECENUM_33_FINJ3"/>
-                    <Item name="FINJ4" value="15" symbol="VARDECENUM_33_FINJ4"/>
-                    <Item name="FINJ5" value="16" symbol="VARDECENUM_33_FINJ5"/>
-                    <Item name="FINJ6" value="17" symbol="VARDECENUM_33_FINJ6"/>
-                    <Item name="AINJ1" value="18" symbol="VARDECENUM_33_AINJ1"/>
-                    <Item name="AINJ2" value="19" symbol="VARDECENUM_33_AINJ2"/>
-                    <Item name="AINJ3" value="20" symbol="VARDECENUM_33_AINJ3"/>
+                    <Item name="Standard (Coil per cylinder)" value="0" symbol="VARDECENUM_33_STANDARDOPENPARENCOILPERCYLINDERCLOSEPAREN"/>
+                    <Item name="Banked (Fire on both phases until CAM sync)" value="1" symbol="VARDECENUM_33_BANKEDOPENPARENFIREONBOTHPHASESUNTILCAMSYNCCLOSEPAREN"/>
+                    <Item name="Batch (Wasted spark)" value="2" symbol="VARDECENUM_33_BATCHOPENPARENWASTEDSPARKCLOSEPAREN"/>
+                    <Item name="Muxed (Distributed)" value="3" symbol="VARDECENUM_33_MUXEDOPENPARENDISTRIBUTEDCLOSEPAREN"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_34</Name>
-                    <Item name="Standard (Injector per cylinder)" value="0" symbol="VARDECENUM_34_STANDARDOPENPARENINJECTORPERCYLINDERCLOSEPAREN"/>
-                    <Item name="Batch (Fire half fuel on half of the injectors every rev)" value="1" symbol="VARDECENUM_34_BATCHOPENPARENFIREHALFFUELONHALFOFTHEINJECTORSEVERYREVCLOSEPAREN"/>
-                    <Item name=" Wasted (Fire half fuel on all injectors every rev)" value="2" symbol="VARDECENUM_34_WASTEDOPENPARENFIREHALFFUELONALLINJECTORSEVERYREVCLOSEPAREN"/>
+                    <Item name="(None)" value="-1" symbol="VARDECENUM_34_OPENPARENNONECLOSEPAREN"/>
+                    <Item name="FINJ1" value="12" symbol="VARDECENUM_34_FINJ1"/>
+                    <Item name="AINJ4" value="21" symbol="VARDECENUM_34_AINJ4"/>
+                    <Item name="AINJ5" value="22" symbol="VARDECENUM_34_AINJ5"/>
+                    <Item name="AINJ6" value="23" symbol="VARDECENUM_34_AINJ6"/>
+                    <Item name="FINJ2" value="13" symbol="VARDECENUM_34_FINJ2"/>
+                    <Item name="FINJ3" value="14" symbol="VARDECENUM_34_FINJ3"/>
+                    <Item name="FINJ4" value="15" symbol="VARDECENUM_34_FINJ4"/>
+                    <Item name="FINJ5" value="16" symbol="VARDECENUM_34_FINJ5"/>
+                    <Item name="FINJ6" value="17" symbol="VARDECENUM_34_FINJ6"/>
+                    <Item name="AINJ1" value="18" symbol="VARDECENUM_34_AINJ1"/>
+                    <Item name="AINJ2" value="19" symbol="VARDECENUM_34_AINJ2"/>
+                    <Item name="AINJ3" value="20" symbol="VARDECENUM_34_AINJ3"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_35</Name>
-                    <Item name="Standard" value="0" symbol="VARDECENUM_35_STANDARD"/>
-                    <Item name="Transient" value="1" symbol="VARDECENUM_35_TRANSIENT"/>
+                    <Item name="Standard (Injector per cylinder)" value="0" symbol="VARDECENUM_35_STANDARDOPENPARENINJECTORPERCYLINDERCLOSEPAREN"/>
+                    <Item name="Batch (Fire half fuel on half of the injectors every rev)" value="1" symbol="VARDECENUM_35_BATCHOPENPARENFIREHALFFUELONHALFOFTHEINJECTORSEVERYREVCLOSEPAREN"/>
+                    <Item name=" Wasted (Fire half fuel on all injectors every rev)" value="2" symbol="VARDECENUM_35_WASTEDOPENPARENFIREHALFFUELONALLINJECTORSEVERYREVCLOSEPAREN"/>
                 </Enum>
                 
                 <Enum>
-                    <Name>VarDecEnum_37</Name>
-                    <Item name="CutThrottle" value="0" symbol="VARDECENUM_37_CUTTHROTTLE"/>
-                    <Item name="DelayedEngineShutdown" value="1" symbol="VARDECENUM_37_DELAYEDENGINESHUTDOWN"/>
-                    <Item name="DisableO2Ctrl" value="2" symbol="VARDECENUM_37_DISABLEO2CTRL"/>
-                    <Item name="EngineShutdown" value="3" symbol="VARDECENUM_37_ENGINESHUTDOWN"/>
-                    <Item name="HardRevLimit" value="4" symbol="VARDECENUM_37_HARDREVLIMIT"/>
-                    <Item name="MediumRevLimit" value="5" symbol="VARDECENUM_37_MEDIUMREVLIMIT"/>
-                    <Item name="SoftRevLimit" value="6" symbol="VARDECENUM_37_SOFTREVLIMIT"/>
+                    <Name>VarDecEnum_36</Name>
+                    <Item name="Standard" value="0" symbol="VARDECENUM_36_STANDARD"/>
+                    <Item name="Transient" value="1" symbol="VARDECENUM_36_TRANSIENT"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_38</Name>
-                    <Item name="-" value="0" symbol="VARDECENUM_38_DASH"/>
+                    <Item name="CutThrottle" value="0" symbol="VARDECENUM_38_CUTTHROTTLE"/>
+                    <Item name="DelayedEngineShutdown" value="1" symbol="VARDECENUM_38_DELAYEDENGINESHUTDOWN"/>
+                    <Item name="DisableO2Ctrl" value="2" symbol="VARDECENUM_38_DISABLEO2CTRL"/>
+                    <Item name="EngineShutdown" value="3" symbol="VARDECENUM_38_ENGINESHUTDOWN"/>
+                    <Item name="HardRevLimit" value="4" symbol="VARDECENUM_38_HARDREVLIMIT"/>
+                    <Item name="MediumRevLimit" value="5" symbol="VARDECENUM_38_MEDIUMREVLIMIT"/>
+                    <Item name="SoftRevLimit" value="6" symbol="VARDECENUM_38_SOFTREVLIMIT"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_39</Name>
-                    <Item name="(None)" value="-1" symbol="VARDECENUM_39_OPENPARENNONECLOSEPAREN"/>
-                    <Item name="ECUP" value="53" symbol="VARDECENUM_39_ECUP"/>
-                    <Item name="AN7M" value="62" symbol="VARDECENUM_39_AN7M"/>
-                    <Item name="AN8M" value="63" symbol="VARDECENUM_39_AN8M"/>
-                    <Item name="AN9M" value="64" symbol="VARDECENUM_39_AN9M"/>
-                    <Item name="AN10M" value="65" symbol="VARDECENUM_39_AN10M"/>
-                    <Item name="AN11M" value="66" symbol="VARDECENUM_39_AN11M"/>
-                    <Item name="AN12M" value="67" symbol="VARDECENUM_39_AN12M"/>
-                    <Item name="AN13M" value="68" symbol="VARDECENUM_39_AN13M"/>
-                    <Item name="AN14M" value="69" symbol="VARDECENUM_39_AN14M"/>
-                    <Item name="AN15M" value="70" symbol="VARDECENUM_39_AN15M"/>
-                    <Item name="AN16M" value="71" symbol="VARDECENUM_39_AN16M"/>
-                    <Item name="DRVP" value="54" symbol="VARDECENUM_39_DRVP"/>
-                    <Item name="AN17M" value="72" symbol="VARDECENUM_39_AN17M"/>
-                    <Item name="AN18M" value="73" symbol="VARDECENUM_39_AN18M"/>
-                    <Item name="AN19M" value="74" symbol="VARDECENUM_39_AN19M"/>
-                    <Item name="O2A" value="90" symbol="VARDECENUM_39_O2A"/>
-                    <Item name="O2B" value="91" symbol="VARDECENUM_39_O2B"/>
-                    <Item name="XDRP_B" value="92" symbol="VARDECENUM_39_XDRP_B"/>
-                    <Item name="XDRP" value="55" symbol="VARDECENUM_39_XDRP"/>
-                    <Item name="AN1M" value="56" symbol="VARDECENUM_39_AN1M"/>
-                    <Item name="AN2M" value="57" symbol="VARDECENUM_39_AN2M"/>
-                    <Item name="AN3M" value="58" symbol="VARDECENUM_39_AN3M"/>
-                    <Item name="AN4M" value="59" symbol="VARDECENUM_39_AN4M"/>
-                    <Item name="AN5M" value="60" symbol="VARDECENUM_39_AN5M"/>
-                    <Item name="AN6M" value="61" symbol="VARDECENUM_39_AN6M"/>
+                    <Item name="-" value="0" symbol="VARDECENUM_39_DASH"/>
                 </Enum>
                 
                 <Enum>
@@ -7479,70 +7496,65 @@
                 
                 <Enum>
                     <Name>VarDecEnum_40</Name>
-                    <Item name="5V" value="0" symbol="VARDECENUM_40_5V"/>
-                    <Item name="2.7V" value="1" symbol="VARDECENUM_40_2POINT7V"/>
+                    <Item name="(None)" value="-1" symbol="VARDECENUM_40_OPENPARENNONECLOSEPAREN"/>
+                    <Item name="ECUP" value="53" symbol="VARDECENUM_40_ECUP"/>
+                    <Item name="AN7M" value="62" symbol="VARDECENUM_40_AN7M"/>
+                    <Item name="AN8M" value="63" symbol="VARDECENUM_40_AN8M"/>
+                    <Item name="AN9M" value="64" symbol="VARDECENUM_40_AN9M"/>
+                    <Item name="AN10M" value="65" symbol="VARDECENUM_40_AN10M"/>
+                    <Item name="AN11M" value="66" symbol="VARDECENUM_40_AN11M"/>
+                    <Item name="AN12M" value="67" symbol="VARDECENUM_40_AN12M"/>
+                    <Item name="AN13M" value="68" symbol="VARDECENUM_40_AN13M"/>
+                    <Item name="AN14M" value="69" symbol="VARDECENUM_40_AN14M"/>
+                    <Item name="AN15M" value="70" symbol="VARDECENUM_40_AN15M"/>
+                    <Item name="AN16M" value="71" symbol="VARDECENUM_40_AN16M"/>
+                    <Item name="DRVP" value="54" symbol="VARDECENUM_40_DRVP"/>
+                    <Item name="AN17M" value="72" symbol="VARDECENUM_40_AN17M"/>
+                    <Item name="AN18M" value="73" symbol="VARDECENUM_40_AN18M"/>
+                    <Item name="AN19M" value="74" symbol="VARDECENUM_40_AN19M"/>
+                    <Item name="O2A" value="90" symbol="VARDECENUM_40_O2A"/>
+                    <Item name="O2B" value="91" symbol="VARDECENUM_40_O2B"/>
+                    <Item name="XDRP_B" value="92" symbol="VARDECENUM_40_XDRP_B"/>
+                    <Item name="XDRP" value="55" symbol="VARDECENUM_40_XDRP"/>
+                    <Item name="AN1M" value="56" symbol="VARDECENUM_40_AN1M"/>
+                    <Item name="AN2M" value="57" symbol="VARDECENUM_40_AN2M"/>
+                    <Item name="AN3M" value="58" symbol="VARDECENUM_40_AN3M"/>
+                    <Item name="AN4M" value="59" symbol="VARDECENUM_40_AN4M"/>
+                    <Item name="AN5M" value="60" symbol="VARDECENUM_40_AN5M"/>
+                    <Item name="AN6M" value="61" symbol="VARDECENUM_40_AN6M"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_41</Name>
-                    <Item name="(None)" value="-1" symbol="VARDECENUM_41_OPENPARENNONECLOSEPAREN"/>
-                    <Item name="DG1M" value="93" symbol="VARDECENUM_41_DG1M"/>
-                    <Item name="DG2M" value="94" symbol="VARDECENUM_41_DG2M"/>
-                    <Item name="DG4M" value="96" symbol="VARDECENUM_41_DG4M"/>
-                    <Item name="CNK" value="100" symbol="VARDECENUM_41_CNK"/>
+                    <Item name="5V" value="0" symbol="VARDECENUM_41_5V"/>
+                    <Item name="2.7V" value="1" symbol="VARDECENUM_41_2POINT7V"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_42</Name>
-                    <Item name="No Alias Protect" value="0" symbol="VARDECENUM_42_NOALIASPROTECT"/>
-                    <Item name="Use Alias Protect" value="1" symbol="VARDECENUM_42_USEALIASPROTECT"/>
+                    <Item name="(None)" value="-1" symbol="VARDECENUM_42_OPENPARENNONECLOSEPAREN"/>
+                    <Item name="DG1M" value="93" symbol="VARDECENUM_42_DG1M"/>
+                    <Item name="DG2M" value="94" symbol="VARDECENUM_42_DG2M"/>
+                    <Item name="DG4M" value="96" symbol="VARDECENUM_42_DG4M"/>
+                    <Item name="CNK" value="100" symbol="VARDECENUM_42_CNK"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_43</Name>
-                    <Item name="Digital Input" value="0" symbol="VARDECENUM_43_DIGITALINPUT"/>
-                    <Item name="VR Input" value="1" symbol="VARDECENUM_43_VRINPUT"/>
+                    <Item name="No Alias Protect" value="0" symbol="VARDECENUM_43_NOALIASPROTECT"/>
+                    <Item name="Use Alias Protect" value="1" symbol="VARDECENUM_43_USEALIASPROTECT"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_44</Name>
-                    <Item name="(None)" value="-1" symbol="VARDECENUM_44_OPENPARENNONECLOSEPAREN"/>
-                    <Item name="FUELP" value="0" symbol="VARDECENUM_44_FUELP"/>
-                    <Item name="FINJ3" value="14" symbol="VARDECENUM_44_FINJ3"/>
-                    <Item name="FINJ4" value="15" symbol="VARDECENUM_44_FINJ4"/>
-                    <Item name="FINJ5" value="16" symbol="VARDECENUM_44_FINJ5"/>
-                    <Item name="FINJ6" value="17" symbol="VARDECENUM_44_FINJ6"/>
-                    <Item name="AINJ1" value="18" symbol="VARDECENUM_44_AINJ1"/>
-                    <Item name="AINJ2" value="19" symbol="VARDECENUM_44_AINJ2"/>
-                    <Item name="AINJ3" value="20" symbol="VARDECENUM_44_AINJ3"/>
-                    <Item name="AINJ4" value="21" symbol="VARDECENUM_44_AINJ4"/>
-                    <Item name="AINJ5" value="22" symbol="VARDECENUM_44_AINJ5"/>
-                    <Item name="AINJ6" value="23" symbol="VARDECENUM_44_AINJ6"/>
-                    <Item name="HSOL1" value="2" symbol="VARDECENUM_44_HSOL1"/>
-                    <Item name="TACH" value="24" symbol="VARDECENUM_44_TACH"/>
-                    <Item name="EST 1" value="36" symbol="VARDECENUM_44_EST1"/>
-                    <Item name="EST 2" value="37" symbol="VARDECENUM_44_EST2"/>
-                    <Item name="EST 3" value="38" symbol="VARDECENUM_44_EST3"/>
-                    <Item name="EST 4" value="39" symbol="VARDECENUM_44_EST4"/>
-                    <Item name="EST 5" value="40" symbol="VARDECENUM_44_EST5"/>
-                    <Item name="EST 6" value="41" symbol="VARDECENUM_44_EST6"/>
-                    <Item name="EST 7" value="42" symbol="VARDECENUM_44_EST7"/>
-                    <Item name="EST 8" value="43" symbol="VARDECENUM_44_EST8"/>
-                    <Item name="MPRD" value="52" symbol="VARDECENUM_44_MPRD"/>
-                    <Item name="HSOL2" value="3" symbol="VARDECENUM_44_HSOL2"/>
-                    <Item name="HSOL3" value="4" symbol="VARDECENUM_44_HSOL3"/>
-                    <Item name="HSOL4" value="5" symbol="VARDECENUM_44_HSOL4"/>
-                    <Item name="START" value="6" symbol="VARDECENUM_44_START"/>
-                    <Item name="OILP" value="11" symbol="VARDECENUM_44_OILP"/>
-                    <Item name="FINJ1" value="12" symbol="VARDECENUM_44_FINJ1"/>
-                    <Item name="FINJ2" value="13" symbol="VARDECENUM_44_FINJ2"/>
+                    <Item name="Digital Input" value="0" symbol="VARDECENUM_44_DIGITALINPUT"/>
+                    <Item name="VR Input" value="1" symbol="VARDECENUM_44_VRINPUT"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_45</Name>
                     <Item name="(None)" value="-1" symbol="VARDECENUM_45_OPENPARENNONECLOSEPAREN"/>
                     <Item name="FUELP" value="0" symbol="VARDECENUM_45_FUELP"/>
-                    <Item name="FINJ2" value="13" symbol="VARDECENUM_45_FINJ2"/>
                     <Item name="FINJ3" value="14" symbol="VARDECENUM_45_FINJ3"/>
                     <Item name="FINJ4" value="15" symbol="VARDECENUM_45_FINJ4"/>
                     <Item name="FINJ5" value="16" symbol="VARDECENUM_45_FINJ5"/>
@@ -7552,8 +7564,8 @@
                     <Item name="AINJ3" value="20" symbol="VARDECENUM_45_AINJ3"/>
                     <Item name="AINJ4" value="21" symbol="VARDECENUM_45_AINJ4"/>
                     <Item name="AINJ5" value="22" symbol="VARDECENUM_45_AINJ5"/>
-                    <Item name="ETC" value="1" symbol="VARDECENUM_45_ETC"/>
                     <Item name="AINJ6" value="23" symbol="VARDECENUM_45_AINJ6"/>
+                    <Item name="HSOL1" value="2" symbol="VARDECENUM_45_HSOL1"/>
                     <Item name="TACH" value="24" symbol="VARDECENUM_45_TACH"/>
                     <Item name="EST 1" value="36" symbol="VARDECENUM_45_EST1"/>
                     <Item name="EST 2" value="37" symbol="VARDECENUM_45_EST2"/>
@@ -7563,13 +7575,48 @@
                     <Item name="EST 6" value="41" symbol="VARDECENUM_45_EST6"/>
                     <Item name="EST 7" value="42" symbol="VARDECENUM_45_EST7"/>
                     <Item name="EST 8" value="43" symbol="VARDECENUM_45_EST8"/>
-                    <Item name="HSOL1" value="2" symbol="VARDECENUM_45_HSOL1"/>
+                    <Item name="MPRD" value="52" symbol="VARDECENUM_45_MPRD"/>
                     <Item name="HSOL2" value="3" symbol="VARDECENUM_45_HSOL2"/>
                     <Item name="HSOL3" value="4" symbol="VARDECENUM_45_HSOL3"/>
                     <Item name="HSOL4" value="5" symbol="VARDECENUM_45_HSOL4"/>
                     <Item name="START" value="6" symbol="VARDECENUM_45_START"/>
                     <Item name="OILP" value="11" symbol="VARDECENUM_45_OILP"/>
                     <Item name="FINJ1" value="12" symbol="VARDECENUM_45_FINJ1"/>
+                    <Item name="FINJ2" value="13" symbol="VARDECENUM_45_FINJ2"/>
+                </Enum>
+                
+                <Enum>
+                    <Name>VarDecEnum_46</Name>
+                    <Item name="(None)" value="-1" symbol="VARDECENUM_46_OPENPARENNONECLOSEPAREN"/>
+                    <Item name="FUELP" value="0" symbol="VARDECENUM_46_FUELP"/>
+                    <Item name="FINJ2" value="13" symbol="VARDECENUM_46_FINJ2"/>
+                    <Item name="FINJ3" value="14" symbol="VARDECENUM_46_FINJ3"/>
+                    <Item name="FINJ4" value="15" symbol="VARDECENUM_46_FINJ4"/>
+                    <Item name="FINJ5" value="16" symbol="VARDECENUM_46_FINJ5"/>
+                    <Item name="FINJ6" value="17" symbol="VARDECENUM_46_FINJ6"/>
+                    <Item name="AINJ1" value="18" symbol="VARDECENUM_46_AINJ1"/>
+                    <Item name="AINJ2" value="19" symbol="VARDECENUM_46_AINJ2"/>
+                    <Item name="AINJ3" value="20" symbol="VARDECENUM_46_AINJ3"/>
+                    <Item name="AINJ4" value="21" symbol="VARDECENUM_46_AINJ4"/>
+                    <Item name="AINJ5" value="22" symbol="VARDECENUM_46_AINJ5"/>
+                    <Item name="ETC" value="1" symbol="VARDECENUM_46_ETC"/>
+                    <Item name="AINJ6" value="23" symbol="VARDECENUM_46_AINJ6"/>
+                    <Item name="TACH" value="24" symbol="VARDECENUM_46_TACH"/>
+                    <Item name="EST 1" value="36" symbol="VARDECENUM_46_EST1"/>
+                    <Item name="EST 2" value="37" symbol="VARDECENUM_46_EST2"/>
+                    <Item name="EST 3" value="38" symbol="VARDECENUM_46_EST3"/>
+                    <Item name="EST 4" value="39" symbol="VARDECENUM_46_EST4"/>
+                    <Item name="EST 5" value="40" symbol="VARDECENUM_46_EST5"/>
+                    <Item name="EST 6" value="41" symbol="VARDECENUM_46_EST6"/>
+                    <Item name="EST 7" value="42" symbol="VARDECENUM_46_EST7"/>
+                    <Item name="EST 8" value="43" symbol="VARDECENUM_46_EST8"/>
+                    <Item name="HSOL1" value="2" symbol="VARDECENUM_46_HSOL1"/>
+                    <Item name="HSOL2" value="3" symbol="VARDECENUM_46_HSOL2"/>
+                    <Item name="HSOL3" value="4" symbol="VARDECENUM_46_HSOL3"/>
+                    <Item name="HSOL4" value="5" symbol="VARDECENUM_46_HSOL4"/>
+                    <Item name="START" value="6" symbol="VARDECENUM_46_START"/>
+                    <Item name="OILP" value="11" symbol="VARDECENUM_46_OILP"/>
+                    <Item name="FINJ1" value="12" symbol="VARDECENUM_46_FINJ1"/>
                 </Enum>
                 
                 <Enum>
@@ -10389,6 +10436,70 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Gain3">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors|FuelOxygenationSensor|Filter Options|Moving Average Filter</group>
+        		                <help>Gain 3 For Moving Average Filter</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Gain3</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Gain2">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors|FuelOxygenationSensor|Filter Options|Moving Average Filter</group>
+        		                <help>Gain 2 For Moving Average Filter</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Gain2</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Gain1">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors|FuelOxygenationSensor|Filter Options|Moving Average Filter</group>
+        		                <help>Gain 1 For Moving Average Filter</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Gain1</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Gain4">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors|FuelOxygenationSensor|Filter Options|Moving Average Filter</group>
+        		                <help>Gain 4 For Moving Average Filter</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Gain4</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="ECT_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
@@ -13066,20 +13177,20 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="FuelSensFilterConst">
+			    <DataStoreVarDec ref="Filter_Type_Selection">
         		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_21</enum_name>
         		                <exp>1.0</exp>
-        		                <format>4.2</format>
+        		                <format>3.0</format>
         		                <gain>1.0</gain>
-        		                <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors | FuelSens | FuelSens Config</group>
-        		                <help>Filter time constant</help>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>FuelSensFilterConst</name>
-        		                <offset>0.0</offset>
+        		                <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors|FuelOxygenationSensor|Filter Options</group>
+        		                <help>Filter Section For Fuel Oxygenation Sensor</help>
+        		                <max>256.000000</max>
+        		                <min>1.000000</min>
+        		                <name>Filter_Type_Selection</name>
+        		                <offset>1.0</offset>
         		                <storage>FLASH</storage>
-        		                <units>sec</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -13134,6 +13245,53 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Fall_Rate">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors|FuelOxygenationSensor|Filter Options|Rate Limiter</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Fall_Rate</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Rise_Rate">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors|FuelOxygenationSensor|Filter Options|Rate Limiter</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Rise_Rate</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="FuelSensFilterConst">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors | FuelSens | FuelSens Config</group>
+        		                <help>Filter time constant</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>FuelSensFilterConst</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="FuelSens_new">
         		                <access>RW RW RW RW</access>
         		                <class>VAR</class>
@@ -13154,7 +13312,7 @@
 			    <DataStoreVarDec ref="SoftCycle1Cyl1">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13170,7 +13328,7 @@
 			    <DataStoreVarDec ref="SoftCycle1Cyl2">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13186,7 +13344,7 @@
 			    <DataStoreVarDec ref="SoftCycle1Cyl3">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13202,7 +13360,7 @@
 			    <DataStoreVarDec ref="SoftCycle1Cyl4">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13218,7 +13376,7 @@
 			    <DataStoreVarDec ref="SoftCycle1Cyl5">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13234,7 +13392,7 @@
 			    <DataStoreVarDec ref="SoftCycle1Cyl6">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13250,7 +13408,7 @@
 			    <DataStoreVarDec ref="SoftCycle1Cyl7">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13266,7 +13424,7 @@
 			    <DataStoreVarDec ref="SoftCycle1Cyl8">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13282,7 +13440,7 @@
 			    <DataStoreVarDec ref="SoftCycle2Cyl1">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13298,7 +13456,7 @@
 			    <DataStoreVarDec ref="SoftCycle2Cyl2">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13314,7 +13472,7 @@
 			    <DataStoreVarDec ref="SoftCycle2Cyl3">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13330,7 +13488,7 @@
 			    <DataStoreVarDec ref="SoftCycle2Cyl4">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13346,7 +13504,7 @@
 			    <DataStoreVarDec ref="SoftCycle2Cyl5">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13362,7 +13520,7 @@
 			    <DataStoreVarDec ref="SoftCycle2Cyl6">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13378,7 +13536,7 @@
 			    <DataStoreVarDec ref="SoftCycle2Cyl7">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13394,7 +13552,7 @@
 			    <DataStoreVarDec ref="SoftCycle2Cyl8">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13410,7 +13568,7 @@
 			    <DataStoreVarDec ref="SoftCycle3Cyl1">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13426,7 +13584,7 @@
 			    <DataStoreVarDec ref="SoftCycle3Cyl2">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13442,7 +13600,7 @@
 			    <DataStoreVarDec ref="SoftCycle3Cyl3">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13458,7 +13616,7 @@
 			    <DataStoreVarDec ref="SoftCycle3Cyl4">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13474,7 +13632,7 @@
 			    <DataStoreVarDec ref="SoftCycle3Cyl5">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13490,7 +13648,7 @@
 			    <DataStoreVarDec ref="SoftCycle3Cyl6">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13506,7 +13664,7 @@
 			    <DataStoreVarDec ref="SoftCycle3Cyl7">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13522,7 +13680,7 @@
 			    <DataStoreVarDec ref="SoftCycle3Cyl8">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13538,7 +13696,7 @@
 			    <DataStoreVarDec ref="SoftCycle4Cyl1">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13554,7 +13712,7 @@
 			    <DataStoreVarDec ref="SoftCycle4Cyl2">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13570,7 +13728,7 @@
 			    <DataStoreVarDec ref="SoftCycle4Cyl3">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13586,7 +13744,7 @@
 			    <DataStoreVarDec ref="SoftCycle4Cyl4">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13602,7 +13760,7 @@
 			    <DataStoreVarDec ref="SoftCycle4Cyl5">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13618,7 +13776,7 @@
 			    <DataStoreVarDec ref="SoftCycle4Cyl6">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13634,7 +13792,7 @@
 			    <DataStoreVarDec ref="SoftCycle4Cyl7">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13650,7 +13808,7 @@
 			    <DataStoreVarDec ref="SoftCycle4Cyl8">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13666,7 +13824,7 @@
 			    <DataStoreVarDec ref="MediumCycle1Cyl1">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13682,7 +13840,7 @@
 			    <DataStoreVarDec ref="MediumCycle1Cyl2">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13698,7 +13856,7 @@
 			    <DataStoreVarDec ref="MediumCycle1Cyl3">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13714,7 +13872,7 @@
 			    <DataStoreVarDec ref="MediumCycle1Cyl4">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13730,7 +13888,7 @@
 			    <DataStoreVarDec ref="MediumCycle1Cyl5">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13746,7 +13904,7 @@
 			    <DataStoreVarDec ref="MediumCycle1Cyl6">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13762,7 +13920,7 @@
 			    <DataStoreVarDec ref="MediumCycle1Cyl7">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13778,7 +13936,7 @@
 			    <DataStoreVarDec ref="MediumCycle1Cyl8">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13794,7 +13952,7 @@
 			    <DataStoreVarDec ref="MediumCycle2Cyl1">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13810,7 +13968,7 @@
 			    <DataStoreVarDec ref="MediumCycle2Cyl2">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13826,7 +13984,7 @@
 			    <DataStoreVarDec ref="MediumCycle2Cyl3">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13842,7 +14000,7 @@
 			    <DataStoreVarDec ref="MediumCycle2Cyl4">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13858,7 +14016,7 @@
 			    <DataStoreVarDec ref="MediumCycle2Cyl5">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13874,7 +14032,7 @@
 			    <DataStoreVarDec ref="MediumCycle2Cyl6">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13890,7 +14048,7 @@
 			    <DataStoreVarDec ref="MediumCycle2Cyl7">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13906,7 +14064,7 @@
 			    <DataStoreVarDec ref="MediumCycle2Cyl8">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13922,7 +14080,7 @@
 			    <DataStoreVarDec ref="MediumCycle3Cyl1">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13938,7 +14096,7 @@
 			    <DataStoreVarDec ref="MediumCycle3Cyl2">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13954,7 +14112,7 @@
 			    <DataStoreVarDec ref="MediumCycle3Cyl3">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13970,7 +14128,7 @@
 			    <DataStoreVarDec ref="MediumCycle3Cyl4">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -13986,7 +14144,7 @@
 			    <DataStoreVarDec ref="MediumCycle3Cyl5">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14002,7 +14160,7 @@
 			    <DataStoreVarDec ref="MediumCycle3Cyl6">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14018,7 +14176,7 @@
 			    <DataStoreVarDec ref="MediumCycle3Cyl7">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14034,7 +14192,7 @@
 			    <DataStoreVarDec ref="MediumCycle3Cyl8">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14050,7 +14208,7 @@
 			    <DataStoreVarDec ref="MediumCycle4Cyl1">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14066,7 +14224,7 @@
 			    <DataStoreVarDec ref="MediumCycle4Cyl2">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14082,7 +14240,7 @@
 			    <DataStoreVarDec ref="MediumCycle4Cyl3">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14098,7 +14256,7 @@
 			    <DataStoreVarDec ref="MediumCycle4Cyl4">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14114,7 +14272,7 @@
 			    <DataStoreVarDec ref="MediumCycle4Cyl5">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14130,7 +14288,7 @@
 			    <DataStoreVarDec ref="MediumCycle4Cyl6">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14146,7 +14304,7 @@
 			    <DataStoreVarDec ref="MediumCycle4Cyl7">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14162,7 +14320,7 @@
 			    <DataStoreVarDec ref="MediumCycle4Cyl8">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14178,7 +14336,7 @@
 			    <DataStoreVarDec ref="HardCycle1Cyl1">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14194,7 +14352,7 @@
 			    <DataStoreVarDec ref="HardCycle1Cyl2">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14210,7 +14368,7 @@
 			    <DataStoreVarDec ref="HardCycle1Cyl3">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14226,7 +14384,7 @@
 			    <DataStoreVarDec ref="HardCycle1Cyl4">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14242,7 +14400,7 @@
 			    <DataStoreVarDec ref="HardCycle1Cyl5">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14258,7 +14416,7 @@
 			    <DataStoreVarDec ref="HardCycle1Cyl6">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14274,7 +14432,7 @@
 			    <DataStoreVarDec ref="HardCycle1Cyl7">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14290,7 +14448,7 @@
 			    <DataStoreVarDec ref="HardCycle1Cyl8">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14306,7 +14464,7 @@
 			    <DataStoreVarDec ref="HardCycle2Cyl1">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14322,7 +14480,7 @@
 			    <DataStoreVarDec ref="HardCycle2Cyl2">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14338,7 +14496,7 @@
 			    <DataStoreVarDec ref="HardCycle2Cyl3">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14354,7 +14512,7 @@
 			    <DataStoreVarDec ref="HardCycle2Cyl4">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14370,7 +14528,7 @@
 			    <DataStoreVarDec ref="HardCycle2Cyl5">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14386,7 +14544,7 @@
 			    <DataStoreVarDec ref="HardCycle2Cyl6">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14402,7 +14560,7 @@
 			    <DataStoreVarDec ref="HardCycle2Cyl7">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14418,7 +14576,7 @@
 			    <DataStoreVarDec ref="HardCycle2Cyl8">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14434,7 +14592,7 @@
 			    <DataStoreVarDec ref="HardCycle3Cyl1">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14450,7 +14608,7 @@
 			    <DataStoreVarDec ref="HardCycle3Cyl2">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14466,7 +14624,7 @@
 			    <DataStoreVarDec ref="HardCycle3Cyl3">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14482,7 +14640,7 @@
 			    <DataStoreVarDec ref="HardCycle3Cyl4">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14498,7 +14656,7 @@
 			    <DataStoreVarDec ref="HardCycle3Cyl5">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14514,7 +14672,7 @@
 			    <DataStoreVarDec ref="HardCycle3Cyl6">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14530,7 +14688,7 @@
 			    <DataStoreVarDec ref="HardCycle3Cyl7">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14546,7 +14704,7 @@
 			    <DataStoreVarDec ref="HardCycle3Cyl8">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14562,7 +14720,7 @@
 			    <DataStoreVarDec ref="HardCycle4Cyl1">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14578,7 +14736,7 @@
 			    <DataStoreVarDec ref="HardCycle4Cyl2">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14594,7 +14752,7 @@
 			    <DataStoreVarDec ref="HardCycle4Cyl3">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14610,7 +14768,7 @@
 			    <DataStoreVarDec ref="HardCycle4Cyl4">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14626,7 +14784,7 @@
 			    <DataStoreVarDec ref="HardCycle4Cyl5">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14642,7 +14800,7 @@
 			    <DataStoreVarDec ref="HardCycle4Cyl6">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14658,7 +14816,7 @@
 			    <DataStoreVarDec ref="HardCycle4Cyl7">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14674,7 +14832,7 @@
 			    <DataStoreVarDec ref="HardCycle4Cyl8">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
+        		                <enum_name>VarDecEnum_22</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -14690,7 +14848,7 @@
 			    <DataStoreVarDec ref="RevLimitType">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_22</enum_name>
+        		                <enum_name>VarDecEnum_23</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -15797,37 +15955,6 @@
         		                <max>4294967295.000000</max>
         		                <min>0.000000</min>
         		                <name>Status1_Age_Count_Ovr_new</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Est_Absolute_Torque_Ovr_ovr">
-        		                <access>RW RW RW RW</access>
-        		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_0</enum_name>
-        		                <exp>1.0</exp>
-        		                <format>1.0</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix | Est_Absolute_Torque_Ovr Override</group>
-        		                <max>1.000000</max>
-        		                <min>0.000000</min>
-        		                <name>Est_Absolute_Torque_Ovr_ovr</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Est_Absolute_Torque_Ovr_new">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix | Est_Absolute_Torque_Ovr Override</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>Est_Absolute_Torque_Ovr_new</name>
         		                <offset>0.0</offset>
         		                <storage>RAM</storage>
         		                <update>BACKGND</update>
@@ -17204,7 +17331,7 @@
 			    <DataStoreVarDec ref="EngineState">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_25</enum_name>
+        		                <enum_name>VarDecEnum_26</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -17277,6 +17404,54 @@
         		                <max>1.000000</max>
         		                <min>0.000000</min>
         		                <name>ESTOP</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Torque_Filter">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix</group>
+        		                <help>Filter time constant</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Torque_Filter</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Est_Absolute_Torque_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_0</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix | Est_Absolute_Torque_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Est_Absolute_Torque_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Est_Absolute_Torque_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix | Est_Absolute_Torque_Ovr Override</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Est_Absolute_Torque_Ovr_new</name>
         		                <offset>0.0</offset>
         		                <storage>RAM</storage>
         		                <update>BACKGND</update>
@@ -17389,7 +17564,7 @@
 			    <DataStoreVarDec ref="EncoderSyncEdge">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_29</enum_name>
+        		                <enum_name>VarDecEnum_30</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -17406,7 +17581,7 @@
 			    <DataStoreVarDec ref="EncoderCamSyncEdge">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_29</enum_name>
+        		                <enum_name>VarDecEnum_30</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -17423,7 +17598,7 @@
 			    <DataStoreVarDec ref="EncoderCrankPullup">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_30</enum_name>
+        		                <enum_name>VarDecEnum_31</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -17440,7 +17615,7 @@
 			    <DataStoreVarDec ref="EncoderCamPullup">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_30</enum_name>
+        		                <enum_name>VarDecEnum_31</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -19241,7 +19416,7 @@
 			    <DataStoreVarDec ref="EST_InitialPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_31</enum_name>
+        		                <enum_name>VarDecEnum_32</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -19258,7 +19433,7 @@
 			    <DataStoreVarDec ref="EST_SequenceType">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_32</enum_name>
+        		                <enum_name>VarDecEnum_33</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -22147,7 +22322,7 @@
 			    <DataStoreVarDec ref="INJ_InitialPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_33</enum_name>
+        		                <enum_name>VarDecEnum_34</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -22164,7 +22339,7 @@
 			    <DataStoreVarDec ref="INJ_SequenceType">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_34</enum_name>
+        		                <enum_name>VarDecEnum_35</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -22181,7 +22356,7 @@
 			    <DataStoreVarDec ref="INJ_Behavior">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_35</enum_name>
+        		                <enum_name>VarDecEnum_36</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -22540,7 +22715,7 @@
         		                <access>RO RO RO RO</access>
         		                <class>ENUMARR</class>
                                 <col_header>
-                                    <enum_name>VarDecEnum_37</enum_name>
+                                    <enum_name>VarDecEnum_38</enum_name>
                                 </col_header>
         		                <enum_name>Faults</enum_name>
         		                <format>3.0</format>
@@ -22550,7 +22725,7 @@
         		                <min>0.000000</min>
         		                <name>FaultActionReason</name>
                                 <row_header>
-                                    <enum_name>VarDecEnum_38</enum_name>
+                                    <enum_name>VarDecEnum_39</enum_name>
                                 </row_header>
         		                <storage>RAM</storage>
         		                <update>BACKGND</update>
@@ -22559,7 +22734,7 @@
 			    <DataStoreVarDec ref="MAPSensorPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_39</enum_name>
+        		                <enum_name>VarDecEnum_40</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -22576,7 +22751,7 @@
 			    <DataStoreVarDec ref="MAPSensorPin_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_40</enum_name>
+        		                <enum_name>VarDecEnum_41</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -22593,7 +22768,7 @@
 			    <DataStoreVarDec ref="ECTSensorPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_39</enum_name>
+        		                <enum_name>VarDecEnum_40</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -22610,7 +22785,7 @@
 			    <DataStoreVarDec ref="ECTSensorPin_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_40</enum_name>
+        		                <enum_name>VarDecEnum_41</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -22627,7 +22802,7 @@
 			    <DataStoreVarDec ref="IATSensorPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_39</enum_name>
+        		                <enum_name>VarDecEnum_40</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -22644,7 +22819,7 @@
 			    <DataStoreVarDec ref="IATSensorPin_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_40</enum_name>
+        		                <enum_name>VarDecEnum_41</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -22661,7 +22836,7 @@
 			    <DataStoreVarDec ref="OilPresPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_39</enum_name>
+        		                <enum_name>VarDecEnum_40</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -22678,7 +22853,7 @@
 			    <DataStoreVarDec ref="OilPresPin_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_40</enum_name>
+        		                <enum_name>VarDecEnum_41</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -22695,7 +22870,7 @@
 			    <DataStoreVarDec ref="SysVoltage">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_39</enum_name>
+        		                <enum_name>VarDecEnum_40</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -22712,7 +22887,7 @@
 			    <DataStoreVarDec ref="SysVoltage_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_40</enum_name>
+        		                <enum_name>VarDecEnum_41</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -22729,7 +22904,7 @@
 			    <DataStoreVarDec ref="TPS1AnalogInput">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_39</enum_name>
+        		                <enum_name>VarDecEnum_40</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -22746,7 +22921,7 @@
 			    <DataStoreVarDec ref="TPS1AnalogInput_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_40</enum_name>
+        		                <enum_name>VarDecEnum_41</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -22763,7 +22938,7 @@
 			    <DataStoreVarDec ref="TPS2AnalogInput">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_39</enum_name>
+        		                <enum_name>VarDecEnum_40</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -22780,7 +22955,7 @@
 			    <DataStoreVarDec ref="TPS2AnalogInput_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_40</enum_name>
+        		                <enum_name>VarDecEnum_41</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -22797,7 +22972,7 @@
 			    <DataStoreVarDec ref="PostO2Pin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_39</enum_name>
+        		                <enum_name>VarDecEnum_40</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -22814,7 +22989,7 @@
 			    <DataStoreVarDec ref="PostO2Pin_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_40</enum_name>
+        		                <enum_name>VarDecEnum_41</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -22831,7 +23006,7 @@
 			    <DataStoreVarDec ref="MAF_Pin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_41</enum_name>
+        		                <enum_name>VarDecEnum_42</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -22848,7 +23023,7 @@
 			    <DataStoreVarDec ref="MAF_Pin_EdgeDetect">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_29</enum_name>
+        		                <enum_name>VarDecEnum_30</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -22865,7 +23040,7 @@
 			    <DataStoreVarDec ref="MAF_Pin_AliasProtect">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_42</enum_name>
+        		                <enum_name>VarDecEnum_43</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -22899,7 +23074,7 @@
 			    <DataStoreVarDec ref="MAF_Pin_Interface">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_43</enum_name>
+        		                <enum_name>VarDecEnum_44</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -22916,7 +23091,7 @@
 			    <DataStoreVarDec ref="FuelSensorPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_41</enum_name>
+        		                <enum_name>VarDecEnum_42</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -22933,7 +23108,7 @@
 			    <DataStoreVarDec ref="FuelSensorPin_EdgeDetect">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_29</enum_name>
+        		                <enum_name>VarDecEnum_30</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -22950,7 +23125,7 @@
 			    <DataStoreVarDec ref="FuelSensorPin_AliasProtect">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_42</enum_name>
+        		                <enum_name>VarDecEnum_43</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -22984,7 +23159,7 @@
 			    <DataStoreVarDec ref="FuelSensorPin_Interface">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_43</enum_name>
+        		                <enum_name>VarDecEnum_44</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -23001,12 +23176,12 @@
 			    <DataStoreVarDec ref="FuelPumpPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_44</enum_name>
+        		                <enum_name>VarDecEnum_45</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut7858p0004</help>
+        		                <help>Digital output pin selection for DOut7269p0001</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>FuelPumpPin</name>
@@ -23018,7 +23193,7 @@
 			    <DataStoreVarDec ref="ETCPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_45</enum_name>
+        		                <enum_name>VarDecEnum_46</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -23035,12 +23210,12 @@
 			    <DataStoreVarDec ref="OilPumpPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_44</enum_name>
+        		                <enum_name>VarDecEnum_45</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut8136p0004</help>
+        		                <help>Digital output pin selection for DOut7547p0001</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>OilPumpPin</name>
@@ -23052,12 +23227,12 @@
 			    <DataStoreVarDec ref="O2_Heater">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_44</enum_name>
+        		                <enum_name>VarDecEnum_45</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut8146p0004</help>
+        		                <help>Digital output pin selection for DOut7557p0001</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>O2_Heater</name>
@@ -23069,7 +23244,7 @@
 			    <DataStoreVarDec ref="FuelPresPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_39</enum_name>
+        		                <enum_name>VarDecEnum_40</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -23086,7 +23261,7 @@
 			    <DataStoreVarDec ref="FuelPresPin_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_40</enum_name>
+        		                <enum_name>VarDecEnum_41</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -23103,7 +23278,7 @@
 			    <DataStoreVarDec ref="EGRPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_39</enum_name>
+        		                <enum_name>VarDecEnum_40</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -23120,7 +23295,7 @@
 			    <DataStoreVarDec ref="EGRPin_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_40</enum_name>
+        		                <enum_name>VarDecEnum_41</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -23137,7 +23312,7 @@
 			    <DataStoreVarDec ref="SensVoltSensorPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_39</enum_name>
+        		                <enum_name>VarDecEnum_40</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -23154,7 +23329,7 @@
 			    <DataStoreVarDec ref="SensVoltSensorPin_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_40</enum_name>
+        		                <enum_name>VarDecEnum_41</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>

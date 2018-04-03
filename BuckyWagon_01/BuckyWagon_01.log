@@ -1,0 +1,245 @@
+ 
+#############################################
+###                                       ###
+###  Starting MotoHawk Build              ###
+###  MotoHawk version: 2010a_sp1.49       ###
+###    MATLAB version: 7.10.0.499 (R2010a)###
+###        21-Jan-2018 12:54:25           ###
+###                                       ###
+#############################################
+ 
+Target Module:   ECU565-128 (DEV)
+DEV Executable:  BuckyWagon_01_170.srz
+MotoTune DLL:    BuckyWago_170.dll
+ 
+Project GUID:    3c32a120-d49a-4164-87-fe-ac-4b-55-ed-6f
+Build GUID:      130491af-4976-4b93-85-f3-4b-64-fe-01-54
+ 
+### Starting Real-Time Workshop build procedure for model: BuckyWagon_01
+### Generating code into build directory: C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build
+{Warning: The 'tokenize' option for regexprep is now the default behavior.} 
+{Warning: The 'tokenize' option for regexprep is now the default behavior.} 
+{Warning: The 'tokenize' option for regexprep is now the default behavior.} 
+{Warning: The 'tokenize' option for regexprep is now the default behavior.} 
+{Warning: The 'tokenize' option for regexprep is now the default behavior.} 
+{Warning: The 'tokenize' option for regexprep is now the default behavior.} 
+{Warning: In CAN message specification: 'Status'
+The maximum value for payload field 'Eaton_HV_Charger_Temperature' has been changed from 125 to 87.5, to fit into the size of the
+field. (msg.fields{6}.maximum)} 
+{Warning: Matching "From" for "Goto" 'BuckyWagon_01/Foreground/Control Strategy/Calculations/Goto4' not found} 
+{Warning: Matching "From" for "Goto" 'BuckyWagon_01/Foreground/Gauges/Goto' not found} 
+{Warning: Output port 12 of 'BuckyWagon_01/Foreground/Control Strategy/Calculations/kW calculation1' is not connected.} 
+{Warning: Input port 1 of 'BuckyWagon_01/Foreground/Control Strategy/Calculations/kW calculation1/Instantaneous DC-DC Watts' is not
+connected.} 
+{Warning: Input port 1 of 'BuckyWagon_01/Foreground/Control Strategy/Calculations/motohawk_probe11' is not connected.} 
+{Warning: Input port 1 of 'BuckyWagon_01/Foreground/Control Strategy/Calculations/motohawk_probe8' is not connected.} 
+{Warning: Input port 1 of 'BuckyWagon_01/Foreground/Control Strategy/Calculations/motohawk_probe9' is not connected.} 
+### Invoking Target Language Compiler on BuckyWagon_01.rtw
+### Using System Target File: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2010a_sp1.49\Blocks\Build\motohawk_ert_rtw.tlc
+### Loading TLC function libraries
+...........
+### Initial pass through model to cache user defined code
+...............................................................................
+...............................................................................
+...............................................................................
+....................
+### Caching model source code
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+.....................................................
+### Writing source file BuckyWagon_01.c
+### Writing header file BuckyWagon_01_private.h
+.
+### Writing header file BuckyWagon_01.h
+### Writing header file BuckyWagon_01_types.h
+.
+### Writing source file BuckyWagon_01_Foreground.c
+### Writing source file BuckyWagon_01_MiniViewDisplay.c
+.
+### Writing header file BuckyWagon_01_Foreground.h
+### Writing header file BuckyWagon_01_MiniViewDisplay.h
+.
+### Writing header file rtwtypes.h
+### Writing header file rt_MAX.h
+.
+### Writing header file rt_MAXd_snf.h
+### Writing header file rt_MIN.h
+.
+### Writing header file rt_MINd_snf.h
+### Writing header file rt_nonfinite.h
+.
+### Writing source file rt_nonfinite.c
+### Writing header file rt_SATURATE.h
+.
+### Writing source file BuckyWagon_01_data.c
+### TLC code generation complete.
+...............................................................................
+...............................................................................
+...............................................................................
+......
+### Processing Template Makefile: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2010a_sp1.49\Blocks\Build\motohawk_ert_rtw.tmf
+### BuckyWagon_01.mk which is generated from C:\Program Files (x86)\Woodward\MCS\MotoHawk\2010a_sp1.49\Blocks\Build\motohawk_ert_rtw.tmf is up to date
+### Building BuckyWagon_01: .\BuckyWagon_01.bat
+### Created Code and Build Scripts.  Ready to Build ### 
+### Successful completion of Real-Time Workshop build procedure for model: BuckyWagon_01
+Creating Application Descriptor...
+...Finished Application Descriptor
+### Starting MotoCoder v0.10.7 ###
+Module: ClassicModule-MPC565
+Module File: file:///C:/PROGRA~2/Woodward/MCS/MotoHawk/2010A_~1.49/MOTOCO~1/Modules/ClassicModule-MPC565.xml
+Module Family: ClassicControlCore
+Module Family Directory: file:///C:/PROGRA~2/Woodward/MCS/MotoHawk/2010A_~1.49/MOTOCO~1/ModuleFamilies/ClassicControlCore
+Application Configuration File: .\MotoHawk_Extensions.xml
+### Generating MotoTune DLL 
+Parser mode is C Source Code 
+Searching for files to parse 
+Writing Vardec Library C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\TDB/ParsedVardecs.xml 
+### Completed MotoTune DLL 
+### Compiling and Linking 
+Buildfile: file:///C:/Users/Owner/Documents/MATLAB/BuckyWagon_01/BuckyWagon_01_Build/BuckyWagon_01.build 
+Target framework: Microsoft .NET Framework 3.5 
+Target(s) specified: rebuild  
+ 
+ 
+rebuild: 
+ 
+ 
+clean: 
+ 
+   [delete] Deleting directory 'C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\Build'. 
+   [delete] Deleting directory 'C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\Archive'. 
+ 
+all: 
+ 
+ 
+init: 
+ 
+    [mkdir] Creating directory 'C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\Build\Obj'. 
+    [mkdir] Creating directory 'C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\Archive'. 
+     [copy] Copying 4 files to 'C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\Archive'. 
+ 
+compile: 
+ 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\Application.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\ApplicationSecurity.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\AppMonitor.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\BuckyWagon_01.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\BuckyWagon_01_data.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\BuckyWagon_01_Foreground.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\BuckyWagon_01_MiniViewDisplay.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\CANReceiveDispatcher.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\CodeCoverage.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\FaultManager.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\MotoCoder_DataStore.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\MotoCoder_Timer.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\MotoHawk_CAN.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\MotoHawk_DataStores.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\MotoHawk_IO.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\rt_nonfinite.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\TableLookupFunctions.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\Trigger_BGND_BASEx20_PERIODIC_4177p0001.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\Trigger_BGND_BASE_PERIODIC_4167p0001.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\Trigger_CAN_RX_BusCAN_1_Buf1.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\Trigger_CAN_RX_BusCAN_1_Buf14.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\Trigger_CAN_RX_BusCAN_2_Buf1.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\Trigger_CAN_RX_BusCAN_2_Buf14.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\Trigger_CAN_Slot_miniview_button_down_2043p0004.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\Trigger_CAN_Slot_miniview_button_menu_2301p0001.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\Trigger_CAN_Slot_miniview_button_up_2552p0001.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\Trigger_FGND_20XRTI_PERIODIC_3974p0001.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\Trigger_FGND_RTI_PERIODIC_3973p0004.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\Trigger_FGND_RTI_PERIODIC_4175p0001.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\Trigger_SHUTDOWN_EVENT_4178p0001.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\Trigger_STARTUP_EVENT_4176p0001.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\VarDecs.c 
+  [gcc-cpp] Compiling C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build\TDB\TableDB.c 
+ 
+link: 
+ 
+   [gcc-ld] Linking BuckyWagon_01.elf 
+ 
+s-records: 
+ 
+[gcc-objcopy] Generating BuckyWagon_01.run from BuckyWagon_01.elf 
+ 
+BUILD SUCCEEDED 
+ 
+Total time: 15 seconds. 
+ 
+### Call MotoConvert 
+Project format is MPC5xx 
+Toolchain format is GCC 
+Transforming range 0x00400000-0x0041FFFF into 64 byte pages... 
+Transforming range 0x00000000-0x000FFFFF into 64 byte pages... 
+Searching for Table Database address 'EriRequestTableList'...Found at 0x0004A8F4 
+Searching for CRC Table address 'g_pCRCBlockPtr' ...Found at 0x00010000 
+Calculating Application defined CRC's...OK. 
+Searching for initialised section '.fixed_ramcals' aliased to '.fixed_romcals' ... 
+Searching for initialised section '.ramcals' aliased to '.romcals' ... 
+    Adding RAM[0x003F8294], ROM[0x00051B70], Length[0x0000003C] 
+Searching for initialised section '.sdata' aliased to '.romsdata' ... 
+    Adding RAM[0x003F7000], ROM[0x00051BDC], Length[0x00000019] 
+Searching for initialised section '.data' aliased to '.romdata' ... 
+    Ignoring zero length section at RAM[0x003F8294], ROM[0x00051BF8] 
+Complete. 
+Writing file sr://BuckyWagon_01.sr... 
+Encrypting 'sr://BuckyWagon_01.sr' into 'srz://.\Target\BuckyWagon_01_170.srz' ... 
+Done. 
+### Creating Build Statistics 
+Memory Summary:
+	FLASH:                     265809 bytes   27% of 982784
+	    NonVolatileDefault:        60 bytes    0% of 982784
+	    BuckyWagon_01_Foreground:25032 bytes    3% of 982784
+	DECRAM:                      4096 bytes  100% of   4096
+	    FgndTimeStack:           3072 bytes   75% of   4096
+	    IdleStack:               1024 bytes   25% of   4096
+	INTERNAL_RAM:                8290 bytes   23% of  36720
+	    NonVolatileWork:           60 bytes    0% of  36720
+	    BgndStack:               2048 bytes    6% of  36720
+	    InterruptStack:          1536 bytes    4% of  36720
+	EXTENDED_RAM:                6069 bytes    1% of  1024K
+	    BuckyWagon_01_M:            4 bytes    0% of  1024K
+	    BuckyWagon_01_B:         1052 bytes    0% of  1024K
+	    BuckyWagon_01_DWork:      324 bytes    0% of  1024K
+	    BuckyWagon_01_M_:           4 bytes    0% of  1024K
+	    VolatileWork:              12 bytes    0% of  1024K
+	CAL_SPACE:                   2756 bytes    4% of  65536
+	    ConstantWork:            2600 bytes    4% of  65536
+	EEPROM_SPACE:                  63 bytes    1% of   8192
+
+### Copy BuckyWago_170.dll and BuckyWagon_01_170.srz 
+### Successful Build with MotoCoder 
+Elapsed Build Time: 2 minutes, 32.3 seconds  (152.3 seconds)
+{Warning: Block diagram 'BuckyWagon_01' contains one or more parameterized library links.  To find the parameterized links use the Model
+Advisor.  The diagram has been saved but may not behave as you intended.} 
+{Warning: Block diagram 'BuckyWagon_01' contains disabled library links.  Use Model Advisor to find the disabled links in non-library
+models.  The diagram has been saved but may not contain what you intended.} 
+ 
+#############################################################################
+###
+### Target Module: ECU565-128
+### Created Development Executable: BuckyWagon_01_170.srz
+### Created MotoTune DLL: BuckyWago_170.dll
+###
+### Successful MotoHawk Build for model: BuckyWagon_01
+###
+#############################################################################
+ 

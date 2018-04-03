@@ -7,24 +7,24 @@
 #define MOTOHAWK_IO_H
 #include "CommonInclude.h"
 
-/* S-Function Block: <S778>/motohawk_ain5 Resource: ECUP */
+/* S-Function Block: <S785>/motohawk_ain5 Resource: ECUP */
 NativeError_S ECUP_AnalogInput_Get(uint16_T *adc, uint16_T *status);
 NativeError_S ECUP_AnalogInput_Create(void);
 
-/* S-Function Block: <S778>/motohawk_dout Resource: MPRD */
-extern NativeError_S DOut8391p0004_DiscreteOutput_Set(boolean_T in);
-extern NativeError_S DOut8391p0004_DiscreteOutputPushPull_Set(int8_T in);
-extern NativeError_S DOut8391p0004_DiscreteOutput_Create(void);
+/* S-Function Block: <S785>/motohawk_dout Resource: MPRD */
+extern NativeError_S DOut7800p0005_DiscreteOutput_Set(boolean_T in);
+extern NativeError_S DOut7800p0005_DiscreteOutputPushPull_Set(int8_T in);
+extern NativeError_S DOut7800p0005_DiscreteOutput_Create(void);
 
-/* S-Function Block: <S556>/motohawk_ain Resource: MAPSensorPin */
+/* S-Function Block: <S563>/motohawk_ain Resource: MAPSensorPin */
 NativeError_S MAPSensorPin_AnalogInput_Get(uint16_T *adc, uint16_T *status);
 NativeError_S MAPSensorPin_AnalogInput_Create(void);
 
-/* S-Function Block: <S582>/motohawk_ain Resource: ECTSensorPin */
+/* S-Function Block: <S589>/motohawk_ain Resource: ECTSensorPin */
 NativeError_S ECTSensorPin_AnalogInput_Get(uint16_T *adc, uint16_T *status);
 NativeError_S ECTSensorPin_AnalogInput_Create(void);
 
-/* S-Function Block: <S582>/motohawk_ain1 Resource: IATSensorPin */
+/* S-Function Block: <S589>/motohawk_ain1 Resource: IATSensorPin */
 NativeError_S IATSensorPin_AnalogInput_Get(uint16_T *adc, uint16_T *status);
 NativeError_S IATSensorPin_AnalogInput_Create(void);
 
@@ -62,12 +62,12 @@ extern void FuelSensorPin_FrequencyInput_Period_Raw_Get32Bit(uint32_T* const
 extern void FuelSensorPin_FrequencyInput_Period_Raw_Get16Bit(uint16_T* const
   out_pu16PeriodCnts, uint16_T* const out_pu16DutyCycleCnts);
 
-/* S-Function Block: <S656>/motohawk_dout Resource: FUELP */
-extern NativeError_S DOut7858p0004_DiscreteOutput_Set(boolean_T in);
-extern NativeError_S DOut7858p0004_DiscreteOutputPushPull_Set(int8_T in);
-extern NativeError_S DOut7858p0004_DiscreteOutput_Create(void);
+/* S-Function Block: <S663>/motohawk_dout Resource: FUELP */
+extern NativeError_S DOut7269p0001_DiscreteOutput_Set(boolean_T in);
+extern NativeError_S DOut7269p0001_DiscreteOutputPushPull_Set(int8_T in);
+extern NativeError_S DOut7269p0001_DiscreteOutput_Create(void);
 
-/* S-Function Block: <S657>/motohawk_pwm1 Resource: ETCPin_PWMOutput */
+/* S-Function Block: <S664>/motohawk_pwm1 Resource: ETCPin_PWMOutput */
 void ETCPin_PWMOutput_PWMOutput_Create(void);
 void ETCPin_PWMOutput_PWMOutput_Set(uint32_T freq, int16_T duty, boolean_T brake,
   boolean_T enable);
@@ -75,15 +75,15 @@ void ETCPin_PWMOutput_PWMOutput_Stop(void);
 void ETCPin_PWMOutput_PWMOutput_Outputs(uint8_T * fault_addr, int16_T
   * current_addr);
 
-/* S-Function Block: <S659>/motohawk_dout Resource: OILP */
-extern NativeError_S DOut8136p0004_DiscreteOutput_Set(boolean_T in);
-extern NativeError_S DOut8136p0004_DiscreteOutputPushPull_Set(int8_T in);
-extern NativeError_S DOut8136p0004_DiscreteOutput_Create(void);
+/* S-Function Block: <S666>/motohawk_dout Resource: OILP */
+extern NativeError_S DOut7547p0001_DiscreteOutput_Set(boolean_T in);
+extern NativeError_S DOut7547p0001_DiscreteOutputPushPull_Set(int8_T in);
+extern NativeError_S DOut7547p0001_DiscreteOutput_Create(void);
 
-/* S-Function Block: <S660>/motohawk_dout Resource: EST 1 */
-extern NativeError_S DOut8146p0004_DiscreteOutput_Set(boolean_T in);
-extern NativeError_S DOut8146p0004_DiscreteOutputPushPull_Set(int8_T in);
-extern NativeError_S DOut8146p0004_DiscreteOutput_Create(void);
+/* S-Function Block: <S667>/motohawk_dout Resource: EST 1 */
+extern NativeError_S DOut7557p0001_DiscreteOutput_Set(boolean_T in);
+extern NativeError_S DOut7557p0001_DiscreteOutputPushPull_Set(int8_T in);
+extern NativeError_S DOut7557p0001_DiscreteOutput_Create(void);
 
 /* S-Function Block: <S356>/motohawk_ain2 Resource: FuelPresPin */
 NativeError_S FuelPresPin_AnalogInput_Get(uint16_T *adc, uint16_T *status);

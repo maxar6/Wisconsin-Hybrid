@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildStatsSymbols>
+   <BuildStatsSymbol>BuckyWagon_01_M</BuildStatsSymbol>
+   <BuildStatsSymbol>BuckyWagon_01_B</BuildStatsSymbol>
+   <BuildStatsSymbol>BuckyWagon_01_DWork</BuildStatsSymbol>
+   <BuildStatsSymbol>BuckyWagon_01_PrevZC</BuildStatsSymbol>
+   <BuildStatsSymbol>BuckyWagon_01_M_</BuildStatsSymbol>
+   <BuildStatsSymbol>VolatileWork</BuildStatsSymbol>
+   <BuildStatsSymbol>ConstantWork</BuildStatsSymbol>
+   <BuildStatsSymbol>NonVolatileWork</BuildStatsSymbol>
+   <BuildStatsSymbol>NonVolatileDefault</BuildStatsSymbol>
+   <BuildStatsSymbol>FgndTimeStack</BuildStatsSymbol>
+   <BuildStatsSymbol>FgndAngleStack</BuildStatsSymbol>
+   <BuildStatsSymbol>BgndStack</BuildStatsSymbol>
+   <BuildStatsSymbol>IdleStack</BuildStatsSymbol>
+   <BuildStatsSymbol>InterruptStack</BuildStatsSymbol>
+   <BuildStatsSymbol>Heap</BuildStatsSymbol>
+   <BuildStatsSymbol>Stack</BuildStatsSymbol>
+   <BuildStatsSymbol>BuckyWagon_01_Foreground</BuildStatsSymbol>
+</BuildStatsSymbols>

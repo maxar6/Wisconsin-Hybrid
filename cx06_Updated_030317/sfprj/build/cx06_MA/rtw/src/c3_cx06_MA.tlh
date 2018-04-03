@@ -1,0 +1,34 @@
+
+%implements "chartHeader" "C"
+%function CacheOutputs(block,system,typeDefHFile,hFile,cFile) void
+%openfile typedefsBuf
+   
+   typedef struct {
+uint8_T is_active_c3_cx06_MA;
+uint8_T is_c3_cx06_MA;
+} %<SFInfo.ChartInstanceTypedef>;
+
+   
+%closefile typedefsBuf
+   %if !WHITE_SPACE(typedefsBuf)
+      %openfile tempBuf
+#ifndef _CSC3_CX06_MA_CHARTSTRUCT_
+#define _CSC3_CX06_MA_CHARTSTRUCT_
+      %<typedefsBuf>\
+ #endif /* _CSC3_CX06_MA_CHARTSTRUCT_ */
+      %closefile tempBuf
+%<SLibSetModelFileAttribute(typeDefHFile,"Typedefs",tempBuf)>
+   %endif
+
+%openfile externFcnsBuf
+   
+   
+   
+   
+%closefile externFcnsBuf
+%<SLibSetModelFileAttribute(hFile,"ExternFcns",externFcnsBuf)>
+   %openfile externFcnsBuf
+   %closefile externFcnsBuf
+   %<SLibSetModelFileAttribute(hFile,"ExternFcns",externFcnsBuf)>
+
+%endfunction %% CacheOutputs

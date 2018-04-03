@@ -1,0 +1,115 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDefines(block,system) void
+   %openfile chartConstBuf
+         #define %<block.SymbolMapping.IN_Off> (1)
+         #define %<block.SymbolMapping.IN_On> (2)
+   %closefile chartConstBuf
+   %return chartConstBuf
+%endfunction %% ChartDefines
+%function ChartFunctions(block,system) void
+   %openfile chartFcnsBuf
+     
+            
+            
+            
+   %closefile chartFcnsBuf
+   %return chartFcnsBuf
+%endfunction %% ChartFunctions
+%function ChartFunctionProtos(block,system,oFile) void
+   %openfile prototypesBuf
+   %closefile prototypesBuf
+   %<SLibSetModelFileAttribute(oFile,"FcnPrototypes",prototypesBuf)>
+%endfunction %% ChartFunctionProtos
+%function ChartSharedFunctions(block,system) void
+   %openfile chartFcnsBuf
+   %closefile chartFcnsBuf
+   %return chartFcnsBuf
+%endfunction %% ChartSharedFunctions
+%function Outputs(block,system) void
+   %openfile codeBuf
+      if(%<LibSFChartInstance(block)>is_active_c11_cx06_MA == 0) {
+%<LibSFChartInstance(block)>is_active_c11_cx06_MA = 1U;
+%<LibSFChartInstance(block)>is_c11_cx06_MA = (uint8_T)%<block.SymbolMapping.IN_Off>;
+%<LibSFAssignOutput(block, 1, "0", "0U")>
+} else {
+switch(%<LibSFChartInstance(block)>is_c11_cx06_MA) {
+case %<block.SymbolMapping.IN_Off>:
+if(((real_T)%<LibSFInputs(block, 2, 0)> > %<LibSFInputs(block, 0, 0)>) && (%<LibSFInputs(block, 3, 0)> < 2.0) && (%<LibSFInputs(block, 4, 0)> == 1)) {
+%<LibSFChartInstance(block)>is_c11_cx06_MA = (uint8_T)%<block.SymbolMapping.IN_On>;
+%<LibSFAssignOutput(block, 1, "0", "1U")>
+}
+break;
+case %<block.SymbolMapping.IN_On>:
+if((real_T)%<LibSFInputs(block, 2, 0)> < %<LibSFInputs(block, 1, 0)>) {
+%<LibSFChartInstance(block)>is_c11_cx06_MA = (uint8_T)%<block.SymbolMapping.IN_Off>;
+%<LibSFAssignOutput(block, 1, "0", "0U")>
+}
+break;
+default:
+%<LibSFChartInstance(block)>is_c11_cx06_MA = (uint8_T)%<block.SymbolMapping.IN_Off>;
+%<LibSFAssignOutput(block, 1, "0", "0U")>
+break;
+}
+}
+   %closefile codeBuf
+   %return codeBuf
+%endfunction  %% Outputs
+%function InlinedInitializerCode(block,system) Output
+   %<SLibResetSFChartInstanceAccessed(block)>\
+   %openfile initBodyBuf
+      %<LibSFChartInstance(block)>is_active_c11_cx06_MA = 0U;
+%<LibSFChartInstance(block)>is_c11_cx06_MA = 0U;
+%<LibSFAssignOutput(block, 1, "0", "0U")>
+
+   %closefile initBodyBuf
+   %if !WHITE_SPACE(initBodyBuf)
+      /* Initialize code for chart: '%<LibGetBlockName(block)>' */
+      %<initBodyBuf>\
+   %endif
+%endfunction
+
+
+%function EnableUnboundOutputEventsCode(block,system) Output
+   %openfile initBodyBuf
+      
+   %closefile initBodyBuf
+   %if !WHITE_SPACE(initBodyBuf)
+      /* Enable code for chart: '%<LibGetBlockName(block)>' */
+      %<initBodyBuf>\
+   %endif
+%endfunction
+
+%function DisableUnboundOutputEventsCode(block,system) Output
+   %openfile initBodyBuf
+      
+   %closefile initBodyBuf
+   %if !WHITE_SPACE(initBodyBuf)
+      /* Disable code for chart: '%<LibGetBlockName(block)>' */
+      %<initBodyBuf>\
+   %endif
+%endfunction
+
+%function DumpSharedUtils(block,system) void
+%endfunction
+
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    UnifiedDWork   0\
+    NumChartData   0 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      DataTypeIdx  0\
+      IsComplex    0\
+      IsFixPoint   0\
+      With         1\
+      Dimensions   []\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

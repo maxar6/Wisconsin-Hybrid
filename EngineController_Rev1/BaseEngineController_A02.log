@@ -4,16 +4,16 @@
 ###  Starting MotoHawk Build              ###
 ###  MotoHawk version: 2011a_sp0.184      ###
 ###    MATLAB version: 7.12.0.635 (R2011a)###
-###        15-Feb-2018 13:54:29           ###
+###        16-Feb-2018 15:05:12           ###
 ###                                       ###
 #############################################
  
 Target Module:   ECU555-80 (DEV)
-DEV Executable:  BaseEngineController_A02_125.srz
-MotoTune DLL:    BaseEngin_125.dll
+DEV Executable:  BaseEngineController_A02_127.srz
+MotoTune DLL:    BaseEngin_127.dll
  
 Project GUID:    34a85f28-21b7-4112-82-b0-87-11-cc-cb-8f
-Build GUID:      e25520c6-903f-4234-8e-44-67-b0-f4-a2-4c
+Build GUID:      b475bd92-f8e0-4975-a5-68-01-55-91-14-96
  
 ### Starting build procedure for model: BaseEngineController_A02
 ### Generating code into build folder: C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build
@@ -76,7 +76,7 @@ parameter}
 ...............................................................................
 ...............................................................................
 ...............................................................................
-.............
+................
 ### Caching model source code
 ...............................................................................
 ...............................................................................
@@ -105,28 +105,28 @@ parameter}
 ...............................................................................
 ...............................................................................
 ...............................................................................
-.....................................................
+.................................................................
 ### Writing source file BaseEngineController_A02.c
+.
 ### Writing header file BaseEngineController_A02_private.h
-.
 ### Writing header file BaseEngineController_A02.h
+.
 ### Writing header file BaseEngineController_A02_types.h
-.
 ### Writing source file BaseEngineController_A02_IdleStateMachine.c
+.
 ### Writing source file Foreground.c
-.
 ### Writing header file Foreground.h
+.
 ### Writing header file rtwtypes.h
-.
 ### Writing header file rt_zcfcn.h
+.
 ### Writing source file rt_zcfcn.c
-.
 ### Writing header file rt_nonfinite.h
+.
 ### Writing source file rt_nonfinite.c
-.
 ### Writing header file BaseEngineController_A02_IdleStateMachine.h
-### Writing source file BaseEngineController_A02_data.c
 .
+### Writing source file BaseEngineController_A02_data.c
 ### TLC code generation complete.
 ...............................................................................
 ...............................................................................
@@ -136,7 +136,7 @@ parameter}
 ...............................................................................
 ...............................................................................
 ...............................................................................
-..........................................
+.................................................
 ### Processing Template Makefile: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tmf
 ### Creating BaseEngineController_A02.mk from C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tmf
 ### Building BaseEngineController_A02: .\BaseEngineController_A02.bat
@@ -190,7 +190,7 @@ compile:
   [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\EncoderCallback.c 
   [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\FaultManager.c 
   [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Foreground.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\InjectorSequenceCallback_36.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\InjectorSequenceCallback_37.c 
   [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\IOCallbacks.c 
   [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\MotoCoder_DataStore.c 
   [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\MotoCoder_Timer.c 
@@ -200,21 +200,21 @@ compile:
   [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\rt_nonfinite.c 
   [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\rt_zcfcn.c 
   [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\TableLookupFunctions.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_BGND_BASE_PERIODIC_8423p0004.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_BGND_BASE_PERIODIC_7832p0005.c 
   [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_CAN_RX_BusCAN_1_Buf1.c 
   [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_CAN_RX_BusCAN_2_Buf14.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_Encoder_Fault_26.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_1408p0004.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_1409p0004.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_4477p0005.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_7373p0001.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_8151p0004.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_MID_TDC_EVENT_7190p0001.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_RTI_PERIODIC_8429p0004.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_TDC1_EVENT_1156p0004.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_TDC_EVENT_6273p0004.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_TDC_EVENT_7664p0001.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_STARTUP_EVENT_7189p0001.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_Encoder_Fault_27.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_1268p0004.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_1269p0004.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_3881p0004.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_6806p0004.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_7562p0001.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_MID_TDC_EVENT_6623p0005.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_RTI_PERIODIC_7838p0005.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_TDC1_EVENT_1016p0001.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_TDC_EVENT_5543p0001.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_TDC_EVENT_7097p0004.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_STARTUP_EVENT_6622p0005.c 
   [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\VarDecs.c 
   [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\TDB\TableDB.c 
  
@@ -228,36 +228,36 @@ s-records:
  
 BUILD SUCCEEDED 
  
-Total time: 12.6 seconds. 
+Total time: 16.6 seconds. 
  
 ### Call MotoConvert 
 Project format is MPC5xx 
 Toolchain format is GCC 
 Transforming range 0x00400000-0x0041FFFF into 64 byte pages... 
 Transforming range 0x00000000-0x0006FFFF into 64 byte pages... 
-Searching for Table Database address 'EriRequestTableList'...Found at 0x00045FDF 
+Searching for Table Database address 'EriRequestTableList'...Found at 0x000461BF 
 Searching for CRC Table address 'g_pCRCBlockPtr' ...Found at 0x00008100 
 Calculating Application defined CRC's...OK. 
 Searching for initialised section '.fixed_ramcals' aliased to '.fixed_romcals' ... 
 Searching for initialised section '.ramcals' aliased to '.romcals' ... 
-    Adding RAM[0x003FC0F0], ROM[0x0004E114], Length[0x000001AC] 
+    Adding RAM[0x003FC104], ROM[0x0004E334], Length[0x000001AC] 
 Searching for initialised section '.sdata' aliased to '.romsdata' ... 
-    Adding RAM[0x003F9800], ROM[0x0004E2F0], Length[0x00000019] 
+    Adding RAM[0x003F9800], ROM[0x0004E510], Length[0x00000019] 
 Searching for initialised section '.data' aliased to '.romdata' ... 
-    Adding RAM[0x003FA8E0], ROM[0x0004E30C], Length[0x000008AC] 
+    Adding RAM[0x003FA8E0], ROM[0x0004E52C], Length[0x000008AC] 
 Complete. 
 Writing file sr://BaseEngineController_A02.sr... 
-Encrypting 'sr://BaseEngineController_A02.sr' into 'srz://.\Target\BaseEngineController_A02_125.srz' ... 
+Encrypting 'sr://BaseEngineController_A02.sr' into 'srz://.\Target\BaseEngineController_A02_127.srz' ... 
 Done. 
 ### Creating Build Statistics 
 Memory Summary:
-	FLASH:                                284875 bytes   79% of 360184
+	FLASH:                                285415 bytes   79% of 360184
 	    BaseEngineController_A02_M:            4 bytes    0% of 360184
 	    NonVolatileDefault:                  428 bytes    0% of 360184
-	    BaseEngineController_A02_Foreground:40528 bytes   11% of 360184
-	INTERNAL_RAM:                          18454 bytes   70% of  26544
+	    BaseEngineController_A02_Foreground:40932 bytes   11% of 360184
+	INTERNAL_RAM:                          18478 bytes   70% of  26544
 	    BaseEngineController_A02_B:         1148 bytes    4% of  26544
-	    BaseEngineController_A02_DWork:      772 bytes    3% of  26544
+	    BaseEngineController_A02_DWork:      796 bytes    3% of  26544
 	    BaseEngineController_A02_M_:           8 bytes    0% of  26544
 	    VolatileWork:                         34 bytes    0% of  26544
 	    NonVolatileWork:                     428 bytes    2% of  26544
@@ -265,13 +265,13 @@ Memory Summary:
 	    BgndStack:                          2048 bytes    8% of  26544
 	    IdleStack:                          1024 bytes    4% of  26544
 	    InterruptStack:                     1536 bytes    6% of  26544
-	CAL_SPACE:                             15872 bytes   24% of  65536
-	    ConstantWork:                      15716 bytes   24% of  65536
+	CAL_SPACE:                             15904 bytes   24% of  65536
+	    ConstantWork:                      15748 bytes   24% of  65536
 	EEPROM_SPACE:                            431 bytes    5% of   8192
 
-### Copy BaseEngin_125.dll and BaseEngineController_A02_125.srz 
+### Copy BaseEngin_127.dll and BaseEngineController_A02_127.srz 
 ### Successful Build with MotoCoder 
-Elapsed Build Time: 2 minutes, 50.2 seconds  (170.2 seconds)
+Elapsed Build Time: 3 minutes, 49.8 seconds  (229.8 seconds)
 {Warning: Block diagram 'BaseEngineController_A02' contains disabled library links.  Use Model Advisor
 to find the disabled links in non-library models.  The diagram has been saved but may not contain
 what you intended.} 
@@ -279,8 +279,8 @@ what you intended.}
 #############################################################################
 ###
 ### Target Module: ECU555-80
-### Created Development Executable: BaseEngineController_A02_125.srz
-### Created MotoTune DLL: BaseEngin_125.dll
+### Created Development Executable: BaseEngineController_A02_127.srz
+### Created MotoTune DLL: BaseEngin_127.dll
 ###
 ### Successful MotoHawk Build for model: BaseEngineController_A02
 ###

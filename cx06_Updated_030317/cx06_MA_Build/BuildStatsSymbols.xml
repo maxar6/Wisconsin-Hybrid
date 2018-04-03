@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildStatsSymbols>
+   <BuildStatsSymbol>cx06_MA_M</BuildStatsSymbol>
+   <BuildStatsSymbol>cx06_MA_B</BuildStatsSymbol>
+   <BuildStatsSymbol>cx06_MA_DWork</BuildStatsSymbol>
+   <BuildStatsSymbol>cx06_MA_PrevZC</BuildStatsSymbol>
+   <BuildStatsSymbol>cx06_MA_M_</BuildStatsSymbol>
+   <BuildStatsSymbol>VolatileWork</BuildStatsSymbol>
+   <BuildStatsSymbol>ConstantWork</BuildStatsSymbol>
+   <BuildStatsSymbol>NonVolatileWork</BuildStatsSymbol>
+   <BuildStatsSymbol>NonVolatileDefault</BuildStatsSymbol>
+   <BuildStatsSymbol>FgndTimeStack</BuildStatsSymbol>
+   <BuildStatsSymbol>FgndAngleStack</BuildStatsSymbol>
+   <BuildStatsSymbol>BgndStack</BuildStatsSymbol>
+   <BuildStatsSymbol>IdleStack</BuildStatsSymbol>
+   <BuildStatsSymbol>InterruptStack</BuildStatsSymbol>
+   <BuildStatsSymbol>Heap</BuildStatsSymbol>
+   <BuildStatsSymbol>Stack</BuildStatsSymbol>
+   <BuildStatsSymbol>cx06_MA_Foreground</BuildStatsSymbol>
+</BuildStatsSymbols>

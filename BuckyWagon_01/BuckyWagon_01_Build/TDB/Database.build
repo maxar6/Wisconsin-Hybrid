@@ -1,0 +1,124 @@
+<project name="Database_DLL" default="Database_DLL" basedir=".">
+    <description>MotoTune DLL NANT Buildfile</description>
+
+    <!-- Source files to compile -->
+    <fileset id="source-files" basedir="${project::get-base-directory()}">
+        <include name = "Database.c"/>
+        <include name = "main.cpp"/>
+    </fileset>
+
+    <!-- Include (header) folders in this build -->
+    <fileset id="include-dirs" basedir="${project::get-base-directory()}">
+        <include name = "."/>
+    </fileset>
+
+    <!-- Global build root folders (Obj in same directory) -->
+    <property name="build.object.dir" value="${project::get-base-directory()}"/>
+    <property name="required.installdir" value=""  overwrite="false" />
+    <!-- Name to which ".dll" is appended -->
+    <property name="database.basename" value="Database"  overwrite="false" /> 
+
+    <!-- Cleans all object files -->
+    <target name="clean" description="Cleans all output files">
+        <delete>
+		<fileset basedir="${project::get-base-directory()}">
+			<include name="*.dll" />
+		</fileset>
+	</delete>
+        <delete>
+		<fileset basedir="${build.object.dir}">
+			<include name="*.o" />
+			<include name="*.obj" />
+		</fileset>
+	</delete>
+    </target>
+
+    <!-- Add dummy builds for all other targets so that this build file can be called from a parent build file -->
+    <target name="*" description="Top level build for any non-named target using any compiler">
+	<echo message="Nothing to do for: ${target::get-current-target()}"/>
+    </target>
+
+    <!-- Cleans and Builds all -->
+    <target name="rebuild" description="Top level build that builds all (after cleaning)">
+        <call target="clean" />
+        <call target="Database_DLL" />
+    </target>
+
+    <!-- Build the Database Dll -->
+    <target name="Database_DLL" description="Top level build">
+        <call target="Win32Host-gcc" />
+    </target>
+
+    <target name="Win32Host-gcc" description="Top level build for an Windows target using a GCC compiler">
+        <property name="target.processor" value="Win32Host" />
+        <property name="target.toolchain" value="gcc-win32-pe" />
+
+        <property name="target.toolchain.discovered" value=""/>
+		<!-- the comparisons below work best when the trailing "\" is not part of the comparison -->
+		<if test="${string::ends-with(required.installdir, '\')}">
+		    <property name="required.installdir"
+			    value="string::substring(required.installdir, 0, string::get-length(required.installdir) - 1) "/>
+	    </if>
+
+        <gcc-versions productversion="target.toolchain.version" installdir="target.toolchain.installdir" style="Periods" target="win32-pe">
+			<!-- the comparisons below work best when the trailing "\" is not part of the comparison -->
+			<if test="${string::ends-with(target.toolchain.installdir, '\')}">
+				<property name="target.toolchain.installdir" 
+					value="${string::substring(target.toolchain.installdir, 0, string::get-length(target.toolchain.installdir) - 1)}" />
+			</if>
+
+			<!-- This version for when no install dir is provided (use the first available) -->
+			<if test="${(string::get-length(required.installdir) == 0) and (target.toolchain.discovered != '1') }">
+					<call target="dll-${target.processor}"/>
+				<property name="target.toolchain.discovered" value="1" />
+			</if>
+
+			<!-- This version to "must match" my installation location -->
+			<if test="${(string::get-length(required.installdir) &gt; 0) and (string::to-lower(target.toolchain.installdir) == string::to-lower(required.installdir))}">
+					<call target="dll-${target.processor}"/>
+				<property name="target.toolchain.discovered" value="1" />
+			</if>
+        </gcc-versions>
+	<fail unless="${target.toolchain.discovered == '1'}">Could not find an installation of win32-pe GCC at ${required.installdir}.</fail>
+    </target>
+
+
+    <!-- Setup build environment -->
+    <target name="init" description="Sets up build output folders">
+        <!-- Create folders -->
+        <mkdir dir="${build.object.dir}" if="${build.object.dir != project::get-base-directory()}" />
+    </target>
+
+    <!-- Builds for an Win32 target -->
+    <target name="dll-Win32Host" depends="init" description="Compiles for a Win32 target">
+        <gcc-cpp
+            if = "${target.toolchain == 'gcc-win32-pe'}"
+            installdir = "${target.toolchain.installdir}"
+            outputdir = "${build.object.dir}"
+            >
+            <options>
+                <option name="O3"/>                         <!-- Set Optimisation level -->
+		<option name="w"/>
+            </options>
+            <defines>
+            </defines>
+            <!-- Pull in the project defined include folders -->
+            <includedirs refid="include-dirs"/>
+            <!-- Pull in the project defined source files -->
+            <sources refid="source-files"/>
+        </gcc-cpp>
+        <gcc-ld
+            if = "${target.toolchain == 'gcc-win32-pe'}"
+            installdir = "${target.toolchain.installdir}"
+            outputdir = "${build.object.dir}"
+            output = "${database.basename}.dll"
+	    >
+            <arg line="-shared"/>
+            <objects basedir="${build.object.dir}">
+                <include name = "Database.o"/>
+                <include name = "main.o"/>
+                <include name = "${path::combine(project::get-base-directory(), 'Database.def')}"/>
+            </objects>
+        </gcc-ld>
+    </target>
+</project>
