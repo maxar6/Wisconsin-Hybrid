@@ -4,8 +4,8 @@
       <GUID>0339744d-1465-4569-a1-b4-32-b1-a7-fa-5f</GUID>
       <Name>Mooventure2016_Rev5</Name>
       <Author>HYBRID</Author>
-      <Copyright>2017 Woodward.</Copyright>
-      <CreateDate>29-Nov-2017</CreateDate>
+      <Copyright>2018 Woodward.</Copyright>
+      <CreateDate>07-Apr-2018</CreateDate>
       <MemoryLayout>DEV</MemoryLayout>
       <Module>ECM-5554-112-0904-xD</Module>
       <OS>
@@ -79,14 +79,14 @@
             <Name>BGND_BASE_PERIODIC</Name>
             <Task ref="BGNDTask"/>
             <Order>255</Order>
-            <Function>Trigger_BGND_BASE_PERIODIC_6596p0005</Function>
+            <Function>Trigger_BGND_BASE_PERIODIC_5678p0001</Function>
          </Trigger>
          <Trigger type="periodic">
             <Multiplier>1</Multiplier>
             <Name>FGND_RTI_PERIODIC</Name>
             <Task ref="FGNDTask"/>
             <Order>0</Order>
-            <Function>Trigger_FGND_RTI_PERIODIC_6605p0005</Function>
+            <Function>Trigger_FGND_RTI_PERIODIC_5687p0001</Function>
          </Trigger>
          <Trigger type="periodic">
             <Name>FaultManagerPeriodicTick</Name>
@@ -850,7 +850,7 @@
          <DataStore ref="Volatile">
             <DataType>boolean</DataType>
             <Default>0</Default>
-            <Name>Engine_On_Ovr_ovr</Name>
+            <Name>Engine_On_ABS_Ovr_ovr</Name>
          </DataStore>
          <DataStore ref="Constant">
             <DataType>real32</DataType>
@@ -860,12 +860,12 @@
          <DataStore ref="Volatile">
             <DataType>real32</DataType>
             <Default>0.0</Default>
-            <Name>Engine_On_Ovr_new</Name>
+            <Name>Engine_On_ABS_Ovr_new</Name>
          </DataStore>
          <DataStore ref="Volatile">
             <DataType>real32</DataType>
             <Default>0.0</Default>
-            <Name>Engine_On_Prb</Name>
+            <Name>Engine_On_ABS_Prb</Name>
          </DataStore>
          <DataStore ref="Constant">
             <DataType>real32</DataType>
@@ -936,6 +936,26 @@
             <DataType>boolean</DataType>
             <Default>0.0</Default>
             <Name>Isolation_Measure_Enable_ovr_new</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>boolean</DataType>
+            <Default>0</Default>
+            <Name>AC_Cmd_Ovr_ovr</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>real32</DataType>
+            <Default>0.0</Default>
+            <Name>AC_Cmd_Ovr_new</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>boolean</DataType>
+            <Default>0</Default>
+            <Name>Defrost_Mode_Ovr_ovr</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>real32</DataType>
+            <Default>0.0</Default>
+            <Name>Defrost_Mode_Ovr_new</Name>
          </DataStore>
          <DataStore ref="Volatile">
             <DataType>boolean</DataType>
@@ -1097,10 +1117,15 @@
             <Default>65.0</Default>
             <Name>High_Threshold</Name>
          </DataStore>
-         <DataStore ref="Constant">
+         <DataStore ref="Volatile">
             <DataType>boolean</DataType>
             <Default>0</Default>
-            <Name>AC_On_FIXME</Name>
+            <Name>Temp_Guage_Ovr_ovr</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>real32</DataType>
+            <Default>0.0</Default>
+            <Name>Temp_Guage_Ovr_new</Name>
          </DataStore>
          <DataStore ref="Volatile">
             <DataType>boolean</DataType>
@@ -2205,6 +2230,221 @@
          <DataStore ref="Volatile">
             <DataType>boolean</DataType>
             <Default>0</Default>
+            <Name>Gen_Load_Ovr_ovr</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>real32</DataType>
+            <Default>0.0</Default>
+            <Name>Gen_Load_Ovr_new</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>boolean</DataType>
+            <Default>0</Default>
+            <Name>Genset_Load_Ovr_ovr</Name>
+         </DataStore>
+         <DataStore ref="Constant">
+            <DataType>real32</DataType>
+            <Default>30.0</Default>
+            <Name>SOC_Low</Name>
+         </DataStore>
+         <DataStore ref="Constant">
+            <DataType>real32</DataType>
+            <Default>5.0</Default>
+            <Name>SOC_Time_Threshold</Name>
+         </DataStore>
+         <DataStore ref="Constant">
+            <DataType>real32</DataType>
+            <Default>45.0</Default>
+            <Name>SOC_High</Name>
+         </DataStore>
+         <DataStore ref="Constant">
+            <DataType>real32</DataType>
+            <Default>20.0</Default>
+            <Name>SOC_Critical</Name>
+         </DataStore>
+         <DataStore ref="Constant">
+            <DataType>real32</DataType>
+            <Default>0.01001896</Default>
+            <Name>RPM_to_Wheel_Speed_Multiplier4</Name>
+         </DataStore>
+         <DataStore ref="Constant">
+            <DataType>real32</DataType>
+            <Default>8.0</Default>
+            <Name>Vehicle_Speed_On</Name>
+         </DataStore>
+         <DataStore ref="Constant">
+            <DataType>real32</DataType>
+            <Default>3.0</Default>
+            <Name>Vehicle_Speed_Time_Threshold</Name>
+         </DataStore>
+         <DataStore ref="Constant">
+            <DataType>real32</DataType>
+            <Default>3.0</Default>
+            <Name>Vehicle_Speed_Off</Name>
+         </DataStore>
+         <DataStore ref="Constant">
+            <DataType>real32</DataType>
+            <Default>20.0</Default>
+            <Name>Coolant_Cold</Name>
+         </DataStore>
+         <DataStore ref="Constant">
+            <DataType>real32</DataType>
+            <Default>40.0</Default>
+            <Name>Coolant_Warm</Name>
+         </DataStore>
+         <DataStore ref="Constant">
+            <DataType>real32</DataType>
+            <Default>60.0</Default>
+            <Name>Coolant_Hot</Name>
+         </DataStore>
+         <DataStore ref="Constant">
+            <DataType>real32</DataType>
+            <Default>2400.0</Default>
+            <Name>Low_RPM</Name>
+         </DataStore>
+         <DataStore ref="Constant">
+            <DataType>real32</DataType>
+            <Default>2800.0</Default>
+            <Name>Medium_RPM</Name>
+         </DataStore>
+         <DataStore ref="Constant">
+            <DataType>real32</DataType>
+            <Default>3800.0</Default>
+            <Name>High_RPM</Name>
+         </DataStore>
+         <DataStore ref="Constant">
+            <DataType>real32</DataType>
+            <Default>45.0</Default>
+            <Name>Low_Throttle</Name>
+         </DataStore>
+         <DataStore ref="Constant">
+            <DataType>real32</DataType>
+            <Default>65.0</Default>
+            <Name>Medium_Throttle</Name>
+         </DataStore>
+         <DataStore ref="Constant">
+            <DataType>real32</DataType>
+            <Default>100.0</Default>
+            <Name>High_Throttle</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>boolean</DataType>
+            <Default>0</Default>
+            <Name>Engine_On_Ovr_ovr</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>real32</DataType>
+            <Default>0.0</Default>
+            <Name>Engine_On_Ovr_new</Name>
+         </DataStore>
+         <DataStore ref="Constant">
+            <DataType>real32</DataType>
+            <Default>3.0</Default>
+            <Name>Engine_On_Time_Threshold</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>boolean</DataType>
+            <Default>0</Default>
+            <Name>RPM_Ovr_ovr</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>real32</DataType>
+            <Default>0.0</Default>
+            <Name>RPM_Ovr_new</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>real32</DataType>
+            <Default>0.0</Default>
+            <Name>Genset_Load_Ovr_new</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>boolean</DataType>
+            <Default>0</Default>
+            <Name>Gen_Enable_Ovr_ovr</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>boolean</DataType>
+            <Default>0</Default>
+            <Name>Pack_State_ovr_ovr</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>real32</DataType>
+            <Default>0.0</Default>
+            <Name>Pack_State_ovr_new</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>boolean</DataType>
+            <Default>0</Default>
+            <Name>Genset_Enable_Ovr_ovr</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>real32</DataType>
+            <Default>0.0</Default>
+            <Name>Genset_Enable_Ovr_new</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>boolean</DataType>
+            <Default>0.0</Default>
+            <Name>Gen_Enable_Ovr_new</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>boolean</DataType>
+            <Default>0</Default>
+            <Name>Vehicle_Speed2_Ovr_ovr</Name>
+         </DataStore>
+         <DataStore ref="Constant">
+            <DataType>real32</DataType>
+            <Default>0.01001896</Default>
+            <Name>RPM_to_Wheel_Speed_Multiplier3</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>real32</DataType>
+            <Default>0.0</Default>
+            <Name>Vehicle_Speed2_Ovr_new</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>boolean</DataType>
+            <Default>0</Default>
+            <Name>Load_Throttle_Ovr_ovr</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>real32</DataType>
+            <Default>0.0</Default>
+            <Name>Load_Throttle_Ovr_new</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>boolean</DataType>
+            <Default>0</Default>
+            <Name>Genset_Throttle_Ovr_ovr</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>real32</DataType>
+            <Default>0.0</Default>
+            <Name>Genset_Throttle_Ovr_new</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>boolean</DataType>
+            <Default>0</Default>
+            <Name>Load_RPM_Ovr_ovr</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>real32</DataType>
+            <Default>0.0</Default>
+            <Name>Load_RPM_Ovr_new</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>boolean</DataType>
+            <Default>0</Default>
+            <Name>Genset_RPM_Ovr_ovr</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>real32</DataType>
+            <Default>0.0</Default>
+            <Name>Genset_RPM_Ovr_new</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>boolean</DataType>
+            <Default>0</Default>
             <Name>VSC_WheelTorqueRequest_Ovr_ovr</Name>
          </DataStore>
          <DataStore ref="Volatile">
@@ -2476,136 +2716,6 @@
             <DataType>real32</DataType>
             <Default>0.0</Default>
             <Name>VSC_MaxDCVoltage_Prb</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>0.0</Default>
-            <Name>Engine_Status</Name>
-         </DataStore>
-         <DataStore ref="Volatile">
-            <DataType>boolean</DataType>
-            <Default>0</Default>
-            <Name>MPGe_Instant_Ovr_ovr</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>32.6</Default>
-            <Name>Gasoline_Specific_Energy</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>8.3</Default>
-            <Name>Gear_Ratio</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>9.5488</Default>
-            <Name>kW_Divisor</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>0.01</Default>
-            <Name>Wheel_Ratio</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>1.1</Default>
-            <Name>Efficiency_Multiplier</Name>
-         </DataStore>
-         <DataStore ref="Volatile">
-            <DataType>real32</DataType>
-            <Default>0.0</Default>
-            <Name>MPGe_Instant_Ovr_new</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>0.0</Default>
-            <Name>Selected_Trip</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>22.0</Default>
-            <Name>Bar_Color</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>25.0</Default>
-            <Name>Power_Flow_Divisor_Battery</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>0.0</Default>
-            <Name>Battery_Drive_Mode</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>800.0</Default>
-            <Name>Power_Flow_Divisor</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>0.0</Default>
-            <Name>Engine2Axle</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>0.0</Default>
-            <Name>Engine2Motor</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>0.0</Default>
-            <Name>Gas_Use_Pct</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>0.0</Default>
-            <Name>Engine_Status_2</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>22.0</Default>
-            <Name>Average_Vehicle_MPG</Name>
-         </DataStore>
-         <DataStore ref="Volatile">
-            <DataType>boolean</DataType>
-            <Default>0</Default>
-            <Name>Fuel_Cost_Setting_Ovr_ovr</Name>
-         </DataStore>
-         <DataStore ref="Volatile">
-            <DataType>real32</DataType>
-            <Default>0.0</Default>
-            <Name>Fuel_Cost_Setting_Ovr_new</Name>
-         </DataStore>
-         <DataStore ref="Volatile">
-            <DataType>boolean</DataType>
-            <Default>0</Default>
-            <Name>Electricity_Cost_Setting_Ovr_ovr</Name>
-         </DataStore>
-         <DataStore ref="Volatile">
-            <DataType>real32</DataType>
-            <Default>0.0</Default>
-            <Name>Electricity_Cost_Setting_Ovr_new</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>0.0</Default>
-            <Name>Trip_A_Fuel_Used</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>22.0</Default>
-            <Name>Average_Vehicle_MPG_Trip_B</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>0.0</Default>
-            <Name>Trip_B_Fuel_Used</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>0.0</Default>
-            <Name>Setting_Screen_Select</Name>
          </DataStore>
          <DataStore ref="Constant">
             <DataType>real32</DataType>
@@ -3000,16 +3110,6 @@
          <DataStore ref="Volatile">
             <DataType>boolean</DataType>
             <Default>0</Default>
-            <Name>Pack_State_ovr_ovr</Name>
-         </DataStore>
-         <DataStore ref="Volatile">
-            <DataType>real32</DataType>
-            <Default>0.0</Default>
-            <Name>Pack_State_ovr_new</Name>
-         </DataStore>
-         <DataStore ref="Volatile">
-            <DataType>boolean</DataType>
-            <Default>0</Default>
             <Name>OutputCurrent_ovr</Name>
          </DataStore>
          <DataStore ref="Volatile">
@@ -3030,52 +3130,42 @@
          <DataStore ref="Volatile">
             <DataType>boolean</DataType>
             <Default>0</Default>
-            <Name>Subfunction_Select_Ovr_ovr</Name>
+            <Name>Oil_Pressure_Ovr_ovr</Name>
          </DataStore>
          <DataStore ref="Volatile">
             <DataType>real32</DataType>
             <Default>0.0</Default>
-            <Name>Subfunction_Select_Ovr_new</Name>
+            <Name>Oil_Pressure_Ovr_new</Name>
          </DataStore>
          <DataStore ref="Volatile">
             <DataType>boolean</DataType>
             <Default>0</Default>
-            <Name>Confirm_Actve_Trip_Ovr_ovr</Name>
+            <Name>Engine_Crank_Ovr_ovr</Name>
          </DataStore>
          <DataStore ref="Volatile">
             <DataType>real32</DataType>
             <Default>0.0</Default>
-            <Name>Confirm_Actve_Trip_Ovr_new</Name>
+            <Name>Engine_Crank_Ovr_new</Name>
          </DataStore>
          <DataStore ref="Volatile">
             <DataType>boolean</DataType>
             <Default>0</Default>
-            <Name>INFO_610_AgeCount_Ovr_ovr</Name>
-         </DataStore>
-         <DataStore ref="Volatile">
-            <DataType>uint32</DataType>
-            <Default>0.0</Default>
-            <Name>INFO_610_AgeCount_Ovr_new</Name>
-         </DataStore>
-         <DataStore ref="Volatile">
-            <DataType>boolean</DataType>
-            <Default>0</Default>
-            <Name>Confirm_Reset_Trip_B_Ovr_ovr</Name>
+            <Name>Load_On_Ovr_ovr</Name>
          </DataStore>
          <DataStore ref="Volatile">
             <DataType>real32</DataType>
             <Default>0.0</Default>
-            <Name>Confirm_Reset_Trip_B_Ovr_new</Name>
+            <Name>Load_On_Ovr_new</Name>
          </DataStore>
          <DataStore ref="Volatile">
             <DataType>boolean</DataType>
             <Default>0</Default>
-            <Name>Confirm_Reset_Trip_A_Ovr_ovr</Name>
+            <Name>Fault_Ovr_ovr</Name>
          </DataStore>
          <DataStore ref="Volatile">
             <DataType>real32</DataType>
             <Default>0.0</Default>
-            <Name>Confirm_Reset_Trip_A_Ovr_new</Name>
+            <Name>Fault_Ovr_new</Name>
          </DataStore>
          <DataStore ref="Volatile">
             <DataType>boolean</DataType>
@@ -3314,31 +3404,6 @@
          </DataStore>
          <DataStore ref="Constant">
             <DataType>real32</DataType>
-            <Default>15.0</Default>
-            <Name>SoC_Threshold</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>2.5</Default>
-            <Name>Suspension_Threshold</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>10.0</Default>
-            <Name>RPM_Threshold</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>2.5</Default>
-            <Name>Suspension_Switch_Input</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>0.0</Default>
-            <Name>Suspension_Height_Sensor</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
             <Default>2.0</Default>
             <Name>Load_Enable_Delay</Name>
          </DataStore>
@@ -3366,6 +3431,36 @@
             <DataType>boolean</DataType>
             <Default>0</Default>
             <Name>Batt_Load_Enable</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>real32</DataType>
+            <Default>0.0</Default>
+            <Name>Engine_On_Timer</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>real32</DataType>
+            <Default>0.0</Default>
+            <Name>SOC_Low_Timer</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>real32</DataType>
+            <Default>0.0</Default>
+            <Name>SOC_High_Timer</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>real32</DataType>
+            <Default>0.0</Default>
+            <Name>SOC_Critical_Timer</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>real32</DataType>
+            <Default>0.0</Default>
+            <Name>Vehicle_Speed_On_Timer</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>real32</DataType>
+            <Default>0.0</Default>
+            <Name>Vehicle_Speed_Off_Timer</Name>
          </DataStore>
          <DataStore ref="Constant">
             <DataType>real32</DataType>
@@ -3411,141 +3506,6 @@
             <DataType>int32</DataType>
             <Default>0</Default>
             <Name>Hybrid_State</Name>
-         </DataStore>
-         <DataStore ref="Volatile">
-            <DataType>real32</DataType>
-            <Default>99.0</Default>
-            <Name>Battery_Initial</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>1.0</Default>
-            <Name>Distance_Trip_A_Integrator_Multiplier</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>0.01</Default>
-            <Name>Wheel_Ratio_Trip_A</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>0.05</Default>
-            <Name>Max_Trip_A_Dist</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>788.0</Default>
-            <Name>Max_Trip_A_kW</Name>
-         </DataStore>
-         <DataStore ref="NonVolatile">
-            <DataType>real32</DataType>
-            <Default>0.0</Default>
-            <Name>Trip_A_Dist_Traveled</Name>
-         </DataStore>
-         <DataStore ref="NonVolatile">
-            <DataType>real32</DataType>
-            <Default>0.0</Default>
-            <Name>Trip_A_Batt_Used</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>1.0</Default>
-            <Name>Distance_Trip_B_Integrator_Multiplier</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>0.01</Default>
-            <Name>Wheel_Ratio_Trip_B</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>0.05</Default>
-            <Name>Max_Trip_B_Dist</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>1.0</Default>
-            <Name>kW_Trip_B_Integrator_Multiplier</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>788.0</Default>
-            <Name>Max_Trip_B_kW</Name>
-         </DataStore>
-         <DataStore ref="NonVolatile">
-            <DataType>real32</DataType>
-            <Default>0.0</Default>
-            <Name>Trip_B_Dist_Traveled</Name>
-         </DataStore>
-         <DataStore ref="NonVolatile">
-            <DataType>real32</DataType>
-            <Default>0.0</Default>
-            <Name>Trip_B_Batt_Used</Name>
-         </DataStore>
-         <DataStore ref="NonVolatile">
-            <DataType>real32</DataType>
-            <Default>30.0</Default>
-            <Name>MPGe_Best_Average</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>200.0</Default>
-            <Name>Min_RPM_For_Calc</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>100.0</Default>
-            <Name>Write_Interval_MPGe</Name>
-         </DataStore>
-         <DataStore ref="Volatile">
-            <DataType>real32</DataType>
-            <Default>30.0</Default>
-            <Name>MPGe_Average</Name>
-         </DataStore>
-         <DataStore ref="Volatile">
-            <DataType>real32</DataType>
-            <Default>0.0</Default>
-            <Name>MPGe_Average_Count</Name>
-         </DataStore>
-         <DataStore ref="Volatile">
-            <DataType>real32</DataType>
-            <Default>0.0</Default>
-            <Name>MPGe_Average_Sum</Name>
-         </DataStore>
-         <DataStore ref="NonVolatile">
-            <DataType>real32</DataType>
-            <Default>30.0</Default>
-            <Name>Previous_Average</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>200.0</Default>
-            <Name>Bar_Min_RPM_For_Calc</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>100.0</Default>
-            <Name>Bar_Write_Interval_MPGe</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
-            <Default>1200.0</Default>
-            <Name>Bar_Reset_Interval_MPGe</Name>
-         </DataStore>
-         <DataStore ref="Volatile">
-            <DataType>real32</DataType>
-            <Default>0.0</Default>
-            <Name>Bar_MPGe_Average</Name>
-         </DataStore>
-         <DataStore ref="Volatile">
-            <DataType>real32</DataType>
-            <Default>0.0</Default>
-            <Name>Bar_MPGe_Average_Count</Name>
-         </DataStore>
-         <DataStore ref="Volatile">
-            <DataType>real32</DataType>
-            <Default>0.0</Default>
-            <Name>Bar_MPGe_Average_Sum</Name>
          </DataStore>
          <DataStore ref="Volatile">
             <DataType>real32</DataType>
@@ -3619,12 +3579,12 @@
          </DataStore>
          <DataStore ref="Volatile">
             <DataType>S_FaultAction</DataType>
-            <Default>Batt_Light Batt_Shutdown Cell_Voltage_Max Check_Engine_Light Check_Engine_Light_Flashing Cooling_Max Cruise Dyno_Shutdown EatonChargerFault GFI_LED HV_Light Pump_On Regen_Brakes_Disabled Set_Crawl_Home Temperature_Flash Temperature_Solid Wrench_Light </Default>
+            <Default>Batt_Light Batt_Shutdown Cell_Voltage_Max Check_Engine_Light Check_Engine_Light_Flashing Cooling_Max Cruise Dyno_Shutdown EatonChargerFault HV_Light Pump_On Regen_Brakes_Disabled Set_Crawl_Home Temperature_Flash Temperature_Solid Wrench_Light </Default>
             <Name>Actions</Name>
          </DataStore>
          <DataStore ref="Volatile">
             <DataType>uint8</DataType>
-            <Default>93 93 93 93 93 93 93 93 93 93 93 93 93 93 93 93 93 </Default>
+            <Default>93 93 93 93 93 93 93 93 93 93 93 93 93 93 93 93 </Default>
             <Name>FaultActionReason</Name>
          </DataStore>
          <DataStore ref="Constant">
@@ -3687,10 +3647,6 @@
          <StructInstance>
             <Container>Actions</Container>
             <Name>EatonChargerFault</Name>
-         </StructInstance>
-         <StructInstance>
-            <Container>Actions</Container>
-            <Name>GFI_LED</Name>
          </StructInstance>
          <StructInstance>
             <Container>Actions</Container>
@@ -4063,7 +4019,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>14</Default>
+               <Default>13</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -4103,7 +4059,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>10</Default>
+               <Default>9</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -4143,7 +4099,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>16</Default>
+               <Default>15</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -4183,7 +4139,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>16</Default>
+               <Default>15</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -4223,7 +4179,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>15</Default>
+               <Default>14</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -4267,7 +4223,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>10</Default>
+               <Default>9</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -4307,7 +4263,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>10</Default>
+               <Default>9</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -4347,7 +4303,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>16</Default>
+               <Default>15</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -4387,7 +4343,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>10</Default>
+               <Default>9</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -4427,7 +4383,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>10</Default>
+               <Default>9</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -4467,7 +4423,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>10</Default>
+               <Default>9</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -4507,7 +4463,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>10</Default>
+               <Default>9</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -5199,7 +5155,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>10</Default>
+               <Default>9</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -5239,7 +5195,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>10</Default>
+               <Default>9</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -5315,7 +5271,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>10</Default>
+               <Default>9</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -5355,7 +5311,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>10</Default>
+               <Default>9</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -5399,7 +5355,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>10</Default>
+               <Default>9</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -5443,7 +5399,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>10</Default>
+               <Default>9</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -5483,7 +5439,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>14</Default>
+               <Default>13</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -5523,7 +5479,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>14</Default>
+               <Default>13</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -5531,7 +5487,7 @@
                <Name>action1_condition</Name>
             </Field>
             <Field>
-               <Default>10</Default>
+               <Default>9</Default>
                <Name>action2</Name>
             </Field>
             <Field>
@@ -5567,7 +5523,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>14</Default>
+               <Default>13</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -5611,7 +5567,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>14</Default>
+               <Default>13</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -5619,7 +5575,7 @@
                <Name>action1_condition</Name>
             </Field>
             <Field>
-               <Default>10</Default>
+               <Default>9</Default>
                <Name>action2</Name>
             </Field>
             <Field>
@@ -5659,7 +5615,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>16</Default>
+               <Default>15</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -5699,7 +5655,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>16</Default>
+               <Default>15</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -5739,7 +5695,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>16</Default>
+               <Default>15</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -5779,7 +5735,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>16</Default>
+               <Default>15</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -5787,7 +5743,7 @@
                <Name>action1_condition</Name>
             </Field>
             <Field>
-               <Default>12</Default>
+               <Default>11</Default>
                <Name>action2</Name>
             </Field>
             <Field>
@@ -5823,7 +5779,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>16</Default>
+               <Default>15</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -5867,7 +5823,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>16</Default>
+               <Default>15</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -5911,7 +5867,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>16</Default>
+               <Default>15</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -5955,7 +5911,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>16</Default>
+               <Default>15</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -5999,7 +5955,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>16</Default>
+               <Default>15</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -6043,7 +5999,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>16</Default>
+               <Default>15</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -6087,7 +6043,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>16</Default>
+               <Default>15</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -6167,7 +6123,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>16</Default>
+               <Default>15</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -6207,7 +6163,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>16</Default>
+               <Default>15</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -6255,11 +6211,7 @@
                <Name>action1_condition</Name>
             </Field>
             <Field>
-               <Default>7</Default>
-               <Name>action2</Name>
-            </Field>
-            <Field>
-               <Default>2</Default>
+               <Default>0</Default>
                <Name>action2_condition</Name>
             </Field>
             <Field>
@@ -6335,7 +6287,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>16</Default>
+               <Default>15</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -6375,7 +6327,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>14</Default>
+               <Default>13</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -6415,7 +6367,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>14</Default>
+               <Default>13</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -6459,7 +6411,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>15</Default>
+               <Default>14</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -6587,7 +6539,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>16</Default>
+               <Default>15</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -6631,7 +6583,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>16</Default>
+               <Default>15</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -6671,7 +6623,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>16</Default>
+               <Default>15</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -6711,7 +6663,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>16</Default>
+               <Default>15</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -6751,7 +6703,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>16</Default>
+               <Default>15</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -6827,7 +6779,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>16</Default>
+               <Default>15</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -6867,7 +6819,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>16</Default>
+               <Default>15</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -6943,7 +6895,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>16</Default>
+               <Default>15</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -6983,7 +6935,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>16</Default>
+               <Default>15</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -7023,7 +6975,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>16</Default>
+               <Default>15</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -7063,7 +7015,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>16</Default>
+               <Default>15</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -7103,7 +7055,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>16</Default>
+               <Default>15</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -7335,7 +7287,7 @@
          <StructInstance>
             <Container>FaultManager</Container>
             <Field>
-               <Default>16</Default>
+               <Default>15</Default>
                <Name>action1</Name>
             </Field>
             <Field>
@@ -7413,7 +7365,7 @@
          <StructDef>
             <Field>
                <DataType>uint16</DataType>
-               <Default>17</Default>
+               <Default>16</Default>
                <Name>action1</Name>
                <Order>5</Order>
                <enum_name>FaultActions</enum_name>
@@ -7446,7 +7398,7 @@
             </Field>
             <Field>
                <DataType>uint16</DataType>
-               <Default>17</Default>
+               <Default>16</Default>
                <Name>action2</Name>
                <Order>7</Order>
                <enum_name>FaultActions</enum_name>
@@ -7460,7 +7412,7 @@
             </Field>
             <Field>
                <DataType>uint16</DataType>
-               <Default>17</Default>
+               <Default>16</Default>
                <Name>action3</Name>
                <Order>9</Order>
                <enum_name>FaultActions</enum_name>
@@ -7474,7 +7426,7 @@
             </Field>
             <Field>
                <DataType>uint16</DataType>
-               <Default>17</Default>
+               <Default>16</Default>
                <Name>action4</Name>
                <Order>11</Order>
                <enum_name>FaultActions</enum_name>
@@ -7605,7 +7557,7 @@
          <StructDef>
             <Field>
                <DataType>uint16</DataType>
-               <Default>17</Default>
+               <Default>16</Default>
                <Name>num_actions</Name>
                <Order>1</Order>
             </Field>
@@ -7621,15 +7573,14 @@
             <Name>FaultActions</Name>
             <Item name="Batt_Light" value="0" symbol="FAULTACTIONS_BATT_LIGHT"/>
             <Item name="Batt_Shutdown" value="1" symbol="FAULTACTIONS_BATT_SHUTDOWN"/>
-            <Item name="HV_Light" value="10" symbol="FAULTACTIONS_HV_LIGHT"/>
-            <Item name="Pump_On" value="11" symbol="FAULTACTIONS_PUMP_ON"/>
-            <Item name="Regen_Brakes_Disabled" value="12"
+            <Item name="Pump_On" value="10" symbol="FAULTACTIONS_PUMP_ON"/>
+            <Item name="Regen_Brakes_Disabled" value="11"
                   symbol="FAULTACTIONS_REGEN_BRAKES_DISABLED"/>
-            <Item name="Set_Crawl_Home" value="13" symbol="FAULTACTIONS_SET_CRAWL_HOME"/>
-            <Item name="Temperature_Flash" value="14" symbol="FAULTACTIONS_TEMPERATURE_FLASH"/>
-            <Item name="Temperature_Solid" value="15" symbol="FAULTACTIONS_TEMPERATURE_SOLID"/>
-            <Item name="Wrench_Light" value="16" symbol="FAULTACTIONS_WRENCH_LIGHT"/>
-            <Item name="(None)" value="17" symbol="FAULTACTIONS_OPENPARENNONECLOSEPAREN"/>
+            <Item name="Set_Crawl_Home" value="12" symbol="FAULTACTIONS_SET_CRAWL_HOME"/>
+            <Item name="Temperature_Flash" value="13" symbol="FAULTACTIONS_TEMPERATURE_FLASH"/>
+            <Item name="Temperature_Solid" value="14" symbol="FAULTACTIONS_TEMPERATURE_SOLID"/>
+            <Item name="Wrench_Light" value="15" symbol="FAULTACTIONS_WRENCH_LIGHT"/>
+            <Item name="(None)" value="16" symbol="FAULTACTIONS_OPENPARENNONECLOSEPAREN"/>
             <Item name="Cell_Voltage_Max" value="2" symbol="FAULTACTIONS_CELL_VOLTAGE_MAX"/>
             <Item name="Check_Engine_Light" value="3" symbol="FAULTACTIONS_CHECK_ENGINE_LIGHT"/>
             <Item name="Check_Engine_Light_Flashing" value="4"
@@ -7638,7 +7589,7 @@
             <Item name="Cruise" value="6" symbol="FAULTACTIONS_CRUISE"/>
             <Item name="Dyno_Shutdown" value="7" symbol="FAULTACTIONS_DYNO_SHUTDOWN"/>
             <Item name="EatonChargerFault" value="8" symbol="FAULTACTIONS_EATONCHARGERFAULT"/>
-            <Item name="GFI_LED" value="9" symbol="FAULTACTIONS_GFI_LED"/>
+            <Item name="HV_Light" value="9" symbol="FAULTACTIONS_HV_LIGHT"/>
          </Enum>
          <Enum>
             <Name>FaultDisp</Name>
@@ -7927,14 +7878,13 @@
             <Name>VarDecEnum_9</Name>
             <Item name="Batt_Light" value="0" symbol="VARDECENUM_9_BATT_LIGHT"/>
             <Item name="Batt_Shutdown" value="1" symbol="VARDECENUM_9_BATT_SHUTDOWN"/>
-            <Item name="HV_Light" value="10" symbol="VARDECENUM_9_HV_LIGHT"/>
-            <Item name="Pump_On" value="11" symbol="VARDECENUM_9_PUMP_ON"/>
-            <Item name="Regen_Brakes_Disabled" value="12"
+            <Item name="Pump_On" value="10" symbol="VARDECENUM_9_PUMP_ON"/>
+            <Item name="Regen_Brakes_Disabled" value="11"
                   symbol="VARDECENUM_9_REGEN_BRAKES_DISABLED"/>
-            <Item name="Set_Crawl_Home" value="13" symbol="VARDECENUM_9_SET_CRAWL_HOME"/>
-            <Item name="Temperature_Flash" value="14" symbol="VARDECENUM_9_TEMPERATURE_FLASH"/>
-            <Item name="Temperature_Solid" value="15" symbol="VARDECENUM_9_TEMPERATURE_SOLID"/>
-            <Item name="Wrench_Light" value="16" symbol="VARDECENUM_9_WRENCH_LIGHT"/>
+            <Item name="Set_Crawl_Home" value="12" symbol="VARDECENUM_9_SET_CRAWL_HOME"/>
+            <Item name="Temperature_Flash" value="13" symbol="VARDECENUM_9_TEMPERATURE_FLASH"/>
+            <Item name="Temperature_Solid" value="14" symbol="VARDECENUM_9_TEMPERATURE_SOLID"/>
+            <Item name="Wrench_Light" value="15" symbol="VARDECENUM_9_WRENCH_LIGHT"/>
             <Item name="Cell_Voltage_Max" value="2" symbol="VARDECENUM_9_CELL_VOLTAGE_MAX"/>
             <Item name="Check_Engine_Light" value="3" symbol="VARDECENUM_9_CHECK_ENGINE_LIGHT"/>
             <Item name="Check_Engine_Light_Flashing" value="4"
@@ -7943,7 +7893,7 @@
             <Item name="Cruise" value="6" symbol="VARDECENUM_9_CRUISE"/>
             <Item name="Dyno_Shutdown" value="7" symbol="VARDECENUM_9_DYNO_SHUTDOWN"/>
             <Item name="EatonChargerFault" value="8" symbol="VARDECENUM_9_EATONCHARGERFAULT"/>
-            <Item name="GFI_LED" value="9" symbol="VARDECENUM_9_GFI_LED"/>
+            <Item name="HV_Light" value="9" symbol="VARDECENUM_9_HV_LIGHT"/>
          </Enum>
       </Types>
       <IO>
@@ -7953,102 +7903,102 @@
             <AppLink>Mooventure2016_Rev5/Foreground/Control/Vehicle Run//Stop Determination/motohawk_din</AppLink>
          </DigitalInput>
          <DiscreteOutput>
-            <Name>DOut5146p0001</Name>
+            <Name>DOut4323p0001</Name>
             <ModuleResource>LSO1</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout1</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut5147p0001</Name>
+            <Name>DOut4324p0001</Name>
             <ModuleResource>LSO3</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout10</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut5148p0001</Name>
+            <Name>DOut4325p0001</Name>
             <ModuleResource>INJ8</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout11</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut5149p0001</Name>
+            <Name>DOut4326p0001</Name>
             <ModuleResource>INJ6</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout12</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut5150p0001</Name>
+            <Name>DOut4327p0001</Name>
             <ModuleResource>INJ7</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout13</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut5151p0001</Name>
+            <Name>DOut4328p0001</Name>
             <ModuleResource>INJ5</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout2</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut5152p0001</Name>
+            <Name>DOut4329p0001</Name>
             <ModuleResource>LSO2</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout3</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut5153p0001</Name>
+            <Name>DOut4330p0001</Name>
             <ModuleResource>INJ4</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout4</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut5154p0001</Name>
+            <Name>DOut4331p0001</Name>
             <ModuleResource>INJ3</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout5</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut5155p0001</Name>
+            <Name>DOut4332p0001</Name>
             <ModuleResource>INJ2</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout6</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut5156p0001</Name>
+            <Name>DOut4333p0001</Name>
             <ModuleResource>LSO12</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout7</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut5157p0001</Name>
+            <Name>DOut4334p0001</Name>
             <ModuleResource>LSO11</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout8</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut5158p0001</Name>
+            <Name>DOut4335p0001</Name>
             <ModuleResource>LSO5</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout9</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut5384p0001</Name>
+            <Name>DOut4561p0001</Name>
             <ModuleResource>LSO9</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout1</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut5385p0001</Name>
+            <Name>DOut4562p0001</Name>
             <ModuleResource>LSO7</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout2</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut5386p0001</Name>
+            <Name>DOut4563p0001</Name>
             <ModuleResource>LSO4</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout3</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut5387p0001</Name>
+            <Name>DOut4564p0001</Name>
             <ModuleResource>LSO10</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout4</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut5388p0001</Name>
+            <Name>DOut4565p0001</Name>
             <ModuleResource>LSO8</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout5</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut5389p0001</Name>
+            <Name>DOut4566p0001</Name>
             <ModuleResource>LSO6</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout6</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut6546p0005</Name>
+            <Name>DOut5628p0004</Name>
             <ModuleResource>MPRD</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Main Power Relay1/Background/motohawk_dout</AppLink>
          </DiscreteOutput>
@@ -8127,7 +8077,7 @@
                   <Task ref="ApplicationInterruptTask"/>
                </Dispatcher>
                <Slot>
-                  <Name>RxSlot_3820p0005</Name>
+                  <Name>RxSlot_3053p0002</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>535</Value>
@@ -8141,7 +8091,7 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_3821p0004</Name>
+                  <Name>RxSlot_3054p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>1200</Value>
@@ -8155,7 +8105,7 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_3822p0004</Name>
+                  <Name>RxSlot_3055p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>1047</Value>
@@ -8169,7 +8119,21 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_4495p0001</Name>
+                  <Name>RxSlot_10273p001</Name>
+                  <ID>
+                     <Type>Standard</Type>
+                     <Value>1072</Value>
+                     <Mask>2047</Mask>
+                  </ID>
+                  <Payload>
+                     <Size>8</Size>
+                     <Value>0 0 0 0 0 0 0 0</Value>
+                     <Mask>0 0 0 0 0 0 0 0</Mask>
+                  </Payload>
+                  <QueueSize>1</QueueSize>
+               </Slot>
+               <Slot>
+                  <Name>RxSlot_3670p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>786</Value>
@@ -8183,7 +8147,7 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_4553p0001</Name>
+                  <Name>RxSlot_3729p0001</Name>
                   <ID>
                      <Type>Extended</Type>
                      <Value>419381321</Value>
@@ -8197,7 +8161,7 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_4635p0005</Name>
+                  <Name>RxSlot_3858p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>632</Value>
@@ -8211,7 +8175,7 @@
                   <QueueSize>2</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_4636p0005</Name>
+                  <Name>RxSlot_3859p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>1572</Value>
@@ -8225,7 +8189,7 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_4637p0005</Name>
+                  <Name>RxSlot_3860p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>608</Value>
@@ -8239,7 +8203,7 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_4638p0005</Name>
+                  <Name>RxSlot_3861p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>1424</Value>
@@ -8253,21 +8217,7 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_4796p0005</Name>
-                  <ID>
-                     <Type>Standard</Type>
-                     <Value>1552</Value>
-                     <Mask>2047</Mask>
-                  </ID>
-                  <Payload>
-                     <Size>8</Size>
-                     <Value>0 0 0 0 0 0 0 0</Value>
-                     <Mask>0 0 0 0 0 0 0 0</Mask>
-                  </Payload>
-                  <QueueSize>1</QueueSize>
-               </Slot>
-               <Slot>
-                  <Name>RxSlot_4843p0005</Name>
+                  <Name>RxSlot_4019p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>128</Value>
@@ -8296,7 +8246,7 @@
                   <Task ref="ApplicationInterruptTask"/>
                </Dispatcher>
                <Slot>
-                  <Name>RxSlot_4497p0001</Name>
+                  <Name>RxSlot_3672p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>968</Value>
@@ -8325,7 +8275,7 @@
                   <Task ref="ApplicationInterruptTask"/>
                </Dispatcher>
                <Slot>
-                  <Name>RxSlot_4018p0004</Name>
+                  <Name>RxSlot_3251p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>762</Value>
@@ -8339,7 +8289,7 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_4019p0004</Name>
+                  <Name>RxSlot_3252p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>763</Value>
@@ -8353,7 +8303,7 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_4020p0004</Name>
+                  <Name>RxSlot_3253p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>764</Value>
@@ -8367,7 +8317,7 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_4021p0004</Name>
+                  <Name>RxSlot_3254p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>765</Value>
@@ -8381,7 +8331,7 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_4022p0004</Name>
+                  <Name>RxSlot_3255p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>766</Value>
@@ -8395,7 +8345,7 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_4023p0004</Name>
+                  <Name>RxSlot_3256p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>767</Value>
@@ -8409,7 +8359,7 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_4024p0004</Name>
+                  <Name>RxSlot_3257p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>768</Value>
@@ -8423,7 +8373,7 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_4494p0004</Name>
+                  <Name>RxSlot_3669p0004</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>1296</Value>
@@ -8437,10 +8387,24 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_4496p0001</Name>
+                  <Name>RxSlot_3671p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>1832</Value>
+                     <Mask>2047</Mask>
+                  </ID>
+                  <Payload>
+                     <Size>8</Size>
+                     <Value>0 0 0 0 0 0 0 0</Value>
+                     <Mask>0 0 0 0 0 0 0 0</Mask>
+                  </Payload>
+                  <QueueSize>1</QueueSize>
+               </Slot>
+               <Slot>
+                  <Name>RxSlot_3808p0001</Name>
+                  <ID>
+                     <Type>Standard</Type>
+                     <Value>521</Value>
                      <Mask>2047</Mask>
                   </ID>
                   <Payload>
@@ -8487,9 +8451,9 @@
             </TableDatabase>
             <ProjectID adjustable="true" adjust-data-type="uint8_T">6</ProjectID>
             <ProductID adjustable="true" adjust-data-type="uint32_T">1</ProductID>
-            <SwIdTxt>Mooventur_209</SwIdTxt>
-            <SwRevisionTxt>Mooventure2016_Rev5_209</SwRevisionTxt>
-            <CalIdTxt>Mooventure2016_Rev5_209_000</CalIdTxt>
+            <SwIdTxt>Mooventur_211</SwIdTxt>
+            <SwRevisionTxt>Mooventure2016_Rev5_211</SwRevisionTxt>
+            <CalIdTxt>Mooventure2016_Rev5_211_000</CalIdTxt>
          </VarDecs>
          <DatabaseBuild>
             <Toolchain>
@@ -8520,8 +8484,8 @@
             <File>Mooventure2016_Rev5_data.c</File>
             <File>MotoHawk_DataStores.c</File>
             <File>TableLookupFunctions.c</File>
-            <File>Trigger_BGND_BASE_PERIODIC_6596p0005.c</File>
-            <File>Trigger_FGND_RTI_PERIODIC_6605p0005.c</File>
+            <File>Trigger_BGND_BASE_PERIODIC_5678p0001.c</File>
+            <File>Trigger_FGND_RTI_PERIODIC_5687p0001.c</File>
             <File>Trigger_Fault_active_0_8.c</File>
             <File>VarDecs.c</File>
             <File>rt_nonfinite.c</File>
@@ -8574,7 +8538,7 @@
             <Define name="MT" value="0"/>
          </Compiler>
       </Build>
-      <Signature>18babe7e-34c7-4785-92-4b-fa-45-db-20-c2</Signature>
+      <Signature>38e241c1-0a3c-43a3-92-11-19-01-4d-0c-89</Signature>
       <VarDecs>
          <DataStoreVarDec ref="ProcessorReboot">
             <access>RW RW RW RW</access>
@@ -10250,17 +10214,17 @@
             <update>BACKGND</update>
             <vector_style>wide</vector_style>
          </DataStoreVarDec>
-         <DataStoreVarDec ref="Engine_On_Ovr_ovr">
+         <DataStoreVarDec ref="Engine_On_ABS_Ovr_ovr">
             <access>RW RW RW RW</access>
             <class>ENUM</class>
             <enum_name>VarDecEnum_1</enum_name>
             <exp>1.0</exp>
             <format>1.0</format>
             <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Outputs|ABS Outputs | Engine_On_Ovr Override</group>
+            <group>Mooventure2016_Rev5|Foreground|Outputs|ABS Outputs | Engine_On_ABS_Ovr Override</group>
             <max>1.000000</max>
             <min>0.000000</min>
-            <name>Engine_On_Ovr_ovr</name>
+            <name>Engine_On_ABS_Ovr_ovr</name>
             <offset>0.0</offset>
             <storage>RAM</storage>
             <update>BACKGND</update>
@@ -10281,22 +10245,22 @@
             <update>BACKGND</update>
             <vector_style>wide</vector_style>
          </DataStoreVarDec>
-         <DataStoreVarDec ref="Engine_On_Ovr_new">
+         <DataStoreVarDec ref="Engine_On_ABS_Ovr_new">
             <access>RW RW RW RW</access>
             <class>VAR</class>
             <exp>1.0</exp>
             <format>4.2</format>
             <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Outputs|ABS Outputs | Engine_On_Ovr Override</group>
+            <group>Mooventure2016_Rev5|Foreground|Outputs|ABS Outputs | Engine_On_ABS_Ovr Override</group>
             <max>4.000000</max>
             <min>0.000000</min>
-            <name>Engine_On_Ovr_new</name>
+            <name>Engine_On_ABS_Ovr_new</name>
             <offset>0.0</offset>
             <storage>RAM</storage>
             <update>BACKGND</update>
             <vector_style>wide</vector_style>
          </DataStoreVarDec>
-         <DataStoreVarDec ref="Engine_On_Prb">
+         <DataStoreVarDec ref="Engine_On_ABS_Prb">
             <access>RO RO RO RO</access>
             <class>VAR</class>
             <exp>1.0</exp>
@@ -10305,7 +10269,7 @@
             <group>Mooventure2016_Rev5|Foreground|Outputs|ABS Outputs</group>
             <max>100000000000000000.000000</max>
             <min>-100000000000000000.000000</min>
-            <name>Engine_On_Prb</name>
+            <name>Engine_On_ABS_Prb</name>
             <offset>0.0</offset>
             <storage>RAM</storage>
             <update>BACKGND</update>
@@ -10522,6 +10486,68 @@
             <max>1.000000</max>
             <min>0.000000</min>
             <name>Isolation_Measure_Enable_ovr_new</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="AC_Cmd_Ovr_ovr">
+            <access>RW RW RW RW</access>
+            <class>ENUM</class>
+            <enum_name>VarDecEnum_1</enum_name>
+            <exp>1.0</exp>
+            <format>1.0</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|CAN Gateway In | AC_Cmd_Ovr Override</group>
+            <max>1.000000</max>
+            <min>0.000000</min>
+            <name>AC_Cmd_Ovr_ovr</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="AC_Cmd_Ovr_new">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|CAN Gateway In | AC_Cmd_Ovr Override</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>AC_Cmd_Ovr_new</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Defrost_Mode_Ovr_ovr">
+            <access>RW RW RW RW</access>
+            <class>ENUM</class>
+            <enum_name>VarDecEnum_1</enum_name>
+            <exp>1.0</exp>
+            <format>1.0</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|CAN Gateway In | Defrost_Mode_Ovr Override</group>
+            <max>1.000000</max>
+            <min>0.000000</min>
+            <name>Defrost_Mode_Ovr_ovr</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Defrost_Mode_Ovr_new">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|CAN Gateway In | Defrost_Mode_Ovr Override</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>Defrost_Mode_Ovr_new</name>
             <offset>0.0</offset>
             <storage>RAM</storage>
             <update>BACKGND</update>
@@ -11018,18 +11044,34 @@
             <update>BACKGND</update>
             <vector_style>wide</vector_style>
          </DataStoreVarDec>
-         <DataStoreVarDec ref="AC_On_FIXME">
+         <DataStoreVarDec ref="Temp_Guage_Ovr_ovr">
             <access>RW RW RW RW</access>
-            <class>VAR</class>
+            <class>ENUM</class>
+            <enum_name>VarDecEnum_1</enum_name>
             <exp>1.0</exp>
             <format>1.0</format>
             <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Control|Coolant Control</group>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|Engine Inputs | Temp_Guage_Ovr Override</group>
             <max>1.000000</max>
             <min>0.000000</min>
-            <name>AC_On_FIXME</name>
+            <name>Temp_Guage_Ovr_ovr</name>
             <offset>0.0</offset>
-            <storage>FLASH</storage>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Temp_Guage_Ovr_new">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|Engine Inputs | Temp_Guage_Ovr Override</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>Temp_Guage_Ovr_new</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
             <update>BACKGND</update>
             <vector_style>wide</vector_style>
          </DataStoreVarDec>
@@ -14315,6 +14357,663 @@
             <update>BACKGND</update>
             <vector_style>wide</vector_style>
          </DataStoreVarDec>
+         <DataStoreVarDec ref="Gen_Load_Ovr_ovr">
+            <access>RW RW RW RW</access>
+            <class>ENUM</class>
+            <enum_name>VarDecEnum_1</enum_name>
+            <exp>1.0</exp>
+            <format>1.0</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Outputs|Engine Outputs | Gen_Load_Ovr Override</group>
+            <max>1.000000</max>
+            <min>0.000000</min>
+            <name>Gen_Load_Ovr_ovr</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Gen_Load_Ovr_new">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Outputs|Engine Outputs | Gen_Load_Ovr Override</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>Gen_Load_Ovr_new</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Genset_Load_Ovr_ovr">
+            <access>RW RW RW RW</access>
+            <class>ENUM</class>
+            <enum_name>VarDecEnum_1</enum_name>
+            <exp>1.0</exp>
+            <format>1.0</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Control|Engine Control | Genset_Load_Ovr Override</group>
+            <max>1.000000</max>
+            <min>0.000000</min>
+            <name>Genset_Load_Ovr_ovr</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="SOC_Low">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Control|Engine Control|SOC States</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>SOC_Low</name>
+            <offset>0.0</offset>
+            <storage>FLASH</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="SOC_Time_Threshold">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Control|Engine Control|SOC States</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>SOC_Time_Threshold</name>
+            <offset>0.0</offset>
+            <storage>FLASH</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="SOC_High">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Control|Engine Control|SOC States</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>SOC_High</name>
+            <offset>0.0</offset>
+            <storage>FLASH</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="SOC_Critical">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Control|Engine Control|SOC States</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>SOC_Critical</name>
+            <offset>0.0</offset>
+            <storage>FLASH</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="RPM_to_Wheel_Speed_Multiplier4">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Control|Engine Control</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>RPM_to_Wheel_Speed_Multiplier4</name>
+            <offset>0.0</offset>
+            <storage>FLASH</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Vehicle_Speed_On">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Control|Engine Control|Vehicle Speed States</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>Vehicle_Speed_On</name>
+            <offset>0.0</offset>
+            <storage>FLASH</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Vehicle_Speed_Time_Threshold">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Control|Engine Control|Vehicle Speed States</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>Vehicle_Speed_Time_Threshold</name>
+            <offset>0.0</offset>
+            <storage>FLASH</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Vehicle_Speed_Off">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Control|Engine Control|Vehicle Speed States</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>Vehicle_Speed_Off</name>
+            <offset>0.0</offset>
+            <storage>FLASH</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Coolant_Cold">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Control|Engine Control</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>Coolant_Cold</name>
+            <offset>0.0</offset>
+            <storage>FLASH</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Coolant_Warm">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Control|Engine Control</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>Coolant_Warm</name>
+            <offset>0.0</offset>
+            <storage>FLASH</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Coolant_Hot">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Control|Engine Control</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>Coolant_Hot</name>
+            <offset>0.0</offset>
+            <storage>FLASH</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Low_RPM">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Control|Engine Control</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>Low_RPM</name>
+            <offset>0.0</offset>
+            <storage>FLASH</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Medium_RPM">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Control|Engine Control</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>Medium_RPM</name>
+            <offset>0.0</offset>
+            <storage>FLASH</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="High_RPM">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Control|Engine Control</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>High_RPM</name>
+            <offset>0.0</offset>
+            <storage>FLASH</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Low_Throttle">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Control|Engine Control</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>Low_Throttle</name>
+            <offset>0.0</offset>
+            <storage>FLASH</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Medium_Throttle">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Control|Engine Control</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>Medium_Throttle</name>
+            <offset>0.0</offset>
+            <storage>FLASH</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="High_Throttle">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Control|Engine Control</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>High_Throttle</name>
+            <offset>0.0</offset>
+            <storage>FLASH</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Engine_On_Ovr_ovr">
+            <access>RW RW RW RW</access>
+            <class>ENUM</class>
+            <enum_name>VarDecEnum_1</enum_name>
+            <exp>1.0</exp>
+            <format>1.0</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|Engine Inputs | Engine_On_Ovr Override</group>
+            <max>1.000000</max>
+            <min>0.000000</min>
+            <name>Engine_On_Ovr_ovr</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Engine_On_Ovr_new">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|Engine Inputs | Engine_On_Ovr Override</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>Engine_On_Ovr_new</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Engine_On_Time_Threshold">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Control|Engine Control|Engine States</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>Engine_On_Time_Threshold</name>
+            <offset>0.0</offset>
+            <storage>FLASH</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="RPM_Ovr_ovr">
+            <access>RW RW RW RW</access>
+            <class>ENUM</class>
+            <enum_name>VarDecEnum_1</enum_name>
+            <exp>1.0</exp>
+            <format>1.0</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|Engine Inputs | RPM_Ovr Override</group>
+            <max>1.000000</max>
+            <min>0.000000</min>
+            <name>RPM_Ovr_ovr</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="RPM_Ovr_new">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|Engine Inputs | RPM_Ovr Override</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>RPM_Ovr_new</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Genset_Load_Ovr_new">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Control|Engine Control | Genset_Load_Ovr Override</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>Genset_Load_Ovr_new</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Gen_Enable_Ovr_ovr">
+            <access>RW RW RW RW</access>
+            <class>ENUM</class>
+            <enum_name>VarDecEnum_1</enum_name>
+            <exp>1.0</exp>
+            <format>1.0</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Outputs|Engine Outputs | Gen_Enable_Ovr Override</group>
+            <max>1.000000</max>
+            <min>0.000000</min>
+            <name>Gen_Enable_Ovr_ovr</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Pack_State_ovr_ovr">
+            <access>RW RW RW RW</access>
+            <class>ENUM</class>
+            <enum_name>VarDecEnum_1</enum_name>
+            <exp>1.0</exp>
+            <format>1.0</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs | Pack_State_ovr Override</group>
+            <max>1.000000</max>
+            <min>0.000000</min>
+            <name>Pack_State_ovr_ovr</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Pack_State_ovr_new">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs | Pack_State_ovr Override</group>
+            <max>8.000000</max>
+            <min>0.000000</min>
+            <name>Pack_State_ovr_new</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Genset_Enable_Ovr_ovr">
+            <access>RW RW RW RW</access>
+            <class>ENUM</class>
+            <enum_name>VarDecEnum_1</enum_name>
+            <exp>1.0</exp>
+            <format>1.0</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Control|Engine Control | Genset_Enable_Ovr Override</group>
+            <max>1.000000</max>
+            <min>0.000000</min>
+            <name>Genset_Enable_Ovr_ovr</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Genset_Enable_Ovr_new">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Control|Engine Control | Genset_Enable_Ovr Override</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>Genset_Enable_Ovr_new</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Gen_Enable_Ovr_new">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>1.0</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Outputs|Engine Outputs | Gen_Enable_Ovr Override</group>
+            <max>1.000000</max>
+            <min>0.000000</min>
+            <name>Gen_Enable_Ovr_new</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Vehicle_Speed2_Ovr_ovr">
+            <access>RW RW RW RW</access>
+            <class>ENUM</class>
+            <enum_name>VarDecEnum_1</enum_name>
+            <exp>1.0</exp>
+            <format>1.0</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Outputs|Engine Outputs | Vehicle_Speed2_Ovr Override</group>
+            <max>1.000000</max>
+            <min>0.000000</min>
+            <name>Vehicle_Speed2_Ovr_ovr</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="RPM_to_Wheel_Speed_Multiplier3">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Outputs|Engine Outputs</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>RPM_to_Wheel_Speed_Multiplier3</name>
+            <offset>0.0</offset>
+            <storage>FLASH</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Vehicle_Speed2_Ovr_new">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Outputs|Engine Outputs | Vehicle_Speed2_Ovr Override</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>Vehicle_Speed2_Ovr_new</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Load_Throttle_Ovr_ovr">
+            <access>RW RW RW RW</access>
+            <class>ENUM</class>
+            <enum_name>VarDecEnum_1</enum_name>
+            <exp>1.0</exp>
+            <format>1.0</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Outputs|Engine Outputs | Load_Throttle_Ovr Override</group>
+            <max>1.000000</max>
+            <min>0.000000</min>
+            <name>Load_Throttle_Ovr_ovr</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Load_Throttle_Ovr_new">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Outputs|Engine Outputs | Load_Throttle_Ovr Override</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>Load_Throttle_Ovr_new</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Genset_Throttle_Ovr_ovr">
+            <access>RW RW RW RW</access>
+            <class>ENUM</class>
+            <enum_name>VarDecEnum_1</enum_name>
+            <exp>1.0</exp>
+            <format>1.0</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Control|Engine Control | Genset_Throttle_Ovr Override</group>
+            <max>1.000000</max>
+            <min>0.000000</min>
+            <name>Genset_Throttle_Ovr_ovr</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Genset_Throttle_Ovr_new">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Control|Engine Control | Genset_Throttle_Ovr Override</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>Genset_Throttle_Ovr_new</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Load_RPM_Ovr_ovr">
+            <access>RW RW RW RW</access>
+            <class>ENUM</class>
+            <enum_name>VarDecEnum_1</enum_name>
+            <exp>1.0</exp>
+            <format>1.0</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Outputs|Engine Outputs | Load_RPM_Ovr Override</group>
+            <max>1.000000</max>
+            <min>0.000000</min>
+            <name>Load_RPM_Ovr_ovr</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Load_RPM_Ovr_new">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Outputs|Engine Outputs | Load_RPM_Ovr Override</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>Load_RPM_Ovr_new</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Genset_RPM_Ovr_ovr">
+            <access>RW RW RW RW</access>
+            <class>ENUM</class>
+            <enum_name>VarDecEnum_1</enum_name>
+            <exp>1.0</exp>
+            <format>1.0</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Control|Engine Control | Genset_RPM_Ovr Override</group>
+            <max>1.000000</max>
+            <min>0.000000</min>
+            <name>Genset_RPM_Ovr_ovr</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Genset_RPM_Ovr_new">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Control|Engine Control | Genset_RPM_Ovr Override</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>Genset_RPM_Ovr_new</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
          <DataStoreVarDec ref="VSC_WheelTorqueRequest_Ovr_ovr">
             <access>RW RW RW RW</access>
             <class>ENUM</class>
@@ -15154,399 +15853,6 @@
             <name>VSC_MaxDCVoltage_Prb</name>
             <offset>0.0</offset>
             <storage>RAM</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Engine_Status">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Outputs|Infotainment Outputs</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Engine_Status</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="MPGe_Instant_Ovr_ovr">
-            <access>RW RW RW RW</access>
-            <class>ENUM</class>
-            <enum_name>VarDecEnum_1</enum_name>
-            <exp>1.0</exp>
-            <format>1.0</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|MPGe | MPGe_Instant_Ovr Override</group>
-            <max>1.000000</max>
-            <min>0.000000</min>
-            <name>MPGe_Instant_Ovr_ovr</name>
-            <offset>0.0</offset>
-            <storage>RAM</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Gasoline_Specific_Energy">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|MPGe</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Gasoline_Specific_Energy</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Gear_Ratio">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|MPGe</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Gear_Ratio</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="kW_Divisor">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|MPGe</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>kW_Divisor</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Wheel_Ratio">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|MPGe</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Wheel_Ratio</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Efficiency_Multiplier">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|MPGe</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Efficiency_Multiplier</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="MPGe_Instant_Ovr_new">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|MPGe | MPGe_Instant_Ovr Override</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>MPGe_Instant_Ovr_new</name>
-            <offset>0.0</offset>
-            <storage>RAM</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Selected_Trip">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Outputs|Infotainment Outputs</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Selected_Trip</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Bar_Color">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|MPGe Bar Calculations</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Bar_Color</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Power_Flow_Divisor_Battery">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Power Flow</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Power_Flow_Divisor_Battery</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Battery_Drive_Mode">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Outputs|Infotainment Outputs</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Battery_Drive_Mode</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Power_Flow_Divisor">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Power Flow</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Power_Flow_Divisor</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Engine2Axle">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Outputs|Infotainment Outputs</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Engine2Axle</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Engine2Motor">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Outputs|Infotainment Outputs</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Engine2Motor</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Gas_Use_Pct">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Outputs|Infotainment Outputs</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Gas_Use_Pct</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Engine_Status_2">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Outputs|Infotainment Outputs</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Engine_Status_2</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Average_Vehicle_MPG">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Cost Calculations|Trip A</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Average_Vehicle_MPG</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Fuel_Cost_Setting_Ovr_ovr">
-            <access>RW RW RW RW</access>
-            <class>ENUM</class>
-            <enum_name>VarDecEnum_1</enum_name>
-            <exp>1.0</exp>
-            <format>1.0</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs | Fuel_Cost_Setting_Ovr Override</group>
-            <max>1.000000</max>
-            <min>0.000000</min>
-            <name>Fuel_Cost_Setting_Ovr_ovr</name>
-            <offset>0.0</offset>
-            <storage>RAM</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Fuel_Cost_Setting_Ovr_new">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs | Fuel_Cost_Setting_Ovr Override</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Fuel_Cost_Setting_Ovr_new</name>
-            <offset>0.0</offset>
-            <storage>RAM</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Electricity_Cost_Setting_Ovr_ovr">
-            <access>RW RW RW RW</access>
-            <class>ENUM</class>
-            <enum_name>VarDecEnum_1</enum_name>
-            <exp>1.0</exp>
-            <format>1.0</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs | Electricity_Cost_Setting_Ovr Override</group>
-            <max>1.000000</max>
-            <min>0.000000</min>
-            <name>Electricity_Cost_Setting_Ovr_ovr</name>
-            <offset>0.0</offset>
-            <storage>RAM</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Electricity_Cost_Setting_Ovr_new">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs | Electricity_Cost_Setting_Ovr Override</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Electricity_Cost_Setting_Ovr_new</name>
-            <offset>0.0</offset>
-            <storage>RAM</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Trip_A_Fuel_Used">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Outputs|Infotainment Outputs</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Trip_A_Fuel_Used</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Average_Vehicle_MPG_Trip_B">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Cost Calculations|Trip B</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Average_Vehicle_MPG_Trip_B</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Trip_B_Fuel_Used">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Outputs|Infotainment Outputs</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Trip_B_Fuel_Used</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Setting_Screen_Select">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Outputs|Infotainment Outputs</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Setting_Screen_Select</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
             <update>BACKGND</update>
             <vector_style>wide</vector_style>
          </DataStoreVarDec>
@@ -16633,37 +16939,6 @@
             <update>BACKGND</update>
             <vector_style>wide</vector_style>
          </DataStoreVarDec>
-         <DataStoreVarDec ref="Pack_State_ovr_ovr">
-            <access>RW RW RW RW</access>
-            <class>ENUM</class>
-            <enum_name>VarDecEnum_1</enum_name>
-            <exp>1.0</exp>
-            <format>1.0</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs | Pack_State_ovr Override</group>
-            <max>1.000000</max>
-            <min>0.000000</min>
-            <name>Pack_State_ovr_ovr</name>
-            <offset>0.0</offset>
-            <storage>RAM</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Pack_State_ovr_new">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs | Pack_State_ovr Override</group>
-            <max>8.000000</max>
-            <min>0.000000</min>
-            <name>Pack_State_ovr_new</name>
-            <offset>0.0</offset>
-            <storage>RAM</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
          <DataStoreVarDec ref="OutputCurrent_ovr">
             <access>RW RW RW RW</access>
             <class>ENUM</class>
@@ -16726,156 +17001,125 @@
             <update>BACKGND</update>
             <vector_style>wide</vector_style>
          </DataStoreVarDec>
-         <DataStoreVarDec ref="Subfunction_Select_Ovr_ovr">
+         <DataStoreVarDec ref="Oil_Pressure_Ovr_ovr">
             <access>RW RW RW RW</access>
             <class>ENUM</class>
             <enum_name>VarDecEnum_1</enum_name>
             <exp>1.0</exp>
             <format>1.0</format>
             <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs | Subfunction_Select_Ovr Override</group>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|Engine Inputs | Oil_Pressure_Ovr Override</group>
             <max>1.000000</max>
             <min>0.000000</min>
-            <name>Subfunction_Select_Ovr_ovr</name>
+            <name>Oil_Pressure_Ovr_ovr</name>
             <offset>0.0</offset>
             <storage>RAM</storage>
             <update>BACKGND</update>
             <vector_style>wide</vector_style>
          </DataStoreVarDec>
-         <DataStoreVarDec ref="Subfunction_Select_Ovr_new">
+         <DataStoreVarDec ref="Oil_Pressure_Ovr_new">
             <access>RW RW RW RW</access>
             <class>VAR</class>
             <exp>1.0</exp>
             <format>4.2</format>
             <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs | Subfunction_Select_Ovr Override</group>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|Engine Inputs | Oil_Pressure_Ovr Override</group>
             <max>100000000000000000.000000</max>
             <min>-100000000000000000.000000</min>
-            <name>Subfunction_Select_Ovr_new</name>
+            <name>Oil_Pressure_Ovr_new</name>
             <offset>0.0</offset>
             <storage>RAM</storage>
             <update>BACKGND</update>
             <vector_style>wide</vector_style>
          </DataStoreVarDec>
-         <DataStoreVarDec ref="Confirm_Actve_Trip_Ovr_ovr">
+         <DataStoreVarDec ref="Engine_Crank_Ovr_ovr">
             <access>RW RW RW RW</access>
             <class>ENUM</class>
             <enum_name>VarDecEnum_1</enum_name>
             <exp>1.0</exp>
             <format>1.0</format>
             <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs | Confirm_Actve_Trip_Ovr Override</group>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|Engine Inputs | Engine_Crank_Ovr Override</group>
             <max>1.000000</max>
             <min>0.000000</min>
-            <name>Confirm_Actve_Trip_Ovr_ovr</name>
+            <name>Engine_Crank_Ovr_ovr</name>
             <offset>0.0</offset>
             <storage>RAM</storage>
             <update>BACKGND</update>
             <vector_style>wide</vector_style>
          </DataStoreVarDec>
-         <DataStoreVarDec ref="Confirm_Actve_Trip_Ovr_new">
+         <DataStoreVarDec ref="Engine_Crank_Ovr_new">
             <access>RW RW RW RW</access>
             <class>VAR</class>
             <exp>1.0</exp>
             <format>4.2</format>
             <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs | Confirm_Actve_Trip_Ovr Override</group>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|Engine Inputs | Engine_Crank_Ovr Override</group>
             <max>100000000000000000.000000</max>
             <min>-100000000000000000.000000</min>
-            <name>Confirm_Actve_Trip_Ovr_new</name>
+            <name>Engine_Crank_Ovr_new</name>
             <offset>0.0</offset>
             <storage>RAM</storage>
             <update>BACKGND</update>
             <vector_style>wide</vector_style>
          </DataStoreVarDec>
-         <DataStoreVarDec ref="INFO_610_AgeCount_Ovr_ovr">
+         <DataStoreVarDec ref="Load_On_Ovr_ovr">
             <access>RW RW RW RW</access>
             <class>ENUM</class>
             <enum_name>VarDecEnum_1</enum_name>
             <exp>1.0</exp>
             <format>1.0</format>
             <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs | INFO_610_AgeCount_Ovr Override</group>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|Engine Inputs | Load_On_Ovr Override</group>
             <max>1.000000</max>
             <min>0.000000</min>
-            <name>INFO_610_AgeCount_Ovr_ovr</name>
+            <name>Load_On_Ovr_ovr</name>
             <offset>0.0</offset>
             <storage>RAM</storage>
             <update>BACKGND</update>
             <vector_style>wide</vector_style>
          </DataStoreVarDec>
-         <DataStoreVarDec ref="INFO_610_AgeCount_Ovr_new">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>8.0</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs | INFO_610_AgeCount_Ovr Override</group>
-            <max>4294967295.000000</max>
-            <min>0.000000</min>
-            <name>INFO_610_AgeCount_Ovr_new</name>
-            <offset>0.0</offset>
-            <storage>RAM</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Confirm_Reset_Trip_B_Ovr_ovr">
-            <access>RW RW RW RW</access>
-            <class>ENUM</class>
-            <enum_name>VarDecEnum_1</enum_name>
-            <exp>1.0</exp>
-            <format>1.0</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs | Confirm_Reset_Trip_B_Ovr Override</group>
-            <max>1.000000</max>
-            <min>0.000000</min>
-            <name>Confirm_Reset_Trip_B_Ovr_ovr</name>
-            <offset>0.0</offset>
-            <storage>RAM</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Confirm_Reset_Trip_B_Ovr_new">
+         <DataStoreVarDec ref="Load_On_Ovr_new">
             <access>RW RW RW RW</access>
             <class>VAR</class>
             <exp>1.0</exp>
             <format>4.2</format>
             <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs | Confirm_Reset_Trip_B_Ovr Override</group>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|Engine Inputs | Load_On_Ovr Override</group>
             <max>100000000000000000.000000</max>
             <min>-100000000000000000.000000</min>
-            <name>Confirm_Reset_Trip_B_Ovr_new</name>
+            <name>Load_On_Ovr_new</name>
             <offset>0.0</offset>
             <storage>RAM</storage>
             <update>BACKGND</update>
             <vector_style>wide</vector_style>
          </DataStoreVarDec>
-         <DataStoreVarDec ref="Confirm_Reset_Trip_A_Ovr_ovr">
+         <DataStoreVarDec ref="Fault_Ovr_ovr">
             <access>RW RW RW RW</access>
             <class>ENUM</class>
             <enum_name>VarDecEnum_1</enum_name>
             <exp>1.0</exp>
             <format>1.0</format>
             <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs | Confirm_Reset_Trip_A_Ovr Override</group>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|Engine Inputs | Fault_Ovr Override</group>
             <max>1.000000</max>
             <min>0.000000</min>
-            <name>Confirm_Reset_Trip_A_Ovr_ovr</name>
+            <name>Fault_Ovr_ovr</name>
             <offset>0.0</offset>
             <storage>RAM</storage>
             <update>BACKGND</update>
             <vector_style>wide</vector_style>
          </DataStoreVarDec>
-         <DataStoreVarDec ref="Confirm_Reset_Trip_A_Ovr_new">
+         <DataStoreVarDec ref="Fault_Ovr_new">
             <access>RW RW RW RW</access>
             <class>VAR</class>
             <exp>1.0</exp>
             <format>4.2</format>
             <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs | Confirm_Reset_Trip_A_Ovr Override</group>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|Engine Inputs | Fault_Ovr Override</group>
             <max>100000000000000000.000000</max>
             <min>-100000000000000000.000000</min>
-            <name>Confirm_Reset_Trip_A_Ovr_new</name>
+            <name>Fault_Ovr_new</name>
             <offset>0.0</offset>
             <storage>RAM</storage>
             <update>BACKGND</update>
@@ -17593,81 +17837,6 @@
             <update>BACKGND</update>
             <vector_style>wide</vector_style>
          </DataStoreVarDec>
-         <DataStoreVarDec ref="SoC_Threshold">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Control|Suspension Control</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>SoC_Threshold</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Suspension_Threshold">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Control|Suspension Control</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Suspension_Threshold</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="RPM_Threshold">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Control|Suspension Control</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>RPM_Threshold</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Suspension_Switch_Input">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Control|Suspension Control</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Suspension_Switch_Input</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Suspension_Height_Sensor">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Control|Suspension Control</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Suspension_Height_Sensor</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
          <DataStoreVarDec ref="Load_Enable_Delay">
             <access>RW RW RW RW</access>
             <class>VAR</class>
@@ -17804,216 +17973,6 @@
             <name>Hybrid_State</name>
             <offset>0.0</offset>
             <storage>RAM</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Distance_Trip_A_Integrator_Multiplier">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Cost Calculations|Trip A</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Distance_Trip_A_Integrator_Multiplier</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Wheel_Ratio_Trip_A">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Cost Calculations|Trip A</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Wheel_Ratio_Trip_A</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Max_Trip_A_Dist">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Cost Calculations|Trip A</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Max_Trip_A_Dist</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Max_Trip_A_kW">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Cost Calculations|Trip A</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Max_Trip_A_kW</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Distance_Trip_B_Integrator_Multiplier">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Cost Calculations|Trip B</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Distance_Trip_B_Integrator_Multiplier</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Wheel_Ratio_Trip_B">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Cost Calculations|Trip B</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Wheel_Ratio_Trip_B</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Max_Trip_B_Dist">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Cost Calculations|Trip B</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Max_Trip_B_Dist</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="kW_Trip_B_Integrator_Multiplier">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Cost Calculations|Trip B</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>kW_Trip_B_Integrator_Multiplier</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Max_Trip_B_kW">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Cost Calculations|Trip B</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Max_Trip_B_kW</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Min_RPM_For_Calc">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|MPGe Averages|Global Average</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Min_RPM_For_Calc</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Write_Interval_MPGe">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>0.05</gain>
-            <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|MPGe Averages|Global Average</group>
-            <max>5000000000000000.000000</max>
-            <min>-5000000000000000.000000</min>
-            <name>Write_Interval_MPGe</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Bar_Min_RPM_For_Calc">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|MPGe Bar Calculations</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Bar_Min_RPM_For_Calc</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Bar_Write_Interval_MPGe">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>0.05</gain>
-            <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|MPGe Bar Calculations</group>
-            <max>5000000000000000.000000</max>
-            <min>-5000000000000000.000000</min>
-            <name>Bar_Write_Interval_MPGe</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Bar_Reset_Interval_MPGe">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>0.05</gain>
-            <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|MPGe Bar Calculations</group>
-            <max>5000000000000000.000000</max>
-            <min>-5000000000000000.000000</min>
-            <name>Bar_Reset_Interval_MPGe</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
             <update>BACKGND</update>
             <vector_style>wide</vector_style>
          </DataStoreVarDec>
@@ -25392,10 +25351,10 @@
       </MC33800>
       <Object name="S_SHRC_3_MC33800_CCD1" claim="MC33800_LSO1"/>
       <Object name="FaultStatus_MC33800_LSO1">
-         <RuntimeObjectName>DOut5146p0001</RuntimeObjectName>
+         <RuntimeObjectName>DOut4323p0001</RuntimeObjectName>
          <ResourceBehavior>DiscreteOutput</ResourceBehavior>
       </Object>
-      <DiscreteOutput_MC33800 name="MC33800_LSO1" claim="DOut5146p0001">
+      <DiscreteOutput_MC33800 name="MC33800_LSO1" claim="DOut4323p0001">
          <MC33800Instance>S_SHRC_3</MC33800Instance>
          <MC33800Pin>MC33800_CCD1</MC33800Pin>
          <MC33800SubModule>CCD</MC33800SubModule>
@@ -25411,16 +25370,16 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO1</ModuleResource>
          <DeviceDriver>MC33800</DeviceDriver>
-         <Name>DOut5146p0001</Name>
+         <Name>DOut4323p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout1</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_MC33800>
       <Object name="S_SHRC_3_MC33800_OUT1" claim="MC33800_LSO3"/>
       <Object name="FaultStatus_MC33800_LSO3">
-         <RuntimeObjectName>DOut5147p0001</RuntimeObjectName>
+         <RuntimeObjectName>DOut4324p0001</RuntimeObjectName>
          <ResourceBehavior>DiscreteOutput</ResourceBehavior>
       </Object>
-      <DiscreteOutput_MC33800 name="MC33800_LSO3" claim="DOut5147p0001">
+      <DiscreteOutput_MC33800 name="MC33800_LSO3" claim="DOut4324p0001">
          <MC33800Instance>S_SHRC_3</MC33800Instance>
          <MC33800Pin>MC33800_OUT1</MC33800Pin>
          <MC33800SubModule>OSS</MC33800SubModule>
@@ -25436,7 +25395,7 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO3</ModuleResource>
          <DeviceDriver>MC33800</DeviceDriver>
-         <Name>DOut5147p0001</Name>
+         <Name>DOut4324p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout10</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_MC33800>
@@ -25472,7 +25431,7 @@
          <Name>MC33800_INJ8</Name>
       </DiscreteOutput_MC33800>
       <Object name="CPUCore_0_GPIO_137_G1" claim="BasicOut_INJ8"/>
-      <DiscreteOutput_BasicOut name="BasicOut_INJ8" claim="DOut5148p0001">
+      <DiscreteOutput_BasicOut name="BasicOut_INJ8" claim="DOut4325p0001">
          <CPUName>CPUCore_0</CPUName>
          <CPUType>CPU</CPUType>
          <CPUResource>GPIO_137_G1</CPUResource>
@@ -25488,7 +25447,7 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>INJ8</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut5148p0001</Name>
+         <Name>DOut4325p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout11</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_BasicOut>
@@ -25515,7 +25474,7 @@
          <Name>MC33800_INJ6</Name>
       </DiscreteOutput_MC33800>
       <Object name="CPUCore_0_GPIO_135_G4" claim="BasicOut_INJ6"/>
-      <DiscreteOutput_BasicOut name="BasicOut_INJ6" claim="DOut5149p0001">
+      <DiscreteOutput_BasicOut name="BasicOut_INJ6" claim="DOut4326p0001">
          <CPUName>CPUCore_0</CPUName>
          <CPUType>CPU</CPUType>
          <CPUResource>GPIO_135_G4</CPUResource>
@@ -25531,7 +25490,7 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>INJ6</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut5149p0001</Name>
+         <Name>DOut4326p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout12</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_BasicOut>
@@ -25558,7 +25517,7 @@
          <Name>MC33800_INJ7</Name>
       </DiscreteOutput_MC33800>
       <Object name="CPUCore_0_GPIO_136_G2" claim="BasicOut_INJ7"/>
-      <DiscreteOutput_BasicOut name="BasicOut_INJ7" claim="DOut5150p0001">
+      <DiscreteOutput_BasicOut name="BasicOut_INJ7" claim="DOut4327p0001">
          <CPUName>CPUCore_0</CPUName>
          <CPUType>CPU</CPUType>
          <CPUResource>GPIO_136_G2</CPUResource>
@@ -25574,7 +25533,7 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>INJ7</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut5150p0001</Name>
+         <Name>DOut4327p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout13</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_BasicOut>
@@ -25601,7 +25560,7 @@
          <Name>MC33800_INJ5</Name>
       </DiscreteOutput_MC33800>
       <Object name="CPUCore_0_GPIO_134_H1" claim="BasicOut_INJ5"/>
-      <DiscreteOutput_BasicOut name="BasicOut_INJ5" claim="DOut5151p0001">
+      <DiscreteOutput_BasicOut name="BasicOut_INJ5" claim="DOut4328p0001">
          <CPUName>CPUCore_0</CPUName>
          <CPUType>CPU</CPUType>
          <CPUResource>GPIO_134_H1</CPUResource>
@@ -25617,7 +25576,7 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>INJ5</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut5151p0001</Name>
+         <Name>DOut4328p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout2</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_BasicOut>
@@ -25644,7 +25603,7 @@
          <Name>MC33800_LSO2</Name>
       </DiscreteOutput_MC33800>
       <Object name="CPUCore_0_GPIO_138_F1" claim="BasicOut_LSO2"/>
-      <DiscreteOutput_BasicOut name="BasicOut_LSO2" claim="DOut5152p0001">
+      <DiscreteOutput_BasicOut name="BasicOut_LSO2" claim="DOut4329p0001">
          <CPUName>CPUCore_0</CPUName>
          <CPUType>CPU</CPUType>
          <CPUResource>GPIO_138_F1</CPUResource>
@@ -25658,7 +25617,7 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO2</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut5152p0001</Name>
+         <Name>DOut4329p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout3</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_BasicOut>
@@ -25685,7 +25644,7 @@
          <Name>MC33800_INJ4</Name>
       </DiscreteOutput_MC33800>
       <Object name="CPUCore_0_GPIO_133_H2" claim="BasicOut_INJ4"/>
-      <DiscreteOutput_BasicOut name="BasicOut_INJ4" claim="DOut5153p0001">
+      <DiscreteOutput_BasicOut name="BasicOut_INJ4" claim="DOut4330p0001">
          <CPUName>CPUCore_0</CPUName>
          <CPUType>CPU</CPUType>
          <CPUResource>GPIO_133_H2</CPUResource>
@@ -25701,7 +25660,7 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>INJ4</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut5153p0001</Name>
+         <Name>DOut4330p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout4</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_BasicOut>
@@ -25728,7 +25687,7 @@
          <Name>MC33800_INJ3</Name>
       </DiscreteOutput_MC33800>
       <Object name="CPUCore_0_GPIO_132_H3" claim="BasicOut_INJ3"/>
-      <DiscreteOutput_BasicOut name="BasicOut_INJ3" claim="DOut5154p0001">
+      <DiscreteOutput_BasicOut name="BasicOut_INJ3" claim="DOut4331p0001">
          <CPUName>CPUCore_0</CPUName>
          <CPUType>CPU</CPUType>
          <CPUResource>GPIO_132_H3</CPUResource>
@@ -25744,7 +25703,7 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>INJ3</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut5154p0001</Name>
+         <Name>DOut4331p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout5</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_BasicOut>
@@ -25771,7 +25730,7 @@
          <Name>MC33800_INJ2</Name>
       </DiscreteOutput_MC33800>
       <Object name="CPUCore_0_GPIO_131_H4" claim="BasicOut_INJ2"/>
-      <DiscreteOutput_BasicOut name="BasicOut_INJ2" claim="DOut5155p0001">
+      <DiscreteOutput_BasicOut name="BasicOut_INJ2" claim="DOut4332p0001">
          <CPUName>CPUCore_0</CPUName>
          <CPUType>CPU</CPUType>
          <CPUResource>GPIO_131_H4</CPUResource>
@@ -25787,16 +25746,16 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>INJ2</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut5155p0001</Name>
+         <Name>DOut4332p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout6</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_BasicOut>
       <Object name="S_SHRC_4_MC33800_OUT2" claim="MC33800_LSO12"/>
       <Object name="FaultStatus_MC33800_LSO12">
-         <RuntimeObjectName>DOut5156p0001</RuntimeObjectName>
+         <RuntimeObjectName>DOut4333p0001</RuntimeObjectName>
          <ResourceBehavior>DiscreteOutput</ResourceBehavior>
       </Object>
-      <DiscreteOutput_MC33800 name="MC33800_LSO12" claim="DOut5156p0001">
+      <DiscreteOutput_MC33800 name="MC33800_LSO12" claim="DOut4333p0001">
          <MC33800Instance>S_SHRC_4</MC33800Instance>
          <MC33800Pin>MC33800_OUT2</MC33800Pin>
          <MC33800SubModule>OSS</MC33800SubModule>
@@ -25812,16 +25771,16 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO12</ModuleResource>
          <DeviceDriver>MC33800</DeviceDriver>
-         <Name>DOut5156p0001</Name>
+         <Name>DOut4333p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout7</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_MC33800>
       <Object name="S_SHRC_4_MC33800_OUT1" claim="MC33800_LSO11"/>
       <Object name="FaultStatus_MC33800_LSO11">
-         <RuntimeObjectName>DOut5157p0001</RuntimeObjectName>
+         <RuntimeObjectName>DOut4334p0001</RuntimeObjectName>
          <ResourceBehavior>DiscreteOutput</ResourceBehavior>
       </Object>
-      <DiscreteOutput_MC33800 name="MC33800_LSO11" claim="DOut5157p0001">
+      <DiscreteOutput_MC33800 name="MC33800_LSO11" claim="DOut4334p0001">
          <MC33800Instance>S_SHRC_4</MC33800Instance>
          <MC33800Pin>MC33800_OUT1</MC33800Pin>
          <MC33800SubModule>OSS</MC33800SubModule>
@@ -25837,16 +25796,16 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO11</ModuleResource>
          <DeviceDriver>MC33800</DeviceDriver>
-         <Name>DOut5157p0001</Name>
+         <Name>DOut4334p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout8</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_MC33800>
       <Object name="S_SHRC_3_MC33800_PWM6" claim="MC33800_LSO5"/>
       <Object name="FaultStatus_MC33800_LSO5">
-         <RuntimeObjectName>DOut5158p0001</RuntimeObjectName>
+         <RuntimeObjectName>DOut4335p0001</RuntimeObjectName>
          <ResourceBehavior>DiscreteOutput</ResourceBehavior>
       </Object>
-      <DiscreteOutput_MC33800 name="MC33800_LSO5" claim="DOut5158p0001">
+      <DiscreteOutput_MC33800 name="MC33800_LSO5" claim="DOut4335p0001">
          <MC33800Instance>S_SHRC_3</MC33800Instance>
          <MC33800Pin>MC33800_PWM6</MC33800Pin>
          <MC33800SubModule>PWM</MC33800SubModule>
@@ -25862,7 +25821,7 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO5</ModuleResource>
          <DeviceDriver>MC33800</DeviceDriver>
-         <Name>DOut5158p0001</Name>
+         <Name>DOut4335p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout9</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_MC33800>
@@ -25889,7 +25848,7 @@
          <Name>MC33800_LSO9</Name>
       </DiscreteOutput_MC33800>
       <Object name="CPUCore_0_GPIO_159_J24" claim="BasicOut_LSO9"/>
-      <DiscreteOutput_BasicOut name="BasicOut_LSO9" claim="DOut5384p0001">
+      <DiscreteOutput_BasicOut name="BasicOut_LSO9" claim="DOut4561p0001">
          <CPUName>CPUCore_0</CPUName>
          <CPUType>CPU</CPUType>
          <CPUResource>GPIO_159_J24</CPUResource>
@@ -25903,16 +25862,16 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO9</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut5384p0001</Name>
+         <Name>DOut4561p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout1</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_BasicOut>
       <Object name="S_SHRC_4_MC33800_PWM6" claim="MC33800_LSO7"/>
       <Object name="FaultStatus_MC33800_LSO7">
-         <RuntimeObjectName>DOut5385p0001</RuntimeObjectName>
+         <RuntimeObjectName>DOut4562p0001</RuntimeObjectName>
          <ResourceBehavior>DiscreteOutput</ResourceBehavior>
       </Object>
-      <DiscreteOutput_MC33800 name="MC33800_LSO7" claim="DOut5385p0001">
+      <DiscreteOutput_MC33800 name="MC33800_LSO7" claim="DOut4562p0001">
          <MC33800Instance>S_SHRC_4</MC33800Instance>
          <MC33800Pin>MC33800_PWM6</MC33800Pin>
          <MC33800SubModule>PWM</MC33800SubModule>
@@ -25928,16 +25887,16 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO7</ModuleResource>
          <DeviceDriver>MC33800</DeviceDriver>
-         <Name>DOut5385p0001</Name>
+         <Name>DOut4562p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout2</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_MC33800>
       <Object name="S_SHRC_3_MC33800_PWM5" claim="MC33800_LSO4"/>
       <Object name="FaultStatus_MC33800_LSO4">
-         <RuntimeObjectName>DOut5386p0001</RuntimeObjectName>
+         <RuntimeObjectName>DOut4563p0001</RuntimeObjectName>
          <ResourceBehavior>DiscreteOutput</ResourceBehavior>
       </Object>
-      <DiscreteOutput_MC33800 name="MC33800_LSO4" claim="DOut5386p0001">
+      <DiscreteOutput_MC33800 name="MC33800_LSO4" claim="DOut4563p0001">
          <MC33800Instance>S_SHRC_3</MC33800Instance>
          <MC33800Pin>MC33800_PWM5</MC33800Pin>
          <MC33800SubModule>PWM</MC33800SubModule>
@@ -25953,7 +25912,7 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO4</ModuleResource>
          <DeviceDriver>MC33800</DeviceDriver>
-         <Name>DOut5386p0001</Name>
+         <Name>DOut4563p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout3</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_MC33800>
@@ -25980,7 +25939,7 @@
          <Name>MC33800_LSO10</Name>
       </DiscreteOutput_MC33800>
       <Object name="CPUCore_0_GPIO_158_J25" claim="BasicOut_LSO10"/>
-      <DiscreteOutput_BasicOut name="BasicOut_LSO10" claim="DOut5387p0001">
+      <DiscreteOutput_BasicOut name="BasicOut_LSO10" claim="DOut4564p0001">
          <CPUName>CPUCore_0</CPUName>
          <CPUType>CPU</CPUType>
          <CPUResource>GPIO_158_J25</CPUResource>
@@ -25994,7 +25953,7 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO10</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut5387p0001</Name>
+         <Name>DOut4564p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout4</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_BasicOut>
@@ -26021,7 +25980,7 @@
          <Name>MC33800_LSO8</Name>
       </DiscreteOutput_MC33800>
       <Object name="CPUCore_0_GPIO_202_AE21" claim="BasicOut_LSO8"/>
-      <DiscreteOutput_BasicOut name="BasicOut_LSO8" claim="DOut5388p0001">
+      <DiscreteOutput_BasicOut name="BasicOut_LSO8" claim="DOut4565p0001">
          <CPUName>CPUCore_0</CPUName>
          <CPUType>CPU</CPUType>
          <CPUResource>GPIO_202_AE21</CPUResource>
@@ -26035,17 +25994,17 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO8</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut5388p0001</Name>
+         <Name>DOut4565p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout5</AppLink>
          <DisableOnStop>true</DisableOnStop>
          <Channel>202</Channel>
       </DiscreteOutput_BasicOut>
       <Object name="S_SHRC_4_MC33800_PWM5" claim="MC33800_LSO6"/>
       <Object name="FaultStatus_MC33800_LSO6">
-         <RuntimeObjectName>DOut5389p0001</RuntimeObjectName>
+         <RuntimeObjectName>DOut4566p0001</RuntimeObjectName>
          <ResourceBehavior>DiscreteOutput</ResourceBehavior>
       </Object>
-      <DiscreteOutput_MC33800 name="MC33800_LSO6" claim="DOut5389p0001">
+      <DiscreteOutput_MC33800 name="MC33800_LSO6" claim="DOut4566p0001">
          <MC33800Instance>S_SHRC_4</MC33800Instance>
          <MC33800Pin>MC33800_PWM5</MC33800Pin>
          <MC33800SubModule>PWM</MC33800SubModule>
@@ -26061,7 +26020,7 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO6</ModuleResource>
          <DeviceDriver>MC33800</DeviceDriver>
-         <Name>DOut5389p0001</Name>
+         <Name>DOut4566p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout6</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_MC33800>
@@ -26088,7 +26047,7 @@
          <Name>MC33800_MPRD</Name>
       </DiscreteOutput_MC33800>
       <Object name="CPUCore_0_GPIO_198_AE20" claim="BasicOut_MPRD"/>
-      <DiscreteOutput_BasicOut name="BasicOut_MPRD" claim="DOut6546p0005">
+      <DiscreteOutput_BasicOut name="BasicOut_MPRD" claim="DOut5628p0004">
          <CPUName>CPUCore_0</CPUName>
          <CPUType>CPU</CPUType>
          <CPUResource>GPIO_198_AE20</CPUResource>
@@ -26102,7 +26061,7 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>MPRD</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut6546p0005</Name>
+         <Name>DOut5628p0004</Name>
          <AppLink>Mooventure2016_Rev5/Main Power Relay1/Background/motohawk_dout</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_BasicOut>
@@ -26391,140 +26350,140 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO1</ModuleResource>
          <DeviceDriver>MC33800</DeviceDriver>
-         <Name>DOut5146p0001</Name>
+         <Name>DOut4323p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout1</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO3</ModuleResource>
          <DeviceDriver>MC33800</DeviceDriver>
-         <Name>DOut5147p0001</Name>
+         <Name>DOut4324p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout10</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>INJ8</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut5148p0001</Name>
+         <Name>DOut4325p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout11</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>INJ6</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut5149p0001</Name>
+         <Name>DOut4326p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout12</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>INJ7</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut5150p0001</Name>
+         <Name>DOut4327p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout13</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>INJ5</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut5151p0001</Name>
+         <Name>DOut4328p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout2</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO2</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut5152p0001</Name>
+         <Name>DOut4329p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout3</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>INJ4</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut5153p0001</Name>
+         <Name>DOut4330p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout4</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>INJ3</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut5154p0001</Name>
+         <Name>DOut4331p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout5</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>INJ2</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut5155p0001</Name>
+         <Name>DOut4332p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout6</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO12</ModuleResource>
          <DeviceDriver>MC33800</DeviceDriver>
-         <Name>DOut5156p0001</Name>
+         <Name>DOut4333p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout7</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO11</ModuleResource>
          <DeviceDriver>MC33800</DeviceDriver>
-         <Name>DOut5157p0001</Name>
+         <Name>DOut4334p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout8</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO5</ModuleResource>
          <DeviceDriver>MC33800</DeviceDriver>
-         <Name>DOut5158p0001</Name>
+         <Name>DOut4335p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout9</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO9</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut5384p0001</Name>
+         <Name>DOut4561p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout1</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO7</ModuleResource>
          <DeviceDriver>MC33800</DeviceDriver>
-         <Name>DOut5385p0001</Name>
+         <Name>DOut4562p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout2</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO4</ModuleResource>
          <DeviceDriver>MC33800</DeviceDriver>
-         <Name>DOut5386p0001</Name>
+         <Name>DOut4563p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout3</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO10</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut5387p0001</Name>
+         <Name>DOut4564p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout4</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO8</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut5388p0001</Name>
+         <Name>DOut4565p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout5</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO6</ModuleResource>
          <DeviceDriver>MC33800</DeviceDriver>
-         <Name>DOut5389p0001</Name>
+         <Name>DOut4566p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout6</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>MPRD</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut6546p0005</Name>
+         <Name>DOut5628p0004</Name>
          <AppLink>Mooventure2016_Rev5/Main Power Relay1/Background/motohawk_dout</AppLink>
       </DiscreteOutput>
       <AnalogInput root="true">
@@ -26626,7 +26585,7 @@
                <Task ref="ApplicationInterruptTask"/>
             </Dispatcher>
             <Slot>
-               <Name>RxSlot_3820p0005</Name>
+               <Name>RxSlot_3053p0002</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>535</Value>
@@ -26640,7 +26599,7 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_3821p0004</Name>
+               <Name>RxSlot_3054p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>1200</Value>
@@ -26654,7 +26613,7 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_3822p0004</Name>
+               <Name>RxSlot_3055p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>1047</Value>
@@ -26668,7 +26627,21 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_4495p0001</Name>
+               <Name>RxSlot_10273p001</Name>
+               <ID>
+                  <Type>Standard</Type>
+                  <Value>1072</Value>
+                  <Mask>2047</Mask>
+               </ID>
+               <Payload>
+                  <Size>8</Size>
+                  <Value>0 0 0 0 0 0 0 0</Value>
+                  <Mask>0 0 0 0 0 0 0 0</Mask>
+               </Payload>
+               <QueueSize>1</QueueSize>
+            </Slot>
+            <Slot>
+               <Name>RxSlot_3670p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>786</Value>
@@ -26682,7 +26655,7 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_4553p0001</Name>
+               <Name>RxSlot_3729p0001</Name>
                <ID>
                   <Type>Extended</Type>
                   <Value>419381321</Value>
@@ -26696,7 +26669,7 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_4635p0005</Name>
+               <Name>RxSlot_3858p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>632</Value>
@@ -26710,7 +26683,7 @@
                <QueueSize>2</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_4636p0005</Name>
+               <Name>RxSlot_3859p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>1572</Value>
@@ -26724,7 +26697,7 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_4637p0005</Name>
+               <Name>RxSlot_3860p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>608</Value>
@@ -26738,7 +26711,7 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_4638p0005</Name>
+               <Name>RxSlot_3861p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>1424</Value>
@@ -26752,21 +26725,7 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_4796p0005</Name>
-               <ID>
-                  <Type>Standard</Type>
-                  <Value>1552</Value>
-                  <Mask>2047</Mask>
-               </ID>
-               <Payload>
-                  <Size>8</Size>
-                  <Value>0 0 0 0 0 0 0 0</Value>
-                  <Mask>0 0 0 0 0 0 0 0</Mask>
-               </Payload>
-               <QueueSize>1</QueueSize>
-            </Slot>
-            <Slot>
-               <Name>RxSlot_4843p0005</Name>
+               <Name>RxSlot_4019p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>128</Value>
@@ -26798,7 +26757,7 @@
                <Task ref="ApplicationInterruptTask"/>
             </Dispatcher>
             <Slot>
-               <Name>RxSlot_4497p0001</Name>
+               <Name>RxSlot_3672p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>968</Value>
@@ -26830,7 +26789,7 @@
                <Task ref="ApplicationInterruptTask"/>
             </Dispatcher>
             <Slot>
-               <Name>RxSlot_4018p0004</Name>
+               <Name>RxSlot_3251p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>762</Value>
@@ -26844,7 +26803,7 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_4019p0004</Name>
+               <Name>RxSlot_3252p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>763</Value>
@@ -26858,7 +26817,7 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_4020p0004</Name>
+               <Name>RxSlot_3253p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>764</Value>
@@ -26872,7 +26831,7 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_4021p0004</Name>
+               <Name>RxSlot_3254p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>765</Value>
@@ -26886,7 +26845,7 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_4022p0004</Name>
+               <Name>RxSlot_3255p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>766</Value>
@@ -26900,7 +26859,7 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_4023p0004</Name>
+               <Name>RxSlot_3256p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>767</Value>
@@ -26914,7 +26873,7 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_4024p0004</Name>
+               <Name>RxSlot_3257p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>768</Value>
@@ -26928,7 +26887,7 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_4494p0004</Name>
+               <Name>RxSlot_3669p0004</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>1296</Value>
@@ -26942,10 +26901,24 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_4496p0001</Name>
+               <Name>RxSlot_3671p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>1832</Value>
+                  <Mask>2047</Mask>
+               </ID>
+               <Payload>
+                  <Size>8</Size>
+                  <Value>0 0 0 0 0 0 0 0</Value>
+                  <Mask>0 0 0 0 0 0 0 0</Mask>
+               </Payload>
+               <QueueSize>1</QueueSize>
+            </Slot>
+            <Slot>
+               <Name>RxSlot_3808p0001</Name>
+               <ID>
+                  <Type>Standard</Type>
+                  <Value>521</Value>
                   <Mask>2047</Mask>
                </ID>
                <Payload>

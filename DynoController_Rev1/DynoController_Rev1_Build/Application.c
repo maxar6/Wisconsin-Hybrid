@@ -8,11 +8,11 @@
 #include "DynoController_Rev1.h"
 
 /*---- DEFINES --------------------------------------------------------------------------------------------*/
-#define DLL_NAME                       "DynoContr_008"
-#define SRZ_NAME                       "DynoController_Rev1_008"
+#define DLL_NAME                       "DynoContr_009"
+#define SRZ_NAME                       "DynoController_Rev1_009"
 #define MODEL_NAME                     "DynoController_Rev1"
 #define MODEL_GUID                     "6a27880e-8e62-404a-92-11-3b-ad-79-73-ba"
-#define BUILD_GUID                     "197a6098-2946-4234-8b-41-e9-0d-c0-c2-cc"
+#define BUILD_GUID                     "242f3651-abf5-41e3-9d-fd-42-e1-f9-e0-fb"
 #define TOKEN_GUID                     "DD8AD11F95A6FC42BFF9AC780840E4B4"
 #define MOTOHAWK_VERSION               "MotoHawk 2011a_sp0.184"
 #define MATLAB_VERSION                 "MATLAB 7.12.0"
@@ -225,8 +225,8 @@ void ApplicationCallback(E_ExecutionEvent in_eEvent)
     {
       if (FGND_RTI_PERIODIC_RunCnt != 0) {
         if (ApplicationStatus == APPLICATION_RUN) {
-          extern void Trigger_FGND_RTI_PERIODIC_750p0001(void);
-          Trigger_FGND_RTI_PERIODIC_750p0001();
+          extern void Trigger_FGND_RTI_PERIODIC_794p0002(void);
+          Trigger_FGND_RTI_PERIODIC_794p0002();
         }
 
         if (FGND_RTI_PERIODIC_RunCnt > 0)
@@ -239,8 +239,8 @@ void ApplicationCallback(E_ExecutionEvent in_eEvent)
     {
       if (STARTUP_EVENT_RunCnt != 0) {
         if (ApplicationStatus == APPLICATION_INIT) {
-          extern void Trigger_STARTUP_EVENT_10849p0004(void);
-          Trigger_STARTUP_EVENT_10849p0004();
+          extern void Trigger_STARTUP_EVENT_795p0002(void);
+          Trigger_STARTUP_EVENT_795p0002();
         }
 
         if (STARTUP_EVENT_RunCnt > 0)
@@ -253,8 +253,8 @@ void ApplicationCallback(E_ExecutionEvent in_eEvent)
     {
       if (FGND_20XRTI_PERIODIC_RunCnt != 0) {
         if (ApplicationStatus == APPLICATION_RUN) {
-          extern void Trigger_FGND_20XRTI_PERIODIC_10837p0011(void);
-          Trigger_FGND_20XRTI_PERIODIC_10837p0011();
+          extern void Trigger_FGND_20XRTI_PERIODIC_589p0005(void);
+          Trigger_FGND_20XRTI_PERIODIC_589p0005();
         }
 
         if (FGND_20XRTI_PERIODIC_RunCnt > 0)
@@ -267,8 +267,8 @@ void ApplicationCallback(E_ExecutionEvent in_eEvent)
     {
       if (BGND_BASE_PERIODIC_RunCnt != 0) {
         if (ApplicationStatus == APPLICATION_RUN) {
-          extern void Trigger_BGND_BASE_PERIODIC_739p0001(void);
-          Trigger_BGND_BASE_PERIODIC_739p0001();
+          extern void Trigger_BGND_BASE_PERIODIC_783p0002(void);
+          Trigger_BGND_BASE_PERIODIC_783p0002();
         }
 
         if (BGND_BASE_PERIODIC_RunCnt > 0)
@@ -508,16 +508,16 @@ void OpenApplication(E_OpenEventType open_type)
 
   {
     ECUP_AnalogInput_Create();
-    DOut692p0001_DiscreteOutput_Create();
-    DOut328p001_DiscreteOutput_Create();
-    DOut329p001_DiscreteOutput_Create();
-    DOut330p001_DiscreteOutput_Create();
-    DOut331p001_DiscreteOutput_Create();
+    DOut736p0002_DiscreteOutput_Create();
     DOut332p001_DiscreteOutput_Create();
     DOut333p001_DiscreteOutput_Create();
-    LoadDumpEnable_DigitalInput_Create();
     DOut334p001_DiscreteOutput_Create();
     DOut335p001_DiscreteOutput_Create();
+    DOut336p001_DiscreteOutput_Create();
+    DOut337p001_DiscreteOutput_Create();
+    LoadDumpEnable_DigitalInput_Create();
+    DOut338p001_DiscreteOutput_Create();
+    DOut339p001_DiscreteOutput_Create();
     BatteryEnable_DigitalInput_Create();
     GensetEnable_DigitalInput_Create();
     GensetLoad_DigitalInput_Create();

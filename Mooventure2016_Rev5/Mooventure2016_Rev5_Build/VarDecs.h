@@ -64,14 +64,13 @@ typedef enum {
   VarDecEnum_9_6 = 6,                  /* EnumTxt:"Cruise" */
   VarDecEnum_9_7 = 7,                  /* EnumTxt:"Dyno_Shutdown" */
   VarDecEnum_9_8 = 8,                  /* EnumTxt:"EatonChargerFault" */
-  VarDecEnum_9_9 = 9,                  /* EnumTxt:"GFI_LED" */
-  VarDecEnum_9_10 = 10,                /* EnumTxt:"HV_Light" */
-  VarDecEnum_9_11 = 11,                /* EnumTxt:"Pump_On" */
-  VarDecEnum_9_12 = 12,                /* EnumTxt:"Regen_Brakes_Disabled" */
-  VarDecEnum_9_13 = 13,                /* EnumTxt:"Set_Crawl_Home" */
-  VarDecEnum_9_14 = 14,                /* EnumTxt:"Temperature_Flash" */
-  VarDecEnum_9_15 = 15,                /* EnumTxt:"Temperature_Solid" */
-  VarDecEnum_9_16 = 16,                /* EnumTxt:"Wrench_Light" */
+  VarDecEnum_9_9 = 9,                  /* EnumTxt:"HV_Light" */
+  VarDecEnum_9_10 = 10,                /* EnumTxt:"Pump_On" */
+  VarDecEnum_9_11 = 11,                /* EnumTxt:"Regen_Brakes_Disabled" */
+  VarDecEnum_9_12 = 12,                /* EnumTxt:"Set_Crawl_Home" */
+  VarDecEnum_9_13 = 13,                /* EnumTxt:"Temperature_Flash" */
+  VarDecEnum_9_14 = 14,                /* EnumTxt:"Temperature_Solid" */
+  VarDecEnum_9_15 = 15,                /* EnumTxt:"Wrench_Light" */
 } VarDecEnum_9;
 
 /* Name: VarDecEnum_10 ClassID:ENUMDEC EnumDflt:"Unknown" */

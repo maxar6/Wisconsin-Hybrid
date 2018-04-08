@@ -332,6 +332,16 @@
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>GensetLoad_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0.0</Default>
+               <Name>GensetLoad_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
                <Default>0.0</Default>
                <Name>Gen_Load_Ovr_new</Name>
              </DataStore>
@@ -361,24 +371,54 @@
                <Name>Vehicle_Speed_Ovr_new</Name>
              </DataStore>
             <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Load_Throttle_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Load_Throttle</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Load_Throttle_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Load_RPM_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Load_RPM</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Load_RPM_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>Vehicle_Speed_Prb</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Load_Throttle_Prb</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Load_RPM_Prb</Name>
              </DataStore>
             <DataStore ref="NonVolatile">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>Auto_Battery_Startup</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>boolean</DataType>
-               <Default>0</Default>
-               <Name>GensetLoad_Ovr_ovr</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>boolean</DataType>
-               <Default>0.0</Default>
-               <Name>GensetLoad_Ovr_new</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>boolean</DataType>
@@ -533,7 +573,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut692p0001</Name>
+               <Name>init_resource_DOut736p0002</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -543,7 +583,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut328p001</Name>
+               <Name>init_resource_DOut332p001</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -553,7 +593,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut329p001</Name>
+               <Name>init_resource_DOut333p001</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -563,7 +603,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut330p001</Name>
+               <Name>init_resource_DOut334p001</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -573,7 +613,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut331p001</Name>
+               <Name>init_resource_DOut335p001</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -583,7 +623,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut332p001</Name>
+               <Name>init_resource_DOut336p001</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -593,7 +633,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut333p001</Name>
+               <Name>init_resource_DOut337p001</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -613,7 +653,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut334p001</Name>
+               <Name>init_resource_DOut338p001</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -623,7 +663,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut335p001</Name>
+               <Name>init_resource_DOut339p001</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -1786,6 +1826,37 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="GensetLoad_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | GensetLoad_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>GensetLoad_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="GensetLoad_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | GensetLoad_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>GensetLoad_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="Gen_Load_Ovr_new">
         		                <access>RW RW RW RW</access>
         		                <class>VAR</class>
@@ -1878,6 +1949,98 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Load_Throttle_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT | Load_Throttle_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Load_Throttle_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Load_Throttle">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Load_Throttle</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Load_Throttle_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT | Load_Throttle_Ovr Override</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Load_Throttle_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Load_RPM_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT | Load_RPM_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Load_RPM_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Load_RPM">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Load_RPM</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Load_RPM_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT | Load_RPM_Ovr Override</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Load_RPM_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="Vehicle_Speed_Prb">
         		                <access>RO RO RO RO</access>
         		                <class>VAR</class>
@@ -1888,6 +2051,36 @@
         		                <max>100000000000000000.000000</max>
         		                <min>-100000000000000000.000000</min>
         		                <name>Vehicle_Speed_Prb</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Load_Throttle_Prb">
+        		                <access>RO RO RO RO</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Load_Throttle_Prb</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Load_RPM_Prb">
+        		                <access>RO RO RO RO</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>DynoController_Rev1|Foreground|Outputs|CAN Outputs|DYNO OUT</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Load_RPM_Prb</name>
         		                <offset>0.0</offset>
         		                <storage>RAM</storage>
         		                <update>BACKGND</update>
@@ -1905,37 +2098,6 @@
         		                <name>Auto_Battery_Startup</name>
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="GensetLoad_Ovr_ovr">
-        		                <access>RW RW RW RW</access>
-        		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
-        		                <exp>1.0</exp>
-        		                <format>1.0</format>
-        		                <gain>1.0</gain>
-        		                <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | GensetLoad_Ovr Override</group>
-        		                <max>1.000000</max>
-        		                <min>0.000000</min>
-        		                <name>GensetLoad_Ovr_ovr</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="GensetLoad_Ovr_new">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>1.0</format>
-        		                <gain>1.0</gain>
-        		                <group>DynoController_Rev1|Foreground|Inputs|Analog Inputs | GensetLoad_Ovr Override</group>
-        		                <max>1.000000</max>
-        		                <min>0.000000</min>
-        		                <name>GensetLoad_Ovr_new</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -2359,7 +2521,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut328p001</help>
+        		                <help>Digital output pin selection for DOut332p001</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>COIL_Pos</name>
@@ -2376,7 +2538,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut329p001</help>
+        		                <help>Digital output pin selection for DOut333p001</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>COIL_Neg</name>
@@ -2393,7 +2555,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut330p001</help>
+        		                <help>Digital output pin selection for DOut334p001</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>Battery_Enable</name>
@@ -2410,7 +2572,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut331p001</help>
+        		                <help>Digital output pin selection for DOut335p001</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>Load_Dump_Enable</name>
@@ -2427,7 +2589,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut332p001</help>
+        		                <help>Digital output pin selection for DOut336p001</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>Genset_Enable</name>
@@ -2444,7 +2606,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut333p001</help>
+        		                <help>Digital output pin selection for DOut337p001</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>Genset_Load</name>
@@ -2478,7 +2640,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut334p001</help>
+        		                <help>Digital output pin selection for DOut338p001</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>ACC1_Out</name>
@@ -2495,7 +2657,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut335p001</help>
+        		                <help>Digital output pin selection for DOut339p001</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>ACC2_Out</name>

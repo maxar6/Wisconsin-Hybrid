@@ -7,31 +7,11 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   4 \
+    NumChartData   0 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
       IsTestPoint  0\
-    }\
-    ChartData {\
-      Name         "is_active_c4_BaseEngineController_A02"\
-      SFName       ""\
-      Path         ""\
-    }\
-    ChartData {\
-      Name         "is_c4_BaseEngineController_A02"\
-      SFName       ""\
-      Path         ""\
-    }\
-    ChartData {\
-      Name         "ActvFltCount"\
-      SFName       ""\
-      Path         ""\
-    }\
-    ChartData {\
-      Name         "OldIndex"\
-      SFName       ""\
-      Path         ""\
     }\
   }
   %return ChartDataElements

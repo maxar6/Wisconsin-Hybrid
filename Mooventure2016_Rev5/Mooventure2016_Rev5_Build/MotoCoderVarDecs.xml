@@ -2215,7 +2215,7 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Engine_On_Ovr_ovr</name>
+      <name>Engine_On_ABS_Ovr_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -2225,8 +2225,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Outputs|ABS Outputs | Engine_On_Ovr Override</group>
-      <struct>VolatileWork_BSS.Engine_On_Ovr_ovr</struct>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|ABS Outputs | Engine_On_ABS_Ovr Override</group>
+      <struct>VolatileWork_BSS.Engine_On_ABS_Ovr_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -2256,7 +2256,7 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Engine_On_Ovr_new</name>
+      <name>Engine_On_ABS_Ovr_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -2266,15 +2266,15 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Outputs|ABS Outputs | Engine_On_Ovr Override</group>
-      <struct>VolatileWork_BSS.Engine_On_Ovr_new</struct>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|ABS Outputs | Engine_On_ABS_Ovr Override</group>
+      <struct>VolatileWork_BSS.Engine_On_ABS_Ovr_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Engine_On_Prb</name>
+      <name>Engine_On_ABS_Prb</name>
       <access>RO RO RO RO</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -2285,7 +2285,7 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Outputs|ABS Outputs</group>
-      <struct>VolatileWork_BSS.Engine_On_Prb</struct>
+      <struct>VolatileWork_BSS.Engine_On_ABS_Prb</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -2564,6 +2564,88 @@
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
+   </VarDec>
+   <VarDec>
+      <name>AC_Cmd_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|CAN Gateway In | AC_Cmd_Ovr Override</group>
+      <struct>VolatileWork_BSS.AC_Cmd_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>AC_Cmd_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|CAN Gateway In | AC_Cmd_Ovr Override</group>
+      <struct>VolatileWork_BSS.AC_Cmd_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Defrost_Mode_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|CAN Gateway In | Defrost_Mode_Ovr Override</group>
+      <struct>VolatileWork_BSS.Defrost_Mode_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Defrost_Mode_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|CAN Gateway In | Defrost_Mode_Ovr Override</group>
+      <struct>VolatileWork_BSS.Defrost_Mode_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>Radiator_Blend_Valve_Ovr_ovr</name>
@@ -3181,7 +3263,7 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>AC_On_FIXME</name>
+      <name>Temp_Guage_Ovr_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -3190,13 +3272,36 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Control|Coolant Control</group>
-      <struct>ConstantWork.AC_On_FIXME</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Engine Inputs | Temp_Guage_Ovr Override</group>
+      <struct>VolatileWork_BSS.Temp_Guage_Ovr_ovr</struct>
+      <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Temp_Guage_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Engine Inputs | Temp_Guage_Ovr Override</group>
+      <struct>VolatileWork_BSS.Temp_Guage_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>Heater_Core_Pos_Request_Ovr_ovr</name>
@@ -7399,6 +7504,840 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
+      <name>Gen_Load_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Engine Outputs | Gen_Load_Ovr Override</group>
+      <struct>VolatileWork_BSS.Gen_Load_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Gen_Load_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Engine Outputs | Gen_Load_Ovr Override</group>
+      <struct>VolatileWork_BSS.Gen_Load_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Genset_Load_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Engine Control | Genset_Load_Ovr Override</group>
+      <struct>VolatileWork_BSS.Genset_Load_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>SOC_Low</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Constant_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Engine Control|SOC States</group>
+      <struct>ConstantWork.SOC_Low</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>SOC_Time_Threshold</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Constant_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Engine Control|SOC States</group>
+      <struct>ConstantWork.SOC_Time_Threshold</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>SOC_High</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Constant_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Engine Control|SOC States</group>
+      <struct>ConstantWork.SOC_High</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>SOC_Critical</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Constant_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Engine Control|SOC States</group>
+      <struct>ConstantWork.SOC_Critical</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>RPM_to_Wheel_Speed_Multiplier4</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Constant_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Engine Control</group>
+      <struct>ConstantWork.RPM_to_Wheel_Speed_Multiplier4</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Vehicle_Speed_On</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Constant_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Engine Control|Vehicle Speed States</group>
+      <struct>ConstantWork.Vehicle_Speed_On</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Vehicle_Speed_Time_Threshold</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Constant_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Engine Control|Vehicle Speed States</group>
+      <struct>ConstantWork.Vehicle_Speed_Time_Threshold</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Vehicle_Speed_Off</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Constant_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Engine Control|Vehicle Speed States</group>
+      <struct>ConstantWork.Vehicle_Speed_Off</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Coolant_Cold</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Constant_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Engine Control</group>
+      <struct>ConstantWork.Coolant_Cold</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Coolant_Warm</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Constant_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Engine Control</group>
+      <struct>ConstantWork.Coolant_Warm</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Coolant_Hot</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Constant_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Engine Control</group>
+      <struct>ConstantWork.Coolant_Hot</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Low_RPM</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Constant_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Engine Control</group>
+      <struct>ConstantWork.Low_RPM</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Medium_RPM</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Constant_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Engine Control</group>
+      <struct>ConstantWork.Medium_RPM</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>High_RPM</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Constant_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Engine Control</group>
+      <struct>ConstantWork.High_RPM</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Low_Throttle</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Constant_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Engine Control</group>
+      <struct>ConstantWork.Low_Throttle</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Medium_Throttle</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Constant_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Engine Control</group>
+      <struct>ConstantWork.Medium_Throttle</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>High_Throttle</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Constant_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Engine Control</group>
+      <struct>ConstantWork.High_Throttle</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Engine_On_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Engine Inputs | Engine_On_Ovr Override</group>
+      <struct>VolatileWork_BSS.Engine_On_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Engine_On_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Engine Inputs | Engine_On_Ovr Override</group>
+      <struct>VolatileWork_BSS.Engine_On_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Engine_On_Time_Threshold</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Constant_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Engine Control|Engine States</group>
+      <struct>ConstantWork.Engine_On_Time_Threshold</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>RPM_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Engine Inputs | RPM_Ovr Override</group>
+      <struct>VolatileWork_BSS.RPM_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>RPM_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Engine Inputs | RPM_Ovr Override</group>
+      <struct>VolatileWork_BSS.RPM_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Genset_Load_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Engine Control | Genset_Load_Ovr Override</group>
+      <struct>VolatileWork_BSS.Genset_Load_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Gen_Enable_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Engine Outputs | Gen_Enable_Ovr Override</group>
+      <struct>VolatileWork_BSS.Gen_Enable_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Pack_State_ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs | Pack_State_ovr Override</group>
+      <struct>VolatileWork_BSS.Pack_State_ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Pack_State_ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>8</max>
+      <min>0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs | Pack_State_ovr Override</group>
+      <struct>VolatileWork_BSS.Pack_State_ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Genset_Enable_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Engine Control | Genset_Enable_Ovr Override</group>
+      <struct>VolatileWork_BSS.Genset_Enable_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Genset_Enable_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Engine Control | Genset_Enable_Ovr Override</group>
+      <struct>VolatileWork_BSS.Genset_Enable_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Gen_Enable_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Engine Outputs | Gen_Enable_Ovr Override</group>
+      <struct>VolatileWork_BSS.Gen_Enable_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
+      <name>Vehicle_Speed2_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Engine Outputs | Vehicle_Speed2_Ovr Override</group>
+      <struct>VolatileWork_BSS.Vehicle_Speed2_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>RPM_to_Wheel_Speed_Multiplier3</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Constant_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Engine Outputs</group>
+      <struct>ConstantWork.RPM_to_Wheel_Speed_Multiplier3</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Vehicle_Speed2_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Engine Outputs | Vehicle_Speed2_Ovr Override</group>
+      <struct>VolatileWork_BSS.Vehicle_Speed2_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Load_Throttle_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Engine Outputs | Load_Throttle_Ovr Override</group>
+      <struct>VolatileWork_BSS.Load_Throttle_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Load_Throttle_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Engine Outputs | Load_Throttle_Ovr Override</group>
+      <struct>VolatileWork_BSS.Load_Throttle_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Genset_Throttle_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Engine Control | Genset_Throttle_Ovr Override</group>
+      <struct>VolatileWork_BSS.Genset_Throttle_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Genset_Throttle_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Engine Control | Genset_Throttle_Ovr Override</group>
+      <struct>VolatileWork_BSS.Genset_Throttle_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Load_RPM_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Engine Outputs | Load_RPM_Ovr Override</group>
+      <struct>VolatileWork_BSS.Load_RPM_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Load_RPM_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Engine Outputs | Load_RPM_Ovr Override</group>
+      <struct>VolatileWork_BSS.Load_RPM_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Genset_RPM_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Engine Control | Genset_RPM_Ovr Override</group>
+      <struct>VolatileWork_BSS.Genset_RPM_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Genset_RPM_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Engine Control | Genset_RPM_Ovr Override</group>
+      <struct>VolatileWork_BSS.Genset_RPM_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
       <name>VSC_WheelTorqueRequest_Ovr_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -8470,489 +9409,6 @@
       <struct>VolatileWork_BSS.VSC_MaxDCVoltage_Prb</struct>
       <class>var</class>
       <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Engine_Status</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Outputs|Infotainment Outputs</group>
-      <struct>ConstantWork.Engine_Status</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>MPGe_Instant_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|MPGe | MPGe_Instant_Ovr Override</group>
-      <struct>VolatileWork_BSS.MPGe_Instant_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Gasoline_Specific_Energy</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|MPGe</group>
-      <struct>ConstantWork.Gasoline_Specific_Energy</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Gear_Ratio</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|MPGe</group>
-      <struct>ConstantWork.Gear_Ratio</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>kW_Divisor</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|MPGe</group>
-      <struct>ConstantWork.kW_Divisor</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Wheel_Ratio</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|MPGe</group>
-      <struct>ConstantWork.Wheel_Ratio</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Efficiency_Multiplier</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|MPGe</group>
-      <struct>ConstantWork.Efficiency_Multiplier</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>MPGe_Instant_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|MPGe | MPGe_Instant_Ovr Override</group>
-      <struct>VolatileWork_BSS.MPGe_Instant_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Selected_Trip</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Outputs|Infotainment Outputs</group>
-      <struct>ConstantWork.Selected_Trip</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Bar_Color</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|MPGe Bar Calculations</group>
-      <struct>ConstantWork.Bar_Color</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Power_Flow_Divisor_Battery</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Power Flow</group>
-      <struct>ConstantWork.Power_Flow_Divisor_Battery</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Battery_Drive_Mode</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Outputs|Infotainment Outputs</group>
-      <struct>ConstantWork.Battery_Drive_Mode</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Power_Flow_Divisor</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Power Flow</group>
-      <struct>ConstantWork.Power_Flow_Divisor</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Engine2Axle</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Outputs|Infotainment Outputs</group>
-      <struct>ConstantWork.Engine2Axle</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Engine2Motor</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Outputs|Infotainment Outputs</group>
-      <struct>ConstantWork.Engine2Motor</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Gas_Use_Pct</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Outputs|Infotainment Outputs</group>
-      <struct>ConstantWork.Gas_Use_Pct</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Engine_Status_2</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Outputs|Infotainment Outputs</group>
-      <struct>ConstantWork.Engine_Status_2</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Average_Vehicle_MPG</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Cost Calculations|Trip A</group>
-      <struct>ConstantWork.Average_Vehicle_MPG</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Fuel_Cost_Setting_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs | Fuel_Cost_Setting_Ovr Override</group>
-      <struct>VolatileWork_BSS.Fuel_Cost_Setting_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Fuel_Cost_Setting_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs | Fuel_Cost_Setting_Ovr Override</group>
-      <struct>VolatileWork_BSS.Fuel_Cost_Setting_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Electricity_Cost_Setting_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs | Electricity_Cost_Setting_Ovr Override</group>
-      <struct>VolatileWork_BSS.Electricity_Cost_Setting_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Electricity_Cost_Setting_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs | Electricity_Cost_Setting_Ovr Override</group>
-      <struct>VolatileWork_BSS.Electricity_Cost_Setting_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Trip_A_Fuel_Used</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Outputs|Infotainment Outputs</group>
-      <struct>ConstantWork.Trip_A_Fuel_Used</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Average_Vehicle_MPG_Trip_B</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Cost Calculations|Trip B</group>
-      <struct>ConstantWork.Average_Vehicle_MPG_Trip_B</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Trip_B_Fuel_Used</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Outputs|Infotainment Outputs</group>
-      <struct>ConstantWork.Trip_B_Fuel_Used</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Setting_Screen_Select</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Outputs|Infotainment Outputs</group>
-      <struct>ConstantWork.Setting_Screen_Select</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -10325,47 +10781,6 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Pack_State_ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs | Pack_State_ovr Override</group>
-      <struct>VolatileWork_BSS.Pack_State_ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Pack_State_ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>8</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Inputs|Battery_Inputs | Pack_State_ovr Override</group>
-      <struct>VolatileWork_BSS.Pack_State_ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
       <name>OutputCurrent_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -10448,7 +10863,7 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Subfunction_Select_Ovr_ovr</name>
+      <name>Oil_Pressure_Ovr_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -10458,8 +10873,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs | Subfunction_Select_Ovr Override</group>
-      <struct>VolatileWork_BSS.Subfunction_Select_Ovr_ovr</struct>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Engine Inputs | Oil_Pressure_Ovr Override</group>
+      <struct>VolatileWork_BSS.Oil_Pressure_Ovr_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -10471,7 +10886,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>Subfunction_Select_Ovr_new</name>
+      <name>Oil_Pressure_Ovr_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -10481,15 +10896,15 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs | Subfunction_Select_Ovr Override</group>
-      <struct>VolatileWork_BSS.Subfunction_Select_Ovr_new</struct>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Engine Inputs | Oil_Pressure_Ovr Override</group>
+      <struct>VolatileWork_BSS.Oil_Pressure_Ovr_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Confirm_Actve_Trip_Ovr_ovr</name>
+      <name>Engine_Crank_Ovr_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -10499,8 +10914,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs | Confirm_Actve_Trip_Ovr Override</group>
-      <struct>VolatileWork_BSS.Confirm_Actve_Trip_Ovr_ovr</struct>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Engine Inputs | Engine_Crank_Ovr Override</group>
+      <struct>VolatileWork_BSS.Engine_Crank_Ovr_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -10512,7 +10927,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>Confirm_Actve_Trip_Ovr_new</name>
+      <name>Engine_Crank_Ovr_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -10522,15 +10937,15 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs | Confirm_Actve_Trip_Ovr Override</group>
-      <struct>VolatileWork_BSS.Confirm_Actve_Trip_Ovr_new</struct>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Engine Inputs | Engine_Crank_Ovr Override</group>
+      <struct>VolatileWork_BSS.Engine_Crank_Ovr_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>INFO_610_AgeCount_Ovr_ovr</name>
+      <name>Load_On_Ovr_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -10540,8 +10955,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs | INFO_610_AgeCount_Ovr Override</group>
-      <struct>VolatileWork_BSS.INFO_610_AgeCount_Ovr_ovr</struct>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Engine Inputs | Load_On_Ovr Override</group>
+      <struct>VolatileWork_BSS.Load_On_Ovr_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -10553,48 +10968,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>INFO_610_AgeCount_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>4.294967295E9</max>
-      <min>0</min>
-      <format>8.0</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs | INFO_610_AgeCount_Ovr Override</group>
-      <struct>VolatileWork_BSS.INFO_610_AgeCount_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint32</type>
-   </VarDec>
-   <VarDec>
-      <name>Confirm_Reset_Trip_B_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs | Confirm_Reset_Trip_B_Ovr Override</group>
-      <struct>VolatileWork_BSS.Confirm_Reset_Trip_B_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Confirm_Reset_Trip_B_Ovr_new</name>
+      <name>Load_On_Ovr_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -10604,15 +10978,15 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs | Confirm_Reset_Trip_B_Ovr Override</group>
-      <struct>VolatileWork_BSS.Confirm_Reset_Trip_B_Ovr_new</struct>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Engine Inputs | Load_On_Ovr Override</group>
+      <struct>VolatileWork_BSS.Load_On_Ovr_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Confirm_Reset_Trip_A_Ovr_ovr</name>
+      <name>Fault_Ovr_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -10622,8 +10996,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs | Confirm_Reset_Trip_A_Ovr Override</group>
-      <struct>VolatileWork_BSS.Confirm_Reset_Trip_A_Ovr_ovr</struct>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Engine Inputs | Fault_Ovr Override</group>
+      <struct>VolatileWork_BSS.Fault_Ovr_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -10635,7 +11009,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>Confirm_Reset_Trip_A_Ovr_new</name>
+      <name>Fault_Ovr_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -10645,8 +11019,8 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Inputs|Infotainment Inputs | Confirm_Reset_Trip_A_Ovr Override</group>
-      <struct>VolatileWork_BSS.Confirm_Reset_Trip_A_Ovr_new</struct>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Engine Inputs | Fault_Ovr Override</group>
+      <struct>VolatileWork_BSS.Fault_Ovr_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -11539,96 +11913,6 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>SoC_Threshold</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Control|Suspension Control</group>
-      <struct>ConstantWork.SoC_Threshold</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Suspension_Threshold</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Control|Suspension Control</group>
-      <struct>ConstantWork.Suspension_Threshold</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>RPM_Threshold</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Control|Suspension Control</group>
-      <struct>ConstantWork.RPM_Threshold</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Suspension_Switch_Input</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Control|Suspension Control</group>
-      <struct>ConstantWork.Suspension_Switch_Input</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Suspension_Height_Sensor</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Control|Suspension Control</group>
-      <struct>ConstantWork.Suspension_Height_Sensor</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
       <name>Load_Enable_Delay</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -11793,258 +12077,6 @@
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>int32</type>
-   </VarDec>
-   <VarDec>
-      <name>Distance_Trip_A_Integrator_Multiplier</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Cost Calculations|Trip A</group>
-      <struct>ConstantWork.Distance_Trip_A_Integrator_Multiplier</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Wheel_Ratio_Trip_A</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Cost Calculations|Trip A</group>
-      <struct>ConstantWork.Wheel_Ratio_Trip_A</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Max_Trip_A_Dist</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Cost Calculations|Trip A</group>
-      <struct>ConstantWork.Max_Trip_A_Dist</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Max_Trip_A_kW</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Cost Calculations|Trip A</group>
-      <struct>ConstantWork.Max_Trip_A_kW</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Distance_Trip_B_Integrator_Multiplier</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Cost Calculations|Trip B</group>
-      <struct>ConstantWork.Distance_Trip_B_Integrator_Multiplier</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Wheel_Ratio_Trip_B</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Cost Calculations|Trip B</group>
-      <struct>ConstantWork.Wheel_Ratio_Trip_B</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Max_Trip_B_Dist</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Cost Calculations|Trip B</group>
-      <struct>ConstantWork.Max_Trip_B_Dist</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>kW_Trip_B_Integrator_Multiplier</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Cost Calculations|Trip B</group>
-      <struct>ConstantWork.kW_Trip_B_Integrator_Multiplier</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Max_Trip_B_kW</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|Cost Calculations|Trip B</group>
-      <struct>ConstantWork.Max_Trip_B_kW</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Min_RPM_For_Calc</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|MPGe Averages|Global Average</group>
-      <struct>ConstantWork.Min_RPM_For_Calc</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Write_Interval_MPGe</name>
-      <access>RW RW RW RW</access>
-      <gain>0.05</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>5.0E15</max>
-      <min>-5.0E15</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|MPGe Averages|Global Average</group>
-      <struct>ConstantWork.Write_Interval_MPGe</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Bar_Min_RPM_For_Calc</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|MPGe Bar Calculations</group>
-      <struct>ConstantWork.Bar_Min_RPM_For_Calc</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Bar_Write_Interval_MPGe</name>
-      <access>RW RW RW RW</access>
-      <gain>0.05</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>5.0E15</max>
-      <min>-5.0E15</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|MPGe Bar Calculations</group>
-      <struct>ConstantWork.Bar_Write_Interval_MPGe</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Bar_Reset_Interval_MPGe</name>
-      <access>RW RW RW RW</access>
-      <gain>0.05</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>5.0E15</max>
-      <min>-5.0E15</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Control|Infotainment|MPGe Bar Calculations</group>
-      <struct>ConstantWork.Bar_Reset_Interval_MPGe</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>Eaton_Plugged_In</name>
@@ -12991,14 +13023,13 @@
          <enum>
             <item name="Batt_Light" value="0"/>
             <item name="Batt_Shutdown" value="1"/>
-            <item name="HV_Light" value="10"/>
-            <item name="Pump_On" value="11"/>
-            <item name="Regen_Brakes_Disabled" value="12"/>
-            <item name="Set_Crawl_Home" value="13"/>
-            <item name="Temperature_Flash" value="14"/>
-            <item name="Temperature_Solid" value="15"/>
-            <item name="Wrench_Light" value="16"/>
-            <item name="(None)" value="17"/>
+            <item name="Pump_On" value="10"/>
+            <item name="Regen_Brakes_Disabled" value="11"/>
+            <item name="Set_Crawl_Home" value="12"/>
+            <item name="Temperature_Flash" value="13"/>
+            <item name="Temperature_Solid" value="14"/>
+            <item name="Wrench_Light" value="15"/>
+            <item name="(None)" value="16"/>
             <item name="Cell_Voltage_Max" value="2"/>
             <item name="Check_Engine_Light" value="3"/>
             <item name="Check_Engine_Light_Flashing" value="4"/>
@@ -13006,7 +13037,7 @@
             <item name="Cruise" value="6"/>
             <item name="Dyno_Shutdown" value="7"/>
             <item name="EatonChargerFault" value="8"/>
-            <item name="GFI_LED" value="9"/>
+            <item name="HV_Light" value="9"/>
             <default>Unknown</default>
          </enum>
       </col_enum>
@@ -13027,14 +13058,13 @@
          <enum>
             <item name="Batt_Light" value="0"/>
             <item name="Batt_Shutdown" value="1"/>
-            <item name="HV_Light" value="10"/>
-            <item name="Pump_On" value="11"/>
-            <item name="Regen_Brakes_Disabled" value="12"/>
-            <item name="Set_Crawl_Home" value="13"/>
-            <item name="Temperature_Flash" value="14"/>
-            <item name="Temperature_Solid" value="15"/>
-            <item name="Wrench_Light" value="16"/>
-            <item name="(None)" value="17"/>
+            <item name="Pump_On" value="10"/>
+            <item name="Regen_Brakes_Disabled" value="11"/>
+            <item name="Set_Crawl_Home" value="12"/>
+            <item name="Temperature_Flash" value="13"/>
+            <item name="Temperature_Solid" value="14"/>
+            <item name="Wrench_Light" value="15"/>
+            <item name="(None)" value="16"/>
             <item name="Cell_Voltage_Max" value="2"/>
             <item name="Check_Engine_Light" value="3"/>
             <item name="Check_Engine_Light_Flashing" value="4"/>
@@ -13042,7 +13072,7 @@
             <item name="Cruise" value="6"/>
             <item name="Dyno_Shutdown" value="7"/>
             <item name="EatonChargerFault" value="8"/>
-            <item name="GFI_LED" value="9"/>
+            <item name="HV_Light" value="9"/>
             <default>Unknown</default>
          </enum>
       </col_enum>
@@ -13063,14 +13093,13 @@
          <enum>
             <item name="Batt_Light" value="0"/>
             <item name="Batt_Shutdown" value="1"/>
-            <item name="HV_Light" value="10"/>
-            <item name="Pump_On" value="11"/>
-            <item name="Regen_Brakes_Disabled" value="12"/>
-            <item name="Set_Crawl_Home" value="13"/>
-            <item name="Temperature_Flash" value="14"/>
-            <item name="Temperature_Solid" value="15"/>
-            <item name="Wrench_Light" value="16"/>
-            <item name="(None)" value="17"/>
+            <item name="Pump_On" value="10"/>
+            <item name="Regen_Brakes_Disabled" value="11"/>
+            <item name="Set_Crawl_Home" value="12"/>
+            <item name="Temperature_Flash" value="13"/>
+            <item name="Temperature_Solid" value="14"/>
+            <item name="Wrench_Light" value="15"/>
+            <item name="(None)" value="16"/>
             <item name="Cell_Voltage_Max" value="2"/>
             <item name="Check_Engine_Light" value="3"/>
             <item name="Check_Engine_Light_Flashing" value="4"/>
@@ -13078,7 +13107,7 @@
             <item name="Cruise" value="6"/>
             <item name="Dyno_Shutdown" value="7"/>
             <item name="EatonChargerFault" value="8"/>
-            <item name="GFI_LED" value="9"/>
+            <item name="HV_Light" value="9"/>
             <default>Unknown</default>
          </enum>
       </col_enum>
@@ -13099,14 +13128,13 @@
          <enum>
             <item name="Batt_Light" value="0"/>
             <item name="Batt_Shutdown" value="1"/>
-            <item name="HV_Light" value="10"/>
-            <item name="Pump_On" value="11"/>
-            <item name="Regen_Brakes_Disabled" value="12"/>
-            <item name="Set_Crawl_Home" value="13"/>
-            <item name="Temperature_Flash" value="14"/>
-            <item name="Temperature_Solid" value="15"/>
-            <item name="Wrench_Light" value="16"/>
-            <item name="(None)" value="17"/>
+            <item name="Pump_On" value="10"/>
+            <item name="Regen_Brakes_Disabled" value="11"/>
+            <item name="Set_Crawl_Home" value="12"/>
+            <item name="Temperature_Flash" value="13"/>
+            <item name="Temperature_Solid" value="14"/>
+            <item name="Wrench_Light" value="15"/>
+            <item name="(None)" value="16"/>
             <item name="Cell_Voltage_Max" value="2"/>
             <item name="Check_Engine_Light" value="3"/>
             <item name="Check_Engine_Light_Flashing" value="4"/>
@@ -13114,7 +13142,7 @@
             <item name="Cruise" value="6"/>
             <item name="Dyno_Shutdown" value="7"/>
             <item name="EatonChargerFault" value="8"/>
-            <item name="GFI_LED" value="9"/>
+            <item name="HV_Light" value="9"/>
             <default>Unknown</default>
          </enum>
       </col_enum>
@@ -15206,116 +15234,16 @@
             <default>Unknown</default>
          </enum>
       </col_enum>
-      <col_enum column="16">
-         <enum>
-            <item name="Battery_Voltage_Too_High" value="0"/>
-            <item name="Battery_Voltage_Too_Low" value="1"/>
-            <item name="Brake_Pedal_Position_Communication_Loss" value="10"/>
-            <item name="Brake_Pedal_Position_Intermiitent" value="11"/>
-            <item name="Brake_Pedal_Position_Low" value="12"/>
-            <item name="Brake_Pedal_Position_Sensor_A_Circuit_High" value="13"/>
-            <item name="Charge_Complete_Cell_Max_Volt" value="14"/>
-            <item name="Charger_Amperage_Draw_Greater_Then_Supply" value="15"/>
-            <item name="Charger_Derated_Over_Temperature" value="16"/>
-            <item name="Charger_Derated_Under_Temperature" value="17"/>
-            <item name="Charger_Internal_Fault" value="18"/>
-            <item name="Charger_Line_Voltage_Too_Low" value="19"/>
-            <item name="Blend_Valve_A_No_Response" value="2"/>
-            <item name="Charger_Line_Votlage_Too_High" value="20"/>
-            <item name="Charger_Requested_But_No_High_Voltage" value="21"/>
-            <item name="Charger_Requested_But_No_Key_Singal" value="22"/>
-            <item name="Charger_Requested_Current_Too_High" value="23"/>
-            <item name="Charger_Requested_Voltage_Out_of_Bounds" value="24"/>
-            <item name="Contactor_1_Failure_To_Close" value="25"/>
-            <item name="Contactor_1_Fused" value="26"/>
-            <item name="Contactor_1_Unexpected_Open" value="27"/>
-            <item name="Contactor_2_Failure_To_Close" value="28"/>
-            <item name="Contactor_2_Fused" value="29"/>
-            <item name="Blend_Valve_B_No_Response" value="3"/>
-            <item name="Contactor_2_Unexpected_Open" value="30"/>
-            <item name="Contactor_3_Failure_To_Close" value="31"/>
-            <item name="Contactor_3_Fused" value="32"/>
-            <item name="Contactor_3_Unexpected_Open" value="33"/>
-            <item name="Contactor_4_Failure_To_Close" value="34"/>
-            <item name="Contactor_4_Fused" value="35"/>
-            <item name="Contactor_4_Unexpected_Open" value="36"/>
-            <item name="Cruise_Control_Brake_Switch_A_Circuit_High" value="37"/>
-            <item name="Cruise_Control_Brake_Switch_A_Circuit_Low" value="38"/>
-            <item name="Cruise_Control_Brake_Switch_A_Circuit_Malfunction" value="39"/>
-            <item name="Blend_Valve_Sensor_A_High_Voltage" value="4"/>
-            <item name="Cruise_Control_Coast_Signal_Malfunction" value="40"/>
-            <item name="Cruise_Control_Off_Signal_Malfunction" value="41"/>
-            <item name="Cruise_Control_On_Signal_Malfunction" value="42"/>
-            <item name="Cruise_Control_Resume_Signal_Malfunction" value="43"/>
-            <item name="Cruise_Control_Set_Signal_Malfunction" value="44"/>
-            <item name="DCDC_Converter_Not_Running" value="45"/>
-            <item name="Drive_Switch_Input_Circuit" value="46"/>
-            <item name="Drive_Switch_Input_High" value="47"/>
-            <item name="Drive_Switch_Input_Low" value="48"/>
-            <item name="Electric_Motor_Approaching_Over_Temperature" value="49"/>
-            <item name="Blend_Valve_Sensor_A_Intermittent" value="5"/>
-            <item name="Electric_Motor_Derated_Over_Temperature" value="50"/>
-            <item name="Electric_Motor_Derated_Over_Voltage" value="51"/>
-            <item name="Electric_Motor_Derated_Under_Temperature" value="52"/>
-            <item name="Electric_Motor_Derated_Under_Voltage" value="53"/>
-            <item name="Electric_Motor_General_Error" value="54"/>
-            <item name="Electric_Motor_Over_Speed_Forward" value="55"/>
-            <item name="Electric_Motor_Over_Speed_Reverse" value="56"/>
-            <item name="Electric_Motor_Shutodwn_Error" value="57"/>
-            <item name="Electric_Motor_Torque_Output_Fault" value="58"/>
-            <item name="Gear_Shift_Communication_Circuit" value="59"/>
-            <item name="Blend_Valve_Sensor_A_Low_Voltage" value="6"/>
-            <item name="HV_Battery_2G_BMS_Fault" value="60"/>
-            <item name="HV_Battery_48_Controller_Communication_Fault" value="61"/>
-            <item name="HV_Battery_Above_Safe_Charge_Point" value="62"/>
-            <item name="HV_Battery_Cell_Balancing_Required_Fault" value="63"/>
-            <item name="HV_Battery_Pack_Above_Operating_Temperature" value="64"/>
-            <item name="HV_Battery_Pack_Below_Operating_Temperature" value="65"/>
-            <item name="HV_Battery_Pack_High_Temperature" value="66"/>
-            <item name="HV_Battery_Pack_Low_Temperature" value="67"/>
-            <item name="HV_Battery_Precharge_Failure" value="68"/>
-            <item name="HV_Battery_Too_Low_For_Load" value="69"/>
-            <item name="Blend_Valve_Sensor_B_High_Voltage" value="7"/>
-            <item name="HV_Battery_Try_To_Balance_Under_Load" value="70"/>
-            <item name="HV_Heater_Over_Temperature" value="71"/>
-            <item name="HV_Heater_Poor_Performance" value="72"/>
-            <item name="HV_Heater_Temperature_Sensor_A_High_Voltage" value="73"/>
-            <item name="HV_Heater_Temperature_Sensor_A_Intermittent" value="74"/>
-            <item name="HV_Heater_Temperature_Sensor_A_Low_Voltage" value="75"/>
-            <item name="Key_Line_Voltage" value="76"/>
-            <item name="Key_Off_Voltage_High" value="77"/>
-            <item name="Park_Nuetral_Switch_Input_Circuit" value="78"/>
-            <item name="Park_Nuetral_Switch_Input_High" value="79"/>
-            <item name="Blend_Valve_Sensor_B_Intermittent" value="8"/>
-            <item name="Park_Nuetral_Switch_Input_Low" value="80"/>
-            <item name="Pedal_Position_Sensor_A_Circuit_High" value="81"/>
-            <item name="Pedal_Position_Sensor_A_Circuit_Intermittent" value="82"/>
-            <item name="Pedal_Position_Sensor_A_Circuit_Low" value="83"/>
-            <item name="System_Voltage_High" value="84"/>
-            <item name="System_Voltage_Low" value="85"/>
-            <item name="System_Voltage_Malfunction" value="86"/>
-            <item name="System_Voltage_Unstable" value="87"/>
-            <item name="Traction_Control_Malfunction" value="88"/>
-            <item name="Vehcile_Speed_Sensor_Malfunction" value="89"/>
-            <item name="Blend_Valve_Sensor_B_Low_Voltage" value="9"/>
-            <item name="Vehicle_Speed_Sensor_Circuit_Low" value="90"/>
-            <item name="Vehicle_Speed_Sensor_Erratic" value="91"/>
-            <item name="Vehicle_Speed_Sensor_Rang_Performance" value="92"/>
-            <item name="(None)" value="93"/>
-            <default>Unknown</default>
-         </enum>
-      </col_enum>
       <col_header>
          <enum>
             <item name="Batt_Light" value="0"/>
             <item name="Batt_Shutdown" value="1"/>
-            <item name="HV_Light" value="10"/>
-            <item name="Pump_On" value="11"/>
-            <item name="Regen_Brakes_Disabled" value="12"/>
-            <item name="Set_Crawl_Home" value="13"/>
-            <item name="Temperature_Flash" value="14"/>
-            <item name="Temperature_Solid" value="15"/>
-            <item name="Wrench_Light" value="16"/>
+            <item name="Pump_On" value="10"/>
+            <item name="Regen_Brakes_Disabled" value="11"/>
+            <item name="Set_Crawl_Home" value="12"/>
+            <item name="Temperature_Flash" value="13"/>
+            <item name="Temperature_Solid" value="14"/>
+            <item name="Wrench_Light" value="15"/>
             <item name="Cell_Voltage_Max" value="2"/>
             <item name="Check_Engine_Light" value="3"/>
             <item name="Check_Engine_Light_Flashing" value="4"/>
@@ -15323,7 +15251,7 @@
             <item name="Cruise" value="6"/>
             <item name="Dyno_Shutdown" value="7"/>
             <item name="EatonChargerFault" value="8"/>
-            <item name="GFI_LED" value="9"/>
+            <item name="HV_Light" value="9"/>
             <default>Unknown</default>
          </enum>
       </col_header>
@@ -15333,7 +15261,7 @@
             <default>Unknown</default>
          </enum>
       </row_header>
-      <col_len>17</col_len>
+      <col_len>16</col_len>
       <row_len>1</row_len>
    </VarDec>
    <VarDec>

@@ -9,12 +9,23 @@
 /* Type Definitions */
 typedef struct {
   SimStruct *S;
+  const mxArray *c33_setSimStateSideEffectsInfo;
   int32_T c33_sfEvent;
   uint32_T chartNumber;
   uint32_T instanceNumber;
-  boolean_T c33_doneDoubleBufferReInit;
   boolean_T c33_isStable;
+  uint8_T c33_doSetSimStateSideEffects;
+  uint8_T c33_is_Running;
   uint8_T c33_is_active_c33_Mooventure2016_Rev5;
+  uint8_T c33_is_c33_Mooventure2016_Rev5;
+  uint8_T c33_tp_Running;
+  uint8_T c33_tp_Shutdown;
+  uint8_T c33_tp_Startup;
+  uint8_T c33_tp_default;
+  uint8_T c33_tp_default_gen;
+  uint8_T c33_tp_high_gen;
+  uint8_T c33_tp_low_gen;
+  uint8_T c33_tp_medium_gen;
   ChartInfoStruct chartInfo;
 } SFc33_Mooventure2016_Rev5InstanceStruct;
 

@@ -3,8 +3,8 @@
 	<GUID>0339744d-1465-4569-a1-b4-32-b1-a7-fa-5f</GUID>
 	<Name>Mooventure2016_Rev5</Name>
 	<Author>HYBRID</Author>
-	<Copyright>2017 Woodward.</Copyright>
-	<CreateDate>29-Nov-2017</CreateDate>
+	<Copyright>2018 Woodward.</Copyright>
+	<CreateDate>07-Apr-2018</CreateDate>
 	<MemoryLayout>DEV</MemoryLayout>
 	<Module>ECM-5554-112-0904-xD</Module>
 	<OS>
@@ -78,14 +78,14 @@
 			<Name>BGND_BASE_PERIODIC</Name>
 			<Task ref="BGNDTask"/>
 			<Order>255</Order>
-			<Function>Trigger_BGND_BASE_PERIODIC_6596p0005</Function>
+			<Function>Trigger_BGND_BASE_PERIODIC_5678p0001</Function>
 		</Trigger>
 		<Trigger type="periodic">
 			<Multiplier>1</Multiplier>
 			<Name>FGND_RTI_PERIODIC</Name>
 			<Task ref="FGNDTask"/>
 			<Order>0</Order>
-			<Function>Trigger_FGND_RTI_PERIODIC_6605p0005</Function>
+			<Function>Trigger_FGND_RTI_PERIODIC_5687p0001</Function>
 		</Trigger>
 	</Triggers>
 	<Memory>
@@ -103,102 +103,102 @@
 			<AppLink>Mooventure2016_Rev5/Foreground/Control/Vehicle Run//Stop Determination/motohawk_din</AppLink>
 		</DigitalInput>
 		<DiscreteOutput>
-			<Name>DOut5146p0001</Name>
+			<Name>DOut4323p0001</Name>
 			<ModuleResource>LSO1</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout1</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut5147p0001</Name>
+			<Name>DOut4324p0001</Name>
 			<ModuleResource>LSO3</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout10</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut5148p0001</Name>
+			<Name>DOut4325p0001</Name>
 			<ModuleResource>INJ8</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout11</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut5149p0001</Name>
+			<Name>DOut4326p0001</Name>
 			<ModuleResource>INJ6</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout12</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut5150p0001</Name>
+			<Name>DOut4327p0001</Name>
 			<ModuleResource>INJ7</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout13</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut5151p0001</Name>
+			<Name>DOut4328p0001</Name>
 			<ModuleResource>INJ5</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout2</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut5152p0001</Name>
+			<Name>DOut4329p0001</Name>
 			<ModuleResource>LSO2</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout3</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut5153p0001</Name>
+			<Name>DOut4330p0001</Name>
 			<ModuleResource>INJ4</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout4</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut5154p0001</Name>
+			<Name>DOut4331p0001</Name>
 			<ModuleResource>INJ3</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout5</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut5155p0001</Name>
+			<Name>DOut4332p0001</Name>
 			<ModuleResource>INJ2</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout6</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut5156p0001</Name>
+			<Name>DOut4333p0001</Name>
 			<ModuleResource>LSO12</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout7</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut5157p0001</Name>
+			<Name>DOut4334p0001</Name>
 			<ModuleResource>LSO11</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout8</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut5158p0001</Name>
+			<Name>DOut4335p0001</Name>
 			<ModuleResource>LSO5</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout9</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut5384p0001</Name>
+			<Name>DOut4561p0001</Name>
 			<ModuleResource>LSO9</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout1</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut5385p0001</Name>
+			<Name>DOut4562p0001</Name>
 			<ModuleResource>LSO7</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout2</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut5386p0001</Name>
+			<Name>DOut4563p0001</Name>
 			<ModuleResource>LSO4</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout3</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut5387p0001</Name>
+			<Name>DOut4564p0001</Name>
 			<ModuleResource>LSO10</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout4</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut5388p0001</Name>
+			<Name>DOut4565p0001</Name>
 			<ModuleResource>LSO8</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout5</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut5389p0001</Name>
+			<Name>DOut4566p0001</Name>
 			<ModuleResource>LSO6</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout6</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut6546p0005</Name>
+			<Name>DOut5628p0004</Name>
 			<ModuleResource>MPRD</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Main Power Relay1/Background/motohawk_dout</AppLink>
 		</DiscreteOutput>
@@ -277,7 +277,7 @@
 					<Task ref="ApplicationInterruptTask"/>
 				</Dispatcher>
 				<Slot>
-					<Name>RxSlot_3820p0005</Name>
+					<Name>RxSlot_3053p0002</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>535</Value>
@@ -291,7 +291,7 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_3821p0004</Name>
+					<Name>RxSlot_3054p0001</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>1200</Value>
@@ -305,7 +305,7 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_3822p0004</Name>
+					<Name>RxSlot_3055p0001</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>1047</Value>
@@ -319,7 +319,21 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_4495p0001</Name>
+					<Name>RxSlot_10273p001</Name>
+					<ID>
+						<Type>Standard</Type>
+						<Value>1072</Value>
+						<Mask>2047</Mask>
+					</ID>
+					<Payload>
+						<Size>8</Size>
+						<Value>0 0 0 0 0 0 0 0</Value>
+						<Mask>0 0 0 0 0 0 0 0</Mask>
+					</Payload>
+					<QueueSize>1</QueueSize>
+				</Slot>
+				<Slot>
+					<Name>RxSlot_3670p0001</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>786</Value>
@@ -333,7 +347,7 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_4553p0001</Name>
+					<Name>RxSlot_3729p0001</Name>
 					<ID>
 						<Type>Extended</Type>
 						<Value>419381321</Value>
@@ -347,7 +361,7 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_4635p0005</Name>
+					<Name>RxSlot_3858p0001</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>632</Value>
@@ -361,7 +375,7 @@
 					<QueueSize>2</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_4636p0005</Name>
+					<Name>RxSlot_3859p0001</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>1572</Value>
@@ -375,7 +389,7 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_4637p0005</Name>
+					<Name>RxSlot_3860p0001</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>608</Value>
@@ -389,7 +403,7 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_4638p0005</Name>
+					<Name>RxSlot_3861p0001</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>1424</Value>
@@ -403,21 +417,7 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_4796p0005</Name>
-					<ID>
-						<Type>Standard</Type>
-						<Value>1552</Value>
-						<Mask>2047</Mask>
-					</ID>
-					<Payload>
-						<Size>8</Size>
-						<Value>0 0 0 0 0 0 0 0</Value>
-						<Mask>0 0 0 0 0 0 0 0</Mask>
-					</Payload>
-					<QueueSize>1</QueueSize>
-				</Slot>
-				<Slot>
-					<Name>RxSlot_4843p0005</Name>
+					<Name>RxSlot_4019p0001</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>128</Value>
@@ -446,7 +446,7 @@
 					<Task ref="ApplicationInterruptTask"/>
 				</Dispatcher>
 				<Slot>
-					<Name>RxSlot_4497p0001</Name>
+					<Name>RxSlot_3672p0001</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>968</Value>
@@ -475,7 +475,7 @@
 					<Task ref="ApplicationInterruptTask"/>
 				</Dispatcher>
 				<Slot>
-					<Name>RxSlot_4018p0004</Name>
+					<Name>RxSlot_3251p0001</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>762</Value>
@@ -489,7 +489,7 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_4019p0004</Name>
+					<Name>RxSlot_3252p0001</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>763</Value>
@@ -503,7 +503,7 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_4020p0004</Name>
+					<Name>RxSlot_3253p0001</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>764</Value>
@@ -517,7 +517,7 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_4021p0004</Name>
+					<Name>RxSlot_3254p0001</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>765</Value>
@@ -531,7 +531,7 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_4022p0004</Name>
+					<Name>RxSlot_3255p0001</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>766</Value>
@@ -545,7 +545,7 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_4023p0004</Name>
+					<Name>RxSlot_3256p0001</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>767</Value>
@@ -559,7 +559,7 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_4024p0004</Name>
+					<Name>RxSlot_3257p0001</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>768</Value>
@@ -573,7 +573,7 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_4494p0004</Name>
+					<Name>RxSlot_3669p0004</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>1296</Value>
@@ -587,10 +587,24 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_4496p0001</Name>
+					<Name>RxSlot_3671p0001</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>1832</Value>
+						<Mask>2047</Mask>
+					</ID>
+					<Payload>
+						<Size>8</Size>
+						<Value>0 0 0 0 0 0 0 0</Value>
+						<Mask>0 0 0 0 0 0 0 0</Mask>
+					</Payload>
+					<QueueSize>1</QueueSize>
+				</Slot>
+				<Slot>
+					<Name>RxSlot_3808p0001</Name>
+					<ID>
+						<Type>Standard</Type>
+						<Value>521</Value>
 						<Mask>2047</Mask>
 					</ID>
 					<Payload>
@@ -628,9 +642,9 @@
 			</TableDatabase>
 			<ProjectID>6</ProjectID>
 			<ProductID>1</ProductID>
-			<SwIdTxt>Mooventur_209</SwIdTxt>
-			<SwRevisionTxt>Mooventure2016_Rev5_209</SwRevisionTxt>
-			<CalIdTxt>Mooventure2016_Rev5_209_000</CalIdTxt>
+			<SwIdTxt>Mooventur_211</SwIdTxt>
+			<SwRevisionTxt>Mooventure2016_Rev5_211</SwRevisionTxt>
+			<CalIdTxt>Mooventure2016_Rev5_211_000</CalIdTxt>
 		</VarDecs>
 		<DatabaseBuild>
 			<Toolchain>
@@ -661,8 +675,8 @@
 			<File>Mooventure2016_Rev5_data.c</File>
 			<File>MotoHawk_DataStores.c</File>
 			<File>TableLookupFunctions.c</File>
-			<File>Trigger_BGND_BASE_PERIODIC_6596p0005.c</File>
-			<File>Trigger_FGND_RTI_PERIODIC_6605p0005.c</File>
+			<File>Trigger_BGND_BASE_PERIODIC_5678p0001.c</File>
+			<File>Trigger_FGND_RTI_PERIODIC_5687p0001.c</File>
 			<File>Trigger_Fault_active_0_8.c</File>
 			<File>VarDecs.c</File>
 			<File>rt_nonfinite.c</File>
@@ -704,5 +718,5 @@
 			<Execute>@if exist .\rtwtypes.h del /Q /F .\rtwtypes.h &gt; NUL</Execute>
 		</Command>
 	</Build>
-	<Signature>18babe7e-34c7-4785-92-4b-fa-45-db-20-c2</Signature>
+	<Signature>38e241c1-0a3c-43a3-92-11-19-01-4d-0c-89</Signature>
 </Application>

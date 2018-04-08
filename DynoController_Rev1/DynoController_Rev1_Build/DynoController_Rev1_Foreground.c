@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'DynoController_Rev1'.
  *
- * Model version                  : 1.298
+ * Model version                  : 1.301
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Mon Jan 15 12:10:05 2018
+ * C/C++ source code generated on : Sat Apr 07 14:25:46 2018
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -65,7 +65,7 @@ void DynoController_Rev1_Foreground_Init(void)
 
   /* Initial conditions for function-call system: '<S6>/Guages' */
 
-  /* S-Function Block: <S124>/motohawk_delta_time */
+  /* S-Function Block: <S130>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -73,7 +73,7 @@ void DynoController_Rev1_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    DynoController_Rev1_DWork.s124_motohawk_delta_time_DWORK1 = now -
+    DynoController_Rev1_DWork.s130_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
   }
 }
@@ -83,7 +83,7 @@ void DynoController_Rev1_Foreground_Enable(void)
 {
   /* Level2 S-Function Block: '<S6>/motohawk_trigger1' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_FGND_20XRTI_PERIODIC_10837p0011 */
+  /* Enable for Trigger_FGND_20XRTI_PERIODIC_589p0005 */
   DynoController_Rev1_DWork.s6_motohawk_trigger1_DWORK1 = 1;
 }
 
@@ -91,7 +91,7 @@ void DynoController_Rev1_Foreground_Enable(void)
 void DynoController_Rev1_Foreground_Disable(void)
 {
   /* Level2 S-Function Block: '<S6>/motohawk_trigger1' (motohawk_sfun_trigger) */
-  /* Disable for Trigger_FGND_20XRTI_PERIODIC_10837p0011 */
+  /* Disable for Trigger_FGND_20XRTI_PERIODIC_589p0005 */
   DynoController_Rev1_DWork.s6_motohawk_trigger1_DWORK1 = 0;
 }
 
@@ -105,7 +105,7 @@ void DynoController_Rev1_Foreground_Start(void)
     GaugeChain_EZLinkOutput_Create();
   }
 
-  /* Clear enable/disable state for embedded trigger Trigger_FGND_20XRTI_PERIODIC_10837p0011 */
+  /* Clear enable/disable state for embedded trigger Trigger_FGND_20XRTI_PERIODIC_589p0005 */
   DynoController_Rev1_DWork.s6_motohawk_trigger1_DWORK1 = 0;
 
   /* S-Function (motohawk_sfun_probe): '<S75>/motohawk_probe7' */
@@ -122,6 +122,8 @@ void DynoController_Rev1_Foreground(void)
   real_T rtb_motohawk_delta_time_h;
   real_T rtb_motohawk_delta_time_p;
   real_T rtb_Merge_oa;
+  real_T rtb_Merge_b;
+  real_T rtb_Merge_c4;
   real_T rtb_Saturation_a;
   real_T rtb_Saturation_j;
   boolean_T rtb_Merge_oaf;
@@ -231,10 +233,10 @@ void DynoController_Rev1_Foreground(void)
   /* MotoHawk Read CAN Message */
   {
     S_CANMessage messageObj;
-    extern MHCAN_directslot MHCAN_directslot_RxSlot_217p001;
+    extern MHCAN_directslot MHCAN_directslot_RxSlot_220p001;
     extern boolean_T MHCAN_getdirect(MHCAN_directslot *directslot, S_CANMessage *
       messageObj);
-    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_217p001,
+    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_220p001,
       &messageObj);
     if (msg_valid) {
       uint8_T tmp1 = 0;
@@ -397,10 +399,10 @@ void DynoController_Rev1_Foreground(void)
   /* MotoHawk Read CAN Message */
   {
     S_CANMessage messageObj;
-    extern MHCAN_directslot MHCAN_directslot_RxSlot_255p001;
+    extern MHCAN_directslot MHCAN_directslot_RxSlot_259p001;
     extern boolean_T MHCAN_getdirect(MHCAN_directslot *directslot, S_CANMessage *
       messageObj);
-    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_255p001,
+    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_259p001,
       &messageObj);
     if (msg_valid) {
       uint16_T tmp0 = 0;
@@ -790,10 +792,10 @@ void DynoController_Rev1_Foreground(void)
   /* MotoHawk Read CAN Message */
   {
     S_CANMessage messageObj;
-    extern MHCAN_directslot MHCAN_directslot_RxSlot_219p001;
+    extern MHCAN_directslot MHCAN_directslot_RxSlot_222p001;
     extern boolean_T MHCAN_getdirect(MHCAN_directslot *directslot, S_CANMessage *
       messageObj);
-    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_219p001,
+    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_222p001,
       &messageObj);
     if (msg_valid) {
       uint16_T tmp0 = 0;
@@ -1123,27 +1125,74 @@ void DynoController_Rev1_Foreground(void)
   DynoController_Rev1_B.s103_Gen_Enable = ((rtb_RelationalOperator1_o &&
     (rtb_Merge_c == 4.0)));
 
-  /* Logic: '<S103>/Logical Operator1' incorporates:
-   *  RelationalOperator: '<S103>/Relational Operator1'
+  /* RelationalOperator: '<S103>/Relational Operator1' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S103>/motohawk_calibration'
    */
+  rtb_LogicalOperator5 = (DynoController_Rev1_B.s39_Merge <=
+    (SOC_Off_Pt_DataStore()));
+
+  /* S-Function Block: <S17>/motohawk_din3 Resource: GensetLoad */
+  {
+    extern NativeError_S GensetLoad_DigitalInput_Get(boolean_T *out, uint16_T
+      *status);
+    GensetLoad_DigitalInput_Get(&DynoController_Rev1_B.s17_motohawk_din3, NULL);
+  }
+
+  /* If: '<S22>/If' incorporates:
+   *  Inport: '<S31>/In1'
+   *  Inport: '<S32>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S22>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S22>/override_enable'
+   */
+  if ((GensetLoad_Ovr_ovr_DataStore())) {
+    /* Outputs for IfAction SubSystem: '<S22>/NewValue' incorporates:
+     *  ActionPort: '<S31>/Action Port'
+     */
+    rtb_RelationalOperator1_o = (GensetLoad_Ovr_new_DataStore());
+
+    /* S-Function (motohawk_sfun_code_cover): '<S31>/motohawk_code_coverage' */
+    /* Code Coverage Test: DynoController_Rev1/Foreground/Inputs/Analog Inputs/motohawk_override_abs4/NewValue */
+    {
+      extern void MH_CodeCovered(uint32_T idx);
+      MH_CodeCovered(9);
+    }
+
+    /* End of Outputs for SubSystem: '<S22>/NewValue' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S22>/OldValue' incorporates:
+     *  ActionPort: '<S32>/Action Port'
+     */
+    rtb_RelationalOperator1_o = DynoController_Rev1_B.s17_motohawk_din3;
+
+    /* S-Function (motohawk_sfun_code_cover): '<S32>/motohawk_code_coverage' */
+    /* Code Coverage Test: DynoController_Rev1/Foreground/Inputs/Analog Inputs/motohawk_override_abs4/OldValue */
+    {
+      extern void MH_CodeCovered(uint32_T idx);
+      MH_CodeCovered(10);
+    }
+
+    /* End of Outputs for SubSystem: '<S22>/OldValue' */
+  }
+
+  /* End of If: '<S22>/If' */
+
+  /* Logic: '<S103>/Logical Operator1' */
   DynoController_Rev1_B.s103_Gen_Load = ((DynoController_Rev1_B.s103_Gen_Enable &&
-    rtb_Merge_n && rtb_RelationalOperator1_o && (DynoController_Rev1_B.s39_Merge
-    <= (SOC_Off_Pt_DataStore()))));
+    rtb_Merge_n && rtb_RelationalOperator1_o && rtb_LogicalOperator5));
 
   /* If: '<S110>/If' incorporates:
-   *  Inport: '<S113>/In1'
-   *  Inport: '<S114>/In1'
+   *  Inport: '<S115>/In1'
+   *  Inport: '<S116>/In1'
    *  S-Function (motohawk_sfun_calibration): '<S110>/new_value'
    *  S-Function (motohawk_sfun_calibration): '<S110>/override_enable'
    */
   if ((Gen_Load_Ovr_ovr_DataStore())) {
     /* Outputs for IfAction SubSystem: '<S110>/NewValue' incorporates:
-     *  ActionPort: '<S113>/Action Port'
+     *  ActionPort: '<S115>/Action Port'
      */
     rtb_Merge_ha = (Gen_Load_Ovr_new_DataStore());
 
-    /* S-Function (motohawk_sfun_code_cover): '<S113>/motohawk_code_coverage' */
+    /* S-Function (motohawk_sfun_code_cover): '<S115>/motohawk_code_coverage' */
     /* Code Coverage Test: DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs1/NewValue */
     {
       extern void MH_CodeCovered(uint32_T idx);
@@ -1153,11 +1202,11 @@ void DynoController_Rev1_Foreground(void)
     /* End of Outputs for SubSystem: '<S110>/NewValue' */
   } else {
     /* Outputs for IfAction SubSystem: '<S110>/OldValue' incorporates:
-     *  ActionPort: '<S114>/Action Port'
+     *  ActionPort: '<S116>/Action Port'
      */
     rtb_Merge_ha = DynoController_Rev1_B.s103_Gen_Load;
 
-    /* S-Function (motohawk_sfun_code_cover): '<S114>/motohawk_code_coverage' */
+    /* S-Function (motohawk_sfun_code_cover): '<S116>/motohawk_code_coverage' */
     /* Code Coverage Test: DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs1/OldValue */
     {
       extern void MH_CodeCovered(uint32_T idx);
@@ -1170,18 +1219,18 @@ void DynoController_Rev1_Foreground(void)
   /* End of If: '<S110>/If' */
 
   /* If: '<S111>/If' incorporates:
-   *  Inport: '<S115>/In1'
-   *  Inport: '<S116>/In1'
+   *  Inport: '<S117>/In1'
+   *  Inport: '<S118>/In1'
    *  S-Function (motohawk_sfun_calibration): '<S111>/new_value'
    *  S-Function (motohawk_sfun_calibration): '<S111>/override_enable'
    */
   if ((Gen_Enable_Ovr_ovr_DataStore())) {
     /* Outputs for IfAction SubSystem: '<S111>/NewValue' incorporates:
-     *  ActionPort: '<S115>/Action Port'
+     *  ActionPort: '<S117>/Action Port'
      */
     rtb_Merge_j = (Gen_Enable_Ovr_new_DataStore());
 
-    /* S-Function (motohawk_sfun_code_cover): '<S115>/motohawk_code_coverage' */
+    /* S-Function (motohawk_sfun_code_cover): '<S117>/motohawk_code_coverage' */
     /* Code Coverage Test: DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs2/NewValue */
     {
       extern void MH_CodeCovered(uint32_T idx);
@@ -1191,11 +1240,11 @@ void DynoController_Rev1_Foreground(void)
     /* End of Outputs for SubSystem: '<S111>/NewValue' */
   } else {
     /* Outputs for IfAction SubSystem: '<S111>/OldValue' incorporates:
-     *  ActionPort: '<S116>/Action Port'
+     *  ActionPort: '<S118>/Action Port'
      */
     rtb_Merge_j = DynoController_Rev1_B.s103_Gen_Enable;
 
-    /* S-Function (motohawk_sfun_code_cover): '<S116>/motohawk_code_coverage' */
+    /* S-Function (motohawk_sfun_code_cover): '<S118>/motohawk_code_coverage' */
     /* Code Coverage Test: DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs2/OldValue */
     {
       extern void MH_CodeCovered(uint32_T idx);
@@ -1208,19 +1257,19 @@ void DynoController_Rev1_Foreground(void)
   /* End of If: '<S111>/If' */
 
   /* If: '<S112>/If' incorporates:
-   *  Inport: '<S117>/In1'
-   *  Inport: '<S118>/In1'
+   *  Inport: '<S119>/In1'
+   *  Inport: '<S120>/In1'
    *  S-Function (motohawk_sfun_calibration): '<S103>/motohawk_calibration1'
    *  S-Function (motohawk_sfun_calibration): '<S112>/new_value'
    *  S-Function (motohawk_sfun_calibration): '<S112>/override_enable'
    */
   if ((Vehicle_Speed_Ovr_ovr_DataStore())) {
     /* Outputs for IfAction SubSystem: '<S112>/NewValue' incorporates:
-     *  ActionPort: '<S117>/Action Port'
+     *  ActionPort: '<S119>/Action Port'
      */
     rtb_Merge_oa = (Vehicle_Speed_Ovr_new_DataStore());
 
-    /* S-Function (motohawk_sfun_code_cover): '<S117>/motohawk_code_coverage' */
+    /* S-Function (motohawk_sfun_code_cover): '<S119>/motohawk_code_coverage' */
     /* Code Coverage Test: DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs3/NewValue */
     {
       extern void MH_CodeCovered(uint32_T idx);
@@ -1230,11 +1279,11 @@ void DynoController_Rev1_Foreground(void)
     /* End of Outputs for SubSystem: '<S112>/NewValue' */
   } else {
     /* Outputs for IfAction SubSystem: '<S112>/OldValue' incorporates:
-     *  ActionPort: '<S118>/Action Port'
+     *  ActionPort: '<S120>/Action Port'
      */
     rtb_Merge_oa = (Vehicle_Speed_DataStore());
 
-    /* S-Function (motohawk_sfun_code_cover): '<S118>/motohawk_code_coverage' */
+    /* S-Function (motohawk_sfun_code_cover): '<S120>/motohawk_code_coverage' */
     /* Code Coverage Test: DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs3/OldValue */
     {
       extern void MH_CodeCovered(uint32_T idx);
@@ -1245,6 +1294,84 @@ void DynoController_Rev1_Foreground(void)
   }
 
   /* End of If: '<S112>/If' */
+
+  /* If: '<S113>/If' incorporates:
+   *  Inport: '<S121>/In1'
+   *  Inport: '<S122>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S103>/motohawk_calibration2'
+   *  S-Function (motohawk_sfun_calibration): '<S113>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S113>/override_enable'
+   */
+  if ((Load_Throttle_Ovr_ovr_DataStore())) {
+    /* Outputs for IfAction SubSystem: '<S113>/NewValue' incorporates:
+     *  ActionPort: '<S121>/Action Port'
+     */
+    rtb_Merge_b = (Load_Throttle_Ovr_new_DataStore());
+
+    /* S-Function (motohawk_sfun_code_cover): '<S121>/motohawk_code_coverage' */
+    /* Code Coverage Test: DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs4/NewValue */
+    {
+      extern void MH_CodeCovered(uint32_T idx);
+      MH_CodeCovered(65);
+    }
+
+    /* End of Outputs for SubSystem: '<S113>/NewValue' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S113>/OldValue' incorporates:
+     *  ActionPort: '<S122>/Action Port'
+     */
+    rtb_Merge_b = (Load_Throttle_DataStore());
+
+    /* S-Function (motohawk_sfun_code_cover): '<S122>/motohawk_code_coverage' */
+    /* Code Coverage Test: DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs4/OldValue */
+    {
+      extern void MH_CodeCovered(uint32_T idx);
+      MH_CodeCovered(66);
+    }
+
+    /* End of Outputs for SubSystem: '<S113>/OldValue' */
+  }
+
+  /* End of If: '<S113>/If' */
+
+  /* If: '<S114>/If' incorporates:
+   *  Inport: '<S123>/In1'
+   *  Inport: '<S124>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S103>/motohawk_calibration3'
+   *  S-Function (motohawk_sfun_calibration): '<S114>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S114>/override_enable'
+   */
+  if ((Load_RPM_Ovr_ovr_DataStore())) {
+    /* Outputs for IfAction SubSystem: '<S114>/NewValue' incorporates:
+     *  ActionPort: '<S123>/Action Port'
+     */
+    rtb_Merge_c4 = (Load_RPM_Ovr_new_DataStore());
+
+    /* S-Function (motohawk_sfun_code_cover): '<S123>/motohawk_code_coverage' */
+    /* Code Coverage Test: DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs5/NewValue */
+    {
+      extern void MH_CodeCovered(uint32_T idx);
+      MH_CodeCovered(67);
+    }
+
+    /* End of Outputs for SubSystem: '<S114>/NewValue' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S114>/OldValue' incorporates:
+     *  ActionPort: '<S124>/Action Port'
+     */
+    rtb_Merge_c4 = (Load_RPM_DataStore());
+
+    /* S-Function (motohawk_sfun_code_cover): '<S124>/motohawk_code_coverage' */
+    /* Code Coverage Test: DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs5/OldValue */
+    {
+      extern void MH_CodeCovered(uint32_T idx);
+      MH_CodeCovered(68);
+    }
+
+    /* End of Outputs for SubSystem: '<S114>/OldValue' */
+  }
+
+  /* End of If: '<S114>/If' */
 
   /* S-Function (motohawk_sfun_send_canmsgs): '<S103>/Send CAN Messages' */
   /* Send CAN Message(s) */
@@ -1270,6 +1397,8 @@ void DynoController_Rev1_Foreground(void)
         uint8_T tmp0;
         uint8_T tmp1;
         uint8_T tmp2;
+        uint8_T tmp3;
+        uint8_T tmp4;
         tmp0 = (uint8_T)(rtb_Merge_j != 0);
         tmp1 = (uint8_T)(rtb_Merge_ha);
         if (rtb_Merge_oa < 0.0000000000F) {
@@ -1280,12 +1409,27 @@ void DynoController_Rev1_Foreground(void)
           tmp2 = (uint8_T)(rtb_Merge_oa);
         }
 
+        if (rtb_Merge_b < 0.0000000000F) {
+          tmp3 = (uint8_T)(0U);
+        } else if (rtb_Merge_b > 255.0000000000F) {
+          tmp3 = (uint8_T)(255U);
+        } else {
+          tmp3 = (uint8_T)(rtb_Merge_b);
+        }
+
+        if (rtb_Merge_c4 < 0.0000000000F) {
+          tmp4 = (uint8_T)(0U);
+        } else if (rtb_Merge_c4 > 255.0000000000F) {
+          tmp4 = (uint8_T)(255U);
+        } else {
+          tmp4 = (uint8_T)(rtb_Merge_c4);
+        }
+
         msg_data[0] = ((((uint8_T *)(&tmp0))[0] & 0x00000001) << 7) |
-          ((((uint8_T *)(&tmp1))[0] & 0x00000003) << 6) | ((((uint8_T *)(&tmp2))
-          [0] & 0x000000FC) >> 2) ;
-        msg_data[1] = ((((uint8_T *)(&tmp2))[0] & 0x00000003) << 6) ;
-        msg_data[2] = 0 ;
-        msg_data[3] = 0 ;
+          ((((uint8_T *)(&tmp1))[0] & 0x00000003) << 6) ;
+        msg_data[1] = ((((uint8_T *)(&tmp4))[0])) ;
+        msg_data[2] = ((((uint8_T *)(&tmp3))[0])) ;
+        msg_data[3] = ((((uint8_T *)(&tmp2))[0])) ;
         msg_data[4] = 0 ;
         msg_data[5] = 0 ;
         msg_data[6] = 0 ;
@@ -1299,6 +1443,12 @@ void DynoController_Rev1_Foreground(void)
 
   /* S-Function (motohawk_sfun_probe): '<S103>/motohawk_probe3' */
   (Vehicle_Speed_Prb_DataStore()) = (Vehicle_Speed_DataStore());
+
+  /* S-Function (motohawk_sfun_probe): '<S103>/motohawk_probe4' */
+  (Load_Throttle_Prb_DataStore()) = (Load_Throttle_DataStore());
+
+  /* S-Function (motohawk_sfun_probe): '<S103>/motohawk_probe5' */
+  (Load_RPM_Prb_DataStore()) = (Load_RPM_DataStore());
 
   /* Logic: '<S8>/Logical Operator1' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S8>/motohawk_calibration1'
@@ -1413,46 +1563,6 @@ void DynoController_Rev1_Foreground(void)
 
   /* End of Stateflow: '<S8>/Chart' */
 
-  /* S-Function Block: <S17>/motohawk_din3 Resource: GensetLoad */
-  {
-    extern NativeError_S GensetLoad_DigitalInput_Get(boolean_T *out, uint16_T
-      *status);
-    GensetLoad_DigitalInput_Get(&DynoController_Rev1_B.s17_motohawk_din3, NULL);
-  }
-
-  /* If: '<S22>/If' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S22>/override_enable'
-   */
-  if ((GensetLoad_Ovr_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S22>/NewValue' incorporates:
-     *  ActionPort: '<S31>/Action Port'
-     */
-
-    /* S-Function (motohawk_sfun_code_cover): '<S31>/motohawk_code_coverage' */
-    /* Code Coverage Test: DynoController_Rev1/Foreground/Inputs/Analog Inputs/motohawk_override_abs4/NewValue */
-    {
-      extern void MH_CodeCovered(uint32_T idx);
-      MH_CodeCovered(9);
-    }
-
-    /* End of Outputs for SubSystem: '<S22>/NewValue' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S22>/OldValue' incorporates:
-     *  ActionPort: '<S32>/Action Port'
-     */
-
-    /* S-Function (motohawk_sfun_code_cover): '<S32>/motohawk_code_coverage' */
-    /* Code Coverage Test: DynoController_Rev1/Foreground/Inputs/Analog Inputs/motohawk_override_abs4/OldValue */
-    {
-      extern void MH_CodeCovered(uint32_T idx);
-      MH_CodeCovered(10);
-    }
-
-    /* End of Outputs for SubSystem: '<S22>/OldValue' */
-  }
-
-  /* End of If: '<S22>/If' */
-
   /* S-Function Block: <S17>/motohawk_din4 Resource: ACC1 */
   {
     extern NativeError_S ACC1_DigitalInput_Get(boolean_T *out, uint16_T *status);
@@ -1529,10 +1639,10 @@ void DynoController_Rev1_Foreground(void)
   /* MotoHawk Read CAN Message */
   {
     S_CANMessage messageObj;
-    extern MHCAN_directslot MHCAN_directslot_RxSlot_218p001;
+    extern MHCAN_directslot MHCAN_directslot_RxSlot_221p001;
     extern boolean_T MHCAN_getdirect(MHCAN_directslot *directslot, S_CANMessage *
       messageObj);
-    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_218p001,
+    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_221p001,
       &messageObj);
     if (msg_valid) {
       uint8_T tmp2 = 0;
@@ -1792,7 +1902,7 @@ void DynoController_Rev1_Foreground(void)
   /* End of If: '<S60>/If' */
 
   /* S-Function (motohawk_sfun_trigger): '<S6>/motohawk_trigger1' */
-  /* Enable for Trigger_FGND_20XRTI_PERIODIC_10837p0011 */
+  /* Enable for Trigger_FGND_20XRTI_PERIODIC_589p0005 */
   if (DynoController_Rev1_DWork.s6_motohawk_trigger1_DWORK1 == 0) {
     DynoController_Rev1_DWork.s6_motohawk_trigger1_DWORK1 = 1;
   }
@@ -1904,58 +2014,58 @@ void DynoController_Rev1_Foreground(void)
 
   /* Update for S-Function (motohawk_sfun_dout): '<S75>/motohawk_dout' */
 
-  /* S-Function Block: DOut328p001 */
+  /* S-Function Block: DOut332p001 */
   {
-    DOut328p001_DiscreteOutput_Set(rtb_Merge_l);
+    DOut332p001_DiscreteOutput_Set(rtb_Merge_l);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S75>/motohawk_dout1' */
 
-  /* S-Function Block: DOut329p001 */
+  /* S-Function Block: DOut333p001 */
   {
-    DOut329p001_DiscreteOutput_Set(rtb_Merge_oaf);
+    DOut333p001_DiscreteOutput_Set(rtb_Merge_oaf);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S75>/motohawk_dout2' */
 
-  /* S-Function Block: DOut330p001 */
+  /* S-Function Block: DOut334p001 */
   {
-    DOut330p001_DiscreteOutput_Set(rtb_Merge_lo);
+    DOut334p001_DiscreteOutput_Set(rtb_Merge_lo);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S75>/motohawk_dout3' */
 
-  /* S-Function Block: DOut331p001 */
+  /* S-Function Block: DOut335p001 */
   {
-    DOut331p001_DiscreteOutput_Set(rtb_Merge_aw);
+    DOut335p001_DiscreteOutput_Set(rtb_Merge_aw);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S75>/motohawk_dout4' */
 
-  /* S-Function Block: DOut332p001 */
+  /* S-Function Block: DOut336p001 */
   {
-    DOut332p001_DiscreteOutput_Set(rtb_Merge_i);
+    DOut336p001_DiscreteOutput_Set(rtb_Merge_i);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S75>/motohawk_dout5' */
 
-  /* S-Function Block: DOut333p001 */
+  /* S-Function Block: DOut337p001 */
   {
-    DOut333p001_DiscreteOutput_Set(rtb_Merge_nt);
+    DOut337p001_DiscreteOutput_Set(rtb_Merge_nt);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S75>/motohawk_dout6' */
 
-  /* S-Function Block: DOut334p001 */
+  /* S-Function Block: DOut338p001 */
   {
-    DOut334p001_DiscreteOutput_Set(rtb_Merge_p);
+    DOut338p001_DiscreteOutput_Set(rtb_Merge_p);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S75>/motohawk_dout7' */
 
-  /* S-Function Block: DOut335p001 */
+  /* S-Function Block: DOut339p001 */
   {
-    DOut335p001_DiscreteOutput_Set(rtb_Merge_nn);
+    DOut339p001_DiscreteOutput_Set(rtb_Merge_nn);
   }
 }
 

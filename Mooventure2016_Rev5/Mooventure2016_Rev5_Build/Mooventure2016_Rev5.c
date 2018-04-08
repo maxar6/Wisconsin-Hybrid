@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'Mooventure2016_Rev5'.
  *
- * Model version                  : 1.2026
+ * Model version                  : 1.2067
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Wed Nov 29 16:58:34 2017
+ * C/C++ source code generated on : Sat Apr 07 15:01:22 2018
  *
  * Target selection: motohawk_motocoder_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -68,252 +68,219 @@ void Mooventure2016_Rev5_initialize(boolean_T firstTime)
                 sizeof(BlockIO_Mooventure2016_Rev5));
 
   {
-    int_T i;
-    for (i = 0; i < 15; i++) {
-      Mooventure2016_Rev5_B.s195_SFunction[i] = 0.0;
-    }
-
-    Mooventure2016_Rev5_B.s206_IPT_CurrentUsed = 0.0;
-    Mooventure2016_Rev5_B.s206_IPT_CurrentRequest = 0.0;
-    Mooventure2016_Rev5_B.s206_IPT_MotorSpeed = 0.0;
-    Mooventure2016_Rev5_B.s206_IPT_WheelTorqueDelivered = 0.0;
-    Mooventure2016_Rev5_B.s206_IPT_CurrentLimit = 0.0;
-    Mooventure2016_Rev5_B.s206_IPT_Antishudder = 0.0;
-    Mooventure2016_Rev5_B.s330_Merge = 0.0;
-    Mooventure2016_Rev5_B.s101_Product = 0.0;
-    Mooventure2016_Rev5_B.s99_Sum2 = 0.0;
-    Mooventure2016_Rev5_B.s103_Product = 0.0;
-    Mooventure2016_Rev5_B.s99_Product2 = 0.0;
-    Mooventure2016_Rev5_B.s104_Switch1 = 0.0;
-    Mooventure2016_Rev5_B.s106_MinMax1 = 0.0;
-    Mooventure2016_Rev5_B.s128_Switch1 = 0.0;
-    Mooventure2016_Rev5_B.s126_Sum1 = 0.0;
-    Mooventure2016_Rev5_B.s204_Shift_Position = 0.0;
-    Mooventure2016_Rev5_B.s204_Brake_Position = 0.0;
-    Mooventure2016_Rev5_B.s201_JCS_PackIdentifier = 0.0;
-    Mooventure2016_Rev5_B.s201_PackState = 0.0;
-    Mooventure2016_Rev5_B.s201_PrechargeState = 0.0;
-    Mooventure2016_Rev5_B.s201_HVIL_Status = 0.0;
-    Mooventure2016_Rev5_B.s201_IsolationStatus = 0.0;
-    Mooventure2016_Rev5_B.s201_WakeSignal = 0.0;
-    Mooventure2016_Rev5_B.s201_SleepInhibited = 0.0;
-    Mooventure2016_Rev5_B.s201_MILState = 0.0;
-    Mooventure2016_Rev5_B.s201_StateOfCharge = 0.0;
-    Mooventure2016_Rev5_B.s201_PS_RollingCounter = 0.0;
-    Mooventure2016_Rev5_B.s77_Torque_Direction = 0.0;
-    Mooventure2016_Rev5_B.s9_motor_Torque = 0.0;
-    Mooventure2016_Rev5_B.s77_IPT_Torque_Request = 0.0;
-    Mooventure2016_Rev5_B.s77_Saturation = 0.0;
-    Mooventure2016_Rev5_B.s80_Switch = 0.0;
-    Mooventure2016_Rev5_B.s366_Pct_whl_trq_desired = 0.0;
-    Mooventure2016_Rev5_B.s366_Commanded_mot_torq = 0.0;
-    Mooventure2016_Rev5_B.s201_BatteryVoltage = 0.0;
-    Mooventure2016_Rev5_B.s201_BatteryCurrent = 0.0;
-    Mooventure2016_Rev5_B.s201_BusVoltage = 0.0;
-    Mooventure2016_Rev5_B.s201_PVC_RollingCounter = 0.0;
-    Mooventure2016_Rev5_B.s205_InputVoltage = 0.0;
-    Mooventure2016_Rev5_B.s205_OutputVoltage = 0.0;
-    Mooventure2016_Rev5_B.s205_InputCurrentLimitMax = 0.0;
-    Mooventure2016_Rev5_B.s205_InputCurrent = 0.0;
-    Mooventure2016_Rev5_B.s205_OutputCurrent = 0.0;
-    Mooventure2016_Rev5_B.s205_Eaton_HV_Charger_Temperature = 0.0;
-    Mooventure2016_Rev5_B.s205_ChargerState = 0.0;
-    Mooventure2016_Rev5_B.s205_MessageCounter = 0.0;
-    Mooventure2016_Rev5_B.s205_MessageChecksum = 0.0;
-    Mooventure2016_Rev5_B.s206_IPT_InverterTemperature = 0.0;
-    Mooventure2016_Rev5_B.s206_IPT_MotorTemperature = 0.0;
-    Mooventure2016_Rev5_B.s206_IPT_MaxTorqueAvailGen = 0.0;
-    Mooventure2016_Rev5_B.s206_IPT_MaxTorqueAvailMotor = 0.0;
-    Mooventure2016_Rev5_B.s206_IPT_HVDCVoltage = 0.0;
-    Mooventure2016_Rev5_B.s206_IPT_ErrorCategory = 0.0;
-    Mooventure2016_Rev5_B.s206_IPT_IPTReady = 0.0;
-    Mooventure2016_Rev5_B.s206_IPT_IPTAwake = 0.0;
-    Mooventure2016_Rev5_B.s206_IPT_MaxWasteAvailable = 0.0;
-    Mooventure2016_Rev5_B.s201_MaxCellVoltage = 0.0;
-    Mooventure2016_Rev5_B.s201_MinCellVoltage = 0.0;
-    Mooventure2016_Rev5_B.s201_MaxCellTemperature = 0.0;
-    Mooventure2016_Rev5_B.s201_MinCellTemperature = 0.0;
-    Mooventure2016_Rev5_B.s201_CoolantTemperature = 0.0;
-    Mooventure2016_Rev5_B.s201_DPI_RollingCounter = 0.0;
-    Mooventure2016_Rev5_B.s204_DRIVER_1 = 0.0;
-    Mooventure2016_Rev5_B.s204_DRIVER_10 = 0.0;
-    Mooventure2016_Rev5_B.s204_PASSENGER_1 = 0.0;
-    Mooventure2016_Rev5_B.s204_PASSENGER_10 = 0.0;
-    Mooventure2016_Rev5_B.s370_Engine_Speed = 0.0;
-    Mooventure2016_Rev5_B.s370_Current = 0.0;
-    Mooventure2016_Rev5_B.s370_Vehi_Speed = 0.0;
-    Mooventure2016_Rev5_B.s370_ODO_Count = 0.0;
-    Mooventure2016_Rev5_B.s201_TripAmpHoursIn = 0.0;
-    Mooventure2016_Rev5_B.s201_TripAmpHoursOut = 0.0;
-    Mooventure2016_Rev5_B.s201_StateOfChargeMax = 0.0;
-    Mooventure2016_Rev5_B.s201_StateOfChargeMin = 0.0;
-    Mooventure2016_Rev5_B.s201_TAH_RollingCounter = 0.0;
-    Mooventure2016_Rev5_B.s372_VSC_WheelTorqueRequest = 0.0;
-    Mooventure2016_Rev5_B.s9_motor_Enable = 0.0;
-    Mooventure2016_Rev5_B.s648_Merge = 0.0;
-    Mooventure2016_Rev5_B.s649_Merge = 0.0;
-    Mooventure2016_Rev5_B.s170_MPGeGlobalAverage = 0.0;
-    Mooventure2016_Rev5_B.s148_Saturation = 0.0;
-    Mooventure2016_Rev5_B.s171_motohawk_data_read1 = 0.0;
-    Mooventure2016_Rev5_B.s169_motohawk_data_read2 = 0.0;
-    Mooventure2016_Rev5_B.s150_MPGe1MinuteAverage = 0.0;
-    Mooventure2016_Rev5_B.s151_BatteryUsePCT = 0.0;
-    Mooventure2016_Rev5_B.s151_Battery2Motor = 0.0;
-    Mooventure2016_Rev5_B.s151_Motor2Axle = 0.0;
-    Mooventure2016_Rev5_B.s207_Subfunction_Select = 0.0;
-    Mooventure2016_Rev5_B.s207_Confirm_Active_Trip = 0.0;
-    Mooventure2016_Rev5_B.s207_Confirm_Reset_Trip_B = 0.0;
-    Mooventure2016_Rev5_B.s207_Confirm_Reset_Trip_A = 0.0;
-    Mooventure2016_Rev5_B.s207_Electricity_Cost_Setting = 0.0;
-    Mooventure2016_Rev5_B.s207_Fuel_Cost_Setting = 0.0;
-    Mooventure2016_Rev5_B.s153_TripACost = 0.0;
-    Mooventure2016_Rev5_B.s153_TripASavings = 0.0;
-    Mooventure2016_Rev5_B.s154_TripBCost = 0.0;
-    Mooventure2016_Rev5_B.s154_TripBSavings = 0.0;
-    Mooventure2016_Rev5_B.s201_MaximumDischargePower_10s = 0.0;
-    Mooventure2016_Rev5_B.s201_MaximumRegenPower_10s = 0.0;
-    Mooventure2016_Rev5_B.s201_IsolationLevel = 0.0;
-    Mooventure2016_Rev5_B.s201_ActiveDTC = 0.0;
-    Mooventure2016_Rev5_B.s201_PPL10s_RollingCounter = 0.0;
-    Mooventure2016_Rev5_B.s265_Merge = 0.0;
-    Mooventure2016_Rev5_B.s204_Button_Pressed = 0.0;
-    Mooventure2016_Rev5_B.s206_IPT_DCErrorCategory = 0.0;
-    Mooventure2016_Rev5_B.s206_IPT_DCLVOn = 0.0;
-    Mooventure2016_Rev5_B.s206_IPT_DCLVGeneralError = 0.0;
-    Mooventure2016_Rev5_B.s206_IPT_DCLVMaxPower = 0.0;
-    Mooventure2016_Rev5_B.s206_IPT_DCLVBusCurrent = 0.0;
-    Mooventure2016_Rev5_B.s206_IPT_DCLVBusVoltage = 0.0;
-    Mooventure2016_Rev5_B.s206_IPT_DCHVBusCurrent = 0.0;
-    Mooventure2016_Rev5_B.s206_Heading = 0.0;
-    Mooventure2016_Rev5_B.s206_Speed = 0.0;
-    Mooventure2016_Rev5_B.s206_Altitude = 0.0;
-    Mooventure2016_Rev5_B.s206_GPSQuality = 0.0;
-    Mooventure2016_Rev5_B.s206_DateTime = 0.0;
-    Mooventure2016_Rev5_B.s201_LifeTimeAmpHoursOut = 0.0;
-    Mooventure2016_Rev5_B.s201_LTAHI_RollingCounter = 0.0;
-    Mooventure2016_Rev5_B.s201_MaximumDischargePower_Continuous = 0.0;
-    Mooventure2016_Rev5_B.s201_MaximumRegenPower_Continuous = 0.0;
-    Mooventure2016_Rev5_B.s201_PPLCont_RollingCounter = 0.0;
-    Mooventure2016_Rev5_B.s199_LF_Wheel_Rolling_Count = 0.0;
-    Mooventure2016_Rev5_B.s199_RT_Wheel_Rolling_Count = 0.0;
-    Mooventure2016_Rev5_B.s199_Wheel_Rolling_Timestamp = 0.0;
-    Mooventure2016_Rev5_B.s199_TCS_ENG_EVNT_IN_PROGRESS = 0.0;
-    Mooventure2016_Rev5_B.s199_Front_left_whl_speed = 0.0;
-    Mooventure2016_Rev5_B.s199_Front_right_whl_speed = 0.0;
-    Mooventure2016_Rev5_B.s199_Rear_left_whl_speed = 0.0;
-    Mooventure2016_Rev5_B.s199_Rear_right_whl_speed = 0.0;
-    Mooventure2016_Rev5_B.s208_STR_WHL_ANGLE_CNTR_FND = 0.0;
-    Mooventure2016_Rev5_B.s208_STR_WHL_ANGLE = 0.0;
-    Mooventure2016_Rev5_B.s208_RELATIVE_STR_WHL_ANGLE = 0.0;
-    Mooventure2016_Rev5_B.s264_Merge = 0.0;
-    Mooventure2016_Rev5_B.s267_Merge = 0.0;
-    Mooventure2016_Rev5_B.s146_Add = 0.0;
-    Mooventure2016_Rev5_B.s156_Switch1 = 0.0;
-    Mooventure2016_Rev5_B.s154_Add = 0.0;
-    Mooventure2016_Rev5_B.s154_Add1 = 0.0;
-    Mooventure2016_Rev5_B.s487_CEL = 0.0;
-    Mooventure2016_Rev5_B.s486_engTemp = 0.0;
-    Mooventure2016_Rev5_B.s486_transTemp = 0.0;
-    Mooventure2016_Rev5_B.s486_timerOut = 0.0;
-    Mooventure2016_Rev5_B.s411_fan1 = 0.0;
-    Mooventure2016_Rev5_B.s411_fan2 = 0.0;
-    Mooventure2016_Rev5_B.s411_fan3 = 0.0;
-    Mooventure2016_Rev5_B.s375_dirOut = 0.0;
-    Mooventure2016_Rev5_B.s301_passengerTemp = 0.0;
-    Mooventure2016_Rev5_B.s300_driverTemp = 0.0;
-    Mooventure2016_Rev5_B.s299_posOut = 0.0;
-    Mooventure2016_Rev5_B.s288_Out = 0.0;
-    Mooventure2016_Rev5_B.s245_temp_reading = 0.0;
-    Mooventure2016_Rev5_B.s75_state = 0.0;
-    Mooventure2016_Rev5_B.s22_radBlend = 0.0;
-    Mooventure2016_Rev5_B.s21_RadiatorBlend = 0.0;
-    Mooventure2016_Rev5_B.s21_HeaterCoreBlend = 0.0;
-    Mooventure2016_Rev5_B.s368_sf_RadiatorMotionControl.s412_motorEnable = 0.0;
-    Mooventure2016_Rev5_B.s368_sf_RadiatorMotionControl.s412_motorDirection =
+    Mooventure2016_Rev5_B.s177_IPT_CurrentUsed = 0.0;
+    Mooventure2016_Rev5_B.s177_IPT_CurrentRequest = 0.0;
+    Mooventure2016_Rev5_B.s177_IPT_MotorSpeed = 0.0;
+    Mooventure2016_Rev5_B.s177_IPT_WheelTorqueDelivered = 0.0;
+    Mooventure2016_Rev5_B.s177_IPT_CurrentLimit = 0.0;
+    Mooventure2016_Rev5_B.s177_IPT_Antishudder = 0.0;
+    Mooventure2016_Rev5_B.s327_Merge = 0.0;
+    Mooventure2016_Rev5_B.s122_Product = 0.0;
+    Mooventure2016_Rev5_B.s120_Sum2 = 0.0;
+    Mooventure2016_Rev5_B.s124_Product = 0.0;
+    Mooventure2016_Rev5_B.s120_Product2 = 0.0;
+    Mooventure2016_Rev5_B.s125_Switch1 = 0.0;
+    Mooventure2016_Rev5_B.s127_MinMax1 = 0.0;
+    Mooventure2016_Rev5_B.s149_Switch1 = 0.0;
+    Mooventure2016_Rev5_B.s147_Sum1 = 0.0;
+    Mooventure2016_Rev5_B.s174_Shift_Position = 0.0;
+    Mooventure2016_Rev5_B.s174_Brake_Position = 0.0;
+    Mooventure2016_Rev5_B.s170_JCS_PackIdentifier = 0.0;
+    Mooventure2016_Rev5_B.s170_PackState = 0.0;
+    Mooventure2016_Rev5_B.s170_PrechargeState = 0.0;
+    Mooventure2016_Rev5_B.s170_HVIL_Status = 0.0;
+    Mooventure2016_Rev5_B.s170_IsolationStatus = 0.0;
+    Mooventure2016_Rev5_B.s170_WakeSignal = 0.0;
+    Mooventure2016_Rev5_B.s170_SleepInhibited = 0.0;
+    Mooventure2016_Rev5_B.s170_MILState = 0.0;
+    Mooventure2016_Rev5_B.s170_StateOfCharge = 0.0;
+    Mooventure2016_Rev5_B.s170_PS_RollingCounter = 0.0;
+    Mooventure2016_Rev5_B.s98_Torque_Direction = 0.0;
+    Mooventure2016_Rev5_B.s10_motor_Torque = 0.0;
+    Mooventure2016_Rev5_B.s98_IPT_Torque_Request = 0.0;
+    Mooventure2016_Rev5_B.s98_Saturation = 0.0;
+    Mooventure2016_Rev5_B.s101_Switch = 0.0;
+    Mooventure2016_Rev5_B.s342_Pct_whl_trq_desired = 0.0;
+    Mooventure2016_Rev5_B.s342_Commanded_mot_torq = 0.0;
+    Mooventure2016_Rev5_B.s170_BatteryVoltage = 0.0;
+    Mooventure2016_Rev5_B.s170_BatteryCurrent = 0.0;
+    Mooventure2016_Rev5_B.s170_BusVoltage = 0.0;
+    Mooventure2016_Rev5_B.s170_PVC_RollingCounter = 0.0;
+    Mooventure2016_Rev5_B.s171_HEV_CC_Defrost_Mode = 0.0;
+    Mooventure2016_Rev5_B.s171_AC_Engaged_CMD = 0.0;
+    Mooventure2016_Rev5_B.s175_InputVoltage = 0.0;
+    Mooventure2016_Rev5_B.s175_OutputVoltage = 0.0;
+    Mooventure2016_Rev5_B.s175_InputCurrentLimitMax = 0.0;
+    Mooventure2016_Rev5_B.s175_InputCurrent = 0.0;
+    Mooventure2016_Rev5_B.s175_OutputCurrent = 0.0;
+    Mooventure2016_Rev5_B.s175_Eaton_HV_Charger_Temperature = 0.0;
+    Mooventure2016_Rev5_B.s175_ChargerState = 0.0;
+    Mooventure2016_Rev5_B.s175_MessageCounter = 0.0;
+    Mooventure2016_Rev5_B.s175_MessageChecksum = 0.0;
+    Mooventure2016_Rev5_B.s177_IPT_InverterTemperature = 0.0;
+    Mooventure2016_Rev5_B.s177_IPT_MotorTemperature = 0.0;
+    Mooventure2016_Rev5_B.s177_IPT_MaxTorqueAvailGen = 0.0;
+    Mooventure2016_Rev5_B.s177_IPT_MaxTorqueAvailMotor = 0.0;
+    Mooventure2016_Rev5_B.s177_IPT_HVDCVoltage = 0.0;
+    Mooventure2016_Rev5_B.s177_IPT_ErrorCategory = 0.0;
+    Mooventure2016_Rev5_B.s177_IPT_IPTReady = 0.0;
+    Mooventure2016_Rev5_B.s177_IPT_IPTAwake = 0.0;
+    Mooventure2016_Rev5_B.s177_IPT_MaxWasteAvailable = 0.0;
+    Mooventure2016_Rev5_B.s170_MaxCellVoltage = 0.0;
+    Mooventure2016_Rev5_B.s170_MinCellVoltage = 0.0;
+    Mooventure2016_Rev5_B.s170_MaxCellTemperature = 0.0;
+    Mooventure2016_Rev5_B.s170_MinCellTemperature = 0.0;
+    Mooventure2016_Rev5_B.s170_CoolantTemperature = 0.0;
+    Mooventure2016_Rev5_B.s170_DPI_RollingCounter = 0.0;
+    Mooventure2016_Rev5_B.s174_DRIVER_1 = 0.0;
+    Mooventure2016_Rev5_B.s174_DRIVER_10 = 0.0;
+    Mooventure2016_Rev5_B.s174_PASSENGER_1 = 0.0;
+    Mooventure2016_Rev5_B.s174_PASSENGER_10 = 0.0;
+    Mooventure2016_Rev5_B.s176_ReadCANMessage_o1 = 0.0;
+    Mooventure2016_Rev5_B.s176_ReadCANMessage_o2 = 0.0;
+    Mooventure2016_Rev5_B.s176_ReadCANMessage_o3 = 0.0;
+    Mooventure2016_Rev5_B.s176_ReadCANMessage_o4 = 0.0;
+    Mooventure2016_Rev5_B.s176_ReadCANMessage_o5 = 0.0;
+    Mooventure2016_Rev5_B.s176_ReadCANMessage_o6 = 0.0;
+    Mooventure2016_Rev5_B.s176_ReadCANMessage_o7 = 0.0;
+    Mooventure2016_Rev5_B.s347_Engine_Speed = 0.0;
+    Mooventure2016_Rev5_B.s347_Current = 0.0;
+    Mooventure2016_Rev5_B.s347_Vehi_Speed = 0.0;
+    Mooventure2016_Rev5_B.s347_ODO_Count = 0.0;
+    Mooventure2016_Rev5_B.s170_TripAmpHoursIn = 0.0;
+    Mooventure2016_Rev5_B.s170_TripAmpHoursOut = 0.0;
+    Mooventure2016_Rev5_B.s170_StateOfChargeMax = 0.0;
+    Mooventure2016_Rev5_B.s170_StateOfChargeMin = 0.0;
+    Mooventure2016_Rev5_B.s170_TAH_RollingCounter = 0.0;
+    Mooventure2016_Rev5_B.s34_Merge = 0.0;
+    Mooventure2016_Rev5_B.s237_Merge = 0.0;
+    Mooventure2016_Rev5_B.s349_Vehicle_Speed = 0.0;
+    Mooventure2016_Rev5_B.s37_Merge = 0.0;
+    Mooventure2016_Rev5_B.s36_Merge = 0.0;
+    Mooventure2016_Rev5_B.s350_VSC_WheelTorqueRequest = 0.0;
+    Mooventure2016_Rev5_B.s10_motor_Enable = 0.0;
+    Mooventure2016_Rev5_B.s640_Merge = 0.0;
+    Mooventure2016_Rev5_B.s641_Merge = 0.0;
+    Mooventure2016_Rev5_B.s170_MaximumDischargePower_10s = 0.0;
+    Mooventure2016_Rev5_B.s170_MaximumRegenPower_10s = 0.0;
+    Mooventure2016_Rev5_B.s170_IsolationLevel = 0.0;
+    Mooventure2016_Rev5_B.s170_ActiveDTC = 0.0;
+    Mooventure2016_Rev5_B.s170_PPL10s_RollingCounter = 0.0;
+    Mooventure2016_Rev5_B.s235_Merge = 0.0;
+    Mooventure2016_Rev5_B.s174_Button_Pressed = 0.0;
+    Mooventure2016_Rev5_B.s177_IPT_DCErrorCategory = 0.0;
+    Mooventure2016_Rev5_B.s177_IPT_DCLVOn = 0.0;
+    Mooventure2016_Rev5_B.s177_IPT_DCLVGeneralError = 0.0;
+    Mooventure2016_Rev5_B.s177_IPT_DCLVMaxPower = 0.0;
+    Mooventure2016_Rev5_B.s177_IPT_DCLVBusCurrent = 0.0;
+    Mooventure2016_Rev5_B.s177_IPT_DCLVBusVoltage = 0.0;
+    Mooventure2016_Rev5_B.s177_IPT_DCHVBusCurrent = 0.0;
+    Mooventure2016_Rev5_B.s177_Heading = 0.0;
+    Mooventure2016_Rev5_B.s177_Speed = 0.0;
+    Mooventure2016_Rev5_B.s177_Altitude = 0.0;
+    Mooventure2016_Rev5_B.s177_GPSQuality = 0.0;
+    Mooventure2016_Rev5_B.s177_DateTime = 0.0;
+    Mooventure2016_Rev5_B.s170_LifeTimeAmpHoursOut = 0.0;
+    Mooventure2016_Rev5_B.s170_LTAHI_RollingCounter = 0.0;
+    Mooventure2016_Rev5_B.s170_MaximumDischargePower_Continuous = 0.0;
+    Mooventure2016_Rev5_B.s170_MaximumRegenPower_Continuous = 0.0;
+    Mooventure2016_Rev5_B.s170_PPLCont_RollingCounter = 0.0;
+    Mooventure2016_Rev5_B.s168_LF_Wheel_Rolling_Count = 0.0;
+    Mooventure2016_Rev5_B.s168_RT_Wheel_Rolling_Count = 0.0;
+    Mooventure2016_Rev5_B.s168_Wheel_Rolling_Timestamp = 0.0;
+    Mooventure2016_Rev5_B.s168_TCS_ENG_EVNT_IN_PROGRESS = 0.0;
+    Mooventure2016_Rev5_B.s168_Front_left_whl_speed = 0.0;
+    Mooventure2016_Rev5_B.s168_Front_right_whl_speed = 0.0;
+    Mooventure2016_Rev5_B.s168_Rear_left_whl_speed = 0.0;
+    Mooventure2016_Rev5_B.s168_Rear_right_whl_speed = 0.0;
+    Mooventure2016_Rev5_B.s178_STR_WHL_ANGLE_CNTR_FND = 0.0;
+    Mooventure2016_Rev5_B.s178_STR_WHL_ANGLE = 0.0;
+    Mooventure2016_Rev5_B.s178_RELATIVE_STR_WHL_ANGLE = 0.0;
+    Mooventure2016_Rev5_B.s234_Merge = 0.0;
+    Mooventure2016_Rev5_B.s464_CEL = 0.0;
+    Mooventure2016_Rev5_B.s463_engTemp = 0.0;
+    Mooventure2016_Rev5_B.s463_transTemp = 0.0;
+    Mooventure2016_Rev5_B.s463_timerOut = 0.0;
+    Mooventure2016_Rev5_B.s388_fan1 = 0.0;
+    Mooventure2016_Rev5_B.s388_fan2 = 0.0;
+    Mooventure2016_Rev5_B.s388_fan3 = 0.0;
+    Mooventure2016_Rev5_B.s352_dirOut = 0.0;
+    Mooventure2016_Rev5_B.s277_passengerTemp = 0.0;
+    Mooventure2016_Rev5_B.s276_driverTemp = 0.0;
+    Mooventure2016_Rev5_B.s275_posOut = 0.0;
+    Mooventure2016_Rev5_B.s264_Out = 0.0;
+    Mooventure2016_Rev5_B.s215_temp_reading = 0.0;
+    Mooventure2016_Rev5_B.s96_state = 0.0;
+    Mooventure2016_Rev5_B.s30_Genset_Enable = 0.0;
+    Mooventure2016_Rev5_B.s30_Genset_Load = 0.0;
+    Mooventure2016_Rev5_B.s30_Genset_RPM = 0.0;
+    Mooventure2016_Rev5_B.s30_Genset_Throttle = 0.0;
+    Mooventure2016_Rev5_B.s21_radBlend = 0.0;
+    Mooventure2016_Rev5_B.s20_RadiatorBlend = 0.0;
+    Mooventure2016_Rev5_B.s20_HeaterCoreBlend = 0.0;
+    Mooventure2016_Rev5_B.s345_sf_RadiatorMotionControl.s389_motorEnable = 0.0;
+    Mooventure2016_Rev5_B.s345_sf_RadiatorMotionControl.s389_motorDirection =
       0.0;
-    Mooventure2016_Rev5_B.s368_sf_HeaterCoreMotionControl.s412_motorEnable = 0.0;
-    Mooventure2016_Rev5_B.s368_sf_HeaterCoreMotionControl.s412_motorDirection =
+    Mooventure2016_Rev5_B.s345_sf_HeaterCoreMotionControl.s389_motorEnable = 0.0;
+    Mooventure2016_Rev5_B.s345_sf_HeaterCoreMotionControl.s389_motorDirection =
       0.0;
-    Mooventure2016_Rev5_B.s366_sf_DataCorrectionMotorABS.s66_torqueOut = 0.0;
-    Mooventure2016_Rev5_B.s151_sf_DataCorrectionMotor.s66_torqueOut = 0.0;
-    Mooventure2016_Rev5_B.s150_sf_Color9.s180_color = 0.0;
-    Mooventure2016_Rev5_B.s150_sf_Color8.s180_color = 0.0;
-    Mooventure2016_Rev5_B.s150_sf_Color7.s180_color = 0.0;
-    Mooventure2016_Rev5_B.s150_sf_Color6.s180_color = 0.0;
-    Mooventure2016_Rev5_B.s150_sf_Color5.s180_color = 0.0;
-    Mooventure2016_Rev5_B.s150_sf_Color4.s180_color = 0.0;
-    Mooventure2016_Rev5_B.s150_sf_Color3.s180_color = 0.0;
-    Mooventure2016_Rev5_B.s150_sf_Color2.s180_color = 0.0;
-    Mooventure2016_Rev5_B.s150_sf_Color15.s180_color = 0.0;
-    Mooventure2016_Rev5_B.s150_sf_Color14.s180_color = 0.0;
-    Mooventure2016_Rev5_B.s150_sf_Color13.s180_color = 0.0;
-    Mooventure2016_Rev5_B.s150_sf_Color11.s180_color = 0.0;
-    Mooventure2016_Rev5_B.s150_sf_Color10.s180_color = 0.0;
-    Mooventure2016_Rev5_B.s150_sf_Color1.s180_color = 0.0;
-    Mooventure2016_Rev5_B.s148_sf_DataCorrection.s66_torqueOut = 0.0;
-    Mooventure2016_Rev5_B.s78_sf_GasPedalScaling.s84_throttleOut = 0.0;
-    Mooventure2016_Rev5_B.s78_sf_Chart.s83_driveTorque = 0.0;
-    Mooventure2016_Rev5_B.s78_sf_Chart.s83_regenTorque = 0.0;
-    Mooventure2016_Rev5_B.s78_sf_BrakePedalScaling.s82_brakeOut = 0.0;
-    Mooventure2016_Rev5_B.s74_sf_GasPedalScaling.s84_throttleOut = 0.0;
-    Mooventure2016_Rev5_B.s74_sf_Chart.s83_driveTorque = 0.0;
-    Mooventure2016_Rev5_B.s74_sf_Chart.s83_regenTorque = 0.0;
-    Mooventure2016_Rev5_B.s74_sf_BrakePedalScaling.s82_brakeOut = 0.0;
-    Mooventure2016_Rev5_B.s72_sf_GasPedalScaling.s84_throttleOut = 0.0;
-    Mooventure2016_Rev5_B.s72_sf_Chart.s83_driveTorque = 0.0;
-    Mooventure2016_Rev5_B.s72_sf_Chart.s83_regenTorque = 0.0;
-    Mooventure2016_Rev5_B.s72_sf_BrakePedalScaling.s82_brakeOut = 0.0;
-    Mooventure2016_Rev5_B.s60_sf_DataCorrection.s66_torqueOut = 0.0;
-    Mooventure2016_Rev5_B.s55_sf_DataCorrectionMotorFault.s66_torqueOut = 0.0;
+    Mooventure2016_Rev5_B.s342_sf_DataCorrectionMotorABS.s87_torqueOut = 0.0;
+    Mooventure2016_Rev5_B.s99_sf_GasPedalScaling.s105_throttleOut = 0.0;
+    Mooventure2016_Rev5_B.s99_sf_Chart.s104_driveTorque = 0.0;
+    Mooventure2016_Rev5_B.s99_sf_Chart.s104_regenTorque = 0.0;
+    Mooventure2016_Rev5_B.s99_sf_BrakePedalScaling.s103_brakeOut = 0.0;
+    Mooventure2016_Rev5_B.s95_sf_GasPedalScaling.s105_throttleOut = 0.0;
+    Mooventure2016_Rev5_B.s95_sf_Chart.s104_driveTorque = 0.0;
+    Mooventure2016_Rev5_B.s95_sf_Chart.s104_regenTorque = 0.0;
+    Mooventure2016_Rev5_B.s95_sf_BrakePedalScaling.s103_brakeOut = 0.0;
+    Mooventure2016_Rev5_B.s93_sf_GasPedalScaling.s105_throttleOut = 0.0;
+    Mooventure2016_Rev5_B.s93_sf_Chart.s104_driveTorque = 0.0;
+    Mooventure2016_Rev5_B.s93_sf_Chart.s104_regenTorque = 0.0;
+    Mooventure2016_Rev5_B.s93_sf_BrakePedalScaling.s103_brakeOut = 0.0;
+    Mooventure2016_Rev5_B.s81_sf_DataCorrection.s87_torqueOut = 0.0;
+    Mooventure2016_Rev5_B.s76_sf_DataCorrectionMotorFault.s87_torqueOut = 0.0;
   }
 
   /* states (dwork) */
   (void) memset((void *)&Mooventure2016_Rev5_DWork, 0,
                 sizeof(D_Work_Mooventure2016_Rev5));
-  Mooventure2016_Rev5_DWork.s101_UnitDelay_DSTATE = 0.0;
-  Mooventure2016_Rev5_DWork.s102_UnitDelay_DSTATE = 0.0;
-  Mooventure2016_Rev5_DWork.s103_UnitDelay_DSTATE = 0.0;
-  Mooventure2016_Rev5_DWork.s104_UnitDelay_DSTATE = 0.0;
-  Mooventure2016_Rev5_DWork.s128_UnitDelay_DSTATE = 0.0;
-  Mooventure2016_Rev5_DWork.s126_UnitDelay_DSTATE = 0.0;
-  Mooventure2016_Rev5_DWork.s270_UnitDelay_DSTATE = 0.0;
-  Mooventure2016_Rev5_DWork.s134_UnitDelay_DSTATE = 0.0;
-  Mooventure2016_Rev5_DWork.s272_UnitDelay_DSTATE = 0.0;
-  Mooventure2016_Rev5_DWork.s252_UnitDelay_DSTATE = 0.0;
-  Mooventure2016_Rev5_DWork.s251_UnitDelay_DSTATE = 0.0;
-  Mooventure2016_Rev5_DWork.s35_UnitDelay1_DSTATE = 0.0;
-  Mooventure2016_Rev5_DWork.s35_UnitDelay_DSTATE = 0.0;
-  Mooventure2016_Rev5_DWork.s39_UnitDelay_DSTATE = 0.0;
-  Mooventure2016_Rev5_DWork.s53_UnitDelay_DSTATE = 0.0;
-  Mooventure2016_Rev5_DWork.s67_UnitDelay_DSTATE = 0.0;
-  Mooventure2016_Rev5_DWork.s68_UnitDelay_DSTATE = 0.0;
-  Mooventure2016_Rev5_DWork.s69_UnitDelay_DSTATE = 0.0;
-  Mooventure2016_Rev5_DWork.s70_UnitDelay_DSTATE = 0.0;
-  Mooventure2016_Rev5_DWork.s60_UnitDelay_DSTATE = 0.0;
-  Mooventure2016_Rev5_DWork.s52_UnitDelay_DSTATE = 0.0;
+  Mooventure2016_Rev5_DWork.s122_UnitDelay_DSTATE = 0.0;
+  Mooventure2016_Rev5_DWork.s123_UnitDelay_DSTATE = 0.0;
+  Mooventure2016_Rev5_DWork.s124_UnitDelay_DSTATE = 0.0;
+  Mooventure2016_Rev5_DWork.s125_UnitDelay_DSTATE = 0.0;
+  Mooventure2016_Rev5_DWork.s149_UnitDelay_DSTATE = 0.0;
+  Mooventure2016_Rev5_DWork.s147_UnitDelay_DSTATE = 0.0;
+  Mooventure2016_Rev5_DWork.s240_UnitDelay_DSTATE = 0.0;
   Mooventure2016_Rev5_DWork.s155_UnitDelay_DSTATE = 0.0;
-  Mooventure2016_Rev5_DWork.s156_UnitDelay_DSTATE = 0.0;
-  Mooventure2016_Rev5_DWork.s160_UnitDelay_DSTATE = 0.0;
-  Mooventure2016_Rev5_DWork.s161_UnitDelay_DSTATE = 0.0;
-  Mooventure2016_Rev5_DWork.s198_count = 0.0;
-  Mooventure2016_Rev5_DWork.s488_sf_BarChartReset.s173_count = 0.0;
-  Mooventure2016_Rev5_DWork.s150_sf_BarChartReset.s173_count = 0.0;
-  Mooventure2016_Rev5_DWork.s150_sf_BarChart.s173_count = 0.0;
-  Mooventure2016_Rev5_DWork.s170_sf_Chart.s173_count = 0.0;
+  Mooventure2016_Rev5_DWork.s242_UnitDelay_DSTATE = 0.0;
+  Mooventure2016_Rev5_DWork.s222_UnitDelay_DSTATE = 0.0;
+  Mooventure2016_Rev5_DWork.s221_UnitDelay_DSTATE = 0.0;
+  Mooventure2016_Rev5_DWork.s56_UnitDelay1_DSTATE = 0.0;
+  Mooventure2016_Rev5_DWork.s56_UnitDelay_DSTATE = 0.0;
+  Mooventure2016_Rev5_DWork.s60_UnitDelay_DSTATE = 0.0;
+  Mooventure2016_Rev5_DWork.s74_UnitDelay_DSTATE = 0.0;
+  Mooventure2016_Rev5_DWork.s88_UnitDelay_DSTATE = 0.0;
+  Mooventure2016_Rev5_DWork.s89_UnitDelay_DSTATE = 0.0;
+  Mooventure2016_Rev5_DWork.s90_UnitDelay_DSTATE = 0.0;
+  Mooventure2016_Rev5_DWork.s91_UnitDelay_DSTATE = 0.0;
+  Mooventure2016_Rev5_DWork.s81_UnitDelay_DSTATE = 0.0;
+  Mooventure2016_Rev5_DWork.s73_UnitDelay_DSTATE = 0.0;
+  Mooventure2016_Rev5_DWork.s485_count = 0.0;
+  Mooventure2016_Rev5_DWork.s167_count = 0.0;
 
   /* Start for S-Function (motohawk_sfun_trigger): '<Root>/motohawk_trigger1' */
   Mooventure2016_Rev5_Foreground_Start();
 
   /* Start for function-call system: '<S2>/Background' */
 
-  /* Start for Triggered SubSystem: '<S691>/Clear' incorporates:
-   *  Start for S-Function (fcncallgen): '<S701>/Function-Call Generator'
-   *  Start for SubSystem: '<S688>/motohawk_restore_nvmem'
+  /* Start for Triggered SubSystem: '<S683>/Clear' incorporates:
+   *  Start for S-Function (fcncallgen): '<S693>/Function-Call Generator'
+   *  Start for SubSystem: '<S680>/motohawk_restore_nvmem'
    */
 
-  /* Start for Triggered SubSystem: '<S692>/Clear' incorporates:
-   *  Start for S-Function (fcncallgen): '<S702>/Function-Call Generator'
-   *  Start for SubSystem: '<S688>/motohawk_store_nvmem'
+  /* Start for Triggered SubSystem: '<S684>/Clear' incorporates:
+   *  Start for S-Function (fcncallgen): '<S694>/Function-Call Generator'
+   *  Start for SubSystem: '<S680>/motohawk_store_nvmem'
    */
   Mooventure2016_Rev5_PrevZCSigState.TriggeredSubsystem_Trig_ZCE = POS_ZCSIG;
   Mooventure2016_Rev5_PrevZCSigState.ShutdownpoweronECU565128_Trig_ZCE =

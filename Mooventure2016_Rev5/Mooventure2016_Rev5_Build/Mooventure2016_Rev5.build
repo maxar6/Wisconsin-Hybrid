@@ -13,8 +13,8 @@
       <include name="Mooventure2016_Rev5_data.c"/>
       <include name="MotoHawk_DataStores.c"/>
       <include name="TableLookupFunctions.c"/>
-      <include name="Trigger_BGND_BASE_PERIODIC_6596p0005.c"/>
-      <include name="Trigger_FGND_RTI_PERIODIC_6605p0005.c"/>
+      <include name="Trigger_BGND_BASE_PERIODIC_5678p0001.c"/>
+      <include name="Trigger_FGND_RTI_PERIODIC_5687p0001.c"/>
       <include name="Trigger_Fault_active_0_8.c"/>
       <include name="VarDecs.c"/>
       <include name="rt_nonfinite.c"/>

@@ -57,6 +57,16 @@
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
+               <Default>10000.0</Default>
+               <Name>Default_PW</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>20.0</Default>
+               <Name>Default_DC</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
                <Default>0.01</Default>
                <Name>ETCDampGainDown</Name>
              </DataStore>
@@ -403,31 +413,6 @@
             <DataStore ref="Volatile">
                <DataType>real32</DataType>
                <Default>0.0</Default>
-               <Name>TQ_PrelookupIn</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>0.0 0.5 1.0 1.5 2.0 2.5 3.0 </Default>
-               <Name>TQ_PrelookupIdxArr</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>uint16</DataType>
-               <Default>0U</Default>
-               <Name>TQ_PrelookupIdx</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>TQ_Interpolation</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>0.0 0.0 0.0 0.0 0.0 0.0 0.0 </Default>
-               <Name>TQ_InterpolationTbl</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
                <Name>MaxETCSetPtLimit</Name>
              </DataStore>
             <DataStore ref="Constant">
@@ -444,6 +429,16 @@
                <DataType>boolean</DataType>
                <Default>1</Default>
                <Name>ThrottleSource</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>0.7</Default>
+               <Name>VE_Adapt_Min</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.1</Default>
+               <Name>VE_Adapt_Max</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>real32</DataType>
@@ -1403,6 +1398,11 @@
             <DataStore ref="Volatile">
                <DataType>real32</DataType>
                <Default>0.0</Default>
+               <Name>VE_Adapt_Enable</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
                <Name>ECTEGRInterpolation</Name>
              </DataStore>
             <DataStore ref="Constant">
@@ -2087,8 +2087,8 @@
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
-               <Default>3600.0</Default>
-               <Name>Max_Generating_RPM</Name>
+               <Default>80.0</Default>
+               <Name>Generating_Max_Torque</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>boolean</DataType>
@@ -2109,6 +2109,26 @@
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>Genset_Load_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Load_Throttle_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Load_Throttle_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Load_RPM_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Load_RPM_Ovr_new</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>boolean</DataType>
@@ -2678,7 +2698,7 @@
             <DataStore ref="Volatile">
                <DataType>boolean</DataType>
                <Default>0</Default>
-               <Name>VETable_ovr</Name>
+               <Name>VETable_Ovr_ovr</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
@@ -2695,7 +2715,7 @@
                <Default>0.0</Default>
                <Name>VE</Name>
              </DataStore>
-            <DataStore ref="Constant">
+            <DataStore ref="NonVolatile">
                <DataType>real32</DataType>
                <Default>1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 </Default>
                <Name>VEMap</Name>
@@ -2703,7 +2723,7 @@
             <DataStore ref="Volatile">
                <DataType>real32</DataType>
                <Default>0.0</Default>
-               <Name>VETable_new</Name>
+               <Name>VETable_Ovr_new</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>boolean</DataType>
@@ -3425,6 +3445,116 @@
                <Default>2</Default>
                <Name>RevLimitType</Name>
              </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Trigger_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>EGRSense_ovr</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>0.005</Default>
+               <Name>EGRSenseFilterConst</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.0</Default>
+               <Name>EGRSenseGain</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>EGRSenseOfst</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.0</Default>
+               <Name>EGRSenseDfltValue</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>EGRSense_new</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.0</Default>
+               <Name>EGR_Hyst</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>EGR_Prelookup_PWIn</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>-100.0 -80.0 -60.0 -40.0 -20.0 0.0 20.0 40.0 60.0 80.0 100.0 </Default>
+               <Name>EGR_Prelookup_PWIdxArr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>uint16</DataType>
+               <Default>0U</Default>
+               <Name>EGR_Prelookup_PWIdx</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>EGR_Interpolation_PW</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 </Default>
+               <Name>EGR_Interpolation_PWTbl</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>EGR_Prelookup_DCIn</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>-100.0 -80.0 -60.0 -40.0 -20.0 0.0 20.0 40.0 60.0 80.0 100.0 </Default>
+               <Name>EGR_Prelookup_DCIdxArr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>uint16</DataType>
+               <Default>0U</Default>
+               <Name>EGR_Prelookup_DCIdx</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>EGR_Interpolation_DC</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 </Default>
+               <Name>EGR_Interpolation_DCTbl</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>uint8</DataType>
+               <Default>0U</Default>
+               <Name>Mode</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0.0</Default>
+               <Name>Trigger_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Duration_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>int32</DataType>
+               <Default>0.0</Default>
+               <Name>Duration_Ovr_new</Name>
+             </DataStore>
             <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
@@ -3733,37 +3863,17 @@
             <DataStore ref="Volatile">
                <DataType>real32</DataType>
                <Default>0.0</Default>
-               <Name>APP_PrelookupIn</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>0.0 0.5 1.0 1.5 2.0 2.5 3.0 </Default>
-               <Name>APP_PrelookupIdxArr</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>uint16</DataType>
-               <Default>0U</Default>
-               <Name>APP_PrelookupIdx</Name>
+               <Name>EGR_Enable</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>real32</DataType>
                <Default>0.0</Default>
-               <Name>APP_Interpolation</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>0.0 0.0 0.0 0.0 0.0 0.0 0.0 </Default>
-               <Name>APP_InterpolationTbl</Name>
+               <Name>EGR_Disable</Name>
              </DataStore>
             <DataStore ref="Volatile">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>ThrottleRampTime</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>TorqueRampTime</Name>
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>RESET</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>real32</DataType>
@@ -3864,6 +3974,21 @@
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>MAPTime_new</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>0.005</Default>
+               <Name>Torque_Filter</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Est_Absolute_Torque_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Est_Absolute_Torque_Ovr_new</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>boolean</DataType>
@@ -4238,36 +4363,6 @@
             <DataStore ref="Volatile">
                <DataType>boolean</DataType>
                <Default>0</Default>
-               <Name>EGRSense_ovr</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>0.005</Default>
-               <Name>EGRSenseFilterConst</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>1.0</Default>
-               <Name>EGRSenseGain</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>EGRSenseOfst</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>1.0</Default>
-               <Name>EGRSenseDfltValue</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>EGRSense_new</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>boolean</DataType>
-               <Default>0</Default>
                <Name>SensVolt_ovr</Name>
              </DataStore>
             <DataStore ref="Constant">
@@ -4359,21 +4454,6 @@
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>ESTOP</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>0.005</Default>
-               <Name>Torque_Filter</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>boolean</DataType>
-               <Default>0</Default>
-               <Name>Est_Absolute_Torque_Ovr_ovr</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>Est_Absolute_Torque_Ovr_new</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
@@ -4738,7 +4818,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut7800p0005</Name>
+               <Name>init_resource_DOut8007p0005</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -4922,13 +5002,28 @@
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
+               <Default>RES_AN6M</Default>
+               <Name>EGRPin</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>uint8</DataType>
+               <Default>0</Default>
+               <Name>EGRPin_ref</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>int16</DataType>
+               <Default>0</Default>
+               <Name>init_resource_EGRPin</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>int16</DataType>
                <Default>0</Default>
                <Name>FuelPumpPin</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut7269p0001</Name>
+               <Name>init_resource_DOut7474p0004</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
@@ -4948,7 +5043,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut7547p0001</Name>
+               <Name>init_resource_DOut7752p0005</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -4958,7 +5053,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut7557p0001</Name>
+               <Name>init_resource_DOut7762p0005</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -4977,21 +5072,6 @@
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
-               <Default>RES_AN6M</Default>
-               <Name>EGRPin</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>uint8</DataType>
-               <Default>0</Default>
-               <Name>EGRPin_ref</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>int16</DataType>
-               <Default>0</Default>
-               <Name>init_resource_EGRPin</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>int16</DataType>
                <Default>RES_XDRP</Default>
                <Name>SensVoltSensorPin</Name>
              </DataStore>
@@ -5004,6 +5084,16 @@
                <DataType>int16</DataType>
                <Default>0</Default>
                <Name>init_resource_SensVoltSensorPin</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>int16</DataType>
+               <Default>RES_ESC</Default>
+               <Name>ONESHOT</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>int16</DataType>
+               <Default>0</Default>
+               <Name>init_resource_ONESHOT</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>uint32</DataType>
@@ -7396,11 +7486,18 @@
                 </Enum>
                 
                 <Enum>
-                    <Name>VarDecEnum_26</Name>
-                    <Item name="-" value="0" symbol="VARDECENUM_26_DASH"/>
-                    <Item name="Stall" value="1" symbol="VARDECENUM_26_STALL"/>
-                    <Item name="Crank" value="2" symbol="VARDECENUM_26_CRANK"/>
-                    <Item name="Run" value="3" symbol="VARDECENUM_26_RUN"/>
+                    <Name>VarDecEnum_24</Name>
+                    <Item name="PulseWidth" value="0" symbol="VARDECENUM_24_PULSEWIDTH"/>
+                    <Item name="DutyCycle" value="1" symbol="VARDECENUM_24_DUTYCYCLE"/>
+                    <Item name="Both" value="2" symbol="VARDECENUM_24_BOTH"/>
+                </Enum>
+                
+                <Enum>
+                    <Name>VarDecEnum_27</Name>
+                    <Item name="-" value="0" symbol="VARDECENUM_27_DASH"/>
+                    <Item name="Stall" value="1" symbol="VARDECENUM_27_STALL"/>
+                    <Item name="Crank" value="2" symbol="VARDECENUM_27_CRANK"/>
+                    <Item name="Run" value="3" symbol="VARDECENUM_27_RUN"/>
                 </Enum>
                 
                 <Enum>
@@ -7410,82 +7507,77 @@
                 </Enum>
                 
                 <Enum>
-                    <Name>VarDecEnum_30</Name>
-                    <Item name="Rising Edge" value="0" symbol="VARDECENUM_30_RISINGEDGE"/>
-                    <Item name="Falling Edge" value="1" symbol="VARDECENUM_30_FALLINGEDGE"/>
-                </Enum>
-                
-                <Enum>
                     <Name>VarDecEnum_31</Name>
-                    <Item name="Weak Pullup" value="0" symbol="VARDECENUM_31_WEAKPULLUP"/>
-                    <Item name="Strong Pullup" value="1" symbol="VARDECENUM_31_STRONGPULLUP"/>
+                    <Item name="Rising Edge" value="0" symbol="VARDECENUM_31_RISINGEDGE"/>
+                    <Item name="Falling Edge" value="1" symbol="VARDECENUM_31_FALLINGEDGE"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_32</Name>
-                    <Item name="(None)" value="-1" symbol="VARDECENUM_32_OPENPARENNONECLOSEPAREN"/>
-                    <Item name="EST 1" value="36" symbol="VARDECENUM_32_EST1"/>
-                    <Item name="EST 2" value="37" symbol="VARDECENUM_32_EST2"/>
-                    <Item name="EST 3" value="38" symbol="VARDECENUM_32_EST3"/>
-                    <Item name="EST 4" value="39" symbol="VARDECENUM_32_EST4"/>
-                    <Item name="EST 5" value="40" symbol="VARDECENUM_32_EST5"/>
-                    <Item name="EST 6" value="41" symbol="VARDECENUM_32_EST6"/>
-                    <Item name="EST 7" value="42" symbol="VARDECENUM_32_EST7"/>
-                    <Item name="EST 8" value="43" symbol="VARDECENUM_32_EST8"/>
+                    <Item name="Weak Pullup" value="0" symbol="VARDECENUM_32_WEAKPULLUP"/>
+                    <Item name="Strong Pullup" value="1" symbol="VARDECENUM_32_STRONGPULLUP"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_33</Name>
-                    <Item name="Standard (Coil per cylinder)" value="0" symbol="VARDECENUM_33_STANDARDOPENPARENCOILPERCYLINDERCLOSEPAREN"/>
-                    <Item name="Banked (Fire on both phases until CAM sync)" value="1" symbol="VARDECENUM_33_BANKEDOPENPARENFIREONBOTHPHASESUNTILCAMSYNCCLOSEPAREN"/>
-                    <Item name="Batch (Wasted spark)" value="2" symbol="VARDECENUM_33_BATCHOPENPARENWASTEDSPARKCLOSEPAREN"/>
-                    <Item name="Muxed (Distributed)" value="3" symbol="VARDECENUM_33_MUXEDOPENPARENDISTRIBUTEDCLOSEPAREN"/>
+                    <Item name="(None)" value="-1" symbol="VARDECENUM_33_OPENPARENNONECLOSEPAREN"/>
+                    <Item name="EST 1" value="36" symbol="VARDECENUM_33_EST1"/>
+                    <Item name="EST 2" value="37" symbol="VARDECENUM_33_EST2"/>
+                    <Item name="EST 3" value="38" symbol="VARDECENUM_33_EST3"/>
+                    <Item name="EST 4" value="39" symbol="VARDECENUM_33_EST4"/>
+                    <Item name="EST 5" value="40" symbol="VARDECENUM_33_EST5"/>
+                    <Item name="EST 6" value="41" symbol="VARDECENUM_33_EST6"/>
+                    <Item name="EST 7" value="42" symbol="VARDECENUM_33_EST7"/>
+                    <Item name="EST 8" value="43" symbol="VARDECENUM_33_EST8"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_34</Name>
-                    <Item name="(None)" value="-1" symbol="VARDECENUM_34_OPENPARENNONECLOSEPAREN"/>
-                    <Item name="FINJ1" value="12" symbol="VARDECENUM_34_FINJ1"/>
-                    <Item name="AINJ4" value="21" symbol="VARDECENUM_34_AINJ4"/>
-                    <Item name="AINJ5" value="22" symbol="VARDECENUM_34_AINJ5"/>
-                    <Item name="AINJ6" value="23" symbol="VARDECENUM_34_AINJ6"/>
-                    <Item name="FINJ2" value="13" symbol="VARDECENUM_34_FINJ2"/>
-                    <Item name="FINJ3" value="14" symbol="VARDECENUM_34_FINJ3"/>
-                    <Item name="FINJ4" value="15" symbol="VARDECENUM_34_FINJ4"/>
-                    <Item name="FINJ5" value="16" symbol="VARDECENUM_34_FINJ5"/>
-                    <Item name="FINJ6" value="17" symbol="VARDECENUM_34_FINJ6"/>
-                    <Item name="AINJ1" value="18" symbol="VARDECENUM_34_AINJ1"/>
-                    <Item name="AINJ2" value="19" symbol="VARDECENUM_34_AINJ2"/>
-                    <Item name="AINJ3" value="20" symbol="VARDECENUM_34_AINJ3"/>
+                    <Item name="Standard (Coil per cylinder)" value="0" symbol="VARDECENUM_34_STANDARDOPENPARENCOILPERCYLINDERCLOSEPAREN"/>
+                    <Item name="Banked (Fire on both phases until CAM sync)" value="1" symbol="VARDECENUM_34_BANKEDOPENPARENFIREONBOTHPHASESUNTILCAMSYNCCLOSEPAREN"/>
+                    <Item name="Batch (Wasted spark)" value="2" symbol="VARDECENUM_34_BATCHOPENPARENWASTEDSPARKCLOSEPAREN"/>
+                    <Item name="Muxed (Distributed)" value="3" symbol="VARDECENUM_34_MUXEDOPENPARENDISTRIBUTEDCLOSEPAREN"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_35</Name>
-                    <Item name="Standard (Injector per cylinder)" value="0" symbol="VARDECENUM_35_STANDARDOPENPARENINJECTORPERCYLINDERCLOSEPAREN"/>
-                    <Item name="Batch (Fire half fuel on half of the injectors every rev)" value="1" symbol="VARDECENUM_35_BATCHOPENPARENFIREHALFFUELONHALFOFTHEINJECTORSEVERYREVCLOSEPAREN"/>
-                    <Item name=" Wasted (Fire half fuel on all injectors every rev)" value="2" symbol="VARDECENUM_35_WASTEDOPENPARENFIREHALFFUELONALLINJECTORSEVERYREVCLOSEPAREN"/>
+                    <Item name="(None)" value="-1" symbol="VARDECENUM_35_OPENPARENNONECLOSEPAREN"/>
+                    <Item name="FINJ1" value="12" symbol="VARDECENUM_35_FINJ1"/>
+                    <Item name="AINJ4" value="21" symbol="VARDECENUM_35_AINJ4"/>
+                    <Item name="AINJ5" value="22" symbol="VARDECENUM_35_AINJ5"/>
+                    <Item name="AINJ6" value="23" symbol="VARDECENUM_35_AINJ6"/>
+                    <Item name="FINJ2" value="13" symbol="VARDECENUM_35_FINJ2"/>
+                    <Item name="FINJ3" value="14" symbol="VARDECENUM_35_FINJ3"/>
+                    <Item name="FINJ4" value="15" symbol="VARDECENUM_35_FINJ4"/>
+                    <Item name="FINJ5" value="16" symbol="VARDECENUM_35_FINJ5"/>
+                    <Item name="FINJ6" value="17" symbol="VARDECENUM_35_FINJ6"/>
+                    <Item name="AINJ1" value="18" symbol="VARDECENUM_35_AINJ1"/>
+                    <Item name="AINJ2" value="19" symbol="VARDECENUM_35_AINJ2"/>
+                    <Item name="AINJ3" value="20" symbol="VARDECENUM_35_AINJ3"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_36</Name>
-                    <Item name="Standard" value="0" symbol="VARDECENUM_36_STANDARD"/>
-                    <Item name="Transient" value="1" symbol="VARDECENUM_36_TRANSIENT"/>
+                    <Item name="Standard (Injector per cylinder)" value="0" symbol="VARDECENUM_36_STANDARDOPENPARENINJECTORPERCYLINDERCLOSEPAREN"/>
+                    <Item name="Batch (Fire half fuel on half of the injectors every rev)" value="1" symbol="VARDECENUM_36_BATCHOPENPARENFIREHALFFUELONHALFOFTHEINJECTORSEVERYREVCLOSEPAREN"/>
+                    <Item name=" Wasted (Fire half fuel on all injectors every rev)" value="2" symbol="VARDECENUM_36_WASTEDOPENPARENFIREHALFFUELONALLINJECTORSEVERYREVCLOSEPAREN"/>
                 </Enum>
                 
                 <Enum>
-                    <Name>VarDecEnum_38</Name>
-                    <Item name="CutThrottle" value="0" symbol="VARDECENUM_38_CUTTHROTTLE"/>
-                    <Item name="DelayedEngineShutdown" value="1" symbol="VARDECENUM_38_DELAYEDENGINESHUTDOWN"/>
-                    <Item name="DisableO2Ctrl" value="2" symbol="VARDECENUM_38_DISABLEO2CTRL"/>
-                    <Item name="EngineShutdown" value="3" symbol="VARDECENUM_38_ENGINESHUTDOWN"/>
-                    <Item name="HardRevLimit" value="4" symbol="VARDECENUM_38_HARDREVLIMIT"/>
-                    <Item name="MediumRevLimit" value="5" symbol="VARDECENUM_38_MEDIUMREVLIMIT"/>
-                    <Item name="SoftRevLimit" value="6" symbol="VARDECENUM_38_SOFTREVLIMIT"/>
+                    <Name>VarDecEnum_37</Name>
+                    <Item name="Standard" value="0" symbol="VARDECENUM_37_STANDARD"/>
+                    <Item name="Transient" value="1" symbol="VARDECENUM_37_TRANSIENT"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_39</Name>
-                    <Item name="-" value="0" symbol="VARDECENUM_39_DASH"/>
+                    <Item name="CutThrottle" value="0" symbol="VARDECENUM_39_CUTTHROTTLE"/>
+                    <Item name="DelayedEngineShutdown" value="1" symbol="VARDECENUM_39_DELAYEDENGINESHUTDOWN"/>
+                    <Item name="DisableO2Ctrl" value="2" symbol="VARDECENUM_39_DISABLEO2CTRL"/>
+                    <Item name="EngineShutdown" value="3" symbol="VARDECENUM_39_ENGINESHUTDOWN"/>
+                    <Item name="HardRevLimit" value="4" symbol="VARDECENUM_39_HARDREVLIMIT"/>
+                    <Item name="MediumRevLimit" value="5" symbol="VARDECENUM_39_MEDIUMREVLIMIT"/>
+                    <Item name="SoftRevLimit" value="6" symbol="VARDECENUM_39_SOFTREVLIMIT"/>
                 </Enum>
                 
                 <Enum>
@@ -7496,100 +7588,70 @@
                 
                 <Enum>
                     <Name>VarDecEnum_40</Name>
-                    <Item name="(None)" value="-1" symbol="VARDECENUM_40_OPENPARENNONECLOSEPAREN"/>
-                    <Item name="ECUP" value="53" symbol="VARDECENUM_40_ECUP"/>
-                    <Item name="AN7M" value="62" symbol="VARDECENUM_40_AN7M"/>
-                    <Item name="AN8M" value="63" symbol="VARDECENUM_40_AN8M"/>
-                    <Item name="AN9M" value="64" symbol="VARDECENUM_40_AN9M"/>
-                    <Item name="AN10M" value="65" symbol="VARDECENUM_40_AN10M"/>
-                    <Item name="AN11M" value="66" symbol="VARDECENUM_40_AN11M"/>
-                    <Item name="AN12M" value="67" symbol="VARDECENUM_40_AN12M"/>
-                    <Item name="AN13M" value="68" symbol="VARDECENUM_40_AN13M"/>
-                    <Item name="AN14M" value="69" symbol="VARDECENUM_40_AN14M"/>
-                    <Item name="AN15M" value="70" symbol="VARDECENUM_40_AN15M"/>
-                    <Item name="AN16M" value="71" symbol="VARDECENUM_40_AN16M"/>
-                    <Item name="DRVP" value="54" symbol="VARDECENUM_40_DRVP"/>
-                    <Item name="AN17M" value="72" symbol="VARDECENUM_40_AN17M"/>
-                    <Item name="AN18M" value="73" symbol="VARDECENUM_40_AN18M"/>
-                    <Item name="AN19M" value="74" symbol="VARDECENUM_40_AN19M"/>
-                    <Item name="O2A" value="90" symbol="VARDECENUM_40_O2A"/>
-                    <Item name="O2B" value="91" symbol="VARDECENUM_40_O2B"/>
-                    <Item name="XDRP_B" value="92" symbol="VARDECENUM_40_XDRP_B"/>
-                    <Item name="XDRP" value="55" symbol="VARDECENUM_40_XDRP"/>
-                    <Item name="AN1M" value="56" symbol="VARDECENUM_40_AN1M"/>
-                    <Item name="AN2M" value="57" symbol="VARDECENUM_40_AN2M"/>
-                    <Item name="AN3M" value="58" symbol="VARDECENUM_40_AN3M"/>
-                    <Item name="AN4M" value="59" symbol="VARDECENUM_40_AN4M"/>
-                    <Item name="AN5M" value="60" symbol="VARDECENUM_40_AN5M"/>
-                    <Item name="AN6M" value="61" symbol="VARDECENUM_40_AN6M"/>
+                    <Item name="-" value="0" symbol="VARDECENUM_40_DASH"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_41</Name>
-                    <Item name="5V" value="0" symbol="VARDECENUM_41_5V"/>
-                    <Item name="2.7V" value="1" symbol="VARDECENUM_41_2POINT7V"/>
+                    <Item name="(None)" value="-1" symbol="VARDECENUM_41_OPENPARENNONECLOSEPAREN"/>
+                    <Item name="ECUP" value="53" symbol="VARDECENUM_41_ECUP"/>
+                    <Item name="AN7M" value="62" symbol="VARDECENUM_41_AN7M"/>
+                    <Item name="AN8M" value="63" symbol="VARDECENUM_41_AN8M"/>
+                    <Item name="AN9M" value="64" symbol="VARDECENUM_41_AN9M"/>
+                    <Item name="AN10M" value="65" symbol="VARDECENUM_41_AN10M"/>
+                    <Item name="AN11M" value="66" symbol="VARDECENUM_41_AN11M"/>
+                    <Item name="AN12M" value="67" symbol="VARDECENUM_41_AN12M"/>
+                    <Item name="AN13M" value="68" symbol="VARDECENUM_41_AN13M"/>
+                    <Item name="AN14M" value="69" symbol="VARDECENUM_41_AN14M"/>
+                    <Item name="AN15M" value="70" symbol="VARDECENUM_41_AN15M"/>
+                    <Item name="AN16M" value="71" symbol="VARDECENUM_41_AN16M"/>
+                    <Item name="DRVP" value="54" symbol="VARDECENUM_41_DRVP"/>
+                    <Item name="AN17M" value="72" symbol="VARDECENUM_41_AN17M"/>
+                    <Item name="AN18M" value="73" symbol="VARDECENUM_41_AN18M"/>
+                    <Item name="AN19M" value="74" symbol="VARDECENUM_41_AN19M"/>
+                    <Item name="O2A" value="90" symbol="VARDECENUM_41_O2A"/>
+                    <Item name="O2B" value="91" symbol="VARDECENUM_41_O2B"/>
+                    <Item name="XDRP_B" value="92" symbol="VARDECENUM_41_XDRP_B"/>
+                    <Item name="XDRP" value="55" symbol="VARDECENUM_41_XDRP"/>
+                    <Item name="AN1M" value="56" symbol="VARDECENUM_41_AN1M"/>
+                    <Item name="AN2M" value="57" symbol="VARDECENUM_41_AN2M"/>
+                    <Item name="AN3M" value="58" symbol="VARDECENUM_41_AN3M"/>
+                    <Item name="AN4M" value="59" symbol="VARDECENUM_41_AN4M"/>
+                    <Item name="AN5M" value="60" symbol="VARDECENUM_41_AN5M"/>
+                    <Item name="AN6M" value="61" symbol="VARDECENUM_41_AN6M"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_42</Name>
-                    <Item name="(None)" value="-1" symbol="VARDECENUM_42_OPENPARENNONECLOSEPAREN"/>
-                    <Item name="DG1M" value="93" symbol="VARDECENUM_42_DG1M"/>
-                    <Item name="DG2M" value="94" symbol="VARDECENUM_42_DG2M"/>
-                    <Item name="DG4M" value="96" symbol="VARDECENUM_42_DG4M"/>
-                    <Item name="CNK" value="100" symbol="VARDECENUM_42_CNK"/>
+                    <Item name="5V" value="0" symbol="VARDECENUM_42_5V"/>
+                    <Item name="2.7V" value="1" symbol="VARDECENUM_42_2POINT7V"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_43</Name>
-                    <Item name="No Alias Protect" value="0" symbol="VARDECENUM_43_NOALIASPROTECT"/>
-                    <Item name="Use Alias Protect" value="1" symbol="VARDECENUM_43_USEALIASPROTECT"/>
+                    <Item name="(None)" value="-1" symbol="VARDECENUM_43_OPENPARENNONECLOSEPAREN"/>
+                    <Item name="DG1M" value="93" symbol="VARDECENUM_43_DG1M"/>
+                    <Item name="DG2M" value="94" symbol="VARDECENUM_43_DG2M"/>
+                    <Item name="DG4M" value="96" symbol="VARDECENUM_43_DG4M"/>
+                    <Item name="CNK" value="100" symbol="VARDECENUM_43_CNK"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_44</Name>
-                    <Item name="Digital Input" value="0" symbol="VARDECENUM_44_DIGITALINPUT"/>
-                    <Item name="VR Input" value="1" symbol="VARDECENUM_44_VRINPUT"/>
+                    <Item name="No Alias Protect" value="0" symbol="VARDECENUM_44_NOALIASPROTECT"/>
+                    <Item name="Use Alias Protect" value="1" symbol="VARDECENUM_44_USEALIASPROTECT"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_45</Name>
-                    <Item name="(None)" value="-1" symbol="VARDECENUM_45_OPENPARENNONECLOSEPAREN"/>
-                    <Item name="FUELP" value="0" symbol="VARDECENUM_45_FUELP"/>
-                    <Item name="FINJ3" value="14" symbol="VARDECENUM_45_FINJ3"/>
-                    <Item name="FINJ4" value="15" symbol="VARDECENUM_45_FINJ4"/>
-                    <Item name="FINJ5" value="16" symbol="VARDECENUM_45_FINJ5"/>
-                    <Item name="FINJ6" value="17" symbol="VARDECENUM_45_FINJ6"/>
-                    <Item name="AINJ1" value="18" symbol="VARDECENUM_45_AINJ1"/>
-                    <Item name="AINJ2" value="19" symbol="VARDECENUM_45_AINJ2"/>
-                    <Item name="AINJ3" value="20" symbol="VARDECENUM_45_AINJ3"/>
-                    <Item name="AINJ4" value="21" symbol="VARDECENUM_45_AINJ4"/>
-                    <Item name="AINJ5" value="22" symbol="VARDECENUM_45_AINJ5"/>
-                    <Item name="AINJ6" value="23" symbol="VARDECENUM_45_AINJ6"/>
-                    <Item name="HSOL1" value="2" symbol="VARDECENUM_45_HSOL1"/>
-                    <Item name="TACH" value="24" symbol="VARDECENUM_45_TACH"/>
-                    <Item name="EST 1" value="36" symbol="VARDECENUM_45_EST1"/>
-                    <Item name="EST 2" value="37" symbol="VARDECENUM_45_EST2"/>
-                    <Item name="EST 3" value="38" symbol="VARDECENUM_45_EST3"/>
-                    <Item name="EST 4" value="39" symbol="VARDECENUM_45_EST4"/>
-                    <Item name="EST 5" value="40" symbol="VARDECENUM_45_EST5"/>
-                    <Item name="EST 6" value="41" symbol="VARDECENUM_45_EST6"/>
-                    <Item name="EST 7" value="42" symbol="VARDECENUM_45_EST7"/>
-                    <Item name="EST 8" value="43" symbol="VARDECENUM_45_EST8"/>
-                    <Item name="MPRD" value="52" symbol="VARDECENUM_45_MPRD"/>
-                    <Item name="HSOL2" value="3" symbol="VARDECENUM_45_HSOL2"/>
-                    <Item name="HSOL3" value="4" symbol="VARDECENUM_45_HSOL3"/>
-                    <Item name="HSOL4" value="5" symbol="VARDECENUM_45_HSOL4"/>
-                    <Item name="START" value="6" symbol="VARDECENUM_45_START"/>
-                    <Item name="OILP" value="11" symbol="VARDECENUM_45_OILP"/>
-                    <Item name="FINJ1" value="12" symbol="VARDECENUM_45_FINJ1"/>
-                    <Item name="FINJ2" value="13" symbol="VARDECENUM_45_FINJ2"/>
+                    <Item name="Digital Input" value="0" symbol="VARDECENUM_45_DIGITALINPUT"/>
+                    <Item name="VR Input" value="1" symbol="VARDECENUM_45_VRINPUT"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_46</Name>
                     <Item name="(None)" value="-1" symbol="VARDECENUM_46_OPENPARENNONECLOSEPAREN"/>
                     <Item name="FUELP" value="0" symbol="VARDECENUM_46_FUELP"/>
-                    <Item name="FINJ2" value="13" symbol="VARDECENUM_46_FINJ2"/>
                     <Item name="FINJ3" value="14" symbol="VARDECENUM_46_FINJ3"/>
                     <Item name="FINJ4" value="15" symbol="VARDECENUM_46_FINJ4"/>
                     <Item name="FINJ5" value="16" symbol="VARDECENUM_46_FINJ5"/>
@@ -7599,8 +7661,8 @@
                     <Item name="AINJ3" value="20" symbol="VARDECENUM_46_AINJ3"/>
                     <Item name="AINJ4" value="21" symbol="VARDECENUM_46_AINJ4"/>
                     <Item name="AINJ5" value="22" symbol="VARDECENUM_46_AINJ5"/>
-                    <Item name="ETC" value="1" symbol="VARDECENUM_46_ETC"/>
                     <Item name="AINJ6" value="23" symbol="VARDECENUM_46_AINJ6"/>
+                    <Item name="HSOL1" value="2" symbol="VARDECENUM_46_HSOL1"/>
                     <Item name="TACH" value="24" symbol="VARDECENUM_46_TACH"/>
                     <Item name="EST 1" value="36" symbol="VARDECENUM_46_EST1"/>
                     <Item name="EST 2" value="37" symbol="VARDECENUM_46_EST2"/>
@@ -7610,13 +7672,68 @@
                     <Item name="EST 6" value="41" symbol="VARDECENUM_46_EST6"/>
                     <Item name="EST 7" value="42" symbol="VARDECENUM_46_EST7"/>
                     <Item name="EST 8" value="43" symbol="VARDECENUM_46_EST8"/>
-                    <Item name="HSOL1" value="2" symbol="VARDECENUM_46_HSOL1"/>
+                    <Item name="MPRD" value="52" symbol="VARDECENUM_46_MPRD"/>
                     <Item name="HSOL2" value="3" symbol="VARDECENUM_46_HSOL2"/>
                     <Item name="HSOL3" value="4" symbol="VARDECENUM_46_HSOL3"/>
                     <Item name="HSOL4" value="5" symbol="VARDECENUM_46_HSOL4"/>
                     <Item name="START" value="6" symbol="VARDECENUM_46_START"/>
                     <Item name="OILP" value="11" symbol="VARDECENUM_46_OILP"/>
                     <Item name="FINJ1" value="12" symbol="VARDECENUM_46_FINJ1"/>
+                    <Item name="FINJ2" value="13" symbol="VARDECENUM_46_FINJ2"/>
+                </Enum>
+                
+                <Enum>
+                    <Name>VarDecEnum_47</Name>
+                    <Item name="(None)" value="-1" symbol="VARDECENUM_47_OPENPARENNONECLOSEPAREN"/>
+                    <Item name="FUELP" value="0" symbol="VARDECENUM_47_FUELP"/>
+                    <Item name="FINJ2" value="13" symbol="VARDECENUM_47_FINJ2"/>
+                    <Item name="FINJ3" value="14" symbol="VARDECENUM_47_FINJ3"/>
+                    <Item name="FINJ4" value="15" symbol="VARDECENUM_47_FINJ4"/>
+                    <Item name="FINJ5" value="16" symbol="VARDECENUM_47_FINJ5"/>
+                    <Item name="FINJ6" value="17" symbol="VARDECENUM_47_FINJ6"/>
+                    <Item name="AINJ1" value="18" symbol="VARDECENUM_47_AINJ1"/>
+                    <Item name="AINJ2" value="19" symbol="VARDECENUM_47_AINJ2"/>
+                    <Item name="AINJ3" value="20" symbol="VARDECENUM_47_AINJ3"/>
+                    <Item name="AINJ4" value="21" symbol="VARDECENUM_47_AINJ4"/>
+                    <Item name="AINJ5" value="22" symbol="VARDECENUM_47_AINJ5"/>
+                    <Item name="ETC" value="1" symbol="VARDECENUM_47_ETC"/>
+                    <Item name="AINJ6" value="23" symbol="VARDECENUM_47_AINJ6"/>
+                    <Item name="TACH" value="24" symbol="VARDECENUM_47_TACH"/>
+                    <Item name="EST 1" value="36" symbol="VARDECENUM_47_EST1"/>
+                    <Item name="EST 2" value="37" symbol="VARDECENUM_47_EST2"/>
+                    <Item name="EST 3" value="38" symbol="VARDECENUM_47_EST3"/>
+                    <Item name="EST 4" value="39" symbol="VARDECENUM_47_EST4"/>
+                    <Item name="EST 5" value="40" symbol="VARDECENUM_47_EST5"/>
+                    <Item name="EST 6" value="41" symbol="VARDECENUM_47_EST6"/>
+                    <Item name="EST 7" value="42" symbol="VARDECENUM_47_EST7"/>
+                    <Item name="EST 8" value="43" symbol="VARDECENUM_47_EST8"/>
+                    <Item name="HSOL1" value="2" symbol="VARDECENUM_47_HSOL1"/>
+                    <Item name="HSOL2" value="3" symbol="VARDECENUM_47_HSOL2"/>
+                    <Item name="HSOL3" value="4" symbol="VARDECENUM_47_HSOL3"/>
+                    <Item name="HSOL4" value="5" symbol="VARDECENUM_47_HSOL4"/>
+                    <Item name="START" value="6" symbol="VARDECENUM_47_START"/>
+                    <Item name="OILP" value="11" symbol="VARDECENUM_47_OILP"/>
+                    <Item name="FINJ1" value="12" symbol="VARDECENUM_47_FINJ1"/>
+                </Enum>
+                
+                <Enum>
+                    <Name>VarDecEnum_48</Name>
+                    <Item name="(None)" value="-1" symbol="VARDECENUM_48_OPENPARENNONECLOSEPAREN"/>
+                    <Item name="HSOL1" value="2" symbol="VARDECENUM_48_HSOL1"/>
+                    <Item name="EST 3" value="38" symbol="VARDECENUM_48_EST3"/>
+                    <Item name="EST 4" value="39" symbol="VARDECENUM_48_EST4"/>
+                    <Item name="EST 5" value="40" symbol="VARDECENUM_48_EST5"/>
+                    <Item name="EST 6" value="41" symbol="VARDECENUM_48_EST6"/>
+                    <Item name="EST 7" value="42" symbol="VARDECENUM_48_EST7"/>
+                    <Item name="EST 8" value="43" symbol="VARDECENUM_48_EST8"/>
+                    <Item name="HSOL2" value="3" symbol="VARDECENUM_48_HSOL2"/>
+                    <Item name="HSOL3" value="4" symbol="VARDECENUM_48_HSOL3"/>
+                    <Item name="HSOL4" value="5" symbol="VARDECENUM_48_HSOL4"/>
+                    <Item name="START" value="6" symbol="VARDECENUM_48_START"/>
+                    <Item name="OILP" value="11" symbol="VARDECENUM_48_OILP"/>
+                    <Item name="ESC" value="35" symbol="VARDECENUM_48_ESC"/>
+                    <Item name="EST 1" value="36" symbol="VARDECENUM_48_EST1"/>
+                    <Item name="EST 2" value="37" symbol="VARDECENUM_48_EST2"/>
                 </Enum>
                 
                 <Enum>
@@ -7806,6 +7923,38 @@
         		                <name>ShutDownTasksComplete</name>
         		                <offset>0.0</offset>
         		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Default_PW">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|EGR Characterization|Signal Generator</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Default_PW</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>us</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Default_DC">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|EGR Characterization|Signal Generator</group>
+        		                <max>100.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Default_DC</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>%</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -8389,6 +8538,36 @@
         		                <name>ThrottleSource</name>
         		                <offset>0.0</offset>
         		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="VE_Adapt_Min">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Control|Controller|Run|AirFlow Manager|VE Adapt|Adapt Table</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>VE_Adapt_Min</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="VE_Adapt_Max">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Control|Controller|Run|AirFlow Manager|VE Adapt|Adapt Table</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>VE_Adapt_Max</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -9879,6 +10058,21 @@
         		                <name>AirControlSource</name>
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="VE_Adapt_Enable">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Control|Controller|Run|AirFlow Manager|VE Adapt</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>VE_Adapt_Enable</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -11548,7 +11742,7 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Max_Generating_RPM">
+			    <DataStoreVarDec ref="Generating_Max_Torque">
         		                <access>RW RW RW RW</access>
         		                <class>VAR</class>
         		                <exp>1.0</exp>
@@ -11557,7 +11751,7 @@
         		                <group>BaseEngineController_A02|Foreground|Control|Controller|Hybrid</group>
         		                <max>100000000000000000.000000</max>
         		                <min>-100000000000000000.000000</min>
-        		                <name>Max_Generating_RPM</name>
+        		                <name>Generating_Max_Torque</name>
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
         		                <units>RPM</units>
@@ -11621,6 +11815,68 @@
         		                <max>100000000000000000.000000</max>
         		                <min>-100000000000000000.000000</min>
         		                <name>Genset_Load_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Load_Throttle_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_0</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|112 | Load_Throttle_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Load_Throttle_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Load_Throttle_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|112 | Load_Throttle_Ovr Override</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Load_Throttle_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Load_RPM_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_0</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|112 | Load_RPM_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Load_RPM_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Load_RPM_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|112 | Load_RPM_Ovr Override</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Load_RPM_Ovr_new</name>
         		                <offset>0.0</offset>
         		                <storage>RAM</storage>
         		                <update>BACKGND</update>
@@ -12962,32 +13218,32 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="VETable_ovr">
+			    <DataStoreVarDec ref="VETable_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
         		                <enum_name>VarDecEnum_0</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
-        		                <group>BaseEngineController_A02|Foreground|Control|VirtualSensors|AirCalcs|SpeedDensityMAPReferenced | VETable Override</group>
+        		                <group>BaseEngineController_A02|Foreground|Control|VirtualSensors|AirCalcs|SpeedDensityMAPReferenced | VETable_Ovr Override</group>
         		                <max>1.000000</max>
         		                <min>0.000000</min>
-        		                <name>VETable_ovr</name>
+        		                <name>VETable_Ovr_ovr</name>
         		                <offset>0.0</offset>
         		                <storage>RAM</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="VETable_new">
+			    <DataStoreVarDec ref="VETable_Ovr_new">
         		                <access>RW RW RW RW</access>
         		                <class>VAR</class>
         		                <exp>1.0</exp>
         		                <format>4.2</format>
         		                <gain>1.0</gain>
-        		                <group>BaseEngineController_A02|Foreground|Control|VirtualSensors|AirCalcs|SpeedDensityMAPReferenced | VETable Override</group>
+        		                <group>BaseEngineController_A02|Foreground|Control|VirtualSensors|AirCalcs|SpeedDensityMAPReferenced | VETable_Ovr Override</group>
         		                <max>100000000000000000.000000</max>
         		                <min>-100000000000000000.000000</min>
-        		                <name>VETable_new</name>
+        		                <name>VETable_Ovr_new</name>
         		                <offset>0.0</offset>
         		                <storage>RAM</storage>
         		                <update>BACKGND</update>
@@ -13186,10 +13442,10 @@
         		                <gain>1.0</gain>
         		                <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors|FuelOxygenationSensor|Filter Options</group>
         		                <help>Filter Section For Fuel Oxygenation Sensor</help>
-        		                <max>256.000000</max>
-        		                <min>1.000000</min>
+        		                <max>255.000000</max>
+        		                <min>0.000000</min>
         		                <name>Filter_Type_Selection</name>
-        		                <offset>1.0</offset>
+        		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -14862,6 +15118,200 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Trigger_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_0</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Outputs|EGR Out | Trigger_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Trigger_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="EGRSense_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_0</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors | EGRSense | EGRSense Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>EGRSense_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="EGRSenseFilterConst">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors | EGRSense | EGRSense Config</group>
+        		                <help>Filter time constant</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>EGRSenseFilterConst</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="EGRSenseGain">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>5.4</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors | EGRSense | EGRSense Config</group>
+        		                <help>Scaling from A/D counts to engineering units</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>EGRSenseGain</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>%/ADC</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="EGRSenseOfst">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors | EGRSense | EGRSense Config</group>
+        		                <help>Offset after gain in engineering units</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>EGRSenseOfst</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>%</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="EGRSenseDfltValue">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors | EGRSense | EGRSense Config</group>
+        		                <help>This is the initial default value should the sensor be in fault on key-up.  Otherwise the sensors outputs the last value prior to faulting</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>EGRSenseDfltValue</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>%</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="EGRSense_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors | EGRSense | EGRSense Override</group>
+        		                <help>Override result of linear sensor characterization, in engineering units</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>EGRSense_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <units>%</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="EGR_Hyst">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|EGR Characterization</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>EGR_Hyst</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Mode">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_24</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>3.0</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|EGR Characterization</group>
+        		                <max>255.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Mode</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Trigger_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Outputs|EGR Out | Trigger_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Trigger_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Duration_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_0</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Outputs|EGR Out | Duration_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Duration_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Duration_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>8.0</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Outputs|EGR Out | Duration_Ovr Override</group>
+        		                <max>2147483647.000000</max>
+        		                <min>-2147483647.000000</min>
+        		                <name>Duration_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="FUELP_Polarity">
         		                <access>RW RW RW RW</access>
         		                <class>VAR</class>
@@ -15895,6 +16345,54 @@
         		                <offset>0.0</offset>
         		                <storage>RAM</storage>
         		                <units>kPa</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Torque_Filter">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix</group>
+        		                <help>Filter time constant</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Torque_Filter</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Est_Absolute_Torque_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_0</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix | Est_Absolute_Torque_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Est_Absolute_Torque_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Est_Absolute_Torque_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix | Est_Absolute_Torque_Ovr Override</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Est_Absolute_Torque_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -17045,107 +17543,6 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="EGRSense_ovr">
-        		                <access>RW RW RW RW</access>
-        		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_0</enum_name>
-        		                <exp>1.0</exp>
-        		                <format>1.0</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors | EGRSense | EGRSense Override</group>
-        		                <max>1.000000</max>
-        		                <min>0.000000</min>
-        		                <name>EGRSense_ovr</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="EGRSenseFilterConst">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors | EGRSense | EGRSense Config</group>
-        		                <help>Filter time constant</help>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>EGRSenseFilterConst</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <units>sec</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="EGRSenseGain">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>5.4</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors | EGRSense | EGRSense Config</group>
-        		                <help>Scaling from A/D counts to engineering units</help>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>EGRSenseGain</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <units>%/ADC</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="EGRSenseOfst">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors | EGRSense | EGRSense Config</group>
-        		                <help>Offset after gain in engineering units</help>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>EGRSenseOfst</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <units>%</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="EGRSenseDfltValue">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors | EGRSense | EGRSense Config</group>
-        		                <help>This is the initial default value should the sensor be in fault on key-up.  Otherwise the sensors outputs the last value prior to faulting</help>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>EGRSenseDfltValue</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <units>%</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="EGRSense_new">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors | EGRSense | EGRSense Override</group>
-        		                <help>Override result of linear sensor characterization, in engineering units</help>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>EGRSense_new</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <units>%</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="SensVolt_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
@@ -17331,7 +17728,7 @@
 			    <DataStoreVarDec ref="EngineState">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_26</enum_name>
+        		                <enum_name>VarDecEnum_27</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -17404,54 +17801,6 @@
         		                <max>1.000000</max>
         		                <min>0.000000</min>
         		                <name>ESTOP</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Torque_Filter">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix</group>
-        		                <help>Filter time constant</help>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>Torque_Filter</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <units>sec</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Est_Absolute_Torque_Ovr_ovr">
-        		                <access>RW RW RW RW</access>
-        		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_0</enum_name>
-        		                <exp>1.0</exp>
-        		                <format>1.0</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix | Est_Absolute_Torque_Ovr Override</group>
-        		                <max>1.000000</max>
-        		                <min>0.000000</min>
-        		                <name>Est_Absolute_Torque_Ovr_ovr</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Est_Absolute_Torque_Ovr_new">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix | Est_Absolute_Torque_Ovr Override</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>Est_Absolute_Torque_Ovr_new</name>
         		                <offset>0.0</offset>
         		                <storage>RAM</storage>
         		                <update>BACKGND</update>
@@ -17564,7 +17913,7 @@
 			    <DataStoreVarDec ref="EncoderSyncEdge">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_30</enum_name>
+        		                <enum_name>VarDecEnum_31</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -17581,7 +17930,7 @@
 			    <DataStoreVarDec ref="EncoderCamSyncEdge">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_30</enum_name>
+        		                <enum_name>VarDecEnum_31</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -17598,7 +17947,7 @@
 			    <DataStoreVarDec ref="EncoderCrankPullup">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_31</enum_name>
+        		                <enum_name>VarDecEnum_32</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -17615,7 +17964,7 @@
 			    <DataStoreVarDec ref="EncoderCamPullup">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_31</enum_name>
+        		                <enum_name>VarDecEnum_32</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -19416,7 +19765,7 @@
 			    <DataStoreVarDec ref="EST_InitialPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_32</enum_name>
+        		                <enum_name>VarDecEnum_33</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -19433,7 +19782,7 @@
 			    <DataStoreVarDec ref="EST_SequenceType">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_33</enum_name>
+        		                <enum_name>VarDecEnum_34</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -19460,89 +19809,6 @@
         		                <name>EST_OpenThreshold</name>
         		                <offset>0</offset>
         		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="TQ_PrelookupIdxArr">
-        		                <access>RW RW RW RW</access>
-        		                <class>prelookup</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_A02|Foreground|Control|Controller|Hybrid</group>
-        		                <index>TQ_PrelookupIdx</index>
-        		                <input>TQ_PrelookupIn</input>
-        		                <len>7</len>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>TQ_PrelookupIdxArr</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="TQ_PrelookupIdx">
-        		                <access>RO RO RO RO</access>
-        		                <class>VAR</class>
-        		                <exp>1</exp>
-        		                <format>4.2</format>
-        		                <gain>0.001953125</gain>
-        		                <group>BaseEngineController_A02|Foreground|Control|Controller|Hybrid</group>
-        		                <max>127.998047</max>
-        		                <min>0.000000</min>
-        		                <name>TQ_PrelookupIdx</name>
-        		                <offset>0</offset>
-        		                <storage>RAM</storage>
-        		                <units>idx.frac</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="TQ_PrelookupIn">
-        		                <access>RO RO RO RO</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_A02|Foreground|Control|Controller|Hybrid</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>TQ_PrelookupIn</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="TQ_InterpolationTbl">
-        		                <access>RW RW RW RW</access>
-        		                <class>interpolation_1d</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_A02|Foreground|Control|Controller|Hybrid</group>
-        		                <len>7</len>
-        		                <max>100000000000000000.000000</max>
-        		                <min>0.000000</min>
-        		                <name>TQ_InterpolationTbl</name>
-        		                <offset>0.0</offset>
-        		                <output>TQ_Interpolation</output>
-        		                <prelookup>TQ_PrelookupIdxArr</prelookup>
-        		                <storage>FLASH</storage>
-        		                <units>us</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="TQ_Interpolation">
-        		                <access>RO RO RO RO</access>
-        		                <class>var</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_A02|Foreground|Control|Controller|Hybrid</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>TQ_Interpolation</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <units>us</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -21924,6 +22190,172 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="EGR_Prelookup_PWIdxArr">
+        		                <access>RW RW RW RW</access>
+        		                <class>prelookup</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|EGR Characterization</group>
+        		                <index>EGR_Prelookup_PWIdx</index>
+        		                <input>EGR_Prelookup_PWIn</input>
+        		                <len>11</len>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>EGR_Prelookup_PWIdxArr</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="EGR_Prelookup_PWIdx">
+        		                <access>RO RO RO RO</access>
+        		                <class>VAR</class>
+        		                <exp>1</exp>
+        		                <format>4.2</format>
+        		                <gain>0.001953125</gain>
+        		                <group>BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|EGR Characterization</group>
+        		                <max>127.998047</max>
+        		                <min>0.000000</min>
+        		                <name>EGR_Prelookup_PWIdx</name>
+        		                <offset>0</offset>
+        		                <storage>RAM</storage>
+        		                <units>idx.frac</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="EGR_Prelookup_PWIn">
+        		                <access>RO RO RO RO</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|EGR Characterization</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>EGR_Prelookup_PWIn</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="EGR_Interpolation_PWTbl">
+        		                <access>RW RW RW RW</access>
+        		                <class>interpolation_1d</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|EGR Characterization</group>
+        		                <len>11</len>
+        		                <max>100000000000000000.000000</max>
+        		                <min>0.000000</min>
+        		                <name>EGR_Interpolation_PWTbl</name>
+        		                <offset>0.0</offset>
+        		                <output>EGR_Interpolation_PW</output>
+        		                <prelookup>EGR_Prelookup_PWIdxArr</prelookup>
+        		                <storage>FLASH</storage>
+        		                <units>us</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="EGR_Interpolation_PW">
+        		                <access>RO RO RO RO</access>
+        		                <class>var</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|EGR Characterization</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>EGR_Interpolation_PW</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <units>us</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="EGR_Prelookup_DCIdxArr">
+        		                <access>RW RW RW RW</access>
+        		                <class>prelookup</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|EGR Characterization</group>
+        		                <index>EGR_Prelookup_DCIdx</index>
+        		                <input>EGR_Prelookup_DCIn</input>
+        		                <len>11</len>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>EGR_Prelookup_DCIdxArr</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="EGR_Prelookup_DCIdx">
+        		                <access>RO RO RO RO</access>
+        		                <class>VAR</class>
+        		                <exp>1</exp>
+        		                <format>4.2</format>
+        		                <gain>0.001953125</gain>
+        		                <group>BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|EGR Characterization</group>
+        		                <max>127.998047</max>
+        		                <min>0.000000</min>
+        		                <name>EGR_Prelookup_DCIdx</name>
+        		                <offset>0</offset>
+        		                <storage>RAM</storage>
+        		                <units>idx.frac</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="EGR_Prelookup_DCIn">
+        		                <access>RO RO RO RO</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|EGR Characterization</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>EGR_Prelookup_DCIn</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="EGR_Interpolation_DCTbl">
+        		                <access>RW RW RW RW</access>
+        		                <class>interpolation_1d</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|EGR Characterization</group>
+        		                <len>11</len>
+        		                <max>100.000000</max>
+        		                <min>0.000000</min>
+        		                <name>EGR_Interpolation_DCTbl</name>
+        		                <offset>0.0</offset>
+        		                <output>EGR_Interpolation_DC</output>
+        		                <prelookup>EGR_Prelookup_DCIdxArr</prelookup>
+        		                <storage>FLASH</storage>
+        		                <units>%</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="EGR_Interpolation_DC">
+        		                <access>RO RO RO RO</access>
+        		                <class>var</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|EGR Characterization</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>EGR_Interpolation_DC</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <units>%</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="ETC_SetpointIdxArr">
         		                <access>RW RW RW RW</access>
         		                <class>prelookup</class>
@@ -22322,7 +22754,7 @@
 			    <DataStoreVarDec ref="INJ_InitialPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_34</enum_name>
+        		                <enum_name>VarDecEnum_35</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -22339,7 +22771,7 @@
 			    <DataStoreVarDec ref="INJ_SequenceType">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_35</enum_name>
+        		                <enum_name>VarDecEnum_36</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -22356,7 +22788,7 @@
 			    <DataStoreVarDec ref="INJ_Behavior">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_36</enum_name>
+        		                <enum_name>VarDecEnum_37</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -22367,89 +22799,6 @@
         		                <name>INJ_Behavior</name>
         		                <offset>0</offset>
         		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="APP_PrelookupIdxArr">
-        		                <access>RW RW RW RW</access>
-        		                <class>prelookup</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_A02|Foreground|Control|Controller|Hybrid</group>
-        		                <index>APP_PrelookupIdx</index>
-        		                <input>APP_PrelookupIn</input>
-        		                <len>7</len>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>APP_PrelookupIdxArr</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="APP_PrelookupIdx">
-        		                <access>RO RO RO RO</access>
-        		                <class>VAR</class>
-        		                <exp>1</exp>
-        		                <format>4.2</format>
-        		                <gain>0.001953125</gain>
-        		                <group>BaseEngineController_A02|Foreground|Control|Controller|Hybrid</group>
-        		                <max>127.998047</max>
-        		                <min>0.000000</min>
-        		                <name>APP_PrelookupIdx</name>
-        		                <offset>0</offset>
-        		                <storage>RAM</storage>
-        		                <units>idx.frac</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="APP_PrelookupIn">
-        		                <access>RO RO RO RO</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_A02|Foreground|Control|Controller|Hybrid</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>APP_PrelookupIn</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="APP_InterpolationTbl">
-        		                <access>RW RW RW RW</access>
-        		                <class>interpolation_1d</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_A02|Foreground|Control|Controller|Hybrid</group>
-        		                <len>7</len>
-        		                <max>100000000000000000.000000</max>
-        		                <min>0.000000</min>
-        		                <name>APP_InterpolationTbl</name>
-        		                <offset>0.0</offset>
-        		                <output>APP_Interpolation</output>
-        		                <prelookup>APP_PrelookupIdxArr</prelookup>
-        		                <storage>FLASH</storage>
-        		                <units>us</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="APP_Interpolation">
-        		                <access>RO RO RO RO</access>
-        		                <class>var</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_A02|Foreground|Control|Controller|Hybrid</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>APP_Interpolation</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <units>us</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -22715,7 +23064,7 @@
         		                <access>RO RO RO RO</access>
         		                <class>ENUMARR</class>
                                 <col_header>
-                                    <enum_name>VarDecEnum_38</enum_name>
+                                    <enum_name>VarDecEnum_39</enum_name>
                                 </col_header>
         		                <enum_name>Faults</enum_name>
         		                <format>3.0</format>
@@ -22725,7 +23074,7 @@
         		                <min>0.000000</min>
         		                <name>FaultActionReason</name>
                                 <row_header>
-                                    <enum_name>VarDecEnum_39</enum_name>
+                                    <enum_name>VarDecEnum_40</enum_name>
                                 </row_header>
         		                <storage>RAM</storage>
         		                <update>BACKGND</update>
@@ -22734,7 +23083,7 @@
 			    <DataStoreVarDec ref="MAPSensorPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_40</enum_name>
+        		                <enum_name>VarDecEnum_41</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -22751,7 +23100,7 @@
 			    <DataStoreVarDec ref="MAPSensorPin_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_41</enum_name>
+        		                <enum_name>VarDecEnum_42</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -22768,7 +23117,7 @@
 			    <DataStoreVarDec ref="ECTSensorPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_40</enum_name>
+        		                <enum_name>VarDecEnum_41</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -22785,7 +23134,7 @@
 			    <DataStoreVarDec ref="ECTSensorPin_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_41</enum_name>
+        		                <enum_name>VarDecEnum_42</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -22802,7 +23151,7 @@
 			    <DataStoreVarDec ref="IATSensorPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_40</enum_name>
+        		                <enum_name>VarDecEnum_41</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -22819,7 +23168,7 @@
 			    <DataStoreVarDec ref="IATSensorPin_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_41</enum_name>
+        		                <enum_name>VarDecEnum_42</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -22836,7 +23185,7 @@
 			    <DataStoreVarDec ref="OilPresPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_40</enum_name>
+        		                <enum_name>VarDecEnum_41</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -22853,7 +23202,7 @@
 			    <DataStoreVarDec ref="OilPresPin_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_41</enum_name>
+        		                <enum_name>VarDecEnum_42</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -22870,7 +23219,7 @@
 			    <DataStoreVarDec ref="SysVoltage">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_40</enum_name>
+        		                <enum_name>VarDecEnum_41</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -22887,7 +23236,7 @@
 			    <DataStoreVarDec ref="SysVoltage_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_41</enum_name>
+        		                <enum_name>VarDecEnum_42</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -22904,7 +23253,7 @@
 			    <DataStoreVarDec ref="TPS1AnalogInput">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_40</enum_name>
+        		                <enum_name>VarDecEnum_41</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -22921,7 +23270,7 @@
 			    <DataStoreVarDec ref="TPS1AnalogInput_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_41</enum_name>
+        		                <enum_name>VarDecEnum_42</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -22938,7 +23287,7 @@
 			    <DataStoreVarDec ref="TPS2AnalogInput">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_40</enum_name>
+        		                <enum_name>VarDecEnum_41</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -22955,7 +23304,7 @@
 			    <DataStoreVarDec ref="TPS2AnalogInput_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_41</enum_name>
+        		                <enum_name>VarDecEnum_42</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -22972,7 +23321,7 @@
 			    <DataStoreVarDec ref="PostO2Pin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_40</enum_name>
+        		                <enum_name>VarDecEnum_41</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -22989,7 +23338,7 @@
 			    <DataStoreVarDec ref="PostO2Pin_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_41</enum_name>
+        		                <enum_name>VarDecEnum_42</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -23006,7 +23355,7 @@
 			    <DataStoreVarDec ref="MAF_Pin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_42</enum_name>
+        		                <enum_name>VarDecEnum_43</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -23023,7 +23372,7 @@
 			    <DataStoreVarDec ref="MAF_Pin_EdgeDetect">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_30</enum_name>
+        		                <enum_name>VarDecEnum_31</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -23040,7 +23389,7 @@
 			    <DataStoreVarDec ref="MAF_Pin_AliasProtect">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_43</enum_name>
+        		                <enum_name>VarDecEnum_44</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -23074,7 +23423,7 @@
 			    <DataStoreVarDec ref="MAF_Pin_Interface">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_44</enum_name>
+        		                <enum_name>VarDecEnum_45</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -23091,7 +23440,7 @@
 			    <DataStoreVarDec ref="FuelSensorPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_42</enum_name>
+        		                <enum_name>VarDecEnum_43</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -23108,7 +23457,7 @@
 			    <DataStoreVarDec ref="FuelSensorPin_EdgeDetect">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_30</enum_name>
+        		                <enum_name>VarDecEnum_31</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -23125,7 +23474,7 @@
 			    <DataStoreVarDec ref="FuelSensorPin_AliasProtect">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_43</enum_name>
+        		                <enum_name>VarDecEnum_44</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -23159,7 +23508,7 @@
 			    <DataStoreVarDec ref="FuelSensorPin_Interface">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_44</enum_name>
+        		                <enum_name>VarDecEnum_45</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -23173,112 +23522,10 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="FuelPumpPin">
-        		                <access>RW RW RW RW</access>
-        		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_45</enum_name>
-        		                <exp>1</exp>
-        		                <format>5.0</format>
-        		                <gain>1</gain>
-        		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut7269p0001</help>
-        		                <max>32767.000000</max>
-        		                <min>-32768.000000</min>
-        		                <name>FuelPumpPin</name>
-        		                <offset>0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="ETCPin">
-        		                <access>RW RW RW RW</access>
-        		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_46</enum_name>
-        		                <exp>1</exp>
-        		                <format>5.0</format>
-        		                <gain>1</gain>
-        		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>PWM output pin selection for ETCPin</help>
-        		                <max>32767.000000</max>
-        		                <min>-32768.000000</min>
-        		                <name>ETCPin</name>
-        		                <offset>0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="OilPumpPin">
-        		                <access>RW RW RW RW</access>
-        		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_45</enum_name>
-        		                <exp>1</exp>
-        		                <format>5.0</format>
-        		                <gain>1</gain>
-        		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut7547p0001</help>
-        		                <max>32767.000000</max>
-        		                <min>-32768.000000</min>
-        		                <name>OilPumpPin</name>
-        		                <offset>0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="O2_Heater">
-        		                <access>RW RW RW RW</access>
-        		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_45</enum_name>
-        		                <exp>1</exp>
-        		                <format>5.0</format>
-        		                <gain>1</gain>
-        		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut7557p0001</help>
-        		                <max>32767.000000</max>
-        		                <min>-32768.000000</min>
-        		                <name>O2_Heater</name>
-        		                <offset>0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="FuelPresPin">
-        		                <access>RW RW RW RW</access>
-        		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_40</enum_name>
-        		                <exp>1</exp>
-        		                <format>5.0</format>
-        		                <gain>1</gain>
-        		                <group>System | I/O Pins | Inputs Config</group>
-        		                <help>Analog input pin selection for FuelPresPin</help>
-        		                <max>32767.000000</max>
-        		                <min>-32768.000000</min>
-        		                <name>FuelPresPin</name>
-        		                <offset>0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="FuelPresPin_ref">
-        		                <access>RW RW RW RW</access>
-        		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_41</enum_name>
-        		                <exp>1</exp>
-        		                <format>3.0</format>
-        		                <gain>1</gain>
-        		                <group>System | I/O Pins | Inputs Config</group>
-        		                <help>Reference Voltage Selection</help>
-        		                <max>255.000000</max>
-        		                <min>0.000000</min>
-        		                <name>FuelPresPin_ref</name>
-        		                <offset>0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="EGRPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_40</enum_name>
+        		                <enum_name>VarDecEnum_41</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -23295,7 +23542,7 @@
 			    <DataStoreVarDec ref="EGRPin_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_41</enum_name>
+        		                <enum_name>VarDecEnum_42</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -23309,10 +23556,112 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="FuelPumpPin">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_46</enum_name>
+        		                <exp>1</exp>
+        		                <format>5.0</format>
+        		                <gain>1</gain>
+        		                <group>System | I/O Pins | Outputs Config</group>
+        		                <help>Digital output pin selection for DOut7474p0004</help>
+        		                <max>32767.000000</max>
+        		                <min>-32768.000000</min>
+        		                <name>FuelPumpPin</name>
+        		                <offset>0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="ETCPin">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_47</enum_name>
+        		                <exp>1</exp>
+        		                <format>5.0</format>
+        		                <gain>1</gain>
+        		                <group>System | I/O Pins | Outputs Config</group>
+        		                <help>PWM output pin selection for ETCPin</help>
+        		                <max>32767.000000</max>
+        		                <min>-32768.000000</min>
+        		                <name>ETCPin</name>
+        		                <offset>0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="OilPumpPin">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_46</enum_name>
+        		                <exp>1</exp>
+        		                <format>5.0</format>
+        		                <gain>1</gain>
+        		                <group>System | I/O Pins | Outputs Config</group>
+        		                <help>Digital output pin selection for DOut7752p0005</help>
+        		                <max>32767.000000</max>
+        		                <min>-32768.000000</min>
+        		                <name>OilPumpPin</name>
+        		                <offset>0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="O2_Heater">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_46</enum_name>
+        		                <exp>1</exp>
+        		                <format>5.0</format>
+        		                <gain>1</gain>
+        		                <group>System | I/O Pins | Outputs Config</group>
+        		                <help>Digital output pin selection for DOut7762p0005</help>
+        		                <max>32767.000000</max>
+        		                <min>-32768.000000</min>
+        		                <name>O2_Heater</name>
+        		                <offset>0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="FuelPresPin">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_41</enum_name>
+        		                <exp>1</exp>
+        		                <format>5.0</format>
+        		                <gain>1</gain>
+        		                <group>System | I/O Pins | Inputs Config</group>
+        		                <help>Analog input pin selection for FuelPresPin</help>
+        		                <max>32767.000000</max>
+        		                <min>-32768.000000</min>
+        		                <name>FuelPresPin</name>
+        		                <offset>0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="FuelPresPin_ref">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_42</enum_name>
+        		                <exp>1</exp>
+        		                <format>3.0</format>
+        		                <gain>1</gain>
+        		                <group>System | I/O Pins | Inputs Config</group>
+        		                <help>Reference Voltage Selection</help>
+        		                <max>255.000000</max>
+        		                <min>0.000000</min>
+        		                <name>FuelPresPin_ref</name>
+        		                <offset>0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="SensVoltSensorPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_40</enum_name>
+        		                <enum_name>VarDecEnum_41</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -23329,7 +23678,7 @@
 			    <DataStoreVarDec ref="SensVoltSensorPin_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_41</enum_name>
+        		                <enum_name>VarDecEnum_42</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -23338,6 +23687,23 @@
         		                <max>255.000000</max>
         		                <min>0.000000</min>
         		                <name>SensVoltSensorPin_ref</name>
+        		                <offset>0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="ONESHOT">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_48</enum_name>
+        		                <exp>1</exp>
+        		                <format>5.0</format>
+        		                <gain>1</gain>
+        		                <group>System | I/O Pins | Outputs Config</group>
+        		                <help>One Shot output pin selection for ONESHOT</help>
+        		                <max>32767.000000</max>
+        		                <min>-32768.000000</min>
+        		                <name>ONESHOT</name>
         		                <offset>0</offset>
         		                <storage>FLASH</storage>
         		                <update>BACKGND</update>

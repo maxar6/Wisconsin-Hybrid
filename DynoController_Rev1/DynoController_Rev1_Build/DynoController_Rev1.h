@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'DynoController_Rev1'.
  *
- * Model version                  : 1.298
+ * Model version                  : 1.301
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Mon Jan 15 12:10:05 2018
+ * C/C++ source code generated on : Sat Apr 07 14:25:46 2018
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -59,16 +59,16 @@ typedef struct {
   real_T s37_MaxCellTemperature;       /* '<S37>/Read CAN Message1' */
   real_T s54_Merge;                    /* '<S54>/Merge' */
   real_T s56_Merge;                    /* '<S56>/Merge' */
-  real_T s124_Sum;                     /* '<S124>/Sum' */
+  real_T s130_Sum;                     /* '<S130>/Sum' */
   int16_T s38_ReadCANMessage_o1;       /* '<S38>/Read CAN Message' */
   int16_T s55_Merge;                   /* '<S55>/Merge' */
-  int16_T s121_Merge;                  /* '<S121>/Merge' */
+  int16_T s127_Merge;                  /* '<S127>/Merge' */
   int16_T s77_Gain;                    /* '<S77>/Gain' */
-  int16_T s120_Merge;                  /* '<S120>/Merge' */
+  int16_T s126_Merge;                  /* '<S126>/Merge' */
   int16_T s77_Gain1;                   /* '<S77>/Gain1' */
-  int16_T s122_Merge;                  /* '<S122>/Merge' */
+  int16_T s128_Merge;                  /* '<S128>/Merge' */
   int16_T s77_Gain2;                   /* '<S77>/Gain2' */
-  int16_T s123_Merge;                  /* '<S123>/Merge' */
+  int16_T s129_Merge;                  /* '<S129>/Merge' */
   boolean_T s11_Merge;                 /* '<S11>/Merge' */
   boolean_T s75_LogicalOperator;       /* '<S75>/Logical Operator' */
   boolean_T s17_motohawk_din1;         /* '<S17>/motohawk_din1' */
@@ -82,8 +82,8 @@ typedef struct {
   boolean_T s102_IsolationMeasurementEnable;/* '<S102>/Logical Operator' */
   boolean_T s17_motohawk_din2;         /* '<S17>/motohawk_din2' */
   boolean_T s103_Gen_Enable;           /* '<S103>/Logical Operator' */
-  boolean_T s103_Gen_Load;             /* '<S103>/Logical Operator1' */
   boolean_T s17_motohawk_din3;         /* '<S17>/motohawk_din3' */
+  boolean_T s103_Gen_Load;             /* '<S103>/Logical Operator1' */
   boolean_T s17_motohawk_din4;         /* '<S17>/motohawk_din4' */
   boolean_T s17_motohawk_din5;         /* '<S17>/motohawk_din5' */
   boolean_T s16_Vehicle_Enable;        /* '<S8>/Chart' */
@@ -96,17 +96,17 @@ typedef struct {
 typedef struct {
   uint32_T s13_motohawk_delta_time_DWORK1;/* '<S13>/motohawk_delta_time' */
   uint32_T s12_motohawk_delta_time_DWORK1;/* '<S12>/motohawk_delta_time' */
-  uint32_T s124_motohawk_delta_time_DWORK1;/* '<S124>/motohawk_delta_time' */
-  uint16_T s134_UnitDelay_DSTATE;      /* '<S134>/Unit Delay' */
-  uint16_T s134_UnitDelay1_DSTATE;     /* '<S134>/Unit Delay1' */
-  boolean_T s135_UnitDelay_DSTATE;     /* '<S135>/Unit Delay' */
-  boolean_T s145_UnitDelay_DSTATE;     /* '<S145>/Unit Delay' */
-  boolean_T s133_UnitDelay5_DSTATE;    /* '<S133>/Unit Delay5' */
-  boolean_T s133_UnitDelay2_DSTATE;    /* '<S133>/Unit Delay2' */
-  boolean_T s133_UnitDelay_DSTATE;     /* '<S133>/Unit Delay' */
-  boolean_T s133_UnitDelay1_DSTATE;    /* '<S133>/Unit Delay1' */
-  boolean_T s133_UnitDelay3_DSTATE;    /* '<S133>/Unit Delay3' */
-  boolean_T s133_UnitDelay4_DSTATE;    /* '<S133>/Unit Delay4' */
+  uint32_T s130_motohawk_delta_time_DWORK1;/* '<S130>/motohawk_delta_time' */
+  uint16_T s140_UnitDelay_DSTATE;      /* '<S140>/Unit Delay' */
+  uint16_T s140_UnitDelay1_DSTATE;     /* '<S140>/Unit Delay1' */
+  boolean_T s141_UnitDelay_DSTATE;     /* '<S141>/Unit Delay' */
+  boolean_T s151_UnitDelay_DSTATE;     /* '<S151>/Unit Delay' */
+  boolean_T s139_UnitDelay5_DSTATE;    /* '<S139>/Unit Delay5' */
+  boolean_T s139_UnitDelay2_DSTATE;    /* '<S139>/Unit Delay2' */
+  boolean_T s139_UnitDelay_DSTATE;     /* '<S139>/Unit Delay' */
+  boolean_T s139_UnitDelay1_DSTATE;    /* '<S139>/Unit Delay1' */
+  boolean_T s139_UnitDelay3_DSTATE;    /* '<S139>/Unit Delay3' */
+  boolean_T s139_UnitDelay4_DSTATE;    /* '<S139>/Unit Delay4' */
   uint8_T s6_motohawk_trigger1_DWORK1; /* '<S6>/motohawk_trigger1' */
   uint8_T s16_is_active_c1_DynoController_Rev1;/* '<S8>/Chart' */
   uint8_T s16_is_c1_DynoController_Rev1;/* '<S8>/Chart' */
@@ -114,12 +114,12 @@ typedef struct {
 
 /* Zero-crossing (trigger) state */
 typedef struct {
-  ZCSigState ShutdownpoweronECU565128_Trig_ZCE;/* '<S133>/Shutdown power on ECU565-128' */
-  ZCSigState SaveNVVarsonetickbeforeMPRDoff_Trig_ZCE;/* '<S133>/Save NV Vars one tick before MPRD off' */
-  ZCSigState ProcessorReboot_Trig_ZCE; /* '<S133>/Processor Reboot' */
-  ZCSigState PostShutdowntwoticksbeforeMPRDoff_Trig_ZCE;/* '<S133>/Post Shutdown two ticks before MPRD off' */
-  ZCSigState Clear_Trig_ZCE;           /* '<S137>/Clear' */
-  ZCSigState Clear_Trig_ZCE_n;         /* '<S136>/Clear' */
+  ZCSigState ShutdownpoweronECU565128_Trig_ZCE;/* '<S139>/Shutdown power on ECU565-128' */
+  ZCSigState SaveNVVarsonetickbeforeMPRDoff_Trig_ZCE;/* '<S139>/Save NV Vars one tick before MPRD off' */
+  ZCSigState ProcessorReboot_Trig_ZCE; /* '<S139>/Processor Reboot' */
+  ZCSigState PostShutdowntwoticksbeforeMPRDoff_Trig_ZCE;/* '<S139>/Post Shutdown two ticks before MPRD off' */
+  ZCSigState Clear_Trig_ZCE;           /* '<S143>/Clear' */
+  ZCSigState Clear_Trig_ZCE_n;         /* '<S142>/Clear' */
 } PrevZCSigStates_DynoController_Rev1;
 
 /* Invariant block signals (auto storage) */
@@ -279,46 +279,52 @@ extern struct RT_MODEL_DynoController_Rev1 *const DynoController_Rev1_M;
  * '<S110>' : DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs1
  * '<S111>' : DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs2
  * '<S112>' : DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs3
- * '<S113>' : DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs1/NewValue
- * '<S114>' : DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs1/OldValue
- * '<S115>' : DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs2/NewValue
- * '<S116>' : DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs2/OldValue
- * '<S117>' : DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs3/NewValue
- * '<S118>' : DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs3/OldValue
- * '<S119>' : DynoController_Rev1/Foreground/Outputs/Guages/Time Since Key On
- * '<S120>' : DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs1
- * '<S121>' : DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs2
- * '<S122>' : DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs3
- * '<S123>' : DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs4
- * '<S124>' : DynoController_Rev1/Foreground/Outputs/Guages/Time Since Key On/Time Since Enabled (With Input)2
- * '<S125>' : DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs1/NewValue
- * '<S126>' : DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs1/OldValue
- * '<S127>' : DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs2/NewValue
- * '<S128>' : DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs2/OldValue
- * '<S129>' : DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs3/NewValue
- * '<S130>' : DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs3/OldValue
- * '<S131>' : DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs4/NewValue
- * '<S132>' : DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs4/OldValue
- * '<S133>' : DynoController_Rev1/Main Power Relay/Background
- * '<S134>' : DynoController_Rev1/Main Power Relay/Background/Delay
- * '<S135>' : DynoController_Rev1/Main Power Relay/Background/Display Variable Event Boolean
- * '<S136>' : DynoController_Rev1/Main Power Relay/Background/Display Variable Event Function-Call
- * '<S137>' : DynoController_Rev1/Main Power Relay/Background/Display Variable Event Function-Call1
- * '<S138>' : DynoController_Rev1/Main Power Relay/Background/Post Shutdown two ticks before MPRD off
- * '<S139>' : DynoController_Rev1/Main Power Relay/Background/Processor Reboot
- * '<S140>' : DynoController_Rev1/Main Power Relay/Background/Save NV Vars one tick before MPRD off
- * '<S141>' : DynoController_Rev1/Main Power Relay/Background/Shutdown power on ECU565-128
- * '<S142>' : DynoController_Rev1/Main Power Relay/Background/motohawk_override_abs
- * '<S143>' : DynoController_Rev1/Main Power Relay/Background/motohawk_restore_nvmem
- * '<S144>' : DynoController_Rev1/Main Power Relay/Background/motohawk_store_nvmem
- * '<S145>' : DynoController_Rev1/Main Power Relay/Background/Delay/MotoHawk S-R Flip-Flop
- * '<S146>' : DynoController_Rev1/Main Power Relay/Background/Display Variable Event Function-Call/Clear
- * '<S147>' : DynoController_Rev1/Main Power Relay/Background/Display Variable Event Function-Call1/Clear
- * '<S148>' : DynoController_Rev1/Main Power Relay/Background/Post Shutdown two ticks before MPRD off/Post Shutdown two ticks before MPRD off
- * '<S149>' : DynoController_Rev1/Main Power Relay/Background/Save NV Vars one tick before MPRD off/Save NV Vars one tick before MPRD off
- * '<S150>' : DynoController_Rev1/Main Power Relay/Background/Shutdown power on ECU565-128/Shutdown power on ECU565-128
- * '<S151>' : DynoController_Rev1/Main Power Relay/Background/motohawk_override_abs/NewValue
- * '<S152>' : DynoController_Rev1/Main Power Relay/Background/motohawk_override_abs/OldValue
+ * '<S113>' : DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs4
+ * '<S114>' : DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs5
+ * '<S115>' : DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs1/NewValue
+ * '<S116>' : DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs1/OldValue
+ * '<S117>' : DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs2/NewValue
+ * '<S118>' : DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs2/OldValue
+ * '<S119>' : DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs3/NewValue
+ * '<S120>' : DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs3/OldValue
+ * '<S121>' : DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs4/NewValue
+ * '<S122>' : DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs4/OldValue
+ * '<S123>' : DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs5/NewValue
+ * '<S124>' : DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs5/OldValue
+ * '<S125>' : DynoController_Rev1/Foreground/Outputs/Guages/Time Since Key On
+ * '<S126>' : DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs1
+ * '<S127>' : DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs2
+ * '<S128>' : DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs3
+ * '<S129>' : DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs4
+ * '<S130>' : DynoController_Rev1/Foreground/Outputs/Guages/Time Since Key On/Time Since Enabled (With Input)2
+ * '<S131>' : DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs1/NewValue
+ * '<S132>' : DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs1/OldValue
+ * '<S133>' : DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs2/NewValue
+ * '<S134>' : DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs2/OldValue
+ * '<S135>' : DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs3/NewValue
+ * '<S136>' : DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs3/OldValue
+ * '<S137>' : DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs4/NewValue
+ * '<S138>' : DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs4/OldValue
+ * '<S139>' : DynoController_Rev1/Main Power Relay/Background
+ * '<S140>' : DynoController_Rev1/Main Power Relay/Background/Delay
+ * '<S141>' : DynoController_Rev1/Main Power Relay/Background/Display Variable Event Boolean
+ * '<S142>' : DynoController_Rev1/Main Power Relay/Background/Display Variable Event Function-Call
+ * '<S143>' : DynoController_Rev1/Main Power Relay/Background/Display Variable Event Function-Call1
+ * '<S144>' : DynoController_Rev1/Main Power Relay/Background/Post Shutdown two ticks before MPRD off
+ * '<S145>' : DynoController_Rev1/Main Power Relay/Background/Processor Reboot
+ * '<S146>' : DynoController_Rev1/Main Power Relay/Background/Save NV Vars one tick before MPRD off
+ * '<S147>' : DynoController_Rev1/Main Power Relay/Background/Shutdown power on ECU565-128
+ * '<S148>' : DynoController_Rev1/Main Power Relay/Background/motohawk_override_abs
+ * '<S149>' : DynoController_Rev1/Main Power Relay/Background/motohawk_restore_nvmem
+ * '<S150>' : DynoController_Rev1/Main Power Relay/Background/motohawk_store_nvmem
+ * '<S151>' : DynoController_Rev1/Main Power Relay/Background/Delay/MotoHawk S-R Flip-Flop
+ * '<S152>' : DynoController_Rev1/Main Power Relay/Background/Display Variable Event Function-Call/Clear
+ * '<S153>' : DynoController_Rev1/Main Power Relay/Background/Display Variable Event Function-Call1/Clear
+ * '<S154>' : DynoController_Rev1/Main Power Relay/Background/Post Shutdown two ticks before MPRD off/Post Shutdown two ticks before MPRD off
+ * '<S155>' : DynoController_Rev1/Main Power Relay/Background/Save NV Vars one tick before MPRD off/Save NV Vars one tick before MPRD off
+ * '<S156>' : DynoController_Rev1/Main Power Relay/Background/Shutdown power on ECU565-128/Shutdown power on ECU565-128
+ * '<S157>' : DynoController_Rev1/Main Power Relay/Background/motohawk_override_abs/NewValue
+ * '<S158>' : DynoController_Rev1/Main Power Relay/Background/motohawk_override_abs/OldValue
  */
 #endif                                 /* RTW_HEADER_DynoController_Rev1_h_ */
 

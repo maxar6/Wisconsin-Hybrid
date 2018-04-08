@@ -7,11 +7,26 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   0 \
+    NumChartData   3 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
       IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c33_Mooventure2016_Rev5"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "is_c33_Mooventure2016_Rev5"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "is_Running"\
+      SFName       ""\
+      Path         ""\
     }\
   }
   %return ChartDataElements

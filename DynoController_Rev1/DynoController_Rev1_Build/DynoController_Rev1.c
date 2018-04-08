@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'DynoController_Rev1'.
  *
- * Model version                  : 1.298
+ * Model version                  : 1.301
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Mon Jan 15 12:10:05 2018
+ * C/C++ source code generated on : Sat Apr 07 14:25:46 2018
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -68,7 +68,7 @@ void DynoController_Rev1_initialize(boolean_T firstTime)
     DynoController_Rev1_B.s37_MaxCellTemperature = 0.0;
     DynoController_Rev1_B.s54_Merge = 0.0;
     DynoController_Rev1_B.s56_Merge = 0.0;
-    DynoController_Rev1_B.s124_Sum = 0.0;
+    DynoController_Rev1_B.s130_Sum = 0.0;
   }
 
   /* states (dwork) */
@@ -80,14 +80,14 @@ void DynoController_Rev1_initialize(boolean_T firstTime)
 
   /* Start for function-call system: '<S2>/Background' */
 
-  /* Start for Triggered SubSystem: '<S136>/Clear' incorporates:
-   *  Start for S-Function (fcncallgen): '<S146>/Function-Call Generator'
-   *  Start for SubSystem: '<S133>/motohawk_restore_nvmem'
+  /* Start for Triggered SubSystem: '<S142>/Clear' incorporates:
+   *  Start for S-Function (fcncallgen): '<S152>/Function-Call Generator'
+   *  Start for SubSystem: '<S139>/motohawk_restore_nvmem'
    */
 
-  /* Start for Triggered SubSystem: '<S137>/Clear' incorporates:
-   *  Start for S-Function (fcncallgen): '<S147>/Function-Call Generator'
-   *  Start for SubSystem: '<S133>/motohawk_store_nvmem'
+  /* Start for Triggered SubSystem: '<S143>/Clear' incorporates:
+   *  Start for S-Function (fcncallgen): '<S153>/Function-Call Generator'
+   *  Start for SubSystem: '<S139>/motohawk_store_nvmem'
    */
   DynoController_Rev1_PrevZCSigState.ShutdownpoweronECU565128_Trig_ZCE =
     ZERO_ZCSIG;

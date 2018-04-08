@@ -4,7 +4,7 @@
 % motohawk_version             2011a_sp0.184
 % motohawk_component_version   0.0.7
 % matlab_version               7.12.0
-% build_version                008
+% build_version                009
 % module_type                  ECU555-48-0708
 % layout_type                  PROD
 % processor_family             PPC
@@ -28,8 +28,8 @@
 % bgnd_base_period_ms          50
 % root_build_dir               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\DynoController_Rev1
 % build_dir                    C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\DynoController_Rev1\DynoController_Rev1_Build
-% dll_name                     DynoContr_008
-% srz_name                     DynoController_Rev1_008
+% dll_name                     DynoContr_009
+% srz_name                     DynoController_Rev1_009
 % fgnd_stack_size              3072
 % fgnd_angle_stack_size        0
 % bgnd_stack_size              2048
@@ -46,5 +46,5 @@
 % toolchain_dir                C:\Program Files (x86)\Woodward\DevelopmentTools\Toolchains\GCC\powerpc-eabi\4_4_0\
 % matlab_root                  C:\Program Files (x86)\MATLAB\R2011a
 % model_guid                   6a27880e-8e62-404a-92-11-3b-ad-79-73-ba
-% build_guid                   197a6098-2946-4234-8b-41-e9-0d-c0-c2-cc
+% build_guid                   242f3651-abf5-41e3-9d-fd-42-e1-f9-e0-fb
 % token_guid                   DD8AD11F95A6FC42BFF9AC780840E4B4

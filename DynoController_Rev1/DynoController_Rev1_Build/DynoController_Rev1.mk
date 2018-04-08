@@ -55,7 +55,7 @@ SHELL           = cmd
 
 
 MODEL           = DynoController_Rev1
-MODULES         = AppMonitor.c Application.c ApplicationSecurity.c CANReceiveDispatcher.c CodeCoverage.c DynoController_Rev1_Foreground.c DynoController_Rev1_data.c MotoHawk_CAN.c MotoHawk_DataStores.c MotoHawk_IO.c Trigger_BGND_BASE_PERIODIC_739p0001.c Trigger_CAN_RX_BusCAN_1_Buf1.c Trigger_FGND_20XRTI_PERIODIC_10837p0011.c Trigger_FGND_RTI_PERIODIC_750p0001.c Trigger_STARTUP_EVENT_10849p0004.c VarDecs.c 
+MODULES         = AppMonitor.c Application.c ApplicationSecurity.c CANReceiveDispatcher.c CodeCoverage.c DynoController_Rev1_Foreground.c DynoController_Rev1_data.c MotoHawk_CAN.c MotoHawk_DataStores.c MotoHawk_IO.c Trigger_BGND_BASE_PERIODIC_783p0002.c Trigger_CAN_RX_BusCAN_1_Buf1.c Trigger_FGND_20XRTI_PERIODIC_589p0005.c Trigger_FGND_RTI_PERIODIC_794p0002.c Trigger_STARTUP_EVENT_795p0002.c VarDecs.c 
 MAKEFILE        = DynoController_Rev1.mk
 MATLAB_ROOT     = C:\Program Files (x86)\MATLAB\R2011a
 S_FUNCTIONS     = 

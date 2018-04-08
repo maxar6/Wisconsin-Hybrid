@@ -26,11 +26,11 @@
 							@if ERRORLEVEL 1 exit junk
 					@"%MOTOCODER_DIR%\bin\Transform" -o TDB/ParsedAndCombinedVardecs.xml TDB/ParsedAndCCVardecs.xml "%MOTOCODER_DIR%\Transforms\VarDecs_Merge.xsl" AdditionalVardecsXML="%cd%\MotoCoderVarDecs.xml"
 							@if ERRORLEVEL 1 exit junk
-					@"%MOTOCODER_DIR%\bin\Transform" -o TDB/DynoContr_008.xml TDB/ParsedAndCombinedVardecs.xml "%MOTOCODER_DIR%\Transforms\VarDecs_Reorder.xsl" application-url="%CD%\ApplicationDescriptor.xml" maxTableSize=65535
+					@"%MOTOCODER_DIR%\bin\Transform" -o TDB/DynoContr_009.xml TDB/ParsedAndCombinedVardecs.xml "%MOTOCODER_DIR%\Transforms\VarDecs_Reorder.xsl" application-url="%CD%\ApplicationDescriptor.xml" maxTableSize=65535
 							@if ERRORLEVEL 1 exit junk
-					@"%MOTOCODER_DIR%\bin\Transform" TDB/DynoContr_008.xml "%MOTOCODER_DIR%\Transforms\VarDecs_Transform.xsl" includeFiles="CommonInclude.h,DynoController_Rev1.h,TDB_Includes.h" GenDLL=1 GenTDB=1
+					@"%MOTOCODER_DIR%\bin\Transform" TDB/DynoContr_009.xml "%MOTOCODER_DIR%\Transforms\VarDecs_Transform.xsl" includeFiles="CommonInclude.h,DynoController_Rev1.h,TDB_Includes.h" GenDLL=1 GenTDB=1
 							@if ERRORLEVEL 1 exit junk
-					@"%MOTOCODER_DIR%\bin\nant\bin\nant.exe" -buildfile:TDB\Database.build -D:required.installdir="C:\Program Files (x86)\Woodward\DevelopmentTools\Toolchains\GCC\win32-pe\4_4_0" -D:database.basename=DynoContr_008 -q -nologo rebuild
+					@"%MOTOCODER_DIR%\bin\nant\bin\nant.exe" -buildfile:TDB\Database.build -D:required.installdir="C:\Program Files (x86)\Woodward\DevelopmentTools\Toolchains\GCC\win32-pe\4_4_0" -D:database.basename=DynoContr_009 -q -nologo rebuild
 							@if ERRORLEVEL 1 exit junk
 					@echo ### Completed MotoTune DLL
 							@if ERRORLEVEL 1 exit junk
@@ -42,7 +42,7 @@
 					
 				
 					@echo ### Call MotoConvert
-					@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\DynoController_Rev1.map -srec=.\Target\DynoController_Rev1.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=DynoController_Rev1.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x0006FFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\DynoController_Rev1_008.srz
+					@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\DynoController_Rev1.map -srec=.\Target\DynoController_Rev1.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=DynoController_Rev1.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x0006FFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\DynoController_Rev1_009.srz
 							@if ERRORLEVEL 1 exit junk
 					
 				
@@ -55,10 +55,10 @@
 							@if ERRORLEVEL 1 exit junk
 					
 				
-					@echo ### Copy DynoContr_008.dll and DynoController_Rev1_008.srz
-					@if exist C:\ECUFiles\TDBDLL\\*.* copy /Y .\TDB\DynoContr_008.dll C:\ECUFiles\TDBDLL\ > NUL
+					@echo ### Copy DynoContr_009.dll and DynoController_Rev1_009.srz
+					@if exist C:\ECUFiles\TDBDLL\\*.* copy /Y .\TDB\DynoContr_009.dll C:\ECUFiles\TDBDLL\ > NUL
 							@if ERRORLEVEL 1 exit junk
-					@if exist C:\ECUFiles\Programs\*.* copy /Y .\Target\DynoController_Rev1_008.srz C:\ECUFiles\Programs > NUL
+					@if exist C:\ECUFiles\Programs\*.* copy /Y .\Target\DynoController_Rev1_009.srz C:\ECUFiles\Programs > NUL
 							@if ERRORLEVEL 1 exit junk
 					
 				@"C:\Program Files (x86)\Woodward\DevelopmentTools\Toolchains\GCC\powerpc-eabi\4_4_0\\bin\nm.exe" -f sysv .\Target\DynoController_Rev1.elf > .\Target\DynoController_Rev1.sym

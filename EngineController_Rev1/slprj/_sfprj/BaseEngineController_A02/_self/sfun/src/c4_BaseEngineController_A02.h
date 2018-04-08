@@ -8,21 +8,24 @@
 
 /* Type Definitions */
 typedef struct {
+  const char * context;
+  const char * name;
+  const char * dominantType;
+  const char * resolved;
+  uint32_T fileTimeLo;
+  uint32_T fileTimeHi;
+  uint32_T mFileTimeLo;
+  uint32_T mFileTimeHi;
+} c4_ResolvedFunctionInfo;
+
+typedef struct {
   SimStruct *S;
-  const mxArray *c4_setSimStateSideEffectsInfo;
   int32_T c4_sfEvent;
   uint32_T chartNumber;
   uint32_T instanceNumber;
-  uint16_T c4_FltOrderOld;
+  boolean_T c4_doneDoubleBufferReInit;
   boolean_T c4_isStable;
-  uint8_T c4_ActvFltCount;
-  uint8_T c4_FltOrderCount;
-  uint8_T c4_OldIndex;
-  uint8_T c4_doSetSimStateSideEffects;
   uint8_T c4_is_active_c4_BaseEngineController_A02;
-  uint8_T c4_is_c4_BaseEngineController_A02;
-  uint8_T c4_tp_AT_STARTUP;
-  uint8_T c4_tp_TIME_STEP;
   ChartInfoStruct chartInfo;
 } SFc4_BaseEngineController_A02InstanceStruct;
 

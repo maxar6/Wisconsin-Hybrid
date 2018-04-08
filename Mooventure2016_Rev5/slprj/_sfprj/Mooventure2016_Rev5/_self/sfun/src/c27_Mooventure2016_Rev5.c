@@ -14,9 +14,9 @@
 /* Variable Declarations */
 
 /* Variable Definitions */
-static const char * c27_debug_family_names[9] = { "nargin", "nargout", "maxTemp",
-  "lowThreshold", "mediumThreshold", "highThreshold", "acOn", "fault",
-  "radiatorFan" };
+static const char * c27_debug_family_names[10] = { "nargin", "nargout",
+  "maxTemp", "lowThreshold", "mediumThreshold", "highThreshold", "acOn", "fault",
+  "engineTemp", "radiatorFan" };
 
 /* Function Declarations */
 static void initialize_c27_Mooventure2016_Rev5
@@ -159,14 +159,16 @@ static void sf_c27_Mooventure2016_Rev5(SFc27_Mooventure2016_Rev5InstanceStruct
   real_T c27_d_hoistedGlobal;
   boolean_T c27_e_hoistedGlobal;
   boolean_T c27_f_hoistedGlobal;
+  real_T c27_g_hoistedGlobal;
   real_T c27_maxTemp;
   real_T c27_lowThreshold;
   real_T c27_mediumThreshold;
   real_T c27_highThreshold;
   boolean_T c27_acOn;
   boolean_T c27_fault;
-  uint32_T c27_debug_family_var_map[9];
-  real_T c27_nargin = 6.0;
+  real_T c27_engineTemp;
+  uint32_T c27_debug_family_var_map[10];
+  real_T c27_nargin = 7.0;
   real_T c27_nargout = 1.0;
   real_T c27_radiatorFan;
   real_T *c27_b_maxTemp;
@@ -176,9 +178,17 @@ static void sf_c27_Mooventure2016_Rev5(SFc27_Mooventure2016_Rev5InstanceStruct
   real_T *c27_b_highThreshold;
   boolean_T *c27_b_acOn;
   boolean_T *c27_b_fault;
+  real_T *c27_b_engineTemp;
   boolean_T guard1 = FALSE;
   boolean_T guard2 = FALSE;
   boolean_T guard3 = FALSE;
+  boolean_T guard4 = FALSE;
+  boolean_T guard5 = FALSE;
+  boolean_T guard6 = FALSE;
+  boolean_T guard7 = FALSE;
+  boolean_T guard8 = FALSE;
+  boolean_T guard9 = FALSE;
+  c27_b_engineTemp = (real_T *)ssGetInputPortSignal(chartInstance->S, 6);
   c27_b_fault = (boolean_T *)ssGetInputPortSignal(chartInstance->S, 5);
   c27_b_acOn = (boolean_T *)ssGetInputPortSignal(chartInstance->S, 4);
   c27_b_highThreshold = (real_T *)ssGetInputPortSignal(chartInstance->S, 3);
@@ -195,6 +205,7 @@ static void sf_c27_Mooventure2016_Rev5(SFc27_Mooventure2016_Rev5InstanceStruct
   _SFD_DATA_RANGE_CHECK(*c27_b_highThreshold, 4U);
   _SFD_DATA_RANGE_CHECK((real_T)*c27_b_acOn, 5U);
   _SFD_DATA_RANGE_CHECK((real_T)*c27_b_fault, 6U);
+  _SFD_DATA_RANGE_CHECK(*c27_b_engineTemp, 7U);
   chartInstance->c27_sfEvent = CALL_EVENT;
   _SFD_CC_CALL(CHART_ENTER_DURING_FUNCTION_TAG, 26U, chartInstance->c27_sfEvent);
   c27_hoistedGlobal = *c27_b_maxTemp;
@@ -203,13 +214,15 @@ static void sf_c27_Mooventure2016_Rev5(SFc27_Mooventure2016_Rev5InstanceStruct
   c27_d_hoistedGlobal = *c27_b_highThreshold;
   c27_e_hoistedGlobal = *c27_b_acOn;
   c27_f_hoistedGlobal = *c27_b_fault;
+  c27_g_hoistedGlobal = *c27_b_engineTemp;
   c27_maxTemp = c27_hoistedGlobal;
   c27_lowThreshold = c27_b_hoistedGlobal;
   c27_mediumThreshold = c27_c_hoistedGlobal;
   c27_highThreshold = c27_d_hoistedGlobal;
   c27_acOn = c27_e_hoistedGlobal;
   c27_fault = c27_f_hoistedGlobal;
-  sf_debug_symbol_scope_push_eml(0U, 9U, 9U, c27_debug_family_names,
+  c27_engineTemp = c27_g_hoistedGlobal;
+  sf_debug_symbol_scope_push_eml(0U, 10U, 10U, c27_debug_family_names,
     c27_debug_family_var_map);
   sf_debug_symbol_scope_add_eml_importable(&c27_nargin, 0U, c27_sf_marshallOut,
     c27_sf_marshallIn);
@@ -221,7 +234,8 @@ static void sf_c27_Mooventure2016_Rev5(SFc27_Mooventure2016_Rev5InstanceStruct
   sf_debug_symbol_scope_add_eml(&c27_highThreshold, 5U, c27_sf_marshallOut);
   sf_debug_symbol_scope_add_eml(&c27_acOn, 6U, c27_b_sf_marshallOut);
   sf_debug_symbol_scope_add_eml(&c27_fault, 7U, c27_b_sf_marshallOut);
-  sf_debug_symbol_scope_add_eml_importable(&c27_radiatorFan, 8U,
+  sf_debug_symbol_scope_add_eml(&c27_engineTemp, 8U, c27_sf_marshallOut);
+  sf_debug_symbol_scope_add_eml_importable(&c27_radiatorFan, 9U,
     c27_sf_marshallOut, c27_sf_marshallIn);
   CV_EML_FCN(0, 0);
   _SFD_EML_CALL(0U, chartInstance->c27_sfEvent, 3);
@@ -234,56 +248,116 @@ static void sf_c27_Mooventure2016_Rev5(SFc27_Mooventure2016_Rev5InstanceStruct
     CV_EML_MCDC(0, 0, FALSE);
     CV_EML_IF(0, 0, FALSE);
     _SFD_EML_CALL(0U, chartInstance->c27_sfEvent, 5);
-    if (CV_EML_IF(0, 1, c27_maxTemp < c27_lowThreshold)) {
-      _SFD_EML_CALL(0U, chartInstance->c27_sfEvent, 6);
-      c27_radiatorFan = 0.0;
+    guard2 = FALSE;
+    if (CV_EML_COND(0, 2, c27_maxTemp < c27_lowThreshold)) {
+      guard2 = TRUE;
+    } else if (CV_EML_COND(0, 3, c27_engineTemp < c27_lowThreshold)) {
+      guard2 = TRUE;
     } else {
+      CV_EML_MCDC(0, 1, FALSE);
+      CV_EML_IF(0, 1, FALSE);
       _SFD_EML_CALL(0U, chartInstance->c27_sfEvent, 7);
-      guard2 = FALSE;
-      if (CV_EML_COND(0, 2, c27_maxTemp >= c27_lowThreshold)) {
-        if (CV_EML_COND(0, 3, c27_maxTemp < c27_mediumThreshold)) {
-          CV_EML_MCDC(0, 1, TRUE);
-          CV_EML_IF(0, 2, TRUE);
-          _SFD_EML_CALL(0U, chartInstance->c27_sfEvent, 8);
-          c27_radiatorFan = 1.0;
+      guard3 = FALSE;
+      guard4 = FALSE;
+      guard5 = FALSE;
+      if (CV_EML_COND(0, 4, c27_maxTemp >= c27_lowThreshold)) {
+        if (CV_EML_COND(0, 5, c27_maxTemp < c27_mediumThreshold)) {
+          guard4 = TRUE;
         } else {
-          guard2 = TRUE;
+          guard5 = TRUE;
         }
       } else {
-        guard2 = TRUE;
+        guard5 = TRUE;
       }
 
-      if (guard2 == TRUE) {
-        CV_EML_MCDC(0, 1, FALSE);
-        CV_EML_IF(0, 2, FALSE);
-        _SFD_EML_CALL(0U, chartInstance->c27_sfEvent, 9);
-        guard3 = FALSE;
-        if (CV_EML_COND(0, 4, c27_maxTemp >= c27_mediumThreshold)) {
-          if (CV_EML_COND(0, 5, c27_maxTemp < c27_highThreshold)) {
-            CV_EML_MCDC(0, 2, TRUE);
-            CV_EML_IF(0, 3, TRUE);
-            _SFD_EML_CALL(0U, chartInstance->c27_sfEvent, 10);
-            c27_radiatorFan = 2.0;
+      if (guard5 == TRUE) {
+        if (CV_EML_COND(0, 6, c27_engineTemp >= c27_lowThreshold + 25.0)) {
+          if (CV_EML_COND(0, 7, c27_engineTemp < c27_mediumThreshold + 25.0)) {
+            guard4 = TRUE;
           } else {
             guard3 = TRUE;
           }
         } else {
           guard3 = TRUE;
         }
+      }
 
-        if (guard3 == TRUE) {
-          CV_EML_MCDC(0, 2, FALSE);
+      if (guard4 == TRUE) {
+        CV_EML_MCDC(0, 2, TRUE);
+        CV_EML_IF(0, 2, TRUE);
+        _SFD_EML_CALL(0U, chartInstance->c27_sfEvent, 8);
+        c27_radiatorFan = 1.0;
+      }
+
+      if (guard3 == TRUE) {
+        CV_EML_MCDC(0, 2, FALSE);
+        CV_EML_IF(0, 2, FALSE);
+        _SFD_EML_CALL(0U, chartInstance->c27_sfEvent, 9);
+        guard6 = FALSE;
+        guard7 = FALSE;
+        guard8 = FALSE;
+        if (CV_EML_COND(0, 8, c27_maxTemp >= c27_mediumThreshold)) {
+          if (CV_EML_COND(0, 9, c27_maxTemp < c27_highThreshold)) {
+            guard7 = TRUE;
+          } else {
+            guard8 = TRUE;
+          }
+        } else {
+          guard8 = TRUE;
+        }
+
+        if (guard8 == TRUE) {
+          if (CV_EML_COND(0, 10, c27_engineTemp >= c27_mediumThreshold + 25.0))
+          {
+            if (CV_EML_COND(0, 11, c27_engineTemp < c27_highThreshold + 25.0)) {
+              guard7 = TRUE;
+            } else {
+              guard6 = TRUE;
+            }
+          } else {
+            guard6 = TRUE;
+          }
+        }
+
+        if (guard7 == TRUE) {
+          CV_EML_MCDC(0, 3, TRUE);
+          CV_EML_IF(0, 3, TRUE);
+          _SFD_EML_CALL(0U, chartInstance->c27_sfEvent, 10);
+          c27_radiatorFan = 2.0;
+        }
+
+        if (guard6 == TRUE) {
+          CV_EML_MCDC(0, 3, FALSE);
           CV_EML_IF(0, 3, FALSE);
           _SFD_EML_CALL(0U, chartInstance->c27_sfEvent, 11);
-          if (CV_EML_IF(0, 4, c27_maxTemp >= c27_highThreshold)) {
-            _SFD_EML_CALL(0U, chartInstance->c27_sfEvent, 12);
-            c27_radiatorFan = 3.0;
+          guard9 = FALSE;
+          if (CV_EML_COND(0, 12, c27_maxTemp >= c27_highThreshold)) {
+            guard9 = TRUE;
+          } else if (CV_EML_COND(0, 13, c27_engineTemp >= c27_highThreshold +
+                                 25.0)) {
+            guard9 = TRUE;
           } else {
+            CV_EML_MCDC(0, 4, FALSE);
+            CV_EML_IF(0, 4, FALSE);
             _SFD_EML_CALL(0U, chartInstance->c27_sfEvent, 14);
             c27_radiatorFan = 0.0;
           }
+
+          if (guard9 == TRUE) {
+            CV_EML_MCDC(0, 4, TRUE);
+            CV_EML_IF(0, 4, TRUE);
+            _SFD_EML_CALL(0U, chartInstance->c27_sfEvent, 12);
+            c27_radiatorFan = 3.0;
+          }
         }
       }
+    }
+
+    if (guard2 == TRUE) {
+      CV_EML_MCDC(0, 1, TRUE);
+      CV_EML_IF(0, 1, TRUE);
+      _SFD_EML_CALL(0U, chartInstance->c27_sfEvent, 6);
+      c27_radiatorFan = 0.0;
     }
   }
 
@@ -477,10 +551,10 @@ static void init_dsm_address_info(SFc27_Mooventure2016_Rev5InstanceStruct
 /* SFunction Glue Code */
 void sf_c27_Mooventure2016_Rev5_get_check_sum(mxArray *plhs[])
 {
-  ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(553297520U);
-  ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(1496815281U);
-  ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(1783069435U);
-  ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(4112078071U);
+  ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(85666082U);
+  ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(3768578152U);
+  ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(2604339666U);
+  ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(1377732903U);
 }
 
 mxArray *sf_c27_Mooventure2016_Rev5_get_autoinheritance_info(void)
@@ -494,17 +568,17 @@ mxArray *sf_c27_Mooventure2016_Rev5_get_autoinheritance_info(void)
   {
     mxArray *mxChecksum = mxCreateDoubleMatrix(4,1,mxREAL);
     double *pr = mxGetPr(mxChecksum);
-    pr[0] = (double)(1284490805U);
-    pr[1] = (double)(1165740121U);
-    pr[2] = (double)(184174721U);
-    pr[3] = (double)(1165132879U);
+    pr[0] = (double)(1890897821U);
+    pr[1] = (double)(57320347U);
+    pr[2] = (double)(772354784U);
+    pr[3] = (double)(2502339687U);
     mxSetField(mxAutoinheritanceInfo,0,"checksum",mxChecksum);
   }
 
   {
     const char *dataFields[] = { "size", "type", "complexity" };
 
-    mxArray *mxData = mxCreateStructMatrix(1,6,3,dataFields);
+    mxArray *mxData = mxCreateStructMatrix(1,7,3,dataFields);
 
     {
       mxArray *mxSize = mxCreateDoubleMatrix(1,2,mxREAL);
@@ -619,6 +693,25 @@ mxArray *sf_c27_Mooventure2016_Rev5_get_autoinheritance_info(void)
     }
 
     mxSetField(mxData,5,"complexity",mxCreateDoubleScalar(0));
+
+    {
+      mxArray *mxSize = mxCreateDoubleMatrix(1,2,mxREAL);
+      double *pr = mxGetPr(mxSize);
+      pr[0] = (double)(1);
+      pr[1] = (double)(1);
+      mxSetField(mxData,6,"size",mxSize);
+    }
+
+    {
+      const char *typeFields[] = { "base", "fixpt" };
+
+      mxArray *mxType = mxCreateStructMatrix(1,1,2,typeFields);
+      mxSetField(mxType,0,"base",mxCreateDoubleScalar(10));
+      mxSetField(mxType,0,"fixpt",mxCreateDoubleMatrix(0,0,mxREAL));
+      mxSetField(mxData,6,"type",mxType);
+    }
+
+    mxSetField(mxData,6,"complexity",mxCreateDoubleScalar(0));
     mxSetField(mxAutoinheritanceInfo,0,"inputs",mxData);
   }
 
@@ -693,7 +786,7 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
            27,
            1,
            1,
-           7,
+           8,
            0,
            0,
            0,
@@ -721,6 +814,7 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
           _SFD_SET_DATA_PROPS(4,1,1,0,"highThreshold");
           _SFD_SET_DATA_PROPS(5,1,1,0,"acOn");
           _SFD_SET_DATA_PROPS(6,1,1,0,"fault");
+          _SFD_SET_DATA_PROPS(7,1,1,0,"engineTemp");
           _SFD_STATE_INFO(0,0,2);
           _SFD_CH_SUBSTATE_COUNT(0);
           _SFD_CH_SUBSTATE_DECOMP(0);
@@ -735,44 +829,66 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
         _SFD_CV_INIT_TRANS(0,0,NULL,NULL,0,NULL);
 
         /* Initialization of MATLAB Function Model Coverage */
-        _SFD_CV_INIT_EML(0,1,5,0,0,0,0,6,3);
-        _SFD_CV_INIT_EML_FCN(0,0,"eML_blk_kernel",0,-1,417);
-        _SFD_CV_INIT_EML_IF(0,0,96,119,139,417);
-        _SFD_CV_INIT_EML_IF(0,1,139,167,187,417);
-        _SFD_CV_INIT_EML_IF(0,2,187,243,263,417);
-        _SFD_CV_INIT_EML_IF(0,3,263,320,340,417);
-        _SFD_CV_INIT_EML_IF(0,4,340,370,390,417);
+        _SFD_CV_INIT_EML(0,1,5,0,0,0,0,14,5);
+        _SFD_CV_INIT_EML_FCN(0,0,"eML_blk_kernel",0,-1,627);
+        _SFD_CV_INIT_EML_IF(0,0,108,131,151,627);
+        _SFD_CV_INIT_EML_IF(0,1,151,206,226,627);
+        _SFD_CV_INIT_EML_IF(0,2,226,350,370,627);
+        _SFD_CV_INIT_EML_IF(0,3,370,496,516,627);
+        _SFD_CV_INIT_EML_IF(0,4,516,580,600,627);
 
         {
-          static int condStart[] = { 99, 111 };
+          static int condStart[] = { 111, 123 };
 
-          static int condEnd[] = { 107, 118 };
+          static int condEnd[] = { 119, 130 };
 
           static int pfixExpr[] = { 0, 1, -2 };
 
-          _SFD_CV_INIT_EML_MCDC(0,0,99,118,2,0,&(condStart[0]),&(condEnd[0]),3,
+          _SFD_CV_INIT_EML_MCDC(0,0,111,130,2,0,&(condStart[0]),&(condEnd[0]),3,
                                 &(pfixExpr[0]));
         }
 
         {
-          static int condStart[] = { 194, 219 };
+          static int condStart[] = { 158, 182 };
 
-          static int condEnd[] = { 215, 242 };
+          static int condEnd[] = { 178, 205 };
 
-          static int pfixExpr[] = { 0, 1, -3 };
+          static int pfixExpr[] = { 0, 1, -2 };
 
-          _SFD_CV_INIT_EML_MCDC(0,1,194,242,2,2,&(condStart[0]),&(condEnd[0]),3,
+          _SFD_CV_INIT_EML_MCDC(0,1,158,205,2,2,&(condStart[0]),&(condEnd[0]),3,
                                 &(pfixExpr[0]));
         }
 
         {
-          static int condStart[] = { 270, 298 };
+          static int condStart[] = { 234, 259, 288, 319 };
 
-          static int condEnd[] = { 294, 319 };
+          static int condEnd[] = { 255, 282, 315, 348 };
 
-          static int pfixExpr[] = { 0, 1, -3 };
+          static int pfixExpr[] = { 0, 1, -3, 2, 3, -3, -2 };
 
-          _SFD_CV_INIT_EML_MCDC(0,2,270,319,2,4,&(condStart[0]),&(condEnd[0]),3,
+          _SFD_CV_INIT_EML_MCDC(0,2,233,349,4,4,&(condStart[0]),&(condEnd[0]),7,
+                                &(pfixExpr[0]));
+        }
+
+        {
+          static int condStart[] = { 378, 406, 433, 467 };
+
+          static int condEnd[] = { 402, 427, 463, 494 };
+
+          static int pfixExpr[] = { 0, 1, -3, 2, 3, -3, -2 };
+
+          _SFD_CV_INIT_EML_MCDC(0,3,377,495,4,8,&(condStart[0]),&(condEnd[0]),7,
+                                &(pfixExpr[0]));
+        }
+
+        {
+          static int condStart[] = { 524, 551 };
+
+          static int condEnd[] = { 546, 579 };
+
+          static int pfixExpr[] = { 0, 1, -2 };
+
+          _SFD_CV_INIT_EML_MCDC(0,4,523,579,2,12,&(condStart[0]),&(condEnd[0]),3,
                                 &(pfixExpr[0]));
         }
 
@@ -799,6 +915,8 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
           (MexFcnForType)c27_b_sf_marshallOut,(MexInFcnForType)NULL);
         _SFD_SET_DATA_COMPILED_PROPS(6,SF_UINT8,0,NULL,0,0,0,0.0,1.0,0,0,
           (MexFcnForType)c27_b_sf_marshallOut,(MexInFcnForType)NULL);
+        _SFD_SET_DATA_COMPILED_PROPS(7,SF_DOUBLE,0,NULL,0,0,0,0.0,1.0,0,0,
+          (MexFcnForType)c27_sf_marshallOut,(MexInFcnForType)NULL);
 
         {
           real_T *c27_maxTemp;
@@ -808,6 +926,8 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
           real_T *c27_highThreshold;
           boolean_T *c27_acOn;
           boolean_T *c27_fault;
+          real_T *c27_engineTemp;
+          c27_engineTemp = (real_T *)ssGetInputPortSignal(chartInstance->S, 6);
           c27_fault = (boolean_T *)ssGetInputPortSignal(chartInstance->S, 5);
           c27_acOn = (boolean_T *)ssGetInputPortSignal(chartInstance->S, 4);
           c27_highThreshold = (real_T *)ssGetInputPortSignal(chartInstance->S, 3);
@@ -823,6 +943,7 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
           _SFD_SET_DATA_VALUE_PTR(4U, c27_highThreshold);
           _SFD_SET_DATA_VALUE_PTR(5U, c27_acOn);
           _SFD_SET_DATA_VALUE_PTR(6U, c27_fault);
+          _SFD_SET_DATA_VALUE_PTR(7U, c27_engineTemp);
         }
       }
     } else {
@@ -983,8 +1104,9 @@ static void mdlSetWorkWidths_c27_Mooventure2016_Rev5(SimStruct *S)
       ssSetInputPortOptimOpts(S, 3, SS_REUSABLE_AND_LOCAL);
       ssSetInputPortOptimOpts(S, 4, SS_REUSABLE_AND_LOCAL);
       ssSetInputPortOptimOpts(S, 5, SS_REUSABLE_AND_LOCAL);
+      ssSetInputPortOptimOpts(S, 6, SS_REUSABLE_AND_LOCAL);
       sf_mark_chart_expressionable_inputs(S,"Mooventure2016_Rev5",
-        "Mooventure2016_Rev5",27,6);
+        "Mooventure2016_Rev5",27,7);
       sf_mark_chart_reusable_outputs(S,"Mooventure2016_Rev5",
         "Mooventure2016_Rev5",27,1);
     }
@@ -995,10 +1117,10 @@ static void mdlSetWorkWidths_c27_Mooventure2016_Rev5(SimStruct *S)
   }
 
   ssSetOptions(S,ssGetOptions(S)|SS_OPTION_WORKS_WITH_CODE_REUSE);
-  ssSetChecksum0(S,(733480191U));
-  ssSetChecksum1(S,(1421573981U));
-  ssSetChecksum2(S,(2736582321U));
-  ssSetChecksum3(S,(47760085U));
+  ssSetChecksum0(S,(1683000005U));
+  ssSetChecksum1(S,(3862086074U));
+  ssSetChecksum2(S,(2096271364U));
+  ssSetChecksum3(S,(1484433120U));
   ssSetmdlDerivatives(S, NULL);
   ssSetExplicitFCSSCtrl(S,1);
 }

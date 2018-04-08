@@ -4,7 +4,7 @@
 % motohawk_version             2011a_sp0.184
 % motohawk_component_version   0.0.7
 % matlab_version               7.12.0
-% build_version                209
+% build_version                211
 % module_type                  ECM-5554-112-0904-xD
 % layout_type                  DEV
 % processor_family             MotoCoder
@@ -27,8 +27,8 @@
 % bgnd_base_period_ms          50
 % root_build_dir               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5
 % build_dir                    C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build
-% dll_name                     Mooventur_209
-% srz_name                     Mooventure2016_Rev5_209
+% dll_name                     Mooventur_211
+% srz_name                     Mooventure2016_Rev5_211
 % fgnd_stack_size              3072
 % fgnd_angle_stack_size        0
 % bgnd_stack_size              2048
@@ -45,5 +45,5 @@
 % toolchain_dir                C:\Program Files (x86)\Woodward\DevelopmentTools\Toolchains\GCC\powerpc-eabispe\4_4_0\
 % matlab_root                  C:\Program Files (x86)\MATLAB\R2011a
 % model_guid                   0339744d-1465-4569-a1-b4-32-b1-a7-fa-5f
-% build_guid                   89820a42-0a43-487b-9d-80-3a-72-d1-04-94
+% build_guid                   7fc06f66-a1b4-4e8d-98-25-57-3d-ec-f3-92
 % token_guid                   DD8AD11F95A6FC42BFF9AC780840E4B4

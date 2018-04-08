@@ -4,7 +4,7 @@
 	<Name>DynoController_Rev1</Name>
 	<Author>HYBRID</Author>
 	<Copyright>2018 Woodward.</Copyright>
-	<CreateDate>15-Jan-2018</CreateDate>
+	<CreateDate>07-Apr-2018</CreateDate>
 	<MemoryLayout>PROD</MemoryLayout>
 	<Module>ClassicModule-MPC555</Module>
 	<Memory/>
@@ -25,9 +25,9 @@
 			</TableDatabase>
 			<ProjectID>6</ProjectID>
 			<ProductID>1</ProductID>
-			<SwIdTxt>DynoContr_008</SwIdTxt>
-			<SwRevisionTxt>DynoController_Rev1_008</SwRevisionTxt>
-			<CalIdTxt>DynoController_Rev1_008_000</CalIdTxt>
+			<SwIdTxt>DynoContr_009</SwIdTxt>
+			<SwRevisionTxt>DynoController_Rev1_009</SwRevisionTxt>
+			<CalIdTxt>DynoController_Rev1_009_000</CalIdTxt>
 		</VarDecs>
 		<DatabaseBuild>
 			<Toolchain>
@@ -38,10 +38,10 @@
 			</Toolchain>
 		</DatabaseBuild>
 		<Command>
-			<Description>Copy DynoContr_008.dll and DynoController_Rev1_008.srz</Description>
+			<Description>Copy DynoContr_009.dll and DynoController_Rev1_009.srz</Description>
 			<Order>99</Order>
-			<Execute>@if exist C:\ECUFiles\TDBDLL\\*.* copy /Y .\TDB\DynoContr_008.dll C:\ECUFiles\TDBDLL\ &gt; NUL</Execute>
-			<Execute>@if exist C:\ECUFiles\Programs\*.* copy /Y .\Target\DynoController_Rev1_008.srz C:\ECUFiles\Programs &gt; NUL</Execute>
+			<Execute>@if exist C:\ECUFiles\TDBDLL\\*.* copy /Y .\TDB\DynoContr_009.dll C:\ECUFiles\TDBDLL\ &gt; NUL</Execute>
+			<Execute>@if exist C:\ECUFiles\Programs\*.* copy /Y .\Target\DynoController_Rev1_009.srz C:\ECUFiles\Programs &gt; NUL</Execute>
 		</Command>
 	</ToolInterface>
 	<Build>
@@ -67,11 +67,11 @@
 			<File>MotoHawk_CAN.c</File>
 			<File>MotoHawk_DataStores.c</File>
 			<File>MotoHawk_IO.c</File>
-			<File>Trigger_BGND_BASE_PERIODIC_739p0001.c</File>
+			<File>Trigger_BGND_BASE_PERIODIC_783p0002.c</File>
 			<File>Trigger_CAN_RX_BusCAN_1_Buf1.c</File>
-			<File>Trigger_FGND_20XRTI_PERIODIC_10837p0011.c</File>
-			<File>Trigger_FGND_RTI_PERIODIC_750p0001.c</File>
-			<File>Trigger_STARTUP_EVENT_10849p0004.c</File>
+			<File>Trigger_FGND_20XRTI_PERIODIC_589p0005.c</File>
+			<File>Trigger_FGND_RTI_PERIODIC_794p0002.c</File>
+			<File>Trigger_STARTUP_EVENT_795p0002.c</File>
 			<File>VarDecs.c</File>
 			<File>rt_nonfinite.c</File>
 			<File>DynoController_Rev1.c</File>
@@ -94,7 +94,7 @@
 		</Command>
 		<Command>
 			<Description>Call MotoConvert</Description>
-			<Execute>@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\DynoController_Rev1.map -srec=.\Target\DynoController_Rev1.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=DynoController_Rev1.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x0006FFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\DynoController_Rev1_008.srz</Execute>
+			<Execute>@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\DynoController_Rev1.map -srec=.\Target\DynoController_Rev1.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=DynoController_Rev1.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x0006FFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\DynoController_Rev1_009.srz</Execute>
 			<Order>55</Order>
 		</Command>
 		<Compiler>
@@ -128,5 +128,5 @@
 			<Execute>@if exist .\rtwtypes.h del /Q /F .\rtwtypes.h &gt; NUL</Execute>
 		</Command>
 	</Build>
-	<Signature>8726ab1b-334f-49a0-93-41-f2-29-c9-bf-08</Signature>
+	<Signature>e89d4a3f-40ee-4e9c-af-84-ba-5f-1a-d4-bf</Signature>
 </Application>

@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.299"
+    ComputedModelVersion    "1.302"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -26,39 +26,39 @@ Model {
   InitFcn		  "try, eval([bdroot '_setup']); catch, eval('model_setup', ''); end"
   UserBdParams		  "MotoHawkBuildVersion;MotoHawkBuildStats;MotoHawkModelSavedName;MotoHawkModelGUID;MotoHawkModelOpenT"
   "ime;MotoHawkModelElapsedTime;MotoHawkBuildInfo;MotoHawkBuildGUID"
-  MotoHawkBuildVersion	  "009"
+  MotoHawkBuildVersion	  "010"
   MotoHawkBuildStats	  "struct('TotalFLASH',{0},'TotalEEPROM',{0},'TotalRAM',{0},'AppFLASH',{0},'AppEEPROM',{0},'AppRA"
-  "M',{0},'HeapRAM',{0},'BuildSuccessCount',{9},'BuildErrorCount',{1})"
+  "M',{0},'HeapRAM',{0},'BuildSuccessCount',{10},'BuildErrorCount',{1})"
   MotoHawkModelSavedName  "DynoController_Rev1"
   MotoHawkModelGUID	  "6a27880e-8e62-404a-92-11-3b-ad-79-73-ba"
-  MotoHawkModelOpenTime	  "2018 1 12 12 0 16.943 "
-  MotoHawkModelElapsedTime "1812631.685"
+  MotoHawkModelOpenTime	  "2018 4 7 14 25 5.116 "
+  MotoHawkModelElapsedTime "1813741.766"
   MotoHawkBuildInfo	  "struct('model_name',{'DynoController_Rev1'},'motohawk_version',{'2011a_sp0.184'},'motohawk_comp"
-  "onent_version',{'0.0.7'},'matlab_version',{'7.12.0'},'build_version',{'008'},'module_type',{'ECU555-48-0708'},'layou"
+  "onent_version',{'0.0.7'},'matlab_version',{'7.12.0'},'build_version',{'009'},'module_type',{'ECU555-48-0708'},'layou"
   "t_type',{'PROD'},'processor_family',{'PPC'},'processor_type',{'MPC555'},'toolchain_vendor',{'gcc-powerpc-eabi'},'too"
   "lchain_version',{'4.4.0'},'component',{0},'archive_file',{'ECM.a'},'enable_build',{1},'fptype',{0},'flash_size',{368"
   "640},'ee_size',{4096},'ram_size',{26624},'decram_size',{0},'module_memory_def',{'MPC555_ModMemoryDef_4KEE_Prod'},'er"
   "i_table0_rev',{9},'max_eri_table_size',{65535},'use_debug_vardecs',{1},'use_info_vardecs',{1},'fgnd_base_period_ms',"
   "{5},'bgnd_base_period_ms',{50},'root_build_dir',{'C:\\Users\\HYBRID\\Documents\\GitHub\\Wisconsin-Hybrid\\DynoContro"
   "ller_Rev1'},'build_dir',{'C:\\Users\\HYBRID\\Documents\\GitHub\\Wisconsin-Hybrid\\DynoController_Rev1\\DynoControlle"
-  "r_Rev1_Build'},'dll_name',{'DynoContr_008'},'srz_name',{'DynoController_Rev1_008'},'fgnd_stack_size',{3072},'fgnd_an"
+  "r_Rev1_Build'},'dll_name',{'DynoContr_009'},'srz_name',{'DynoController_Rev1_009'},'fgnd_stack_size',{3072},'fgnd_an"
   "gle_stack_size',{0},'bgnd_stack_size',{2048},'idle_stack_size',{1024},'irq_stack_size',{1536},'heap_size',{4096},'he"
   "ap_margin',{409},'install_dll_dir',{'C:\\ECUFiles\\TDBDLL\\'},'install_srz_dir',{'C:\\ECUFiles\\Programs'},'app_int_"
   "stack_size',{1024},'shutdown_stack_size',{1024},'mingw_dir',{'C:\\PROGRA~2\\Woodward\\DEVELO~1\\TOOLCH~1\\GCC\\win32"
   "-pe\\4_4_0\\'},'motohawk_dir',{'C:\\PROGRA~2\\Woodward\\MCS\\MotoHawk\\2011A_~1.184'},'toolchain_dir',{'C:\\Program "
   "Files (x86)\\Woodward\\DevelopmentTools\\Toolchains\\GCC\\powerpc-eabi\\4_4_0\\'},'matlab_root',{'C:\\Program Files "
-  "(x86)\\MATLAB\\R2011a'},'model_guid',{'6a27880e-8e62-404a-92-11-3b-ad-79-73-ba'},'build_guid',{'197a6098-2946-4234-8"
-  "b-41-e9-0d-c0-c2-cc'},'token_guid',{'DD8AD11F95A6FC42BFF9AC780840E4B4'})"
-  MotoHawkBuildGUID	  "197a6098-2946-4234-8b-41-e9-0d-c0-c2-cc"
+  "(x86)\\MATLAB\\R2011a'},'model_guid',{'6a27880e-8e62-404a-92-11-3b-ad-79-73-ba'},'build_guid',{'242f3651-abf5-41e3-9"
+  "d-fd-42-e1-f9-e0-fb'},'token_guid',{'DD8AD11F95A6FC42BFF9AC780840E4B4'})"
+  MotoHawkBuildGUID	  "242f3651-abf5-41e3-9d-fd-42-e1-f9-e0-fb"
   Created		  "Mon May 16 15:00:08 2005"
   Creator		  "Owner"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "HYBRID"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Jan 15 12:10:51 2018"
-  RTWModifiedTimeStamp	  437659461
-  ModelVersionFormat	  "1.%<AutoIncrement:299>"
+  LastModifiedDate	  "Sat Apr 07 14:26:45 2018"
+  RTWModifiedTimeStamp	  445012005
+  ModelVersionFormat	  "1.%<AutoIncrement:302>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1443,8 +1443,8 @@ Model {
   }
   System {
     Name		    "DynoController_Rev1"
-    Location		    [202, 74, 1331, 717]
-    Open		    on
+    Location		    [202, 82, 1331, 725]
+    Open		    off
     ModelBrowserVisibility  on
     ModelBrowserWidth	    200
     ScreenColor		    "white"
@@ -1457,7 +1457,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "112"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "334"
+    SIDHighWatermark	    "340"
     Block {
       BlockType		      Reference
       Name		      "CAN Definition"
@@ -7816,7 +7816,7 @@ Model {
 		  System {
 		    Name		    "DYNO OUT"
 		    Location		    [202, 74, 1364, 717]
-		    Open		    off
+		    Open		    on
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
 		    ScreenColor		    "white"
@@ -7871,7 +7871,7 @@ Model {
 		    Ports		    [1, 3]
 		    Position		    [190, 227, 195, 273]
 		    ShowName		    off
-		    OutputSignals	    "CAN Inputs.DYNO.Engine On,Analog Inputs.Genset Enable,CAN Inputs.BATTERY.State Of Charge"
+		    OutputSignals	    "CAN Inputs.DYNO.Engine On,Analog Inputs.Genset Load,CAN Inputs.BATTERY.State Of Charge"
 		    Port {
 		    PortNumber		    1
 		    Name		    "<Engine On>"
@@ -7880,7 +7880,7 @@ Model {
 		    }
 		    Port {
 		    PortNumber		    2
-		    Name		    "<Genset Enable>"
+		    Name		    "<Genset Load>"
 		    RTWStorageClass	    "Auto"
 		    DataLoggingNameMode	    "SignalName"
 		    }
@@ -7953,8 +7953,8 @@ Model {
 		    BlockType		    Reference
 		    Name		    "Send CAN Messages"
 		    SID			    "194"
-		    Ports		    [3]
-		    Position		    [760, 70, 1520, 420]
+		    Ports		    [5]
+		    Position		    [765, 98, 1520, 592]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/CAN Blocks/Send CAN Messages"
@@ -8045,6 +8045,96 @@ Model {
 		    Port {
 		    PortNumber		    1
 		    Name		    "Vehicle_Speed"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_calibration2"
+		    SID			    "335"
+		    Ports		    [0, 1]
+		    Position		    [340, 425, 490, 465]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
+		    SourceType		    "MotoHawk Calibration"
+		    nam			    "'Load_Throttle'"
+		    val			    "0"
+		    storage		    "Display"
+		    show_more		    off
+		    name_source		    "Use Parameter"
+		    data_type		    "Inherit from 'Default Value'"
+		    read_level		    "1"
+		    write_level		    "1"
+		    ovr_cals		    on
+		    view_as		    "Number"
+		    enum_struct		    "{'Disabled', 'Enabled'}"
+		    vector_style	    "Wide Row"
+		    use_help_units	    off
+		    help		    "''"
+		    units		    "''"
+		    use_header_enum	    off
+		    row_header_enum	    "{}"
+		    col_header_enum	    "{}"
+		    use_min_max		    off
+		    min_val		    "-inf"
+		    max_val		    "inf"
+		    use_precision	    off
+		    precision		    "''"
+		    gain		    "1"
+		    offset		    "0"
+		    exp			    "1"
+		    use_mototune_group	    off
+		    mototune_group	    "motohawk_vardec_path(gcb)"
+		    Port {
+		    PortNumber		    1
+		    Name		    "Load_Throttle"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_calibration3"
+		    SID			    "338"
+		    Ports		    [0, 1]
+		    Position		    [335, 520, 485, 560]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
+		    SourceType		    "MotoHawk Calibration"
+		    nam			    "'Load_RPM'"
+		    val			    "0"
+		    storage		    "Display"
+		    show_more		    off
+		    name_source		    "Use Parameter"
+		    data_type		    "Inherit from 'Default Value'"
+		    read_level		    "1"
+		    write_level		    "1"
+		    ovr_cals		    on
+		    view_as		    "Number"
+		    enum_struct		    "{'Disabled', 'Enabled'}"
+		    vector_style	    "Wide Row"
+		    use_help_units	    off
+		    help		    "''"
+		    units		    "''"
+		    use_header_enum	    off
+		    row_header_enum	    "{}"
+		    col_header_enum	    "{}"
+		    use_min_max		    off
+		    min_val		    "-inf"
+		    max_val		    "inf"
+		    use_precision	    off
+		    precision		    "''"
+		    gain		    "1"
+		    offset		    "0"
+		    exp			    "1"
+		    use_mototune_group	    off
+		    mototune_group	    "motohawk_vardec_path(gcb)"
+		    Port {
+		    PortNumber		    1
+		    Name		    "Load_RPM"
 		    RTWStorageClass	    "Auto"
 		    DataLoggingNameMode	    "SignalName"
 		    }
@@ -8192,6 +8282,100 @@ Model {
 		    }
 		    Block {
 		    BlockType		    Reference
+		    Name		    "motohawk_override_abs4"
+		    SID			    "336"
+		    Ports		    [1, 1]
+		    Position		    [535, 432, 685, 458]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_override_abs"
+		    SourceType		    "MotoHawk Absolute Override"
+		    ShowPortLabels	    "FromPortIcon"
+		    SystemSampleTime	    "-1"
+		    FunctionWithSeparateData off
+		    RTWMemSecFuncInitTerm   "Inherit from model"
+		    RTWMemSecFuncExecute    "Inherit from model"
+		    RTWMemSecDataConstants  "Inherit from model"
+		    RTWMemSecDataInternal   "Inherit from model"
+		    RTWMemSecDataParameters "Inherit from model"
+		    GeneratePreprocessorConditionals off
+		    parent_name		    "'Load_Throttle_Ovr'"
+		    parent_val		    "0"
+		    show_more		    off
+		    name_source		    "Use Parameter"
+		    parent_read_level	    "1"
+		    parent_override_level   "1"
+		    view_as		    "Number"
+		    enum_struct		    "{'Disabled', 'Enabled'}"
+		    use_help_units	    off
+		    parent_help		    "''"
+		    parent_units	    "''"
+		    use_min_max		    off
+		    parent_min		    "-inf"
+		    parent_max		    "inf"
+		    use_precision	    off
+		    parent_precision	    "''"
+		    parent_gain		    "1"
+		    parent_offset	    "0"
+		    parent_exp		    "1"
+		    use_mototune_group	    off
+		    parent_group	    "motohawk_vardec_path(gcb)"
+		    Port {
+		    PortNumber		    1
+		    Name		    "Load_Throttle"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_override_abs5"
+		    SID			    "339"
+		    Ports		    [1, 1]
+		    Position		    [530, 527, 680, 553]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_override_abs"
+		    SourceType		    "MotoHawk Absolute Override"
+		    ShowPortLabels	    "FromPortIcon"
+		    SystemSampleTime	    "-1"
+		    FunctionWithSeparateData off
+		    RTWMemSecFuncInitTerm   "Inherit from model"
+		    RTWMemSecFuncExecute    "Inherit from model"
+		    RTWMemSecDataConstants  "Inherit from model"
+		    RTWMemSecDataInternal   "Inherit from model"
+		    RTWMemSecDataParameters "Inherit from model"
+		    GeneratePreprocessorConditionals off
+		    parent_name		    "'Load_RPM_Ovr'"
+		    parent_val		    "0"
+		    show_more		    off
+		    name_source		    "Use Parameter"
+		    parent_read_level	    "1"
+		    parent_override_level   "1"
+		    view_as		    "Number"
+		    enum_struct		    "{'Disabled', 'Enabled'}"
+		    use_help_units	    off
+		    parent_help		    "''"
+		    parent_units	    "''"
+		    use_min_max		    off
+		    parent_min		    "-inf"
+		    parent_max		    "inf"
+		    use_precision	    off
+		    parent_precision	    "''"
+		    parent_gain		    "1"
+		    parent_offset	    "0"
+		    parent_exp		    "1"
+		    use_mototune_group	    off
+		    parent_group	    "motohawk_vardec_path(gcb)"
+		    Port {
+		    PortNumber		    1
+		    Name		    "Load_RPM"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Reference
 		    Name		    "motohawk_probe1"
 		    SID			    "200"
 		    Ports		    [1]
@@ -8283,11 +8467,74 @@ Model {
 		    use_mototune_group	    off
 		    mototune_group	    "motohawk_vardec_path(gcb)"
 		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_probe4"
+		    SID			    "337"
+		    Ports		    [1]
+		    Position		    [535, 402, 685, 428]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
+		    SourceType		    "MotoHawk Probe"
+		    nam			    "'Load_Throttle_Prb'"
+		    show_more		    off
+		    name_source		    "Use Parameter"
+		    read_level		    "1"
+		    view_as		    "Number"
+		    enum_struct		    "{'Disabled', 'Enabled'}"
+		    vector_style	    "Wide Row"
+		    use_help_units	    off
+		    help		    "''"
+		    units		    "''"
+		    use_header_enum	    off
+		    row_header_enum	    "{}"
+		    col_header_enum	    "{}"
+		    use_precision	    off
+		    precision		    "''"
+		    gain		    "1"
+		    offset		    "0"
+		    exp			    "1"
+		    use_mototune_group	    off
+		    mototune_group	    "motohawk_vardec_path(gcb)"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_probe5"
+		    SID			    "340"
+		    Ports		    [1]
+		    Position		    [530, 497, 680, 523]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
+		    SourceType		    "MotoHawk Probe"
+		    nam			    "'Load_RPM_Prb'"
+		    show_more		    off
+		    name_source		    "Use Parameter"
+		    read_level		    "1"
+		    view_as		    "Number"
+		    enum_struct		    "{'Disabled', 'Enabled'}"
+		    vector_style	    "Wide Row"
+		    use_help_units	    off
+		    help		    "''"
+		    units		    "''"
+		    use_header_enum	    off
+		    row_header_enum	    "{}"
+		    col_header_enum	    "{}"
+		    use_precision	    off
+		    precision		    "''"
+		    gain		    "1"
+		    offset		    "0"
+		    exp			    "1"
+		    use_mototune_group	    off
+		    mototune_group	    "motohawk_vardec_path(gcb)"
+		    }
 		    Line {
 		    Name		    "Gen_Enable"
 		    Labels		    [0, 0]
 		    SrcBlock		    "motohawk_override_abs2"
 		    SrcPort		    1
+		    Points		    [35, 0]
 		    DstBlock		    "Send CAN Messages"
 		    DstPort		    1
 		    }
@@ -8304,6 +8551,7 @@ Model {
 		    Labels		    [0, 0]
 		    SrcBlock		    "motohawk_override_abs3"
 		    SrcPort		    1
+		    Points		    [35, 0]
 		    DstBlock		    "Send CAN Messages"
 		    DstPort		    3
 		    }
@@ -8401,7 +8649,7 @@ Model {
 		    DstPort		    2
 		    }
 		    Line {
-		    Name		    "<Genset Enable>"
+		    Name		    "<Genset Load>"
 		    Labels		    [0, 0]
 		    SrcBlock		    "Bus\nSelector1"
 		    SrcPort		    2
@@ -8446,6 +8694,57 @@ Model {
 		    DstBlock		    "motohawk_probe3"
 		    DstPort		    1
 		    }
+		    }
+		    Line {
+		    Name		    "Load_Throttle"
+		    Labels		    [0, 0]
+		    SrcBlock		    "motohawk_calibration2"
+		    SrcPort		    1
+		    Points		    [15, 0]
+		    Branch {
+		    Labels		    [1, 0]
+		    DstBlock		    "motohawk_override_abs4"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, -30]
+		    DstBlock		    "motohawk_probe4"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    Name		    "Load_RPM"
+		    Labels		    [0, 0]
+		    SrcBlock		    "motohawk_calibration3"
+		    SrcPort		    1
+		    Points		    [15, 0]
+		    Branch {
+		    Labels		    [1, 0]
+		    DstBlock		    "motohawk_override_abs5"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, -30]
+		    DstBlock		    "motohawk_probe5"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    Name		    "Load_Throttle"
+		    Labels		    [0, 0]
+		    SrcBlock		    "motohawk_override_abs4"
+		    SrcPort		    1
+		    DstBlock		    "Send CAN Messages"
+		    DstPort		    4
+		    }
+		    Line {
+		    Name		    "Load_RPM"
+		    Labels		    [0, 0]
+		    SrcBlock		    "motohawk_override_abs5"
+		    SrcPort		    1
+		    Points		    [30, 0; 0, 5]
+		    DstBlock		    "Send CAN Messages"
+		    DstPort		    5
 		    }
 		  }
 		}
@@ -9443,7 +9742,7 @@ Model {
 	      SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 	      SourceType	      "MotoHawk Function Trigger"
 	      trigger		      "FGND_20XRTI_PERIODIC"
-	      function_name	      "Trigger_FGND_20XRTI_PERIODIC_10837p0011"
+	      function_name	      "Trigger_FGND_20XRTI_PERIODIC_589p0005"
 	      priority_order	      "200"
 	      inherited		      on
 	      run_disabled	      off
@@ -11454,7 +11753,7 @@ Model {
 	  SourceBlock		  "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 	  SourceType		  "MotoHawk Function Trigger"
 	  trigger		  "BGND_BASE_PERIODIC"
-	  function_name		  "Trigger_BGND_BASE_PERIODIC_739p0001"
+	  function_name		  "Trigger_BGND_BASE_PERIODIC_783p0002"
 	  priority_order	  "255"
 	  inherited		  on
 	  run_disabled		  on
@@ -11659,7 +11958,7 @@ Model {
       SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
       SourceType	      "MotoHawk Function Trigger"
       trigger		      "FGND_RTI_PERIODIC"
-      function_name	      "Trigger_FGND_RTI_PERIODIC_750p0001"
+      function_name	      "Trigger_FGND_RTI_PERIODIC_794p0002"
       priority_order	      "0"
       inherited		      off
       run_disabled	      off
@@ -11681,7 +11980,7 @@ Model {
       SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
       SourceType	      "MotoHawk Function Trigger"
       trigger		      "STARTUP_EVENT"
-      function_name	      "Trigger_STARTUP_EVENT_10849p0004"
+      function_name	      "Trigger_STARTUP_EVENT_795p0002"
       priority_order	      "0"
       inherited		      off
       run_disabled	      off

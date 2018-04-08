@@ -208,6 +208,44 @@
       </enum>
    </VarDec>
    <VarDec>
+      <name>Default_PW</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>us</units>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|EGR Characterization|Signal Generator</group>
+      <struct>ConstantWork.Default_PW</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Default_DC</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>100</max>
+      <min>0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>%</units>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|EGR Characterization|Signal Generator</group>
+      <struct>ConstantWork.Default_DC</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
       <name>ETCDampGainDown</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -910,6 +948,42 @@
          <item name="NORMAL" value="1"/>
          <default>Unknown</default>
       </enum>
+   </VarDec>
+   <VarDec>
+      <name>VE_Adapt_Min</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|Controller|Run|AirFlow Manager|VE Adapt|Adapt Table</group>
+      <struct>ConstantWork.VE_Adapt_Min</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>VE_Adapt_Max</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|Controller|Run|AirFlow Manager|VE Adapt|Adapt Table</group>
+      <struct>ConstantWork.VE_Adapt_Max</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>EquivRatio_ovr</name>
@@ -2700,6 +2774,24 @@
          <item name="IAC" value="1"/>
          <default>Unknown</default>
       </enum>
+   </VarDec>
+   <VarDec>
+      <name>VE_Adapt_Enable</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|Controller|Run|AirFlow Manager|VE Adapt</group>
+      <struct>VolatileWork_BSS.VE_Adapt_Enable</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>FuelPumpStartTime</name>
@@ -4776,7 +4868,7 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Max_Generating_RPM</name>
+      <name>Generating_Max_Torque</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -4788,7 +4880,7 @@
       <units>RPM</units>
       <ctype>const Constant_T</ctype>
       <group>BaseEngineController_A02|Foreground|Control|Controller|Hybrid</group>
-      <struct>ConstantWork.Max_Generating_RPM</struct>
+      <struct>ConstantWork.Generating_Max_Torque</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
@@ -4871,6 +4963,88 @@
       <ctype>Volatile_BSS_T</ctype>
       <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|112 | Genset_Load_Ovr Override</group>
       <struct>VolatileWork_BSS.Genset_Load_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Load_Throttle_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|112 | Load_Throttle_Ovr Override</group>
+      <struct>VolatileWork_BSS.Load_Throttle_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Load_Throttle_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|112 | Load_Throttle_Ovr Override</group>
+      <struct>VolatileWork_BSS.Load_Throttle_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Load_RPM_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|112 | Load_RPM_Ovr Override</group>
+      <struct>VolatileWork_BSS.Load_RPM_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Load_RPM_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|112 | Load_RPM_Ovr Override</group>
+      <struct>VolatileWork_BSS.Load_RPM_Ovr_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -6550,7 +6724,7 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>VETable_ovr</name>
+      <name>VETable_Ovr_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -6560,8 +6734,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>BaseEngineController_A02|Foreground|Control|VirtualSensors|AirCalcs|SpeedDensityMAPReferenced | VETable Override</group>
-      <struct>VolatileWork_BSS.VETable_ovr</struct>
+      <group>BaseEngineController_A02|Foreground|Control|VirtualSensors|AirCalcs|SpeedDensityMAPReferenced | VETable_Ovr Override</group>
+      <struct>VolatileWork_BSS.VETable_Ovr_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -6573,7 +6747,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>VETable_new</name>
+      <name>VETable_Ovr_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -6583,8 +6757,8 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>BaseEngineController_A02|Foreground|Control|VirtualSensors|AirCalcs|SpeedDensityMAPReferenced | VETable Override</group>
-      <struct>VolatileWork_BSS.VETable_new</struct>
+      <group>BaseEngineController_A02|Foreground|Control|VirtualSensors|AirCalcs|SpeedDensityMAPReferenced | VETable_Ovr Override</group>
+      <struct>VolatileWork_BSS.VETable_Ovr_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -6819,10 +6993,10 @@
       <name>Filter_Type_Selection</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
-      <offset>1</offset>
+      <offset>0</offset>
       <exp>1</exp>
-      <max>256</max>
-      <min>1</min>
+      <max>255</max>
+      <min>0</min>
       <format>3.0</format>
       <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
@@ -9210,6 +9384,253 @@
       </enum>
    </VarDec>
    <VarDec>
+      <name>Trigger_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Outputs|EGR Out | Trigger_Ovr Override</group>
+      <struct>VolatileWork_BSS.Trigger_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>EGRSense_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors | EGRSense | EGRSense Override</group>
+      <struct>VolatileWork_BSS.EGRSense_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>EGRSenseFilterConst</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant</help>
+      <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors | EGRSense | EGRSense Config</group>
+      <struct>ConstantWork.EGRSenseFilterConst</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>EGRSenseGain</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>5.4</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>%/ADC</units>
+      <ctype>const Constant_T</ctype>
+      <help>Scaling from A/D counts to engineering units</help>
+      <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors | EGRSense | EGRSense Config</group>
+      <struct>ConstantWork.EGRSenseGain</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>EGRSenseOfst</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>%</units>
+      <ctype>const Constant_T</ctype>
+      <help>Offset after gain in engineering units</help>
+      <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors | EGRSense | EGRSense Config</group>
+      <struct>ConstantWork.EGRSenseOfst</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>EGRSenseDfltValue</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>%</units>
+      <ctype>const Constant_T</ctype>
+      <help>This is the initial default value should the sensor be in fault on key-up.  Otherwise the sensors outputs the last value prior to faulting</help>
+      <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors | EGRSense | EGRSense Config</group>
+      <struct>ConstantWork.EGRSenseDfltValue</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>EGRSense_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>%</units>
+      <ctype>Volatile_BSS_T</ctype>
+      <help>Override result of linear sensor characterization, in engineering units</help>
+      <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors | EGRSense | EGRSense Override</group>
+      <struct>VolatileWork_BSS.EGRSense_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>EGR_Hyst</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|EGR Characterization</group>
+      <struct>ConstantWork.EGR_Hyst</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Mode</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|EGR Characterization</group>
+      <struct>ConstantWork.Mode</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="PulseWidth" value="0"/>
+         <item name="DutyCycle" value="1"/>
+         <item name="Both" value="2"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Trigger_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Outputs|EGR Out | Trigger_Ovr Override</group>
+      <struct>VolatileWork_BSS.Trigger_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
+      <name>Duration_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Outputs|EGR Out | Duration_Ovr Override</group>
+      <struct>VolatileWork_BSS.Duration_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Duration_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>2.147483647E9</max>
+      <min>-2.147483647E9</min>
+      <format>8.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Outputs|EGR Out | Duration_Ovr Override</group>
+      <struct>VolatileWork_BSS.Duration_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>int32</type>
+   </VarDec>
+   <VarDec>
       <name>FUELP_Polarity</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -10514,6 +10935,67 @@
       <help>Override result of linear sensor characterization, in engineering units</help>
       <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors | MAPTime | MAPTime Override</group>
       <struct>VolatileWork_BSS.MAPTime_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Torque_Filter</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant</help>
+      <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix</group>
+      <struct>ConstantWork.Torque_Filter</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Est_Absolute_Torque_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix | Est_Absolute_Torque_Ovr Override</group>
+      <struct>VolatileWork_BSS.Est_Absolute_Torque_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Est_Absolute_Torque_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix | Est_Absolute_Torque_Ovr Override</group>
+      <struct>VolatileWork_BSS.Est_Absolute_Torque_Ovr_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -12037,129 +12519,6 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>EGRSense_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors | EGRSense | EGRSense Override</group>
-      <struct>VolatileWork_BSS.EGRSense_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>EGRSenseFilterConst</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>sec</units>
-      <ctype>const Constant_T</ctype>
-      <help>Filter time constant</help>
-      <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors | EGRSense | EGRSense Config</group>
-      <struct>ConstantWork.EGRSenseFilterConst</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>EGRSenseGain</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>5.4</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>%/ADC</units>
-      <ctype>const Constant_T</ctype>
-      <help>Scaling from A/D counts to engineering units</help>
-      <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors | EGRSense | EGRSense Config</group>
-      <struct>ConstantWork.EGRSenseGain</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>EGRSenseOfst</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>%</units>
-      <ctype>const Constant_T</ctype>
-      <help>Offset after gain in engineering units</help>
-      <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors | EGRSense | EGRSense Config</group>
-      <struct>ConstantWork.EGRSenseOfst</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>EGRSenseDfltValue</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>%</units>
-      <ctype>const Constant_T</ctype>
-      <help>This is the initial default value should the sensor be in fault on key-up.  Otherwise the sensors outputs the last value prior to faulting</help>
-      <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors | EGRSense | EGRSense Config</group>
-      <struct>ConstantWork.EGRSenseDfltValue</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>EGRSense_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>%</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <help>Override result of linear sensor characterization, in engineering units</help>
-      <group>BaseEngineController_A02|Foreground|Inputs|LinearSensors | EGRSense | EGRSense Override</group>
-      <struct>VolatileWork_BSS.EGRSense_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
       <name>SensVolt_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -12483,67 +12842,6 @@
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
-   </VarDec>
-   <VarDec>
-      <name>Torque_Filter</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>sec</units>
-      <ctype>const Constant_T</ctype>
-      <help>Filter time constant</help>
-      <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix</group>
-      <struct>ConstantWork.Torque_Filter</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Est_Absolute_Torque_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix | Est_Absolute_Torque_Ovr Override</group>
-      <struct>VolatileWork_BSS.Est_Absolute_Torque_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Est_Absolute_Torque_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix | Est_Absolute_Torque_Ovr Override</group>
-      <struct>VolatileWork_BSS.Est_Absolute_Torque_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>MAFMax</name>
@@ -14979,105 +15277,6 @@
       <type>uint16</type>
    </VarDec>
    <VarDec>
-      <name>TQ_PrelookupIdxArr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>BaseEngineController_A02|Foreground|Control|Controller|Hybrid</group>
-      <struct>ConstantWork.TQ_PrelookupIdxArr</struct>
-      <class>prelookup</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <len>7</len>
-      <input>TQ_PrelookupIn</input>
-      <index>TQ_PrelookupIdx</index>
-   </VarDec>
-   <VarDec>
-      <name>TQ_PrelookupIdx</name>
-      <access>RO RO RO RO</access>
-      <gain>0.001953125</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>127.998046875</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0x0000FFFF</mask>
-      <units>idx.frac</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BaseEngineController_A02|Foreground|Control|Controller|Hybrid</group>
-      <struct>VolatileWork_BSS.TQ_PrelookupIdx</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint16</type>
-   </VarDec>
-   <VarDec>
-      <name>TQ_PrelookupIn</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BaseEngineController_A02|Foreground|Control|Controller|Hybrid</group>
-      <struct>VolatileWork_BSS.TQ_PrelookupIn</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>TQ_InterpolationTbl</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>us</units>
-      <ctype>const Constant_T</ctype>
-      <group>BaseEngineController_A02|Foreground|Control|Controller|Hybrid</group>
-      <struct>ConstantWork.TQ_InterpolationTbl</struct>
-      <class>interpolation_1d</class>
-      <storage>FLASH</storage>
-      <update>REMOTE</update>
-      <type>real32</type>
-      <len>7</len>
-      <output>TQ_Interpolation</output>
-      <prelookup>TQ_PrelookupIdxArr</prelookup>
-   </VarDec>
-   <VarDec>
-      <name>TQ_Interpolation</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>us</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BaseEngineController_A02|Foreground|Control|Controller|Hybrid</group>
-      <struct>VolatileWork_BSS.TQ_Interpolation</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
       <name>SysVolt09IdxArr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -16278,12 +16477,12 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
+      <ctype>NonVolatile_T</ctype>
       <group>BaseEngineController_A02|Foreground|Control|VirtualSensors|AirCalcs|SpeedDensityMAPReferenced</group>
-      <struct>ConstantWork.VEMap.data</struct>
+      <struct>NonVolatileWork.VEMap.data</struct>
       <class>interpolation_2d</class>
       <storage>FLASH</storage>
-      <update>REMOTE</update>
+      <update>BACKGND</update>
       <type>real32</type>
       <output>VE</output>
       <col_prelookup>RPM17IdxArr</col_prelookup>
@@ -17880,6 +18079,204 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
+      <name>EGR_Prelookup_PWIdxArr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|EGR Characterization</group>
+      <struct>ConstantWork.EGR_Prelookup_PWIdxArr</struct>
+      <class>prelookup</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+      <len>11</len>
+      <input>EGR_Prelookup_PWIn</input>
+      <index>EGR_Prelookup_PWIdx</index>
+   </VarDec>
+   <VarDec>
+      <name>EGR_Prelookup_PWIdx</name>
+      <access>RO RO RO RO</access>
+      <gain>0.001953125</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>127.998046875</max>
+      <min>0</min>
+      <format>4.2</format>
+      <mask>0x0000FFFF</mask>
+      <units>idx.frac</units>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|EGR Characterization</group>
+      <struct>VolatileWork_BSS.EGR_Prelookup_PWIdx</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint16</type>
+   </VarDec>
+   <VarDec>
+      <name>EGR_Prelookup_PWIn</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|EGR Characterization</group>
+      <struct>VolatileWork_BSS.EGR_Prelookup_PWIn</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>EGR_Interpolation_PWTbl</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>us</units>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|EGR Characterization</group>
+      <struct>ConstantWork.EGR_Interpolation_PWTbl</struct>
+      <class>interpolation_1d</class>
+      <storage>FLASH</storage>
+      <update>REMOTE</update>
+      <type>real32</type>
+      <len>11</len>
+      <output>EGR_Interpolation_PW</output>
+      <prelookup>EGR_Prelookup_PWIdxArr</prelookup>
+   </VarDec>
+   <VarDec>
+      <name>EGR_Interpolation_PW</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>us</units>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|EGR Characterization</group>
+      <struct>VolatileWork_BSS.EGR_Interpolation_PW</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>EGR_Prelookup_DCIdxArr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|EGR Characterization</group>
+      <struct>ConstantWork.EGR_Prelookup_DCIdxArr</struct>
+      <class>prelookup</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+      <len>11</len>
+      <input>EGR_Prelookup_DCIn</input>
+      <index>EGR_Prelookup_DCIdx</index>
+   </VarDec>
+   <VarDec>
+      <name>EGR_Prelookup_DCIdx</name>
+      <access>RO RO RO RO</access>
+      <gain>0.001953125</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>127.998046875</max>
+      <min>0</min>
+      <format>4.2</format>
+      <mask>0x0000FFFF</mask>
+      <units>idx.frac</units>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|EGR Characterization</group>
+      <struct>VolatileWork_BSS.EGR_Prelookup_DCIdx</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint16</type>
+   </VarDec>
+   <VarDec>
+      <name>EGR_Prelookup_DCIn</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|EGR Characterization</group>
+      <struct>VolatileWork_BSS.EGR_Prelookup_DCIn</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>EGR_Interpolation_DCTbl</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>100</max>
+      <min>0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>%</units>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|EGR Characterization</group>
+      <struct>ConstantWork.EGR_Interpolation_DCTbl</struct>
+      <class>interpolation_1d</class>
+      <storage>FLASH</storage>
+      <update>REMOTE</update>
+      <type>real32</type>
+      <len>11</len>
+      <output>EGR_Interpolation_DC</output>
+      <prelookup>EGR_Prelookup_DCIdxArr</prelookup>
+   </VarDec>
+   <VarDec>
+      <name>EGR_Interpolation_DC</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>%</units>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|ActuatorCharacterization|EGR Characterization</group>
+      <struct>VolatileWork_BSS.EGR_Interpolation_DC</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
       <name>ETC_SetpointIdxArr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -18429,105 +18826,6 @@
          <item name="Transient" value="1"/>
          <default>Unknown</default>
       </enum>
-   </VarDec>
-   <VarDec>
-      <name>APP_PrelookupIdxArr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>BaseEngineController_A02|Foreground|Control|Controller|Hybrid</group>
-      <struct>ConstantWork.APP_PrelookupIdxArr</struct>
-      <class>prelookup</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <len>7</len>
-      <input>APP_PrelookupIn</input>
-      <index>APP_PrelookupIdx</index>
-   </VarDec>
-   <VarDec>
-      <name>APP_PrelookupIdx</name>
-      <access>RO RO RO RO</access>
-      <gain>0.001953125</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>127.998046875</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0x0000FFFF</mask>
-      <units>idx.frac</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BaseEngineController_A02|Foreground|Control|Controller|Hybrid</group>
-      <struct>VolatileWork_BSS.APP_PrelookupIdx</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint16</type>
-   </VarDec>
-   <VarDec>
-      <name>APP_PrelookupIn</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BaseEngineController_A02|Foreground|Control|Controller|Hybrid</group>
-      <struct>VolatileWork_BSS.APP_PrelookupIn</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>APP_InterpolationTbl</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>us</units>
-      <ctype>const Constant_T</ctype>
-      <group>BaseEngineController_A02|Foreground|Control|Controller|Hybrid</group>
-      <struct>ConstantWork.APP_InterpolationTbl</struct>
-      <class>interpolation_1d</class>
-      <storage>FLASH</storage>
-      <update>REMOTE</update>
-      <type>real32</type>
-      <len>7</len>
-      <output>APP_Interpolation</output>
-      <prelookup>APP_PrelookupIdxArr</prelookup>
-   </VarDec>
-   <VarDec>
-      <name>APP_Interpolation</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>us</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BaseEngineController_A02|Foreground|Control|Controller|Hybrid</group>
-      <struct>VolatileWork_BSS.APP_Interpolation</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>App05IdxArr</name>
@@ -20652,6 +20950,78 @@
       </enum>
    </VarDec>
    <VarDec>
+      <name>EGRPin</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Analog input pin selection for EGRPin</help>
+      <group>System | I/O Pins | Inputs Config</group>
+      <struct>ConstantWork.EGRPin</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>int16</type>
+      <class>enum</class>
+      <enum>
+         <item name="(None)" value="-1"/>
+         <item name="ECUP" value="53"/>
+         <item name="AN7M" value="62"/>
+         <item name="AN8M" value="63"/>
+         <item name="AN9M" value="64"/>
+         <item name="AN10M" value="65"/>
+         <item name="AN11M" value="66"/>
+         <item name="AN12M" value="67"/>
+         <item name="AN13M" value="68"/>
+         <item name="AN14M" value="69"/>
+         <item name="AN15M" value="70"/>
+         <item name="AN16M" value="71"/>
+         <item name="DRVP" value="54"/>
+         <item name="AN17M" value="72"/>
+         <item name="AN18M" value="73"/>
+         <item name="AN19M" value="74"/>
+         <item name="O2A" value="90"/>
+         <item name="O2B" value="91"/>
+         <item name="XDRP_B" value="92"/>
+         <item name="XDRP" value="55"/>
+         <item name="AN1M" value="56"/>
+         <item name="AN2M" value="57"/>
+         <item name="AN3M" value="58"/>
+         <item name="AN4M" value="59"/>
+         <item name="AN5M" value="60"/>
+         <item name="AN6M" value="61"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>EGRPin_ref</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Reference Voltage Selection</help>
+      <group>System | I/O Pins | Inputs Config</group>
+      <struct>ConstantWork.EGRPin_ref</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="5V" value="0"/>
+         <item name="2.7V" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
       <name>FuelPumpPin</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -20662,7 +21032,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut7269p0001</help>
+      <help>Digital output pin selection for DOut7474p0004</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.FuelPumpPin</struct>
       <storage>FLASH</storage>
@@ -20766,7 +21136,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut7547p0001</help>
+      <help>Digital output pin selection for DOut7752p0005</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.OilPumpPin</struct>
       <storage>FLASH</storage>
@@ -20818,7 +21188,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut7557p0001</help>
+      <help>Digital output pin selection for DOut7762p0005</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.O2_Heater</struct>
       <storage>FLASH</storage>
@@ -20932,78 +21302,6 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>EGRPin</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>32767</max>
-      <min>-32768</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <help>Analog input pin selection for EGRPin</help>
-      <group>System | I/O Pins | Inputs Config</group>
-      <struct>ConstantWork.EGRPin</struct>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>int16</type>
-      <class>enum</class>
-      <enum>
-         <item name="(None)" value="-1"/>
-         <item name="ECUP" value="53"/>
-         <item name="AN7M" value="62"/>
-         <item name="AN8M" value="63"/>
-         <item name="AN9M" value="64"/>
-         <item name="AN10M" value="65"/>
-         <item name="AN11M" value="66"/>
-         <item name="AN12M" value="67"/>
-         <item name="AN13M" value="68"/>
-         <item name="AN14M" value="69"/>
-         <item name="AN15M" value="70"/>
-         <item name="AN16M" value="71"/>
-         <item name="DRVP" value="54"/>
-         <item name="AN17M" value="72"/>
-         <item name="AN18M" value="73"/>
-         <item name="AN19M" value="74"/>
-         <item name="O2A" value="90"/>
-         <item name="O2B" value="91"/>
-         <item name="XDRP_B" value="92"/>
-         <item name="XDRP" value="55"/>
-         <item name="AN1M" value="56"/>
-         <item name="AN2M" value="57"/>
-         <item name="AN3M" value="58"/>
-         <item name="AN4M" value="59"/>
-         <item name="AN5M" value="60"/>
-         <item name="AN6M" value="61"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>EGRPin_ref</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>255</max>
-      <min>0</min>
-      <format>3.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>const Constant_T</ctype>
-      <help>Reference Voltage Selection</help>
-      <group>System | I/O Pins | Inputs Config</group>
-      <struct>ConstantWork.EGRPin_ref</struct>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="5V" value="0"/>
-         <item name="2.7V" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
       <name>SensVoltSensorPin</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -21072,6 +21370,44 @@
       <enum>
          <item name="5V" value="0"/>
          <item name="2.7V" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>ONESHOT</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>One Shot output pin selection for ONESHOT</help>
+      <group>System | I/O Pins | Outputs Config</group>
+      <struct>ConstantWork.ONESHOT</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>int16</type>
+      <class>enum</class>
+      <enum>
+         <item name="(None)" value="-1"/>
+         <item name="HSOL1" value="2"/>
+         <item name="EST 3" value="38"/>
+         <item name="EST 4" value="39"/>
+         <item name="EST 5" value="40"/>
+         <item name="EST 6" value="41"/>
+         <item name="EST 7" value="42"/>
+         <item name="EST 8" value="43"/>
+         <item name="HSOL2" value="3"/>
+         <item name="HSOL3" value="4"/>
+         <item name="HSOL4" value="5"/>
+         <item name="START" value="6"/>
+         <item name="OILP" value="11"/>
+         <item name="ESC" value="35"/>
+         <item name="EST 1" value="36"/>
+         <item name="EST 2" value="37"/>
          <default>Unknown</default>
       </enum>
    </VarDec>

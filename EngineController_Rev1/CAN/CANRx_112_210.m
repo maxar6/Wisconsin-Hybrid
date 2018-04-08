@@ -142,13 +142,30 @@ function msg = CANTx_112_210()
   
   msg.fields{3}.name          = 'Vehicle_Speed';
   msg.fields{3}.units         = 'MPH';
-  msg.fields{3}.start_bit     = 54;
+  msg.fields{3}.start_bit     = 32;
   msg.fields{3}.bit_length    = 8;
   msg.fields{3}.byte_order    = 'BIG_ENDIAN';
   msg.fields{3}.data_type     = 'UNSIGNED';
   msg.fields{3}.scale         = 1;
   msg.fields{3}.offset        = 0;
   
+  msg.fields{4}.name          = 'Load_Throttle';
+  msg.fields{4}.units         = '%';
+  msg.fields{4}.start_bit     = 40;
+  msg.fields{4}.bit_length    = 8;
+  msg.fields{4}.byte_order    = 'BIG_ENDIAN';
+  msg.fields{4}.data_type     = 'UNSIGNED';
+  msg.fields{4}.scale         = 1;
+  msg.fields{4}.offset        = 0;
+  
+  msg.fields{5}.name          = 'Load_RPM';
+  msg.fields{5}.units         = 'RPM';
+  msg.fields{5}.start_bit     = 48;
+  msg.fields{5}.bit_length    = 8;
+  msg.fields{5}.byte_order    = 'BIG_ENDIAN';
+  msg.fields{5}.data_type     = 'UNSIGNED';
+  msg.fields{5}.scale         = 1;
+  msg.fields{5}.offset        = 0;
    
 % Equation: (CAN_msg_field_value) * 1e-2 + 250.0 = (Simulink_model_value)
 % example:             1245       * 1e-2 + 250.0 =     262.45 degK

@@ -1014,7 +1014,7 @@
 		<format>4.2</format>
 		<mask>0xFFFFFFFF</mask>
 		<ctype>BlockIO_DynoController_Rev1</ctype>
-		<struct>DynoController_Rev1_B.s124_Sum</struct>
+		<struct>DynoController_Rev1_B.s130_Sum</struct>
 		<group>DynoController_Rev1|Foreground|Outputs|Guages|Time Since Key On</group>
 	</VarDec>
 	<VarDec>
@@ -1731,12 +1731,20 @@
 		<group>System | Code Coverage</group>
 		<bits>
 			<item>
+				<name>CodeCover000090</name>
+				<group>System | Code Coverage</group>
+				<help>Determines if this subsystem has run</help>
+				<bit>26</bit>
+				<true_text>-</true_text>
+				<false_text>DynoController_Rev1/Main Power Relay/Background/motohawk_store_nvmem</false_text>
+			</item>
+			<item>
 				<name>CodeCover000080</name>
 				<group>System | Code Coverage</group>
 				<help>Determines if this subsystem has run</help>
 				<bit>16</bit>
 				<true_text>-</true_text>
-				<false_text>DynoController_Rev1/Main Power Relay/Background/Save NV Vars one tick before MPRD off/Save NV Vars one tick before MPRD off</false_text>
+				<false_text>DynoController_Rev1/Main Power Relay/Background/Post Shutdown two ticks before MPRD off</false_text>
 			</item>
 			<item>
 				<name>CodeCover000081</name>
@@ -1744,7 +1752,7 @@
 				<help>Determines if this subsystem has run</help>
 				<bit>17</bit>
 				<true_text>-</true_text>
-				<false_text>DynoController_Rev1/Main Power Relay/Background/Shutdown power on ECU565-128</false_text>
+				<false_text>DynoController_Rev1/Main Power Relay/Background/Post Shutdown two ticks before MPRD off/Post Shutdown two ticks before MPRD off</false_text>
 			</item>
 			<item>
 				<name>CodeCover000070</name>
@@ -1752,7 +1760,7 @@
 				<help>Determines if this subsystem has run</help>
 				<bit>6</bit>
 				<true_text>-</true_text>
-				<false_text>DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs3/OldValue</false_text>
+				<false_text>DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs1/OldValue</false_text>
 			</item>
 			<item>
 				<name>CodeCover000082</name>
@@ -1760,7 +1768,7 @@
 				<help>Determines if this subsystem has run</help>
 				<bit>18</bit>
 				<true_text>-</true_text>
-				<false_text>DynoController_Rev1/Main Power Relay/Background/Shutdown power on ECU565-128/Shutdown power on ECU565-128</false_text>
+				<false_text>DynoController_Rev1/Main Power Relay/Background/Processor Reboot</false_text>
 			</item>
 			<item>
 				<name>CodeCover000071</name>
@@ -1768,7 +1776,7 @@
 				<help>Determines if this subsystem has run</help>
 				<bit>7</bit>
 				<true_text>-</true_text>
-				<false_text>DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs4/NewValue</false_text>
+				<false_text>DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs2/NewValue</false_text>
 			</item>
 			<item>
 				<name>CodeCover000083</name>
@@ -1776,7 +1784,7 @@
 				<help>Determines if this subsystem has run</help>
 				<bit>19</bit>
 				<true_text>-</true_text>
-				<false_text>DynoController_Rev1/Main Power Relay/Background/motohawk_override_abs/NewValue</false_text>
+				<false_text>DynoController_Rev1/Main Power Relay/Background/Save NV Vars one tick before MPRD off</false_text>
 			</item>
 			<item>
 				<name>CodeCover000072</name>
@@ -1784,7 +1792,7 @@
 				<help>Determines if this subsystem has run</help>
 				<bit>8</bit>
 				<true_text>-</true_text>
-				<false_text>DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs4/OldValue</false_text>
+				<false_text>DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs2/OldValue</false_text>
 			</item>
 			<item>
 				<name>CodeCover000084</name>
@@ -1792,7 +1800,7 @@
 				<help>Determines if this subsystem has run</help>
 				<bit>20</bit>
 				<true_text>-</true_text>
-				<false_text>DynoController_Rev1/Main Power Relay/Background/motohawk_override_abs/OldValue</false_text>
+				<false_text>DynoController_Rev1/Main Power Relay/Background/Save NV Vars one tick before MPRD off/Save NV Vars one tick before MPRD off</false_text>
 			</item>
 			<item>
 				<name>CodeCover000073</name>
@@ -1800,7 +1808,7 @@
 				<help>Determines if this subsystem has run</help>
 				<bit>9</bit>
 				<true_text>-</true_text>
-				<false_text>DynoController_Rev1/Main Power Relay/Background</false_text>
+				<false_text>DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs3/NewValue</false_text>
 			</item>
 			<item>
 				<name>CodeCover000085</name>
@@ -1808,7 +1816,7 @@
 				<help>Determines if this subsystem has run</help>
 				<bit>21</bit>
 				<true_text>-</true_text>
-				<false_text>DynoController_Rev1/Main Power Relay/Background/motohawk_restore_nvmem</false_text>
+				<false_text>DynoController_Rev1/Main Power Relay/Background/Shutdown power on ECU565-128</false_text>
 			</item>
 			<item>
 				<name>CodeCover000074</name>
@@ -1816,7 +1824,7 @@
 				<help>Determines if this subsystem has run</help>
 				<bit>10</bit>
 				<true_text>-</true_text>
-				<false_text>DynoController_Rev1/Main Power Relay/Background/Display Variable Event Function-Call/Clear</false_text>
+				<false_text>DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs3/OldValue</false_text>
 			</item>
 			<item>
 				<name>CodeCover000086</name>
@@ -1824,7 +1832,7 @@
 				<help>Determines if this subsystem has run</help>
 				<bit>22</bit>
 				<true_text>-</true_text>
-				<false_text>DynoController_Rev1/Main Power Relay/Background/motohawk_store_nvmem</false_text>
+				<false_text>DynoController_Rev1/Main Power Relay/Background/Shutdown power on ECU565-128/Shutdown power on ECU565-128</false_text>
 			</item>
 			<item>
 				<name>CodeCover000075</name>
@@ -1832,7 +1840,7 @@
 				<help>Determines if this subsystem has run</help>
 				<bit>11</bit>
 				<true_text>-</true_text>
-				<false_text>DynoController_Rev1/Main Power Relay/Background/Display Variable Event Function-Call1/Clear</false_text>
+				<false_text>DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs4/NewValue</false_text>
 			</item>
 			<item>
 				<name>CodeCover000064</name>
@@ -1843,12 +1851,20 @@
 				<false_text>DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs3/OldValue</false_text>
 			</item>
 			<item>
+				<name>CodeCover000087</name>
+				<group>System | Code Coverage</group>
+				<help>Determines if this subsystem has run</help>
+				<bit>23</bit>
+				<true_text>-</true_text>
+				<false_text>DynoController_Rev1/Main Power Relay/Background/motohawk_override_abs/NewValue</false_text>
+			</item>
+			<item>
 				<name>CodeCover000076</name>
 				<group>System | Code Coverage</group>
 				<help>Determines if this subsystem has run</help>
 				<bit>12</bit>
 				<true_text>-</true_text>
-				<false_text>DynoController_Rev1/Main Power Relay/Background/Post Shutdown two ticks before MPRD off</false_text>
+				<false_text>DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs4/OldValue</false_text>
 			</item>
 			<item>
 				<name>CodeCover000065</name>
@@ -1856,7 +1872,15 @@
 				<help>Determines if this subsystem has run</help>
 				<bit>1</bit>
 				<true_text>-</true_text>
-				<false_text>DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs1/NewValue</false_text>
+				<false_text>DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs4/NewValue</false_text>
+			</item>
+			<item>
+				<name>CodeCover000088</name>
+				<group>System | Code Coverage</group>
+				<help>Determines if this subsystem has run</help>
+				<bit>24</bit>
+				<true_text>-</true_text>
+				<false_text>DynoController_Rev1/Main Power Relay/Background/motohawk_override_abs/OldValue</false_text>
 			</item>
 			<item>
 				<name>CodeCover000077</name>
@@ -1864,7 +1888,7 @@
 				<help>Determines if this subsystem has run</help>
 				<bit>13</bit>
 				<true_text>-</true_text>
-				<false_text>DynoController_Rev1/Main Power Relay/Background/Post Shutdown two ticks before MPRD off/Post Shutdown two ticks before MPRD off</false_text>
+				<false_text>DynoController_Rev1/Main Power Relay/Background</false_text>
 			</item>
 			<item>
 				<name>CodeCover000066</name>
@@ -1872,7 +1896,15 @@
 				<help>Determines if this subsystem has run</help>
 				<bit>2</bit>
 				<true_text>-</true_text>
-				<false_text>DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs1/OldValue</false_text>
+				<false_text>DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs4/OldValue</false_text>
+			</item>
+			<item>
+				<name>CodeCover000089</name>
+				<group>System | Code Coverage</group>
+				<help>Determines if this subsystem has run</help>
+				<bit>25</bit>
+				<true_text>-</true_text>
+				<false_text>DynoController_Rev1/Main Power Relay/Background/motohawk_restore_nvmem</false_text>
 			</item>
 			<item>
 				<name>CodeCover000078</name>
@@ -1880,7 +1912,7 @@
 				<help>Determines if this subsystem has run</help>
 				<bit>14</bit>
 				<true_text>-</true_text>
-				<false_text>DynoController_Rev1/Main Power Relay/Background/Processor Reboot</false_text>
+				<false_text>DynoController_Rev1/Main Power Relay/Background/Display Variable Event Function-Call/Clear</false_text>
 			</item>
 			<item>
 				<name>CodeCover000067</name>
@@ -1888,7 +1920,7 @@
 				<help>Determines if this subsystem has run</help>
 				<bit>3</bit>
 				<true_text>-</true_text>
-				<false_text>DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs2/NewValue</false_text>
+				<false_text>DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs5/NewValue</false_text>
 			</item>
 			<item>
 				<name>CodeCover000079</name>
@@ -1896,7 +1928,7 @@
 				<help>Determines if this subsystem has run</help>
 				<bit>15</bit>
 				<true_text>-</true_text>
-				<false_text>DynoController_Rev1/Main Power Relay/Background/Save NV Vars one tick before MPRD off</false_text>
+				<false_text>DynoController_Rev1/Main Power Relay/Background/Display Variable Event Function-Call1/Clear</false_text>
 			</item>
 			<item>
 				<name>CodeCover000068</name>
@@ -1904,7 +1936,7 @@
 				<help>Determines if this subsystem has run</help>
 				<bit>4</bit>
 				<true_text>-</true_text>
-				<false_text>DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs2/OldValue</false_text>
+				<false_text>DynoController_Rev1/Foreground/Outputs/CAN Outputs/DYNO OUT/motohawk_override_abs5/OldValue</false_text>
 			</item>
 			<item>
 				<name>CodeCover000069</name>
@@ -1912,7 +1944,7 @@
 				<help>Determines if this subsystem has run</help>
 				<bit>5</bit>
 				<true_text>-</true_text>
-				<false_text>DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs3/NewValue</false_text>
+				<false_text>DynoController_Rev1/Foreground/Outputs/Guages/motohawk_override_abs1/NewValue</false_text>
 			</item>
 		</bits>
 	</VarDec>
@@ -2440,6 +2472,118 @@
 		</enum>
 	</VarDec>
 	<VarDec>
+		<name>dout_create_DOut336p001</name>
+		<class>enum</class>
+		<access>RO RO RO RO</access>
+		<storage>RAM</storage>
+		<update>BACKGND</update>
+		<type>uint8</type>
+		<gain>1.0</gain>
+		<offset>0.0</offset>
+		<exp>1.0</exp>
+		<max>0.0</max>
+		<min>0.0</min>
+		<format>4.2</format>
+		<mask>0xFFFFFFFF</mask>
+		<ctype>E_NativeFWError</ctype>
+		<struct>dout_create_DOut336p001</struct>
+		<help>Debug Variable</help>
+		<group>System | Debug | Resources | DiscreteOut</group>
+		<enum name="E_NativeFWError">
+			<item name="Normal Operation" value="0"/>
+			<item name="Bad Resource ID" value="1"/>
+			<item name="Hardware Not Supported" value="2"/>
+			<item name="Behaviour Not Supported" value="3"/>
+			<item name="Bad Attribute Data" value="4"/>
+			<item name="Fail On Create" value="5"/>
+			<item name="Fail On Set Attributes" value="6"/>
+			<item name="Resource Not Created" value="7"/>
+			<item name="Missing Attribute" value="8"/>
+			<item name="Behaviour Method Not Supported" value="9"/>
+			<item name="A Service Failed" value="10"/>
+			<item name="Failed to destroy a resource" value="11"/>
+			<item name="Resource Was Created" value="12"/>
+			<item name="Resource Conflict" value="13"/>
+			<item name="Invalid Encoder Type" value="14"/>
+			<item name="2-Strike Not Supported" value="15"/>
+			<item name="720degCA Pattern Not Supported" value="16"/>
+			<item name="CAM Pattern Not Supported" value="17"/>
+			<item name="Unknown CAM Pattern Supplied" value="18"/>
+			<item name="Engine Speed Present" value="19"/>
+			<item name="Hardware Interface Not Supported" value="20"/>
+			<item name="Service Already Started" value="21"/>
+			<item name="Register Write Failed to verify" value="22"/>
+			<item name="Register access was denied" value="23"/>
+			<item name="Out of free store memory" value="24"/>
+			<item name="Software Q Overrun" value="25"/>
+			<item name="Hardware Q Overrun" value="26"/>
+			<item name="Feature unsupported in archive" value="27"/>
+			<item name="Insufficient FW resource" value="28"/>
+			<item name="OS Resource conflict" value="29"/>
+			<item name="Driver Mode conflict" value="30"/>
+			<item name="RTC time is illegal" value="31"/>
+			<item name="FFS unmounted" value="32"/>
+			<item name="Access from an ISR" value="33"/>
+			<item name="FFS internal" value="34"/>
+			<item name="Operation timed out" value="35"/>
+			<item name="Task Kernel API Usage" value="36"/>
+			<item name="Operation aborted" value="37"/>
+			<item name="File not Found" value="38"/>
+			<item name="Invalid characters in filename" value="39"/>
+			<item name="Duplicate filename" value="40"/>
+			<item name="Filename is too long" value="41"/>
+			<item name="Dir not empty on remove" value="42"/>
+			<item name="Dir not found" value="43"/>
+			<item name="Dir name invalid" value="44"/>
+			<item name="Dir exists" value="45"/>
+			<item name="Dir too deep" value="46"/>
+			<item name="Illegal Handle" value="47"/>
+			<item name="End of File" value="48"/>
+			<item name="Media Full" value="49"/>
+			<item name="Media Write" value="50"/>
+			<item name="Media Read" value="51"/>
+			<item name="Media Write Protected" value="52"/>
+			<item name="File Read Only" value="53"/>
+			<item name="FS Media Changed" value="54"/>
+			<item name="Internal USB" value="55"/>
+			<item name="Voltage too high for USB IC" value="56"/>
+			<item name="Encoder not created" value="57"/>
+			<item name="TPU Chan Conflict" value="64"/>
+			<item name="TPU Func Unavailable" value="65"/>
+			<item name="TPU Config" value="66"/>
+			<item name="TPU Primative Usage" value="67"/>
+			<item name="TPU Primitive Count" value="68"/>
+			<item name="TPU Restricted TPU channel" value="69"/>
+			<item name="TPU Not Created" value="70"/>
+			<item name="TPU Self Modify constant write err" value="71"/>
+			<item name="TPU Error 0x48" value="72"/>
+			<item name="TPU Error 0x49" value="73"/>
+			<item name="TPU Error 0x4A" value="74"/>
+			<item name="TPU Error 0x4B" value="75"/>
+			<item name="TPU Error 0x4C" value="76"/>
+			<item name="TPU Error 0x4D" value="77"/>
+			<item name="TPU Error 0x4E" value="78"/>
+			<item name="TPU Error 0x4F" value="79"/>
+			<item name="TPU Error 0x50" value="80"/>
+			<item name="TPU Error 0x51" value="81"/>
+			<item name="TPU Error 0x52" value="82"/>
+			<item name="TPU Error 0x53" value="83"/>
+			<item name="TPU Error 0x54" value="84"/>
+			<item name="TPU Error 0x55" value="85"/>
+			<item name="TPU Error 0x56" value="86"/>
+			<item name="TPU Error 0x57" value="87"/>
+			<item name="TPU Error 0x58" value="88"/>
+			<item name="TPU Error 0x59" value="89"/>
+			<item name="TPU Error 0x5A" value="90"/>
+			<item name="TPU Error 0x5B" value="91"/>
+			<item name="TPU Error 0x5C" value="92"/>
+			<item name="TPU Error 0x5D" value="93"/>
+			<item name="TPU Error 0x5E" value="94"/>
+			<item name="TPU Error 0x5F" value="95"/>
+			<default>Illegal Error</default>
+		</enum>
+	</VarDec>
+	<VarDec>
 		<name>can_tx_err_CAN_1_0</name>
 		<class>enum</class>
 		<access>RO RO RO RO</access>
@@ -2569,6 +2713,230 @@
 		<struct>GaugeChain_EZlinkTx</struct>
 		<help>Debug Variable</help>
 		<group>System | Debug | Resources | EZLink</group>
+		<enum name="E_NativeFWError">
+			<item name="Normal Operation" value="0"/>
+			<item name="Bad Resource ID" value="1"/>
+			<item name="Hardware Not Supported" value="2"/>
+			<item name="Behaviour Not Supported" value="3"/>
+			<item name="Bad Attribute Data" value="4"/>
+			<item name="Fail On Create" value="5"/>
+			<item name="Fail On Set Attributes" value="6"/>
+			<item name="Resource Not Created" value="7"/>
+			<item name="Missing Attribute" value="8"/>
+			<item name="Behaviour Method Not Supported" value="9"/>
+			<item name="A Service Failed" value="10"/>
+			<item name="Failed to destroy a resource" value="11"/>
+			<item name="Resource Was Created" value="12"/>
+			<item name="Resource Conflict" value="13"/>
+			<item name="Invalid Encoder Type" value="14"/>
+			<item name="2-Strike Not Supported" value="15"/>
+			<item name="720degCA Pattern Not Supported" value="16"/>
+			<item name="CAM Pattern Not Supported" value="17"/>
+			<item name="Unknown CAM Pattern Supplied" value="18"/>
+			<item name="Engine Speed Present" value="19"/>
+			<item name="Hardware Interface Not Supported" value="20"/>
+			<item name="Service Already Started" value="21"/>
+			<item name="Register Write Failed to verify" value="22"/>
+			<item name="Register access was denied" value="23"/>
+			<item name="Out of free store memory" value="24"/>
+			<item name="Software Q Overrun" value="25"/>
+			<item name="Hardware Q Overrun" value="26"/>
+			<item name="Feature unsupported in archive" value="27"/>
+			<item name="Insufficient FW resource" value="28"/>
+			<item name="OS Resource conflict" value="29"/>
+			<item name="Driver Mode conflict" value="30"/>
+			<item name="RTC time is illegal" value="31"/>
+			<item name="FFS unmounted" value="32"/>
+			<item name="Access from an ISR" value="33"/>
+			<item name="FFS internal" value="34"/>
+			<item name="Operation timed out" value="35"/>
+			<item name="Task Kernel API Usage" value="36"/>
+			<item name="Operation aborted" value="37"/>
+			<item name="File not Found" value="38"/>
+			<item name="Invalid characters in filename" value="39"/>
+			<item name="Duplicate filename" value="40"/>
+			<item name="Filename is too long" value="41"/>
+			<item name="Dir not empty on remove" value="42"/>
+			<item name="Dir not found" value="43"/>
+			<item name="Dir name invalid" value="44"/>
+			<item name="Dir exists" value="45"/>
+			<item name="Dir too deep" value="46"/>
+			<item name="Illegal Handle" value="47"/>
+			<item name="End of File" value="48"/>
+			<item name="Media Full" value="49"/>
+			<item name="Media Write" value="50"/>
+			<item name="Media Read" value="51"/>
+			<item name="Media Write Protected" value="52"/>
+			<item name="File Read Only" value="53"/>
+			<item name="FS Media Changed" value="54"/>
+			<item name="Internal USB" value="55"/>
+			<item name="Voltage too high for USB IC" value="56"/>
+			<item name="Encoder not created" value="57"/>
+			<item name="TPU Chan Conflict" value="64"/>
+			<item name="TPU Func Unavailable" value="65"/>
+			<item name="TPU Config" value="66"/>
+			<item name="TPU Primative Usage" value="67"/>
+			<item name="TPU Primitive Count" value="68"/>
+			<item name="TPU Restricted TPU channel" value="69"/>
+			<item name="TPU Not Created" value="70"/>
+			<item name="TPU Self Modify constant write err" value="71"/>
+			<item name="TPU Error 0x48" value="72"/>
+			<item name="TPU Error 0x49" value="73"/>
+			<item name="TPU Error 0x4A" value="74"/>
+			<item name="TPU Error 0x4B" value="75"/>
+			<item name="TPU Error 0x4C" value="76"/>
+			<item name="TPU Error 0x4D" value="77"/>
+			<item name="TPU Error 0x4E" value="78"/>
+			<item name="TPU Error 0x4F" value="79"/>
+			<item name="TPU Error 0x50" value="80"/>
+			<item name="TPU Error 0x51" value="81"/>
+			<item name="TPU Error 0x52" value="82"/>
+			<item name="TPU Error 0x53" value="83"/>
+			<item name="TPU Error 0x54" value="84"/>
+			<item name="TPU Error 0x55" value="85"/>
+			<item name="TPU Error 0x56" value="86"/>
+			<item name="TPU Error 0x57" value="87"/>
+			<item name="TPU Error 0x58" value="88"/>
+			<item name="TPU Error 0x59" value="89"/>
+			<item name="TPU Error 0x5A" value="90"/>
+			<item name="TPU Error 0x5B" value="91"/>
+			<item name="TPU Error 0x5C" value="92"/>
+			<item name="TPU Error 0x5D" value="93"/>
+			<item name="TPU Error 0x5E" value="94"/>
+			<item name="TPU Error 0x5F" value="95"/>
+			<default>Illegal Error</default>
+		</enum>
+	</VarDec>
+	<VarDec>
+		<name>dout_create_DOut337p001</name>
+		<class>enum</class>
+		<access>RO RO RO RO</access>
+		<storage>RAM</storage>
+		<update>BACKGND</update>
+		<type>uint8</type>
+		<gain>1.0</gain>
+		<offset>0.0</offset>
+		<exp>1.0</exp>
+		<max>0.0</max>
+		<min>0.0</min>
+		<format>4.2</format>
+		<mask>0xFFFFFFFF</mask>
+		<ctype>E_NativeFWError</ctype>
+		<struct>dout_create_DOut337p001</struct>
+		<help>Debug Variable</help>
+		<group>System | Debug | Resources | DiscreteOut</group>
+		<enum name="E_NativeFWError">
+			<item name="Normal Operation" value="0"/>
+			<item name="Bad Resource ID" value="1"/>
+			<item name="Hardware Not Supported" value="2"/>
+			<item name="Behaviour Not Supported" value="3"/>
+			<item name="Bad Attribute Data" value="4"/>
+			<item name="Fail On Create" value="5"/>
+			<item name="Fail On Set Attributes" value="6"/>
+			<item name="Resource Not Created" value="7"/>
+			<item name="Missing Attribute" value="8"/>
+			<item name="Behaviour Method Not Supported" value="9"/>
+			<item name="A Service Failed" value="10"/>
+			<item name="Failed to destroy a resource" value="11"/>
+			<item name="Resource Was Created" value="12"/>
+			<item name="Resource Conflict" value="13"/>
+			<item name="Invalid Encoder Type" value="14"/>
+			<item name="2-Strike Not Supported" value="15"/>
+			<item name="720degCA Pattern Not Supported" value="16"/>
+			<item name="CAM Pattern Not Supported" value="17"/>
+			<item name="Unknown CAM Pattern Supplied" value="18"/>
+			<item name="Engine Speed Present" value="19"/>
+			<item name="Hardware Interface Not Supported" value="20"/>
+			<item name="Service Already Started" value="21"/>
+			<item name="Register Write Failed to verify" value="22"/>
+			<item name="Register access was denied" value="23"/>
+			<item name="Out of free store memory" value="24"/>
+			<item name="Software Q Overrun" value="25"/>
+			<item name="Hardware Q Overrun" value="26"/>
+			<item name="Feature unsupported in archive" value="27"/>
+			<item name="Insufficient FW resource" value="28"/>
+			<item name="OS Resource conflict" value="29"/>
+			<item name="Driver Mode conflict" value="30"/>
+			<item name="RTC time is illegal" value="31"/>
+			<item name="FFS unmounted" value="32"/>
+			<item name="Access from an ISR" value="33"/>
+			<item name="FFS internal" value="34"/>
+			<item name="Operation timed out" value="35"/>
+			<item name="Task Kernel API Usage" value="36"/>
+			<item name="Operation aborted" value="37"/>
+			<item name="File not Found" value="38"/>
+			<item name="Invalid characters in filename" value="39"/>
+			<item name="Duplicate filename" value="40"/>
+			<item name="Filename is too long" value="41"/>
+			<item name="Dir not empty on remove" value="42"/>
+			<item name="Dir not found" value="43"/>
+			<item name="Dir name invalid" value="44"/>
+			<item name="Dir exists" value="45"/>
+			<item name="Dir too deep" value="46"/>
+			<item name="Illegal Handle" value="47"/>
+			<item name="End of File" value="48"/>
+			<item name="Media Full" value="49"/>
+			<item name="Media Write" value="50"/>
+			<item name="Media Read" value="51"/>
+			<item name="Media Write Protected" value="52"/>
+			<item name="File Read Only" value="53"/>
+			<item name="FS Media Changed" value="54"/>
+			<item name="Internal USB" value="55"/>
+			<item name="Voltage too high for USB IC" value="56"/>
+			<item name="Encoder not created" value="57"/>
+			<item name="TPU Chan Conflict" value="64"/>
+			<item name="TPU Func Unavailable" value="65"/>
+			<item name="TPU Config" value="66"/>
+			<item name="TPU Primative Usage" value="67"/>
+			<item name="TPU Primitive Count" value="68"/>
+			<item name="TPU Restricted TPU channel" value="69"/>
+			<item name="TPU Not Created" value="70"/>
+			<item name="TPU Self Modify constant write err" value="71"/>
+			<item name="TPU Error 0x48" value="72"/>
+			<item name="TPU Error 0x49" value="73"/>
+			<item name="TPU Error 0x4A" value="74"/>
+			<item name="TPU Error 0x4B" value="75"/>
+			<item name="TPU Error 0x4C" value="76"/>
+			<item name="TPU Error 0x4D" value="77"/>
+			<item name="TPU Error 0x4E" value="78"/>
+			<item name="TPU Error 0x4F" value="79"/>
+			<item name="TPU Error 0x50" value="80"/>
+			<item name="TPU Error 0x51" value="81"/>
+			<item name="TPU Error 0x52" value="82"/>
+			<item name="TPU Error 0x53" value="83"/>
+			<item name="TPU Error 0x54" value="84"/>
+			<item name="TPU Error 0x55" value="85"/>
+			<item name="TPU Error 0x56" value="86"/>
+			<item name="TPU Error 0x57" value="87"/>
+			<item name="TPU Error 0x58" value="88"/>
+			<item name="TPU Error 0x59" value="89"/>
+			<item name="TPU Error 0x5A" value="90"/>
+			<item name="TPU Error 0x5B" value="91"/>
+			<item name="TPU Error 0x5C" value="92"/>
+			<item name="TPU Error 0x5D" value="93"/>
+			<item name="TPU Error 0x5E" value="94"/>
+			<item name="TPU Error 0x5F" value="95"/>
+			<default>Illegal Error</default>
+		</enum>
+	</VarDec>
+	<VarDec>
+		<name>dout_create_DOut338p001</name>
+		<class>enum</class>
+		<access>RO RO RO RO</access>
+		<storage>RAM</storage>
+		<update>BACKGND</update>
+		<type>uint8</type>
+		<gain>1.0</gain>
+		<offset>0.0</offset>
+		<exp>1.0</exp>
+		<max>0.0</max>
+		<min>0.0</min>
+		<format>4.2</format>
+		<mask>0xFFFFFFFF</mask>
+		<ctype>E_NativeFWError</ctype>
+		<struct>dout_create_DOut338p001</struct>
+		<help>Debug Variable</help>
+		<group>System | Debug | Resources | DiscreteOut</group>
 		<enum name="E_NativeFWError">
 			<item name="Normal Operation" value="0"/>
 			<item name="Bad Resource ID" value="1"/>
@@ -2802,7 +3170,7 @@
 		</enum>
 	</VarDec>
 	<VarDec>
-		<name>dout_create_DOut328p001</name>
+		<name>dout_create_DOut339p001</name>
 		<class>enum</class>
 		<access>RO RO RO RO</access>
 		<storage>RAM</storage>
@@ -2816,7 +3184,7 @@
 		<format>4.2</format>
 		<mask>0xFFFFFFFF</mask>
 		<ctype>E_NativeFWError</ctype>
-		<struct>dout_create_DOut328p001</struct>
+		<struct>dout_create_DOut339p001</struct>
 		<help>Debug Variable</help>
 		<group>System | Debug | Resources | DiscreteOut</group>
 		<enum name="E_NativeFWError">
@@ -3155,118 +3523,6 @@
 		<struct>din_read_LoadDumpEnable</struct>
 		<help>Debug Variable</help>
 		<group>System | Debug | Resources | DigitalInput</group>
-		<enum name="E_NativeFWError">
-			<item name="Normal Operation" value="0"/>
-			<item name="Bad Resource ID" value="1"/>
-			<item name="Hardware Not Supported" value="2"/>
-			<item name="Behaviour Not Supported" value="3"/>
-			<item name="Bad Attribute Data" value="4"/>
-			<item name="Fail On Create" value="5"/>
-			<item name="Fail On Set Attributes" value="6"/>
-			<item name="Resource Not Created" value="7"/>
-			<item name="Missing Attribute" value="8"/>
-			<item name="Behaviour Method Not Supported" value="9"/>
-			<item name="A Service Failed" value="10"/>
-			<item name="Failed to destroy a resource" value="11"/>
-			<item name="Resource Was Created" value="12"/>
-			<item name="Resource Conflict" value="13"/>
-			<item name="Invalid Encoder Type" value="14"/>
-			<item name="2-Strike Not Supported" value="15"/>
-			<item name="720degCA Pattern Not Supported" value="16"/>
-			<item name="CAM Pattern Not Supported" value="17"/>
-			<item name="Unknown CAM Pattern Supplied" value="18"/>
-			<item name="Engine Speed Present" value="19"/>
-			<item name="Hardware Interface Not Supported" value="20"/>
-			<item name="Service Already Started" value="21"/>
-			<item name="Register Write Failed to verify" value="22"/>
-			<item name="Register access was denied" value="23"/>
-			<item name="Out of free store memory" value="24"/>
-			<item name="Software Q Overrun" value="25"/>
-			<item name="Hardware Q Overrun" value="26"/>
-			<item name="Feature unsupported in archive" value="27"/>
-			<item name="Insufficient FW resource" value="28"/>
-			<item name="OS Resource conflict" value="29"/>
-			<item name="Driver Mode conflict" value="30"/>
-			<item name="RTC time is illegal" value="31"/>
-			<item name="FFS unmounted" value="32"/>
-			<item name="Access from an ISR" value="33"/>
-			<item name="FFS internal" value="34"/>
-			<item name="Operation timed out" value="35"/>
-			<item name="Task Kernel API Usage" value="36"/>
-			<item name="Operation aborted" value="37"/>
-			<item name="File not Found" value="38"/>
-			<item name="Invalid characters in filename" value="39"/>
-			<item name="Duplicate filename" value="40"/>
-			<item name="Filename is too long" value="41"/>
-			<item name="Dir not empty on remove" value="42"/>
-			<item name="Dir not found" value="43"/>
-			<item name="Dir name invalid" value="44"/>
-			<item name="Dir exists" value="45"/>
-			<item name="Dir too deep" value="46"/>
-			<item name="Illegal Handle" value="47"/>
-			<item name="End of File" value="48"/>
-			<item name="Media Full" value="49"/>
-			<item name="Media Write" value="50"/>
-			<item name="Media Read" value="51"/>
-			<item name="Media Write Protected" value="52"/>
-			<item name="File Read Only" value="53"/>
-			<item name="FS Media Changed" value="54"/>
-			<item name="Internal USB" value="55"/>
-			<item name="Voltage too high for USB IC" value="56"/>
-			<item name="Encoder not created" value="57"/>
-			<item name="TPU Chan Conflict" value="64"/>
-			<item name="TPU Func Unavailable" value="65"/>
-			<item name="TPU Config" value="66"/>
-			<item name="TPU Primative Usage" value="67"/>
-			<item name="TPU Primitive Count" value="68"/>
-			<item name="TPU Restricted TPU channel" value="69"/>
-			<item name="TPU Not Created" value="70"/>
-			<item name="TPU Self Modify constant write err" value="71"/>
-			<item name="TPU Error 0x48" value="72"/>
-			<item name="TPU Error 0x49" value="73"/>
-			<item name="TPU Error 0x4A" value="74"/>
-			<item name="TPU Error 0x4B" value="75"/>
-			<item name="TPU Error 0x4C" value="76"/>
-			<item name="TPU Error 0x4D" value="77"/>
-			<item name="TPU Error 0x4E" value="78"/>
-			<item name="TPU Error 0x4F" value="79"/>
-			<item name="TPU Error 0x50" value="80"/>
-			<item name="TPU Error 0x51" value="81"/>
-			<item name="TPU Error 0x52" value="82"/>
-			<item name="TPU Error 0x53" value="83"/>
-			<item name="TPU Error 0x54" value="84"/>
-			<item name="TPU Error 0x55" value="85"/>
-			<item name="TPU Error 0x56" value="86"/>
-			<item name="TPU Error 0x57" value="87"/>
-			<item name="TPU Error 0x58" value="88"/>
-			<item name="TPU Error 0x59" value="89"/>
-			<item name="TPU Error 0x5A" value="90"/>
-			<item name="TPU Error 0x5B" value="91"/>
-			<item name="TPU Error 0x5C" value="92"/>
-			<item name="TPU Error 0x5D" value="93"/>
-			<item name="TPU Error 0x5E" value="94"/>
-			<item name="TPU Error 0x5F" value="95"/>
-			<default>Illegal Error</default>
-		</enum>
-	</VarDec>
-	<VarDec>
-		<name>dout_create_DOut329p001</name>
-		<class>enum</class>
-		<access>RO RO RO RO</access>
-		<storage>RAM</storage>
-		<update>BACKGND</update>
-		<type>uint8</type>
-		<gain>1.0</gain>
-		<offset>0.0</offset>
-		<exp>1.0</exp>
-		<max>0.0</max>
-		<min>0.0</min>
-		<format>4.2</format>
-		<mask>0xFFFFFFFF</mask>
-		<ctype>E_NativeFWError</ctype>
-		<struct>dout_create_DOut329p001</struct>
-		<help>Debug Variable</help>
-		<group>System | Debug | Resources | DiscreteOut</group>
 		<enum name="E_NativeFWError">
 			<item name="Normal Operation" value="0"/>
 			<item name="Bad Resource ID" value="1"/>
@@ -4508,7 +4764,7 @@
 		</enum>
 	</VarDec>
 	<VarDec>
-		<name>dout_create_DOut330p001</name>
+		<name>dout_create_DOut736p0002</name>
 		<class>enum</class>
 		<access>RO RO RO RO</access>
 		<storage>RAM</storage>
@@ -4522,231 +4778,7 @@
 		<format>4.2</format>
 		<mask>0xFFFFFFFF</mask>
 		<ctype>E_NativeFWError</ctype>
-		<struct>dout_create_DOut330p001</struct>
-		<help>Debug Variable</help>
-		<group>System | Debug | Resources | DiscreteOut</group>
-		<enum name="E_NativeFWError">
-			<item name="Normal Operation" value="0"/>
-			<item name="Bad Resource ID" value="1"/>
-			<item name="Hardware Not Supported" value="2"/>
-			<item name="Behaviour Not Supported" value="3"/>
-			<item name="Bad Attribute Data" value="4"/>
-			<item name="Fail On Create" value="5"/>
-			<item name="Fail On Set Attributes" value="6"/>
-			<item name="Resource Not Created" value="7"/>
-			<item name="Missing Attribute" value="8"/>
-			<item name="Behaviour Method Not Supported" value="9"/>
-			<item name="A Service Failed" value="10"/>
-			<item name="Failed to destroy a resource" value="11"/>
-			<item name="Resource Was Created" value="12"/>
-			<item name="Resource Conflict" value="13"/>
-			<item name="Invalid Encoder Type" value="14"/>
-			<item name="2-Strike Not Supported" value="15"/>
-			<item name="720degCA Pattern Not Supported" value="16"/>
-			<item name="CAM Pattern Not Supported" value="17"/>
-			<item name="Unknown CAM Pattern Supplied" value="18"/>
-			<item name="Engine Speed Present" value="19"/>
-			<item name="Hardware Interface Not Supported" value="20"/>
-			<item name="Service Already Started" value="21"/>
-			<item name="Register Write Failed to verify" value="22"/>
-			<item name="Register access was denied" value="23"/>
-			<item name="Out of free store memory" value="24"/>
-			<item name="Software Q Overrun" value="25"/>
-			<item name="Hardware Q Overrun" value="26"/>
-			<item name="Feature unsupported in archive" value="27"/>
-			<item name="Insufficient FW resource" value="28"/>
-			<item name="OS Resource conflict" value="29"/>
-			<item name="Driver Mode conflict" value="30"/>
-			<item name="RTC time is illegal" value="31"/>
-			<item name="FFS unmounted" value="32"/>
-			<item name="Access from an ISR" value="33"/>
-			<item name="FFS internal" value="34"/>
-			<item name="Operation timed out" value="35"/>
-			<item name="Task Kernel API Usage" value="36"/>
-			<item name="Operation aborted" value="37"/>
-			<item name="File not Found" value="38"/>
-			<item name="Invalid characters in filename" value="39"/>
-			<item name="Duplicate filename" value="40"/>
-			<item name="Filename is too long" value="41"/>
-			<item name="Dir not empty on remove" value="42"/>
-			<item name="Dir not found" value="43"/>
-			<item name="Dir name invalid" value="44"/>
-			<item name="Dir exists" value="45"/>
-			<item name="Dir too deep" value="46"/>
-			<item name="Illegal Handle" value="47"/>
-			<item name="End of File" value="48"/>
-			<item name="Media Full" value="49"/>
-			<item name="Media Write" value="50"/>
-			<item name="Media Read" value="51"/>
-			<item name="Media Write Protected" value="52"/>
-			<item name="File Read Only" value="53"/>
-			<item name="FS Media Changed" value="54"/>
-			<item name="Internal USB" value="55"/>
-			<item name="Voltage too high for USB IC" value="56"/>
-			<item name="Encoder not created" value="57"/>
-			<item name="TPU Chan Conflict" value="64"/>
-			<item name="TPU Func Unavailable" value="65"/>
-			<item name="TPU Config" value="66"/>
-			<item name="TPU Primative Usage" value="67"/>
-			<item name="TPU Primitive Count" value="68"/>
-			<item name="TPU Restricted TPU channel" value="69"/>
-			<item name="TPU Not Created" value="70"/>
-			<item name="TPU Self Modify constant write err" value="71"/>
-			<item name="TPU Error 0x48" value="72"/>
-			<item name="TPU Error 0x49" value="73"/>
-			<item name="TPU Error 0x4A" value="74"/>
-			<item name="TPU Error 0x4B" value="75"/>
-			<item name="TPU Error 0x4C" value="76"/>
-			<item name="TPU Error 0x4D" value="77"/>
-			<item name="TPU Error 0x4E" value="78"/>
-			<item name="TPU Error 0x4F" value="79"/>
-			<item name="TPU Error 0x50" value="80"/>
-			<item name="TPU Error 0x51" value="81"/>
-			<item name="TPU Error 0x52" value="82"/>
-			<item name="TPU Error 0x53" value="83"/>
-			<item name="TPU Error 0x54" value="84"/>
-			<item name="TPU Error 0x55" value="85"/>
-			<item name="TPU Error 0x56" value="86"/>
-			<item name="TPU Error 0x57" value="87"/>
-			<item name="TPU Error 0x58" value="88"/>
-			<item name="TPU Error 0x59" value="89"/>
-			<item name="TPU Error 0x5A" value="90"/>
-			<item name="TPU Error 0x5B" value="91"/>
-			<item name="TPU Error 0x5C" value="92"/>
-			<item name="TPU Error 0x5D" value="93"/>
-			<item name="TPU Error 0x5E" value="94"/>
-			<item name="TPU Error 0x5F" value="95"/>
-			<default>Illegal Error</default>
-		</enum>
-	</VarDec>
-	<VarDec>
-		<name>dout_create_DOut331p001</name>
-		<class>enum</class>
-		<access>RO RO RO RO</access>
-		<storage>RAM</storage>
-		<update>BACKGND</update>
-		<type>uint8</type>
-		<gain>1.0</gain>
-		<offset>0.0</offset>
-		<exp>1.0</exp>
-		<max>0.0</max>
-		<min>0.0</min>
-		<format>4.2</format>
-		<mask>0xFFFFFFFF</mask>
-		<ctype>E_NativeFWError</ctype>
-		<struct>dout_create_DOut331p001</struct>
-		<help>Debug Variable</help>
-		<group>System | Debug | Resources | DiscreteOut</group>
-		<enum name="E_NativeFWError">
-			<item name="Normal Operation" value="0"/>
-			<item name="Bad Resource ID" value="1"/>
-			<item name="Hardware Not Supported" value="2"/>
-			<item name="Behaviour Not Supported" value="3"/>
-			<item name="Bad Attribute Data" value="4"/>
-			<item name="Fail On Create" value="5"/>
-			<item name="Fail On Set Attributes" value="6"/>
-			<item name="Resource Not Created" value="7"/>
-			<item name="Missing Attribute" value="8"/>
-			<item name="Behaviour Method Not Supported" value="9"/>
-			<item name="A Service Failed" value="10"/>
-			<item name="Failed to destroy a resource" value="11"/>
-			<item name="Resource Was Created" value="12"/>
-			<item name="Resource Conflict" value="13"/>
-			<item name="Invalid Encoder Type" value="14"/>
-			<item name="2-Strike Not Supported" value="15"/>
-			<item name="720degCA Pattern Not Supported" value="16"/>
-			<item name="CAM Pattern Not Supported" value="17"/>
-			<item name="Unknown CAM Pattern Supplied" value="18"/>
-			<item name="Engine Speed Present" value="19"/>
-			<item name="Hardware Interface Not Supported" value="20"/>
-			<item name="Service Already Started" value="21"/>
-			<item name="Register Write Failed to verify" value="22"/>
-			<item name="Register access was denied" value="23"/>
-			<item name="Out of free store memory" value="24"/>
-			<item name="Software Q Overrun" value="25"/>
-			<item name="Hardware Q Overrun" value="26"/>
-			<item name="Feature unsupported in archive" value="27"/>
-			<item name="Insufficient FW resource" value="28"/>
-			<item name="OS Resource conflict" value="29"/>
-			<item name="Driver Mode conflict" value="30"/>
-			<item name="RTC time is illegal" value="31"/>
-			<item name="FFS unmounted" value="32"/>
-			<item name="Access from an ISR" value="33"/>
-			<item name="FFS internal" value="34"/>
-			<item name="Operation timed out" value="35"/>
-			<item name="Task Kernel API Usage" value="36"/>
-			<item name="Operation aborted" value="37"/>
-			<item name="File not Found" value="38"/>
-			<item name="Invalid characters in filename" value="39"/>
-			<item name="Duplicate filename" value="40"/>
-			<item name="Filename is too long" value="41"/>
-			<item name="Dir not empty on remove" value="42"/>
-			<item name="Dir not found" value="43"/>
-			<item name="Dir name invalid" value="44"/>
-			<item name="Dir exists" value="45"/>
-			<item name="Dir too deep" value="46"/>
-			<item name="Illegal Handle" value="47"/>
-			<item name="End of File" value="48"/>
-			<item name="Media Full" value="49"/>
-			<item name="Media Write" value="50"/>
-			<item name="Media Read" value="51"/>
-			<item name="Media Write Protected" value="52"/>
-			<item name="File Read Only" value="53"/>
-			<item name="FS Media Changed" value="54"/>
-			<item name="Internal USB" value="55"/>
-			<item name="Voltage too high for USB IC" value="56"/>
-			<item name="Encoder not created" value="57"/>
-			<item name="TPU Chan Conflict" value="64"/>
-			<item name="TPU Func Unavailable" value="65"/>
-			<item name="TPU Config" value="66"/>
-			<item name="TPU Primative Usage" value="67"/>
-			<item name="TPU Primitive Count" value="68"/>
-			<item name="TPU Restricted TPU channel" value="69"/>
-			<item name="TPU Not Created" value="70"/>
-			<item name="TPU Self Modify constant write err" value="71"/>
-			<item name="TPU Error 0x48" value="72"/>
-			<item name="TPU Error 0x49" value="73"/>
-			<item name="TPU Error 0x4A" value="74"/>
-			<item name="TPU Error 0x4B" value="75"/>
-			<item name="TPU Error 0x4C" value="76"/>
-			<item name="TPU Error 0x4D" value="77"/>
-			<item name="TPU Error 0x4E" value="78"/>
-			<item name="TPU Error 0x4F" value="79"/>
-			<item name="TPU Error 0x50" value="80"/>
-			<item name="TPU Error 0x51" value="81"/>
-			<item name="TPU Error 0x52" value="82"/>
-			<item name="TPU Error 0x53" value="83"/>
-			<item name="TPU Error 0x54" value="84"/>
-			<item name="TPU Error 0x55" value="85"/>
-			<item name="TPU Error 0x56" value="86"/>
-			<item name="TPU Error 0x57" value="87"/>
-			<item name="TPU Error 0x58" value="88"/>
-			<item name="TPU Error 0x59" value="89"/>
-			<item name="TPU Error 0x5A" value="90"/>
-			<item name="TPU Error 0x5B" value="91"/>
-			<item name="TPU Error 0x5C" value="92"/>
-			<item name="TPU Error 0x5D" value="93"/>
-			<item name="TPU Error 0x5E" value="94"/>
-			<item name="TPU Error 0x5F" value="95"/>
-			<default>Illegal Error</default>
-		</enum>
-	</VarDec>
-	<VarDec>
-		<name>dout_create_DOut692p0001</name>
-		<class>enum</class>
-		<access>RO RO RO RO</access>
-		<storage>RAM</storage>
-		<update>BACKGND</update>
-		<type>uint8</type>
-		<gain>1.0</gain>
-		<offset>0.0</offset>
-		<exp>1.0</exp>
-		<max>0.0</max>
-		<min>0.0</min>
-		<format>4.2</format>
-		<mask>0xFFFFFFFF</mask>
-		<ctype>E_NativeFWError</ctype>
-		<struct>dout_create_DOut692p0001</struct>
+		<struct>dout_create_DOut736p0002</struct>
 		<help>Debug Variable</help>
 		<group>System | Debug | Resources | DiscreteOut</group>
 		<enum name="E_NativeFWError">
