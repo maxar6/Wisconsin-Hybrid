@@ -15,17 +15,17 @@
              value="${path::combine(project::get-base-directory(), 'Archive')}"
              dynamic="true"/>
    <fileset id="include-dirs" basedir="${project::get-base-directory()}">
-      <include name="C:\Users\Owner\Documents\MATLAB\BuckyWagon_01\BuckyWagon_01_Build"/>
-      <include name="C:\ProgramData\MotoHawk\2010a_sp1_49\Toolchains\7_10_0\rtw_lib_single\API"/>
-      <include name="C:\ProgramData\MotoHawk\2010a_sp1_49\Toolchains\7_10_0\rtw_lib_single\API\MPC565"/>
-      <include name="C:\PROGRA~2\Woodward\MCS\MotoHawk\2010A_~1.49\ControlCoreClassic\Framework\MultiTask\API"/>
-      <include name="C:\PROGRA~2\Woodward\MCS\MotoHawk\2010A_~1.49\ControlCoreClassic\GlobalDefinitions\MotoTron"/>
-      <include name="C:\PROGRA~2\Woodward\MCS\MotoHawk\2010A_~1.49\ControlCoreClassic\MotoTronProtocol\MultiTarget\API"/>
-      <include name="C:\PROGRA~2\Woodward\MCS\MotoHawk\2010A_~1.49\ControlCoreClassic\ModuleDefinitions\Motorola"/>
-      <include name="C:\PROGRA~2\Woodward\MCS\MotoHawk\2010A_~1.49\ControlCoreClassic\MotoTronSpecific\MultiTarget\API"/>
-      <include name="C:\PROGRA~2\Woodward\MCS\MotoHawk\2010A_~1.49\ControlCoreClassic\FileSystem\smxFFS\API"/>
-      <include name="C:\PROGRA~2\Woodward\MCS\MotoHawk\2010A_~1.49\ControlCoreClassic\FileSystem\ucFS\API"/>
-      <include name="C:\PROGRA~2\Woodward\MCS\MotoHawk\2010A_~1.49\ControlCoreClassic"/>
+      <include name="C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build"/>
+      <include name="C:\ProgramData\MotoHawk\2011a_sp0_184\Toolchains\7_12_0\rtw_lib_single\API"/>
+      <include name="C:\ProgramData\MotoHawk\2011a_sp0_184\Toolchains\7_12_0\rtw_lib_single\API\MPC565"/>
+      <include name="c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\ControlCoreClassic\Framework\MultiTask\API"/>
+      <include name="c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\ControlCoreClassic\GlobalDefinitions\MotoTron"/>
+      <include name="c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\ControlCoreClassic\MotoTronProtocol\MultiTarget\API"/>
+      <include name="c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\ControlCoreClassic\ModuleDefinitions\Motorola"/>
+      <include name="c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\ControlCoreClassic\MotoTronSpecific\MultiTarget\API"/>
+      <include name="c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\ControlCoreClassic\FileSystem\smxFFS\API"/>
+      <include name="c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\ControlCoreClassic\FileSystem\ucFS\API"/>
+      <include name="c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\ControlCoreClassic"/>
    </fileset>
    <fileset id="library-files">
       <include name="libc.a" asis="true"/>
@@ -50,20 +50,20 @@
       <include name="MotoHawk_DataStores.c"/>
       <include name="MotoHawk_IO.c"/>
       <include name="TableLookupFunctions.c"/>
-      <include name="Trigger_BGND_BASE_PERIODIC_4167p0001.c"/>
-      <include name="Trigger_BGND_BASEx20_PERIODIC_4177p0001.c"/>
+      <include name="Trigger_BGND_BASE_PERIODIC_4279p0005.c"/>
+      <include name="Trigger_BGND_BASEx20_PERIODIC_4289p0005.c"/>
       <include name="Trigger_CAN_RX_BusCAN_1_Buf1.c"/>
       <include name="Trigger_CAN_RX_BusCAN_1_Buf14.c"/>
       <include name="Trigger_CAN_RX_BusCAN_2_Buf1.c"/>
       <include name="Trigger_CAN_RX_BusCAN_2_Buf14.c"/>
-      <include name="Trigger_CAN_Slot_miniview_button_down_2043p0004.c"/>
-      <include name="Trigger_CAN_Slot_miniview_button_menu_2301p0001.c"/>
-      <include name="Trigger_CAN_Slot_miniview_button_up_2552p0001.c"/>
-      <include name="Trigger_FGND_20XRTI_PERIODIC_3974p0001.c"/>
-      <include name="Trigger_FGND_RTI_PERIODIC_3973p0004.c"/>
-      <include name="Trigger_FGND_RTI_PERIODIC_4175p0001.c"/>
-      <include name="Trigger_SHUTDOWN_EVENT_4178p0001.c"/>
-      <include name="Trigger_STARTUP_EVENT_4176p0001.c"/>
+      <include name="Trigger_CAN_Slot_miniview_button_down_2150p0001.c"/>
+      <include name="Trigger_CAN_Slot_miniview_button_menu_2408p0001.c"/>
+      <include name="Trigger_CAN_Slot_miniview_button_up_2659p0004.c"/>
+      <include name="Trigger_FGND_20XRTI_PERIODIC_4086p0002.c"/>
+      <include name="Trigger_FGND_RTI_PERIODIC_4085p0005.c"/>
+      <include name="Trigger_FGND_RTI_PERIODIC_4287p0005.c"/>
+      <include name="Trigger_SHUTDOWN_EVENT_4290p0005.c"/>
+      <include name="Trigger_STARTUP_EVENT_4288p0005.c"/>
       <include name="VarDecs.c"/>
       <include name="rt_nonfinite.c"/>
       <include name="BuckyWagon_01.c"/>
@@ -89,13 +89,13 @@
       <mkdir dir="${archive.dir}"/>
       <copy todir="${archive.dir}">
          <fileset>
-            <include name="C:\Program Files (x86)\Woodward\MCS\MotoHawk\2010a_sp1.49\ControlCoreClassic\Framework\MultiTask\Archives\gcc-powerpc-eabi\4_4_0\PCM128.a"
+            <include name="C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\ControlCoreClassic\Framework\MultiTask\Archives\gcc-powerpc-eabi\4_4_0\PCM128.a"
                      asis="true"/>
-            <include name="C:\PROGRA~2\Woodward\MCS\MotoHawk\2010A_~1.49\ControlCoreClassic\Framework\MultiTask\Source\TPU\Generic\Archives\gcc-powerpc-eabi\4_4_0\TPU_ISDL.a"
+            <include name="C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\ControlCoreClassic\Framework\MultiTask\Source\TPU\Generic\Archives\gcc-powerpc-eabi\4_4_0\TPU_ISDL.a"
                      asis="true"/>
-            <include name="C:\PROGRA~2\Woodward\MCS\MotoHawk\2010A_~1.49\ControlCoreClassic\MotoTronProtocol\MultiTarget\Archives\gcc-powerpc-eabi\4_4_0\MPC5xxKeySuite_K10E15M6C255CK2BB1.a"
+            <include name="c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\ControlCoreClassic\MotoTronProtocol\MultiTarget\Archives\gcc-powerpc-eabi\4_4_0\MPC5xxKeySuite_K10E15M6C255CK2BB1.a"
                      asis="true"/>
-            <include name="C:\PROGRA~2\Woodward\MCS\MotoHawk\2010A_~1.49\ControlCoreClassic\MotoTronSpecific\MultiTarget\Archives\gcc-powerpc-eabi\4_4_0\MotoTronSpecific.a"
+            <include name="c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\ControlCoreClassic\MotoTronSpecific\MultiTarget\Archives\gcc-powerpc-eabi\4_4_0\MotoTronSpecific.a"
                      asis="true"/>
          </fileset>
       </copy>
@@ -130,6 +130,8 @@
             <define name="RES_NONE" value="-1"/>
             <define name="MODEL" value="BuckyWagon_01"/>
             <define name="ERT"/>
+            <define name="__BORLANDC__" value="0"/>
+            <define name="__WATCOMC__" value="0"/>
             <define name="NUMST" value="1"/>
             <define name="NCSTATES" value="0"/>
             <define name="TID01EQ" value="0"/>

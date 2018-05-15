@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BaseEngineController_A02'.
  *
- * Model version                  : 1.1615
+ * Model version                  : 1.1626
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Sat Apr 07 14:22:48 2018
+ * C/C++ source code generated on : Sun Apr 22 15:55:33 2018
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -55,6 +55,7 @@ typedef struct {
   real_T s365_GensetEnable_a;          /* '<S365>/Read CAN Message' */
   real_T s365_ReadCANMessage_o4;       /* '<S365>/Read CAN Message' */
   real_T s365_ReadCANMessage_o5;       /* '<S365>/Read CAN Message' */
+  real_T s365_Product;                 /* '<S365>/Product' */
   real_T s529_Sum1;                    /* '<S529>/Sum1' */
   real_T s597_Merge;                   /* '<S597>/Merge' */
   real_T s632_Switch;                  /* '<S632>/Switch' */
@@ -255,7 +256,7 @@ typedef struct {
   real_T s51_In1;                      /* '<S51>/In1' */
   real_T s25_TestTime;                 /* '<S13>/ETC Test  Manager' */
   real_T s20_enout;                    /* '<S19>/Chart' */
-  real_T s821_Switch;                  /* '<S821>/Switch' */
+  real_T s824_Switch;                  /* '<S824>/Switch' */
   int32_T s676_DataTypeConversion;     /* '<S676>/Data Type Conversion' */
   int32_T s764_Merge;                  /* '<S764>/Merge' */
   uint32_T s366_ReadCANMessage_o1;     /* '<S366>/Read CAN Message' */
@@ -320,9 +321,9 @@ typedef struct {
   boolean_T s769_LogicalOperator;      /* '<S769>/Logical Operator' */
   boolean_T s783_Merge[8];             /* '<S783>/Merge' */
   boolean_T s120_OILP;                 /* '<S120>/Merge9' */
-  boolean_T s797_LogicalOperator;      /* '<S797>/Logical Operator' */
+  boolean_T s800_LogicalOperator;      /* '<S800>/Logical Operator' */
   boolean_T s120_O2Heater;             /* '<S120>/Merge11' */
-  boolean_T s801_LogicalOperator;      /* '<S801>/Logical Operator' */
+  boolean_T s804_LogicalOperator;      /* '<S804>/Logical Operator' */
   boolean_T s675_LogicalOperator1[8];  /* '<S675>/Logical Operator1' */
   boolean_T s752_RelationalOperator1;  /* '<S752>/Relational Operator1' */
   boolean_T s320_RelationalOperator3;  /* '<S320>/Relational Operator3' */
@@ -355,9 +356,9 @@ typedef struct {
   boolean_T s26_LogicalOperator;       /* '<S26>/Logical Operator' */
   boolean_T s34_RelationalOperator;    /* '<S34>/Relational Operator' */
   boolean_T s25_TestComplete;          /* '<S13>/ETC Test  Manager' */
-  boolean_T s805_RelationalOperator;   /* '<S805>/Relational Operator' */
-  boolean_T s805_motohawk_data_read;   /* '<S805>/motohawk_data_read' */
-  boolean_T s809_MPRDState;            /* '<S805>/ECUP Latch' */
+  boolean_T s808_RelationalOperator;   /* '<S808>/Relational Operator' */
+  boolean_T s808_motohawk_data_read;   /* '<S808>/motohawk_data_read' */
+  boolean_T s812_MPRDState;            /* '<S808>/ECUP Latch' */
   rtB_MultiplyandDivideavoidingdivdebyzero_BaseEngineController_A02
     s303_MultiplyandDivideavoidingdivdebyzero1;/* '<S303>/Multiply and Divide, avoiding divde by zero1' */
   rtB_MultiplyandDivideavoidingdivdebyzero_BaseEngineController_A02
@@ -481,8 +482,8 @@ typedef struct {
   real_T s43_UnitDelay_DSTATE;         /* '<S43>/Unit Delay' */
   real_T s46_UnitDelay_DSTATE;         /* '<S46>/Unit Delay' */
   real_T s47_UnitDelay_DSTATE;         /* '<S47>/Unit Delay' */
-  real_T s811_UnitDelay_DSTATE;        /* '<S811>/Unit Delay' */
-  real_T s811_UnitDelay1_DSTATE;       /* '<S811>/Unit Delay1' */
+  real_T s814_UnitDelay_DSTATE;        /* '<S814>/Unit Delay' */
+  real_T s814_UnitDelay1_DSTATE;       /* '<S814>/Unit Delay1' */
   real_T s280_TOld;                    /* '<S275>/Baro Stall State Delay' */
   real_T s127_count;                   /* '<S119>/Remy Control' */
   real_T s25_TimerOld;                 /* '<S13>/ETC Test  Manager' */
@@ -540,7 +541,7 @@ typedef struct {
   uint32_T s54_motohawk_delta_time_DWORK1;/* '<S54>/motohawk_delta_time' */
   uint32_T s42_motohawk_delta_time_DWORK1;/* '<S42>/motohawk_delta_time' */
   uint32_T s47_motohawk_delta_time_DWORK1;/* '<S47>/motohawk_delta_time' */
-  uint32_T s821_motohawk_delta_time_DWORK1;/* '<S821>/motohawk_delta_time' */
+  uint32_T s824_motohawk_delta_time_DWORK1;/* '<S824>/motohawk_delta_time' */
   int_T s134_HitCrossing1_MODE;        /* '<S134>/Hit  Crossing1' */
   uint16_T s679_InjectorSequence_DWORK2;/* '<S679>/Injector Sequence' */
   int8_T s322_UnitDelay_DSTATE;        /* '<S322>/Unit Delay' */
@@ -557,16 +558,16 @@ typedef struct {
   boolean_T s182_UnitDelay_DSTATE;     /* '<S182>/Unit Delay' */
   boolean_T s234_UnitDelay_DSTATE;     /* '<S234>/Unit Delay' */
   boolean_T s44_UnitDelay_DSTATE;      /* '<S44>/Unit Delay' */
-  boolean_T s810_UnitDelay8_DSTATE;    /* '<S810>/Unit Delay8' */
-  boolean_T s810_UnitDelay6_DSTATE;    /* '<S810>/Unit Delay6' */
-  boolean_T s810_UnitDelay7_DSTATE;    /* '<S810>/Unit Delay7' */
-  boolean_T s806_UnitDelay_DSTATE;     /* '<S806>/Unit Delay' */
-  boolean_T s812_UnitDelay2_DSTATE;    /* '<S812>/Unit Delay2' */
-  boolean_T s805_UnitDelay5_DSTATE;    /* '<S805>/Unit Delay5' */
-  boolean_T s812_UnitDelay_DSTATE;     /* '<S812>/Unit Delay' */
-  boolean_T s812_UnitDelay1_DSTATE;    /* '<S812>/Unit Delay1' */
-  boolean_T s805_UnitDelay3_DSTATE;    /* '<S805>/Unit Delay3' */
-  boolean_T s805_UnitDelay4_DSTATE;    /* '<S805>/Unit Delay4' */
+  boolean_T s813_UnitDelay8_DSTATE;    /* '<S813>/Unit Delay8' */
+  boolean_T s813_UnitDelay6_DSTATE;    /* '<S813>/Unit Delay6' */
+  boolean_T s813_UnitDelay7_DSTATE;    /* '<S813>/Unit Delay7' */
+  boolean_T s809_UnitDelay_DSTATE;     /* '<S809>/Unit Delay' */
+  boolean_T s815_UnitDelay2_DSTATE;    /* '<S815>/Unit Delay2' */
+  boolean_T s808_UnitDelay5_DSTATE;    /* '<S808>/Unit Delay5' */
+  boolean_T s815_UnitDelay_DSTATE;     /* '<S815>/Unit Delay' */
+  boolean_T s815_UnitDelay1_DSTATE;    /* '<S815>/Unit Delay1' */
+  boolean_T s808_UnitDelay3_DSTATE;    /* '<S808>/Unit Delay3' */
+  boolean_T s808_UnitDelay4_DSTATE;    /* '<S808>/Unit Delay4' */
   uint8_T s363_motohawk_trigger_DWORK1;/* '<S363>/motohawk_trigger' */
   uint8_T s325_motohawk_trigger_DWORK1;/* '<S325>/motohawk_trigger' */
   uint8_T s526_motohawk_trigger5_DWORK1;/* '<S526>/motohawk_trigger5' */
@@ -585,10 +586,10 @@ typedef struct {
   uint8_T s25_is_c9_BaseEngineController_A02;/* '<S13>/ETC Test  Manager' */
   uint8_T s20_is_active_c1_BaseEngineController_A02;/* '<S19>/Chart' */
   uint8_T s20_is_c1_BaseEngineController_A02;/* '<S19>/Chart' */
-  uint8_T s809_is_c8_BaseEngineController_A02;/* '<S805>/ECUP Latch' */
+  uint8_T s812_is_c8_BaseEngineController_A02;/* '<S808>/ECUP Latch' */
   boolean_T s679_InjectorSequence_DWORK1[8];/* '<S679>/Injector Sequence' */
   boolean_T s222_Multiplyby10ifnotyetenabled_FirstOutputTime;/* '<S222>/Multiply by 1.0 if not yet enabled' */
-  boolean_T s825_Memory_PreviousInput; /* '<S825>/Memory' */
+  boolean_T s828_Memory_PreviousInput; /* '<S828>/Memory' */
   boolean_T s7_Stall_MODE;             /* '<S7>/Stall' */
   boolean_T s7_Crank_MODE;             /* '<S7>/Crank' */
   boolean_T s275_CaptureSignalAtStartup_MODE;/* '<S275>/Capture Signal At Startup' */
@@ -614,16 +615,16 @@ typedef struct {
   ZCSigState HitCrossing1_Input_ZCE;   /* '<S134>/Hit  Crossing1' */
   ZCSigState ResetTasksCompleteToFalse_Trig_ZCE;/* '<S30>/Reset TasksComplete To False' */
   ZCSigState ResetTasksCompleteToTrue_Trig_ZCE;/* '<S13>/Reset TasksComplete To True' */
-  ZCSigState ShutdownpoweronECU565563_Trig_ZCE;/* '<S812>/Shutdown power on ECU565//563' */
-  ZCSigState SaveNVVarsonetickbeforeMPRDoff_Trig_ZCE;/* '<S812>/Save NV Vars one tick before MPRD off' */
-  ZCSigState ProcessorReboot_Trig_ZCE; /* '<S812>/Processor Reboot' */
-  ZCSigState PostShutdowntwoticksbeforeMPRDoff_Trig_ZCE;/* '<S812>/Post Shutdown two ticks before MPRD off' */
-  ZCSigState ShutdownpoweronECU565563_Trig_ZCE_e;/* '<S810>/Shutdown power on ECU565//563' */
-  ZCSigState SaveNVVarsonetickbeforeMPRDoff_Trig_ZCE_j;/* '<S810>/Save NV Vars one tick before MPRD off' */
-  ZCSigState ProcessorReboot_Trig_ZCE_j;/* '<S810>/Processor Reboot' */
-  ZCSigState PostShutdowntwoticksbeforeMPRDoff_Trig_ZCE_c;/* '<S810>/Post Shutdown two ticks before MPRD off' */
-  ZCSigState Clear_Trig_ZCE;           /* '<S808>/Clear' */
-  ZCSigState Clear_Trig_ZCE_l;         /* '<S807>/Clear' */
+  ZCSigState ShutdownpoweronECU565563_Trig_ZCE;/* '<S815>/Shutdown power on ECU565//563' */
+  ZCSigState SaveNVVarsonetickbeforeMPRDoff_Trig_ZCE;/* '<S815>/Save NV Vars one tick before MPRD off' */
+  ZCSigState ProcessorReboot_Trig_ZCE; /* '<S815>/Processor Reboot' */
+  ZCSigState PostShutdowntwoticksbeforeMPRDoff_Trig_ZCE;/* '<S815>/Post Shutdown two ticks before MPRD off' */
+  ZCSigState ShutdownpoweronECU565563_Trig_ZCE_e;/* '<S813>/Shutdown power on ECU565//563' */
+  ZCSigState SaveNVVarsonetickbeforeMPRDoff_Trig_ZCE_j;/* '<S813>/Save NV Vars one tick before MPRD off' */
+  ZCSigState ProcessorReboot_Trig_ZCE_j;/* '<S813>/Processor Reboot' */
+  ZCSigState PostShutdowntwoticksbeforeMPRDoff_Trig_ZCE_c;/* '<S813>/Post Shutdown two ticks before MPRD off' */
+  ZCSigState Clear_Trig_ZCE;           /* '<S811>/Clear' */
+  ZCSigState Clear_Trig_ZCE_l;         /* '<S810>/Clear' */
 } PrevZCSigStates_BaseEngineController_A02;
 
 /* Invariant block signals (auto storage) */
@@ -637,7 +638,7 @@ typedef struct {
 /* Constant parameters (auto storage) */
 typedef struct {
   /* Computed Parameter: Logic_table
-   * Referenced by: '<S825>/Logic'
+   * Referenced by: '<S828>/Logic'
    */
   boolean_T Logic_table[16];
 
@@ -649,7 +650,7 @@ typedef struct {
    *   '<S44>/Combinatorial  Logic'
    *   '<S234>/Combinatorial  Logic'
    */
-  boolean_T pooled645[8];
+  boolean_T pooled646[8];
 } ConstParam_BaseEngineController_A02;
 
 /* Real-time Model Data Structure */
@@ -1490,58 +1491,61 @@ extern struct RT_MODEL_BaseEngineController_A02 *const
  * '<S781>' : BaseEngineController_A02/Foreground/Outputs/Injector Control/motohawk_override_abs3
  * '<S782>' : BaseEngineController_A02/Foreground/Outputs/Injector Control/motohawk_override_abs4
  * '<S783>' : BaseEngineController_A02/Foreground/Outputs/Injector Control/motohawk_override_abs5
- * '<S784>' : BaseEngineController_A02/Foreground/Outputs/Injector Control/Injector Enable Manager/Cals_and_Probes_Page
- * '<S785>' : BaseEngineController_A02/Foreground/Outputs/Injector Control/Injector Enable Manager/Stall
- * '<S786>' : BaseEngineController_A02/Foreground/Outputs/Injector Control/Injector Enable Manager/Time Since Enabled (With Input)1
- * '<S787>' : BaseEngineController_A02/Foreground/Outputs/Injector Control/motohawk_override_abs1/NewValue
- * '<S788>' : BaseEngineController_A02/Foreground/Outputs/Injector Control/motohawk_override_abs1/OldValue
- * '<S789>' : BaseEngineController_A02/Foreground/Outputs/Injector Control/motohawk_override_abs2/NewValue
- * '<S790>' : BaseEngineController_A02/Foreground/Outputs/Injector Control/motohawk_override_abs2/OldValue
- * '<S791>' : BaseEngineController_A02/Foreground/Outputs/Injector Control/motohawk_override_abs3/NewValue
- * '<S792>' : BaseEngineController_A02/Foreground/Outputs/Injector Control/motohawk_override_abs3/OldValue
- * '<S793>' : BaseEngineController_A02/Foreground/Outputs/Injector Control/motohawk_override_abs4/NewValue
- * '<S794>' : BaseEngineController_A02/Foreground/Outputs/Injector Control/motohawk_override_abs4/OldValue
- * '<S795>' : BaseEngineController_A02/Foreground/Outputs/Injector Control/motohawk_override_abs5/NewValue
- * '<S796>' : BaseEngineController_A02/Foreground/Outputs/Injector Control/motohawk_override_abs5/OldValue
- * '<S797>' : BaseEngineController_A02/Foreground/Outputs/OilPump/Discrete Actuator - OILP
- * '<S798>' : BaseEngineController_A02/Foreground/Outputs/OilPump/Discrete Actuator - OILP/Override in Engineering Units
- * '<S799>' : BaseEngineController_A02/Foreground/Outputs/OilPump/Discrete Actuator - OILP/Override in Engineering Units/NewValue
- * '<S800>' : BaseEngineController_A02/Foreground/Outputs/OilPump/Discrete Actuator - OILP/Override in Engineering Units/OldValue
- * '<S801>' : BaseEngineController_A02/Foreground/Outputs/Oxygen Heater/Discrete Actuator - Oxygen Heater
- * '<S802>' : BaseEngineController_A02/Foreground/Outputs/Oxygen Heater/Discrete Actuator - Oxygen Heater/Override in Engineering Units
- * '<S803>' : BaseEngineController_A02/Foreground/Outputs/Oxygen Heater/Discrete Actuator - Oxygen Heater/Override in Engineering Units/NewValue
- * '<S804>' : BaseEngineController_A02/Foreground/Outputs/Oxygen Heater/Discrete Actuator - Oxygen Heater/Override in Engineering Units/OldValue
- * '<S805>' : BaseEngineController_A02/Main Power Relay/Main Power Relay
- * '<S806>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/Display Variable Event Boolean
- * '<S807>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/Display Variable Event Function-Call
- * '<S808>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/Display Variable Event Function-Call1
- * '<S809>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/ECUP Latch
- * '<S810>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/Forced Shutdown Process
- * '<S811>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/On Off Delay
- * '<S812>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/ShutDown Processes
- * '<S813>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/motohawk_restore_nvmem
- * '<S814>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/motohawk_store_nvmem
- * '<S815>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/Display Variable Event Function-Call/Clear
- * '<S816>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/Display Variable Event Function-Call1/Clear
- * '<S817>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/Forced Shutdown Process/Post Shutdown two ticks before MPRD off
- * '<S818>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/Forced Shutdown Process/Processor Reboot
- * '<S819>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/Forced Shutdown Process/Save NV Vars one tick before MPRD off
- * '<S820>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/Forced Shutdown Process/Shutdown power on ECU565//563
- * '<S821>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/Forced Shutdown Process/Time Since Enabled (With Input)1
- * '<S822>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/Forced Shutdown Process/Post Shutdown two ticks before MPRD off/Post Shutdown two ticks before MPRD off
- * '<S823>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/Forced Shutdown Process/Save NV Vars one tick before MPRD off/Save NV Vars one tick before MPRD off
- * '<S824>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/Forced Shutdown Process/Shutdown power on ECU565//563/Shutdown power on ECU565-128
- * '<S825>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/On Off Delay/S-R Flip-Flop
- * '<S826>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/ShutDown Processes/Post Shutdown two ticks before MPRD off
- * '<S827>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/ShutDown Processes/Processor Reboot
- * '<S828>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/ShutDown Processes/Save NV Vars one tick before MPRD off
- * '<S829>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/ShutDown Processes/Shutdown power on ECU565//563
- * '<S830>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/ShutDown Processes/motohawk_override_abs
- * '<S831>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/ShutDown Processes/Post Shutdown two ticks before MPRD off/Post Shutdown two ticks before MPRD off
- * '<S832>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/ShutDown Processes/Save NV Vars one tick before MPRD off/Save NV Vars one tick before MPRD off
- * '<S833>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/ShutDown Processes/Shutdown power on ECU565//563/Shutdown power on ECU565-128
- * '<S834>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/ShutDown Processes/motohawk_override_abs/NewValue
- * '<S835>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/ShutDown Processes/motohawk_override_abs/OldValue
+ * '<S784>' : BaseEngineController_A02/Foreground/Outputs/Injector Control/motohawk_override_abs6
+ * '<S785>' : BaseEngineController_A02/Foreground/Outputs/Injector Control/Injector Enable Manager/Cals_and_Probes_Page
+ * '<S786>' : BaseEngineController_A02/Foreground/Outputs/Injector Control/Injector Enable Manager/Stall
+ * '<S787>' : BaseEngineController_A02/Foreground/Outputs/Injector Control/Injector Enable Manager/Time Since Enabled (With Input)1
+ * '<S788>' : BaseEngineController_A02/Foreground/Outputs/Injector Control/motohawk_override_abs1/NewValue
+ * '<S789>' : BaseEngineController_A02/Foreground/Outputs/Injector Control/motohawk_override_abs1/OldValue
+ * '<S790>' : BaseEngineController_A02/Foreground/Outputs/Injector Control/motohawk_override_abs2/NewValue
+ * '<S791>' : BaseEngineController_A02/Foreground/Outputs/Injector Control/motohawk_override_abs2/OldValue
+ * '<S792>' : BaseEngineController_A02/Foreground/Outputs/Injector Control/motohawk_override_abs3/NewValue
+ * '<S793>' : BaseEngineController_A02/Foreground/Outputs/Injector Control/motohawk_override_abs3/OldValue
+ * '<S794>' : BaseEngineController_A02/Foreground/Outputs/Injector Control/motohawk_override_abs4/NewValue
+ * '<S795>' : BaseEngineController_A02/Foreground/Outputs/Injector Control/motohawk_override_abs4/OldValue
+ * '<S796>' : BaseEngineController_A02/Foreground/Outputs/Injector Control/motohawk_override_abs5/NewValue
+ * '<S797>' : BaseEngineController_A02/Foreground/Outputs/Injector Control/motohawk_override_abs5/OldValue
+ * '<S798>' : BaseEngineController_A02/Foreground/Outputs/Injector Control/motohawk_override_abs6/NewValue
+ * '<S799>' : BaseEngineController_A02/Foreground/Outputs/Injector Control/motohawk_override_abs6/OldValue
+ * '<S800>' : BaseEngineController_A02/Foreground/Outputs/OilPump/Discrete Actuator - OILP
+ * '<S801>' : BaseEngineController_A02/Foreground/Outputs/OilPump/Discrete Actuator - OILP/Override in Engineering Units
+ * '<S802>' : BaseEngineController_A02/Foreground/Outputs/OilPump/Discrete Actuator - OILP/Override in Engineering Units/NewValue
+ * '<S803>' : BaseEngineController_A02/Foreground/Outputs/OilPump/Discrete Actuator - OILP/Override in Engineering Units/OldValue
+ * '<S804>' : BaseEngineController_A02/Foreground/Outputs/Oxygen Heater/Discrete Actuator - Oxygen Heater
+ * '<S805>' : BaseEngineController_A02/Foreground/Outputs/Oxygen Heater/Discrete Actuator - Oxygen Heater/Override in Engineering Units
+ * '<S806>' : BaseEngineController_A02/Foreground/Outputs/Oxygen Heater/Discrete Actuator - Oxygen Heater/Override in Engineering Units/NewValue
+ * '<S807>' : BaseEngineController_A02/Foreground/Outputs/Oxygen Heater/Discrete Actuator - Oxygen Heater/Override in Engineering Units/OldValue
+ * '<S808>' : BaseEngineController_A02/Main Power Relay/Main Power Relay
+ * '<S809>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/Display Variable Event Boolean
+ * '<S810>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/Display Variable Event Function-Call
+ * '<S811>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/Display Variable Event Function-Call1
+ * '<S812>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/ECUP Latch
+ * '<S813>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/Forced Shutdown Process
+ * '<S814>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/On Off Delay
+ * '<S815>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/ShutDown Processes
+ * '<S816>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/motohawk_restore_nvmem
+ * '<S817>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/motohawk_store_nvmem
+ * '<S818>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/Display Variable Event Function-Call/Clear
+ * '<S819>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/Display Variable Event Function-Call1/Clear
+ * '<S820>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/Forced Shutdown Process/Post Shutdown two ticks before MPRD off
+ * '<S821>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/Forced Shutdown Process/Processor Reboot
+ * '<S822>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/Forced Shutdown Process/Save NV Vars one tick before MPRD off
+ * '<S823>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/Forced Shutdown Process/Shutdown power on ECU565//563
+ * '<S824>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/Forced Shutdown Process/Time Since Enabled (With Input)1
+ * '<S825>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/Forced Shutdown Process/Post Shutdown two ticks before MPRD off/Post Shutdown two ticks before MPRD off
+ * '<S826>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/Forced Shutdown Process/Save NV Vars one tick before MPRD off/Save NV Vars one tick before MPRD off
+ * '<S827>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/Forced Shutdown Process/Shutdown power on ECU565//563/Shutdown power on ECU565-128
+ * '<S828>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/On Off Delay/S-R Flip-Flop
+ * '<S829>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/ShutDown Processes/Post Shutdown two ticks before MPRD off
+ * '<S830>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/ShutDown Processes/Processor Reboot
+ * '<S831>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/ShutDown Processes/Save NV Vars one tick before MPRD off
+ * '<S832>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/ShutDown Processes/Shutdown power on ECU565//563
+ * '<S833>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/ShutDown Processes/motohawk_override_abs
+ * '<S834>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/ShutDown Processes/Post Shutdown two ticks before MPRD off/Post Shutdown two ticks before MPRD off
+ * '<S835>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/ShutDown Processes/Save NV Vars one tick before MPRD off/Save NV Vars one tick before MPRD off
+ * '<S836>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/ShutDown Processes/Shutdown power on ECU565//563/Shutdown power on ECU565-128
+ * '<S837>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/ShutDown Processes/motohawk_override_abs/NewValue
+ * '<S838>' : BaseEngineController_A02/Main Power Relay/Main Power Relay/ShutDown Processes/motohawk_override_abs/OldValue
  */
 #endif                                 /* RTW_HEADER_BaseEngineController_A02_h_ */
 

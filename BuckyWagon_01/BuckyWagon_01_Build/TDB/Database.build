@@ -98,7 +98,7 @@
             >
             <options>
                 <option name="O3"/>                         <!-- Set Optimisation level -->
-		<option name="w"/>
+                <option name="w"/>
             </options>
             <defines>
             </defines>
@@ -112,7 +112,7 @@
             installdir = "${target.toolchain.installdir}"
             outputdir = "${build.object.dir}"
             output = "${database.basename}.dll"
-	    >
+            >
             <arg line="-shared"/>
             <objects basedir="${build.object.dir}">
                 <include name = "Database.o"/>

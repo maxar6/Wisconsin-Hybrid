@@ -4,98 +4,94 @@
     <Symbol Name="__CTOR_LIST__" Address="0x0006E168" Section=".ctors" Size="0" />
     <Symbol Name="__DTOR_LIST__" Address="0x0006E170" Section=".dtors" Size="0" />
     <Symbol Name="__CTOR_END__" Address="0x0006E168" Section=".ctors" Size="0" />
-    <Symbol Name="DOut4328p0001_DiscreteOutput_Set" Address="0x00055300" Section=".text" Size="32" />
-    <Symbol Name="DOut4329p0001_State" Address="0x40004538" Section=".bss" Size="1" />
+    <Symbol Name="DOut4374p0004_MC33800_Methods" Address="0x00066CF0" Section=".text" Size="16" />
     <Symbol Name="eQADC_Open" Address="0x00042B98" Section=".text" Size="92" />
-    <Symbol Name="RxSlot_3859p0001_Receive" Address="0x0005201C" Section=".text" Size="248" />
-    <Symbol Name="DOut4326p0001_State" Address="0x40004535" Section=".bss" Size="1" />
+    <Symbol Name="DOut4367p0004_DiscreteOutput_Get" Address="0x00054BF0" Section=".text" Size="20" />
+    <Symbol Name="DOut4366p0004_DiscreteOutput_Get" Address="0x00054BDC" Section=".text" Size="20" />
     <Symbol Name="g_ERIProtocolOnCAN" Address="0x000670C4" Section=".text" Size="28" />
     <Symbol Name="KeySuite_MessageHandler" Address="0x00057870" Section=".text" Size="392" />
     <Symbol Name="TLE7368_PWR_HOLD" Address="0x00069158" Section=".text" Size="12" />
     <Symbol Name="NonVolatile_CloseDataStore" Address="0x00054388" Section=".text" Size="4" />
     <Symbol Name="Freescale_RWECheck" Address="0x0005CA74" Section=".text" Size="40" />
-    <Symbol Name="DOut4563p0001_State" Address="0x40004542" Section=".bss" Size="1" />
     <Symbol Name="RCHW" Address="0x00040000" Section=".RCHW_rodata" Size="4" />
     <Symbol Name="g_FLEXCAN2_A_ConfigObj" Address="0x000664B8" Section=".text" Size="264" />
     <Symbol Name="KeySuite_CRCAccumulateFunction_Get" Address="0x0006187C" Section=".text" Size="48" />
+    <Symbol Name="RxSlot_3267p0001_ReceiveFrame" Address="0x40003624" Section=".bss" Size="16" />
     <Symbol Name="__ashldi3" Address="0x000643AC" Section=".text" Size="56" />
+    <Symbol Name="DOut4366p0004_CPUDigitalOut" Address="0x00066F34" Section=".text" Size="12" />
     <Symbol Name="VolatileWork_BSS" Address="0x40003F9C" Section=".bss" Size="1420" />
-    <Symbol Name="DOut5628p0004_DiscreteOutput_Stop" Address="0x00054F68" Section=".text" Size="28" />
+    <Symbol Name="DOut4372p0004" Address="0x00066A14" Section=".text" Size="24" />
     <Symbol Name="ERI_Protocol_MsgHandler" Address="0x00060A00" Section=".text" Size="132" />
-    <Symbol Name="DOut4565p0001_CPUOut_Methods" Address="0x00067004" Section=".text" Size="16" />
-    <Symbol Name="DOut4327p0001_DiscreteOutput_Get" Address="0x00054BDC" Section=".text" Size="20" />
+    <Symbol Name="DOut4601p0004_DiscreteOutput_Set" Address="0x00055F2C" Section=".text" Size="144" />
     <Symbol Name="GPIO_PinState_Get" Address="0x000444DC" Section=".text" Size="16" />
     <Symbol Name="KEY_Handler_Read_CallBack" Address="0x000621BC" Section=".text" Size="96" />
     <Symbol Name="Mooventure2016_Rev5_terminate" Address="0x00045B0C" Section=".text" Size="4" />
     <Symbol Name="SetFaultOccurred" Address="0x00044FD4" Section=".text" Size="92" />
+    <Symbol Name="RxSlot_3264p0001_ReceiveFrame" Address="0x40003660" Section=".bss" Size="16" />
     <Symbol Name="fabs" Address="0x0005B674" Section=".text" Size="24" />
     <Symbol Name="KeySuite_Manager_Connection_Find" Address="0x00056E3C" Section=".text" Size="292" />
     <Symbol Name="AnalogInput_VISTA_1_AD0" Address="0x40000034" Section=".data" Size="12" />
     <Symbol Name="VISTA_1_Register_Write" Address="0x00055478" Section=".text" Size="60" />
-    <Symbol Name="DOut4327p0001_DiscreteOutput_Stop" Address="0x00055064" Section=".text" Size="28" />
-    <Symbol Name="DOut4323p0001_MC33800DigitalOut" Address="0x00066B8C" Section=".text" Size="12" />
     <Symbol Name="ModuleSupportReg_Memory_ReadSynch" Address="0x0005BE08" Section=".text" Size="168" />
     <Symbol Name="SecurityBasicKeyDecryptionInfo" Address="0x00069EA4" Section=".text" Size="8" />
     <Symbol Name="sqrt" Address="0x00059E6C" Section=".text" Size="356" />
     <Symbol Name="IRQ_RestoreExecContext" Address="0x00040338" Section=".text" Size="168" />
-    <Symbol Name="DOut4324p0001_MC33800_Methods" Address="0x00066B98" Section=".text" Size="16" />
     <Symbol Name="SecurityTokenOwner" Address="0x00069E20" Section=".text" Size="9" />
+    <Symbol Name="DOut4364p0004_DiscreteOutput_Stop" Address="0x0005509C" Section=".text" Size="24" />
     <Symbol Name="MC33800_INJ5" Address="0x00066A8C" Section=".text" Size="24" />
-    <Symbol Name="DOut4325p0001_CPUDigitalOut" Address="0x00066EFC" Section=".text" Size="12" />
-    <Symbol Name="RxSlot_3858p0001_Receive" Address="0x00052CD8" Section=".text" Size="208" />
+    <Symbol Name="RxSlot_3698p0001_ReceiveFrame" Address="0x40003714" Section=".bss" Size="16" />
     <Symbol Name="VISTA_ADC_GetConversion" Address="0x000604E8" Section=".text" Size="148" />
     <Symbol Name="Timer_FreeRunningCounter_ResetTime" Address="0x00050EC8" Section=".text" Size="44" />
     <Symbol Name="__eqdf2" Address="0x0006377C" Section=".text" Size="136" />
     <Symbol Name="MailBox_PostTo" Address="0x0005E324" Section=".text" Size="404" />
-    <Symbol Name="DOut4329p0001_DiscreteOutput_Get" Address="0x00054C04" Section=".text" Size="20" />
     <Symbol Name="SetFaultActive" Address="0x000454D0" Section=".text" Size="92" />
     <Symbol Name="e200_Open" Address="0x00042674" Section=".text" Size="12" />
-    <Symbol Name="DOut5628p0004_CPUDigitalOut" Address="0x00067030" Section=".text" Size="12" />
     <Symbol Name="Timer_FreeRunningCounter_GetDiff_us" Address="0x000422D8" Section=".text" Size="24" />
-    <Symbol Name="RxSlot_3054p0001_ReceiveFrame" Address="0x40003750" Section=".bss" Size="16" />
     <Symbol Name="Key_Protocol_OnCANReceipt" Address="0x000616E0" Section=".text" Size="32" />
+    <Symbol Name="DOut4604p0004_DiscreteOutput_Set" Address="0x00055220" Section=".text" Size="32" />
     <Symbol Name="ModuleSupport_PowerSupply_Create" Address="0x0005C100" Section=".text" Size="40" />
     <Symbol Name="s_pEBI_OR" Address="0x00069100" Section=".text" Size="4" />
+    <Symbol Name="RxSlot_3267p0001_ReceiveFrameValid" Address="0x40003620" Section=".bss" Size="1" />
     <Symbol Name="g_eMIOSTickTimerISRPriority" Address="0x00066395" Section=".text" Size="1" />
     <Symbol Name="MC33800_CCD_DigitalOut_Create" Address="0x0005EB0C" Section=".text" Size="8" />
     <Symbol Name="KeySuite_Manager_ConnectionReplyObject_AllocateStatus_Get" Address="0x00056798" Section=".text" Size="24" />
     <Symbol Name="VISTA_1_Knock_IIR_Coefficient_Convert_RealToFixedPt" Address="0x00054800" Section=".text" Size="68" />
-    <Symbol Name="DOut5628p0004_State" Address="0x4000453F" Section=".bss" Size="1" />
+    <Symbol Name="RxSlot_3264p0001_Receive" Address="0x00051954" Section=".text" Size="248" />
     <Symbol Name="VISTA_1DeviceAttrib" Address="0x00066DE4" Section=".text" Size="6" />
     <Symbol Name="TLE7368_Watchdog_Reset" Address="0x0005FE0C" Section=".text" Size="192" />
     <Symbol Name="g_pszSerialNumber" Address="0x400046A4" Section=".bss" Size="4" />
     <Symbol Name="GetLastInactiveFault" Address="0x00045054" Section=".text" Size="12" />
+    <Symbol Name="DOut4603p0004_CPUOut_Methods" Address="0x00066FE8" Section=".text" Size="16" />
     <Symbol Name="BGNDTask_1000000" Address="0x00050CE8" Section=".text" Size="36" />
-    <Symbol Name="DOut4327p0001_DiscreteOutput_Set" Address="0x00055320" Section=".text" Size="32" />
+    <Symbol Name="DOut4367p0004_CPUDigitalOut" Address="0x00066F50" Section=".text" Size="12" />
     <Symbol Name="KeySuiteSupport_CANLink_TransmitExtended" Address="0x000569C0" Section=".text" Size="120" />
     <Symbol Name="g_ApplicationInterruptTask_MailBox" Address="0x00066074" Section=".text" Size="16" />
     <Symbol Name="eQADCCommon_CFIFO_Pause_ISR" Address="0x000430C4" Section=".text" Size="32" />
+    <Symbol Name="DOut4373p0004_MC33800_Methods" Address="0x00066CD4" Section=".text" Size="16" />
     <Symbol Name="CAN_1_KeySuite_SetIDFilter" Address="0x00051250" Section=".text" Size="20" />
     <Symbol Name="SPI_eDMARequest_Get" Address="0x0005E18C" Section=".text" Size="24" />
-    <Symbol Name="DOut4566p0001_DiscreteOutput_Set" Address="0x00055D8C" Section=".text" Size="144" />
-    <Symbol Name="RxSlot_4019p0001_Receive" Address="0x00051D34" Section=".text" Size="248" />
     <Symbol Name="MotoCoder_DiscreteOutput_UpdateOnChange_Create" Address="0x00054D4C" Section=".text" Size="56" />
+    <Symbol Name="RxSlot_3888p0001_Receive" Address="0x00051F24" Section=".text" Size="248" />
+    <Symbol Name="DOut4372p0004_MC33800DigitalOut" Address="0x00066CC8" Section=".text" Size="12" />
     <Symbol Name="GetFlexCAN2INTCSourceModuleOffset" Address="0x0005D660" Section=".text" Size="32" />
     <Symbol Name="g_u32ETPUChannelOwnsFlagArr" Address="0x400008F4" Section=".sbss" Size="8" />
     <Symbol Name="TskCPU_StartMultitasking" Address="0x00041C8C" Section=".text" Size="76" />
-    <Symbol Name="Trigger_FGND_RTI_PERIODIC_5687p0001" Address="0x00058320" Section=".text" Size="68" />
+    <Symbol Name="DOut4603p0004_DiscreteOutput_Stop" Address="0x00054FA0" Section=".text" Size="28" />
     <Symbol Name="g_IdleTaskDefn" Address="0x00065C40" Section=".text" Size="36" />
-    <Symbol Name="RxSlot_3669p0004_ReceiveFrame" Address="0x400035FC" Section=".bss" Size="16" />
-    <Symbol Name="DOut5628p0004_DiscreteOutput_Set" Address="0x00055200" Section=".text" Size="32" />
-    <Symbol Name="RxSlot_3257p0001_ReceiveFrame" Address="0x40003610" Section=".bss" Size="16" />
+    <Symbol Name="DOut4604p0004_DiscreteOutput_Stop" Address="0x00054F84" Section=".text" Size="28" />
+    <Symbol Name="RxSlot_3262p0001_ReceiveFrame" Address="0x40003688" Section=".bss" Size="16" />
     <Symbol Name="KeySuite_Manager_Memory_Read" Address="0x00057244" Section=".text" Size="112" />
     <Symbol Name="KeySuite_RefreshPacketTimeout" Address="0x00061844" Section=".text" Size="56" />
     <Symbol Name="MC33800_CCD_DigitalOut_State_Set" Address="0x0005EB00" Section=".text" Size="4" />
     <Symbol Name="MC33800_LSO10_DiscreteOutput_Create" Address="0x00055644" Section=".text" Size="104" />
     <Symbol Name="__malloc_unlock" Address="0x00058F24" Section=".text" Size="4" />
     <Symbol Name="MC33800_INJ5_MC33800DigitalOut" Address="0x00066C3C" Section=".text" Size="12" />
-    <Symbol Name="RxSlot_3671p0001_ReceiveFrame" Address="0x400035E8" Section=".bss" Size="16" />
+    <Symbol Name="DOut4601p0004_State" Address="0x40004543" Section=".bss" Size="1" />
     <Symbol Name="SPI_Module_CombinedISR" Address="0x0005DC50" Section=".text" Size="48" />
     <Symbol Name="ComputeSecurity_Calculate" Address="0x00060754" Section=".text" Size="12" />
     <Symbol Name="ODRC" Address="0x00066854" Section=".text" Size="12" />
-    <Symbol Name="DOut4332p0001_DiscreteOutput_Get" Address="0x00054C40" Section=".text" Size="20" />
     <Symbol Name="WaitOnSpinTimer" Address="0x000421D0" Section=".text" Size="184" />
-    <Symbol Name="DOut4333p0001_State" Address="0x40004546" Section=".bss" Size="1" />
+    <Symbol Name="RxSlot_3265p0001_ReceiveFrameValid" Address="0x40003648" Section=".bss" Size="1" />
     <Symbol Name="GPIO_DigitalOut_SetAttributes" Address="0x0005D77C" Section=".text" Size="8" />
     <Symbol Name="g_u16ExecPerfCnt" Address="0x40000874" Section=".sbss" Size="2" />
     <Symbol Name="KeySuite_ForceDefaultKey" Address="0x00061AB0" Section=".text" Size="144" />
@@ -106,65 +102,64 @@
     <Symbol Name="Interrupt_DisableApp" Address="0x00040320" Section=".text" Size="24" />
     <Symbol Name="eTPUProc_ECR_Set" Address="0x000446C8" Section=".text" Size="56" />
     <Symbol Name="g_KeySuiteProtocolInstanceInfo" Address="0x000670A4" Section=".text" Size="32" />
-    <Symbol Name="DOut4334p0001_DiscreteOutput_Set" Address="0x000560CC" Section=".text" Size="144" />
     <Symbol Name="g_ETPUModule" Address="0x00065D24" Section=".text" Size="22" />
     <Symbol Name="H1_InhibitB_State" Address="0x40004540" Section=".bss" Size="1" />
     <Symbol Name="S_SHRC_4SPIDeviceMethods" Address="0x00066BB4" Section=".text" Size="12" />
     <Symbol Name="s_u8HasTimestamp" Address="0x4000095C" Section=".bss" Size="1" />
     <Symbol Name="SPI_BMethods" Address="0x00066DD0" Section=".text" Size="8" />
     <Symbol Name="MC33800_INJ3_DiscreteOutput_Create" Address="0x000559A8" Section=".text" Size="100" />
-    <Symbol Name="DOut4331p0001_DiscreteOutput_Create" Address="0x00054E44" Section=".text" Size="32" />
     <Symbol Name="MC33800_INJ7_DiscreteOutput_Create" Address="0x00055B3C" Section=".text" Size="100" />
     <Symbol Name="KeySuite_CRCReturnValueFunction_Get" Address="0x000618DC" Section=".text" Size="48" />
     <Symbol Name="VISTA_1DevicePLLUnlockedAttrib" Address="0x00066E08" Section=".text" Size="6" />
+    <Symbol Name="RxSlot_3267p0001_Receive" Address="0x0005166C" Section=".text" Size="248" />
+    <Symbol Name="DOut4368p0004_DiscreteOutput_Stop" Address="0x0005502C" Section=".text" Size="28" />
     <Symbol Name="ERI_Handler_XTDREQ_DFMInit" Address="0x00060E68" Section=".text" Size="124" />
     <Symbol Name="MatlabVersionTxt" Address="0x00065E50" Section=".text" Size="80" />
     <Symbol Name="eTPUProc_TPUChannel_GetPtr" Address="0x00044700" Section=".text" Size="28" />
     <Symbol Name="SyncObj_WaitOn" Address="0x00041A8C" Section=".text" Size="156" />
     <Symbol Name="FlexCAN2_TXBuffer_IsFree" Address="0x0005CE38" Section=".text" Size="40" />
-    <Symbol Name="DOut4323p0001" Address="0x00066B04" Section=".text" Size="24" />
+    <Symbol Name="DOut4605p0004" Address="0x00066954" Section=".text" Size="24" />
     <Symbol Name="Tsk_GetStackPointerForKernelOpen" Address="0x00040F0C" Section=".text" Size="64" />
     <Symbol Name="EEPROM_1_Methods" Address="0x00066EDC" Section=".text" Size="16" />
+    <Symbol Name="DOut4368p0004_DiscreteOutput_Set" Address="0x000552E0" Section=".text" Size="32" />
+    <Symbol Name="RxSlot_3888p0001_ReceiveFrameValid" Address="0x400036D4" Section=".bss" Size="1" />
     <Symbol Name="MotoHawkVersionTxt" Address="0x00065E1C" Section=".text" Size="50" />
+    <Symbol Name="DOut4369p0004_DiscreteOutput_Stop" Address="0x00055010" Section=".text" Size="28" />
+    <Symbol Name="DOut4363p0004_DiscreteOutput_Create" Address="0x00055C68" Section=".text" Size="116" />
     <Symbol Name="Key_Handler_ECURevReq" Address="0x00061BDC" Section=".text" Size="196" />
     <Symbol Name="ERI_Handler_Request" Address="0x0006118C" Section=".text" Size="464" />
     <Symbol Name="Mooventure2016_Rev5_M" Address="0x00065F90" Section=".text" Size="4" />
     <Symbol Name="ModuleSupport_EngineeringClock_Open" Address="0x000579FC" Section=".text" Size="24" />
+    <Symbol Name="RxSlot_3064p0002_ReceiveFrame" Address="0x40003764" Section=".bss" Size="16" />
     <Symbol Name="FriendlyName" Address="0x000671CC" Section=".text" Size="33" />
     <Symbol Name="Key_Protocol_OnTick" Address="0x000617D0" Section=".text" Size="32" />
-    <Symbol Name="DOut4566p0001_MC33800DigitalOut" Address="0x00066DA8" Section=".text" Size="12" />
-    <Symbol Name="RxSlot_3861p0001_Receive" Address="0x00051E2C" Section=".text" Size="248" />
     <Symbol Name="g_SHUTDOWNTask" Address="0x000660A8" Section=".text" Size="36" />
     <Symbol Name="TskCPU_TaskStack_Init" Address="0x00041CE8" Section=".text" Size="80" />
     <Symbol Name="ResetFaultXY" Address="0x0004526C" Section=".text" Size="44" />
-    <Symbol Name="DOut4566p0001" Address="0x00066954" Section=".text" Size="24" />
     <Symbol Name="VolatileWork" Address="0x4000000C" Section=".data" Size="40" />
     <Symbol Name="ModuleSupReg_Memory_Register" Address="0x0005BDC8" Section=".text" Size="64" />
     <Symbol Name="SetLock_C" Address="0x000695E8" Section=".text" Size="256" />
+    <Symbol Name="DOut4371p0004_DiscreteOutput_Get" Address="0x00054C40" Section=".text" Size="20" />
     <Symbol Name="g_AppTaskStack" Address="0x400014C4" Section=".bss" Size="1024" />
     <Symbol Name="__gtdf2" Address="0x0006388C" Section=".text" Size="136" />
+    <Symbol Name="DOut4373p0004" Address="0x000669FC" Section=".text" Size="24" />
     <Symbol Name="TLE7368_WDI_CPUOut_Methods" Address="0x0006911C" Section=".text" Size="16" />
     <Symbol Name="g_ApplicationInterruptTaskTCB" Address="0x400035A0" Section=".bss" Size="36" />
     <Symbol Name="__errno" Address="0x000627F4" Section=".text" Size="12" />
     <Symbol Name="rtIsNaNF" Address="0x00057C28" Section=".text" Size="24" />
     <Symbol Name="FLEXCAN2_C_ReceiveQueueFrames" Address="0x40003914" Section=".bss" Size="256" />
-    <Symbol Name="DOut4330p0001_DiscreteOutput_Set" Address="0x000552C0" Section=".text" Size="32" />
     <Symbol Name="g_eMIOSTickTimerChannel" Address="0x00066394" Section=".text" Size="1" />
-    <Symbol Name="RxSlot_3255p0001_ReceiveFrame" Address="0x40003638" Section=".bss" Size="16" />
-    <Symbol Name="DOut4566p0001_DiscreteOutput_Stop" Address="0x00055D4C" Section=".text" Size="64" />
+    <Symbol Name="DOut4372p0004_DiscreteOutput_Create" Address="0x000558D4" Section=".text" Size="112" />
     <Symbol Name="rtNaNF" Address="0x400046BC" Section=".bss" Size="4" />
     <Symbol Name="TskSync_Semaphore_Release" Address="0x00041F44" Section=".text" Size="136" />
     <Symbol Name="g_pCRCBlockPtr" Address="0x00040008" Section=".CRCDefnPtr_rodata" Size="4" />
     <Symbol Name="KeySuite_Manager_ChangeToProtocol" Address="0x000575D0" Section=".text" Size="316" />
     <Symbol Name="Mooventure2016_Rev5_PrevZCSigState" Address="0x40000DFC" Section=".bss" Size="7" />
     <Symbol Name="MC33800_LSO9_MC33800_Methods" Address="0x00066D0C" Section=".text" Size="16" />
-    <Symbol Name="DOut4330p0001_DiscreteOutput_Stop" Address="0x00055010" Section=".text" Size="28" />
     <Symbol Name="INTC_ClrSWISR" Address="0x00044504" Section=".text" Size="24" />
     <Symbol Name="SCI_eDMA_RxHalfISR" Address="0x0005CC34" Section=".text" Size="64" />
     <Symbol Name="Debug_LoadCalibrationError" Address="0x40004528" Section=".bss" Size="2" />
-    <Symbol Name="RxSlot_3671p0001_Receive" Address="0x00051384" Section=".text" Size="248" />
-    <Symbol Name="DOut4333p0001_DiscreteOutput_Set" Address="0x0005619C" Section=".text" Size="144" />
-    <Symbol Name="RxSlot_3055p0001_Receive" Address="0x000523FC" Section=".text" Size="248" />
+    <Symbol Name="RxSlot_3697p0004_ReceiveFrameValid" Address="0x400035F8" Section=".bss" Size="1" />
     <Symbol Name="TLE7368_Watchdog_PeriodicRefresh" Address="0x0005FECC" Section=".text" Size="320" />
     <Symbol Name="__ieee754_fmod" Address="0x00059FD0" Section=".text" Size="872" />
     <Symbol Name="Table6" Address="0x00069058" Section=".text" Size="8" />
@@ -175,20 +170,15 @@
     <Symbol Name="g_eTPU_ISRObj" Address="0x0006638C" Section=".text" Size="8" />
     <Symbol Name="floor" Address="0x00059534" Section=".text" Size="532" />
     <Symbol Name="Security_GetKeyProjectProductID" Address="0x0006070C" Section=".text" Size="44" />
-    <Symbol Name="DOut4333p0001_DiscreteOutput_Create" Address="0x000558D4" Section=".text" Size="112" />
+    <Symbol Name="DOut4369p0004_CPUOut_Methods" Address="0x00066F78" Section=".text" Size="16" />
     <Symbol Name="MC33800_DiscreteOut_State_Set" Address="0x0005ECB4" Section=".text" Size="84" />
-    <Symbol Name="DOut4562p0001_DiscreteOutput_Stop" Address="0x00055EEC" Section=".text" Size="64" />
-    <Symbol Name="RxSlot_3729p0001_ReceiveFrameValid" Address="0x400036FC" Section=".bss" Size="1" />
-    <Symbol Name="RxSlot_3671p0001_ReceiveFrameValid" Address="0x400035E4" Section=".bss" Size="1" />
+    <Symbol Name="RxSlot_3065p0001_ReceiveFrame" Address="0x40003750" Section=".bss" Size="16" />
     <Symbol Name="ModuleSupport_Close" Address="0x0005BF94" Section=".text" Size="32" />
     <Symbol Name="FLEXCAN2_B_TransmitQueueFrames" Address="0x40003A54" Section=".bss" Size="256" />
-    <Symbol Name="RxSlot_3859p0001_ReceiveFrameValid" Address="0x400036E8" Section=".bss" Size="1" />
-    <Symbol Name="DOut4563p0001_MC33800DigitalOut" Address="0x00066D54" Section=".text" Size="12" />
     <Symbol Name="Reboot_ControlCore" Address="0x0005D7FC" Section=".text" Size="112" />
-    <Symbol Name="RxSlot_3256p0001_Receive" Address="0x0005166C" Section=".text" Size="248" />
     <Symbol Name="eTPU_PWM_Create" Address="0x0005CD64" Section=".text" Size="212" />
+    <Symbol Name="DOut4364p0004_CPUDigitalOut" Address="0x00066EFC" Section=".text" Size="12" />
     <Symbol Name="s_AppTaskParamInfo" Address="0x00065C6C" Section=".text" Size="4" />
-    <Symbol Name="RxSlot_10273p001_ReceiveFrameValid" Address="0x40003724" Section=".bss" Size="1" />
     <Symbol Name="__make_fp" Address="0x00063EE8" Section=".text" Size="52" />
     <Symbol Name="VISTA_1_Register_Read" Address="0x0005543C" Section=".text" Size="60" />
     <Symbol Name="CAN_3_KeySuite_ReceiveQueueFrames" Address="0x40003A14" Section=".bss" Size="64" />
@@ -197,39 +187,33 @@
     <Symbol Name="NonVolatile_NonVolatileCRC" Address="0x40003F98" Section=".bss" Size="4" />
     <Symbol Name="ContinuousScan_eQADCQueue_Create" Address="0x00054844" Section=".text" Size="56" />
     <Symbol Name="NonVolatile_RestoreDefaultNonVolatile" Address="0x0005448C" Section=".text" Size="108" />
-    <Symbol Name="DOut4561p0001_CPUDigitalOut" Address="0x00066FDC" Section=".text" Size="12" />
     <Symbol Name="MPC55xxFlash_Erase" Address="0x0005C75C" Section=".text" Size="264" />
-    <Symbol Name="RxSlot_4019p0001_ReceiveFrameValid" Address="0x400036AC" Section=".bss" Size="1" />
+    <Symbol Name="RxSlot_3698p0001_ReceiveFrameValid" Address="0x40003710" Section=".bss" Size="1" />
     <Symbol Name="Task_Sleep" Address="0x00041B28" Section=".text" Size="108" />
     <Symbol Name="g_eEcuHwMaj" Address="0x400046B0" Section=".bss" Size="1" />
     <Symbol Name="ContinuousScan_eQADCQueue_QueueMethod" Address="0x00066E3C" Section=".text" Size="28" />
-    <Symbol Name="DOut4327p0001_DiscreteOutput_Create" Address="0x00054EC4" Section=".text" Size="32" />
     <Symbol Name="MPC55xxFlash_Program" Address="0x0005C514" Section=".text" Size="392" />
+    <Symbol Name="DOut4602p0004_MC33800DigitalOut" Address="0x00066D54" Section=".text" Size="12" />
     <Symbol Name="MC33800_LSO10_MC33800_Methods" Address="0x00066D60" Section=".text" Size="16" />
-    <Symbol Name="RxSlot_3256p0001_ReceiveFrameValid" Address="0x40003620" Section=".bss" Size="1" />
-    <Symbol Name="DOut4562p0001_DiscreteOutput_Create" Address="0x0005571C" Section=".text" Size="112" />
+    <Symbol Name="DOut4364p0004_DiscreteOutput_Get" Address="0x00054BB4" Section=".text" Size="20" />
     <Symbol Name="MotoCoder_TaskEventQueue_Execute" Address="0x00050C40" Section=".text" Size="136" />
     <Symbol Name="eTPU_ParameterFrame_Local_8Bit_Get" Address="0x00043B6C" Section=".text" Size="108" />
     <Symbol Name="Security_Basic_Key_Decrypt" Address="0x00060738" Section=".text" Size="28" />
     <Symbol Name="ModuleSupport_EBI_Open" Address="0x0005BFB8" Section=".text" Size="8" />
-    <Symbol Name="DOut4332p0001_DiscreteOutput_Create" Address="0x00054E24" Section=".text" Size="32" />
-    <Symbol Name="DOut4323p0001_DiscreteOutput_Create" Address="0x00055CDC" Section=".text" Size="112" />
     <Symbol Name="ERI_Handler_XTDREQ_CRCStatus" Address="0x00060CB0" Section=".text" Size="204" />
     <Symbol Name="g_ConnectionArr" Address="0x400045FC" Section=".bss" Size="120" />
     <Symbol Name="SPI_DMethods" Address="0x00066E80" Section=".text" Size="8" />
     <Symbol Name="MotoHawkModelName" Address="0x00065D7C" Section=".text" Size="80" />
     <Symbol Name="eTPU_ParameterFrame_Ofs_Get" Address="0x00043DC0" Section=".text" Size="108" />
     <Symbol Name="S_SHRC_4" Address="0x00066B1C" Section=".text" Size="12" />
-    <Symbol Name="DOut4335p0001_DiscreteOutput_Stop" Address="0x00055FBC" Section=".text" Size="64" />
-    <Symbol Name="DOut4334p0001_DiscreteOutput_Create" Address="0x00055864" Section=".text" Size="112" />
-    <Symbol Name="DOut4328p0001_DiscreteOutput_Create" Address="0x00054EA4" Section=".text" Size="32" />
-    <Symbol Name="RxSlot_3729p0001_Receive" Address="0x00052114" Section=".text" Size="248" />
+    <Symbol Name="DOut4372p0004_MC33800_Methods" Address="0x00066CB8" Section=".text" Size="16" />
     <Symbol Name="DefaultSecurity_KeyArr" Address="0x00069EE4" Section=".text" Size="4" />
     <Symbol Name="FlexCAN2SharedBufferISR" Address="0x0005D1B0" Section=".text" Size="292" />
     <Symbol Name="g_u8Capability" Address="0x400046B2" Section=".bss" Size="1" />
     <Symbol Name="g_FGNDTaskStack" Address="0x40002120" Section=".bss" Size="3072" />
-    <Symbol Name="DOut4564p0001_DiscreteOutput_Get" Address="0x00054C68" Section=".text" Size="20" />
+    <Symbol Name="DOut4367p0004_DiscreteOutput_Set" Address="0x00055300" Section=".text" Size="32" />
     <Symbol Name="SaveCalibration" Address="0x00050D4C" Section=".text" Size="128" />
+    <Symbol Name="RxSlot_3262p0001_Receive" Address="0x00051B44" Section=".text" Size="248" />
     <Symbol Name="Tsk_Timer_OnTick" Address="0x00041420" Section=".text" Size="292" />
     <Symbol Name="M95256_Verify" Address="0x0005E8AC" Section=".text" Size="128" />
     <Symbol Name="BasicOut_DiscreteOut_Create" Address="0x0005E640" Section=".text" Size="88" />
@@ -242,30 +226,33 @@
     <Symbol Name="g_uReadyListMask" Address="0x40000870" Section=".sbss" Size="4" />
     <Symbol Name="g_u32ExecutionStarvationTime_us" Address="0x00066130" Section=".text" Size="4" />
     <Symbol Name="ModuleSupport_PowerSupply_Close" Address="0x0005C07C" Section=".text" Size="52" />
-    <Symbol Name="RxSlot_3251p0001_ReceiveFrame" Address="0x40003688" Section=".bss" Size="16" />
-    <Symbol Name="DOut4561p0001_CPUOut_Methods" Address="0x00066FCC" Section=".text" Size="16" />
     <Symbol Name="e200_BothTimerIRQ_Disable" Address="0x000426A0" Section=".text" Size="20" />
     <Symbol Name="g_InitPadConfigArr" Address="0x00069185" Section=".text" Size="264" />
     <Symbol Name="eQADC_Queue_Conversion_Result_Standard_Get" Address="0x00042E70" Section=".text" Size="56" />
-    <Symbol Name="DOut4334p0001_MC33800_Methods" Address="0x00066CD4" Section=".text" Size="16" />
     <Symbol Name="Tsk_Task_IsPriorityOccupied" Address="0x00040D3C" Section=".text" Size="60" />
     <Symbol Name="__floatsidf" Address="0x00063AAC" Section=".text" Size="196" />
     <Symbol Name="g_FlexCAN2RuntimeConfigObj" Address="0x000667D0" Section=".text" Size="12" />
+    <Symbol Name="RxSlot_3886p0001_Receive" Address="0x00052CD8" Section=".text" Size="208" />
     <Symbol Name="CAN_1_Transmit" Address="0x00053D78" Section=".text" Size="88" />
     <Symbol Name="g_pSPIDeviceDefnArr" Address="0x40000918" Section=".sbss" Size="16" />
     <Symbol Name="SerialEE_ReadSynch" Address="0x0005F95C" Section=".text" Size="144" />
     <Symbol Name="g_u8BootVerMaj" Address="0x400046B3" Section=".bss" Size="1" />
     <Symbol Name="__ltdf2" Address="0x0006399C" Section=".text" Size="136" />
+    <Symbol Name="DOut4364p0004_State" Address="0x40004534" Section=".bss" Size="1" />
+    <Symbol Name="RxSlot_3065p0001_Receive" Address="0x000524F4" Section=".text" Size="248" />
     <Symbol Name="TLE7368" Address="0x0006912C" Section=".text" Size="16" />
     <Symbol Name="Tsk_Task_CreateStatic" Address="0x000417D0" Section=".text" Size="216" />
+    <Symbol Name="RxSlot_3757p0001_Receive" Address="0x00052114" Section=".text" Size="248" />
     <Symbol Name="__DTOR_END__" Address="0x0006E170" Section=".dtors" Size="0" />
-    <Symbol Name="RxSlot_3254p0001_Receive" Address="0x0005185C" Section=".text" Size="248" />
+    <Symbol Name="DOut4370p0004" Address="0x000668A8" Section=".text" Size="12" />
+    <Symbol Name="DOut4363p0004_DiscreteOutput_Stop" Address="0x0005622C" Section=".text" Size="64" />
     <Symbol Name="TLE7368_PWR_HOLD_CPUOut_Methods" Address="0x0006913C" Section=".text" Size="16" />
     <Symbol Name="CAN_3_KeySuite_ReceiveQueue" Address="0x400037A4" Section=".bss" Size="16" />
     <Symbol Name="DGIn_DigitalInput_Create" Address="0x0005E6B8" Section=".text" Size="52" />
     <Symbol Name="CriticalSection_Enter" Address="0x000410C4" Section=".text" Size="68" />
-    <Symbol Name="DOut4333p0001" Address="0x00066A14" Section=".text" Size="24" />
+    <Symbol Name="DOut4363p0004_MC33800_Methods" Address="0x00066B98" Section=".text" Size="16" />
     <Symbol Name="g_InterruptStack" Address="0x40000EC4" Section=".bss" Size="1536" />
+    <Symbol Name="DOut4601p0004_DiscreteOutput_Stop" Address="0x00055EEC" Section=".text" Size="64" />
     <Symbol Name="Event_Set" Address="0x00041C78" Section=".text" Size="4" />
     <Symbol Name="u4LastRandomNumber" Address="0x40000EA8" Section=".bss" Size="4" />
     <Symbol Name="H1_InhibitB_CPUOut_Methods" Address="0x0006703C" Section=".text" Size="16" />
@@ -273,8 +260,8 @@
     <Symbol Name="DGIn_DigitalInput_GetAttributes" Address="0x0005E6EC" Section=".text" Size="104" />
     <Symbol Name="ESTOP2_CPUDGIn_Methods" Address="0x00066B3C" Section=".text" Size="8" />
     <Symbol Name="IRQ_ExternalIRQ_NestedIRQHandler" Address="0x00040484" Section=".text" Size="344" />
+    <Symbol Name="DOut4602p0004_DiscreteOutput_Create" Address="0x000556AC" Section=".text" Size="112" />
     <Symbol Name="eTPUCommon_Engine_Stop" Address="0x000438D0" Section=".text" Size="32" />
-    <Symbol Name="DOut4334p0001_State" Address="0x40004545" Section=".bss" Size="1" />
     <Symbol Name="g_FGNDTask_MailBoxFetchSemaphore" Address="0x00066164" Section=".text" Size="12" />
     <Symbol Name="KeySuiteSupport_CANLink_TXId_Get" Address="0x00056870" Section=".text" Size="12" />
     <Symbol Name="ERI_Protocol_Memory_Request" Address="0x000608F0" Section=".text" Size="164" />
@@ -284,96 +271,105 @@
     <Symbol Name="s_ERIProtocolSpecificDataArr" Address="0x40004680" Section=".bss" Size="36" />
     <Symbol Name="MotoHawkBuildGUID" Address="0x00065EF0" Section=".text" Size="80" />
     <Symbol Name="NonVolatileDefault" Address="0x0006E1C4" Section=".romcals" Size="112" />
+    <Symbol Name="DOut4365p0004_DiscreteOutput_Stop" Address="0x00055080" Section=".text" Size="28" />
+    <Symbol Name="DOut4368p0004_CPUDigitalOut" Address="0x00066F6C" Section=".text" Size="12" />
+    <Symbol Name="DOut4374p0004" Address="0x000669E4" Section=".text" Size="24" />
     <Symbol Name="malloc" Address="0x000583D0" Section=".text" Size="44" />
-    <Symbol Name="DOut4329p0001_CPUDigitalOut" Address="0x00066F6C" Section=".text" Size="12" />
+    <Symbol Name="DOut4365p0004" Address="0x000668E4" Section=".text" Size="12" />
     <Symbol Name="SerialEE_Create" Address="0x0005FBB4" Section=".text" Size="184" />
     <Symbol Name="g_pfnSPIModuleISR" Address="0x40000928" Section=".sbss" Size="4" />
     <Symbol Name="H1_InhibitB_DiscreteOutput_Get" Address="0x00054CA4" Section=".text" Size="20" />
-    <Symbol Name="RxSlot_3858p0001_ReceiveQueue" Address="0x400037D4" Section=".bss" Size="16" />
     <Symbol Name="MPC55xxFlash_Close" Address="0x0005C864" Section=".text" Size="68" />
-    <Symbol Name="RxSlot_3256p0001_ReceiveFrame" Address="0x40003624" Section=".bss" Size="16" />
+    <Symbol Name="DOut5671p0001_State" Address="0x4000453F" Section=".bss" Size="1" />
     <Symbol Name="Tsk_Task_Sleep" Address="0x00040E14" Section=".text" Size="152" />
     <Symbol Name="calculate_crc" Address="0x0005431C" Section=".text" Size="108" />
+    <Symbol Name="Trigger_FGND_RTI_PERIODIC_5730p0001" Address="0x00058320" Section=".text" Size="68" />
     <Symbol Name="eTPUPrimitive_PWM_Frequency_Set" Address="0x0006231C" Section=".text" Size="220" />
     <Symbol Name="CodeCoveredBits" Address="0x40000968" Section=".bss" Size="44" />
-    <Symbol Name="RxSlot_3729p0001_ReceiveFrame" Address="0x40003700" Section=".bss" Size="16" />
     <Symbol Name="S_SHRC_4SPIDevice" Address="0x00066BC8" Section=".text" Size="16" />
     <Symbol Name="Timer_FreeRunningCounter_GetRawTicksFromTime" Address="0x00050EA8" Section=".text" Size="32" />
     <Symbol Name="ClearFault" Address="0x00045700" Section=".text" Size="128" />
     <Symbol Name="g_u8TaskKernelErrorCnt" Address="0x40000862" Section=".sbss" Size="1" />
     <Symbol Name="VISTA_1_Create" Address="0x000554B4" Section=".text" Size="80" />
-    <Symbol Name="DOut4325p0001" Address="0x000668F0" Section=".text" Size="12" />
     <Symbol Name="g_pStartOfInterruptStack" Address="0x40000868" Section=".sbss" Size="4" />
     <Symbol Name="ERI_Protocol_CRC_InProgress" Address="0x000608DC" Section=".text" Size="20" />
     <Symbol Name="Table1Rev_cu1" Address="0x000671EE" Section=".text" Size="1" />
     <Symbol Name="eTPUProc_TPUModule_GetPtr" Address="0x0004471C" Section=".text" Size="12" />
     <Symbol Name="__malloc_top_pad" Address="0x40000908" Section=".sbss" Size="4" />
+    <Symbol Name="RxSlot_3700p0001_Receive" Address="0x00051C3C" Section=".text" Size="248" />
+    <Symbol Name="RxSlot_3268p0001_Receive" Address="0x00051574" Section=".text" Size="248" />
     <Symbol Name="IsFirstApplicationBoot" Address="0xFF000072" Section=".serial_ee_data" Size="1" />
     <Symbol Name="SWISR_IRQHandler" Address="0x0005D988" Section=".text" Size="36" />
     <Symbol Name="SPI_C_Create" Address="0x00054730" Section=".text" Size="88" />
+    <Symbol Name="DOut4368p0004_State" Address="0x40004538" Section=".bss" Size="1" />
     <Symbol Name="eTPUProc_ExtendError_RequestChannel" Address="0x00044664" Section=".text" Size="80" />
     <Symbol Name="CAN_LoadTransmitBuffer" Address="0x0005395C" Section=".text" Size="188" />
     <Symbol Name="Freescale_FlashInit" Address="0x0005C93C" Section=".text" Size="72" />
     <Symbol Name="KeySuite_Manager_ReceiptObj_Request" Address="0x00056924" Section=".text" Size="156" />
     <Symbol Name="EEPROM_1_PageBuffer" Address="0x400045DC" Section=".bss" Size="32" />
+    <Symbol Name="DOut4604p0004_State" Address="0x4000453E" Section=".bss" Size="1" />
     <Symbol Name="ApplicationCompatibilityArr" Address="0x000690D0" Section=".text" Size="6" />
     <Symbol Name="FlashProgram_C" Address="0x00069BB0" Section=".text" Size="564" />
     <Symbol Name="ECSM_ExtIRQHandler" Address="0x00042710" Section=".text" Size="48" />
     <Symbol Name="MPC5xxTestCode_AccessArr" Address="0x00069EB4" Section=".text" Size="48" />
+    <Symbol Name="DOut4364p0004_DiscreteOutput_Create" Address="0x00054F04" Section=".text" Size="28" />
     <Symbol Name="Tsk_ExecPerf_RefreshPreTask" Address="0x00041064" Section=".text" Size="16" />
-    <Symbol Name="RxSlot_3808p0001_ReceiveFrameValid" Address="0x400035D0" Section=".bss" Size="1" />
     <Symbol Name="SPI_SendMessage" Address="0x0005E000" Section=".text" Size="396" />
     <Symbol Name="NonVolatile_OpenDataStore" Address="0x000546AC" Section=".text" Size="132" />
+    <Symbol Name="RxSlot_3887p0001_Receive" Address="0x0005201C" Section=".text" Size="248" />
     <Symbol Name="g_Protocol_ERI_Rev" Address="0x00069EF0" Section=".text" Size="1" />
     <Symbol Name="KeySuiteSupport_CANLink_IsTXComplete" Address="0x00056888" Section=".text" Size="8" />
     <Symbol Name="GetNextActiveFault" Address="0x0004517C" Section=".text" Size="120" />
+    <Symbol Name="DOut4605p0004_DiscreteOutput_Set" Address="0x00055D8C" Section=".text" Size="144" />
     <Symbol Name="eQADCCommon_RFIFO_Drain_ISR" Address="0x00043124" Section=".text" Size="32" />
     <Symbol Name="_sbrk_r" Address="0x00058F28" Section=".text" Size="116" />
     <Symbol Name="VISTA_1" Address="0x00066930" Section=".text" Size="12" />
+    <Symbol Name="DOut4604p0004_CPUOut_Methods" Address="0x00067004" Section=".text" Size="16" />
     <Symbol Name="MC33800_INJ7" Address="0x00066AA4" Section=".text" Size="24" />
     <Symbol Name="MailBox_CreateStatic" Address="0x0005E4B8" Section=".text" Size="164" />
     <Symbol Name="g_u16IdleStackOfsForEnd" Address="0x00065C92" Section=".text" Size="2" />
     <Symbol Name="FLEXCAN2_B_ReceiveQueueFrames" Address="0x40003B54" Section=".bss" Size="256" />
-    <Symbol Name="DOut4562p0001_MC33800DigitalOut" Address="0x00066D38" Section=".text" Size="12" />
     <Symbol Name="GetNextSuspectedFault" Address="0x00045104" Section=".text" Size="120" />
     <Symbol Name="g_ISRExecPerfArr" Address="0x400008A4" Section=".sbss" Size="44" />
     <Symbol Name="KeySuite_Manager_MemInitStatus" Address="0x00056660" Section=".text" Size="8" />
     <Symbol Name="MC33800_INJ4_DiscreteOutput_Create" Address="0x00055A0C" Section=".text" Size="100" />
     <Symbol Name="g_u8ISRNestingCnt" Address="0x40000860" Section=".sbss" Size="1" />
-    <Symbol Name="RxSlot_3251p0001_Receive" Address="0x00051B44" Section=".text" Size="248" />
+    <Symbol Name="DOut4600p0004_CPUDigitalOut" Address="0x00066FDC" Section=".text" Size="12" />
+    <Symbol Name="DOut4366p0004_DiscreteOutput_Create" Address="0x00054EC4" Section=".text" Size="32" />
     <Symbol Name="ODRC_CPUDigitalOut" Address="0x00067068" Section=".text" Size="12" />
-    <Symbol Name="DOut4329p0001_CPUOut_Methods" Address="0x00066F5C" Section=".text" Size="16" />
+    <Symbol Name="RxSlot_3478p0004_ReceiveFrame" Address="0x40003728" Section=".bss" Size="16" />
     <Symbol Name="S_SHRC_3SPIDeviceMethods" Address="0x00066B58" Section=".text" Size="12" />
     <Symbol Name="Mooventure2016_Rev5_HeaterCoreMotionControl" Address="0x00045E30" Section=".text" Size="96" />
     <Symbol Name="Timer_Watchdog_ResetStarvation" Address="0x00042138" Section=".text" Size="16" />
     <Symbol Name="VISTA_ADC_Create" Address="0x00060644" Section=".text" Size="200" />
+    <Symbol Name="DOut4367p0004" Address="0x000668CC" Section=".text" Size="12" />
     <Symbol Name="g_u8_eMIOS_INTERNAL_CLK_TIME_PER_TICK_ns" Address="0x400008EC" Section=".sbss" Size="1" />
-    <Symbol Name="DOut4561p0001_State" Address="0x4000453C" Section=".bss" Size="1" />
     <Symbol Name="eQADCCommon_CFIFO_NonCoherency_ISR" Address="0x000430A0" Section=".text" Size="36" />
     <Symbol Name="EriRequestTableList" Address="0x000671F8" Section=".text" Size="64" />
     <Symbol Name="__unpack_d" Address="0x0006416C" Section=".text" Size="252" />
+    <Symbol Name="DOut4374p0004_DiscreteOutput_Create" Address="0x000557F4" Section=".text" Size="112" />
     <Symbol Name="ModuleSupport_ExternalWatchdog_IsEnabled" Address="0x0005C0B0" Section=".text" Size="40" />
-    <Symbol Name="RxSlot_3670p0001_ReceiveFrame" Address="0x40003714" Section=".bss" Size="16" />
     <Symbol Name="VISTA_1Device" Address="0x00066DEC" Section=".text" Size="16" />
+    <Symbol Name="DOut4369p0004_DiscreteOutput_Create" Address="0x00054E64" Section=".text" Size="32" />
     <Symbol Name="MMU_Open" Address="0x00040780" Section=".text" Size="136" />
     <Symbol Name="Table5Rev_cu1" Address="0x000671F2" Section=".text" Size="1" />
     <Symbol Name="ERI_Handler_Read_CallBack" Address="0x0006167C" Section=".text" Size="100" />
+    <Symbol Name="DOut4365p0004_DiscreteOutput_Create" Address="0x00054EE4" Section=".text" Size="32" />
     <Symbol Name="CAN_1_KeySuite_ReceiveQueue" Address="0x400037C4" Section=".bss" Size="16" />
-    <Symbol Name="DOut4331p0001_DiscreteOutput_Set" Address="0x000552A0" Section=".text" Size="32" />
     <Symbol Name="__malloc_max_sbrked_mem" Address="0x4000090C" Section=".sbss" Size="4" />
-    <Symbol Name="RxSlot_3053p0002_ReceiveFrame" Address="0x40003764" Section=".bss" Size="16" />
     <Symbol Name="eTPU_ParameterFrame_Ofs_GetBase" Address="0x00043990" Section=".text" Size="52" />
-    <Symbol Name="DOut4323p0001_MC33800_Methods" Address="0x00066B7C" Section=".text" Size="16" />
     <Symbol Name="H1_InhibitB_DiscreteOutput_Create" Address="0x00054D84" Section=".text" Size="32" />
     <Symbol Name="g_uSystemClockTicksPerMicroSec" Address="0x000690EC" Section=".text" Size="2" />
     <Symbol Name="MC33800_INJ7_MC33800DigitalOut" Address="0x00066C20" Section=".text" Size="12" />
+    <Symbol Name="DOut4363p0004_MC33800DigitalOut" Address="0x00066BA8" Section=".text" Size="12" />
+    <Symbol Name="DOut4604p0004_CPUDigitalOut" Address="0x00067014" Section=".text" Size="12" />
     <Symbol Name="eQADC_Queue_Conversion_Scaled_Result_Get" Address="0x00042D64" Section=".text" Size="268" />
     <Symbol Name="__extendsfdf2" Address="0x00062BF0" Section=".text" Size="72" />
     <Symbol Name="g_eTPUDigitalFilterCtrl" Address="0x00066189" Section=".text" Size="1" />
     <Symbol Name="SyncObj_Destroy" Address="0x0004196C" Section=".text" Size="128" />
+    <Symbol Name="DOut5671p0001_CPUDigitalOut" Address="0x00067030" Section=".text" Size="12" />
     <Symbol Name="KeySuite_Exception_GetFromNativeError" Address="0x000567B0" Section=".text" Size="140" />
     <Symbol Name="ModuleSupportStartup_Open" Address="0x0005BF6C" Section=".text" Size="40" />
-    <Symbol Name="RxSlot_3670p0001_ReceiveFrameValid" Address="0x40003710" Section=".bss" Size="1" />
     <Symbol Name="CAN_2_KeySuite_ReceiveQueueFrames" Address="0x40003C54" Section=".bss" Size="64" />
     <Symbol Name="__adddf3" Address="0x000630C4" Section=".text" Size="112" />
     <Symbol Name="eTPU_ParameterFrame_Local_24Bit_Set" Address="0x00043CC4" Section=".text" Size="124" />
@@ -382,36 +378,36 @@
     <Symbol Name="KeySuite_Manager_ValidateParameter" Address="0x00057448" Section=".text" Size="280" />
     <Symbol Name="eTPU_ParameterFrame_GetForChan" Address="0x00043D64" Section=".text" Size="92" />
     <Symbol Name="ReadModuleConfig" Address="0x00057A14" Section=".text" Size="288" />
-    <Symbol Name="DOut4565p0001" Address="0x00066878" Section=".text" Size="12" />
+    <Symbol Name="DOut4365p0004_State" Address="0x40004535" Section=".bss" Size="1" />
+    <Symbol Name="DOut4371p0004_DiscreteOutput_Create" Address="0x00054E24" Section=".text" Size="32" />
     <Symbol Name="Entry" Address="0x00040268" Section=".text" Size="88" />
     <Symbol Name="DefaultSecurity_Security" Address="0x00069EE8" Section=".text" Size="8" />
-    <Symbol Name="DOut4566p0001_MC33800_Methods" Address="0x00066D98" Section=".text" Size="16" />
-    <Symbol Name="RxSlot_10273p001_Receive" Address="0x00052304" Section=".text" Size="248" />
+    <Symbol Name="RxSlot_3266p0001_Receive" Address="0x00051764" Section=".text" Size="248" />
+    <Symbol Name="DOut4365p0004_CPUOut_Methods" Address="0x00066F08" Section=".text" Size="16" />
+    <Symbol Name="DOut4365p0004_DiscreteOutput_Get" Address="0x00054BC8" Section=".text" Size="20" />
     <Symbol Name="__fdlib_version" Address="0x4000085C" Section=".sdata" Size="4" />
     <Symbol Name="MC33800_PWM_DigitalOut_SetAttributes" Address="0x0005F388" Section=".text" Size="8" />
+    <Symbol Name="DOut4368p0004" Address="0x000668C0" Section=".text" Size="12" />
     <Symbol Name="InternalFlash_Registered_ReadSynch" Address="0x0005BB00" Section=".text" Size="52" />
     <Symbol Name="_global_impure_ptr" Address="0x40000850" Section=".sdata" Size="4" />
     <Symbol Name="eDMA_Configuration_SetChannelAttributes" Address="0x000427A8" Section=".text" Size="84" />
     <Symbol Name="MC33800_INJ4_MC33800_Methods" Address="0x00066C64" Section=".text" Size="16" />
     <Symbol Name="eTPUProc_TPUMaskDefn_GetPtrWithTPUChannel" Address="0x000446B4" Section=".text" Size="20" />
     <Symbol Name="S_SHRC_4_Create" Address="0x00056440" Section=".text" Size="56" />
+    <Symbol Name="RxSlot_3265p0001_Receive" Address="0x0005185C" Section=".text" Size="248" />
     <Symbol Name="FLEXCAN2_B_TransmitQueue" Address="0x40003784" Section=".bss" Size="16" />
     <Symbol Name="rtIsInfF" Address="0x00057BE0" Section=".text" Size="48" />
-    <Symbol Name="DOut4564p0001_CPUOut_Methods" Address="0x00066FE8" Section=".text" Size="16" />
-    <Symbol Name="DOut4565p0001_CPUDigitalOut" Address="0x00067014" Section=".text" Size="12" />
     <Symbol Name="MotoHawkModelSecondsInUseTick" Address="0x00057B34" Section=".text" Size="24" />
     <Symbol Name="Memory_WriteSynch" Address="0x0005BB34" Section=".text" Size="220" />
-    <Symbol Name="DOut4331p0001_DiscreteOutput_Get" Address="0x00054C2C" Section=".text" Size="20" />
     <Symbol Name="Tsk_ExecPerf_RefreshPostTask" Address="0x0004103C" Section=".text" Size="40" />
     <Symbol Name="MC33800_LSO10_MC33800DigitalOut" Address="0x00066D70" Section=".text" Size="12" />
     <Symbol Name="ESTOP2_DigitalInput_Get" Address="0x000564B0" Section=".text" Size="64" />
+    <Symbol Name="DOut4362p0004_DiscreteOutput_Stop" Address="0x000562FC" Section=".text" Size="64" />
     <Symbol Name="__udivdi3" Address="0x00062800" Section=".text" Size="1008" />
     <Symbol Name="SPI_Device_Destroy" Address="0x0005DC48" Section=".text" Size="8" />
     <Symbol Name="Load_FlexCAN2_RXBuffer" Address="0x0005CFD0" Section=".text" Size="232" />
-    <Symbol Name="DOut4331p0001_CPUDigitalOut" Address="0x00066FA4" Section=".text" Size="12" />
     <Symbol Name="M95256_Write" Address="0x0005E92C" Section=".text" Size="320" />
     <Symbol Name="CAN_3_KeySuite_DynamicIDMask" Address="0x40000008" Section=".data" Size="4" />
-    <Symbol Name="DOut4327p0001" Address="0x000668D8" Section=".text" Size="12" />
     <Symbol Name="g_INTC_IRQVectorTable" Address="0x00065000" Section=".text" Size="2480" />
     <Symbol Name="__floatunsidf" Address="0x00063C08" Section=".text" Size="308" />
     <Symbol Name="MC33800_LSO10" Address="0x00066984" Section=".text" Size="24" />
@@ -420,37 +416,39 @@
     <Symbol Name="Tsk_Task_RemoveFromReadyList" Address="0x00040DA8" Section=".text" Size="48" />
     <Symbol Name="FGNDTask_5000" Address="0x00050D0C" Section=".text" Size="32" />
     <Symbol Name="CAN_3_TransmitQueueDepth" Address="0x00052740" Section=".text" Size="16" />
+    <Symbol Name="DOut5671p0001_DiscreteOutput_Stop" Address="0x00054F68" Section=".text" Size="28" />
     <Symbol Name="Mooventure2016_Rev5_DataCorrectionMotorFault" Address="0x00045BA4" Section=".text" Size="56" />
     <Symbol Name="GetNextOccurredFault" Address="0x000451F4" Section=".text" Size="120" />
     <Symbol Name="s_pEBI_BR" Address="0x000690FC" Section=".text" Size="4" />
     <Symbol Name="SerialEE_Read_GenericDevice" Address="0x0005F764" Section=".text" Size="172" />
-    <Symbol Name="RxSlot_3254p0001_ReceiveFrameValid" Address="0x40003648" Section=".bss" Size="1" />
     <Symbol Name="s_IdleLoopCompleteEventECB" Address="0x4000094C" Section=".bss" Size="12" />
-    <Symbol Name="DOut4329p0001_DiscreteOutput_Stop" Address="0x0005502C" Section=".text" Size="28" />
+    <Symbol Name="DOut4372p0004_State" Address="0x40004546" Section=".bss" Size="1" />
     <Symbol Name="S_SHRC_3Runtime" Address="0x4000454C" Section=".bss" Size="56" />
+    <Symbol Name="RxSlot_3699p0001_Receive" Address="0x00051384" Section=".text" Size="248" />
     <Symbol Name="FLEXCAN2_B_ReceiveQueue" Address="0x400037F4" Section=".bss" Size="16" />
     <Symbol Name="eTPU_FM_Set" Address="0x00043A9C" Section=".text" Size="52" />
     <Symbol Name="KeySuite_ProtocolMemory_Free" Address="0x00061B40" Section=".text" Size="40" />
     <Symbol Name="NonVolatileStorage" Address="0xFF000000" Section=".serial_ee_bss" Size="112" />
     <Symbol Name="Timer_FreeRunningCounter_Get64Bits" Address="0x00042294" Section=".text" Size="68" />
     <Symbol Name="Mooventure2016_Rev5_Foreground_Enable" Address="0x00045E90" Section=".text" Size="32" />
+    <Symbol Name="DOut4604p0004" Address="0x00066878" Section=".text" Size="12" />
     <Symbol Name="KeySuite_Manager_Table_Read" Address="0x000573C0" Section=".text" Size="136" />
     <Symbol Name="FlashInit_C" Address="0x00069A18" Section=".text" Size="408" />
     <Symbol Name="MC33800_LSO9" Address="0x000669CC" Section=".text" Size="24" />
-    <Symbol Name="DOut4324p0001_DiscreteOutput_Stop" Address="0x0005622C" Section=".text" Size="64" />
     <Symbol Name="s_pfnEntry" Address="0x00040004" Section=".Entry_rodata" Size="4" />
     <Symbol Name="BasicOut_DiscreteOut_State_Set" Address="0x0005E5EC" Section=".text" Size="84" />
     <Symbol Name="Freescale_BlankCheck" Address="0x0005C9AC" Section=".text" Size="40" />
     <Symbol Name="MC33800_INJ6_MC33800_Methods" Address="0x00066BF4" Section=".text" Size="16" />
     <Symbol Name="ERI_Handler_XTDREQ_DFMStatus" Address="0x00060F60" Section=".text" Size="112" />
     <Symbol Name="g_eQADC_ISRObj" Address="0x00066120" Section=".text" Size="8" />
+    <Symbol Name="DOut4371p0004_DiscreteOutput_Set" Address="0x00055280" Section=".text" Size="32" />
     <Symbol Name="Mooventure2016_Rev5_Foreground_Init" Address="0x00045F80" Section=".text" Size="1608" />
     <Symbol Name="g_u32PeakHeapBytesUsed" Address="0x40000960" Section=".bss" Size="4" />
-    <Symbol Name="DOut4562p0001" Address="0x000669B4" Section=".text" Size="24" />
     <Symbol Name="KeySuite_Manager_MemClose" Address="0x0005666C" Section=".text" Size="8" />
     <Symbol Name="CAN_Tx_Buffer_ISR" Address="0x00053A6C" Section=".text" Size="96" />
     <Symbol Name="IsFaultSuspected" Address="0x00044A24" Section=".text" Size="64" />
     <Symbol Name="ECUP_AnalogInput_Get" Address="0x00054A44" Section=".text" Size="76" />
+    <Symbol Name="DOut4367p0004_State" Address="0x40004537" Section=".bss" Size="1" />
     <Symbol Name="ComputeSecurity_Universal_Calculate" Address="0x00060760" Section=".text" Size="44" />
     <Symbol Name="IRQ_SaveUnsavedExternalIRQContext" Address="0x000403E0" Section=".text" Size="164" />
     <Symbol Name="SPI_Device_Create" Address="0x0005DC18" Section=".text" Size="48" />
@@ -462,13 +460,14 @@
     <Symbol Name="mh_CAN_2_CityID_Update" Address="0x00044888" Section=".text" Size="24" />
     <Symbol Name="g_StaticSemaphoreDefn" Address="0x00065C9C" Section=".text" Size="8" />
     <Symbol Name="Table6Rev_cu1" Address="0x000671F3" Section=".text" Size="1" />
+    <Symbol Name="RxSlot_3887p0001_ReceiveFrame" Address="0x400036EC" Section=".bss" Size="16" />
     <Symbol Name="Table7Rev_cu1" Address="0x000671F4" Section=".text" Size="1" />
     <Symbol Name="rint" Address="0x0005B6DC" Section=".text" Size="528" />
-    <Symbol Name="RxSlot_3861p0001_ReceiveFrame" Address="0x400036C4" Section=".bss" Size="16" />
     <Symbol Name="__unpack_f" Address="0x00063E20" Section=".text" Size="200" />
     <Symbol Name="TLE7368_WDI" Address="0x00069104" Section=".text" Size="12" />
     <Symbol Name="AdjustFaultActionReferenceCount" Address="0x00044D58" Section=".text" Size="364" />
     <Symbol Name="ECSM_IRQHandler" Address="0x000426D4" Section=".text" Size="60" />
+    <Symbol Name="DOut4369p0004_State" Address="0x40004539" Section=".bss" Size="1" />
     <Symbol Name="CompilerVersion" Address="0x00065DCC" Section=".text" Size="80" />
     <Symbol Name="g_bEnableWatchdog" Address="0x00066115" Section=".text" Size="1" />
     <Symbol Name="RefreshFaultActionReferenceCounts" Address="0x00044AE4" Section=".text" Size="628" />
@@ -479,31 +478,36 @@
     <Symbol Name="Freescale_ProgramVerify" Address="0x0005C9FC" Section=".text" Size="40" />
     <Symbol Name="__init" Address="0x0006E120" Section=".init" Size="0" />
     <Symbol Name="GlobalFaultClear" Address="0x00045780" Section=".text" Size="176" />
-    <Symbol Name="RxSlot_3253p0001_Receive" Address="0x00051954" Section=".text" Size="248" />
     <Symbol Name="Mooventure2016_Rev5_M_" Address="0x400009A4" Section=".bss" Size="12" />
+    <Symbol Name="RxSlot_3886p0001_ReceiveQueue" Address="0x400037D4" Section=".bss" Size="16" />
     <Symbol Name="g_KeyProtocolOnCAN" Address="0x00067088" Section=".text" Size="28" />
-    <Symbol Name="DOut4563p0001" Address="0x0006699C" Section=".text" Size="24" />
+    <Symbol Name="DOut4600p0004_CPUOut_Methods" Address="0x00066FCC" Section=".text" Size="16" />
+    <Symbol Name="DOut4364p0004" Address="0x000668F0" Section=".text" Size="12" />
     <Symbol Name="ControlCore_PowerUpStatus_Query_WasWarm" Address="0x00044650" Section=".text" Size="20" />
     <Symbol Name="KeySuite_Manager_ResetTransport" Address="0x00056F60" Section=".text" Size="112" />
     <Symbol Name="SHUTDOWNTask_PostEvent" Address="0x00050C28" Section=".text" Size="24" />
     <Symbol Name="Debug_CAN_2_TransmitOverrun" Address="0x4000452E" Section=".bss" Size="2" />
     <Symbol Name="g_pDestroyTaskStack" Address="0x400008D0" Section=".sbss" Size="4" />
+    <Symbol Name="DOut4370p0004_CPUDigitalOut" Address="0x00066FA4" Section=".text" Size="12" />
+    <Symbol Name="DOut4600p0004_DiscreteOutput_Create" Address="0x00054E04" Section=".text" Size="32" />
     <Symbol Name="ModuleSupportStartup_PreOpen" Address="0x0005BF58" Section=".text" Size="20" />
     <Symbol Name="CloseApplication" Address="0x000448B8" Section=".text" Size="4" />
-    <Symbol Name="DOut4565p0001_DiscreteOutput_Set" Address="0x00055220" Section=".text" Size="32" />
     <Symbol Name="eTPU_ParameterFrame_GetBase" Address="0x00043D40" Section=".text" Size="36" />
+    <Symbol Name="DOut4602p0004_MC33800_Methods" Address="0x00066D44" Section=".text" Size="16" />
     <Symbol Name="EEPROM_1_Memory" Address="0x00066EAC" Section=".text" Size="36" />
     <Symbol Name="g_SHUTDOWNTaskTCB" Address="0x40003160" Section=".bss" Size="36" />
-    <Symbol Name="DOut4564p0001_State" Address="0x4000453D" Section=".bss" Size="1" />
+    <Symbol Name="RxSlot_3066p0001_Receive" Address="0x000523FC" Section=".text" Size="248" />
     <Symbol Name="MC33800_INJ6" Address="0x00066ABC" Section=".text" Size="24" />
-    <Symbol Name="RxSlot_3255p0001_Receive" Address="0x00051764" Section=".text" Size="248" />
+    <Symbol Name="DOut4371p0004_State" Address="0x4000453B" Section=".bss" Size="1" />
+    <Symbol Name="RxSlot_4047p0001_ReceiveFrameValid" Address="0x400036AC" Section=".bss" Size="1" />
     <Symbol Name="g_bEnableControlledShutdown" Address="0x00066114" Section=".text" Size="1" />
+    <Symbol Name="RxSlot_3698p0001_Receive" Address="0x0005220C" Section=".text" Size="248" />
     <Symbol Name="Security_ComputeSecurity" Address="0x0006078C" Section=".text" Size="336" />
     <Symbol Name="MC33800_INJ5_MC33800_Methods" Address="0x00066C2C" Section=".text" Size="16" />
+    <Symbol Name="RxSlot_3836p0001_Receive" Address="0x0005128C" Section=".text" Size="248" />
     <Symbol Name="MC33800_PWM_DigitalOut_Create" Address="0x0005F390" Section=".text" Size="8" />
     <Symbol Name="MailBox_FetchFrom" Address="0x0005E1F0" Section=".text" Size="308" />
     <Symbol Name="g_eTPU_ISRArr" Address="0x0006618C" Section=".text" Size="512" />
-    <Symbol Name="DOut4335p0001" Address="0x000669E4" Section=".text" Size="24" />
     <Symbol Name="e200_FixedIntervalIRQ_RequestUse" Address="0x00042680" Section=".text" Size="16" />
     <Symbol Name="g_uSystemClockFreqInHz" Address="0x000690F0" Section=".text" Size="4" />
     <Symbol Name="H1m_Methods" Address="0x00066E6C" Section=".text" Size="20" />
@@ -524,21 +528,23 @@
     <Symbol Name="CAN_3_Transmit" Address="0x00053CC8" Section=".text" Size="88" />
     <Symbol Name="Table1" Address="0x00067348" Section=".text" Size="7408" />
     <Symbol Name="RWECheck_C" Address="0x00069588" Section=".text" Size="96" />
-    <Symbol Name="DOut4332p0001_State" Address="0x4000453B" Section=".bss" Size="1" />
     <Symbol Name="Table3" Address="0x00069040" Section=".text" Size="8" />
     <Symbol Name="s_u32ExtSRAM_BR" Address="0x000690F4" Section=".text" Size="4" />
     <Symbol Name="Timer_Watchdog_Starvation_IsExpired" Address="0x000421B0" Section=".text" Size="32" />
+    <Symbol Name="RxSlot_3065p0001_ReceiveFrameValid" Address="0x4000374C" Section=".bss" Size="1" />
     <Symbol Name="MC33800_MPRD" Address="0x0006693C" Section=".text" Size="24" />
     <Symbol Name="Timer_FreeRunningCounter_GetTicksFromTime" Address="0x00042310" Section=".text" Size="16" />
+    <Symbol Name="DOut4600p0004_DiscreteOutput_Get" Address="0x00054C54" Section=".text" Size="20" />
     <Symbol Name="ContinuousScan_eQADCQueueCommandQueueDefn" Address="0x00066E58" Section=".text" Size="12" />
     <Symbol Name="g_FlexCANBufferConfig_CAN_Tx_Buffer_ISR" Address="0x000664B0" Section=".text" Size="4" />
-    <Symbol Name="DOut4565p0001_DiscreteOutput_Stop" Address="0x00054F84" Section=".text" Size="28" />
+    <Symbol Name="DOut4374p0004_DiscreteOutput_Stop" Address="0x00055FBC" Section=".text" Size="64" />
+    <Symbol Name="DOut4370p0004_DiscreteOutput_Create" Address="0x00054E44" Section=".text" Size="32" />
     <Symbol Name="Mooventure2016_Rev5_Foreground_Start" Address="0x00045F14" Section=".text" Size="108" />
+    <Symbol Name="DOut4371p0004" Address="0x0006689C" Section=".text" Size="12" />
     <Symbol Name="MC33800_INJ3_MC33800DigitalOut" Address="0x00066C90" Section=".text" Size="12" />
     <Symbol Name="SPI_InitDMADefaults" Address="0x0005DC80" Section=".text" Size="400" />
     <Symbol Name="e200_DecrementorIRQ_RequestUse" Address="0x00042690" Section=".text" Size="16" />
-    <Symbol Name="DOut4566p0001_DiscreteOutput_Create" Address="0x0005556C" Section=".text" Size="112" />
-    <Symbol Name="RxSlot_3054p0001_ReceiveFrameValid" Address="0x4000374C" Section=".bss" Size="1" />
+    <Symbol Name="RxSlot_3888p0001_ReceiveFrame" Address="0x400036D8" Section=".bss" Size="16" />
     <Symbol Name="TskCPU_SystemCallISR" Address="0x00041D38" Section=".text" Size="168" />
     <Symbol Name="eTPU_PWM_Frequency_Get" Address="0x0005CCB4" Section=".text" Size="64" />
     <Symbol Name="__pack_f" Address="0x000643E4" Section=".text" Size="316" />
@@ -550,34 +556,34 @@
     <Symbol Name="H1m_Runtime" Address="0x400045CC" Section=".bss" Size="1" />
     <Symbol Name="CAN_2_Transmit" Address="0x00053D20" Section=".text" Size="88" />
     <Symbol Name="Tsk_Task_Reschedule" Address="0x00040DD8" Section=".text" Size="60" />
+    <Symbol Name="DOut4368p0004_DiscreteOutput_Get" Address="0x00054C04" Section=".text" Size="20" />
     <Symbol Name="Table2Rev_cu1" Address="0x000671EF" Section=".text" Size="1" />
     <Symbol Name="g_SCIModuleDefnArr" Address="0x00066458" Section=".text" Size="8" />
+    <Symbol Name="DOut4603p0004" Address="0x00066884" Section=".text" Size="12" />
     <Symbol Name="ControlCoreOpen" Address="0x00040974" Section=".text" Size="68" />
     <Symbol Name="MC33800_INJ8_MC33800_Methods" Address="0x00066BD8" Section=".text" Size="16" />
     <Symbol Name="Tsk_Task_AddToReadyList" Address="0x00040D78" Section=".text" Size="48" />
     <Symbol Name="TskSync_SyncTask_Destroy" Address="0x00041EF0" Section=".text" Size="84" />
     <Symbol Name="VISTA_Register_WriteBlock" Address="0x0006000C" Section=".text" Size="316" />
     <Symbol Name="MotoHawkTokenGUID" Address="0x00065F40" Section=".text" Size="80" />
+    <Symbol Name="DOut4364p0004_CPUOut_Methods" Address="0x00066EEC" Section=".text" Size="16" />
+    <Symbol Name="DOut4362p0004_DiscreteOutput_Create" Address="0x00055CDC" Section=".text" Size="112" />
     <Symbol Name="DCDC_Conveter_AnalogInput_Get" Address="0x00054960" Section=".text" Size="76" />
     <Symbol Name="ERI_Handler_XTDREQ_MapInit" Address="0x000614EC" Section=".text" Size="208" />
     <Symbol Name="g_u16CPUIdlePcnt" Address="0x40000E62" Section=".bss" Size="2" />
-    <Symbol Name="RxSlot_3672p0001_Receive" Address="0x00051C3C" Section=".text" Size="248" />
-    <Symbol Name="DOut4327p0001_State" Address="0x40004536" Section=".bss" Size="1" />
+    <Symbol Name="DOut4370p0004_DiscreteOutput_Set" Address="0x000552A0" Section=".text" Size="32" />
     <Symbol Name="g_eTickTimerMode" Address="0x00066396" Section=".text" Size="1" />
-    <Symbol Name="DOut4324p0001_State" Address="0x40004547" Section=".bss" Size="1" />
-    <Symbol Name="DOut4326p0001_CPUOut_Methods" Address="0x00066F08" Section=".text" Size="16" />
-    <Symbol Name="DOut4335p0001_MC33800DigitalOut" Address="0x00066D00" Section=".text" Size="12" />
-    <Symbol Name="DOut4330p0001_State" Address="0x40004539" Section=".bss" Size="1" />
     <Symbol Name="FlexCAN2ErrorISR" Address="0x0005D2D4" Section=".text" Size="168" />
     <Symbol Name="eTPUProc_TimeBase_SetTCR1WithFreq" Address="0x000447A8" Section=".text" Size="96" />
     <Symbol Name="TskCPU_PreTaskHook" Address="0x00041DE0" Section=".text" Size="32" />
     <Symbol Name="fmod" Address="0x00059748" Section=".text" Size="380" />
     <Symbol Name="MC33800_INJ3" Address="0x00066A44" Section=".text" Size="24" />
+    <Symbol Name="DOut4603p0004_DiscreteOutput_Create" Address="0x00054DE4" Section=".text" Size="32" />
     <Symbol Name="g_StaticSemaphoreMethods" Address="0x00065C94" Section=".text" Size="8" />
     <Symbol Name="ERI_Handler_XTDREQ_DFMUpdate" Address="0x00060EE4" Section=".text" Size="124" />
     <Symbol Name="Security_Basic_Key_DecryptionObj" Address="0x00069EAC" Section=".text" Size="8" />
     <Symbol Name="Freescale_FlashErase" Address="0x0005C984" Section=".text" Size="40" />
-    <Symbol Name="DOut4329p0001_DiscreteOutput_Create" Address="0x00054E84" Section=".text" Size="32" />
+    <Symbol Name="DOut4372p0004_DiscreteOutput_Stop" Address="0x0005615C" Section=".text" Size="64" />
     <Symbol Name="S_SHRC_4SPIDeviceAttrib" Address="0x00066BC0" Section=".text" Size="6" />
     <Symbol Name="eTPUCommon_eDMA_ISR" Address="0x0004391C" Section=".text" Size="116" />
     <Symbol Name="g_FGNDTask_MailBoxRuntime" Address="0x40002110" Section=".bss" Size="16" />
@@ -588,9 +594,8 @@
     <Symbol Name="CAN_Queued_PeriodicKick" Address="0x00053ACC" Section=".text" Size="144" />
     <Symbol Name="s_ADCModuleCreate" Address="0x4000095D" Section=".bss" Size="1" />
     <Symbol Name="rtInfF" Address="0x400046B8" Section=".bss" Size="4" />
-    <Symbol Name="DOut4328p0001_DiscreteOutput_Get" Address="0x00054BF0" Section=".text" Size="20" />
-    <Symbol Name="DOut4334p0001_DiscreteOutput_Stop" Address="0x0005608C" Section=".text" Size="64" />
     <Symbol Name="Timer_FreeRunningCounter_Get64BitDiffAndUpdate_us" Address="0x0004234C" Section=".text" Size="132" />
+    <Symbol Name="RxSlot_3265p0001_ReceiveFrame" Address="0x4000364C" Section=".bss" Size="16" />
     <Symbol Name="Heater_Core_Blend_Position_AnalogInput_Get" Address="0x0005487C" Section=".text" Size="76" />
     <Symbol Name="Timer_FreeRunningCounter_GetDeltaUpdateReference_us" Address="0x00050E30" Section=".text" Size="120" />
     <Symbol Name="SPI_TCD_Load" Address="0x0005DEB8" Section=".text" Size="328" />
@@ -609,40 +614,36 @@
     <Symbol Name="VISTA_Register_ReadBlock" Address="0x00060178" Section=".text" Size="408" />
     <Symbol Name="VISTA_WriteRegister" Address="0x00060148" Section=".text" Size="48" />
     <Symbol Name="MPC5xxTestCode_Key" Address="0x00069E08" Section=".text" Size="24" />
-    <Symbol Name="DOut4324p0001_DiscreteOutput_Create" Address="0x00055C68" Section=".text" Size="116" />
     <Symbol Name="MC33800_PWM_Circuit_Configure_GPO" Address="0x0005F590" Section=".text" Size="336" />
     <Symbol Name="M95256_Read" Address="0x0005E7F8" Section=".text" Size="180" />
-    <Symbol Name="RxSlot_3251p0001_ReceiveFrameValid" Address="0x40003684" Section=".bss" Size="1" />
     <Symbol Name="g_u32ETPUChannelsArr" Address="0x40000900" Section=".sbss" Size="8" />
     <Symbol Name="ModuleSupport_Watchdog_Refresh" Address="0x0005C0D8" Section=".text" Size="40" />
-    <Symbol Name="DOut4323p0001_DiscreteOutput_Stop" Address="0x000562FC" Section=".text" Size="64" />
     <Symbol Name="__malloc_sbrk_base" Address="0x40000858" Section=".sdata" Size="4" />
     <Symbol Name="_start" Address="0x000424C8" Section=".text" Size="428" />
     <Symbol Name="g_FGNDTask" Address="0x000660CC" Section=".text" Size="36" />
-    <Symbol Name="DOut4563p0001_DiscreteOutput_Set" Address="0x00055E5C" Section=".text" Size="144" />
     <Symbol Name="eQADC_Common_DisableAllQueues" Address="0x00042B50" Section=".text" Size="72" />
     <Symbol Name="Key_Handler_ReqBaud" Address="0x00061CD4" Section=".text" Size="192" />
     <Symbol Name="GetLastSuspectedFault" Address="0x00045030" Section=".text" Size="12" />
-    <Symbol Name="DOut4332p0001_DiscreteOutput_Stop" Address="0x00054FD8" Section=".text" Size="28" />
     <Symbol Name="OnChangeFaultOccurred" Address="0x00044F24" Section=".text" Size="84" />
     <Symbol Name="__ucmpdi2" Address="0x00063DF0" Section=".text" Size="48" />
     <Symbol Name="g_u8CriticalSectionCnt" Address="0x40000861" Section=".sbss" Size="1" />
-    <Symbol Name="RxSlot_3257p0001_ReceiveFrameValid" Address="0x4000360C" Section=".bss" Size="1" />
+    <Symbol Name="DOut4367p0004_DiscreteOutput_Create" Address="0x00054EA4" Section=".text" Size="32" />
     <Symbol Name="g_u32EMIOSChannelOwnsFlag" Address="0x400008E8" Section=".sbss" Size="4" />
     <Symbol Name="ModuleSupport_KeySuiteSupport_CloseNonProgrammingCANLinks" Address="0x000579F8" Section=".text" Size="4" />
-    <Symbol Name="DOut5628p0004_DiscreteOutput_Get" Address="0x00054C90" Section=".text" Size="20" />
     <Symbol Name="__SBSS_END__" Address="0x4000092C" Section=".sbss" Size="0" />
     <Symbol Name="eTPU_Priority_Set" Address="0x00043AD0" Section=".text" Size="64" />
     <Symbol Name="Throttle_Position_AnalogInput_Get" Address="0x000549F8" Section=".text" Size="76" />
+    <Symbol Name="DOut4372p0004_DiscreteOutput_Set" Address="0x0005619C" Section=".text" Size="144" />
     <Symbol Name="OnChangeFaultActive" Address="0x0004546C" Section=".text" Size="100" />
     <Symbol Name="Semaphore_Release" Address="0x00041BF8" Section=".text" Size="128" />
-    <Symbol Name="RxSlot_3053p0002_Receive" Address="0x000525EC" Section=".text" Size="248" />
     <Symbol Name="eTPUCommon_StacBus_ServeTCR1" Address="0x00043904" Section=".text" Size="24" />
     <Symbol Name="KeySuite_Manager_MessageHandler_Execute" Address="0x00056AE4" Section=".text" Size="224" />
     <Symbol Name="g_AppTask" Address="0x00066134" Section=".text" Size="36" />
     <Symbol Name="INTC_Open" Address="0x00044534" Section=".text" Size="112" />
+    <Symbol Name="DOut4365p0004_DiscreteOutput_Set" Address="0x00055340" Section=".text" Size="32" />
     <Symbol Name="CAN_1_KeySuite_ReceiveQueueFrames" Address="0x40003F54" Section=".bss" Size="64" />
     <Symbol Name="CAN_3_KeySuite_SetIDFilter" Address="0x00051278" Section=".text" Size="20" />
+    <Symbol Name="DOut4602p0004_State" Address="0x40004542" Section=".bss" Size="1" />
     <Symbol Name="FlexCAN2BufferISR" Address="0x0005D0F8" Section=".text" Size="168" />
     <Symbol Name="_SDA_BASE_" Address="0x4000084C" Section=".sdata" Size="0" />
     <Symbol Name="ERI_Protocol_Memory_Free" Address="0x00060994" Section=".text" Size="76" />
@@ -651,6 +652,8 @@
     <Symbol Name="CAN_3_ReceiveDispatch" Address="0x00052E5C" Section=".text" Size="788" />
     <Symbol Name="FLEXCAN2_C_ReceiveQueue" Address="0x400037E4" Section=".bss" Size="16" />
     <Symbol Name="MC33800_Hardware_SPI_Message_Send" Address="0x0005EEF0" Section=".text" Size="208" />
+    <Symbol Name="DOut4364p0004_DiscreteOutput_Set" Address="0x00055360" Section=".text" Size="28" />
+    <Symbol Name="DOut4369p0004_DiscreteOutput_Get" Address="0x00054C18" Section=".text" Size="20" />
     <Symbol Name="g_ApplicationInterruptTask" Address="0x00066084" Section=".text" Size="36" />
     <Symbol Name="g_CRCBlockInfo" Address="0x00065CA4" Section=".text" Size="8" />
     <Symbol Name="eTPUuCode_Constants_Calculate" Address="0x000626F8" Section=".text" Size="120" />
@@ -661,10 +664,10 @@
     <Symbol Name="g_u8NumTasksSupported" Address="0x0006612A" Section=".text" Size="1" />
     <Symbol Name="MC33800_CCD_DigitalOut_SetAttributes" Address="0x0005EB04" Section=".text" Size="8" />
     <Symbol Name="CANFrame_Queue_Depth" Address="0x000526E4" Section=".text" Size="92" />
+    <Symbol Name="DOut4368p0004_CPUOut_Methods" Address="0x00066F5C" Section=".text" Size="16" />
     <Symbol Name="CAN_Queued_Transmit" Address="0x00053B5C" Section=".text" Size="364" />
     <Symbol Name="__ieee754_pow" Address="0x0005A338" Section=".text" Size="4140" />
     <Symbol Name="g_pTaskDefnPriorityArr" Address="0x40000EAC" Section=".bss" Size="24" />
-    <Symbol Name="RxSlot_3255p0001_ReceiveFrameValid" Address="0x40003634" Section=".bss" Size="1" />
     <Symbol Name="Timer_FreeRunningCounter_Get32Bits" Address="0x00042288" Section=".text" Size="12" />
     <Symbol Name="__eabi_uconvert" Address="0x00063DB8" Section=".text" Size="56" />
     <Symbol Name="pow" Address="0x000598C4" Section=".text" Size="1448" />
@@ -674,13 +677,12 @@
     <Symbol Name="GetActionCondForFaultAction" Address="0x000453A8" Section=".text" Size="152" />
     <Symbol Name="Tsk_LogKernelError" Address="0x00040EFC" Section=".text" Size="16" />
     <Symbol Name="__malloc_current_mallinfo" Address="0x400046D0" Section=".bss" Size="40" />
-    <Symbol Name="DOut4326p0001_DiscreteOutput_Set" Address="0x00055340" Section=".text" Size="32" />
     <Symbol Name="VISTA_HW_Create" Address="0x00060318" Section=".text" Size="464" />
     <Symbol Name="Timer_Open" Address="0x000423D0" Section=".text" Size="212" />
-    <Symbol Name="DOut4331p0001" Address="0x000668A8" Section=".text" Size="12" />
     <Symbol Name="MC33800_DiscreteOut_Create" Address="0x0005EC8C" Section=".text" Size="40" />
-    <Symbol Name="RxSlot_3252p0001_Receive" Address="0x00051A4C" Section=".text" Size="248" />
+    <Symbol Name="DOut4363p0004" Address="0x00066AEC" Section=".text" Size="24" />
     <Symbol Name="Interrupt_Enable" Address="0x000402C0" Section=".text" Size="36" />
+    <Symbol Name="DOut4373p0004_MC33800DigitalOut" Address="0x00066CE4" Section=".text" Size="12" />
     <Symbol Name="KeySuite_NewConnection_Open" Address="0x0006193C" Section=".text" Size="24" />
     <Symbol Name="TskSync_Semaphore_WaitOn" Address="0x0004202C" Section=".text" Size="268" />
     <Symbol Name="KeySuite_ProtocolMemory_Request" Address="0x00061B68" Section=".text" Size="76" />
@@ -689,39 +691,46 @@
     <Symbol Name="CAN_3_KeySuite_Receive" Address="0x00052A68" Section=".text" Size="208" />
     <Symbol Name="g_u32EMIOSChannelAlloc" Address="0x400008E4" Section=".sbss" Size="4" />
     <Symbol Name="MotoCoderVersionTxt" Address="0x00066118" Section=".text" Size="7" />
-    <Symbol Name="RxSlot_3254p0001_ReceiveFrame" Address="0x4000364C" Section=".bss" Size="16" />
     <Symbol Name="KeySuite_Reply_EndianTransform" Address="0x00061A88" Section=".text" Size="12" />
     <Symbol Name="GPIO_PadConfig_Set" Address="0x000444EC" Section=".text" Size="24" />
     <Symbol Name="g_ApplicationInterruptTask_MailBoxFetchSemaphoreECB" Address="0x40003184" Section=".bss" Size="12" />
     <Symbol Name="KeySuite_RefreshPeriodicTimer" Address="0x00056C74" Section=".text" Size="80" />
     <Symbol Name="Mooventure2016_Rev5_initialize" Address="0x00045B10" Section=".text" Size="148" />
+    <Symbol Name="RxSlot_3699p0001_ReceiveFrame" Address="0x400035E8" Section=".bss" Size="16" />
     <Symbol Name="eMIOS_InternalModulusUpCounter_Create" Address="0x000428B8" Section=".text" Size="124" />
+    <Symbol Name="RxSlot_3263p0001_ReceiveFrame" Address="0x40003674" Section=".bss" Size="16" />
     <Symbol Name="KeySuite_Manager_MemInit" Address="0x00056658" Section=".text" Size="8" />
     <Symbol Name="CAN_FillMotoTronBootObj" Address="0x000511B0" Section=".text" Size="136" />
+    <Symbol Name="DOut4601p0004" Address="0x000669B4" Section=".text" Size="24" />
     <Symbol Name="SHUTDOWNTask_SendEvent" Address="0x00050ADC" Section=".text" Size="4" />
+    <Symbol Name="RxSlot_3757p0001_ReceiveFrame" Address="0x40003700" Section=".bss" Size="16" />
     <Symbol Name="Tsk_StartMultiTaskingKernel" Address="0x000418A8" Section=".text" Size="196" />
     <Symbol Name="__fpcmp_parts_d" Address="0x00064268" Section=".text" Size="268" />
     <Symbol Name="ModuleSupport_ExternalSRAM_Open" Address="0x0005BFFC" Section=".text" Size="8" />
     <Symbol Name="g_Protocol_MotProg_Rev" Address="0x00069F41" Section=".text" Size="1" />
     <Symbol Name="eTPUCommon_Open" Address="0x000440EC" Section=".text" Size="456" />
     <Symbol Name="g_u8TPUChannelArr" Address="0x00065D3C" Section=".text" Size="64" />
+    <Symbol Name="RxSlot_3886p0001_ReceiveQueueFrames" Address="0x40003F34" Section=".bss" Size="32" />
     <Symbol Name="g_FLEXCAN2_C_ConfigObj" Address="0x000666C8" Section=".text" Size="264" />
     <Symbol Name="InternalFlash_WriteSynch" Address="0x0005BD38" Section=".text" Size="140" />
+    <Symbol Name="RxSlot_3268p0001_ReceiveFrame" Address="0x40003610" Section=".bss" Size="16" />
     <Symbol Name="Tsk_ExecPerf_RefreshPostISR" Address="0x00041010" Section=".text" Size="44" />
+    <Symbol Name="DOut4374p0004_DiscreteOutput_Set" Address="0x00055FFC" Section=".text" Size="144" />
     <Symbol Name="ApplicationOpen" Address="0x00050EF4" Section=".text" Size="260" />
     <Symbol Name="BootMailBox_MotoTronBootObj_Post" Address="0x0005CA9C" Section=".text" Size="36" />
     <Symbol Name="g_bAppOpen" Address="0x40000E60" Section=".bss" Size="1" />
+    <Symbol Name="RxSlot_3064p0002_ReceiveFrameValid" Address="0x40003760" Section=".bss" Size="1" />
     <Symbol Name="EEPROM_1_Create" Address="0x0005537C" Section=".text" Size="44" />
     <Symbol Name="NonVolatile_NonVolatileStatus" Address="0x40003F94" Section=".bss" Size="1" />
-    <Symbol Name="DOut4334p0001_MC33800DigitalOut" Address="0x00066CE4" Section=".text" Size="12" />
     <Symbol Name="InternalFlash_Registered_WriteSynch" Address="0x0005BDC4" Section=".text" Size="4" />
     <Symbol Name="MC33800_Hardware_Create" Address="0x0005ED08" Section=".text" Size="488" />
     <Symbol Name="Mooventure2016_Rev5_Chart_Init" Address="0x00045C60" Section=".text" Size="28" />
     <Symbol Name="eTPUCommon_Engine_Start" Address="0x000438F0" Section=".text" Size="20" />
     <Symbol Name="memcmp" Address="0x00058CAC" Section=".text" Size="164" />
     <Symbol Name="ApplicationInit" Address="0x00050D2C" Section=".text" Size="32" />
+    <Symbol Name="DOut4601p0004_DiscreteOutput_Create" Address="0x0005571C" Section=".text" Size="112" />
     <Symbol Name="rtIsInf" Address="0x00057BB0" Section=".text" Size="48" />
-    <Symbol Name="DOut4326p0001_DiscreteOutput_Get" Address="0x00054BC8" Section=".text" Size="20" />
+    <Symbol Name="DOut4368p0004_DiscreteOutput_Create" Address="0x00054E84" Section=".text" Size="32" />
     <Symbol Name="ModuleSupport_PowerSupply_Shutdown" Address="0x0005C054" Section=".text" Size="40" />
     <Symbol Name="Key_Handler_ReqSeed" Address="0x00061E4C" Section=".text" Size="164" />
     <Symbol Name="L1Cache_Open" Address="0x00044618" Section=".text" Size="56" />
@@ -733,9 +742,8 @@
     <Symbol Name="H1m_PWMOutput_Stop" Address="0x00054B28" Section=".text" Size="52" />
     <Symbol Name="Cruise_Control_AnalogInput_Get" Address="0x000549AC" Section=".text" Size="76" />
     <Symbol Name="TskCPU_Task_FreeStack" Address="0x00041CD8" Section=".text" Size="16" />
-    <Symbol Name="DOut4562p0001_MC33800_Methods" Address="0x00066D28" Section=".text" Size="16" />
+    <Symbol Name="DOut4362p0004_MC33800DigitalOut" Address="0x00066B8C" Section=".text" Size="12" />
     <Symbol Name="GetFaultActionStatus" Address="0x00045440" Section=".text" Size="44" />
-    <Symbol Name="DOut4326p0001_CPUDigitalOut" Address="0x00066F18" Section=".text" Size="12" />
     <Symbol Name="NonVolatile_OpenNonVolatile" Address="0x000544F8" Section=".text" Size="436" />
     <Symbol Name="__divdf3" Address="0x00063500" Section=".text" Size="636" />
     <Symbol Name="eTPUProc_Stop" Address="0x00044768" Section=".text" Size="64" />
@@ -753,30 +761,31 @@
     <Symbol Name="IsFaultValid" Address="0x000449E4" Section=".text" Size="16" />
     <Symbol Name="__muldf3" Address="0x00063134" Section=".text" Size="972" />
     <Symbol Name="H1m_PWMOutput_PWMOutput_Set" Address="0x00055198" Section=".text" Size="104" />
-    <Symbol Name="DOut5628p0004_DiscreteOutput_Create" Address="0x00054DA4" Section=".text" Size="32" />
-    <Symbol Name="DOut4328p0001" Address="0x000668CC" Section=".text" Size="12" />
     <Symbol Name="MC33800_LSO9_MC33800DigitalOut" Address="0x00066D1C" Section=".text" Size="12" />
-    <Symbol Name="DOut4563p0001_DiscreteOutput_Stop" Address="0x00055E1C" Section=".text" Size="64" />
     <Symbol Name="Key_Protocol_MsgHandler" Address="0x00061700" Section=".text" Size="208" />
+    <Symbol Name="DOut4605p0004_DiscreteOutput_Stop" Address="0x00055D4C" Section=".text" Size="64" />
     <Symbol Name="FlashErase_C" Address="0x00069834" Section=".text" Size="484" />
     <Symbol Name="eTPU_Malloc" Address="0x00043E2C" Section=".text" Size="200" />
     <Symbol Name="ModuleSupport_OnTick" Address="0x0005C004" Section=".text" Size="32" />
-    <Symbol Name="RxSlot_4019p0001_ReceiveFrame" Address="0x400036B0" Section=".bss" Size="16" />
     <Symbol Name="ERI_Handler_ExtendedRequest2" Address="0x00061090" Section=".text" Size="80" />
-    <Symbol Name="DOut4335p0001_State" Address="0x40004544" Section=".bss" Size="1" />
+    <Symbol Name="RxSlot_3266p0001_ReceiveFrame" Address="0x40003638" Section=".bss" Size="16" />
     <Symbol Name="eDMA_StatusCtrl_SetEnableRequest" Address="0x00042740" Section=".text" Size="16" />
     <Symbol Name="IRQ_CoreException_NestedIRQHandler" Address="0x00040610" Section=".text" Size="304" />
     <Symbol Name="__malloc_lock" Address="0x00058F20" Section=".text" Size="4" />
     <Symbol Name="g_BGNDTask_MailBoxFetchSemaphoreECB" Address="0x400018C4" Section=".bss" Size="12" />
     <Symbol Name="sbrk" Address="0x0005D914" Section=".text" Size="116" />
+    <Symbol Name="RxSlot_3263p0001_ReceiveFrameValid" Address="0x40003670" Section=".bss" Size="1" />
     <Symbol Name="H1m_PWMOutput_Set" Address="0x00054AD8" Section=".text" Size="80" />
     <Symbol Name="SPI_B_Create" Address="0x00054788" Section=".text" Size="88" />
     <Symbol Name="ModuleSupportReg_Memory_WriteSynch" Address="0x0005BEB0" Section=".text" Size="168" />
     <Symbol Name="KeySuite_Manager_OnProgComplete" Address="0x00056668" Section=".text" Size="4" />
+    <Symbol Name="RxSlot_3836p0001_ReceiveFrameValid" Address="0x400035D0" Section=".bss" Size="1" />
     <Symbol Name="IO_Stop" Address="0x0005633C" Section=".text" Size="116" />
+    <Symbol Name="DOut5671p0001_DiscreteOutput_Create" Address="0x00054DA4" Section=".text" Size="32" />
     <Symbol Name="ERI_Protocol_OnTick" Address="0x00060BCC" Section=".text" Size="76" />
-    <Symbol Name="DOut4325p0001_DiscreteOutput_Stop" Address="0x0005509C" Section=".text" Size="24" />
     <Symbol Name="ESTOP2_DigitalInput_Create" Address="0x000564F0" Section=".text" Size="56" />
+    <Symbol Name="DOut4363p0004_State" Address="0x40004547" Section=".bss" Size="1" />
+    <Symbol Name="DOut4367p0004_CPUOut_Methods" Address="0x00066F40" Section=".text" Size="16" />
     <Symbol Name="ERI_Handler_Write_CallBack" Address="0x000615BC" Section=".text" Size="192" />
     <Symbol Name="MC33800_INJ2_MC33800DigitalOut" Address="0x00066CAC" Section=".text" Size="12" />
     <Symbol Name="rtIsNaN" Address="0x00057C10" Section=".text" Size="24" />
@@ -786,17 +795,17 @@
     <Symbol Name="ODRC_DiscreteOutput_Create" Address="0x00054D38" Section=".text" Size="20" />
     <Symbol Name="eTPU_ParameterFrame_Local_24Bit_Unsigned_Get" Address="0x00043BD8" Section=".text" Size="116" />
     <Symbol Name="Key_Handler_ReqAcc4Bytes" Address="0x00061EF0" Section=".text" Size="372" />
-    <Symbol Name="RxSlot_3859p0001_ReceiveFrame" Address="0x400036EC" Section=".bss" Size="16" />
-    <Symbol Name="DOut4327p0001_CPUOut_Methods" Address="0x00066F24" Section=".text" Size="16" />
+    <Symbol Name="DOut4602p0004_DiscreteOutput_Set" Address="0x00055E5C" Section=".text" Size="144" />
+    <Symbol Name="DOut5671p0001_DiscreteOutput_Set" Address="0x00055200" Section=".text" Size="32" />
     <Symbol Name="Memory_ReadSynch" Address="0x0005BC10" Section=".text" Size="296" />
     <Symbol Name="eQADCCommon_CFIFO_Fill_ISR" Address="0x00043104" Section=".text" Size="32" />
+    <Symbol Name="RxSlot_3697p0004_ReceiveFrame" Address="0x400035FC" Section=".bss" Size="16" />
     <Symbol Name="EEPROM_1SPIDeviceAttrib" Address="0x00066E94" Section=".text" Size="6" />
     <Symbol Name="Table4" Address="0x00069048" Section=".text" Size="8" />
-    <Symbol Name="DOut4323p0001_State" Address="0x40004548" Section=".bss" Size="1" />
-    <Symbol Name="Trigger_BGND_BASE_PERIODIC_5678p0001" Address="0x00057E00" Section=".text" Size="1012" />
     <Symbol Name="Debug_CAN_3_TransmitOverrun" Address="0x40004530" Section=".bss" Size="2" />
     <Symbol Name="rtMinusInf" Address="0x400046CC" Section=".bss" Size="4" />
     <Symbol Name="eTPU_InterruptStatus_PollWithClr" Address="0x000439C4" Section=".text" Size="64" />
+    <Symbol Name="DOut4370p0004_DiscreteOutput_Stop" Address="0x00054FF4" Section=".text" Size="28" />
     <Symbol Name="memset" Address="0x00058E50" Section=".text" Size="208" />
     <Symbol Name="ModuleSupport_ExternalSRAM_PreOpen" Address="0x0005BFC0" Section=".text" Size="60" />
     <Symbol Name="g_u32ERIProtocolPacketTimeout_ms" Address="0x000670F0" Section=".text" Size="4" />
@@ -804,10 +813,11 @@
     <Symbol Name="main" Address="0x00040944" Section=".text" Size="48" />
     <Symbol Name="MC33800_CCD_Diagnostics_Configure" Address="0x0005EB14" Section=".text" Size="172" />
     <Symbol Name="ThreadSafeMalloc" Address="0x000443E4" Section=".text" Size="208" />
+    <Symbol Name="DOut4603p0004_DiscreteOutput_Get" Address="0x00054C68" Section=".text" Size="20" />
     <Symbol Name="MC33800_LSO2_DiscreteOutput_Create" Address="0x00055A70" Section=".text" Size="104" />
     <Symbol Name="TLE7368_Shutdown" Address="0x0005FDD0" Section=".text" Size="60" />
+    <Symbol Name="RxSlot_3066p0001_ReceiveFrameValid" Address="0x40003738" Section=".bss" Size="1" />
     <Symbol Name="__malloc_max_total_mem" Address="0x40000910" Section=".sbss" Size="4" />
-    <Symbol Name="DOut4335p0001_DiscreteOutput_Create" Address="0x000557F4" Section=".text" Size="112" />
     <Symbol Name="Mooventure2016_Rev5_Chart" Address="0x00045C7C" Section=".text" Size="356" />
     <Symbol Name="eTPU_PWM_DutyCycle_Get" Address="0x0005CC74" Section=".text" Size="64" />
     <Symbol Name="Create_FlexCAN2Module" Address="0x0005D480" Section=".text" Size="412" />
@@ -815,23 +825,23 @@
     <Symbol Name="S_SHRC_3SPIDevice" Address="0x00066B6C" Section=".text" Size="16" />
     <Symbol Name="ModuleSupport_Watchdog_Reset" Address="0x0005C02C" Section=".text" Size="40" />
     <Symbol Name="g_u8BootVerMin" Address="0x400046B4" Section=".bss" Size="1" />
-    <Symbol Name="DOut4330p0001_DiscreteOutput_Get" Address="0x00054C18" Section=".text" Size="20" />
+    <Symbol Name="RxSlot_3478p0004_ReceiveFrameValid" Address="0x40003724" Section=".bss" Size="1" />
     <Symbol Name="MC33800_LSO8" Address="0x0006696C" Section=".text" Size="24" />
+    <Symbol Name="DOut4370p0004_State" Address="0x4000453A" Section=".bss" Size="1" />
     <Symbol Name="MC33800_CCD_DiscreteOut_Create" Address="0x0005EBC0" Section=".text" Size="204" />
     <Symbol Name="NonVolatileEEStatus" Address="0xFF000070" Section=".serial_ee_data" Size="2" />
     <Symbol Name="Mooventure2016_Rev5_step" Address="0x00045AE0" Section=".text" Size="44" />
     <Symbol Name="s_TimeBaseExceptionUse" Address="0x400008D4" Section=".sbss" Size="1" />
+    <Symbol Name="DOut4370p0004_CPUOut_Methods" Address="0x00066F94" Section=".text" Size="16" />
     <Symbol Name="SwRevisionTxt" Address="0x00067198" Section=".text" Size="50" />
-    <Symbol Name="DOut4328p0001_DiscreteOutput_Stop" Address="0x00055048" Section=".text" Size="28" />
     <Symbol Name="EEPROM_1" Address="0x000668FC" Section=".text" Size="52" />
     <Symbol Name="MotoCoder_DiscreteOutput_UpdateOnChange_Stop" Address="0x00054F20" Section=".text" Size="44" />
     <Symbol Name="MC33800_INJ8" Address="0x00066AD4" Section=".text" Size="24" />
     <Symbol Name="BGNDTask_50000" Address="0x00050CC8" Section=".text" Size="32" />
+    <Symbol Name="DOut4603p0004_CPUDigitalOut" Address="0x00066FF8" Section=".text" Size="12" />
     <Symbol Name="MC33800_OSS_DigitalOut_Create" Address="0x0005F04C" Section=".text" Size="8" />
     <Symbol Name="matherr" Address="0x0005B6C8" Section=".text" Size="8" />
-    <Symbol Name="DOut4325p0001_DiscreteOutput_Create" Address="0x00054F04" Section=".text" Size="28" />
     <Symbol Name="eQADCCommon_Combined_Overrun_ISR" Address="0x0004309C" Section=".text" Size="4" />
-    <Symbol Name="DOut4329p0001_DiscreteOutput_Set" Address="0x000552E0" Section=".text" Size="32" />
     <Symbol Name="g_eFMPLLRFD" Address="0x000690E9" Section=".text" Size="1" />
     <Symbol Name="Timer_Watchdog_Refresh" Address="0x00042198" Section=".text" Size="24" />
     <Symbol Name="__truncdfsf2" Address="0x00063BA8" Section=".text" Size="96" />
@@ -843,11 +853,10 @@
     <Symbol Name="MC33800_INJ2_DiscreteOutput_Create" Address="0x00055944" Section=".text" Size="100" />
     <Symbol Name="Timer_FreeRunningCounter_GetTime" Address="0x00051050" Section=".text" Size="168" />
     <Symbol Name="SPI_CMethods" Address="0x00066B50" Section=".text" Size="8" />
-    <Symbol Name="DOut4332p0001" Address="0x0006689C" Section=".text" Size="12" />
     <Symbol Name="MC33800_LSO2_MC33800DigitalOut" Address="0x00066C58" Section=".text" Size="12" />
     <Symbol Name="ESTOP2_CPUDigitalIn" Address="0x00066B44" Section=".text" Size="12" />
     <Symbol Name="s_u8MMUTblEntryConfigArrCount" Address="0x00065C2C" Section=".text" Size="1" />
-    <Symbol Name="DOut4565p0001_State" Address="0x4000453E" Section=".bss" Size="1" />
+    <Symbol Name="RxSlot_3266p0001_ReceiveFrameValid" Address="0x40003634" Section=".bss" Size="1" />
     <Symbol Name="EEPROM_1_AccessSemaphoreECB" Address="0x400045D0" Section=".bss" Size="12" />
     <Symbol Name="BlankCheck_C" Address="0x000696E8" Section=".text" Size="332" />
     <Symbol Name="g_SHUTDOWNTask_MailBoxFetchSemaphoreECB" Address="0x40002D44" Section=".bss" Size="12" />
@@ -855,6 +864,7 @@
     <Symbol Name="ProgramVerify_C" Address="0x00069418" Section=".text" Size="368" />
     <Symbol Name="KeySuite_Manager_OnCANReceipt" Address="0x000577C8" Section=".text" Size="168" />
     <Symbol Name="Freescale_FlashProgram" Address="0x0005C9D4" Section=".text" Size="40" />
+    <Symbol Name="DOut4600p0004_DiscreteOutput_Stop" Address="0x00054FBC" Section=".text" Size="28" />
     <Symbol Name="GetNextEnabledFault" Address="0x00045098" Section=".text" Size="108" />
     <Symbol Name="CAN_1_Error_Status_Get" Address="0x000528F8" Section=".text" Size="196" />
     <Symbol Name="ThreadSafeFree" Address="0x00044354" Section=".text" Size="144" />
@@ -873,18 +883,16 @@
     <Symbol Name="eQADC_Create" Address="0x00043604" Section=".text" Size="656" />
     <Symbol Name="MotoCoder_TaskEvent_Post" Address="0x00050B0C" Section=".text" Size="52" />
     <Symbol Name="g_BGNDTask_MailBox" Address="0x00066030" Section=".text" Size="16" />
+    <Symbol Name="Trigger_BGND_BASE_PERIODIC_5721p0001" Address="0x00057E00" Section=".text" Size="1012" />
     <Symbol Name="eDMA_ControlReg_Open" Address="0x0004281C" Section=".text" Size="24" />
     <Symbol Name="H1_InhibitB" Address="0x00066860" Section=".text" Size="12" />
     <Symbol Name="MC33800_LSO8_DiscreteOutput_Create" Address="0x000555DC" Section=".text" Size="104" />
     <Symbol Name="MC33800_MPRD_MC33800DigitalOut" Address="0x00066DC4" Section=".text" Size="12" />
-    <Symbol Name="RxSlot_3252p0001_ReceiveFrameValid" Address="0x40003670" Section=".bss" Size="1" />
     <Symbol Name="eQADC_Queue_Conversion_Result_MultipleStandard_Get" Address="0x00042EA8" Section=".text" Size="304" />
     <Symbol Name="Timer_FreeRunningCounter_GetDiffAndUpdate_us" Address="0x000422F0" Section=".text" Size="32" />
     <Symbol Name="UpdateFault" Address="0x0004552C" Section=".text" Size="468" />
-    <Symbol Name="RxSlot_3860p0001_ReceiveFrameValid" Address="0x400036D4" Section=".bss" Size="1" />
     <Symbol Name="KeySuite_Manager_OnTimerTick" Address="0x00056BC4" Section=".text" Size="176" />
     <Symbol Name="GPIO_PinState_Set" Address="0x000444B4" Section=".text" Size="40" />
-    <Symbol Name="DOut4332p0001_CPUDigitalOut" Address="0x00066FC0" Section=".text" Size="12" />
     <Symbol Name="H1_InhibitB_CPUDigitalOut" Address="0x0006704C" Section=".text" Size="12" />
     <Symbol Name="CAN_1_ReceiveDispatch" Address="0x00053274" Section=".text" Size="876" />
     <Symbol Name="FLEXCAN2_C_Create" Address="0x00053DD0" Section=".text" Size="324" />
@@ -895,38 +903,37 @@
     <Symbol Name="__nedf2" Address="0x00063804" Section=".text" Size="136" />
     <Symbol Name="FlexCAN2_ECR_Get" Address="0x0005D1A0" Section=".text" Size="16" />
     <Symbol Name="KeySuite_Manager_OnModuleSupportClose" Address="0x00056CC4" Section=".text" Size="376" />
-    <Symbol Name="DOut4326p0001_DiscreteOutput_Stop" Address="0x00055080" Section=".text" Size="28" />
-    <Symbol Name="DOut4330p0001_CPUDigitalOut" Address="0x00066F88" Section=".text" Size="12" />
-    <Symbol Name="DOut4325p0001_CPUOut_Methods" Address="0x00066EEC" Section=".text" Size="16" />
-    <Symbol Name="DOut4562p0001_DiscreteOutput_Set" Address="0x00055F2C" Section=".text" Size="144" />
-    <Symbol Name="DOut4325p0001_DiscreteOutput_Get" Address="0x00054BB4" Section=".text" Size="20" />
+    <Symbol Name="DOut4374p0004_MC33800DigitalOut" Address="0x00066D00" Section=".text" Size="12" />
+    <Symbol Name="DOut4362p0004_State" Address="0x40004548" Section=".bss" Size="1" />
+    <Symbol Name="DOut4602p0004" Address="0x0006699C" Section=".text" Size="24" />
     <Symbol Name="H1m_PWMOutput_Create" Address="0x00054A90" Section=".text" Size="72" />
-    <Symbol Name="DOut4330p0001_CPUOut_Methods" Address="0x00066F78" Section=".text" Size="16" />
     <Symbol Name="g_FGNDTaskTCB" Address="0x40002D20" Section=".bss" Size="36" />
-    <Symbol Name="DOut4326p0001" Address="0x000668E4" Section=".text" Size="12" />
     <Symbol Name="Mooventure2016_Rev5_B" Address="0x400009B0" Section=".bss" Size="788" />
-    <Symbol Name="DOut4330p0001_DiscreteOutput_Create" Address="0x00054E64" Section=".text" Size="32" />
     <Symbol Name="KeySuite_Manager_TransmitReplyOnCAN" Address="0x00056A38" Section=".text" Size="172" />
-    <Symbol Name="DOut4564p0001_DiscreteOutput_Stop" Address="0x00054FA0" Section=".text" Size="28" />
+    <Symbol Name="DOut4605p0004_MC33800_Methods" Address="0x00066D98" Section=".text" Size="16" />
     <Symbol Name="g_BGNDTask_MailBoxFetchSemaphore" Address="0x00066158" Section=".text" Size="12" />
     <Symbol Name="SwIdTxt" Address="0x00067188" Section=".text" Size="13" />
     <Symbol Name="CANFrame_Queue_Enqueue" Address="0x00052DA8" Section=".text" Size="180" />
-    <Symbol Name="DOut4565p0001_DiscreteOutput_Create" Address="0x00054DC4" Section=".text" Size="32" />
+    <Symbol Name="DOut4374p0004_State" Address="0x40004544" Section=".bss" Size="1" />
     <Symbol Name="CAN_1_TransmitQueueDepth" Address="0x00052760" Section=".text" Size="16" />
     <Symbol Name="g_ApplicationInterruptTask_MailBoxFetchSemaphore" Address="0x0006617C" Section=".text" Size="12" />
     <Symbol Name="KeySuite_Manager_Table_Write" Address="0x00057330" Section=".text" Size="144" />
     <Symbol Name="eQADC_MultiQueue_Create" Address="0x0004357C" Section=".text" Size="136" />
+    <Symbol Name="DOut4366p0004" Address="0x000668D8" Section=".text" Size="12" />
     <Symbol Name="ERI_Handler_ExtendedRequest" Address="0x00061040" Section=".text" Size="80" />
+    <Symbol Name="DOut4369p0004_CPUDigitalOut" Address="0x00066F88" Section=".text" Size="12" />
     <Symbol Name="g_IdleTaskStack" Address="0x400047C8" Section=".CC_Stack_bss" Size="492" />
     <Symbol Name="IsFaultEnabled" Address="0x000449F4" Section=".text" Size="48" />
-    <Symbol Name="RxSlot_3055p0001_ReceiveFrame" Address="0x4000373C" Section=".bss" Size="16" />
     <Symbol Name="g_eMIOS_ISRArr" Address="0x00066398" Section=".text" Size="192" />
-    <Symbol Name="DOut4331p0001_State" Address="0x4000453A" Section=".bss" Size="1" />
+    <Symbol Name="DOut4369p0004_DiscreteOutput_Set" Address="0x000552C0" Section=".text" Size="32" />
     <Symbol Name="ConstantStorage" Address="0x001E0000" Section=".flashcals" Size="5460" />
     <Symbol Name="Mooventure2016_Rev5_ConstB" Address="0x00065F94" Section=".text" Size="8" />
     <Symbol Name="__fini" Address="0x0006E144" Section=".fini" Size="0" />
     <Symbol Name="MC33800_OSS_DigitalOut_State_Set" Address="0x0005F040" Section=".text" Size="4" />
     <Symbol Name="ContinuousScan_eQADCQueueResultQueueDefn" Address="0x00066E64" Section=".text" Size="8" />
+    <Symbol Name="RxSlot_4047p0001_ReceiveFrame" Address="0x400036B0" Section=".bss" Size="16" />
+    <Symbol Name="DOut4373p0004_DiscreteOutput_Create" Address="0x00055864" Section=".text" Size="112" />
+    <Symbol Name="DOut5671p0001" Address="0x0006686C" Section=".text" Size="12" />
     <Symbol Name="TLE7368_Watchdog_IsEnabled" Address="0x0005FCC8" Section=".text" Size="16" />
     <Symbol Name="IsFaultOccurred" Address="0x00044AA4" Section=".text" Size="64" />
     <Symbol Name="KeySuite_Manager_FreeReplyObject" Address="0x00056788" Section=".text" Size="16" />
@@ -937,29 +944,28 @@
     <Symbol Name="MC33800_INJ7_MC33800_Methods" Address="0x00066C10" Section=".text" Size="16" />
     <Symbol Name="TLE7368_WDI_CPUDigitalOut" Address="0x00069110" Section=".text" Size="12" />
     <Symbol Name="S_SHRC_3SPIDeviceAttrib" Address="0x00066B64" Section=".text" Size="6" />
+    <Symbol Name="DOut4371p0004_DiscreteOutput_Stop" Address="0x00054FD8" Section=".text" Size="28" />
     <Symbol Name="scalbn" Address="0x0005B8EC" Section=".text" Size="516" />
+    <Symbol Name="DOut4362p0004" Address="0x00066B04" Section=".text" Size="24" />
     <Symbol Name="g_SHUTDOWNTaskStack" Address="0x40002D60" Section=".bss" Size="1024" />
+    <Symbol Name="DOut4371p0004_CPUDigitalOut" Address="0x00066FC0" Section=".text" Size="12" />
     <Symbol Name="LicenseRestriction" Address="0x00069E38" Section=".text" Size="105" />
     <Symbol Name="LicenseType" Address="0x00069E2C" Section=".text" Size="11" />
+    <Symbol Name="RxSlot_3697p0004_Receive" Address="0x0005147C" Section=".text" Size="248" />
     <Symbol Name="g_ModuleInitPadConfigArr" Address="0x000690E4" Section=".text" Size="4" />
     <Symbol Name="ModuleSupport_Reset" Address="0x0005C128" Section=".text" Size="32" />
     <Symbol Name="g_pfnECSM_ExtIRQHandler" Address="0x400008DC" Section=".sbss" Size="4" />
     <Symbol Name="s_bFlashAvailable" Address="0x40004714" Section=".bss" Size="1" />
     <Symbol Name="g_FlexCANBufferConfig_CAN_Rx_Buffer_ISR" Address="0x000664B4" Section=".text" Size="4" />
-    <Symbol Name="RxSlot_3808p0001_ReceiveFrame" Address="0x400035D4" Section=".bss" Size="16" />
     <Symbol Name="VISTA_1DevicePLLUnlockedMethods" Address="0x00066DFC" Section=".text" Size="12" />
     <Symbol Name="Table7" Address="0x00069060" Section=".text" Size="8" />
-    <Symbol Name="DOut4324p0001" Address="0x00066AEC" Section=".text" Size="24" />
-    <Symbol Name="DOut5628p0004_CPUOut_Methods" Address="0x00067020" Section=".text" Size="16" />
+    <Symbol Name="RxSlot_3889p0001_ReceiveFrame" Address="0x400036C4" Section=".bss" Size="16" />
+    <Symbol Name="RxSlot_3836p0001_ReceiveFrame" Address="0x400035D4" Section=".bss" Size="16" />
     <Symbol Name="Table4Rev_cu1" Address="0x000671F1" Section=".text" Size="1" />
-    <Symbol Name="RxSlot_3053p0002_ReceiveFrameValid" Address="0x40003760" Section=".bss" Size="1" />
     <Symbol Name="MotoCoder_DiscreteOutput_UpdateOnChange_Set" Address="0x000550B4" Section=".text" Size="144" />
     <Symbol Name="eMIOS_Open" Address="0x000429E8" Section=".text" Size="360" />
     <Symbol Name="MC33800_INJ8_DiscreteOutput_Create" Address="0x00055C04" Section=".text" Size="100" />
-    <Symbol Name="RxSlot_10273p001_ReceiveFrame" Address="0x40003728" Section=".bss" Size="16" />
     <Symbol Name="Mooventure2016_Rev5_GasPedalScaling" Address="0x00045DE0" Section=".text" Size="80" />
-    <Symbol Name="DOut4325p0001_State" Address="0x40004534" Section=".bss" Size="1" />
-    <Symbol Name="DOut4566p0001_State" Address="0x40004541" Section=".bss" Size="1" />
     <Symbol Name="VISTA_1_Knock_IIR_Coefficient_Convert_FixedPtToReal" Address="0x000547E0" Section=".text" Size="32" />
     <Symbol Name="MC33800_LSO8_MC33800DigitalOut" Address="0x00066D8C" Section=".text" Size="12" />
     <Symbol Name="CANFrame_Queue_Dequeue" Address="0x000529BC" Section=".text" Size="172" />
@@ -968,11 +974,11 @@
     <Symbol Name="MC33800_INJ5_DiscreteOutput_Create" Address="0x00055AD8" Section=".text" Size="100" />
     <Symbol Name="MH_CodeCovered" Address="0x000449B4" Section=".text" Size="40" />
     <Symbol Name="ContinuousScan_eQADCQueue" Address="0x00066804" Section=".text" Size="36" />
-    <Symbol Name="DOut4564p0001_DiscreteOutput_Create" Address="0x00054DE4" Section=".text" Size="32" />
     <Symbol Name="g_TLE7368_RuntimeObj" Address="0x40004700" Section=".bss" Size="20" />
     <Symbol Name="SPI_D" Address="0x00066848" Section=".text" Size="12" />
     <Symbol Name="Key_Handler_KeyKey" Address="0x00061BB4" Section=".text" Size="40" />
-    <Symbol Name="RxSlot_3253p0001_ReceiveFrame" Address="0x40003660" Section=".bss" Size="16" />
+    <Symbol Name="DOut4605p0004_MC33800DigitalOut" Address="0x00066DA8" Section=".text" Size="12" />
+    <Symbol Name="DOut4366p0004_DiscreteOutput_Stop" Address="0x00055064" Section=".text" Size="28" />
     <Symbol Name="eTPUPrimitive_PWM_CreateChild" Address="0x00062508" Section=".text" Size="368" />
     <Symbol Name="CAN_2_TransmitQueueDepth" Address="0x00052750" Section=".text" Size="16" />
     <Symbol Name="eTPUPrimitive_PWM_Frequency_Get" Address="0x000622A0" Section=".text" Size="124" />
@@ -985,19 +991,16 @@
     <Symbol Name="OpenApplication" Address="0x000448BC" Section=".text" Size="248" />
     <Symbol Name="g_u8EcuHwMin" Address="0x400046B1" Section=".bss" Size="1" />
     <Symbol Name="nan" Address="0x0005B6D0" Section=".text" Size="12" />
-    <Symbol Name="DOut4333p0001_MC33800_Methods" Address="0x00066CB8" Section=".text" Size="16" />
-    <Symbol Name="DOut4564p0001_CPUDigitalOut" Address="0x00066FF8" Section=".text" Size="12" />
     <Symbol Name="g_u32KeyProtocolPacketTimeout_ms" Address="0x000670EC" Section=".text" Size="4" />
     <Symbol Name="CRCTableArr" Address="0x0006E240" Section=".CRCConstants_rodata" Size="16" />
-    <Symbol Name="DOut4328p0001_CPUOut_Methods" Address="0x00066F40" Section=".text" Size="16" />
     <Symbol Name="Debug_CAN_1_TransmitOverrun" Address="0x4000452C" Section=".bss" Size="2" />
     <Symbol Name="FLEXCAN2_A_ReceiveQueue" Address="0x40003804" Section=".bss" Size="16" />
     <Symbol Name="DRVP_Create" Address="0x000553FC" Section=".text" Size="64" />
     <Symbol Name="Mooventure2016_Rev5_DWork" Address="0x40000CC4" Section=".bss" Size="312" />
     <Symbol Name="ERI_Handler_XTDREQ_CRCRequest" Address="0x00060D7C" Section=".text" Size="236" />
     <Symbol Name="ModuleSupport_EBI_PreOpen" Address="0x0005BFB4" Section=".text" Size="4" />
+    <Symbol Name="RxSlot_3066p0001_ReceiveFrame" Address="0x4000373C" Section=".bss" Size="16" />
     <Symbol Name="Table0" Address="0x00067238" Section=".text" Size="272" />
-    <Symbol Name="DOut4564p0001_DiscreteOutput_Set" Address="0x00055240" Section=".text" Size="32" />
     <Symbol Name="g_u4ProductID" Address="0x00067184" Section=".text" Size="4" />
     <Symbol Name="__ieee754_sqrt" Address="0x0005B364" Section=".text" Size="784" />
     <Symbol Name="Table2" Address="0x00069038" Section=".text" Size="8" />
@@ -1010,11 +1013,11 @@
     <Symbol Name="rt_InitInfAndNaN" Address="0x00057B4C" Section=".text" Size="100" />
     <Symbol Name="Table3Rev_cu1" Address="0x000671F0" Section=".text" Size="1" />
     <Symbol Name="ERI_Protocol_CRC_Update" Address="0x00060A84" Section=".text" Size="328" />
+    <Symbol Name="DOut4605p0004_DiscreteOutput_Create" Address="0x0005556C" Section=".text" Size="112" />
     <Symbol Name="g_SHUTDOWNTask_MailBox" Address="0x00066040" Section=".text" Size="16" />
-    <Symbol Name="RxSlot_3860p0001_ReceiveFrame" Address="0x400036D8" Section=".bss" Size="16" />
-    <Symbol Name="DOut4324p0001_DiscreteOutput_Set" Address="0x0005626C" Section=".text" Size="144" />
-    <Symbol Name="DOut5628p0004" Address="0x0006686C" Section=".text" Size="12" />
+    <Symbol Name="RxSlot_3264p0001_ReceiveFrameValid" Address="0x4000365C" Section=".bss" Size="1" />
     <Symbol Name="e200_BothTimerIRQ_Enable" Address="0x000426B4" Section=".text" Size="32" />
+    <Symbol Name="RxSlot_3268p0001_ReceiveFrameValid" Address="0x4000360C" Section=".bss" Size="1" />
     <Symbol Name="g_BootMailBox" Address="0x4000FFF0" Section=".BootMailBox_bss" Size="16" />
     <Symbol Name="CAN_1_KeySuite_Receive" Address="0x00052C08" Section=".text" Size="208" />
     <Symbol Name="CAN_3_Create" Address="0x00053F14" Section=".text" Size="124" />
@@ -1027,28 +1030,26 @@
     <Symbol Name="KeySuite_Manager_Memory_Write" Address="0x00057560" Section=".text" Size="112" />
     <Symbol Name="__eabi" Address="0x00063D3C" Section=".text" Size="72" />
     <Symbol Name="NonVolatile_StoreNonVolatile" Address="0x0005438C" Section=".text" Size="256" />
-    <Symbol Name="DOut4330p0001" Address="0x000668B4" Section=".text" Size="12" />
+    <Symbol Name="RxSlot_3478p0004_Receive" Address="0x00052304" Section=".text" Size="248" />
     <Symbol Name="Freescale_SetLock" Address="0x0005CA4C" Section=".text" Size="40" />
     <Symbol Name="KeySuite_Manager_TransmitFunction_Get" Address="0x00056674" Section=".text" Size="84" />
-    <Symbol Name="DOut4333p0001_MC33800DigitalOut" Address="0x00066CC8" Section=".text" Size="12" />
     <Symbol Name="g_pszPartNumber" Address="0x400046A8" Section=".bss" Size="4" />
     <Symbol Name="eTPUuCode_TimeBase_OpenAsEncoderAt10MHz" Address="0x00062794" Section=".text" Size="96" />
     <Symbol Name="MC33800_INJ4_MC33800DigitalOut" Address="0x00066C74" Section=".text" Size="12" />
     <Symbol Name="Timer_FreeRunningCounter_Get64BitTimeFromTicks" Address="0x00042320" Section=".text" Size="44" />
     <Symbol Name="g_ApplicationInterruptTask_MailBoxRuntime" Address="0x40003190" Section=".bss" Size="16" />
-    <Symbol Name="DOut4324p0001_MC33800DigitalOut" Address="0x00066BA8" Section=".text" Size="12" />
-    <Symbol Name="DOut4561p0001_DiscreteOutput_Get" Address="0x00054C54" Section=".text" Size="20" />
     <Symbol Name="SerialEE_WriteSynch" Address="0x0005F9EC" Section=".text" Size="456" />
     <Symbol Name="INTC_UnhandledISR" Address="0x0004451C" Section=".text" Size="4" />
-    <Symbol Name="DOut4327p0001_CPUDigitalOut" Address="0x00066F34" Section=".text" Size="12" />
     <Symbol Name="CAN_1_Create" Address="0x00054274" Section=".text" Size="152" />
     <Symbol Name="Mooventure2016_Rev5_Foreground_Disable" Address="0x00045EB0" Section=".text" Size="100" />
-    <Symbol Name="DOut4331p0001_DiscreteOutput_Stop" Address="0x00054FF4" Section=".text" Size="28" />
-    <Symbol Name="DOut4332p0001_CPUOut_Methods" Address="0x00066FB0" Section=".text" Size="16" />
+    <Symbol Name="DOut4370p0004_DiscreteOutput_Get" Address="0x00054C2C" Section=".text" Size="20" />
     <Symbol Name="Mooventure2016_Rev5_Foreground" Address="0x0004676C" Section=".text" Size="41840" />
     <Symbol Name="eDMA_StatusCtrl_ClearEnableRequest" Address="0x00042750" Section=".text" Size="44" />
+    <Symbol Name="DOut4363p0004_DiscreteOutput_Set" Address="0x0005626C" Section=".text" Size="144" />
+    <Symbol Name="DOut4604p0004_DiscreteOutput_Get" Address="0x00054C7C" Section=".text" Size="20" />
     <Symbol Name="eTPU_PWM_FrequencyDutyCycle_Set" Address="0x0005CCF4" Section=".text" Size="112" />
     <Symbol Name="ModuleSupport_Watchdog_MPC555x_TCR_WRC_Get" Address="0x0005C024" Section=".text" Size="8" />
+    <Symbol Name="RxSlot_4047p0001_Receive" Address="0x00051D34" Section=".text" Size="248" />
     <Symbol Name="eTPU_ParameterFrame_Local_8Bit_Set" Address="0x00043C4C" Section=".text" Size="120" />
     <Symbol Name="g_FGNDTask_MailBoxFetchSemaphoreECB" Address="0x40002104" Section=".bss" Size="12" />
     <Symbol Name="_Z39eTPUuCode_TimeBase_OpenAsEncoderAt10MHzPK14S_ETPUMaskDefn" Address="0x00062794" Section=".text" Size="96" />
@@ -1057,34 +1058,31 @@
     <Symbol Name="TskCPU_PostTaskHook" Address="0x00041E00" Section=".text" Size="32" />
     <Symbol Name="H1m_PWMOutput_PWMOutput_Stop" Address="0x00055164" Section=".text" Size="52" />
     <Symbol Name="MC33800_PWM_DigitalOut_State_Set" Address="0x0005F384" Section=".text" Size="4" />
-    <Symbol Name="DOut4332p0001_DiscreteOutput_Set" Address="0x00055280" Section=".text" Size="32" />
     <Symbol Name="g_szIdleTaskName" Address="0x0006E234" Section=".sdata2" Size="10" />
-    <Symbol Name="RxSlot_3808p0001_Receive" Address="0x0005128C" Section=".text" Size="248" />
     <Symbol Name="g_bIsAppUsingETPU" Address="0x0006618B" Section=".text" Size="1" />
-    <Symbol Name="DOut4328p0001_CPUDigitalOut" Address="0x00066F50" Section=".text" Size="12" />
+    <Symbol Name="DOut4604p0004_DiscreteOutput_Create" Address="0x00054DC4" Section=".text" Size="32" />
     <Symbol Name="__malloc_trim_threshold" Address="0x40000854" Section=".sdata" Size="4" />
     <Symbol Name="NonVolatileWork" Address="0x40004758" Section=".ramcals" Size="112" />
     <Symbol Name="TskSync_Semaphore_CreateStatic" Address="0x00041E20" Section=".text" Size="32" />
     <Symbol Name="exit" Address="0x00058364" Section=".text" Size="64" />
-    <Symbol Name="RxSlot_3672p0001_ReceiveFrame" Address="0x4000369C" Section=".bss" Size="16" />
     <Symbol Name="MPC55xxFlash_Open" Address="0x0005C8A8" Section=".text" Size="148" />
     <Symbol Name="g_FGNDTask_MailBox" Address="0x00066020" Section=".text" Size="16" />
-    <Symbol Name="DOut4328p0001_State" Address="0x40004537" Section=".bss" Size="1" />
     <Symbol Name="g_SPIDMARequestArr" Address="0x00069DF8" Section=".text" Size="8" />
-    <Symbol Name="RxSlot_3858p0001_ReceiveQueueFrames" Address="0x40003F34" Section=".bss" Size="32" />
     <Symbol Name="SoftReset_FlexCAN2" Address="0x0005D0B8" Section=".text" Size="64" />
     <Symbol Name="g_SHUTDOWNTask_MailBoxRuntime" Address="0x40002D50" Section=".bss" Size="16" />
-    <Symbol Name="RxSlot_3257p0001_Receive" Address="0x00051574" Section=".text" Size="248" />
+    <Symbol Name="RxSlot_3889p0001_ReceiveFrameValid" Address="0x400036C0" Section=".bss" Size="1" />
     <Symbol Name="g_ECSMpThisArr" Address="0x400008E0" Section=".sbss" Size="4" />
     <Symbol Name="TLE7368_PWR_HOLD_CPUDigitalOut" Address="0x0006914C" Section=".text" Size="12" />
     <Symbol Name="CAN_2_ReceiveDispatch" Address="0x00053170" Section=".text" Size="260" />
+    <Symbol Name="DOut4371p0004_CPUOut_Methods" Address="0x00066FB0" Section=".text" Size="16" />
     <Symbol Name="g_u16InterruptStackMinBytesFree" Address="0x40000864" Section=".sbss" Size="2" />
     <Symbol Name="eTPU_ISR" Address="0x00043A04" Section=".text" Size="116" />
-    <Symbol Name="RxSlot_3860p0001_Receive" Address="0x00051F24" Section=".text" Size="248" />
+    <Symbol Name="RxSlot_3700p0001_ReceiveFrame" Address="0x4000369C" Section=".bss" Size="16" />
     <Symbol Name="EEPROM_1SPIDevice" Address="0x00066E9C" Section=".text" Size="16" />
-    <Symbol Name="RxSlot_3669p0004_Receive" Address="0x0005147C" Section=".text" Size="248" />
     <Symbol Name="g_FLEXCAN2_B_ConfigObj" Address="0x000665C0" Section=".text" Size="264" />
-    <Symbol Name="RxSlot_3670p0001_Receive" Address="0x0005220C" Section=".text" Size="248" />
+    <Symbol Name="RxSlot_3263p0001_Receive" Address="0x00051A4C" Section=".text" Size="248" />
+    <Symbol Name="DOut4602p0004_DiscreteOutput_Stop" Address="0x00055E1C" Section=".text" Size="64" />
+    <Symbol Name="DOut5671p0001_CPUOut_Methods" Address="0x00067020" Section=".text" Size="16" />
     <Symbol Name="GPIO_DigitalOut_State_Get" Address="0x0005D740" Section=".text" Size="20" />
     <Symbol Name="g_SHUTDOWNTask_MailBoxFetchSemaphore" Address="0x00066170" Section=".text" Size="12" />
     <Symbol Name="MC33800_LSO2_MC33800_Methods" Address="0x00066C48" Section=".text" Size="16" />
@@ -1094,33 +1092,36 @@
     <Symbol Name="Module_Shutdown" Address="0x00051154" Section=".text" Size="92" />
     <Symbol Name="ERI_Protocol_Init" Address="0x00060C18" Section=".text" Size="152" />
     <Symbol Name="MPC55xxFlash_Verify" Address="0x0005C26C" Section=".text" Size="176" />
-    <Symbol Name="DOut4563p0001_MC33800_Methods" Address="0x00066D44" Section=".text" Size="16" />
+    <Symbol Name="DOut5671p0001_DiscreteOutput_Get" Address="0x00054C90" Section=".text" Size="20" />
     <Symbol Name="MC33800_INJ8_MC33800DigitalOut" Address="0x00066BE8" Section=".text" Size="12" />
     <Symbol Name="IO_Create" Address="0x00056528" Section=".text" Size="304" />
-    <Symbol Name="DOut4326p0001_DiscreteOutput_Create" Address="0x00054EE4" Section=".text" Size="32" />
     <Symbol Name="GPIO_DigitalOut_State_Set" Address="0x0005D754" Section=".text" Size="40" />
     <Symbol Name="KeySuiteSupport_CANLink_GetClientCityID" Address="0x00056868" Section=".text" Size="8" />
     <Symbol Name="SIU_PadFunction_ApplyAsOutputOnly" Address="0x000409EC" Section=".text" Size="40" />
-    <Symbol Name="DOut4331p0001_CPUOut_Methods" Address="0x00066F94" Section=".text" Size="16" />
+    <Symbol Name="DOut4373p0004_DiscreteOutput_Set" Address="0x000560CC" Section=".text" Size="144" />
     <Symbol Name="eTPUCommon_TimeBase_SetTCR1WithFreq" Address="0x00043894" Section=".text" Size="60" />
     <Symbol Name="g_BGNDTask" Address="0x000660F0" Section=".text" Size="36" />
+    <Symbol Name="DOut4603p0004_DiscreteOutput_Set" Address="0x00055240" Section=".text" Size="32" />
     <Symbol Name="TLE7368_Close" Address="0x0005FC6C" Section=".text" Size="92" />
+    <Symbol Name="DOut4373p0004_DiscreteOutput_Stop" Address="0x0005608C" Section=".text" Size="64" />
+    <Symbol Name="RxSlot_3700p0001_ReceiveFrameValid" Address="0x40003698" Section=".bss" Size="1" />
     <Symbol Name="OnChangeFaultSuspected" Address="0x00044EC4" Section=".text" Size="96" />
     <Symbol Name="Task_CreateStatic" Address="0x00041A10" Section=".text" Size="124" />
     <Symbol Name="Radiator_Blend_Position_AnalogInput_Get" Address="0x000548C8" Section=".text" Size="76" />
     <Symbol Name="g_u32BytesOnHeap" Address="0x40000964" Section=".bss" Size="4" />
     <Symbol Name="MC33800_INJ3_MC33800_Methods" Address="0x00066C80" Section=".text" Size="16" />
+    <Symbol Name="DOut4601p0004_MC33800_Methods" Address="0x00066D28" Section=".text" Size="16" />
     <Symbol Name="IRQ_PreISRHook" Address="0x00040760" Section=".text" Size="32" />
     <Symbol Name="GetFaultProperties" Address="0x00045298" Section=".text" Size="264" />
+    <Symbol Name="RxSlot_3699p0001_ReceiveFrameValid" Address="0x400035E4" Section=".bss" Size="1" />
     <Symbol Name="CAN_2_Error_Status_Get" Address="0x00052834" Section=".text" Size="196" />
+    <Symbol Name="DOut4373p0004_State" Address="0x40004545" Section=".bss" Size="1" />
     <Symbol Name="Flash_Memory" Address="0x00066050" Section=".text" Size="36" />
     <Symbol Name="CAN_Queued_TransmitComplete" Address="0x00053A18" Section=".text" Size="84" />
     <Symbol Name="g_ModuleSupportMMUConfigArr" Address="0x00069164" Section=".text" Size="32" />
-    <Symbol Name="DOut4561p0001_DiscreteOutput_Stop" Address="0x00054FBC" Section=".text" Size="28" />
     <Symbol Name="__isnand" Address="0x0005B69C" Section=".text" Size="44" />
     <Symbol Name="_exit" Address="0x0005D910" Section=".text" Size="4" />
     <Symbol Name="SIU_Open" Address="0x00040C34" Section=".text" Size="264" />
-    <Symbol Name="RxSlot_3672p0001_ReceiveFrameValid" Address="0x40003698" Section=".bss" Size="1" />
     <Symbol Name="FLEXCAN2_A_TransmitQueue" Address="0x40003794" Section=".bss" Size="16" />
     <Symbol Name="H1_InhibitB_DiscreteOutput_Stop" Address="0x00054F4C" Section=".text" Size="28" />
     <Symbol Name="Create_FlexCAN2Buffer" Address="0x0005D37C" Section=".text" Size="260" />
@@ -1133,64 +1134,65 @@
     <Symbol Name="g_pfEndTaskMethodsArr" Address="0x00065C64" Section=".text" Size="8" />
     <Symbol Name="eDMA_Open" Address="0x000427FC" Section=".text" Size="32" />
     <Symbol Name="MotoTronBoot_Version_GetFromHardBoot" Address="0x0005CB64" Section=".text" Size="140" />
-    <Symbol Name="DOut4565p0001_DiscreteOutput_Get" Address="0x00054C7C" Section=".text" Size="20" />
     <Symbol Name="g_pTPUMaskDefn" Address="0x400008FC" Section=".sbss" Size="4" />
     <Symbol Name="CoreDD_PinState_GetForResourceState" Address="0x0005E698" Section=".text" Size="32" />
+    <Symbol Name="DOut4605p0004_State" Address="0x40004541" Section=".bss" Size="1" />
     <Symbol Name="KeySuite_DefaultBaud_Get" Address="0x00061A94" Section=".text" Size="28" />
+    <Symbol Name="RxSlot_3757p0001_ReceiveFrameValid" Address="0x400036FC" Section=".bss" Size="1" />
     <Symbol Name="KeySuite_Manager_SecurityChallenge" Address="0x000571E0" Section=".text" Size="100" />
-    <Symbol Name="DOut4323p0001_DiscreteOutput_Set" Address="0x000563B0" Section=".text" Size="144" />
     <Symbol Name="Tsk_ExecPerf_RefreshPreISR" Address="0x00040FD0" Section=".text" Size="64" />
     <Symbol Name="RandomNumber_Get" Address="0x000510F8" Section=".text" Size="92" />
-    <Symbol Name="RxSlot_3054p0001_Receive" Address="0x000524F4" Section=".text" Size="248" />
     <Symbol Name="MC33800_LSO8_MC33800_Methods" Address="0x00066D7C" Section=".text" Size="16" />
-    <Symbol Name="DOut4335p0001_DiscreteOutput_Set" Address="0x00055FFC" Section=".text" Size="144" />
     <Symbol Name="KeySuite_Manager_ValidateProtocol" Address="0x000570D0" Section=".text" Size="272" />
-    <Symbol Name="DOut4561p0001_DiscreteOutput_Set" Address="0x00055260" Section=".text" Size="32" />
     <Symbol Name="__gedf2" Address="0x00063914" Section=".text" Size="136" />
     <Symbol Name="s_ADCModule_PreScaler" Address="0x4000095E" Section=".bss" Size="1" />
     <Symbol Name="INTC_OpenInSwVectorMode" Address="0x000445A4" Section=".text" Size="32" />
     <Symbol Name="CAN_2_Create" Address="0x000540D8" Section=".text" Size="88" />
-    <Symbol Name="DOut4562p0001_State" Address="0x40004543" Section=".bss" Size="1" />
     <Symbol Name="rtMinusInfF" Address="0x400046C0" Section=".bss" Size="4" />
     <Symbol Name="GetNextFault" Address="0x0004506C" Section=".text" Size="44" />
-    <Symbol Name="DOut4329p0001" Address="0x000668C0" Section=".text" Size="12" />
     <Symbol Name="VISTA_1DeviceMethods" Address="0x00066DD8" Section=".text" Size="12" />
     <Symbol Name="KeySuite_Manager_Connection_GetFromCAN" Address="0x000570A4" Section=".text" Size="44" />
     <Symbol Name="OpenMemory" Address="0x00050E04" Section=".text" Size="44" />
     <Symbol Name="Tsk_Execution_IsLegalToWait" Address="0x00041074" Section=".text" Size="64" />
     <Symbol Name="SetFaultSuspected" Address="0x00044F78" Section=".text" Size="92" />
-    <Symbol Name="DOut4561p0001_DiscreteOutput_Create" Address="0x00054E04" Section=".text" Size="32" />
     <Symbol Name="SIU_eQADC_CFIFO_Trigger_Create" Address="0x00040A14" Section=".text" Size="544" />
-    <Symbol Name="RxSlot_3252p0001_ReceiveFrame" Address="0x40003674" Section=".bss" Size="16" />
-    <Symbol Name="DOut4564p0001" Address="0x00066884" Section=".text" Size="12" />
+    <Symbol Name="DOut4600p0004_State" Address="0x4000453C" Section=".bss" Size="1" />
     <Symbol Name="__eabi_convert" Address="0x00063D84" Section=".text" Size="52" />
-    <Symbol Name="RxSlot_3861p0001_ReceiveFrameValid" Address="0x400036C0" Section=".bss" Size="1" />
     <Symbol Name="KeySuite_Manager_GetTableItemPtr" Address="0x000572B4" Section=".text" Size="124" />
+    <Symbol Name="DOut4600p0004_DiscreteOutput_Set" Address="0x00055260" Section=".text" Size="32" />
     <Symbol Name="FLEXCAN2_A_Create" Address="0x00054130" Section=".text" Size="324" />
     <Symbol Name="s_u32ExtSRAM_OR" Address="0x000690F8" Section=".text" Size="4" />
+    <Symbol Name="RxSlot_3262p0001_ReceiveFrameValid" Address="0x40003684" Section=".bss" Size="1" />
     <Symbol Name="Task_Activate" Address="0x000419EC" Section=".text" Size="36" />
     <Symbol Name="g_u8_eMIOS_INTERNAL_CLK_TICKS_PER_US" Address="0x400008ED" Section=".sbss" Size="1" />
     <Symbol Name="CAN_2_KeySuite_DynamicIDMask" Address="0x40000004" Section=".data" Size="4" />
     <Symbol Name="g_eTPUTCRCLKFilter" Address="0x0006618A" Section=".text" Size="1" />
     <Symbol Name="__SDATA_START__" Address="0x4000084C" Section=".sdata" Size="0" />
+    <Symbol Name="DOut4366p0004_State" Address="0x40004536" Section=".bss" Size="1" />
     <Symbol Name="KeySuite_Manager_Protocol_Method_Get" Address="0x0005673C" Section=".text" Size="76" />
+    <Symbol Name="DOut4369p0004" Address="0x000668B4" Section=".text" Size="12" />
+    <Symbol Name="RxSlot_3887p0001_ReceiveFrameValid" Address="0x400036E8" Section=".bss" Size="1" />
     <Symbol Name="CAN_1_KeySuite_DynamicID" Address="0x400035C4" Section=".bss" Size="4" />
+    <Symbol Name="DOut4603p0004_State" Address="0x4000453D" Section=".bss" Size="1" />
+    <Symbol Name="DOut4366p0004_DiscreteOutput_Set" Address="0x00055320" Section=".text" Size="32" />
     <Symbol Name="eDMA_InterruptRequest_Set" Address="0x00042834" Section=".text" Size="132" />
     <Symbol Name="ControlCoreOpenWithISREnabled" Address="0x00040940" Section=".text" Size="4" />
+    <Symbol Name="DOut4365p0004_CPUDigitalOut" Address="0x00066F18" Section=".text" Size="12" />
     <Symbol Name="CAN_2_KeySuite_SetIDFilter" Address="0x00051264" Section=".text" Size="20" />
-    <Symbol Name="DOut4333p0001_DiscreteOutput_Stop" Address="0x0005615C" Section=".text" Size="64" />
+    <Symbol Name="DOut4600p0004" Address="0x00066890" Section=".text" Size="12" />
     <Symbol Name="__subdf3" Address="0x00063048" Section=".text" Size="124" />
-    <Symbol Name="DOut4334p0001" Address="0x000669FC" Section=".text" Size="24" />
+    <Symbol Name="DOut4362p0004_DiscreteOutput_Set" Address="0x000563B0" Section=".text" Size="144" />
     <Symbol Name="H1m" Address="0x00066828" Section=".text" Size="24" />
     <Symbol Name="Table5" Address="0x00069050" Section=".text" Size="8" />
+    <Symbol Name="DOut4362p0004_MC33800_Methods" Address="0x00066B7C" Section=".text" Size="16" />
     <Symbol Name="NonVolatile_NonVolatileStatus_Reset" Address="0x0005430C" Section=".text" Size="16" />
     <Symbol Name="g_BGNDTask_MailBoxRuntime" Address="0x400018D0" Section=".bss" Size="16" />
     <Symbol Name="FLEXCAN2_C_TransmitQueue" Address="0x40003774" Section=".bss" Size="16" />
     <Symbol Name="g_ProtocolManagerDefn" Address="0x000670F4" Section=".text" Size="112" />
-    <Symbol Name="RxSlot_3669p0004_ReceiveFrameValid" Address="0x400035F8" Section=".bss" Size="1" />
     <Symbol Name="GetLock_C" Address="0x00069338" Section=".text" Size="224" />
     <Symbol Name="g_pEndOfInterruptStack" Address="0x4000086C" Section=".sbss" Size="4" />
     <Symbol Name="g_BGNDTaskStack" Address="0x400018E0" Section=".bss" Size="2048" />
+    <Symbol Name="DOut4366p0004_CPUOut_Methods" Address="0x00066F24" Section=".text" Size="16" />
     <Symbol Name="KeySuite_Seed_Get" Address="0x000619EC" Section=".text" Size="156" />
     <Symbol Name="FLEXCAN2_A_ReceiveQueueFrames" Address="0x40003DD4" Section=".bss" Size="352" />
     <Symbol Name="CAN_2_KeySuite_DynamicID" Address="0x400035C8" Section=".bss" Size="4" />
@@ -1204,31 +1206,29 @@
     <Symbol Name="eTPUProc_Start" Address="0x00044728" Section=".text" Size="64" />
     <Symbol Name="eTPU_Primitive_Set" Address="0x000440E0" Section=".text" Size="12" />
     <Symbol Name="GetFaultName" Address="0x000453A0" Section=".text" Size="8" />
-    <Symbol Name="RxSlot_3055p0001_ReceiveFrameValid" Address="0x40003738" Section=".bss" Size="1" />
     <Symbol Name="KeySuite_TableItem_GetAddress" Address="0x0006190C" Section=".text" Size="48" />
     <Symbol Name="Interrupt_EnableApp" Address="0x000402FC" Section=".text" Size="36" />
     <Symbol Name="TableInterpolation1D_real_T" Address="0x00057DB0" Section=".text" Size="80" />
     <Symbol Name="MotoTronBootObj_V3Buffer_GetFromHardBoot" Address="0x0005CB54" Section=".text" Size="8" />
+    <Symbol Name="DOut4367p0004_DiscreteOutput_Stop" Address="0x00055048" Section=".text" Size="28" />
     <Symbol Name="g_pszModelNumber" Address="0x400046AC" Section=".bss" Size="4" />
     <Symbol Name="XBar_Open" Address="0x000424A4" Section=".text" Size="32" />
-    <Symbol Name="DOut4335p0001_MC33800_Methods" Address="0x00066CF0" Section=".text" Size="16" />
+    <Symbol Name="RxSlot_3064p0002_Receive" Address="0x000525EC" Section=".text" Size="248" />
     <Symbol Name="__pack_d" Address="0x00063F1C" Section=".text" Size="592" />
     <Symbol Name="App_RTITimer_OnTick" Address="0x00050B40" Section=".text" Size="232" />
-    <Symbol Name="DOut4563p0001_DiscreteOutput_Create" Address="0x000556AC" Section=".text" Size="112" />
-    <Symbol Name="DOut4325p0001_DiscreteOutput_Set" Address="0x00055360" Section=".text" Size="28" />
     <Symbol Name="CANFrame_Queue_Create" Address="0x00051238" Section=".text" Size="24" />
     <Symbol Name="EEPROM_1SPIDeviceMethods" Address="0x00066E88" Section=".text" Size="12" />
     <Symbol Name="s_IdleLoopCompleteEvent" Address="0x00065C70" Section=".text" Size="12" />
     <Symbol Name="Tsk_TaskSync_GetHighestPriorityWaitingTask" Address="0x00040EAC" Section=".text" Size="36" />
+    <Symbol Name="RxSlot_3889p0001_Receive" Address="0x00051E2C" Section=".text" Size="248" />
     <Symbol Name="free" Address="0x000583A4" Section=".text" Size="44" />
-    <Symbol Name="RxSlot_3253p0001_ReceiveFrameValid" Address="0x4000365C" Section=".bss" Size="1" />
     <Symbol Name="Freescale_GetLock" Address="0x0005CA24" Section=".text" Size="40" />
     <Symbol Name="g_eQADCCommandQueueBuffer5" Address="0x00066E20" Section=".text" Size="28" />
     <Symbol Name="g_u8ModuleSupportNumMMUEntries" Address="0x00069184" Section=".text" Size="1" />
     <Symbol Name="GPIO_DigitalOut_Create" Address="0x0005D784" Section=".text" Size="120" />
+    <Symbol Name="DOut4601p0004_MC33800DigitalOut" Address="0x00066D38" Section=".text" Size="12" />
     <Symbol Name="g_InitRegisterConfigArr" Address="0x00069290" Section=".text" Size="60" />
     <Symbol Name="ERI_Handler_XTDREQ_CRCValue" Address="0x000610E0" Section=".text" Size="172" />
-    <Symbol Name="DOut4561p0001" Address="0x00066890" Section=".text" Size="12" />
     <Symbol Name="CAN_3_KeySuite_DynamicID" Address="0x400035CC" Section=".bss" Size="4" />
     <Symbol Name="CriticalSection_Exit" Address="0x00041108" Section=".text" Size="160" />
   </Symbols>
@@ -6954,46 +6954,46 @@
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="RxSlot_3053p0002_ReceiveFrame" Address="0x40003764" SizeInBytes="16">
+        <Variable Name="RxSlot_3064p0002_ReceiveFrame" Address="0x40003764" SizeInBytes="16">
           <TypeReference Name="CANFrame" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3053p0002_ReceiveFrameValid" Address="0x40003760" SizeInBytes="1">
+        <Variable Name="RxSlot_3064p0002_ReceiveFrameValid" Address="0x40003760" SizeInBytes="1">
           <TypeReference Name="boolean_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3054p0001_ReceiveFrame" Address="0x40003750" SizeInBytes="16">
+        <Variable Name="RxSlot_3065p0001_ReceiveFrame" Address="0x40003750" SizeInBytes="16">
           <TypeReference Name="CANFrame" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3054p0001_ReceiveFrameValid" Address="0x4000374C" SizeInBytes="1">
+        <Variable Name="RxSlot_3065p0001_ReceiveFrameValid" Address="0x4000374C" SizeInBytes="1">
           <TypeReference Name="boolean_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3055p0001_ReceiveFrame" Address="0x4000373C" SizeInBytes="16">
+        <Variable Name="RxSlot_3066p0001_ReceiveFrame" Address="0x4000373C" SizeInBytes="16">
           <TypeReference Name="CANFrame" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3055p0001_ReceiveFrameValid" Address="0x40003738" SizeInBytes="1">
+        <Variable Name="RxSlot_3066p0001_ReceiveFrameValid" Address="0x40003738" SizeInBytes="1">
           <TypeReference Name="boolean_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_10273p001_ReceiveFrame" Address="0x40003728" SizeInBytes="16">
+        <Variable Name="RxSlot_3478p0004_ReceiveFrame" Address="0x40003728" SizeInBytes="16">
           <TypeReference Name="CANFrame" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_10273p001_ReceiveFrameValid" Address="0x40003724" SizeInBytes="1">
+        <Variable Name="RxSlot_3478p0004_ReceiveFrameValid" Address="0x40003724" SizeInBytes="1">
           <TypeReference Name="boolean_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3670p0001_ReceiveFrame" Address="0x40003714" SizeInBytes="16">
+        <Variable Name="RxSlot_3698p0001_ReceiveFrame" Address="0x40003714" SizeInBytes="16">
           <TypeReference Name="CANFrame" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3670p0001_ReceiveFrameValid" Address="0x40003710" SizeInBytes="1">
+        <Variable Name="RxSlot_3698p0001_ReceiveFrameValid" Address="0x40003710" SizeInBytes="1">
           <TypeReference Name="boolean_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3729p0001_ReceiveFrame" Address="0x40003700" SizeInBytes="16">
+        <Variable Name="RxSlot_3757p0001_ReceiveFrame" Address="0x40003700" SizeInBytes="16">
           <TypeReference Name="CANFrame" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3729p0001_ReceiveFrameValid" Address="0x400036FC" SizeInBytes="1">
+        <Variable Name="RxSlot_3757p0001_ReceiveFrameValid" Address="0x400036FC" SizeInBytes="1">
           <TypeReference Name="boolean_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3858p0001_ReceiveQueue" Address="0x400037D4" SizeInBytes="16">
+        <Variable Name="RxSlot_3886p0001_ReceiveQueue" Address="0x400037D4" SizeInBytes="16">
           <TypeReference Name="CANFrame_Queue" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3858p0001_ReceiveQueueFrames" Address="0x40003F34" SizeInBytes="16">
+        <Variable Name="RxSlot_3886p0001_ReceiveQueueFrames" Address="0x40003F34" SizeInBytes="16">
           <TypeReference Name="CANFrame" Namespace="TypeDefinition">
             <TypeModifiers>
               <Array>
@@ -7002,28 +7002,28 @@
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="RxSlot_3859p0001_ReceiveFrame" Address="0x400036EC" SizeInBytes="16">
+        <Variable Name="RxSlot_3887p0001_ReceiveFrame" Address="0x400036EC" SizeInBytes="16">
           <TypeReference Name="CANFrame" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3859p0001_ReceiveFrameValid" Address="0x400036E8" SizeInBytes="1">
+        <Variable Name="RxSlot_3887p0001_ReceiveFrameValid" Address="0x400036E8" SizeInBytes="1">
           <TypeReference Name="boolean_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3860p0001_ReceiveFrame" Address="0x400036D8" SizeInBytes="16">
+        <Variable Name="RxSlot_3888p0001_ReceiveFrame" Address="0x400036D8" SizeInBytes="16">
           <TypeReference Name="CANFrame" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3860p0001_ReceiveFrameValid" Address="0x400036D4" SizeInBytes="1">
+        <Variable Name="RxSlot_3888p0001_ReceiveFrameValid" Address="0x400036D4" SizeInBytes="1">
           <TypeReference Name="boolean_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3861p0001_ReceiveFrame" Address="0x400036C4" SizeInBytes="16">
+        <Variable Name="RxSlot_3889p0001_ReceiveFrame" Address="0x400036C4" SizeInBytes="16">
           <TypeReference Name="CANFrame" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3861p0001_ReceiveFrameValid" Address="0x400036C0" SizeInBytes="1">
+        <Variable Name="RxSlot_3889p0001_ReceiveFrameValid" Address="0x400036C0" SizeInBytes="1">
           <TypeReference Name="boolean_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_4019p0001_ReceiveFrame" Address="0x400036B0" SizeInBytes="16">
+        <Variable Name="RxSlot_4047p0001_ReceiveFrame" Address="0x400036B0" SizeInBytes="16">
           <TypeReference Name="CANFrame" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_4019p0001_ReceiveFrameValid" Address="0x400036AC" SizeInBytes="1">
+        <Variable Name="RxSlot_4047p0001_ReceiveFrameValid" Address="0x400036AC" SizeInBytes="1">
           <TypeReference Name="boolean_T" Namespace="TypeDefinition" />
         </Variable>
         <Variable Name="CAN_1_KeySuite_ReceiveQueue" Address="0x400037C4" SizeInBytes="16">
@@ -7062,10 +7062,10 @@
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="RxSlot_3672p0001_ReceiveFrame" Address="0x4000369C" SizeInBytes="16">
+        <Variable Name="RxSlot_3700p0001_ReceiveFrame" Address="0x4000369C" SizeInBytes="16">
           <TypeReference Name="CANFrame" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3672p0001_ReceiveFrameValid" Address="0x40003698" SizeInBytes="1">
+        <Variable Name="RxSlot_3700p0001_ReceiveFrameValid" Address="0x40003698" SizeInBytes="1">
           <TypeReference Name="boolean_T" Namespace="TypeDefinition" />
         </Variable>
         <Variable Name="CAN_2_KeySuite_ReceiveQueue" Address="0x400037B4" SizeInBytes="16">
@@ -7104,64 +7104,64 @@
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="RxSlot_3251p0001_ReceiveFrame" Address="0x40003688" SizeInBytes="16">
+        <Variable Name="RxSlot_3262p0001_ReceiveFrame" Address="0x40003688" SizeInBytes="16">
           <TypeReference Name="CANFrame" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3251p0001_ReceiveFrameValid" Address="0x40003684" SizeInBytes="1">
+        <Variable Name="RxSlot_3262p0001_ReceiveFrameValid" Address="0x40003684" SizeInBytes="1">
           <TypeReference Name="boolean_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3252p0001_ReceiveFrame" Address="0x40003674" SizeInBytes="16">
+        <Variable Name="RxSlot_3263p0001_ReceiveFrame" Address="0x40003674" SizeInBytes="16">
           <TypeReference Name="CANFrame" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3252p0001_ReceiveFrameValid" Address="0x40003670" SizeInBytes="1">
+        <Variable Name="RxSlot_3263p0001_ReceiveFrameValid" Address="0x40003670" SizeInBytes="1">
           <TypeReference Name="boolean_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3253p0001_ReceiveFrame" Address="0x40003660" SizeInBytes="16">
+        <Variable Name="RxSlot_3264p0001_ReceiveFrame" Address="0x40003660" SizeInBytes="16">
           <TypeReference Name="CANFrame" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3253p0001_ReceiveFrameValid" Address="0x4000365C" SizeInBytes="1">
+        <Variable Name="RxSlot_3264p0001_ReceiveFrameValid" Address="0x4000365C" SizeInBytes="1">
           <TypeReference Name="boolean_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3254p0001_ReceiveFrame" Address="0x4000364C" SizeInBytes="16">
+        <Variable Name="RxSlot_3265p0001_ReceiveFrame" Address="0x4000364C" SizeInBytes="16">
           <TypeReference Name="CANFrame" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3254p0001_ReceiveFrameValid" Address="0x40003648" SizeInBytes="1">
+        <Variable Name="RxSlot_3265p0001_ReceiveFrameValid" Address="0x40003648" SizeInBytes="1">
           <TypeReference Name="boolean_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3255p0001_ReceiveFrame" Address="0x40003638" SizeInBytes="16">
+        <Variable Name="RxSlot_3266p0001_ReceiveFrame" Address="0x40003638" SizeInBytes="16">
           <TypeReference Name="CANFrame" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3255p0001_ReceiveFrameValid" Address="0x40003634" SizeInBytes="1">
+        <Variable Name="RxSlot_3266p0001_ReceiveFrameValid" Address="0x40003634" SizeInBytes="1">
           <TypeReference Name="boolean_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3256p0001_ReceiveFrame" Address="0x40003624" SizeInBytes="16">
+        <Variable Name="RxSlot_3267p0001_ReceiveFrame" Address="0x40003624" SizeInBytes="16">
           <TypeReference Name="CANFrame" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3256p0001_ReceiveFrameValid" Address="0x40003620" SizeInBytes="1">
+        <Variable Name="RxSlot_3267p0001_ReceiveFrameValid" Address="0x40003620" SizeInBytes="1">
           <TypeReference Name="boolean_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3257p0001_ReceiveFrame" Address="0x40003610" SizeInBytes="16">
+        <Variable Name="RxSlot_3268p0001_ReceiveFrame" Address="0x40003610" SizeInBytes="16">
           <TypeReference Name="CANFrame" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3257p0001_ReceiveFrameValid" Address="0x4000360C" SizeInBytes="1">
+        <Variable Name="RxSlot_3268p0001_ReceiveFrameValid" Address="0x4000360C" SizeInBytes="1">
           <TypeReference Name="boolean_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3669p0004_ReceiveFrame" Address="0x400035FC" SizeInBytes="16">
+        <Variable Name="RxSlot_3697p0004_ReceiveFrame" Address="0x400035FC" SizeInBytes="16">
           <TypeReference Name="CANFrame" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3669p0004_ReceiveFrameValid" Address="0x400035F8" SizeInBytes="1">
+        <Variable Name="RxSlot_3697p0004_ReceiveFrameValid" Address="0x400035F8" SizeInBytes="1">
           <TypeReference Name="boolean_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3671p0001_ReceiveFrame" Address="0x400035E8" SizeInBytes="16">
+        <Variable Name="RxSlot_3699p0001_ReceiveFrame" Address="0x400035E8" SizeInBytes="16">
           <TypeReference Name="CANFrame" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3671p0001_ReceiveFrameValid" Address="0x400035E4" SizeInBytes="1">
+        <Variable Name="RxSlot_3699p0001_ReceiveFrameValid" Address="0x400035E4" SizeInBytes="1">
           <TypeReference Name="boolean_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3808p0001_ReceiveFrame" Address="0x400035D4" SizeInBytes="16">
+        <Variable Name="RxSlot_3836p0001_ReceiveFrame" Address="0x400035D4" SizeInBytes="16">
           <TypeReference Name="CANFrame" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_3808p0001_ReceiveFrameValid" Address="0x400035D0" SizeInBytes="1">
+        <Variable Name="RxSlot_3836p0001_ReceiveFrameValid" Address="0x400035D0" SizeInBytes="1">
           <TypeReference Name="boolean_T" Namespace="TypeDefinition" />
         </Variable>
         <Variable Name="CAN_3_KeySuite_ReceiveQueue" Address="0x400037A4" SizeInBytes="16">
@@ -7710,7 +7710,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="RxSlot_3808p0001_Receive">
+        <Subprogram Name="RxSlot_3836p0001_Receive">
           <StartingAddress>0x0005128C</StartingAddress>
           <EndingAddress>0x00051384</EndingAddress>
           <ReturnValue>
@@ -7751,7 +7751,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="RxSlot_3671p0001_Receive">
+        <Subprogram Name="RxSlot_3699p0001_Receive">
           <StartingAddress>0x00051384</StartingAddress>
           <EndingAddress>0x0005147C</EndingAddress>
           <ReturnValue>
@@ -7792,7 +7792,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="RxSlot_3669p0004_Receive">
+        <Subprogram Name="RxSlot_3697p0004_Receive">
           <StartingAddress>0x0005147C</StartingAddress>
           <EndingAddress>0x00051574</EndingAddress>
           <ReturnValue>
@@ -7833,7 +7833,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="RxSlot_3257p0001_Receive">
+        <Subprogram Name="RxSlot_3268p0001_Receive">
           <StartingAddress>0x00051574</StartingAddress>
           <EndingAddress>0x0005166C</EndingAddress>
           <ReturnValue>
@@ -7874,7 +7874,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="RxSlot_3256p0001_Receive">
+        <Subprogram Name="RxSlot_3267p0001_Receive">
           <StartingAddress>0x0005166C</StartingAddress>
           <EndingAddress>0x00051764</EndingAddress>
           <ReturnValue>
@@ -7915,7 +7915,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="RxSlot_3255p0001_Receive">
+        <Subprogram Name="RxSlot_3266p0001_Receive">
           <StartingAddress>0x00051764</StartingAddress>
           <EndingAddress>0x0005185C</EndingAddress>
           <ReturnValue>
@@ -7956,7 +7956,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="RxSlot_3254p0001_Receive">
+        <Subprogram Name="RxSlot_3265p0001_Receive">
           <StartingAddress>0x0005185C</StartingAddress>
           <EndingAddress>0x00051954</EndingAddress>
           <ReturnValue>
@@ -7997,7 +7997,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="RxSlot_3253p0001_Receive">
+        <Subprogram Name="RxSlot_3264p0001_Receive">
           <StartingAddress>0x00051954</StartingAddress>
           <EndingAddress>0x00051A4C</EndingAddress>
           <ReturnValue>
@@ -8038,7 +8038,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="RxSlot_3252p0001_Receive">
+        <Subprogram Name="RxSlot_3263p0001_Receive">
           <StartingAddress>0x00051A4C</StartingAddress>
           <EndingAddress>0x00051B44</EndingAddress>
           <ReturnValue>
@@ -8079,7 +8079,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="RxSlot_3251p0001_Receive">
+        <Subprogram Name="RxSlot_3262p0001_Receive">
           <StartingAddress>0x00051B44</StartingAddress>
           <EndingAddress>0x00051C3C</EndingAddress>
           <ReturnValue>
@@ -8120,7 +8120,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="RxSlot_3672p0001_Receive">
+        <Subprogram Name="RxSlot_3700p0001_Receive">
           <StartingAddress>0x00051C3C</StartingAddress>
           <EndingAddress>0x00051D34</EndingAddress>
           <ReturnValue>
@@ -8161,7 +8161,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="RxSlot_4019p0001_Receive">
+        <Subprogram Name="RxSlot_4047p0001_Receive">
           <StartingAddress>0x00051D34</StartingAddress>
           <EndingAddress>0x00051E2C</EndingAddress>
           <ReturnValue>
@@ -8202,7 +8202,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="RxSlot_3861p0001_Receive">
+        <Subprogram Name="RxSlot_3889p0001_Receive">
           <StartingAddress>0x00051E2C</StartingAddress>
           <EndingAddress>0x00051F24</EndingAddress>
           <ReturnValue>
@@ -8243,7 +8243,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="RxSlot_3860p0001_Receive">
+        <Subprogram Name="RxSlot_3888p0001_Receive">
           <StartingAddress>0x00051F24</StartingAddress>
           <EndingAddress>0x0005201C</EndingAddress>
           <ReturnValue>
@@ -8284,7 +8284,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="RxSlot_3859p0001_Receive">
+        <Subprogram Name="RxSlot_3887p0001_Receive">
           <StartingAddress>0x0005201C</StartingAddress>
           <EndingAddress>0x00052114</EndingAddress>
           <ReturnValue>
@@ -8325,7 +8325,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="RxSlot_3729p0001_Receive">
+        <Subprogram Name="RxSlot_3757p0001_Receive">
           <StartingAddress>0x00052114</StartingAddress>
           <EndingAddress>0x0005220C</EndingAddress>
           <ReturnValue>
@@ -8366,7 +8366,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="RxSlot_3670p0001_Receive">
+        <Subprogram Name="RxSlot_3698p0001_Receive">
           <StartingAddress>0x0005220C</StartingAddress>
           <EndingAddress>0x00052304</EndingAddress>
           <ReturnValue>
@@ -8407,7 +8407,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="RxSlot_10273p001_Receive">
+        <Subprogram Name="RxSlot_3478p0004_Receive">
           <StartingAddress>0x00052304</StartingAddress>
           <EndingAddress>0x000523FC</EndingAddress>
           <ReturnValue>
@@ -8448,7 +8448,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="RxSlot_3055p0001_Receive">
+        <Subprogram Name="RxSlot_3066p0001_Receive">
           <StartingAddress>0x000523FC</StartingAddress>
           <EndingAddress>0x000524F4</EndingAddress>
           <ReturnValue>
@@ -8489,7 +8489,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="RxSlot_3054p0001_Receive">
+        <Subprogram Name="RxSlot_3065p0001_Receive">
           <StartingAddress>0x000524F4</StartingAddress>
           <EndingAddress>0x000525EC</EndingAddress>
           <ReturnValue>
@@ -8530,7 +8530,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="RxSlot_3053p0002_Receive">
+        <Subprogram Name="RxSlot_3064p0002_Receive">
           <StartingAddress>0x000525EC</StartingAddress>
           <EndingAddress>0x000526E4</EndingAddress>
           <ReturnValue>
@@ -8847,7 +8847,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="RxSlot_3858p0001_Receive">
+        <Subprogram Name="RxSlot_3886p0001_Receive">
           <StartingAddress>0x00052CD8</StartingAddress>
           <EndingAddress>0x00052DA8</EndingAddress>
           <ReturnValue>
@@ -12536,84 +12536,84 @@
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4325p0001" Address="0x000668F0" SizeInBytes="12">
+        <Variable Name="DOut4364p0004" Address="0x000668F0" SizeInBytes="12">
           <TypeReference Name="S_BasicOut_Defn_DiscreteOut" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4326p0001" Address="0x000668E4" SizeInBytes="12">
+        <Variable Name="DOut4365p0004" Address="0x000668E4" SizeInBytes="12">
           <TypeReference Name="S_BasicOut_Defn_DiscreteOut" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4327p0001" Address="0x000668D8" SizeInBytes="12">
+        <Variable Name="DOut4366p0004" Address="0x000668D8" SizeInBytes="12">
           <TypeReference Name="S_BasicOut_Defn_DiscreteOut" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4328p0001" Address="0x000668CC" SizeInBytes="12">
+        <Variable Name="DOut4367p0004" Address="0x000668CC" SizeInBytes="12">
           <TypeReference Name="S_BasicOut_Defn_DiscreteOut" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4329p0001" Address="0x000668C0" SizeInBytes="12">
+        <Variable Name="DOut4368p0004" Address="0x000668C0" SizeInBytes="12">
           <TypeReference Name="S_BasicOut_Defn_DiscreteOut" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4330p0001" Address="0x000668B4" SizeInBytes="12">
+        <Variable Name="DOut4369p0004" Address="0x000668B4" SizeInBytes="12">
           <TypeReference Name="S_BasicOut_Defn_DiscreteOut" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4331p0001" Address="0x000668A8" SizeInBytes="12">
+        <Variable Name="DOut4370p0004" Address="0x000668A8" SizeInBytes="12">
           <TypeReference Name="S_BasicOut_Defn_DiscreteOut" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4332p0001" Address="0x0006689C" SizeInBytes="12">
+        <Variable Name="DOut4371p0004" Address="0x0006689C" SizeInBytes="12">
           <TypeReference Name="S_BasicOut_Defn_DiscreteOut" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4561p0001" Address="0x00066890" SizeInBytes="12">
+        <Variable Name="DOut4600p0004" Address="0x00066890" SizeInBytes="12">
           <TypeReference Name="S_BasicOut_Defn_DiscreteOut" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4564p0001" Address="0x00066884" SizeInBytes="12">
+        <Variable Name="DOut4603p0004" Address="0x00066884" SizeInBytes="12">
           <TypeReference Name="S_BasicOut_Defn_DiscreteOut" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4565p0001" Address="0x00066878" SizeInBytes="12">
+        <Variable Name="DOut4604p0004" Address="0x00066878" SizeInBytes="12">
           <TypeReference Name="S_BasicOut_Defn_DiscreteOut" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut5628p0004" Address="0x0006686C" SizeInBytes="12">
+        <Variable Name="DOut5671p0001" Address="0x0006686C" SizeInBytes="12">
           <TypeReference Name="S_BasicOut_Defn_DiscreteOut" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
@@ -12700,52 +12700,52 @@
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4323p0001_MC33800_Methods" Address="0x00066B7C" SizeInBytes="16">
+        <Variable Name="DOut4362p0004_MC33800_Methods" Address="0x00066B7C" SizeInBytes="16">
           <TypeReference Name="S_DigitalOutMethod" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4323p0001_MC33800DigitalOut" Address="0x00066B8C" SizeInBytes="12">
+        <Variable Name="DOut4362p0004_MC33800DigitalOut" Address="0x00066B8C" SizeInBytes="12">
           <TypeReference Name="S_DigitalOutObject" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4323p0001" Address="0x00066B04" SizeInBytes="24">
+        <Variable Name="DOut4362p0004" Address="0x00066B04" SizeInBytes="24">
           <TypeReference Name="S_MC33800Output_Defn_DiscreteOut" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4323p0001_State" Address="0x40004548" SizeInBytes="1">
+        <Variable Name="DOut4362p0004_State" Address="0x40004548" SizeInBytes="1">
           <TypeReference Name="E_ResourceState" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="DOut4324p0001_MC33800_Methods" Address="0x00066B98" SizeInBytes="16">
+        <Variable Name="DOut4363p0004_MC33800_Methods" Address="0x00066B98" SizeInBytes="16">
           <TypeReference Name="S_DigitalOutMethod" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4324p0001_MC33800DigitalOut" Address="0x00066BA8" SizeInBytes="12">
+        <Variable Name="DOut4363p0004_MC33800DigitalOut" Address="0x00066BA8" SizeInBytes="12">
           <TypeReference Name="S_DigitalOutObject" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4324p0001" Address="0x00066AEC" SizeInBytes="24">
+        <Variable Name="DOut4363p0004" Address="0x00066AEC" SizeInBytes="24">
           <TypeReference Name="S_MC33800Output_Defn_DiscreteOut" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4324p0001_State" Address="0x40004547" SizeInBytes="1">
+        <Variable Name="DOut4363p0004_State" Address="0x40004547" SizeInBytes="1">
           <TypeReference Name="E_ResourceState" Namespace="TypeDefinition" />
         </Variable>
         <Variable Name="S_SHRC_4SPIDeviceMethods" Address="0x00066BB4" SizeInBytes="12">
@@ -12947,76 +12947,76 @@
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4333p0001_MC33800_Methods" Address="0x00066CB8" SizeInBytes="16">
+        <Variable Name="DOut4372p0004_MC33800_Methods" Address="0x00066CB8" SizeInBytes="16">
           <TypeReference Name="S_DigitalOutMethod" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4333p0001_MC33800DigitalOut" Address="0x00066CC8" SizeInBytes="12">
+        <Variable Name="DOut4372p0004_MC33800DigitalOut" Address="0x00066CC8" SizeInBytes="12">
           <TypeReference Name="S_DigitalOutObject" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4333p0001" Address="0x00066A14" SizeInBytes="24">
+        <Variable Name="DOut4372p0004" Address="0x00066A14" SizeInBytes="24">
           <TypeReference Name="S_MC33800Output_Defn_DiscreteOut" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4333p0001_State" Address="0x40004546" SizeInBytes="1">
+        <Variable Name="DOut4372p0004_State" Address="0x40004546" SizeInBytes="1">
           <TypeReference Name="E_ResourceState" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="DOut4334p0001_MC33800_Methods" Address="0x00066CD4" SizeInBytes="16">
+        <Variable Name="DOut4373p0004_MC33800_Methods" Address="0x00066CD4" SizeInBytes="16">
           <TypeReference Name="S_DigitalOutMethod" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4334p0001_MC33800DigitalOut" Address="0x00066CE4" SizeInBytes="12">
+        <Variable Name="DOut4373p0004_MC33800DigitalOut" Address="0x00066CE4" SizeInBytes="12">
           <TypeReference Name="S_DigitalOutObject" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4334p0001" Address="0x000669FC" SizeInBytes="24">
+        <Variable Name="DOut4373p0004" Address="0x000669FC" SizeInBytes="24">
           <TypeReference Name="S_MC33800Output_Defn_DiscreteOut" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4334p0001_State" Address="0x40004545" SizeInBytes="1">
+        <Variable Name="DOut4373p0004_State" Address="0x40004545" SizeInBytes="1">
           <TypeReference Name="E_ResourceState" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="DOut4335p0001_MC33800_Methods" Address="0x00066CF0" SizeInBytes="16">
+        <Variable Name="DOut4374p0004_MC33800_Methods" Address="0x00066CF0" SizeInBytes="16">
           <TypeReference Name="S_DigitalOutMethod" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4335p0001_MC33800DigitalOut" Address="0x00066D00" SizeInBytes="12">
+        <Variable Name="DOut4374p0004_MC33800DigitalOut" Address="0x00066D00" SizeInBytes="12">
           <TypeReference Name="S_DigitalOutObject" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4335p0001" Address="0x000669E4" SizeInBytes="24">
+        <Variable Name="DOut4374p0004" Address="0x000669E4" SizeInBytes="24">
           <TypeReference Name="S_MC33800Output_Defn_DiscreteOut" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4335p0001_State" Address="0x40004544" SizeInBytes="1">
+        <Variable Name="DOut4374p0004_State" Address="0x40004544" SizeInBytes="1">
           <TypeReference Name="E_ResourceState" Namespace="TypeDefinition" />
         </Variable>
         <Variable Name="MC33800_LSO9_MC33800_Methods" Address="0x00066D0C" SizeInBytes="16">
@@ -13040,52 +13040,52 @@
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4562p0001_MC33800_Methods" Address="0x00066D28" SizeInBytes="16">
+        <Variable Name="DOut4601p0004_MC33800_Methods" Address="0x00066D28" SizeInBytes="16">
           <TypeReference Name="S_DigitalOutMethod" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4562p0001_MC33800DigitalOut" Address="0x00066D38" SizeInBytes="12">
+        <Variable Name="DOut4601p0004_MC33800DigitalOut" Address="0x00066D38" SizeInBytes="12">
           <TypeReference Name="S_DigitalOutObject" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4562p0001" Address="0x000669B4" SizeInBytes="24">
+        <Variable Name="DOut4601p0004" Address="0x000669B4" SizeInBytes="24">
           <TypeReference Name="S_MC33800Output_Defn_DiscreteOut" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4562p0001_State" Address="0x40004543" SizeInBytes="1">
+        <Variable Name="DOut4601p0004_State" Address="0x40004543" SizeInBytes="1">
           <TypeReference Name="E_ResourceState" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="DOut4563p0001_MC33800_Methods" Address="0x00066D44" SizeInBytes="16">
+        <Variable Name="DOut4602p0004_MC33800_Methods" Address="0x00066D44" SizeInBytes="16">
           <TypeReference Name="S_DigitalOutMethod" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4563p0001_MC33800DigitalOut" Address="0x00066D54" SizeInBytes="12">
+        <Variable Name="DOut4602p0004_MC33800DigitalOut" Address="0x00066D54" SizeInBytes="12">
           <TypeReference Name="S_DigitalOutObject" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4563p0001" Address="0x0006699C" SizeInBytes="24">
+        <Variable Name="DOut4602p0004" Address="0x0006699C" SizeInBytes="24">
           <TypeReference Name="S_MC33800Output_Defn_DiscreteOut" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4563p0001_State" Address="0x40004542" SizeInBytes="1">
+        <Variable Name="DOut4602p0004_State" Address="0x40004542" SizeInBytes="1">
           <TypeReference Name="E_ResourceState" Namespace="TypeDefinition" />
         </Variable>
         <Variable Name="MC33800_LSO10_MC33800_Methods" Address="0x00066D60" SizeInBytes="16">
@@ -13130,28 +13130,28 @@
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4566p0001_MC33800_Methods" Address="0x00066D98" SizeInBytes="16">
+        <Variable Name="DOut4605p0004_MC33800_Methods" Address="0x00066D98" SizeInBytes="16">
           <TypeReference Name="S_DigitalOutMethod" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4566p0001_MC33800DigitalOut" Address="0x00066DA8" SizeInBytes="12">
+        <Variable Name="DOut4605p0004_MC33800DigitalOut" Address="0x00066DA8" SizeInBytes="12">
           <TypeReference Name="S_DigitalOutObject" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4566p0001" Address="0x00066954" SizeInBytes="24">
+        <Variable Name="DOut4605p0004" Address="0x00066954" SizeInBytes="24">
           <TypeReference Name="S_MC33800Output_Defn_DiscreteOut" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4566p0001_State" Address="0x40004541" SizeInBytes="1">
+        <Variable Name="DOut4605p0004_State" Address="0x40004541" SizeInBytes="1">
           <TypeReference Name="E_ResourceState" Namespace="TypeDefinition" />
         </Variable>
         <Variable Name="MC33800_MPRD_MC33800_Methods" Address="0x00066DB4" SizeInBytes="16">
@@ -13376,204 +13376,204 @@
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4325p0001_State" Address="0x40004534" SizeInBytes="1">
+        <Variable Name="DOut4364p0004_State" Address="0x40004534" SizeInBytes="1">
           <TypeReference Name="E_ResourceState" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="DOut4325p0001_CPUOut_Methods" Address="0x00066EEC" SizeInBytes="16">
+        <Variable Name="DOut4364p0004_CPUOut_Methods" Address="0x00066EEC" SizeInBytes="16">
           <TypeReference Name="S_DigitalOutMethod" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4325p0001_CPUDigitalOut" Address="0x00066EFC" SizeInBytes="12">
+        <Variable Name="DOut4364p0004_CPUDigitalOut" Address="0x00066EFC" SizeInBytes="12">
           <TypeReference Name="S_DigitalOutObject" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4326p0001_State" Address="0x40004535" SizeInBytes="1">
+        <Variable Name="DOut4365p0004_State" Address="0x40004535" SizeInBytes="1">
           <TypeReference Name="E_ResourceState" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="DOut4326p0001_CPUOut_Methods" Address="0x00066F08" SizeInBytes="16">
+        <Variable Name="DOut4365p0004_CPUOut_Methods" Address="0x00066F08" SizeInBytes="16">
           <TypeReference Name="S_DigitalOutMethod" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4326p0001_CPUDigitalOut" Address="0x00066F18" SizeInBytes="12">
+        <Variable Name="DOut4365p0004_CPUDigitalOut" Address="0x00066F18" SizeInBytes="12">
           <TypeReference Name="S_DigitalOutObject" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4327p0001_State" Address="0x40004536" SizeInBytes="1">
+        <Variable Name="DOut4366p0004_State" Address="0x40004536" SizeInBytes="1">
           <TypeReference Name="E_ResourceState" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="DOut4327p0001_CPUOut_Methods" Address="0x00066F24" SizeInBytes="16">
+        <Variable Name="DOut4366p0004_CPUOut_Methods" Address="0x00066F24" SizeInBytes="16">
           <TypeReference Name="S_DigitalOutMethod" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4327p0001_CPUDigitalOut" Address="0x00066F34" SizeInBytes="12">
+        <Variable Name="DOut4366p0004_CPUDigitalOut" Address="0x00066F34" SizeInBytes="12">
           <TypeReference Name="S_DigitalOutObject" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4328p0001_State" Address="0x40004537" SizeInBytes="1">
+        <Variable Name="DOut4367p0004_State" Address="0x40004537" SizeInBytes="1">
           <TypeReference Name="E_ResourceState" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="DOut4328p0001_CPUOut_Methods" Address="0x00066F40" SizeInBytes="16">
+        <Variable Name="DOut4367p0004_CPUOut_Methods" Address="0x00066F40" SizeInBytes="16">
           <TypeReference Name="S_DigitalOutMethod" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4328p0001_CPUDigitalOut" Address="0x00066F50" SizeInBytes="12">
+        <Variable Name="DOut4367p0004_CPUDigitalOut" Address="0x00066F50" SizeInBytes="12">
           <TypeReference Name="S_DigitalOutObject" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4329p0001_State" Address="0x40004538" SizeInBytes="1">
+        <Variable Name="DOut4368p0004_State" Address="0x40004538" SizeInBytes="1">
           <TypeReference Name="E_ResourceState" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="DOut4329p0001_CPUOut_Methods" Address="0x00066F5C" SizeInBytes="16">
+        <Variable Name="DOut4368p0004_CPUOut_Methods" Address="0x00066F5C" SizeInBytes="16">
           <TypeReference Name="S_DigitalOutMethod" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4329p0001_CPUDigitalOut" Address="0x00066F6C" SizeInBytes="12">
+        <Variable Name="DOut4368p0004_CPUDigitalOut" Address="0x00066F6C" SizeInBytes="12">
           <TypeReference Name="S_DigitalOutObject" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4330p0001_State" Address="0x40004539" SizeInBytes="1">
+        <Variable Name="DOut4369p0004_State" Address="0x40004539" SizeInBytes="1">
           <TypeReference Name="E_ResourceState" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="DOut4330p0001_CPUOut_Methods" Address="0x00066F78" SizeInBytes="16">
+        <Variable Name="DOut4369p0004_CPUOut_Methods" Address="0x00066F78" SizeInBytes="16">
           <TypeReference Name="S_DigitalOutMethod" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4330p0001_CPUDigitalOut" Address="0x00066F88" SizeInBytes="12">
+        <Variable Name="DOut4369p0004_CPUDigitalOut" Address="0x00066F88" SizeInBytes="12">
           <TypeReference Name="S_DigitalOutObject" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4331p0001_State" Address="0x4000453A" SizeInBytes="1">
+        <Variable Name="DOut4370p0004_State" Address="0x4000453A" SizeInBytes="1">
           <TypeReference Name="E_ResourceState" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="DOut4331p0001_CPUOut_Methods" Address="0x00066F94" SizeInBytes="16">
+        <Variable Name="DOut4370p0004_CPUOut_Methods" Address="0x00066F94" SizeInBytes="16">
           <TypeReference Name="S_DigitalOutMethod" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4331p0001_CPUDigitalOut" Address="0x00066FA4" SizeInBytes="12">
+        <Variable Name="DOut4370p0004_CPUDigitalOut" Address="0x00066FA4" SizeInBytes="12">
           <TypeReference Name="S_DigitalOutObject" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4332p0001_State" Address="0x4000453B" SizeInBytes="1">
+        <Variable Name="DOut4371p0004_State" Address="0x4000453B" SizeInBytes="1">
           <TypeReference Name="E_ResourceState" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="DOut4332p0001_CPUOut_Methods" Address="0x00066FB0" SizeInBytes="16">
+        <Variable Name="DOut4371p0004_CPUOut_Methods" Address="0x00066FB0" SizeInBytes="16">
           <TypeReference Name="S_DigitalOutMethod" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4332p0001_CPUDigitalOut" Address="0x00066FC0" SizeInBytes="12">
+        <Variable Name="DOut4371p0004_CPUDigitalOut" Address="0x00066FC0" SizeInBytes="12">
           <TypeReference Name="S_DigitalOutObject" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4561p0001_State" Address="0x4000453C" SizeInBytes="1">
+        <Variable Name="DOut4600p0004_State" Address="0x4000453C" SizeInBytes="1">
           <TypeReference Name="E_ResourceState" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="DOut4561p0001_CPUOut_Methods" Address="0x00066FCC" SizeInBytes="16">
+        <Variable Name="DOut4600p0004_CPUOut_Methods" Address="0x00066FCC" SizeInBytes="16">
           <TypeReference Name="S_DigitalOutMethod" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4561p0001_CPUDigitalOut" Address="0x00066FDC" SizeInBytes="12">
+        <Variable Name="DOut4600p0004_CPUDigitalOut" Address="0x00066FDC" SizeInBytes="12">
           <TypeReference Name="S_DigitalOutObject" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4564p0001_State" Address="0x4000453D" SizeInBytes="1">
+        <Variable Name="DOut4603p0004_State" Address="0x4000453D" SizeInBytes="1">
           <TypeReference Name="E_ResourceState" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="DOut4564p0001_CPUOut_Methods" Address="0x00066FE8" SizeInBytes="16">
+        <Variable Name="DOut4603p0004_CPUOut_Methods" Address="0x00066FE8" SizeInBytes="16">
           <TypeReference Name="S_DigitalOutMethod" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4564p0001_CPUDigitalOut" Address="0x00066FF8" SizeInBytes="12">
+        <Variable Name="DOut4603p0004_CPUDigitalOut" Address="0x00066FF8" SizeInBytes="12">
           <TypeReference Name="S_DigitalOutObject" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4565p0001_State" Address="0x4000453E" SizeInBytes="1">
+        <Variable Name="DOut4604p0004_State" Address="0x4000453E" SizeInBytes="1">
           <TypeReference Name="E_ResourceState" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="DOut4565p0001_CPUOut_Methods" Address="0x00067004" SizeInBytes="16">
+        <Variable Name="DOut4604p0004_CPUOut_Methods" Address="0x00067004" SizeInBytes="16">
           <TypeReference Name="S_DigitalOutMethod" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut4565p0001_CPUDigitalOut" Address="0x00067014" SizeInBytes="12">
+        <Variable Name="DOut4604p0004_CPUDigitalOut" Address="0x00067014" SizeInBytes="12">
           <TypeReference Name="S_DigitalOutObject" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut5628p0004_State" Address="0x4000453F" SizeInBytes="1">
+        <Variable Name="DOut5671p0001_State" Address="0x4000453F" SizeInBytes="1">
           <TypeReference Name="E_ResourceState" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="DOut5628p0004_CPUOut_Methods" Address="0x00067020" SizeInBytes="16">
+        <Variable Name="DOut5671p0001_CPUOut_Methods" Address="0x00067020" SizeInBytes="16">
           <TypeReference Name="S_DigitalOutMethod" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="DOut5628p0004_CPUDigitalOut" Address="0x00067030" SizeInBytes="12">
+        <Variable Name="DOut5671p0001_CPUDigitalOut" Address="0x00067030" SizeInBytes="12">
           <TypeReference Name="S_DigitalOutObject" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
@@ -18001,7 +18001,7 @@
           <StartingAddress>0x00054B5C</StartingAddress>
           <EndingAddress>0x00054BB4</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4325p0001_DiscreteOutput_Get">
+        <Subprogram Name="DOut4364p0004_DiscreteOutput_Get">
           <StartingAddress>0x00054BB4</StartingAddress>
           <EndingAddress>0x00054BC8</EndingAddress>
           <ReturnValue>
@@ -18019,7 +18019,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut4326p0001_DiscreteOutput_Get">
+        <Subprogram Name="DOut4365p0004_DiscreteOutput_Get">
           <StartingAddress>0x00054BC8</StartingAddress>
           <EndingAddress>0x00054BDC</EndingAddress>
           <ReturnValue>
@@ -18037,7 +18037,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut4327p0001_DiscreteOutput_Get">
+        <Subprogram Name="DOut4366p0004_DiscreteOutput_Get">
           <StartingAddress>0x00054BDC</StartingAddress>
           <EndingAddress>0x00054BF0</EndingAddress>
           <ReturnValue>
@@ -18055,7 +18055,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut4328p0001_DiscreteOutput_Get">
+        <Subprogram Name="DOut4367p0004_DiscreteOutput_Get">
           <StartingAddress>0x00054BF0</StartingAddress>
           <EndingAddress>0x00054C04</EndingAddress>
           <ReturnValue>
@@ -18073,7 +18073,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut4329p0001_DiscreteOutput_Get">
+        <Subprogram Name="DOut4368p0004_DiscreteOutput_Get">
           <StartingAddress>0x00054C04</StartingAddress>
           <EndingAddress>0x00054C18</EndingAddress>
           <ReturnValue>
@@ -18091,7 +18091,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut4330p0001_DiscreteOutput_Get">
+        <Subprogram Name="DOut4369p0004_DiscreteOutput_Get">
           <StartingAddress>0x00054C18</StartingAddress>
           <EndingAddress>0x00054C2C</EndingAddress>
           <ReturnValue>
@@ -18109,7 +18109,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut4331p0001_DiscreteOutput_Get">
+        <Subprogram Name="DOut4370p0004_DiscreteOutput_Get">
           <StartingAddress>0x00054C2C</StartingAddress>
           <EndingAddress>0x00054C40</EndingAddress>
           <ReturnValue>
@@ -18127,7 +18127,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut4332p0001_DiscreteOutput_Get">
+        <Subprogram Name="DOut4371p0004_DiscreteOutput_Get">
           <StartingAddress>0x00054C40</StartingAddress>
           <EndingAddress>0x00054C54</EndingAddress>
           <ReturnValue>
@@ -18145,7 +18145,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut4561p0001_DiscreteOutput_Get">
+        <Subprogram Name="DOut4600p0004_DiscreteOutput_Get">
           <StartingAddress>0x00054C54</StartingAddress>
           <EndingAddress>0x00054C68</EndingAddress>
           <ReturnValue>
@@ -18163,7 +18163,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut4564p0001_DiscreteOutput_Get">
+        <Subprogram Name="DOut4603p0004_DiscreteOutput_Get">
           <StartingAddress>0x00054C68</StartingAddress>
           <EndingAddress>0x00054C7C</EndingAddress>
           <ReturnValue>
@@ -18181,7 +18181,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut4565p0001_DiscreteOutput_Get">
+        <Subprogram Name="DOut4604p0004_DiscreteOutput_Get">
           <StartingAddress>0x00054C7C</StartingAddress>
           <EndingAddress>0x00054C90</EndingAddress>
           <ReturnValue>
@@ -18199,7 +18199,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut5628p0004_DiscreteOutput_Get">
+        <Subprogram Name="DOut5671p0001_DiscreteOutput_Get">
           <StartingAddress>0x00054C90</StartingAddress>
           <EndingAddress>0x00054CA4</EndingAddress>
           <ReturnValue>
@@ -18310,51 +18310,51 @@
           <StartingAddress>0x00054D84</StartingAddress>
           <EndingAddress>0x00054DA4</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut5628p0004_DiscreteOutput_Create">
+        <Subprogram Name="DOut5671p0001_DiscreteOutput_Create">
           <StartingAddress>0x00054DA4</StartingAddress>
           <EndingAddress>0x00054DC4</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4565p0001_DiscreteOutput_Create">
+        <Subprogram Name="DOut4604p0004_DiscreteOutput_Create">
           <StartingAddress>0x00054DC4</StartingAddress>
           <EndingAddress>0x00054DE4</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4564p0001_DiscreteOutput_Create">
+        <Subprogram Name="DOut4603p0004_DiscreteOutput_Create">
           <StartingAddress>0x00054DE4</StartingAddress>
           <EndingAddress>0x00054E04</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4561p0001_DiscreteOutput_Create">
+        <Subprogram Name="DOut4600p0004_DiscreteOutput_Create">
           <StartingAddress>0x00054E04</StartingAddress>
           <EndingAddress>0x00054E24</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4332p0001_DiscreteOutput_Create">
+        <Subprogram Name="DOut4371p0004_DiscreteOutput_Create">
           <StartingAddress>0x00054E24</StartingAddress>
           <EndingAddress>0x00054E44</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4331p0001_DiscreteOutput_Create">
+        <Subprogram Name="DOut4370p0004_DiscreteOutput_Create">
           <StartingAddress>0x00054E44</StartingAddress>
           <EndingAddress>0x00054E64</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4330p0001_DiscreteOutput_Create">
+        <Subprogram Name="DOut4369p0004_DiscreteOutput_Create">
           <StartingAddress>0x00054E64</StartingAddress>
           <EndingAddress>0x00054E84</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4329p0001_DiscreteOutput_Create">
+        <Subprogram Name="DOut4368p0004_DiscreteOutput_Create">
           <StartingAddress>0x00054E84</StartingAddress>
           <EndingAddress>0x00054EA4</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4328p0001_DiscreteOutput_Create">
+        <Subprogram Name="DOut4367p0004_DiscreteOutput_Create">
           <StartingAddress>0x00054EA4</StartingAddress>
           <EndingAddress>0x00054EC4</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4327p0001_DiscreteOutput_Create">
+        <Subprogram Name="DOut4366p0004_DiscreteOutput_Create">
           <StartingAddress>0x00054EC4</StartingAddress>
           <EndingAddress>0x00054EE4</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4326p0001_DiscreteOutput_Create">
+        <Subprogram Name="DOut4365p0004_DiscreteOutput_Create">
           <StartingAddress>0x00054EE4</StartingAddress>
           <EndingAddress>0x00054F04</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4325p0001_DiscreteOutput_Create">
+        <Subprogram Name="DOut4364p0004_DiscreteOutput_Create">
           <StartingAddress>0x00054F04</StartingAddress>
           <EndingAddress>0x00054F20</EndingAddress>
         </Subprogram>
@@ -18387,51 +18387,51 @@
           <StartingAddress>0x00054F4C</StartingAddress>
           <EndingAddress>0x00054F68</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut5628p0004_DiscreteOutput_Stop">
+        <Subprogram Name="DOut5671p0001_DiscreteOutput_Stop">
           <StartingAddress>0x00054F68</StartingAddress>
           <EndingAddress>0x00054F84</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4565p0001_DiscreteOutput_Stop">
+        <Subprogram Name="DOut4604p0004_DiscreteOutput_Stop">
           <StartingAddress>0x00054F84</StartingAddress>
           <EndingAddress>0x00054FA0</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4564p0001_DiscreteOutput_Stop">
+        <Subprogram Name="DOut4603p0004_DiscreteOutput_Stop">
           <StartingAddress>0x00054FA0</StartingAddress>
           <EndingAddress>0x00054FBC</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4561p0001_DiscreteOutput_Stop">
+        <Subprogram Name="DOut4600p0004_DiscreteOutput_Stop">
           <StartingAddress>0x00054FBC</StartingAddress>
           <EndingAddress>0x00054FD8</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4332p0001_DiscreteOutput_Stop">
+        <Subprogram Name="DOut4371p0004_DiscreteOutput_Stop">
           <StartingAddress>0x00054FD8</StartingAddress>
           <EndingAddress>0x00054FF4</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4331p0001_DiscreteOutput_Stop">
+        <Subprogram Name="DOut4370p0004_DiscreteOutput_Stop">
           <StartingAddress>0x00054FF4</StartingAddress>
           <EndingAddress>0x00055010</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4330p0001_DiscreteOutput_Stop">
+        <Subprogram Name="DOut4369p0004_DiscreteOutput_Stop">
           <StartingAddress>0x00055010</StartingAddress>
           <EndingAddress>0x0005502C</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4329p0001_DiscreteOutput_Stop">
+        <Subprogram Name="DOut4368p0004_DiscreteOutput_Stop">
           <StartingAddress>0x0005502C</StartingAddress>
           <EndingAddress>0x00055048</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4328p0001_DiscreteOutput_Stop">
+        <Subprogram Name="DOut4367p0004_DiscreteOutput_Stop">
           <StartingAddress>0x00055048</StartingAddress>
           <EndingAddress>0x00055064</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4327p0001_DiscreteOutput_Stop">
+        <Subprogram Name="DOut4366p0004_DiscreteOutput_Stop">
           <StartingAddress>0x00055064</StartingAddress>
           <EndingAddress>0x00055080</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4326p0001_DiscreteOutput_Stop">
+        <Subprogram Name="DOut4365p0004_DiscreteOutput_Stop">
           <StartingAddress>0x00055080</StartingAddress>
           <EndingAddress>0x0005509C</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4325p0001_DiscreteOutput_Stop">
+        <Subprogram Name="DOut4364p0004_DiscreteOutput_Stop">
           <StartingAddress>0x0005509C</StartingAddress>
           <EndingAddress>0x000550B4</EndingAddress>
         </Subprogram>
@@ -18503,7 +18503,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut5628p0004_DiscreteOutput_Set">
+        <Subprogram Name="DOut5671p0001_DiscreteOutput_Set">
           <StartingAddress>0x00055200</StartingAddress>
           <EndingAddress>0x00055220</EndingAddress>
           <Parameters>
@@ -18513,7 +18513,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut4565p0001_DiscreteOutput_Set">
+        <Subprogram Name="DOut4604p0004_DiscreteOutput_Set">
           <StartingAddress>0x00055220</StartingAddress>
           <EndingAddress>0x00055240</EndingAddress>
           <Parameters>
@@ -18523,7 +18523,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut4564p0001_DiscreteOutput_Set">
+        <Subprogram Name="DOut4603p0004_DiscreteOutput_Set">
           <StartingAddress>0x00055240</StartingAddress>
           <EndingAddress>0x00055260</EndingAddress>
           <Parameters>
@@ -18533,7 +18533,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut4561p0001_DiscreteOutput_Set">
+        <Subprogram Name="DOut4600p0004_DiscreteOutput_Set">
           <StartingAddress>0x00055260</StartingAddress>
           <EndingAddress>0x00055280</EndingAddress>
           <Parameters>
@@ -18543,7 +18543,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut4332p0001_DiscreteOutput_Set">
+        <Subprogram Name="DOut4371p0004_DiscreteOutput_Set">
           <StartingAddress>0x00055280</StartingAddress>
           <EndingAddress>0x000552A0</EndingAddress>
           <Parameters>
@@ -18553,7 +18553,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut4331p0001_DiscreteOutput_Set">
+        <Subprogram Name="DOut4370p0004_DiscreteOutput_Set">
           <StartingAddress>0x000552A0</StartingAddress>
           <EndingAddress>0x000552C0</EndingAddress>
           <Parameters>
@@ -18563,7 +18563,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut4330p0001_DiscreteOutput_Set">
+        <Subprogram Name="DOut4369p0004_DiscreteOutput_Set">
           <StartingAddress>0x000552C0</StartingAddress>
           <EndingAddress>0x000552E0</EndingAddress>
           <Parameters>
@@ -18573,7 +18573,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut4329p0001_DiscreteOutput_Set">
+        <Subprogram Name="DOut4368p0004_DiscreteOutput_Set">
           <StartingAddress>0x000552E0</StartingAddress>
           <EndingAddress>0x00055300</EndingAddress>
           <Parameters>
@@ -18583,7 +18583,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut4328p0001_DiscreteOutput_Set">
+        <Subprogram Name="DOut4367p0004_DiscreteOutput_Set">
           <StartingAddress>0x00055300</StartingAddress>
           <EndingAddress>0x00055320</EndingAddress>
           <Parameters>
@@ -18593,7 +18593,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut4327p0001_DiscreteOutput_Set">
+        <Subprogram Name="DOut4366p0004_DiscreteOutput_Set">
           <StartingAddress>0x00055320</StartingAddress>
           <EndingAddress>0x00055340</EndingAddress>
           <Parameters>
@@ -18603,7 +18603,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut4326p0001_DiscreteOutput_Set">
+        <Subprogram Name="DOut4365p0004_DiscreteOutput_Set">
           <StartingAddress>0x00055340</StartingAddress>
           <EndingAddress>0x00055360</EndingAddress>
           <Parameters>
@@ -18613,7 +18613,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut4325p0001_DiscreteOutput_Set">
+        <Subprogram Name="DOut4364p0004_DiscreteOutput_Set">
           <StartingAddress>0x00055360</StartingAddress>
           <EndingAddress>0x0005537C</EndingAddress>
           <Parameters>
@@ -18697,7 +18697,7 @@
           <StartingAddress>0x00055504</StartingAddress>
           <EndingAddress>0x0005556C</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4566p0001_DiscreteOutput_Create">
+        <Subprogram Name="DOut4605p0004_DiscreteOutput_Create">
           <StartingAddress>0x0005556C</StartingAddress>
           <EndingAddress>0x000555DC</EndingAddress>
         </Subprogram>
@@ -18709,11 +18709,11 @@
           <StartingAddress>0x00055644</StartingAddress>
           <EndingAddress>0x000556AC</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4563p0001_DiscreteOutput_Create">
+        <Subprogram Name="DOut4602p0004_DiscreteOutput_Create">
           <StartingAddress>0x000556AC</StartingAddress>
           <EndingAddress>0x0005571C</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4562p0001_DiscreteOutput_Create">
+        <Subprogram Name="DOut4601p0004_DiscreteOutput_Create">
           <StartingAddress>0x0005571C</StartingAddress>
           <EndingAddress>0x0005578C</EndingAddress>
         </Subprogram>
@@ -18721,15 +18721,15 @@
           <StartingAddress>0x0005578C</StartingAddress>
           <EndingAddress>0x000557F4</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4335p0001_DiscreteOutput_Create">
+        <Subprogram Name="DOut4374p0004_DiscreteOutput_Create">
           <StartingAddress>0x000557F4</StartingAddress>
           <EndingAddress>0x00055864</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4334p0001_DiscreteOutput_Create">
+        <Subprogram Name="DOut4373p0004_DiscreteOutput_Create">
           <StartingAddress>0x00055864</StartingAddress>
           <EndingAddress>0x000558D4</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4333p0001_DiscreteOutput_Create">
+        <Subprogram Name="DOut4372p0004_DiscreteOutput_Create">
           <StartingAddress>0x000558D4</StartingAddress>
           <EndingAddress>0x00055944</EndingAddress>
         </Subprogram>
@@ -18765,19 +18765,19 @@
           <StartingAddress>0x00055C04</StartingAddress>
           <EndingAddress>0x00055C68</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4324p0001_DiscreteOutput_Create">
+        <Subprogram Name="DOut4363p0004_DiscreteOutput_Create">
           <StartingAddress>0x00055C68</StartingAddress>
           <EndingAddress>0x00055CDC</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4323p0001_DiscreteOutput_Create">
+        <Subprogram Name="DOut4362p0004_DiscreteOutput_Create">
           <StartingAddress>0x00055CDC</StartingAddress>
           <EndingAddress>0x00055D4C</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4566p0001_DiscreteOutput_Stop">
+        <Subprogram Name="DOut4605p0004_DiscreteOutput_Stop">
           <StartingAddress>0x00055D4C</StartingAddress>
           <EndingAddress>0x00055D8C</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4566p0001_DiscreteOutput_Set">
+        <Subprogram Name="DOut4605p0004_DiscreteOutput_Set">
           <StartingAddress>0x00055D8C</StartingAddress>
           <EndingAddress>0x00055E1C</EndingAddress>
           <Parameters>
@@ -18787,11 +18787,11 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut4563p0001_DiscreteOutput_Stop">
+        <Subprogram Name="DOut4602p0004_DiscreteOutput_Stop">
           <StartingAddress>0x00055E1C</StartingAddress>
           <EndingAddress>0x00055E5C</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4563p0001_DiscreteOutput_Set">
+        <Subprogram Name="DOut4602p0004_DiscreteOutput_Set">
           <StartingAddress>0x00055E5C</StartingAddress>
           <EndingAddress>0x00055EEC</EndingAddress>
           <Parameters>
@@ -18801,11 +18801,11 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut4562p0001_DiscreteOutput_Stop">
+        <Subprogram Name="DOut4601p0004_DiscreteOutput_Stop">
           <StartingAddress>0x00055EEC</StartingAddress>
           <EndingAddress>0x00055F2C</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4562p0001_DiscreteOutput_Set">
+        <Subprogram Name="DOut4601p0004_DiscreteOutput_Set">
           <StartingAddress>0x00055F2C</StartingAddress>
           <EndingAddress>0x00055FBC</EndingAddress>
           <Parameters>
@@ -18815,11 +18815,11 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut4335p0001_DiscreteOutput_Stop">
+        <Subprogram Name="DOut4374p0004_DiscreteOutput_Stop">
           <StartingAddress>0x00055FBC</StartingAddress>
           <EndingAddress>0x00055FFC</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4335p0001_DiscreteOutput_Set">
+        <Subprogram Name="DOut4374p0004_DiscreteOutput_Set">
           <StartingAddress>0x00055FFC</StartingAddress>
           <EndingAddress>0x0005608C</EndingAddress>
           <Parameters>
@@ -18829,11 +18829,11 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut4334p0001_DiscreteOutput_Stop">
+        <Subprogram Name="DOut4373p0004_DiscreteOutput_Stop">
           <StartingAddress>0x0005608C</StartingAddress>
           <EndingAddress>0x000560CC</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4334p0001_DiscreteOutput_Set">
+        <Subprogram Name="DOut4373p0004_DiscreteOutput_Set">
           <StartingAddress>0x000560CC</StartingAddress>
           <EndingAddress>0x0005615C</EndingAddress>
           <Parameters>
@@ -18843,11 +18843,11 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut4333p0001_DiscreteOutput_Stop">
+        <Subprogram Name="DOut4372p0004_DiscreteOutput_Stop">
           <StartingAddress>0x0005615C</StartingAddress>
           <EndingAddress>0x0005619C</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4333p0001_DiscreteOutput_Set">
+        <Subprogram Name="DOut4372p0004_DiscreteOutput_Set">
           <StartingAddress>0x0005619C</StartingAddress>
           <EndingAddress>0x0005622C</EndingAddress>
           <Parameters>
@@ -18857,11 +18857,11 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut4324p0001_DiscreteOutput_Stop">
+        <Subprogram Name="DOut4363p0004_DiscreteOutput_Stop">
           <StartingAddress>0x0005622C</StartingAddress>
           <EndingAddress>0x0005626C</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4324p0001_DiscreteOutput_Set">
+        <Subprogram Name="DOut4363p0004_DiscreteOutput_Set">
           <StartingAddress>0x0005626C</StartingAddress>
           <EndingAddress>0x000562FC</EndingAddress>
           <Parameters>
@@ -18871,7 +18871,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut4323p0001_DiscreteOutput_Stop">
+        <Subprogram Name="DOut4362p0004_DiscreteOutput_Stop">
           <StartingAddress>0x000562FC</StartingAddress>
           <EndingAddress>0x0005633C</EndingAddress>
         </Subprogram>
@@ -18879,7 +18879,7 @@
           <StartingAddress>0x0005633C</StartingAddress>
           <EndingAddress>0x000563B0</EndingAddress>
         </Subprogram>
-        <Subprogram Name="DOut4323p0001_DiscreteOutput_Set">
+        <Subprogram Name="DOut4362p0004_DiscreteOutput_Set">
           <StartingAddress>0x000563B0</StartingAddress>
           <EndingAddress>0x00056440</EndingAddress>
           <Parameters>
@@ -22412,12 +22412,12 @@
         </Subprogram>
       </Subprograms>
     </CompilationUnit>
-    <CompilationUnit Name="C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Trigger_BGND_BASE_PERIODIC_5678p0001.c">
+    <CompilationUnit Name="C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Trigger_BGND_BASE_PERIODIC_5721p0001.c">
       <Producer>GNU C 4.4.0</Producer>
       <StartingAddress>0x00057E00</StartingAddress>
       <EndingAddress>0x000581F4</EndingAddress>
       <Subprograms>
-        <Subprogram Name="Trigger_BGND_BASE_PERIODIC_5678p0001">
+        <Subprogram Name="Trigger_BGND_BASE_PERIODIC_5721p0001">
           <StartingAddress>0x00057E00</StartingAddress>
           <EndingAddress>0x000581F4</EndingAddress>
         </Subprogram>
@@ -22434,12 +22434,12 @@
         </Subprogram>
       </Subprograms>
     </CompilationUnit>
-    <CompilationUnit Name="C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Trigger_FGND_RTI_PERIODIC_5687p0001.c">
+    <CompilationUnit Name="C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Trigger_FGND_RTI_PERIODIC_5730p0001.c">
       <Producer>GNU C 4.4.0</Producer>
       <StartingAddress>0x00058320</StartingAddress>
       <EndingAddress>0x00058364</EndingAddress>
       <Subprograms>
-        <Subprogram Name="Trigger_FGND_RTI_PERIODIC_5687p0001">
+        <Subprogram Name="Trigger_FGND_RTI_PERIODIC_5730p0001">
           <StartingAddress>0x00058320</StartingAddress>
           <EndingAddress>0x00058364</EndingAddress>
         </Subprogram>

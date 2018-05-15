@@ -1,13 +1,12 @@
 /*
  * File: BuckyWagon_01_MiniViewDisplay.c
  *
- * Real-Time Workshop code generated for Simulink model BuckyWagon_01.
+ * Code generated for Simulink model 'BuckyWagon_01'.
  *
- * Model version                        : 1.1518
- * Real-Time Workshop file version      : 7.5  (R2010a)  25-Jan-2010
- * Real-Time Workshop file generated on : Sun Jan 21 12:54:58 2018
- * TLC version                          : 7.5 (Jan 19 2010)
- * C/C++ source code generated on       : Sun Jan 21 12:55:01 2018
+ * Model version                  : 1.1520
+ * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
+ * TLC version                    : 8.0 (Feb  3 2011)
+ * C/C++ source code generated on : Mon Apr 23 14:25:32 2018
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -68,10 +67,10 @@
 #define BuckyWagon_01_event_upPressed  (9)
 #define BuckyWagon_01_event_upReleased (10)
 
-/* Named constants for Stateflow: '<S213>/Chart' */
+/* Named constants for Stateflow: '<S216>/Chart' */
 #define BuckyWagon_01_IN_CheckNextFault (1U)
 #define BuckyWagon_01_IN_Fault         (1U)
-#define BuckyWagon_01_IN_NO_ACTIVE_CHILD_k (0U)
+#define BuckyWagon_01_IN_NO_ACTIVE_CHILD_d (0U)
 #define BuckyWagon_01_IN_NoFault       (2U)
 #define BuckyWagon_01_IN_lastWait      (2U)
 #define BuckyWagon_01_IN_scrollText    (3U)
@@ -105,8 +104,14 @@ static void BuckyWagon_01_Quad(const uint8_T rtu_quadIndex[4], const uint8_T
   localDW);
 static void BuckyWagon_01_enter_internal_select_var(uint8_T rtu_21,
   rtB_Chart_BuckyWagon_01_n *localB, rtDW_Chart_BuckyWagon_01_o *localDW);
+static void BuckyWagon_01_storeSelect(const uint8_T rtu_dualIndex[2], const
+  uint8_T rtu_quadIndex[4], rtB_Chart_BuckyWagon_01_n *localB,
+  rtDW_Chart_BuckyWagon_01_o *localDW);
 static void BuckyWagon_01_enter_atomic_Setup_Init(uint8_T rtu_21,
   rtB_Chart_BuckyWagon_01_n *localB, rtDW_Chart_BuckyWagon_01_o *localDW);
+static void BuckyWagon_01_loadSelect(uint8_T rtu_singleIndex, const uint8_T
+  rtu_dualIndex[2], const uint8_T rtu_quadIndex[4], rtDW_Chart_BuckyWagon_01_o
+  *localDW);
 static void BuckyWagon_01_Setup(uint8_T rtu_listIndex, uint8_T rtu_singleIndex,
   const uint8_T rtu_dualIndex[2], const uint8_T rtu_quadIndex[4], uint8_T
   rtu_screen, const uint8_T rtu_setupNames[104], const uint8_T rtu_names[180],
@@ -125,19 +130,19 @@ static void BuckyWagon_01_chartstep_c2_BuckyWagon_01(uint8_T rtu_menuTime,
 /* Start for function-call system: '<S11>/Clear Screen' */
 void BuckyWagon_01_ClearScreen_Start(void)
 {
-  /* Start for S-Function (fcncallgen): '<S198>/Function-Call Generator' incorporates:
-   *  Start for SubSystem: '<S198>/Clear Screen'
+  /* Start for S-Function (fcncallgen): '<S201>/Function-Call Generator' incorporates:
+   *  Start for SubSystem: '<S201>/Clear Screen'
    */
 }
 
 /* Output and update for function-call system: '<S11>/Clear Screen' */
 void BuckyWagon_01_ClearScreen(void)
 {
-  /* S-Function (fcncallgen): '<S198>/Function-Call Generator' incorporates:
-   *  SubSystem: '<S198>/Clear Screen'
+  /* S-Function (fcncallgen): '<S201>/Function-Call Generator' incorporates:
+   *  SubSystem: '<S201>/Clear Screen'
    */
 
-  /* S-Function (motohawk_sfun_send_canmsgs): '<S219>/Send CAN Messages' */
+  /* S-Function (motohawk_sfun_send_canmsgs): '<S222>/Send CAN Messages' */
   /* Send CAN Message(s) */
   {
     /* Transmit Messages Asynchronously (every time block executes) */
@@ -155,8 +160,8 @@ void BuckyWagon_01_ClearScreen(void)
 /* Start for function-call system: '<S11>/Draw Rect' */
 void BuckyWagon_01_DrawRect_Start(void)
 {
-  /* Start for S-Function (fcncallgen): '<S202>/Function-Call Generator' incorporates:
-   *  Start for SubSystem: '<S202>/Subsystem'
+  /* Start for S-Function (fcncallgen): '<S205>/Function-Call Generator' incorporates:
+   *  Start for SubSystem: '<S205>/Subsystem'
    */
 }
 
@@ -164,11 +169,11 @@ void BuckyWagon_01_DrawRect_Start(void)
 void BuckyWagon_01_DrawRect(uint8_T rtu_x0, uint8_T rtu_x1, uint8_T rtu_y0,
   uint8_T rtu_y1, uint8_T rtu_linecolor, uint8_T rtu_fillcolor)
 {
-  /* S-Function (fcncallgen): '<S202>/Function-Call Generator' incorporates:
-   *  SubSystem: '<S202>/Subsystem'
+  /* S-Function (fcncallgen): '<S205>/Function-Call Generator' incorporates:
+   *  SubSystem: '<S205>/Subsystem'
    */
 
-  /* S-Function (motohawk_sfun_send_canmsgs): '<S223>/Send CAN Messages' */
+  /* S-Function (motohawk_sfun_send_canmsgs): '<S226>/Send CAN Messages' */
   /* Send CAN Message(s) */
   {
     /* Transmit Messages Asynchronously (every time block executes) */
@@ -216,43 +221,31 @@ void BuckyWagon_01_DrawRect(uint8_T rtu_x0, uint8_T rtu_x1, uint8_T rtu_y0,
 /* Start for function-call system: '<S11>/Send String_efficient' */
 void BuckyWagon_01_SendString_efficient_Start(void)
 {
-  /* Start for S-Function (fcncallgen): '<S216>/Function-Call Generator' incorporates:
-   *  Start for SubSystem: '<S216>/Subsystem'
+  /* Start for S-Function (fcncallgen): '<S219>/Function-Call Generator' incorporates:
+   *  Start for S-Function (fcncallgen): '<S233>/Function-Call Generator'
+   *  Start for S-Function (fcncallgen): '<S236>/Function-Call Generator'
+   *  Start for SubSystem: '<S219>/Subsystem'
+   *  Start for SubSystem: '<S233>/Send Substring (page 0)'
+   *  Start for SubSystem: '<S236>/Subsystem'
    */
 
-  /* Start for S-Function (fcncallgen): '<S230>/Function-Call Generator' incorporates:
-   *  Start for SubSystem: '<S230>/Send Substring (page 0)'
+  /* Start for S-Function (fcncallgen): '<S219>/Function-Call Generator' incorporates:
+   *  Start for S-Function (fcncallgen): '<S237>/Function-Call Generator'
+   *  Start for S-Function (fcncallgen): '<S240>/Function-Call Generator'
+   *  Start for SubSystem: '<S233>/Function-Call Subsystem'
+   *  Start for SubSystem: '<S233>/Send Substring (page 1)'
+   *  Start for SubSystem: '<S234>/Enabled Subsystem'
+   *  Start for SubSystem: '<S237>/Subsystem'
    */
 
-  /* Start for S-Function (fcncallgen): '<S233>/Function-Call Generator' incorporates:
-   *  Start for SubSystem: '<S230>/Function-Call Subsystem'
-   *  Start for SubSystem: '<S233>/Subsystem'
+  /* Start for S-Function (fcncallgen): '<S219>/Function-Call Generator' incorporates:
+   *  Start for S-Function (fcncallgen): '<S238>/Function-Call Generator'
+   *  Start for S-Function (fcncallgen): '<S242>/Function-Call Generator'
+   *  Start for SubSystem: '<S233>/Function-Call Subsystem1'
+   *  Start for SubSystem: '<S233>/Send Substring (page 2)'
+   *  Start for SubSystem: '<S235>/Enabled Subsystem'
+   *  Start for SubSystem: '<S238>/Subsystem'
    */
-
-  /* Start for enable SubSystem: '<S231>/Enabled Subsystem' */
-
-  /* Start for S-Function (fcncallgen): '<S237>/Function-Call Generator' incorporates:
-   *  Start for SubSystem: '<S230>/Send Substring (page 1)'
-   */
-
-  /* Start for S-Function (fcncallgen): '<S234>/Function-Call Generator' incorporates:
-   *  Start for SubSystem: '<S230>/Function-Call Subsystem1'
-   *  Start for SubSystem: '<S234>/Subsystem'
-   */
-
-  /* Start for enable SubSystem: '<S232>/Enabled Subsystem' */
-
-  /* Start for S-Function (fcncallgen): '<S239>/Function-Call Generator' incorporates:
-   *  Start for SubSystem: '<S230>/Send Substring (page 2)'
-   */
-
-  /* Start for S-Function (fcncallgen): '<S235>/Function-Call Generator' incorporates:
-   *  Start for SubSystem: '<S235>/Subsystem'
-   */
-
-  /* end of Start for SubSystem: '<S232>/Enabled Subsystem' */
-
-  /* end of Start for SubSystem: '<S231>/Enabled Subsystem' */
 }
 
 /* Output and update for function-call system: '<S11>/Send String_efficient' */
@@ -266,20 +259,15 @@ void BuckyWagon_01_SendString_efficient(uint8_T rtu_string, uint8_T rtu_b0,
   int8_T rtb_Compare_lf[7];
   int32_T i;
 
-  /* S-Function (fcncallgen): '<S216>/Function-Call Generator' incorporates:
-   *  SubSystem: '<S216>/Subsystem'
+  /* S-Function (fcncallgen): '<S219>/Function-Call Generator' incorporates:
+   *  S-Function (fcncallgen): '<S233>/Function-Call Generator'
+   *  S-Function (fcncallgen): '<S236>/Function-Call Generator'
+   *  SubSystem: '<S219>/Subsystem'
+   *  SubSystem: '<S233>/Send Substring (page 0)'
+   *  SubSystem: '<S236>/Subsystem'
    */
 
-  /* S-Function (fcncallgen): '<S230>/Function-Call Generator' incorporates:
-   *  SubSystem: '<S230>/Send Substring (page 0)'
-   */
-
-  /* S-Function (fcncallgen): '<S233>/Function-Call Generator' incorporates:
-   *  SubSystem: '<S230>/Function-Call Subsystem'
-   *  SubSystem: '<S233>/Subsystem'
-   */
-
-  /* S-Function (motohawk_sfun_send_canmsgs): '<S240>/Send CAN Messages' */
+  /* S-Function (motohawk_sfun_send_canmsgs): '<S243>/Send CAN Messages' */
   /* Send CAN Message(s) */
   {
     /* Transmit Messages Asynchronously (every time block executes) */
@@ -324,30 +312,36 @@ void BuckyWagon_01_SendString_efficient(uint8_T rtu_string, uint8_T rtu_b0,
     }
   }
 
-  /* RelationalOperator: '<S236>/Compare' incorporates:
-   *  Constant: '<S236>/Constant'
+  /* S-Function (fcncallgen): '<S219>/Function-Call Generator' incorporates:
+   *  SubSystem: '<S233>/Function-Call Subsystem'
+   */
+  /* RelationalOperator: '<S239>/Compare' incorporates:
+   *  Constant: '<S239>/Constant'
    */
   for (i = 0; i < 7; i++) {
     rtb_Compare_lf[i] = (rtu_string_c[i] != 0);
   }
 
-  /* Outputs for enable SubSystem: '<S231>/Enabled Subsystem' incorporates:
-   *  EnablePort: '<S237>/Enable'
-   *  Logic: '<S231>/Logical Operator'
+  /* End of RelationalOperator: '<S239>/Compare' */
+
+  /* S-Function (fcncallgen): '<S219>/Function-Call Generator' incorporates:
+   *  EnablePort: '<S240>/Enable'
+   *  SubSystem: '<S234>/Enabled Subsystem'
+   */
+  /* Logic: '<S234>/Logical Operator' incorporates:
+   *  Logic: '<S235>/Logical Operator'
    */
   if ((rtb_Compare_lf[0] != 0) && (rtb_Compare_lf[1] != 0) && (rtb_Compare_lf[2]
        != 0) && (rtb_Compare_lf[3] != 0) && (rtb_Compare_lf[4] != 0) &&
       (rtb_Compare_lf[5] != 0) && (rtb_Compare_lf[6] != 0)) {
-    /* S-Function (fcncallgen): '<S237>/Function-Call Generator' incorporates:
-     *  SubSystem: '<S230>/Send Substring (page 1)'
+    /* S-Function (fcncallgen): '<S219>/Function-Call Generator' incorporates:
+     *  S-Function (fcncallgen): '<S237>/Function-Call Generator'
+     *  S-Function (fcncallgen): '<S240>/Function-Call Generator'
+     *  SubSystem: '<S233>/Send Substring (page 1)'
+     *  SubSystem: '<S237>/Subsystem'
      */
 
-    /* S-Function (fcncallgen): '<S234>/Function-Call Generator' incorporates:
-     *  SubSystem: '<S230>/Function-Call Subsystem1'
-     *  SubSystem: '<S234>/Subsystem'
-     */
-
-    /* S-Function (motohawk_sfun_send_canmsgs): '<S241>/Send CAN Messages' */
+    /* S-Function (motohawk_sfun_send_canmsgs): '<S244>/Send CAN Messages' */
     /* Send CAN Message(s) */
     {
       /* Transmit Messages Asynchronously (every time block executes) */
@@ -392,29 +386,33 @@ void BuckyWagon_01_SendString_efficient(uint8_T rtu_string, uint8_T rtu_b0,
       }
     }
 
-    /* RelationalOperator: '<S238>/Compare' incorporates:
-     *  Constant: '<S238>/Constant'
+    /* S-Function (fcncallgen): '<S219>/Function-Call Generator' incorporates:
+     *  SubSystem: '<S233>/Function-Call Subsystem1'
+     */
+    /* RelationalOperator: '<S241>/Compare' incorporates:
+     *  Constant: '<S241>/Constant'
      */
     for (i = 0; i < 7; i++) {
       rtb_Compare_lf[i] = (rtu_string_o[i] != 0);
     }
 
-    /* Outputs for enable SubSystem: '<S232>/Enabled Subsystem' incorporates:
-     *  EnablePort: '<S239>/Enable'
-     *  Logic: '<S232>/Logical Operator'
+    /* End of RelationalOperator: '<S241>/Compare' */
+
+    /* S-Function (fcncallgen): '<S219>/Function-Call Generator' incorporates:
+     *  EnablePort: '<S242>/Enable'
+     *  SubSystem: '<S235>/Enabled Subsystem'
      */
     if ((rtb_Compare_lf[0] != 0) && (rtb_Compare_lf[1] != 0) && (rtb_Compare_lf
          [2] != 0) && (rtb_Compare_lf[3] != 0) && (rtb_Compare_lf[4] != 0) &&
         (rtb_Compare_lf[5] != 0) && (rtb_Compare_lf[6] != 0)) {
-      /* S-Function (fcncallgen): '<S239>/Function-Call Generator' incorporates:
-       *  SubSystem: '<S230>/Send Substring (page 2)'
+      /* S-Function (fcncallgen): '<S219>/Function-Call Generator' incorporates:
+       *  S-Function (fcncallgen): '<S238>/Function-Call Generator'
+       *  S-Function (fcncallgen): '<S242>/Function-Call Generator'
+       *  SubSystem: '<S233>/Send Substring (page 2)'
+       *  SubSystem: '<S238>/Subsystem'
        */
 
-      /* S-Function (fcncallgen): '<S235>/Function-Call Generator' incorporates:
-       *  SubSystem: '<S235>/Subsystem'
-       */
-
-      /* S-Function (motohawk_sfun_send_canmsgs): '<S242>/Send CAN Messages' */
+      /* S-Function (motohawk_sfun_send_canmsgs): '<S245>/Send CAN Messages' */
       /* Send CAN Message(s) */
       {
         /* Transmit Messages Asynchronously (every time block executes) */
@@ -450,18 +448,16 @@ void BuckyWagon_01_SendString_efficient(uint8_T rtu_string, uint8_T rtu_b0,
         }
       }
     }
-
-    /* end of Outputs for SubSystem: '<S232>/Enabled Subsystem' */
   }
 
-  /* end of Outputs for SubSystem: '<S231>/Enabled Subsystem' */
+  /* End of Logic: '<S234>/Logical Operator' */
 }
 
 /* Start for function-call system: '<S11>/Draw String' */
 void BuckyWagon_01_DrawString_Start(void)
 {
-  /* Start for S-Function (fcncallgen): '<S203>/Function-Call Generator' incorporates:
-   *  Start for SubSystem: '<S203>/Subsystem'
+  /* Start for S-Function (fcncallgen): '<S206>/Function-Call Generator' incorporates:
+   *  Start for SubSystem: '<S206>/Subsystem'
    */
 }
 
@@ -470,11 +466,11 @@ void BuckyWagon_01_DrawString(uint8_T rtu_string, uint8_T rtu_x, uint8_T rtu_y,
   uint8_T rtu_font, uint8_T rtu_horizcenter, uint8_T rtu_vertcenter, uint8_T
   rtu_stringwrap, uint8_T rtu_fontlinecolor, uint8_T rtu_fontfillcolor)
 {
-  /* S-Function (fcncallgen): '<S203>/Function-Call Generator' incorporates:
-   *  SubSystem: '<S203>/Subsystem'
+  /* S-Function (fcncallgen): '<S206>/Function-Call Generator' incorporates:
+   *  SubSystem: '<S206>/Subsystem'
    */
 
-  /* S-Function (motohawk_sfun_send_canmsgs): '<S224>/Send CAN Messages' */
+  /* S-Function (motohawk_sfun_send_canmsgs): '<S227>/Send CAN Messages' */
   /* Send CAN Message(s) */
   {
     /* Transmit Messages Asynchronously (every time block executes) */
@@ -557,8 +553,8 @@ void BuckyWagon_01_DrawString(uint8_T rtu_string, uint8_T rtu_x, uint8_T rtu_y,
 /* Start for function-call system: '<S11>/Draw Vline' */
 void BuckyWagon_01_DrawVline_Start(void)
 {
-  /* Start for S-Function (fcncallgen): '<S204>/Function-Call Generator' incorporates:
-   *  Start for SubSystem: '<S204>/Subsystem'
+  /* Start for S-Function (fcncallgen): '<S207>/Function-Call Generator' incorporates:
+   *  Start for SubSystem: '<S207>/Subsystem'
    */
 }
 
@@ -566,11 +562,11 @@ void BuckyWagon_01_DrawVline_Start(void)
 void BuckyWagon_01_DrawVline(uint8_T rtu_x, uint8_T rtu_y0, uint8_T rtu_y1,
   uint8_T rtu_linecolor, uint8_T rtu_fillcolor)
 {
-  /* S-Function (fcncallgen): '<S204>/Function-Call Generator' incorporates:
-   *  SubSystem: '<S204>/Subsystem'
+  /* S-Function (fcncallgen): '<S207>/Function-Call Generator' incorporates:
+   *  SubSystem: '<S207>/Subsystem'
    */
 
-  /* S-Function (motohawk_sfun_send_canmsgs): '<S225>/Send CAN Messages' */
+  /* S-Function (motohawk_sfun_send_canmsgs): '<S228>/Send CAN Messages' */
   /* Send CAN Message(s) */
   {
     /* Transmit Messages Asynchronously (every time block executes) */
@@ -615,8 +611,8 @@ void BuckyWagon_01_DrawVline(uint8_T rtu_x, uint8_T rtu_y0, uint8_T rtu_y1,
 /* Start for function-call system: '<S11>/Draw HLine' */
 void BuckyWagon_01_DrawHLine_Start(void)
 {
-  /* Start for S-Function (fcncallgen): '<S201>/Function-Call Generator' incorporates:
-   *  Start for SubSystem: '<S201>/Subsystem'
+  /* Start for S-Function (fcncallgen): '<S204>/Function-Call Generator' incorporates:
+   *  Start for SubSystem: '<S204>/Subsystem'
    */
 }
 
@@ -624,11 +620,11 @@ void BuckyWagon_01_DrawHLine_Start(void)
 void BuckyWagon_01_DrawHLine(uint8_T rtu_x0, uint8_T rtu_x1, uint8_T rtu_y,
   uint8_T rtu_linecolor, uint8_T rtu_fillcolor)
 {
-  /* S-Function (fcncallgen): '<S201>/Function-Call Generator' incorporates:
-   *  SubSystem: '<S201>/Subsystem'
+  /* S-Function (fcncallgen): '<S204>/Function-Call Generator' incorporates:
+   *  SubSystem: '<S204>/Subsystem'
    */
 
-  /* S-Function (motohawk_sfun_send_canmsgs): '<S222>/Send CAN Messages' */
+  /* S-Function (motohawk_sfun_send_canmsgs): '<S225>/Send CAN Messages' */
   /* Send CAN Message(s) */
   {
     /* Transmit Messages Asynchronously (every time block executes) */
@@ -673,7 +669,7 @@ void BuckyWagon_01_DrawHLine(uint8_T rtu_x0, uint8_T rtu_x1, uint8_T rtu_y,
 /* Output and update for function-call system: '<S11>/Function-Call Subsystem' */
 void BuckyWagon_01_FunctionCallSubsystem(uint8_T rtu_Value)
 {
-  /* S-Function (motohawk_sfun_data_write): '<S208>/motohawk_data_write' */
+  /* S-Function (motohawk_sfun_data_write): '<S211>/motohawk_data_write' */
   /* Write to Data Storage as scalar: listIndex */
   {
     listIndex_DataStore() = rtu_Value;
@@ -683,7 +679,7 @@ void BuckyWagon_01_FunctionCallSubsystem(uint8_T rtu_Value)
 /* Output and update for function-call system: '<S11>/Function-Call Subsystem1' */
 void BuckyWagon_01_FunctionCallSubsystem1(uint8_T rtu_Value)
 {
-  /* S-Function (motohawk_sfun_data_write): '<S209>/motohawk_data_write' */
+  /* S-Function (motohawk_sfun_data_write): '<S212>/motohawk_data_write' */
   /* Write to Data Storage as scalar: screen */
   {
     screen_DataStore() = rtu_Value;
@@ -695,67 +691,91 @@ static void BuckyWagon_01_enter_internal_Dual(const uint8_T rtu_dualIndex[2],
   const int16_T rtu_data[18], uint8_T rtu_21, rtB_Chart_BuckyWagon_01_n *localB,
   rtDW_Chart_BuckyWagon_01_o *localDW)
 {
-  /* Transition: '<S197>:181' */
-  localB->s197_stringNum = 0U;
-  while (localB->s197_stringNum < 2) {
-    /* Transition: '<S197>:182' */
-    localDW->s197_oldData[(int32_T)localB->s197_stringNum] = (int16_T)(rtu_data
-      [(int32_T)rtu_dualIndex[(int32_T)localB->s197_stringNum]] + 1);
-    localB->s197_stringNum = (uint8_T)(localB->s197_stringNum + 1);
+  /* Transition: '<S200>:181' */
+  localB->s200_stringNum = 0U;
+  while (localB->s200_stringNum < 2) {
+    /* Transition: '<S200>:182' */
+    localDW->s200_oldData[localB->s200_stringNum] = (int16_T)
+      (rtu_data[rtu_dualIndex[localB->s200_stringNum]] + 1);
+    localB->s200_stringNum = (uint8_T)(localB->s200_stringNum + 1);
   }
 
-  /* Transition: '<S197>:183' */
-  /* Entry 'Dual_Init': '<S197>:19' */
-  localDW->s197_is_Dual = BuckyWagon_01_IN_Dual_Init;
+  /* Transition: '<S200>:183' */
+  localDW->s200_is_Dual = BuckyWagon_01_IN_Dual_Init;
 
-  /* Event: '<S197>:300' */
+  /* Outputs for Function Call SubSystem: '<S11>/Clear Screen' */
+
+  /* Entry 'Dual_Init': '<S200>:19' */
+  /* Event: '<S200>:300' */
   BuckyWagon_01_ClearScreen();
 
+  /* End of Outputs for SubSystem: '<S11>/Clear Screen' */
+
   /* draw string */
-  localB->s197_stringNum = 15U;
-  sprintf(charPtr(&localB->s197_string[0]), "UWMAD");
-  localB->s197_string[5] = 0U;
+  localB->s200_stringNum = 15U;
+  sprintf(charPtr(&localB->s200_string[0]), "UWMAD");
+  localB->s200_string[5] = 0U;
 
-  /* Event: '<S197>:303' */
-  BuckyWagon_01_SendString_efficient(localB->s197_stringNum, localB->
-    s197_string[0], localB->s197_string[1], localB->s197_string[2],
-    localB->s197_string[3], localB->s197_string[4], localB->s197_string[5],
-    localB->s197_string[6], localB->s197_string, localB->s197_string[7],
-    localB->s197_string[8], localB->s197_string[9], localB->s197_string[10],
-    localB->s197_string[11], localB->s197_string[12], localB->s197_string[13],
-    &localB->s197_string[7], localB->s197_string[14], localB->s197_string[15],
-    localB->s197_string[16]);
-  localB->s197_hCenter = 1U;
-  localB->s197_vCenter = 0U;
-  localB->s197_font = BuckyWagon_01_FONT4x6;
-  localB->s197_x0 = 32U;
-  localB->s197_y0 = 2U;
-  localB->s197_lineColor = BuckyWagon_01_BLACK;
-  localB->s197_fillColor = BuckyWagon_01_WHITE;
+  /* Outputs for Function Call SubSystem: '<S11>/Send String_efficient' */
 
-  /* Event: '<S197>:304' */
-  BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-    localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-    localB->s197_vCenter, rtu_21, localB->s197_lineColor, localB->s197_fillColor);
+  /* Event: '<S200>:303' */
+  BuckyWagon_01_SendString_efficient(localB->s200_stringNum, localB->
+    s200_string[0], localB->s200_string[1], localB->s200_string[2],
+    localB->s200_string[3], localB->s200_string[4], localB->s200_string[5],
+    localB->s200_string[6], localB->s200_string, localB->s200_string[7],
+    localB->s200_string[8], localB->s200_string[9], localB->s200_string[10],
+    localB->s200_string[11], localB->s200_string[12], localB->s200_string[13],
+    &localB->s200_string[7], localB->s200_string[14], localB->s200_string[15],
+    localB->s200_string[16]);
+
+  /* End of Outputs for SubSystem: '<S11>/Send String_efficient' */
+  localB->s200_hCenter = 1U;
+  localB->s200_vCenter = 0U;
+  localB->s200_font = BuckyWagon_01_FONT4x6;
+  localB->s200_x0 = 32U;
+  localB->s200_y0 = 2U;
+  localB->s200_lineColor = BuckyWagon_01_BLACK;
+  localB->s200_fillColor = BuckyWagon_01_WHITE;
+
+  /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
+
+  /* Event: '<S200>:304' */
+  BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+    localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+    localB->s200_vCenter, rtu_21, localB->s200_lineColor, localB->s200_fillColor);
+
+  /* End of Outputs for SubSystem: '<S11>/Draw String' */
 
   /* draw lines */
-  localB->s197_y0 = 8U;
-  localB->s197_x0 = 0U;
-  localB->s197_x1 = 64U;
+  localB->s200_y0 = 8U;
+  localB->s200_x0 = 0U;
+  localB->s200_x1 = 64U;
 
-  /* Event: '<S197>:306' */
-  BuckyWagon_01_DrawHLine(localB->s197_x0, localB->s197_x1, localB->s197_y0,
-    localB->s197_lineColor, localB->s197_fillColor);
-  localB->s197_y0 = 54U;
+  /* Outputs for Function Call SubSystem: '<S11>/Draw HLine' */
 
-  /* Event: '<S197>:306' */
-  BuckyWagon_01_DrawHLine(localB->s197_x0, localB->s197_x1, localB->s197_y0,
-    localB->s197_lineColor, localB->s197_fillColor);
-  localB->s197_y0 = 31U;
+  /* Event: '<S200>:306' */
+  BuckyWagon_01_DrawHLine(localB->s200_x0, localB->s200_x1, localB->s200_y0,
+    localB->s200_lineColor, localB->s200_fillColor);
 
-  /* Event: '<S197>:306' */
-  BuckyWagon_01_DrawHLine(localB->s197_x0, localB->s197_x1, localB->s197_y0,
-    localB->s197_lineColor, localB->s197_fillColor);
+  /* End of Outputs for SubSystem: '<S11>/Draw HLine' */
+  localB->s200_y0 = 54U;
+
+  /* Outputs for Function Call SubSystem: '<S11>/Draw HLine' */
+
+  /* Event: '<S200>:306' */
+  BuckyWagon_01_DrawHLine(localB->s200_x0, localB->s200_x1, localB->s200_y0,
+    localB->s200_lineColor, localB->s200_fillColor);
+
+  /* End of Outputs for SubSystem: '<S11>/Draw HLine' */
+  localB->s200_y0 = 31U;
+
+  /* Outputs for Function Call SubSystem: '<S11>/Draw HLine' */
+
+  /* Event: '<S200>:306' */
+  BuckyWagon_01_DrawHLine(localB->s200_x0, localB->s200_x1, localB->s200_y0,
+    localB->s200_lineColor, localB->s200_fillColor);
+
+  /* End of Outputs for SubSystem: '<S11>/Draw HLine' */
 }
 
 /* Function for Stateflow: '<S11>/Chart' */
@@ -764,227 +784,268 @@ static void BuckyWagon_01_Dual(const uint8_T rtu_dualIndex[2], const uint8_T
   const int16_T rtu_data[18], uint8_T rtu_21, rtB_Chart_BuckyWagon_01_n *localB,
   rtDW_Chart_BuckyWagon_01_o *localDW)
 {
-  /* During 'Dual': '<S197>:20' */
-  if (_sfEvent_BuckyWagon_01_ == BuckyWagon_01_event_menuPressed) {
-    /* Transition: '<S197>:84' */
-    /* Exit 'Dual_Init': '<S197>:19' */
-    localDW->s197_is_Dual = (uint8_T)BuckyWagon_01_IN_NO_ACTIVE_CHILD_h;
-
-    /* Exit 'List_Idle': '<S197>:1' */
-    /* Exit 'dualNames': '<S197>:18' */
-    /* Exit 'Dual': '<S197>:20' */
-    /* Entry 'wait2': '<S197>:29' */
-    localDW->s197_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_wait2;
+  /* During 'Dual': '<S200>:20' */
+  if (localDW->s200_sfEvent == BuckyWagon_01_event_menuPressed) {
+    /* Transition: '<S200>:84' */
+    localDW->s200_is_Dual = (uint8_T)BuckyWagon_01_IN_NO_ACTIVE_CHILD_h;
+    localDW->s200_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_wait2;
   } else {
-    switch (localDW->s197_is_Dual) {
+    switch (localDW->s200_is_Dual) {
      case BuckyWagon_01_IN_Dual_Init:
-      /* During 'Dual_Init': '<S197>:19' */
-      /* Transition: '<S197>:184' */
-      /* Exit 'Dual_Init': '<S197>:19' */
-      /* Entry 'dualNames': '<S197>:18' */
-      localDW->s197_is_Dual = BuckyWagon_01_IN_dualNames;
-      localB->s197_hCenter = 1U;
-      localB->s197_font = BuckyWagon_01_FONT6x8;
-      localB->s197_x0 = 30U;
-      localB->s197_stringNum = 0U;
-      memcpy(&localB->s197_string[0], &rtu_names[10 * rtu_dualIndex[0]], 10);
+      /* During 'Dual_Init': '<S200>:19' */
+      /* Transition: '<S200>:184' */
+      localDW->s200_is_Dual = BuckyWagon_01_IN_dualNames;
 
-      /* Event: '<S197>:303' */
-      BuckyWagon_01_SendString_efficient(localB->s197_stringNum,
-        localB->s197_string[0], localB->s197_string[1], localB->s197_string[2],
-        localB->s197_string[3], localB->s197_string[4], localB->s197_string[5],
-        localB->s197_string[6], localB->s197_string, localB->s197_string[7],
-        localB->s197_string[8], localB->s197_string[9], localB->s197_string[10],
-        localB->s197_string[11], localB->s197_string[12], localB->s197_string[13],
-        &localB->s197_string[7], localB->s197_string[14], localB->s197_string[15],
-        localB->s197_string[16]);
-      localB->s197_y0 = 20U;
+      /* Entry 'dualNames': '<S200>:18' */
+      localB->s200_hCenter = 1U;
+      localB->s200_font = BuckyWagon_01_FONT6x8;
+      localB->s200_x0 = 30U;
+      localB->s200_stringNum = 0U;
+      memcpy(&localB->s200_string[0], &rtu_names[10 * rtu_dualIndex[0]], 10);
 
-      /* Event: '<S197>:304' */
-      BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-        localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-        localB->s197_vCenter, rtu_21, localB->s197_lineColor,
-        localB->s197_fillColor);
-      memcpy(&localB->s197_string[0], &rtu_names[10 * rtu_dualIndex[1]], 10);
+      /* Outputs for Function Call SubSystem: '<S11>/Send String_efficient' */
 
-      /* Event: '<S197>:303' */
-      BuckyWagon_01_SendString_efficient(localB->s197_stringNum,
-        localB->s197_string[0], localB->s197_string[1], localB->s197_string[2],
-        localB->s197_string[3], localB->s197_string[4], localB->s197_string[5],
-        localB->s197_string[6], localB->s197_string, localB->s197_string[7],
-        localB->s197_string[8], localB->s197_string[9], localB->s197_string[10],
-        localB->s197_string[11], localB->s197_string[12], localB->s197_string[13],
-        &localB->s197_string[7], localB->s197_string[14], localB->s197_string[15],
-        localB->s197_string[16]);
-      localB->s197_y0 = 34U;
+      /* Event: '<S200>:303' */
+      BuckyWagon_01_SendString_efficient(localB->s200_stringNum,
+        localB->s200_string[0], localB->s200_string[1], localB->s200_string[2],
+        localB->s200_string[3], localB->s200_string[4], localB->s200_string[5],
+        localB->s200_string[6], localB->s200_string, localB->s200_string[7],
+        localB->s200_string[8], localB->s200_string[9], localB->s200_string[10],
+        localB->s200_string[11], localB->s200_string[12], localB->s200_string[13],
+        &localB->s200_string[7], localB->s200_string[14], localB->s200_string[15],
+        localB->s200_string[16]);
 
-      /* Event: '<S197>:304' */
-      BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-        localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-        localB->s197_vCenter, rtu_21, localB->s197_lineColor,
-        localB->s197_fillColor);
+      /* End of Outputs for SubSystem: '<S11>/Send String_efficient' */
+      localB->s200_y0 = 20U;
+
+      /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
+
+      /* Event: '<S200>:304' */
+      BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+        localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+        localB->s200_vCenter, rtu_21, localB->s200_lineColor,
+        localB->s200_fillColor);
+
+      /* End of Outputs for SubSystem: '<S11>/Draw String' */
+      memcpy(&localB->s200_string[0], &rtu_names[10 * rtu_dualIndex[1]], 10);
+
+      /* Outputs for Function Call SubSystem: '<S11>/Send String_efficient' */
+
+      /* Event: '<S200>:303' */
+      BuckyWagon_01_SendString_efficient(localB->s200_stringNum,
+        localB->s200_string[0], localB->s200_string[1], localB->s200_string[2],
+        localB->s200_string[3], localB->s200_string[4], localB->s200_string[5],
+        localB->s200_string[6], localB->s200_string, localB->s200_string[7],
+        localB->s200_string[8], localB->s200_string[9], localB->s200_string[10],
+        localB->s200_string[11], localB->s200_string[12], localB->s200_string[13],
+        &localB->s200_string[7], localB->s200_string[14], localB->s200_string[15],
+        localB->s200_string[16]);
+
+      /* End of Outputs for SubSystem: '<S11>/Send String_efficient' */
+      localB->s200_y0 = 34U;
+
+      /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
+
+      /* Event: '<S200>:304' */
+      BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+        localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+        localB->s200_vCenter, rtu_21, localB->s200_lineColor,
+        localB->s200_fillColor);
+
+      /* End of Outputs for SubSystem: '<S11>/Draw String' */
       break;
 
      case BuckyWagon_01_IN_List_Idle:
-      /* During 'List_Idle': '<S197>:1' */
-      if ((_sfEvent_BuckyWagon_01_ == BuckyWagon_01_event_tick) &&
-          (localDW->s197_timer >= BuckyWagon_01_UPDATE_TIME)) {
-        /* Transition: '<S197>:186' */
-        localB->s197_stringNum = 0U;
-        localB->s197_font = BuckyWagon_01_FONT6x8;
-        localB->s197_fillColor = BuckyWagon_01_WHITE;
-        localB->s197_hCenter = 0U;
-        if (localDW->s197_oldData[0] != rtu_data[(int32_T)rtu_dualIndex[0]]) {
-          /* Transition: '<S197>:187' */
-          sprintf(charPtr(&localB->s197_string[0]), "%d", rtu_data[(int32_T)
-                  rtu_dualIndex[0]]);
+      /* During 'List_Idle': '<S200>:1' */
+      if ((localDW->s200_sfEvent == BuckyWagon_01_event_tick) &&
+          (localDW->s200_timer >= BuckyWagon_01_UPDATE_TIME)) {
+        /* Transition: '<S200>:186' */
+        localB->s200_stringNum = 0U;
+        localB->s200_font = BuckyWagon_01_FONT6x8;
+        localB->s200_fillColor = BuckyWagon_01_WHITE;
+        localB->s200_hCenter = 0U;
+        if (localDW->s200_oldData[0] != rtu_data[rtu_dualIndex[0]]) {
+          /* Transition: '<S200>:187' */
+          sprintf(charPtr(&localB->s200_string[0]), "%d",
+                  rtu_data[rtu_dualIndex[0]]);
 
-          /* Event: '<S197>:303' */
-          BuckyWagon_01_SendString_efficient(localB->s197_stringNum,
-            localB->s197_string[0], localB->s197_string[1], localB->s197_string
-            [2], localB->s197_string[3], localB->s197_string[4],
-            localB->s197_string[5], localB->s197_string[6], localB->s197_string,
-            localB->s197_string[7], localB->s197_string[8], localB->s197_string
-            [9], localB->s197_string[10], localB->s197_string[11],
-            localB->s197_string[12], localB->s197_string[13],
-            &localB->s197_string[7], localB->s197_string[14],
-            localB->s197_string[15], localB->s197_string[16]);
-          localB->s197_x0 = 0U;
-          localB->s197_x1 = 60U;
-          localB->s197_y0 = 10U;
-          localB->s197_y1 = 18U;
-          localB->s197_lineColor = 0U;
+          /* Outputs for Function Call SubSystem: '<S11>/Send String_efficient' */
 
-          /* Event: '<S197>:301' */
-          BuckyWagon_01_DrawRect(localB->s197_x0, localB->s197_x1,
-            localB->s197_y0, localB->s197_y1, localB->s197_lineColor,
-            localB->s197_fillColor);
-          localB->s197_lineColor = 1U;
-          localB->s197_x0 = 30U;
+          /* Event: '<S200>:303' */
+          BuckyWagon_01_SendString_efficient(localB->s200_stringNum,
+            localB->s200_string[0], localB->s200_string[1], localB->s200_string
+            [2], localB->s200_string[3], localB->s200_string[4],
+            localB->s200_string[5], localB->s200_string[6], localB->s200_string,
+            localB->s200_string[7], localB->s200_string[8], localB->s200_string
+            [9], localB->s200_string[10], localB->s200_string[11],
+            localB->s200_string[12], localB->s200_string[13],
+            &localB->s200_string[7], localB->s200_string[14],
+            localB->s200_string[15], localB->s200_string[16]);
 
-          /* Event: '<S197>:304' */
-          BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-            localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-            localB->s197_vCenter, rtu_21, localB->s197_lineColor,
-            localB->s197_fillColor);
-          localDW->s197_oldData[0] = rtu_data[(int32_T)rtu_dualIndex[0]];
+          /* End of Outputs for SubSystem: '<S11>/Send String_efficient' */
+          localB->s200_x0 = 0U;
+          localB->s200_x1 = 60U;
+          localB->s200_y0 = 10U;
+          localB->s200_y1 = 18U;
+          localB->s200_lineColor = 0U;
+
+          /* Outputs for Function Call SubSystem: '<S11>/Draw Rect' */
+
+          /* Event: '<S200>:301' */
+          BuckyWagon_01_DrawRect(localB->s200_x0, localB->s200_x1,
+            localB->s200_y0, localB->s200_y1, localB->s200_lineColor,
+            localB->s200_fillColor);
+
+          /* End of Outputs for SubSystem: '<S11>/Draw Rect' */
+          localB->s200_lineColor = 1U;
+          localB->s200_x0 = 30U;
+
+          /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
+
+          /* Event: '<S200>:304' */
+          BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+            localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+            localB->s200_vCenter, rtu_21, localB->s200_lineColor,
+            localB->s200_fillColor);
+
+          /* End of Outputs for SubSystem: '<S11>/Draw String' */
+          localDW->s200_oldData[0] = rtu_data[rtu_dualIndex[0]];
         } else {
-          /* Transition: '<S197>:188' */
+          /* Transition: '<S200>:188' */
         }
 
-        if (localDW->s197_oldData[1] != rtu_data[(int32_T)rtu_dualIndex[1]]) {
-          /* Transition: '<S197>:190' */
-          sprintf(charPtr(&localB->s197_string[0]), "%d", rtu_data[(int32_T)
-                  rtu_dualIndex[1]]);
+        if (localDW->s200_oldData[1] != rtu_data[rtu_dualIndex[1]]) {
+          /* Transition: '<S200>:190' */
+          sprintf(charPtr(&localB->s200_string[0]), "%d",
+                  rtu_data[rtu_dualIndex[1]]);
 
-          /* Event: '<S197>:303' */
-          BuckyWagon_01_SendString_efficient(localB->s197_stringNum,
-            localB->s197_string[0], localB->s197_string[1], localB->s197_string
-            [2], localB->s197_string[3], localB->s197_string[4],
-            localB->s197_string[5], localB->s197_string[6], localB->s197_string,
-            localB->s197_string[7], localB->s197_string[8], localB->s197_string
-            [9], localB->s197_string[10], localB->s197_string[11],
-            localB->s197_string[12], localB->s197_string[13],
-            &localB->s197_string[7], localB->s197_string[14],
-            localB->s197_string[15], localB->s197_string[16]);
-          localB->s197_x0 = 0U;
-          localB->s197_x1 = 60U;
-          localB->s197_y0 = 44U;
-          localB->s197_y1 = 53U;
-          localB->s197_lineColor = 0U;
+          /* Outputs for Function Call SubSystem: '<S11>/Send String_efficient' */
 
-          /* Event: '<S197>:301' */
-          BuckyWagon_01_DrawRect(localB->s197_x0, localB->s197_x1,
-            localB->s197_y0, localB->s197_y1, localB->s197_lineColor,
-            localB->s197_fillColor);
-          localB->s197_lineColor = 1U;
-          localB->s197_x0 = 30U;
+          /* Event: '<S200>:303' */
+          BuckyWagon_01_SendString_efficient(localB->s200_stringNum,
+            localB->s200_string[0], localB->s200_string[1], localB->s200_string
+            [2], localB->s200_string[3], localB->s200_string[4],
+            localB->s200_string[5], localB->s200_string[6], localB->s200_string,
+            localB->s200_string[7], localB->s200_string[8], localB->s200_string
+            [9], localB->s200_string[10], localB->s200_string[11],
+            localB->s200_string[12], localB->s200_string[13],
+            &localB->s200_string[7], localB->s200_string[14],
+            localB->s200_string[15], localB->s200_string[16]);
 
-          /* Event: '<S197>:304' */
-          BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-            localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-            localB->s197_vCenter, rtu_21, localB->s197_lineColor,
-            localB->s197_fillColor);
-          localDW->s197_oldData[1] = rtu_data[(int32_T)rtu_dualIndex[1]];
+          /* End of Outputs for SubSystem: '<S11>/Send String_efficient' */
+          localB->s200_x0 = 0U;
+          localB->s200_x1 = 60U;
+          localB->s200_y0 = 44U;
+          localB->s200_y1 = 53U;
+          localB->s200_lineColor = 0U;
+
+          /* Outputs for Function Call SubSystem: '<S11>/Draw Rect' */
+
+          /* Event: '<S200>:301' */
+          BuckyWagon_01_DrawRect(localB->s200_x0, localB->s200_x1,
+            localB->s200_y0, localB->s200_y1, localB->s200_lineColor,
+            localB->s200_fillColor);
+
+          /* End of Outputs for SubSystem: '<S11>/Draw Rect' */
+          localB->s200_lineColor = 1U;
+          localB->s200_x0 = 30U;
+
+          /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
+
+          /* Event: '<S200>:304' */
+          BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+            localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+            localB->s200_vCenter, rtu_21, localB->s200_lineColor,
+            localB->s200_fillColor);
+
+          /* End of Outputs for SubSystem: '<S11>/Draw String' */
+          localDW->s200_oldData[1] = rtu_data[rtu_dualIndex[1]];
         } else {
-          /* Transition: '<S197>:73' */
+          /* Transition: '<S200>:73' */
         }
 
-        /* Transition: '<S197>:67' */
-        localB->s197_y0 = 55U;
-        localB->s197_y1 = 63U;
-        localB->s197_x0 = 0U;
-        localB->s197_x1 = 63U;
-        memcpy(&localB->s197_string[0], &rtu_statusTxt[0], 9);
-        localB->s197_string[9] = 0U;
+        /* Transition: '<S200>:67' */
+        localB->s200_y0 = 55U;
+        localB->s200_y1 = 63U;
+        localB->s200_x0 = 0U;
+        localB->s200_x1 = 63U;
+        memcpy(&localB->s200_string[0], &rtu_statusTxt[0], 9);
+        localB->s200_string[9] = 0U;
 
-        /* Event: '<S197>:303' */
-        BuckyWagon_01_SendString_efficient(localB->s197_stringNum,
-          localB->s197_string[0], localB->s197_string[1], localB->s197_string[2],
-          localB->s197_string[3], localB->s197_string[4], localB->s197_string[5],
-          localB->s197_string[6], localB->s197_string, localB->s197_string[7],
-          localB->s197_string[8], localB->s197_string[9], localB->s197_string[10],
-          localB->s197_string[11], localB->s197_string[12], localB->s197_string
-          [13], &localB->s197_string[7], localB->s197_string[14],
-          localB->s197_string[15], localB->s197_string[16]);
+        /* Outputs for Function Call SubSystem: '<S11>/Send String_efficient' */
+
+        /* Event: '<S200>:303' */
+        BuckyWagon_01_SendString_efficient(localB->s200_stringNum,
+          localB->s200_string[0], localB->s200_string[1], localB->s200_string[2],
+          localB->s200_string[3], localB->s200_string[4], localB->s200_string[5],
+          localB->s200_string[6], localB->s200_string, localB->s200_string[7],
+          localB->s200_string[8], localB->s200_string[9], localB->s200_string[10],
+          localB->s200_string[11], localB->s200_string[12], localB->s200_string
+          [13], &localB->s200_string[7], localB->s200_string[14],
+          localB->s200_string[15], localB->s200_string[16]);
+
+        /* End of Outputs for SubSystem: '<S11>/Send String_efficient' */
         if (rtu_statusTxtMode == 1) {
-          /* Transition: '<S197>:130' */
-          localB->s197_fillColor = BuckyWagon_01_BLACK;
-          localB->s197_lineColor = BuckyWagon_01_BLACK;
+          /* Transition: '<S200>:130' */
+          localB->s200_fillColor = BuckyWagon_01_BLACK;
+          localB->s200_lineColor = BuckyWagon_01_BLACK;
 
-          /* Event: '<S197>:301' */
-          BuckyWagon_01_DrawRect(localB->s197_x0, localB->s197_x1,
-            localB->s197_y0, localB->s197_y1, localB->s197_lineColor,
-            localB->s197_fillColor);
-          localB->s197_lineColor = BuckyWagon_01_WHITE;
+          /* Outputs for Function Call SubSystem: '<S11>/Draw Rect' */
+
+          /* Event: '<S200>:301' */
+          BuckyWagon_01_DrawRect(localB->s200_x0, localB->s200_x1,
+            localB->s200_y0, localB->s200_y1, localB->s200_lineColor,
+            localB->s200_fillColor);
+
+          /* End of Outputs for SubSystem: '<S11>/Draw Rect' */
+          localB->s200_lineColor = BuckyWagon_01_WHITE;
         } else {
-          /* Transition: '<S197>:74' */
-          localB->s197_lineColor = BuckyWagon_01_WHITE;
+          /* Transition: '<S200>:74' */
+          localB->s200_lineColor = BuckyWagon_01_WHITE;
 
-          /* Event: '<S197>:301' */
-          BuckyWagon_01_DrawRect(localB->s197_x0, localB->s197_x1,
-            localB->s197_y0, localB->s197_y1, localB->s197_lineColor,
-            localB->s197_fillColor);
-          localB->s197_lineColor = BuckyWagon_01_BLACK;
+          /* Outputs for Function Call SubSystem: '<S11>/Draw Rect' */
+
+          /* Event: '<S200>:301' */
+          BuckyWagon_01_DrawRect(localB->s200_x0, localB->s200_x1,
+            localB->s200_y0, localB->s200_y1, localB->s200_lineColor,
+            localB->s200_fillColor);
+
+          /* End of Outputs for SubSystem: '<S11>/Draw Rect' */
+          localB->s200_lineColor = BuckyWagon_01_BLACK;
         }
 
-        /* Transition: '<S197>:76' */
-        localB->s197_y0 = 56U;
-        localB->s197_font = BuckyWagon_01_FONT4x6;
-        localB->s197_x0 = 17U;
+        /* Transition: '<S200>:76' */
+        localB->s200_y0 = 56U;
+        localB->s200_font = BuckyWagon_01_FONT4x6;
+        localB->s200_x0 = 17U;
 
-        /* Event: '<S197>:304' */
-        BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-          localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-          localB->s197_vCenter, rtu_21, localB->s197_lineColor,
-          localB->s197_fillColor);
+        /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
 
-        /* Transition: '<S197>:72' */
-        localDW->s197_timer = 0U;
+        /* Event: '<S200>:304' */
+        BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+          localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+          localB->s200_vCenter, rtu_21, localB->s200_lineColor,
+          localB->s200_fillColor);
 
-        /* Exit 'List_Idle': '<S197>:1' */
-        /* Entry 'List_Idle': '<S197>:1' */
-        localDW->s197_is_Dual = BuckyWagon_01_IN_List_Idle;
+        /* End of Outputs for SubSystem: '<S11>/Draw String' */
+
+        /* Transition: '<S200>:72' */
+        localDW->s200_timer = 0U;
+        localDW->s200_is_Dual = BuckyWagon_01_IN_List_Idle;
       } else {
-        if (_sfEvent_BuckyWagon_01_ == BuckyWagon_01_event_tick) {
-          /* Transition: '<S197>:189' */
-          /* Exit 'List_Idle': '<S197>:1' */
-          localDW->s197_timer = (uint16_T)(localDW->s197_timer + 1);
-
-          /* Entry 'List_Idle': '<S197>:1' */
-          localDW->s197_is_Dual = BuckyWagon_01_IN_List_Idle;
+        if (localDW->s200_sfEvent == BuckyWagon_01_event_tick) {
+          /* Transition: '<S200>:189' */
+          localDW->s200_timer = (uint16_T)(localDW->s200_timer + 1);
+          localDW->s200_is_Dual = BuckyWagon_01_IN_List_Idle;
         }
       }
       break;
 
      case BuckyWagon_01_IN_dualNames:
-      /* During 'dualNames': '<S197>:18' */
-      /* Transition: '<S197>:185' */
-      localDW->s197_timer = BuckyWagon_01_UPDATE_TIME;
-
-      /* Exit 'dualNames': '<S197>:18' */
-      /* Entry 'List_Idle': '<S197>:1' */
-      localDW->s197_is_Dual = BuckyWagon_01_IN_List_Idle;
+      /* During 'dualNames': '<S200>:18' */
+      /* Transition: '<S200>:185' */
+      localDW->s200_timer = BuckyWagon_01_UPDATE_TIME;
+      localDW->s200_is_Dual = BuckyWagon_01_IN_List_Idle;
       break;
 
      default:
@@ -1000,61 +1061,81 @@ static void BuckyWagon_01_enter_internal_List(uint8_T rtu_listIndex, const
   int16_T rtu_data[18], uint8_T rtu_21, rtB_Chart_BuckyWagon_01_n *localB,
   rtDW_Chart_BuckyWagon_01_o *localDW)
 {
-  /* Transition: '<S197>:114' */
-  localB->s197_stringNum = 0U;
-  while (localB->s197_stringNum < 6) {
-    /* Transition: '<S197>:112' */
-    localDW->s197_oldData[(int32_T)localB->s197_stringNum] = (int16_T)
-      (rtu_data[localB->s197_stringNum + rtu_listIndex] + 1);
-    localB->s197_stringNum = (uint8_T)(localB->s197_stringNum + 1);
+  /* Transition: '<S200>:114' */
+  localB->s200_stringNum = 0U;
+  while (localB->s200_stringNum < 6) {
+    /* Transition: '<S200>:112' */
+    localDW->s200_oldData[localB->s200_stringNum] = (int16_T)(rtu_data
+      [localB->s200_stringNum + rtu_listIndex] + 1);
+    localB->s200_stringNum = (uint8_T)(localB->s200_stringNum + 1);
   }
 
-  /* Transition: '<S197>:109' */
-  /* Entry 'List_Init': '<S197>:8' */
-  localDW->s197_is_List = BuckyWagon_01_IN_List_Init;
+  /* Transition: '<S200>:109' */
+  localDW->s200_is_List = BuckyWagon_01_IN_List_Init;
 
-  /* Event: '<S197>:300' */
+  /* Outputs for Function Call SubSystem: '<S11>/Clear Screen' */
+
+  /* Entry 'List_Init': '<S200>:8' */
+  /* Event: '<S200>:300' */
   BuckyWagon_01_ClearScreen();
 
+  /* End of Outputs for SubSystem: '<S11>/Clear Screen' */
+
   /* draw lines and name */
-  localB->s197_stringNum = 15U;
-  sprintf(charPtr(&localB->s197_string[0]), "UWMAD");
-  localB->s197_string[5] = 0U;
+  localB->s200_stringNum = 15U;
+  sprintf(charPtr(&localB->s200_string[0]), "UWMAD");
+  localB->s200_string[5] = 0U;
 
-  /* Event: '<S197>:303' */
-  BuckyWagon_01_SendString_efficient(localB->s197_stringNum, localB->
-    s197_string[0], localB->s197_string[1], localB->s197_string[2],
-    localB->s197_string[3], localB->s197_string[4], localB->s197_string[5],
-    localB->s197_string[6], localB->s197_string, localB->s197_string[7],
-    localB->s197_string[8], localB->s197_string[9], localB->s197_string[10],
-    localB->s197_string[11], localB->s197_string[12], localB->s197_string[13],
-    &localB->s197_string[7], localB->s197_string[14], localB->s197_string[15],
-    localB->s197_string[16]);
-  localB->s197_y0 = 8U;
-  localB->s197_x0 = 0U;
-  localB->s197_x1 = 63U;
-  localB->s197_lineColor = BuckyWagon_01_BLACK;
-  localB->s197_fillColor = BuckyWagon_01_WHITE;
+  /* Outputs for Function Call SubSystem: '<S11>/Send String_efficient' */
 
-  /* Event: '<S197>:306' */
-  BuckyWagon_01_DrawHLine(localB->s197_x0, localB->s197_x1, localB->s197_y0,
-    localB->s197_lineColor, localB->s197_fillColor);
-  localB->s197_y0 = 54U;
+  /* Event: '<S200>:303' */
+  BuckyWagon_01_SendString_efficient(localB->s200_stringNum, localB->
+    s200_string[0], localB->s200_string[1], localB->s200_string[2],
+    localB->s200_string[3], localB->s200_string[4], localB->s200_string[5],
+    localB->s200_string[6], localB->s200_string, localB->s200_string[7],
+    localB->s200_string[8], localB->s200_string[9], localB->s200_string[10],
+    localB->s200_string[11], localB->s200_string[12], localB->s200_string[13],
+    &localB->s200_string[7], localB->s200_string[14], localB->s200_string[15],
+    localB->s200_string[16]);
 
-  /* Event: '<S197>:306' */
-  BuckyWagon_01_DrawHLine(localB->s197_x0, localB->s197_x1, localB->s197_y0,
-    localB->s197_lineColor, localB->s197_fillColor);
-  localB->s197_hCenter = 1U;
-  localB->s197_vCenter = 0U;
-  localB->s197_font = BuckyWagon_01_FONT4x6;
-  localB->s197_x0 = 32U;
-  localB->s197_y0 = 2U;
+  /* End of Outputs for SubSystem: '<S11>/Send String_efficient' */
+  localB->s200_y0 = 8U;
+  localB->s200_x0 = 0U;
+  localB->s200_x1 = 63U;
+  localB->s200_lineColor = BuckyWagon_01_BLACK;
+  localB->s200_fillColor = BuckyWagon_01_WHITE;
 
-  /* Event: '<S197>:304' */
-  BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-    localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-    localB->s197_vCenter, rtu_21, localB->s197_lineColor, localB->s197_fillColor);
-  localB->s197_listIndexO = rtu_listIndex;
+  /* Outputs for Function Call SubSystem: '<S11>/Draw HLine' */
+
+  /* Event: '<S200>:306' */
+  BuckyWagon_01_DrawHLine(localB->s200_x0, localB->s200_x1, localB->s200_y0,
+    localB->s200_lineColor, localB->s200_fillColor);
+
+  /* End of Outputs for SubSystem: '<S11>/Draw HLine' */
+  localB->s200_y0 = 54U;
+
+  /* Outputs for Function Call SubSystem: '<S11>/Draw HLine' */
+
+  /* Event: '<S200>:306' */
+  BuckyWagon_01_DrawHLine(localB->s200_x0, localB->s200_x1, localB->s200_y0,
+    localB->s200_lineColor, localB->s200_fillColor);
+
+  /* End of Outputs for SubSystem: '<S11>/Draw HLine' */
+  localB->s200_hCenter = 1U;
+  localB->s200_vCenter = 0U;
+  localB->s200_font = BuckyWagon_01_FONT4x6;
+  localB->s200_x0 = 32U;
+  localB->s200_y0 = 2U;
+
+  /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
+
+  /* Event: '<S200>:304' */
+  BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+    localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+    localB->s200_vCenter, rtu_21, localB->s200_lineColor, localB->s200_fillColor);
+
+  /* End of Outputs for SubSystem: '<S11>/Draw String' */
+  localB->s200_listIndexO = rtu_listIndex;
 }
 
 /* Function for Stateflow: '<S11>/Chart' */
@@ -1063,343 +1144,405 @@ static void BuckyWagon_01_List(uint8_T rtu_listIndex, const uint8_T rtu_names
   rtu_statusTxtMode, const int16_T rtu_data[18], uint8_T rtu_21,
   rtB_Chart_BuckyWagon_01_n *localB, rtDW_Chart_BuckyWagon_01_o *localDW)
 {
-  boolean_T sf_guard;
+  boolean_T guard;
 
-  /* During 'List': '<S197>:3' */
-  if (_sfEvent_BuckyWagon_01_ == BuckyWagon_01_event_menuPressed) {
-    /* Transition: '<S197>:55' */
-    /* Exit 'List_Idle': '<S197>:5' */
-    localDW->s197_is_List = (uint8_T)BuckyWagon_01_IN_NO_ACTIVE_CHILD_h;
-
-    /* Exit 'List_Init': '<S197>:8' */
-    /* Exit 'List_Wait': '<S197>:2' */
-    /* Exit 'List_Wait2': '<S197>:4' */
-    /* Exit 'List': '<S197>:3' */
-    /* Entry 'wait4': '<S197>:27' */
-    localDW->s197_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_wait4;
+  /* During 'List': '<S200>:3' */
+  if (localDW->s200_sfEvent == BuckyWagon_01_event_menuPressed) {
+    /* Transition: '<S200>:55' */
+    localDW->s200_is_List = (uint8_T)BuckyWagon_01_IN_NO_ACTIVE_CHILD_h;
+    localDW->s200_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_wait4;
   } else {
-    sf_guard = FALSE;
-    switch (localDW->s197_is_List) {
+    guard = FALSE;
+    switch (localDW->s200_is_List) {
      case BuckyWagon_01_IN_List_Idle_h:
-      /* During 'List_Idle': '<S197>:5' */
-      if ((_sfEvent_BuckyWagon_01_ == BuckyWagon_01_event_tick) &&
-          (localDW->s197_timer >= BuckyWagon_01_UPDATE_TIME)) {
-        /* Transition: '<S197>:102' */
-        localB->s197_stringNum = 0U;
-        localB->s197_fillColor = BuckyWagon_01_WHITE;
-        localB->s197_hCenter = 0U;
-        while (localB->s197_stringNum < 6) {
-          /* Transition: '<S197>:103' */
-          if (rtu_data[localB->s197_stringNum + rtu_listIndex] ==
-              localDW->s197_oldData[(int32_T)localB->s197_stringNum]) {
-            /* Transition: '<S197>:105' */
-            localB->s197_stringNum = (uint8_T)(localB->s197_stringNum + 1);
+      /* During 'List_Idle': '<S200>:5' */
+      if ((localDW->s200_sfEvent == BuckyWagon_01_event_tick) &&
+          (localDW->s200_timer >= BuckyWagon_01_UPDATE_TIME)) {
+        /* Transition: '<S200>:102' */
+        localB->s200_stringNum = 0U;
+        localB->s200_fillColor = BuckyWagon_01_WHITE;
+        localB->s200_hCenter = 0U;
+        while (localB->s200_stringNum < 6) {
+          /* Transition: '<S200>:103' */
+          if (rtu_data[localB->s200_stringNum + rtu_listIndex] ==
+              localDW->s200_oldData[localB->s200_stringNum]) {
+            /* Transition: '<S200>:105' */
+            localB->s200_stringNum = (uint8_T)(localB->s200_stringNum + 1);
           } else {
-            /* Transition: '<S197>:101' */
-            sprintf(charPtr(&localB->s197_string[0]), "%-4d", rtu_data
-                    [localB->s197_stringNum + rtu_listIndex]);
-            localB->s197_string[4] = 0U;
+            /* Transition: '<S200>:101' */
+            sprintf(charPtr(&localB->s200_string[0]), "%-4d", rtu_data
+                    [localB->s200_stringNum + rtu_listIndex]);
+            localB->s200_string[4] = 0U;
 
-            /* Event: '<S197>:303' */
-            BuckyWagon_01_SendString_efficient(localB->s197_stringNum,
-              localB->s197_string[0], localB->s197_string[1],
-              localB->s197_string[2], localB->s197_string[3],
-              localB->s197_string[4], localB->s197_string[5],
-              localB->s197_string[6], localB->s197_string, localB->s197_string[7],
-              localB->s197_string[8], localB->s197_string[9],
-              localB->s197_string[10], localB->s197_string[11],
-              localB->s197_string[12], localB->s197_string[13],
-              &localB->s197_string[7], localB->s197_string[14],
-              localB->s197_string[15], localB->s197_string[16]);
-            localB->s197_x0 = 42U;
-            localB->s197_x1 = 57U;
-            localB->s197_y0 = (uint8_T)(localB->s197_stringNum * 7 + 12);
-            localB->s197_y1 = (uint8_T)(localB->s197_y0 + 6);
-            localB->s197_lineColor = 0U;
+            /* Outputs for Function Call SubSystem: '<S11>/Send String_efficient' */
 
-            /* Event: '<S197>:301' */
-            BuckyWagon_01_DrawRect(localB->s197_x0, localB->s197_x1,
-              localB->s197_y0, localB->s197_y1, localB->s197_lineColor,
-              localB->s197_fillColor);
-            localB->s197_lineColor = 1U;
+            /* Event: '<S200>:303' */
+            BuckyWagon_01_SendString_efficient(localB->s200_stringNum,
+              localB->s200_string[0], localB->s200_string[1],
+              localB->s200_string[2], localB->s200_string[3],
+              localB->s200_string[4], localB->s200_string[5],
+              localB->s200_string[6], localB->s200_string, localB->s200_string[7],
+              localB->s200_string[8], localB->s200_string[9],
+              localB->s200_string[10], localB->s200_string[11],
+              localB->s200_string[12], localB->s200_string[13],
+              &localB->s200_string[7], localB->s200_string[14],
+              localB->s200_string[15], localB->s200_string[16]);
 
-            /* Event: '<S197>:304' */
-            BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-              localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-              localB->s197_vCenter, rtu_21, localB->s197_lineColor,
-              localB->s197_fillColor);
-            localDW->s197_oldData[(int32_T)localB->s197_stringNum] =
-              rtu_data[localB->s197_stringNum + rtu_listIndex];
-            localB->s197_stringNum = (uint8_T)(localB->s197_stringNum + 1);
+            /* End of Outputs for SubSystem: '<S11>/Send String_efficient' */
+            localB->s200_x0 = 42U;
+            localB->s200_x1 = 57U;
+            localB->s200_y0 = (uint8_T)(localB->s200_stringNum * 7 + 12);
+            localB->s200_y1 = (uint8_T)(localB->s200_y0 + 6);
+            localB->s200_lineColor = 0U;
+
+            /* Outputs for Function Call SubSystem: '<S11>/Draw Rect' */
+
+            /* Event: '<S200>:301' */
+            BuckyWagon_01_DrawRect(localB->s200_x0, localB->s200_x1,
+              localB->s200_y0, localB->s200_y1, localB->s200_lineColor,
+              localB->s200_fillColor);
+
+            /* End of Outputs for SubSystem: '<S11>/Draw Rect' */
+            localB->s200_lineColor = 1U;
+
+            /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
+
+            /* Event: '<S200>:304' */
+            BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+              localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+              localB->s200_vCenter, rtu_21, localB->s200_lineColor,
+              localB->s200_fillColor);
+
+            /* End of Outputs for SubSystem: '<S11>/Draw String' */
+            localDW->s200_oldData[localB->s200_stringNum] = rtu_data
+              [localB->s200_stringNum + rtu_listIndex];
+            localB->s200_stringNum = (uint8_T)(localB->s200_stringNum + 1);
           }
         }
 
-        /* Transition: '<S197>:79' */
-        localB->s197_y0 = 55U;
-        localB->s197_y1 = 63U;
-        localB->s197_x0 = 0U;
-        localB->s197_x1 = 63U;
-        memcpy(&localB->s197_string[0], &rtu_statusTxt[0], 9);
-        localB->s197_string[9] = 0U;
+        /* Transition: '<S200>:79' */
+        localB->s200_y0 = 55U;
+        localB->s200_y1 = 63U;
+        localB->s200_x0 = 0U;
+        localB->s200_x1 = 63U;
+        memcpy(&localB->s200_string[0], &rtu_statusTxt[0], 9);
+        localB->s200_string[9] = 0U;
 
-        /* Event: '<S197>:303' */
-        BuckyWagon_01_SendString_efficient(localB->s197_stringNum,
-          localB->s197_string[0], localB->s197_string[1], localB->s197_string[2],
-          localB->s197_string[3], localB->s197_string[4], localB->s197_string[5],
-          localB->s197_string[6], localB->s197_string, localB->s197_string[7],
-          localB->s197_string[8], localB->s197_string[9], localB->s197_string[10],
-          localB->s197_string[11], localB->s197_string[12], localB->s197_string
-          [13], &localB->s197_string[7], localB->s197_string[14],
-          localB->s197_string[15], localB->s197_string[16]);
+        /* Outputs for Function Call SubSystem: '<S11>/Send String_efficient' */
+
+        /* Event: '<S200>:303' */
+        BuckyWagon_01_SendString_efficient(localB->s200_stringNum,
+          localB->s200_string[0], localB->s200_string[1], localB->s200_string[2],
+          localB->s200_string[3], localB->s200_string[4], localB->s200_string[5],
+          localB->s200_string[6], localB->s200_string, localB->s200_string[7],
+          localB->s200_string[8], localB->s200_string[9], localB->s200_string[10],
+          localB->s200_string[11], localB->s200_string[12], localB->s200_string
+          [13], &localB->s200_string[7], localB->s200_string[14],
+          localB->s200_string[15], localB->s200_string[16]);
+
+        /* End of Outputs for SubSystem: '<S11>/Send String_efficient' */
         if (rtu_statusTxtMode == 1) {
-          /* Transition: '<S197>:78' */
-          localB->s197_fillColor = BuckyWagon_01_BLACK;
-          localB->s197_lineColor = BuckyWagon_01_BLACK;
+          /* Transition: '<S200>:78' */
+          localB->s200_fillColor = BuckyWagon_01_BLACK;
+          localB->s200_lineColor = BuckyWagon_01_BLACK;
 
-          /* Event: '<S197>:301' */
-          BuckyWagon_01_DrawRect(localB->s197_x0, localB->s197_x1,
-            localB->s197_y0, localB->s197_y1, localB->s197_lineColor,
-            localB->s197_fillColor);
-          localB->s197_lineColor = BuckyWagon_01_WHITE;
+          /* Outputs for Function Call SubSystem: '<S11>/Draw Rect' */
+
+          /* Event: '<S200>:301' */
+          BuckyWagon_01_DrawRect(localB->s200_x0, localB->s200_x1,
+            localB->s200_y0, localB->s200_y1, localB->s200_lineColor,
+            localB->s200_fillColor);
+
+          /* End of Outputs for SubSystem: '<S11>/Draw Rect' */
+          localB->s200_lineColor = BuckyWagon_01_WHITE;
         } else {
-          /* Transition: '<S197>:80' */
-          localB->s197_lineColor = BuckyWagon_01_WHITE;
+          /* Transition: '<S200>:80' */
+          localB->s200_lineColor = BuckyWagon_01_WHITE;
 
-          /* Event: '<S197>:301' */
-          BuckyWagon_01_DrawRect(localB->s197_x0, localB->s197_x1,
-            localB->s197_y0, localB->s197_y1, localB->s197_lineColor,
-            localB->s197_fillColor);
-          localB->s197_lineColor = BuckyWagon_01_BLACK;
+          /* Outputs for Function Call SubSystem: '<S11>/Draw Rect' */
+
+          /* Event: '<S200>:301' */
+          BuckyWagon_01_DrawRect(localB->s200_x0, localB->s200_x1,
+            localB->s200_y0, localB->s200_y1, localB->s200_lineColor,
+            localB->s200_fillColor);
+
+          /* End of Outputs for SubSystem: '<S11>/Draw Rect' */
+          localB->s200_lineColor = BuckyWagon_01_BLACK;
         }
 
-        /* Transition: '<S197>:100' */
-        localB->s197_y0 = 56U;
-        localB->s197_font = BuckyWagon_01_FONT4x6;
-        localB->s197_x0 = 17U;
+        /* Transition: '<S200>:100' */
+        localB->s200_y0 = 56U;
+        localB->s200_font = BuckyWagon_01_FONT4x6;
+        localB->s200_x0 = 17U;
 
-        /* Event: '<S197>:304' */
-        BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-          localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-          localB->s197_vCenter, rtu_21, localB->s197_lineColor,
-          localB->s197_fillColor);
+        /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
 
-        /* Transition: '<S197>:92' */
-        localDW->s197_timer = 0U;
+        /* Event: '<S200>:304' */
+        BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+          localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+          localB->s200_vCenter, rtu_21, localB->s200_lineColor,
+          localB->s200_fillColor);
 
-        /* Exit 'List_Idle': '<S197>:5' */
-        /* Entry 'List_Idle': '<S197>:5' */
-        localDW->s197_is_List = BuckyWagon_01_IN_List_Idle_h;
-        localB->s197_stringNum = 0U;
-      } else if (_sfEvent_BuckyWagon_01_ == BuckyWagon_01_event_tick) {
-        /* Transition: '<S197>:91' */
-        /* Exit 'List_Idle': '<S197>:5' */
-        localDW->s197_timer = (uint16_T)(localDW->s197_timer + 1);
+        /* End of Outputs for SubSystem: '<S11>/Draw String' */
 
-        /* Entry 'List_Idle': '<S197>:5' */
-        localDW->s197_is_List = BuckyWagon_01_IN_List_Idle_h;
-        localB->s197_stringNum = 0U;
-      } else if (_sfEvent_BuckyWagon_01_ == BuckyWagon_01_event_upPressed) {
-        /* Transition: '<S197>:94' */
+        /* Transition: '<S200>:92' */
+        localDW->s200_timer = 0U;
+        localDW->s200_is_List = BuckyWagon_01_IN_List_Idle_h;
+
+        /* Entry 'List_Idle': '<S200>:5' */
+        localB->s200_stringNum = 0U;
+      } else if (localDW->s200_sfEvent == BuckyWagon_01_event_tick) {
+        /* Transition: '<S200>:91' */
+        localDW->s200_timer = (uint16_T)(localDW->s200_timer + 1);
+        localDW->s200_is_List = BuckyWagon_01_IN_List_Idle_h;
+
+        /* Entry 'List_Idle': '<S200>:5' */
+        localB->s200_stringNum = 0U;
+      } else if (localDW->s200_sfEvent == BuckyWagon_01_event_upPressed) {
+        /* Transition: '<S200>:94' */
         if (rtu_listIndex == 0) {
-          /* Transition: '<S197>:93' */
-          /* Exit 'List_Idle': '<S197>:5' */
-          /* Entry 'List_Idle': '<S197>:5' */
-          localDW->s197_is_List = BuckyWagon_01_IN_List_Idle_h;
-          localB->s197_stringNum = 0U;
-        } else {
-          /* Transition: '<S197>:95' */
-          localB->s197_listIndexO = (uint8_T)(rtu_listIndex - 1);
+          /* Transition: '<S200>:93' */
+          localDW->s200_is_List = BuckyWagon_01_IN_List_Idle_h;
 
-          /* Event: '<S197>:313' */
-          BuckyWagon_01_FunctionCallSubsystem(localB->s197_listIndexO);
-          sf_guard = TRUE;
+          /* Entry 'List_Idle': '<S200>:5' */
+          localB->s200_stringNum = 0U;
+        } else {
+          /* Transition: '<S200>:95' */
+          localB->s200_listIndexO = (uint8_T)(rtu_listIndex - 1);
+
+          /* Outputs for Function Call SubSystem: '<S11>/Function-Call Subsystem' */
+
+          /* Event: '<S200>:313' */
+          BuckyWagon_01_FunctionCallSubsystem(localB->s200_listIndexO);
+
+          /* End of Outputs for SubSystem: '<S11>/Function-Call Subsystem' */
+          guard = TRUE;
         }
       } else {
-        if (_sfEvent_BuckyWagon_01_ == BuckyWagon_01_event_downPressed) {
-          /* Transition: '<S197>:97' */
+        if (localDW->s200_sfEvent == BuckyWagon_01_event_downPressed) {
+          /* Transition: '<S200>:97' */
           if (rtu_numFields - 6 == rtu_listIndex) {
-            /* Transition: '<S197>:99' */
-            /* Exit 'List_Idle': '<S197>:5' */
-            /* Entry 'List_Idle': '<S197>:5' */
-            localDW->s197_is_List = BuckyWagon_01_IN_List_Idle_h;
-            localB->s197_stringNum = 0U;
-          } else {
-            /* Transition: '<S197>:98' */
-            localB->s197_listIndexO = (uint8_T)(rtu_listIndex + 1);
+            /* Transition: '<S200>:99' */
+            localDW->s200_is_List = BuckyWagon_01_IN_List_Idle_h;
 
-            /* Event: '<S197>:313' */
-            BuckyWagon_01_FunctionCallSubsystem(localB->s197_listIndexO);
-            sf_guard = TRUE;
+            /* Entry 'List_Idle': '<S200>:5' */
+            localB->s200_stringNum = 0U;
+          } else {
+            /* Transition: '<S200>:98' */
+            localB->s200_listIndexO = (uint8_T)(rtu_listIndex + 1);
+
+            /* Outputs for Function Call SubSystem: '<S11>/Function-Call Subsystem' */
+
+            /* Event: '<S200>:313' */
+            BuckyWagon_01_FunctionCallSubsystem(localB->s200_listIndexO);
+
+            /* End of Outputs for SubSystem: '<S11>/Function-Call Subsystem' */
+            guard = TRUE;
           }
         }
       }
       break;
 
      case BuckyWagon_01_IN_List_Init:
-      /* During 'List_Init': '<S197>:8' */
-      /* Transition: '<S197>:96' */
-      /* Transition: '<S197>:104' */
-      localB->s197_stringNum = 0U;
-      while (localB->s197_stringNum < 6) {
-        /* Transition: '<S197>:106' */
-        memcpy(&localB->s197_string[0], &rtu_names[10 * (localB->s197_listIndexO
-                + localB->s197_stringNum)], 10);
+      /* During 'List_Init': '<S200>:8' */
+      /* Transition: '<S200>:96' */
+      /* Transition: '<S200>:104' */
+      localB->s200_stringNum = 0U;
+      while (localB->s200_stringNum < 6) {
+        /* Transition: '<S200>:106' */
+        memcpy(&localB->s200_string[0], &rtu_names[10 * (localB->s200_listIndexO
+                + localB->s200_stringNum)], 10);
 
-        /* Event: '<S197>:303' */
-        BuckyWagon_01_SendString_efficient(localB->s197_stringNum,
-          localB->s197_string[0], localB->s197_string[1], localB->s197_string[2],
-          localB->s197_string[3], localB->s197_string[4], localB->s197_string[5],
-          localB->s197_string[6], localB->s197_string, localB->s197_string[7],
-          localB->s197_string[8], localB->s197_string[9], localB->s197_string[10],
-          localB->s197_string[11], localB->s197_string[12], localB->s197_string
-          [13], &localB->s197_string[7], localB->s197_string[14],
-          localB->s197_string[15], localB->s197_string[16]);
-        localB->s197_stringNum = (uint8_T)(localB->s197_stringNum + 1);
+        /* Outputs for Function Call SubSystem: '<S11>/Send String_efficient' */
+
+        /* Event: '<S200>:303' */
+        BuckyWagon_01_SendString_efficient(localB->s200_stringNum,
+          localB->s200_string[0], localB->s200_string[1], localB->s200_string[2],
+          localB->s200_string[3], localB->s200_string[4], localB->s200_string[5],
+          localB->s200_string[6], localB->s200_string, localB->s200_string[7],
+          localB->s200_string[8], localB->s200_string[9], localB->s200_string[10],
+          localB->s200_string[11], localB->s200_string[12], localB->s200_string
+          [13], &localB->s200_string[7], localB->s200_string[14],
+          localB->s200_string[15], localB->s200_string[16]);
+
+        /* End of Outputs for SubSystem: '<S11>/Send String_efficient' */
+        localB->s200_stringNum = (uint8_T)(localB->s200_stringNum + 1);
       }
 
-      /* Transition: '<S197>:108' */
-      /* Exit 'List_Init': '<S197>:8' */
-      /* Entry 'List_Wait': '<S197>:2' */
-      localDW->s197_is_List = BuckyWagon_01_IN_List_Wait;
+      /* Transition: '<S200>:108' */
+      localDW->s200_is_List = BuckyWagon_01_IN_List_Wait;
       break;
 
      case BuckyWagon_01_IN_List_Wait:
-      /* During 'List_Wait': '<S197>:2' */
-      /* Transition: '<S197>:111' */
-      localB->s197_x0 = 9U;
-      localB->s197_y0 = 12U;
-      localB->s197_x1 = 41U;
-      localB->s197_y1 = 53U;
-      localB->s197_lineColor = 0U;
-      localB->s197_fillColor = 0U;
+      /* During 'List_Wait': '<S200>:2' */
+      /* Transition: '<S200>:111' */
+      localB->s200_x0 = 9U;
+      localB->s200_y0 = 12U;
+      localB->s200_x1 = 41U;
+      localB->s200_y1 = 53U;
+      localB->s200_lineColor = 0U;
+      localB->s200_fillColor = 0U;
 
-      /* Event: '<S197>:301' */
-      BuckyWagon_01_DrawRect(localB->s197_x0, localB->s197_x1, localB->s197_y0,
-        localB->s197_y1, localB->s197_lineColor, localB->s197_fillColor);
-      localB->s197_lineColor = 1U;
-      localB->s197_hCenter = 0U;
-      localB->s197_stringNum = 0U;
-      while (localB->s197_stringNum < 6) {
-        /* Transition: '<S197>:113' */
-        localB->s197_y0 = (uint8_T)(localB->s197_stringNum * 7 + 12);
+      /* Outputs for Function Call SubSystem: '<S11>/Draw Rect' */
 
-        /* Event: '<S197>:304' */
-        BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-          localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-          localB->s197_vCenter, rtu_21, localB->s197_lineColor,
-          localB->s197_fillColor);
-        localB->s197_stringNum = (uint8_T)(localB->s197_stringNum + 1);
+      /* Event: '<S200>:301' */
+      BuckyWagon_01_DrawRect(localB->s200_x0, localB->s200_x1, localB->s200_y0,
+        localB->s200_y1, localB->s200_lineColor, localB->s200_fillColor);
+
+      /* End of Outputs for SubSystem: '<S11>/Draw Rect' */
+      localB->s200_lineColor = 1U;
+      localB->s200_hCenter = 0U;
+      localB->s200_stringNum = 0U;
+      while (localB->s200_stringNum < 6) {
+        /* Transition: '<S200>:113' */
+        localB->s200_y0 = (uint8_T)(localB->s200_stringNum * 7 + 12);
+
+        /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
+
+        /* Event: '<S200>:304' */
+        BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+          localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+          localB->s200_vCenter, rtu_21, localB->s200_lineColor,
+          localB->s200_fillColor);
+
+        /* End of Outputs for SubSystem: '<S11>/Draw String' */
+        localB->s200_stringNum = (uint8_T)(localB->s200_stringNum + 1);
       }
 
-      /* Transition: '<S197>:110' */
-      /* Exit 'List_Wait': '<S197>:2' */
-      /* Entry 'List_Wait2': '<S197>:4' */
-      localDW->s197_is_List = BuckyWagon_01_IN_List_Wait2;
+      /* Transition: '<S200>:110' */
+      localDW->s200_is_List = BuckyWagon_01_IN_List_Wait2;
       break;
 
      case BuckyWagon_01_IN_List_Wait2:
-      /* During 'List_Wait2': '<S197>:4' */
-      /* Transition: '<S197>:107' */
-      localB->s197_stringNum = 0U;
-      while (localB->s197_stringNum < 6) {
-        /* Transition: '<S197>:103' */
-        if (rtu_data[localB->s197_stringNum + rtu_listIndex] ==
-            localDW->s197_oldData[(int32_T)localB->s197_stringNum]) {
-          /* Transition: '<S197>:105' */
-          localB->s197_stringNum = (uint8_T)(localB->s197_stringNum + 1);
+      /* During 'List_Wait2': '<S200>:4' */
+      /* Transition: '<S200>:107' */
+      localB->s200_stringNum = 0U;
+      while (localB->s200_stringNum < 6) {
+        /* Transition: '<S200>:103' */
+        if (rtu_data[localB->s200_stringNum + rtu_listIndex] ==
+            localDW->s200_oldData[localB->s200_stringNum]) {
+          /* Transition: '<S200>:105' */
+          localB->s200_stringNum = (uint8_T)(localB->s200_stringNum + 1);
         } else {
-          /* Transition: '<S197>:101' */
-          sprintf(charPtr(&localB->s197_string[0]), "%-4d", rtu_data
-                  [localB->s197_stringNum + rtu_listIndex]);
-          localB->s197_string[4] = 0U;
+          /* Transition: '<S200>:101' */
+          sprintf(charPtr(&localB->s200_string[0]), "%-4d", rtu_data
+                  [localB->s200_stringNum + rtu_listIndex]);
+          localB->s200_string[4] = 0U;
 
-          /* Event: '<S197>:303' */
-          BuckyWagon_01_SendString_efficient(localB->s197_stringNum,
-            localB->s197_string[0], localB->s197_string[1], localB->s197_string
-            [2], localB->s197_string[3], localB->s197_string[4],
-            localB->s197_string[5], localB->s197_string[6], localB->s197_string,
-            localB->s197_string[7], localB->s197_string[8], localB->s197_string
-            [9], localB->s197_string[10], localB->s197_string[11],
-            localB->s197_string[12], localB->s197_string[13],
-            &localB->s197_string[7], localB->s197_string[14],
-            localB->s197_string[15], localB->s197_string[16]);
-          localB->s197_x0 = 42U;
-          localB->s197_x1 = 57U;
-          localB->s197_y0 = (uint8_T)(localB->s197_stringNum * 7 + 12);
-          localB->s197_y1 = (uint8_T)(localB->s197_y0 + 6);
-          localB->s197_lineColor = 0U;
+          /* Outputs for Function Call SubSystem: '<S11>/Send String_efficient' */
 
-          /* Event: '<S197>:301' */
-          BuckyWagon_01_DrawRect(localB->s197_x0, localB->s197_x1,
-            localB->s197_y0, localB->s197_y1, localB->s197_lineColor,
-            localB->s197_fillColor);
-          localB->s197_lineColor = 1U;
+          /* Event: '<S200>:303' */
+          BuckyWagon_01_SendString_efficient(localB->s200_stringNum,
+            localB->s200_string[0], localB->s200_string[1], localB->s200_string
+            [2], localB->s200_string[3], localB->s200_string[4],
+            localB->s200_string[5], localB->s200_string[6], localB->s200_string,
+            localB->s200_string[7], localB->s200_string[8], localB->s200_string
+            [9], localB->s200_string[10], localB->s200_string[11],
+            localB->s200_string[12], localB->s200_string[13],
+            &localB->s200_string[7], localB->s200_string[14],
+            localB->s200_string[15], localB->s200_string[16]);
 
-          /* Event: '<S197>:304' */
-          BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-            localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-            localB->s197_vCenter, rtu_21, localB->s197_lineColor,
-            localB->s197_fillColor);
-          localDW->s197_oldData[(int32_T)localB->s197_stringNum] =
-            rtu_data[localB->s197_stringNum + rtu_listIndex];
-          localB->s197_stringNum = (uint8_T)(localB->s197_stringNum + 1);
+          /* End of Outputs for SubSystem: '<S11>/Send String_efficient' */
+          localB->s200_x0 = 42U;
+          localB->s200_x1 = 57U;
+          localB->s200_y0 = (uint8_T)(localB->s200_stringNum * 7 + 12);
+          localB->s200_y1 = (uint8_T)(localB->s200_y0 + 6);
+          localB->s200_lineColor = 0U;
+
+          /* Outputs for Function Call SubSystem: '<S11>/Draw Rect' */
+
+          /* Event: '<S200>:301' */
+          BuckyWagon_01_DrawRect(localB->s200_x0, localB->s200_x1,
+            localB->s200_y0, localB->s200_y1, localB->s200_lineColor,
+            localB->s200_fillColor);
+
+          /* End of Outputs for SubSystem: '<S11>/Draw Rect' */
+          localB->s200_lineColor = 1U;
+
+          /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
+
+          /* Event: '<S200>:304' */
+          BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+            localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+            localB->s200_vCenter, rtu_21, localB->s200_lineColor,
+            localB->s200_fillColor);
+
+          /* End of Outputs for SubSystem: '<S11>/Draw String' */
+          localDW->s200_oldData[localB->s200_stringNum] = rtu_data
+            [localB->s200_stringNum + rtu_listIndex];
+          localB->s200_stringNum = (uint8_T)(localB->s200_stringNum + 1);
         }
       }
 
-      /* Transition: '<S197>:79' */
-      localB->s197_y0 = 55U;
-      localB->s197_y1 = 63U;
-      localB->s197_x0 = 0U;
-      localB->s197_x1 = 63U;
-      memcpy(&localB->s197_string[0], &rtu_statusTxt[0], 9);
-      localB->s197_string[9] = 0U;
+      /* Transition: '<S200>:79' */
+      localB->s200_y0 = 55U;
+      localB->s200_y1 = 63U;
+      localB->s200_x0 = 0U;
+      localB->s200_x1 = 63U;
+      memcpy(&localB->s200_string[0], &rtu_statusTxt[0], 9);
+      localB->s200_string[9] = 0U;
 
-      /* Event: '<S197>:303' */
-      BuckyWagon_01_SendString_efficient(localB->s197_stringNum,
-        localB->s197_string[0], localB->s197_string[1], localB->s197_string[2],
-        localB->s197_string[3], localB->s197_string[4], localB->s197_string[5],
-        localB->s197_string[6], localB->s197_string, localB->s197_string[7],
-        localB->s197_string[8], localB->s197_string[9], localB->s197_string[10],
-        localB->s197_string[11], localB->s197_string[12], localB->s197_string[13],
-        &localB->s197_string[7], localB->s197_string[14], localB->s197_string[15],
-        localB->s197_string[16]);
+      /* Outputs for Function Call SubSystem: '<S11>/Send String_efficient' */
+
+      /* Event: '<S200>:303' */
+      BuckyWagon_01_SendString_efficient(localB->s200_stringNum,
+        localB->s200_string[0], localB->s200_string[1], localB->s200_string[2],
+        localB->s200_string[3], localB->s200_string[4], localB->s200_string[5],
+        localB->s200_string[6], localB->s200_string, localB->s200_string[7],
+        localB->s200_string[8], localB->s200_string[9], localB->s200_string[10],
+        localB->s200_string[11], localB->s200_string[12], localB->s200_string[13],
+        &localB->s200_string[7], localB->s200_string[14], localB->s200_string[15],
+        localB->s200_string[16]);
+
+      /* End of Outputs for SubSystem: '<S11>/Send String_efficient' */
       if (rtu_statusTxtMode == 1) {
-        /* Transition: '<S197>:78' */
-        localB->s197_fillColor = BuckyWagon_01_BLACK;
-        localB->s197_lineColor = BuckyWagon_01_BLACK;
+        /* Transition: '<S200>:78' */
+        localB->s200_fillColor = BuckyWagon_01_BLACK;
+        localB->s200_lineColor = BuckyWagon_01_BLACK;
 
-        /* Event: '<S197>:301' */
-        BuckyWagon_01_DrawRect(localB->s197_x0, localB->s197_x1, localB->s197_y0,
-          localB->s197_y1, localB->s197_lineColor, localB->s197_fillColor);
-        localB->s197_lineColor = BuckyWagon_01_WHITE;
+        /* Outputs for Function Call SubSystem: '<S11>/Draw Rect' */
+
+        /* Event: '<S200>:301' */
+        BuckyWagon_01_DrawRect(localB->s200_x0, localB->s200_x1, localB->s200_y0,
+          localB->s200_y1, localB->s200_lineColor, localB->s200_fillColor);
+
+        /* End of Outputs for SubSystem: '<S11>/Draw Rect' */
+        localB->s200_lineColor = BuckyWagon_01_WHITE;
       } else {
-        /* Transition: '<S197>:80' */
-        localB->s197_lineColor = BuckyWagon_01_WHITE;
+        /* Transition: '<S200>:80' */
+        localB->s200_lineColor = BuckyWagon_01_WHITE;
 
-        /* Event: '<S197>:301' */
-        BuckyWagon_01_DrawRect(localB->s197_x0, localB->s197_x1, localB->s197_y0,
-          localB->s197_y1, localB->s197_lineColor, localB->s197_fillColor);
-        localB->s197_lineColor = BuckyWagon_01_BLACK;
+        /* Outputs for Function Call SubSystem: '<S11>/Draw Rect' */
+
+        /* Event: '<S200>:301' */
+        BuckyWagon_01_DrawRect(localB->s200_x0, localB->s200_x1, localB->s200_y0,
+          localB->s200_y1, localB->s200_lineColor, localB->s200_fillColor);
+
+        /* End of Outputs for SubSystem: '<S11>/Draw Rect' */
+        localB->s200_lineColor = BuckyWagon_01_BLACK;
       }
 
-      /* Transition: '<S197>:100' */
-      localB->s197_y0 = 56U;
-      localB->s197_font = BuckyWagon_01_FONT4x6;
-      localB->s197_x0 = 17U;
+      /* Transition: '<S200>:100' */
+      localB->s200_y0 = 56U;
+      localB->s200_font = BuckyWagon_01_FONT4x6;
+      localB->s200_x0 = 17U;
 
-      /* Event: '<S197>:304' */
-      BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-        localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-        localB->s197_vCenter, rtu_21, localB->s197_lineColor,
-        localB->s197_fillColor);
+      /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
 
-      /* Transition: '<S197>:92' */
-      localDW->s197_timer = 0U;
+      /* Event: '<S200>:304' */
+      BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+        localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+        localB->s200_vCenter, rtu_21, localB->s200_lineColor,
+        localB->s200_fillColor);
 
-      /* Exit 'List_Wait2': '<S197>:4' */
-      /* Entry 'List_Idle': '<S197>:5' */
-      localDW->s197_is_List = BuckyWagon_01_IN_List_Idle_h;
-      localB->s197_stringNum = 0U;
+      /* End of Outputs for SubSystem: '<S11>/Draw String' */
+
+      /* Transition: '<S200>:92' */
+      localDW->s200_timer = 0U;
+      localDW->s200_is_List = BuckyWagon_01_IN_List_Idle_h;
+
+      /* Entry 'List_Idle': '<S200>:5' */
+      localB->s200_stringNum = 0U;
       break;
 
      default:
@@ -1408,30 +1551,32 @@ static void BuckyWagon_01_List(uint8_T rtu_listIndex, const uint8_T rtu_names
       break;
     }
 
-    if (sf_guard) {
-      /* Transition: '<S197>:104' */
-      localB->s197_stringNum = 0U;
-      while (localB->s197_stringNum < 6) {
-        /* Transition: '<S197>:106' */
-        memcpy(&localB->s197_string[0], &rtu_names[10 * (localB->s197_listIndexO
-                + localB->s197_stringNum)], 10);
+    if (guard) {
+      /* Transition: '<S200>:104' */
+      localB->s200_stringNum = 0U;
+      while (localB->s200_stringNum < 6) {
+        /* Transition: '<S200>:106' */
+        memcpy(&localB->s200_string[0], &rtu_names[10 * (localB->s200_listIndexO
+                + localB->s200_stringNum)], 10);
 
-        /* Event: '<S197>:303' */
-        BuckyWagon_01_SendString_efficient(localB->s197_stringNum,
-          localB->s197_string[0], localB->s197_string[1], localB->s197_string[2],
-          localB->s197_string[3], localB->s197_string[4], localB->s197_string[5],
-          localB->s197_string[6], localB->s197_string, localB->s197_string[7],
-          localB->s197_string[8], localB->s197_string[9], localB->s197_string[10],
-          localB->s197_string[11], localB->s197_string[12], localB->s197_string
-          [13], &localB->s197_string[7], localB->s197_string[14],
-          localB->s197_string[15], localB->s197_string[16]);
-        localB->s197_stringNum = (uint8_T)(localB->s197_stringNum + 1);
+        /* Outputs for Function Call SubSystem: '<S11>/Send String_efficient' */
+
+        /* Event: '<S200>:303' */
+        BuckyWagon_01_SendString_efficient(localB->s200_stringNum,
+          localB->s200_string[0], localB->s200_string[1], localB->s200_string[2],
+          localB->s200_string[3], localB->s200_string[4], localB->s200_string[5],
+          localB->s200_string[6], localB->s200_string, localB->s200_string[7],
+          localB->s200_string[8], localB->s200_string[9], localB->s200_string[10],
+          localB->s200_string[11], localB->s200_string[12], localB->s200_string
+          [13], &localB->s200_string[7], localB->s200_string[14],
+          localB->s200_string[15], localB->s200_string[16]);
+
+        /* End of Outputs for SubSystem: '<S11>/Send String_efficient' */
+        localB->s200_stringNum = (uint8_T)(localB->s200_stringNum + 1);
       }
 
-      /* Transition: '<S197>:108' */
-      /* Exit 'List_Idle': '<S197>:5' */
-      /* Entry 'List_Wait': '<S197>:2' */
-      localDW->s197_is_List = BuckyWagon_01_IN_List_Wait;
+      /* Transition: '<S200>:108' */
+      localDW->s200_is_List = BuckyWagon_01_IN_List_Wait;
     }
   }
 }
@@ -1441,74 +1586,102 @@ static void BuckyWagon_01_enter_internal_Quad(const uint8_T rtu_quadIndex[4],
   const int16_T rtu_data[18], uint8_T rtu_21, rtB_Chart_BuckyWagon_01_n *localB,
   rtDW_Chart_BuckyWagon_01_o *localDW)
 {
-  /* Transition: '<S197>:166' */
-  localB->s197_stringNum = 0U;
-  while (localB->s197_stringNum < 4) {
-    /* Transition: '<S197>:168' */
-    localDW->s197_oldData[(int32_T)localB->s197_stringNum] = (int16_T)(rtu_data
-      [(int32_T)rtu_quadIndex[(int32_T)localB->s197_stringNum]] + 1);
-    localB->s197_stringNum = (uint8_T)(localB->s197_stringNum + 1);
+  /* Transition: '<S200>:166' */
+  localB->s200_stringNum = 0U;
+  while (localB->s200_stringNum < 4) {
+    /* Transition: '<S200>:168' */
+    localDW->s200_oldData[localB->s200_stringNum] = (int16_T)
+      (rtu_data[rtu_quadIndex[localB->s200_stringNum]] + 1);
+    localB->s200_stringNum = (uint8_T)(localB->s200_stringNum + 1);
   }
 
-  /* Transition: '<S197>:169' */
-  /* Entry 'Quad_Init': '<S197>:22' */
-  localDW->s197_is_Quad = BuckyWagon_01_IN_Quad_Init;
+  /* Transition: '<S200>:169' */
+  localDW->s200_is_Quad = BuckyWagon_01_IN_Quad_Init;
 
-  /* Event: '<S197>:300' */
+  /* Outputs for Function Call SubSystem: '<S11>/Clear Screen' */
+
+  /* Entry 'Quad_Init': '<S200>:22' */
+  /* Event: '<S200>:300' */
   BuckyWagon_01_ClearScreen();
 
+  /* End of Outputs for SubSystem: '<S11>/Clear Screen' */
+
   /* draw string */
-  localB->s197_stringNum = 15U;
-  sprintf(charPtr(&localB->s197_string[0]), "UWMAD");
-  localB->s197_string[5] = 0U;
+  localB->s200_stringNum = 15U;
+  sprintf(charPtr(&localB->s200_string[0]), "UWMAD");
+  localB->s200_string[5] = 0U;
 
-  /* Event: '<S197>:303' */
-  BuckyWagon_01_SendString_efficient(localB->s197_stringNum, localB->
-    s197_string[0], localB->s197_string[1], localB->s197_string[2],
-    localB->s197_string[3], localB->s197_string[4], localB->s197_string[5],
-    localB->s197_string[6], localB->s197_string, localB->s197_string[7],
-    localB->s197_string[8], localB->s197_string[9], localB->s197_string[10],
-    localB->s197_string[11], localB->s197_string[12], localB->s197_string[13],
-    &localB->s197_string[7], localB->s197_string[14], localB->s197_string[15],
-    localB->s197_string[16]);
-  localB->s197_hCenter = 1U;
-  localB->s197_vCenter = 0U;
-  localB->s197_font = BuckyWagon_01_FONT4x6;
-  localB->s197_x0 = 32U;
-  localB->s197_y0 = 2U;
-  localB->s197_lineColor = BuckyWagon_01_BLACK;
-  localB->s197_fillColor = BuckyWagon_01_WHITE;
+  /* Outputs for Function Call SubSystem: '<S11>/Send String_efficient' */
 
-  /* Event: '<S197>:304' */
-  BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-    localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-    localB->s197_vCenter, rtu_21, localB->s197_lineColor, localB->s197_fillColor);
+  /* Event: '<S200>:303' */
+  BuckyWagon_01_SendString_efficient(localB->s200_stringNum, localB->
+    s200_string[0], localB->s200_string[1], localB->s200_string[2],
+    localB->s200_string[3], localB->s200_string[4], localB->s200_string[5],
+    localB->s200_string[6], localB->s200_string, localB->s200_string[7],
+    localB->s200_string[8], localB->s200_string[9], localB->s200_string[10],
+    localB->s200_string[11], localB->s200_string[12], localB->s200_string[13],
+    &localB->s200_string[7], localB->s200_string[14], localB->s200_string[15],
+    localB->s200_string[16]);
+
+  /* End of Outputs for SubSystem: '<S11>/Send String_efficient' */
+  localB->s200_hCenter = 1U;
+  localB->s200_vCenter = 0U;
+  localB->s200_font = BuckyWagon_01_FONT4x6;
+  localB->s200_x0 = 32U;
+  localB->s200_y0 = 2U;
+  localB->s200_lineColor = BuckyWagon_01_BLACK;
+  localB->s200_fillColor = BuckyWagon_01_WHITE;
+
+  /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
+
+  /* Event: '<S200>:304' */
+  BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+    localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+    localB->s200_vCenter, rtu_21, localB->s200_lineColor, localB->s200_fillColor);
+
+  /* End of Outputs for SubSystem: '<S11>/Draw String' */
 
   /* draw lines */
-  localB->s197_y0 = 8U;
-  localB->s197_x0 = 0U;
-  localB->s197_x1 = 64U;
+  localB->s200_y0 = 8U;
+  localB->s200_x0 = 0U;
+  localB->s200_x1 = 64U;
 
-  /* Event: '<S197>:306' */
-  BuckyWagon_01_DrawHLine(localB->s197_x0, localB->s197_x1, localB->s197_y0,
-    localB->s197_lineColor, localB->s197_fillColor);
-  localB->s197_y0 = 54U;
+  /* Outputs for Function Call SubSystem: '<S11>/Draw HLine' */
 
-  /* Event: '<S197>:306' */
-  BuckyWagon_01_DrawHLine(localB->s197_x0, localB->s197_x1, localB->s197_y0,
-    localB->s197_lineColor, localB->s197_fillColor);
-  localB->s197_y0 = 31U;
+  /* Event: '<S200>:306' */
+  BuckyWagon_01_DrawHLine(localB->s200_x0, localB->s200_x1, localB->s200_y0,
+    localB->s200_lineColor, localB->s200_fillColor);
 
-  /* Event: '<S197>:306' */
-  BuckyWagon_01_DrawHLine(localB->s197_x0, localB->s197_x1, localB->s197_y0,
-    localB->s197_lineColor, localB->s197_fillColor);
-  localB->s197_y0 = 8U;
-  localB->s197_y1 = 54U;
-  localB->s197_x0 = 30U;
+  /* End of Outputs for SubSystem: '<S11>/Draw HLine' */
+  localB->s200_y0 = 54U;
 
-  /* Event: '<S197>:305' */
-  BuckyWagon_01_DrawVline(localB->s197_x0, localB->s197_y0, localB->s197_y1,
-    localB->s197_lineColor, localB->s197_fillColor);
+  /* Outputs for Function Call SubSystem: '<S11>/Draw HLine' */
+
+  /* Event: '<S200>:306' */
+  BuckyWagon_01_DrawHLine(localB->s200_x0, localB->s200_x1, localB->s200_y0,
+    localB->s200_lineColor, localB->s200_fillColor);
+
+  /* End of Outputs for SubSystem: '<S11>/Draw HLine' */
+  localB->s200_y0 = 31U;
+
+  /* Outputs for Function Call SubSystem: '<S11>/Draw HLine' */
+
+  /* Event: '<S200>:306' */
+  BuckyWagon_01_DrawHLine(localB->s200_x0, localB->s200_x1, localB->s200_y0,
+    localB->s200_lineColor, localB->s200_fillColor);
+
+  /* End of Outputs for SubSystem: '<S11>/Draw HLine' */
+  localB->s200_y0 = 8U;
+  localB->s200_y1 = 54U;
+  localB->s200_x0 = 30U;
+
+  /* Outputs for Function Call SubSystem: '<S11>/Draw Vline' */
+
+  /* Event: '<S200>:305' */
+  BuckyWagon_01_DrawVline(localB->s200_x0, localB->s200_y0, localB->s200_y1,
+    localB->s200_lineColor, localB->s200_fillColor);
+
+  /* End of Outputs for SubSystem: '<S11>/Draw Vline' */
 }
 
 /* Function for Stateflow: '<S11>/Chart' */
@@ -1516,54 +1689,74 @@ static void BuckyWagon_01_enter_internal_Single(uint8_T rtu_singleIndex, const
   int16_T rtu_data[18], uint8_T rtu_21, rtB_Chart_BuckyWagon_01_n *localB,
   rtDW_Chart_BuckyWagon_01_o *localDW)
 {
-  /* Transition: '<S197>:71' */
-  /* Entry 'Single_Init': '<S197>:7' */
-  localDW->s197_is_Single = BuckyWagon_01_IN_Single_Init;
+  /* Transition: '<S200>:71' */
+  localDW->s200_is_Single = BuckyWagon_01_IN_Single_Init;
 
-  /* Event: '<S197>:300' */
+  /* Outputs for Function Call SubSystem: '<S11>/Clear Screen' */
+
+  /* Entry 'Single_Init': '<S200>:7' */
+  /* Event: '<S200>:300' */
   BuckyWagon_01_ClearScreen();
 
+  /* End of Outputs for SubSystem: '<S11>/Clear Screen' */
+
   /* draw string */
-  localB->s197_stringNum = 15U;
-  sprintf(charPtr(&localB->s197_string[0]), "UWMAD");
-  localB->s197_string[5] = 0U;
+  localB->s200_stringNum = 15U;
+  sprintf(charPtr(&localB->s200_string[0]), "UWMAD");
+  localB->s200_string[5] = 0U;
 
-  /* Event: '<S197>:303' */
-  BuckyWagon_01_SendString_efficient(localB->s197_stringNum, localB->
-    s197_string[0], localB->s197_string[1], localB->s197_string[2],
-    localB->s197_string[3], localB->s197_string[4], localB->s197_string[5],
-    localB->s197_string[6], localB->s197_string, localB->s197_string[7],
-    localB->s197_string[8], localB->s197_string[9], localB->s197_string[10],
-    localB->s197_string[11], localB->s197_string[12], localB->s197_string[13],
-    &localB->s197_string[7], localB->s197_string[14], localB->s197_string[15],
-    localB->s197_string[16]);
-  localB->s197_hCenter = 1U;
-  localB->s197_vCenter = 0U;
-  localB->s197_font = BuckyWagon_01_FONT4x6;
-  localB->s197_x0 = 32U;
-  localB->s197_y0 = 2U;
-  localB->s197_lineColor = BuckyWagon_01_BLACK;
-  localB->s197_fillColor = BuckyWagon_01_WHITE;
+  /* Outputs for Function Call SubSystem: '<S11>/Send String_efficient' */
 
-  /* Event: '<S197>:304' */
-  BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-    localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-    localB->s197_vCenter, rtu_21, localB->s197_lineColor, localB->s197_fillColor);
+  /* Event: '<S200>:303' */
+  BuckyWagon_01_SendString_efficient(localB->s200_stringNum, localB->
+    s200_string[0], localB->s200_string[1], localB->s200_string[2],
+    localB->s200_string[3], localB->s200_string[4], localB->s200_string[5],
+    localB->s200_string[6], localB->s200_string, localB->s200_string[7],
+    localB->s200_string[8], localB->s200_string[9], localB->s200_string[10],
+    localB->s200_string[11], localB->s200_string[12], localB->s200_string[13],
+    &localB->s200_string[7], localB->s200_string[14], localB->s200_string[15],
+    localB->s200_string[16]);
+
+  /* End of Outputs for SubSystem: '<S11>/Send String_efficient' */
+  localB->s200_hCenter = 1U;
+  localB->s200_vCenter = 0U;
+  localB->s200_font = BuckyWagon_01_FONT4x6;
+  localB->s200_x0 = 32U;
+  localB->s200_y0 = 2U;
+  localB->s200_lineColor = BuckyWagon_01_BLACK;
+  localB->s200_fillColor = BuckyWagon_01_WHITE;
+
+  /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
+
+  /* Event: '<S200>:304' */
+  BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+    localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+    localB->s200_vCenter, rtu_21, localB->s200_lineColor, localB->s200_fillColor);
+
+  /* End of Outputs for SubSystem: '<S11>/Draw String' */
 
   /* draw lines */
-  localB->s197_y0 = 8U;
-  localB->s197_x0 = 0U;
-  localB->s197_x1 = 64U;
+  localB->s200_y0 = 8U;
+  localB->s200_x0 = 0U;
+  localB->s200_x1 = 64U;
 
-  /* Event: '<S197>:306' */
-  BuckyWagon_01_DrawHLine(localB->s197_x0, localB->s197_x1, localB->s197_y0,
-    localB->s197_lineColor, localB->s197_fillColor);
-  localB->s197_y0 = 54U;
+  /* Outputs for Function Call SubSystem: '<S11>/Draw HLine' */
 
-  /* Event: '<S197>:306' */
-  BuckyWagon_01_DrawHLine(localB->s197_x0, localB->s197_x1, localB->s197_y0,
-    localB->s197_lineColor, localB->s197_fillColor);
-  localDW->s197_oldData[0] = (int16_T)(rtu_data[(int32_T)rtu_singleIndex] + 1);
+  /* Event: '<S200>:306' */
+  BuckyWagon_01_DrawHLine(localB->s200_x0, localB->s200_x1, localB->s200_y0,
+    localB->s200_lineColor, localB->s200_fillColor);
+
+  /* End of Outputs for SubSystem: '<S11>/Draw HLine' */
+  localB->s200_y0 = 54U;
+
+  /* Outputs for Function Call SubSystem: '<S11>/Draw HLine' */
+
+  /* Event: '<S200>:306' */
+  BuckyWagon_01_DrawHLine(localB->s200_x0, localB->s200_x1, localB->s200_y0,
+    localB->s200_lineColor, localB->s200_fillColor);
+
+  /* End of Outputs for SubSystem: '<S11>/Draw HLine' */
+  localDW->s200_oldData[0] = (int16_T)(rtu_data[rtu_singleIndex] + 1);
 }
 
 /* Function for Stateflow: '<S11>/Chart' */
@@ -1573,361 +1766,450 @@ static void BuckyWagon_01_Quad(const uint8_T rtu_quadIndex[4], const uint8_T
   uint8_T rtu_21, rtB_Chart_BuckyWagon_01_n *localB, rtDW_Chart_BuckyWagon_01_o *
   localDW)
 {
-  /* During 'Quad': '<S197>:24' */
-  if (_sfEvent_BuckyWagon_01_ == BuckyWagon_01_event_menuPressed) {
-    /* Transition: '<S197>:85' */
-    /* Exit 'Quad_Idle': '<S197>:21' */
-    localDW->s197_is_Quad = (uint8_T)BuckyWagon_01_IN_NO_ACTIVE_CHILD_h;
-
-    /* Exit 'Quad_Init': '<S197>:22' */
-    /* Exit 'Quad_Names': '<S197>:23' */
-    /* Exit 'Quad': '<S197>:24' */
-    /* Entry 'wait1': '<S197>:17' */
-    localDW->s197_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_wait1;
+  /* During 'Quad': '<S200>:24' */
+  if (localDW->s200_sfEvent == BuckyWagon_01_event_menuPressed) {
+    /* Transition: '<S200>:85' */
+    localDW->s200_is_Quad = (uint8_T)BuckyWagon_01_IN_NO_ACTIVE_CHILD_h;
+    localDW->s200_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_wait1;
   } else {
-    switch (localDW->s197_is_Quad) {
+    switch (localDW->s200_is_Quad) {
      case BuckyWagon_01_IN_Quad_Idle:
-      /* During 'Quad_Idle': '<S197>:21' */
-      if ((_sfEvent_BuckyWagon_01_ == BuckyWagon_01_event_tick) &&
-          (localDW->s197_timer >= BuckyWagon_01_UPDATE_TIME)) {
-        /* Transition: '<S197>:170' */
-        localB->s197_stringNum = 0U;
-        localB->s197_font = BuckyWagon_01_FONT6x8;
-        localB->s197_fillColor = BuckyWagon_01_WHITE;
-        localB->s197_hCenter = 0U;
-        if (localDW->s197_oldData[0] != rtu_data[(int32_T)rtu_quadIndex[0]]) {
-          /* Transition: '<S197>:171' */
-          sprintf(charPtr(&localB->s197_string[0]), "%4d", rtu_data[(int32_T)
-                  rtu_quadIndex[0]]);
+      /* During 'Quad_Idle': '<S200>:21' */
+      if ((localDW->s200_sfEvent == BuckyWagon_01_event_tick) &&
+          (localDW->s200_timer >= BuckyWagon_01_UPDATE_TIME)) {
+        /* Transition: '<S200>:170' */
+        localB->s200_stringNum = 0U;
+        localB->s200_font = BuckyWagon_01_FONT6x8;
+        localB->s200_fillColor = BuckyWagon_01_WHITE;
+        localB->s200_hCenter = 0U;
+        if (localDW->s200_oldData[0] != rtu_data[rtu_quadIndex[0]]) {
+          /* Transition: '<S200>:171' */
+          sprintf(charPtr(&localB->s200_string[0]), "%4d",
+                  rtu_data[rtu_quadIndex[0]]);
 
-          /* Event: '<S197>:303' */
-          BuckyWagon_01_SendString_efficient(localB->s197_stringNum,
-            localB->s197_string[0], localB->s197_string[1], localB->s197_string
-            [2], localB->s197_string[3], localB->s197_string[4],
-            localB->s197_string[5], localB->s197_string[6], localB->s197_string,
-            localB->s197_string[7], localB->s197_string[8], localB->s197_string
-            [9], localB->s197_string[10], localB->s197_string[11],
-            localB->s197_string[12], localB->s197_string[13],
-            &localB->s197_string[7], localB->s197_string[14],
-            localB->s197_string[15], localB->s197_string[16]);
-          localB->s197_x0 = 5U;
-          localB->s197_x1 = 29U;
-          localB->s197_y0 = 23U;
-          localB->s197_y1 = 30U;
-          localB->s197_lineColor = 0U;
+          /* Outputs for Function Call SubSystem: '<S11>/Send String_efficient' */
 
-          /* Event: '<S197>:301' */
-          BuckyWagon_01_DrawRect(localB->s197_x0, localB->s197_x1,
-            localB->s197_y0, localB->s197_y1, localB->s197_lineColor,
-            localB->s197_fillColor);
-          localB->s197_lineColor = 1U;
+          /* Event: '<S200>:303' */
+          BuckyWagon_01_SendString_efficient(localB->s200_stringNum,
+            localB->s200_string[0], localB->s200_string[1], localB->s200_string
+            [2], localB->s200_string[3], localB->s200_string[4],
+            localB->s200_string[5], localB->s200_string[6], localB->s200_string,
+            localB->s200_string[7], localB->s200_string[8], localB->s200_string
+            [9], localB->s200_string[10], localB->s200_string[11],
+            localB->s200_string[12], localB->s200_string[13],
+            &localB->s200_string[7], localB->s200_string[14],
+            localB->s200_string[15], localB->s200_string[16]);
 
-          /* Event: '<S197>:304' */
-          BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-            localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-            localB->s197_vCenter, rtu_21, localB->s197_lineColor,
-            localB->s197_fillColor);
-          localDW->s197_oldData[0] = rtu_data[(int32_T)rtu_quadIndex[0]];
+          /* End of Outputs for SubSystem: '<S11>/Send String_efficient' */
+          localB->s200_x0 = 5U;
+          localB->s200_x1 = 29U;
+          localB->s200_y0 = 23U;
+          localB->s200_y1 = 30U;
+          localB->s200_lineColor = 0U;
+
+          /* Outputs for Function Call SubSystem: '<S11>/Draw Rect' */
+
+          /* Event: '<S200>:301' */
+          BuckyWagon_01_DrawRect(localB->s200_x0, localB->s200_x1,
+            localB->s200_y0, localB->s200_y1, localB->s200_lineColor,
+            localB->s200_fillColor);
+
+          /* End of Outputs for SubSystem: '<S11>/Draw Rect' */
+          localB->s200_lineColor = 1U;
+
+          /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
+
+          /* Event: '<S200>:304' */
+          BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+            localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+            localB->s200_vCenter, rtu_21, localB->s200_lineColor,
+            localB->s200_fillColor);
+
+          /* End of Outputs for SubSystem: '<S11>/Draw String' */
+          localDW->s200_oldData[0] = rtu_data[rtu_quadIndex[0]];
         } else {
-          /* Transition: '<S197>:172' */
+          /* Transition: '<S200>:172' */
         }
 
-        if (localDW->s197_oldData[1] != rtu_data[(int32_T)rtu_quadIndex[1]]) {
-          /* Transition: '<S197>:174' */
-          sprintf(charPtr(&localB->s197_string[0]), "%-4d", rtu_data[(int32_T)
-                  rtu_quadIndex[1]]);
+        if (localDW->s200_oldData[1] != rtu_data[rtu_quadIndex[1]]) {
+          /* Transition: '<S200>:174' */
+          sprintf(charPtr(&localB->s200_string[0]), "%-4d",
+                  rtu_data[rtu_quadIndex[1]]);
 
-          /* Event: '<S197>:303' */
-          BuckyWagon_01_SendString_efficient(localB->s197_stringNum,
-            localB->s197_string[0], localB->s197_string[1], localB->s197_string
-            [2], localB->s197_string[3], localB->s197_string[4],
-            localB->s197_string[5], localB->s197_string[6], localB->s197_string,
-            localB->s197_string[7], localB->s197_string[8], localB->s197_string
-            [9], localB->s197_string[10], localB->s197_string[11],
-            localB->s197_string[12], localB->s197_string[13],
-            &localB->s197_string[7], localB->s197_string[14],
-            localB->s197_string[15], localB->s197_string[16]);
-          localB->s197_x0 = 32U;
-          localB->s197_x1 = 55U;
-          localB->s197_y0 = 23U;
-          localB->s197_y1 = 30U;
-          localB->s197_lineColor = 0U;
+          /* Outputs for Function Call SubSystem: '<S11>/Send String_efficient' */
 
-          /* Event: '<S197>:301' */
-          BuckyWagon_01_DrawRect(localB->s197_x0, localB->s197_x1,
-            localB->s197_y0, localB->s197_y1, localB->s197_lineColor,
-            localB->s197_fillColor);
-          localB->s197_lineColor = 1U;
+          /* Event: '<S200>:303' */
+          BuckyWagon_01_SendString_efficient(localB->s200_stringNum,
+            localB->s200_string[0], localB->s200_string[1], localB->s200_string
+            [2], localB->s200_string[3], localB->s200_string[4],
+            localB->s200_string[5], localB->s200_string[6], localB->s200_string,
+            localB->s200_string[7], localB->s200_string[8], localB->s200_string
+            [9], localB->s200_string[10], localB->s200_string[11],
+            localB->s200_string[12], localB->s200_string[13],
+            &localB->s200_string[7], localB->s200_string[14],
+            localB->s200_string[15], localB->s200_string[16]);
 
-          /* Event: '<S197>:304' */
-          BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-            localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-            localB->s197_vCenter, rtu_21, localB->s197_lineColor,
-            localB->s197_fillColor);
-          localDW->s197_oldData[1] = rtu_data[(int32_T)rtu_quadIndex[1]];
+          /* End of Outputs for SubSystem: '<S11>/Send String_efficient' */
+          localB->s200_x0 = 32U;
+          localB->s200_x1 = 55U;
+          localB->s200_y0 = 23U;
+          localB->s200_y1 = 30U;
+          localB->s200_lineColor = 0U;
+
+          /* Outputs for Function Call SubSystem: '<S11>/Draw Rect' */
+
+          /* Event: '<S200>:301' */
+          BuckyWagon_01_DrawRect(localB->s200_x0, localB->s200_x1,
+            localB->s200_y0, localB->s200_y1, localB->s200_lineColor,
+            localB->s200_fillColor);
+
+          /* End of Outputs for SubSystem: '<S11>/Draw Rect' */
+          localB->s200_lineColor = 1U;
+
+          /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
+
+          /* Event: '<S200>:304' */
+          BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+            localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+            localB->s200_vCenter, rtu_21, localB->s200_lineColor,
+            localB->s200_fillColor);
+
+          /* End of Outputs for SubSystem: '<S11>/Draw String' */
+          localDW->s200_oldData[1] = rtu_data[rtu_quadIndex[1]];
         } else {
-          /* Transition: '<S197>:175' */
+          /* Transition: '<S200>:175' */
         }
 
-        if (localDW->s197_oldData[2] != rtu_data[(int32_T)rtu_quadIndex[2]]) {
-          /* Transition: '<S197>:176' */
-          sprintf(charPtr(&localB->s197_string[0]), "%4d", rtu_data[(int32_T)
-                  rtu_quadIndex[2]]);
+        if (localDW->s200_oldData[2] != rtu_data[rtu_quadIndex[2]]) {
+          /* Transition: '<S200>:176' */
+          sprintf(charPtr(&localB->s200_string[0]), "%4d",
+                  rtu_data[rtu_quadIndex[2]]);
 
-          /* Event: '<S197>:303' */
-          BuckyWagon_01_SendString_efficient(localB->s197_stringNum,
-            localB->s197_string[0], localB->s197_string[1], localB->s197_string
-            [2], localB->s197_string[3], localB->s197_string[4],
-            localB->s197_string[5], localB->s197_string[6], localB->s197_string,
-            localB->s197_string[7], localB->s197_string[8], localB->s197_string
-            [9], localB->s197_string[10], localB->s197_string[11],
-            localB->s197_string[12], localB->s197_string[13],
-            &localB->s197_string[7], localB->s197_string[14],
-            localB->s197_string[15], localB->s197_string[16]);
-          localB->s197_x0 = 5U;
-          localB->s197_x1 = 29U;
-          localB->s197_y0 = 33U;
-          localB->s197_y1 = 40U;
-          localB->s197_lineColor = 0U;
+          /* Outputs for Function Call SubSystem: '<S11>/Send String_efficient' */
 
-          /* Event: '<S197>:301' */
-          BuckyWagon_01_DrawRect(localB->s197_x0, localB->s197_x1,
-            localB->s197_y0, localB->s197_y1, localB->s197_lineColor,
-            localB->s197_fillColor);
-          localB->s197_lineColor = 1U;
+          /* Event: '<S200>:303' */
+          BuckyWagon_01_SendString_efficient(localB->s200_stringNum,
+            localB->s200_string[0], localB->s200_string[1], localB->s200_string
+            [2], localB->s200_string[3], localB->s200_string[4],
+            localB->s200_string[5], localB->s200_string[6], localB->s200_string,
+            localB->s200_string[7], localB->s200_string[8], localB->s200_string
+            [9], localB->s200_string[10], localB->s200_string[11],
+            localB->s200_string[12], localB->s200_string[13],
+            &localB->s200_string[7], localB->s200_string[14],
+            localB->s200_string[15], localB->s200_string[16]);
 
-          /* Event: '<S197>:304' */
-          BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-            localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-            localB->s197_vCenter, rtu_21, localB->s197_lineColor,
-            localB->s197_fillColor);
-          localDW->s197_oldData[2] = rtu_data[(int32_T)rtu_quadIndex[2]];
+          /* End of Outputs for SubSystem: '<S11>/Send String_efficient' */
+          localB->s200_x0 = 5U;
+          localB->s200_x1 = 29U;
+          localB->s200_y0 = 33U;
+          localB->s200_y1 = 40U;
+          localB->s200_lineColor = 0U;
+
+          /* Outputs for Function Call SubSystem: '<S11>/Draw Rect' */
+
+          /* Event: '<S200>:301' */
+          BuckyWagon_01_DrawRect(localB->s200_x0, localB->s200_x1,
+            localB->s200_y0, localB->s200_y1, localB->s200_lineColor,
+            localB->s200_fillColor);
+
+          /* End of Outputs for SubSystem: '<S11>/Draw Rect' */
+          localB->s200_lineColor = 1U;
+
+          /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
+
+          /* Event: '<S200>:304' */
+          BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+            localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+            localB->s200_vCenter, rtu_21, localB->s200_lineColor,
+            localB->s200_fillColor);
+
+          /* End of Outputs for SubSystem: '<S11>/Draw String' */
+          localDW->s200_oldData[2] = rtu_data[rtu_quadIndex[2]];
         } else {
-          /* Transition: '<S197>:177' */
+          /* Transition: '<S200>:177' */
         }
 
-        if (localDW->s197_oldData[3] != rtu_data[(int32_T)rtu_quadIndex[3]]) {
-          /* Transition: '<S197>:179' */
-          sprintf(charPtr(&localB->s197_string[0]), "%-4d", rtu_data[(int32_T)
-                  rtu_quadIndex[3]]);
+        if (localDW->s200_oldData[3] != rtu_data[rtu_quadIndex[3]]) {
+          /* Transition: '<S200>:179' */
+          sprintf(charPtr(&localB->s200_string[0]), "%-4d",
+                  rtu_data[rtu_quadIndex[3]]);
 
-          /* Event: '<S197>:303' */
-          BuckyWagon_01_SendString_efficient(localB->s197_stringNum,
-            localB->s197_string[0], localB->s197_string[1], localB->s197_string
-            [2], localB->s197_string[3], localB->s197_string[4],
-            localB->s197_string[5], localB->s197_string[6], localB->s197_string,
-            localB->s197_string[7], localB->s197_string[8], localB->s197_string
-            [9], localB->s197_string[10], localB->s197_string[11],
-            localB->s197_string[12], localB->s197_string[13],
-            &localB->s197_string[7], localB->s197_string[14],
-            localB->s197_string[15], localB->s197_string[16]);
-          localB->s197_x0 = 32U;
-          localB->s197_x1 = 55U;
-          localB->s197_y0 = 33U;
-          localB->s197_y1 = 40U;
-          localB->s197_lineColor = 0U;
+          /* Outputs for Function Call SubSystem: '<S11>/Send String_efficient' */
 
-          /* Event: '<S197>:301' */
-          BuckyWagon_01_DrawRect(localB->s197_x0, localB->s197_x1,
-            localB->s197_y0, localB->s197_y1, localB->s197_lineColor,
-            localB->s197_fillColor);
-          localB->s197_lineColor = 1U;
+          /* Event: '<S200>:303' */
+          BuckyWagon_01_SendString_efficient(localB->s200_stringNum,
+            localB->s200_string[0], localB->s200_string[1], localB->s200_string
+            [2], localB->s200_string[3], localB->s200_string[4],
+            localB->s200_string[5], localB->s200_string[6], localB->s200_string,
+            localB->s200_string[7], localB->s200_string[8], localB->s200_string
+            [9], localB->s200_string[10], localB->s200_string[11],
+            localB->s200_string[12], localB->s200_string[13],
+            &localB->s200_string[7], localB->s200_string[14],
+            localB->s200_string[15], localB->s200_string[16]);
 
-          /* Event: '<S197>:304' */
-          BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-            localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-            localB->s197_vCenter, rtu_21, localB->s197_lineColor,
-            localB->s197_fillColor);
-          localDW->s197_oldData[3] = rtu_data[(int32_T)rtu_quadIndex[3]];
+          /* End of Outputs for SubSystem: '<S11>/Send String_efficient' */
+          localB->s200_x0 = 32U;
+          localB->s200_x1 = 55U;
+          localB->s200_y0 = 33U;
+          localB->s200_y1 = 40U;
+          localB->s200_lineColor = 0U;
+
+          /* Outputs for Function Call SubSystem: '<S11>/Draw Rect' */
+
+          /* Event: '<S200>:301' */
+          BuckyWagon_01_DrawRect(localB->s200_x0, localB->s200_x1,
+            localB->s200_y0, localB->s200_y1, localB->s200_lineColor,
+            localB->s200_fillColor);
+
+          /* End of Outputs for SubSystem: '<S11>/Draw Rect' */
+          localB->s200_lineColor = 1U;
+
+          /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
+
+          /* Event: '<S200>:304' */
+          BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+            localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+            localB->s200_vCenter, rtu_21, localB->s200_lineColor,
+            localB->s200_fillColor);
+
+          /* End of Outputs for SubSystem: '<S11>/Draw String' */
+          localDW->s200_oldData[3] = rtu_data[rtu_quadIndex[3]];
         } else {
-          /* Transition: '<S197>:180' */
+          /* Transition: '<S200>:180' */
         }
 
-        /* Transition: '<S197>:133' */
-        localB->s197_y0 = 55U;
-        localB->s197_y1 = 63U;
-        localB->s197_x0 = 0U;
-        localB->s197_x1 = 63U;
-        memcpy(&localB->s197_string[0], &rtu_statusTxt[0], 9);
-        localB->s197_string[9] = 0U;
+        /* Transition: '<S200>:133' */
+        localB->s200_y0 = 55U;
+        localB->s200_y1 = 63U;
+        localB->s200_x0 = 0U;
+        localB->s200_x1 = 63U;
+        memcpy(&localB->s200_string[0], &rtu_statusTxt[0], 9);
+        localB->s200_string[9] = 0U;
 
-        /* Event: '<S197>:303' */
-        BuckyWagon_01_SendString_efficient(localB->s197_stringNum,
-          localB->s197_string[0], localB->s197_string[1], localB->s197_string[2],
-          localB->s197_string[3], localB->s197_string[4], localB->s197_string[5],
-          localB->s197_string[6], localB->s197_string, localB->s197_string[7],
-          localB->s197_string[8], localB->s197_string[9], localB->s197_string[10],
-          localB->s197_string[11], localB->s197_string[12], localB->s197_string
-          [13], &localB->s197_string[7], localB->s197_string[14],
-          localB->s197_string[15], localB->s197_string[16]);
+        /* Outputs for Function Call SubSystem: '<S11>/Send String_efficient' */
+
+        /* Event: '<S200>:303' */
+        BuckyWagon_01_SendString_efficient(localB->s200_stringNum,
+          localB->s200_string[0], localB->s200_string[1], localB->s200_string[2],
+          localB->s200_string[3], localB->s200_string[4], localB->s200_string[5],
+          localB->s200_string[6], localB->s200_string, localB->s200_string[7],
+          localB->s200_string[8], localB->s200_string[9], localB->s200_string[10],
+          localB->s200_string[11], localB->s200_string[12], localB->s200_string
+          [13], &localB->s200_string[7], localB->s200_string[14],
+          localB->s200_string[15], localB->s200_string[16]);
+
+        /* End of Outputs for SubSystem: '<S11>/Send String_efficient' */
         if (rtu_statusTxtMode == 1) {
-          /* Transition: '<S197>:134' */
-          localB->s197_fillColor = BuckyWagon_01_BLACK;
-          localB->s197_lineColor = BuckyWagon_01_BLACK;
+          /* Transition: '<S200>:134' */
+          localB->s200_fillColor = BuckyWagon_01_BLACK;
+          localB->s200_lineColor = BuckyWagon_01_BLACK;
 
-          /* Event: '<S197>:301' */
-          BuckyWagon_01_DrawRect(localB->s197_x0, localB->s197_x1,
-            localB->s197_y0, localB->s197_y1, localB->s197_lineColor,
-            localB->s197_fillColor);
-          localB->s197_lineColor = BuckyWagon_01_WHITE;
+          /* Outputs for Function Call SubSystem: '<S11>/Draw Rect' */
+
+          /* Event: '<S200>:301' */
+          BuckyWagon_01_DrawRect(localB->s200_x0, localB->s200_x1,
+            localB->s200_y0, localB->s200_y1, localB->s200_lineColor,
+            localB->s200_fillColor);
+
+          /* End of Outputs for SubSystem: '<S11>/Draw Rect' */
+          localB->s200_lineColor = BuckyWagon_01_WHITE;
         } else {
-          /* Transition: '<S197>:132' */
-          localB->s197_lineColor = BuckyWagon_01_WHITE;
+          /* Transition: '<S200>:132' */
+          localB->s200_lineColor = BuckyWagon_01_WHITE;
 
-          /* Event: '<S197>:301' */
-          BuckyWagon_01_DrawRect(localB->s197_x0, localB->s197_x1,
-            localB->s197_y0, localB->s197_y1, localB->s197_lineColor,
-            localB->s197_fillColor);
-          localB->s197_lineColor = BuckyWagon_01_BLACK;
+          /* Outputs for Function Call SubSystem: '<S11>/Draw Rect' */
+
+          /* Event: '<S200>:301' */
+          BuckyWagon_01_DrawRect(localB->s200_x0, localB->s200_x1,
+            localB->s200_y0, localB->s200_y1, localB->s200_lineColor,
+            localB->s200_fillColor);
+
+          /* End of Outputs for SubSystem: '<S11>/Draw Rect' */
+          localB->s200_lineColor = BuckyWagon_01_BLACK;
         }
 
-        /* Transition: '<S197>:131' */
-        localB->s197_y0 = 56U;
-        localB->s197_font = BuckyWagon_01_FONT4x6;
-        localB->s197_x0 = 17U;
+        /* Transition: '<S200>:131' */
+        localB->s200_y0 = 56U;
+        localB->s200_font = BuckyWagon_01_FONT4x6;
+        localB->s200_x0 = 17U;
 
-        /* Event: '<S197>:304' */
-        BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-          localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-          localB->s197_vCenter, rtu_21, localB->s197_lineColor,
-          localB->s197_fillColor);
+        /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
 
-        /* Transition: '<S197>:178' */
-        localDW->s197_timer = 0U;
+        /* Event: '<S200>:304' */
+        BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+          localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+          localB->s200_vCenter, rtu_21, localB->s200_lineColor,
+          localB->s200_fillColor);
 
-        /* Exit 'Quad_Idle': '<S197>:21' */
-        /* Entry 'Quad_Idle': '<S197>:21' */
-        localDW->s197_is_Quad = BuckyWagon_01_IN_Quad_Idle;
+        /* End of Outputs for SubSystem: '<S11>/Draw String' */
+
+        /* Transition: '<S200>:178' */
+        localDW->s200_timer = 0U;
+        localDW->s200_is_Quad = BuckyWagon_01_IN_Quad_Idle;
       } else {
-        if (_sfEvent_BuckyWagon_01_ == BuckyWagon_01_event_tick) {
-          /* Transition: '<S197>:173' */
-          /* Exit 'Quad_Idle': '<S197>:21' */
-          localDW->s197_timer = (uint16_T)(localDW->s197_timer + 1);
-
-          /* Entry 'Quad_Idle': '<S197>:21' */
-          localDW->s197_is_Quad = BuckyWagon_01_IN_Quad_Idle;
+        if (localDW->s200_sfEvent == BuckyWagon_01_event_tick) {
+          /* Transition: '<S200>:173' */
+          localDW->s200_timer = (uint16_T)(localDW->s200_timer + 1);
+          localDW->s200_is_Quad = BuckyWagon_01_IN_Quad_Idle;
         }
       }
       break;
 
      case BuckyWagon_01_IN_Quad_Init:
-      /* During 'Quad_Init': '<S197>:22' */
-      /* Transition: '<S197>:165' */
-      localB->s197_stringNum = 0U;
-      while (localB->s197_stringNum < 4) {
-        /* Transition: '<S197>:163' */
-        memcpy(&localB->s197_string[0], &rtu_namesline1[7 * rtu_quadIndex
-               [(int32_T)localB->s197_stringNum]], 7);
+      /* During 'Quad_Init': '<S200>:22' */
+      /* Transition: '<S200>:165' */
+      localB->s200_stringNum = 0U;
+      while (localB->s200_stringNum < 4) {
+        /* Transition: '<S200>:163' */
+        memcpy(&localB->s200_string[0], &rtu_namesline1[7 * rtu_quadIndex
+               [localB->s200_stringNum]], 7);
 
-        /* Event: '<S197>:303' */
-        BuckyWagon_01_SendString_efficient(localB->s197_stringNum,
-          localB->s197_string[0], localB->s197_string[1], localB->s197_string[2],
-          localB->s197_string[3], localB->s197_string[4], localB->s197_string[5],
-          localB->s197_string[6], localB->s197_string, localB->s197_string[7],
-          localB->s197_string[8], localB->s197_string[9], localB->s197_string[10],
-          localB->s197_string[11], localB->s197_string[12], localB->s197_string
-          [13], &localB->s197_string[7], localB->s197_string[14],
-          localB->s197_string[15], localB->s197_string[16]);
-        memcpy(&localB->s197_string[0], &rtu_namesline2[7 * rtu_quadIndex
-               [(int32_T)localB->s197_stringNum]], 7);
-        localB->s197_stringNum = (uint8_T)(localB->s197_stringNum + 4);
+        /* Outputs for Function Call SubSystem: '<S11>/Send String_efficient' */
 
-        /* Event: '<S197>:303' */
-        BuckyWagon_01_SendString_efficient(localB->s197_stringNum,
-          localB->s197_string[0], localB->s197_string[1], localB->s197_string[2],
-          localB->s197_string[3], localB->s197_string[4], localB->s197_string[5],
-          localB->s197_string[6], localB->s197_string, localB->s197_string[7],
-          localB->s197_string[8], localB->s197_string[9], localB->s197_string[10],
-          localB->s197_string[11], localB->s197_string[12], localB->s197_string
-          [13], &localB->s197_string[7], localB->s197_string[14],
-          localB->s197_string[15], localB->s197_string[16]);
-        localB->s197_stringNum = (uint8_T)(localB->s197_stringNum - 3);
+        /* Event: '<S200>:303' */
+        BuckyWagon_01_SendString_efficient(localB->s200_stringNum,
+          localB->s200_string[0], localB->s200_string[1], localB->s200_string[2],
+          localB->s200_string[3], localB->s200_string[4], localB->s200_string[5],
+          localB->s200_string[6], localB->s200_string, localB->s200_string[7],
+          localB->s200_string[8], localB->s200_string[9], localB->s200_string[10],
+          localB->s200_string[11], localB->s200_string[12], localB->s200_string
+          [13], &localB->s200_string[7], localB->s200_string[14],
+          localB->s200_string[15], localB->s200_string[16]);
+
+        /* End of Outputs for SubSystem: '<S11>/Send String_efficient' */
+        memcpy(&localB->s200_string[0], &rtu_namesline2[7 * rtu_quadIndex
+               [localB->s200_stringNum]], 7);
+        localB->s200_stringNum = (uint8_T)(localB->s200_stringNum + 4);
+
+        /* Outputs for Function Call SubSystem: '<S11>/Send String_efficient' */
+
+        /* Event: '<S200>:303' */
+        BuckyWagon_01_SendString_efficient(localB->s200_stringNum,
+          localB->s200_string[0], localB->s200_string[1], localB->s200_string[2],
+          localB->s200_string[3], localB->s200_string[4], localB->s200_string[5],
+          localB->s200_string[6], localB->s200_string, localB->s200_string[7],
+          localB->s200_string[8], localB->s200_string[9], localB->s200_string[10],
+          localB->s200_string[11], localB->s200_string[12], localB->s200_string
+          [13], &localB->s200_string[7], localB->s200_string[14],
+          localB->s200_string[15], localB->s200_string[16]);
+
+        /* End of Outputs for SubSystem: '<S11>/Send String_efficient' */
+        localB->s200_stringNum = (uint8_T)(localB->s200_stringNum - 3);
       }
 
-      /* Transition: '<S197>:164' */
-      /* Exit 'Quad_Init': '<S197>:22' */
-      /* Entry 'Quad_Names': '<S197>:23' */
-      localDW->s197_is_Quad = BuckyWagon_01_IN_Quad_Names;
-      localB->s197_hCenter = 0U;
-      localB->s197_x0 = 10U;
-      localB->s197_y0 = 10U;
-      localB->s197_stringNum = 0U;
+      /* Transition: '<S200>:164' */
+      localDW->s200_is_Quad = BuckyWagon_01_IN_Quad_Names;
 
-      /* Event: '<S197>:304' */
-      BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-        localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-        localB->s197_vCenter, rtu_21, localB->s197_lineColor,
-        localB->s197_fillColor);
-      localB->s197_x0 = 5U;
-      localB->s197_y0 = 16U;
-      localB->s197_stringNum = 4U;
+      /* Entry 'Quad_Names': '<S200>:23' */
+      localB->s200_hCenter = 0U;
+      localB->s200_x0 = 10U;
+      localB->s200_y0 = 10U;
+      localB->s200_stringNum = 0U;
 
-      /* Event: '<S197>:304' */
-      BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-        localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-        localB->s197_vCenter, rtu_21, localB->s197_lineColor,
-        localB->s197_fillColor);
-      localB->s197_y0 = 41U;
-      localB->s197_stringNum = 2U;
+      /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
 
-      /* Event: '<S197>:304' */
-      BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-        localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-        localB->s197_vCenter, rtu_21, localB->s197_lineColor,
-        localB->s197_fillColor);
-      localB->s197_x0 = 10U;
-      localB->s197_y0 = 47U;
-      localB->s197_stringNum = 6U;
+      /* Event: '<S200>:304' */
+      BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+        localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+        localB->s200_vCenter, rtu_21, localB->s200_lineColor,
+        localB->s200_fillColor);
 
-      /* Event: '<S197>:304' */
-      BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-        localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-        localB->s197_vCenter, rtu_21, localB->s197_lineColor,
-        localB->s197_fillColor);
-      localB->s197_x0 = 32U;
-      localB->s197_y0 = 10U;
-      localB->s197_stringNum = 1U;
+      /* End of Outputs for SubSystem: '<S11>/Draw String' */
+      localB->s200_x0 = 5U;
+      localB->s200_y0 = 16U;
+      localB->s200_stringNum = 4U;
 
-      /* Event: '<S197>:304' */
-      BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-        localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-        localB->s197_vCenter, rtu_21, localB->s197_lineColor,
-        localB->s197_fillColor);
-      localB->s197_y0 = 16U;
-      localB->s197_stringNum = 5U;
+      /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
 
-      /* Event: '<S197>:304' */
-      BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-        localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-        localB->s197_vCenter, rtu_21, localB->s197_lineColor,
-        localB->s197_fillColor);
-      localB->s197_y0 = 41U;
-      localB->s197_stringNum = 3U;
+      /* Event: '<S200>:304' */
+      BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+        localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+        localB->s200_vCenter, rtu_21, localB->s200_lineColor,
+        localB->s200_fillColor);
 
-      /* Event: '<S197>:304' */
-      BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-        localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-        localB->s197_vCenter, rtu_21, localB->s197_lineColor,
-        localB->s197_fillColor);
-      localB->s197_y0 = 47U;
-      localB->s197_stringNum = 7U;
+      /* End of Outputs for SubSystem: '<S11>/Draw String' */
+      localB->s200_y0 = 41U;
+      localB->s200_stringNum = 2U;
 
-      /* Event: '<S197>:304' */
-      BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-        localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-        localB->s197_vCenter, rtu_21, localB->s197_lineColor,
-        localB->s197_fillColor);
+      /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
+
+      /* Event: '<S200>:304' */
+      BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+        localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+        localB->s200_vCenter, rtu_21, localB->s200_lineColor,
+        localB->s200_fillColor);
+
+      /* End of Outputs for SubSystem: '<S11>/Draw String' */
+      localB->s200_x0 = 10U;
+      localB->s200_y0 = 47U;
+      localB->s200_stringNum = 6U;
+
+      /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
+
+      /* Event: '<S200>:304' */
+      BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+        localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+        localB->s200_vCenter, rtu_21, localB->s200_lineColor,
+        localB->s200_fillColor);
+
+      /* End of Outputs for SubSystem: '<S11>/Draw String' */
+      localB->s200_x0 = 32U;
+      localB->s200_y0 = 10U;
+      localB->s200_stringNum = 1U;
+
+      /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
+
+      /* Event: '<S200>:304' */
+      BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+        localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+        localB->s200_vCenter, rtu_21, localB->s200_lineColor,
+        localB->s200_fillColor);
+
+      /* End of Outputs for SubSystem: '<S11>/Draw String' */
+      localB->s200_y0 = 16U;
+      localB->s200_stringNum = 5U;
+
+      /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
+
+      /* Event: '<S200>:304' */
+      BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+        localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+        localB->s200_vCenter, rtu_21, localB->s200_lineColor,
+        localB->s200_fillColor);
+
+      /* End of Outputs for SubSystem: '<S11>/Draw String' */
+      localB->s200_y0 = 41U;
+      localB->s200_stringNum = 3U;
+
+      /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
+
+      /* Event: '<S200>:304' */
+      BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+        localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+        localB->s200_vCenter, rtu_21, localB->s200_lineColor,
+        localB->s200_fillColor);
+
+      /* End of Outputs for SubSystem: '<S11>/Draw String' */
+      localB->s200_y0 = 47U;
+      localB->s200_stringNum = 7U;
+
+      /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
+
+      /* Event: '<S200>:304' */
+      BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+        localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+        localB->s200_vCenter, rtu_21, localB->s200_lineColor,
+        localB->s200_fillColor);
+
+      /* End of Outputs for SubSystem: '<S11>/Draw String' */
       break;
 
      case BuckyWagon_01_IN_Quad_Names:
-      /* During 'Quad_Names': '<S197>:23' */
-      /* Transition: '<S197>:167' */
-      localDW->s197_timer = BuckyWagon_01_UPDATE_TIME;
-      localB->s197_font = BuckyWagon_01_FONT6x8;
-
-      /* Exit 'Quad_Names': '<S197>:23' */
-      /* Entry 'Quad_Idle': '<S197>:21' */
-      localDW->s197_is_Quad = BuckyWagon_01_IN_Quad_Idle;
+      /* During 'Quad_Names': '<S200>:23' */
+      /* Transition: '<S200>:167' */
+      localDW->s200_timer = BuckyWagon_01_UPDATE_TIME;
+      localB->s200_font = BuckyWagon_01_FONT6x8;
+      localDW->s200_is_Quad = BuckyWagon_01_IN_Quad_Idle;
       break;
 
      default:
@@ -1942,104 +2224,234 @@ static void BuckyWagon_01_Quad(const uint8_T rtu_quadIndex[4], const uint8_T
 static void BuckyWagon_01_enter_internal_select_var(uint8_T rtu_21,
   rtB_Chart_BuckyWagon_01_n *localB, rtDW_Chart_BuckyWagon_01_o *localDW)
 {
-  /* Transition: '<S197>:146' */
-  /* Entry 'Select_Init': '<S197>:33' */
-  localDW->s197_is_select_var = BuckyWagon_01_IN_Select_Init;
+  /* Transition: '<S200>:146' */
+  localDW->s200_is_select_var = BuckyWagon_01_IN_Select_Init;
 
-  /* Event: '<S197>:300' */
+  /* Outputs for Function Call SubSystem: '<S11>/Clear Screen' */
+
+  /* Entry 'Select_Init': '<S200>:33' */
+  /* Event: '<S200>:300' */
   BuckyWagon_01_ClearScreen();
 
+  /* End of Outputs for SubSystem: '<S11>/Clear Screen' */
+
   /* draw lines and name */
-  localB->s197_stringNum = 15U;
-  sprintf(charPtr(&localB->s197_string[0]), "UWMAD");
-  localB->s197_string[5] = 0U;
+  localB->s200_stringNum = 15U;
+  sprintf(charPtr(&localB->s200_string[0]), "UWMAD");
+  localB->s200_string[5] = 0U;
 
-  /* Event: '<S197>:303' */
-  BuckyWagon_01_SendString_efficient(localB->s197_stringNum, localB->
-    s197_string[0], localB->s197_string[1], localB->s197_string[2],
-    localB->s197_string[3], localB->s197_string[4], localB->s197_string[5],
-    localB->s197_string[6], localB->s197_string, localB->s197_string[7],
-    localB->s197_string[8], localB->s197_string[9], localB->s197_string[10],
-    localB->s197_string[11], localB->s197_string[12], localB->s197_string[13],
-    &localB->s197_string[7], localB->s197_string[14], localB->s197_string[15],
-    localB->s197_string[16]);
-  localB->s197_y0 = 8U;
-  localB->s197_x0 = 0U;
-  localB->s197_x1 = 63U;
-  localB->s197_lineColor = BuckyWagon_01_BLACK;
-  localB->s197_fillColor = BuckyWagon_01_WHITE;
+  /* Outputs for Function Call SubSystem: '<S11>/Send String_efficient' */
 
-  /* Event: '<S197>:306' */
-  BuckyWagon_01_DrawHLine(localB->s197_x0, localB->s197_x1, localB->s197_y0,
-    localB->s197_lineColor, localB->s197_fillColor);
-  localB->s197_y0 = 54U;
+  /* Event: '<S200>:303' */
+  BuckyWagon_01_SendString_efficient(localB->s200_stringNum, localB->
+    s200_string[0], localB->s200_string[1], localB->s200_string[2],
+    localB->s200_string[3], localB->s200_string[4], localB->s200_string[5],
+    localB->s200_string[6], localB->s200_string, localB->s200_string[7],
+    localB->s200_string[8], localB->s200_string[9], localB->s200_string[10],
+    localB->s200_string[11], localB->s200_string[12], localB->s200_string[13],
+    &localB->s200_string[7], localB->s200_string[14], localB->s200_string[15],
+    localB->s200_string[16]);
 
-  /* Event: '<S197>:306' */
-  BuckyWagon_01_DrawHLine(localB->s197_x0, localB->s197_x1, localB->s197_y0,
-    localB->s197_lineColor, localB->s197_fillColor);
-  localB->s197_hCenter = 1U;
-  localB->s197_vCenter = 0U;
-  localB->s197_font = BuckyWagon_01_FONT4x6;
-  localB->s197_x0 = 32U;
-  localB->s197_y0 = 2U;
+  /* End of Outputs for SubSystem: '<S11>/Send String_efficient' */
+  localB->s200_y0 = 8U;
+  localB->s200_x0 = 0U;
+  localB->s200_x1 = 63U;
+  localB->s200_lineColor = BuckyWagon_01_BLACK;
+  localB->s200_fillColor = BuckyWagon_01_WHITE;
 
-  /* Event: '<S197>:304' */
-  BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-    localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-    localB->s197_vCenter, rtu_21, localB->s197_lineColor, localB->s197_fillColor);
-  localDW->s197_selectIndex = 0U;
-  localDW->s197_selectVIndex = 0U;
+  /* Outputs for Function Call SubSystem: '<S11>/Draw HLine' */
+
+  /* Event: '<S200>:306' */
+  BuckyWagon_01_DrawHLine(localB->s200_x0, localB->s200_x1, localB->s200_y0,
+    localB->s200_lineColor, localB->s200_fillColor);
+
+  /* End of Outputs for SubSystem: '<S11>/Draw HLine' */
+  localB->s200_y0 = 54U;
+
+  /* Outputs for Function Call SubSystem: '<S11>/Draw HLine' */
+
+  /* Event: '<S200>:306' */
+  BuckyWagon_01_DrawHLine(localB->s200_x0, localB->s200_x1, localB->s200_y0,
+    localB->s200_lineColor, localB->s200_fillColor);
+
+  /* End of Outputs for SubSystem: '<S11>/Draw HLine' */
+  localB->s200_hCenter = 1U;
+  localB->s200_vCenter = 0U;
+  localB->s200_font = BuckyWagon_01_FONT4x6;
+  localB->s200_x0 = 32U;
+  localB->s200_y0 = 2U;
+
+  /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
+
+  /* Event: '<S200>:304' */
+  BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+    localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+    localB->s200_vCenter, rtu_21, localB->s200_lineColor, localB->s200_fillColor);
+
+  /* End of Outputs for SubSystem: '<S11>/Draw String' */
+  localDW->s200_selectIndex = 0U;
+  localDW->s200_selectVIndex = 0U;
+}
+
+/* Function for Stateflow: '<S11>/Chart' */
+static void BuckyWagon_01_storeSelect(const uint8_T rtu_dualIndex[2], const
+  uint8_T rtu_quadIndex[4], rtB_Chart_BuckyWagon_01_n *localB,
+  rtDW_Chart_BuckyWagon_01_o *localDW)
+{
+  /* Graphical Function 'storeSelect': '<S200>:25' */
+  /* Transition: '<S200>:160' */
+  if (localDW->s200_setupIndex == 1) {
+    /* Transition: '<S200>:159' */
+    localB->s200_singleIndexO = localDW->s200_selectIndex;
+
+    /* Outputs for Function Call SubSystem: '<S11>/Function-Call Subsystem2' */
+
+    /* Event: '<S200>:316' */
+
+    /* S-Function (motohawk_sfun_data_write): '<S213>/motohawk_data_write' */
+    /* Write to Data Storage as scalar: singleIndex */
+    {
+      singleIndex_DataStore() = localB->s200_singleIndexO;
+    }
+
+    /* End of Outputs for SubSystem: '<S11>/Function-Call Subsystem2' */
+  } else if ((localDW->s200_setupIndex == 2) || (localDW->s200_setupIndex == 3))
+  {
+    /* Transition: '<S200>:161' */
+    localB->s200_dualIndexO[0] = rtu_dualIndex[0];
+    localB->s200_dualIndexO[1] = rtu_dualIndex[1];
+    localB->s200_dualIndexO[localDW->s200_setupIndex - 2] =
+      localDW->s200_selectIndex;
+
+    /* Outputs for Function Call SubSystem: '<S11>/Function-Call Subsystem3' */
+
+    /* Event: '<S200>:315' */
+
+    /* S-Function (motohawk_sfun_data_write): '<S214>/motohawk_data_write' */
+    /* Write to Data Storage as vector: dualIndex */
+    {
+      dualIndex_DataStore()[0] = localB->s200_dualIndexO[0];
+      dualIndex_DataStore()[1] = localB->s200_dualIndexO[1];
+    }
+
+    /* End of Outputs for SubSystem: '<S11>/Function-Call Subsystem3' */
+  } else {
+    if (localDW->s200_setupIndex >= 4) {
+      /* Transition: '<S200>:162' */
+      localB->s200_quadIndexO[0] = rtu_quadIndex[0];
+      localB->s200_quadIndexO[1] = rtu_quadIndex[1];
+      localB->s200_quadIndexO[2] = rtu_quadIndex[2];
+      localB->s200_quadIndexO[3] = rtu_quadIndex[3];
+      localB->s200_quadIndexO[localDW->s200_setupIndex - 4] =
+        localDW->s200_selectIndex;
+
+      /* Outputs for Function Call SubSystem: '<S11>/Function-Call Subsystem4' */
+
+      /* Event: '<S200>:317' */
+
+      /* S-Function (motohawk_sfun_data_write): '<S215>/motohawk_data_write' */
+      /* Write to Data Storage as vector: quadIndex */
+      {
+        quadIndex_DataStore()[0] = localB->s200_quadIndexO[0];
+        quadIndex_DataStore()[1] = localB->s200_quadIndexO[1];
+        quadIndex_DataStore()[2] = localB->s200_quadIndexO[2];
+        quadIndex_DataStore()[3] = localB->s200_quadIndexO[3];
+      }
+
+      /* End of Outputs for SubSystem: '<S11>/Function-Call Subsystem4' */
+    }
+  }
 }
 
 /* Function for Stateflow: '<S11>/Chart' */
 static void BuckyWagon_01_enter_atomic_Setup_Init(uint8_T rtu_21,
   rtB_Chart_BuckyWagon_01_n *localB, rtDW_Chart_BuckyWagon_01_o *localDW)
 {
-  /* Entry 'Setup_Init': '<S197>:16' */
-  localDW->s197_is_Setup = BuckyWagon_01_IN_Setup_Init;
+  /* Outputs for Function Call SubSystem: '<S11>/Clear Screen' */
 
-  /* Event: '<S197>:300' */
+  /* Entry 'Setup_Init': '<S200>:16' */
+  /* Event: '<S200>:300' */
   BuckyWagon_01_ClearScreen();
 
+  /* End of Outputs for SubSystem: '<S11>/Clear Screen' */
+
   /* draw lines and name */
-  localB->s197_stringNum = 15U;
-  sprintf(charPtr(&localB->s197_string[0]), "UWMAD");
-  localB->s197_string[5] = 0U;
+  localB->s200_stringNum = 15U;
+  sprintf(charPtr(&localB->s200_string[0]), "UWMAD");
+  localB->s200_string[5] = 0U;
 
-  /* Event: '<S197>:303' */
-  BuckyWagon_01_SendString_efficient(localB->s197_stringNum, localB->
-    s197_string[0], localB->s197_string[1], localB->s197_string[2],
-    localB->s197_string[3], localB->s197_string[4], localB->s197_string[5],
-    localB->s197_string[6], localB->s197_string, localB->s197_string[7],
-    localB->s197_string[8], localB->s197_string[9], localB->s197_string[10],
-    localB->s197_string[11], localB->s197_string[12], localB->s197_string[13],
-    &localB->s197_string[7], localB->s197_string[14], localB->s197_string[15],
-    localB->s197_string[16]);
-  localB->s197_y0 = 8U;
-  localB->s197_x0 = 0U;
-  localB->s197_x1 = 63U;
-  localB->s197_lineColor = BuckyWagon_01_BLACK;
-  localB->s197_fillColor = BuckyWagon_01_WHITE;
+  /* Outputs for Function Call SubSystem: '<S11>/Send String_efficient' */
 
-  /* Event: '<S197>:306' */
-  BuckyWagon_01_DrawHLine(localB->s197_x0, localB->s197_x1, localB->s197_y0,
-    localB->s197_lineColor, localB->s197_fillColor);
-  localB->s197_y0 = 54U;
+  /* Event: '<S200>:303' */
+  BuckyWagon_01_SendString_efficient(localB->s200_stringNum, localB->
+    s200_string[0], localB->s200_string[1], localB->s200_string[2],
+    localB->s200_string[3], localB->s200_string[4], localB->s200_string[5],
+    localB->s200_string[6], localB->s200_string, localB->s200_string[7],
+    localB->s200_string[8], localB->s200_string[9], localB->s200_string[10],
+    localB->s200_string[11], localB->s200_string[12], localB->s200_string[13],
+    &localB->s200_string[7], localB->s200_string[14], localB->s200_string[15],
+    localB->s200_string[16]);
 
-  /* Event: '<S197>:306' */
-  BuckyWagon_01_DrawHLine(localB->s197_x0, localB->s197_x1, localB->s197_y0,
-    localB->s197_lineColor, localB->s197_fillColor);
-  localB->s197_hCenter = 1U;
-  localB->s197_vCenter = 0U;
-  localB->s197_font = BuckyWagon_01_FONT4x6;
-  localB->s197_x0 = 32U;
-  localB->s197_y0 = 2U;
+  /* End of Outputs for SubSystem: '<S11>/Send String_efficient' */
+  localB->s200_y0 = 8U;
+  localB->s200_x0 = 0U;
+  localB->s200_x1 = 63U;
+  localB->s200_lineColor = BuckyWagon_01_BLACK;
+  localB->s200_fillColor = BuckyWagon_01_WHITE;
 
-  /* Event: '<S197>:304' */
-  BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-    localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-    localB->s197_vCenter, rtu_21, localB->s197_lineColor, localB->s197_fillColor);
-  localDW->s197_setupVIndex = 0U;
+  /* Outputs for Function Call SubSystem: '<S11>/Draw HLine' */
+
+  /* Event: '<S200>:306' */
+  BuckyWagon_01_DrawHLine(localB->s200_x0, localB->s200_x1, localB->s200_y0,
+    localB->s200_lineColor, localB->s200_fillColor);
+
+  /* End of Outputs for SubSystem: '<S11>/Draw HLine' */
+  localB->s200_y0 = 54U;
+
+  /* Outputs for Function Call SubSystem: '<S11>/Draw HLine' */
+
+  /* Event: '<S200>:306' */
+  BuckyWagon_01_DrawHLine(localB->s200_x0, localB->s200_x1, localB->s200_y0,
+    localB->s200_lineColor, localB->s200_fillColor);
+
+  /* End of Outputs for SubSystem: '<S11>/Draw HLine' */
+  localB->s200_hCenter = 1U;
+  localB->s200_vCenter = 0U;
+  localB->s200_font = BuckyWagon_01_FONT4x6;
+  localB->s200_x0 = 32U;
+  localB->s200_y0 = 2U;
+
+  /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
+
+  /* Event: '<S200>:304' */
+  BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+    localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+    localB->s200_vCenter, rtu_21, localB->s200_lineColor, localB->s200_fillColor);
+
+  /* End of Outputs for SubSystem: '<S11>/Draw String' */
+  localDW->s200_setupVIndex = 0U;
+}
+
+/* Function for Stateflow: '<S11>/Chart' */
+static void BuckyWagon_01_loadSelect(uint8_T rtu_singleIndex, const uint8_T
+  rtu_dualIndex[2], const uint8_T rtu_quadIndex[4], rtDW_Chart_BuckyWagon_01_o
+  *localDW)
+{
+  /* Graphical Function 'loadSelect': '<S200>:26' */
+  /* Transition: '<S200>:156' */
+  if (localDW->s200_setupIndex == 1) {
+    /* Transition: '<S200>:155' */
+    localDW->s200_selectIndex = rtu_singleIndex;
+  } else if ((localDW->s200_setupIndex == 2) || (localDW->s200_setupIndex == 3))
+  {
+    /* Transition: '<S200>:157' */
+    localDW->s200_selectIndex = rtu_dualIndex[localDW->s200_setupIndex - 2];
+  } else {
+    if (localDW->s200_setupIndex >= 4) {
+      /* Transition: '<S200>:158' */
+      localDW->s200_selectIndex = rtu_quadIndex[localDW->s200_setupIndex - 4];
+    }
+  }
 }
 
 /* Function for Stateflow: '<S11>/Chart' */
@@ -2049,235 +2461,191 @@ static void BuckyWagon_01_Setup(uint8_T rtu_listIndex, uint8_T rtu_singleIndex,
   uint8_T rtu_numFields, const int16_T rtu_data[18], uint8_T rtu_21,
   rtB_Chart_BuckyWagon_01_n *localB, rtDW_Chart_BuckyWagon_01_o *localDW)
 {
-  boolean_T sf_guard;
-  boolean_T sf_guard_0;
+  boolean_T guard;
+  boolean_T guard_0;
 
-  /* During 'Setup': '<S197>:13' */
-  sf_guard = FALSE;
-  sf_guard_0 = FALSE;
-  switch (localDW->s197_is_Setup) {
+  /* During 'Setup': '<S200>:13' */
+  guard = FALSE;
+  guard_0 = FALSE;
+  switch (localDW->s200_is_Setup) {
    case BuckyWagon_01_IN_Setup_Init:
-    /* During 'Setup_Init': '<S197>:16' */
-    /* Transition: '<S197>:59' */
-    if (localDW->s197_setupIndex >= localDW->s197_setupVIndex + 6) {
-      /* Transition: '<S197>:53' */
-      localDW->s197_setupVIndex = (uint8_T)(localDW->s197_setupIndex - 5);
-      localB->s197_stringNum = 0U;
-    } else if (localDW->s197_setupIndex < localDW->s197_setupVIndex) {
-      /* Transition: '<S197>:52' */
-      localDW->s197_setupVIndex = localDW->s197_setupIndex;
-      localB->s197_stringNum = 0U;
+    /* During 'Setup_Init': '<S200>:16' */
+    /* Transition: '<S200>:59' */
+    if (localDW->s200_setupIndex >= localDW->s200_setupVIndex + 6) {
+      /* Transition: '<S200>:53' */
+      localDW->s200_setupVIndex = (uint8_T)(localDW->s200_setupIndex - 5);
+      localB->s200_stringNum = 0U;
+    } else if (localDW->s200_setupIndex < localDW->s200_setupVIndex) {
+      /* Transition: '<S200>:52' */
+      localDW->s200_setupVIndex = localDW->s200_setupIndex;
+      localB->s200_stringNum = 0U;
     } else {
-      /* Transition: '<S197>:54' */
-      localB->s197_stringNum = 0U;
+      /* Transition: '<S200>:54' */
+      localB->s200_stringNum = 0U;
     }
 
-    while (localB->s197_stringNum < 6) {
-      /* Transition: '<S197>:46' */
-      memcpy(&localB->s197_string[0], &rtu_setupNames[13 *
-             (localDW->s197_setupVIndex + localB->s197_stringNum)], 13);
+    while (localB->s200_stringNum < 6) {
+      /* Transition: '<S200>:46' */
+      memcpy(&localB->s200_string[0], &rtu_setupNames[13 *
+             (localDW->s200_setupVIndex + localB->s200_stringNum)], 13);
 
-      /* Event: '<S197>:303' */
-      BuckyWagon_01_SendString_efficient(localB->s197_stringNum,
-        localB->s197_string[0], localB->s197_string[1], localB->s197_string[2],
-        localB->s197_string[3], localB->s197_string[4], localB->s197_string[5],
-        localB->s197_string[6], localB->s197_string, localB->s197_string[7],
-        localB->s197_string[8], localB->s197_string[9], localB->s197_string[10],
-        localB->s197_string[11], localB->s197_string[12], localB->s197_string[13],
-        &localB->s197_string[7], localB->s197_string[14], localB->s197_string[15],
-        localB->s197_string[16]);
-      localB->s197_stringNum = (uint8_T)(localB->s197_stringNum + 1);
+      /* Outputs for Function Call SubSystem: '<S11>/Send String_efficient' */
+
+      /* Event: '<S200>:303' */
+      BuckyWagon_01_SendString_efficient(localB->s200_stringNum,
+        localB->s200_string[0], localB->s200_string[1], localB->s200_string[2],
+        localB->s200_string[3], localB->s200_string[4], localB->s200_string[5],
+        localB->s200_string[6], localB->s200_string, localB->s200_string[7],
+        localB->s200_string[8], localB->s200_string[9], localB->s200_string[10],
+        localB->s200_string[11], localB->s200_string[12], localB->s200_string[13],
+        &localB->s200_string[7], localB->s200_string[14], localB->s200_string[15],
+        localB->s200_string[16]);
+
+      /* End of Outputs for SubSystem: '<S11>/Send String_efficient' */
+      localB->s200_stringNum = (uint8_T)(localB->s200_stringNum + 1);
     }
 
-    /* Transition: '<S197>:50' */
-    /* Exit 'Setup_Init': '<S197>:16' */
-    /* Entry 'setup_Wait': '<S197>:14' */
-    localDW->s197_is_Setup = BuckyWagon_01_IN_setup_Wait;
+    /* Transition: '<S200>:50' */
+    localDW->s200_is_Setup = BuckyWagon_01_IN_setup_Wait;
     break;
 
    case BuckyWagon_01_IN_select_var:
-    /* During 'select_var': '<S197>:30' */
-    switch (localDW->s197_is_select_var) {
+    /* During 'select_var': '<S200>:30' */
+    switch (localDW->s200_is_select_var) {
      case BuckyWagon_01_IN_Select_Init:
-      /* During 'Select_Init': '<S197>:33' */
-      /* Transition: '<S197>:150' */
-      if (localDW->s197_selectIndex >= localDW->s197_selectVIndex + 6) {
-        /* Transition: '<S197>:144' */
-        localDW->s197_selectVIndex = (uint8_T)(localDW->s197_selectIndex - 5);
-        localB->s197_stringNum = 0U;
-      } else if (localDW->s197_selectIndex < localDW->s197_selectVIndex) {
-        /* Transition: '<S197>:143' */
-        localDW->s197_selectVIndex = localDW->s197_selectIndex;
-        localB->s197_stringNum = 0U;
+      /* During 'Select_Init': '<S200>:33' */
+      /* Transition: '<S200>:150' */
+      if (localDW->s200_selectIndex >= localDW->s200_selectVIndex + 6) {
+        /* Transition: '<S200>:144' */
+        localDW->s200_selectVIndex = (uint8_T)(localDW->s200_selectIndex - 5);
+        localB->s200_stringNum = 0U;
+      } else if (localDW->s200_selectIndex < localDW->s200_selectVIndex) {
+        /* Transition: '<S200>:143' */
+        localDW->s200_selectVIndex = localDW->s200_selectIndex;
+        localB->s200_stringNum = 0U;
       } else {
-        /* Transition: '<S197>:145' */
-        localB->s197_stringNum = 0U;
+        /* Transition: '<S200>:145' */
+        localB->s200_stringNum = 0U;
       }
 
-      while (localB->s197_stringNum < 6) {
-        /* Transition: '<S197>:137' */
-        memcpy(&localB->s197_string[0], &rtu_names[10 *
-               (localDW->s197_selectVIndex + localB->s197_stringNum)], 10);
+      while (localB->s200_stringNum < 6) {
+        /* Transition: '<S200>:137' */
+        memcpy(&localB->s200_string[0], &rtu_names[10 *
+               (localDW->s200_selectVIndex + localB->s200_stringNum)], 10);
 
-        /* Event: '<S197>:303' */
-        BuckyWagon_01_SendString_efficient(localB->s197_stringNum,
-          localB->s197_string[0], localB->s197_string[1], localB->s197_string[2],
-          localB->s197_string[3], localB->s197_string[4], localB->s197_string[5],
-          localB->s197_string[6], localB->s197_string, localB->s197_string[7],
-          localB->s197_string[8], localB->s197_string[9], localB->s197_string[10],
-          localB->s197_string[11], localB->s197_string[12], localB->s197_string
-          [13], &localB->s197_string[7], localB->s197_string[14],
-          localB->s197_string[15], localB->s197_string[16]);
-        localB->s197_stringNum = (uint8_T)(localB->s197_stringNum + 1);
+        /* Outputs for Function Call SubSystem: '<S11>/Send String_efficient' */
+
+        /* Event: '<S200>:303' */
+        BuckyWagon_01_SendString_efficient(localB->s200_stringNum,
+          localB->s200_string[0], localB->s200_string[1], localB->s200_string[2],
+          localB->s200_string[3], localB->s200_string[4], localB->s200_string[5],
+          localB->s200_string[6], localB->s200_string, localB->s200_string[7],
+          localB->s200_string[8], localB->s200_string[9], localB->s200_string[10],
+          localB->s200_string[11], localB->s200_string[12], localB->s200_string
+          [13], &localB->s200_string[7], localB->s200_string[14],
+          localB->s200_string[15], localB->s200_string[16]);
+
+        /* End of Outputs for SubSystem: '<S11>/Send String_efficient' */
+        localB->s200_stringNum = (uint8_T)(localB->s200_stringNum + 1);
       }
 
-      /* Transition: '<S197>:141' */
-      /* Exit 'Select_Init': '<S197>:33' */
-      /* Entry 'select_Wait': '<S197>:31' */
-      localDW->s197_is_select_var = BuckyWagon_01_IN_select_Wait;
+      /* Transition: '<S200>:141' */
+      localDW->s200_is_select_var = BuckyWagon_01_IN_select_Wait;
       break;
 
      case BuckyWagon_01_IN_select_Idle:
-      /* During 'select_Idle': '<S197>:32' */
-      if (_sfEvent_BuckyWagon_01_ == BuckyWagon_01_event_menuReleased) {
-        /* Transition: '<S197>:154' */
-        /* Graphical Function 'storeSelect': '<S197>:25' */
-        /* Transition: '<S197>:160' */
-        if (localDW->s197_setupIndex == 1) {
-          /* Transition: '<S197>:159' */
-          localB->s197_singleIndexO = localDW->s197_selectIndex;
-
-          /* Event: '<S197>:316' */
-
-          /* S-Function (motohawk_sfun_data_write): '<S210>/motohawk_data_write' */
-          /* Write to Data Storage as scalar: singleIndex */
-          {
-            singleIndex_DataStore() = localB->s197_singleIndexO;
-          }
-        } else if ((localDW->s197_setupIndex == 2) || (localDW->s197_setupIndex ==
-                    3)) {
-          /* Transition: '<S197>:161' */
-          localB->s197_dualIndexO[0] = rtu_dualIndex[0];
-          localB->s197_dualIndexO[1] = rtu_dualIndex[1];
-          localB->s197_dualIndexO[localDW->s197_setupIndex - 2] =
-            localDW->s197_selectIndex;
-
-          /* Event: '<S197>:315' */
-
-          /* S-Function (motohawk_sfun_data_write): '<S211>/motohawk_data_write' */
-          /* Write to Data Storage as vector: dualIndex */
-          {
-            dualIndex_DataStore()[0] = localB->s197_dualIndexO[0];
-            dualIndex_DataStore()[1] = localB->s197_dualIndexO[1];
-          }
-        } else {
-          if (localDW->s197_setupIndex >= 4) {
-            /* Transition: '<S197>:162' */
-            localB->s197_quadIndexO[0] = rtu_quadIndex[0];
-            localB->s197_quadIndexO[1] = rtu_quadIndex[1];
-            localB->s197_quadIndexO[2] = rtu_quadIndex[2];
-            localB->s197_quadIndexO[3] = rtu_quadIndex[3];
-            localB->s197_quadIndexO[localDW->s197_setupIndex - 4] =
-              localDW->s197_selectIndex;
-
-            /* Event: '<S197>:317' */
-
-            /* S-Function (motohawk_sfun_data_write): '<S212>/motohawk_data_write' */
-            /* Write to Data Storage as vector: quadIndex */
-            {
-              quadIndex_DataStore()[0] = localB->s197_quadIndexO[0];
-              quadIndex_DataStore()[1] = localB->s197_quadIndexO[1];
-              quadIndex_DataStore()[2] = localB->s197_quadIndexO[2];
-              quadIndex_DataStore()[3] = localB->s197_quadIndexO[3];
-            }
-          }
-        }
-
-        /* Exit 'select_Idle': '<S197>:32' */
-        localDW->s197_is_select_var = (uint8_T)
+      /* During 'select_Idle': '<S200>:32' */
+      if (localDW->s200_sfEvent == BuckyWagon_01_event_menuReleased) {
+        /* Transition: '<S200>:154' */
+        BuckyWagon_01_storeSelect(rtu_dualIndex, rtu_quadIndex, localB, localDW);
+        localDW->s200_is_select_var = (uint8_T)
           BuckyWagon_01_IN_NO_ACTIVE_CHILD_h;
-
-        /* Exit 'select_var': '<S197>:30' */
-        localDW->s197_is_Setup = (uint8_T)BuckyWagon_01_IN_NO_ACTIVE_CHILD_h;
+        localDW->s200_is_Setup = BuckyWagon_01_IN_Setup_Init;
         BuckyWagon_01_enter_atomic_Setup_Init(rtu_21, localB, localDW);
-      } else if (_sfEvent_BuckyWagon_01_ == BuckyWagon_01_event_upPressed) {
-        /* Transition: '<S197>:152' */
-        if (localDW->s197_selectIndex == 0) {
-          /* Transition: '<S197>:153' */
-          /* Exit 'select_Idle': '<S197>:32' */
-          /* Entry 'select_Idle': '<S197>:32' */
-          localDW->s197_is_select_var = BuckyWagon_01_IN_select_Idle;
+      } else if (localDW->s200_sfEvent == BuckyWagon_01_event_upPressed) {
+        /* Transition: '<S200>:152' */
+        if (localDW->s200_selectIndex == 0) {
+          /* Transition: '<S200>:153' */
+          localDW->s200_is_select_var = BuckyWagon_01_IN_select_Idle;
         } else {
-          /* Transition: '<S197>:151' */
-          localDW->s197_selectIndex = (uint8_T)(localDW->s197_selectIndex - 1);
-          sf_guard = TRUE;
+          /* Transition: '<S200>:151' */
+          localDW->s200_selectIndex = (uint8_T)(localDW->s200_selectIndex - 1);
+          guard = TRUE;
         }
       } else {
-        if (_sfEvent_BuckyWagon_01_ == BuckyWagon_01_event_downPressed) {
-          /* Transition: '<S197>:149' */
-          if (rtu_numFields - 1 == localDW->s197_selectIndex) {
-            /* Transition: '<S197>:147' */
-            /* Exit 'select_Idle': '<S197>:32' */
-            /* Entry 'select_Idle': '<S197>:32' */
-            localDW->s197_is_select_var = BuckyWagon_01_IN_select_Idle;
+        if (localDW->s200_sfEvent == BuckyWagon_01_event_downPressed) {
+          /* Transition: '<S200>:149' */
+          if (rtu_numFields - 1 == localDW->s200_selectIndex) {
+            /* Transition: '<S200>:147' */
+            localDW->s200_is_select_var = BuckyWagon_01_IN_select_Idle;
           } else {
-            /* Transition: '<S197>:148' */
-            localDW->s197_selectIndex = (uint8_T)(localDW->s197_selectIndex + 1);
-            sf_guard = TRUE;
+            /* Transition: '<S200>:148' */
+            localDW->s200_selectIndex = (uint8_T)(localDW->s200_selectIndex + 1);
+            guard = TRUE;
           }
         }
       }
       break;
 
      case BuckyWagon_01_IN_select_Wait:
-      /* During 'select_Wait': '<S197>:31' */
-      /* Transition: '<S197>:139' */
-      localB->s197_x0 = 0U;
-      localB->s197_y0 = 12U;
-      localB->s197_x1 = 64U;
-      localB->s197_y1 = 53U;
-      localB->s197_lineColor = 0U;
-      localB->s197_fillColor = 0U;
+      /* During 'select_Wait': '<S200>:31' */
+      /* Transition: '<S200>:139' */
+      localB->s200_x0 = 0U;
+      localB->s200_y0 = 12U;
+      localB->s200_x1 = 64U;
+      localB->s200_y1 = 53U;
+      localB->s200_lineColor = 0U;
+      localB->s200_fillColor = 0U;
 
-      /* Event: '<S197>:301' */
-      BuckyWagon_01_DrawRect(localB->s197_x0, localB->s197_x1, localB->s197_y0,
-        localB->s197_y1, localB->s197_lineColor, localB->s197_fillColor);
-      localB->s197_lineColor = 1U;
-      localB->s197_hCenter = 1U;
-      localB->s197_stringNum = 0U;
-      while (localB->s197_stringNum < 6) {
-        /* Transition: '<S197>:136' */
-        localB->s197_y0 = (uint8_T)(localB->s197_stringNum * 7 + 12);
-        if (localDW->s197_selectVIndex + localB->s197_stringNum ==
-            localDW->s197_selectIndex) {
-          /* Transition: '<S197>:138' */
-          localB->s197_fillColor = BuckyWagon_01_BLACK;
-          localB->s197_lineColor = BuckyWagon_01_WHITE;
+      /* Outputs for Function Call SubSystem: '<S11>/Draw Rect' */
 
-          /* Event: '<S197>:304' */
-          BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-            localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-            localB->s197_vCenter, rtu_21, localB->s197_lineColor,
-            localB->s197_fillColor);
-          localB->s197_stringNum = (uint8_T)(localB->s197_stringNum + 1);
+      /* Event: '<S200>:301' */
+      BuckyWagon_01_DrawRect(localB->s200_x0, localB->s200_x1, localB->s200_y0,
+        localB->s200_y1, localB->s200_lineColor, localB->s200_fillColor);
+
+      /* End of Outputs for SubSystem: '<S11>/Draw Rect' */
+      localB->s200_lineColor = 1U;
+      localB->s200_hCenter = 1U;
+      localB->s200_stringNum = 0U;
+      while (localB->s200_stringNum < 6) {
+        /* Transition: '<S200>:136' */
+        localB->s200_y0 = (uint8_T)(localB->s200_stringNum * 7 + 12);
+        if (localDW->s200_selectVIndex + localB->s200_stringNum ==
+            localDW->s200_selectIndex) {
+          /* Transition: '<S200>:138' */
+          localB->s200_fillColor = BuckyWagon_01_BLACK;
+          localB->s200_lineColor = BuckyWagon_01_WHITE;
+
+          /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
+
+          /* Event: '<S200>:304' */
+          BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+            localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+            localB->s200_vCenter, rtu_21, localB->s200_lineColor,
+            localB->s200_fillColor);
+
+          /* End of Outputs for SubSystem: '<S11>/Draw String' */
+          localB->s200_stringNum = (uint8_T)(localB->s200_stringNum + 1);
         } else {
-          /* Transition: '<S197>:140' */
-          localB->s197_fillColor = BuckyWagon_01_WHITE;
-          localB->s197_lineColor = BuckyWagon_01_BLACK;
+          /* Transition: '<S200>:140' */
+          localB->s200_fillColor = BuckyWagon_01_WHITE;
+          localB->s200_lineColor = BuckyWagon_01_BLACK;
 
-          /* Event: '<S197>:304' */
-          BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-            localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-            localB->s197_vCenter, rtu_21, localB->s197_lineColor,
-            localB->s197_fillColor);
-          localB->s197_stringNum = (uint8_T)(localB->s197_stringNum + 1);
+          /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
+
+          /* Event: '<S200>:304' */
+          BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+            localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+            localB->s200_vCenter, rtu_21, localB->s200_lineColor,
+            localB->s200_fillColor);
+
+          /* End of Outputs for SubSystem: '<S11>/Draw String' */
+          localB->s200_stringNum = (uint8_T)(localB->s200_stringNum + 1);
         }
       }
 
-      /* Transition: '<S197>:142' */
-      /* Exit 'select_Wait': '<S197>:31' */
-      /* Entry 'select_Idle': '<S197>:32' */
-      localDW->s197_is_select_var = BuckyWagon_01_IN_select_Idle;
+      /* Transition: '<S200>:142' */
+      localDW->s200_is_select_var = BuckyWagon_01_IN_select_Idle;
       break;
 
      default:
@@ -2287,252 +2655,238 @@ static void BuckyWagon_01_Setup(uint8_T rtu_listIndex, uint8_T rtu_singleIndex,
     break;
 
    case BuckyWagon_01_IN_setup_Idle:
-    /* During 'setup_Idle': '<S197>:15' */
-    if (_sfEvent_BuckyWagon_01_ == BuckyWagon_01_event_menuReleased) {
-      /* Transition: '<S197>:66' */
-      if (localDW->s197_setupIndex == 0) {
-        /* Transition: '<S197>:65' */
+    /* During 'setup_Idle': '<S200>:15' */
+    if (localDW->s200_sfEvent == BuckyWagon_01_event_menuReleased) {
+      /* Transition: '<S200>:66' */
+      if (localDW->s200_setupIndex == 0) {
+        /* Transition: '<S200>:65' */
         if (rtu_screen == 1) {
-          /* Transition: '<S197>:36' */
-          /* Exit 'setup_Idle': '<S197>:15' */
-          localDW->s197_is_Setup = (uint8_T)BuckyWagon_01_IN_NO_ACTIVE_CHILD_h;
-
-          /* Exit 'Setup': '<S197>:13' */
-          /* Entry 'Single': '<S197>:12' */
-          localDW->s197_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_Single;
+          /* Transition: '<S200>:36' */
+          localDW->s200_is_Setup = (uint8_T)BuckyWagon_01_IN_NO_ACTIVE_CHILD_h;
+          localDW->s200_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_Single;
           BuckyWagon_01_enter_internal_Single(rtu_singleIndex, rtu_data, rtu_21,
             localB, localDW);
         } else if (rtu_screen == 2) {
-          /* Transition: '<S197>:42' */
-          /* Exit 'setup_Idle': '<S197>:15' */
-          localDW->s197_is_Setup = (uint8_T)BuckyWagon_01_IN_NO_ACTIVE_CHILD_h;
-
-          /* Exit 'Setup': '<S197>:13' */
-          /* Entry 'Dual': '<S197>:20' */
-          localDW->s197_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_Dual;
+          /* Transition: '<S200>:42' */
+          localDW->s200_is_Setup = (uint8_T)BuckyWagon_01_IN_NO_ACTIVE_CHILD_h;
+          localDW->s200_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_Dual;
           BuckyWagon_01_enter_internal_Dual(rtu_dualIndex, rtu_data, rtu_21,
             localB, localDW);
         } else if (rtu_screen == 3) {
-          /* Transition: '<S197>:38' */
-          /* Exit 'setup_Idle': '<S197>:15' */
-          localDW->s197_is_Setup = (uint8_T)BuckyWagon_01_IN_NO_ACTIVE_CHILD_h;
-
-          /* Exit 'Setup': '<S197>:13' */
-          /* Entry 'Quad': '<S197>:24' */
-          localDW->s197_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_Quad;
+          /* Transition: '<S200>:38' */
+          localDW->s200_is_Setup = (uint8_T)BuckyWagon_01_IN_NO_ACTIVE_CHILD_h;
+          localDW->s200_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_Quad;
           BuckyWagon_01_enter_internal_Quad(rtu_quadIndex, rtu_data, rtu_21,
             localB, localDW);
         } else {
-          /* Transition: '<S197>:41' */
-          /* Exit 'setup_Idle': '<S197>:15' */
-          localDW->s197_is_Setup = (uint8_T)BuckyWagon_01_IN_NO_ACTIVE_CHILD_h;
-
-          /* Exit 'Setup': '<S197>:13' */
-          /* Entry 'List': '<S197>:3' */
-          localDW->s197_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_List;
+          /* Transition: '<S200>:41' */
+          localDW->s200_is_Setup = (uint8_T)BuckyWagon_01_IN_NO_ACTIVE_CHILD_h;
+          localDW->s200_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_List;
           BuckyWagon_01_enter_internal_List(rtu_listIndex, rtu_data, rtu_21,
             localB, localDW);
         }
       } else {
-        /* Transition: '<S197>:69' */
-        /* Graphical Function 'loadSelect': '<S197>:26' */
-        /* Transition: '<S197>:156' */
-        if (localDW->s197_setupIndex == 1) {
-          /* Transition: '<S197>:155' */
-          localDW->s197_selectIndex = rtu_singleIndex;
-        } else if ((localDW->s197_setupIndex == 2) || (localDW->s197_setupIndex ==
-                    3)) {
-          /* Transition: '<S197>:157' */
-          localDW->s197_selectIndex = rtu_dualIndex[localDW->s197_setupIndex - 2];
-        } else {
-          if (localDW->s197_setupIndex >= 4) {
-            /* Transition: '<S197>:158' */
-            localDW->s197_selectIndex = rtu_quadIndex[localDW->s197_setupIndex -
-              4];
-          }
-        }
-
-        /* Exit 'setup_Idle': '<S197>:15' */
-        /* Entry 'select_var': '<S197>:30' */
-        localDW->s197_is_Setup = BuckyWagon_01_IN_select_var;
+        /* Transition: '<S200>:69' */
+        BuckyWagon_01_loadSelect(rtu_singleIndex, rtu_dualIndex, rtu_quadIndex,
+          localDW);
+        localDW->s200_is_Setup = BuckyWagon_01_IN_select_var;
         BuckyWagon_01_enter_internal_select_var(rtu_21, localB, localDW);
       }
-    } else if (_sfEvent_BuckyWagon_01_ == BuckyWagon_01_event_upPressed) {
-      /* Transition: '<S197>:61' */
-      if (localDW->s197_setupIndex == 0) {
-        /* Transition: '<S197>:62' */
-        /* Exit 'setup_Idle': '<S197>:15' */
-        /* Entry 'setup_Idle': '<S197>:15' */
-        localDW->s197_is_Setup = BuckyWagon_01_IN_setup_Idle;
-        localB->s197_stringNum = 0U;
+    } else if (localDW->s200_sfEvent == BuckyWagon_01_event_upPressed) {
+      /* Transition: '<S200>:61' */
+      if (localDW->s200_setupIndex == 0) {
+        /* Transition: '<S200>:62' */
+        localDW->s200_is_Setup = BuckyWagon_01_IN_setup_Idle;
+
+        /* Entry 'setup_Idle': '<S200>:15' */
+        localB->s200_stringNum = 0U;
       } else {
-        /* Transition: '<S197>:60' */
-        localDW->s197_setupIndex = (uint8_T)(localDW->s197_setupIndex - 1);
-        sf_guard_0 = TRUE;
+        /* Transition: '<S200>:60' */
+        localDW->s200_setupIndex = (uint8_T)(localDW->s200_setupIndex - 1);
+        guard_0 = TRUE;
       }
     } else {
-      if (_sfEvent_BuckyWagon_01_ == BuckyWagon_01_event_downPressed) {
-        /* Transition: '<S197>:58' */
-        if (localDW->s197_setupIndex == 7) {
-          /* Transition: '<S197>:56' */
-          /* Exit 'setup_Idle': '<S197>:15' */
-          /* Entry 'setup_Idle': '<S197>:15' */
-          localDW->s197_is_Setup = BuckyWagon_01_IN_setup_Idle;
-          localB->s197_stringNum = 0U;
+      if (localDW->s200_sfEvent == BuckyWagon_01_event_downPressed) {
+        /* Transition: '<S200>:58' */
+        if (localDW->s200_setupIndex == 7) {
+          /* Transition: '<S200>:56' */
+          localDW->s200_is_Setup = BuckyWagon_01_IN_setup_Idle;
+
+          /* Entry 'setup_Idle': '<S200>:15' */
+          localB->s200_stringNum = 0U;
         } else {
-          /* Transition: '<S197>:57' */
-          localDW->s197_setupIndex = (uint8_T)(localDW->s197_setupIndex + 1);
-          sf_guard_0 = TRUE;
+          /* Transition: '<S200>:57' */
+          localDW->s200_setupIndex = (uint8_T)(localDW->s200_setupIndex + 1);
+          guard_0 = TRUE;
         }
       }
     }
     break;
 
    case BuckyWagon_01_IN_setup_Wait:
-    /* During 'setup_Wait': '<S197>:14' */
-    /* Transition: '<S197>:48' */
-    localB->s197_x0 = 0U;
-    localB->s197_y0 = 12U;
-    localB->s197_x1 = 64U;
-    localB->s197_y1 = 53U;
-    localB->s197_lineColor = 0U;
-    localB->s197_fillColor = 0U;
+    /* During 'setup_Wait': '<S200>:14' */
+    /* Transition: '<S200>:48' */
+    localB->s200_x0 = 0U;
+    localB->s200_y0 = 12U;
+    localB->s200_x1 = 64U;
+    localB->s200_y1 = 53U;
+    localB->s200_lineColor = 0U;
+    localB->s200_fillColor = 0U;
 
-    /* Event: '<S197>:301' */
-    BuckyWagon_01_DrawRect(localB->s197_x0, localB->s197_x1, localB->s197_y0,
-      localB->s197_y1, localB->s197_lineColor, localB->s197_fillColor);
-    localB->s197_lineColor = 1U;
-    localB->s197_hCenter = 1U;
-    localB->s197_stringNum = 0U;
-    while (localB->s197_stringNum < 6) {
-      /* Transition: '<S197>:45' */
-      localB->s197_y0 = (uint8_T)(localB->s197_stringNum * 7 + 12);
-      if (localDW->s197_setupVIndex + localB->s197_stringNum ==
-          localDW->s197_setupIndex) {
-        /* Transition: '<S197>:47' */
-        localB->s197_fillColor = BuckyWagon_01_BLACK;
-        localB->s197_lineColor = BuckyWagon_01_WHITE;
+    /* Outputs for Function Call SubSystem: '<S11>/Draw Rect' */
 
-        /* Event: '<S197>:304' */
-        BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-          localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-          localB->s197_vCenter, rtu_21, localB->s197_lineColor,
-          localB->s197_fillColor);
-        localB->s197_stringNum = (uint8_T)(localB->s197_stringNum + 1);
+    /* Event: '<S200>:301' */
+    BuckyWagon_01_DrawRect(localB->s200_x0, localB->s200_x1, localB->s200_y0,
+      localB->s200_y1, localB->s200_lineColor, localB->s200_fillColor);
+
+    /* End of Outputs for SubSystem: '<S11>/Draw Rect' */
+    localB->s200_lineColor = 1U;
+    localB->s200_hCenter = 1U;
+    localB->s200_stringNum = 0U;
+    while (localB->s200_stringNum < 6) {
+      /* Transition: '<S200>:45' */
+      localB->s200_y0 = (uint8_T)(localB->s200_stringNum * 7 + 12);
+      if (localDW->s200_setupVIndex + localB->s200_stringNum ==
+          localDW->s200_setupIndex) {
+        /* Transition: '<S200>:47' */
+        localB->s200_fillColor = BuckyWagon_01_BLACK;
+        localB->s200_lineColor = BuckyWagon_01_WHITE;
+
+        /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
+
+        /* Event: '<S200>:304' */
+        BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+          localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+          localB->s200_vCenter, rtu_21, localB->s200_lineColor,
+          localB->s200_fillColor);
+
+        /* End of Outputs for SubSystem: '<S11>/Draw String' */
+        localB->s200_stringNum = (uint8_T)(localB->s200_stringNum + 1);
       } else {
-        /* Transition: '<S197>:49' */
-        localB->s197_fillColor = BuckyWagon_01_WHITE;
-        localB->s197_lineColor = BuckyWagon_01_BLACK;
+        /* Transition: '<S200>:49' */
+        localB->s200_fillColor = BuckyWagon_01_WHITE;
+        localB->s200_lineColor = BuckyWagon_01_BLACK;
 
-        /* Event: '<S197>:304' */
-        BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-          localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-          localB->s197_vCenter, rtu_21, localB->s197_lineColor,
-          localB->s197_fillColor);
-        localB->s197_stringNum = (uint8_T)(localB->s197_stringNum + 1);
+        /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
+
+        /* Event: '<S200>:304' */
+        BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+          localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+          localB->s200_vCenter, rtu_21, localB->s200_lineColor,
+          localB->s200_fillColor);
+
+        /* End of Outputs for SubSystem: '<S11>/Draw String' */
+        localB->s200_stringNum = (uint8_T)(localB->s200_stringNum + 1);
       }
     }
 
-    /* Transition: '<S197>:51' */
-    /* Exit 'setup_Wait': '<S197>:14' */
-    /* Entry 'setup_Idle': '<S197>:15' */
-    localDW->s197_is_Setup = BuckyWagon_01_IN_setup_Idle;
-    localB->s197_stringNum = 0U;
+    /* Transition: '<S200>:51' */
+    localDW->s200_is_Setup = BuckyWagon_01_IN_setup_Idle;
+
+    /* Entry 'setup_Idle': '<S200>:15' */
+    localB->s200_stringNum = 0U;
     break;
 
    case BuckyWagon_01_IN_wait:
-    /* During 'wait': '<S197>:11' */
-    if (_sfEvent_BuckyWagon_01_ == BuckyWagon_01_event_menuReleased) {
-      /* Transition: '<S197>:81' */
-      /* Exit 'wait': '<S197>:11' */
-      localDW->s197_is_Setup = (uint8_T)BuckyWagon_01_IN_NO_ACTIVE_CHILD_h;
+    /* During 'wait': '<S200>:11' */
+    if (localDW->s200_sfEvent == BuckyWagon_01_event_menuReleased) {
+      /* Transition: '<S200>:81' */
+      localDW->s200_is_Setup = BuckyWagon_01_IN_Setup_Init;
       BuckyWagon_01_enter_atomic_Setup_Init(rtu_21, localB, localDW);
     }
     break;
 
    default:
-    /* Transition: '<S197>:82' */
-    /* Entry 'wait': '<S197>:11' */
-    localDW->s197_is_Setup = BuckyWagon_01_IN_wait;
+    /* Transition: '<S200>:82' */
+    localDW->s200_is_Setup = BuckyWagon_01_IN_wait;
 
-    /* Event: '<S197>:300' */
+    /* Outputs for Function Call SubSystem: '<S11>/Clear Screen' */
+
+    /* Entry 'wait': '<S200>:11' */
+    /* Event: '<S200>:300' */
     BuckyWagon_01_ClearScreen();
-    localDW->s197_setupIndex = 0U;
+
+    /* End of Outputs for SubSystem: '<S11>/Clear Screen' */
+    localDW->s200_setupIndex = 0U;
     break;
   }
 
-  if (sf_guard_0) {
-    if (localDW->s197_setupIndex >= localDW->s197_setupVIndex + 6) {
-      /* Transition: '<S197>:53' */
-      localDW->s197_setupVIndex = (uint8_T)(localDW->s197_setupIndex - 5);
-      localB->s197_stringNum = 0U;
-    } else if (localDW->s197_setupIndex < localDW->s197_setupVIndex) {
-      /* Transition: '<S197>:52' */
-      localDW->s197_setupVIndex = localDW->s197_setupIndex;
-      localB->s197_stringNum = 0U;
+  if (guard_0) {
+    if (localDW->s200_setupIndex >= localDW->s200_setupVIndex + 6) {
+      /* Transition: '<S200>:53' */
+      localDW->s200_setupVIndex = (uint8_T)(localDW->s200_setupIndex - 5);
+      localB->s200_stringNum = 0U;
+    } else if (localDW->s200_setupIndex < localDW->s200_setupVIndex) {
+      /* Transition: '<S200>:52' */
+      localDW->s200_setupVIndex = localDW->s200_setupIndex;
+      localB->s200_stringNum = 0U;
     } else {
-      /* Transition: '<S197>:54' */
-      localB->s197_stringNum = 0U;
+      /* Transition: '<S200>:54' */
+      localB->s200_stringNum = 0U;
     }
 
-    while (localB->s197_stringNum < 6) {
-      /* Transition: '<S197>:46' */
-      memcpy(&localB->s197_string[0], &rtu_setupNames[13 *
-             (localDW->s197_setupVIndex + localB->s197_stringNum)], 13);
+    while (localB->s200_stringNum < 6) {
+      /* Transition: '<S200>:46' */
+      memcpy(&localB->s200_string[0], &rtu_setupNames[13 *
+             (localDW->s200_setupVIndex + localB->s200_stringNum)], 13);
 
-      /* Event: '<S197>:303' */
-      BuckyWagon_01_SendString_efficient(localB->s197_stringNum,
-        localB->s197_string[0], localB->s197_string[1], localB->s197_string[2],
-        localB->s197_string[3], localB->s197_string[4], localB->s197_string[5],
-        localB->s197_string[6], localB->s197_string, localB->s197_string[7],
-        localB->s197_string[8], localB->s197_string[9], localB->s197_string[10],
-        localB->s197_string[11], localB->s197_string[12], localB->s197_string[13],
-        &localB->s197_string[7], localB->s197_string[14], localB->s197_string[15],
-        localB->s197_string[16]);
-      localB->s197_stringNum = (uint8_T)(localB->s197_stringNum + 1);
+      /* Outputs for Function Call SubSystem: '<S11>/Send String_efficient' */
+
+      /* Event: '<S200>:303' */
+      BuckyWagon_01_SendString_efficient(localB->s200_stringNum,
+        localB->s200_string[0], localB->s200_string[1], localB->s200_string[2],
+        localB->s200_string[3], localB->s200_string[4], localB->s200_string[5],
+        localB->s200_string[6], localB->s200_string, localB->s200_string[7],
+        localB->s200_string[8], localB->s200_string[9], localB->s200_string[10],
+        localB->s200_string[11], localB->s200_string[12], localB->s200_string[13],
+        &localB->s200_string[7], localB->s200_string[14], localB->s200_string[15],
+        localB->s200_string[16]);
+
+      /* End of Outputs for SubSystem: '<S11>/Send String_efficient' */
+      localB->s200_stringNum = (uint8_T)(localB->s200_stringNum + 1);
     }
 
-    /* Transition: '<S197>:50' */
-    /* Exit 'setup_Idle': '<S197>:15' */
-    /* Entry 'setup_Wait': '<S197>:14' */
-    localDW->s197_is_Setup = BuckyWagon_01_IN_setup_Wait;
+    /* Transition: '<S200>:50' */
+    localDW->s200_is_Setup = BuckyWagon_01_IN_setup_Wait;
   }
 
-  if (sf_guard) {
-    if (localDW->s197_selectIndex >= localDW->s197_selectVIndex + 6) {
-      /* Transition: '<S197>:144' */
-      localDW->s197_selectVIndex = (uint8_T)(localDW->s197_selectIndex - 5);
-      localB->s197_stringNum = 0U;
-    } else if (localDW->s197_selectIndex < localDW->s197_selectVIndex) {
-      /* Transition: '<S197>:143' */
-      localDW->s197_selectVIndex = localDW->s197_selectIndex;
-      localB->s197_stringNum = 0U;
+  if (guard) {
+    if (localDW->s200_selectIndex >= localDW->s200_selectVIndex + 6) {
+      /* Transition: '<S200>:144' */
+      localDW->s200_selectVIndex = (uint8_T)(localDW->s200_selectIndex - 5);
+      localB->s200_stringNum = 0U;
+    } else if (localDW->s200_selectIndex < localDW->s200_selectVIndex) {
+      /* Transition: '<S200>:143' */
+      localDW->s200_selectVIndex = localDW->s200_selectIndex;
+      localB->s200_stringNum = 0U;
     } else {
-      /* Transition: '<S197>:145' */
-      localB->s197_stringNum = 0U;
+      /* Transition: '<S200>:145' */
+      localB->s200_stringNum = 0U;
     }
 
-    while (localB->s197_stringNum < 6) {
-      /* Transition: '<S197>:137' */
-      memcpy(&localB->s197_string[0], &rtu_names[10 *
-             (localDW->s197_selectVIndex + localB->s197_stringNum)], 10);
+    while (localB->s200_stringNum < 6) {
+      /* Transition: '<S200>:137' */
+      memcpy(&localB->s200_string[0], &rtu_names[10 *
+             (localDW->s200_selectVIndex + localB->s200_stringNum)], 10);
 
-      /* Event: '<S197>:303' */
-      BuckyWagon_01_SendString_efficient(localB->s197_stringNum,
-        localB->s197_string[0], localB->s197_string[1], localB->s197_string[2],
-        localB->s197_string[3], localB->s197_string[4], localB->s197_string[5],
-        localB->s197_string[6], localB->s197_string, localB->s197_string[7],
-        localB->s197_string[8], localB->s197_string[9], localB->s197_string[10],
-        localB->s197_string[11], localB->s197_string[12], localB->s197_string[13],
-        &localB->s197_string[7], localB->s197_string[14], localB->s197_string[15],
-        localB->s197_string[16]);
-      localB->s197_stringNum = (uint8_T)(localB->s197_stringNum + 1);
+      /* Outputs for Function Call SubSystem: '<S11>/Send String_efficient' */
+
+      /* Event: '<S200>:303' */
+      BuckyWagon_01_SendString_efficient(localB->s200_stringNum,
+        localB->s200_string[0], localB->s200_string[1], localB->s200_string[2],
+        localB->s200_string[3], localB->s200_string[4], localB->s200_string[5],
+        localB->s200_string[6], localB->s200_string, localB->s200_string[7],
+        localB->s200_string[8], localB->s200_string[9], localB->s200_string[10],
+        localB->s200_string[11], localB->s200_string[12], localB->s200_string[13],
+        &localB->s200_string[7], localB->s200_string[14], localB->s200_string[15],
+        localB->s200_string[16]);
+
+      /* End of Outputs for SubSystem: '<S11>/Send String_efficient' */
+      localB->s200_stringNum = (uint8_T)(localB->s200_stringNum + 1);
     }
 
-    /* Transition: '<S197>:141' */
-    /* Exit 'select_Idle': '<S197>:32' */
-    /* Entry 'select_Wait': '<S197>:31' */
-    localDW->s197_is_select_var = BuckyWagon_01_IN_select_Wait;
+    /* Transition: '<S200>:141' */
+    localDW->s200_is_select_var = BuckyWagon_01_IN_select_Wait;
   }
 }
 
@@ -2547,19 +2901,20 @@ static void BuckyWagon_01_chartstep_c2_BuckyWagon_01(uint8_T rtu_menuTime,
   uint8_T rtu_statusTxtMode, const int16_T rtu_data[18], uint8_T rtu_21,
   rtB_Chart_BuckyWagon_01_n *localB, rtDW_Chart_BuckyWagon_01_o *localDW)
 {
-  int32_T sf_temp;
+  int32_T temp;
 
   /* During: Foreground/MiniViewDisplay/Chart */
-  if (localDW->s197_is_active_c2_BuckyWagon_01 == 0) {
+  if (localDW->s200_is_active_c2_BuckyWagon_01 == 0) {
     /* Entry: Foreground/MiniViewDisplay/Chart */
-    localDW->s197_is_active_c2_BuckyWagon_01 = 1U;
+    localDW->s200_is_active_c2_BuckyWagon_01 = 1U;
 
-    /* Transition: '<S197>:43' */
-    /* Entry 'PowerupDelay': '<S197>:9' */
-    localDW->s197_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_PowerupDelay;
-    localDW->s197_timer = 0U;
+    /* Transition: '<S200>:43' */
+    localDW->s200_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_PowerupDelay;
+
+    /* Entry 'PowerupDelay': '<S200>:9' */
+    localDW->s200_timer = 0U;
   } else {
-    switch (localDW->s197_is_c2_BuckyWagon_01) {
+    switch (localDW->s200_is_c2_BuckyWagon_01) {
      case BuckyWagon_01_IN_Dual:
       BuckyWagon_01_Dual(rtu_dualIndex, rtu_names, rtu_statusTxt,
                          rtu_statusTxtMode, rtu_data, rtu_21, localB, localDW);
@@ -2571,40 +2926,32 @@ static void BuckyWagon_01_chartstep_c2_BuckyWagon_01(uint8_T rtu_menuTime,
       break;
 
      case BuckyWagon_01_IN_PowerupDelay:
-      /* During 'PowerupDelay': '<S197>:9' */
-      if (localDW->s197_timer >= rtu_startupDelay) {
-        /* Transition: '<S197>:40' */
+      /* During 'PowerupDelay': '<S200>:9' */
+      if (localDW->s200_timer >= rtu_startupDelay) {
+        /* Transition: '<S200>:40' */
         if (rtu_screen == 1) {
-          /* Transition: '<S197>:36' */
-          /* Exit 'PowerupDelay': '<S197>:9' */
-          /* Entry 'Single': '<S197>:12' */
-          localDW->s197_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_Single;
+          /* Transition: '<S200>:36' */
+          localDW->s200_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_Single;
           BuckyWagon_01_enter_internal_Single(rtu_singleIndex, rtu_data, rtu_21,
             localB, localDW);
         } else if (rtu_screen == 2) {
-          /* Transition: '<S197>:42' */
-          /* Exit 'PowerupDelay': '<S197>:9' */
-          /* Entry 'Dual': '<S197>:20' */
-          localDW->s197_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_Dual;
+          /* Transition: '<S200>:42' */
+          localDW->s200_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_Dual;
           BuckyWagon_01_enter_internal_Dual(rtu_dualIndex, rtu_data, rtu_21,
             localB, localDW);
         } else if (rtu_screen == 3) {
-          /* Transition: '<S197>:38' */
-          /* Exit 'PowerupDelay': '<S197>:9' */
-          /* Entry 'Quad': '<S197>:24' */
-          localDW->s197_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_Quad;
+          /* Transition: '<S200>:38' */
+          localDW->s200_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_Quad;
           BuckyWagon_01_enter_internal_Quad(rtu_quadIndex, rtu_data, rtu_21,
             localB, localDW);
         } else {
-          /* Transition: '<S197>:41' */
-          /* Exit 'PowerupDelay': '<S197>:9' */
-          /* Entry 'List': '<S197>:3' */
-          localDW->s197_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_List;
+          /* Transition: '<S200>:41' */
+          localDW->s200_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_List;
           BuckyWagon_01_enter_internal_List(rtu_listIndex, rtu_data, rtu_21,
             localB, localDW);
         }
       } else {
-        localDW->s197_timer = (uint16_T)(localDW->s197_timer + 1);
+        localDW->s200_timer = (uint16_T)(localDW->s200_timer + 1);
       }
       break;
 
@@ -2621,266 +2968,314 @@ static void BuckyWagon_01_chartstep_c2_BuckyWagon_01(uint8_T rtu_menuTime,
       break;
 
      case BuckyWagon_01_IN_Single:
-      /* During 'Single': '<S197>:12' */
-      if (_sfEvent_BuckyWagon_01_ == BuckyWagon_01_event_menuPressed) {
-        /* Transition: '<S197>:83' */
-        /* Exit 'List_Idle': '<S197>:10' */
-        localDW->s197_is_Single = (uint8_T)BuckyWagon_01_IN_NO_ACTIVE_CHILD_h;
-
-        /* Exit 'Single_Init': '<S197>:7' */
-        /* Exit 'singleNames': '<S197>:6' */
-        /* Exit 'Single': '<S197>:12' */
-        /* Entry 'wait3': '<S197>:28' */
-        localDW->s197_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_wait3;
+      /* During 'Single': '<S200>:12' */
+      if (localDW->s200_sfEvent == BuckyWagon_01_event_menuPressed) {
+        /* Transition: '<S200>:83' */
+        localDW->s200_is_Single = (uint8_T)BuckyWagon_01_IN_NO_ACTIVE_CHILD_h;
+        localDW->s200_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_wait3;
       } else {
-        switch (localDW->s197_is_Single) {
+        switch (localDW->s200_is_Single) {
          case BuckyWagon_01_IN_List_Idle_h:
-          /* During 'List_Idle': '<S197>:10' */
-          if ((_sfEvent_BuckyWagon_01_ == BuckyWagon_01_event_tick) &&
-              (localDW->s197_timer >= BuckyWagon_01_UPDATE_TIME)) {
-            /* Transition: '<S197>:123' */
-            localB->s197_stringNum = 0U;
-            localB->s197_font = BuckyWagon_01_FONT8x15;
-            localB->s197_fillColor = BuckyWagon_01_WHITE;
-            localB->s197_hCenter = 0U;
-            if (localDW->s197_oldData[0] != rtu_data[(int32_T)rtu_singleIndex])
-            {
-              /* Transition: '<S197>:126' */
-              sprintf(charPtr(&localB->s197_string[0]), "%4d", rtu_data[(int32_T)
-                      rtu_singleIndex]);
+          /* During 'List_Idle': '<S200>:10' */
+          if ((localDW->s200_sfEvent == BuckyWagon_01_event_tick) &&
+              (localDW->s200_timer >= BuckyWagon_01_UPDATE_TIME)) {
+            /* Transition: '<S200>:123' */
+            localB->s200_stringNum = 0U;
+            localB->s200_font = BuckyWagon_01_FONT8x15;
+            localB->s200_fillColor = BuckyWagon_01_WHITE;
+            localB->s200_hCenter = 0U;
+            if (localDW->s200_oldData[0] != rtu_data[rtu_singleIndex]) {
+              /* Transition: '<S200>:126' */
+              sprintf(charPtr(&localB->s200_string[0]), "%4d",
+                      rtu_data[rtu_singleIndex]);
 
-              /* Event: '<S197>:303' */
-              BuckyWagon_01_SendString_efficient(localB->s197_stringNum,
-                localB->s197_string[0], localB->s197_string[1],
-                localB->s197_string[2], localB->s197_string[3],
-                localB->s197_string[4], localB->s197_string[5],
-                localB->s197_string[6], localB->s197_string, localB->
-                s197_string[7], localB->s197_string[8], localB->s197_string[9],
-                localB->s197_string[10], localB->s197_string[11],
-                localB->s197_string[12], localB->s197_string[13],
-                &localB->s197_string[7], localB->s197_string[14],
-                localB->s197_string[15], localB->s197_string[16]);
-              localB->s197_x0 = 0U;
-              localB->s197_x1 = 64U;
-              localB->s197_y0 = 25U;
-              localB->s197_y1 = 39U;
-              localB->s197_fillColor = BuckyWagon_01_WHITE;
-              localB->s197_lineColor = 0U;
+              /* Outputs for Function Call SubSystem: '<S11>/Send String_efficient' */
 
-              /* Event: '<S197>:301' */
-              BuckyWagon_01_DrawRect(localB->s197_x0, localB->s197_x1,
-                localB->s197_y0, localB->s197_y1, localB->s197_lineColor,
-                localB->s197_fillColor);
-              localB->s197_lineColor = BuckyWagon_01_BLACK;
-              localB->s197_x0 = 15U;
+              /* Event: '<S200>:303' */
+              BuckyWagon_01_SendString_efficient(localB->s200_stringNum,
+                localB->s200_string[0], localB->s200_string[1],
+                localB->s200_string[2], localB->s200_string[3],
+                localB->s200_string[4], localB->s200_string[5],
+                localB->s200_string[6], localB->s200_string, localB->
+                s200_string[7], localB->s200_string[8], localB->s200_string[9],
+                localB->s200_string[10], localB->s200_string[11],
+                localB->s200_string[12], localB->s200_string[13],
+                &localB->s200_string[7], localB->s200_string[14],
+                localB->s200_string[15], localB->s200_string[16]);
 
-              /* Event: '<S197>:304' */
-              BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-                localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-                localB->s197_vCenter, rtu_21, localB->s197_lineColor,
-                localB->s197_fillColor);
-              localDW->s197_oldData[0] = rtu_data[(int32_T)rtu_singleIndex];
-              localB->s197_x0 = 6U;
-              localB->s197_x1 = 58U;
-              localB->s197_y0 = 41U;
-              localB->s197_y1 = 48U;
-              localB->s197_lineColor = BuckyWagon_01_BLACK;
+              /* End of Outputs for SubSystem: '<S11>/Send String_efficient' */
+              localB->s200_x0 = 0U;
+              localB->s200_x1 = 64U;
+              localB->s200_y0 = 25U;
+              localB->s200_y1 = 39U;
+              localB->s200_fillColor = BuckyWagon_01_WHITE;
+              localB->s200_lineColor = 0U;
 
-              /* Event: '<S197>:301' */
-              BuckyWagon_01_DrawRect(localB->s197_x0, localB->s197_x1,
-                localB->s197_y0, localB->s197_y1, localB->s197_lineColor,
-                localB->s197_fillColor);
-              if (rtu_data[(int32_T)rtu_singleIndex] > rt_MAX((int32_T)
-                   rtu_barMin[(int32_T)rtu_singleIndex], rtu_barMax[(int32_T)
-                   rtu_singleIndex])) {
-                /* Transition: '<S197>:127' */
-                sf_temp = (rt_MAX((int32_T)rtu_barMin[(int32_T)rtu_singleIndex],
-                                  rtu_barMax[(int32_T)rtu_singleIndex]) -
-                           rtu_barMin[(int32_T)rtu_singleIndex]) * 52 /
-                  (rtu_barMax[(int32_T)rtu_singleIndex] - rtu_barMin[(int32_T)
-                   rtu_singleIndex]) + 6;
-              } else if (rtu_data[(int32_T)rtu_singleIndex] < rt_MIN((int32_T)
-                          rtu_barMin[(int32_T)rtu_singleIndex], rtu_barMax
-                          [(int32_T)rtu_singleIndex])) {
-                /* Transition: '<S197>:125' */
-                sf_temp = (rt_MIN((int32_T)rtu_barMin[(int32_T)rtu_singleIndex],
-                                  rtu_barMax[(int32_T)rtu_singleIndex]) -
-                           rtu_barMin[(int32_T)rtu_singleIndex]) * 52 /
-                  (rtu_barMax[(int32_T)rtu_singleIndex] - rtu_barMin[(int32_T)
-                   rtu_singleIndex]) + 6;
+              /* Outputs for Function Call SubSystem: '<S11>/Draw Rect' */
+
+              /* Event: '<S200>:301' */
+              BuckyWagon_01_DrawRect(localB->s200_x0, localB->s200_x1,
+                localB->s200_y0, localB->s200_y1, localB->s200_lineColor,
+                localB->s200_fillColor);
+
+              /* End of Outputs for SubSystem: '<S11>/Draw Rect' */
+              localB->s200_lineColor = BuckyWagon_01_BLACK;
+              localB->s200_x0 = 15U;
+
+              /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
+
+              /* Event: '<S200>:304' */
+              BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+                localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+                localB->s200_vCenter, rtu_21, localB->s200_lineColor,
+                localB->s200_fillColor);
+
+              /* End of Outputs for SubSystem: '<S11>/Draw String' */
+              localDW->s200_oldData[0] = rtu_data[rtu_singleIndex];
+              localB->s200_x0 = 6U;
+              localB->s200_x1 = 58U;
+              localB->s200_y0 = 41U;
+              localB->s200_y1 = 48U;
+              localB->s200_lineColor = BuckyWagon_01_BLACK;
+
+              /* Outputs for Function Call SubSystem: '<S11>/Draw Rect' */
+
+              /* Event: '<S200>:301' */
+              BuckyWagon_01_DrawRect(localB->s200_x0, localB->s200_x1,
+                localB->s200_y0, localB->s200_y1, localB->s200_lineColor,
+                localB->s200_fillColor);
+
+              /* End of Outputs for SubSystem: '<S11>/Draw Rect' */
+              temp = rtu_barMin[rtu_singleIndex];
+              if (rtu_data[rtu_singleIndex] > (temp >=
+                   rtu_barMax[rtu_singleIndex] ? temp :
+                   rtu_barMax[rtu_singleIndex])) {
+                /* Transition: '<S200>:127' */
+                temp = rtu_barMin[rtu_singleIndex];
+                temp = ((temp >= rtu_barMax[rtu_singleIndex] ? temp :
+                         rtu_barMax[rtu_singleIndex]) -
+                        rtu_barMin[rtu_singleIndex]) * 52 /
+                  (rtu_barMax[rtu_singleIndex] - rtu_barMin[rtu_singleIndex]) +
+                  6;
               } else {
-                /* Transition: '<S197>:121' */
-                sf_temp = (rtu_data[(int32_T)rtu_singleIndex] - rtu_barMin
-                           [(int32_T)rtu_singleIndex]) * 52 / (rtu_barMax
-                  [(int32_T)rtu_singleIndex] - rtu_barMin[(int32_T)
-                  rtu_singleIndex]) + 6;
+                temp = rtu_barMin[rtu_singleIndex];
+                if (rtu_data[rtu_singleIndex] < (temp <=
+                     rtu_barMax[rtu_singleIndex] ? temp :
+                     rtu_barMax[rtu_singleIndex])) {
+                  /* Transition: '<S200>:125' */
+                  temp = rtu_barMin[rtu_singleIndex];
+                  temp = ((temp <= rtu_barMax[rtu_singleIndex] ? temp :
+                           rtu_barMax[rtu_singleIndex]) -
+                          rtu_barMin[rtu_singleIndex]) * 52 /
+                    (rtu_barMax[rtu_singleIndex] - rtu_barMin[rtu_singleIndex])
+                    + 6;
+                } else {
+                  /* Transition: '<S200>:121' */
+                  temp = (rtu_data[rtu_singleIndex] - rtu_barMin[rtu_singleIndex])
+                    * 52 / (rtu_barMax[rtu_singleIndex] -
+                            rtu_barMin[rtu_singleIndex]) + 6;
+                }
               }
 
-              if ((rtu_barGraphMode[(int32_T)rtu_singleIndex] == 2) && (sf_temp >=
-                   32)) {
-                /* Transition: '<S197>:128' */
-                localB->s197_x1 = (uint8_T)sf_temp;
-                localB->s197_fillColor = BuckyWagon_01_BLACK;
-                localB->s197_x0 = 32U;
+              if ((rtu_barGraphMode[rtu_singleIndex] == 2) && (temp >= 32)) {
+                /* Transition: '<S200>:128' */
+                localB->s200_x1 = (uint8_T)temp;
+                localB->s200_fillColor = BuckyWagon_01_BLACK;
+                localB->s200_x0 = 32U;
 
-                /* Event: '<S197>:301' */
-                BuckyWagon_01_DrawRect(localB->s197_x0, localB->s197_x1,
-                  localB->s197_y0, localB->s197_y1, localB->s197_lineColor,
-                  localB->s197_fillColor);
-              } else if ((rtu_barGraphMode[(int32_T)rtu_singleIndex] == 2) &&
-                         (sf_temp < 32)) {
-                /* Transition: '<S197>:122' */
-                localB->s197_x0 = (uint8_T)sf_temp;
-                localB->s197_x1 = 32U;
-                localB->s197_fillColor = BuckyWagon_01_BLACK;
+                /* Outputs for Function Call SubSystem: '<S11>/Draw Rect' */
 
-                /* Event: '<S197>:301' */
-                BuckyWagon_01_DrawRect(localB->s197_x0, localB->s197_x1,
-                  localB->s197_y0, localB->s197_y1, localB->s197_lineColor,
-                  localB->s197_fillColor);
-              } else if (rtu_barGraphMode[(int32_T)rtu_singleIndex] == 1) {
-                /* Transition: '<S197>:120' */
-                localB->s197_x0 = (uint8_T)sf_temp;
-                localB->s197_fillColor = BuckyWagon_01_BLACK;
+                /* Event: '<S200>:301' */
+                BuckyWagon_01_DrawRect(localB->s200_x0, localB->s200_x1,
+                  localB->s200_y0, localB->s200_y1, localB->s200_lineColor,
+                  localB->s200_fillColor);
 
-                /* Event: '<S197>:301' */
-                BuckyWagon_01_DrawRect(localB->s197_x0, localB->s197_x1,
-                  localB->s197_y0, localB->s197_y1, localB->s197_lineColor,
-                  localB->s197_fillColor);
-              } else if (rtu_barGraphMode[(int32_T)rtu_singleIndex] == 3) {
-                /* Transition: '<S197>:68' */
-                localB->s197_x0 = (uint8_T)sf_temp;
+                /* End of Outputs for SubSystem: '<S11>/Draw Rect' */
+              } else if ((rtu_barGraphMode[rtu_singleIndex] == 2) && (temp < 32))
+              {
+                /* Transition: '<S200>:122' */
+                localB->s200_x0 = (uint8_T)temp;
+                localB->s200_x1 = 32U;
+                localB->s200_fillColor = BuckyWagon_01_BLACK;
 
-                /* Event: '<S197>:305' */
-                BuckyWagon_01_DrawVline(localB->s197_x0, localB->s197_y0,
-                  localB->s197_y1, localB->s197_lineColor,
-                  localB->s197_fillColor);
+                /* Outputs for Function Call SubSystem: '<S11>/Draw Rect' */
+
+                /* Event: '<S200>:301' */
+                BuckyWagon_01_DrawRect(localB->s200_x0, localB->s200_x1,
+                  localB->s200_y0, localB->s200_y1, localB->s200_lineColor,
+                  localB->s200_fillColor);
+
+                /* End of Outputs for SubSystem: '<S11>/Draw Rect' */
+              } else if (rtu_barGraphMode[rtu_singleIndex] == 1) {
+                /* Transition: '<S200>:120' */
+                localB->s200_x0 = (uint8_T)temp;
+                localB->s200_fillColor = BuckyWagon_01_BLACK;
+
+                /* Outputs for Function Call SubSystem: '<S11>/Draw Rect' */
+
+                /* Event: '<S200>:301' */
+                BuckyWagon_01_DrawRect(localB->s200_x0, localB->s200_x1,
+                  localB->s200_y0, localB->s200_y1, localB->s200_lineColor,
+                  localB->s200_fillColor);
+
+                /* End of Outputs for SubSystem: '<S11>/Draw Rect' */
+              } else if (rtu_barGraphMode[rtu_singleIndex] == 3) {
+                /* Transition: '<S200>:68' */
+                localB->s200_x0 = (uint8_T)temp;
+
+                /* Outputs for Function Call SubSystem: '<S11>/Draw Vline' */
+
+                /* Event: '<S200>:305' */
+                BuckyWagon_01_DrawVline(localB->s200_x0, localB->s200_y0,
+                  localB->s200_y1, localB->s200_lineColor,
+                  localB->s200_fillColor);
+
+                /* End of Outputs for SubSystem: '<S11>/Draw Vline' */
               } else {
-                /* Transition: '<S197>:124' */
-                localB->s197_x1 = (uint8_T)sf_temp;
-                localB->s197_fillColor = BuckyWagon_01_BLACK;
+                /* Transition: '<S200>:124' */
+                localB->s200_x1 = (uint8_T)temp;
+                localB->s200_fillColor = BuckyWagon_01_BLACK;
 
-                /* Event: '<S197>:301' */
-                BuckyWagon_01_DrawRect(localB->s197_x0, localB->s197_x1,
-                  localB->s197_y0, localB->s197_y1, localB->s197_lineColor,
-                  localB->s197_fillColor);
+                /* Outputs for Function Call SubSystem: '<S11>/Draw Rect' */
+
+                /* Event: '<S200>:301' */
+                BuckyWagon_01_DrawRect(localB->s200_x0, localB->s200_x1,
+                  localB->s200_y0, localB->s200_y1, localB->s200_lineColor,
+                  localB->s200_fillColor);
+
+                /* End of Outputs for SubSystem: '<S11>/Draw Rect' */
               }
 
-              /* Transition: '<S197>:119' */
-              /* Transition: '<S197>:115' */
+              /* Transition: '<S200>:119' */
+              /* Transition: '<S200>:115' */
             } else {
-              /* Transition: '<S197>:118' */
+              /* Transition: '<S200>:118' */
             }
 
-            /* Transition: '<S197>:77' */
-            localB->s197_y0 = 55U;
-            localB->s197_y1 = 63U;
-            localB->s197_x0 = 0U;
-            localB->s197_x1 = 63U;
-            memcpy(&localB->s197_string[0], &rtu_statusTxt[0], 9);
-            localB->s197_string[9] = 0U;
+            /* Transition: '<S200>:77' */
+            localB->s200_y0 = 55U;
+            localB->s200_y1 = 63U;
+            localB->s200_x0 = 0U;
+            localB->s200_x1 = 63U;
+            memcpy(&localB->s200_string[0], &rtu_statusTxt[0], 9);
+            localB->s200_string[9] = 0U;
 
-            /* Event: '<S197>:303' */
-            BuckyWagon_01_SendString_efficient(localB->s197_stringNum,
-              localB->s197_string[0], localB->s197_string[1],
-              localB->s197_string[2], localB->s197_string[3],
-              localB->s197_string[4], localB->s197_string[5],
-              localB->s197_string[6], localB->s197_string, localB->s197_string[7],
-              localB->s197_string[8], localB->s197_string[9],
-              localB->s197_string[10], localB->s197_string[11],
-              localB->s197_string[12], localB->s197_string[13],
-              &localB->s197_string[7], localB->s197_string[14],
-              localB->s197_string[15], localB->s197_string[16]);
+            /* Outputs for Function Call SubSystem: '<S11>/Send String_efficient' */
+
+            /* Event: '<S200>:303' */
+            BuckyWagon_01_SendString_efficient(localB->s200_stringNum,
+              localB->s200_string[0], localB->s200_string[1],
+              localB->s200_string[2], localB->s200_string[3],
+              localB->s200_string[4], localB->s200_string[5],
+              localB->s200_string[6], localB->s200_string, localB->s200_string[7],
+              localB->s200_string[8], localB->s200_string[9],
+              localB->s200_string[10], localB->s200_string[11],
+              localB->s200_string[12], localB->s200_string[13],
+              &localB->s200_string[7], localB->s200_string[14],
+              localB->s200_string[15], localB->s200_string[16]);
+
+            /* End of Outputs for SubSystem: '<S11>/Send String_efficient' */
             if (rtu_statusTxtMode == 1) {
-              /* Transition: '<S197>:75' */
-              localB->s197_fillColor = BuckyWagon_01_BLACK;
-              localB->s197_lineColor = BuckyWagon_01_BLACK;
+              /* Transition: '<S200>:75' */
+              localB->s200_fillColor = BuckyWagon_01_BLACK;
+              localB->s200_lineColor = BuckyWagon_01_BLACK;
 
-              /* Event: '<S197>:301' */
-              BuckyWagon_01_DrawRect(localB->s197_x0, localB->s197_x1,
-                localB->s197_y0, localB->s197_y1, localB->s197_lineColor,
-                localB->s197_fillColor);
-              localB->s197_lineColor = BuckyWagon_01_WHITE;
+              /* Outputs for Function Call SubSystem: '<S11>/Draw Rect' */
+
+              /* Event: '<S200>:301' */
+              BuckyWagon_01_DrawRect(localB->s200_x0, localB->s200_x1,
+                localB->s200_y0, localB->s200_y1, localB->s200_lineColor,
+                localB->s200_fillColor);
+
+              /* End of Outputs for SubSystem: '<S11>/Draw Rect' */
+              localB->s200_lineColor = BuckyWagon_01_WHITE;
             } else {
-              /* Transition: '<S197>:135' */
-              localB->s197_lineColor = BuckyWagon_01_WHITE;
-              localB->s197_fillColor = BuckyWagon_01_WHITE;
+              /* Transition: '<S200>:135' */
+              localB->s200_lineColor = BuckyWagon_01_WHITE;
+              localB->s200_fillColor = BuckyWagon_01_WHITE;
 
-              /* Event: '<S197>:301' */
-              BuckyWagon_01_DrawRect(localB->s197_x0, localB->s197_x1,
-                localB->s197_y0, localB->s197_y1, localB->s197_lineColor,
-                localB->s197_fillColor);
-              localB->s197_lineColor = BuckyWagon_01_BLACK;
+              /* Outputs for Function Call SubSystem: '<S11>/Draw Rect' */
+
+              /* Event: '<S200>:301' */
+              BuckyWagon_01_DrawRect(localB->s200_x0, localB->s200_x1,
+                localB->s200_y0, localB->s200_y1, localB->s200_lineColor,
+                localB->s200_fillColor);
+
+              /* End of Outputs for SubSystem: '<S11>/Draw Rect' */
+              localB->s200_lineColor = BuckyWagon_01_BLACK;
             }
 
-            /* Transition: '<S197>:44' */
-            localB->s197_y0 = 56U;
-            localB->s197_font = BuckyWagon_01_FONT4x6;
-            localB->s197_x0 = 17U;
+            /* Transition: '<S200>:44' */
+            localB->s200_y0 = 56U;
+            localB->s200_font = BuckyWagon_01_FONT4x6;
+            localB->s200_x0 = 17U;
 
-            /* Event: '<S197>:304' */
-            BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-              localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-              localB->s197_vCenter, rtu_21, localB->s197_lineColor,
-              localB->s197_fillColor);
+            /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
 
-            /* Transition: '<S197>:116' */
-            localDW->s197_timer = 0U;
+            /* Event: '<S200>:304' */
+            BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+              localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+              localB->s200_vCenter, rtu_21, localB->s200_lineColor,
+              localB->s200_fillColor);
 
-            /* Exit 'List_Idle': '<S197>:10' */
-            /* Entry 'List_Idle': '<S197>:10' */
-            localDW->s197_is_Single = BuckyWagon_01_IN_List_Idle_h;
+            /* End of Outputs for SubSystem: '<S11>/Draw String' */
+
+            /* Transition: '<S200>:116' */
+            localDW->s200_timer = 0U;
+            localDW->s200_is_Single = BuckyWagon_01_IN_List_Idle_h;
           } else {
-            if (_sfEvent_BuckyWagon_01_ == BuckyWagon_01_event_tick) {
-              /* Transition: '<S197>:117' */
-              /* Exit 'List_Idle': '<S197>:10' */
-              localDW->s197_timer = (uint16_T)(localDW->s197_timer + 1);
-
-              /* Entry 'List_Idle': '<S197>:10' */
-              localDW->s197_is_Single = BuckyWagon_01_IN_List_Idle_h;
+            if (localDW->s200_sfEvent == BuckyWagon_01_event_tick) {
+              /* Transition: '<S200>:117' */
+              localDW->s200_timer = (uint16_T)(localDW->s200_timer + 1);
+              localDW->s200_is_Single = BuckyWagon_01_IN_List_Idle_h;
             }
           }
           break;
 
          case BuckyWagon_01_IN_Single_Init:
-          /* During 'Single_Init': '<S197>:7' */
-          /* Transition: '<S197>:70' */
-          /* Exit 'Single_Init': '<S197>:7' */
-          /* Entry 'singleNames': '<S197>:6' */
-          localDW->s197_is_Single = BuckyWagon_01_IN_singleNames;
-          localB->s197_hCenter = 1U;
-          localB->s197_font = BuckyWagon_01_FONT6x8;
-          localB->s197_x0 = 30U;
-          localB->s197_stringNum = 0U;
-          memcpy(&localB->s197_string[0], &rtu_names[10 * rtu_singleIndex], 10);
+          /* During 'Single_Init': '<S200>:7' */
+          /* Transition: '<S200>:70' */
+          localDW->s200_is_Single = BuckyWagon_01_IN_singleNames;
 
-          /* Event: '<S197>:303' */
-          BuckyWagon_01_SendString_efficient(localB->s197_stringNum,
-            localB->s197_string[0], localB->s197_string[1], localB->s197_string
-            [2], localB->s197_string[3], localB->s197_string[4],
-            localB->s197_string[5], localB->s197_string[6], localB->s197_string,
-            localB->s197_string[7], localB->s197_string[8], localB->s197_string
-            [9], localB->s197_string[10], localB->s197_string[11],
-            localB->s197_string[12], localB->s197_string[13],
-            &localB->s197_string[7], localB->s197_string[14],
-            localB->s197_string[15], localB->s197_string[16]);
-          localB->s197_y0 = 14U;
+          /* Entry 'singleNames': '<S200>:6' */
+          localB->s200_hCenter = 1U;
+          localB->s200_font = BuckyWagon_01_FONT6x8;
+          localB->s200_x0 = 30U;
+          localB->s200_stringNum = 0U;
+          memcpy(&localB->s200_string[0], &rtu_names[10 * rtu_singleIndex], 10);
 
-          /* Event: '<S197>:304' */
-          BuckyWagon_01_DrawString(localB->s197_stringNum, localB->s197_x0,
-            localB->s197_y0, localB->s197_font, localB->s197_hCenter,
-            localB->s197_vCenter, rtu_21, localB->s197_lineColor,
-            localB->s197_fillColor);
+          /* Outputs for Function Call SubSystem: '<S11>/Send String_efficient' */
+
+          /* Event: '<S200>:303' */
+          BuckyWagon_01_SendString_efficient(localB->s200_stringNum,
+            localB->s200_string[0], localB->s200_string[1], localB->s200_string
+            [2], localB->s200_string[3], localB->s200_string[4],
+            localB->s200_string[5], localB->s200_string[6], localB->s200_string,
+            localB->s200_string[7], localB->s200_string[8], localB->s200_string
+            [9], localB->s200_string[10], localB->s200_string[11],
+            localB->s200_string[12], localB->s200_string[13],
+            &localB->s200_string[7], localB->s200_string[14],
+            localB->s200_string[15], localB->s200_string[16]);
+
+          /* End of Outputs for SubSystem: '<S11>/Send String_efficient' */
+          localB->s200_y0 = 14U;
+
+          /* Outputs for Function Call SubSystem: '<S11>/Draw String' */
+
+          /* Event: '<S200>:304' */
+          BuckyWagon_01_DrawString(localB->s200_stringNum, localB->s200_x0,
+            localB->s200_y0, localB->s200_font, localB->s200_hCenter,
+            localB->s200_vCenter, rtu_21, localB->s200_lineColor,
+            localB->s200_fillColor);
+
+          /* End of Outputs for SubSystem: '<S11>/Draw String' */
           break;
 
          case BuckyWagon_01_IN_singleNames:
-          /* During 'singleNames': '<S197>:6' */
-          /* Transition: '<S197>:129' */
-          localDW->s197_timer = BuckyWagon_01_UPDATE_TIME;
-
-          /* Exit 'singleNames': '<S197>:6' */
-          /* Entry 'List_Idle': '<S197>:10' */
-          localDW->s197_is_Single = BuckyWagon_01_IN_List_Idle_h;
+          /* During 'singleNames': '<S200>:6' */
+          /* Transition: '<S200>:129' */
+          localDW->s200_timer = BuckyWagon_01_UPDATE_TIME;
+          localDW->s200_is_Single = BuckyWagon_01_IN_List_Idle_h;
           break;
 
          default:
@@ -2892,138 +3287,151 @@ static void BuckyWagon_01_chartstep_c2_BuckyWagon_01(uint8_T rtu_menuTime,
       break;
 
      case BuckyWagon_01_IN_wait1:
-      /* During 'wait1': '<S197>:17' */
-      if (_sfEvent_BuckyWagon_01_ == BuckyWagon_01_event_menuReleased) {
-        /* Transition: '<S197>:90' */
-        localB->s197_screenO = 2U;
+      /* During 'wait1': '<S200>:17' */
+      if (localDW->s200_sfEvent == BuckyWagon_01_event_menuReleased) {
+        /* Transition: '<S200>:90' */
+        localB->s200_screenO = 2U;
 
-        /* Event: '<S197>:314' */
-        BuckyWagon_01_FunctionCallSubsystem1(localB->s197_screenO);
+        /* Outputs for Function Call SubSystem: '<S11>/Function-Call Subsystem1' */
 
-        /* Exit 'wait1': '<S197>:17' */
-        /* Entry 'Dual': '<S197>:20' */
-        localDW->s197_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_Dual;
+        /* Event: '<S200>:314' */
+        BuckyWagon_01_FunctionCallSubsystem1(localB->s200_screenO);
+
+        /* End of Outputs for SubSystem: '<S11>/Function-Call Subsystem1' */
+        localDW->s200_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_Dual;
         BuckyWagon_01_enter_internal_Dual(rtu_dualIndex, rtu_data, rtu_21,
           localB, localDW);
       } else {
         if (rtu_menuTime >= BuckyWagon_01_SETUP_TIME) {
-          /* Transition: '<S197>:86' */
-          /* Exit 'wait1': '<S197>:17' */
-          /* Entry 'Setup': '<S197>:13' */
-          localDW->s197_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_Setup;
+          /* Transition: '<S200>:86' */
+          localDW->s200_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_Setup;
 
-          /* Transition: '<S197>:82' */
-          /* Entry 'wait': '<S197>:11' */
-          localDW->s197_is_Setup = BuckyWagon_01_IN_wait;
+          /* Transition: '<S200>:82' */
+          localDW->s200_is_Setup = BuckyWagon_01_IN_wait;
 
-          /* Event: '<S197>:300' */
+          /* Outputs for Function Call SubSystem: '<S11>/Clear Screen' */
+
+          /* Entry 'wait': '<S200>:11' */
+          /* Event: '<S200>:300' */
           BuckyWagon_01_ClearScreen();
-          localDW->s197_setupIndex = 0U;
+
+          /* End of Outputs for SubSystem: '<S11>/Clear Screen' */
+          localDW->s200_setupIndex = 0U;
         }
       }
       break;
 
      case BuckyWagon_01_IN_wait2:
-      /* During 'wait2': '<S197>:29' */
-      if (_sfEvent_BuckyWagon_01_ == BuckyWagon_01_event_menuReleased) {
-        /* Transition: '<S197>:89' */
-        localB->s197_screenO = 1U;
+      /* During 'wait2': '<S200>:29' */
+      if (localDW->s200_sfEvent == BuckyWagon_01_event_menuReleased) {
+        /* Transition: '<S200>:89' */
+        localB->s200_screenO = 1U;
 
-        /* Event: '<S197>:314' */
-        BuckyWagon_01_FunctionCallSubsystem1(localB->s197_screenO);
+        /* Outputs for Function Call SubSystem: '<S11>/Function-Call Subsystem1' */
 
-        /* Exit 'wait2': '<S197>:29' */
-        /* Entry 'Single': '<S197>:12' */
-        localDW->s197_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_Single;
+        /* Event: '<S200>:314' */
+        BuckyWagon_01_FunctionCallSubsystem1(localB->s200_screenO);
+
+        /* End of Outputs for SubSystem: '<S11>/Function-Call Subsystem1' */
+        localDW->s200_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_Single;
         BuckyWagon_01_enter_internal_Single(rtu_singleIndex, rtu_data, rtu_21,
           localB, localDW);
       } else {
         if (rtu_menuTime >= BuckyWagon_01_SETUP_TIME) {
-          /* Transition: '<S197>:37' */
-          /* Exit 'wait2': '<S197>:29' */
-          /* Entry 'Setup': '<S197>:13' */
-          localDW->s197_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_Setup;
+          /* Transition: '<S200>:37' */
+          localDW->s200_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_Setup;
 
-          /* Transition: '<S197>:82' */
-          /* Entry 'wait': '<S197>:11' */
-          localDW->s197_is_Setup = BuckyWagon_01_IN_wait;
+          /* Transition: '<S200>:82' */
+          localDW->s200_is_Setup = BuckyWagon_01_IN_wait;
 
-          /* Event: '<S197>:300' */
+          /* Outputs for Function Call SubSystem: '<S11>/Clear Screen' */
+
+          /* Entry 'wait': '<S200>:11' */
+          /* Event: '<S200>:300' */
           BuckyWagon_01_ClearScreen();
-          localDW->s197_setupIndex = 0U;
+
+          /* End of Outputs for SubSystem: '<S11>/Clear Screen' */
+          localDW->s200_setupIndex = 0U;
         }
       }
       break;
 
      case BuckyWagon_01_IN_wait3:
-      /* During 'wait3': '<S197>:28' */
-      if (_sfEvent_BuckyWagon_01_ == BuckyWagon_01_event_menuReleased) {
-        /* Transition: '<S197>:88' */
-        localB->s197_screenO = 0U;
+      /* During 'wait3': '<S200>:28' */
+      if (localDW->s200_sfEvent == BuckyWagon_01_event_menuReleased) {
+        /* Transition: '<S200>:88' */
+        localB->s200_screenO = 0U;
 
-        /* Event: '<S197>:314' */
-        BuckyWagon_01_FunctionCallSubsystem1(localB->s197_screenO);
+        /* Outputs for Function Call SubSystem: '<S11>/Function-Call Subsystem1' */
 
-        /* Exit 'wait3': '<S197>:28' */
-        /* Entry 'List': '<S197>:3' */
-        localDW->s197_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_List;
+        /* Event: '<S200>:314' */
+        BuckyWagon_01_FunctionCallSubsystem1(localB->s200_screenO);
+
+        /* End of Outputs for SubSystem: '<S11>/Function-Call Subsystem1' */
+        localDW->s200_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_List;
         BuckyWagon_01_enter_internal_List(rtu_listIndex, rtu_data, rtu_21,
           localB, localDW);
       } else {
         if (rtu_menuTime >= BuckyWagon_01_SETUP_TIME) {
-          /* Transition: '<S197>:35' */
-          /* Exit 'wait3': '<S197>:28' */
-          /* Entry 'Setup': '<S197>:13' */
-          localDW->s197_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_Setup;
+          /* Transition: '<S200>:35' */
+          localDW->s200_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_Setup;
 
-          /* Transition: '<S197>:82' */
-          /* Entry 'wait': '<S197>:11' */
-          localDW->s197_is_Setup = BuckyWagon_01_IN_wait;
+          /* Transition: '<S200>:82' */
+          localDW->s200_is_Setup = BuckyWagon_01_IN_wait;
 
-          /* Event: '<S197>:300' */
+          /* Outputs for Function Call SubSystem: '<S11>/Clear Screen' */
+
+          /* Entry 'wait': '<S200>:11' */
+          /* Event: '<S200>:300' */
           BuckyWagon_01_ClearScreen();
-          localDW->s197_setupIndex = 0U;
+
+          /* End of Outputs for SubSystem: '<S11>/Clear Screen' */
+          localDW->s200_setupIndex = 0U;
         }
       }
       break;
 
      case BuckyWagon_01_IN_wait4:
-      /* During 'wait4': '<S197>:27' */
-      if (_sfEvent_BuckyWagon_01_ == BuckyWagon_01_event_menuReleased) {
-        /* Transition: '<S197>:87' */
-        localB->s197_screenO = 4U;
+      /* During 'wait4': '<S200>:27' */
+      if (localDW->s200_sfEvent == BuckyWagon_01_event_menuReleased) {
+        /* Transition: '<S200>:87' */
+        localB->s200_screenO = 4U;
 
-        /* Event: '<S197>:314' */
-        BuckyWagon_01_FunctionCallSubsystem1(localB->s197_screenO);
+        /* Outputs for Function Call SubSystem: '<S11>/Function-Call Subsystem1' */
 
-        /* Exit 'wait4': '<S197>:27' */
-        /* Entry 'Quad': '<S197>:24' */
-        localDW->s197_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_Quad;
+        /* Event: '<S200>:314' */
+        BuckyWagon_01_FunctionCallSubsystem1(localB->s200_screenO);
+
+        /* End of Outputs for SubSystem: '<S11>/Function-Call Subsystem1' */
+        localDW->s200_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_Quad;
         BuckyWagon_01_enter_internal_Quad(rtu_quadIndex, rtu_data, rtu_21,
           localB, localDW);
       } else {
         if (rtu_menuTime >= BuckyWagon_01_SETUP_TIME) {
-          /* Transition: '<S197>:39' */
-          /* Exit 'wait4': '<S197>:27' */
-          /* Entry 'Setup': '<S197>:13' */
-          localDW->s197_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_Setup;
+          /* Transition: '<S200>:39' */
+          localDW->s200_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_Setup;
 
-          /* Transition: '<S197>:82' */
-          /* Entry 'wait': '<S197>:11' */
-          localDW->s197_is_Setup = BuckyWagon_01_IN_wait;
+          /* Transition: '<S200>:82' */
+          localDW->s200_is_Setup = BuckyWagon_01_IN_wait;
 
-          /* Event: '<S197>:300' */
+          /* Outputs for Function Call SubSystem: '<S11>/Clear Screen' */
+
+          /* Entry 'wait': '<S200>:11' */
+          /* Event: '<S200>:300' */
           BuckyWagon_01_ClearScreen();
-          localDW->s197_setupIndex = 0U;
+
+          /* End of Outputs for SubSystem: '<S11>/Clear Screen' */
+          localDW->s200_setupIndex = 0U;
         }
       }
       break;
 
      default:
-      /* Transition: '<S197>:43' */
-      /* Entry 'PowerupDelay': '<S197>:9' */
-      localDW->s197_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_PowerupDelay;
-      localDW->s197_timer = 0U;
+      /* Transition: '<S200>:43' */
+      localDW->s200_is_c2_BuckyWagon_01 = BuckyWagon_01_IN_PowerupDelay;
+
+      /* Entry 'PowerupDelay': '<S200>:9' */
+      localDW->s200_timer = 0U;
       break;
     }
   }
@@ -3034,98 +3442,82 @@ void BuckyWagon_01_Chart_f_Init(rtB_Chart_BuckyWagon_01_n *localB,
   rtDW_Chart_BuckyWagon_01_o *localDW)
 {
   int32_T i;
-
-  /* InitializeConditions for Stateflow: '<S11>/Chart' incorporates:
-   *  InitializeConditions for SubSystem: '<S11>/Clear Screen'
-   *  InitializeConditions for SubSystem: '<S11>/Draw Bitmap'
-   *  InitializeConditions for SubSystem: '<S11>/Draw HLine'
-   *  InitializeConditions for SubSystem: '<S11>/Draw Rect'
-   *  InitializeConditions for SubSystem: '<S11>/Draw String'
-   *  InitializeConditions for SubSystem: '<S11>/Draw Vline'
-   *  InitializeConditions for SubSystem: '<S11>/Function-Call Subsystem'
-   *  InitializeConditions for SubSystem: '<S11>/Function-Call Subsystem1'
-   *  InitializeConditions for SubSystem: '<S11>/Function-Call Subsystem2'
-   *  InitializeConditions for SubSystem: '<S11>/Function-Call Subsystem3'
-   *  InitializeConditions for SubSystem: '<S11>/Function-Call Subsystem4'
-   *  InitializeConditions for SubSystem: '<S11>/Send String_efficient'
-   *  InitializeConditions for SubSystem: '<S11>/Set GUI Mode'
-   */
-  localDW->s197_is_Dual = 0U;
-  localDW->s197_is_List = 0U;
-  localDW->s197_is_Quad = 0U;
-  localDW->s197_is_Setup = 0U;
-  localDW->s197_is_select_var = 0U;
-  localDW->s197_is_Single = 0U;
-  localDW->s197_is_active_c2_BuckyWagon_01 = 0U;
-  localDW->s197_is_c2_BuckyWagon_01 = 0U;
-  localDW->s197_timer = 0U;
+  localDW->s200_is_Dual = 0U;
+  localDW->s200_is_List = 0U;
+  localDW->s200_is_Quad = 0U;
+  localDW->s200_is_Setup = 0U;
+  localDW->s200_is_select_var = 0U;
+  localDW->s200_is_Single = 0U;
+  localDW->s200_is_active_c2_BuckyWagon_01 = 0U;
+  localDW->s200_is_c2_BuckyWagon_01 = 0U;
+  localDW->s200_timer = 0U;
   for (i = 0; i < 6; i++) {
-    localDW->s197_oldData[i] = 0;
+    localDW->s200_oldData[i] = 0;
   }
 
-  localDW->s197_setupIndex = 0U;
-  localDW->s197_setupVIndex = 0U;
-  localDW->s197_selectIndex = 0U;
-  localDW->s197_selectVIndex = 0U;
-  localB->s197_mode = 0U;
-  localB->s197_x0 = 0U;
-  localB->s197_x1 = 0U;
-  localB->s197_y0 = 0U;
-  localB->s197_y1 = 0U;
-  localB->s197_lineColor = 0U;
-  localB->s197_fillColor = 0U;
-  localB->s197_stringNum = 0U;
+  localDW->s200_setupIndex = 0U;
+  localDW->s200_setupVIndex = 0U;
+  localDW->s200_selectIndex = 0U;
+  localDW->s200_selectVIndex = 0U;
+  localB->s200_mode = 0U;
+  localB->s200_x0 = 0U;
+  localB->s200_x1 = 0U;
+  localB->s200_y0 = 0U;
+  localB->s200_y1 = 0U;
+  localB->s200_lineColor = 0U;
+  localB->s200_fillColor = 0U;
+  localB->s200_stringNum = 0U;
   for (i = 0; i < 18; i++) {
-    localB->s197_string[i] = 0U;
+    localB->s200_string[i] = 0U;
   }
 
-  localB->s197_font = 0U;
-  localB->s197_hCenter = 0U;
-  localB->s197_vCenter = 0U;
-  localB->s197_listIndexO = 0U;
-  localB->s197_screenO = 0U;
-  localB->s197_dualIndexO[0] = 0U;
-  localB->s197_dualIndexO[1] = 0U;
-  localB->s197_quadIndexO[0] = 0U;
-  localB->s197_quadIndexO[1] = 0U;
-  localB->s197_quadIndexO[2] = 0U;
-  localB->s197_quadIndexO[3] = 0U;
-  localB->s197_singleIndexO = 0U;
+  localB->s200_font = 0U;
+  localB->s200_hCenter = 0U;
+  localB->s200_vCenter = 0U;
+  localB->s200_listIndexO = 0U;
+  localB->s200_screenO = 0U;
+  localB->s200_dualIndexO[0] = 0U;
+  localB->s200_dualIndexO[1] = 0U;
+  localB->s200_quadIndexO[0] = 0U;
+  localB->s200_quadIndexO[1] = 0U;
+  localB->s200_quadIndexO[2] = 0U;
+  localB->s200_quadIndexO[3] = 0U;
+  localB->s200_singleIndexO = 0U;
 }
 
 /* Start for trigger system: '<S11>/Chart' */
 void BuckyWagon_01_Chart_h_Start(rtB_Chart_BuckyWagon_01_n *localB,
   rtDW_Chart_BuckyWagon_01_o *localDW)
 {
-  /* Start for Stateflow: '<S11>/Chart' incorporates:
-   *  Start for SubSystem: '<S11>/Clear Screen'
-   *  Start for SubSystem: '<S11>/Draw Bitmap'
-   *  Start for SubSystem: '<S11>/Draw HLine'
-   *  Start for SubSystem: '<S11>/Draw Rect'
-   *  Start for SubSystem: '<S11>/Draw String'
-   *  Start for SubSystem: '<S11>/Draw Vline'
-   *  Start for SubSystem: '<S11>/Function-Call Subsystem'
-   *  Start for SubSystem: '<S11>/Function-Call Subsystem1'
-   *  Start for SubSystem: '<S11>/Function-Call Subsystem2'
-   *  Start for SubSystem: '<S11>/Function-Call Subsystem3'
-   *  Start for SubSystem: '<S11>/Function-Call Subsystem4'
-   *  Start for SubSystem: '<S11>/Send String_efficient'
-   *  Start for SubSystem: '<S11>/Set GUI Mode'
-   */
-
-  /* Start for S-Function (fcncallgen): '<S217>/Function-Call Generator' incorporates:
-   *  Start for SubSystem: '<S217>/Subsystem'
-   */
+  /* Start for Function Call SubSystem: '<S11>/Clear Screen' */
   BuckyWagon_01_ClearScreen_Start();
+
+  /* End of Start for SubSystem: '<S11>/Clear Screen' */
+
+  /* Start for Function Call SubSystem: '<S11>/Draw Rect' */
   BuckyWagon_01_DrawRect_Start();
 
-  /* Start for S-Function (fcncallgen): '<S200>/Function-Call Generator' incorporates:
-   *  Start for SubSystem: '<S200>/Subsystem'
-   */
+  /* End of Start for SubSystem: '<S11>/Draw Rect' */
+
+  /* Start for Function Call SubSystem: '<S11>/Send String_efficient' */
   BuckyWagon_01_SendString_efficient_Start();
+
+  /* End of Start for SubSystem: '<S11>/Send String_efficient' */
+
+  /* Start for Function Call SubSystem: '<S11>/Draw String' */
   BuckyWagon_01_DrawString_Start();
+
+  /* End of Start for SubSystem: '<S11>/Draw String' */
+
+  /* Start for Function Call SubSystem: '<S11>/Draw Vline' */
   BuckyWagon_01_DrawVline_Start();
+
+  /* End of Start for SubSystem: '<S11>/Draw Vline' */
+
+  /* Start for Function Call SubSystem: '<S11>/Draw HLine' */
   BuckyWagon_01_DrawHLine_Start();
+
+  /* End of Start for SubSystem: '<S11>/Draw HLine' */
 }
 
 /* Output and update for trigger system: '<S11>/Chart' */
@@ -3145,11 +3537,14 @@ void BuckyWagon_01_Chart_o(const boolean_T rtu_0[7], uint8_T rtu_menuTime,
   int32_T i;
   boolean_T tmp;
   boolean_T zcEvent_0;
+
+  /* Stateflow: '<S11>/Chart' incorporates:
+   *  TriggerPort: '<S200>/ input events '
+   */
   tmp = FALSE;
   for (i = 0; i < 7; i++) {
-    zcEvent_0 = ((((localZCE->Chart_Trig_ZCE[i]) == POS_ZCSIG) != (int32_T)
-                  rtu_0[i]) && ((localZCE->Chart_Trig_ZCE[i]) !=
-      UNINITIALIZED_ZCSIG));
+    zcEvent_0 = ((((localZCE->Chart_Trig_ZCE[i]) == POS_ZCSIG) != rtu_0[i]) &&
+                 ((localZCE->Chart_Trig_ZCE[i]) != UNINITIALIZED_ZCSIG));
     tmp = (tmp || zcEvent_0);
     zcEvent[i] = zcEvent_0;
   }
@@ -3160,107 +3555,80 @@ void BuckyWagon_01_Chart_o(const boolean_T rtu_0[7], uint8_T rtu_menuTime,
         RISING_ZCEVENT : FALLING_ZCEVENT : NO_ZCEVENT);
     }
 
-    /* Stateflow: '<S11>/Chart' incorporates:
-     *  SubSystem: '<S11>/Clear Screen'
-     *  SubSystem: '<S11>/Draw HLine'
-     *  SubSystem: '<S11>/Draw Rect'
-     *  SubSystem: '<S11>/Draw String'
-     *  SubSystem: '<S11>/Draw Vline'
-     *  SubSystem: '<S11>/Function-Call Subsystem'
-     *  SubSystem: '<S11>/Function-Call Subsystem1'
-     *  SubSystem: '<S11>/Function-Call Subsystem2'
-     *  SubSystem: '<S11>/Function-Call Subsystem3'
-     *  SubSystem: '<S11>/Function-Call Subsystem4'
-     *  SubSystem: '<S11>/Send String_efficient'
-     */
     /* Gateway: Foreground/MiniViewDisplay/Chart */
     if (rtb_inputevents[0U] != 0) {
-      /* Event: '<S197>:298' */
-      i = _sfEvent_BuckyWagon_01_;
-      _sfEvent_BuckyWagon_01_ = BuckyWagon_01_event_tick;
+      /* Event: '<S200>:298' */
+      localDW->s200_sfEvent = BuckyWagon_01_event_tick;
       BuckyWagon_01_chartstep_c2_BuckyWagon_01(rtu_menuTime, rtu_startupDelay,
         rtu_listIndex, rtu_singleIndex, rtu_dualIndex, rtu_quadIndex, rtu_screen,
         rtu_setupNames, rtu_names, rtu_numFields, rtu_namesline1, rtu_namesline2,
         rtu_barGraphMode, rtu_barMax, rtu_barMin, rtu_statusTxt,
         rtu_statusTxtMode, rtu_data, rtu_21, localB, localDW);
-      _sfEvent_BuckyWagon_01_ = i;
     }
 
     if (rtb_inputevents[1U] == 1) {
-      /* Event: '<S197>:307' */
-      i = _sfEvent_BuckyWagon_01_;
-      _sfEvent_BuckyWagon_01_ = BuckyWagon_01_event_upPressed;
+      /* Event: '<S200>:307' */
+      localDW->s200_sfEvent = BuckyWagon_01_event_upPressed;
       BuckyWagon_01_chartstep_c2_BuckyWagon_01(rtu_menuTime, rtu_startupDelay,
         rtu_listIndex, rtu_singleIndex, rtu_dualIndex, rtu_quadIndex, rtu_screen,
         rtu_setupNames, rtu_names, rtu_numFields, rtu_namesline1, rtu_namesline2,
         rtu_barGraphMode, rtu_barMax, rtu_barMin, rtu_statusTxt,
         rtu_statusTxtMode, rtu_data, rtu_21, localB, localDW);
-      _sfEvent_BuckyWagon_01_ = i;
     }
 
     if (rtb_inputevents[2U] == -1) {
-      /* Event: '<S197>:308' */
-      i = _sfEvent_BuckyWagon_01_;
-      _sfEvent_BuckyWagon_01_ = BuckyWagon_01_event_upReleased;
+      /* Event: '<S200>:308' */
+      localDW->s200_sfEvent = BuckyWagon_01_event_upReleased;
       BuckyWagon_01_chartstep_c2_BuckyWagon_01(rtu_menuTime, rtu_startupDelay,
         rtu_listIndex, rtu_singleIndex, rtu_dualIndex, rtu_quadIndex, rtu_screen,
         rtu_setupNames, rtu_names, rtu_numFields, rtu_namesline1, rtu_namesline2,
         rtu_barGraphMode, rtu_barMax, rtu_barMin, rtu_statusTxt,
         rtu_statusTxtMode, rtu_data, rtu_21, localB, localDW);
-      _sfEvent_BuckyWagon_01_ = i;
     }
 
     if (rtb_inputevents[3U] == 1) {
-      /* Event: '<S197>:309' */
-      i = _sfEvent_BuckyWagon_01_;
-      _sfEvent_BuckyWagon_01_ = BuckyWagon_01_event_menuPressed;
+      /* Event: '<S200>:309' */
+      localDW->s200_sfEvent = BuckyWagon_01_event_menuPressed;
       BuckyWagon_01_chartstep_c2_BuckyWagon_01(rtu_menuTime, rtu_startupDelay,
         rtu_listIndex, rtu_singleIndex, rtu_dualIndex, rtu_quadIndex, rtu_screen,
         rtu_setupNames, rtu_names, rtu_numFields, rtu_namesline1, rtu_namesline2,
         rtu_barGraphMode, rtu_barMax, rtu_barMin, rtu_statusTxt,
         rtu_statusTxtMode, rtu_data, rtu_21, localB, localDW);
-      _sfEvent_BuckyWagon_01_ = i;
     }
 
     if (rtb_inputevents[4U] == -1) {
-      /* Event: '<S197>:310' */
-      i = _sfEvent_BuckyWagon_01_;
-      _sfEvent_BuckyWagon_01_ = BuckyWagon_01_event_menuReleased;
+      /* Event: '<S200>:310' */
+      localDW->s200_sfEvent = BuckyWagon_01_event_menuReleased;
       BuckyWagon_01_chartstep_c2_BuckyWagon_01(rtu_menuTime, rtu_startupDelay,
         rtu_listIndex, rtu_singleIndex, rtu_dualIndex, rtu_quadIndex, rtu_screen,
         rtu_setupNames, rtu_names, rtu_numFields, rtu_namesline1, rtu_namesline2,
         rtu_barGraphMode, rtu_barMax, rtu_barMin, rtu_statusTxt,
         rtu_statusTxtMode, rtu_data, rtu_21, localB, localDW);
-      _sfEvent_BuckyWagon_01_ = i;
     }
 
     if (rtb_inputevents[5U] == 1) {
-      /* Event: '<S197>:311' */
-      i = _sfEvent_BuckyWagon_01_;
-      _sfEvent_BuckyWagon_01_ = BuckyWagon_01_event_downPressed;
+      /* Event: '<S200>:311' */
+      localDW->s200_sfEvent = BuckyWagon_01_event_downPressed;
       BuckyWagon_01_chartstep_c2_BuckyWagon_01(rtu_menuTime, rtu_startupDelay,
         rtu_listIndex, rtu_singleIndex, rtu_dualIndex, rtu_quadIndex, rtu_screen,
         rtu_setupNames, rtu_names, rtu_numFields, rtu_namesline1, rtu_namesline2,
         rtu_barGraphMode, rtu_barMax, rtu_barMin, rtu_statusTxt,
         rtu_statusTxtMode, rtu_data, rtu_21, localB, localDW);
-      _sfEvent_BuckyWagon_01_ = i;
     }
 
     if (rtb_inputevents[6U] == -1) {
-      /* Event: '<S197>:312' */
-      i = _sfEvent_BuckyWagon_01_;
-      _sfEvent_BuckyWagon_01_ = BuckyWagon_01_event_downReleased;
+      /* Event: '<S200>:312' */
+      localDW->s200_sfEvent = BuckyWagon_01_event_downReleased;
       BuckyWagon_01_chartstep_c2_BuckyWagon_01(rtu_menuTime, rtu_startupDelay,
         rtu_listIndex, rtu_singleIndex, rtu_dualIndex, rtu_quadIndex, rtu_screen,
         rtu_setupNames, rtu_names, rtu_numFields, rtu_namesline1, rtu_namesline2,
         rtu_barGraphMode, rtu_barMax, rtu_barMin, rtu_statusTxt,
         rtu_statusTxtMode, rtu_data, rtu_21, localB, localDW);
-      _sfEvent_BuckyWagon_01_ = i;
     }
   }
 
   for (i = 0; i < 7; i++) {
-    localZCE->Chart_Trig_ZCE[i] = (uint8_T)(rtu_0[i] ? (int32_T)POS_ZCSIG :
+    (localZCE->Chart_Trig_ZCE[i]) = (uint8_T)(rtu_0[i] ? (int32_T)POS_ZCSIG :
       (int32_T)ZERO_ZCSIG);
   }
 }
@@ -3274,13 +3642,25 @@ void BuckyWagon_01_Chart_o(const boolean_T rtu_0[7], uint8_T rtu_menuTime,
 void BuckyWagon_01_EnabledSubsystem(boolean_T rtu_0, uint8_T rtu_1,
   rtB_EnabledSubsystem_BuckyWagon_01 *localB)
 {
+  /* Outputs for Enabled SubSystem: '<S11>/Enabled Subsystem' incorporates:
+   *  EnablePort: '<S208>/Enable'
+   */
   if (rtu_0) {
-    /* Inport: '<S205>/In' */
-    localB->s205_In = rtu_1;
+    /* Inport: '<S208>/In' */
+    localB->s208_In = rtu_1;
   }
+
+  /* End of Outputs for SubSystem: '<S11>/Enabled Subsystem' */
 }
 
-/* Output and update for function-call system: '<S213>/Fault Iterator' */
+/* Initial conditions for function-call system: '<S216>/Fault Iterator' */
+void BuckyWagon_01_FaultIterator_Init(rtDW_FaultIterator_BuckyWagon_01 *localDW)
+{
+  /* InitializeConditions for UnitDelay: '<S230>/Unit Delay' */
+  localDW->s230_UnitDelay_DSTATE = 0;
+}
+
+/* Output and update for function-call system: '<S216>/Fault Iterator' */
 void BuckyWagon_01_FaultIterator(rtB_FaultIterator_BuckyWagon_01 *localB,
   rtDW_FaultIterator_BuckyWagon_01 *localDW)
 {
@@ -3288,28 +3668,28 @@ void BuckyWagon_01_FaultIterator(rtB_FaultIterator_BuckyWagon_01 *localB,
   fault_T rtb_UnitDelay_fi;
   fault_T rtb_motohawk_fault_iterator_o2;
 
-  /* UnitDelay: '<S227>/Unit Delay' */
-  rtb_UnitDelay_fi = localDW->s227_UnitDelay_DSTATE;
+  /* UnitDelay: '<S230>/Unit Delay' */
+  rtb_UnitDelay_fi = localDW->s230_UnitDelay_DSTATE;
 
-  /* S-Function (motohawk_sfun_fault_iterator): '<S227>/motohawk_fault_iterator' */
+  /* S-Function (motohawk_sfun_fault_iterator): '<S230>/motohawk_fault_iterator' */
   /* Get Next Active Fault */
   {
     extern boolean_T IsFaultValid(uint32_T fault);
     extern uint32_T GetNextActiveFault(uint32_T fault, boolean_T loop);
     rtb_motohawk_fault_iterator_o2 = GetNextActiveFault((uint32_T)
       (rtb_UnitDelay_fi), 1);
-    localB->s227_motohawk_fault_iterator_o1 = IsFaultValid
+    localB->s230_motohawk_fault_iterator_o1 = IsFaultValid
       (rtb_motohawk_fault_iterator_o2);
   }
 
-  /* S-Function (motohawk_sfun_fault_name): '<S227>/motohawk_fault_name' */
+  /* S-Function (motohawk_sfun_fault_name): '<S230>/motohawk_fault_name' */
   {
     extern const char *GetFaultName(uint32_T fault);
     const char *name;
     char *out;
     int i;
     name = GetFaultName(rtb_motohawk_fault_iterator_o2);
-    out = (char *) localB->s227_motohawk_fault_name;
+    out = (char *) localB->s230_motohawk_fault_name;
     i = 0;
     if (name) {
       while ((i < 26) && name[i]) {
@@ -3324,8 +3704,8 @@ void BuckyWagon_01_FaultIterator(rtB_FaultIterator_BuckyWagon_01 *localB,
     }
   }
 
-  /* Update for UnitDelay: '<S227>/Unit Delay' */
-  localDW->s227_UnitDelay_DSTATE = rtb_motohawk_fault_iterator_o2;
+  /* Update for UnitDelay: '<S230>/Unit Delay' */
+  localDW->s230_UnitDelay_DSTATE = rtb_motohawk_fault_iterator_o2;
 }
 
 /* Initial conditions for function-call system: '<S2>/MiniViewDisplay' */
@@ -3333,20 +3713,23 @@ void BuckyWagon_01_MiniViewDisplay_Init(void)
 {
   int32_T i;
 
-  /* InitializeConditions for Stateflow: '<S213>/Chart' incorporates:
-   *  InitializeConditions for SubSystem: '<S213>/Fault Iterator'
-   */
-  BuckyWagon_01_DWork.s226_is_Fault = 0U;
-  BuckyWagon_01_DWork.s226_is_active_c3_BuckyWagon_01 = 0U;
-  BuckyWagon_01_DWork.s226_is_c3_BuckyWagon_01 = 0U;
-  BuckyWagon_01_B.s226_mode = 0U;
+  /* InitializeConditions for Stateflow: '<S216>/Chart' */
+  BuckyWagon_01_DWork.s229_is_Fault = 0U;
+  BuckyWagon_01_DWork.s229_is_active_c3_BuckyWagon_01 = 0U;
+  BuckyWagon_01_DWork.s229_is_c3_BuckyWagon_01 = 0U;
+  BuckyWagon_01_B.s229_mode = 0U;
   for (i = 0; i < 10; i++) {
-    BuckyWagon_01_B.s226_text[i] = 0U;
+    BuckyWagon_01_B.s229_text[i] = 0U;
   }
 
-  BuckyWagon_01_B.s226_minTimer = 0U;
-  BuckyWagon_01_B.s226_scrollIndex = 0U;
-  BuckyWagon_01_B.s226_scrollTimer = 0U;
+  BuckyWagon_01_B.s229_minTimer = 0U;
+  BuckyWagon_01_B.s229_scrollIndex = 0U;
+  BuckyWagon_01_B.s229_scrollTimer = 0U;
+
+  /* InitializeConditions for Stateflow: '<S216>/Chart' incorporates:
+   *  InitializeConditions for SubSystem: '<S216>/Fault Iterator'
+   */
+  BuckyWagon_01_FaultIterator_Init(&BuckyWagon_01_DWork.s216_FaultIterator);
 
   /* InitializeConditions for Stateflow: '<S11>/Chart' */
   BuckyWagon_01_Chart_f_Init(&BuckyWagon_01_B.s11_sf_Chart,
@@ -3356,8 +3739,8 @@ void BuckyWagon_01_MiniViewDisplay_Init(void)
 /* Start for function-call system: '<S2>/MiniViewDisplay' */
 void BuckyWagon_01_MiniViewDisplay_Start(void)
 {
-  /* Start for Stateflow: '<S213>/Chart' incorporates:
-   *  Start for SubSystem: '<S213>/Fault Iterator'
+  /* Start for Stateflow: '<S216>/Chart' incorporates:
+   *  Start for SubSystem: '<S216>/Fault Iterator'
    */
 
   /* Start for Stateflow: '<S11>/Chart' */
@@ -3370,37 +3753,30 @@ void BuckyWagon_01_MiniViewDisplay(void)
 {
   /* local block i/o variables */
   boolean_T rtb_HiddenBuf_InsertedFor_Chart_at_inport_20[7];
-  boolean_T eml_guard;
   uint8_T rtb_UnitDelay_j[27];
   real_T rtb_Gain6;
-  real_T rtb_Saturation14;
+  boolean_T rtb_UnitDelay_h;
   real_T rtb_faultNameLength;
   int32_T i;
-  real_T tmp;
-  real_T tmp_0;
-  real_T tmp_1;
-  real_T tmp_2;
-  real_T tmp_3;
+  real_T u;
 
-  /* Outputs for enable SubSystem: '<S11>/Enabled Subsystem2' */
-  BuckyWagon_01_EnabledSubsystem(BuckyWagon_01_B.s244_upasserted,
-    BuckyWagon_01_B.s244_upcount, &BuckyWagon_01_B.s11_EnabledSubsystem2);
+  /* Outputs for Enabled SubSystem: '<S11>/Enabled Subsystem2' */
+  BuckyWagon_01_EnabledSubsystem(BuckyWagon_01_B.s247_upasserted,
+    BuckyWagon_01_B.s247_upcount, &BuckyWagon_01_B.s11_EnabledSubsystem2);
 
-  /* end of Outputs for SubSystem: '<S11>/Enabled Subsystem2' */
+  /* End of Outputs for SubSystem: '<S11>/Enabled Subsystem2' */
 
-  /* Outputs for enable SubSystem: '<S11>/Enabled Subsystem1' */
-  BuckyWagon_01_EnabledSubsystem(BuckyWagon_01_B.s229_menuasserted,
-    BuckyWagon_01_B.s229_menucount, &BuckyWagon_01_B.s11_EnabledSubsystem1);
+  /* Outputs for Enabled SubSystem: '<S11>/Enabled Subsystem1' */
+  BuckyWagon_01_EnabledSubsystem(BuckyWagon_01_B.s232_menuasserted,
+    BuckyWagon_01_B.s232_menucount, &BuckyWagon_01_B.s11_EnabledSubsystem1);
 
-  /* end of Outputs for SubSystem: '<S11>/Enabled Subsystem1' */
+  /* End of Outputs for SubSystem: '<S11>/Enabled Subsystem1' */
 
-  /* Outputs for enable SubSystem: '<S11>/Enabled Subsystem' incorporates:
-   *  EnablePort: '<S205>/Enable'
-   */
-  BuckyWagon_01_EnabledSubsystem(BuckyWagon_01_B.s220_downasserted,
-    BuckyWagon_01_B.s220_downcount, &BuckyWagon_01_B.s11_EnabledSubsystem);
+  /* Outputs for Enabled SubSystem: '<S11>/Enabled Subsystem' */
+  BuckyWagon_01_EnabledSubsystem(BuckyWagon_01_B.s223_downasserted,
+    BuckyWagon_01_B.s223_downcount, &BuckyWagon_01_B.s11_EnabledSubsystem);
 
-  /* end of Outputs for SubSystem: '<S11>/Enabled Subsystem' */
+  /* End of Outputs for SubSystem: '<S11>/Enabled Subsystem' */
 
   /* S-Function (motohawk_sfun_data_read): '<S11>/motohawk_data_read1' */
   BuckyWagon_01_B.s11_motohawk_data_read1 = listIndex_DataStore();
@@ -3421,484 +3797,590 @@ void BuckyWagon_01_MiniViewDisplay(void)
   /* S-Function (motohawk_sfun_data_read): '<S11>/motohawk_data_read4' */
   BuckyWagon_01_B.s11_motohawk_data_read4 = screen_DataStore();
 
-  /* UnitDelay: '<S213>/Unit Delay' */
+  /* UnitDelay: '<S216>/Unit Delay' */
   for (i = 0; i < 27; i++) {
-    rtb_UnitDelay_j[i] = BuckyWagon_01_DWork.s213_UnitDelay_DSTATE[i];
+    rtb_UnitDelay_j[i] = BuckyWagon_01_DWork.s216_UnitDelay_DSTATE[i];
   }
 
-  /* Embedded MATLAB: '<S213>/getStringLength' */
-  /* Embedded MATLAB Function 'Foreground/MiniViewDisplay/GetFaultName/getStringLength': '<S228>:1' */
+  /* End of UnitDelay: '<S216>/Unit Delay' */
+
+  /* MATLAB Function Block: '<S216>/getStringLength' */
+
+  /* MATLAB Function 'Foreground/MiniViewDisplay/GetFaultName/getStringLength': '<S231>:1' */
   /*  This block supports the Embedded MATLAB subset. */
   /*  See the help menu for details.  */
-  /* '<S228>:1:5' */
+  /* '<S231>:1:5' */
   rtb_faultNameLength = 1.0;
-  do {
-    i = 0;
-    eml_guard = FALSE;
-    if (rtb_UnitDelay_j[(int32_T)rtb_faultNameLength - 1] != 0) {
-      /* '<S228>:1:6' */
-      eml_guard = TRUE;
-    } else if (rtb_faultNameLength > 27.0) {
-      /* '<S228>:1:7' */
-      eml_guard = TRUE;
-    } else {
-      i = 1;
-    }
+  while ((rtb_UnitDelay_j[(int32_T)rtb_faultNameLength - 1] != 0) ||
+         (rtb_faultNameLength > 27.0)) {
+    /* '<S231>:1:6' */
+    /* '<S231>:1:7' */
+    /* '<S231>:1:8' */
+    rtb_faultNameLength++;
+  }
 
-    if (eml_guard) {
-      /* '<S228>:1:8' */
-      rtb_faultNameLength++;
-    }
-  } while ((uint32_T)i == 0U);
+  /* End of MATLAB Function Block: '<S216>/getStringLength' */
 
-  /* Stateflow: '<S213>/Chart' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S213>/motohawk_calibration'
-   *  S-Function (motohawk_sfun_calibration): '<S213>/motohawk_calibration1'
-   *  S-Function (motohawk_sfun_calibration): '<S213>/motohawk_calibration2'
-   *  S-Function (motohawk_sfun_calibration): '<S213>/motohawk_calibration3'
-   *  S-Function (motohawk_sfun_calibration): '<S213>/motohawk_calibration4'
-   *  S-Function (motohawk_sfun_calibration): '<S213>/motohawk_calibration5'
-   *  S-Function (motohawk_sfun_calibration): '<S213>/motohawk_calibration6'
-   *  S-Function (motohawk_sfun_calibration): '<S213>/motohawk_calibration7'
-   *  SubSystem: '<S213>/Fault Iterator'
-   *  UnitDelay: '<S213>/Unit Delay1'
-   */
+  /* Stateflow: '<S216>/Chart' */
+
   /* Gateway: Foreground/MiniViewDisplay/GetFaultName/Chart */
   /* During: Foreground/MiniViewDisplay/GetFaultName/Chart */
-  if (BuckyWagon_01_DWork.s226_is_active_c3_BuckyWagon_01 == 0) {
+  if (BuckyWagon_01_DWork.s229_is_active_c3_BuckyWagon_01 == 0) {
     /* Entry: Foreground/MiniViewDisplay/GetFaultName/Chart */
-    BuckyWagon_01_DWork.s226_is_active_c3_BuckyWagon_01 = 1U;
+    BuckyWagon_01_DWork.s229_is_active_c3_BuckyWagon_01 = 1U;
 
-    /* Transition: '<S226>:7' */
-    /* Entry 'NoFault': '<S226>:1' */
-    BuckyWagon_01_DWork.s226_is_c3_BuckyWagon_01 = BuckyWagon_01_IN_NoFault;
+    /* Transition: '<S229>:7' */
+    BuckyWagon_01_DWork.s229_is_c3_BuckyWagon_01 = BuckyWagon_01_IN_NoFault;
+
+    /* Entry 'NoFault': '<S229>:1' */
     for (i = 0; i < 10; i++) {
-      BuckyWagon_01_B.s226_text[i] = ((uint8_T)(noErrText_DataStore())[i]);
+      /* S-Function (motohawk_sfun_calibration): '<S216>/motohawk_calibration2' */
+      BuckyWagon_01_B.s229_text[i] = ((uint8_T)(noErrText_DataStore())[i]);
     }
   } else {
-    switch (BuckyWagon_01_DWork.s226_is_c3_BuckyWagon_01) {
+    switch (BuckyWagon_01_DWork.s229_is_c3_BuckyWagon_01) {
      case BuckyWagon_01_IN_Fault:
-      /* During 'Fault': '<S226>:2' */
-      if (!(BuckyWagon_01_DWork.s213_UnitDelay1_DSTATE &&
+      /* UnitDelay: '<S216>/Unit Delay1' incorporates:
+       *  S-Function (motohawk_sfun_calibration): '<S216>/motohawk_calibration'
+       *  S-Function (motohawk_sfun_calibration): '<S216>/motohawk_calibration2'
+       *  S-Function (motohawk_sfun_calibration): '<S216>/motohawk_calibration3'
+       *  S-Function (motohawk_sfun_calibration): '<S216>/motohawk_calibration4'
+       *  S-Function (motohawk_sfun_calibration): '<S216>/motohawk_calibration5'
+       *  S-Function (motohawk_sfun_calibration): '<S216>/motohawk_calibration6'
+       *  S-Function (motohawk_sfun_calibration): '<S216>/motohawk_calibration7'
+       */
+      /* During 'Fault': '<S229>:2' */
+      if (!(BuckyWagon_01_DWork.s216_UnitDelay1_DSTATE &&
             (DisplayFaults_DataStore()))) {
-        /* Transition: '<S226>:13' */
-        /* Exit 'CheckNextFault': '<S226>:6' */
-        BuckyWagon_01_DWork.s226_is_Fault = (uint8_T)
-          BuckyWagon_01_IN_NO_ACTIVE_CHILD_k;
+        /* Transition: '<S229>:13' */
+        BuckyWagon_01_DWork.s229_is_Fault = (uint8_T)
+          BuckyWagon_01_IN_NO_ACTIVE_CHILD_d;
+        BuckyWagon_01_DWork.s229_is_c3_BuckyWagon_01 = BuckyWagon_01_IN_NoFault;
 
-        /* Exit 'lastWait': '<S226>:4' */
-        /* Exit 'scrollText': '<S226>:3' */
-        /* Exit 'scrollTextFirst': '<S226>:5' */
-        /* Exit 'Fault': '<S226>:2' */
-        /* Entry 'NoFault': '<S226>:1' */
-        BuckyWagon_01_DWork.s226_is_c3_BuckyWagon_01 = BuckyWagon_01_IN_NoFault;
+        /* Entry 'NoFault': '<S229>:1' */
         for (i = 0; i < 10; i++) {
-          BuckyWagon_01_B.s226_text[i] = ((uint8_T)(noErrText_DataStore())[i]);
+          BuckyWagon_01_B.s229_text[i] = ((uint8_T)(noErrText_DataStore())[i]);
         }
       } else {
-        BuckyWagon_01_B.s226_minTimer = (uint16_T)(BuckyWagon_01_B.s226_minTimer
+        BuckyWagon_01_B.s229_minTimer = (uint16_T)(BuckyWagon_01_B.s229_minTimer
           + 1);
-        switch (BuckyWagon_01_DWork.s226_is_Fault) {
+        switch (BuckyWagon_01_DWork.s229_is_Fault) {
          case BuckyWagon_01_IN_CheckNextFault:
-          /* During 'CheckNextFault': '<S226>:6' */
-          /* Transition: '<S226>:17' */
-          /* Transition: '<S226>:18' */
-          /* Transition: '<S226>:14' */
-          /* Exit 'CheckNextFault': '<S226>:6' */
-          /* Entry 'scrollTextFirst': '<S226>:5' */
-          BuckyWagon_01_DWork.s226_is_Fault = BuckyWagon_01_IN_scrollTextFirst;
-          BuckyWagon_01_B.s226_scrollTimer = 0U;
-          BuckyWagon_01_B.s226_scrollIndex = 0U;
-          BuckyWagon_01_B.s226_minTimer = 0U;
-          memcpy(&BuckyWagon_01_B.s226_text[0], &rtb_UnitDelay_j[(int32_T)0],
-                 ((uint8_T)(dispLength_DataStore())));
-          BuckyWagon_01_B.s226_text[(int32_T)((uint8_T)(dispLength_DataStore()))]
-            = 0U;
+          /* During 'CheckNextFault': '<S229>:6' */
+          /* Transition: '<S229>:17' */
+          /* Transition: '<S229>:18' */
+          /* Transition: '<S229>:14' */
+          BuckyWagon_01_DWork.s229_is_Fault = BuckyWagon_01_IN_scrollTextFirst;
+
+          /* Entry 'scrollTextFirst': '<S229>:5' */
+          BuckyWagon_01_B.s229_scrollTimer = 0U;
+          BuckyWagon_01_B.s229_scrollIndex = 0U;
+          BuckyWagon_01_B.s229_minTimer = 0U;
+          memcpy(&BuckyWagon_01_B.s229_text[0], &rtb_UnitDelay_j[0], ((uint8_T)
+                  (dispLength_DataStore())));
+          BuckyWagon_01_B.s229_text[((uint8_T)(dispLength_DataStore()))] = 0U;
           break;
 
          case BuckyWagon_01_IN_lastWait:
-          /* During 'lastWait': '<S226>:4' */
-          if ((BuckyWagon_01_B.s226_scrollTimer > ((uint16_T)
-                (lastScrollTime_DataStore()))) && (BuckyWagon_01_B.s226_minTimer
+          /* During 'lastWait': '<S229>:4' */
+          if ((BuckyWagon_01_B.s229_scrollTimer > ((uint16_T)
+                (lastScrollTime_DataStore()))) && (BuckyWagon_01_B.s229_minTimer
                > ((uint16_T)(minTime_DataStore())))) {
-            /* Transition: '<S226>:12' */
-            /* Event: '<S226>:38' */
-            BuckyWagon_01_FaultIterator(&BuckyWagon_01_B.s213_FaultIterator,
-              &BuckyWagon_01_DWork.s213_FaultIterator);
-
-            /* Exit 'lastWait': '<S226>:4' */
-            /* Entry 'CheckNextFault': '<S226>:6' */
-            BuckyWagon_01_DWork.s226_is_Fault = BuckyWagon_01_IN_CheckNextFault;
+            /* Stateflow: '<S216>/Chart' incorporates:
+             *  SubSystem: '<S216>/Fault Iterator'
+             */
+            /* Transition: '<S229>:12' */
+            /* Event: '<S229>:38' */
+            BuckyWagon_01_FaultIterator(&BuckyWagon_01_B.s216_FaultIterator,
+              &BuckyWagon_01_DWork.s216_FaultIterator);
+            BuckyWagon_01_DWork.s229_is_Fault = BuckyWagon_01_IN_CheckNextFault;
           } else {
-            BuckyWagon_01_B.s226_scrollTimer = (uint16_T)
-              (BuckyWagon_01_B.s226_scrollTimer + 1);
+            /* Stateflow: '<S216>/Chart' */
+            BuckyWagon_01_B.s229_scrollTimer = (uint16_T)
+              (BuckyWagon_01_B.s229_scrollTimer + 1);
           }
           break;
 
          case BuckyWagon_01_IN_scrollText:
-          /* During 'scrollText': '<S226>:3' */
-          if (BuckyWagon_01_B.s226_scrollTimer >= ((uint16_T)
+          /* Stateflow: '<S216>/Chart' */
+          /* During 'scrollText': '<S229>:3' */
+          if (BuckyWagon_01_B.s229_scrollTimer >= ((uint16_T)
                (scrollTime_DataStore()))) {
-            /* Transition: '<S226>:9' */
-            if (rtb_faultNameLength - 2.0 >= (real_T)(((uint8_T)
-                  (dispLength_DataStore())) + BuckyWagon_01_B.s226_scrollIndex))
-            {
-              /* Transition: '<S226>:10' */
-              BuckyWagon_01_B.s226_scrollIndex = (uint8_T)
-                (BuckyWagon_01_B.s226_scrollIndex + 1);
+            /* Transition: '<S229>:9' */
+            if ((int32_T)rtb_faultNameLength - 2 >= ((uint8_T)
+                 (dispLength_DataStore())) + BuckyWagon_01_B.s229_scrollIndex) {
+              /* Transition: '<S229>:10' */
+              BuckyWagon_01_B.s229_scrollIndex = (uint8_T)
+                (BuckyWagon_01_B.s229_scrollIndex + 1);
+              BuckyWagon_01_DWork.s229_is_Fault = BuckyWagon_01_IN_scrollText;
 
-              /* Exit 'scrollText': '<S226>:3' */
-              /* Entry 'scrollText': '<S226>:3' */
-              BuckyWagon_01_DWork.s226_is_Fault = BuckyWagon_01_IN_scrollText;
-              BuckyWagon_01_B.s226_scrollTimer = 0U;
-              memcpy(&BuckyWagon_01_B.s226_text[0], &rtb_UnitDelay_j[(int32_T)
-                     BuckyWagon_01_B.s226_scrollIndex], ((uint8_T)
-                      (dispLength_DataStore())));
-              BuckyWagon_01_B.s226_text[(int32_T)((uint8_T)(dispLength_DataStore
-                ()))] = 0U;
+              /* Entry 'scrollText': '<S229>:3' */
+              BuckyWagon_01_B.s229_scrollTimer = 0U;
+              memcpy(&BuckyWagon_01_B.s229_text[0],
+                     &rtb_UnitDelay_j[BuckyWagon_01_B.s229_scrollIndex],
+                     ((uint8_T)(dispLength_DataStore())));
+              BuckyWagon_01_B.s229_text[((uint8_T)(dispLength_DataStore()))] =
+                0U;
             } else {
-              /* Transition: '<S226>:11' */
-              /* Exit 'scrollText': '<S226>:3' */
-              /* Entry 'lastWait': '<S226>:4' */
-              BuckyWagon_01_DWork.s226_is_Fault = BuckyWagon_01_IN_lastWait;
+              /* Transition: '<S229>:11' */
+              BuckyWagon_01_DWork.s229_is_Fault = BuckyWagon_01_IN_lastWait;
             }
           } else {
-            BuckyWagon_01_B.s226_scrollTimer = (uint16_T)
-              (BuckyWagon_01_B.s226_scrollTimer + 1);
+            BuckyWagon_01_B.s229_scrollTimer = (uint16_T)
+              (BuckyWagon_01_B.s229_scrollTimer + 1);
           }
           break;
 
          case BuckyWagon_01_IN_scrollTextFirst:
-          /* During 'scrollTextFirst': '<S226>:5' */
-          if (BuckyWagon_01_B.s226_scrollTimer >= ((uint16_T)
+          /* Stateflow: '<S216>/Chart' */
+          /* During 'scrollTextFirst': '<S229>:5' */
+          if (BuckyWagon_01_B.s229_scrollTimer >= ((uint16_T)
                (firstScrollTime_DataStore()))) {
-            /* Transition: '<S226>:16' */
-            BuckyWagon_01_B.s226_scrollIndex = (uint8_T)
-              (BuckyWagon_01_B.s226_scrollIndex + 1);
+            /* Transition: '<S229>:16' */
+            BuckyWagon_01_B.s229_scrollIndex = (uint8_T)
+              (BuckyWagon_01_B.s229_scrollIndex + 1);
+            BuckyWagon_01_DWork.s229_is_Fault = BuckyWagon_01_IN_scrollText;
 
-            /* Exit 'scrollTextFirst': '<S226>:5' */
-            /* Entry 'scrollText': '<S226>:3' */
-            BuckyWagon_01_DWork.s226_is_Fault = BuckyWagon_01_IN_scrollText;
-            BuckyWagon_01_B.s226_scrollTimer = 0U;
-            memcpy(&BuckyWagon_01_B.s226_text[0], &rtb_UnitDelay_j[(int32_T)
-                   BuckyWagon_01_B.s226_scrollIndex], ((uint8_T)
+            /* Entry 'scrollText': '<S229>:3' */
+            BuckyWagon_01_B.s229_scrollTimer = 0U;
+            memcpy(&BuckyWagon_01_B.s229_text[0],
+                   &rtb_UnitDelay_j[BuckyWagon_01_B.s229_scrollIndex], ((uint8_T)
                     (dispLength_DataStore())));
-            BuckyWagon_01_B.s226_text[(int32_T)((uint8_T)(dispLength_DataStore()))]
-              = 0U;
+            BuckyWagon_01_B.s229_text[((uint8_T)(dispLength_DataStore()))] = 0U;
           } else {
-            BuckyWagon_01_B.s226_scrollTimer = (uint16_T)
-              (BuckyWagon_01_B.s226_scrollTimer + 1);
+            BuckyWagon_01_B.s229_scrollTimer = (uint16_T)
+              (BuckyWagon_01_B.s229_scrollTimer + 1);
           }
           break;
 
          default:
-          /* Transition: '<S226>:15' */
-          /* Entry 'scrollTextFirst': '<S226>:5' */
-          BuckyWagon_01_DWork.s226_is_Fault = BuckyWagon_01_IN_scrollTextFirst;
-          BuckyWagon_01_B.s226_scrollTimer = 0U;
-          BuckyWagon_01_B.s226_scrollIndex = 0U;
-          BuckyWagon_01_B.s226_minTimer = 0U;
-          memcpy(&BuckyWagon_01_B.s226_text[0], &rtb_UnitDelay_j[(int32_T)0],
-                 ((uint8_T)(dispLength_DataStore())));
-          BuckyWagon_01_B.s226_text[(int32_T)((uint8_T)(dispLength_DataStore()))]
-            = 0U;
+          /* Transition: '<S229>:15' */
+          BuckyWagon_01_DWork.s229_is_Fault = BuckyWagon_01_IN_scrollTextFirst;
+
+          /* Entry 'scrollTextFirst': '<S229>:5' */
+          BuckyWagon_01_B.s229_scrollTimer = 0U;
+          BuckyWagon_01_B.s229_scrollIndex = 0U;
+          BuckyWagon_01_B.s229_minTimer = 0U;
+          memcpy(&BuckyWagon_01_B.s229_text[0], &rtb_UnitDelay_j[0], ((uint8_T)
+                  (dispLength_DataStore())));
+          BuckyWagon_01_B.s229_text[((uint8_T)(dispLength_DataStore()))] = 0U;
           break;
         }
       }
+
+      /* End of UnitDelay: '<S216>/Unit Delay1' */
       break;
 
      case BuckyWagon_01_IN_NoFault:
-      /* During 'NoFault': '<S226>:1' */
-      if (BuckyWagon_01_DWork.s213_UnitDelay1_DSTATE && (DisplayFaults_DataStore
+      /* Stateflow: '<S216>/Chart' */
+      /* UnitDelay: '<S216>/Unit Delay1' incorporates:
+       *  S-Function (motohawk_sfun_calibration): '<S216>/motohawk_calibration'
+       *  S-Function (motohawk_sfun_calibration): '<S216>/motohawk_calibration1'
+       *  S-Function (motohawk_sfun_calibration): '<S216>/motohawk_calibration3'
+       */
+      /* During 'NoFault': '<S229>:1' */
+      if (BuckyWagon_01_DWork.s216_UnitDelay1_DSTATE && (DisplayFaults_DataStore
            ())) {
-        /* Transition: '<S226>:8' */
-        /* Exit 'NoFault': '<S226>:1' */
-        /* Entry 'Fault': '<S226>:2' */
-        BuckyWagon_01_DWork.s226_is_c3_BuckyWagon_01 = BuckyWagon_01_IN_Fault;
-        BuckyWagon_01_B.s226_mode = !(InvertMode_DataStore());
+        /* Transition: '<S229>:8' */
+        BuckyWagon_01_DWork.s229_is_c3_BuckyWagon_01 = BuckyWagon_01_IN_Fault;
 
-        /* Transition: '<S226>:15' */
-        /* Entry 'scrollTextFirst': '<S226>:5' */
-        BuckyWagon_01_DWork.s226_is_Fault = BuckyWagon_01_IN_scrollTextFirst;
-        BuckyWagon_01_B.s226_scrollTimer = 0U;
-        BuckyWagon_01_B.s226_scrollIndex = 0U;
-        BuckyWagon_01_B.s226_minTimer = 0U;
-        memcpy(&BuckyWagon_01_B.s226_text[0], &rtb_UnitDelay_j[(int32_T)0],
-               ((uint8_T)(dispLength_DataStore())));
-        BuckyWagon_01_B.s226_text[(int32_T)((uint8_T)(dispLength_DataStore()))] =
-          0U;
+        /* Entry 'Fault': '<S229>:2' */
+        BuckyWagon_01_B.s229_mode = !(InvertMode_DataStore());
+
+        /* Transition: '<S229>:15' */
+        BuckyWagon_01_DWork.s229_is_Fault = BuckyWagon_01_IN_scrollTextFirst;
+
+        /* Entry 'scrollTextFirst': '<S229>:5' */
+        BuckyWagon_01_B.s229_scrollTimer = 0U;
+        BuckyWagon_01_B.s229_scrollIndex = 0U;
+        BuckyWagon_01_B.s229_minTimer = 0U;
+        memcpy(&BuckyWagon_01_B.s229_text[0], &rtb_UnitDelay_j[0], ((uint8_T)
+                (dispLength_DataStore())));
+        BuckyWagon_01_B.s229_text[((uint8_T)(dispLength_DataStore()))] = 0U;
       } else {
-        BuckyWagon_01_B.s226_mode = (InvertMode_DataStore());
+        BuckyWagon_01_B.s229_mode = (InvertMode_DataStore());
 
-        /* Event: '<S226>:38' */
-        BuckyWagon_01_FaultIterator(&BuckyWagon_01_B.s213_FaultIterator,
-          &BuckyWagon_01_DWork.s213_FaultIterator);
+        /* Stateflow: '<S216>/Chart' incorporates:
+         *  SubSystem: '<S216>/Fault Iterator'
+         */
+        /* Event: '<S229>:38' */
+        BuckyWagon_01_FaultIterator(&BuckyWagon_01_B.s216_FaultIterator,
+          &BuckyWagon_01_DWork.s216_FaultIterator);
       }
+
+      /* End of UnitDelay: '<S216>/Unit Delay1' */
       break;
 
      default:
-      /* Transition: '<S226>:7' */
-      /* Entry 'NoFault': '<S226>:1' */
-      BuckyWagon_01_DWork.s226_is_c3_BuckyWagon_01 = BuckyWagon_01_IN_NoFault;
+      /* Transition: '<S229>:7' */
+      BuckyWagon_01_DWork.s229_is_c3_BuckyWagon_01 = BuckyWagon_01_IN_NoFault;
+
+      /* Entry 'NoFault': '<S229>:1' */
       for (i = 0; i < 10; i++) {
-        BuckyWagon_01_B.s226_text[i] = ((uint8_T)(noErrText_DataStore())[i]);
+        /* S-Function (motohawk_sfun_calibration): '<S216>/motohawk_calibration2' */
+        BuckyWagon_01_B.s229_text[i] = ((uint8_T)(noErrText_DataStore())[i]);
       }
       break;
     }
   }
 
-  /* Gain: '<S215>/Gain3' */
-  rtb_faultNameLength = 100.0 * BuckyWagon_01_B.s265_Merge;
-
-  /* Saturate: '<S215>/Saturation' */
-  rtb_faultNameLength = rt_SATURATE(rtb_faultNameLength, -32767.0, 32767.0);
-
-  /* DataTypeConversion: '<S215>/Data Type Conversion7' */
-  if (rtIsNaN(rtb_faultNameLength) || rtIsInf(rtb_faultNameLength)) {
-    tmp = 0.0;
-  } else {
-    tmp = fmod(floor(rtb_faultNameLength), 65536.0);
-  }
-
-  /* Gain: '<S215>/Gain' */
-  rtb_faultNameLength = 100.0 * BuckyWagon_01_B.s135_Merge;
-
-  /* Saturate: '<S215>/Saturation5' */
-  rtb_faultNameLength = rt_SATURATE(rtb_faultNameLength, -32767.0, 32767.0);
-
-  /* DataTypeConversion: '<S215>/Data Type Conversion1' */
-  if (rtIsNaN(rtb_faultNameLength) || rtIsInf(rtb_faultNameLength)) {
-    tmp_0 = 0.0;
-  } else {
-    tmp_0 = fmod(floor(rtb_faultNameLength), 65536.0);
-  }
-
-  /* Gain: '<S215>/Gain5' incorporates:
-   *  Product: '<S215>/Product'
+  /* Gain: '<S218>/Gain5' incorporates:
+   *  Product: '<S218>/Product'
    */
-  rtb_faultNameLength = BuckyWagon_01_B.s245_bcm_ibat *
-    BuckyWagon_01_B.s245_bcm_vbat * 0.001;
+  rtb_faultNameLength = BuckyWagon_01_B.s248_bcm_ibat *
+    BuckyWagon_01_B.s248_bcm_vbat * 0.001;
 
-  /* Gain: '<S215>/Gain6' incorporates:
-   *  Product: '<S215>/Product1'
+  /* Gain: '<S218>/Gain6' incorporates:
+   *  Product: '<S218>/Product1'
    */
-  rtb_Gain6 = BuckyWagon_01_B.s362_Merge * BuckyWagon_01_B.s363_Merge *
-    1.0471975511965977E-004;
+  rtb_Gain6 = BuckyWagon_01_B.s365_Merge * BuckyWagon_01_B.s366_Merge *
+    0.00010471975511965977;
 
-  /* Gain: '<S215>/Gain7' incorporates:
-   *  Product: '<S215>/Divide'
+  /* Saturate: '<S218>/Saturation' incorporates:
+   *  Gain: '<S218>/Gain3'
    */
-  rtb_Saturation14 = rtb_faultNameLength / rtb_Gain6 * 100.0;
+  u = 100.0 * BuckyWagon_01_B.s268_Merge;
 
-  /* Saturate: '<S215>/Saturation9' */
-  rtb_Saturation14 = rt_SATURATE(rtb_Saturation14, 0.0, 100.0);
-
-  /* DataTypeConversion: '<S215>/Data Type Conversion8' */
-  if (rtIsNaN(rtb_Saturation14) || rtIsInf(rtb_Saturation14)) {
-    tmp_1 = 0.0;
+  /* DataTypeConversion: '<S218>/Data Type Conversion7' incorporates:
+   *  Saturate: '<S218>/Saturation'
+   */
+  u = u >= 32767.0 ? 32767.0 : u <= -32767.0 ? -32767.0 : u;
+  if (rtIsNaN(u) || rtIsInf(u)) {
+    u = 0.0;
   } else {
-    tmp_1 = fmod(floor(rtb_Saturation14), 65536.0);
+    u = fmod(floor(u), 65536.0);
   }
 
-  /* Gain: '<S215>/Gain2' */
-  rtb_Saturation14 = 100.0 * BuckyWagon_01_B.s9_CoolantPumpSpeed;
-
-  /* Saturate: '<S215>/Saturation11' */
-  rtb_Saturation14 = rt_SATURATE(rtb_Saturation14, -32767.0, 32767.0);
-
-  /* DataTypeConversion: '<S215>/Data Type Conversion12' */
-  if (rtIsNaN(rtb_Saturation14) || rtIsInf(rtb_Saturation14)) {
-    tmp_2 = 0.0;
-  } else {
-    tmp_2 = fmod(floor(rtb_Saturation14), 65536.0);
-  }
-
-  /* Gain: '<S215>/Gain1' */
-  rtb_Saturation14 = 1000.0 * BuckyWagon_01_B.s380_Merge;
-
-  /* Saturate: '<S215>/Saturation12' */
-  rtb_Saturation14 = rt_SATURATE(rtb_Saturation14, -32767.0, 32767.0);
-
-  /* DataTypeConversion: '<S215>/Data Type Conversion17' */
-  if (rtIsNaN(rtb_Saturation14) || rtIsInf(rtb_Saturation14)) {
-    tmp_3 = 0.0;
-  } else {
-    tmp_3 = fmod(floor(rtb_Saturation14), 65536.0);
-  }
-
-  /* Gain: '<S215>/Gain4' */
-  rtb_Saturation14 = 100.0 * BuckyWagon_01_B.s372_Merge;
-
-  /* Saturate: '<S215>/Saturation13' */
-  rtb_Saturation14 = rt_SATURATE(rtb_Saturation14, -32767.0, 32767.0);
+  /* End of DataTypeConversion: '<S218>/Data Type Conversion7' */
 
   /* SignalConversion: '<S11>/TmpSignal ConversionAtChartInport20' incorporates:
-   *  DataTypeConversion: '<S215>/Data Type Conversion'
-   *  DataTypeConversion: '<S215>/Data Type Conversion10'
-   *  DataTypeConversion: '<S215>/Data Type Conversion11'
-   *  DataTypeConversion: '<S215>/Data Type Conversion13'
-   *  DataTypeConversion: '<S215>/Data Type Conversion14'
-   *  DataTypeConversion: '<S215>/Data Type Conversion15'
-   *  DataTypeConversion: '<S215>/Data Type Conversion16'
-   *  DataTypeConversion: '<S215>/Data Type Conversion18'
-   *  DataTypeConversion: '<S215>/Data Type Conversion2'
-   *  DataTypeConversion: '<S215>/Data Type Conversion4'
-   *  DataTypeConversion: '<S215>/Data Type Conversion5'
-   *  DataTypeConversion: '<S215>/Data Type Conversion6'
-   *  Saturate: '<S215>/Saturation1'
-   *  Saturate: '<S215>/Saturation10'
-   *  Saturate: '<S215>/Saturation14'
-   *  Saturate: '<S215>/Saturation2'
-   *  Saturate: '<S215>/Saturation4'
-   *  Saturate: '<S215>/Saturation6'
-   *  Saturate: '<S215>/Saturation7'
-   *  Saturate: '<S215>/Saturation8'
+   *  DataTypeConversion: '<S218>/Data Type Conversion7'
    */
-  BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[0] = (int16_T)(tmp <
-    0.0 ? (int32_T)(int16_T)(-((int16_T)(uint16_T)(-tmp))) : (int32_T)(int16_T)
-    (uint16_T)tmp);
-  tmp = rt_SATURATE(BuckyWagon_01_B.s245_bcm_vbat, -32767.0, 32767.0);
-  if (rtIsNaN(tmp) || rtIsInf(tmp)) {
-    tmp = 0.0;
+  BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[0] = (int16_T)(u < 0.0 ?
+    (int16_T)-(int16_T)(uint16_T)-u : (int16_T)(uint16_T)u);
+
+  /* DataTypeConversion: '<S218>/Data Type Conversion4' incorporates:
+   *  Saturate: '<S218>/Saturation1'
+   */
+  u = BuckyWagon_01_B.s248_bcm_vbat >= 32767.0 ? 32767.0 :
+    BuckyWagon_01_B.s248_bcm_vbat <= -32767.0 ? -32767.0 :
+    BuckyWagon_01_B.s248_bcm_vbat;
+  if (rtIsNaN(u) || rtIsInf(u)) {
+    u = 0.0;
   } else {
-    tmp = fmod(floor(tmp), 65536.0);
+    u = fmod(floor(u), 65536.0);
   }
 
-  BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[1] = (int16_T)(tmp <
-    0.0 ? (int32_T)(int16_T)(-((int16_T)(uint16_T)(-tmp))) : (int32_T)(int16_T)
-    (uint16_T)tmp);
-  tmp = rt_SATURATE(BuckyWagon_01_B.s245_bcm_ibat, -32767.0, 32767.0);
-  if (rtIsNaN(tmp) || rtIsInf(tmp)) {
-    tmp = 0.0;
+  /* End of DataTypeConversion: '<S218>/Data Type Conversion4' */
+
+  /* SignalConversion: '<S11>/TmpSignal ConversionAtChartInport20' incorporates:
+   *  DataTypeConversion: '<S218>/Data Type Conversion4'
+   */
+  BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[1] = (int16_T)(u < 0.0 ?
+    (int16_T)-(int16_T)(uint16_T)-u : (int16_T)(uint16_T)u);
+
+  /* DataTypeConversion: '<S218>/Data Type Conversion2' incorporates:
+   *  Saturate: '<S218>/Saturation2'
+   */
+  u = BuckyWagon_01_B.s248_bcm_ibat >= 32767.0 ? 32767.0 :
+    BuckyWagon_01_B.s248_bcm_ibat <= -32767.0 ? -32767.0 :
+    BuckyWagon_01_B.s248_bcm_ibat;
+  if (rtIsNaN(u) || rtIsInf(u)) {
+    u = 0.0;
   } else {
-    tmp = fmod(floor(tmp), 65536.0);
+    u = fmod(floor(u), 65536.0);
   }
 
-  BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[2] = (int16_T)(tmp <
-    0.0 ? (int32_T)(int16_T)(-((int16_T)(uint16_T)(-tmp))) : (int32_T)(int16_T)
-    (uint16_T)tmp);
+  /* End of DataTypeConversion: '<S218>/Data Type Conversion2' */
+
+  /* SignalConversion: '<S11>/TmpSignal ConversionAtChartInport20' incorporates:
+   *  DataTypeConversion: '<S218>/Data Type Conversion2'
+   */
+  BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[2] = (int16_T)(u < 0.0 ?
+    (int16_T)-(int16_T)(uint16_T)-u : (int16_T)(uint16_T)u);
   BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[3] =
-    BuckyWagon_01_ConstB.s215_DataTypeConversion3;
-  tmp = rt_SATURATE(BuckyWagon_01_B.s362_Merge, -32767.0, 32767.0);
-  if (rtIsNaN(tmp) || rtIsInf(tmp)) {
-    tmp = 0.0;
+    BuckyWagon_01_ConstB.s218_DataTypeConversion3;
+
+  /* DataTypeConversion: '<S218>/Data Type Conversion5' incorporates:
+   *  Saturate: '<S218>/Saturation4'
+   */
+  u = BuckyWagon_01_B.s365_Merge >= 32767.0 ? 32767.0 :
+    BuckyWagon_01_B.s365_Merge <= -32767.0 ? -32767.0 :
+    BuckyWagon_01_B.s365_Merge;
+  if (rtIsNaN(u) || rtIsInf(u)) {
+    u = 0.0;
   } else {
-    tmp = fmod(floor(tmp), 65536.0);
+    u = fmod(floor(u), 65536.0);
   }
 
-  BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[4] = (int16_T)(tmp <
-    0.0 ? (int32_T)(int16_T)(-((int16_T)(uint16_T)(-tmp))) : (int32_T)(int16_T)
-    (uint16_T)tmp);
-  BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[5] = (int16_T)(tmp_0 <
-    0.0 ? (int32_T)(int16_T)(-((int16_T)(uint16_T)(-tmp_0))) : (int32_T)(int16_T)
-    (uint16_T)tmp_0);
-  tmp = rt_SATURATE(BuckyWagon_01_B.s363_Merge, -32767.0, 32767.0);
-  if (rtIsNaN(tmp) || rtIsInf(tmp)) {
-    tmp = 0.0;
+  /* End of DataTypeConversion: '<S218>/Data Type Conversion5' */
+
+  /* SignalConversion: '<S11>/TmpSignal ConversionAtChartInport20' incorporates:
+   *  DataTypeConversion: '<S218>/Data Type Conversion5'
+   */
+  BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[4] = (int16_T)(u < 0.0 ?
+    (int16_T)-(int16_T)(uint16_T)-u : (int16_T)(uint16_T)u);
+
+  /* Saturate: '<S218>/Saturation5' incorporates:
+   *  Gain: '<S218>/Gain'
+   */
+  u = 100.0 * BuckyWagon_01_B.s138_Merge;
+
+  /* DataTypeConversion: '<S218>/Data Type Conversion1' incorporates:
+   *  Saturate: '<S218>/Saturation5'
+   */
+  u = u >= 32767.0 ? 32767.0 : u <= -32767.0 ? -32767.0 : u;
+  if (rtIsNaN(u) || rtIsInf(u)) {
+    u = 0.0;
   } else {
-    tmp = fmod(floor(tmp), 65536.0);
+    u = fmod(floor(u), 65536.0);
   }
 
-  BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[6] = (int16_T)(tmp <
-    0.0 ? (int32_T)(int16_T)(-((int16_T)(uint16_T)(-tmp))) : (int32_T)(int16_T)
-    (uint16_T)tmp);
-  tmp = rt_SATURATE(rtb_faultNameLength, -32767.0, 32767.0);
-  if (rtIsNaN(tmp) || rtIsInf(tmp)) {
-    tmp = 0.0;
+  /* End of DataTypeConversion: '<S218>/Data Type Conversion1' */
+
+  /* SignalConversion: '<S11>/TmpSignal ConversionAtChartInport20' incorporates:
+   *  DataTypeConversion: '<S218>/Data Type Conversion1'
+   */
+  BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[5] = (int16_T)(u < 0.0 ?
+    (int16_T)-(int16_T)(uint16_T)-u : (int16_T)(uint16_T)u);
+
+  /* DataTypeConversion: '<S218>/Data Type Conversion' incorporates:
+   *  Saturate: '<S218>/Saturation6'
+   */
+  u = BuckyWagon_01_B.s366_Merge >= 32767.0 ? 32767.0 :
+    BuckyWagon_01_B.s366_Merge <= -32767.0 ? -32767.0 :
+    BuckyWagon_01_B.s366_Merge;
+  if (rtIsNaN(u) || rtIsInf(u)) {
+    u = 0.0;
   } else {
-    tmp = fmod(floor(tmp), 65536.0);
+    u = fmod(floor(u), 65536.0);
   }
 
-  BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[7] = (int16_T)(tmp <
-    0.0 ? (int32_T)(int16_T)(-((int16_T)(uint16_T)(-tmp))) : (int32_T)(int16_T)
-    (uint16_T)tmp);
-  tmp = rt_SATURATE(rtb_Gain6, -32767.0, 32767.0);
-  if (rtIsNaN(tmp) || rtIsInf(tmp)) {
-    tmp = 0.0;
+  /* End of DataTypeConversion: '<S218>/Data Type Conversion' */
+
+  /* SignalConversion: '<S11>/TmpSignal ConversionAtChartInport20' incorporates:
+   *  DataTypeConversion: '<S218>/Data Type Conversion'
+   */
+  BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[6] = (int16_T)(u < 0.0 ?
+    (int16_T)-(int16_T)(uint16_T)-u : (int16_T)(uint16_T)u);
+
+  /* DataTypeConversion: '<S218>/Data Type Conversion6' incorporates:
+   *  Saturate: '<S218>/Saturation7'
+   */
+  u = rtb_faultNameLength >= 32767.0 ? 32767.0 : rtb_faultNameLength <= -32767.0
+    ? -32767.0 : rtb_faultNameLength;
+  if (rtIsNaN(u) || rtIsInf(u)) {
+    u = 0.0;
   } else {
-    tmp = fmod(floor(tmp), 65536.0);
+    u = fmod(floor(u), 65536.0);
   }
 
-  BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[8] = (int16_T)(tmp <
-    0.0 ? (int32_T)(int16_T)(-((int16_T)(uint16_T)(-tmp))) : (int32_T)(int16_T)
-    (uint16_T)tmp);
-  BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[9] = (int16_T)(tmp_1 <
-    0.0 ? (int32_T)(int16_T)(-((int16_T)(uint16_T)(-tmp_1))) : (int32_T)(int16_T)
-    (uint16_T)tmp_1);
-  tmp = rt_SATURATE(BuckyWagon_01_B.s251_Inverter_Temperature, -32767.0, 32767.0);
-  if (rtIsNaN(tmp) || rtIsInf(tmp)) {
-    tmp = 0.0;
+  /* End of DataTypeConversion: '<S218>/Data Type Conversion6' */
+
+  /* SignalConversion: '<S11>/TmpSignal ConversionAtChartInport20' incorporates:
+   *  DataTypeConversion: '<S218>/Data Type Conversion6'
+   */
+  BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[7] = (int16_T)(u < 0.0 ?
+    (int16_T)-(int16_T)(uint16_T)-u : (int16_T)(uint16_T)u);
+
+  /* DataTypeConversion: '<S218>/Data Type Conversion10' incorporates:
+   *  Saturate: '<S218>/Saturation8'
+   */
+  u = rtb_Gain6 >= 32767.0 ? 32767.0 : rtb_Gain6 <= -32767.0 ? -32767.0 :
+    rtb_Gain6;
+  if (rtIsNaN(u) || rtIsInf(u)) {
+    u = 0.0;
   } else {
-    tmp = fmod(floor(tmp), 65536.0);
+    u = fmod(floor(u), 65536.0);
   }
 
-  BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[10] = (int16_T)(tmp <
-    0.0 ? (int32_T)(int16_T)(-((int16_T)(uint16_T)(-tmp))) : (int32_T)(int16_T)
-    (uint16_T)tmp);
-  BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[11] = (int16_T)(tmp_2 <
-    0.0 ? (int32_T)(int16_T)(-((int16_T)(uint16_T)(-tmp_2))) : (int32_T)(int16_T)
-    (uint16_T)tmp_2);
-  BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[12] = (int16_T)(tmp_3 <
-    0.0 ? (int32_T)(int16_T)(-((int16_T)(uint16_T)(-tmp_3))) : (int32_T)(int16_T)
-    (uint16_T)tmp_3);
-  if (rtIsNaN(rtb_Saturation14) || rtIsInf(rtb_Saturation14)) {
-    tmp = 0.0;
+  /* End of DataTypeConversion: '<S218>/Data Type Conversion10' */
+
+  /* SignalConversion: '<S11>/TmpSignal ConversionAtChartInport20' incorporates:
+   *  DataTypeConversion: '<S218>/Data Type Conversion10'
+   */
+  BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[8] = (int16_T)(u < 0.0 ?
+    (int16_T)-(int16_T)(uint16_T)-u : (int16_T)(uint16_T)u);
+
+  /* Saturate: '<S218>/Saturation9' incorporates:
+   *  Gain: '<S218>/Gain7'
+   *  Product: '<S218>/Divide'
+   */
+  u = rtb_faultNameLength / rtb_Gain6 * 100.0;
+
+  /* DataTypeConversion: '<S218>/Data Type Conversion8' incorporates:
+   *  Saturate: '<S218>/Saturation9'
+   */
+  u = u >= 100.0 ? 100.0 : u <= 0.0 ? 0.0 : u;
+  if (rtIsNaN(u) || rtIsInf(u)) {
+    u = 0.0;
   } else {
-    tmp = fmod(floor(rtb_Saturation14), 65536.0);
+    u = fmod(floor(u), 65536.0);
   }
 
-  BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[13] = (int16_T)(tmp <
-    0.0 ? (int32_T)(int16_T)(-((int16_T)(uint16_T)(-tmp))) : (int32_T)(int16_T)
-    (uint16_T)tmp);
-  if (rtIsNaN(BuckyWagon_01_B.s388_Merge) || rtIsInf(BuckyWagon_01_B.s388_Merge))
+  /* End of DataTypeConversion: '<S218>/Data Type Conversion8' */
+
+  /* SignalConversion: '<S11>/TmpSignal ConversionAtChartInport20' incorporates:
+   *  DataTypeConversion: '<S218>/Data Type Conversion8'
+   */
+  BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[9] = (int16_T)(u < 0.0 ?
+    (int16_T)-(int16_T)(uint16_T)-u : (int16_T)(uint16_T)u);
+
+  /* DataTypeConversion: '<S218>/Data Type Conversion11' incorporates:
+   *  Saturate: '<S218>/Saturation10'
+   */
+  u = BuckyWagon_01_B.s254_Inverter_Temperature >= 32767.0 ? 32767.0 :
+    BuckyWagon_01_B.s254_Inverter_Temperature <= -32767.0 ? -32767.0 :
+    BuckyWagon_01_B.s254_Inverter_Temperature;
+  if (rtIsNaN(u) || rtIsInf(u)) {
+    u = 0.0;
+  } else {
+    u = fmod(floor(u), 65536.0);
+  }
+
+  /* End of DataTypeConversion: '<S218>/Data Type Conversion11' */
+
+  /* SignalConversion: '<S11>/TmpSignal ConversionAtChartInport20' incorporates:
+   *  DataTypeConversion: '<S218>/Data Type Conversion11'
+   */
+  BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[10] = (int16_T)(u < 0.0
+    ? (int16_T)-(int16_T)(uint16_T)-u : (int16_T)(uint16_T)u);
+
+  /* Saturate: '<S218>/Saturation11' incorporates:
+   *  Gain: '<S218>/Gain2'
+   */
+  u = 100.0 * BuckyWagon_01_B.s9_CoolantPumpSpeed;
+
+  /* DataTypeConversion: '<S218>/Data Type Conversion12' incorporates:
+   *  Saturate: '<S218>/Saturation11'
+   */
+  u = u >= 32767.0 ? 32767.0 : u <= -32767.0 ? -32767.0 : u;
+  if (rtIsNaN(u) || rtIsInf(u)) {
+    u = 0.0;
+  } else {
+    u = fmod(floor(u), 65536.0);
+  }
+
+  /* End of DataTypeConversion: '<S218>/Data Type Conversion12' */
+
+  /* SignalConversion: '<S11>/TmpSignal ConversionAtChartInport20' incorporates:
+   *  DataTypeConversion: '<S218>/Data Type Conversion12'
+   */
+  BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[11] = (int16_T)(u < 0.0
+    ? (int16_T)-(int16_T)(uint16_T)-u : (int16_T)(uint16_T)u);
+
+  /* Saturate: '<S218>/Saturation12' incorporates:
+   *  Gain: '<S218>/Gain1'
+   */
+  u = 1000.0 * BuckyWagon_01_B.s383_Merge;
+
+  /* DataTypeConversion: '<S218>/Data Type Conversion17' incorporates:
+   *  Saturate: '<S218>/Saturation12'
+   */
+  u = u >= 32767.0 ? 32767.0 : u <= -32767.0 ? -32767.0 : u;
+  if (rtIsNaN(u) || rtIsInf(u)) {
+    u = 0.0;
+  } else {
+    u = fmod(floor(u), 65536.0);
+  }
+
+  /* End of DataTypeConversion: '<S218>/Data Type Conversion17' */
+
+  /* SignalConversion: '<S11>/TmpSignal ConversionAtChartInport20' incorporates:
+   *  DataTypeConversion: '<S218>/Data Type Conversion17'
+   */
+  BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[12] = (int16_T)(u < 0.0
+    ? (int16_T)-(int16_T)(uint16_T)-u : (int16_T)(uint16_T)u);
+
+  /* Saturate: '<S218>/Saturation13' incorporates:
+   *  Gain: '<S218>/Gain4'
+   */
+  u = 100.0 * BuckyWagon_01_B.s375_Merge;
+
+  /* DataTypeConversion: '<S218>/Data Type Conversion18' incorporates:
+   *  Saturate: '<S218>/Saturation13'
+   */
+  u = u >= 32767.0 ? 32767.0 : u <= -32767.0 ? -32767.0 : u;
+  if (rtIsNaN(u) || rtIsInf(u)) {
+    u = 0.0;
+  } else {
+    u = fmod(floor(u), 65536.0);
+  }
+
+  /* End of DataTypeConversion: '<S218>/Data Type Conversion18' */
+
+  /* SignalConversion: '<S11>/TmpSignal ConversionAtChartInport20' incorporates:
+   *  DataTypeConversion: '<S218>/Data Type Conversion18'
+   */
+  BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[13] = (int16_T)(u < 0.0
+    ? (int16_T)-(int16_T)(uint16_T)-u : (int16_T)(uint16_T)u);
+
+  /* DataTypeConversion: '<S218>/Data Type Conversion14' */
+  if (rtIsNaN(BuckyWagon_01_B.s391_Merge) || rtIsInf(BuckyWagon_01_B.s391_Merge))
   {
-    tmp = 0.0;
+    u = 0.0;
   } else {
-    tmp = fmod(floor(BuckyWagon_01_B.s388_Merge), 65536.0);
+    u = fmod(floor(BuckyWagon_01_B.s391_Merge), 65536.0);
   }
 
-  BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[14] = (int16_T)(tmp <
-    0.0 ? (int32_T)(int16_T)(-((int16_T)(uint16_T)(-tmp))) : (int32_T)(int16_T)
-    (uint16_T)tmp);
+  /* End of DataTypeConversion: '<S218>/Data Type Conversion14' */
+
+  /* SignalConversion: '<S11>/TmpSignal ConversionAtChartInport20' incorporates:
+   *  DataTypeConversion: '<S218>/Data Type Conversion13'
+   *  DataTypeConversion: '<S218>/Data Type Conversion14'
+   */
+  BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[14] = (int16_T)(u < 0.0
+    ? (int16_T)-(int16_T)(uint16_T)-u : (int16_T)(uint16_T)u);
   BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[15] =
-    BuckyWagon_01_B.s277_Merge;
-  tmp = rt_SATURATE(BuckyWagon_01_B.s9_InReverse, -32767.0, 32767.0);
-  if (rtIsNaN(tmp) || rtIsInf(tmp)) {
-    tmp = 0.0;
+    BuckyWagon_01_B.s280_Merge;
+
+  /* DataTypeConversion: '<S218>/Data Type Conversion15' incorporates:
+   *  Saturate: '<S218>/Saturation14'
+   */
+  u = BuckyWagon_01_B.s9_InReverse >= 32767.0 ? 32767.0 :
+    BuckyWagon_01_B.s9_InReverse <= -32767.0 ? -32767.0 :
+    BuckyWagon_01_B.s9_InReverse;
+  if (rtIsNaN(u) || rtIsInf(u)) {
+    u = 0.0;
   } else {
-    tmp = fmod(floor(tmp), 65536.0);
+    u = fmod(floor(u), 65536.0);
   }
 
-  BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[16] = (int16_T)(tmp <
-    0.0 ? (int32_T)(int16_T)(-((int16_T)(uint16_T)(-tmp))) : (int32_T)(int16_T)
-    (uint16_T)tmp);
+  /* End of DataTypeConversion: '<S218>/Data Type Conversion15' */
+
+  /* SignalConversion: '<S11>/TmpSignal ConversionAtChartInport20' incorporates:
+   *  DataTypeConversion: '<S218>/Data Type Conversion15'
+   *  DataTypeConversion: '<S218>/Data Type Conversion16'
+   */
+  BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[16] = (int16_T)(u < 0.0
+    ? (int16_T)-(int16_T)(uint16_T)-u : (int16_T)(uint16_T)u);
   BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20[17] =
-    BuckyWagon_01_B.s258_Merge;
+    BuckyWagon_01_B.s261_Merge;
 
   /* UnitDelay: '<S11>/Unit Delay' */
-  eml_guard = BuckyWagon_01_DWork.s11_UnitDelay_DSTATE;
+  rtb_UnitDelay_h = BuckyWagon_01_DWork.s11_UnitDelay_DSTATE;
 
-  /* SignalConversion: '<S11>/HiddenBuf_InsertedFor_Chart_at_inport_20' */
+  /* SignalConversion: '<S11>/HiddenBuf_InsertedFor_Chart_at_inport_20' incorporates:
+   *  UnitDelay: '<S11>/Unit Delay'
+   */
   rtb_HiddenBuf_InsertedFor_Chart_at_inport_20[0] =
     BuckyWagon_01_DWork.s11_UnitDelay_DSTATE;
   rtb_HiddenBuf_InsertedFor_Chart_at_inport_20[1] =
-    BuckyWagon_01_B.s244_upasserted;
+    BuckyWagon_01_B.s247_upasserted;
   rtb_HiddenBuf_InsertedFor_Chart_at_inport_20[2] =
-    BuckyWagon_01_B.s244_upasserted;
+    BuckyWagon_01_B.s247_upasserted;
   rtb_HiddenBuf_InsertedFor_Chart_at_inport_20[3] =
-    BuckyWagon_01_B.s229_menuasserted;
+    BuckyWagon_01_B.s232_menuasserted;
   rtb_HiddenBuf_InsertedFor_Chart_at_inport_20[4] =
-    BuckyWagon_01_B.s229_menuasserted;
+    BuckyWagon_01_B.s232_menuasserted;
   rtb_HiddenBuf_InsertedFor_Chart_at_inport_20[5] =
-    BuckyWagon_01_B.s220_downasserted;
+    BuckyWagon_01_B.s223_downasserted;
   rtb_HiddenBuf_InsertedFor_Chart_at_inport_20[6] =
-    BuckyWagon_01_B.s220_downasserted;
+    BuckyWagon_01_B.s223_downasserted;
 
-  /* Stateflow: '<S11>/Chart' incorporates:
-   *  TriggerPort: '<S197>/ input events '
-   */
+  /* Stateflow: '<S11>/Chart' */
   BuckyWagon_01_Chart_o(rtb_HiddenBuf_InsertedFor_Chart_at_inport_20,
-                        BuckyWagon_01_B.s11_EnabledSubsystem1.s205_In,
+                        BuckyWagon_01_B.s11_EnabledSubsystem1.s208_In,
                         (startupDelay_DataStore()),
                         BuckyWagon_01_B.s11_motohawk_data_read1,
                         BuckyWagon_01_B.s11_motohawk_data_read3,
@@ -3912,30 +4394,32 @@ void BuckyWagon_01_MiniViewDisplay(void)
                         BuckyWagon_01_ConstP.Constant5_Value,
                         BuckyWagon_01_ConstP.Constant6_Value,
                         BuckyWagon_01_ConstP.Constant7_Value,
-                        BuckyWagon_01_B.s226_text, BuckyWagon_01_B.s226_mode,
+                        BuckyWagon_01_B.s229_text, BuckyWagon_01_B.s229_mode,
                         BuckyWagon_01_B.s11_TmpSignalConversionAtChartInport20,
                         ((uint8_T)0U), &BuckyWagon_01_B.s11_sf_Chart,
                         &BuckyWagon_01_DWork.s11_sf_Chart,
                         &BuckyWagon_01_PrevZCSigState.s11_sf_Chart);
 
-  /* Update for UnitDelay: '<S213>/Unit Delay' */
+  /* Update for UnitDelay: '<S216>/Unit Delay' */
   for (i = 0; i < 27; i++) {
-    BuckyWagon_01_DWork.s213_UnitDelay_DSTATE[i] =
-      BuckyWagon_01_B.s213_FaultIterator.s227_motohawk_fault_name[i];
+    BuckyWagon_01_DWork.s216_UnitDelay_DSTATE[i] =
+      BuckyWagon_01_B.s216_FaultIterator.s230_motohawk_fault_name[i];
   }
 
-  /* Update for UnitDelay: '<S213>/Unit Delay1' */
-  BuckyWagon_01_DWork.s213_UnitDelay1_DSTATE =
-    BuckyWagon_01_B.s213_FaultIterator.s227_motohawk_fault_iterator_o1;
+  /* End of UnitDelay: '<S216>/Unit Delay' */
+
+  /* Update for UnitDelay: '<S216>/Unit Delay1' */
+  BuckyWagon_01_DWork.s216_UnitDelay1_DSTATE =
+    BuckyWagon_01_B.s216_FaultIterator.s230_motohawk_fault_iterator_o1;
 
   /* Update for UnitDelay: '<S11>/Unit Delay' incorporates:
    *  Logic: '<S11>/Logical Operator'
    */
-  BuckyWagon_01_DWork.s11_UnitDelay_DSTATE = !eml_guard;
+  BuckyWagon_01_DWork.s11_UnitDelay_DSTATE = !rtb_UnitDelay_h;
 }
 
 /*
- * File trailer for Real-Time Workshop generated code.
+ * File trailer for generated code.
  *
  * [EOF]
  */

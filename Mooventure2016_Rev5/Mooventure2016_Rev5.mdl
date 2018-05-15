@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.2068"
+    ComputedModelVersion    "1.2070"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -26,30 +26,30 @@ Model {
   InitFcn		  "try, eval([bdroot '_setup']); catch, eval('model_setup', ''); end"
   UserBdParams		  "MotoHawkBuildVersion;MotoHawkBuildStats;MotoHawkModelSavedName;MotoHawkModelGUID;MotoHawkModelOpenT"
   "ime;MotoHawkModelElapsedTime;MotoHawkBuildInfo;MotoHawkBuildGUID;RegisteredStructs"
-  MotoHawkBuildVersion	  "212"
+  MotoHawkBuildVersion	  "213"
   MotoHawkBuildStats	  "struct('TotalFLASH',{0},'TotalEEPROM',{0},'TotalRAM',{0},'AppFLASH',{0},'AppEEPROM',{0},'AppRA"
-  "M',{0},'HeapRAM',{0},'BuildSuccessCount',{212},'BuildErrorCount',{54})"
+  "M',{0},'HeapRAM',{0},'BuildSuccessCount',{213},'BuildErrorCount',{54})"
   MotoHawkModelSavedName  "Mooventure2016_Rev5"
   MotoHawkModelGUID	  "0339744d-1465-4569-a1-b4-32-b1-a7-fa-5f"
-  MotoHawkModelOpenTime	  "2018 4 7 14 27 9.562 "
-  MotoHawkModelElapsedTime "208895132.398"
+  MotoHawkModelOpenTime	  "2018 4 8 0 44 32.512 "
+  MotoHawkModelElapsedTime "208895450.646"
   MotoHawkBuildInfo	  "struct('model_name',{'Mooventure2016_Rev5'},'motohawk_version',{'2011a_sp0.184'},'motohawk_comp"
-  "onent_version',{'0.0.7'},'matlab_version',{'7.12.0'},'build_version',{'211'},'module_type',{'ECM-5554-112-0904-xD'},"
+  "onent_version',{'0.0.7'},'matlab_version',{'7.12.0'},'build_version',{'212'},'module_type',{'ECM-5554-112-0904-xD'},"
   "'layout_type',{'DEV'},'processor_family',{'MotoCoder'},'processor_type',{'MPC5554'},'toolchain_vendor',{'gcc-powerpc"
   "-eabispe'},'toolchain_version',{'4.4.0'},'component',{logical(0)},'archive_file',{''},'enable_build',{1},'fptype',{0"
   "},'flash_size',{2097152},'ee_size',{0},'ram_size',{65536},'decram_size',{0},'module_memory_def',{'_Dev'},'eri_table0"
   "_rev',{9},'max_eri_table_size',{65535},'use_debug_vardecs',{1},'use_info_vardecs',{1},'fgnd_base_period_ms',{5},'bgn"
   "d_base_period_ms',{50},'root_build_dir',{'C:\\Users\\HYBRID\\Documents\\GitHub\\Wisconsin-Hybrid\\Mooventure2016_Rev"
   "5'},'build_dir',{'C:\\Users\\HYBRID\\Documents\\GitHub\\Wisconsin-Hybrid\\Mooventure2016_Rev5\\Mooventure2016_Rev5_B"
-  "uild'},'dll_name',{'Mooventur_211'},'srz_name',{'Mooventure2016_Rev5_211'},'fgnd_stack_size',{3072},'fgnd_angle_stac"
+  "uild'},'dll_name',{'Mooventur_212'},'srz_name',{'Mooventure2016_Rev5_212'},'fgnd_stack_size',{3072},'fgnd_angle_stac"
   "k_size',{0},'bgnd_stack_size',{2048},'idle_stack_size',{1024},'irq_stack_size',{1536},'heap_size',{4096},'heap_margi"
   "n',{409},'install_dll_dir',{'C:\\ECUFiles\\TDBDLL\\'},'install_srz_dir',{'C:\\ECUFiles\\Programs'},'app_int_stack_si"
   "ze',{1024},'shutdown_stack_size',{1024},'mingw_dir',{'C:\\PROGRA~2\\Woodward\\DEVELO~1\\TOOLCH~1\\GCC\\win32-pe\\4_4"
   "_0\\'},'motohawk_dir',{'C:\\PROGRA~2\\Woodward\\MCS\\MotoHawk\\2011A_~1.184'},'toolchain_dir',{'C:\\Program Files (x"
   "86)\\Woodward\\DevelopmentTools\\Toolchains\\GCC\\powerpc-eabispe\\4_4_0\\'},'matlab_root',{'C:\\Program Files (x86)"
-  "\\MATLAB\\R2011a'},'model_guid',{'0339744d-1465-4569-a1-b4-32-b1-a7-fa-5f'},'build_guid',{'7fc06f66-a1b4-4e8d-98-25-"
-  "57-3d-ec-f3-92'},'token_guid',{'DD8AD11F95A6FC42BFF9AC780840E4B4'})"
-  MotoHawkBuildGUID	  "7fc06f66-a1b4-4e8d-98-25-57-3d-ec-f3-92"
+  "\\MATLAB\\R2011a'},'model_guid',{'0339744d-1465-4569-a1-b4-32-b1-a7-fa-5f'},'build_guid',{'d562e537-da09-4a78-9f-6b-"
+  "d4-e6-15-d6-aa'},'token_guid',{'DD8AD11F95A6FC42BFF9AC780840E4B4'})"
+  MotoHawkBuildGUID	  "d562e537-da09-4a78-9f-6b-d4-e6-15-d6-aa"
   RegisteredStructs	  "struct('Name',{'MyStruct'},'Data',{struct('Member1',{uint32(0)},'Member2',{uint32(0)})},'Enums'"
   ",{{'',{'Disabled','Enabled'}}})"
   Created		  "Mon May 16 15:00:08 2005"
@@ -58,9 +58,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "HYBRID"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sat Apr 07 15:02:51 2018"
-  RTWModifiedTimeStamp	  445012170
-  ModelVersionFormat	  "1.%<AutoIncrement:2068>"
+  LastModifiedDate	  "Sun Apr 08 00:48:48 2018"
+  RTWModifiedTimeStamp	  445049112
+  ModelVersionFormat	  "1.%<AutoIncrement:2070>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -6975,7 +6975,7 @@ Model {
 	      System {
 		Name			"Engine Control"
 		Location		[433, 403, 931, 703]
-		Open			off
+		Open			on
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	252
 		ScreenColor		"white"
@@ -43951,7 +43951,7 @@ Model {
 	      System {
 		Name			"CAN Gateway In"
 		Location		[433, 403, 931, 703]
-		Open			on
+		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -75186,7 +75186,7 @@ Model {
 	  SourceBlock		  "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 	  SourceType		  "MotoHawk Function Trigger"
 	  trigger		  "BGND_BASE_PERIODIC"
-	  function_name		  "Trigger_BGND_BASE_PERIODIC_5678p0001"
+	  function_name		  "Trigger_BGND_BASE_PERIODIC_5721p0001"
 	  priority_order	  "255"
 	  inherited		  on
 	  run_disabled		  on
@@ -75360,7 +75360,7 @@ Model {
       SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
       SourceType	      "MotoHawk Function Trigger"
       trigger		      "FGND_RTI_PERIODIC"
-      function_name	      "Trigger_FGND_RTI_PERIODIC_5687p0001"
+      function_name	      "Trigger_FGND_RTI_PERIODIC_5730p0001"
       priority_order	      "0"
       inherited		      off
       run_disabled	      off
@@ -83389,8 +83389,8 @@ Stateflow {
   chart {
     id			    451
     name		    "Foreground/Control/Engine Control/Chart"
-    windowPosition	    [-3 9 1440 723]
-    viewLimits		    [1.843 1648.379 0 810.004]
+    windowPosition	    [18.75 9 1440 723]
+    viewLimits		    [1.874 1648.348 0 809.973]
     zoomFactor		    1.179
     screen		    [1 1 1920 1080 1.333333333333333]
     treeNode		    [0 454 0 0]
@@ -83398,8 +83398,8 @@ Stateflow {
     viewObj		    451
     machine		    1
     subviewS {
-      x1		      0.478
-      zoomFactor	      1.181
+      x1		      1.874
+      zoomFactor	      1.179
     }
     ssIdHighWaterMark	    59
     decomposition	    CLUSTER_CHART
@@ -83507,7 +83507,7 @@ Stateflow {
   }
   transition {
     id			    460
-    labelPosition	    [73.335 76.755 7.955 15.886]
+    labelPosition	    [73.335 76.755 7.954 15.885]
     fontSize		    12
     src {
       intersection	      [0 0 1 0 87.7354 68.3639 0 0]
@@ -83531,7 +83531,7 @@ Stateflow {
   transition {
     id			    461
     labelString		    "[SOC_Critical || (SOC_Low && Speed_On)]"
-    labelPosition	    [191.98 131.467 222.732 15.886]
+    labelPosition	    [191.98 131.467 222.723 15.885]
     fontSize		    12
     src {
       id		      452
@@ -83544,7 +83544,7 @@ Stateflow {
     midPoint		    [310.7085 155.8424]
     chart		    451
     linkNode		    [451 462 473]
-    dataLimits		    [184.256 434.789 153.442 158.242]
+    dataLimits		    [184.256 434.789 153.444 158.244]
     stampAngle		    NaN
     subviewer		    451
     drawStyle		    SMART
@@ -83554,7 +83554,7 @@ Stateflow {
   transition {
     id			    462
     labelString		    "[Engine_On]"
-    labelPosition	    [579.911 129.715 65.405 15.886]
+    labelPosition	    [579.911 129.715 65.403 15.885]
     fontSize		    12
     src {
       id		      453
@@ -83576,7 +83576,7 @@ Stateflow {
   }
   transition {
     id			    463
-    labelPosition	    [835.626 132.516 7.955 15.886]
+    labelPosition	    [835.626 132.516 7.954 15.885]
     fontSize		    12
     src {
       intersection	      [0 0 1 0 850.0261 121.2014 0 0]
@@ -83597,7 +83597,7 @@ Stateflow {
   transition {
     id			    464
     labelString		    "[Coolant_Temp > Coolant_Cold]"
-    labelPosition	    [978.196 158.518 164.397 15.886]
+    labelPosition	    [978.196 158.518 164.391 15.885]
     fontSize		    12
     src {
       id		      455
@@ -83620,7 +83620,7 @@ Stateflow {
   transition {
     id			    465
     labelString		    "[Coolant_Temp > Coolant_Warm]"
-    labelPosition	    [1429.527 262.962 172.352 15.886]
+    labelPosition	    [1429.527 262.962 172.345 15.885]
     fontSize		    12
     src {
       id		      456
@@ -83642,8 +83642,8 @@ Stateflow {
   }
   transition {
     id			    466
-    labelString		    "[Coolant_Temp > Coolant_Hot && SOC_Critical]"
-    labelPosition	    [886.487 369.784 248.364 15.886]
+    labelString		    "[(Coolant_Temp > Coolant_Hot) && SOC_Critical]"
+    labelPosition	    [886.487 369.784 255.425 15.885]
     fontSize		    12
     src {
       id		      457
@@ -83666,7 +83666,7 @@ Stateflow {
   transition {
     id			    467
     labelString		    "[!SOC_Critical]"
-    labelPosition	    [1062.588 335.096 77.779 15.886]
+    labelPosition	    [1062.588 335.096 77.776 15.885]
     fontSize		    12
     src {
       id		      458
@@ -83688,8 +83688,8 @@ Stateflow {
   }
   transition {
     id			    468
-    labelString		    "[Coolant_Temp < Coolant_Warm-3]"
-    labelPosition	    [1337.381 286.114 182.074 15.886]
+    labelString		    "[Coolant_Temp < (Coolant_Warm-3)]"
+    labelPosition	    [1337.381 286.114 189.138 15.885]
     fontSize		    12
     src {
       id		      457
@@ -83711,8 +83711,8 @@ Stateflow {
   }
   transition {
     id			    469
-    labelString		    "[Coolant_Temp < Coolant_Cold -3 || SOC_High || Speed_Off]"
-    labelPosition	    [911.512 186.799 309.35 15.886]
+    labelString		    "[(Coolant_Temp < (Coolant_Cold -3)) || SOC_High || Speed_Off]"
+    labelPosition	    [911.512 186.799 323.479 15.885]
     fontSize		    12
     src {
       id		      456
@@ -83735,7 +83735,7 @@ Stateflow {
   transition {
     id			    470
     labelString		    "[SOC_High || Speed_Off]"
-    labelPosition	    [1032.773 257.102 128.159 15.886]
+    labelPosition	    [1032.773 257.102 128.154 15.885]
     fontSize		    12
     src {
       id		      457
@@ -83762,7 +83762,7 @@ Stateflow {
   transition {
     id			    471
     labelString		    "[SOC_High]"
-    labelPosition	    [825.457 299.063 62.754 15.886]
+    labelPosition	    [825.457 299.063 62.751 15.885]
     fontSize		    12
     src {
       id		      458
@@ -83785,7 +83785,7 @@ Stateflow {
   transition {
     id			    472
     labelString		    "[SOC_High || (Speed_Off && !SOC_Critical)]"
-    labelPosition	    [426.136 331.283 227.151 15.886]
+    labelPosition	    [426.136 331.283 227.142 15.885]
     fontSize		    12
     src {
       id		      454
@@ -83808,7 +83808,7 @@ Stateflow {
   transition {
     id			    473
     labelString		    "[Engine_RPM < 200]"
-    labelPosition	    [136.145 243.376 108.714 15.886]
+    labelPosition	    [136.145 243.376 108.71 15.885]
     fontSize		    12
     src {
       id		      459

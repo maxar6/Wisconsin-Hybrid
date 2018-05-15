@@ -8,7 +8,7 @@
 #
 #---------------------------------------------------------------------------------------------------
 #                  
-#   This is the global Linker Directive file to be used with MPC565 based applications.
+#   This is the global Linker Directive file to be used with MPC555 based applications.
 ####################################################################################################
 */
 OUTPUT_ARCH(powerpc:common)
@@ -17,8 +17,6 @@ ENTRY(Entry)
 EXTERN(Entry)
 EXTERN(ExceptionBranchTable)
 EXTERN(g_pCRCBlockPtr)
-
-
 
 MEMORY
 {
@@ -300,7 +298,6 @@ SECTIONS
 	    PROVIDE (__dataextended_end = .);
 	    PROVIDE (__ghsbegin_endofExtendedRAM = .);
   	} > EXTENDED_RAM 
-	ASSERT(( __dataextended_start_lma + SIZEOF(.dataextended) <= 0x00100000), "Initialization of RAM variables do not fit in FLASH.")
 
     .ramkeepalive (NOLOAD) :
     {
@@ -350,6 +347,7 @@ SECTIONS
     } > TPU_A_SPACE
     .tpubpararam :
     {
+        PROVIDE (__ghsbegin_tpubpararam = .);
   		*(.tpubpararam)
     } > TPU_B_SPACE
 

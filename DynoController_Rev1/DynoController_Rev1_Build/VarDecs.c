@@ -166,40 +166,40 @@ uint8_T ain_create_ECUP = RESOURCE_NOT_CREATED;
    UpdateID:BACKGND Group:"System | Debug | Resources | AnalogIn" Help:"Debug Variable" */
 uint8_T ain_read_ECUP = RESOURCE_NOT_CREATED;
 
-/* Name: dout_create_DOut736p0002 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:dout_create_DOut736p0002 Mask:FFFFFFFF EnumDec:E_NativeFWError
+/* Name: dout_create_DOut736p0004 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:dout_create_DOut736p0004 Mask:FFFFFFFF EnumDec:E_NativeFWError
    UpdateID:BACKGND Group:"System | Debug | Resources | DiscreteOut" Help:"Debug Variable" */
-uint8_T dout_create_DOut736p0002 = 7;
+uint8_T dout_create_DOut736p0004 = 7;
 
-/* Name: dout_create_DOut332p001 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:dout_create_DOut332p001 Mask:FFFFFFFF EnumDec:E_NativeFWError
+/* Name: dout_create_DOut332p0011 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:dout_create_DOut332p0011 Mask:FFFFFFFF EnumDec:E_NativeFWError
    UpdateID:BACKGND Group:"System | Debug | Resources | DiscreteOut" Help:"Debug Variable" */
-uint8_T dout_create_DOut332p001 = 7;
+uint8_T dout_create_DOut332p0011 = 7;
 
-/* Name: dout_create_DOut333p001 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:dout_create_DOut333p001 Mask:FFFFFFFF EnumDec:E_NativeFWError
+/* Name: dout_create_DOut333p0011 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:dout_create_DOut333p0011 Mask:FFFFFFFF EnumDec:E_NativeFWError
    UpdateID:BACKGND Group:"System | Debug | Resources | DiscreteOut" Help:"Debug Variable" */
-uint8_T dout_create_DOut333p001 = 7;
+uint8_T dout_create_DOut333p0011 = 7;
 
-/* Name: dout_create_DOut334p001 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:dout_create_DOut334p001 Mask:FFFFFFFF EnumDec:E_NativeFWError
+/* Name: dout_create_DOut334p0011 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:dout_create_DOut334p0011 Mask:FFFFFFFF EnumDec:E_NativeFWError
    UpdateID:BACKGND Group:"System | Debug | Resources | DiscreteOut" Help:"Debug Variable" */
-uint8_T dout_create_DOut334p001 = 7;
+uint8_T dout_create_DOut334p0011 = 7;
 
-/* Name: dout_create_DOut335p001 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:dout_create_DOut335p001 Mask:FFFFFFFF EnumDec:E_NativeFWError
+/* Name: dout_create_DOut335p0011 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:dout_create_DOut335p0011 Mask:FFFFFFFF EnumDec:E_NativeFWError
    UpdateID:BACKGND Group:"System | Debug | Resources | DiscreteOut" Help:"Debug Variable" */
-uint8_T dout_create_DOut335p001 = 7;
+uint8_T dout_create_DOut335p0011 = 7;
 
-/* Name: dout_create_DOut336p001 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:dout_create_DOut336p001 Mask:FFFFFFFF EnumDec:E_NativeFWError
+/* Name: dout_create_DOut336p0011 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:dout_create_DOut336p0011 Mask:FFFFFFFF EnumDec:E_NativeFWError
    UpdateID:BACKGND Group:"System | Debug | Resources | DiscreteOut" Help:"Debug Variable" */
-uint8_T dout_create_DOut336p001 = 7;
+uint8_T dout_create_DOut336p0011 = 7;
 
-/* Name: dout_create_DOut337p001 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:dout_create_DOut337p001 Mask:FFFFFFFF EnumDec:E_NativeFWError
+/* Name: dout_create_DOut337p0011 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:dout_create_DOut337p0011 Mask:FFFFFFFF EnumDec:E_NativeFWError
    UpdateID:BACKGND Group:"System | Debug | Resources | DiscreteOut" Help:"Debug Variable" */
-uint8_T dout_create_DOut337p001 = 7;
+uint8_T dout_create_DOut337p0011 = 7;
 
 /* Name: din_create_LoadDumpEnable ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
    CType:E_NativeFWError Struct:din_create_LoadDumpEnable Mask:FFFFFFFF EnumDec:E_NativeFWError
@@ -211,15 +211,15 @@ uint8_T din_create_LoadDumpEnable = RESOURCE_NOT_CREATED;
    UpdateID:BACKGND Group:"System | Debug | Resources | DigitalInput" Help:"Debug Variable" */
 uint8_T din_read_LoadDumpEnable = RESOURCE_NOT_CREATED;
 
-/* Name: dout_create_DOut338p001 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:dout_create_DOut338p001 Mask:FFFFFFFF EnumDec:E_NativeFWError
+/* Name: dout_create_DOut338p0011 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:dout_create_DOut338p0011 Mask:FFFFFFFF EnumDec:E_NativeFWError
    UpdateID:BACKGND Group:"System | Debug | Resources | DiscreteOut" Help:"Debug Variable" */
-uint8_T dout_create_DOut338p001 = 7;
+uint8_T dout_create_DOut338p0011 = 7;
 
-/* Name: dout_create_DOut339p001 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:dout_create_DOut339p001 Mask:FFFFFFFF EnumDec:E_NativeFWError
+/* Name: dout_create_DOut339p0011 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:dout_create_DOut339p0011 Mask:FFFFFFFF EnumDec:E_NativeFWError
    UpdateID:BACKGND Group:"System | Debug | Resources | DiscreteOut" Help:"Debug Variable" */
-uint8_T dout_create_DOut339p001 = 7;
+uint8_T dout_create_DOut339p0011 = 7;
 
 /* Name: din_create_BatteryEnable ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
    CType:E_NativeFWError Struct:din_create_BatteryEnable Mask:FFFFFFFF EnumDec:E_NativeFWError

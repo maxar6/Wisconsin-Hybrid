@@ -127,7 +127,7 @@
              </DataStore>
             <DataStore ref="NonVolatile">
                <DataType>real32</DataType>
-               <Default>20.0</Default>
+               <Default>1.0</Default>
                <Name>SOC_Load_Dump</Name>
              </DataStore>
             <DataStore ref="Volatile">
@@ -573,7 +573,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut736p0002</Name>
+               <Name>init_resource_DOut736p0004</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -583,7 +583,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut332p001</Name>
+               <Name>init_resource_DOut332p0011</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -593,7 +593,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut333p001</Name>
+               <Name>init_resource_DOut333p0011</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -603,7 +603,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut334p001</Name>
+               <Name>init_resource_DOut334p0011</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -613,7 +613,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut335p001</Name>
+               <Name>init_resource_DOut335p0011</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -623,7 +623,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut336p001</Name>
+               <Name>init_resource_DOut336p0011</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -633,7 +633,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut337p001</Name>
+               <Name>init_resource_DOut337p0011</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -653,7 +653,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut338p001</Name>
+               <Name>init_resource_DOut338p0011</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -663,7 +663,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut339p001</Name>
+               <Name>init_resource_DOut339p0011</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -2521,7 +2521,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut332p001</help>
+        		                <help>Digital output pin selection for DOut332p0011</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>COIL_Pos</name>
@@ -2538,7 +2538,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut333p001</help>
+        		                <help>Digital output pin selection for DOut333p0011</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>COIL_Neg</name>
@@ -2555,7 +2555,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut334p001</help>
+        		                <help>Digital output pin selection for DOut334p0011</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>Battery_Enable</name>
@@ -2572,7 +2572,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut335p001</help>
+        		                <help>Digital output pin selection for DOut335p0011</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>Load_Dump_Enable</name>
@@ -2589,7 +2589,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut336p001</help>
+        		                <help>Digital output pin selection for DOut336p0011</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>Genset_Enable</name>
@@ -2606,7 +2606,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut337p001</help>
+        		                <help>Digital output pin selection for DOut337p0011</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>Genset_Load</name>
@@ -2640,7 +2640,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut338p001</help>
+        		                <help>Digital output pin selection for DOut338p0011</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>ACC1_Out</name>
@@ -2657,7 +2657,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut339p001</help>
+        		                <help>Digital output pin selection for DOut339p0011</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>ACC2_Out</name>

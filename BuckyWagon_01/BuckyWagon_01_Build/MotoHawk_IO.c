@@ -1,11 +1,11 @@
 /*
  * MotoHawk_IO.c
  *
- * Real-Time Workshop code generation for Simulink model "BuckyWagon_01.mdl".
+ * Code generation for model "BuckyWagon_01.mdl".
  *
- * Model version              : 1.1518
- * Real-Time Workshop version : 7.5  (R2010a)  25-Jan-2010
- * C source code generated on : Sun Jan 21 12:55:01 2018
+ * Model version              : 1.1520
+ * Simulink Coder version : 8.0 (R2011a) 09-Mar-2011
+ * C source code generated on : Mon Apr 23 14:25:32 2018
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -15,7 +15,7 @@
 
 #include "MotoHawk_IO.h"
 
-/* S-Function Block: <S398>/motohawk_ain5 Resource: ECUP */
+/* S-Function Block: <S401>/motohawk_ain5 Resource: ECUP */
 NativeError_S ECUP_AnalogInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -71,6 +71,112 @@ NativeError_S ECUP_AnalogInput_Get(uint16_T *adc, uint16_T *status)
   }
 
   return sErrorResult;
+}
+
+/* S-Function Block: <S401>/motohawk_dout Resource: DOut4231p0005 */
+NativeError_S DOut4231p0005_DiscreteOutput_Create(void)
+{
+  NativeError_S sErrorResult;
+  S_DiscreteOutCreateAttributes CreateInfo;
+  CreateInfo.DynamicObj.eState = RES_OFF;
+  CreateInfo.DynamicObj.eResourceCondition = RES_ENABLED;
+  CreateInfo.DynamicObj.uValidAttributesMask = USE_DISCRETE_CONDITION |
+    USE_DISCRETE_STATE;
+  CreateInfo.uValidAttributesMask = USE_DISCRETE_DYNAMIC_ON_CREATE;
+  sErrorResult = CreateResource((E_ModuleResource) (((int16_T) 52)), &CreateInfo,
+    BEHAVIOUR_DISCRETE_OUT);
+  if (SUCCESS(sErrorResult)) {
+    (init_resource_DOut4231p0005_DataStore()) = ((int16_T) 52);
+  } else {
+    (init_resource_DOut4231p0005_DataStore()) = -1;
+    LogNativeError(sErrorResult);
+  }
+
+  {
+    extern uint8_T dout_create_DOut4231p0005;
+    if (SUCCESS(sErrorResult))
+      dout_create_DOut4231p0005 = 0;
+    else
+      dout_create_DOut4231p0005 = (uint8_T) GetErrorCode(sErrorResult);
+  }
+
+  return sErrorResult;
+}
+
+NativeError_S DOut4231p0005_DiscreteOutput_Set(boolean_T in)
+{
+  if ((init_resource_DOut4231p0005_DataStore()) >= 0) {
+    return SetDiscreteOutState((E_ModuleResource)
+      ((init_resource_DOut4231p0005_DataStore())), (in) ? RES_ON : RES_OFF);
+  }
+
+  return ERROR_FAIL;                   /* Return an error */
+}
+
+NativeError_S DOut4231p0005_DiscreteOutputPushPull_Set(int8_T in)
+{
+  if ((init_resource_DOut4231p0005_DataStore()) >= 0) {
+    return SetDiscreteOutState((E_ModuleResource)
+      ((init_resource_DOut4231p0005_DataStore())), ((in) < 0) ? RES_ON_REVERSE :
+                               (((in) > 0) ? RES_ON : RES_OFF));
+  }
+
+  return ERROR_FAIL;                   /* Return an error */
+}
+
+/* S-Function Block: <S14>/motohawk_dout1 Resource: DOut150p001 */
+NativeError_S DOut150p001_DiscreteOutput_Create(void)
+{
+  NativeError_S sErrorResult;
+  if ((ReverseOut_Pin_DataStore()) >= 0) {
+    S_DiscreteOutCreateAttributes CreateInfo;
+    CreateInfo.DynamicObj.eState = RES_OFF;
+    CreateInfo.DynamicObj.eResourceCondition = RES_ENABLED;
+    CreateInfo.DynamicObj.uValidAttributesMask = USE_DISCRETE_CONDITION |
+      USE_DISCRETE_STATE;
+    CreateInfo.uValidAttributesMask = USE_DISCRETE_DYNAMIC_ON_CREATE;
+    sErrorResult = CreateResource((E_ModuleResource) ((ReverseOut_Pin_DataStore())),
+      &CreateInfo, BEHAVIOUR_DISCRETE_OUT);
+    if (SUCCESS(sErrorResult)) {
+      (init_resource_DOut150p001_DataStore()) = (ReverseOut_Pin_DataStore());
+    } else {
+      (init_resource_DOut150p001_DataStore()) = -1;
+      LogNativeError(sErrorResult);
+    }
+
+    {
+      extern uint8_T dout_create_DOut150p001;
+      if (SUCCESS(sErrorResult))
+        dout_create_DOut150p001 = 0;
+      else
+        dout_create_DOut150p001 = (uint8_T) GetErrorCode(sErrorResult);
+    }
+  } else {
+    sErrorResult = ERROR_FAIL;
+  }
+
+  return sErrorResult;
+}
+
+NativeError_S DOut150p001_DiscreteOutput_Set(boolean_T in)
+{
+  if ((init_resource_DOut150p001_DataStore()) >= 0) {
+    return SetDiscreteOutState((E_ModuleResource)
+      ((init_resource_DOut150p001_DataStore())), (in) ? RES_ON : RES_OFF);
+  }
+
+  return ERROR_FAIL;                   /* Return an error */
+}
+
+NativeError_S DOut150p001_DiscreteOutputPushPull_Set(int8_T in)
+{
+  if ((init_resource_DOut150p001_DataStore()) >= 0) {
+    return SetDiscreteOutState((E_ModuleResource)
+      ((init_resource_DOut150p001_DataStore())), ((in) < 0) ? RES_ON_REVERSE :
+                               (((in) > 0) ? RES_ON : RES_OFF));
+  }
+
+  return ERROR_FAIL;                   /* Return an error */
 }
 
 void Fan_Pin_PWMOutput_PWMOutput_Set(uint32_T freq, int16_T duty, boolean_T
@@ -144,63 +250,174 @@ void Fan_Pin_PWMOutput_PWMOutput_Create()
   (init_resource_Fan_Pin_PWMOutput_DataStore()) = -1;
 }
 
-/* S-Function Block: <S12>/motohawk_ain Resource: Accel_Pedal_Pin */
-NativeError_S Accel_Pedal_Pin_AnalogInput_Create(void)
+/* S-Function Block: <S14>/motohawk_dout2 Resource: DOut151p001 */
+NativeError_S DOut151p001_DiscreteOutput_Create(void)
 {
-  NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
-  S_AnalogInCreateAttributes CreateInfo;
-  CreateInfo.DynamicObj.eResourceCondition = RES_ENABLED;
-  CreateInfo.DynamicObj.uValidAttributesMask = USE_ANALOG_CONDITION;
-  CreateInfo.uValidAttributesMask = USE_ANALOG_DYNAMIC_ON_CREATE;
-  if ((Accel_Pedal_Pin_ref_DataStore())) {
-    CreateInfo.uValidAttributesMask |= USE_ALTERNATE_REFERENCE;
+  NativeError_S sErrorResult;
+  if ((DCDCInhibit_Out_Pin_DataStore()) >= 0) {
+    S_DiscreteOutCreateAttributes CreateInfo;
+    CreateInfo.DynamicObj.eState = RES_OFF;
+    CreateInfo.DynamicObj.eResourceCondition = RES_ENABLED;
+    CreateInfo.DynamicObj.uValidAttributesMask = USE_DISCRETE_CONDITION |
+      USE_DISCRETE_STATE;
+    CreateInfo.uValidAttributesMask = USE_DISCRETE_DYNAMIC_ON_CREATE;
+    sErrorResult = CreateResource((E_ModuleResource)
+      ((DCDCInhibit_Out_Pin_DataStore())), &CreateInfo, BEHAVIOUR_DISCRETE_OUT);
+    if (SUCCESS(sErrorResult)) {
+      (init_resource_DOut151p001_DataStore()) = (DCDCInhibit_Out_Pin_DataStore());
+    } else {
+      (init_resource_DOut151p001_DataStore()) = -1;
+      LogNativeError(sErrorResult);
+    }
+
+    {
+      extern uint8_T dout_create_DOut151p001;
+      if (SUCCESS(sErrorResult))
+        dout_create_DOut151p001 = 0;
+      else
+        dout_create_DOut151p001 = (uint8_T) GetErrorCode(sErrorResult);
+    }
+  } else {
+    sErrorResult = ERROR_FAIL;
   }
 
-  (init_resource_Accel_Pedal_Pin_DataStore()) = -1;
-  if ((Accel_Pedal_Pin_DataStore()) >= 0) {
-    sErrorResult = CreateResource((E_ModuleResource) ((Accel_Pedal_Pin_DataStore
-                                    ())), &CreateInfo, BEHAVIOUR_ANALOGIN);
+  return sErrorResult;
+}
+
+NativeError_S DOut151p001_DiscreteOutput_Set(boolean_T in)
+{
+  if ((init_resource_DOut151p001_DataStore()) >= 0) {
+    return SetDiscreteOutState((E_ModuleResource)
+      ((init_resource_DOut151p001_DataStore())), (in) ? RES_ON : RES_OFF);
+  }
+
+  return ERROR_FAIL;                   /* Return an error */
+}
+
+NativeError_S DOut151p001_DiscreteOutputPushPull_Set(int8_T in)
+{
+  if ((init_resource_DOut151p001_DataStore()) >= 0) {
+    return SetDiscreteOutState((E_ModuleResource)
+      ((init_resource_DOut151p001_DataStore())), ((in) < 0) ? RES_ON_REVERSE :
+                               (((in) > 0) ? RES_ON : RES_OFF));
+  }
+
+  return ERROR_FAIL;                   /* Return an error */
+}
+
+/* S-Function Block: <S14>/motohawk_dout3 Resource: DOut152p001 */
+NativeError_S DOut152p001_DiscreteOutput_Create(void)
+{
+  NativeError_S sErrorResult;
+  if ((Brake_Light_Out_DataStore()) >= 0) {
+    S_DiscreteOutCreateAttributes CreateInfo;
+    CreateInfo.DynamicObj.eState = RES_OFF;
+    CreateInfo.DynamicObj.eResourceCondition = RES_ENABLED;
+    CreateInfo.DynamicObj.uValidAttributesMask = USE_DISCRETE_CONDITION |
+      USE_DISCRETE_STATE;
+    CreateInfo.uValidAttributesMask = USE_DISCRETE_DYNAMIC_ON_CREATE;
+    sErrorResult = CreateResource((E_ModuleResource) ((Brake_Light_Out_DataStore
+                                    ())), &CreateInfo, BEHAVIOUR_DISCRETE_OUT);
     if (SUCCESS(sErrorResult)) {
-      (init_resource_Accel_Pedal_Pin_DataStore()) = (Accel_Pedal_Pin_DataStore());
+      (init_resource_DOut152p001_DataStore()) = (Brake_Light_Out_DataStore());
+    } else {
+      (init_resource_DOut152p001_DataStore()) = -1;
+      LogNativeError(sErrorResult);
+    }
+
+    {
+      extern uint8_T dout_create_DOut152p001;
+      if (SUCCESS(sErrorResult))
+        dout_create_DOut152p001 = 0;
+      else
+        dout_create_DOut152p001 = (uint8_T) GetErrorCode(sErrorResult);
+    }
+  } else {
+    sErrorResult = ERROR_FAIL;
+  }
+
+  return sErrorResult;
+}
+
+NativeError_S DOut152p001_DiscreteOutput_Set(boolean_T in)
+{
+  if ((init_resource_DOut152p001_DataStore()) >= 0) {
+    return SetDiscreteOutState((E_ModuleResource)
+      ((init_resource_DOut152p001_DataStore())), (in) ? RES_ON : RES_OFF);
+  }
+
+  return ERROR_FAIL;                   /* Return an error */
+}
+
+NativeError_S DOut152p001_DiscreteOutputPushPull_Set(int8_T in)
+{
+  if ((init_resource_DOut152p001_DataStore()) >= 0) {
+    return SetDiscreteOutState((E_ModuleResource)
+      ((init_resource_DOut152p001_DataStore())), ((in) < 0) ? RES_ON_REVERSE :
+                               (((in) > 0) ? RES_ON : RES_OFF));
+  }
+
+  return ERROR_FAIL;                   /* Return an error */
+}
+
+/* S-Function Block: <S12>/motohawk_din Resource: EStop_Switch_Pin */
+NativeError_S EStop_Switch_Pin_DigitalInput_Create(void)
+{
+  NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
+  S_SwitchCreateResourceAttributes CreateInfo;
+  CreateInfo.ePolarity = RES_POL_ACTIVE_HIGH;
+  CreateInfo.eSwitchPullUp = (E_SwitchPullUp) 2;
+  CreateInfo.uSampleRateInMilliSecs = 0;/* Default is to not de-bounce the digital input */
+  CreateInfo.DynamicObj.eAssertionThreshold = THRESH_DIGITAL;
+  CreateInfo.DynamicObj.eResourceCondition = RES_ENABLED;
+  CreateInfo.DynamicObj.uValidAttributesMask = USE_SWITCH_CONDITION |
+    USE_SWITCH_ASSERT_THRESH;
+  CreateInfo.uValidAttributesMask = USE_SWITCH_DYNAMIC_ON_CREATE |
+    USE_SWITCH_POLARITY | USE_SWITCH_PULLUP_STRENGTH |
+    USE_SWITCH_DEBOUNCE_SAMPLE_RATE;
+  (init_resource_EStop_Switch_Pin_DataStore()) = -1;
+  if ((EStop_Switch_Pin_DataStore()) >= 0) {
+    sErrorResult = CreateResource((E_ModuleResource) (EStop_Switch_Pin_DataStore
+                                   ()), &CreateInfo, BEHAVIOUR_SWITCH);
+    if (SUCCESS(sErrorResult)) {
+      (init_resource_EStop_Switch_Pin_DataStore()) = (EStop_Switch_Pin_DataStore
+        ());
     } else {
       LogNativeError(sErrorResult);
     }
 
     {
-      extern uint8_T ain_create_Accel_Pedal_Pin;
+      extern uint8_T din_create_EStop_Switch_Pin;
       if (SUCCESS(sErrorResult))
-        ain_create_Accel_Pedal_Pin = 0;
+        din_create_EStop_Switch_Pin = 0;
       else
-        ain_create_Accel_Pedal_Pin = (uint8_T) GetErrorCode(sErrorResult);
+        din_create_EStop_Switch_Pin = (uint8_T) GetErrorCode(sErrorResult);
     }
   }
 
   return sErrorResult;
 }
 
-NativeError_S Accel_Pedal_Pin_AnalogInput_Get(uint16_T *adc, uint16_T *status)
+NativeError_S EStop_Switch_Pin_DigitalInput_Get(boolean_T *out, uint16_T *status)
 {
   NativeError_S sErrorResult = ERROR_FAIL;
-  uint16_T Result;
-  if ((init_resource_Accel_Pedal_Pin_DataStore()) >= 0) {
-    S_AnalogHowToGet HowToGetObj;
-    S_AnalogResult AnalogResultObj;
-    HowToGetObj.uValidAttributesMask = 0;
-    sErrorResult = GetResourceValueBEHAVIOUR_ANALOGIN((E_ModuleResource)
-      ((init_resource_Accel_Pedal_Pin_DataStore())), &HowToGetObj,
-      &AnalogResultObj);
+  if ((init_resource_EStop_Switch_Pin_DataStore()) >= 0) {
+    E_ResourceState ResourceState;
+    NativeError_S sErrorResult;
+    sErrorResult = GetSwitchResourceState((E_ModuleResource)
+      (init_resource_EStop_Switch_Pin_DataStore()), &ResourceState);
     if (SUCCESS(sErrorResult)) {
-      *adc = AnalogResultObj.uADCValue ;
+      *out = (ResourceState != RES_OFF);
     } else {
-      *adc = 0;
+      *out = 0;
     }
 
     {
-      extern uint8_T ain_read_Accel_Pedal_Pin;
+      extern uint8_T din_read_EStop_Switch_Pin;
       if (SUCCESS(sErrorResult))
-        ain_read_Accel_Pedal_Pin = 0;
+        din_read_EStop_Switch_Pin = 0;
       else
-        ain_read_Accel_Pedal_Pin = (uint8_T) GetErrorCode(sErrorResult);
+        din_read_EStop_Switch_Pin = (uint8_T) GetErrorCode(sErrorResult);
     }
   }
 
@@ -271,6 +488,69 @@ NativeError_S Reverse_Switch_Pin_AnalogInput_Get(uint16_T *adc, uint16_T *status
   return sErrorResult;
 }
 
+/* S-Function Block: <S12>/motohawk_ain Resource: Accel_Pedal_Pin */
+NativeError_S Accel_Pedal_Pin_AnalogInput_Create(void)
+{
+  NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
+  S_AnalogInCreateAttributes CreateInfo;
+  CreateInfo.DynamicObj.eResourceCondition = RES_ENABLED;
+  CreateInfo.DynamicObj.uValidAttributesMask = USE_ANALOG_CONDITION;
+  CreateInfo.uValidAttributesMask = USE_ANALOG_DYNAMIC_ON_CREATE;
+  if ((Accel_Pedal_Pin_ref_DataStore())) {
+    CreateInfo.uValidAttributesMask |= USE_ALTERNATE_REFERENCE;
+  }
+
+  (init_resource_Accel_Pedal_Pin_DataStore()) = -1;
+  if ((Accel_Pedal_Pin_DataStore()) >= 0) {
+    sErrorResult = CreateResource((E_ModuleResource) ((Accel_Pedal_Pin_DataStore
+                                    ())), &CreateInfo, BEHAVIOUR_ANALOGIN);
+    if (SUCCESS(sErrorResult)) {
+      (init_resource_Accel_Pedal_Pin_DataStore()) = (Accel_Pedal_Pin_DataStore());
+    } else {
+      LogNativeError(sErrorResult);
+    }
+
+    {
+      extern uint8_T ain_create_Accel_Pedal_Pin;
+      if (SUCCESS(sErrorResult))
+        ain_create_Accel_Pedal_Pin = 0;
+      else
+        ain_create_Accel_Pedal_Pin = (uint8_T) GetErrorCode(sErrorResult);
+    }
+  }
+
+  return sErrorResult;
+}
+
+NativeError_S Accel_Pedal_Pin_AnalogInput_Get(uint16_T *adc, uint16_T *status)
+{
+  NativeError_S sErrorResult = ERROR_FAIL;
+  uint16_T Result;
+  if ((init_resource_Accel_Pedal_Pin_DataStore()) >= 0) {
+    S_AnalogHowToGet HowToGetObj;
+    S_AnalogResult AnalogResultObj;
+    HowToGetObj.uValidAttributesMask = 0;
+    sErrorResult = GetResourceValueBEHAVIOUR_ANALOGIN((E_ModuleResource)
+      ((init_resource_Accel_Pedal_Pin_DataStore())), &HowToGetObj,
+      &AnalogResultObj);
+    if (SUCCESS(sErrorResult)) {
+      *adc = AnalogResultObj.uADCValue ;
+    } else {
+      *adc = 0;
+    }
+
+    {
+      extern uint8_T ain_read_Accel_Pedal_Pin;
+      if (SUCCESS(sErrorResult))
+        ain_read_Accel_Pedal_Pin = 0;
+      else
+        ain_read_Accel_Pedal_Pin = (uint8_T) GetErrorCode(sErrorResult);
+    }
+  }
+
+  return sErrorResult;
+}
+
 /* S-Function Block: <S12>/motohawk_ain1 Resource: Brake_Pedal_Pin */
 NativeError_S Brake_Pedal_Pin_AnalogInput_Create(void)
 {
@@ -328,70 +608,6 @@ NativeError_S Brake_Pedal_Pin_AnalogInput_Get(uint16_T *adc, uint16_T *status)
         ain_read_Brake_Pedal_Pin = 0;
       else
         ain_read_Brake_Pedal_Pin = (uint8_T) GetErrorCode(sErrorResult);
-    }
-  }
-
-  return sErrorResult;
-}
-
-/* S-Function Block: <S12>/motohawk_din Resource: EStop_Switch_Pin */
-NativeError_S EStop_Switch_Pin_DigitalInput_Create(void)
-{
-  NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
-  S_SwitchCreateResourceAttributes CreateInfo;
-  CreateInfo.ePolarity = RES_POL_ACTIVE_HIGH;
-  CreateInfo.eSwitchPullUp = (E_SwitchPullUp) 2;
-  CreateInfo.uSampleRateInMilliSecs = 0;/* Default is to not de-bounce the digital input */
-  CreateInfo.DynamicObj.eAssertionThreshold = THRESH_DIGITAL;
-  CreateInfo.DynamicObj.eResourceCondition = RES_ENABLED;
-  CreateInfo.DynamicObj.uValidAttributesMask = USE_SWITCH_CONDITION |
-    USE_SWITCH_ASSERT_THRESH;
-  CreateInfo.uValidAttributesMask = USE_SWITCH_DYNAMIC_ON_CREATE |
-    USE_SWITCH_POLARITY | USE_SWITCH_PULLUP_STRENGTH |
-    USE_SWITCH_DEBOUNCE_SAMPLE_RATE;
-  (init_resource_EStop_Switch_Pin_DataStore()) = -1;
-  if ((EStop_Switch_Pin_DataStore()) >= 0) {
-    sErrorResult = CreateResource((E_ModuleResource) (EStop_Switch_Pin_DataStore
-                                   ()), &CreateInfo, BEHAVIOUR_SWITCH);
-    if (SUCCESS(sErrorResult)) {
-      (init_resource_EStop_Switch_Pin_DataStore()) = (EStop_Switch_Pin_DataStore
-        ());
-    } else {
-      LogNativeError(sErrorResult);
-    }
-
-    {
-      extern uint8_T din_create_EStop_Switch_Pin;
-      if (SUCCESS(sErrorResult))
-        din_create_EStop_Switch_Pin = 0;
-      else
-        din_create_EStop_Switch_Pin = (uint8_T) GetErrorCode(sErrorResult);
-    }
-  }
-
-  return sErrorResult;
-}
-
-NativeError_S EStop_Switch_Pin_DigitalInput_Get(boolean_T *out, uint16_T *status)
-{
-  NativeError_S sErrorResult = ERROR_FAIL;
-  if ((init_resource_EStop_Switch_Pin_DataStore()) >= 0) {
-    E_ResourceState ResourceState;
-    NativeError_S sErrorResult;
-    sErrorResult = GetSwitchResourceState((E_ModuleResource)
-      (init_resource_EStop_Switch_Pin_DataStore()), &ResourceState);
-    if (SUCCESS(sErrorResult)) {
-      *out = (ResourceState != RES_OFF);
-    } else {
-      *out = 0;
-    }
-
-    {
-      extern uint8_T din_read_EStop_Switch_Pin;
-      if (SUCCESS(sErrorResult))
-        din_read_EStop_Switch_Pin = 0;
-      else
-        din_read_EStop_Switch_Pin = (uint8_T) GetErrorCode(sErrorResult);
     }
   }
 

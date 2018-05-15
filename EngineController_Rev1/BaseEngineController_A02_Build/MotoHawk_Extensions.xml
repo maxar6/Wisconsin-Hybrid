@@ -3827,6 +3827,16 @@
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>ESTOP_FuelInj_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0.0</Default>
+               <Name>ESTOP_FuelInj_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
                <Default>0.0 0U 0U 0U 0U 0U 0U 0U </Default>
                <Name>InjEnable_new</Name>
              </DataStore>
@@ -4818,7 +4828,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut8007p0005</Name>
+               <Name>init_resource_DOut8020p0004</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -5023,7 +5033,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut7474p0004</Name>
+               <Name>init_resource_DOut7481p0001</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
@@ -5043,7 +5053,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut7752p0005</Name>
+               <Name>init_resource_DOut7765p0004</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -5053,7 +5063,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut7762p0005</Name>
+               <Name>init_resource_DOut7775p0004</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -16050,6 +16060,37 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="ESTOP_FuelInj_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_0</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Outputs|Injector Control | ESTOP_FuelInj_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>ESTOP_FuelInj_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="ESTOP_FuelInj_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_A02|Foreground|Outputs|Injector Control | ESTOP_FuelInj_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>ESTOP_FuelInj_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="InjEnable_new">
         		                <access>RW RW RW RW</access>
         		                <class>VAR</class>
@@ -23564,7 +23605,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut7474p0004</help>
+        		                <help>Digital output pin selection for DOut7481p0001</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>FuelPumpPin</name>
@@ -23598,7 +23639,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut7752p0005</help>
+        		                <help>Digital output pin selection for DOut7765p0004</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>OilPumpPin</name>
@@ -23615,7 +23656,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut7762p0005</help>
+        		                <help>Digital output pin selection for DOut7775p0004</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>O2_Heater</name>

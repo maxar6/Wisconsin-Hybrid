@@ -13,9 +13,10 @@
 #define c5_IN_NO_ACTIVE_CHILD          (0U)
 #define c5_IN_default                  (2U)
 #define c5_IN_cranking                 (1U)
-#define c5_IN_startFail                (5U)
+#define c5_IN_startFail                (6U)
 #define c5_IN_idle                     (4U)
 #define c5_IN_generating               (3U)
+#define c5_IN_rampDown                 (5U)
 
 /* Variable Declarations */
 
@@ -101,6 +102,7 @@ static void initialize_c5_BaseEngineController_A02
   chartInstance->c5_tp_default = 0U;
   chartInstance->c5_tp_generating = 0U;
   chartInstance->c5_tp_idle = 0U;
+  chartInstance->c5_tp_rampDown = 0U;
   chartInstance->c5_tp_startFail = 0U;
   chartInstance->c5_is_active_c5_BaseEngineController_A02 = 0U;
   chartInstance->c5_is_c5_BaseEngineController_A02 = 0U;
@@ -166,9 +168,9 @@ static void c5_update_debugger_state_c5_BaseEngineController_A02
   }
 
   if (chartInstance->c5_is_c5_BaseEngineController_A02 == c5_IN_startFail) {
-    _SFD_CS_CALL(STATE_ACTIVE_TAG, 4U, chartInstance->c5_sfEvent);
+    _SFD_CS_CALL(STATE_ACTIVE_TAG, 5U, chartInstance->c5_sfEvent);
   } else {
-    _SFD_CS_CALL(STATE_INACTIVE_TAG, 4U, chartInstance->c5_sfEvent);
+    _SFD_CS_CALL(STATE_INACTIVE_TAG, 5U, chartInstance->c5_sfEvent);
   }
 
   if (chartInstance->c5_is_c5_BaseEngineController_A02 == c5_IN_idle) {
@@ -181,6 +183,12 @@ static void c5_update_debugger_state_c5_BaseEngineController_A02
     _SFD_CS_CALL(STATE_ACTIVE_TAG, 2U, chartInstance->c5_sfEvent);
   } else {
     _SFD_CS_CALL(STATE_INACTIVE_TAG, 2U, chartInstance->c5_sfEvent);
+  }
+
+  if (chartInstance->c5_is_c5_BaseEngineController_A02 == c5_IN_rampDown) {
+    _SFD_CS_CALL(STATE_ACTIVE_TAG, 4U, chartInstance->c5_sfEvent);
+  } else {
+    _SFD_CS_CALL(STATE_INACTIVE_TAG, 4U, chartInstance->c5_sfEvent);
   }
 
   sf_debug_set_animation(c5_prevAniVal);
@@ -345,6 +353,12 @@ static void c5_set_sim_state_side_effects_c5_BaseEngineController_A02
       chartInstance->c5_tp_idle = 0U;
     }
 
+    if (chartInstance->c5_is_c5_BaseEngineController_A02 == c5_IN_rampDown) {
+      chartInstance->c5_tp_rampDown = 1U;
+    } else {
+      chartInstance->c5_tp_rampDown = 0U;
+    }
+
     if (chartInstance->c5_is_c5_BaseEngineController_A02 == c5_IN_startFail) {
       chartInstance->c5_tp_startFail = 1U;
     } else {
@@ -438,8 +452,8 @@ static void c5_chartstep_c5_BaseEngineController_A02
   real_T *c5_APP;
   real_T *c5_genLoad;
   real_T *c5_generateAPP;
-  real_T *c5_maxMotorRPM;
   real_T *c5_generateTQ;
+  real_T *c5_maxMotorRPM;
   real_T *c5_crankWait;
   c5_generateAPP = (real_T *)ssGetInputPortSignal(chartInstance->S, 10);
   c5_generateTQ = (real_T *)ssGetInputPortSignal(chartInstance->S, 9);
@@ -503,7 +517,7 @@ static void c5_chartstep_c5_BaseEngineController_A02
         chartInstance->c5_tp_cranking = 0U;
         _SFD_CS_CALL(STATE_INACTIVE_TAG, 0U, chartInstance->c5_sfEvent);
         chartInstance->c5_is_c5_BaseEngineController_A02 = c5_IN_startFail;
-        _SFD_CS_CALL(STATE_ACTIVE_TAG, 4U, chartInstance->c5_sfEvent);
+        _SFD_CS_CALL(STATE_ACTIVE_TAG, 5U, chartInstance->c5_sfEvent);
         chartInstance->c5_tp_startFail = 1U;
         chartInstance->c5_count = 0.0;
         _SFD_DATA_RANGE_CHECK(chartInstance->c5_count, 14U);
@@ -631,12 +645,16 @@ static void c5_chartstep_c5_BaseEngineController_A02
           _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 10U, chartInstance->c5_sfEvent);
           chartInstance->c5_tp_generating = 0U;
           _SFD_CS_CALL(STATE_INACTIVE_TAG, 2U, chartInstance->c5_sfEvent);
-          chartInstance->c5_is_c5_BaseEngineController_A02 = c5_IN_idle;
-          _SFD_CS_CALL(STATE_ACTIVE_TAG, 3U, chartInstance->c5_sfEvent);
-          chartInstance->c5_tp_idle = 1U;
+          chartInstance->c5_is_c5_BaseEngineController_A02 = c5_IN_rampDown;
+          _SFD_CS_CALL(STATE_ACTIVE_TAG, 4U, chartInstance->c5_sfEvent);
+          chartInstance->c5_tp_rampDown = 1U;
         } else {
           *c5_APP = *c5_generateAPP;
           _SFD_DATA_RANGE_CHECK(*c5_APP, 9U);
+          *c5_generatingTQ = *c5_generateTQ;
+          _SFD_DATA_RANGE_CHECK(*c5_generatingTQ, 13U);
+          *c5_maxRPM = *c5_maxMotorRPM;
+          _SFD_DATA_RANGE_CHECK(*c5_maxRPM, 11U);
         }
       }
 
@@ -689,10 +707,10 @@ static void c5_chartstep_c5_BaseEngineController_A02
           _SFD_DATA_RANGE_CHECK(*c5_remyEn, 10U);
           *c5_maxRPM = *c5_maxMotorRPM;
           _SFD_DATA_RANGE_CHECK(*c5_maxRPM, 11U);
+          *c5_generatingTQ = 0.0;
+          _SFD_DATA_RANGE_CHECK(*c5_generatingTQ, 13U);
           *c5_motorTQ = 0.0;
           _SFD_DATA_RANGE_CHECK(*c5_motorTQ, 12U);
-          *c5_generatingTQ = *c5_generateTQ;
-          _SFD_DATA_RANGE_CHECK(*c5_generatingTQ, 13U);
           *c5_APP = 0.0;
           _SFD_DATA_RANGE_CHECK(*c5_APP, 9U);
         }
@@ -701,9 +719,33 @@ static void c5_chartstep_c5_BaseEngineController_A02
       _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 3U, chartInstance->c5_sfEvent);
       break;
 
-     case c5_IN_startFail:
+     case c5_IN_rampDown:
       CV_CHART_EVAL(4, 0, 5);
       _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 4U,
+                   chartInstance->c5_sfEvent);
+      _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 11U,
+                   chartInstance->c5_sfEvent);
+      if (CV_TRANSITION_EVAL(11U, (int32_T)_SFD_CCP_CALL(11U, 0, *c5_RPM <=
+            1400.0 != 0U, chartInstance->c5_sfEvent))) {
+        _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 11U, chartInstance->c5_sfEvent);
+        chartInstance->c5_tp_rampDown = 0U;
+        _SFD_CS_CALL(STATE_INACTIVE_TAG, 4U, chartInstance->c5_sfEvent);
+        chartInstance->c5_is_c5_BaseEngineController_A02 = c5_IN_idle;
+        _SFD_CS_CALL(STATE_ACTIVE_TAG, 3U, chartInstance->c5_sfEvent);
+        chartInstance->c5_tp_idle = 1U;
+      } else {
+        *c5_APP = 0.0;
+        _SFD_DATA_RANGE_CHECK(*c5_APP, 9U);
+        *c5_generatingTQ = *c5_generateTQ;
+        _SFD_DATA_RANGE_CHECK(*c5_generatingTQ, 13U);
+      }
+
+      _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 4U, chartInstance->c5_sfEvent);
+      break;
+
+     case c5_IN_startFail:
+      CV_CHART_EVAL(4, 0, 6);
+      _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 5U,
                    chartInstance->c5_sfEvent);
       _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 3U,
                    chartInstance->c5_sfEvent);
@@ -727,7 +769,7 @@ static void c5_chartstep_c5_BaseEngineController_A02
 
         _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 3U, chartInstance->c5_sfEvent);
         chartInstance->c5_tp_startFail = 0U;
-        _SFD_CS_CALL(STATE_INACTIVE_TAG, 4U, chartInstance->c5_sfEvent);
+        _SFD_CS_CALL(STATE_INACTIVE_TAG, 5U, chartInstance->c5_sfEvent);
         chartInstance->c5_is_c5_BaseEngineController_A02 = c5_IN_default;
         _SFD_CS_CALL(STATE_ACTIVE_TAG, 1U, chartInstance->c5_sfEvent);
         chartInstance->c5_tp_default = 1U;
@@ -739,7 +781,7 @@ static void c5_chartstep_c5_BaseEngineController_A02
               chartInstance->c5_sfEvent))) {
           _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 4U, chartInstance->c5_sfEvent);
           chartInstance->c5_tp_startFail = 0U;
-          _SFD_CS_CALL(STATE_INACTIVE_TAG, 4U, chartInstance->c5_sfEvent);
+          _SFD_CS_CALL(STATE_INACTIVE_TAG, 5U, chartInstance->c5_sfEvent);
           chartInstance->c5_is_c5_BaseEngineController_A02 = c5_IN_cranking;
           _SFD_CS_CALL(STATE_ACTIVE_TAG, 0U, chartInstance->c5_sfEvent);
           chartInstance->c5_tp_cranking = 1U;
@@ -757,7 +799,7 @@ static void c5_chartstep_c5_BaseEngineController_A02
         }
       }
 
-      _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 4U, chartInstance->c5_sfEvent);
+      _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 5U, chartInstance->c5_sfEvent);
       break;
 
      default:
@@ -995,10 +1037,10 @@ static void init_dsm_address_info(SFc5_BaseEngineController_A02InstanceStruct
 /* SFunction Glue Code */
 void sf_c5_BaseEngineController_A02_get_check_sum(mxArray *plhs[])
 {
-  ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(99615634U);
-  ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(3244852713U);
-  ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(1506931129U);
-  ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(554220327U);
+  ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(541112601U);
+  ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(1072009699U);
+  ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(1646018163U);
+  ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(2372770474U);
 }
 
 mxArray *sf_c5_BaseEngineController_A02_get_autoinheritance_info(void)
@@ -1380,8 +1422,8 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
         chartAlreadyPresent = sf_debug_initialize_chart
           (_BaseEngineController_A02MachineNumber_,
            5,
-           5,
-           11,
+           6,
+           12,
            17,
            0,
            0,
@@ -1427,21 +1469,24 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
           _SFD_STATE_INFO(2,0,0);
           _SFD_STATE_INFO(3,0,0);
           _SFD_STATE_INFO(4,0,0);
-          _SFD_CH_SUBSTATE_COUNT(5);
+          _SFD_STATE_INFO(5,0,0);
+          _SFD_CH_SUBSTATE_COUNT(6);
           _SFD_CH_SUBSTATE_DECOMP(0);
           _SFD_CH_SUBSTATE_INDEX(0,0);
           _SFD_CH_SUBSTATE_INDEX(1,1);
           _SFD_CH_SUBSTATE_INDEX(2,2);
           _SFD_CH_SUBSTATE_INDEX(3,3);
           _SFD_CH_SUBSTATE_INDEX(4,4);
+          _SFD_CH_SUBSTATE_INDEX(5,5);
           _SFD_ST_SUBSTATE_COUNT(0,0);
           _SFD_ST_SUBSTATE_COUNT(1,0);
           _SFD_ST_SUBSTATE_COUNT(2,0);
           _SFD_ST_SUBSTATE_COUNT(3,0);
           _SFD_ST_SUBSTATE_COUNT(4,0);
+          _SFD_ST_SUBSTATE_COUNT(5,0);
         }
 
-        _SFD_CV_INIT_CHART(5,1,0,0);
+        _SFD_CV_INIT_CHART(6,1,0,0);
 
         {
           _SFD_CV_INIT_STATE(0,0,0,0,0,0,NULL,NULL);
@@ -1461,6 +1506,10 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
 
         {
           _SFD_CV_INIT_STATE(4,0,0,0,0,0,NULL,NULL);
+        }
+
+        {
+          _SFD_CV_INIT_STATE(5,0,0,0,0,0,NULL,NULL);
         }
 
         {
@@ -1572,6 +1621,17 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
           static int sPostFixPredicateTree[] = { 0, -1 };
 
           _SFD_CV_INIT_TRANS(10,1,&(sStartGuardMap[0]),&(sEndGuardMap[0]),2,
+                             &(sPostFixPredicateTree[0]));
+        }
+
+        {
+          static unsigned int sStartGuardMap[] = { 1 };
+
+          static unsigned int sEndGuardMap[] = { 10 };
+
+          static int sPostFixPredicateTree[] = { 0 };
+
+          _SFD_CV_INIT_TRANS(11,1,&(sStartGuardMap[0]),&(sEndGuardMap[0]),1,
                              &(sPostFixPredicateTree[0]));
         }
 
@@ -1708,6 +1768,19 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
           static unsigned int sEndGuardMap[] = { 9 };
 
           _SFD_TRANS_COV_MAPS(10,
+                              0,NULL,NULL,
+                              1,&(sStartGuardMap[0]),&(sEndGuardMap[0]),
+                              0,NULL,NULL,
+                              0,NULL,NULL);
+        }
+
+        _SFD_TRANS_COV_WTS(11,0,1,0,0);
+        if (chartAlreadyPresent==0) {
+          static unsigned int sStartGuardMap[] = { 1 };
+
+          static unsigned int sEndGuardMap[] = { 10 };
+
+          _SFD_TRANS_COV_MAPS(11,
                               0,NULL,NULL,
                               1,&(sStartGuardMap[0]),&(sEndGuardMap[0]),
                               0,NULL,NULL,
@@ -1981,10 +2054,10 @@ static void mdlSetWorkWidths_c5_BaseEngineController_A02(SimStruct *S)
   }
 
   ssSetOptions(S,ssGetOptions(S)|SS_OPTION_WORKS_WITH_CODE_REUSE);
-  ssSetChecksum0(S,(1076800928U));
-  ssSetChecksum1(S,(540032454U));
-  ssSetChecksum2(S,(1852189633U));
-  ssSetChecksum3(S,(3445711725U));
+  ssSetChecksum0(S,(2048762070U));
+  ssSetChecksum1(S,(2011091626U));
+  ssSetChecksum2(S,(1693510075U));
+  ssSetChecksum3(S,(125228562U));
   ssSetmdlDerivatives(S, NULL);
   ssSetExplicitFCSSCtrl(S,1);
 }

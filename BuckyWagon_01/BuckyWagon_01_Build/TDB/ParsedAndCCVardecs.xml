@@ -35,7 +35,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s372_Merge</struct>
+      <struct>BuckyWagon_01_B.s375_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>Sensors | Accel | Accel_Pedal</group>
    </VarDec>
@@ -54,7 +54,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_CmdValOutRange</struct>
+      <struct>BuckyWagon_01_B.s250_CmdValOutRange</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -72,7 +72,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_ShtdwnThrsBattTemp</struct>
+      <struct>BuckyWagon_01_B.s250_ShtdwnThrsBattTemp</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -90,7 +90,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_WatchdogInternal</struct>
+      <struct>BuckyWagon_01_B.s250_WatchdogInternal</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -108,7 +108,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_OutptOvrVlt</struct>
+      <struct>BuckyWagon_01_B.s250_OutptOvrVlt</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -126,7 +126,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_TempExtrn2</struct>
+      <struct>BuckyWagon_01_B.s250_TempExtrn2</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -162,7 +162,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s251_Phase_Current</struct>
+      <struct>BuckyWagon_01_B.s254_Phase_Current</struct>
       <group>Sensors | EatonController</group>
    </VarDec>
    <VarDec>
@@ -180,7 +180,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s251_RelationalOperator</struct>
+      <struct>BuckyWagon_01_B.s254_RelationalOperator</struct>
       <group>Sensors | EatonController</group>
    </VarDec>
    <VarDec>
@@ -198,7 +198,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s245_bcm_dis_buf</struct>
+      <struct>BuckyWagon_01_B.s248_bcm_dis_buf</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -216,7 +216,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s41_Merge</struct>
+      <struct>BuckyWagon_01_B.s44_Merge</struct>
       <group>Sensors | EHPAS</group>
    </VarDec>
    <VarDec>
@@ -234,7 +234,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s133_LogicalOperator</struct>
+      <struct>BuckyWagon_01_B.s136_LogicalOperator</struct>
       <group>Actuators | BCM</group>
    </VarDec>
    <VarDec>
@@ -291,7 +291,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s253_Sum1</struct>
+      <struct>BuckyWagon_01_B.s256_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>Sensors | LVVolt | LVVolt</group>
    </VarDec>
@@ -310,7 +310,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_NVSRAMChksmFail</struct>
+      <struct>BuckyWagon_01_B.s250_NVSRAMChksmFail</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -328,7 +328,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_MainsFuseDefect</struct>
+      <struct>BuckyWagon_01_B.s250_MainsFuseDefect</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -346,7 +346,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_TempExtrn3</struct>
+      <struct>BuckyWagon_01_B.s250_TempExtrn3</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -364,7 +364,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s226_scrollIndex</struct>
+      <struct>BuckyWagon_01_B.s229_scrollIndex</struct>
       <group>BuckyWagon_01|Foreground|MiniViewDisplay|GetFaultName</group>
    </VarDec>
    <VarDec>
@@ -382,7 +382,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s251_Maximum_Rated_Torqe</struct>
+      <struct>BuckyWagon_01_B.s254_Maximum_Rated_Torqe</struct>
       <group>Sensors | EatonController</group>
    </VarDec>
    <VarDec>
@@ -400,7 +400,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s245_bcm_soc_j</struct>
+      <struct>BuckyWagon_01_B.s248_bcm_soc_j</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -418,7 +418,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s266_Merge</struct>
+      <struct>BuckyWagon_01_B.s269_Merge</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -431,12 +431,12 @@
       <gain>1.0</gain>
       <offset>0.0</offset>
       <exp>1.0</exp>
-      <max>255.000000</max>
+      <max>1.000000</max>
       <min>0.000000</min>
-      <format>3.0</format>
+      <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s21_Compare</struct>
+      <struct>BuckyWagon_01_B.s21_LogicalOperator</struct>
       <group>Actuators | BCM</group>
    </VarDec>
    <VarDec>
@@ -550,7 +550,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s92_Merge</struct>
+      <struct>BuckyWagon_01_B.s95_Merge</struct>
       <group>Actuators | EatonCharger</group>
    </VarDec>
    <VarDec>
@@ -568,7 +568,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s249_EMP_Pump_Status</struct>
+      <struct>BuckyWagon_01_B.s252_EMP_Pump_Status</struct>
       <group>Sensors | EHPAS</group>
    </VarDec>
    <VarDec>
@@ -586,7 +586,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s245_bcm_chga_ena</struct>
+      <struct>BuckyWagon_01_B.s248_bcm_chga_ena</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -604,7 +604,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s245_bcm_alarm</struct>
+      <struct>BuckyWagon_01_B.s248_bcm_alarm</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -623,7 +623,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s37_LogicalOperator</struct>
+      <struct>BuckyWagon_01_B.s40_LogicalOperator</struct>
       <help>Display output in engineering units</help>
       <group>Actuators | DC/DC | InhibitDCDC_Out</group>
    </VarDec>
@@ -681,7 +681,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s252_Saturation</struct>
+      <struct>BuckyWagon_01_B.s255_Saturation</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>Sensors | Accel | Accel_Pedal</group>
    </VarDec>
@@ -700,7 +700,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_ShtdwnThresChrgTime</struct>
+      <struct>BuckyWagon_01_B.s250_ShtdwnThresChrgTime</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -718,7 +718,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_TempSensCap</struct>
+      <struct>BuckyWagon_01_B.s250_TempSensCap</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -736,7 +736,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_MainsOvrVlt1</struct>
+      <struct>BuckyWagon_01_B.s250_MainsOvrVlt1</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -755,7 +755,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s277_Merge</struct>
+      <struct>BuckyWagon_01_B.s280_Merge</struct>
       <help>Display output in engineering units</help>
       <group>Sensors | Reverse | Reverse_Switch</group>
    </VarDec>
@@ -810,7 +810,7 @@
       <format>1.3</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s226_scrollTimer</struct>
+      <struct>BuckyWagon_01_B.s229_scrollTimer</struct>
       <group>BuckyWagon_01|Foreground|MiniViewDisplay|GetFaultName</group>
    </VarDec>
    <VarDec>
@@ -828,7 +828,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s248_EHPAS_Input_Voltage</struct>
+      <struct>BuckyWagon_01_B.s251_EHPAS_Input_Voltage</struct>
       <group>Sensors | EHPAS</group>
    </VarDec>
    <VarDec>
@@ -846,7 +846,7 @@
       <format>8.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s248_AgeCount</struct>
+      <struct>BuckyWagon_01_B.s251_AgeCount</struct>
       <group>Sensors | EHPAS</group>
    </VarDec>
    <VarDec>
@@ -864,7 +864,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s245_bcm_chg_max</struct>
+      <struct>BuckyWagon_01_B.s248_bcm_chg_max</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -882,7 +882,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s245_bcm_vbat</struct>
+      <struct>BuckyWagon_01_B.s248_bcm_vbat</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -900,7 +900,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s245_bcm_hvil_mon</struct>
+      <struct>BuckyWagon_01_B.s248_bcm_hvil_mon</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -918,7 +918,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s57_Merge</struct>
+      <struct>BuckyWagon_01_B.s60_Merge</struct>
       <group>Actuators | Brusa</group>
    </VarDec>
    <VarDec>
@@ -1031,7 +1031,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_FlashChksmFail</struct>
+      <struct>BuckyWagon_01_B.s250_FlashChksmFail</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -1049,7 +1049,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_TempSensXfrmr</struct>
+      <struct>BuckyWagon_01_B.s250_TempSensXfrmr</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -1067,7 +1067,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_MainsOvrVlt2</struct>
+      <struct>BuckyWagon_01_B.s250_MainsOvrVlt2</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -1085,7 +1085,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_LimByBattTemp</struct>
+      <struct>BuckyWagon_01_B.s250_LimByBattTemp</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -1103,7 +1103,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s89_Merge</struct>
+      <struct>BuckyWagon_01_B.s92_Merge</struct>
       <group>Actuators | EatonCharger</group>
    </VarDec>
    <VarDec>
@@ -1121,7 +1121,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s249_EMP_Pump_Power</struct>
+      <struct>BuckyWagon_01_B.s252_EMP_Pump_Power</struct>
       <group>Sensors | EHPAS</group>
    </VarDec>
    <VarDec>
@@ -1139,7 +1139,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s248_EHPAS_Fault</struct>
+      <struct>BuckyWagon_01_B.s251_EHPAS_Fault</struct>
       <group>Sensors | EHPAS</group>
    </VarDec>
    <VarDec>
@@ -1157,7 +1157,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s154_Sum</struct>
+      <struct>BuckyWagon_01_B.s157_Sum</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|HillHold Algorithm|HillHold PI Controller1</group>
    </VarDec>
    <VarDec>
@@ -1175,7 +1175,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s149_HillHoldOn</struct>
+      <struct>BuckyWagon_01_B.s152_HillHoldOn</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|HillHold Algorithm</group>
    </VarDec>
    <VarDec>
@@ -1212,7 +1212,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s250_InputCurrentLimitMax</struct>
+      <struct>BuckyWagon_01_B.s253_InputCurrentLimitMax</struct>
       <group>Sensors | EatonCharger</group>
    </VarDec>
    <VarDec>
@@ -1230,7 +1230,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s250_MessageCounter</struct>
+      <struct>BuckyWagon_01_B.s253_MessageCounter</struct>
       <group>Sensors | EatonCharger</group>
    </VarDec>
    <VarDec>
@@ -1248,7 +1248,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_TempSensExt1</struct>
+      <struct>BuckyWagon_01_B.s250_TempSensExt1</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -1266,7 +1266,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s144_Saturation</struct>
+      <struct>BuckyWagon_01_B.s147_Saturation</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
    </VarDec>
    <VarDec>
@@ -1284,7 +1284,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s251_Motor_Temperature</struct>
+      <struct>BuckyWagon_01_B.s254_Motor_Temperature</struct>
       <group>Sensors | EatonController</group>
    </VarDec>
    <VarDec>
@@ -1302,7 +1302,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s248_EHPAS_Pump_Speed</struct>
+      <struct>BuckyWagon_01_B.s251_EHPAS_Pump_Speed</struct>
       <group>Sensors | EHPAS</group>
    </VarDec>
    <VarDec>
@@ -1320,7 +1320,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s245_bcm_chg_buf</struct>
+      <struct>BuckyWagon_01_B.s248_bcm_chg_buf</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -1338,7 +1338,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s245_bcm_chga_mon</struct>
+      <struct>BuckyWagon_01_B.s248_bcm_chga_mon</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -1356,7 +1356,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s192_Merge</struct>
+      <struct>BuckyWagon_01_B.s195_Merge</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Reverse</group>
    </VarDec>
    <VarDec>
@@ -1451,7 +1451,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s388_Merge</struct>
+      <struct>BuckyWagon_01_B.s391_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>Sensors | Brake | Brake_Pedal</group>
    </VarDec>
@@ -1470,7 +1470,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s331_sf_Chart.s287_pluggedIn</struct>
+      <struct>BuckyWagon_01_B.s334_sf_Chart.s290_pluggedIn</struct>
       <group>Sensors | EatonCharger</group>
    </VarDec>
    <VarDec>
@@ -1488,7 +1488,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_EEPROMSysChksmFail</struct>
+      <struct>BuckyWagon_01_B.s250_EEPROMSysChksmFail</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -1506,7 +1506,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_TempSensExt2</struct>
+      <struct>BuckyWagon_01_B.s250_TempSensExt2</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -1524,7 +1524,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_EuropeMains</struct>
+      <struct>BuckyWagon_01_B.s250_EuropeMains</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -1542,7 +1542,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_LimByTempPwrStg</struct>
+      <struct>BuckyWagon_01_B.s250_LimByTempPwrStg</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -1560,7 +1560,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_LimByTempCap</struct>
+      <struct>BuckyWagon_01_B.s250_LimByTempCap</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -1578,7 +1578,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_LimByNLG5MaxMainsCrnt</struct>
+      <struct>BuckyWagon_01_B.s250_LimByNLG5MaxMainsCrnt</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -1596,7 +1596,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s144_Gain4</struct>
+      <struct>BuckyWagon_01_B.s147_Gain4</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
    </VarDec>
    <VarDec>
@@ -1614,7 +1614,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s249_EMP_Speed_Percent</struct>
+      <struct>BuckyWagon_01_B.s252_EMP_Speed_Percent</struct>
       <group>Sensors | EHPAS</group>
    </VarDec>
    <VarDec>
@@ -1632,7 +1632,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s245_bcm_cell_undervolt</struct>
+      <struct>BuckyWagon_01_B.s248_bcm_cell_undervolt</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -1650,7 +1650,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s245_bcm_vbat</struct>
+      <struct>BuckyWagon_01_B.s248_bcm_vbat</struct>
       <group>Sensors</group>
    </VarDec>
    <VarDec>
@@ -1668,7 +1668,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s76_Merge</struct>
+      <struct>BuckyWagon_01_B.s79_Merge</struct>
       <group>Actuators | EMP Coolant Pump</group>
    </VarDec>
    <VarDec>
@@ -1687,7 +1687,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s36_LogicalOperator</struct>
+      <struct>BuckyWagon_01_B.s39_LogicalOperator</struct>
       <help>Display output in engineering units</help>
       <group>Actuators | Reverse | ReverseOut</group>
    </VarDec>
@@ -1725,7 +1725,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_TempSensExt3</struct>
+      <struct>BuckyWagon_01_B.s250_TempSensExt3</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -1743,7 +1743,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_LimByMainCrnt</struct>
+      <struct>BuckyWagon_01_B.s250_LimByMainCrnt</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -1762,7 +1762,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s246_DataTypeConversion</struct>
+      <struct>BuckyWagon_01_B.s249_DataTypeConversion</struct>
       <help>Display output in engineering units</help>
       <group>Sensors | Reverse | Reverse_Switch</group>
    </VarDec>
@@ -1781,7 +1781,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s107_Merge</struct>
+      <struct>BuckyWagon_01_B.s110_Merge</struct>
       <group>Actuators | Solectria</group>
    </VarDec>
    <VarDec>
@@ -1799,7 +1799,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s251_Phase_phase_voltage</struct>
+      <struct>BuckyWagon_01_B.s254_Phase_phase_voltage</struct>
       <group>Sensors | EatonController</group>
    </VarDec>
    <VarDec>
@@ -1817,7 +1817,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s251_Motor_Control_State</struct>
+      <struct>BuckyWagon_01_B.s254_Motor_Control_State</struct>
       <group>Sensors | EatonController</group>
    </VarDec>
    <VarDec>
@@ -1835,7 +1835,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s245_bcm_t_coolant</struct>
+      <struct>BuckyWagon_01_B.s248_bcm_t_coolant</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -1853,7 +1853,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s245_bcm_mod_ena</struct>
+      <struct>BuckyWagon_01_B.s248_bcm_mod_ena</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -1872,7 +1872,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s254_Saturation</struct>
+      <struct>BuckyWagon_01_B.s257_Saturation</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>Sensors | Brake | Brake_Pedal</group>
    </VarDec>
@@ -1891,7 +1891,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s250_InputCurrent</struct>
+      <struct>BuckyWagon_01_B.s253_InputCurrent</struct>
       <group>Sensors | EatonCharger</group>
    </VarDec>
    <VarDec>
@@ -1909,7 +1909,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s250_OutputVoltage</struct>
+      <struct>BuckyWagon_01_B.s253_OutputVoltage</struct>
       <group>Sensors | EatonCharger</group>
    </VarDec>
    <VarDec>
@@ -1927,7 +1927,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_LimByOutVlt</struct>
+      <struct>BuckyWagon_01_B.s250_LimByOutVlt</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -1945,7 +1945,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_CAN_Xmit</struct>
+      <struct>BuckyWagon_01_B.s250_CAN_Xmit</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -1963,7 +1963,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_TempSensDiode</struct>
+      <struct>BuckyWagon_01_B.s250_TempSensDiode</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -1981,7 +1981,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_PlsbltyMainsVltMeas</struct>
+      <struct>BuckyWagon_01_B.s250_PlsbltyMainsVltMeas</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -1999,7 +1999,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_LimByNLG5MaxPwr</struct>
+      <struct>BuckyWagon_01_B.s250_LimByNLG5MaxPwr</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -2017,7 +2017,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_LimByOutCrnt</struct>
+      <struct>BuckyWagon_01_B.s250_LimByOutCrnt</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -2035,7 +2035,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s144_Gain1</struct>
+      <struct>BuckyWagon_01_B.s147_Gain1</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
    </VarDec>
    <VarDec>
@@ -2053,7 +2053,7 @@
       <format>1.3</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s178_Sum1</struct>
+      <struct>BuckyWagon_01_B.s181_Sum1</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy</group>
    </VarDec>
    <VarDec>
@@ -2071,7 +2071,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s251_Maximum_Rated_Power</struct>
+      <struct>BuckyWagon_01_B.s254_Maximum_Rated_Power</struct>
       <group>Sensors | EatonController</group>
    </VarDec>
    <VarDec>
@@ -2089,7 +2089,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s249_EMP_Pump_Speed</struct>
+      <struct>BuckyWagon_01_B.s252_EMP_Pump_Speed</struct>
       <group>Sensors | EHPAS</group>
    </VarDec>
    <VarDec>
@@ -2107,7 +2107,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s263_Merge</struct>
+      <struct>BuckyWagon_01_B.s266_Merge</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -2163,7 +2163,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s380_Merge</struct>
+      <struct>BuckyWagon_01_B.s383_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>Sensors | LVVolt | LVVolt</group>
    </VarDec>
@@ -2182,7 +2182,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s250_FaultSeverityIndicator</struct>
+      <struct>BuckyWagon_01_B.s253_FaultSeverityIndicator</struct>
       <group>Sensors | EatonCharger</group>
    </VarDec>
    <VarDec>
@@ -2200,7 +2200,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s250_OutputCurrent</struct>
+      <struct>BuckyWagon_01_B.s253_OutputCurrent</struct>
       <group>Sensors | EatonCharger</group>
    </VarDec>
    <VarDec>
@@ -2218,7 +2218,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_CANTimeout</struct>
+      <struct>BuckyWagon_01_B.s250_CANTimeout</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -2236,7 +2236,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_OutptCrntByBstr</struct>
+      <struct>BuckyWagon_01_B.s250_OutptCrntByBstr</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -2254,7 +2254,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_LimByTempXfrmr</struct>
+      <struct>BuckyWagon_01_B.s250_LimByTempXfrmr</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -2272,7 +2272,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_LimByNLG5MaxOutVlt</struct>
+      <struct>BuckyWagon_01_B.s250_LimByNLG5MaxOutVlt</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -2290,7 +2290,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s90_Merge</struct>
+      <struct>BuckyWagon_01_B.s93_Merge</struct>
       <group>Actuators | EatonCharger</group>
    </VarDec>
    <VarDec>
@@ -2308,7 +2308,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s251_Percent_Torque_Available</struct>
+      <struct>BuckyWagon_01_B.s254_Percent_Torque_Available</struct>
       <group>Sensors | EatonController</group>
    </VarDec>
    <VarDec>
@@ -2326,7 +2326,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s251_Fault_Severity_Indicator</struct>
+      <struct>BuckyWagon_01_B.s254_Fault_Severity_Indicator</struct>
       <group>Sensors | EatonController</group>
    </VarDec>
    <VarDec>
@@ -2344,7 +2344,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s248_EHPAS_Input_Current_NA</struct>
+      <struct>BuckyWagon_01_B.s251_EHPAS_Input_Current_NA</struct>
       <group>Sensors | EHPAS</group>
    </VarDec>
    <VarDec>
@@ -2362,7 +2362,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s245_bcm_chg_done</struct>
+      <struct>BuckyWagon_01_B.s248_bcm_chg_done</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -2380,7 +2380,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s140_Merge</struct>
+      <struct>BuckyWagon_01_B.s143_Merge</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Brusa Charger (No Longer Used)</group>
    </VarDec>
    <VarDec>
@@ -2399,7 +2399,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s50_MinMax1</struct>
+      <struct>BuckyWagon_01_B.s53_MinMax1</struct>
       <help>Actual duty cycle of actuator</help>
       <group>Actuators | Fan | FanOut</group>
    </VarDec>
@@ -2418,7 +2418,7 @@
       <format>1.3</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s393_Merge</struct>
+      <struct>BuckyWagon_01_B.s396_Merge</struct>
       <group>Sensors | Vehicle Speed</group>
    </VarDec>
    <VarDec>
@@ -2436,7 +2436,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s250_ChargerState</struct>
+      <struct>BuckyWagon_01_B.s253_ChargerState</struct>
       <group>Sensors | EatonCharger</group>
    </VarDec>
    <VarDec>
@@ -2454,7 +2454,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s250_IgnitionStatus</struct>
+      <struct>BuckyWagon_01_B.s253_IgnitionStatus</struct>
       <group>Sensors | EatonCharger</group>
    </VarDec>
    <VarDec>
@@ -2472,7 +2472,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_PwrLimByIntOvrTemp</struct>
+      <struct>BuckyWagon_01_B.s250_PwrLimByIntOvrTemp</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -2490,7 +2490,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_USAMainsL1</struct>
+      <struct>BuckyWagon_01_B.s250_USAMainsL1</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -2508,7 +2508,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_TempSensPwrStg</struct>
+      <struct>BuckyWagon_01_B.s250_TempSensPwrStg</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -2526,7 +2526,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_PwrStgShrtCkt</struct>
+      <struct>BuckyWagon_01_B.s250_PwrStgShrtCkt</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -2544,7 +2544,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_OutptActVlt</struct>
+      <struct>BuckyWagon_01_B.s250_OutptActVlt</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -2562,7 +2562,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_MainsActCrnt</struct>
+      <struct>BuckyWagon_01_B.s250_MainsActCrnt</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -2580,7 +2580,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s143_Sum1</struct>
+      <struct>BuckyWagon_01_B.s146_Sum1</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations|Odometer</group>
    </VarDec>
    <VarDec>
@@ -2598,7 +2598,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s144_Divide</struct>
+      <struct>BuckyWagon_01_B.s147_Divide</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
    </VarDec>
    <VarDec>
@@ -2616,7 +2616,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s144_Gain3</struct>
+      <struct>BuckyWagon_01_B.s147_Gain3</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
    </VarDec>
    <VarDec>
@@ -2634,7 +2634,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s144_Divide3</struct>
+      <struct>BuckyWagon_01_B.s147_Divide3</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
    </VarDec>
    <VarDec>
@@ -2671,7 +2671,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s118_LogicalOperator</struct>
+      <struct>BuckyWagon_01_B.s121_LogicalOperator</struct>
       <help>Accel pedal has been at zero position since key-up</help>
       <group>Diagnostic &amp; Protection</group>
    </VarDec>
@@ -2690,7 +2690,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s245_bcm_cpwr_cmd</struct>
+      <struct>BuckyWagon_01_B.s248_bcm_cpwr_cmd</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -2765,7 +2765,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_PwrLimByLowMainsVlt</struct>
+      <struct>BuckyWagon_01_B.s250_PwrLimByLowMainsVlt</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -2783,7 +2783,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_USAMainsL2</struct>
+      <struct>BuckyWagon_01_B.s250_USAMainsL2</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -2801,7 +2801,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_MainsCrntByCntrlPlt</struct>
+      <struct>BuckyWagon_01_B.s250_MainsCrntByCntrlPlt</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -2819,7 +2819,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_LimByCntrlPlt</struct>
+      <struct>BuckyWagon_01_B.s250_LimByCntrlPlt</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -2837,7 +2837,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s144_Gain8</struct>
+      <struct>BuckyWagon_01_B.s147_Gain8</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
    </VarDec>
    <VarDec>
@@ -2855,7 +2855,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s107_Merge</struct>
+      <struct>BuckyWagon_01_B.s110_Merge</struct>
       <group>Actuators | Solectria</group>
    </VarDec>
    <VarDec>
@@ -2873,7 +2873,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s251_Inverter_Temperature</struct>
+      <struct>BuckyWagon_01_B.s254_Inverter_Temperature</struct>
       <group>Sensors | EatonController</group>
    </VarDec>
    <VarDec>
@@ -2891,7 +2891,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s251_Message_Checksum</struct>
+      <struct>BuckyWagon_01_B.s254_Message_Checksum</struct>
       <group>Sensors | EatonController</group>
    </VarDec>
    <VarDec>
@@ -2909,7 +2909,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s245_bcm_lvbat</struct>
+      <struct>BuckyWagon_01_B.s248_bcm_lvbat</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -2927,7 +2927,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s245_bcm_cell_vmin</struct>
+      <struct>BuckyWagon_01_B.s248_bcm_cell_vmin</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -2945,7 +2945,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s245_bcm_cpwr_mon</struct>
+      <struct>BuckyWagon_01_B.s248_bcm_cpwr_mon</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -3039,7 +3039,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s250_MessageChecksum</struct>
+      <struct>BuckyWagon_01_B.s253_MessageChecksum</struct>
       <group>Sensors | EatonCharger</group>
    </VarDec>
    <VarDec>
@@ -3057,7 +3057,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_PwrLimByLowBattVlt</struct>
+      <struct>BuckyWagon_01_B.s250_PwrLimByLowBattVlt</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -3075,7 +3075,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_PlsbltyOutptVltMeas</struct>
+      <struct>BuckyWagon_01_B.s250_PlsbltyOutptVltMeas</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -3093,7 +3093,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_AuxBattVlt</struct>
+      <struct>BuckyWagon_01_B.s250_AuxBattVlt</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -3111,7 +3111,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s144_Gain5</struct>
+      <struct>BuckyWagon_01_B.s147_Gain5</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
    </VarDec>
    <VarDec>
@@ -3129,7 +3129,7 @@
       <format>1.3</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s226_minTimer</struct>
+      <struct>BuckyWagon_01_B.s229_minTimer</struct>
       <group>BuckyWagon_01|Foreground|MiniViewDisplay|GetFaultName</group>
    </VarDec>
    <VarDec>
@@ -3147,7 +3147,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s251_Maximum_Rated_Speed</struct>
+      <struct>BuckyWagon_01_B.s254_Maximum_Rated_Speed</struct>
       <group>Sensors | EatonController</group>
    </VarDec>
    <VarDec>
@@ -3165,7 +3165,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s251_Isolation_Resistance</struct>
+      <struct>BuckyWagon_01_B.s254_Isolation_Resistance</struct>
       <group>Sensors | EatonController</group>
    </VarDec>
    <VarDec>
@@ -3183,7 +3183,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s249_EMP_Board_Temp</struct>
+      <struct>BuckyWagon_01_B.s252_EMP_Board_Temp</struct>
       <group>Sensors | EHPAS</group>
    </VarDec>
    <VarDec>
@@ -3201,7 +3201,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s248_EHPAS_TempCur</struct>
+      <struct>BuckyWagon_01_B.s251_EHPAS_TempCur</struct>
       <group>Sensors | EHPAS</group>
    </VarDec>
    <VarDec>
@@ -3219,7 +3219,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s245_bcm_cell_vmax</struct>
+      <struct>BuckyWagon_01_B.s248_bcm_cell_vmax</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -3237,7 +3237,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s161_Product</struct>
+      <struct>BuckyWagon_01_B.s164_Product</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving|Regen</group>
    </VarDec>
    <VarDec>
@@ -3274,7 +3274,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_ShtdwnThresBattAhrs</struct>
+      <struct>BuckyWagon_01_B.s250_ShtdwnThresBattAhrs</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -3292,7 +3292,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_ShtdwnThresBattVlt</struct>
+      <struct>BuckyWagon_01_B.s250_ShtdwnThresBattVlt</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -3310,7 +3310,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_LimByTempDiode</struct>
+      <struct>BuckyWagon_01_B.s250_LimByTempDiode</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -3328,7 +3328,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s286_Merge</struct>
+      <struct>BuckyWagon_01_B.s289_Merge</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -3346,7 +3346,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s251_Message_Counter</struct>
+      <struct>BuckyWagon_01_B.s254_Message_Counter</struct>
       <group>Sensors | EatonController</group>
    </VarDec>
    <VarDec>
@@ -3364,7 +3364,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s245_bcm_veh_mon</struct>
+      <struct>BuckyWagon_01_B.s248_bcm_veh_mon</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -3382,7 +3382,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s245_bcm_cell_tmin</struct>
+      <struct>BuckyWagon_01_B.s248_bcm_cell_tmin</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -3400,7 +3400,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s245_bcm_cool_req</struct>
+      <struct>BuckyWagon_01_B.s248_bcm_cool_req</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -3418,7 +3418,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s262_Merge</struct>
+      <struct>BuckyWagon_01_B.s265_Merge</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -3436,7 +3436,7 @@
       <format>1.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s138_timer</struct>
+      <struct>BuckyWagon_01_B.s141_timer</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Brusa Charger (No Longer Used)</group>
    </VarDec>
    <VarDec>
@@ -3454,7 +3454,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s56_Merge</struct>
+      <struct>BuckyWagon_01_B.s59_Merge</struct>
       <group>Actuators | Brusa</group>
    </VarDec>
    <VarDec>
@@ -3492,7 +3492,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s392_Sum</struct>
+      <struct>BuckyWagon_01_B.s395_Sum</struct>
       <group>BuckyWagon_01</group>
    </VarDec>
    <VarDec>
@@ -3530,7 +3530,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s250_Eaton_HV_Charger_Temperature</struct>
+      <struct>BuckyWagon_01_B.s253_Eaton_HV_Charger_Temperature</struct>
       <group>Sensors | EatonCharger</group>
    </VarDec>
    <VarDec>
@@ -3548,7 +3548,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_CntrlPltDet</struct>
+      <struct>BuckyWagon_01_B.s250_CntrlPltDet</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -3566,7 +3566,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_PwrStgTemp</struct>
+      <struct>BuckyWagon_01_B.s250_PwrStgTemp</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -3584,7 +3584,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_OutptActCrnt</struct>
+      <struct>BuckyWagon_01_B.s250_OutptActCrnt</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -3602,7 +3602,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_MainsActVlt</struct>
+      <struct>BuckyWagon_01_B.s250_MainsActVlt</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -3620,7 +3620,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_LimByPwrInd</struct>
+      <struct>BuckyWagon_01_B.s250_LimByPwrInd</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -3638,7 +3638,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s144_Gain6</struct>
+      <struct>BuckyWagon_01_B.s147_Gain6</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
    </VarDec>
    <VarDec>
@@ -3656,7 +3656,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s82_ctrlState</struct>
+      <struct>BuckyWagon_01_B.s85_ctrlState</struct>
       <group>Actuators | EatonController</group>
    </VarDec>
    <VarDec>
@@ -3674,7 +3674,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s249_EMP_Pump_Mode</struct>
+      <struct>BuckyWagon_01_B.s252_EMP_Pump_Mode</struct>
       <group>Sensors | EHPAS</group>
    </VarDec>
    <VarDec>
@@ -3692,7 +3692,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s248_EHPAS_TempMax</struct>
+      <struct>BuckyWagon_01_B.s251_EHPAS_TempMax</struct>
       <group>Sensors | EHPAS</group>
    </VarDec>
    <VarDec>
@@ -3710,7 +3710,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s264_Merge</struct>
+      <struct>BuckyWagon_01_B.s267_Merge</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -3728,7 +3728,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s245_bcm_cell_tmax</struct>
+      <struct>BuckyWagon_01_B.s248_bcm_cell_tmax</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -3746,7 +3746,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s161_Product2</struct>
+      <struct>BuckyWagon_01_B.s164_Product2</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving|Regen</group>
    </VarDec>
    <VarDec>
@@ -3764,7 +3764,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s250_InputVoltage</struct>
+      <struct>BuckyWagon_01_B.s253_InputVoltage</struct>
       <group>Sensors | EatonCharger</group>
    </VarDec>
    <VarDec>
@@ -3782,7 +3782,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_CAN_Rcv</struct>
+      <struct>BuckyWagon_01_B.s250_CAN_Rcv</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -3800,7 +3800,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_BattPolarity</struct>
+      <struct>BuckyWagon_01_B.s250_BattPolarity</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -3818,7 +3818,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_OutptFuseDefect</struct>
+      <struct>BuckyWagon_01_B.s250_OutptFuseDefect</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -3836,7 +3836,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_AhrsByExtShnt</struct>
+      <struct>BuckyWagon_01_B.s250_AhrsByExtShnt</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -3854,7 +3854,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_MainsCrntByPwrInd</struct>
+      <struct>BuckyWagon_01_B.s250_MainsCrntByPwrInd</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -3872,7 +3872,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_LimByNLG5MaxOutCrnt</struct>
+      <struct>BuckyWagon_01_B.s250_LimByNLG5MaxOutCrnt</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -3890,7 +3890,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s144_Gain</struct>
+      <struct>BuckyWagon_01_B.s147_Gain</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
    </VarDec>
    <VarDec>
@@ -3908,7 +3908,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s125_Switch1</struct>
+      <struct>BuckyWagon_01_B.s128_Switch1</struct>
       <group>BuckyWagon_01|Foreground|Addl_Fault_Detection|Traction Drive</group>
    </VarDec>
    <VarDec>
@@ -3926,7 +3926,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s362_Merge</struct>
+      <struct>BuckyWagon_01_B.s365_Merge</struct>
       <group>Sensors | EatonController</group>
    </VarDec>
    <VarDec>
@@ -3944,7 +3944,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s248_EHPAS_Op_State</struct>
+      <struct>BuckyWagon_01_B.s251_EHPAS_Op_State</struct>
       <group>Sensors | EHPAS</group>
    </VarDec>
    <VarDec>
@@ -3962,7 +3962,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s245_bcm_dis_max</struct>
+      <struct>BuckyWagon_01_B.s248_bcm_dis_max</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -3980,7 +3980,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s245_bcm_epo</struct>
+      <struct>BuckyWagon_01_B.s248_bcm_epo</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -3998,7 +3998,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s161_Saturation1</struct>
+      <struct>BuckyWagon_01_B.s164_Saturation1</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving|Regen</group>
    </VarDec>
    <VarDec>
@@ -4016,7 +4016,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s139_Sum1</struct>
+      <struct>BuckyWagon_01_B.s142_Sum1</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Brusa Charger (No Longer Used)</group>
    </VarDec>
    <VarDec>
@@ -4034,7 +4034,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s59_Merge</struct>
+      <struct>BuckyWagon_01_B.s62_Merge</struct>
       <group>Actuators | Brusa</group>
    </VarDec>
    <VarDec>
@@ -4071,7 +4071,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_CANOff</struct>
+      <struct>BuckyWagon_01_B.s250_CANOff</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -4089,7 +4089,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_Initialization</struct>
+      <struct>BuckyWagon_01_B.s250_Initialization</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -4107,7 +4107,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_EEPROMPOWChksmFail</struct>
+      <struct>BuckyWagon_01_B.s250_EEPROMPOWChksmFail</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -4125,7 +4125,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_TempExtrn1</struct>
+      <struct>BuckyWagon_01_B.s250_TempExtrn1</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
    </VarDec>
    <VarDec>
@@ -4143,7 +4143,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s258_Merge</struct>
+      <struct>BuckyWagon_01_B.s261_Merge</struct>
       <group>BuckyWagon_01|Foreground|Sensors</group>
    </VarDec>
    <VarDec>
@@ -4161,7 +4161,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s143_UnitDelay</struct>
+      <struct>BuckyWagon_01_B.s146_Sum</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations|Odometer</group>
    </VarDec>
    <VarDec>
@@ -4179,7 +4179,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s93_Merge</struct>
+      <struct>BuckyWagon_01_B.s96_Merge</struct>
       <group>Actuators | EatonCharger</group>
    </VarDec>
    <VarDec>
@@ -4197,7 +4197,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s251_DC_Bus_Voltage</struct>
+      <struct>BuckyWagon_01_B.s254_DC_Bus_Voltage</struct>
       <group>Sensors | EatonController</group>
    </VarDec>
    <VarDec>
@@ -4215,7 +4215,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s251_DC_Bus_Current</struct>
+      <struct>BuckyWagon_01_B.s254_DC_Bus_Current</struct>
       <group>Sensors | EatonController</group>
    </VarDec>
    <VarDec>
@@ -4233,7 +4233,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s363_Merge</struct>
+      <struct>BuckyWagon_01_B.s366_Merge</struct>
       <group>Sensors | EatonController</group>
    </VarDec>
    <VarDec>
@@ -4251,7 +4251,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s245_bcm_ibat</struct>
+      <struct>BuckyWagon_01_B.s248_bcm_ibat</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -4269,7 +4269,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s245_bcm_gfd</struct>
+      <struct>BuckyWagon_01_B.s248_bcm_gfd</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -4287,7 +4287,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s155_Sum1</struct>
+      <struct>BuckyWagon_01_B.s158_Sum1</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|HillHold Algorithm|HillHold PI Controller1</group>
    </VarDec>
    <VarDec>
@@ -4305,7 +4305,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s55_Merge</struct>
+      <struct>BuckyWagon_01_B.s58_Merge</struct>
       <group>Actuators | Brusa</group>
    </VarDec>
    <VarDec>
@@ -5761,7 +5761,7 @@
       <type>char</type>
       <text_len>80</text_len>
       <ctype>uint1</ctype>
-      <struct>MotoHawkTokenGUID[0]</struct>
+      <struct>MotoHawkBuildGUID[0]</struct>
       <help>GUID identifying the MotoHawk build session</help>
       <group>System | Version</group>
    </VarDec>
@@ -6029,118 +6029,6 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>dout_create_MPRD</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>0.0</max>
-      <min>0.0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>E_NativeFWError</ctype>
-      <struct>dout_create_MPRD</struct>
-      <help>Debug Variable</help>
-      <group>System | Debug | Resources | DiscreteOut</group>
-      <enum name="E_NativeFWError">
-         <item name="Normal Operation" value="0"/>
-         <item name="Bad Resource ID" value="1"/>
-         <item name="Hardware Not Supported" value="2"/>
-         <item name="Behaviour Not Supported" value="3"/>
-         <item name="Bad Attribute Data" value="4"/>
-         <item name="Fail On Create" value="5"/>
-         <item name="Fail On Set Attributes" value="6"/>
-         <item name="Resource Not Created" value="7"/>
-         <item name="Missing Attribute" value="8"/>
-         <item name="Behaviour Method Not Supported" value="9"/>
-         <item name="A Service Failed" value="10"/>
-         <item name="Failed to destroy a resource" value="11"/>
-         <item name="Resource Was Created" value="12"/>
-         <item name="Resource Conflict" value="13"/>
-         <item name="Invalid Encoder Type" value="14"/>
-         <item name="2-Strike Not Supported" value="15"/>
-         <item name="720degCA Pattern Not Supported" value="16"/>
-         <item name="CAM Pattern Not Supported" value="17"/>
-         <item name="Unknown CAM Pattern Supplied" value="18"/>
-         <item name="Engine Speed Present" value="19"/>
-         <item name="Hardware Interface Not Supported" value="20"/>
-         <item name="Service Already Started" value="21"/>
-         <item name="Register Write Failed to verify" value="22"/>
-         <item name="Register access was denied" value="23"/>
-         <item name="Out of free store memory" value="24"/>
-         <item name="Software Q Overrun" value="25"/>
-         <item name="Hardware Q Overrun" value="26"/>
-         <item name="Feature unsupported in archive" value="27"/>
-         <item name="Insufficient FW resource" value="28"/>
-         <item name="OS Resource conflict" value="29"/>
-         <item name="Driver Mode conflict" value="30"/>
-         <item name="RTC time is illegal" value="31"/>
-         <item name="FFS unmounted" value="32"/>
-         <item name="Access from an ISR" value="33"/>
-         <item name="FFS internal" value="34"/>
-         <item name="Operation timed out" value="35"/>
-         <item name="Task Kernel API Usage" value="36"/>
-         <item name="Operation aborted" value="37"/>
-         <item name="File not Found" value="38"/>
-         <item name="Invalid characters in filename" value="39"/>
-         <item name="Duplicate filename" value="40"/>
-         <item name="Filename is too long" value="41"/>
-         <item name="Dir not empty on remove" value="42"/>
-         <item name="Dir not found" value="43"/>
-         <item name="Dir name invalid" value="44"/>
-         <item name="Dir exists" value="45"/>
-         <item name="Dir too deep" value="46"/>
-         <item name="Illegal Handle" value="47"/>
-         <item name="End of File" value="48"/>
-         <item name="Media Full" value="49"/>
-         <item name="Media Write" value="50"/>
-         <item name="Media Read" value="51"/>
-         <item name="Media Write Protected" value="52"/>
-         <item name="File Read Only" value="53"/>
-         <item name="FS Media Changed" value="54"/>
-         <item name="Internal USB" value="55"/>
-         <item name="Voltage too high for USB IC" value="56"/>
-         <item name="Encoder not created" value="57"/>
-         <item name="TPU Chan Conflict" value="64"/>
-         <item name="TPU Func Unavailable" value="65"/>
-         <item name="TPU Config" value="66"/>
-         <item name="TPU Primative Usage" value="67"/>
-         <item name="TPU Primitive Count" value="68"/>
-         <item name="TPU Restricted TPU channel" value="69"/>
-         <item name="TPU Not Created" value="70"/>
-         <item name="TPU Self Modify constant write err" value="71"/>
-         <item name="TPU Error 0x48" value="72"/>
-         <item name="TPU Error 0x49" value="73"/>
-         <item name="TPU Error 0x4A" value="74"/>
-         <item name="TPU Error 0x4B" value="75"/>
-         <item name="TPU Error 0x4C" value="76"/>
-         <item name="TPU Error 0x4D" value="77"/>
-         <item name="TPU Error 0x4E" value="78"/>
-         <item name="TPU Error 0x4F" value="79"/>
-         <item name="TPU Error 0x50" value="80"/>
-         <item name="TPU Error 0x51" value="81"/>
-         <item name="TPU Error 0x52" value="82"/>
-         <item name="TPU Error 0x53" value="83"/>
-         <item name="TPU Error 0x54" value="84"/>
-         <item name="TPU Error 0x55" value="85"/>
-         <item name="TPU Error 0x56" value="86"/>
-         <item name="TPU Error 0x57" value="87"/>
-         <item name="TPU Error 0x58" value="88"/>
-         <item name="TPU Error 0x59" value="89"/>
-         <item name="TPU Error 0x5A" value="90"/>
-         <item name="TPU Error 0x5B" value="91"/>
-         <item name="TPU Error 0x5C" value="92"/>
-         <item name="TPU Error 0x5D" value="93"/>
-         <item name="TPU Error 0x5E" value="94"/>
-         <item name="TPU Error 0x5F" value="95"/>
-         <default>Illegal Error</default>
-      </enum>
-   </VarDec>
-   <VarDec>
       <name>ApplicationStopReasonBlock</name>
       <class>enum</class>
       <access>RO RO RO RO</access>
@@ -6189,118 +6077,6 @@
       <struct>resource_allocation</struct>
       <help>Debug Variable</help>
       <group>System | Debug | Resources | Other</group>
-      <enum name="E_NativeFWError">
-         <item name="Normal Operation" value="0"/>
-         <item name="Bad Resource ID" value="1"/>
-         <item name="Hardware Not Supported" value="2"/>
-         <item name="Behaviour Not Supported" value="3"/>
-         <item name="Bad Attribute Data" value="4"/>
-         <item name="Fail On Create" value="5"/>
-         <item name="Fail On Set Attributes" value="6"/>
-         <item name="Resource Not Created" value="7"/>
-         <item name="Missing Attribute" value="8"/>
-         <item name="Behaviour Method Not Supported" value="9"/>
-         <item name="A Service Failed" value="10"/>
-         <item name="Failed to destroy a resource" value="11"/>
-         <item name="Resource Was Created" value="12"/>
-         <item name="Resource Conflict" value="13"/>
-         <item name="Invalid Encoder Type" value="14"/>
-         <item name="2-Strike Not Supported" value="15"/>
-         <item name="720degCA Pattern Not Supported" value="16"/>
-         <item name="CAM Pattern Not Supported" value="17"/>
-         <item name="Unknown CAM Pattern Supplied" value="18"/>
-         <item name="Engine Speed Present" value="19"/>
-         <item name="Hardware Interface Not Supported" value="20"/>
-         <item name="Service Already Started" value="21"/>
-         <item name="Register Write Failed to verify" value="22"/>
-         <item name="Register access was denied" value="23"/>
-         <item name="Out of free store memory" value="24"/>
-         <item name="Software Q Overrun" value="25"/>
-         <item name="Hardware Q Overrun" value="26"/>
-         <item name="Feature unsupported in archive" value="27"/>
-         <item name="Insufficient FW resource" value="28"/>
-         <item name="OS Resource conflict" value="29"/>
-         <item name="Driver Mode conflict" value="30"/>
-         <item name="RTC time is illegal" value="31"/>
-         <item name="FFS unmounted" value="32"/>
-         <item name="Access from an ISR" value="33"/>
-         <item name="FFS internal" value="34"/>
-         <item name="Operation timed out" value="35"/>
-         <item name="Task Kernel API Usage" value="36"/>
-         <item name="Operation aborted" value="37"/>
-         <item name="File not Found" value="38"/>
-         <item name="Invalid characters in filename" value="39"/>
-         <item name="Duplicate filename" value="40"/>
-         <item name="Filename is too long" value="41"/>
-         <item name="Dir not empty on remove" value="42"/>
-         <item name="Dir not found" value="43"/>
-         <item name="Dir name invalid" value="44"/>
-         <item name="Dir exists" value="45"/>
-         <item name="Dir too deep" value="46"/>
-         <item name="Illegal Handle" value="47"/>
-         <item name="End of File" value="48"/>
-         <item name="Media Full" value="49"/>
-         <item name="Media Write" value="50"/>
-         <item name="Media Read" value="51"/>
-         <item name="Media Write Protected" value="52"/>
-         <item name="File Read Only" value="53"/>
-         <item name="FS Media Changed" value="54"/>
-         <item name="Internal USB" value="55"/>
-         <item name="Voltage too high for USB IC" value="56"/>
-         <item name="Encoder not created" value="57"/>
-         <item name="TPU Chan Conflict" value="64"/>
-         <item name="TPU Func Unavailable" value="65"/>
-         <item name="TPU Config" value="66"/>
-         <item name="TPU Primative Usage" value="67"/>
-         <item name="TPU Primitive Count" value="68"/>
-         <item name="TPU Restricted TPU channel" value="69"/>
-         <item name="TPU Not Created" value="70"/>
-         <item name="TPU Self Modify constant write err" value="71"/>
-         <item name="TPU Error 0x48" value="72"/>
-         <item name="TPU Error 0x49" value="73"/>
-         <item name="TPU Error 0x4A" value="74"/>
-         <item name="TPU Error 0x4B" value="75"/>
-         <item name="TPU Error 0x4C" value="76"/>
-         <item name="TPU Error 0x4D" value="77"/>
-         <item name="TPU Error 0x4E" value="78"/>
-         <item name="TPU Error 0x4F" value="79"/>
-         <item name="TPU Error 0x50" value="80"/>
-         <item name="TPU Error 0x51" value="81"/>
-         <item name="TPU Error 0x52" value="82"/>
-         <item name="TPU Error 0x53" value="83"/>
-         <item name="TPU Error 0x54" value="84"/>
-         <item name="TPU Error 0x55" value="85"/>
-         <item name="TPU Error 0x56" value="86"/>
-         <item name="TPU Error 0x57" value="87"/>
-         <item name="TPU Error 0x58" value="88"/>
-         <item name="TPU Error 0x59" value="89"/>
-         <item name="TPU Error 0x5A" value="90"/>
-         <item name="TPU Error 0x5B" value="91"/>
-         <item name="TPU Error 0x5C" value="92"/>
-         <item name="TPU Error 0x5D" value="93"/>
-         <item name="TPU Error 0x5E" value="94"/>
-         <item name="TPU Error 0x5F" value="95"/>
-         <default>Illegal Error</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>din_read_EStop_Switch_Pin</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>0.0</max>
-      <min>0.0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>E_NativeFWError</ctype>
-      <struct>din_read_EStop_Switch_Pin</struct>
-      <help>Debug Variable</help>
-      <group>System | Debug | Resources | DigitalInput</group>
       <enum name="E_NativeFWError">
          <item name="Normal Operation" value="0"/>
          <item name="Bad Resource ID" value="1"/>
@@ -6508,6 +6284,118 @@
       </enum>
    </VarDec>
    <VarDec>
+      <name>din_read_EStop_Switch_Pin</name>
+      <class>enum</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <gain>1.0</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>0.0</max>
+      <min>0.0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>E_NativeFWError</ctype>
+      <struct>din_read_EStop_Switch_Pin</struct>
+      <help>Debug Variable</help>
+      <group>System | Debug | Resources | DigitalInput</group>
+      <enum name="E_NativeFWError">
+         <item name="Normal Operation" value="0"/>
+         <item name="Bad Resource ID" value="1"/>
+         <item name="Hardware Not Supported" value="2"/>
+         <item name="Behaviour Not Supported" value="3"/>
+         <item name="Bad Attribute Data" value="4"/>
+         <item name="Fail On Create" value="5"/>
+         <item name="Fail On Set Attributes" value="6"/>
+         <item name="Resource Not Created" value="7"/>
+         <item name="Missing Attribute" value="8"/>
+         <item name="Behaviour Method Not Supported" value="9"/>
+         <item name="A Service Failed" value="10"/>
+         <item name="Failed to destroy a resource" value="11"/>
+         <item name="Resource Was Created" value="12"/>
+         <item name="Resource Conflict" value="13"/>
+         <item name="Invalid Encoder Type" value="14"/>
+         <item name="2-Strike Not Supported" value="15"/>
+         <item name="720degCA Pattern Not Supported" value="16"/>
+         <item name="CAM Pattern Not Supported" value="17"/>
+         <item name="Unknown CAM Pattern Supplied" value="18"/>
+         <item name="Engine Speed Present" value="19"/>
+         <item name="Hardware Interface Not Supported" value="20"/>
+         <item name="Service Already Started" value="21"/>
+         <item name="Register Write Failed to verify" value="22"/>
+         <item name="Register access was denied" value="23"/>
+         <item name="Out of free store memory" value="24"/>
+         <item name="Software Q Overrun" value="25"/>
+         <item name="Hardware Q Overrun" value="26"/>
+         <item name="Feature unsupported in archive" value="27"/>
+         <item name="Insufficient FW resource" value="28"/>
+         <item name="OS Resource conflict" value="29"/>
+         <item name="Driver Mode conflict" value="30"/>
+         <item name="RTC time is illegal" value="31"/>
+         <item name="FFS unmounted" value="32"/>
+         <item name="Access from an ISR" value="33"/>
+         <item name="FFS internal" value="34"/>
+         <item name="Operation timed out" value="35"/>
+         <item name="Task Kernel API Usage" value="36"/>
+         <item name="Operation aborted" value="37"/>
+         <item name="File not Found" value="38"/>
+         <item name="Invalid characters in filename" value="39"/>
+         <item name="Duplicate filename" value="40"/>
+         <item name="Filename is too long" value="41"/>
+         <item name="Dir not empty on remove" value="42"/>
+         <item name="Dir not found" value="43"/>
+         <item name="Dir name invalid" value="44"/>
+         <item name="Dir exists" value="45"/>
+         <item name="Dir too deep" value="46"/>
+         <item name="Illegal Handle" value="47"/>
+         <item name="End of File" value="48"/>
+         <item name="Media Full" value="49"/>
+         <item name="Media Write" value="50"/>
+         <item name="Media Read" value="51"/>
+         <item name="Media Write Protected" value="52"/>
+         <item name="File Read Only" value="53"/>
+         <item name="FS Media Changed" value="54"/>
+         <item name="Internal USB" value="55"/>
+         <item name="Voltage too high for USB IC" value="56"/>
+         <item name="Encoder not created" value="57"/>
+         <item name="TPU Chan Conflict" value="64"/>
+         <item name="TPU Func Unavailable" value="65"/>
+         <item name="TPU Config" value="66"/>
+         <item name="TPU Primative Usage" value="67"/>
+         <item name="TPU Primitive Count" value="68"/>
+         <item name="TPU Restricted TPU channel" value="69"/>
+         <item name="TPU Not Created" value="70"/>
+         <item name="TPU Self Modify constant write err" value="71"/>
+         <item name="TPU Error 0x48" value="72"/>
+         <item name="TPU Error 0x49" value="73"/>
+         <item name="TPU Error 0x4A" value="74"/>
+         <item name="TPU Error 0x4B" value="75"/>
+         <item name="TPU Error 0x4C" value="76"/>
+         <item name="TPU Error 0x4D" value="77"/>
+         <item name="TPU Error 0x4E" value="78"/>
+         <item name="TPU Error 0x4F" value="79"/>
+         <item name="TPU Error 0x50" value="80"/>
+         <item name="TPU Error 0x51" value="81"/>
+         <item name="TPU Error 0x52" value="82"/>
+         <item name="TPU Error 0x53" value="83"/>
+         <item name="TPU Error 0x54" value="84"/>
+         <item name="TPU Error 0x55" value="85"/>
+         <item name="TPU Error 0x56" value="86"/>
+         <item name="TPU Error 0x57" value="87"/>
+         <item name="TPU Error 0x58" value="88"/>
+         <item name="TPU Error 0x59" value="89"/>
+         <item name="TPU Error 0x5A" value="90"/>
+         <item name="TPU Error 0x5B" value="91"/>
+         <item name="TPU Error 0x5C" value="92"/>
+         <item name="TPU Error 0x5D" value="93"/>
+         <item name="TPU Error 0x5E" value="94"/>
+         <item name="TPU Error 0x5F" value="95"/>
+         <default>Illegal Error</default>
+      </enum>
+   </VarDec>
+   <VarDec>
       <name>EHPAS_PumpState_probe</name>
       <class>enum</class>
       <access>RO RO RO RO</access>
@@ -6522,7 +6410,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s171_PumpState</struct>
+      <struct>BuckyWagon_01_B.s174_PumpState</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|EHPAS_PercentControl</group>
       <enum name="VarDecEnum_11">
          <item name="Off" value="0"/>
@@ -6983,118 +6871,6 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>dout_create_ReverseOut_Pin</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>0.0</max>
-      <min>0.0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>E_NativeFWError</ctype>
-      <struct>dout_create_ReverseOut_Pin</struct>
-      <help>Debug Variable</help>
-      <group>System | Debug | Resources | DiscreteOut</group>
-      <enum name="E_NativeFWError">
-         <item name="Normal Operation" value="0"/>
-         <item name="Bad Resource ID" value="1"/>
-         <item name="Hardware Not Supported" value="2"/>
-         <item name="Behaviour Not Supported" value="3"/>
-         <item name="Bad Attribute Data" value="4"/>
-         <item name="Fail On Create" value="5"/>
-         <item name="Fail On Set Attributes" value="6"/>
-         <item name="Resource Not Created" value="7"/>
-         <item name="Missing Attribute" value="8"/>
-         <item name="Behaviour Method Not Supported" value="9"/>
-         <item name="A Service Failed" value="10"/>
-         <item name="Failed to destroy a resource" value="11"/>
-         <item name="Resource Was Created" value="12"/>
-         <item name="Resource Conflict" value="13"/>
-         <item name="Invalid Encoder Type" value="14"/>
-         <item name="2-Strike Not Supported" value="15"/>
-         <item name="720degCA Pattern Not Supported" value="16"/>
-         <item name="CAM Pattern Not Supported" value="17"/>
-         <item name="Unknown CAM Pattern Supplied" value="18"/>
-         <item name="Engine Speed Present" value="19"/>
-         <item name="Hardware Interface Not Supported" value="20"/>
-         <item name="Service Already Started" value="21"/>
-         <item name="Register Write Failed to verify" value="22"/>
-         <item name="Register access was denied" value="23"/>
-         <item name="Out of free store memory" value="24"/>
-         <item name="Software Q Overrun" value="25"/>
-         <item name="Hardware Q Overrun" value="26"/>
-         <item name="Feature unsupported in archive" value="27"/>
-         <item name="Insufficient FW resource" value="28"/>
-         <item name="OS Resource conflict" value="29"/>
-         <item name="Driver Mode conflict" value="30"/>
-         <item name="RTC time is illegal" value="31"/>
-         <item name="FFS unmounted" value="32"/>
-         <item name="Access from an ISR" value="33"/>
-         <item name="FFS internal" value="34"/>
-         <item name="Operation timed out" value="35"/>
-         <item name="Task Kernel API Usage" value="36"/>
-         <item name="Operation aborted" value="37"/>
-         <item name="File not Found" value="38"/>
-         <item name="Invalid characters in filename" value="39"/>
-         <item name="Duplicate filename" value="40"/>
-         <item name="Filename is too long" value="41"/>
-         <item name="Dir not empty on remove" value="42"/>
-         <item name="Dir not found" value="43"/>
-         <item name="Dir name invalid" value="44"/>
-         <item name="Dir exists" value="45"/>
-         <item name="Dir too deep" value="46"/>
-         <item name="Illegal Handle" value="47"/>
-         <item name="End of File" value="48"/>
-         <item name="Media Full" value="49"/>
-         <item name="Media Write" value="50"/>
-         <item name="Media Read" value="51"/>
-         <item name="Media Write Protected" value="52"/>
-         <item name="File Read Only" value="53"/>
-         <item name="FS Media Changed" value="54"/>
-         <item name="Internal USB" value="55"/>
-         <item name="Voltage too high for USB IC" value="56"/>
-         <item name="Encoder not created" value="57"/>
-         <item name="TPU Chan Conflict" value="64"/>
-         <item name="TPU Func Unavailable" value="65"/>
-         <item name="TPU Config" value="66"/>
-         <item name="TPU Primative Usage" value="67"/>
-         <item name="TPU Primitive Count" value="68"/>
-         <item name="TPU Restricted TPU channel" value="69"/>
-         <item name="TPU Not Created" value="70"/>
-         <item name="TPU Self Modify constant write err" value="71"/>
-         <item name="TPU Error 0x48" value="72"/>
-         <item name="TPU Error 0x49" value="73"/>
-         <item name="TPU Error 0x4A" value="74"/>
-         <item name="TPU Error 0x4B" value="75"/>
-         <item name="TPU Error 0x4C" value="76"/>
-         <item name="TPU Error 0x4D" value="77"/>
-         <item name="TPU Error 0x4E" value="78"/>
-         <item name="TPU Error 0x4F" value="79"/>
-         <item name="TPU Error 0x50" value="80"/>
-         <item name="TPU Error 0x51" value="81"/>
-         <item name="TPU Error 0x52" value="82"/>
-         <item name="TPU Error 0x53" value="83"/>
-         <item name="TPU Error 0x54" value="84"/>
-         <item name="TPU Error 0x55" value="85"/>
-         <item name="TPU Error 0x56" value="86"/>
-         <item name="TPU Error 0x57" value="87"/>
-         <item name="TPU Error 0x58" value="88"/>
-         <item name="TPU Error 0x59" value="89"/>
-         <item name="TPU Error 0x5A" value="90"/>
-         <item name="TPU Error 0x5B" value="91"/>
-         <item name="TPU Error 0x5C" value="92"/>
-         <item name="TPU Error 0x5D" value="93"/>
-         <item name="TPU Error 0x5E" value="94"/>
-         <item name="TPU Error 0x5F" value="95"/>
-         <default>Illegal Error</default>
-      </enum>
-   </VarDec>
-   <VarDec>
       <name>NLG5FanActv</name>
       <class>enum</class>
       <access>RO RO RO RO</access>
@@ -7109,9 +6885,9 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_DataTypeConversion3</struct>
+      <struct>BuckyWagon_01_B.s250_DataTypeConversion3</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
-      <enum name="VarDecEnum_1">
+      <enum name="VarDecEnum_2">
          <item name="Off" value="0"/>
          <item name="On" value="1"/>
          <default>Unknown</default>
@@ -7270,7 +7046,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s60_Merge</struct>
+      <struct>BuckyWagon_01_B.s63_Merge</struct>
       <group>Actuators | Brusa</group>
       <enum name="VarDecEnum_5">
          <item name="Disabled" value="0"/>
@@ -8063,6 +7839,118 @@
       </enum>
    </VarDec>
    <VarDec>
+      <name>dout_create_DOut150p001</name>
+      <class>enum</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <gain>1.0</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>0.0</max>
+      <min>0.0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>E_NativeFWError</ctype>
+      <struct>dout_create_DOut150p001</struct>
+      <help>Debug Variable</help>
+      <group>System | Debug | Resources | DiscreteOut</group>
+      <enum name="E_NativeFWError">
+         <item name="Normal Operation" value="0"/>
+         <item name="Bad Resource ID" value="1"/>
+         <item name="Hardware Not Supported" value="2"/>
+         <item name="Behaviour Not Supported" value="3"/>
+         <item name="Bad Attribute Data" value="4"/>
+         <item name="Fail On Create" value="5"/>
+         <item name="Fail On Set Attributes" value="6"/>
+         <item name="Resource Not Created" value="7"/>
+         <item name="Missing Attribute" value="8"/>
+         <item name="Behaviour Method Not Supported" value="9"/>
+         <item name="A Service Failed" value="10"/>
+         <item name="Failed to destroy a resource" value="11"/>
+         <item name="Resource Was Created" value="12"/>
+         <item name="Resource Conflict" value="13"/>
+         <item name="Invalid Encoder Type" value="14"/>
+         <item name="2-Strike Not Supported" value="15"/>
+         <item name="720degCA Pattern Not Supported" value="16"/>
+         <item name="CAM Pattern Not Supported" value="17"/>
+         <item name="Unknown CAM Pattern Supplied" value="18"/>
+         <item name="Engine Speed Present" value="19"/>
+         <item name="Hardware Interface Not Supported" value="20"/>
+         <item name="Service Already Started" value="21"/>
+         <item name="Register Write Failed to verify" value="22"/>
+         <item name="Register access was denied" value="23"/>
+         <item name="Out of free store memory" value="24"/>
+         <item name="Software Q Overrun" value="25"/>
+         <item name="Hardware Q Overrun" value="26"/>
+         <item name="Feature unsupported in archive" value="27"/>
+         <item name="Insufficient FW resource" value="28"/>
+         <item name="OS Resource conflict" value="29"/>
+         <item name="Driver Mode conflict" value="30"/>
+         <item name="RTC time is illegal" value="31"/>
+         <item name="FFS unmounted" value="32"/>
+         <item name="Access from an ISR" value="33"/>
+         <item name="FFS internal" value="34"/>
+         <item name="Operation timed out" value="35"/>
+         <item name="Task Kernel API Usage" value="36"/>
+         <item name="Operation aborted" value="37"/>
+         <item name="File not Found" value="38"/>
+         <item name="Invalid characters in filename" value="39"/>
+         <item name="Duplicate filename" value="40"/>
+         <item name="Filename is too long" value="41"/>
+         <item name="Dir not empty on remove" value="42"/>
+         <item name="Dir not found" value="43"/>
+         <item name="Dir name invalid" value="44"/>
+         <item name="Dir exists" value="45"/>
+         <item name="Dir too deep" value="46"/>
+         <item name="Illegal Handle" value="47"/>
+         <item name="End of File" value="48"/>
+         <item name="Media Full" value="49"/>
+         <item name="Media Write" value="50"/>
+         <item name="Media Read" value="51"/>
+         <item name="Media Write Protected" value="52"/>
+         <item name="File Read Only" value="53"/>
+         <item name="FS Media Changed" value="54"/>
+         <item name="Internal USB" value="55"/>
+         <item name="Voltage too high for USB IC" value="56"/>
+         <item name="Encoder not created" value="57"/>
+         <item name="TPU Chan Conflict" value="64"/>
+         <item name="TPU Func Unavailable" value="65"/>
+         <item name="TPU Config" value="66"/>
+         <item name="TPU Primative Usage" value="67"/>
+         <item name="TPU Primitive Count" value="68"/>
+         <item name="TPU Restricted TPU channel" value="69"/>
+         <item name="TPU Not Created" value="70"/>
+         <item name="TPU Self Modify constant write err" value="71"/>
+         <item name="TPU Error 0x48" value="72"/>
+         <item name="TPU Error 0x49" value="73"/>
+         <item name="TPU Error 0x4A" value="74"/>
+         <item name="TPU Error 0x4B" value="75"/>
+         <item name="TPU Error 0x4C" value="76"/>
+         <item name="TPU Error 0x4D" value="77"/>
+         <item name="TPU Error 0x4E" value="78"/>
+         <item name="TPU Error 0x4F" value="79"/>
+         <item name="TPU Error 0x50" value="80"/>
+         <item name="TPU Error 0x51" value="81"/>
+         <item name="TPU Error 0x52" value="82"/>
+         <item name="TPU Error 0x53" value="83"/>
+         <item name="TPU Error 0x54" value="84"/>
+         <item name="TPU Error 0x55" value="85"/>
+         <item name="TPU Error 0x56" value="86"/>
+         <item name="TPU Error 0x57" value="87"/>
+         <item name="TPU Error 0x58" value="88"/>
+         <item name="TPU Error 0x59" value="89"/>
+         <item name="TPU Error 0x5A" value="90"/>
+         <item name="TPU Error 0x5B" value="91"/>
+         <item name="TPU Error 0x5C" value="92"/>
+         <item name="TPU Error 0x5D" value="93"/>
+         <item name="TPU Error 0x5E" value="94"/>
+         <item name="TPU Error 0x5F" value="95"/>
+         <default>Illegal Error</default>
+      </enum>
+   </VarDec>
+   <VarDec>
       <name>ain_create_ECUP</name>
       <class>enum</class>
       <access>RO RO RO RO</access>
@@ -8189,12 +8077,124 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s91_Merge</struct>
+      <struct>BuckyWagon_01_B.s94_Merge</struct>
       <group>Actuators | EatonCharger</group>
       <enum name="VarDecEnum_8">
          <item name="No Ventilation" value="0"/>
          <item name="Ventilation" value="1"/>
          <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>dout_create_DOut151p001</name>
+      <class>enum</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <gain>1.0</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>0.0</max>
+      <min>0.0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>E_NativeFWError</ctype>
+      <struct>dout_create_DOut151p001</struct>
+      <help>Debug Variable</help>
+      <group>System | Debug | Resources | DiscreteOut</group>
+      <enum name="E_NativeFWError">
+         <item name="Normal Operation" value="0"/>
+         <item name="Bad Resource ID" value="1"/>
+         <item name="Hardware Not Supported" value="2"/>
+         <item name="Behaviour Not Supported" value="3"/>
+         <item name="Bad Attribute Data" value="4"/>
+         <item name="Fail On Create" value="5"/>
+         <item name="Fail On Set Attributes" value="6"/>
+         <item name="Resource Not Created" value="7"/>
+         <item name="Missing Attribute" value="8"/>
+         <item name="Behaviour Method Not Supported" value="9"/>
+         <item name="A Service Failed" value="10"/>
+         <item name="Failed to destroy a resource" value="11"/>
+         <item name="Resource Was Created" value="12"/>
+         <item name="Resource Conflict" value="13"/>
+         <item name="Invalid Encoder Type" value="14"/>
+         <item name="2-Strike Not Supported" value="15"/>
+         <item name="720degCA Pattern Not Supported" value="16"/>
+         <item name="CAM Pattern Not Supported" value="17"/>
+         <item name="Unknown CAM Pattern Supplied" value="18"/>
+         <item name="Engine Speed Present" value="19"/>
+         <item name="Hardware Interface Not Supported" value="20"/>
+         <item name="Service Already Started" value="21"/>
+         <item name="Register Write Failed to verify" value="22"/>
+         <item name="Register access was denied" value="23"/>
+         <item name="Out of free store memory" value="24"/>
+         <item name="Software Q Overrun" value="25"/>
+         <item name="Hardware Q Overrun" value="26"/>
+         <item name="Feature unsupported in archive" value="27"/>
+         <item name="Insufficient FW resource" value="28"/>
+         <item name="OS Resource conflict" value="29"/>
+         <item name="Driver Mode conflict" value="30"/>
+         <item name="RTC time is illegal" value="31"/>
+         <item name="FFS unmounted" value="32"/>
+         <item name="Access from an ISR" value="33"/>
+         <item name="FFS internal" value="34"/>
+         <item name="Operation timed out" value="35"/>
+         <item name="Task Kernel API Usage" value="36"/>
+         <item name="Operation aborted" value="37"/>
+         <item name="File not Found" value="38"/>
+         <item name="Invalid characters in filename" value="39"/>
+         <item name="Duplicate filename" value="40"/>
+         <item name="Filename is too long" value="41"/>
+         <item name="Dir not empty on remove" value="42"/>
+         <item name="Dir not found" value="43"/>
+         <item name="Dir name invalid" value="44"/>
+         <item name="Dir exists" value="45"/>
+         <item name="Dir too deep" value="46"/>
+         <item name="Illegal Handle" value="47"/>
+         <item name="End of File" value="48"/>
+         <item name="Media Full" value="49"/>
+         <item name="Media Write" value="50"/>
+         <item name="Media Read" value="51"/>
+         <item name="Media Write Protected" value="52"/>
+         <item name="File Read Only" value="53"/>
+         <item name="FS Media Changed" value="54"/>
+         <item name="Internal USB" value="55"/>
+         <item name="Voltage too high for USB IC" value="56"/>
+         <item name="Encoder not created" value="57"/>
+         <item name="TPU Chan Conflict" value="64"/>
+         <item name="TPU Func Unavailable" value="65"/>
+         <item name="TPU Config" value="66"/>
+         <item name="TPU Primative Usage" value="67"/>
+         <item name="TPU Primitive Count" value="68"/>
+         <item name="TPU Restricted TPU channel" value="69"/>
+         <item name="TPU Not Created" value="70"/>
+         <item name="TPU Self Modify constant write err" value="71"/>
+         <item name="TPU Error 0x48" value="72"/>
+         <item name="TPU Error 0x49" value="73"/>
+         <item name="TPU Error 0x4A" value="74"/>
+         <item name="TPU Error 0x4B" value="75"/>
+         <item name="TPU Error 0x4C" value="76"/>
+         <item name="TPU Error 0x4D" value="77"/>
+         <item name="TPU Error 0x4E" value="78"/>
+         <item name="TPU Error 0x4F" value="79"/>
+         <item name="TPU Error 0x50" value="80"/>
+         <item name="TPU Error 0x51" value="81"/>
+         <item name="TPU Error 0x52" value="82"/>
+         <item name="TPU Error 0x53" value="83"/>
+         <item name="TPU Error 0x54" value="84"/>
+         <item name="TPU Error 0x55" value="85"/>
+         <item name="TPU Error 0x56" value="86"/>
+         <item name="TPU Error 0x57" value="87"/>
+         <item name="TPU Error 0x58" value="88"/>
+         <item name="TPU Error 0x59" value="89"/>
+         <item name="TPU Error 0x5A" value="90"/>
+         <item name="TPU Error 0x5B" value="91"/>
+         <item name="TPU Error 0x5C" value="92"/>
+         <item name="TPU Error 0x5D" value="93"/>
+         <item name="TPU Error 0x5E" value="94"/>
+         <item name="TPU Error 0x5F" value="95"/>
+         <default>Illegal Error</default>
       </enum>
    </VarDec>
    <VarDec>
@@ -8212,7 +8212,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_DataTypeConversion4</struct>
+      <struct>BuckyWagon_01_B.s250_DataTypeConversion4</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
       <enum name="VarDecEnum_14">
          <item name="none" value="0"/>
@@ -8220,6 +8220,118 @@
          <item name="AC in Phase" value="2"/>
          <item name="AC not in Phase" value="3"/>
          <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>dout_create_DOut152p001</name>
+      <class>enum</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <gain>1.0</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>0.0</max>
+      <min>0.0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>E_NativeFWError</ctype>
+      <struct>dout_create_DOut152p001</struct>
+      <help>Debug Variable</help>
+      <group>System | Debug | Resources | DiscreteOut</group>
+      <enum name="E_NativeFWError">
+         <item name="Normal Operation" value="0"/>
+         <item name="Bad Resource ID" value="1"/>
+         <item name="Hardware Not Supported" value="2"/>
+         <item name="Behaviour Not Supported" value="3"/>
+         <item name="Bad Attribute Data" value="4"/>
+         <item name="Fail On Create" value="5"/>
+         <item name="Fail On Set Attributes" value="6"/>
+         <item name="Resource Not Created" value="7"/>
+         <item name="Missing Attribute" value="8"/>
+         <item name="Behaviour Method Not Supported" value="9"/>
+         <item name="A Service Failed" value="10"/>
+         <item name="Failed to destroy a resource" value="11"/>
+         <item name="Resource Was Created" value="12"/>
+         <item name="Resource Conflict" value="13"/>
+         <item name="Invalid Encoder Type" value="14"/>
+         <item name="2-Strike Not Supported" value="15"/>
+         <item name="720degCA Pattern Not Supported" value="16"/>
+         <item name="CAM Pattern Not Supported" value="17"/>
+         <item name="Unknown CAM Pattern Supplied" value="18"/>
+         <item name="Engine Speed Present" value="19"/>
+         <item name="Hardware Interface Not Supported" value="20"/>
+         <item name="Service Already Started" value="21"/>
+         <item name="Register Write Failed to verify" value="22"/>
+         <item name="Register access was denied" value="23"/>
+         <item name="Out of free store memory" value="24"/>
+         <item name="Software Q Overrun" value="25"/>
+         <item name="Hardware Q Overrun" value="26"/>
+         <item name="Feature unsupported in archive" value="27"/>
+         <item name="Insufficient FW resource" value="28"/>
+         <item name="OS Resource conflict" value="29"/>
+         <item name="Driver Mode conflict" value="30"/>
+         <item name="RTC time is illegal" value="31"/>
+         <item name="FFS unmounted" value="32"/>
+         <item name="Access from an ISR" value="33"/>
+         <item name="FFS internal" value="34"/>
+         <item name="Operation timed out" value="35"/>
+         <item name="Task Kernel API Usage" value="36"/>
+         <item name="Operation aborted" value="37"/>
+         <item name="File not Found" value="38"/>
+         <item name="Invalid characters in filename" value="39"/>
+         <item name="Duplicate filename" value="40"/>
+         <item name="Filename is too long" value="41"/>
+         <item name="Dir not empty on remove" value="42"/>
+         <item name="Dir not found" value="43"/>
+         <item name="Dir name invalid" value="44"/>
+         <item name="Dir exists" value="45"/>
+         <item name="Dir too deep" value="46"/>
+         <item name="Illegal Handle" value="47"/>
+         <item name="End of File" value="48"/>
+         <item name="Media Full" value="49"/>
+         <item name="Media Write" value="50"/>
+         <item name="Media Read" value="51"/>
+         <item name="Media Write Protected" value="52"/>
+         <item name="File Read Only" value="53"/>
+         <item name="FS Media Changed" value="54"/>
+         <item name="Internal USB" value="55"/>
+         <item name="Voltage too high for USB IC" value="56"/>
+         <item name="Encoder not created" value="57"/>
+         <item name="TPU Chan Conflict" value="64"/>
+         <item name="TPU Func Unavailable" value="65"/>
+         <item name="TPU Config" value="66"/>
+         <item name="TPU Primative Usage" value="67"/>
+         <item name="TPU Primitive Count" value="68"/>
+         <item name="TPU Restricted TPU channel" value="69"/>
+         <item name="TPU Not Created" value="70"/>
+         <item name="TPU Self Modify constant write err" value="71"/>
+         <item name="TPU Error 0x48" value="72"/>
+         <item name="TPU Error 0x49" value="73"/>
+         <item name="TPU Error 0x4A" value="74"/>
+         <item name="TPU Error 0x4B" value="75"/>
+         <item name="TPU Error 0x4C" value="76"/>
+         <item name="TPU Error 0x4D" value="77"/>
+         <item name="TPU Error 0x4E" value="78"/>
+         <item name="TPU Error 0x4F" value="79"/>
+         <item name="TPU Error 0x50" value="80"/>
+         <item name="TPU Error 0x51" value="81"/>
+         <item name="TPU Error 0x52" value="82"/>
+         <item name="TPU Error 0x53" value="83"/>
+         <item name="TPU Error 0x54" value="84"/>
+         <item name="TPU Error 0x55" value="85"/>
+         <item name="TPU Error 0x56" value="86"/>
+         <item name="TPU Error 0x57" value="87"/>
+         <item name="TPU Error 0x58" value="88"/>
+         <item name="TPU Error 0x59" value="89"/>
+         <item name="TPU Error 0x5A" value="90"/>
+         <item name="TPU Error 0x5B" value="91"/>
+         <item name="TPU Error 0x5C" value="92"/>
+         <item name="TPU Error 0x5D" value="93"/>
+         <item name="TPU Error 0x5E" value="94"/>
+         <item name="TPU Error 0x5F" value="95"/>
+         <default>Illegal Error</default>
       </enum>
    </VarDec>
    <VarDec>
@@ -8349,7 +8461,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s58_Merge</struct>
+      <struct>BuckyWagon_01_B.s61_Merge</struct>
       <group>Actuators | Brusa</group>
       <enum name="VarDecEnum_8">
          <item name="No Ventilation" value="0"/>
@@ -8384,7 +8496,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>din_create_EStop_Switch_Pin</name>
+      <name>ain_create_Accel_Pedal_Pin</name>
       <class>enum</class>
       <access>RO RO RO RO</access>
       <storage>RAM</storage>
@@ -8398,9 +8510,9 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>E_NativeFWError</ctype>
-      <struct>din_create_EStop_Switch_Pin</struct>
+      <struct>ain_create_Accel_Pedal_Pin</struct>
       <help>Debug Variable</help>
-      <group>System | Debug | Resources | DigitalInput</group>
+      <group>System | Debug | Resources | AnalogIn</group>
       <enum name="E_NativeFWError">
          <item name="Normal Operation" value="0"/>
          <item name="Bad Resource ID" value="1"/>
@@ -8496,7 +8608,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>ain_create_Accel_Pedal_Pin</name>
+      <name>din_create_EStop_Switch_Pin</name>
       <class>enum</class>
       <access>RO RO RO RO</access>
       <storage>RAM</storage>
@@ -8510,9 +8622,9 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>E_NativeFWError</ctype>
-      <struct>ain_create_Accel_Pedal_Pin</struct>
+      <struct>din_create_EStop_Switch_Pin</struct>
       <help>Debug Variable</help>
-      <group>System | Debug | Resources | AnalogIn</group>
+      <group>System | Debug | Resources | DigitalInput</group>
       <enum name="E_NativeFWError">
          <item name="Normal Operation" value="0"/>
          <item name="Bad Resource ID" value="1"/>
@@ -8734,7 +8846,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s138_state</struct>
+      <struct>BuckyWagon_01_B.s141_state</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Brusa Charger (No Longer Used)</group>
       <enum name="VarDecEnum_9">
          <item name="Wait" value="0"/>
@@ -8743,6 +8855,118 @@
          <item name="Complete" value="3"/>
          <item name="delay" value="4"/>
          <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>dout_create_DOut4231p0005</name>
+      <class>enum</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <gain>1.0</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>0.0</max>
+      <min>0.0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>E_NativeFWError</ctype>
+      <struct>dout_create_DOut4231p0005</struct>
+      <help>Debug Variable</help>
+      <group>System | Debug | Resources | DiscreteOut</group>
+      <enum name="E_NativeFWError">
+         <item name="Normal Operation" value="0"/>
+         <item name="Bad Resource ID" value="1"/>
+         <item name="Hardware Not Supported" value="2"/>
+         <item name="Behaviour Not Supported" value="3"/>
+         <item name="Bad Attribute Data" value="4"/>
+         <item name="Fail On Create" value="5"/>
+         <item name="Fail On Set Attributes" value="6"/>
+         <item name="Resource Not Created" value="7"/>
+         <item name="Missing Attribute" value="8"/>
+         <item name="Behaviour Method Not Supported" value="9"/>
+         <item name="A Service Failed" value="10"/>
+         <item name="Failed to destroy a resource" value="11"/>
+         <item name="Resource Was Created" value="12"/>
+         <item name="Resource Conflict" value="13"/>
+         <item name="Invalid Encoder Type" value="14"/>
+         <item name="2-Strike Not Supported" value="15"/>
+         <item name="720degCA Pattern Not Supported" value="16"/>
+         <item name="CAM Pattern Not Supported" value="17"/>
+         <item name="Unknown CAM Pattern Supplied" value="18"/>
+         <item name="Engine Speed Present" value="19"/>
+         <item name="Hardware Interface Not Supported" value="20"/>
+         <item name="Service Already Started" value="21"/>
+         <item name="Register Write Failed to verify" value="22"/>
+         <item name="Register access was denied" value="23"/>
+         <item name="Out of free store memory" value="24"/>
+         <item name="Software Q Overrun" value="25"/>
+         <item name="Hardware Q Overrun" value="26"/>
+         <item name="Feature unsupported in archive" value="27"/>
+         <item name="Insufficient FW resource" value="28"/>
+         <item name="OS Resource conflict" value="29"/>
+         <item name="Driver Mode conflict" value="30"/>
+         <item name="RTC time is illegal" value="31"/>
+         <item name="FFS unmounted" value="32"/>
+         <item name="Access from an ISR" value="33"/>
+         <item name="FFS internal" value="34"/>
+         <item name="Operation timed out" value="35"/>
+         <item name="Task Kernel API Usage" value="36"/>
+         <item name="Operation aborted" value="37"/>
+         <item name="File not Found" value="38"/>
+         <item name="Invalid characters in filename" value="39"/>
+         <item name="Duplicate filename" value="40"/>
+         <item name="Filename is too long" value="41"/>
+         <item name="Dir not empty on remove" value="42"/>
+         <item name="Dir not found" value="43"/>
+         <item name="Dir name invalid" value="44"/>
+         <item name="Dir exists" value="45"/>
+         <item name="Dir too deep" value="46"/>
+         <item name="Illegal Handle" value="47"/>
+         <item name="End of File" value="48"/>
+         <item name="Media Full" value="49"/>
+         <item name="Media Write" value="50"/>
+         <item name="Media Read" value="51"/>
+         <item name="Media Write Protected" value="52"/>
+         <item name="File Read Only" value="53"/>
+         <item name="FS Media Changed" value="54"/>
+         <item name="Internal USB" value="55"/>
+         <item name="Voltage too high for USB IC" value="56"/>
+         <item name="Encoder not created" value="57"/>
+         <item name="TPU Chan Conflict" value="64"/>
+         <item name="TPU Func Unavailable" value="65"/>
+         <item name="TPU Config" value="66"/>
+         <item name="TPU Primative Usage" value="67"/>
+         <item name="TPU Primitive Count" value="68"/>
+         <item name="TPU Restricted TPU channel" value="69"/>
+         <item name="TPU Not Created" value="70"/>
+         <item name="TPU Self Modify constant write err" value="71"/>
+         <item name="TPU Error 0x48" value="72"/>
+         <item name="TPU Error 0x49" value="73"/>
+         <item name="TPU Error 0x4A" value="74"/>
+         <item name="TPU Error 0x4B" value="75"/>
+         <item name="TPU Error 0x4C" value="76"/>
+         <item name="TPU Error 0x4D" value="77"/>
+         <item name="TPU Error 0x4E" value="78"/>
+         <item name="TPU Error 0x4F" value="79"/>
+         <item name="TPU Error 0x50" value="80"/>
+         <item name="TPU Error 0x51" value="81"/>
+         <item name="TPU Error 0x52" value="82"/>
+         <item name="TPU Error 0x53" value="83"/>
+         <item name="TPU Error 0x54" value="84"/>
+         <item name="TPU Error 0x55" value="85"/>
+         <item name="TPU Error 0x56" value="86"/>
+         <item name="TPU Error 0x57" value="87"/>
+         <item name="TPU Error 0x58" value="88"/>
+         <item name="TPU Error 0x59" value="89"/>
+         <item name="TPU Error 0x5A" value="90"/>
+         <item name="TPU Error 0x5B" value="91"/>
+         <item name="TPU Error 0x5C" value="92"/>
+         <item name="TPU Error 0x5D" value="93"/>
+         <item name="TPU Error 0x5E" value="94"/>
+         <item name="TPU Error 0x5F" value="95"/>
+         <default>Illegal Error</default>
       </enum>
    </VarDec>
    <VarDec>
@@ -8966,118 +9190,6 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>dout_create_DCDCInhibit_Out_Pin</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>0.0</max>
-      <min>0.0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>E_NativeFWError</ctype>
-      <struct>dout_create_DCDCInhibit_Out_Pin</struct>
-      <help>Debug Variable</help>
-      <group>System | Debug | Resources | DiscreteOut</group>
-      <enum name="E_NativeFWError">
-         <item name="Normal Operation" value="0"/>
-         <item name="Bad Resource ID" value="1"/>
-         <item name="Hardware Not Supported" value="2"/>
-         <item name="Behaviour Not Supported" value="3"/>
-         <item name="Bad Attribute Data" value="4"/>
-         <item name="Fail On Create" value="5"/>
-         <item name="Fail On Set Attributes" value="6"/>
-         <item name="Resource Not Created" value="7"/>
-         <item name="Missing Attribute" value="8"/>
-         <item name="Behaviour Method Not Supported" value="9"/>
-         <item name="A Service Failed" value="10"/>
-         <item name="Failed to destroy a resource" value="11"/>
-         <item name="Resource Was Created" value="12"/>
-         <item name="Resource Conflict" value="13"/>
-         <item name="Invalid Encoder Type" value="14"/>
-         <item name="2-Strike Not Supported" value="15"/>
-         <item name="720degCA Pattern Not Supported" value="16"/>
-         <item name="CAM Pattern Not Supported" value="17"/>
-         <item name="Unknown CAM Pattern Supplied" value="18"/>
-         <item name="Engine Speed Present" value="19"/>
-         <item name="Hardware Interface Not Supported" value="20"/>
-         <item name="Service Already Started" value="21"/>
-         <item name="Register Write Failed to verify" value="22"/>
-         <item name="Register access was denied" value="23"/>
-         <item name="Out of free store memory" value="24"/>
-         <item name="Software Q Overrun" value="25"/>
-         <item name="Hardware Q Overrun" value="26"/>
-         <item name="Feature unsupported in archive" value="27"/>
-         <item name="Insufficient FW resource" value="28"/>
-         <item name="OS Resource conflict" value="29"/>
-         <item name="Driver Mode conflict" value="30"/>
-         <item name="RTC time is illegal" value="31"/>
-         <item name="FFS unmounted" value="32"/>
-         <item name="Access from an ISR" value="33"/>
-         <item name="FFS internal" value="34"/>
-         <item name="Operation timed out" value="35"/>
-         <item name="Task Kernel API Usage" value="36"/>
-         <item name="Operation aborted" value="37"/>
-         <item name="File not Found" value="38"/>
-         <item name="Invalid characters in filename" value="39"/>
-         <item name="Duplicate filename" value="40"/>
-         <item name="Filename is too long" value="41"/>
-         <item name="Dir not empty on remove" value="42"/>
-         <item name="Dir not found" value="43"/>
-         <item name="Dir name invalid" value="44"/>
-         <item name="Dir exists" value="45"/>
-         <item name="Dir too deep" value="46"/>
-         <item name="Illegal Handle" value="47"/>
-         <item name="End of File" value="48"/>
-         <item name="Media Full" value="49"/>
-         <item name="Media Write" value="50"/>
-         <item name="Media Read" value="51"/>
-         <item name="Media Write Protected" value="52"/>
-         <item name="File Read Only" value="53"/>
-         <item name="FS Media Changed" value="54"/>
-         <item name="Internal USB" value="55"/>
-         <item name="Voltage too high for USB IC" value="56"/>
-         <item name="Encoder not created" value="57"/>
-         <item name="TPU Chan Conflict" value="64"/>
-         <item name="TPU Func Unavailable" value="65"/>
-         <item name="TPU Config" value="66"/>
-         <item name="TPU Primative Usage" value="67"/>
-         <item name="TPU Primitive Count" value="68"/>
-         <item name="TPU Restricted TPU channel" value="69"/>
-         <item name="TPU Not Created" value="70"/>
-         <item name="TPU Self Modify constant write err" value="71"/>
-         <item name="TPU Error 0x48" value="72"/>
-         <item name="TPU Error 0x49" value="73"/>
-         <item name="TPU Error 0x4A" value="74"/>
-         <item name="TPU Error 0x4B" value="75"/>
-         <item name="TPU Error 0x4C" value="76"/>
-         <item name="TPU Error 0x4D" value="77"/>
-         <item name="TPU Error 0x4E" value="78"/>
-         <item name="TPU Error 0x4F" value="79"/>
-         <item name="TPU Error 0x50" value="80"/>
-         <item name="TPU Error 0x51" value="81"/>
-         <item name="TPU Error 0x52" value="82"/>
-         <item name="TPU Error 0x53" value="83"/>
-         <item name="TPU Error 0x54" value="84"/>
-         <item name="TPU Error 0x55" value="85"/>
-         <item name="TPU Error 0x56" value="86"/>
-         <item name="TPU Error 0x57" value="87"/>
-         <item name="TPU Error 0x58" value="88"/>
-         <item name="TPU Error 0x59" value="89"/>
-         <item name="TPU Error 0x5A" value="90"/>
-         <item name="TPU Error 0x5B" value="91"/>
-         <item name="TPU Error 0x5C" value="92"/>
-         <item name="TPU Error 0x5D" value="93"/>
-         <item name="TPU Error 0x5E" value="94"/>
-         <item name="TPU Error 0x5F" value="95"/>
-         <default>Illegal Error</default>
-      </enum>
-   </VarDec>
-   <VarDec>
       <name>NLG5GenErrLtch</name>
       <class>enum</class>
       <access>RO RO RO RO</access>
@@ -9092,7 +9204,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_DataTypeConversion1</struct>
+      <struct>BuckyWagon_01_B.s250_DataTypeConversion1</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
       <enum name="VarDecEnum_12">
          <item name="No Error" value="0"/>
@@ -9375,118 +9487,6 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>dout_create_Brake_Light_Out</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>0.0</max>
-      <min>0.0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>E_NativeFWError</ctype>
-      <struct>dout_create_Brake_Light_Out</struct>
-      <help>Debug Variable</help>
-      <group>System | Debug | Resources | DiscreteOut</group>
-      <enum name="E_NativeFWError">
-         <item name="Normal Operation" value="0"/>
-         <item name="Bad Resource ID" value="1"/>
-         <item name="Hardware Not Supported" value="2"/>
-         <item name="Behaviour Not Supported" value="3"/>
-         <item name="Bad Attribute Data" value="4"/>
-         <item name="Fail On Create" value="5"/>
-         <item name="Fail On Set Attributes" value="6"/>
-         <item name="Resource Not Created" value="7"/>
-         <item name="Missing Attribute" value="8"/>
-         <item name="Behaviour Method Not Supported" value="9"/>
-         <item name="A Service Failed" value="10"/>
-         <item name="Failed to destroy a resource" value="11"/>
-         <item name="Resource Was Created" value="12"/>
-         <item name="Resource Conflict" value="13"/>
-         <item name="Invalid Encoder Type" value="14"/>
-         <item name="2-Strike Not Supported" value="15"/>
-         <item name="720degCA Pattern Not Supported" value="16"/>
-         <item name="CAM Pattern Not Supported" value="17"/>
-         <item name="Unknown CAM Pattern Supplied" value="18"/>
-         <item name="Engine Speed Present" value="19"/>
-         <item name="Hardware Interface Not Supported" value="20"/>
-         <item name="Service Already Started" value="21"/>
-         <item name="Register Write Failed to verify" value="22"/>
-         <item name="Register access was denied" value="23"/>
-         <item name="Out of free store memory" value="24"/>
-         <item name="Software Q Overrun" value="25"/>
-         <item name="Hardware Q Overrun" value="26"/>
-         <item name="Feature unsupported in archive" value="27"/>
-         <item name="Insufficient FW resource" value="28"/>
-         <item name="OS Resource conflict" value="29"/>
-         <item name="Driver Mode conflict" value="30"/>
-         <item name="RTC time is illegal" value="31"/>
-         <item name="FFS unmounted" value="32"/>
-         <item name="Access from an ISR" value="33"/>
-         <item name="FFS internal" value="34"/>
-         <item name="Operation timed out" value="35"/>
-         <item name="Task Kernel API Usage" value="36"/>
-         <item name="Operation aborted" value="37"/>
-         <item name="File not Found" value="38"/>
-         <item name="Invalid characters in filename" value="39"/>
-         <item name="Duplicate filename" value="40"/>
-         <item name="Filename is too long" value="41"/>
-         <item name="Dir not empty on remove" value="42"/>
-         <item name="Dir not found" value="43"/>
-         <item name="Dir name invalid" value="44"/>
-         <item name="Dir exists" value="45"/>
-         <item name="Dir too deep" value="46"/>
-         <item name="Illegal Handle" value="47"/>
-         <item name="End of File" value="48"/>
-         <item name="Media Full" value="49"/>
-         <item name="Media Write" value="50"/>
-         <item name="Media Read" value="51"/>
-         <item name="Media Write Protected" value="52"/>
-         <item name="File Read Only" value="53"/>
-         <item name="FS Media Changed" value="54"/>
-         <item name="Internal USB" value="55"/>
-         <item name="Voltage too high for USB IC" value="56"/>
-         <item name="Encoder not created" value="57"/>
-         <item name="TPU Chan Conflict" value="64"/>
-         <item name="TPU Func Unavailable" value="65"/>
-         <item name="TPU Config" value="66"/>
-         <item name="TPU Primative Usage" value="67"/>
-         <item name="TPU Primitive Count" value="68"/>
-         <item name="TPU Restricted TPU channel" value="69"/>
-         <item name="TPU Not Created" value="70"/>
-         <item name="TPU Self Modify constant write err" value="71"/>
-         <item name="TPU Error 0x48" value="72"/>
-         <item name="TPU Error 0x49" value="73"/>
-         <item name="TPU Error 0x4A" value="74"/>
-         <item name="TPU Error 0x4B" value="75"/>
-         <item name="TPU Error 0x4C" value="76"/>
-         <item name="TPU Error 0x4D" value="77"/>
-         <item name="TPU Error 0x4E" value="78"/>
-         <item name="TPU Error 0x4F" value="79"/>
-         <item name="TPU Error 0x50" value="80"/>
-         <item name="TPU Error 0x51" value="81"/>
-         <item name="TPU Error 0x52" value="82"/>
-         <item name="TPU Error 0x53" value="83"/>
-         <item name="TPU Error 0x54" value="84"/>
-         <item name="TPU Error 0x55" value="85"/>
-         <item name="TPU Error 0x56" value="86"/>
-         <item name="TPU Error 0x57" value="87"/>
-         <item name="TPU Error 0x58" value="88"/>
-         <item name="TPU Error 0x59" value="89"/>
-         <item name="TPU Error 0x5A" value="90"/>
-         <item name="TPU Error 0x5B" value="91"/>
-         <item name="TPU Error 0x5C" value="92"/>
-         <item name="TPU Error 0x5D" value="93"/>
-         <item name="TPU Error 0x5E" value="94"/>
-         <item name="TPU Error 0x5F" value="95"/>
-         <default>Illegal Error</default>
-      </enum>
-   </VarDec>
-   <VarDec>
       <name>NLG5GenLimWrng</name>
       <class>enum</class>
       <access>RO RO RO RO</access>
@@ -9501,7 +9501,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_DataTypeConversion2</struct>
+      <struct>BuckyWagon_01_B.s250_DataTypeConversion2</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
       <enum name="VarDecEnum_13">
          <item name="No Warn" value="0"/>
@@ -9524,7 +9524,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s247_DataTypeConversion</struct>
+      <struct>BuckyWagon_01_B.s250_DataTypeConversion</struct>
       <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger</group>
       <enum name="VarDecEnum_5">
          <item name="Disabled" value="0"/>
@@ -9725,6 +9725,8 @@
          <item name="X Plus 1 on Cnk with X Plus 1 Cam" value="35"/>
          <item name="X Plus 1 on Cnk with X Plus 1 Cam with Encoder Synthesizer" value="36"/>
          <item name="N-1/N-2 [XPlus1 Cam]" value="37"/>
+         <item name="X Shift 1 Retarded [ToothCam]" value="38"/>
+         <item name="N-1/N-2 [Tooth Cam] with MuxPSP" value="39"/>
          <default>Unsupported TPU Mask</default>
       </enum>
       <table>0</table>

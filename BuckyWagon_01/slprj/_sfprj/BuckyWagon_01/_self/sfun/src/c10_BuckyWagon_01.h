@@ -5,14 +5,12 @@
 #include "sfc_sf.h"
 #include "sfc_mex.h"
 #include "rtwtypes.h"
-#include "rtw_capi.h"
-#include "rtw_modelmap.h"
 
 /* Type Definitions */
 typedef struct {
   SimStruct *S;
   const mxArray *c10_setSimStateSideEffectsInfo;
-  void *c10_testPointAddrMap[5];
+  int32_T c10_sfEvent;
   uint32_T chartNumber;
   uint32_T instanceNumber;
   int16_T c10_timer;
@@ -25,7 +23,6 @@ typedef struct {
   uint8_T c10_tp_On;
   uint8_T c10_tp_countUp;
   ChartInfoStruct chartInfo;
-  rtwCAPI_ModelMappingInfo c10_testPointMappingInfo;
 } SFc10_BuckyWagon_01InstanceStruct;
 
 /* Named Constants */

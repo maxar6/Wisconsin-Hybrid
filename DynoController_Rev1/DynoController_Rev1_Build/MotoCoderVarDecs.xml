@@ -2208,7 +2208,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut332p001</help>
+      <help>Digital output pin selection for DOut332p0011</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.COIL_Pos</struct>
       <storage>FLASH</storage>
@@ -2242,7 +2242,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut333p001</help>
+      <help>Digital output pin selection for DOut333p0011</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.COIL_Neg</struct>
       <storage>FLASH</storage>
@@ -2276,7 +2276,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut334p001</help>
+      <help>Digital output pin selection for DOut334p0011</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.Battery_Enable</struct>
       <storage>FLASH</storage>
@@ -2310,7 +2310,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut335p001</help>
+      <help>Digital output pin selection for DOut335p0011</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.Load_Dump_Enable</struct>
       <storage>FLASH</storage>
@@ -2344,7 +2344,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut336p001</help>
+      <help>Digital output pin selection for DOut336p0011</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.Genset_Enable</struct>
       <storage>FLASH</storage>
@@ -2378,7 +2378,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut337p001</help>
+      <help>Digital output pin selection for DOut337p0011</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.Genset_Load</struct>
       <storage>FLASH</storage>
@@ -2454,7 +2454,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut338p001</help>
+      <help>Digital output pin selection for DOut338p0011</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.ACC1_Out</struct>
       <storage>FLASH</storage>
@@ -2488,7 +2488,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut339p001</help>
+      <help>Digital output pin selection for DOut339p0011</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.ACC2_Out</struct>
       <storage>FLASH</storage>

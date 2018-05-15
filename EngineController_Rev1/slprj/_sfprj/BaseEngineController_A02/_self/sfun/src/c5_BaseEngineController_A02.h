@@ -22,6 +22,7 @@ typedef struct {
   uint8_T c5_tp_default;
   uint8_T c5_tp_generating;
   uint8_T c5_tp_idle;
+  uint8_T c5_tp_rampDown;
   uint8_T c5_tp_startFail;
   ChartInfoStruct chartInfo;
 } SFc5_BaseEngineController_A02InstanceStruct;

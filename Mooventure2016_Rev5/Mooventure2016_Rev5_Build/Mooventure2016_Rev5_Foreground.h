@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'Mooventure2016_Rev5'.
  *
- * Model version                  : 1.2067
+ * Model version                  : 1.2069
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Sat Apr 07 15:01:22 2018
+ * C/C++ source code generated on : Sun Apr 08 00:47:19 2018
  *
  * Target selection: motohawk_motocoder_ert_rtw.tlc
  * Embedded hardware selection: Specified

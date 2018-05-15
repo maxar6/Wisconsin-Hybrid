@@ -44,25 +44,39 @@ static void finalize_c1_BuckyWagon_01(SFc1_BuckyWagon_01InstanceStruct
   *chartInstance);
 static void sf_c1_BuckyWagon_01(SFc1_BuckyWagon_01InstanceStruct *chartInstance);
 static void c1_c1_BuckyWagon_01(SFc1_BuckyWagon_01InstanceStruct *chartInstance);
+static void initSimStructsc1_BuckyWagon_01(SFc1_BuckyWagon_01InstanceStruct
+  *chartInstance);
+static void c1_Main(SFc1_BuckyWagon_01InstanceStruct *chartInstance);
 static void init_script_number_translation(uint32_T c1_machineNumber, uint32_T
   c1_chartNumber);
-static const mxArray *c1_sf_marshall(void *chartInstanceVoid, void *c1_u);
-static const mxArray *c1_b_sf_marshall(void *chartInstanceVoid, void *c1_u);
-static const mxArray *c1_c_sf_marshall(void *chartInstanceVoid, void *c1_u);
-static real_T c1_emlrt_marshallIn(SFc1_BuckyWagon_01InstanceStruct
-  *chartInstance, const mxArray *c1_inReverse, const char_T *c1_name);
+static const mxArray *c1_sf_marshallOut(void *chartInstanceVoid, void *c1_inData);
+static int32_T c1_emlrt_marshallIn(SFc1_BuckyWagon_01InstanceStruct
+  *chartInstance, const mxArray *c1_u, const emlrtMsgIdentifier *c1_parentId);
+static void c1_sf_marshallIn(void *chartInstanceVoid, const mxArray
+  *c1_mxArrayInData, const char_T *c1_varName, void *c1_outData);
+static const mxArray *c1_b_sf_marshallOut(void *chartInstanceVoid, void
+  *c1_inData);
 static uint8_T c1_b_emlrt_marshallIn(SFc1_BuckyWagon_01InstanceStruct
-  *chartInstance, const mxArray *c1_b_is_active_c1_BuckyWagon_01, const char_T
-  *c1_name);
-static const mxArray *c1_c_emlrt_marshallIn(SFc1_BuckyWagon_01InstanceStruct
+  *chartInstance, const mxArray *c1_b_tp_Main, const char_T *c1_identifier);
+static uint8_T c1_c_emlrt_marshallIn(SFc1_BuckyWagon_01InstanceStruct
+  *chartInstance, const mxArray *c1_u, const emlrtMsgIdentifier *c1_parentId);
+static void c1_b_sf_marshallIn(void *chartInstanceVoid, const mxArray
+  *c1_mxArrayInData, const char_T *c1_varName, void *c1_outData);
+static const mxArray *c1_c_sf_marshallOut(void *chartInstanceVoid, void
+  *c1_inData);
+static const mxArray *c1_d_sf_marshallOut(void *chartInstanceVoid, void
+  *c1_inData);
+static real_T c1_d_emlrt_marshallIn(SFc1_BuckyWagon_01InstanceStruct
+  *chartInstance, const mxArray *c1_inReverse, const char_T *c1_identifier);
+static real_T c1_e_emlrt_marshallIn(SFc1_BuckyWagon_01InstanceStruct
+  *chartInstance, const mxArray *c1_u, const emlrtMsgIdentifier *c1_parentId);
+static void c1_c_sf_marshallIn(void *chartInstanceVoid, const mxArray
+  *c1_mxArrayInData, const char_T *c1_varName, void *c1_outData);
+static const mxArray *c1_f_emlrt_marshallIn(SFc1_BuckyWagon_01InstanceStruct
   *chartInstance, const mxArray *c1_b_setSimStateSideEffectsInfo, const char_T
-  *c1_name);
-static void init_test_point_addr_map(SFc1_BuckyWagon_01InstanceStruct
-  *chartInstance);
-static void **get_test_point_address_map(SFc1_BuckyWagon_01InstanceStruct
-  *chartInstance);
-static rtwCAPI_ModelMappingInfo *get_test_point_mapping_info
-  (SFc1_BuckyWagon_01InstanceStruct *chartInstance);
+  *c1_identifier);
+static const mxArray *c1_g_emlrt_marshallIn(SFc1_BuckyWagon_01InstanceStruct
+  *chartInstance, const mxArray *c1_u, const emlrtMsgIdentifier *c1_parentId);
 static void init_dsm_address_info(SFc1_BuckyWagon_01InstanceStruct
   *chartInstance);
 
@@ -72,6 +86,7 @@ static void initialize_c1_BuckyWagon_01(SFc1_BuckyWagon_01InstanceStruct
 {
   real_T *c1_inReverse;
   c1_inReverse = (real_T *)ssGetOutputPortSignal(chartInstance->S, 1);
+  chartInstance->c1_sfEvent = CALL_EVENT;
   _sfTime_ = (real_T)ssGetT(chartInstance->S);
   chartInstance->c1_doSetSimStateSideEffects = 0U;
   chartInstance->c1_setSimStateSideEffectsInfo = NULL;
@@ -119,55 +134,55 @@ static void c1_update_debugger_state_c1_BuckyWagon_01
   c1_prevAniVal = sf_debug_get_animation();
   sf_debug_set_animation(0U);
   if ((int16_T)chartInstance->c1_is_active_c1_BuckyWagon_01 == 1) {
-    _SFD_CC_CALL(CHART_ACTIVE_TAG,0);
+    _SFD_CC_CALL(CHART_ACTIVE_TAG, 0U, chartInstance->c1_sfEvent);
   }
 
   if (chartInstance->c1_is_c1_BuckyWagon_01 == c1_IN_Main) {
-    _SFD_CS_CALL(STATE_ACTIVE_TAG,0);
+    _SFD_CS_CALL(STATE_ACTIVE_TAG, 0U, chartInstance->c1_sfEvent);
   } else {
-    _SFD_CS_CALL(STATE_INACTIVE_TAG,0);
+    _SFD_CS_CALL(STATE_INACTIVE_TAG, 0U, chartInstance->c1_sfEvent);
   }
 
   if ((int16_T)chartInstance->c1_is_active_ButtonDebounce == 1) {
-    _SFD_CS_CALL(STATE_ACTIVE_TAG,1);
+    _SFD_CS_CALL(STATE_ACTIVE_TAG, 1U, chartInstance->c1_sfEvent);
   } else {
-    _SFD_CS_CALL(STATE_INACTIVE_TAG,1);
+    _SFD_CS_CALL(STATE_INACTIVE_TAG, 1U, chartInstance->c1_sfEvent);
   }
 
   if (chartInstance->c1_is_ButtonDebounce == c1_IN_waitRelease) {
-    _SFD_CS_CALL(STATE_ACTIVE_TAG,4);
+    _SFD_CS_CALL(STATE_ACTIVE_TAG, 4U, chartInstance->c1_sfEvent);
   } else {
-    _SFD_CS_CALL(STATE_INACTIVE_TAG,4);
+    _SFD_CS_CALL(STATE_INACTIVE_TAG, 4U, chartInstance->c1_sfEvent);
   }
 
   if ((int16_T)chartInstance->c1_is_active_ReverseLogic == 1) {
-    _SFD_CS_CALL(STATE_ACTIVE_TAG,5);
+    _SFD_CS_CALL(STATE_ACTIVE_TAG, 5U, chartInstance->c1_sfEvent);
   } else {
-    _SFD_CS_CALL(STATE_INACTIVE_TAG,5);
+    _SFD_CS_CALL(STATE_INACTIVE_TAG, 5U, chartInstance->c1_sfEvent);
   }
 
   if (chartInstance->c1_is_ButtonDebounce == c1_IN_TransistionOn) {
-    _SFD_CS_CALL(STATE_ACTIVE_TAG,3);
+    _SFD_CS_CALL(STATE_ACTIVE_TAG, 3U, chartInstance->c1_sfEvent);
   } else {
-    _SFD_CS_CALL(STATE_INACTIVE_TAG,3);
+    _SFD_CS_CALL(STATE_INACTIVE_TAG, 3U, chartInstance->c1_sfEvent);
   }
 
   if (chartInstance->c1_is_ButtonDebounce == c1_IN_TransistionOff) {
-    _SFD_CS_CALL(STATE_ACTIVE_TAG,2);
+    _SFD_CS_CALL(STATE_ACTIVE_TAG, 2U, chartInstance->c1_sfEvent);
   } else {
-    _SFD_CS_CALL(STATE_INACTIVE_TAG,2);
+    _SFD_CS_CALL(STATE_INACTIVE_TAG, 2U, chartInstance->c1_sfEvent);
   }
 
   if (chartInstance->c1_is_ReverseLogic == c1_IN_Forward) {
-    _SFD_CS_CALL(STATE_ACTIVE_TAG,6);
+    _SFD_CS_CALL(STATE_ACTIVE_TAG, 6U, chartInstance->c1_sfEvent);
   } else {
-    _SFD_CS_CALL(STATE_INACTIVE_TAG,6);
+    _SFD_CS_CALL(STATE_INACTIVE_TAG, 6U, chartInstance->c1_sfEvent);
   }
 
   if (chartInstance->c1_is_ReverseLogic == c1_IN_Reverse) {
-    _SFD_CS_CALL(STATE_ACTIVE_TAG,7);
+    _SFD_CS_CALL(STATE_ACTIVE_TAG, 7U, chartInstance->c1_sfEvent);
   } else {
-    _SFD_CS_CALL(STATE_INACTIVE_TAG,7);
+    _SFD_CS_CALL(STATE_INACTIVE_TAG, 7U, chartInstance->c1_sfEvent);
   }
 
   sf_debug_set_animation(c1_prevAniVal);
@@ -177,7 +192,7 @@ static void c1_update_debugger_state_c1_BuckyWagon_01
 static const mxArray *get_sim_state_c1_BuckyWagon_01
   (SFc1_BuckyWagon_01InstanceStruct *chartInstance)
 {
-  const mxArray *c1_st = NULL;
+  const mxArray *c1_st;
   const mxArray *c1_y = NULL;
   real_T c1_hoistedGlobal;
   real_T c1_u;
@@ -205,6 +220,7 @@ static const mxArray *get_sim_state_c1_BuckyWagon_01
   const mxArray *c1_i_y = NULL;
   real_T *c1_inReverse;
   c1_inReverse = (real_T *)ssGetOutputPortSignal(chartInstance->S, 1);
+  c1_st = NULL;
   c1_st = NULL;
   c1_y = NULL;
   sf_mex_assign(&c1_y, sf_mex_createcellarray(8));
@@ -259,9 +275,9 @@ static void set_sim_state_c1_BuckyWagon_01(SFc1_BuckyWagon_01InstanceStruct
   real_T *c1_inReverse;
   c1_inReverse = (real_T *)ssGetOutputPortSignal(chartInstance->S, 1);
   c1_u = sf_mex_dup(c1_st);
-  *c1_inReverse = c1_emlrt_marshallIn(chartInstance, sf_mex_dup(sf_mex_getcell
+  *c1_inReverse = c1_d_emlrt_marshallIn(chartInstance, sf_mex_dup(sf_mex_getcell
     (c1_u, 0)), "inReverse");
-  chartInstance->c1_timer = c1_emlrt_marshallIn(chartInstance, sf_mex_dup
+  chartInstance->c1_timer = c1_d_emlrt_marshallIn(chartInstance, sf_mex_dup
     (sf_mex_getcell(c1_u, 1)), "timer");
   chartInstance->c1_is_active_c1_BuckyWagon_01 = c1_b_emlrt_marshallIn
     (chartInstance, sf_mex_dup(sf_mex_getcell(c1_u, 2)),
@@ -270,19 +286,16 @@ static void set_sim_state_c1_BuckyWagon_01(SFc1_BuckyWagon_01InstanceStruct
     (chartInstance, sf_mex_dup(sf_mex_getcell(c1_u, 3)),
      "is_active_ButtonDebounce");
   chartInstance->c1_is_active_ReverseLogic = c1_b_emlrt_marshallIn(chartInstance,
-    sf_mex_dup(sf_mex_getcell(c1_u, 4)),
-    "is_active_ReverseLogic");
+    sf_mex_dup(sf_mex_getcell(c1_u, 4)), "is_active_ReverseLogic");
   chartInstance->c1_is_c1_BuckyWagon_01 = c1_b_emlrt_marshallIn(chartInstance,
-    sf_mex_dup(sf_mex_getcell(c1_u, 5)),
-    "is_c1_BuckyWagon_01");
+    sf_mex_dup(sf_mex_getcell(c1_u, 5)), "is_c1_BuckyWagon_01");
   chartInstance->c1_is_ButtonDebounce = c1_b_emlrt_marshallIn(chartInstance,
     sf_mex_dup(sf_mex_getcell(c1_u, 6)), "is_ButtonDebounce");
   chartInstance->c1_is_ReverseLogic = c1_b_emlrt_marshallIn(chartInstance,
     sf_mex_dup(sf_mex_getcell(c1_u, 7)), "is_ReverseLogic");
   sf_mex_assign(&chartInstance->c1_setSimStateSideEffectsInfo,
-                c1_c_emlrt_marshallIn(chartInstance, sf_mex_dup(sf_mex_getcell
-    (c1_u, 8)
-    ), "setSimStateSideEffectsInfo"));
+                c1_f_emlrt_marshallIn(chartInstance, sf_mex_dup(sf_mex_getcell
+    (c1_u, 8)), "setSimStateSideEffectsInfo"));
   sf_mex_destroy(&c1_u);
   chartInstance->c1_doSetSimStateSideEffects = 1U;
   c1_update_debugger_state_c1_BuckyWagon_01(chartInstance);
@@ -353,7 +366,6 @@ static void finalize_c1_BuckyWagon_01(SFc1_BuckyWagon_01InstanceStruct
 
 static void sf_c1_BuckyWagon_01(SFc1_BuckyWagon_01InstanceStruct *chartInstance)
 {
-  int32_T c1_previousEvent;
   real_T *c1_accel;
   real_T *c1_speed;
   boolean_T *c1_revButton;
@@ -376,7 +388,7 @@ static void sf_c1_BuckyWagon_01(SFc1_BuckyWagon_01InstanceStruct *chartInstance)
   c1_accel = (real_T *)ssGetInputPortSignal(chartInstance->S, 0);
   c1_set_sim_state_side_effects_c1_BuckyWagon_01(chartInstance);
   _sfTime_ = (real_T)ssGetT(chartInstance->S);
-  _SFD_CC_CALL(CHART_ENTER_SFUNCTION_TAG,0);
+  _SFD_CC_CALL(CHART_ENTER_SFUNCTION_TAG, 0U, chartInstance->c1_sfEvent);
   _SFD_DATA_RANGE_CHECK(*c1_accel, 0U);
   _SFD_DATA_RANGE_CHECK(*c1_speed, 1U);
   _SFD_DATA_RANGE_CHECK((real_T)*c1_revButton, 2U);
@@ -388,21 +400,68 @@ static void sf_c1_BuckyWagon_01(SFc1_BuckyWagon_01InstanceStruct *chartInstance)
   _SFD_DATA_RANGE_CHECK(*c1_revSpdThres, 8U);
   _SFD_DATA_RANGE_CHECK(chartInstance->c1_timer, 9U);
   _SFD_DATA_RANGE_CHECK(*c1_onTime, 10U);
-  c1_previousEvent = _sfEvent_;
-  _sfEvent_ = CALL_EVENT;
+  chartInstance->c1_sfEvent = CALL_EVENT;
   c1_c1_BuckyWagon_01(chartInstance);
-  _sfEvent_ = c1_previousEvent;
   sf_debug_check_for_state_inconsistency(_BuckyWagon_01MachineNumber_,
     chartInstance->chartNumber, chartInstance->instanceNumber);
 }
 
 static void c1_c1_BuckyWagon_01(SFc1_BuckyWagon_01InstanceStruct *chartInstance)
 {
+  real_T *c1_inReverse;
+  c1_inReverse = (real_T *)ssGetOutputPortSignal(chartInstance->S, 1);
+  _SFD_CC_CALL(CHART_ENTER_DURING_FUNCTION_TAG, 0U, chartInstance->c1_sfEvent);
+  if ((int16_T)chartInstance->c1_is_active_c1_BuckyWagon_01 == 0) {
+    _SFD_CC_CALL(CHART_ENTER_ENTRY_FUNCTION_TAG, 0U, chartInstance->c1_sfEvent);
+    chartInstance->c1_is_active_c1_BuckyWagon_01 = 1U;
+    _SFD_CC_CALL(EXIT_OUT_OF_FUNCTION_TAG, 0U, chartInstance->c1_sfEvent);
+    chartInstance->c1_is_c1_BuckyWagon_01 = c1_IN_Main;
+    _SFD_CS_CALL(STATE_ACTIVE_TAG, 0U, chartInstance->c1_sfEvent);
+    chartInstance->c1_tp_Main = 1U;
+    chartInstance->c1_is_active_ButtonDebounce = 1U;
+    _SFD_CS_CALL(STATE_ACTIVE_TAG, 1U, chartInstance->c1_sfEvent);
+    chartInstance->c1_tp_ButtonDebounce = 1U;
+    _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 7U, chartInstance->c1_sfEvent);
+    _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 7U, chartInstance->c1_sfEvent);
+    chartInstance->c1_is_ButtonDebounce = c1_IN_TransistionOn;
+    _SFD_CS_CALL(STATE_ACTIVE_TAG, 3U, chartInstance->c1_sfEvent);
+    chartInstance->c1_tp_TransistionOn = 1U;
+    chartInstance->c1_is_active_ReverseLogic = 1U;
+    _SFD_CS_CALL(STATE_ACTIVE_TAG, 5U, chartInstance->c1_sfEvent);
+    chartInstance->c1_tp_ReverseLogic = 1U;
+    _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 8U, chartInstance->c1_sfEvent);
+    _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 8U, chartInstance->c1_sfEvent);
+    if (chartInstance->c1_is_ReverseLogic == c1_IN_Forward) {
+    } else {
+      chartInstance->c1_is_ReverseLogic = c1_IN_Forward;
+      _SFD_CS_CALL(STATE_ACTIVE_TAG, 6U, chartInstance->c1_sfEvent);
+      chartInstance->c1_tp_Forward = 1U;
+      *c1_inReverse = 0.0;
+      _SFD_DATA_RANGE_CHECK(*c1_inReverse, 5U);
+    }
+  } else if (chartInstance->c1_is_c1_BuckyWagon_01 != c1_IN_Main) {
+  } else {
+    c1_Main(chartInstance);
+  }
+
+  _SFD_CC_CALL(EXIT_OUT_OF_FUNCTION_TAG, 0U, chartInstance->c1_sfEvent);
+}
+
+static void initSimStructsc1_BuckyWagon_01(SFc1_BuckyWagon_01InstanceStruct
+  *chartInstance)
+{
+}
+
+static void c1_Main(SFc1_BuckyWagon_01InstanceStruct *chartInstance)
+{
   int32_T c1_previousEvent;
   boolean_T c1_temp;
   boolean_T c1_b_temp;
   boolean_T c1_c_temp;
   boolean_T c1_d_temp;
+  real_T *c1_offTime;
+  boolean_T *c1_revButton;
+  real_T *c1_onTime;
   real_T *c1_speed;
   real_T *c1_revSpdThres;
   real_T *c1_accel;
@@ -410,9 +469,6 @@ static void c1_c1_BuckyWagon_01(SFc1_BuckyWagon_01InstanceStruct *chartInstance)
   real_T *c1_inReverse;
   real_T *c1_fwdSpdThres;
   real_T *c1_fwdAccThres;
-  real_T *c1_offTime;
-  boolean_T *c1_revButton;
-  real_T *c1_onTime;
   c1_onTime = (real_T *)ssGetInputPortSignal(chartInstance->S, 8);
   c1_revSpdThres = (real_T *)ssGetInputPortSignal(chartInstance->S, 7);
   c1_revAccThres = (real_T *)ssGetInputPortSignal(chartInstance->S, 6);
@@ -423,271 +479,235 @@ static void c1_c1_BuckyWagon_01(SFc1_BuckyWagon_01InstanceStruct *chartInstance)
   c1_revButton = (boolean_T *)ssGetInputPortSignal(chartInstance->S, 2);
   c1_speed = (real_T *)ssGetInputPortSignal(chartInstance->S, 1);
   c1_accel = (real_T *)ssGetInputPortSignal(chartInstance->S, 0);
-  _SFD_CC_CALL(CHART_ENTER_DURING_FUNCTION_TAG,0);
-  if ((int16_T)chartInstance->c1_is_active_c1_BuckyWagon_01 == 0) {
-    _SFD_CC_CALL(CHART_ENTER_ENTRY_FUNCTION_TAG,0);
-    chartInstance->c1_is_active_c1_BuckyWagon_01 = 1U;
-    _SFD_CC_CALL(EXIT_OUT_OF_FUNCTION_TAG,0);
-    chartInstance->c1_is_c1_BuckyWagon_01 = c1_IN_Main;
-    _SFD_CS_CALL(STATE_ACTIVE_TAG,0);
-    chartInstance->c1_tp_Main = 1U;
-    chartInstance->c1_is_active_ButtonDebounce = 1U;
-    _SFD_CS_CALL(STATE_ACTIVE_TAG,1);
-    chartInstance->c1_tp_ButtonDebounce = 1U;
-    _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG,7);
-    _SFD_CT_CALL(TRANSITION_ACTIVE_TAG,7);
-    chartInstance->c1_is_ButtonDebounce = c1_IN_TransistionOn;
-    _SFD_CS_CALL(STATE_ACTIVE_TAG,3);
-    chartInstance->c1_tp_TransistionOn = 1U;
-    chartInstance->c1_is_active_ReverseLogic = 1U;
-    _SFD_CS_CALL(STATE_ACTIVE_TAG,5);
-    chartInstance->c1_tp_ReverseLogic = 1U;
-    _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG,8);
-    _SFD_CT_CALL(TRANSITION_ACTIVE_TAG,8);
-    if (chartInstance->c1_is_ReverseLogic == c1_IN_Forward) {
-    } else {
-      chartInstance->c1_is_ReverseLogic = c1_IN_Forward;
-      _SFD_CS_CALL(STATE_ACTIVE_TAG,6);
-      chartInstance->c1_tp_Forward = 1U;
-      *c1_inReverse = 0.0;
-      _SFD_DATA_RANGE_CHECK(*c1_inReverse, 5U);
-    }
+  _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 0U, chartInstance->c1_sfEvent);
+  if ((int16_T)chartInstance->c1_is_active_ButtonDebounce == 0) {
   } else {
-    _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG,0);
-    if (chartInstance->c1_is_c1_BuckyWagon_01 != c1_IN_Main) {
-    } else {
-      _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG,1);
-      if ((int16_T)chartInstance->c1_is_active_ButtonDebounce == 0) {
+    _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 1U, chartInstance->c1_sfEvent);
+    switch (chartInstance->c1_is_ButtonDebounce) {
+     case c1_IN_TransistionOff:
+      CV_STATE_EVAL(1, 0, 1);
+      _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 2U,
+                   chartInstance->c1_sfEvent);
+      _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 1U,
+                   chartInstance->c1_sfEvent);
+      if (CV_TRANSITION_EVAL(1U, (int32_T)_SFD_CCP_CALL(1U, 0,
+            chartInstance->c1_timer >= *c1_offTime != 0U,
+            chartInstance->c1_sfEvent))) {
+        if (sf_debug_transition_conflict_check_enabled()) {
+          unsigned int transitionList[2];
+          unsigned int numTransitions = 1;
+          transitionList[0] = 1;
+          sf_debug_transition_conflict_check_begin();
+          if (*c1_revButton) {
+            transitionList[numTransitions] = 0;
+            numTransitions++;
+          }
+
+          sf_debug_transition_conflict_check_end();
+          if (numTransitions > 1) {
+            _SFD_TRANSITION_CONFLICT(&(transitionList[0]),numTransitions);
+          }
+        }
+
+        _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 1U, chartInstance->c1_sfEvent);
+        chartInstance->c1_tp_TransistionOff = 0U;
+        _SFD_CS_CALL(STATE_INACTIVE_TAG, 2U, chartInstance->c1_sfEvent);
+        chartInstance->c1_is_ButtonDebounce = c1_IN_TransistionOn;
+        _SFD_CS_CALL(STATE_ACTIVE_TAG, 3U, chartInstance->c1_sfEvent);
+        chartInstance->c1_tp_TransistionOn = 1U;
       } else {
-        switch (chartInstance->c1_is_ButtonDebounce) {
-         case c1_IN_TransistionOff:
-          CV_STATE_EVAL(1,0,1);
-          _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG,2);
-          _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG,1);
-          if (CV_TRANSITION_EVAL(1U, (int32_T)_SFD_CCP_CALL(1,0,
-                ((chartInstance->c1_timer >= *c1_offTime)!=0))) != 0) {
-            if (sf_debug_transition_conflict_check_enabled()) {
-              unsigned int transitionList[2];
-              unsigned int numTransitions= 1;
-              transitionList[0] = 1;
-              sf_debug_transition_conflict_check_begin();
-              if (*c1_revButton) {
-                transitionList[numTransitions] = 0;
-                numTransitions++;
-              }
-
-              sf_debug_transition_conflict_check_end();
-              if (numTransitions>1) {
-                _SFD_TRANSITION_CONFLICT(&(transitionList[0]),numTransitions);
-              }
-            }
-
-            _SFD_CT_CALL(TRANSITION_ACTIVE_TAG,1);
-            _SFD_CS_CALL(STATE_ENTER_EXIT_FUNCTION_TAG,2);
-            chartInstance->c1_tp_TransistionOff = 0U;
-            _SFD_CS_CALL(STATE_INACTIVE_TAG,2);
-            _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG,2);
-            chartInstance->c1_is_ButtonDebounce = c1_IN_TransistionOn;
-            _SFD_CS_CALL(STATE_ACTIVE_TAG,3);
-            chartInstance->c1_tp_TransistionOn = 1U;
-          } else {
-            _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG,0);
-            if (CV_TRANSITION_EVAL(0U, (int32_T)_SFD_CCP_CALL(0,0,
-                  ((*c1_revButton)!=0))) != 0) {
-              _SFD_CT_CALL(TRANSITION_ACTIVE_TAG,0);
-              chartInstance->c1_timer = 0.0;
-              _SFD_DATA_RANGE_CHECK(chartInstance->c1_timer, 9U);
-              _SFD_CS_CALL(STATE_ENTER_EXIT_FUNCTION_TAG,2);
-              chartInstance->c1_tp_TransistionOff = 0U;
-              _SFD_CS_CALL(STATE_INACTIVE_TAG,2);
-              _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG,2);
-              chartInstance->c1_is_ButtonDebounce = c1_IN_TransistionOff;
-              _SFD_CS_CALL(STATE_ACTIVE_TAG,2);
-              chartInstance->c1_tp_TransistionOff = 1U;
-            } else {
-              chartInstance->c1_timer = chartInstance->c1_timer + 1.0;
-              _SFD_DATA_RANGE_CHECK(chartInstance->c1_timer, 9U);
-            }
-          }
-
-          _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG,2);
-          break;
-
-         case c1_IN_TransistionOn:
-          CV_STATE_EVAL(1,0,2);
-          _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG,3);
-          _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG,4);
-          if (CV_TRANSITION_EVAL(4U, !(_SFD_CCP_CALL(4,0,((*c1_revButton)!=0))
-                != 0)) != 0) {
-            if (sf_debug_transition_conflict_check_enabled()) {
-              unsigned int transitionList[2];
-              unsigned int numTransitions= 1;
-              transitionList[0] = 4;
-              sf_debug_transition_conflict_check_begin();
-              if (chartInstance->c1_timer >= *c1_onTime) {
-                transitionList[numTransitions] = 2;
-                numTransitions++;
-              }
-
-              sf_debug_transition_conflict_check_end();
-              if (numTransitions>1) {
-                _SFD_TRANSITION_CONFLICT(&(transitionList[0]),numTransitions);
-              }
-            }
-
-            _SFD_CT_CALL(TRANSITION_ACTIVE_TAG,4);
-            chartInstance->c1_timer = 0.0;
-            _SFD_DATA_RANGE_CHECK(chartInstance->c1_timer, 9U);
-            _SFD_CS_CALL(STATE_ENTER_EXIT_FUNCTION_TAG,3);
-            chartInstance->c1_tp_TransistionOn = 0U;
-            _SFD_CS_CALL(STATE_INACTIVE_TAG,3);
-            _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG,3);
-            chartInstance->c1_is_ButtonDebounce = c1_IN_TransistionOn;
-            _SFD_CS_CALL(STATE_ACTIVE_TAG,3);
-            chartInstance->c1_tp_TransistionOn = 1U;
-          } else {
-            _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG,2);
-            if (CV_TRANSITION_EVAL(2U, (int32_T)_SFD_CCP_CALL(2,0,
-                  ((chartInstance->c1_timer >= *c1_onTime)!=0))) != 0) {
-              _SFD_CT_CALL(TRANSITION_ACTIVE_TAG,2);
-              _SFD_CS_CALL(STATE_ENTER_EXIT_FUNCTION_TAG,3);
-              chartInstance->c1_tp_TransistionOn = 0U;
-              _SFD_CS_CALL(STATE_INACTIVE_TAG,3);
-              _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG,3);
-              chartInstance->c1_is_ButtonDebounce = c1_IN_waitRelease;
-              _SFD_CS_CALL(STATE_ACTIVE_TAG,4);
-              chartInstance->c1_tp_waitRelease = 1U;
-              c1_previousEvent = _sfEvent_;
-              _sfEvent_ = c1_event_buttonPress;
-              _SFD_CE_CALL(EVENT_BEFORE_BROADCAST_TAG,c1_event_buttonPress);
-              c1_c1_BuckyWagon_01(chartInstance);
-              _SFD_CE_CALL(EVENT_AFTER_BROADCAST_TAG,c1_event_buttonPress);
-              _sfEvent_ = c1_previousEvent;
-            } else {
-              chartInstance->c1_timer = chartInstance->c1_timer + 1.0;
-              _SFD_DATA_RANGE_CHECK(chartInstance->c1_timer, 9U);
-            }
-          }
-
-          _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG,3);
-          break;
-
-         case c1_IN_waitRelease:
-          CV_STATE_EVAL(1,0,3);
-          _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG,4);
-          if (chartInstance->c1_is_ButtonDebounce != c1_IN_waitRelease) {
-          } else {
-            _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG,3);
-            if (CV_TRANSITION_EVAL(3U, !(_SFD_CCP_CALL(3,0,((*c1_revButton)!=0))
-                  != 0)) != 0) {
-              _SFD_CT_CALL(TRANSITION_ACTIVE_TAG,3);
-              _SFD_CS_CALL(STATE_ENTER_EXIT_FUNCTION_TAG,4);
-              chartInstance->c1_tp_waitRelease = 0U;
-              _SFD_CS_CALL(STATE_INACTIVE_TAG,4);
-              _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG,4);
-              chartInstance->c1_is_ButtonDebounce = c1_IN_TransistionOff;
-              _SFD_CS_CALL(STATE_ACTIVE_TAG,2);
-              chartInstance->c1_tp_TransistionOff = 1U;
-            }
-          }
-
-          _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG,4);
-          break;
-
-         default:
-          CV_STATE_EVAL(1,0,0);
-          chartInstance->c1_is_ButtonDebounce = (uint8_T)c1_IN_NO_ACTIVE_CHILD;
-          _SFD_CS_CALL(STATE_INACTIVE_TAG,2);
-          break;
+        _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 0U,
+                     chartInstance->c1_sfEvent);
+        if (CV_TRANSITION_EVAL(0U, (int32_T)_SFD_CCP_CALL(0U, 0, *c1_revButton
+              != 0U, chartInstance->c1_sfEvent))) {
+          _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 0U, chartInstance->c1_sfEvent);
+          chartInstance->c1_timer = 0.0;
+          _SFD_DATA_RANGE_CHECK(chartInstance->c1_timer, 9U);
+          chartInstance->c1_tp_TransistionOff = 0U;
+          _SFD_CS_CALL(STATE_INACTIVE_TAG, 2U, chartInstance->c1_sfEvent);
+          chartInstance->c1_is_ButtonDebounce = c1_IN_TransistionOff;
+          _SFD_CS_CALL(STATE_ACTIVE_TAG, 2U, chartInstance->c1_sfEvent);
+          chartInstance->c1_tp_TransistionOff = 1U;
+        } else {
+          chartInstance->c1_timer++;
+          _SFD_DATA_RANGE_CHECK(chartInstance->c1_timer, 9U);
         }
       }
 
-      _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG,1);
-      _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG,5);
-      if ((int16_T)chartInstance->c1_is_active_ReverseLogic == 0) {
+      _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 2U, chartInstance->c1_sfEvent);
+      break;
+
+     case c1_IN_TransistionOn:
+      CV_STATE_EVAL(1, 0, 2);
+      _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 3U,
+                   chartInstance->c1_sfEvent);
+      _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 4U,
+                   chartInstance->c1_sfEvent);
+      if (CV_TRANSITION_EVAL(4U, !(_SFD_CCP_CALL(4U, 0, *c1_revButton != 0U,
+             chartInstance->c1_sfEvent) != 0))) {
+        if (sf_debug_transition_conflict_check_enabled()) {
+          unsigned int transitionList[2];
+          unsigned int numTransitions = 1;
+          transitionList[0] = 4;
+          sf_debug_transition_conflict_check_begin();
+          if (chartInstance->c1_timer >= *c1_onTime) {
+            transitionList[numTransitions] = 2;
+            numTransitions++;
+          }
+
+          sf_debug_transition_conflict_check_end();
+          if (numTransitions > 1) {
+            _SFD_TRANSITION_CONFLICT(&(transitionList[0]),numTransitions);
+          }
+        }
+
+        _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 4U, chartInstance->c1_sfEvent);
+        chartInstance->c1_timer = 0.0;
+        _SFD_DATA_RANGE_CHECK(chartInstance->c1_timer, 9U);
+        chartInstance->c1_tp_TransistionOn = 0U;
+        _SFD_CS_CALL(STATE_INACTIVE_TAG, 3U, chartInstance->c1_sfEvent);
+        chartInstance->c1_is_ButtonDebounce = c1_IN_TransistionOn;
+        _SFD_CS_CALL(STATE_ACTIVE_TAG, 3U, chartInstance->c1_sfEvent);
+        chartInstance->c1_tp_TransistionOn = 1U;
       } else {
-        switch (chartInstance->c1_is_ReverseLogic) {
-         case c1_IN_Forward:
-          CV_STATE_EVAL(5,0,1);
-          _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG,6);
-          _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG,6);
-          c1_temp = (_SFD_CCP_CALL(6,0,((_sfEvent_ == c1_event_buttonPress)!=0))
-                     != 0);
-          if (c1_temp) {
-            c1_b_temp = (_SFD_CCP_CALL(6,1,((*c1_speed < *c1_revSpdThres)!=0))
-                         != 0);
-            if (c1_b_temp) {
-              c1_b_temp = (_SFD_CCP_CALL(6,2,((*c1_accel < *c1_revAccThres)!=0))
-                           != 0);
-            }
-
-            c1_temp = c1_b_temp;
-          }
-
-          if (CV_TRANSITION_EVAL(6U, (int32_T)c1_temp) != 0) {
-            _SFD_CT_CALL(TRANSITION_ACTIVE_TAG,6);
-            _SFD_CS_CALL(STATE_ENTER_EXIT_FUNCTION_TAG,6);
-            chartInstance->c1_tp_Forward = 0U;
-            _SFD_CS_CALL(STATE_INACTIVE_TAG,6);
-            _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG,6);
-            chartInstance->c1_is_ReverseLogic = c1_IN_Reverse;
-            _SFD_CS_CALL(STATE_ACTIVE_TAG,7);
-            chartInstance->c1_tp_Reverse = 1U;
-            *c1_inReverse = 1.0;
-            _SFD_DATA_RANGE_CHECK(*c1_inReverse, 5U);
-          }
-
-          _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG,6);
-          break;
-
-         case c1_IN_Reverse:
-          CV_STATE_EVAL(5,0,2);
-          _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG,7);
-          _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG,5);
-          c1_c_temp = (_SFD_CCP_CALL(5,0,((_sfEvent_ == c1_event_buttonPress)!=0))
-                       != 0);
-          if (c1_c_temp) {
-            c1_d_temp = (_SFD_CCP_CALL(5,1,((*c1_speed < *c1_fwdSpdThres)!=0))
-                         != 0);
-            if (c1_d_temp) {
-              c1_d_temp = (_SFD_CCP_CALL(5,2,((*c1_accel < *c1_fwdAccThres)!=0))
-                           != 0);
-            }
-
-            c1_c_temp = c1_d_temp;
-          }
-
-          if (CV_TRANSITION_EVAL(5U, (int32_T)c1_c_temp) != 0) {
-            _SFD_CT_CALL(TRANSITION_ACTIVE_TAG,5);
-            _SFD_CS_CALL(STATE_ENTER_EXIT_FUNCTION_TAG,7);
-            chartInstance->c1_tp_Reverse = 0U;
-            _SFD_CS_CALL(STATE_INACTIVE_TAG,7);
-            _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG,7);
-            chartInstance->c1_is_ReverseLogic = c1_IN_Forward;
-            _SFD_CS_CALL(STATE_ACTIVE_TAG,6);
-            chartInstance->c1_tp_Forward = 1U;
-            *c1_inReverse = 0.0;
-            _SFD_DATA_RANGE_CHECK(*c1_inReverse, 5U);
-          }
-
-          _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG,7);
-          break;
-
-         default:
-          CV_STATE_EVAL(5,0,0);
-          chartInstance->c1_is_ReverseLogic = (uint8_T)c1_IN_NO_ACTIVE_CHILD;
-          _SFD_CS_CALL(STATE_INACTIVE_TAG,6);
-          break;
+        _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 2U,
+                     chartInstance->c1_sfEvent);
+        if (CV_TRANSITION_EVAL(2U, (int32_T)_SFD_CCP_CALL(2U, 0,
+              chartInstance->c1_timer >= *c1_onTime != 0U,
+              chartInstance->c1_sfEvent))) {
+          _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 2U, chartInstance->c1_sfEvent);
+          chartInstance->c1_tp_TransistionOn = 0U;
+          _SFD_CS_CALL(STATE_INACTIVE_TAG, 3U, chartInstance->c1_sfEvent);
+          chartInstance->c1_is_ButtonDebounce = c1_IN_waitRelease;
+          _SFD_CS_CALL(STATE_ACTIVE_TAG, 4U, chartInstance->c1_sfEvent);
+          chartInstance->c1_tp_waitRelease = 1U;
+          c1_previousEvent = chartInstance->c1_sfEvent;
+          chartInstance->c1_sfEvent = c1_event_buttonPress;
+          _SFD_CE_CALL(EVENT_BEFORE_BROADCAST_TAG, c1_event_buttonPress,
+                       chartInstance->c1_sfEvent);
+          c1_c1_BuckyWagon_01(chartInstance);
+          _SFD_CE_CALL(EVENT_AFTER_BROADCAST_TAG, c1_event_buttonPress,
+                       chartInstance->c1_sfEvent);
+          chartInstance->c1_sfEvent = c1_previousEvent;
+        } else {
+          chartInstance->c1_timer++;
+          _SFD_DATA_RANGE_CHECK(chartInstance->c1_timer, 9U);
         }
       }
 
-      _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG,5);
+      _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 3U, chartInstance->c1_sfEvent);
+      break;
+
+     case c1_IN_waitRelease:
+      CV_STATE_EVAL(1, 0, 3);
+      _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 4U,
+                   chartInstance->c1_sfEvent);
+      _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 3U,
+                   chartInstance->c1_sfEvent);
+      if (CV_TRANSITION_EVAL(3U, !(_SFD_CCP_CALL(3U, 0, *c1_revButton != 0U,
+             chartInstance->c1_sfEvent) != 0))) {
+        _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 3U, chartInstance->c1_sfEvent);
+        chartInstance->c1_tp_waitRelease = 0U;
+        _SFD_CS_CALL(STATE_INACTIVE_TAG, 4U, chartInstance->c1_sfEvent);
+        chartInstance->c1_is_ButtonDebounce = c1_IN_TransistionOff;
+        _SFD_CS_CALL(STATE_ACTIVE_TAG, 2U, chartInstance->c1_sfEvent);
+        chartInstance->c1_tp_TransistionOff = 1U;
+      }
+
+      _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 4U, chartInstance->c1_sfEvent);
+      break;
+
+     default:
+      CV_STATE_EVAL(1, 0, 0);
+      chartInstance->c1_is_ButtonDebounce = (uint8_T)c1_IN_NO_ACTIVE_CHILD;
+      _SFD_CS_CALL(STATE_INACTIVE_TAG, 2U, chartInstance->c1_sfEvent);
+      break;
     }
 
-    _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG,0);
+    _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 1U, chartInstance->c1_sfEvent);
   }
 
-  _SFD_CC_CALL(EXIT_OUT_OF_FUNCTION_TAG,0);
+  if ((int16_T)chartInstance->c1_is_active_ReverseLogic == 0) {
+  } else {
+    _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 5U, chartInstance->c1_sfEvent);
+    switch (chartInstance->c1_is_ReverseLogic) {
+     case c1_IN_Forward:
+      CV_STATE_EVAL(5, 0, 1);
+      _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 6U,
+                   chartInstance->c1_sfEvent);
+      _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 6U,
+                   chartInstance->c1_sfEvent);
+      c1_temp = (_SFD_CCP_CALL(6U, 0, chartInstance->c1_sfEvent ==
+                  c1_event_buttonPress != 0U, chartInstance->c1_sfEvent) != 0);
+      if (c1_temp) {
+        c1_b_temp = (_SFD_CCP_CALL(6U, 1, *c1_speed < *c1_revSpdThres != 0U,
+          chartInstance->c1_sfEvent) != 0);
+        if (c1_b_temp) {
+          c1_b_temp = (_SFD_CCP_CALL(6U, 2, *c1_accel < *c1_revAccThres != 0U,
+            chartInstance->c1_sfEvent) != 0);
+        }
+
+        c1_temp = c1_b_temp;
+      }
+
+      if (CV_TRANSITION_EVAL(6U, (int32_T)c1_temp)) {
+        _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 6U, chartInstance->c1_sfEvent);
+        chartInstance->c1_tp_Forward = 0U;
+        _SFD_CS_CALL(STATE_INACTIVE_TAG, 6U, chartInstance->c1_sfEvent);
+        chartInstance->c1_is_ReverseLogic = c1_IN_Reverse;
+        _SFD_CS_CALL(STATE_ACTIVE_TAG, 7U, chartInstance->c1_sfEvent);
+        chartInstance->c1_tp_Reverse = 1U;
+        *c1_inReverse = 1.0;
+        _SFD_DATA_RANGE_CHECK(*c1_inReverse, 5U);
+      }
+
+      _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 6U, chartInstance->c1_sfEvent);
+      break;
+
+     case c1_IN_Reverse:
+      CV_STATE_EVAL(5, 0, 2);
+      _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 7U,
+                   chartInstance->c1_sfEvent);
+      _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 5U,
+                   chartInstance->c1_sfEvent);
+      c1_c_temp = (_SFD_CCP_CALL(5U, 0, chartInstance->c1_sfEvent ==
+        c1_event_buttonPress != 0U, chartInstance->c1_sfEvent) != 0);
+      if (c1_c_temp) {
+        c1_d_temp = (_SFD_CCP_CALL(5U, 1, *c1_speed < *c1_fwdSpdThres != 0U,
+          chartInstance->c1_sfEvent) != 0);
+        if (c1_d_temp) {
+          c1_d_temp = (_SFD_CCP_CALL(5U, 2, *c1_accel < *c1_fwdAccThres != 0U,
+            chartInstance->c1_sfEvent) != 0);
+        }
+
+        c1_c_temp = c1_d_temp;
+      }
+
+      if (CV_TRANSITION_EVAL(5U, (int32_T)c1_c_temp)) {
+        _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 5U, chartInstance->c1_sfEvent);
+        chartInstance->c1_tp_Reverse = 0U;
+        _SFD_CS_CALL(STATE_INACTIVE_TAG, 7U, chartInstance->c1_sfEvent);
+        chartInstance->c1_is_ReverseLogic = c1_IN_Forward;
+        _SFD_CS_CALL(STATE_ACTIVE_TAG, 6U, chartInstance->c1_sfEvent);
+        chartInstance->c1_tp_Forward = 1U;
+        *c1_inReverse = 0.0;
+        _SFD_DATA_RANGE_CHECK(*c1_inReverse, 5U);
+      }
+
+      _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 7U, chartInstance->c1_sfEvent);
+      break;
+
+     default:
+      CV_STATE_EVAL(5, 0, 0);
+      chartInstance->c1_is_ReverseLogic = (uint8_T)c1_IN_NO_ACTIVE_CHILD;
+      _SFD_CS_CALL(STATE_INACTIVE_TAG, 6U, chartInstance->c1_sfEvent);
+      break;
+    }
+
+    _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 5U, chartInstance->c1_sfEvent);
+  }
+
+  _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 0U, chartInstance->c1_sfEvent);
 }
 
 static void init_script_number_translation(uint32_T c1_machineNumber, uint32_T
@@ -704,112 +724,210 @@ const mxArray *sf_c1_BuckyWagon_01_get_eml_resolved_functions_info(void)
   return c1_nameCaptureInfo;
 }
 
-static const mxArray *c1_sf_marshall(void *chartInstanceVoid, void *c1_u)
+static const mxArray *c1_sf_marshallOut(void *chartInstanceVoid, void *c1_inData)
 {
+  const mxArray *c1_mxArrayOutData = NULL;
+  int32_T c1_u;
   const mxArray *c1_y = NULL;
-  uint8_T c1_b_u;
-  const mxArray *c1_b_y = NULL;
   SFc1_BuckyWagon_01InstanceStruct *chartInstance;
   chartInstance = (SFc1_BuckyWagon_01InstanceStruct *)chartInstanceVoid;
+  c1_mxArrayOutData = NULL;
+  c1_u = *(int32_T *)c1_inData;
   c1_y = NULL;
-  c1_b_u = *((uint8_T *)c1_u);
-  c1_b_y = NULL;
-  sf_mex_assign(&c1_b_y, sf_mex_create("y", &c1_b_u, 3, 0U, 0U, 0U, 0));
-  sf_mex_assign(&c1_y, c1_b_y);
+  sf_mex_assign(&c1_y, sf_mex_create("y", &c1_u, 6, 0U, 0U, 0U, 0));
+  sf_mex_assign(&c1_mxArrayOutData, c1_y);
+  return c1_mxArrayOutData;
+}
+
+static int32_T c1_emlrt_marshallIn(SFc1_BuckyWagon_01InstanceStruct
+  *chartInstance, const mxArray *c1_u, const emlrtMsgIdentifier *c1_parentId)
+{
+  int32_T c1_y;
+  int32_T c1_i0;
+  sf_mex_import(c1_parentId, sf_mex_dup(c1_u), &c1_i0, 1, 6, 0U, 0, 0U, 0);
+  c1_y = c1_i0;
+  sf_mex_destroy(&c1_u);
   return c1_y;
 }
 
-static const mxArray *c1_b_sf_marshall(void *chartInstanceVoid, void *c1_u)
+static void c1_sf_marshallIn(void *chartInstanceVoid, const mxArray
+  *c1_mxArrayInData, const char_T *c1_varName, void *c1_outData)
 {
-  const mxArray *c1_y = NULL;
-  boolean_T c1_b_u;
-  const mxArray *c1_b_y = NULL;
+  const mxArray *c1_b_sfEvent;
+  const char_T *c1_identifier;
+  emlrtMsgIdentifier c1_thisId;
+  int32_T c1_y;
   SFc1_BuckyWagon_01InstanceStruct *chartInstance;
   chartInstance = (SFc1_BuckyWagon_01InstanceStruct *)chartInstanceVoid;
+  c1_b_sfEvent = sf_mex_dup(c1_mxArrayInData);
+  c1_identifier = c1_varName;
+  c1_thisId.fIdentifier = c1_identifier;
+  c1_thisId.fParent = NULL;
+  c1_y = c1_emlrt_marshallIn(chartInstance, sf_mex_dup(c1_b_sfEvent), &c1_thisId);
+  sf_mex_destroy(&c1_b_sfEvent);
+  *(int32_T *)c1_outData = c1_y;
+  sf_mex_destroy(&c1_mxArrayInData);
+}
+
+static const mxArray *c1_b_sf_marshallOut(void *chartInstanceVoid, void
+  *c1_inData)
+{
+  const mxArray *c1_mxArrayOutData = NULL;
+  uint8_T c1_u;
+  const mxArray *c1_y = NULL;
+  SFc1_BuckyWagon_01InstanceStruct *chartInstance;
+  chartInstance = (SFc1_BuckyWagon_01InstanceStruct *)chartInstanceVoid;
+  c1_mxArrayOutData = NULL;
+  c1_u = *(uint8_T *)c1_inData;
   c1_y = NULL;
-  c1_b_u = *((boolean_T *)c1_u);
-  c1_b_y = NULL;
-  sf_mex_assign(&c1_b_y, sf_mex_create("y", &c1_b_u, 11, 0U, 0U, 0U, 0));
-  sf_mex_assign(&c1_y, c1_b_y);
+  sf_mex_assign(&c1_y, sf_mex_create("y", &c1_u, 3, 0U, 0U, 0U, 0));
+  sf_mex_assign(&c1_mxArrayOutData, c1_y);
+  return c1_mxArrayOutData;
+}
+
+static uint8_T c1_b_emlrt_marshallIn(SFc1_BuckyWagon_01InstanceStruct
+  *chartInstance, const mxArray *c1_b_tp_Main, const char_T *c1_identifier)
+{
+  uint8_T c1_y;
+  emlrtMsgIdentifier c1_thisId;
+  c1_thisId.fIdentifier = c1_identifier;
+  c1_thisId.fParent = NULL;
+  c1_y = c1_c_emlrt_marshallIn(chartInstance, sf_mex_dup(c1_b_tp_Main),
+    &c1_thisId);
+  sf_mex_destroy(&c1_b_tp_Main);
   return c1_y;
 }
 
-static const mxArray *c1_c_sf_marshall(void *chartInstanceVoid, void *c1_u)
+static uint8_T c1_c_emlrt_marshallIn(SFc1_BuckyWagon_01InstanceStruct
+  *chartInstance, const mxArray *c1_u, const emlrtMsgIdentifier *c1_parentId)
 {
-  const mxArray *c1_y = NULL;
-  real_T c1_b_u;
-  const mxArray *c1_b_y = NULL;
-  SFc1_BuckyWagon_01InstanceStruct *chartInstance;
-  chartInstance = (SFc1_BuckyWagon_01InstanceStruct *)chartInstanceVoid;
-  c1_y = NULL;
-  c1_b_u = *((real_T *)c1_u);
-  c1_b_y = NULL;
-  sf_mex_assign(&c1_b_y, sf_mex_create("y", &c1_b_u, 0, 0U, 0U, 0U, 0));
-  sf_mex_assign(&c1_y, c1_b_y);
+  uint8_T c1_y;
+  uint8_T c1_u0;
+  sf_mex_import(c1_parentId, sf_mex_dup(c1_u), &c1_u0, 1, 3, 0U, 0, 0U, 0);
+  c1_y = c1_u0;
+  sf_mex_destroy(&c1_u);
   return c1_y;
 }
 
-static real_T c1_emlrt_marshallIn(SFc1_BuckyWagon_01InstanceStruct
-  *chartInstance, const mxArray *c1_inReverse, const char_T *
-  c1_name)
+static void c1_b_sf_marshallIn(void *chartInstanceVoid, const mxArray
+  *c1_mxArrayInData, const char_T *c1_varName, void *c1_outData)
+{
+  const mxArray *c1_b_tp_Main;
+  const char_T *c1_identifier;
+  emlrtMsgIdentifier c1_thisId;
+  uint8_T c1_y;
+  SFc1_BuckyWagon_01InstanceStruct *chartInstance;
+  chartInstance = (SFc1_BuckyWagon_01InstanceStruct *)chartInstanceVoid;
+  c1_b_tp_Main = sf_mex_dup(c1_mxArrayInData);
+  c1_identifier = c1_varName;
+  c1_thisId.fIdentifier = c1_identifier;
+  c1_thisId.fParent = NULL;
+  c1_y = c1_c_emlrt_marshallIn(chartInstance, sf_mex_dup(c1_b_tp_Main),
+    &c1_thisId);
+  sf_mex_destroy(&c1_b_tp_Main);
+  *(uint8_T *)c1_outData = c1_y;
+  sf_mex_destroy(&c1_mxArrayInData);
+}
+
+static const mxArray *c1_c_sf_marshallOut(void *chartInstanceVoid, void
+  *c1_inData)
+{
+  const mxArray *c1_mxArrayOutData = NULL;
+  real_T c1_u;
+  const mxArray *c1_y = NULL;
+  SFc1_BuckyWagon_01InstanceStruct *chartInstance;
+  chartInstance = (SFc1_BuckyWagon_01InstanceStruct *)chartInstanceVoid;
+  c1_mxArrayOutData = NULL;
+  c1_u = *(real_T *)c1_inData;
+  c1_y = NULL;
+  sf_mex_assign(&c1_y, sf_mex_create("y", &c1_u, 0, 0U, 0U, 0U, 0));
+  sf_mex_assign(&c1_mxArrayOutData, c1_y);
+  return c1_mxArrayOutData;
+}
+
+static const mxArray *c1_d_sf_marshallOut(void *chartInstanceVoid, void
+  *c1_inData)
+{
+  const mxArray *c1_mxArrayOutData = NULL;
+  boolean_T c1_u;
+  const mxArray *c1_y = NULL;
+  SFc1_BuckyWagon_01InstanceStruct *chartInstance;
+  chartInstance = (SFc1_BuckyWagon_01InstanceStruct *)chartInstanceVoid;
+  c1_mxArrayOutData = NULL;
+  c1_u = *(boolean_T *)c1_inData;
+  c1_y = NULL;
+  sf_mex_assign(&c1_y, sf_mex_create("y", &c1_u, 11, 0U, 0U, 0U, 0));
+  sf_mex_assign(&c1_mxArrayOutData, c1_y);
+  return c1_mxArrayOutData;
+}
+
+static real_T c1_d_emlrt_marshallIn(SFc1_BuckyWagon_01InstanceStruct
+  *chartInstance, const mxArray *c1_inReverse, const char_T *c1_identifier)
 {
   real_T c1_y;
-  real_T c1_d0;
-  sf_mex_import(c1_name, sf_mex_dup(c1_inReverse), &c1_d0, 1, 0, 0U, 0, 0U, 0);
-  c1_y = c1_d0;
+  emlrtMsgIdentifier c1_thisId;
+  c1_thisId.fIdentifier = c1_identifier;
+  c1_thisId.fParent = NULL;
+  c1_y = c1_e_emlrt_marshallIn(chartInstance, sf_mex_dup(c1_inReverse),
+    &c1_thisId);
   sf_mex_destroy(&c1_inReverse);
   return c1_y;
 }
 
-static uint8_T c1_b_emlrt_marshallIn(SFc1_BuckyWagon_01InstanceStruct
-  *chartInstance, const mxArray *c1_b_is_active_c1_BuckyWagon_01
-  , const char_T *c1_name)
+static real_T c1_e_emlrt_marshallIn(SFc1_BuckyWagon_01InstanceStruct
+  *chartInstance, const mxArray *c1_u, const emlrtMsgIdentifier *c1_parentId)
 {
-  uint8_T c1_y;
-  uint8_T c1_u0;
-  sf_mex_import(c1_name, sf_mex_dup(c1_b_is_active_c1_BuckyWagon_01), &c1_u0, 1,
-                3, 0U, 0, 0U, 0);
-  c1_y = c1_u0;
-  sf_mex_destroy(&c1_b_is_active_c1_BuckyWagon_01);
+  real_T c1_y;
+  real_T c1_d0;
+  sf_mex_import(c1_parentId, sf_mex_dup(c1_u), &c1_d0, 1, 0, 0U, 0, 0U, 0);
+  c1_y = c1_d0;
+  sf_mex_destroy(&c1_u);
   return c1_y;
 }
 
-static const mxArray *c1_c_emlrt_marshallIn(SFc1_BuckyWagon_01InstanceStruct
-  *chartInstance, const mxArray *
-  c1_b_setSimStateSideEffectsInfo, const char_T *c1_name)
+static void c1_c_sf_marshallIn(void *chartInstanceVoid, const mxArray
+  *c1_mxArrayInData, const char_T *c1_varName, void *c1_outData)
+{
+  const mxArray *c1_inReverse;
+  const char_T *c1_identifier;
+  emlrtMsgIdentifier c1_thisId;
+  real_T c1_y;
+  SFc1_BuckyWagon_01InstanceStruct *chartInstance;
+  chartInstance = (SFc1_BuckyWagon_01InstanceStruct *)chartInstanceVoid;
+  c1_inReverse = sf_mex_dup(c1_mxArrayInData);
+  c1_identifier = c1_varName;
+  c1_thisId.fIdentifier = c1_identifier;
+  c1_thisId.fParent = NULL;
+  c1_y = c1_e_emlrt_marshallIn(chartInstance, sf_mex_dup(c1_inReverse),
+    &c1_thisId);
+  sf_mex_destroy(&c1_inReverse);
+  *(real_T *)c1_outData = c1_y;
+  sf_mex_destroy(&c1_mxArrayInData);
+}
+
+static const mxArray *c1_f_emlrt_marshallIn(SFc1_BuckyWagon_01InstanceStruct
+  *chartInstance, const mxArray *c1_b_setSimStateSideEffectsInfo, const char_T
+  *c1_identifier)
 {
   const mxArray *c1_y = NULL;
+  emlrtMsgIdentifier c1_thisId;
   c1_y = NULL;
-  sf_mex_assign(&c1_y, sf_mex_duplicatearraysafe
-                (&c1_b_setSimStateSideEffectsInfo));
+  c1_thisId.fIdentifier = c1_identifier;
+  c1_thisId.fParent = NULL;
+  sf_mex_assign(&c1_y, c1_g_emlrt_marshallIn(chartInstance, sf_mex_dup
+    (c1_b_setSimStateSideEffectsInfo), &c1_thisId));
   sf_mex_destroy(&c1_b_setSimStateSideEffectsInfo);
   return c1_y;
 }
 
-static void init_test_point_addr_map(SFc1_BuckyWagon_01InstanceStruct
-  *chartInstance)
+static const mxArray *c1_g_emlrt_marshallIn(SFc1_BuckyWagon_01InstanceStruct
+  *chartInstance, const mxArray *c1_u, const emlrtMsgIdentifier *c1_parentId)
 {
-  chartInstance->c1_testPointAddrMap[0] = &chartInstance->c1_timer;
-  chartInstance->c1_testPointAddrMap[1] = &chartInstance->c1_tp_Main;
-  chartInstance->c1_testPointAddrMap[2] = &chartInstance->c1_tp_ButtonDebounce;
-  chartInstance->c1_testPointAddrMap[3] = &chartInstance->c1_tp_TransistionOff;
-  chartInstance->c1_testPointAddrMap[4] = &chartInstance->c1_tp_TransistionOn;
-  chartInstance->c1_testPointAddrMap[5] = &chartInstance->c1_tp_waitRelease;
-  chartInstance->c1_testPointAddrMap[6] = &chartInstance->c1_tp_ReverseLogic;
-  chartInstance->c1_testPointAddrMap[7] = &chartInstance->c1_tp_Forward;
-  chartInstance->c1_testPointAddrMap[8] = &chartInstance->c1_tp_Reverse;
-}
-
-static void **get_test_point_address_map(SFc1_BuckyWagon_01InstanceStruct
-  *chartInstance)
-{
-  return &chartInstance->c1_testPointAddrMap[0];
-}
-
-static rtwCAPI_ModelMappingInfo *get_test_point_mapping_info
-  (SFc1_BuckyWagon_01InstanceStruct *chartInstance)
-{
-  return &chartInstance->c1_testPointMappingInfo;
+  const mxArray *c1_y = NULL;
+  c1_y = NULL;
+  sf_mex_assign(&c1_y, sf_mex_duplicatearraysafe(&c1_u));
+  sf_mex_destroy(&c1_u);
+  return c1_y;
 }
 
 static void init_dsm_address_info(SFc1_BuckyWagon_01InstanceStruct
@@ -818,30 +936,29 @@ static void init_dsm_address_info(SFc1_BuckyWagon_01InstanceStruct
 }
 
 /* SFunction Glue Code */
-static void init_test_point_mapping_info(SimStruct *S);
 void sf_c1_BuckyWagon_01_get_check_sum(mxArray *plhs[])
 {
-  ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(3488990853U);
-  ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(3651117446U);
-  ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(2816337094U);
-  ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(662992781U);
+  ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(973194443U);
+  ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(4177841695U);
+  ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(905833946U);
+  ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(3012295930U);
 }
 
 mxArray *sf_c1_BuckyWagon_01_get_autoinheritance_info(void)
 {
   const char *autoinheritanceFields[] = { "checksum", "inputs", "parameters",
-    "outputs" };
+    "outputs", "locals" };
 
-  mxArray *mxAutoinheritanceInfo = mxCreateStructMatrix(1,1,4,
+  mxArray *mxAutoinheritanceInfo = mxCreateStructMatrix(1,1,5,
     autoinheritanceFields);
 
   {
     mxArray *mxChecksum = mxCreateDoubleMatrix(4,1,mxREAL);
     double *pr = mxGetPr(mxChecksum);
-    pr[0] = (double)(1060411324U);
-    pr[1] = (double)(951980723U);
-    pr[2] = (double)(3389463405U);
-    pr[3] = (double)(260343089U);
+    pr[0] = (double)(4206312603U);
+    pr[1] = (double)(4075541925U);
+    pr[2] = (double)(1139517548U);
+    pr[3] = (double)(651704908U);
     mxSetField(mxAutoinheritanceInfo,0,"checksum",mxChecksum);
   }
 
@@ -1054,10 +1171,14 @@ mxArray *sf_c1_BuckyWagon_01_get_autoinheritance_info(void)
     mxSetField(mxAutoinheritanceInfo,0,"outputs",mxData);
   }
 
+  {
+    mxSetField(mxAutoinheritanceInfo,0,"locals",mxCreateDoubleMatrix(0,0,mxREAL));
+  }
+
   return(mxAutoinheritanceInfo);
 }
 
-static mxArray *sf_get_sim_state_info_c1_BuckyWagon_01(void)
+static const mxArray *sf_get_sim_state_info_c1_BuckyWagon_01(void)
 {
   const char *infoFields[] = { "chartChecksum", "varInfo" };
 
@@ -1111,28 +1232,17 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
             1,
             1,
             1);
-          _SFD_SET_DATA_PROPS(0,1,1,0,SF_DOUBLE,0,NULL,0,0,0,0.0,1.0,0,"accel",0,
-                              (MexFcnForType)c1_c_sf_marshall);
-          _SFD_SET_DATA_PROPS(1,1,1,0,SF_DOUBLE,0,NULL,0,0,0,0.0,1.0,0,"speed",0,
-                              (MexFcnForType)c1_c_sf_marshall);
-          _SFD_SET_DATA_PROPS(2,1,1,0,SF_UINT8,0,NULL,0,0,0,0.0,1.0,0,
-                              "revButton",0,(MexFcnForType)c1_b_sf_marshall);
-          _SFD_SET_DATA_PROPS(3,1,1,0,SF_DOUBLE,0,NULL,0,0,0,0.0,1.0,0,
-                              "fwdAccThres",0,(MexFcnForType)c1_c_sf_marshall);
-          _SFD_SET_DATA_PROPS(4,1,1,0,SF_DOUBLE,0,NULL,0,0,0,0.0,1.0,0,
-                              "fwdSpdThres",0,(MexFcnForType)c1_c_sf_marshall);
-          _SFD_SET_DATA_PROPS(5,2,0,1,SF_DOUBLE,0,NULL,0,0,0,0.0,1.0,0,
-                              "inReverse",0,(MexFcnForType)c1_c_sf_marshall);
-          _SFD_SET_DATA_PROPS(6,1,1,0,SF_DOUBLE,0,NULL,0,0,0,0.0,1.0,0,"offTime",
-                              0,(MexFcnForType)c1_c_sf_marshall);
-          _SFD_SET_DATA_PROPS(7,1,1,0,SF_DOUBLE,0,NULL,0,0,0,0.0,1.0,0,
-                              "revAccThres",0,(MexFcnForType)c1_c_sf_marshall);
-          _SFD_SET_DATA_PROPS(8,1,1,0,SF_DOUBLE,0,NULL,0,0,0,0.0,1.0,0,
-                              "revSpdThres",0,(MexFcnForType)c1_c_sf_marshall);
-          _SFD_SET_DATA_PROPS(9,0,0,0,SF_DOUBLE,0,NULL,0,0,0,0.0,1.0,0,"timer",0,
-                              (MexFcnForType)c1_c_sf_marshall);
-          _SFD_SET_DATA_PROPS(10,1,1,0,SF_DOUBLE,0,NULL,0,0,0,0.0,1.0,0,"onTime",
-                              0,(MexFcnForType)c1_c_sf_marshall);
+          _SFD_SET_DATA_PROPS(0,1,1,0,"accel");
+          _SFD_SET_DATA_PROPS(1,1,1,0,"speed");
+          _SFD_SET_DATA_PROPS(2,1,1,0,"revButton");
+          _SFD_SET_DATA_PROPS(3,1,1,0,"fwdAccThres");
+          _SFD_SET_DATA_PROPS(4,1,1,0,"fwdSpdThres");
+          _SFD_SET_DATA_PROPS(5,2,0,1,"inReverse");
+          _SFD_SET_DATA_PROPS(6,1,1,0,"offTime");
+          _SFD_SET_DATA_PROPS(7,1,1,0,"revAccThres");
+          _SFD_SET_DATA_PROPS(8,1,1,0,"revSpdThres");
+          _SFD_SET_DATA_PROPS(9,0,0,0,"timer");
+          _SFD_SET_DATA_PROPS(10,1,1,0,"onTime");
           _SFD_EVENT_SCOPE(0,0);
           _SFD_STATE_INFO(0,1,0);
           _SFD_STATE_INFO(1,0,1);
@@ -1384,6 +1494,29 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
                               0,NULL,NULL);
         }
 
+        _SFD_SET_DATA_COMPILED_PROPS(0,SF_DOUBLE,0,NULL,0,0,0,0.0,1.0,0,0,
+          (MexFcnForType)c1_c_sf_marshallOut,(MexInFcnForType)NULL);
+        _SFD_SET_DATA_COMPILED_PROPS(1,SF_DOUBLE,0,NULL,0,0,0,0.0,1.0,0,0,
+          (MexFcnForType)c1_c_sf_marshallOut,(MexInFcnForType)NULL);
+        _SFD_SET_DATA_COMPILED_PROPS(2,SF_UINT8,0,NULL,0,0,0,0.0,1.0,0,0,
+          (MexFcnForType)c1_d_sf_marshallOut,(MexInFcnForType)NULL);
+        _SFD_SET_DATA_COMPILED_PROPS(3,SF_DOUBLE,0,NULL,0,0,0,0.0,1.0,0,0,
+          (MexFcnForType)c1_c_sf_marshallOut,(MexInFcnForType)NULL);
+        _SFD_SET_DATA_COMPILED_PROPS(4,SF_DOUBLE,0,NULL,0,0,0,0.0,1.0,0,0,
+          (MexFcnForType)c1_c_sf_marshallOut,(MexInFcnForType)NULL);
+        _SFD_SET_DATA_COMPILED_PROPS(5,SF_DOUBLE,0,NULL,0,0,0,0.0,1.0,0,0,
+          (MexFcnForType)c1_c_sf_marshallOut,(MexInFcnForType)c1_c_sf_marshallIn);
+        _SFD_SET_DATA_COMPILED_PROPS(6,SF_DOUBLE,0,NULL,0,0,0,0.0,1.0,0,0,
+          (MexFcnForType)c1_c_sf_marshallOut,(MexInFcnForType)NULL);
+        _SFD_SET_DATA_COMPILED_PROPS(7,SF_DOUBLE,0,NULL,0,0,0,0.0,1.0,0,0,
+          (MexFcnForType)c1_c_sf_marshallOut,(MexInFcnForType)NULL);
+        _SFD_SET_DATA_COMPILED_PROPS(8,SF_DOUBLE,0,NULL,0,0,0,0.0,1.0,0,0,
+          (MexFcnForType)c1_c_sf_marshallOut,(MexInFcnForType)NULL);
+        _SFD_SET_DATA_COMPILED_PROPS(9,SF_DOUBLE,0,NULL,0,0,0,0.0,1.0,0,0,
+          (MexFcnForType)c1_c_sf_marshallOut,(MexInFcnForType)c1_c_sf_marshallIn);
+        _SFD_SET_DATA_COMPILED_PROPS(10,SF_DOUBLE,0,NULL,0,0,0,0.0,1.0,0,0,
+          (MexFcnForType)c1_c_sf_marshallOut,(MexInFcnForType)NULL);
+
         {
           real_T *c1_accel;
           real_T *c1_speed;
@@ -1450,7 +1583,7 @@ static void sf_opaque_gateway_c1_BuckyWagon_01(void *chartInstanceVar)
   sf_c1_BuckyWagon_01((SFc1_BuckyWagon_01InstanceStruct*) chartInstanceVar);
 }
 
-static mxArray* sf_internal_get_sim_state_c1_BuckyWagon_01(SimStruct* S)
+extern const mxArray* sf_internal_get_sim_state_c1_BuckyWagon_01(SimStruct* S)
 {
   ChartInfoStruct *chartInfo = (ChartInfoStruct*) ssGetUserData(S);
   mxArray *plhs[1] = { NULL };
@@ -1461,7 +1594,7 @@ static mxArray* sf_internal_get_sim_state_c1_BuckyWagon_01(SimStruct* S)
   prhs[1] = mxCreateDoubleScalar(ssGetSFuncBlockHandle(S));
   prhs[2] = (mxArray*) get_sim_state_c1_BuckyWagon_01
     ((SFc1_BuckyWagon_01InstanceStruct*)chartInfo->chartInstance);/* raw sim ctx */
-  prhs[3] = sf_get_sim_state_info_c1_BuckyWagon_01();/* state var info */
+  prhs[3] = (mxArray*) sf_get_sim_state_info_c1_BuckyWagon_01();/* state var info */
   mxError = sf_mex_call_matlab(1, plhs, 4, prhs, "sfprivate");
   mxDestroyArray(prhs[0]);
   mxDestroyArray(prhs[1]);
@@ -1474,7 +1607,7 @@ static mxArray* sf_internal_get_sim_state_c1_BuckyWagon_01(SimStruct* S)
   return plhs[0];
 }
 
-static void sf_internal_set_sim_state_c1_BuckyWagon_01(SimStruct* S, const
+extern void sf_internal_set_sim_state_c1_BuckyWagon_01(SimStruct* S, const
   mxArray *st)
 {
   ChartInfoStruct *chartInfo = (ChartInfoStruct*) ssGetUserData(S);
@@ -1500,7 +1633,7 @@ static void sf_internal_set_sim_state_c1_BuckyWagon_01(SimStruct* S, const
   mxDestroyArray(plhs[0]);
 }
 
-static mxArray* sf_opaque_get_sim_state_c1_BuckyWagon_01(SimStruct* S)
+static const mxArray* sf_opaque_get_sim_state_c1_BuckyWagon_01(SimStruct* S)
 {
   return sf_internal_get_sim_state_c1_BuckyWagon_01(S);
 }
@@ -1521,13 +1654,15 @@ static void sf_opaque_terminate_c1_BuckyWagon_01(void *chartInstanceVar)
 
     finalize_c1_BuckyWagon_01((SFc1_BuckyWagon_01InstanceStruct*)
       chartInstanceVar);
-    if (!sim_mode_is_rtw_gen(S)) {
-      ssSetModelMappingInfoPtr(S, NULL);
-    }
-
     free((void *)chartInstanceVar);
     ssSetUserData(S,NULL);
   }
+}
+
+static void sf_opaque_init_subchart_simstructs(void *chartInstanceVar)
+{
+  initSimStructsc1_BuckyWagon_01((SFc1_BuckyWagon_01InstanceStruct*)
+    chartInstanceVar);
 }
 
 extern unsigned int sf_machine_global_initializer_called(void);
@@ -1550,12 +1685,13 @@ static void mdlSetWorkWidths_c1_BuckyWagon_01(SimStruct *S)
 {
   if (sim_mode_is_rtw_gen(S) || sim_mode_is_external(S)) {
     int_T chartIsInlinable =
-      (int_T)sf_is_chart_inlinable("BuckyWagon_01","BuckyWagon_01",1);
+      (int_T)sf_is_chart_inlinable(S,"BuckyWagon_01","BuckyWagon_01",1);
     ssSetStateflowIsInlinable(S,chartIsInlinable);
-    ssSetRTWCG(S,sf_rtw_info_uint_prop("BuckyWagon_01","BuckyWagon_01",1,"RTWCG"));
+    ssSetRTWCG(S,sf_rtw_info_uint_prop(S,"BuckyWagon_01","BuckyWagon_01",1,
+                "RTWCG"));
     ssSetEnableFcnIsTrivial(S,1);
     ssSetDisableFcnIsTrivial(S,1);
-    ssSetNotMultipleInlinable(S,sf_rtw_info_uint_prop("BuckyWagon_01",
+    ssSetNotMultipleInlinable(S,sf_rtw_info_uint_prop(S,"BuckyWagon_01",
       "BuckyWagon_01",1,"gatewayCannotBeInlinedMultipleTimes"));
     if (chartIsInlinable) {
       ssSetInputPortOptimOpts(S, 0, SS_REUSABLE_AND_LOCAL);
@@ -1573,13 +1709,14 @@ static void mdlSetWorkWidths_c1_BuckyWagon_01(SimStruct *S)
 
     sf_set_rtw_dwork_info(S,"BuckyWagon_01","BuckyWagon_01",1);
     ssSetHasSubFunctions(S,!(chartIsInlinable));
-    ssSetOptions(S,ssGetOptions(S)|SS_OPTION_WORKS_WITH_CODE_REUSE);
+  } else {
   }
 
-  ssSetChecksum0(S,(650919634U));
-  ssSetChecksum1(S,(3839284244U));
-  ssSetChecksum2(S,(5169631U));
-  ssSetChecksum3(S,(1275852644U));
+  ssSetOptions(S,ssGetOptions(S)|SS_OPTION_WORKS_WITH_CODE_REUSE);
+  ssSetChecksum0(S,(1341258933U));
+  ssSetChecksum1(S,(212429917U));
+  ssSetChecksum2(S,(2176043991U));
+  ssSetChecksum3(S,(1326363935U));
   ssSetmdlDerivatives(S, NULL);
   ssSetExplicitFCSSCtrl(S,1);
 }
@@ -1629,11 +1766,11 @@ static void mdlStart_c1_BuckyWagon_01(SimStruct *S)
   chartInstance->chartInfo.storeCurrentConfiguration = NULL;
   chartInstance->S = S;
   ssSetUserData(S,(void *)(&(chartInstance->chartInfo)));/* register the chart instance with simstruct */
+  init_dsm_address_info(chartInstance);
   if (!sim_mode_is_rtw_gen(S)) {
-    init_test_point_mapping_info(S);
-    init_dsm_address_info(chartInstance);
   }
 
+  sf_opaque_init_subchart_simstructs(chartInstance->chartInfo.chartInstance);
   chart_debug_initialization(S,1);
 }
 
@@ -1659,108 +1796,4 @@ void c1_BuckyWagon_01_method_dispatcher(SimStruct *S, int_T method, void *data)
                          "Can't handle method %d.\n", method);
     break;
   }
-}
-
-static const rtwCAPI_DataTypeMap dataTypeMap[] = {
-  /* cName, mwName, numElements, elemMapIndex, dataSize, slDataId, isComplex, isPointer */
-  { "real_T", "real_T", 0, 0, sizeof(real_T), SS_DOUBLE, 0, 0 },
-
-  { "uint8_T", "uint8_T", 0, 0, sizeof(uint8_T), SS_UINT8, 0, 0 } };
-
-static const rtwCAPI_FixPtMap fixedPointMap[] = {
-  /* *fracSlope, *bias, scaleType, wordLength, exponent, isSigned */
-  { NULL, NULL, rtwCAPI_FIX_RESERVED, 64, 0, 0 } };
-
-static const rtwCAPI_DimensionMap dimensionMap[] = {
-  /* dataOrientation, dimArrayIndex, numDims*/
-  { rtwCAPI_SCALAR, 0, 2 } };
-
-static const uint_T dimensionArray[] = {
-  1, 1 };
-
-static real_T sfCAPIsampleTimeZero = 0.0;
-static const rtwCAPI_SampleTimeMap sampleTimeMap[] = {
-  /* *period, *offset, taskId, mode */
-  { &sfCAPIsampleTimeZero, &sfCAPIsampleTimeZero, 0, 0 }
-};
-
-static const rtwCAPI_Signals testPointSignals[] = {
-  /* addrMapIndex, sysNum, SFRelativePath, dataName, portNumber, dataTypeIndex, dimIndex, fixPtIdx, sTimeIndex */
-  { 0, 0, "StateflowChart/timer", "timer", 0, 0, 0, 0, 0 },
-
-  { 1, 0, "StateflowChart/Main", "Main", 0, 1, 0, 0, 0 },
-
-  { 2, 0, "StateflowChart/Main.ButtonDebounce", "ButtonDebounce", 0, 1, 0, 0, 0
-  },
-
-  { 3, 0, "StateflowChart/Main.ButtonDebounce.TransistionOff", "TransistionOff",
-    0, 1, 0, 0, 0 },
-
-  { 4, 0, "StateflowChart/Main.ButtonDebounce.TransistionOn", "TransistionOn", 0,
-    1, 0, 0, 0 },
-
-  { 5, 0, "StateflowChart/Main.ButtonDebounce.waitRelease", "waitRelease", 0, 1,
-    0, 0, 0 },
-
-  { 6, 0, "StateflowChart/Main.ReverseLogic", "ReverseLogic", 0, 1, 0, 0, 0 },
-
-  { 7, 0, "StateflowChart/Main.ReverseLogic.Forward", "Forward", 0, 1, 0, 0, 0 },
-
-  { 8, 0, "StateflowChart/Main.ReverseLogic.Reverse", "Reverse", 0, 1, 0, 0, 0 }
-};
-
-static rtwCAPI_ModelMappingStaticInfo testPointMappingStaticInfo = {
-  /* block signal monitoring */
-  {
-    testPointSignals,                  /* Block signals Array  */
-    9                                  /* Num Block IO signals */
-  },
-
-  /* parameter tuning */
-  {
-    NULL,                              /* Block parameters Array    */
-    0,                                 /* Num block parameters      */
-    NULL,                              /* Variable parameters Array */
-    0                                  /* Num variable parameters   */
-  },
-
-  /* block states */
-  {
-    NULL,                              /* Block States array        */
-    0                                  /* Num Block States          */
-  },
-
-  /* Static maps */
-  {
-    dataTypeMap,                       /* Data Type Map            */
-    dimensionMap,                      /* Data Dimension Map       */
-    fixedPointMap,                     /* Fixed Point Map          */
-    NULL,                              /* Structure Element map    */
-    sampleTimeMap,                     /* Sample Times Map         */
-    dimensionArray                     /* Dimension Array          */
-  },
-
-  /* Target type */
-  "float"
-};
-
-static void init_test_point_mapping_info(SimStruct *S)
-{
-  rtwCAPI_ModelMappingInfo *testPointMappingInfo;
-  void **testPointAddrMap;
-  SFc1_BuckyWagon_01InstanceStruct *chartInstance;
-  chartInstance = (SFc1_BuckyWagon_01InstanceStruct *) ((ChartInfoStruct *)
-    (ssGetUserData(S)))->chartInstance;
-  init_test_point_addr_map(chartInstance);
-  testPointMappingInfo = get_test_point_mapping_info(chartInstance);
-  testPointAddrMap = get_test_point_address_map(chartInstance);
-  rtwCAPI_SetStaticMap(*testPointMappingInfo, &testPointMappingStaticInfo);
-  rtwCAPI_SetLoggingStaticMap(*testPointMappingInfo, NULL);
-  rtwCAPI_SetInstanceLoggingInfo(*testPointMappingInfo, NULL);
-  rtwCAPI_SetPath(*testPointMappingInfo, "");
-  rtwCAPI_SetFullPath(*testPointMappingInfo, NULL);
-  rtwCAPI_SetDataAddressMap(*testPointMappingInfo, testPointAddrMap);
-  rtwCAPI_SetChildMMIArray(*testPointMappingInfo, NULL);
-  rtwCAPI_SetChildMMIArrayLen(*testPointMappingInfo, 0);
-  ssSetModelMappingInfoPtr(S, testPointMappingInfo);
 }

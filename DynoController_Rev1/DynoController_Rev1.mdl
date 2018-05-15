@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.302"
+    ComputedModelVersion    "1.306"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -26,39 +26,39 @@ Model {
   InitFcn		  "try, eval([bdroot '_setup']); catch, eval('model_setup', ''); end"
   UserBdParams		  "MotoHawkBuildVersion;MotoHawkBuildStats;MotoHawkModelSavedName;MotoHawkModelGUID;MotoHawkModelOpenT"
   "ime;MotoHawkModelElapsedTime;MotoHawkBuildInfo;MotoHawkBuildGUID"
-  MotoHawkBuildVersion	  "010"
+  MotoHawkBuildVersion	  "012"
   MotoHawkBuildStats	  "struct('TotalFLASH',{0},'TotalEEPROM',{0},'TotalRAM',{0},'AppFLASH',{0},'AppEEPROM',{0},'AppRA"
-  "M',{0},'HeapRAM',{0},'BuildSuccessCount',{10},'BuildErrorCount',{1})"
+  "M',{0},'HeapRAM',{0},'BuildSuccessCount',{12},'BuildErrorCount',{1})"
   MotoHawkModelSavedName  "DynoController_Rev1"
   MotoHawkModelGUID	  "6a27880e-8e62-404a-92-11-3b-ad-79-73-ba"
-  MotoHawkModelOpenTime	  "2018 4 7 14 25 5.116 "
-  MotoHawkModelElapsedTime "1813741.766"
+  MotoHawkModelOpenTime	  "2018 4 13 0 14 9.833 "
+  MotoHawkModelElapsedTime "1814633.537"
   MotoHawkBuildInfo	  "struct('model_name',{'DynoController_Rev1'},'motohawk_version',{'2011a_sp0.184'},'motohawk_comp"
-  "onent_version',{'0.0.7'},'matlab_version',{'7.12.0'},'build_version',{'009'},'module_type',{'ECU555-48-0708'},'layou"
+  "onent_version',{'0.0.7'},'matlab_version',{'7.12.0'},'build_version',{'011'},'module_type',{'ECU555-48-0708'},'layou"
   "t_type',{'PROD'},'processor_family',{'PPC'},'processor_type',{'MPC555'},'toolchain_vendor',{'gcc-powerpc-eabi'},'too"
   "lchain_version',{'4.4.0'},'component',{0},'archive_file',{'ECM.a'},'enable_build',{1},'fptype',{0},'flash_size',{368"
   "640},'ee_size',{4096},'ram_size',{26624},'decram_size',{0},'module_memory_def',{'MPC555_ModMemoryDef_4KEE_Prod'},'er"
   "i_table0_rev',{9},'max_eri_table_size',{65535},'use_debug_vardecs',{1},'use_info_vardecs',{1},'fgnd_base_period_ms',"
   "{5},'bgnd_base_period_ms',{50},'root_build_dir',{'C:\\Users\\HYBRID\\Documents\\GitHub\\Wisconsin-Hybrid\\DynoContro"
   "ller_Rev1'},'build_dir',{'C:\\Users\\HYBRID\\Documents\\GitHub\\Wisconsin-Hybrid\\DynoController_Rev1\\DynoControlle"
-  "r_Rev1_Build'},'dll_name',{'DynoContr_009'},'srz_name',{'DynoController_Rev1_009'},'fgnd_stack_size',{3072},'fgnd_an"
+  "r_Rev1_Build'},'dll_name',{'DynoContr_011'},'srz_name',{'DynoController_Rev1_011'},'fgnd_stack_size',{3072},'fgnd_an"
   "gle_stack_size',{0},'bgnd_stack_size',{2048},'idle_stack_size',{1024},'irq_stack_size',{1536},'heap_size',{4096},'he"
   "ap_margin',{409},'install_dll_dir',{'C:\\ECUFiles\\TDBDLL\\'},'install_srz_dir',{'C:\\ECUFiles\\Programs'},'app_int_"
   "stack_size',{1024},'shutdown_stack_size',{1024},'mingw_dir',{'C:\\PROGRA~2\\Woodward\\DEVELO~1\\TOOLCH~1\\GCC\\win32"
   "-pe\\4_4_0\\'},'motohawk_dir',{'C:\\PROGRA~2\\Woodward\\MCS\\MotoHawk\\2011A_~1.184'},'toolchain_dir',{'C:\\Program "
   "Files (x86)\\Woodward\\DevelopmentTools\\Toolchains\\GCC\\powerpc-eabi\\4_4_0\\'},'matlab_root',{'C:\\Program Files "
-  "(x86)\\MATLAB\\R2011a'},'model_guid',{'6a27880e-8e62-404a-92-11-3b-ad-79-73-ba'},'build_guid',{'242f3651-abf5-41e3-9"
-  "d-fd-42-e1-f9-e0-fb'},'token_guid',{'DD8AD11F95A6FC42BFF9AC780840E4B4'})"
-  MotoHawkBuildGUID	  "242f3651-abf5-41e3-9d-fd-42-e1-f9-e0-fb"
+  "(x86)\\MATLAB\\R2011a'},'model_guid',{'6a27880e-8e62-404a-92-11-3b-ad-79-73-ba'},'build_guid',{'0632f483-d0b9-425d-a"
+  "9-64-b8-95-1d-f8-ef'},'token_guid',{'DD8AD11F95A6FC42BFF9AC780840E4B4'})"
+  MotoHawkBuildGUID	  "0632f483-d0b9-425d-a9-64-b8-95-1d-f8-ef"
   Created		  "Mon May 16 15:00:08 2005"
   Creator		  "Owner"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "HYBRID"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sat Apr 07 14:26:45 2018"
-  RTWModifiedTimeStamp	  445012005
-  ModelVersionFormat	  "1.%<AutoIncrement:302>"
+  LastModifiedDate	  "Fri Apr 13 00:19:57 2018"
+  RTWModifiedTimeStamp	  445479331
+  ModelVersionFormat	  "1.%<AutoIncrement:306>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -5978,7 +5978,7 @@ Model {
 	      System {
 		Name			"Analog Outputs"
 		Location		[202, 83, 1918, 1027]
-		Open			off
+		Open			on
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -6160,7 +6160,7 @@ Model {
 		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
 		  SourceType		  "MotoHawk Calibration"
 		  nam			  "'SOC_Load_Dump'"
-		  val			  "20"
+		  val			  "1"
 		  storage		  "Calibration NV"
 		  show_more		  off
 		  name_source		  "Use Parameter"
@@ -7816,7 +7816,7 @@ Model {
 		  System {
 		    Name		    "DYNO OUT"
 		    Location		    [202, 74, 1364, 717]
-		    Open		    on
+		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
 		    ScreenColor		    "white"
@@ -9742,7 +9742,7 @@ Model {
 	      SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 	      SourceType	      "MotoHawk Function Trigger"
 	      trigger		      "FGND_20XRTI_PERIODIC"
-	      function_name	      "Trigger_FGND_20XRTI_PERIODIC_589p0005"
+	      function_name	      "Trigger_FGND_20XRTI_PERIODIC_589p0009"
 	      priority_order	      "200"
 	      inherited		      on
 	      run_disabled	      off
@@ -11753,7 +11753,7 @@ Model {
 	  SourceBlock		  "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 	  SourceType		  "MotoHawk Function Trigger"
 	  trigger		  "BGND_BASE_PERIODIC"
-	  function_name		  "Trigger_BGND_BASE_PERIODIC_783p0002"
+	  function_name		  "Trigger_BGND_BASE_PERIODIC_783p0004"
 	  priority_order	  "255"
 	  inherited		  on
 	  run_disabled		  on
@@ -11958,7 +11958,7 @@ Model {
       SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
       SourceType	      "MotoHawk Function Trigger"
       trigger		      "FGND_RTI_PERIODIC"
-      function_name	      "Trigger_FGND_RTI_PERIODIC_794p0002"
+      function_name	      "Trigger_FGND_RTI_PERIODIC_794p0004"
       priority_order	      "0"
       inherited		      off
       run_disabled	      off
@@ -11980,7 +11980,7 @@ Model {
       SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
       SourceType	      "MotoHawk Function Trigger"
       trigger		      "STARTUP_EVENT"
-      function_name	      "Trigger_STARTUP_EVENT_795p0002"
+      function_name	      "Trigger_STARTUP_EVENT_795p0004"
       priority_order	      "0"
       inherited		      off
       run_disabled	      off

@@ -45,6 +45,29 @@
       <type>uint16</type>
    </VarDec>
    <VarDec>
+      <name>MPRD_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>System | Main Power Relay | MPRD Override</group>
+      <struct>VolatileWork_BSS.MPRD_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
       <name>MPRD_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -66,29 +89,6 @@
       <enum>
          <item name="Off" value="0"/>
          <item name="On" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>MPRD_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>System | Main Power Relay | MPRD Override</group>
-      <struct>VolatileWork_BSS.MPRD_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
          <default>Unknown</default>
       </enum>
    </VarDec>
@@ -207,24 +207,6 @@
       <type>uint8</type>
    </VarDec>
    <VarDec>
-      <name>hsc_bcm_enable_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>255</max>
-      <min>0</min>
-      <format>3.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | BCM | hsc_bcm_enable Override</group>
-      <struct>VolatileWork_BSS.hsc_bcm_enable_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-   </VarDec>
-   <VarDec>
       <name>hsc_bcm_enable_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -248,7 +230,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>hsc_bcm_epo_new</name>
+      <name>hsc_bcm_enable_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -258,8 +240,8 @@
       <format>3.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | BCM | hsc_bcm_epo Override</group>
-      <struct>VolatileWork_BSS.hsc_bcm_epo_new</struct>
+      <group>Actuators | BCM | hsc_bcm_enable Override</group>
+      <struct>VolatileWork_BSS.hsc_bcm_enable_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -289,7 +271,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>hsc_bcm_leakage_enable_new</name>
+      <name>hsc_bcm_epo_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -299,8 +281,8 @@
       <format>3.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | BCM | hsc_bcm_leakage_enable Override</group>
-      <struct>VolatileWork_BSS.hsc_bcm_leakage_enable_new</struct>
+      <group>Actuators | BCM | hsc_bcm_epo Override</group>
+      <struct>VolatileWork_BSS.hsc_bcm_epo_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -330,7 +312,43 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>hsc_bcm_mainc_enable_new</name>
+      <name>GFD_Enable</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BuckyWagon_01|Foreground|Actuators|A123 Battery Controller|GFD Logic</group>
+      <struct>ConstantWork.GFD_Enable</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>GFD_Torque_Off</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BuckyWagon_01|Foreground|Actuators|A123 Battery Controller|GFD Logic</group>
+      <struct>ConstantWork.GFD_Torque_Off</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>hsc_bcm_leakage_enable_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -340,8 +358,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | BCM | hsc_bcm_mainc_enable Override</group>
-      <struct>VolatileWork_BSS.hsc_bcm_mainc_enable_new</struct>
+      <group>Actuators | BCM | hsc_bcm_leakage_enable Override</group>
+      <struct>VolatileWork_BSS.hsc_bcm_leakage_enable_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -371,6 +389,24 @@
       </enum>
    </VarDec>
    <VarDec>
+      <name>hsc_bcm_mainc_enable_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Actuators | BCM | hsc_bcm_mainc_enable Override</group>
+      <struct>VolatileWork_BSS.hsc_bcm_mainc_enable_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
       <name>hsc_bcm_enable</name>
       <access>RO RO RO RO</access>
       <gain>1</gain>
@@ -387,24 +423,6 @@
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
-   </VarDec>
-   <VarDec>
-      <name>Flash_Reverse_Lights_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Actuators|Analog Out|Cruise Control Indicator | Flash_Reverse_Lights_Ovr Override</group>
-      <struct>VolatileWork_BSS.Flash_Reverse_Lights_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>Flash_Reverse_Lights_Ovr_ovr</name>
@@ -428,6 +446,24 @@
          <item name="Override" value="1"/>
          <default>Unknown</default>
       </enum>
+   </VarDec>
+   <VarDec>
+      <name>Flash_Reverse_Lights_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BuckyWagon_01|Foreground|Actuators|Analog Out|Cruise Control Indicator | Flash_Reverse_Lights_Ovr Override</group>
+      <struct>VolatileWork_BSS.Flash_Reverse_Lights_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>cCInd_LongOff</name>
@@ -490,7 +526,7 @@
       <type>uint16</type>
    </VarDec>
    <VarDec>
-      <name>RevOut__new</name>
+      <name>RevOut__Polarity</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -500,12 +536,12 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <units>bool</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <help>Override actuator, in engineering units</help>
-      <group>Actuators | Reverse | ReverseOut | RevOut_ Override</group>
-      <struct>VolatileWork_BSS.RevOut__new</struct>
+      <ctype>const Constant_T</ctype>
+      <help>Inverts the output of the actuator relative to the desired command - 0 = High True    1 = Low True</help>
+      <group>Actuators | Reverse | ReverseOut | ReverseOut Config</group>
+      <struct>ConstantWork.RevOut__Polarity</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
    </VarDec>
@@ -577,7 +613,7 @@
       <type>int16</type>
    </VarDec>
    <VarDec>
-      <name>RevOut__Polarity</name>
+      <name>RevOut__new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -587,17 +623,17 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <units>bool</units>
-      <ctype>const Constant_T</ctype>
-      <help>Inverts the output of the actuator relative to the desired command - 0 = High True    1 = Low True</help>
-      <group>Actuators | Reverse | ReverseOut | ReverseOut Config</group>
-      <struct>ConstantWork.RevOut__Polarity</struct>
+      <ctype>Volatile_BSS_T</ctype>
+      <help>Override actuator, in engineering units</help>
+      <group>Actuators | Reverse | ReverseOut | RevOut_ Override</group>
+      <struct>VolatileWork_BSS.RevOut__new</struct>
       <class>var</class>
-      <storage>FLASH</storage>
+      <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
    </VarDec>
    <VarDec>
-      <name>FanOut_new</name>
+      <name>FanOut_Gain</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -606,13 +642,13 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <units>%</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <help>Override result of linear sensor characterization, in engineering units</help>
-      <group>Actuators | Fan | FanOut | FanOut Override</group>
-      <struct>VolatileWork_BSS.FanOut_new</struct>
+      <units>%/%</units>
+      <ctype>const Constant_T</ctype>
+      <help>Scaling from engineering units to PWM duty cycle</help>
+      <group>Actuators | Fan | FanOut | FanOut Config</group>
+      <struct>ConstantWork.FanOut_Gain</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -640,7 +676,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>FanOut_Gain</name>
+      <name>FanOut_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -649,13 +685,13 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <units>%/%</units>
-      <ctype>const Constant_T</ctype>
-      <help>Scaling from engineering units to PWM duty cycle</help>
-      <group>Actuators | Fan | FanOut | FanOut Config</group>
-      <struct>ConstantWork.FanOut_Gain</struct>
+      <units>%</units>
+      <ctype>Volatile_BSS_T</ctype>
+      <help>Override result of linear sensor characterization, in engineering units</help>
+      <group>Actuators | Fan | FanOut | FanOut Override</group>
+      <struct>VolatileWork_BSS.FanOut_new</struct>
       <class>var</class>
-      <storage>FLASH</storage>
+      <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -740,7 +776,7 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>InhibitDCDC_Out__new</name>
+      <name>InhibitDCDC_Out__Polarity</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -750,12 +786,12 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <units>bool</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <help>Override actuator, in engineering units</help>
-      <group>Actuators | DC/DC | InhibitDCDC_Out | InhibitDCDC_Out_ Override</group>
-      <struct>VolatileWork_BSS.InhibitDCDC_Out__new</struct>
+      <ctype>const Constant_T</ctype>
+      <help>Inverts the output of the actuator relative to the desired command - 0 = High True    1 = Low True</help>
+      <group>Actuators | DC/DC | InhibitDCDC_Out | InhibitDCDC_Out Config</group>
+      <struct>ConstantWork.InhibitDCDC_Out__Polarity</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
    </VarDec>
@@ -783,7 +819,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>InhibitDCDC_Out__Polarity</name>
+      <name>InhibitDCDC_Out__new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -793,12 +829,12 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <units>bool</units>
-      <ctype>const Constant_T</ctype>
-      <help>Inverts the output of the actuator relative to the desired command - 0 = High True    1 = Low True</help>
-      <group>Actuators | DC/DC | InhibitDCDC_Out | InhibitDCDC_Out Config</group>
-      <struct>ConstantWork.InhibitDCDC_Out__Polarity</struct>
+      <ctype>Volatile_BSS_T</ctype>
+      <help>Override actuator, in engineering units</help>
+      <group>Actuators | DC/DC | InhibitDCDC_Out | InhibitDCDC_Out_ Override</group>
+      <struct>VolatileWork_BSS.InhibitDCDC_Out__new</struct>
       <class>var</class>
-      <storage>FLASH</storage>
+      <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
    </VarDec>
@@ -840,24 +876,6 @@
       <type>uint8</type>
    </VarDec>
    <VarDec>
-      <name>OutCrntCmd_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | Brusa | OutCrntCmd Override</group>
-      <struct>VolatileWork_BSS.OutCrntCmd_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
       <name>OutCrntCmd_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -881,7 +899,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>OutVoltCmd_new</name>
+      <name>OutCrntCmd_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -891,8 +909,8 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | Brusa | OutVoltCmd Override</group>
-      <struct>VolatileWork_BSS.OutVoltCmd_new</struct>
+      <group>Actuators | Brusa | OutCrntCmd Override</group>
+      <struct>VolatileWork_BSS.OutCrntCmd_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -922,7 +940,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>MaxMainsCrnt_new</name>
+      <name>OutVoltCmd_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -932,8 +950,8 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | Brusa | MaxMainsCrnt Override</group>
-      <struct>VolatileWork_BSS.MaxMainsCrnt_new</struct>
+      <group>Actuators | Brusa | OutVoltCmd Override</group>
+      <struct>VolatileWork_BSS.OutVoltCmd_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -952,6 +970,47 @@
       <ctype>Volatile_BSS_T</ctype>
       <group>Actuators | Brusa | MaxMainsCrnt Override</group>
       <struct>VolatileWork_BSS.MaxMainsCrnt_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>MaxMainsCrnt_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Actuators | Brusa | MaxMainsCrnt Override</group>
+      <struct>VolatileWork_BSS.MaxMainsCrnt_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>CntrlPltVentReq_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Actuators | Brusa | CntrlPltVentReq Override</group>
+      <struct>VolatileWork_BSS.CntrlPltVentReq_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -986,7 +1045,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>CntrlPltVentReq_ovr</name>
+      <name>ClearErrorLtch_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -996,8 +1055,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | Brusa | CntrlPltVentReq Override</group>
-      <struct>VolatileWork_BSS.CntrlPltVentReq_ovr</struct>
+      <group>Actuators | Brusa | ClearErrorLtch Override</group>
+      <struct>VolatileWork_BSS.ClearErrorLtch_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -1027,7 +1086,7 @@
       <type>uint8</type>
    </VarDec>
    <VarDec>
-      <name>ClearErrorLtch_ovr</name>
+      <name>CAN_Enable_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -1037,8 +1096,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | Brusa | ClearErrorLtch Override</group>
-      <struct>VolatileWork_BSS.ClearErrorLtch_ovr</struct>
+      <group>Actuators | Brusa | CAN_Enable Override</group>
+      <struct>VolatileWork_BSS.CAN_Enable_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -1073,7 +1132,25 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>CAN_Enable_ovr</name>
+      <name>EHPAS_Performance_Limit</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>Actuators | EHPAS</group>
+      <struct>ConstantWork.EHPAS_Performance_Limit</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>EHPAS_Operating_Mode_Cmd_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -1083,8 +1160,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | Brusa | CAN_Enable Override</group>
-      <struct>VolatileWork_BSS.CAN_Enable_ovr</struct>
+      <group>Actuators | EHPAS | EHPAS_Operating_Mode_Cmd Override</group>
+      <struct>VolatileWork_BSS.EHPAS_Operating_Mode_Cmd_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -1114,7 +1191,7 @@
       <type>uint8</type>
    </VarDec>
    <VarDec>
-      <name>EHPAS_Operating_Mode_Cmd_ovr</name>
+      <name>EMP_Speed_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -1124,67 +1201,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | EHPAS | EHPAS_Operating_Mode_Cmd Override</group>
-      <struct>VolatileWork_BSS.EHPAS_Operating_Mode_Cmd_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>EHPAS_Performance_Limit</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>Actuators | EHPAS</group>
-      <struct>ConstantWork.EHPAS_Performance_Limit</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>EMP_Mode_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>255</max>
-      <min>0</min>
-      <format>3.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | EMP Coolant Pump | EMP_Mode Override</group>
-      <struct>VolatileWork_BSS.EMP_Mode_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-   </VarDec>
-   <VarDec>
-      <name>EMP_Mode_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | EMP Coolant Pump | EMP_Mode Override</group>
-      <struct>VolatileWork_BSS.EMP_Mode_ovr</struct>
+      <group>Actuators | EMP Coolant Pump | EMP_Speed Override</group>
+      <struct>VolatileWork_BSS.EMP_Speed_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -1214,7 +1232,7 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>EMP_Speed_ovr</name>
+      <name>EMP_Mode_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -1224,8 +1242,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | EMP Coolant Pump | EMP_Speed Override</group>
-      <struct>VolatileWork_BSS.EMP_Speed_ovr</struct>
+      <group>Actuators | EMP Coolant Pump | EMP_Mode Override</group>
+      <struct>VolatileWork_BSS.EMP_Mode_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -1235,6 +1253,24 @@
          <item name="Override" value="1"/>
          <default>Unknown</default>
       </enum>
+   </VarDec>
+   <VarDec>
+      <name>EMP_Mode_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Actuators | EMP Coolant Pump | EMP_Mode Override</group>
+      <struct>VolatileWork_BSS.EMP_Mode_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>AccelRstSpd</name>
@@ -1255,24 +1291,6 @@
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>startCharge_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Brusa Charger (No Longer Used) | startCharge Override</group>
-      <struct>VolatileWork_BSS.startCharge_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>startCharge_ovr</name>
@@ -1296,6 +1314,24 @@
          <item name="Override" value="1"/>
          <default>Unknown</default>
       </enum>
+   </VarDec>
+   <VarDec>
+      <name>startCharge_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BuckyWagon_01|Foreground|Control Strategy|Brusa Charger (No Longer Used) | startCharge Override</group>
+      <struct>VolatileWork_BSS.startCharge_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>IFilterAlpha</name>
@@ -1653,24 +1689,6 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Regen_SOC_Speed_Ramp_ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving|Regen | Regen_SOC_Speed_Ramp_ovr Override</group>
-      <struct>VolatileWork_BSS.Regen_SOC_Speed_Ramp_ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
       <name>Regen_SOC_Speed_Ramp_ovr_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -1692,6 +1710,24 @@
          <item name="Override" value="1"/>
          <default>Unknown</default>
       </enum>
+   </VarDec>
+   <VarDec>
+      <name>Regen_SOC_Speed_Ramp_ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving|Regen | Regen_SOC_Speed_Ramp_ovr Override</group>
+      <struct>VolatileWork_BSS.Regen_SOC_Speed_Ramp_ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>MinBrakeBedPosforHillHold</name>
@@ -2076,24 +2112,6 @@
       <type>uint16</type>
    </VarDec>
    <VarDec>
-      <name>Contactor_Shutdown_Test_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01 | Strategy | Control Strategy | HV Controller | Contactor_Shutdown_Test Override</group>
-      <struct>VolatileWork_BSS.Contactor_Shutdown_Test_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-   </VarDec>
-   <VarDec>
       <name>Contactor_Shutdown_Test_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -2115,6 +2133,24 @@
          <item name="Override" value="1"/>
          <default>Unknown</default>
       </enum>
+   </VarDec>
+   <VarDec>
+      <name>Contactor_Shutdown_Test_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BuckyWagon_01 | Strategy | Control Strategy | HV Controller | Contactor_Shutdown_Test Override</group>
+      <struct>VolatileWork_BSS.Contactor_Shutdown_Test_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>Load_Enable_Delay</name>
@@ -2207,24 +2243,6 @@
       <struct>ConstantWork.ReverseDerate</struct>
       <class>var</class>
       <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>In_Reverse_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Reverse | In_Reverse Override</group>
-      <struct>VolatileWork_BSS.In_Reverse_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -2372,6 +2390,47 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
+      <name>In_Reverse_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BuckyWagon_01|Foreground|Control Strategy|Reverse | In_Reverse Override</group>
+      <struct>VolatileWork_BSS.In_Reverse_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>bcm_mainc_stat_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Sensors | BCM | bcm_mainc_stat Override</group>
+      <struct>VolatileWork_BSS.bcm_mainc_stat_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
       <name>bcm_mainc_stat_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -2390,7 +2449,7 @@
       <type>uint8</type>
    </VarDec>
    <VarDec>
-      <name>bcm_mainc_stat_ovr</name>
+      <name>bcm_ready_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -2400,8 +2459,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Sensors | BCM | bcm_mainc_stat Override</group>
-      <struct>VolatileWork_BSS.bcm_mainc_stat_ovr</struct>
+      <group>Sensors | BCM | bcm_ready Override</group>
+      <struct>VolatileWork_BSS.bcm_ready_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -2431,7 +2490,7 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>bcm_ready_ovr</name>
+      <name>bcm_chargec_stat_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -2441,8 +2500,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Sensors | BCM | bcm_ready Override</group>
-      <struct>VolatileWork_BSS.bcm_ready_ovr</struct>
+      <group>Sensors | BCM | bcm_chargec_stat Override</group>
+      <struct>VolatileWork_BSS.bcm_chargec_stat_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -2470,29 +2529,6 @@
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
-   </VarDec>
-   <VarDec>
-      <name>bcm_chargec_stat_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Sensors | BCM | bcm_chargec_stat Override</group>
-      <struct>VolatileWork_BSS.bcm_chargec_stat_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
    </VarDec>
    <VarDec>
       <name>SOC_ovr</name>
@@ -2536,24 +2572,6 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>bcm_cell_overvolt_ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Sensors | BCM | bcm_cell_overvolt_ovr Override</group>
-      <struct>VolatileWork_BSS.bcm_cell_overvolt_ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
       <name>bcm_cell_overvolt_ovr_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -2575,6 +2593,24 @@
          <item name="Override" value="1"/>
          <default>Unknown</default>
       </enum>
+   </VarDec>
+   <VarDec>
+      <name>bcm_cell_overvolt_ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Sensors | BCM | bcm_cell_overvolt_ovr Override</group>
+      <struct>VolatileWork_BSS.bcm_cell_overvolt_ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>EHPAS_Pump_Speed_ovr</name>
@@ -3129,24 +3165,6 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Motor_Speed_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Sensors | EatonController | Motor_Speed Override</group>
-      <struct>VolatileWork_BSS.Motor_Speed_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
       <name>Motor_Speed_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -3170,6 +3188,24 @@
       </enum>
    </VarDec>
    <VarDec>
+      <name>Motor_Speed_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Sensors | EatonController | Motor_Speed Override</group>
+      <struct>VolatileWork_BSS.Motor_Speed_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
       <name>Drive_Ready</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -3184,24 +3220,6 @@
       <struct>ConstantWork.Drive_Ready</struct>
       <class>var</class>
       <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Motor_Torque_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Sensors | EatonController | Motor_Torque Override</group>
-      <struct>VolatileWork_BSS.Motor_Torque_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -3227,6 +3245,24 @@
          <item name="Override" value="1"/>
          <default>Unknown</default>
       </enum>
+   </VarDec>
+   <VarDec>
+      <name>Motor_Torque_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Sensors | EatonController | Motor_Torque Override</group>
+      <struct>VolatileWork_BSS.Motor_Torque_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>startupDelay</name>
@@ -3566,7 +3602,7 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>InputVoltage_new</name>
+      <name>PluggedInMainsThesEaton</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -3575,11 +3611,13 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Sensors | EatonCharger | InputVoltage Override</group>
-      <struct>VolatileWork_BSS.InputVoltage_new</struct>
+      <units>V</units>
+      <ctype>const Constant_T</ctype>
+      <help>Above this mains voltage the charger is plugged in.</help>
+      <group>Sensors | EatonCharger</group>
+      <struct>ConstantWork.PluggedInMainsThesEaton</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -3607,7 +3645,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>PluggedInMainsThesEaton</name>
+      <name>InputVoltage_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -3616,38 +3654,16 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <units>V</units>
-      <ctype>const Constant_T</ctype>
-      <help>Above this mains voltage the charger is plugged in.</help>
-      <group>Sensors | EatonCharger</group>
-      <struct>ConstantWork.PluggedInMainsThesEaton</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Accel_Pedal_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>%</units>
       <ctype>Volatile_BSS_T</ctype>
-      <help>Override result of linear sensor characterization, in engineering units</help>
-      <group>Sensors | Accel | Accel_Pedal | Accel_Pedal Override</group>
-      <struct>VolatileWork_BSS.Accel_Pedal_new</struct>
+      <group>Sensors | EatonCharger | InputVoltage Override</group>
+      <struct>VolatileWork_BSS.InputVoltage_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Accel_Pedal_ovr</name>
+      <name>motor_torque_Ovr_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -3657,8 +3673,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Sensors | Accel | Accel_Pedal | Accel_Pedal Override</group>
-      <struct>VolatileWork_BSS.Accel_Pedal_ovr</struct>
+      <group>BuckyWagon_01|Foreground|Control Strategy | motor_torque_Ovr Override</group>
+      <struct>VolatileWork_BSS.motor_torque_Ovr_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -3670,87 +3686,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>Accel_Full</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>%</units>
-      <ctype>const Constant_T</ctype>
-      <help>Offset after gain in engineering units</help>
-      <group>Sensors | Accel | Accel_Pedal | Accel_Pedal Config</group>
-      <struct>ConstantWork.Accel_Full</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Accel_Zero</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>5.4</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>%/ADC</units>
-      <ctype>const Constant_T</ctype>
-      <help>Scaling from A/D counts to engineering units</help>
-      <group>Sensors | Accel | Accel_Pedal | Accel_Pedal Config</group>
-      <struct>ConstantWork.Accel_Zero</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Accel_DfltValue</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>%</units>
-      <ctype>const Constant_T</ctype>
-      <help>This is the initial default value should the sensor be in fault on key-up.  Otherwise the sensors outputs the last value prior to faulting</help>
-      <group>Sensors | Accel | Accel_Pedal | Accel_Pedal Config</group>
-      <struct>ConstantWork.Accel_DfltValue</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Accel_FilterConst</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>sec</units>
-      <ctype>const Constant_T</ctype>
-      <help>Filter time constant</help>
-      <group>Sensors | Accel | Accel_Pedal | Accel_Pedal Config</group>
-      <struct>ConstantWork.Accel_FilterConst</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Reverse_Switch_new</name>
+      <name>Estop_switch_ovr_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -3759,11 +3695,50 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <units>Boolean</units>
       <ctype>Volatile_BSS_T</ctype>
-      <help>Override actuator, in engineering units</help>
-      <group>Sensors | Reverse | Reverse_Switch | Reverse_Switch Override</group>
-      <struct>VolatileWork_BSS.Reverse_Switch_new</struct>
+      <group>BuckyWagon_01|Foreground|Sensors | Estop_switch_ovr Override</group>
+      <struct>VolatileWork_BSS.Estop_switch_ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>E_Stop_Invert</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BuckyWagon_01|Foreground|Sensors</group>
+      <struct>ConstantWork.E_Stop_Invert</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
+      <name>Estop_switch_ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BuckyWagon_01|Foreground|Sensors | Estop_switch_ovr Override</group>
+      <struct>VolatileWork_BSS.Estop_switch_ovr_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -3833,7 +3808,50 @@
       <type>uint8</type>
    </VarDec>
    <VarDec>
-      <name>Vehicle_Speed_new</name>
+      <name>Reverse_Switch_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <units>Boolean</units>
+      <ctype>Volatile_BSS_T</ctype>
+      <help>Override actuator, in engineering units</help>
+      <group>Sensors | Reverse | Reverse_Switch | Reverse_Switch Override</group>
+      <struct>VolatileWork_BSS.Reverse_Switch_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
+      <name>Accel_Pedal_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Sensors | Accel | Accel_Pedal | Accel_Pedal Override</group>
+      <struct>VolatileWork_BSS.Accel_Pedal_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Accel_FilterConst</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -3842,9 +3860,91 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant</help>
+      <group>Sensors | Accel | Accel_Pedal | Accel_Pedal Config</group>
+      <struct>ConstantWork.Accel_FilterConst</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Accel_Full</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>%</units>
+      <ctype>const Constant_T</ctype>
+      <help>Offset after gain in engineering units</help>
+      <group>Sensors | Accel | Accel_Pedal | Accel_Pedal Config</group>
+      <struct>ConstantWork.Accel_Full</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Accel_Zero</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>5.4</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>%/ADC</units>
+      <ctype>const Constant_T</ctype>
+      <help>Scaling from A/D counts to engineering units</help>
+      <group>Sensors | Accel | Accel_Pedal | Accel_Pedal Config</group>
+      <struct>ConstantWork.Accel_Zero</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Accel_DfltValue</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>%</units>
+      <ctype>const Constant_T</ctype>
+      <help>This is the initial default value should the sensor be in fault on key-up.  Otherwise the sensors outputs the last value prior to faulting</help>
+      <group>Sensors | Accel | Accel_Pedal | Accel_Pedal Config</group>
+      <struct>ConstantWork.Accel_DfltValue</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Accel_Pedal_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>%</units>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Sensors | Vehicle Speed | Vehicle_Speed Override</group>
-      <struct>VolatileWork_BSS.Vehicle_Speed_new</struct>
+      <help>Override result of linear sensor characterization, in engineering units</help>
+      <group>Sensors | Accel | Accel_Pedal | Accel_Pedal Override</group>
+      <struct>VolatileWork_BSS.Accel_Pedal_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -3894,25 +3994,7 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Charging_Cooling_Speed</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy</group>
-      <struct>ConstantWork.Charging_Cooling_Speed</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>OutputCurrent_new</name>
+      <name>Vehicle_Speed_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -3922,69 +4004,8 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Sensors | EatonCharger | OutputCurrent Override</group>
-      <struct>VolatileWork_BSS.OutputCurrent_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>OutputCurrent_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Sensors | EatonCharger | OutputCurrent Override</group>
-      <struct>VolatileWork_BSS.OutputCurrent_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Charger_Curr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy</group>
-      <struct>ConstantWork.Charger_Curr</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Brake_Pedal_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>%</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <help>Override result of linear sensor characterization, in engineering units</help>
-      <group>Sensors | Brake | Brake_Pedal | Brake_Pedal Override</group>
-      <struct>VolatileWork_BSS.Brake_Pedal_new</struct>
+      <group>Sensors | Vehicle Speed | Vehicle_Speed Override</group>
+      <struct>VolatileWork_BSS.Vehicle_Speed_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -4012,6 +4033,26 @@
          <item name="Override" value="1"/>
          <default>Unknown</default>
       </enum>
+   </VarDec>
+   <VarDec>
+      <name>Brake_FilterConst</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant</help>
+      <group>Sensors | Brake | Brake_Pedal | Brake_Pedal Config</group>
+      <struct>ConstantWork.Brake_FilterConst</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>Brake_Full</name>
@@ -4074,7 +4115,27 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Brake_FilterConst</name>
+      <name>Brake_Pedal_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>%</units>
+      <ctype>Volatile_BSS_T</ctype>
+      <help>Override result of linear sensor characterization, in engineering units</help>
+      <group>Sensors | Brake | Brake_Pedal | Brake_Pedal Override</group>
+      <struct>VolatileWork_BSS.Brake_Pedal_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>FiltConst</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -4086,33 +4147,69 @@
       <units>sec</units>
       <ctype>const Constant_T</ctype>
       <help>Filter time constant</help>
-      <group>Sensors | Brake | Brake_Pedal | Brake_Pedal Config</group>
-      <struct>ConstantWork.Brake_FilterConst</struct>
+      <group>BuckyWagon_01|Foreground|Control Strategy</group>
+      <struct>ConstantWork.FiltConst</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Estop_switch_ovr_new</name>
+      <name>motor_torque_Ovr_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Sensors | Estop_switch_ovr Override</group>
-      <struct>VolatileWork_BSS.Estop_switch_ovr_new</struct>
+      <group>BuckyWagon_01|Foreground|Control Strategy | motor_torque_Ovr Override</group>
+      <struct>VolatileWork_BSS.motor_torque_Ovr_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>uint8</type>
+      <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Estop_switch_ovr_ovr</name>
+      <name>Charging_Cooling_Speed</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BuckyWagon_01|Foreground|Control Strategy</group>
+      <struct>ConstantWork.Charging_Cooling_Speed</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Charger_Curr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BuckyWagon_01|Foreground|Control Strategy</group>
+      <struct>ConstantWork.Charger_Curr</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>OutputCurrent_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -4122,8 +4219,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Sensors | Estop_switch_ovr Override</group>
-      <struct>VolatileWork_BSS.Estop_switch_ovr_ovr</struct>
+      <group>Sensors | EatonCharger | OutputCurrent Override</group>
+      <struct>VolatileWork_BSS.OutputCurrent_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -4135,40 +4232,22 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>E_Stop_Invert</name>
+      <name>OutputCurrent_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>BuckyWagon_01|Foreground|Sensors</group>
-      <struct>ConstantWork.E_Stop_Invert</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-   </VarDec>
-   <VarDec>
-      <name>pluggedIn_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger | pluggedIn Override</group>
-      <struct>VolatileWork_BSS.pluggedIn_new</struct>
+      <group>Sensors | EatonCharger | OutputCurrent Override</group>
+      <struct>VolatileWork_BSS.OutputCurrent_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>uint8</type>
+      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>pluggedIn_ovr</name>
@@ -4234,31 +4313,22 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>EHPAS_PumpStateEnable_ovr_new</name>
+      <name>pluggedIn_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>255</max>
+      <max>1</max>
       <min>0</min>
-      <format>3.0</format>
+      <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|EHPAS_PercentControl | EHPAS_PumpStateEnable_ovr Override</group>
-      <struct>VolatileWork_BSS.EHPAS_PumpStateEnable_ovr_new</struct>
+      <group>BuckyWagon_01|Foreground|Sensors|Brusa Charger | pluggedIn Override</group>
+      <struct>VolatileWork_BSS.pluggedIn_new</struct>
+      <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Off" value="0"/>
-         <item name="Low_Speed_Maneuvering" value="1"/>
-         <item name="Normal_Driving" value="2"/>
-         <item name="Normal_DrivingWithBrake" value="3"/>
-         <item name="KeyUpActive" value="4"/>
-         <item name="ZeroSpeedBraking" value="5"/>
-         <default>Unknown</default>
-      </enum>
    </VarDec>
    <VarDec>
       <name>EHPAS_PumpStateEnable_ovr_ovr</name>
@@ -4444,6 +4514,33 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
+      <name>EHPAS_PumpStateEnable_ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BuckyWagon_01|Foreground|Control Strategy|EHPAS_PercentControl | EHPAS_PumpStateEnable_ovr Override</group>
+      <struct>VolatileWork_BSS.EHPAS_PumpStateEnable_ovr_new</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Off" value="0"/>
+         <item name="Low_Speed_Maneuvering" value="1"/>
+         <item name="Normal_Driving" value="2"/>
+         <item name="Normal_DrivingWithBrake" value="3"/>
+         <item name="KeyUpActive" value="4"/>
+         <item name="ZeroSpeedBraking" value="5"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
       <name>Enable_PowerSteering_CAN_Msg</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -4462,7 +4559,7 @@
       <type>uint8</type>
    </VarDec>
    <VarDec>
-      <name>Control_Mode_Ovr_new</name>
+      <name>Speed</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -4471,11 +4568,47 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | EatonController | Control_Mode_Ovr Override</group>
-      <struct>VolatileWork_BSS.Control_Mode_Ovr_new</struct>
+      <ctype>const Constant_T</ctype>
+      <group>Actuators | EatonController</group>
+      <struct>ConstantWork.Speed</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Speed_Ramp_Rate</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>Actuators | EatonController</group>
+      <struct>ConstantWork.Speed_Ramp_Rate</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Torque_Ramp_Rate</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>Actuators | EatonController</group>
+      <struct>ConstantWork.Torque_Ramp_Rate</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -4611,7 +4744,7 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>motor_torque_Ovr_new</name>
+      <name>Control_Mode_Ovr_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -4621,105 +4754,8 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy | motor_torque_Ovr Override</group>
-      <struct>VolatileWork_BSS.motor_torque_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>motor_torque_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy | motor_torque_Ovr Override</group>
-      <struct>VolatileWork_BSS.motor_torque_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>FiltConst</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>sec</units>
-      <ctype>const Constant_T</ctype>
-      <help>Filter time constant</help>
-      <group>BuckyWagon_01|Foreground|Control Strategy</group>
-      <struct>ConstantWork.FiltConst</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Speed</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>Actuators | EatonController</group>
-      <struct>ConstantWork.Speed</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Speed_Ramp_Rate</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>Actuators | EatonController</group>
-      <struct>ConstantWork.Speed_Ramp_Rate</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Torque_Command_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | EatonController | Torque_Command_Ovr Override</group>
-      <struct>VolatileWork_BSS.Torque_Command_Ovr_new</struct>
+      <group>Actuators | EatonController | Control_Mode_Ovr Override</group>
+      <struct>VolatileWork_BSS.Control_Mode_Ovr_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -4749,66 +4785,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>Torque_Ramp_Rate</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>Actuators | EatonController</group>
-      <struct>ConstantWork.Torque_Ramp_Rate</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Charge_Enable_Override_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | EatonCharger | Charge_Enable_Override Override</group>
-      <struct>VolatileWork_BSS.Charge_Enable_Override_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-   </VarDec>
-   <VarDec>
-      <name>Charge_Enable_Override_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | EatonCharger | Charge_Enable_Override Override</group>
-      <struct>VolatileWork_BSS.Charge_Enable_Override_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Charge_Complete_Override_new</name>
+      <name>Torque_Command_Ovr_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -4818,155 +4795,8 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | EatonCharger | Charge_Complete_Override Override</group>
-      <struct>VolatileWork_BSS.Charge_Complete_Override_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Charge_Complete_Override_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | EatonCharger | Charge_Complete_Override Override</group>
-      <struct>VolatileWork_BSS.Charge_Complete_Override_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Charge_Falt_Override_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>255</max>
-      <min>0</min>
-      <format>3.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <help>This tells the charger that there is a problem with the vehcile where the charger can not charge the vehicle.</help>
-      <group>Actuators | EatonCharger | Charge_Falt_Override Override</group>
-      <struct>VolatileWork_BSS.Charge_Falt_Override_new</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Disabled" value="0"/>
-         <item name="Enabled" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Charge_Falt_Override_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | EatonCharger | Charge_Falt_Override Override</group>
-      <struct>VolatileWork_BSS.Charge_Falt_Override_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Voltage_Limit_Override_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | EatonCharger | Voltage_Limit_Override Override</group>
-      <struct>VolatileWork_BSS.Voltage_Limit_Override_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Voltage_Limit_Override_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | EatonCharger | Voltage_Limit_Override Override</group>
-      <struct>VolatileWork_BSS.Voltage_Limit_Override_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Voltage_Limit</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>Actuators | EatonCharger</group>
-      <struct>ConstantWork.Voltage_Limit</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Current_Limit_Override_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | EatonCharger | Current_Limit_Override Override</group>
-      <struct>VolatileWork_BSS.Current_Limit_Override_new</struct>
+      <group>Actuators | EatonController | Torque_Command_Ovr Override</group>
+      <struct>VolatileWork_BSS.Torque_Command_Ovr_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -5014,7 +4844,7 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>SpeedSet_new</name>
+      <name>Current_Limit_Override_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -5024,12 +4854,200 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | Solectria | SpeedSet Override</group>
-      <struct>VolatileWork_BSS.SpeedSet_new</struct>
+      <group>Actuators | EatonCharger | Current_Limit_Override Override</group>
+      <struct>VolatileWork_BSS.Current_Limit_Override_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Voltage_Limit_Override_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Actuators | EatonCharger | Voltage_Limit_Override Override</group>
+      <struct>VolatileWork_BSS.Voltage_Limit_Override_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Voltage_Limit</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>Actuators | EatonCharger</group>
+      <struct>ConstantWork.Voltage_Limit</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Voltage_Limit_Override_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Actuators | EatonCharger | Voltage_Limit_Override Override</group>
+      <struct>VolatileWork_BSS.Voltage_Limit_Override_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Charge_Falt_Override_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Actuators | EatonCharger | Charge_Falt_Override Override</group>
+      <struct>VolatileWork_BSS.Charge_Falt_Override_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Charge_Falt_Override_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <help>This tells the charger that there is a problem with the vehcile where the charger can not charge the vehicle.</help>
+      <group>Actuators | EatonCharger | Charge_Falt_Override Override</group>
+      <struct>VolatileWork_BSS.Charge_Falt_Override_new</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Disabled" value="0"/>
+         <item name="Enabled" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Charge_Complete_Override_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Actuators | EatonCharger | Charge_Complete_Override Override</group>
+      <struct>VolatileWork_BSS.Charge_Complete_Override_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Charge_Complete_Override_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Actuators | EatonCharger | Charge_Complete_Override Override</group>
+      <struct>VolatileWork_BSS.Charge_Complete_Override_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Charge_Enable_Override_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Actuators | EatonCharger | Charge_Enable_Override Override</group>
+      <struct>VolatileWork_BSS.Charge_Enable_Override_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Charge_Enable_Override_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Actuators | EatonCharger | Charge_Enable_Override Override</group>
+      <struct>VolatileWork_BSS.Charge_Enable_Override_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>SpeedSet_ovr</name>
@@ -5055,7 +5073,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>LowerTorqueLimit_new</name>
+      <name>SpeedSet_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -5065,8 +5083,8 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | Solectria | LowerTorqueLimit Override</group>
-      <struct>VolatileWork_BSS.LowerTorqueLimit_new</struct>
+      <group>Actuators | Solectria | SpeedSet Override</group>
+      <struct>VolatileWork_BSS.SpeedSet_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -5096,7 +5114,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>TorqueControl_new</name>
+      <name>LowerTorqueLimit_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -5106,8 +5124,8 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | Solectria | TorqueControl Override</group>
-      <struct>VolatileWork_BSS.TorqueControl_new</struct>
+      <group>Actuators | Solectria | LowerTorqueLimit Override</group>
+      <struct>VolatileWork_BSS.LowerTorqueLimit_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -5137,7 +5155,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>UpperTorqueLimit_new</name>
+      <name>TorqueControl_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -5147,8 +5165,8 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | Solectria | UpperTorqueLimit Override</group>
-      <struct>VolatileWork_BSS.UpperTorqueLimit_new</struct>
+      <group>Actuators | Solectria | TorqueControl Override</group>
+      <struct>VolatileWork_BSS.TorqueControl_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -5176,6 +5194,24 @@
          <item name="Override" value="1"/>
          <default>Unknown</default>
       </enum>
+   </VarDec>
+   <VarDec>
+      <name>UpperTorqueLimit_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Actuators | Solectria | UpperTorqueLimit Override</group>
+      <struct>VolatileWork_BSS.UpperTorqueLimit_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>SpeedSet</name>
@@ -5308,7 +5344,7 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>LVVolt_new</name>
+      <name>Low12VThres</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -5318,12 +5354,12 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <units>V</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <help>Override result of linear sensor characterization, in engineering units</help>
-      <group>Sensors | LVVolt | LVVolt | LVVolt Override</group>
-      <struct>VolatileWork_BSS.LVVolt_new</struct>
+      <ctype>const Constant_T</ctype>
+      <help>Voltage below with low 12V fault occurs.</help>
+      <group>Diagnostics and Protection</group>
+      <struct>ConstantWork.Low12VThres</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -5349,6 +5385,26 @@
          <item name="Override" value="1"/>
          <default>Unknown</default>
       </enum>
+   </VarDec>
+   <VarDec>
+      <name>LVVolt_FilterConst</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant</help>
+      <group>Sensors | LVVolt | LVVolt | LVVolt Config</group>
+      <struct>ConstantWork.LVVolt_FilterConst</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>LVVolt_Gain</name>
@@ -5411,27 +5467,7 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>LVVolt_FilterConst</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>sec</units>
-      <ctype>const Constant_T</ctype>
-      <help>Filter time constant</help>
-      <group>Sensors | LVVolt | LVVolt | LVVolt Config</group>
-      <struct>ConstantWork.LVVolt_FilterConst</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Low12VThres</name>
+      <name>LVVolt_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -5441,12 +5477,12 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <units>V</units>
-      <ctype>const Constant_T</ctype>
-      <help>Voltage below with low 12V fault occurs.</help>
-      <group>Diagnostics and Protection</group>
-      <struct>ConstantWork.Low12VThres</struct>
+      <ctype>Volatile_BSS_T</ctype>
+      <help>Override result of linear sensor characterization, in engineering units</help>
+      <group>Sensors | LVVolt | LVVolt | LVVolt Override</group>
+      <struct>VolatileWork_BSS.LVVolt_new</struct>
       <class>var</class>
-      <storage>FLASH</storage>
+      <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -5531,25 +5567,7 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>OutputVoltage_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Sensors | EatonCharger | OutputVoltage Override</group>
-      <struct>VolatileWork_BSS.OutputVoltage_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>OutputVoltage_ovr</name>
+      <name>FaultSeverityIndicator_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -5559,213 +5577,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Sensors | EatonCharger | OutputVoltage Override</group>
-      <struct>VolatileWork_BSS.OutputVoltage_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>InputCurrentLimitMax_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Sensors | EatonCharger | InputCurrentLimitMax Override</group>
-      <struct>VolatileWork_BSS.InputCurrentLimitMax_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>InputCurrentLimitMax_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Sensors | EatonCharger | InputCurrentLimitMax Override</group>
-      <struct>VolatileWork_BSS.InputCurrentLimitMax_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>InputCurrent_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Sensors | EatonCharger | InputCurrent Override</group>
-      <struct>VolatileWork_BSS.InputCurrent_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>InputCurrent_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Sensors | EatonCharger | InputCurrent Override</group>
-      <struct>VolatileWork_BSS.InputCurrent_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Eaton_HV_Charger_Temperature_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Sensors | EatonCharger | Eaton_HV_Charger_Temperature Override</group>
-      <struct>VolatileWork_BSS.Eaton_HV_Charger_Temperature_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Eaton_HV_Charger_Temperature_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Sensors | EatonCharger | Eaton_HV_Charger_Temperature Override</group>
-      <struct>VolatileWork_BSS.Eaton_HV_Charger_Temperature_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>IgnitionStatus_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Sensors | EatonCharger | IgnitionStatus Override</group>
-      <struct>VolatileWork_BSS.IgnitionStatus_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>IgnitionStatus_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Sensors | EatonCharger | IgnitionStatus Override</group>
-      <struct>VolatileWork_BSS.IgnitionStatus_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>ChargerState_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Sensors | EatonCharger | ChargerState Override</group>
-      <struct>VolatileWork_BSS.ChargerState_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>ChargerState_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Sensors | EatonCharger | ChargerState Override</group>
-      <struct>VolatileWork_BSS.ChargerState_ovr</struct>
+      <group>Sensors | EatonCharger | FaultSeverityIndicator Override</group>
+      <struct>VolatileWork_BSS.FaultSeverityIndicator_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -5795,7 +5608,7 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>FaultSeverityIndicator_ovr</name>
+      <name>ChargerState_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -5805,8 +5618,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Sensors | EatonCharger | FaultSeverityIndicator Override</group>
-      <struct>VolatileWork_BSS.FaultSeverityIndicator_ovr</struct>
+      <group>Sensors | EatonCharger | ChargerState Override</group>
+      <struct>VolatileWork_BSS.ChargerState_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -5816,6 +5629,229 @@
          <item name="Override" value="1"/>
          <default>Unknown</default>
       </enum>
+   </VarDec>
+   <VarDec>
+      <name>ChargerState_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Sensors | EatonCharger | ChargerState Override</group>
+      <struct>VolatileWork_BSS.ChargerState_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>IgnitionStatus_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Sensors | EatonCharger | IgnitionStatus Override</group>
+      <struct>VolatileWork_BSS.IgnitionStatus_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>IgnitionStatus_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Sensors | EatonCharger | IgnitionStatus Override</group>
+      <struct>VolatileWork_BSS.IgnitionStatus_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Eaton_HV_Charger_Temperature_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Sensors | EatonCharger | Eaton_HV_Charger_Temperature Override</group>
+      <struct>VolatileWork_BSS.Eaton_HV_Charger_Temperature_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Eaton_HV_Charger_Temperature_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Sensors | EatonCharger | Eaton_HV_Charger_Temperature Override</group>
+      <struct>VolatileWork_BSS.Eaton_HV_Charger_Temperature_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>OutputVoltage_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Sensors | EatonCharger | OutputVoltage Override</group>
+      <struct>VolatileWork_BSS.OutputVoltage_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>OutputVoltage_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Sensors | EatonCharger | OutputVoltage Override</group>
+      <struct>VolatileWork_BSS.OutputVoltage_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>InputCurrentLimitMax_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Sensors | EatonCharger | InputCurrentLimitMax Override</group>
+      <struct>VolatileWork_BSS.InputCurrentLimitMax_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>InputCurrentLimitMax_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Sensors | EatonCharger | InputCurrentLimitMax Override</group>
+      <struct>VolatileWork_BSS.InputCurrentLimitMax_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>InputCurrent_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Sensors | EatonCharger | InputCurrent Override</group>
+      <struct>VolatileWork_BSS.InputCurrent_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>InputCurrent_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Sensors | EatonCharger | InputCurrent Override</group>
+      <struct>VolatileWork_BSS.InputCurrent_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>InstDCDCWatts</name>
@@ -6374,200 +6410,6 @@
       <type>uint8</type>
    </VarDec>
    <VarDec>
-      <name>RadiatorFanSpeed_InverterTempIdxArr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy</group>
-      <struct>ConstantWork.RadiatorFanSpeed_InverterTempIdxArr</struct>
-      <class>prelookup</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <len>5</len>
-      <input>RadiatorFanSpeed_InverterTempIn</input>
-      <index>RadiatorFanSpeed_InverterTempIdx</index>
-   </VarDec>
-   <VarDec>
-      <name>RadiatorFanSpeed_InverterTempIdx</name>
-      <access>RO RO RO RO</access>
-      <gain>0.001953125</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>127.998046875</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0x0000FFFF</mask>
-      <units>idx.frac</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy</group>
-      <struct>VolatileWork_BSS.RadiatorFanSpeed_InverterTempIdx</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint16</type>
-   </VarDec>
-   <VarDec>
-      <name>RadiatorFanSpeed_InverterTempIn</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy</group>
-      <struct>VolatileWork_BSS.RadiatorFanSpeed_InverterTempIn</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>RadiatorFanSpeedTbl</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy</group>
-      <struct>ConstantWork.RadiatorFanSpeedTbl</struct>
-      <class>interpolation_1d</class>
-      <storage>FLASH</storage>
-      <update>REMOTE</update>
-      <type>real32</type>
-      <len>5</len>
-      <output>RadiatorFanSpeed</output>
-      <prelookup>RadiatorFanSpeed_InverterTempIdxArr</prelookup>
-   </VarDec>
-   <VarDec>
-      <name>RadiatorFanSpeed</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy</group>
-      <struct>VolatileWork_BSS.RadiatorFanSpeed</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>CoolantPumpSpeedIdxArr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy</group>
-      <struct>ConstantWork.CoolantPumpSpeedIdxArr</struct>
-      <class>prelookup</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <len>11</len>
-      <input>CoolantPumpSpeedIn</input>
-      <index>CoolantPumpSpeedIdx</index>
-   </VarDec>
-   <VarDec>
-      <name>CoolantPumpSpeedIdx</name>
-      <access>RO RO RO RO</access>
-      <gain>0.001953125</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>127.998046875</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0x0000FFFF</mask>
-      <units>idx.frac</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy</group>
-      <struct>VolatileWork_BSS.CoolantPumpSpeedIdx</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint16</type>
-   </VarDec>
-   <VarDec>
-      <name>CoolantPumpSpeedIn</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy</group>
-      <struct>VolatileWork_BSS.CoolantPumpSpeedIn</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>CoolantPumpSpeedTbl</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy</group>
-      <struct>ConstantWork.CoolantPumpSpeedTbl</struct>
-      <class>interpolation_1d</class>
-      <storage>FLASH</storage>
-      <update>REMOTE</update>
-      <type>real32</type>
-      <len>11</len>
-      <output>CoolantPumpSpeed</output>
-      <prelookup>CoolantPumpSpeedIdxArr</prelookup>
-   </VarDec>
-   <VarDec>
-      <name>CoolantPumpSpeed</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy</group>
-      <struct>VolatileWork_BSS.CoolantPumpSpeed</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
       <name>StateOfChargePctIdxArr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -6822,193 +6664,198 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>ReverseOut_Pin</name>
+      <name>RadiatorFanSpeed_InverterTempIdxArr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>32767</max>
-      <min>-32768</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Discrete output pin selection for ReverseOut_Pin</help>
-      <group>System | I/O Pins | Outputs Config</group>
-      <struct>ConstantWork.ReverseOut_Pin</struct>
+      <group>BuckyWagon_01|Foreground|Control Strategy</group>
+      <struct>ConstantWork.RadiatorFanSpeed_InverterTempIdxArr</struct>
+      <class>prelookup</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>int16</type>
-      <class>enum</class>
-      <enum>
-         <item name="(None)" value="-1"/>
-         <item name="FINJ1" value="12"/>
-         <item name="FINJ10" value="21"/>
-         <item name="FINJ11" value="22"/>
-         <item name="FINJ12" value="23"/>
-         <item name="TACH" value="24"/>
-         <item name="LSD1" value="25"/>
-         <item name="LSD2" value="26"/>
-         <item name="LSD3" value="27"/>
-         <item name="LSD4" value="28"/>
-         <item name="LSD5" value="29"/>
-         <item name="LSD6" value="30"/>
-         <item name="FINJ2" value="13"/>
-         <item name="LSD7" value="31"/>
-         <item name="LSD8" value="32"/>
-         <item name="LSD9" value="33"/>
-         <item name="LSD10" value="34"/>
-         <item name="EST 1" value="36"/>
-         <item name="EST 2" value="37"/>
-         <item name="EST 3" value="38"/>
-         <item name="EST 4" value="39"/>
-         <item name="EST 5" value="40"/>
-         <item name="EST 6" value="41"/>
-         <item name="FINJ3" value="14"/>
-         <item name="EST 7" value="42"/>
-         <item name="EST 8" value="43"/>
-         <item name="EST 9" value="44"/>
-         <item name="EST 10" value="45"/>
-         <item name="EST 11" value="46"/>
-         <item name="EST 12" value="47"/>
-         <item name="EST 13" value="48"/>
-         <item name="EST 14" value="49"/>
-         <item name="EST 15" value="50"/>
-         <item name="EST 16" value="51"/>
-         <item name="FINJ4" value="15"/>
-         <item name="MPRD" value="52"/>
-         <item name="FINJ5" value="16"/>
-         <item name="FINJ6" value="17"/>
-         <item name="FINJ7" value="18"/>
-         <item name="FINJ8" value="19"/>
-         <item name="FINJ9" value="20"/>
-         <default>Unknown</default>
-      </enum>
+      <type>real32</type>
+      <len>5</len>
+      <input>RadiatorFanSpeed_InverterTempIn</input>
+      <index>RadiatorFanSpeed_InverterTempIdx</index>
    </VarDec>
    <VarDec>
-      <name>DCDCInhibit_Out_Pin</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
+      <name>RadiatorFanSpeed_InverterTempIdx</name>
+      <access>RO RO RO RO</access>
+      <gain>0.001953125</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>32767</max>
-      <min>-32768</min>
-      <format>5.0</format>
+      <max>127.998046875</max>
+      <min>0</min>
+      <format>4.2</format>
       <mask>0x0000FFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <help>Discrete output pin selection for DCDCInhibit_Out_Pin</help>
-      <group>System | I/O Pins | Outputs Config</group>
-      <struct>ConstantWork.DCDCInhibit_Out_Pin</struct>
-      <storage>FLASH</storage>
+      <units>idx.frac</units>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BuckyWagon_01|Foreground|Control Strategy</group>
+      <struct>VolatileWork_BSS.RadiatorFanSpeed_InverterTempIdx</struct>
+      <class>var</class>
+      <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>int16</type>
-      <class>enum</class>
-      <enum>
-         <item name="(None)" value="-1"/>
-         <item name="FINJ1" value="12"/>
-         <item name="FINJ10" value="21"/>
-         <item name="FINJ11" value="22"/>
-         <item name="FINJ12" value="23"/>
-         <item name="TACH" value="24"/>
-         <item name="LSD1" value="25"/>
-         <item name="LSD2" value="26"/>
-         <item name="LSD3" value="27"/>
-         <item name="LSD4" value="28"/>
-         <item name="LSD5" value="29"/>
-         <item name="LSD6" value="30"/>
-         <item name="FINJ2" value="13"/>
-         <item name="LSD7" value="31"/>
-         <item name="LSD8" value="32"/>
-         <item name="LSD9" value="33"/>
-         <item name="LSD10" value="34"/>
-         <item name="EST 1" value="36"/>
-         <item name="EST 2" value="37"/>
-         <item name="EST 3" value="38"/>
-         <item name="EST 4" value="39"/>
-         <item name="EST 5" value="40"/>
-         <item name="EST 6" value="41"/>
-         <item name="FINJ3" value="14"/>
-         <item name="EST 7" value="42"/>
-         <item name="EST 8" value="43"/>
-         <item name="EST 9" value="44"/>
-         <item name="EST 10" value="45"/>
-         <item name="EST 11" value="46"/>
-         <item name="EST 12" value="47"/>
-         <item name="EST 13" value="48"/>
-         <item name="EST 14" value="49"/>
-         <item name="EST 15" value="50"/>
-         <item name="EST 16" value="51"/>
-         <item name="FINJ4" value="15"/>
-         <item name="MPRD" value="52"/>
-         <item name="FINJ5" value="16"/>
-         <item name="FINJ6" value="17"/>
-         <item name="FINJ7" value="18"/>
-         <item name="FINJ8" value="19"/>
-         <item name="FINJ9" value="20"/>
-         <default>Unknown</default>
-      </enum>
+      <type>uint16</type>
    </VarDec>
    <VarDec>
-      <name>Brake_Light_Out</name>
+      <name>RadiatorFanSpeed_InverterTempIn</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BuckyWagon_01|Foreground|Control Strategy</group>
+      <struct>VolatileWork_BSS.RadiatorFanSpeed_InverterTempIn</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>RadiatorFanSpeedTbl</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>32767</max>
-      <min>-32768</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Discrete output pin selection for Brake_Light_Out</help>
-      <group>System | I/O Pins | Outputs Config</group>
-      <struct>ConstantWork.Brake_Light_Out</struct>
+      <group>BuckyWagon_01|Foreground|Control Strategy</group>
+      <struct>ConstantWork.RadiatorFanSpeedTbl</struct>
+      <class>interpolation_1d</class>
+      <storage>FLASH</storage>
+      <update>REMOTE</update>
+      <type>real32</type>
+      <len>5</len>
+      <output>RadiatorFanSpeed</output>
+      <prelookup>RadiatorFanSpeed_InverterTempIdxArr</prelookup>
+   </VarDec>
+   <VarDec>
+      <name>RadiatorFanSpeed</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BuckyWagon_01|Foreground|Control Strategy</group>
+      <struct>VolatileWork_BSS.RadiatorFanSpeed</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>CoolantPumpSpeedIdxArr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BuckyWagon_01|Foreground|Control Strategy</group>
+      <struct>ConstantWork.CoolantPumpSpeedIdxArr</struct>
+      <class>prelookup</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>int16</type>
-      <class>enum</class>
-      <enum>
-         <item name="(None)" value="-1"/>
-         <item name="FINJ1" value="12"/>
-         <item name="FINJ10" value="21"/>
-         <item name="FINJ11" value="22"/>
-         <item name="FINJ12" value="23"/>
-         <item name="TACH" value="24"/>
-         <item name="LSD1" value="25"/>
-         <item name="LSD2" value="26"/>
-         <item name="LSD3" value="27"/>
-         <item name="LSD4" value="28"/>
-         <item name="LSD5" value="29"/>
-         <item name="LSD6" value="30"/>
-         <item name="FINJ2" value="13"/>
-         <item name="LSD7" value="31"/>
-         <item name="LSD8" value="32"/>
-         <item name="LSD9" value="33"/>
-         <item name="LSD10" value="34"/>
-         <item name="EST 1" value="36"/>
-         <item name="EST 2" value="37"/>
-         <item name="EST 3" value="38"/>
-         <item name="EST 4" value="39"/>
-         <item name="EST 5" value="40"/>
-         <item name="EST 6" value="41"/>
-         <item name="FINJ3" value="14"/>
-         <item name="EST 7" value="42"/>
-         <item name="EST 8" value="43"/>
-         <item name="EST 9" value="44"/>
-         <item name="EST 10" value="45"/>
-         <item name="EST 11" value="46"/>
-         <item name="EST 12" value="47"/>
-         <item name="EST 13" value="48"/>
-         <item name="EST 14" value="49"/>
-         <item name="EST 15" value="50"/>
-         <item name="EST 16" value="51"/>
-         <item name="FINJ4" value="15"/>
-         <item name="MPRD" value="52"/>
-         <item name="FINJ5" value="16"/>
-         <item name="FINJ6" value="17"/>
-         <item name="FINJ7" value="18"/>
-         <item name="FINJ8" value="19"/>
-         <item name="FINJ9" value="20"/>
-         <default>Unknown</default>
-      </enum>
+      <type>real32</type>
+      <len>11</len>
+      <input>CoolantPumpSpeedIn</input>
+      <index>CoolantPumpSpeedIdx</index>
+   </VarDec>
+   <VarDec>
+      <name>CoolantPumpSpeedIdx</name>
+      <access>RO RO RO RO</access>
+      <gain>0.001953125</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>127.998046875</max>
+      <min>0</min>
+      <format>4.2</format>
+      <mask>0x0000FFFF</mask>
+      <units>idx.frac</units>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BuckyWagon_01|Foreground|Control Strategy</group>
+      <struct>VolatileWork_BSS.CoolantPumpSpeedIdx</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint16</type>
+   </VarDec>
+   <VarDec>
+      <name>CoolantPumpSpeedIn</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BuckyWagon_01|Foreground|Control Strategy</group>
+      <struct>VolatileWork_BSS.CoolantPumpSpeedIn</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>CoolantPumpSpeedTbl</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BuckyWagon_01|Foreground|Control Strategy</group>
+      <struct>ConstantWork.CoolantPumpSpeedTbl</struct>
+      <class>interpolation_1d</class>
+      <storage>FLASH</storage>
+      <update>REMOTE</update>
+      <type>real32</type>
+      <len>11</len>
+      <output>CoolantPumpSpeed</output>
+      <prelookup>CoolantPumpSpeedIdxArr</prelookup>
+   </VarDec>
+   <VarDec>
+      <name>CoolantPumpSpeed</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BuckyWagon_01|Foreground|Control Strategy</group>
+      <struct>VolatileWork_BSS.CoolantPumpSpeed</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>FaultManager</name>
@@ -7729,6 +7576,69 @@
       <row_len>1</row_len>
    </VarDec>
    <VarDec>
+      <name>ReverseOut_Pin</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Digital output pin selection for DOut150p001</help>
+      <group>System | I/O Pins | Outputs Config</group>
+      <struct>ConstantWork.ReverseOut_Pin</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>int16</type>
+      <class>enum</class>
+      <enum>
+         <item name="(None)" value="-1"/>
+         <item name="FINJ1" value="12"/>
+         <item name="FINJ10" value="21"/>
+         <item name="FINJ11" value="22"/>
+         <item name="FINJ12" value="23"/>
+         <item name="TACH" value="24"/>
+         <item name="LSD1" value="25"/>
+         <item name="LSD2" value="26"/>
+         <item name="LSD3" value="27"/>
+         <item name="LSD4" value="28"/>
+         <item name="LSD5" value="29"/>
+         <item name="LSD6" value="30"/>
+         <item name="FINJ2" value="13"/>
+         <item name="LSD7" value="31"/>
+         <item name="LSD8" value="32"/>
+         <item name="LSD9" value="33"/>
+         <item name="LSD10" value="34"/>
+         <item name="EST 1" value="36"/>
+         <item name="EST 2" value="37"/>
+         <item name="EST 3" value="38"/>
+         <item name="EST 4" value="39"/>
+         <item name="EST 5" value="40"/>
+         <item name="EST 6" value="41"/>
+         <item name="FINJ3" value="14"/>
+         <item name="EST 7" value="42"/>
+         <item name="EST 8" value="43"/>
+         <item name="EST 9" value="44"/>
+         <item name="EST 10" value="45"/>
+         <item name="EST 11" value="46"/>
+         <item name="EST 12" value="47"/>
+         <item name="EST 13" value="48"/>
+         <item name="EST 14" value="49"/>
+         <item name="EST 15" value="50"/>
+         <item name="EST 16" value="51"/>
+         <item name="FINJ4" value="15"/>
+         <item name="MPRD" value="52"/>
+         <item name="FINJ5" value="16"/>
+         <item name="FINJ6" value="17"/>
+         <item name="FINJ7" value="18"/>
+         <item name="FINJ8" value="19"/>
+         <item name="FINJ9" value="20"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
       <name>Fan_Pin</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -7794,7 +7704,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>Accel_Pedal_Pin</name>
+      <name>DCDCInhibit_Out_Pin</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -7804,19 +7714,142 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Analog input pin selection for Accel_Pedal_Pin</help>
-      <group>System | I/O Pins | Inputs Config</group>
-      <struct>ConstantWork.Accel_Pedal_Pin</struct>
+      <help>Digital output pin selection for DOut151p001</help>
+      <group>System | I/O Pins | Outputs Config</group>
+      <struct>ConstantWork.DCDCInhibit_Out_Pin</struct>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>int16</type>
       <class>enum</class>
       <enum>
          <item name="(None)" value="-1"/>
-         <item name="ECUP" value="53"/>
-         <item name="AN7M" value="62"/>
-         <item name="AN8M" value="63"/>
-         <item name="AN9M" value="64"/>
+         <item name="FINJ1" value="12"/>
+         <item name="FINJ10" value="21"/>
+         <item name="FINJ11" value="22"/>
+         <item name="FINJ12" value="23"/>
+         <item name="TACH" value="24"/>
+         <item name="LSD1" value="25"/>
+         <item name="LSD2" value="26"/>
+         <item name="LSD3" value="27"/>
+         <item name="LSD4" value="28"/>
+         <item name="LSD5" value="29"/>
+         <item name="LSD6" value="30"/>
+         <item name="FINJ2" value="13"/>
+         <item name="LSD7" value="31"/>
+         <item name="LSD8" value="32"/>
+         <item name="LSD9" value="33"/>
+         <item name="LSD10" value="34"/>
+         <item name="EST 1" value="36"/>
+         <item name="EST 2" value="37"/>
+         <item name="EST 3" value="38"/>
+         <item name="EST 4" value="39"/>
+         <item name="EST 5" value="40"/>
+         <item name="EST 6" value="41"/>
+         <item name="FINJ3" value="14"/>
+         <item name="EST 7" value="42"/>
+         <item name="EST 8" value="43"/>
+         <item name="EST 9" value="44"/>
+         <item name="EST 10" value="45"/>
+         <item name="EST 11" value="46"/>
+         <item name="EST 12" value="47"/>
+         <item name="EST 13" value="48"/>
+         <item name="EST 14" value="49"/>
+         <item name="EST 15" value="50"/>
+         <item name="EST 16" value="51"/>
+         <item name="FINJ4" value="15"/>
+         <item name="MPRD" value="52"/>
+         <item name="FINJ5" value="16"/>
+         <item name="FINJ6" value="17"/>
+         <item name="FINJ7" value="18"/>
+         <item name="FINJ8" value="19"/>
+         <item name="FINJ9" value="20"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Brake_Light_Out</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Digital output pin selection for DOut152p001</help>
+      <group>System | I/O Pins | Outputs Config</group>
+      <struct>ConstantWork.Brake_Light_Out</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>int16</type>
+      <class>enum</class>
+      <enum>
+         <item name="(None)" value="-1"/>
+         <item name="FINJ1" value="12"/>
+         <item name="FINJ10" value="21"/>
+         <item name="FINJ11" value="22"/>
+         <item name="FINJ12" value="23"/>
+         <item name="TACH" value="24"/>
+         <item name="LSD1" value="25"/>
+         <item name="LSD2" value="26"/>
+         <item name="LSD3" value="27"/>
+         <item name="LSD4" value="28"/>
+         <item name="LSD5" value="29"/>
+         <item name="LSD6" value="30"/>
+         <item name="FINJ2" value="13"/>
+         <item name="LSD7" value="31"/>
+         <item name="LSD8" value="32"/>
+         <item name="LSD9" value="33"/>
+         <item name="LSD10" value="34"/>
+         <item name="EST 1" value="36"/>
+         <item name="EST 2" value="37"/>
+         <item name="EST 3" value="38"/>
+         <item name="EST 4" value="39"/>
+         <item name="EST 5" value="40"/>
+         <item name="EST 6" value="41"/>
+         <item name="FINJ3" value="14"/>
+         <item name="EST 7" value="42"/>
+         <item name="EST 8" value="43"/>
+         <item name="EST 9" value="44"/>
+         <item name="EST 10" value="45"/>
+         <item name="EST 11" value="46"/>
+         <item name="EST 12" value="47"/>
+         <item name="EST 13" value="48"/>
+         <item name="EST 14" value="49"/>
+         <item name="EST 15" value="50"/>
+         <item name="EST 16" value="51"/>
+         <item name="FINJ4" value="15"/>
+         <item name="MPRD" value="52"/>
+         <item name="FINJ5" value="16"/>
+         <item name="FINJ6" value="17"/>
+         <item name="FINJ7" value="18"/>
+         <item name="FINJ8" value="19"/>
+         <item name="FINJ9" value="20"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>EStop_Switch_Pin</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Digital input pin selection for EStop_Switch_Pin</help>
+      <group>System | I/O Pins | Inputs Config</group>
+      <struct>ConstantWork.EStop_Switch_Pin</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>int16</type>
+      <class>enum</class>
+      <enum>
+         <item name="(None)" value="-1"/>
+         <item name="AN1M" value="56"/>
          <item name="AN10M" value="65"/>
          <item name="AN11M" value="66"/>
          <item name="AN12M" value="67"/>
@@ -7824,10 +7857,10 @@
          <item name="AN14M" value="69"/>
          <item name="AN15M" value="70"/>
          <item name="AN16M" value="71"/>
-         <item name="DRVP" value="54"/>
          <item name="AN17M" value="72"/>
          <item name="AN18M" value="73"/>
          <item name="AN19M" value="74"/>
+         <item name="AN2M" value="57"/>
          <item name="AN20M" value="75"/>
          <item name="AN21M" value="76"/>
          <item name="AN22M" value="77"/>
@@ -7835,10 +7868,10 @@
          <item name="AN24M" value="79"/>
          <item name="AN25M" value="80"/>
          <item name="AN26M" value="81"/>
-         <item name="XDRP" value="55"/>
          <item name="AN27M" value="82"/>
          <item name="AN28M" value="83"/>
          <item name="AN29M" value="84"/>
+         <item name="AN3M" value="58"/>
          <item name="AN30M" value="85"/>
          <item name="AN31M" value="86"/>
          <item name="AN32M" value="87"/>
@@ -7846,37 +7879,22 @@
          <item name="AN34M" value="89"/>
          <item name="O2A" value="90"/>
          <item name="O2B" value="91"/>
-         <item name="AN1M" value="56"/>
-         <item name="XDRP_B" value="92"/>
-         <item name="AN2M" value="57"/>
-         <item name="AN3M" value="58"/>
+         <item name="DG1M" value="93"/>
+         <item name="DG2M" value="94"/>
+         <item name="DG3M" value="95"/>
          <item name="AN4M" value="59"/>
+         <item name="DG4M" value="96"/>
+         <item name="DG5M" value="102"/>
+         <item name="DG6M" value="103"/>
+         <item name="DG7M" value="104"/>
+         <item name="SPD1" value="105"/>
+         <item name="SPD2" value="106"/>
+         <item name="DG8M" value="111"/>
          <item name="AN5M" value="60"/>
          <item name="AN6M" value="61"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Accel_Pedal_Pin_ref</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>255</max>
-      <min>0</min>
-      <format>3.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>const Constant_T</ctype>
-      <help>Reference Voltage Selection</help>
-      <group>System | I/O Pins | Inputs Config</group>
-      <struct>ConstantWork.Accel_Pedal_Pin_ref</struct>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="5V" value="0"/>
-         <item name="2.7V" value="1"/>
+         <item name="AN7M" value="62"/>
+         <item name="AN8M" value="63"/>
+         <item name="AN9M" value="64"/>
          <default>Unknown</default>
       </enum>
    </VarDec>
@@ -7957,6 +7975,93 @@
       <help>Reference Voltage Selection</help>
       <group>System | I/O Pins | Inputs Config</group>
       <struct>ConstantWork.Reverse_Switch_Pin_ref</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="5V" value="0"/>
+         <item name="2.7V" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Accel_Pedal_Pin</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Analog input pin selection for Accel_Pedal_Pin</help>
+      <group>System | I/O Pins | Inputs Config</group>
+      <struct>ConstantWork.Accel_Pedal_Pin</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>int16</type>
+      <class>enum</class>
+      <enum>
+         <item name="(None)" value="-1"/>
+         <item name="ECUP" value="53"/>
+         <item name="AN7M" value="62"/>
+         <item name="AN8M" value="63"/>
+         <item name="AN9M" value="64"/>
+         <item name="AN10M" value="65"/>
+         <item name="AN11M" value="66"/>
+         <item name="AN12M" value="67"/>
+         <item name="AN13M" value="68"/>
+         <item name="AN14M" value="69"/>
+         <item name="AN15M" value="70"/>
+         <item name="AN16M" value="71"/>
+         <item name="DRVP" value="54"/>
+         <item name="AN17M" value="72"/>
+         <item name="AN18M" value="73"/>
+         <item name="AN19M" value="74"/>
+         <item name="AN20M" value="75"/>
+         <item name="AN21M" value="76"/>
+         <item name="AN22M" value="77"/>
+         <item name="AN23M" value="78"/>
+         <item name="AN24M" value="79"/>
+         <item name="AN25M" value="80"/>
+         <item name="AN26M" value="81"/>
+         <item name="XDRP" value="55"/>
+         <item name="AN27M" value="82"/>
+         <item name="AN28M" value="83"/>
+         <item name="AN29M" value="84"/>
+         <item name="AN30M" value="85"/>
+         <item name="AN31M" value="86"/>
+         <item name="AN32M" value="87"/>
+         <item name="AN33M" value="88"/>
+         <item name="AN34M" value="89"/>
+         <item name="O2A" value="90"/>
+         <item name="O2B" value="91"/>
+         <item name="AN1M" value="56"/>
+         <item name="XDRP_B" value="92"/>
+         <item name="AN2M" value="57"/>
+         <item name="AN3M" value="58"/>
+         <item name="AN4M" value="59"/>
+         <item name="AN5M" value="60"/>
+         <item name="AN6M" value="61"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Accel_Pedal_Pin_ref</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Reference Voltage Selection</help>
+      <group>System | I/O Pins | Inputs Config</group>
+      <struct>ConstantWork.Accel_Pedal_Pin_ref</struct>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -8051,75 +8156,6 @@
       <enum>
          <item name="5V" value="0"/>
          <item name="2.7V" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>EStop_Switch_Pin</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>32767</max>
-      <min>-32768</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <help>Digital input pin selection for EStop_Switch_Pin</help>
-      <group>System | I/O Pins | Inputs Config</group>
-      <struct>ConstantWork.EStop_Switch_Pin</struct>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>int16</type>
-      <class>enum</class>
-      <enum>
-         <item name="(None)" value="-1"/>
-         <item name="AN1M" value="56"/>
-         <item name="AN10M" value="65"/>
-         <item name="AN11M" value="66"/>
-         <item name="AN12M" value="67"/>
-         <item name="AN13M" value="68"/>
-         <item name="AN14M" value="69"/>
-         <item name="AN15M" value="70"/>
-         <item name="AN16M" value="71"/>
-         <item name="AN17M" value="72"/>
-         <item name="AN18M" value="73"/>
-         <item name="AN19M" value="74"/>
-         <item name="AN2M" value="57"/>
-         <item name="AN20M" value="75"/>
-         <item name="AN21M" value="76"/>
-         <item name="AN22M" value="77"/>
-         <item name="AN23M" value="78"/>
-         <item name="AN24M" value="79"/>
-         <item name="AN25M" value="80"/>
-         <item name="AN26M" value="81"/>
-         <item name="AN27M" value="82"/>
-         <item name="AN28M" value="83"/>
-         <item name="AN29M" value="84"/>
-         <item name="AN3M" value="58"/>
-         <item name="AN30M" value="85"/>
-         <item name="AN31M" value="86"/>
-         <item name="AN32M" value="87"/>
-         <item name="AN33M" value="88"/>
-         <item name="AN34M" value="89"/>
-         <item name="O2A" value="90"/>
-         <item name="O2B" value="91"/>
-         <item name="DG1M" value="93"/>
-         <item name="DG2M" value="94"/>
-         <item name="DG3M" value="95"/>
-         <item name="AN4M" value="59"/>
-         <item name="DG4M" value="96"/>
-         <item name="DG5M" value="102"/>
-         <item name="DG6M" value="103"/>
-         <item name="DG7M" value="104"/>
-         <item name="SPD1" value="105"/>
-         <item name="SPD2" value="106"/>
-         <item name="DG8M" value="111"/>
-         <item name="AN5M" value="60"/>
-         <item name="AN6M" value="61"/>
-         <item name="AN7M" value="62"/>
-         <item name="AN8M" value="63"/>
-         <item name="AN9M" value="64"/>
          <default>Unknown</default>
       </enum>
    </VarDec>

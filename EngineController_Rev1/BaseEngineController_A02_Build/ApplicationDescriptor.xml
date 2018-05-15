@@ -4,7 +4,7 @@
 	<Name>BaseEngineController_A02</Name>
 	<Author>HYBRID</Author>
 	<Copyright>2018 Woodward.</Copyright>
-	<CreateDate>07-Apr-2018</CreateDate>
+	<CreateDate>22-Apr-2018</CreateDate>
 	<MemoryLayout>DEV</MemoryLayout>
 	<Module>ClassicModule-MPC555</Module>
 	<Memory/>
@@ -25,9 +25,9 @@
 			</TableDatabase>
 			<ProjectID>6</ProjectID>
 			<ProductID>1</ProductID>
-			<SwIdTxt>BaseEngin_128</SwIdTxt>
-			<SwRevisionTxt>BaseEngineController_A02_128</SwRevisionTxt>
-			<CalIdTxt>BaseEngineController_A02_128_000</CalIdTxt>
+			<SwIdTxt>BaseEngin_132</SwIdTxt>
+			<SwRevisionTxt>BaseEngineController_A02_132</SwRevisionTxt>
+			<CalIdTxt>BaseEngineController_A02_132_000</CalIdTxt>
 		</VarDecs>
 		<DatabaseBuild>
 			<Toolchain>
@@ -38,10 +38,10 @@
 			</Toolchain>
 		</DatabaseBuild>
 		<Command>
-			<Description>Copy BaseEngin_128.dll and BaseEngineController_A02_128.srz</Description>
+			<Description>Copy BaseEngin_132.dll and BaseEngineController_A02_132.srz</Description>
 			<Order>99</Order>
-			<Execute>@if exist C:\ECUFiles\TDBDLL\\*.* copy /Y .\TDB\BaseEngin_128.dll C:\ECUFiles\TDBDLL\ &gt; NUL</Execute>
-			<Execute>@if exist C:\ECUFiles\Programs\*.* copy /Y .\Target\BaseEngineController_A02_128.srz C:\ECUFiles\Programs &gt; NUL</Execute>
+			<Execute>@if exist C:\ECUFiles\TDBDLL\\*.* copy /Y .\TDB\BaseEngin_132.dll C:\ECUFiles\TDBDLL\ &gt; NUL</Execute>
+			<Execute>@if exist C:\ECUFiles\Programs\*.* copy /Y .\Target\BaseEngineController_A02_132.srz C:\ECUFiles\Programs &gt; NUL</Execute>
 		</Command>
 	</ToolInterface>
 	<Build>
@@ -72,21 +72,21 @@
 			<File>MotoHawk_DataStores.c</File>
 			<File>MotoHawk_IO.c</File>
 			<File>TableLookupFunctions.c</File>
-			<File>Trigger_BGND_BASE_PERIODIC_8039p0005.c</File>
+			<File>Trigger_BGND_BASE_PERIODIC_8052p0004.c</File>
 			<File>Trigger_CAN_RX_BusCAN_1_Buf1.c</File>
 			<File>Trigger_CAN_RX_BusCAN_2_Buf14.c</File>
 			<File>Trigger_Encoder_Fault_28.c</File>
 			<File>Trigger_FGND_5XRTI_PERIODIC_1408p0004.c</File>
 			<File>Trigger_FGND_5XRTI_PERIODIC_1409p0004.c</File>
 			<File>Trigger_FGND_5XRTI_PERIODIC_4024p0001.c</File>
-			<File>Trigger_FGND_5XRTI_PERIODIC_6989p0004.c</File>
-			<File>Trigger_FGND_5XRTI_PERIODIC_7767p0005.c</File>
-			<File>Trigger_FGND_MID_TDC_EVENT_6806p0004.c</File>
-			<File>Trigger_FGND_RTI_PERIODIC_8045p0005.c</File>
+			<File>Trigger_FGND_5XRTI_PERIODIC_6996p0005.c</File>
+			<File>Trigger_FGND_5XRTI_PERIODIC_7780p0004.c</File>
+			<File>Trigger_FGND_MID_TDC_EVENT_6813p0005.c</File>
+			<File>Trigger_FGND_RTI_PERIODIC_8058p0004.c</File>
 			<File>Trigger_FGND_TDC1_EVENT_1156p0004.c</File>
-			<File>Trigger_FGND_TDC_EVENT_5692p0001.c</File>
-			<File>Trigger_FGND_TDC_EVENT_7280p0004.c</File>
-			<File>Trigger_STARTUP_EVENT_6805p0004.c</File>
+			<File>Trigger_FGND_TDC_EVENT_5695p0004.c</File>
+			<File>Trigger_FGND_TDC_EVENT_7287p0001.c</File>
+			<File>Trigger_STARTUP_EVENT_6812p0005.c</File>
 			<File>VarDecs.c</File>
 			<File>rt_zcfcn.c</File>
 			<File>rt_nonfinite.c</File>
@@ -110,7 +110,7 @@
 		</Command>
 		<Command>
 			<Description>Call MotoConvert</Description>
-			<Execute>@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\BaseEngineController_A02.map -srec=.\Target\BaseEngineController_A02.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=BaseEngineController_A02.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x0006FFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\BaseEngineController_A02_128.srz</Execute>
+			<Execute>@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\BaseEngineController_A02.map -srec=.\Target\BaseEngineController_A02.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=BaseEngineController_A02.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x0006FFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\BaseEngineController_A02_132.srz</Execute>
 			<Order>55</Order>
 		</Command>
 		<Compiler>
@@ -144,5 +144,5 @@
 			<Execute>@if exist .\rtwtypes.h del /Q /F .\rtwtypes.h &gt; NUL</Execute>
 		</Command>
 	</Build>
-	<Signature>238b1bc6-3422-43ba-bb-a7-11-24-55-12-cf</Signature>
+	<Signature>ab9be079-310b-45d6-b4-55-be-40-a5-6a-08</Signature>
 </Application>

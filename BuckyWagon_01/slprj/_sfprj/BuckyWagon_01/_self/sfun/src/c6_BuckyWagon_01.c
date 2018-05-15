@@ -43,30 +43,48 @@ static void finalize_c6_BuckyWagon_01(SFc6_BuckyWagon_01InstanceStruct
 static void sf_c6_BuckyWagon_01(SFc6_BuckyWagon_01InstanceStruct *chartInstance);
 static void c6_chartstep_c6_BuckyWagon_01(SFc6_BuckyWagon_01InstanceStruct
   *chartInstance);
+static void initSimStructsc6_BuckyWagon_01(SFc6_BuckyWagon_01InstanceStruct
+  *chartInstance);
 static void init_script_number_translation(uint32_T c6_machineNumber, uint32_T
   c6_chartNumber);
-static const mxArray *c6_sf_marshall(void *chartInstanceVoid, void *c6_u);
-static const mxArray *c6_b_sf_marshall(void *chartInstanceVoid, void *c6_u);
-static const mxArray *c6_c_sf_marshall(void *chartInstanceVoid, void *c6_u);
-static const mxArray *c6_d_sf_marshall(void *chartInstanceVoid, void *c6_u);
-static boolean_T c6_emlrt_marshallIn(SFc6_BuckyWagon_01InstanceStruct
-  *chartInstance, const mxArray *c6_light, const char_T *c6_name);
-static uint16_T c6_b_emlrt_marshallIn(SFc6_BuckyWagon_01InstanceStruct
-  *chartInstance, const mxArray *c6_b_timer, const char_T *c6_name);
+static const mxArray *c6_sf_marshallOut(void *chartInstanceVoid, void *c6_inData);
+static int32_T c6_emlrt_marshallIn(SFc6_BuckyWagon_01InstanceStruct
+  *chartInstance, const mxArray *c6_u, const emlrtMsgIdentifier *c6_parentId);
+static void c6_sf_marshallIn(void *chartInstanceVoid, const mxArray
+  *c6_mxArrayInData, const char_T *c6_varName, void *c6_outData);
+static const mxArray *c6_b_sf_marshallOut(void *chartInstanceVoid, void
+  *c6_inData);
+static uint8_T c6_b_emlrt_marshallIn(SFc6_BuckyWagon_01InstanceStruct
+  *chartInstance, const mxArray *c6_b_tp_Off, const char_T *c6_identifier);
 static uint8_T c6_c_emlrt_marshallIn(SFc6_BuckyWagon_01InstanceStruct
-  *chartInstance, const mxArray *c6_b_is_active_c6_BuckyWagon_01, const char_T
-  *c6_name);
-static const mxArray *c6_d_emlrt_marshallIn(SFc6_BuckyWagon_01InstanceStruct
+  *chartInstance, const mxArray *c6_u, const emlrtMsgIdentifier *c6_parentId);
+static void c6_b_sf_marshallIn(void *chartInstanceVoid, const mxArray
+  *c6_mxArrayInData, const char_T *c6_varName, void *c6_outData);
+static const mxArray *c6_c_sf_marshallOut(void *chartInstanceVoid, void
+  *c6_inData);
+static const mxArray *c6_d_sf_marshallOut(void *chartInstanceVoid, void
+  *c6_inData);
+static boolean_T c6_d_emlrt_marshallIn(SFc6_BuckyWagon_01InstanceStruct
+  *chartInstance, const mxArray *c6_light, const char_T *c6_identifier);
+static boolean_T c6_e_emlrt_marshallIn(SFc6_BuckyWagon_01InstanceStruct
+  *chartInstance, const mxArray *c6_u, const emlrtMsgIdentifier *c6_parentId);
+static void c6_c_sf_marshallIn(void *chartInstanceVoid, const mxArray
+  *c6_mxArrayInData, const char_T *c6_varName, void *c6_outData);
+static const mxArray *c6_e_sf_marshallOut(void *chartInstanceVoid, void
+  *c6_inData);
+static uint16_T c6_f_emlrt_marshallIn(SFc6_BuckyWagon_01InstanceStruct
+  *chartInstance, const mxArray *c6_b_timer, const char_T *c6_identifier);
+static uint16_T c6_g_emlrt_marshallIn(SFc6_BuckyWagon_01InstanceStruct
+  *chartInstance, const mxArray *c6_u, const emlrtMsgIdentifier *c6_parentId);
+static void c6_d_sf_marshallIn(void *chartInstanceVoid, const mxArray
+  *c6_mxArrayInData, const char_T *c6_varName, void *c6_outData);
+static const mxArray *c6_h_emlrt_marshallIn(SFc6_BuckyWagon_01InstanceStruct
   *chartInstance, const mxArray *c6_b_setSimStateSideEffectsInfo, const char_T
-  *c6_name);
+  *c6_identifier);
+static const mxArray *c6_i_emlrt_marshallIn(SFc6_BuckyWagon_01InstanceStruct
+  *chartInstance, const mxArray *c6_u, const emlrtMsgIdentifier *c6_parentId);
 static uint16_T c6__u16_s32_(SFc6_BuckyWagon_01InstanceStruct *chartInstance,
   int32_T c6_b);
-static void init_test_point_addr_map(SFc6_BuckyWagon_01InstanceStruct
-  *chartInstance);
-static void **get_test_point_address_map(SFc6_BuckyWagon_01InstanceStruct
-  *chartInstance);
-static rtwCAPI_ModelMappingInfo *get_test_point_mapping_info
-  (SFc6_BuckyWagon_01InstanceStruct *chartInstance);
 static void init_dsm_address_info(SFc6_BuckyWagon_01InstanceStruct
   *chartInstance);
 
@@ -76,6 +94,7 @@ static void initialize_c6_BuckyWagon_01(SFc6_BuckyWagon_01InstanceStruct
 {
   boolean_T *c6_light;
   c6_light = (boolean_T *)ssGetOutputPortSignal(chartInstance->S, 1);
+  chartInstance->c6_sfEvent = CALL_EVENT;
   _sfTime_ = (real_T)ssGetT(chartInstance->S);
   chartInstance->c6_doSetSimStateSideEffects = 0U;
   chartInstance->c6_setSimStateSideEffectsInfo = NULL;
@@ -116,37 +135,37 @@ static void c6_update_debugger_state_c6_BuckyWagon_01
   c6_prevAniVal = sf_debug_get_animation();
   sf_debug_set_animation(0U);
   if ((int16_T)chartInstance->c6_is_active_c6_BuckyWagon_01 == 1) {
-    _SFD_CC_CALL(CHART_ACTIVE_TAG,5);
+    _SFD_CC_CALL(CHART_ACTIVE_TAG, 5U, chartInstance->c6_sfEvent);
   }
 
   if (chartInstance->c6_is_c6_BuckyWagon_01 == c6_IN_Off) {
-    _SFD_CS_CALL(STATE_ACTIVE_TAG,2);
+    _SFD_CS_CALL(STATE_ACTIVE_TAG, 2U, chartInstance->c6_sfEvent);
   } else {
-    _SFD_CS_CALL(STATE_INACTIVE_TAG,2);
+    _SFD_CS_CALL(STATE_INACTIVE_TAG, 2U, chartInstance->c6_sfEvent);
   }
 
   if (chartInstance->c6_is_c6_BuckyWagon_01 == c6_IN_FlashOne) {
-    _SFD_CS_CALL(STATE_ACTIVE_TAG,0);
+    _SFD_CS_CALL(STATE_ACTIVE_TAG, 0U, chartInstance->c6_sfEvent);
   } else {
-    _SFD_CS_CALL(STATE_INACTIVE_TAG,0);
+    _SFD_CS_CALL(STATE_INACTIVE_TAG, 0U, chartInstance->c6_sfEvent);
   }
 
   if (chartInstance->c6_is_c6_BuckyWagon_01 == c6_IN_FlashTwo) {
-    _SFD_CS_CALL(STATE_ACTIVE_TAG,1);
+    _SFD_CS_CALL(STATE_ACTIVE_TAG, 1U, chartInstance->c6_sfEvent);
   } else {
-    _SFD_CS_CALL(STATE_INACTIVE_TAG,1);
+    _SFD_CS_CALL(STATE_INACTIVE_TAG, 1U, chartInstance->c6_sfEvent);
   }
 
   if (chartInstance->c6_is_c6_BuckyWagon_01 == c6_IN_OffOne) {
-    _SFD_CS_CALL(STATE_ACTIVE_TAG,3);
+    _SFD_CS_CALL(STATE_ACTIVE_TAG, 3U, chartInstance->c6_sfEvent);
   } else {
-    _SFD_CS_CALL(STATE_INACTIVE_TAG,3);
+    _SFD_CS_CALL(STATE_INACTIVE_TAG, 3U, chartInstance->c6_sfEvent);
   }
 
   if (chartInstance->c6_is_c6_BuckyWagon_01 == c6_IN_OffTwo) {
-    _SFD_CS_CALL(STATE_ACTIVE_TAG,4);
+    _SFD_CS_CALL(STATE_ACTIVE_TAG, 4U, chartInstance->c6_sfEvent);
   } else {
-    _SFD_CS_CALL(STATE_INACTIVE_TAG,4);
+    _SFD_CS_CALL(STATE_INACTIVE_TAG, 4U, chartInstance->c6_sfEvent);
   }
 
   sf_debug_set_animation(c6_prevAniVal);
@@ -156,7 +175,7 @@ static void c6_update_debugger_state_c6_BuckyWagon_01
 static const mxArray *get_sim_state_c6_BuckyWagon_01
   (SFc6_BuckyWagon_01InstanceStruct *chartInstance)
 {
-  const mxArray *c6_st = NULL;
+  const mxArray *c6_st;
   const mxArray *c6_y = NULL;
   boolean_T c6_hoistedGlobal;
   boolean_T c6_u;
@@ -172,6 +191,7 @@ static const mxArray *get_sim_state_c6_BuckyWagon_01
   const mxArray *c6_e_y = NULL;
   boolean_T *c6_light;
   c6_light = (boolean_T *)ssGetOutputPortSignal(chartInstance->S, 1);
+  c6_st = NULL;
   c6_st = NULL;
   c6_y = NULL;
   sf_mex_assign(&c6_y, sf_mex_createcellarray(4));
@@ -206,20 +226,18 @@ static void set_sim_state_c6_BuckyWagon_01(SFc6_BuckyWagon_01InstanceStruct
   boolean_T *c6_light;
   c6_light = (boolean_T *)ssGetOutputPortSignal(chartInstance->S, 1);
   c6_u = sf_mex_dup(c6_st);
-  *c6_light = c6_emlrt_marshallIn(chartInstance, sf_mex_dup(sf_mex_getcell(c6_u,
-    0)), "light");
-  chartInstance->c6_timer = c6_b_emlrt_marshallIn(chartInstance, sf_mex_dup
+  *c6_light = c6_d_emlrt_marshallIn(chartInstance, sf_mex_dup(sf_mex_getcell
+    (c6_u, 0)), "light");
+  chartInstance->c6_timer = c6_f_emlrt_marshallIn(chartInstance, sf_mex_dup
     (sf_mex_getcell(c6_u, 1)), "timer");
-  chartInstance->c6_is_active_c6_BuckyWagon_01 = c6_c_emlrt_marshallIn
+  chartInstance->c6_is_active_c6_BuckyWagon_01 = c6_b_emlrt_marshallIn
     (chartInstance, sf_mex_dup(sf_mex_getcell(c6_u, 2)),
      "is_active_c6_BuckyWagon_01");
-  chartInstance->c6_is_c6_BuckyWagon_01 = c6_c_emlrt_marshallIn(chartInstance,
-    sf_mex_dup(sf_mex_getcell(c6_u, 3)),
-    "is_c6_BuckyWagon_01");
+  chartInstance->c6_is_c6_BuckyWagon_01 = c6_b_emlrt_marshallIn(chartInstance,
+    sf_mex_dup(sf_mex_getcell(c6_u, 3)), "is_c6_BuckyWagon_01");
   sf_mex_assign(&chartInstance->c6_setSimStateSideEffectsInfo,
-                c6_d_emlrt_marshallIn(chartInstance, sf_mex_dup(sf_mex_getcell
-    (c6_u, 4)
-    ), "setSimStateSideEffectsInfo"));
+                c6_h_emlrt_marshallIn(chartInstance, sf_mex_dup(sf_mex_getcell
+    (c6_u, 4)), "setSimStateSideEffectsInfo"));
   sf_mex_destroy(&c6_u);
   chartInstance->c6_doSetSimStateSideEffects = 1U;
   c6_update_debugger_state_c6_BuckyWagon_01(chartInstance);
@@ -272,7 +290,6 @@ static void finalize_c6_BuckyWagon_01(SFc6_BuckyWagon_01InstanceStruct
 
 static void sf_c6_BuckyWagon_01(SFc6_BuckyWagon_01InstanceStruct *chartInstance)
 {
-  int32_T c6_previousEvent;
   real_T *c6_cCOn;
   boolean_T *c6_light;
   uint16_T *c6_offLongTime;
@@ -285,17 +302,15 @@ static void sf_c6_BuckyWagon_01(SFc6_BuckyWagon_01InstanceStruct *chartInstance)
   c6_cCOn = (real_T *)ssGetInputPortSignal(chartInstance->S, 0);
   c6_set_sim_state_side_effects_c6_BuckyWagon_01(chartInstance);
   _sfTime_ = (real_T)ssGetT(chartInstance->S);
-  _SFD_CC_CALL(CHART_ENTER_SFUNCTION_TAG,5);
+  _SFD_CC_CALL(CHART_ENTER_SFUNCTION_TAG, 5U, chartInstance->c6_sfEvent);
   _SFD_DATA_RANGE_CHECK(*c6_cCOn, 0U);
   _SFD_DATA_RANGE_CHECK((real_T)*c6_light, 1U);
   _SFD_DATA_RANGE_CHECK((real_T)*c6_offLongTime, 2U);
   _SFD_DATA_RANGE_CHECK((real_T)*c6_offShortTime, 3U);
   _SFD_DATA_RANGE_CHECK((real_T)*c6_onTime, 4U);
   _SFD_DATA_RANGE_CHECK((real_T)chartInstance->c6_timer, 5U);
-  c6_previousEvent = _sfEvent_;
-  _sfEvent_ = CALL_EVENT;
+  chartInstance->c6_sfEvent = CALL_EVENT;
   c6_chartstep_c6_BuckyWagon_01(chartInstance);
-  _sfEvent_ = c6_previousEvent;
   sf_debug_check_for_state_inconsistency(_BuckyWagon_01MachineNumber_,
     chartInstance->chartNumber, chartInstance->instanceNumber);
 }
@@ -303,9 +318,9 @@ static void sf_c6_BuckyWagon_01(SFc6_BuckyWagon_01InstanceStruct *chartInstance)
 static void c6_chartstep_c6_BuckyWagon_01(SFc6_BuckyWagon_01InstanceStruct
   *chartInstance)
 {
-  real_T *c6_cCOn;
-  boolean_T *c6_light;
   uint16_T *c6_onTime;
+  boolean_T *c6_light;
+  real_T *c6_cCOn;
   uint16_T *c6_offShortTime;
   uint16_T *c6_offLongTime;
   c6_onTime = (uint16_T *)ssGetInputPortSignal(chartInstance->S, 3);
@@ -313,33 +328,34 @@ static void c6_chartstep_c6_BuckyWagon_01(SFc6_BuckyWagon_01InstanceStruct
   c6_offLongTime = (uint16_T *)ssGetInputPortSignal(chartInstance->S, 1);
   c6_light = (boolean_T *)ssGetOutputPortSignal(chartInstance->S, 1);
   c6_cCOn = (real_T *)ssGetInputPortSignal(chartInstance->S, 0);
-  _SFD_CC_CALL(CHART_ENTER_DURING_FUNCTION_TAG,5);
+  _SFD_CC_CALL(CHART_ENTER_DURING_FUNCTION_TAG, 5U, chartInstance->c6_sfEvent);
   if ((int16_T)chartInstance->c6_is_active_c6_BuckyWagon_01 == 0) {
-    _SFD_CC_CALL(CHART_ENTER_ENTRY_FUNCTION_TAG,5);
+    _SFD_CC_CALL(CHART_ENTER_ENTRY_FUNCTION_TAG, 5U, chartInstance->c6_sfEvent);
     chartInstance->c6_is_active_c6_BuckyWagon_01 = 1U;
-    _SFD_CC_CALL(EXIT_OUT_OF_FUNCTION_TAG,5);
-    _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG,0);
-    _SFD_CT_CALL(TRANSITION_ACTIVE_TAG,0);
+    _SFD_CC_CALL(EXIT_OUT_OF_FUNCTION_TAG, 5U, chartInstance->c6_sfEvent);
+    _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 0U, chartInstance->c6_sfEvent);
+    _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 0U, chartInstance->c6_sfEvent);
     chartInstance->c6_is_c6_BuckyWagon_01 = c6_IN_Off;
-    _SFD_CS_CALL(STATE_ACTIVE_TAG,2);
+    _SFD_CS_CALL(STATE_ACTIVE_TAG, 2U, chartInstance->c6_sfEvent);
     chartInstance->c6_tp_Off = 1U;
     *c6_light = FALSE;
     _SFD_DATA_RANGE_CHECK((real_T)*c6_light, 1U);
   } else {
     switch (chartInstance->c6_is_c6_BuckyWagon_01) {
      case c6_IN_FlashOne:
-      CV_CHART_EVAL(5,0,1);
-      _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG,0);
-      _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG,2);
-      if (CV_TRANSITION_EVAL(2U, (int32_T)_SFD_CCP_CALL(2,0,
-            ((chartInstance->c6_timer >= *c6_onTime)!=0))) != 0) {
-        _SFD_CT_CALL(TRANSITION_ACTIVE_TAG,2);
-        _SFD_CS_CALL(STATE_ENTER_EXIT_FUNCTION_TAG,0);
+      CV_CHART_EVAL(5, 0, 1);
+      _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 0U,
+                   chartInstance->c6_sfEvent);
+      _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 2U,
+                   chartInstance->c6_sfEvent);
+      if (CV_TRANSITION_EVAL(2U, (int32_T)_SFD_CCP_CALL(2U, 0,
+            chartInstance->c6_timer >= *c6_onTime != 0U,
+            chartInstance->c6_sfEvent))) {
+        _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 2U, chartInstance->c6_sfEvent);
         chartInstance->c6_tp_FlashOne = 0U;
-        _SFD_CS_CALL(STATE_INACTIVE_TAG,0);
-        _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG,0);
+        _SFD_CS_CALL(STATE_INACTIVE_TAG, 0U, chartInstance->c6_sfEvent);
         chartInstance->c6_is_c6_BuckyWagon_01 = c6_IN_OffOne;
-        _SFD_CS_CALL(STATE_ACTIVE_TAG,3);
+        _SFD_CS_CALL(STATE_ACTIVE_TAG, 3U, chartInstance->c6_sfEvent);
         chartInstance->c6_tp_OffOne = 1U;
         *c6_light = FALSE;
         _SFD_DATA_RANGE_CHECK((real_T)*c6_light, 1U);
@@ -351,22 +367,23 @@ static void c6_chartstep_c6_BuckyWagon_01(SFc6_BuckyWagon_01InstanceStruct
         _SFD_DATA_RANGE_CHECK((real_T)chartInstance->c6_timer, 5U);
       }
 
-      _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG,0);
+      _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 0U, chartInstance->c6_sfEvent);
       break;
 
      case c6_IN_FlashTwo:
-      CV_CHART_EVAL(5,0,2);
-      _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG,1);
-      _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG,4);
-      if (CV_TRANSITION_EVAL(4U, (int32_T)_SFD_CCP_CALL(4,0,
-            ((chartInstance->c6_timer >= *c6_onTime)!=0))) != 0) {
-        _SFD_CT_CALL(TRANSITION_ACTIVE_TAG,4);
-        _SFD_CS_CALL(STATE_ENTER_EXIT_FUNCTION_TAG,1);
+      CV_CHART_EVAL(5, 0, 2);
+      _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 1U,
+                   chartInstance->c6_sfEvent);
+      _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 4U,
+                   chartInstance->c6_sfEvent);
+      if (CV_TRANSITION_EVAL(4U, (int32_T)_SFD_CCP_CALL(4U, 0,
+            chartInstance->c6_timer >= *c6_onTime != 0U,
+            chartInstance->c6_sfEvent))) {
+        _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 4U, chartInstance->c6_sfEvent);
         chartInstance->c6_tp_FlashTwo = 0U;
-        _SFD_CS_CALL(STATE_INACTIVE_TAG,1);
-        _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG,1);
+        _SFD_CS_CALL(STATE_INACTIVE_TAG, 1U, chartInstance->c6_sfEvent);
         chartInstance->c6_is_c6_BuckyWagon_01 = c6_IN_OffTwo;
-        _SFD_CS_CALL(STATE_ACTIVE_TAG,4);
+        _SFD_CS_CALL(STATE_ACTIVE_TAG, 4U, chartInstance->c6_sfEvent);
         chartInstance->c6_tp_OffTwo = 1U;
         *c6_light = FALSE;
         _SFD_DATA_RANGE_CHECK((real_T)*c6_light, 1U);
@@ -378,22 +395,22 @@ static void c6_chartstep_c6_BuckyWagon_01(SFc6_BuckyWagon_01InstanceStruct
         _SFD_DATA_RANGE_CHECK((real_T)chartInstance->c6_timer, 5U);
       }
 
-      _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG,1);
+      _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 1U, chartInstance->c6_sfEvent);
       break;
 
      case c6_IN_Off:
-      CV_CHART_EVAL(5,0,3);
-      _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG,2);
-      _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG,1);
-      if (CV_TRANSITION_EVAL(1U, (int32_T)_SFD_CCP_CALL(1,0,((*c6_cCOn)!=0))) !=
-          0) {
-        _SFD_CT_CALL(TRANSITION_ACTIVE_TAG,1);
-        _SFD_CS_CALL(STATE_ENTER_EXIT_FUNCTION_TAG,2);
+      CV_CHART_EVAL(5, 0, 3);
+      _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 2U,
+                   chartInstance->c6_sfEvent);
+      _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 1U,
+                   chartInstance->c6_sfEvent);
+      if (CV_TRANSITION_EVAL(1U, (int32_T)_SFD_CCP_CALL(1U, 0, *c6_cCOn != 0U,
+            chartInstance->c6_sfEvent))) {
+        _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 1U, chartInstance->c6_sfEvent);
         chartInstance->c6_tp_Off = 0U;
-        _SFD_CS_CALL(STATE_INACTIVE_TAG,2);
-        _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG,2);
+        _SFD_CS_CALL(STATE_INACTIVE_TAG, 2U, chartInstance->c6_sfEvent);
         chartInstance->c6_is_c6_BuckyWagon_01 = c6_IN_FlashOne;
-        _SFD_CS_CALL(STATE_ACTIVE_TAG,0);
+        _SFD_CS_CALL(STATE_ACTIVE_TAG, 0U, chartInstance->c6_sfEvent);
         chartInstance->c6_tp_FlashOne = 1U;
         *c6_light = TRUE;
         _SFD_DATA_RANGE_CHECK((real_T)*c6_light, 1U);
@@ -401,18 +418,21 @@ static void c6_chartstep_c6_BuckyWagon_01(SFc6_BuckyWagon_01InstanceStruct
         _SFD_DATA_RANGE_CHECK((real_T)chartInstance->c6_timer, 5U);
       }
 
-      _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG,2);
+      _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 2U, chartInstance->c6_sfEvent);
       break;
 
      case c6_IN_OffOne:
-      CV_CHART_EVAL(5,0,4);
-      _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG,3);
-      _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG,3);
-      if (CV_TRANSITION_EVAL(3U, (int32_T)_SFD_CCP_CALL(3,0,
-            ((chartInstance->c6_timer >= *c6_offShortTime)!=0))) != 0) {
+      CV_CHART_EVAL(5, 0, 4);
+      _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 3U,
+                   chartInstance->c6_sfEvent);
+      _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 3U,
+                   chartInstance->c6_sfEvent);
+      if (CV_TRANSITION_EVAL(3U, (int32_T)_SFD_CCP_CALL(3U, 0,
+            chartInstance->c6_timer >= *c6_offShortTime != 0U,
+            chartInstance->c6_sfEvent))) {
         if (sf_debug_transition_conflict_check_enabled()) {
           unsigned int transitionList[2];
-          unsigned int numTransitions= 1;
+          unsigned int numTransitions = 1;
           transitionList[0] = 3;
           sf_debug_transition_conflict_check_begin();
           if (!(*c6_cCOn != 0.0)) {
@@ -421,38 +441,37 @@ static void c6_chartstep_c6_BuckyWagon_01(SFc6_BuckyWagon_01InstanceStruct
           }
 
           sf_debug_transition_conflict_check_end();
-          if (numTransitions>1) {
+          if (numTransitions > 1) {
             _SFD_TRANSITION_CONFLICT(&(transitionList[0]),numTransitions);
           }
         }
 
-        _SFD_CT_CALL(TRANSITION_ACTIVE_TAG,3);
-        _SFD_CS_CALL(STATE_ENTER_EXIT_FUNCTION_TAG,3);
+        _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 3U, chartInstance->c6_sfEvent);
         chartInstance->c6_tp_OffOne = 0U;
-        _SFD_CS_CALL(STATE_INACTIVE_TAG,3);
-        _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG,3);
+        _SFD_CS_CALL(STATE_INACTIVE_TAG, 3U, chartInstance->c6_sfEvent);
         chartInstance->c6_is_c6_BuckyWagon_01 = c6_IN_FlashTwo;
-        _SFD_CS_CALL(STATE_ACTIVE_TAG,1);
+        _SFD_CS_CALL(STATE_ACTIVE_TAG, 1U, chartInstance->c6_sfEvent);
         chartInstance->c6_tp_FlashTwo = 1U;
         *c6_light = TRUE;
         _SFD_DATA_RANGE_CHECK((real_T)*c6_light, 1U);
         chartInstance->c6_timer = 0U;
         _SFD_DATA_RANGE_CHECK((real_T)chartInstance->c6_timer, 5U);
       } else {
-        _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG,5);
-        if (CV_TRANSITION_EVAL(5U, !(_SFD_CCP_CALL(5,0,((*c6_cCOn)!=0)) != 0))
-            != 0) {
-          _SFD_CT_CALL(TRANSITION_ACTIVE_TAG,5);
-          _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG,8);
-          _SFD_CT_CALL(TRANSITION_ACTIVE_TAG,8);
-          _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG,9);
-          _SFD_CT_CALL(TRANSITION_ACTIVE_TAG,9);
-          _SFD_CS_CALL(STATE_ENTER_EXIT_FUNCTION_TAG,3);
+        _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 5U,
+                     chartInstance->c6_sfEvent);
+        if (CV_TRANSITION_EVAL(5U, !(_SFD_CCP_CALL(5U, 0, *c6_cCOn != 0U,
+               chartInstance->c6_sfEvent) != 0))) {
+          _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 5U, chartInstance->c6_sfEvent);
+          _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 8U,
+                       chartInstance->c6_sfEvent);
+          _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 8U, chartInstance->c6_sfEvent);
+          _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 9U,
+                       chartInstance->c6_sfEvent);
+          _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 9U, chartInstance->c6_sfEvent);
           chartInstance->c6_tp_OffOne = 0U;
-          _SFD_CS_CALL(STATE_INACTIVE_TAG,3);
-          _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG,3);
+          _SFD_CS_CALL(STATE_INACTIVE_TAG, 3U, chartInstance->c6_sfEvent);
           chartInstance->c6_is_c6_BuckyWagon_01 = c6_IN_Off;
-          _SFD_CS_CALL(STATE_ACTIVE_TAG,2);
+          _SFD_CS_CALL(STATE_ACTIVE_TAG, 2U, chartInstance->c6_sfEvent);
           chartInstance->c6_tp_Off = 1U;
           *c6_light = FALSE;
           _SFD_DATA_RANGE_CHECK((real_T)*c6_light, 1U);
@@ -463,18 +482,21 @@ static void c6_chartstep_c6_BuckyWagon_01(SFc6_BuckyWagon_01InstanceStruct
         }
       }
 
-      _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG,3);
+      _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 3U, chartInstance->c6_sfEvent);
       break;
 
      case c6_IN_OffTwo:
-      CV_CHART_EVAL(5,0,5);
-      _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG,4);
-      _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG,11);
-      if (CV_TRANSITION_EVAL(11U, (int32_T)_SFD_CCP_CALL(11,0,
-            ((chartInstance->c6_timer >= *c6_offLongTime)!=0))) != 0) {
+      CV_CHART_EVAL(5, 0, 5);
+      _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 4U,
+                   chartInstance->c6_sfEvent);
+      _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 11U,
+                   chartInstance->c6_sfEvent);
+      if (CV_TRANSITION_EVAL(11U, (int32_T)_SFD_CCP_CALL(11U, 0,
+            chartInstance->c6_timer >= *c6_offLongTime != 0U,
+            chartInstance->c6_sfEvent))) {
         if (sf_debug_transition_conflict_check_enabled()) {
           unsigned int transitionList[2];
-          unsigned int numTransitions= 1;
+          unsigned int numTransitions = 1;
           transitionList[0] = 11;
           sf_debug_transition_conflict_check_begin();
           if (!(*c6_cCOn != 0.0)) {
@@ -483,44 +505,46 @@ static void c6_chartstep_c6_BuckyWagon_01(SFc6_BuckyWagon_01InstanceStruct
           }
 
           sf_debug_transition_conflict_check_end();
-          if (numTransitions>1) {
+          if (numTransitions > 1) {
             _SFD_TRANSITION_CONFLICT(&(transitionList[0]),numTransitions);
           }
         }
 
-        _SFD_CT_CALL(TRANSITION_ACTIVE_TAG,11);
-        _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG,12);
-        _SFD_CT_CALL(TRANSITION_ACTIVE_TAG,12);
-        _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG,10);
-        _SFD_CT_CALL(TRANSITION_ACTIVE_TAG,10);
-        _SFD_CS_CALL(STATE_ENTER_EXIT_FUNCTION_TAG,4);
+        _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 11U, chartInstance->c6_sfEvent);
+        _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 12U,
+                     chartInstance->c6_sfEvent);
+        _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 12U, chartInstance->c6_sfEvent);
+        _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 10U,
+                     chartInstance->c6_sfEvent);
+        _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 10U, chartInstance->c6_sfEvent);
         chartInstance->c6_tp_OffTwo = 0U;
-        _SFD_CS_CALL(STATE_INACTIVE_TAG,4);
-        _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG,4);
+        _SFD_CS_CALL(STATE_INACTIVE_TAG, 4U, chartInstance->c6_sfEvent);
         chartInstance->c6_is_c6_BuckyWagon_01 = c6_IN_FlashOne;
-        _SFD_CS_CALL(STATE_ACTIVE_TAG,0);
+        _SFD_CS_CALL(STATE_ACTIVE_TAG, 0U, chartInstance->c6_sfEvent);
         chartInstance->c6_tp_FlashOne = 1U;
         *c6_light = TRUE;
         _SFD_DATA_RANGE_CHECK((real_T)*c6_light, 1U);
         chartInstance->c6_timer = 0U;
         _SFD_DATA_RANGE_CHECK((real_T)chartInstance->c6_timer, 5U);
       } else {
-        _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG,6);
-        if (CV_TRANSITION_EVAL(6U, !(_SFD_CCP_CALL(6,0,((*c6_cCOn)!=0)) != 0))
-            != 0) {
-          _SFD_CT_CALL(TRANSITION_ACTIVE_TAG,6);
-          _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG,7);
-          _SFD_CT_CALL(TRANSITION_ACTIVE_TAG,7);
-          _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG,8);
-          _SFD_CT_CALL(TRANSITION_ACTIVE_TAG,8);
-          _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG,9);
-          _SFD_CT_CALL(TRANSITION_ACTIVE_TAG,9);
-          _SFD_CS_CALL(STATE_ENTER_EXIT_FUNCTION_TAG,4);
+        _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 6U,
+                     chartInstance->c6_sfEvent);
+        if (CV_TRANSITION_EVAL(6U, !(_SFD_CCP_CALL(6U, 0, *c6_cCOn != 0U,
+               chartInstance->c6_sfEvent) != 0))) {
+          _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 6U, chartInstance->c6_sfEvent);
+          _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 7U,
+                       chartInstance->c6_sfEvent);
+          _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 7U, chartInstance->c6_sfEvent);
+          _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 8U,
+                       chartInstance->c6_sfEvent);
+          _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 8U, chartInstance->c6_sfEvent);
+          _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 9U,
+                       chartInstance->c6_sfEvent);
+          _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 9U, chartInstance->c6_sfEvent);
           chartInstance->c6_tp_OffTwo = 0U;
-          _SFD_CS_CALL(STATE_INACTIVE_TAG,4);
-          _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG,4);
+          _SFD_CS_CALL(STATE_INACTIVE_TAG, 4U, chartInstance->c6_sfEvent);
           chartInstance->c6_is_c6_BuckyWagon_01 = c6_IN_Off;
-          _SFD_CS_CALL(STATE_ACTIVE_TAG,2);
+          _SFD_CS_CALL(STATE_ACTIVE_TAG, 2U, chartInstance->c6_sfEvent);
           chartInstance->c6_tp_Off = 1U;
           *c6_light = FALSE;
           _SFD_DATA_RANGE_CHECK((real_T)*c6_light, 1U);
@@ -531,18 +555,23 @@ static void c6_chartstep_c6_BuckyWagon_01(SFc6_BuckyWagon_01InstanceStruct
         }
       }
 
-      _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG,4);
+      _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 4U, chartInstance->c6_sfEvent);
       break;
 
      default:
-      CV_CHART_EVAL(5,0,0);
+      CV_CHART_EVAL(5, 0, 0);
       chartInstance->c6_is_c6_BuckyWagon_01 = (uint8_T)c6_IN_NO_ACTIVE_CHILD;
-      _SFD_CS_CALL(STATE_INACTIVE_TAG,0);
+      _SFD_CS_CALL(STATE_INACTIVE_TAG, 0U, chartInstance->c6_sfEvent);
       break;
     }
   }
 
-  _SFD_CC_CALL(EXIT_OUT_OF_FUNCTION_TAG,5);
+  _SFD_CC_CALL(EXIT_OUT_OF_FUNCTION_TAG, 5U, chartInstance->c6_sfEvent);
+}
+
+static void initSimStructsc6_BuckyWagon_01(SFc6_BuckyWagon_01InstanceStruct
+  *chartInstance)
+{
 }
 
 static void init_script_number_translation(uint32_T c6_machineNumber, uint32_T
@@ -559,112 +588,265 @@ const mxArray *sf_c6_BuckyWagon_01_get_eml_resolved_functions_info(void)
   return c6_nameCaptureInfo;
 }
 
-static const mxArray *c6_sf_marshall(void *chartInstanceVoid, void *c6_u)
+static const mxArray *c6_sf_marshallOut(void *chartInstanceVoid, void *c6_inData)
 {
+  const mxArray *c6_mxArrayOutData = NULL;
+  int32_T c6_u;
   const mxArray *c6_y = NULL;
-  uint8_T c6_b_u;
-  const mxArray *c6_b_y = NULL;
   SFc6_BuckyWagon_01InstanceStruct *chartInstance;
   chartInstance = (SFc6_BuckyWagon_01InstanceStruct *)chartInstanceVoid;
+  c6_mxArrayOutData = NULL;
+  c6_u = *(int32_T *)c6_inData;
   c6_y = NULL;
-  c6_b_u = *((uint8_T *)c6_u);
-  c6_b_y = NULL;
-  sf_mex_assign(&c6_b_y, sf_mex_create("y", &c6_b_u, 3, 0U, 0U, 0U, 0));
-  sf_mex_assign(&c6_y, c6_b_y);
+  sf_mex_assign(&c6_y, sf_mex_create("y", &c6_u, 6, 0U, 0U, 0U, 0));
+  sf_mex_assign(&c6_mxArrayOutData, c6_y);
+  return c6_mxArrayOutData;
+}
+
+static int32_T c6_emlrt_marshallIn(SFc6_BuckyWagon_01InstanceStruct
+  *chartInstance, const mxArray *c6_u, const emlrtMsgIdentifier *c6_parentId)
+{
+  int32_T c6_y;
+  int32_T c6_i0;
+  sf_mex_import(c6_parentId, sf_mex_dup(c6_u), &c6_i0, 1, 6, 0U, 0, 0U, 0);
+  c6_y = c6_i0;
+  sf_mex_destroy(&c6_u);
   return c6_y;
 }
 
-static const mxArray *c6_b_sf_marshall(void *chartInstanceVoid, void *c6_u)
+static void c6_sf_marshallIn(void *chartInstanceVoid, const mxArray
+  *c6_mxArrayInData, const char_T *c6_varName, void *c6_outData)
 {
-  const mxArray *c6_y = NULL;
-  boolean_T c6_b_u;
-  const mxArray *c6_b_y = NULL;
+  const mxArray *c6_b_sfEvent;
+  const char_T *c6_identifier;
+  emlrtMsgIdentifier c6_thisId;
+  int32_T c6_y;
   SFc6_BuckyWagon_01InstanceStruct *chartInstance;
   chartInstance = (SFc6_BuckyWagon_01InstanceStruct *)chartInstanceVoid;
-  c6_y = NULL;
-  c6_b_u = *((boolean_T *)c6_u);
-  c6_b_y = NULL;
-  sf_mex_assign(&c6_b_y, sf_mex_create("y", &c6_b_u, 11, 0U, 0U, 0U, 0));
-  sf_mex_assign(&c6_y, c6_b_y);
-  return c6_y;
+  c6_b_sfEvent = sf_mex_dup(c6_mxArrayInData);
+  c6_identifier = c6_varName;
+  c6_thisId.fIdentifier = c6_identifier;
+  c6_thisId.fParent = NULL;
+  c6_y = c6_emlrt_marshallIn(chartInstance, sf_mex_dup(c6_b_sfEvent), &c6_thisId);
+  sf_mex_destroy(&c6_b_sfEvent);
+  *(int32_T *)c6_outData = c6_y;
+  sf_mex_destroy(&c6_mxArrayInData);
 }
 
-static const mxArray *c6_c_sf_marshall(void *chartInstanceVoid, void *c6_u)
+static const mxArray *c6_b_sf_marshallOut(void *chartInstanceVoid, void
+  *c6_inData)
 {
+  const mxArray *c6_mxArrayOutData = NULL;
+  uint8_T c6_u;
   const mxArray *c6_y = NULL;
-  real_T c6_b_u;
-  const mxArray *c6_b_y = NULL;
   SFc6_BuckyWagon_01InstanceStruct *chartInstance;
   chartInstance = (SFc6_BuckyWagon_01InstanceStruct *)chartInstanceVoid;
+  c6_mxArrayOutData = NULL;
+  c6_u = *(uint8_T *)c6_inData;
   c6_y = NULL;
-  c6_b_u = *((real_T *)c6_u);
-  c6_b_y = NULL;
-  sf_mex_assign(&c6_b_y, sf_mex_create("y", &c6_b_u, 0, 0U, 0U, 0U, 0));
-  sf_mex_assign(&c6_y, c6_b_y);
-  return c6_y;
+  sf_mex_assign(&c6_y, sf_mex_create("y", &c6_u, 3, 0U, 0U, 0U, 0));
+  sf_mex_assign(&c6_mxArrayOutData, c6_y);
+  return c6_mxArrayOutData;
 }
 
-static const mxArray *c6_d_sf_marshall(void *chartInstanceVoid, void *c6_u)
+static uint8_T c6_b_emlrt_marshallIn(SFc6_BuckyWagon_01InstanceStruct
+  *chartInstance, const mxArray *c6_b_tp_Off, const char_T *c6_identifier)
 {
-  const mxArray *c6_y = NULL;
-  uint16_T c6_b_u;
-  const mxArray *c6_b_y = NULL;
-  SFc6_BuckyWagon_01InstanceStruct *chartInstance;
-  chartInstance = (SFc6_BuckyWagon_01InstanceStruct *)chartInstanceVoid;
-  c6_y = NULL;
-  c6_b_u = *((uint16_T *)c6_u);
-  c6_b_y = NULL;
-  sf_mex_assign(&c6_b_y, sf_mex_create("y", &c6_b_u, 5, 0U, 0U, 0U, 0));
-  sf_mex_assign(&c6_y, c6_b_y);
-  return c6_y;
-}
-
-static boolean_T c6_emlrt_marshallIn(SFc6_BuckyWagon_01InstanceStruct
-  *chartInstance, const mxArray *c6_light, const char_T *c6_name
-  )
-{
-  boolean_T c6_y;
-  boolean_T c6_b0;
-  sf_mex_import(c6_name, sf_mex_dup(c6_light), &c6_b0, 1, 11, 0U, 0, 0U, 0);
-  c6_y = c6_b0;
-  sf_mex_destroy(&c6_light);
-  return c6_y;
-}
-
-static uint16_T c6_b_emlrt_marshallIn(SFc6_BuckyWagon_01InstanceStruct
-  *chartInstance, const mxArray *c6_b_timer, const char_T *
-  c6_name)
-{
-  uint16_T c6_y;
-  uint16_T c6_u0;
-  sf_mex_import(c6_name, sf_mex_dup(c6_b_timer), &c6_u0, 1, 5, 0U, 0, 0U, 0);
-  c6_y = c6_u0;
-  sf_mex_destroy(&c6_b_timer);
+  uint8_T c6_y;
+  emlrtMsgIdentifier c6_thisId;
+  c6_thisId.fIdentifier = c6_identifier;
+  c6_thisId.fParent = NULL;
+  c6_y = c6_c_emlrt_marshallIn(chartInstance, sf_mex_dup(c6_b_tp_Off),
+    &c6_thisId);
+  sf_mex_destroy(&c6_b_tp_Off);
   return c6_y;
 }
 
 static uint8_T c6_c_emlrt_marshallIn(SFc6_BuckyWagon_01InstanceStruct
-  *chartInstance, const mxArray *c6_b_is_active_c6_BuckyWagon_01
-  , const char_T *c6_name)
+  *chartInstance, const mxArray *c6_u, const emlrtMsgIdentifier *c6_parentId)
 {
   uint8_T c6_y;
-  uint8_T c6_u1;
-  sf_mex_import(c6_name, sf_mex_dup(c6_b_is_active_c6_BuckyWagon_01), &c6_u1, 1,
-                3, 0U, 0, 0U, 0);
-  c6_y = c6_u1;
-  sf_mex_destroy(&c6_b_is_active_c6_BuckyWagon_01);
+  uint8_T c6_u0;
+  sf_mex_import(c6_parentId, sf_mex_dup(c6_u), &c6_u0, 1, 3, 0U, 0, 0U, 0);
+  c6_y = c6_u0;
+  sf_mex_destroy(&c6_u);
   return c6_y;
 }
 
-static const mxArray *c6_d_emlrt_marshallIn(SFc6_BuckyWagon_01InstanceStruct
-  *chartInstance, const mxArray *
-  c6_b_setSimStateSideEffectsInfo, const char_T *c6_name)
+static void c6_b_sf_marshallIn(void *chartInstanceVoid, const mxArray
+  *c6_mxArrayInData, const char_T *c6_varName, void *c6_outData)
+{
+  const mxArray *c6_b_tp_Off;
+  const char_T *c6_identifier;
+  emlrtMsgIdentifier c6_thisId;
+  uint8_T c6_y;
+  SFc6_BuckyWagon_01InstanceStruct *chartInstance;
+  chartInstance = (SFc6_BuckyWagon_01InstanceStruct *)chartInstanceVoid;
+  c6_b_tp_Off = sf_mex_dup(c6_mxArrayInData);
+  c6_identifier = c6_varName;
+  c6_thisId.fIdentifier = c6_identifier;
+  c6_thisId.fParent = NULL;
+  c6_y = c6_c_emlrt_marshallIn(chartInstance, sf_mex_dup(c6_b_tp_Off),
+    &c6_thisId);
+  sf_mex_destroy(&c6_b_tp_Off);
+  *(uint8_T *)c6_outData = c6_y;
+  sf_mex_destroy(&c6_mxArrayInData);
+}
+
+static const mxArray *c6_c_sf_marshallOut(void *chartInstanceVoid, void
+  *c6_inData)
+{
+  const mxArray *c6_mxArrayOutData = NULL;
+  real_T c6_u;
+  const mxArray *c6_y = NULL;
+  SFc6_BuckyWagon_01InstanceStruct *chartInstance;
+  chartInstance = (SFc6_BuckyWagon_01InstanceStruct *)chartInstanceVoid;
+  c6_mxArrayOutData = NULL;
+  c6_u = *(real_T *)c6_inData;
+  c6_y = NULL;
+  sf_mex_assign(&c6_y, sf_mex_create("y", &c6_u, 0, 0U, 0U, 0U, 0));
+  sf_mex_assign(&c6_mxArrayOutData, c6_y);
+  return c6_mxArrayOutData;
+}
+
+static const mxArray *c6_d_sf_marshallOut(void *chartInstanceVoid, void
+  *c6_inData)
+{
+  const mxArray *c6_mxArrayOutData = NULL;
+  boolean_T c6_u;
+  const mxArray *c6_y = NULL;
+  SFc6_BuckyWagon_01InstanceStruct *chartInstance;
+  chartInstance = (SFc6_BuckyWagon_01InstanceStruct *)chartInstanceVoid;
+  c6_mxArrayOutData = NULL;
+  c6_u = *(boolean_T *)c6_inData;
+  c6_y = NULL;
+  sf_mex_assign(&c6_y, sf_mex_create("y", &c6_u, 11, 0U, 0U, 0U, 0));
+  sf_mex_assign(&c6_mxArrayOutData, c6_y);
+  return c6_mxArrayOutData;
+}
+
+static boolean_T c6_d_emlrt_marshallIn(SFc6_BuckyWagon_01InstanceStruct
+  *chartInstance, const mxArray *c6_light, const char_T *c6_identifier)
+{
+  boolean_T c6_y;
+  emlrtMsgIdentifier c6_thisId;
+  c6_thisId.fIdentifier = c6_identifier;
+  c6_thisId.fParent = NULL;
+  c6_y = c6_e_emlrt_marshallIn(chartInstance, sf_mex_dup(c6_light), &c6_thisId);
+  sf_mex_destroy(&c6_light);
+  return c6_y;
+}
+
+static boolean_T c6_e_emlrt_marshallIn(SFc6_BuckyWagon_01InstanceStruct
+  *chartInstance, const mxArray *c6_u, const emlrtMsgIdentifier *c6_parentId)
+{
+  boolean_T c6_y;
+  boolean_T c6_b0;
+  sf_mex_import(c6_parentId, sf_mex_dup(c6_u), &c6_b0, 1, 11, 0U, 0, 0U, 0);
+  c6_y = c6_b0;
+  sf_mex_destroy(&c6_u);
+  return c6_y;
+}
+
+static void c6_c_sf_marshallIn(void *chartInstanceVoid, const mxArray
+  *c6_mxArrayInData, const char_T *c6_varName, void *c6_outData)
+{
+  const mxArray *c6_light;
+  const char_T *c6_identifier;
+  emlrtMsgIdentifier c6_thisId;
+  boolean_T c6_y;
+  SFc6_BuckyWagon_01InstanceStruct *chartInstance;
+  chartInstance = (SFc6_BuckyWagon_01InstanceStruct *)chartInstanceVoid;
+  c6_light = sf_mex_dup(c6_mxArrayInData);
+  c6_identifier = c6_varName;
+  c6_thisId.fIdentifier = c6_identifier;
+  c6_thisId.fParent = NULL;
+  c6_y = c6_e_emlrt_marshallIn(chartInstance, sf_mex_dup(c6_light), &c6_thisId);
+  sf_mex_destroy(&c6_light);
+  *(boolean_T *)c6_outData = c6_y;
+  sf_mex_destroy(&c6_mxArrayInData);
+}
+
+static const mxArray *c6_e_sf_marshallOut(void *chartInstanceVoid, void
+  *c6_inData)
+{
+  const mxArray *c6_mxArrayOutData = NULL;
+  uint16_T c6_u;
+  const mxArray *c6_y = NULL;
+  SFc6_BuckyWagon_01InstanceStruct *chartInstance;
+  chartInstance = (SFc6_BuckyWagon_01InstanceStruct *)chartInstanceVoid;
+  c6_mxArrayOutData = NULL;
+  c6_u = *(uint16_T *)c6_inData;
+  c6_y = NULL;
+  sf_mex_assign(&c6_y, sf_mex_create("y", &c6_u, 5, 0U, 0U, 0U, 0));
+  sf_mex_assign(&c6_mxArrayOutData, c6_y);
+  return c6_mxArrayOutData;
+}
+
+static uint16_T c6_f_emlrt_marshallIn(SFc6_BuckyWagon_01InstanceStruct
+  *chartInstance, const mxArray *c6_b_timer, const char_T *c6_identifier)
+{
+  uint16_T c6_y;
+  emlrtMsgIdentifier c6_thisId;
+  c6_thisId.fIdentifier = c6_identifier;
+  c6_thisId.fParent = NULL;
+  c6_y = c6_g_emlrt_marshallIn(chartInstance, sf_mex_dup(c6_b_timer), &c6_thisId);
+  sf_mex_destroy(&c6_b_timer);
+  return c6_y;
+}
+
+static uint16_T c6_g_emlrt_marshallIn(SFc6_BuckyWagon_01InstanceStruct
+  *chartInstance, const mxArray *c6_u, const emlrtMsgIdentifier *c6_parentId)
+{
+  uint16_T c6_y;
+  uint16_T c6_u1;
+  sf_mex_import(c6_parentId, sf_mex_dup(c6_u), &c6_u1, 1, 5, 0U, 0, 0U, 0);
+  c6_y = c6_u1;
+  sf_mex_destroy(&c6_u);
+  return c6_y;
+}
+
+static void c6_d_sf_marshallIn(void *chartInstanceVoid, const mxArray
+  *c6_mxArrayInData, const char_T *c6_varName, void *c6_outData)
+{
+  const mxArray *c6_b_timer;
+  const char_T *c6_identifier;
+  emlrtMsgIdentifier c6_thisId;
+  uint16_T c6_y;
+  SFc6_BuckyWagon_01InstanceStruct *chartInstance;
+  chartInstance = (SFc6_BuckyWagon_01InstanceStruct *)chartInstanceVoid;
+  c6_b_timer = sf_mex_dup(c6_mxArrayInData);
+  c6_identifier = c6_varName;
+  c6_thisId.fIdentifier = c6_identifier;
+  c6_thisId.fParent = NULL;
+  c6_y = c6_g_emlrt_marshallIn(chartInstance, sf_mex_dup(c6_b_timer), &c6_thisId);
+  sf_mex_destroy(&c6_b_timer);
+  *(uint16_T *)c6_outData = c6_y;
+  sf_mex_destroy(&c6_mxArrayInData);
+}
+
+static const mxArray *c6_h_emlrt_marshallIn(SFc6_BuckyWagon_01InstanceStruct
+  *chartInstance, const mxArray *c6_b_setSimStateSideEffectsInfo, const char_T
+  *c6_identifier)
+{
+  const mxArray *c6_y = NULL;
+  emlrtMsgIdentifier c6_thisId;
+  c6_y = NULL;
+  c6_thisId.fIdentifier = c6_identifier;
+  c6_thisId.fParent = NULL;
+  sf_mex_assign(&c6_y, c6_i_emlrt_marshallIn(chartInstance, sf_mex_dup
+    (c6_b_setSimStateSideEffectsInfo), &c6_thisId));
+  sf_mex_destroy(&c6_b_setSimStateSideEffectsInfo);
+  return c6_y;
+}
+
+static const mxArray *c6_i_emlrt_marshallIn(SFc6_BuckyWagon_01InstanceStruct
+  *chartInstance, const mxArray *c6_u, const emlrtMsgIdentifier *c6_parentId)
 {
   const mxArray *c6_y = NULL;
   c6_y = NULL;
-  sf_mex_assign(&c6_y, sf_mex_duplicatearraysafe
-                (&c6_b_setSimStateSideEffectsInfo));
-  sf_mex_destroy(&c6_b_setSimStateSideEffectsInfo);
+  sf_mex_assign(&c6_y, sf_mex_duplicatearraysafe(&c6_u));
+  sf_mex_destroy(&c6_u);
   return c6_y;
 }
 
@@ -680,59 +862,35 @@ static uint16_T c6__u16_s32_(SFc6_BuckyWagon_01InstanceStruct *chartInstance,
   return c6_a;
 }
 
-static void init_test_point_addr_map(SFc6_BuckyWagon_01InstanceStruct
-  *chartInstance)
-{
-  chartInstance->c6_testPointAddrMap[0] = &chartInstance->c6_timer;
-  chartInstance->c6_testPointAddrMap[1] = &chartInstance->c6_tp_FlashOne;
-  chartInstance->c6_testPointAddrMap[2] = &chartInstance->c6_tp_FlashTwo;
-  chartInstance->c6_testPointAddrMap[3] = &chartInstance->c6_tp_Off;
-  chartInstance->c6_testPointAddrMap[4] = &chartInstance->c6_tp_OffOne;
-  chartInstance->c6_testPointAddrMap[5] = &chartInstance->c6_tp_OffTwo;
-}
-
-static void **get_test_point_address_map(SFc6_BuckyWagon_01InstanceStruct
-  *chartInstance)
-{
-  return &chartInstance->c6_testPointAddrMap[0];
-}
-
-static rtwCAPI_ModelMappingInfo *get_test_point_mapping_info
-  (SFc6_BuckyWagon_01InstanceStruct *chartInstance)
-{
-  return &chartInstance->c6_testPointMappingInfo;
-}
-
 static void init_dsm_address_info(SFc6_BuckyWagon_01InstanceStruct
   *chartInstance)
 {
 }
 
 /* SFunction Glue Code */
-static void init_test_point_mapping_info(SimStruct *S);
 void sf_c6_BuckyWagon_01_get_check_sum(mxArray *plhs[])
 {
-  ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(330445474U);
-  ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(533300384U);
-  ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(2101855260U);
-  ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(363097650U);
+  ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(1523272599U);
+  ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(3276255254U);
+  ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(1838274979U);
+  ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(1231452645U);
 }
 
 mxArray *sf_c6_BuckyWagon_01_get_autoinheritance_info(void)
 {
   const char *autoinheritanceFields[] = { "checksum", "inputs", "parameters",
-    "outputs" };
+    "outputs", "locals" };
 
-  mxArray *mxAutoinheritanceInfo = mxCreateStructMatrix(1,1,4,
+  mxArray *mxAutoinheritanceInfo = mxCreateStructMatrix(1,1,5,
     autoinheritanceFields);
 
   {
     mxArray *mxChecksum = mxCreateDoubleMatrix(4,1,mxREAL);
     double *pr = mxGetPr(mxChecksum);
-    pr[0] = (double)(1393685245U);
-    pr[1] = (double)(2484836146U);
-    pr[2] = (double)(92881684U);
-    pr[3] = (double)(948473407U);
+    pr[0] = (double)(4293453605U);
+    pr[1] = (double)(2464540595U);
+    pr[2] = (double)(2549629941U);
+    pr[3] = (double)(423663950U);
     mxSetField(mxAutoinheritanceInfo,0,"checksum",mxChecksum);
   }
 
@@ -850,10 +1008,14 @@ mxArray *sf_c6_BuckyWagon_01_get_autoinheritance_info(void)
     mxSetField(mxAutoinheritanceInfo,0,"outputs",mxData);
   }
 
+  {
+    mxSetField(mxAutoinheritanceInfo,0,"locals",mxCreateDoubleMatrix(0,0,mxREAL));
+  }
+
   return(mxAutoinheritanceInfo);
 }
 
-static mxArray *sf_get_sim_state_info_c6_BuckyWagon_01(void)
+static const mxArray *sf_get_sim_state_info_c6_BuckyWagon_01(void)
 {
   const char *infoFields[] = { "chartChecksum", "varInfo" };
 
@@ -907,18 +1069,12 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
             0,
             0,
             0);
-          _SFD_SET_DATA_PROPS(0,1,1,0,SF_DOUBLE,0,NULL,0,0,0,0.0,1.0,0,"cCOn",0,
-                              (MexFcnForType)c6_c_sf_marshall);
-          _SFD_SET_DATA_PROPS(1,2,0,1,SF_UINT8,0,NULL,0,0,0,0.0,1.0,0,"light",0,
-                              (MexFcnForType)c6_b_sf_marshall);
-          _SFD_SET_DATA_PROPS(2,1,1,0,SF_UINT16,0,NULL,0,0,0,0.0,1.0,0,
-                              "offLongTime",0,(MexFcnForType)c6_d_sf_marshall);
-          _SFD_SET_DATA_PROPS(3,1,1,0,SF_UINT16,0,NULL,0,0,0,0.0,1.0,0,
-                              "offShortTime",0,(MexFcnForType)c6_d_sf_marshall);
-          _SFD_SET_DATA_PROPS(4,1,1,0,SF_UINT16,0,NULL,0,0,0,0.0,1.0,0,"onTime",
-                              0,(MexFcnForType)c6_d_sf_marshall);
-          _SFD_SET_DATA_PROPS(5,0,0,0,SF_UINT16,0,NULL,0,0,0,0.0,1.0,0,"timer",0,
-                              (MexFcnForType)c6_d_sf_marshall);
+          _SFD_SET_DATA_PROPS(0,1,1,0,"cCOn");
+          _SFD_SET_DATA_PROPS(1,2,0,1,"light");
+          _SFD_SET_DATA_PROPS(2,1,1,0,"offLongTime");
+          _SFD_SET_DATA_PROPS(3,1,1,0,"offShortTime");
+          _SFD_SET_DATA_PROPS(4,1,1,0,"onTime");
+          _SFD_SET_DATA_PROPS(5,0,0,0,"timer");
           _SFD_STATE_INFO(0,0,0);
           _SFD_STATE_INFO(1,0,0);
           _SFD_STATE_INFO(2,0,0);
@@ -1190,6 +1346,19 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
                               0,NULL,NULL);
         }
 
+        _SFD_SET_DATA_COMPILED_PROPS(0,SF_DOUBLE,0,NULL,0,0,0,0.0,1.0,0,0,
+          (MexFcnForType)c6_c_sf_marshallOut,(MexInFcnForType)NULL);
+        _SFD_SET_DATA_COMPILED_PROPS(1,SF_UINT8,0,NULL,0,0,0,0.0,1.0,0,0,
+          (MexFcnForType)c6_d_sf_marshallOut,(MexInFcnForType)c6_c_sf_marshallIn);
+        _SFD_SET_DATA_COMPILED_PROPS(2,SF_UINT16,0,NULL,0,0,0,0.0,1.0,0,0,
+          (MexFcnForType)c6_e_sf_marshallOut,(MexInFcnForType)NULL);
+        _SFD_SET_DATA_COMPILED_PROPS(3,SF_UINT16,0,NULL,0,0,0,0.0,1.0,0,0,
+          (MexFcnForType)c6_e_sf_marshallOut,(MexInFcnForType)NULL);
+        _SFD_SET_DATA_COMPILED_PROPS(4,SF_UINT16,0,NULL,0,0,0,0.0,1.0,0,0,
+          (MexFcnForType)c6_e_sf_marshallOut,(MexInFcnForType)NULL);
+        _SFD_SET_DATA_COMPILED_PROPS(5,SF_UINT16,0,NULL,0,0,0,0.0,1.0,0,0,
+          (MexFcnForType)c6_e_sf_marshallOut,(MexInFcnForType)c6_d_sf_marshallIn);
+
         {
           real_T *c6_cCOn;
           boolean_T *c6_light;
@@ -1241,7 +1410,7 @@ static void sf_opaque_gateway_c6_BuckyWagon_01(void *chartInstanceVar)
   sf_c6_BuckyWagon_01((SFc6_BuckyWagon_01InstanceStruct*) chartInstanceVar);
 }
 
-static mxArray* sf_internal_get_sim_state_c6_BuckyWagon_01(SimStruct* S)
+extern const mxArray* sf_internal_get_sim_state_c6_BuckyWagon_01(SimStruct* S)
 {
   ChartInfoStruct *chartInfo = (ChartInfoStruct*) ssGetUserData(S);
   mxArray *plhs[1] = { NULL };
@@ -1252,7 +1421,7 @@ static mxArray* sf_internal_get_sim_state_c6_BuckyWagon_01(SimStruct* S)
   prhs[1] = mxCreateDoubleScalar(ssGetSFuncBlockHandle(S));
   prhs[2] = (mxArray*) get_sim_state_c6_BuckyWagon_01
     ((SFc6_BuckyWagon_01InstanceStruct*)chartInfo->chartInstance);/* raw sim ctx */
-  prhs[3] = sf_get_sim_state_info_c6_BuckyWagon_01();/* state var info */
+  prhs[3] = (mxArray*) sf_get_sim_state_info_c6_BuckyWagon_01();/* state var info */
   mxError = sf_mex_call_matlab(1, plhs, 4, prhs, "sfprivate");
   mxDestroyArray(prhs[0]);
   mxDestroyArray(prhs[1]);
@@ -1265,7 +1434,7 @@ static mxArray* sf_internal_get_sim_state_c6_BuckyWagon_01(SimStruct* S)
   return plhs[0];
 }
 
-static void sf_internal_set_sim_state_c6_BuckyWagon_01(SimStruct* S, const
+extern void sf_internal_set_sim_state_c6_BuckyWagon_01(SimStruct* S, const
   mxArray *st)
 {
   ChartInfoStruct *chartInfo = (ChartInfoStruct*) ssGetUserData(S);
@@ -1291,7 +1460,7 @@ static void sf_internal_set_sim_state_c6_BuckyWagon_01(SimStruct* S, const
   mxDestroyArray(plhs[0]);
 }
 
-static mxArray* sf_opaque_get_sim_state_c6_BuckyWagon_01(SimStruct* S)
+static const mxArray* sf_opaque_get_sim_state_c6_BuckyWagon_01(SimStruct* S)
 {
   return sf_internal_get_sim_state_c6_BuckyWagon_01(S);
 }
@@ -1312,13 +1481,15 @@ static void sf_opaque_terminate_c6_BuckyWagon_01(void *chartInstanceVar)
 
     finalize_c6_BuckyWagon_01((SFc6_BuckyWagon_01InstanceStruct*)
       chartInstanceVar);
-    if (!sim_mode_is_rtw_gen(S)) {
-      ssSetModelMappingInfoPtr(S, NULL);
-    }
-
     free((void *)chartInstanceVar);
     ssSetUserData(S,NULL);
   }
+}
+
+static void sf_opaque_init_subchart_simstructs(void *chartInstanceVar)
+{
+  initSimStructsc6_BuckyWagon_01((SFc6_BuckyWagon_01InstanceStruct*)
+    chartInstanceVar);
 }
 
 extern unsigned int sf_machine_global_initializer_called(void);
@@ -1341,12 +1512,13 @@ static void mdlSetWorkWidths_c6_BuckyWagon_01(SimStruct *S)
 {
   if (sim_mode_is_rtw_gen(S) || sim_mode_is_external(S)) {
     int_T chartIsInlinable =
-      (int_T)sf_is_chart_inlinable("BuckyWagon_01","BuckyWagon_01",6);
+      (int_T)sf_is_chart_inlinable(S,"BuckyWagon_01","BuckyWagon_01",6);
     ssSetStateflowIsInlinable(S,chartIsInlinable);
-    ssSetRTWCG(S,sf_rtw_info_uint_prop("BuckyWagon_01","BuckyWagon_01",6,"RTWCG"));
+    ssSetRTWCG(S,sf_rtw_info_uint_prop(S,"BuckyWagon_01","BuckyWagon_01",6,
+                "RTWCG"));
     ssSetEnableFcnIsTrivial(S,1);
     ssSetDisableFcnIsTrivial(S,1);
-    ssSetNotMultipleInlinable(S,sf_rtw_info_uint_prop("BuckyWagon_01",
+    ssSetNotMultipleInlinable(S,sf_rtw_info_uint_prop(S,"BuckyWagon_01",
       "BuckyWagon_01",6,"gatewayCannotBeInlinedMultipleTimes"));
     if (chartIsInlinable) {
       ssSetInputPortOptimOpts(S, 0, SS_REUSABLE_AND_LOCAL);
@@ -1359,13 +1531,14 @@ static void mdlSetWorkWidths_c6_BuckyWagon_01(SimStruct *S)
 
     sf_set_rtw_dwork_info(S,"BuckyWagon_01","BuckyWagon_01",6);
     ssSetHasSubFunctions(S,!(chartIsInlinable));
-    ssSetOptions(S,ssGetOptions(S)|SS_OPTION_WORKS_WITH_CODE_REUSE);
+  } else {
   }
 
-  ssSetChecksum0(S,(3346548760U));
-  ssSetChecksum1(S,(3526241986U));
-  ssSetChecksum2(S,(998140040U));
-  ssSetChecksum3(S,(3346959799U));
+  ssSetOptions(S,ssGetOptions(S)|SS_OPTION_WORKS_WITH_CODE_REUSE);
+  ssSetChecksum0(S,(1317972619U));
+  ssSetChecksum1(S,(3742548582U));
+  ssSetChecksum2(S,(2314738936U));
+  ssSetChecksum3(S,(1058407438U));
   ssSetmdlDerivatives(S, NULL);
   ssSetExplicitFCSSCtrl(S,1);
 }
@@ -1415,11 +1588,11 @@ static void mdlStart_c6_BuckyWagon_01(SimStruct *S)
   chartInstance->chartInfo.storeCurrentConfiguration = NULL;
   chartInstance->S = S;
   ssSetUserData(S,(void *)(&(chartInstance->chartInfo)));/* register the chart instance with simstruct */
+  init_dsm_address_info(chartInstance);
   if (!sim_mode_is_rtw_gen(S)) {
-    init_test_point_mapping_info(S);
-    init_dsm_address_info(chartInstance);
   }
 
+  sf_opaque_init_subchart_simstructs(chartInstance->chartInfo.chartInstance);
   chart_debug_initialization(S,1);
 }
 
@@ -1445,97 +1618,4 @@ void c6_BuckyWagon_01_method_dispatcher(SimStruct *S, int_T method, void *data)
                          "Can't handle method %d.\n", method);
     break;
   }
-}
-
-static const rtwCAPI_DataTypeMap dataTypeMap[] = {
-  /* cName, mwName, numElements, elemMapIndex, dataSize, slDataId, isComplex, isPointer */
-  { "uint16_T", "uint16_T", 0, 0, sizeof(uint16_T), SS_UINT16, 0, 0 },
-
-  { "uint8_T", "uint8_T", 0, 0, sizeof(uint8_T), SS_UINT8, 0, 0 } };
-
-static const rtwCAPI_FixPtMap fixedPointMap[] = {
-  /* *fracSlope, *bias, scaleType, wordLength, exponent, isSigned */
-  { NULL, NULL, rtwCAPI_FIX_RESERVED, 64, 0, 0 } };
-
-static const rtwCAPI_DimensionMap dimensionMap[] = {
-  /* dataOrientation, dimArrayIndex, numDims*/
-  { rtwCAPI_SCALAR, 0, 2 } };
-
-static const uint_T dimensionArray[] = {
-  1, 1 };
-
-static real_T sfCAPIsampleTimeZero = 0.0;
-static const rtwCAPI_SampleTimeMap sampleTimeMap[] = {
-  /* *period, *offset, taskId, mode */
-  { &sfCAPIsampleTimeZero, &sfCAPIsampleTimeZero, 0, 0 }
-};
-
-static const rtwCAPI_Signals testPointSignals[] = {
-  /* addrMapIndex, sysNum, SFRelativePath, dataName, portNumber, dataTypeIndex, dimIndex, fixPtIdx, sTimeIndex */
-  { 0, 0, "StateflowChart/timer", "timer", 0, 0, 0, 0, 0 },
-
-  { 1, 0, "StateflowChart/FlashOne", "FlashOne", 0, 1, 0, 0, 0 },
-
-  { 2, 0, "StateflowChart/FlashTwo", "FlashTwo", 0, 1, 0, 0, 0 },
-
-  { 3, 0, "StateflowChart/Off", "Off", 0, 1, 0, 0, 0 },
-
-  { 4, 0, "StateflowChart/OffOne", "OffOne", 0, 1, 0, 0, 0 },
-
-  { 5, 0, "StateflowChart/OffTwo", "OffTwo", 0, 1, 0, 0, 0 } };
-
-static rtwCAPI_ModelMappingStaticInfo testPointMappingStaticInfo = {
-  /* block signal monitoring */
-  {
-    testPointSignals,                  /* Block signals Array  */
-    6                                  /* Num Block IO signals */
-  },
-
-  /* parameter tuning */
-  {
-    NULL,                              /* Block parameters Array    */
-    0,                                 /* Num block parameters      */
-    NULL,                              /* Variable parameters Array */
-    0                                  /* Num variable parameters   */
-  },
-
-  /* block states */
-  {
-    NULL,                              /* Block States array        */
-    0                                  /* Num Block States          */
-  },
-
-  /* Static maps */
-  {
-    dataTypeMap,                       /* Data Type Map            */
-    dimensionMap,                      /* Data Dimension Map       */
-    fixedPointMap,                     /* Fixed Point Map          */
-    NULL,                              /* Structure Element map    */
-    sampleTimeMap,                     /* Sample Times Map         */
-    dimensionArray                     /* Dimension Array          */
-  },
-
-  /* Target type */
-  "float"
-};
-
-static void init_test_point_mapping_info(SimStruct *S)
-{
-  rtwCAPI_ModelMappingInfo *testPointMappingInfo;
-  void **testPointAddrMap;
-  SFc6_BuckyWagon_01InstanceStruct *chartInstance;
-  chartInstance = (SFc6_BuckyWagon_01InstanceStruct *) ((ChartInfoStruct *)
-    (ssGetUserData(S)))->chartInstance;
-  init_test_point_addr_map(chartInstance);
-  testPointMappingInfo = get_test_point_mapping_info(chartInstance);
-  testPointAddrMap = get_test_point_address_map(chartInstance);
-  rtwCAPI_SetStaticMap(*testPointMappingInfo, &testPointMappingStaticInfo);
-  rtwCAPI_SetLoggingStaticMap(*testPointMappingInfo, NULL);
-  rtwCAPI_SetInstanceLoggingInfo(*testPointMappingInfo, NULL);
-  rtwCAPI_SetPath(*testPointMappingInfo, "");
-  rtwCAPI_SetFullPath(*testPointMappingInfo, NULL);
-  rtwCAPI_SetDataAddressMap(*testPointMappingInfo, testPointAddrMap);
-  rtwCAPI_SetChildMMIArray(*testPointMappingInfo, NULL);
-  rtwCAPI_SetChildMMIArrayLen(*testPointMappingInfo, 0);
-  ssSetModelMappingInfoPtr(S, testPointMappingInfo);
 }

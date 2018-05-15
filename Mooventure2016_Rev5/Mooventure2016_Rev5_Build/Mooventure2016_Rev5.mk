@@ -55,7 +55,7 @@ SHELL           = cmd
 
 
 MODEL           = Mooventure2016_Rev5
-MODULES         = Application.c CodeCoverage.c FaultManager.c Mooventure2016_Rev5_Foreground.c Mooventure2016_Rev5_data.c MotoHawk_DataStores.c TableLookupFunctions.c Trigger_BGND_BASE_PERIODIC_5678p0001.c Trigger_FGND_RTI_PERIODIC_5687p0001.c Trigger_Fault_active_0_8.c VarDecs.c 
+MODULES         = Application.c CodeCoverage.c FaultManager.c Mooventure2016_Rev5_Foreground.c Mooventure2016_Rev5_data.c MotoHawk_DataStores.c TableLookupFunctions.c Trigger_BGND_BASE_PERIODIC_5721p0001.c Trigger_FGND_RTI_PERIODIC_5730p0001.c Trigger_Fault_active_0_8.c VarDecs.c 
 MAKEFILE        = Mooventure2016_Rev5.mk
 MATLAB_ROOT     = C:\Program Files (x86)\MATLAB\R2011a
 S_FUNCTIONS     = 

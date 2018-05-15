@@ -281,27 +281,27 @@
       <Symbol Name="CAN_1_KeySuite_SetIDFilter" Address="0x00051250" Size="20"/>
       <Symbol Name="CAN_2_KeySuite_SetIDFilter" Address="0x00051264" Size="20"/>
       <Symbol Name="CAN_3_KeySuite_SetIDFilter" Address="0x00051278" Size="20"/>
-      <Symbol Name="RxSlot_3808p0001_Receive" Address="0x0005128C" Size="248"/>
-      <Symbol Name="RxSlot_3671p0001_Receive" Address="0x00051384" Size="248"/>
-      <Symbol Name="RxSlot_3669p0004_Receive" Address="0x0005147C" Size="248"/>
-      <Symbol Name="RxSlot_3257p0001_Receive" Address="0x00051574" Size="248"/>
-      <Symbol Name="RxSlot_3256p0001_Receive" Address="0x0005166C" Size="248"/>
-      <Symbol Name="RxSlot_3255p0001_Receive" Address="0x00051764" Size="248"/>
-      <Symbol Name="RxSlot_3254p0001_Receive" Address="0x0005185C" Size="248"/>
-      <Symbol Name="RxSlot_3253p0001_Receive" Address="0x00051954" Size="248"/>
-      <Symbol Name="RxSlot_3252p0001_Receive" Address="0x00051A4C" Size="248"/>
-      <Symbol Name="RxSlot_3251p0001_Receive" Address="0x00051B44" Size="248"/>
-      <Symbol Name="RxSlot_3672p0001_Receive" Address="0x00051C3C" Size="248"/>
-      <Symbol Name="RxSlot_4019p0001_Receive" Address="0x00051D34" Size="248"/>
-      <Symbol Name="RxSlot_3861p0001_Receive" Address="0x00051E2C" Size="248"/>
-      <Symbol Name="RxSlot_3860p0001_Receive" Address="0x00051F24" Size="248"/>
-      <Symbol Name="RxSlot_3859p0001_Receive" Address="0x0005201C" Size="248"/>
-      <Symbol Name="RxSlot_3729p0001_Receive" Address="0x00052114" Size="248"/>
-      <Symbol Name="RxSlot_3670p0001_Receive" Address="0x0005220C" Size="248"/>
-      <Symbol Name="RxSlot_10273p001_Receive" Address="0x00052304" Size="248"/>
-      <Symbol Name="RxSlot_3055p0001_Receive" Address="0x000523FC" Size="248"/>
-      <Symbol Name="RxSlot_3054p0001_Receive" Address="0x000524F4" Size="248"/>
-      <Symbol Name="RxSlot_3053p0002_Receive" Address="0x000525EC" Size="248"/>
+      <Symbol Name="RxSlot_3836p0001_Receive" Address="0x0005128C" Size="248"/>
+      <Symbol Name="RxSlot_3699p0001_Receive" Address="0x00051384" Size="248"/>
+      <Symbol Name="RxSlot_3697p0004_Receive" Address="0x0005147C" Size="248"/>
+      <Symbol Name="RxSlot_3268p0001_Receive" Address="0x00051574" Size="248"/>
+      <Symbol Name="RxSlot_3267p0001_Receive" Address="0x0005166C" Size="248"/>
+      <Symbol Name="RxSlot_3266p0001_Receive" Address="0x00051764" Size="248"/>
+      <Symbol Name="RxSlot_3265p0001_Receive" Address="0x0005185C" Size="248"/>
+      <Symbol Name="RxSlot_3264p0001_Receive" Address="0x00051954" Size="248"/>
+      <Symbol Name="RxSlot_3263p0001_Receive" Address="0x00051A4C" Size="248"/>
+      <Symbol Name="RxSlot_3262p0001_Receive" Address="0x00051B44" Size="248"/>
+      <Symbol Name="RxSlot_3700p0001_Receive" Address="0x00051C3C" Size="248"/>
+      <Symbol Name="RxSlot_4047p0001_Receive" Address="0x00051D34" Size="248"/>
+      <Symbol Name="RxSlot_3889p0001_Receive" Address="0x00051E2C" Size="248"/>
+      <Symbol Name="RxSlot_3888p0001_Receive" Address="0x00051F24" Size="248"/>
+      <Symbol Name="RxSlot_3887p0001_Receive" Address="0x0005201C" Size="248"/>
+      <Symbol Name="RxSlot_3757p0001_Receive" Address="0x00052114" Size="248"/>
+      <Symbol Name="RxSlot_3698p0001_Receive" Address="0x0005220C" Size="248"/>
+      <Symbol Name="RxSlot_3478p0004_Receive" Address="0x00052304" Size="248"/>
+      <Symbol Name="RxSlot_3066p0001_Receive" Address="0x000523FC" Size="248"/>
+      <Symbol Name="RxSlot_3065p0001_Receive" Address="0x000524F4" Size="248"/>
+      <Symbol Name="RxSlot_3064p0002_Receive" Address="0x000525EC" Size="248"/>
       <Symbol Name="CANFrame_Queue_Depth" Address="0x000526E4" Size="92"/>
       <Symbol Name="CAN_3_TransmitQueueDepth" Address="0x00052740" Size="16"/>
       <Symbol Name="CAN_2_TransmitQueueDepth" Address="0x00052750" Size="16"/>
@@ -313,7 +313,7 @@
       <Symbol Name="CAN_3_KeySuite_Receive" Address="0x00052A68" Size="208"/>
       <Symbol Name="CAN_2_KeySuite_Receive" Address="0x00052B38" Size="208"/>
       <Symbol Name="CAN_1_KeySuite_Receive" Address="0x00052C08" Size="208"/>
-      <Symbol Name="RxSlot_3858p0001_Receive" Address="0x00052CD8" Size="208"/>
+      <Symbol Name="RxSlot_3886p0001_Receive" Address="0x00052CD8" Size="208"/>
       <Symbol Name="CANFrame_Queue_Enqueue" Address="0x00052DA8" Size="180"/>
       <Symbol Name="CAN_3_ReceiveDispatch" Address="0x00052E5C" Size="788"/>
       <Symbol Name="CAN_2_ReceiveDispatch" Address="0x00053170" Size="260"/>
@@ -359,18 +359,18 @@
       <Symbol Name="H1m_PWMOutput_Set" Address="0x00054AD8" Size="80"/>
       <Symbol Name="H1m_PWMOutput_Stop" Address="0x00054B28" Size="52"/>
       <Symbol Name="SPI_D_Create" Address="0x00054B5C" Size="88"/>
-      <Symbol Name="DOut4325p0001_DiscreteOutput_Get" Address="0x00054BB4" Size="20"/>
-      <Symbol Name="DOut4326p0001_DiscreteOutput_Get" Address="0x00054BC8" Size="20"/>
-      <Symbol Name="DOut4327p0001_DiscreteOutput_Get" Address="0x00054BDC" Size="20"/>
-      <Symbol Name="DOut4328p0001_DiscreteOutput_Get" Address="0x00054BF0" Size="20"/>
-      <Symbol Name="DOut4329p0001_DiscreteOutput_Get" Address="0x00054C04" Size="20"/>
-      <Symbol Name="DOut4330p0001_DiscreteOutput_Get" Address="0x00054C18" Size="20"/>
-      <Symbol Name="DOut4331p0001_DiscreteOutput_Get" Address="0x00054C2C" Size="20"/>
-      <Symbol Name="DOut4332p0001_DiscreteOutput_Get" Address="0x00054C40" Size="20"/>
-      <Symbol Name="DOut4561p0001_DiscreteOutput_Get" Address="0x00054C54" Size="20"/>
-      <Symbol Name="DOut4564p0001_DiscreteOutput_Get" Address="0x00054C68" Size="20"/>
-      <Symbol Name="DOut4565p0001_DiscreteOutput_Get" Address="0x00054C7C" Size="20"/>
-      <Symbol Name="DOut5628p0004_DiscreteOutput_Get" Address="0x00054C90" Size="20"/>
+      <Symbol Name="DOut4364p0004_DiscreteOutput_Get" Address="0x00054BB4" Size="20"/>
+      <Symbol Name="DOut4365p0004_DiscreteOutput_Get" Address="0x00054BC8" Size="20"/>
+      <Symbol Name="DOut4366p0004_DiscreteOutput_Get" Address="0x00054BDC" Size="20"/>
+      <Symbol Name="DOut4367p0004_DiscreteOutput_Get" Address="0x00054BF0" Size="20"/>
+      <Symbol Name="DOut4368p0004_DiscreteOutput_Get" Address="0x00054C04" Size="20"/>
+      <Symbol Name="DOut4369p0004_DiscreteOutput_Get" Address="0x00054C18" Size="20"/>
+      <Symbol Name="DOut4370p0004_DiscreteOutput_Get" Address="0x00054C2C" Size="20"/>
+      <Symbol Name="DOut4371p0004_DiscreteOutput_Get" Address="0x00054C40" Size="20"/>
+      <Symbol Name="DOut4600p0004_DiscreteOutput_Get" Address="0x00054C54" Size="20"/>
+      <Symbol Name="DOut4603p0004_DiscreteOutput_Get" Address="0x00054C68" Size="20"/>
+      <Symbol Name="DOut4604p0004_DiscreteOutput_Get" Address="0x00054C7C" Size="20"/>
+      <Symbol Name="DOut5671p0001_DiscreteOutput_Get" Address="0x00054C90" Size="20"/>
       <Symbol Name="H1_InhibitB_DiscreteOutput_Get" Address="0x00054CA4" Size="20"/>
       <Symbol Name="ODRC_DiscreteOutput_Get" Address="0x00054CB8" Size="76"/>
       <Symbol Name="MotoCoder_DiscreteOutput_UpdateAlways_Create" Address="0x00054D04"
@@ -379,50 +379,50 @@
       <Symbol Name="MotoCoder_DiscreteOutput_UpdateOnChange_Create" Address="0x00054D4C"
               Size="56"/>
       <Symbol Name="H1_InhibitB_DiscreteOutput_Create" Address="0x00054D84" Size="32"/>
-      <Symbol Name="DOut5628p0004_DiscreteOutput_Create" Address="0x00054DA4" Size="32"/>
-      <Symbol Name="DOut4565p0001_DiscreteOutput_Create" Address="0x00054DC4" Size="32"/>
-      <Symbol Name="DOut4564p0001_DiscreteOutput_Create" Address="0x00054DE4" Size="32"/>
-      <Symbol Name="DOut4561p0001_DiscreteOutput_Create" Address="0x00054E04" Size="32"/>
-      <Symbol Name="DOut4332p0001_DiscreteOutput_Create" Address="0x00054E24" Size="32"/>
-      <Symbol Name="DOut4331p0001_DiscreteOutput_Create" Address="0x00054E44" Size="32"/>
-      <Symbol Name="DOut4330p0001_DiscreteOutput_Create" Address="0x00054E64" Size="32"/>
-      <Symbol Name="DOut4329p0001_DiscreteOutput_Create" Address="0x00054E84" Size="32"/>
-      <Symbol Name="DOut4328p0001_DiscreteOutput_Create" Address="0x00054EA4" Size="32"/>
-      <Symbol Name="DOut4327p0001_DiscreteOutput_Create" Address="0x00054EC4" Size="32"/>
-      <Symbol Name="DOut4326p0001_DiscreteOutput_Create" Address="0x00054EE4" Size="32"/>
-      <Symbol Name="DOut4325p0001_DiscreteOutput_Create" Address="0x00054F04" Size="28"/>
+      <Symbol Name="DOut5671p0001_DiscreteOutput_Create" Address="0x00054DA4" Size="32"/>
+      <Symbol Name="DOut4604p0004_DiscreteOutput_Create" Address="0x00054DC4" Size="32"/>
+      <Symbol Name="DOut4603p0004_DiscreteOutput_Create" Address="0x00054DE4" Size="32"/>
+      <Symbol Name="DOut4600p0004_DiscreteOutput_Create" Address="0x00054E04" Size="32"/>
+      <Symbol Name="DOut4371p0004_DiscreteOutput_Create" Address="0x00054E24" Size="32"/>
+      <Symbol Name="DOut4370p0004_DiscreteOutput_Create" Address="0x00054E44" Size="32"/>
+      <Symbol Name="DOut4369p0004_DiscreteOutput_Create" Address="0x00054E64" Size="32"/>
+      <Symbol Name="DOut4368p0004_DiscreteOutput_Create" Address="0x00054E84" Size="32"/>
+      <Symbol Name="DOut4367p0004_DiscreteOutput_Create" Address="0x00054EA4" Size="32"/>
+      <Symbol Name="DOut4366p0004_DiscreteOutput_Create" Address="0x00054EC4" Size="32"/>
+      <Symbol Name="DOut4365p0004_DiscreteOutput_Create" Address="0x00054EE4" Size="32"/>
+      <Symbol Name="DOut4364p0004_DiscreteOutput_Create" Address="0x00054F04" Size="28"/>
       <Symbol Name="MotoCoder_DiscreteOutput_UpdateOnChange_Stop" Address="0x00054F20"
               Size="44"/>
       <Symbol Name="H1_InhibitB_DiscreteOutput_Stop" Address="0x00054F4C" Size="28"/>
-      <Symbol Name="DOut5628p0004_DiscreteOutput_Stop" Address="0x00054F68" Size="28"/>
-      <Symbol Name="DOut4565p0001_DiscreteOutput_Stop" Address="0x00054F84" Size="28"/>
-      <Symbol Name="DOut4564p0001_DiscreteOutput_Stop" Address="0x00054FA0" Size="28"/>
-      <Symbol Name="DOut4561p0001_DiscreteOutput_Stop" Address="0x00054FBC" Size="28"/>
-      <Symbol Name="DOut4332p0001_DiscreteOutput_Stop" Address="0x00054FD8" Size="28"/>
-      <Symbol Name="DOut4331p0001_DiscreteOutput_Stop" Address="0x00054FF4" Size="28"/>
-      <Symbol Name="DOut4330p0001_DiscreteOutput_Stop" Address="0x00055010" Size="28"/>
-      <Symbol Name="DOut4329p0001_DiscreteOutput_Stop" Address="0x0005502C" Size="28"/>
-      <Symbol Name="DOut4328p0001_DiscreteOutput_Stop" Address="0x00055048" Size="28"/>
-      <Symbol Name="DOut4327p0001_DiscreteOutput_Stop" Address="0x00055064" Size="28"/>
-      <Symbol Name="DOut4326p0001_DiscreteOutput_Stop" Address="0x00055080" Size="28"/>
-      <Symbol Name="DOut4325p0001_DiscreteOutput_Stop" Address="0x0005509C" Size="24"/>
+      <Symbol Name="DOut5671p0001_DiscreteOutput_Stop" Address="0x00054F68" Size="28"/>
+      <Symbol Name="DOut4604p0004_DiscreteOutput_Stop" Address="0x00054F84" Size="28"/>
+      <Symbol Name="DOut4603p0004_DiscreteOutput_Stop" Address="0x00054FA0" Size="28"/>
+      <Symbol Name="DOut4600p0004_DiscreteOutput_Stop" Address="0x00054FBC" Size="28"/>
+      <Symbol Name="DOut4371p0004_DiscreteOutput_Stop" Address="0x00054FD8" Size="28"/>
+      <Symbol Name="DOut4370p0004_DiscreteOutput_Stop" Address="0x00054FF4" Size="28"/>
+      <Symbol Name="DOut4369p0004_DiscreteOutput_Stop" Address="0x00055010" Size="28"/>
+      <Symbol Name="DOut4368p0004_DiscreteOutput_Stop" Address="0x0005502C" Size="28"/>
+      <Symbol Name="DOut4367p0004_DiscreteOutput_Stop" Address="0x00055048" Size="28"/>
+      <Symbol Name="DOut4366p0004_DiscreteOutput_Stop" Address="0x00055064" Size="28"/>
+      <Symbol Name="DOut4365p0004_DiscreteOutput_Stop" Address="0x00055080" Size="28"/>
+      <Symbol Name="DOut4364p0004_DiscreteOutput_Stop" Address="0x0005509C" Size="24"/>
       <Symbol Name="MotoCoder_DiscreteOutput_UpdateOnChange_Set" Address="0x000550B4"
               Size="144"/>
       <Symbol Name="H1_InhibitB_DiscreteOutput_Set" Address="0x00055144" Size="32"/>
       <Symbol Name="H1m_PWMOutput_PWMOutput_Stop" Address="0x00055164" Size="52"/>
       <Symbol Name="H1m_PWMOutput_PWMOutput_Set" Address="0x00055198" Size="104"/>
-      <Symbol Name="DOut5628p0004_DiscreteOutput_Set" Address="0x00055200" Size="32"/>
-      <Symbol Name="DOut4565p0001_DiscreteOutput_Set" Address="0x00055220" Size="32"/>
-      <Symbol Name="DOut4564p0001_DiscreteOutput_Set" Address="0x00055240" Size="32"/>
-      <Symbol Name="DOut4561p0001_DiscreteOutput_Set" Address="0x00055260" Size="32"/>
-      <Symbol Name="DOut4332p0001_DiscreteOutput_Set" Address="0x00055280" Size="32"/>
-      <Symbol Name="DOut4331p0001_DiscreteOutput_Set" Address="0x000552A0" Size="32"/>
-      <Symbol Name="DOut4330p0001_DiscreteOutput_Set" Address="0x000552C0" Size="32"/>
-      <Symbol Name="DOut4329p0001_DiscreteOutput_Set" Address="0x000552E0" Size="32"/>
-      <Symbol Name="DOut4328p0001_DiscreteOutput_Set" Address="0x00055300" Size="32"/>
-      <Symbol Name="DOut4327p0001_DiscreteOutput_Set" Address="0x00055320" Size="32"/>
-      <Symbol Name="DOut4326p0001_DiscreteOutput_Set" Address="0x00055340" Size="32"/>
-      <Symbol Name="DOut4325p0001_DiscreteOutput_Set" Address="0x00055360" Size="28"/>
+      <Symbol Name="DOut5671p0001_DiscreteOutput_Set" Address="0x00055200" Size="32"/>
+      <Symbol Name="DOut4604p0004_DiscreteOutput_Set" Address="0x00055220" Size="32"/>
+      <Symbol Name="DOut4603p0004_DiscreteOutput_Set" Address="0x00055240" Size="32"/>
+      <Symbol Name="DOut4600p0004_DiscreteOutput_Set" Address="0x00055260" Size="32"/>
+      <Symbol Name="DOut4371p0004_DiscreteOutput_Set" Address="0x00055280" Size="32"/>
+      <Symbol Name="DOut4370p0004_DiscreteOutput_Set" Address="0x000552A0" Size="32"/>
+      <Symbol Name="DOut4369p0004_DiscreteOutput_Set" Address="0x000552C0" Size="32"/>
+      <Symbol Name="DOut4368p0004_DiscreteOutput_Set" Address="0x000552E0" Size="32"/>
+      <Symbol Name="DOut4367p0004_DiscreteOutput_Set" Address="0x00055300" Size="32"/>
+      <Symbol Name="DOut4366p0004_DiscreteOutput_Set" Address="0x00055320" Size="32"/>
+      <Symbol Name="DOut4365p0004_DiscreteOutput_Set" Address="0x00055340" Size="32"/>
+      <Symbol Name="DOut4364p0004_DiscreteOutput_Set" Address="0x00055360" Size="28"/>
       <Symbol Name="EEPROM_1_Create" Address="0x0005537C" Size="44"/>
       <Symbol Name="DRVP_AnalogInput_Get" Address="0x000553A8" Size="84"/>
       <Symbol Name="DRVP_Create" Address="0x000553FC" Size="64"/>
@@ -430,15 +430,15 @@
       <Symbol Name="VISTA_1_Register_Write" Address="0x00055478" Size="60"/>
       <Symbol Name="VISTA_1_Create" Address="0x000554B4" Size="80"/>
       <Symbol Name="MC33800_MPRD_DiscreteOutput_Create" Address="0x00055504" Size="104"/>
-      <Symbol Name="DOut4566p0001_DiscreteOutput_Create" Address="0x0005556C" Size="112"/>
+      <Symbol Name="DOut4605p0004_DiscreteOutput_Create" Address="0x0005556C" Size="112"/>
       <Symbol Name="MC33800_LSO8_DiscreteOutput_Create" Address="0x000555DC" Size="104"/>
       <Symbol Name="MC33800_LSO10_DiscreteOutput_Create" Address="0x00055644" Size="104"/>
-      <Symbol Name="DOut4563p0001_DiscreteOutput_Create" Address="0x000556AC" Size="112"/>
-      <Symbol Name="DOut4562p0001_DiscreteOutput_Create" Address="0x0005571C" Size="112"/>
+      <Symbol Name="DOut4602p0004_DiscreteOutput_Create" Address="0x000556AC" Size="112"/>
+      <Symbol Name="DOut4601p0004_DiscreteOutput_Create" Address="0x0005571C" Size="112"/>
       <Symbol Name="MC33800_LSO9_DiscreteOutput_Create" Address="0x0005578C" Size="104"/>
-      <Symbol Name="DOut4335p0001_DiscreteOutput_Create" Address="0x000557F4" Size="112"/>
-      <Symbol Name="DOut4334p0001_DiscreteOutput_Create" Address="0x00055864" Size="112"/>
-      <Symbol Name="DOut4333p0001_DiscreteOutput_Create" Address="0x000558D4" Size="112"/>
+      <Symbol Name="DOut4374p0004_DiscreteOutput_Create" Address="0x000557F4" Size="112"/>
+      <Symbol Name="DOut4373p0004_DiscreteOutput_Create" Address="0x00055864" Size="112"/>
+      <Symbol Name="DOut4372p0004_DiscreteOutput_Create" Address="0x000558D4" Size="112"/>
       <Symbol Name="MC33800_INJ2_DiscreteOutput_Create" Address="0x00055944" Size="100"/>
       <Symbol Name="MC33800_INJ3_DiscreteOutput_Create" Address="0x000559A8" Size="100"/>
       <Symbol Name="MC33800_INJ4_DiscreteOutput_Create" Address="0x00055A0C" Size="100"/>
@@ -447,25 +447,25 @@
       <Symbol Name="MC33800_INJ7_DiscreteOutput_Create" Address="0x00055B3C" Size="100"/>
       <Symbol Name="MC33800_INJ6_DiscreteOutput_Create" Address="0x00055BA0" Size="100"/>
       <Symbol Name="MC33800_INJ8_DiscreteOutput_Create" Address="0x00055C04" Size="100"/>
-      <Symbol Name="DOut4324p0001_DiscreteOutput_Create" Address="0x00055C68" Size="116"/>
-      <Symbol Name="DOut4323p0001_DiscreteOutput_Create" Address="0x00055CDC" Size="112"/>
-      <Symbol Name="DOut4566p0001_DiscreteOutput_Stop" Address="0x00055D4C" Size="64"/>
-      <Symbol Name="DOut4566p0001_DiscreteOutput_Set" Address="0x00055D8C" Size="144"/>
-      <Symbol Name="DOut4563p0001_DiscreteOutput_Stop" Address="0x00055E1C" Size="64"/>
-      <Symbol Name="DOut4563p0001_DiscreteOutput_Set" Address="0x00055E5C" Size="144"/>
-      <Symbol Name="DOut4562p0001_DiscreteOutput_Stop" Address="0x00055EEC" Size="64"/>
-      <Symbol Name="DOut4562p0001_DiscreteOutput_Set" Address="0x00055F2C" Size="144"/>
-      <Symbol Name="DOut4335p0001_DiscreteOutput_Stop" Address="0x00055FBC" Size="64"/>
-      <Symbol Name="DOut4335p0001_DiscreteOutput_Set" Address="0x00055FFC" Size="144"/>
-      <Symbol Name="DOut4334p0001_DiscreteOutput_Stop" Address="0x0005608C" Size="64"/>
-      <Symbol Name="DOut4334p0001_DiscreteOutput_Set" Address="0x000560CC" Size="144"/>
-      <Symbol Name="DOut4333p0001_DiscreteOutput_Stop" Address="0x0005615C" Size="64"/>
-      <Symbol Name="DOut4333p0001_DiscreteOutput_Set" Address="0x0005619C" Size="144"/>
-      <Symbol Name="DOut4324p0001_DiscreteOutput_Stop" Address="0x0005622C" Size="64"/>
-      <Symbol Name="DOut4324p0001_DiscreteOutput_Set" Address="0x0005626C" Size="144"/>
-      <Symbol Name="DOut4323p0001_DiscreteOutput_Stop" Address="0x000562FC" Size="64"/>
+      <Symbol Name="DOut4363p0004_DiscreteOutput_Create" Address="0x00055C68" Size="116"/>
+      <Symbol Name="DOut4362p0004_DiscreteOutput_Create" Address="0x00055CDC" Size="112"/>
+      <Symbol Name="DOut4605p0004_DiscreteOutput_Stop" Address="0x00055D4C" Size="64"/>
+      <Symbol Name="DOut4605p0004_DiscreteOutput_Set" Address="0x00055D8C" Size="144"/>
+      <Symbol Name="DOut4602p0004_DiscreteOutput_Stop" Address="0x00055E1C" Size="64"/>
+      <Symbol Name="DOut4602p0004_DiscreteOutput_Set" Address="0x00055E5C" Size="144"/>
+      <Symbol Name="DOut4601p0004_DiscreteOutput_Stop" Address="0x00055EEC" Size="64"/>
+      <Symbol Name="DOut4601p0004_DiscreteOutput_Set" Address="0x00055F2C" Size="144"/>
+      <Symbol Name="DOut4374p0004_DiscreteOutput_Stop" Address="0x00055FBC" Size="64"/>
+      <Symbol Name="DOut4374p0004_DiscreteOutput_Set" Address="0x00055FFC" Size="144"/>
+      <Symbol Name="DOut4373p0004_DiscreteOutput_Stop" Address="0x0005608C" Size="64"/>
+      <Symbol Name="DOut4373p0004_DiscreteOutput_Set" Address="0x000560CC" Size="144"/>
+      <Symbol Name="DOut4372p0004_DiscreteOutput_Stop" Address="0x0005615C" Size="64"/>
+      <Symbol Name="DOut4372p0004_DiscreteOutput_Set" Address="0x0005619C" Size="144"/>
+      <Symbol Name="DOut4363p0004_DiscreteOutput_Stop" Address="0x0005622C" Size="64"/>
+      <Symbol Name="DOut4363p0004_DiscreteOutput_Set" Address="0x0005626C" Size="144"/>
+      <Symbol Name="DOut4362p0004_DiscreteOutput_Stop" Address="0x000562FC" Size="64"/>
       <Symbol Name="IO_Stop" Address="0x0005633C" Size="116"/>
-      <Symbol Name="DOut4323p0001_DiscreteOutput_Set" Address="0x000563B0" Size="144"/>
+      <Symbol Name="DOut4362p0004_DiscreteOutput_Set" Address="0x000563B0" Size="144"/>
       <Symbol Name="S_SHRC_4_Create" Address="0x00056440" Size="56"/>
       <Symbol Name="S_SHRC_3_Create" Address="0x00056478" Size="56"/>
       <Symbol Name="ESTOP2_DigitalInput_Get" Address="0x000564B0" Size="64"/>
@@ -526,9 +526,9 @@
       <Symbol Name="rtIsNaNF" Address="0x00057C28" Size="24"/>
       <Symbol Name="TablePrelookup_real_T" Address="0x00057C40" Size="368"/>
       <Symbol Name="TableInterpolation1D_real_T" Address="0x00057DB0" Size="80"/>
-      <Symbol Name="Trigger_BGND_BASE_PERIODIC_5678p0001" Address="0x00057E00" Size="1012"/>
+      <Symbol Name="Trigger_BGND_BASE_PERIODIC_5721p0001" Address="0x00057E00" Size="1012"/>
       <Symbol Name="Trigger_Fault_active_0_8" Address="0x000581F4" Size="300"/>
-      <Symbol Name="Trigger_FGND_RTI_PERIODIC_5687p0001" Address="0x00058320" Size="68"/>
+      <Symbol Name="Trigger_FGND_RTI_PERIODIC_5730p0001" Address="0x00058320" Size="68"/>
       <Symbol Name="exit" Address="0x00058364" Size="64"/>
       <Symbol Name="free" Address="0x000583A4" Size="44"/>
       <Symbol Name="malloc" Address="0x000583D0" Size="44"/>
@@ -873,30 +873,30 @@
       <Symbol Name="SPI_D" Address="0x00066848" Size="12"/>
       <Symbol Name="ODRC" Address="0x00066854" Size="12"/>
       <Symbol Name="H1_InhibitB" Address="0x00066860" Size="12"/>
-      <Symbol Name="DOut5628p0004" Address="0x0006686C" Size="12"/>
-      <Symbol Name="DOut4565p0001" Address="0x00066878" Size="12"/>
-      <Symbol Name="DOut4564p0001" Address="0x00066884" Size="12"/>
-      <Symbol Name="DOut4561p0001" Address="0x00066890" Size="12"/>
-      <Symbol Name="DOut4332p0001" Address="0x0006689C" Size="12"/>
-      <Symbol Name="DOut4331p0001" Address="0x000668A8" Size="12"/>
-      <Symbol Name="DOut4330p0001" Address="0x000668B4" Size="12"/>
-      <Symbol Name="DOut4329p0001" Address="0x000668C0" Size="12"/>
-      <Symbol Name="DOut4328p0001" Address="0x000668CC" Size="12"/>
-      <Symbol Name="DOut4327p0001" Address="0x000668D8" Size="12"/>
-      <Symbol Name="DOut4326p0001" Address="0x000668E4" Size="12"/>
-      <Symbol Name="DOut4325p0001" Address="0x000668F0" Size="12"/>
+      <Symbol Name="DOut5671p0001" Address="0x0006686C" Size="12"/>
+      <Symbol Name="DOut4604p0004" Address="0x00066878" Size="12"/>
+      <Symbol Name="DOut4603p0004" Address="0x00066884" Size="12"/>
+      <Symbol Name="DOut4600p0004" Address="0x00066890" Size="12"/>
+      <Symbol Name="DOut4371p0004" Address="0x0006689C" Size="12"/>
+      <Symbol Name="DOut4370p0004" Address="0x000668A8" Size="12"/>
+      <Symbol Name="DOut4369p0004" Address="0x000668B4" Size="12"/>
+      <Symbol Name="DOut4368p0004" Address="0x000668C0" Size="12"/>
+      <Symbol Name="DOut4367p0004" Address="0x000668CC" Size="12"/>
+      <Symbol Name="DOut4366p0004" Address="0x000668D8" Size="12"/>
+      <Symbol Name="DOut4365p0004" Address="0x000668E4" Size="12"/>
+      <Symbol Name="DOut4364p0004" Address="0x000668F0" Size="12"/>
       <Symbol Name="EEPROM_1" Address="0x000668FC" Size="52"/>
       <Symbol Name="VISTA_1" Address="0x00066930" Size="12"/>
       <Symbol Name="MC33800_MPRD" Address="0x0006693C" Size="24"/>
-      <Symbol Name="DOut4566p0001" Address="0x00066954" Size="24"/>
+      <Symbol Name="DOut4605p0004" Address="0x00066954" Size="24"/>
       <Symbol Name="MC33800_LSO8" Address="0x0006696C" Size="24"/>
       <Symbol Name="MC33800_LSO10" Address="0x00066984" Size="24"/>
-      <Symbol Name="DOut4563p0001" Address="0x0006699C" Size="24"/>
-      <Symbol Name="DOut4562p0001" Address="0x000669B4" Size="24"/>
+      <Symbol Name="DOut4602p0004" Address="0x0006699C" Size="24"/>
+      <Symbol Name="DOut4601p0004" Address="0x000669B4" Size="24"/>
       <Symbol Name="MC33800_LSO9" Address="0x000669CC" Size="24"/>
-      <Symbol Name="DOut4335p0001" Address="0x000669E4" Size="24"/>
-      <Symbol Name="DOut4334p0001" Address="0x000669FC" Size="24"/>
-      <Symbol Name="DOut4333p0001" Address="0x00066A14" Size="24"/>
+      <Symbol Name="DOut4374p0004" Address="0x000669E4" Size="24"/>
+      <Symbol Name="DOut4373p0004" Address="0x000669FC" Size="24"/>
+      <Symbol Name="DOut4372p0004" Address="0x00066A14" Size="24"/>
       <Symbol Name="MC33800_INJ2" Address="0x00066A2C" Size="24"/>
       <Symbol Name="MC33800_INJ3" Address="0x00066A44" Size="24"/>
       <Symbol Name="MC33800_INJ4" Address="0x00066A5C" Size="24"/>
@@ -905,8 +905,8 @@
       <Symbol Name="MC33800_INJ7" Address="0x00066AA4" Size="24"/>
       <Symbol Name="MC33800_INJ6" Address="0x00066ABC" Size="24"/>
       <Symbol Name="MC33800_INJ8" Address="0x00066AD4" Size="24"/>
-      <Symbol Name="DOut4324p0001" Address="0x00066AEC" Size="24"/>
-      <Symbol Name="DOut4323p0001" Address="0x00066B04" Size="24"/>
+      <Symbol Name="DOut4363p0004" Address="0x00066AEC" Size="24"/>
+      <Symbol Name="DOut4362p0004" Address="0x00066B04" Size="24"/>
       <Symbol Name="S_SHRC_4" Address="0x00066B1C" Size="12"/>
       <Symbol Name="S_SHRC_3" Address="0x00066B28" Size="12"/>
       <Symbol Name="ESTOP2" Address="0x00066B34" Size="8"/>
@@ -916,10 +916,10 @@
       <Symbol Name="S_SHRC_3SPIDeviceMethods" Address="0x00066B58" Size="12"/>
       <Symbol Name="S_SHRC_3SPIDeviceAttrib" Address="0x00066B64" Size="6"/>
       <Symbol Name="S_SHRC_3SPIDevice" Address="0x00066B6C" Size="16"/>
-      <Symbol Name="DOut4323p0001_MC33800_Methods" Address="0x00066B7C" Size="16"/>
-      <Symbol Name="DOut4323p0001_MC33800DigitalOut" Address="0x00066B8C" Size="12"/>
-      <Symbol Name="DOut4324p0001_MC33800_Methods" Address="0x00066B98" Size="16"/>
-      <Symbol Name="DOut4324p0001_MC33800DigitalOut" Address="0x00066BA8" Size="12"/>
+      <Symbol Name="DOut4362p0004_MC33800_Methods" Address="0x00066B7C" Size="16"/>
+      <Symbol Name="DOut4362p0004_MC33800DigitalOut" Address="0x00066B8C" Size="12"/>
+      <Symbol Name="DOut4363p0004_MC33800_Methods" Address="0x00066B98" Size="16"/>
+      <Symbol Name="DOut4363p0004_MC33800DigitalOut" Address="0x00066BA8" Size="12"/>
       <Symbol Name="S_SHRC_4SPIDeviceMethods" Address="0x00066BB4" Size="12"/>
       <Symbol Name="S_SHRC_4SPIDeviceAttrib" Address="0x00066BC0" Size="6"/>
       <Symbol Name="S_SHRC_4SPIDevice" Address="0x00066BC8" Size="16"/>
@@ -939,24 +939,24 @@
       <Symbol Name="MC33800_INJ3_MC33800DigitalOut" Address="0x00066C90" Size="12"/>
       <Symbol Name="MC33800_INJ2_MC33800_Methods" Address="0x00066C9C" Size="16"/>
       <Symbol Name="MC33800_INJ2_MC33800DigitalOut" Address="0x00066CAC" Size="12"/>
-      <Symbol Name="DOut4333p0001_MC33800_Methods" Address="0x00066CB8" Size="16"/>
-      <Symbol Name="DOut4333p0001_MC33800DigitalOut" Address="0x00066CC8" Size="12"/>
-      <Symbol Name="DOut4334p0001_MC33800_Methods" Address="0x00066CD4" Size="16"/>
-      <Symbol Name="DOut4334p0001_MC33800DigitalOut" Address="0x00066CE4" Size="12"/>
-      <Symbol Name="DOut4335p0001_MC33800_Methods" Address="0x00066CF0" Size="16"/>
-      <Symbol Name="DOut4335p0001_MC33800DigitalOut" Address="0x00066D00" Size="12"/>
+      <Symbol Name="DOut4372p0004_MC33800_Methods" Address="0x00066CB8" Size="16"/>
+      <Symbol Name="DOut4372p0004_MC33800DigitalOut" Address="0x00066CC8" Size="12"/>
+      <Symbol Name="DOut4373p0004_MC33800_Methods" Address="0x00066CD4" Size="16"/>
+      <Symbol Name="DOut4373p0004_MC33800DigitalOut" Address="0x00066CE4" Size="12"/>
+      <Symbol Name="DOut4374p0004_MC33800_Methods" Address="0x00066CF0" Size="16"/>
+      <Symbol Name="DOut4374p0004_MC33800DigitalOut" Address="0x00066D00" Size="12"/>
       <Symbol Name="MC33800_LSO9_MC33800_Methods" Address="0x00066D0C" Size="16"/>
       <Symbol Name="MC33800_LSO9_MC33800DigitalOut" Address="0x00066D1C" Size="12"/>
-      <Symbol Name="DOut4562p0001_MC33800_Methods" Address="0x00066D28" Size="16"/>
-      <Symbol Name="DOut4562p0001_MC33800DigitalOut" Address="0x00066D38" Size="12"/>
-      <Symbol Name="DOut4563p0001_MC33800_Methods" Address="0x00066D44" Size="16"/>
-      <Symbol Name="DOut4563p0001_MC33800DigitalOut" Address="0x00066D54" Size="12"/>
+      <Symbol Name="DOut4601p0004_MC33800_Methods" Address="0x00066D28" Size="16"/>
+      <Symbol Name="DOut4601p0004_MC33800DigitalOut" Address="0x00066D38" Size="12"/>
+      <Symbol Name="DOut4602p0004_MC33800_Methods" Address="0x00066D44" Size="16"/>
+      <Symbol Name="DOut4602p0004_MC33800DigitalOut" Address="0x00066D54" Size="12"/>
       <Symbol Name="MC33800_LSO10_MC33800_Methods" Address="0x00066D60" Size="16"/>
       <Symbol Name="MC33800_LSO10_MC33800DigitalOut" Address="0x00066D70" Size="12"/>
       <Symbol Name="MC33800_LSO8_MC33800_Methods" Address="0x00066D7C" Size="16"/>
       <Symbol Name="MC33800_LSO8_MC33800DigitalOut" Address="0x00066D8C" Size="12"/>
-      <Symbol Name="DOut4566p0001_MC33800_Methods" Address="0x00066D98" Size="16"/>
-      <Symbol Name="DOut4566p0001_MC33800DigitalOut" Address="0x00066DA8" Size="12"/>
+      <Symbol Name="DOut4605p0004_MC33800_Methods" Address="0x00066D98" Size="16"/>
+      <Symbol Name="DOut4605p0004_MC33800DigitalOut" Address="0x00066DA8" Size="12"/>
       <Symbol Name="MC33800_MPRD_MC33800_Methods" Address="0x00066DB4" Size="16"/>
       <Symbol Name="MC33800_MPRD_MC33800DigitalOut" Address="0x00066DC4" Size="12"/>
       <Symbol Name="SPI_BMethods" Address="0x00066DD0" Size="8"/>
@@ -978,30 +978,30 @@
       <Symbol Name="EEPROM_1_Memory" Address="0x00066EAC" Size="36"/>
       <Symbol Name="EEPROM_1_AccessSemaphore" Address="0x00066ED0" Size="12"/>
       <Symbol Name="EEPROM_1_Methods" Address="0x00066EDC" Size="16"/>
-      <Symbol Name="DOut4325p0001_CPUOut_Methods" Address="0x00066EEC" Size="16"/>
-      <Symbol Name="DOut4325p0001_CPUDigitalOut" Address="0x00066EFC" Size="12"/>
-      <Symbol Name="DOut4326p0001_CPUOut_Methods" Address="0x00066F08" Size="16"/>
-      <Symbol Name="DOut4326p0001_CPUDigitalOut" Address="0x00066F18" Size="12"/>
-      <Symbol Name="DOut4327p0001_CPUOut_Methods" Address="0x00066F24" Size="16"/>
-      <Symbol Name="DOut4327p0001_CPUDigitalOut" Address="0x00066F34" Size="12"/>
-      <Symbol Name="DOut4328p0001_CPUOut_Methods" Address="0x00066F40" Size="16"/>
-      <Symbol Name="DOut4328p0001_CPUDigitalOut" Address="0x00066F50" Size="12"/>
-      <Symbol Name="DOut4329p0001_CPUOut_Methods" Address="0x00066F5C" Size="16"/>
-      <Symbol Name="DOut4329p0001_CPUDigitalOut" Address="0x00066F6C" Size="12"/>
-      <Symbol Name="DOut4330p0001_CPUOut_Methods" Address="0x00066F78" Size="16"/>
-      <Symbol Name="DOut4330p0001_CPUDigitalOut" Address="0x00066F88" Size="12"/>
-      <Symbol Name="DOut4331p0001_CPUOut_Methods" Address="0x00066F94" Size="16"/>
-      <Symbol Name="DOut4331p0001_CPUDigitalOut" Address="0x00066FA4" Size="12"/>
-      <Symbol Name="DOut4332p0001_CPUOut_Methods" Address="0x00066FB0" Size="16"/>
-      <Symbol Name="DOut4332p0001_CPUDigitalOut" Address="0x00066FC0" Size="12"/>
-      <Symbol Name="DOut4561p0001_CPUOut_Methods" Address="0x00066FCC" Size="16"/>
-      <Symbol Name="DOut4561p0001_CPUDigitalOut" Address="0x00066FDC" Size="12"/>
-      <Symbol Name="DOut4564p0001_CPUOut_Methods" Address="0x00066FE8" Size="16"/>
-      <Symbol Name="DOut4564p0001_CPUDigitalOut" Address="0x00066FF8" Size="12"/>
-      <Symbol Name="DOut4565p0001_CPUOut_Methods" Address="0x00067004" Size="16"/>
-      <Symbol Name="DOut4565p0001_CPUDigitalOut" Address="0x00067014" Size="12"/>
-      <Symbol Name="DOut5628p0004_CPUOut_Methods" Address="0x00067020" Size="16"/>
-      <Symbol Name="DOut5628p0004_CPUDigitalOut" Address="0x00067030" Size="12"/>
+      <Symbol Name="DOut4364p0004_CPUOut_Methods" Address="0x00066EEC" Size="16"/>
+      <Symbol Name="DOut4364p0004_CPUDigitalOut" Address="0x00066EFC" Size="12"/>
+      <Symbol Name="DOut4365p0004_CPUOut_Methods" Address="0x00066F08" Size="16"/>
+      <Symbol Name="DOut4365p0004_CPUDigitalOut" Address="0x00066F18" Size="12"/>
+      <Symbol Name="DOut4366p0004_CPUOut_Methods" Address="0x00066F24" Size="16"/>
+      <Symbol Name="DOut4366p0004_CPUDigitalOut" Address="0x00066F34" Size="12"/>
+      <Symbol Name="DOut4367p0004_CPUOut_Methods" Address="0x00066F40" Size="16"/>
+      <Symbol Name="DOut4367p0004_CPUDigitalOut" Address="0x00066F50" Size="12"/>
+      <Symbol Name="DOut4368p0004_CPUOut_Methods" Address="0x00066F5C" Size="16"/>
+      <Symbol Name="DOut4368p0004_CPUDigitalOut" Address="0x00066F6C" Size="12"/>
+      <Symbol Name="DOut4369p0004_CPUOut_Methods" Address="0x00066F78" Size="16"/>
+      <Symbol Name="DOut4369p0004_CPUDigitalOut" Address="0x00066F88" Size="12"/>
+      <Symbol Name="DOut4370p0004_CPUOut_Methods" Address="0x00066F94" Size="16"/>
+      <Symbol Name="DOut4370p0004_CPUDigitalOut" Address="0x00066FA4" Size="12"/>
+      <Symbol Name="DOut4371p0004_CPUOut_Methods" Address="0x00066FB0" Size="16"/>
+      <Symbol Name="DOut4371p0004_CPUDigitalOut" Address="0x00066FC0" Size="12"/>
+      <Symbol Name="DOut4600p0004_CPUOut_Methods" Address="0x00066FCC" Size="16"/>
+      <Symbol Name="DOut4600p0004_CPUDigitalOut" Address="0x00066FDC" Size="12"/>
+      <Symbol Name="DOut4603p0004_CPUOut_Methods" Address="0x00066FE8" Size="16"/>
+      <Symbol Name="DOut4603p0004_CPUDigitalOut" Address="0x00066FF8" Size="12"/>
+      <Symbol Name="DOut4604p0004_CPUOut_Methods" Address="0x00067004" Size="16"/>
+      <Symbol Name="DOut4604p0004_CPUDigitalOut" Address="0x00067014" Size="12"/>
+      <Symbol Name="DOut5671p0001_CPUOut_Methods" Address="0x00067020" Size="16"/>
+      <Symbol Name="DOut5671p0001_CPUDigitalOut" Address="0x00067030" Size="12"/>
       <Symbol Name="H1_InhibitB_CPUOut_Methods" Address="0x0006703C" Size="16"/>
       <Symbol Name="H1_InhibitB_CPUDigitalOut" Address="0x0006704C" Size="12"/>
       <Symbol Name="ODRC_CPUOut_Methods" Address="0x00067058" Size="16"/>
@@ -1232,55 +1232,55 @@
       <Symbol Name="CAN_1_KeySuite_DynamicID" Address="0x400035C4" Size="4"/>
       <Symbol Name="CAN_2_KeySuite_DynamicID" Address="0x400035C8" Size="4"/>
       <Symbol Name="CAN_3_KeySuite_DynamicID" Address="0x400035CC" Size="4"/>
-      <Symbol Name="RxSlot_3808p0001_ReceiveFrameValid" Address="0x400035D0" Size="1"/>
-      <Symbol Name="RxSlot_3808p0001_ReceiveFrame" Address="0x400035D4" Size="16"/>
-      <Symbol Name="RxSlot_3671p0001_ReceiveFrameValid" Address="0x400035E4" Size="1"/>
-      <Symbol Name="RxSlot_3671p0001_ReceiveFrame" Address="0x400035E8" Size="16"/>
-      <Symbol Name="RxSlot_3669p0004_ReceiveFrameValid" Address="0x400035F8" Size="1"/>
-      <Symbol Name="RxSlot_3669p0004_ReceiveFrame" Address="0x400035FC" Size="16"/>
-      <Symbol Name="RxSlot_3257p0001_ReceiveFrameValid" Address="0x4000360C" Size="1"/>
-      <Symbol Name="RxSlot_3257p0001_ReceiveFrame" Address="0x40003610" Size="16"/>
-      <Symbol Name="RxSlot_3256p0001_ReceiveFrameValid" Address="0x40003620" Size="1"/>
-      <Symbol Name="RxSlot_3256p0001_ReceiveFrame" Address="0x40003624" Size="16"/>
-      <Symbol Name="RxSlot_3255p0001_ReceiveFrameValid" Address="0x40003634" Size="1"/>
-      <Symbol Name="RxSlot_3255p0001_ReceiveFrame" Address="0x40003638" Size="16"/>
-      <Symbol Name="RxSlot_3254p0001_ReceiveFrameValid" Address="0x40003648" Size="1"/>
-      <Symbol Name="RxSlot_3254p0001_ReceiveFrame" Address="0x4000364C" Size="16"/>
-      <Symbol Name="RxSlot_3253p0001_ReceiveFrameValid" Address="0x4000365C" Size="1"/>
-      <Symbol Name="RxSlot_3253p0001_ReceiveFrame" Address="0x40003660" Size="16"/>
-      <Symbol Name="RxSlot_3252p0001_ReceiveFrameValid" Address="0x40003670" Size="1"/>
-      <Symbol Name="RxSlot_3252p0001_ReceiveFrame" Address="0x40003674" Size="16"/>
-      <Symbol Name="RxSlot_3251p0001_ReceiveFrameValid" Address="0x40003684" Size="1"/>
-      <Symbol Name="RxSlot_3251p0001_ReceiveFrame" Address="0x40003688" Size="16"/>
-      <Symbol Name="RxSlot_3672p0001_ReceiveFrameValid" Address="0x40003698" Size="1"/>
-      <Symbol Name="RxSlot_3672p0001_ReceiveFrame" Address="0x4000369C" Size="16"/>
-      <Symbol Name="RxSlot_4019p0001_ReceiveFrameValid" Address="0x400036AC" Size="1"/>
-      <Symbol Name="RxSlot_4019p0001_ReceiveFrame" Address="0x400036B0" Size="16"/>
-      <Symbol Name="RxSlot_3861p0001_ReceiveFrameValid" Address="0x400036C0" Size="1"/>
-      <Symbol Name="RxSlot_3861p0001_ReceiveFrame" Address="0x400036C4" Size="16"/>
-      <Symbol Name="RxSlot_3860p0001_ReceiveFrameValid" Address="0x400036D4" Size="1"/>
-      <Symbol Name="RxSlot_3860p0001_ReceiveFrame" Address="0x400036D8" Size="16"/>
-      <Symbol Name="RxSlot_3859p0001_ReceiveFrameValid" Address="0x400036E8" Size="1"/>
-      <Symbol Name="RxSlot_3859p0001_ReceiveFrame" Address="0x400036EC" Size="16"/>
-      <Symbol Name="RxSlot_3729p0001_ReceiveFrameValid" Address="0x400036FC" Size="1"/>
-      <Symbol Name="RxSlot_3729p0001_ReceiveFrame" Address="0x40003700" Size="16"/>
-      <Symbol Name="RxSlot_3670p0001_ReceiveFrameValid" Address="0x40003710" Size="1"/>
-      <Symbol Name="RxSlot_3670p0001_ReceiveFrame" Address="0x40003714" Size="16"/>
-      <Symbol Name="RxSlot_10273p001_ReceiveFrameValid" Address="0x40003724" Size="1"/>
-      <Symbol Name="RxSlot_10273p001_ReceiveFrame" Address="0x40003728" Size="16"/>
-      <Symbol Name="RxSlot_3055p0001_ReceiveFrameValid" Address="0x40003738" Size="1"/>
-      <Symbol Name="RxSlot_3055p0001_ReceiveFrame" Address="0x4000373C" Size="16"/>
-      <Symbol Name="RxSlot_3054p0001_ReceiveFrameValid" Address="0x4000374C" Size="1"/>
-      <Symbol Name="RxSlot_3054p0001_ReceiveFrame" Address="0x40003750" Size="16"/>
-      <Symbol Name="RxSlot_3053p0002_ReceiveFrameValid" Address="0x40003760" Size="1"/>
-      <Symbol Name="RxSlot_3053p0002_ReceiveFrame" Address="0x40003764" Size="16"/>
+      <Symbol Name="RxSlot_3836p0001_ReceiveFrameValid" Address="0x400035D0" Size="1"/>
+      <Symbol Name="RxSlot_3836p0001_ReceiveFrame" Address="0x400035D4" Size="16"/>
+      <Symbol Name="RxSlot_3699p0001_ReceiveFrameValid" Address="0x400035E4" Size="1"/>
+      <Symbol Name="RxSlot_3699p0001_ReceiveFrame" Address="0x400035E8" Size="16"/>
+      <Symbol Name="RxSlot_3697p0004_ReceiveFrameValid" Address="0x400035F8" Size="1"/>
+      <Symbol Name="RxSlot_3697p0004_ReceiveFrame" Address="0x400035FC" Size="16"/>
+      <Symbol Name="RxSlot_3268p0001_ReceiveFrameValid" Address="0x4000360C" Size="1"/>
+      <Symbol Name="RxSlot_3268p0001_ReceiveFrame" Address="0x40003610" Size="16"/>
+      <Symbol Name="RxSlot_3267p0001_ReceiveFrameValid" Address="0x40003620" Size="1"/>
+      <Symbol Name="RxSlot_3267p0001_ReceiveFrame" Address="0x40003624" Size="16"/>
+      <Symbol Name="RxSlot_3266p0001_ReceiveFrameValid" Address="0x40003634" Size="1"/>
+      <Symbol Name="RxSlot_3266p0001_ReceiveFrame" Address="0x40003638" Size="16"/>
+      <Symbol Name="RxSlot_3265p0001_ReceiveFrameValid" Address="0x40003648" Size="1"/>
+      <Symbol Name="RxSlot_3265p0001_ReceiveFrame" Address="0x4000364C" Size="16"/>
+      <Symbol Name="RxSlot_3264p0001_ReceiveFrameValid" Address="0x4000365C" Size="1"/>
+      <Symbol Name="RxSlot_3264p0001_ReceiveFrame" Address="0x40003660" Size="16"/>
+      <Symbol Name="RxSlot_3263p0001_ReceiveFrameValid" Address="0x40003670" Size="1"/>
+      <Symbol Name="RxSlot_3263p0001_ReceiveFrame" Address="0x40003674" Size="16"/>
+      <Symbol Name="RxSlot_3262p0001_ReceiveFrameValid" Address="0x40003684" Size="1"/>
+      <Symbol Name="RxSlot_3262p0001_ReceiveFrame" Address="0x40003688" Size="16"/>
+      <Symbol Name="RxSlot_3700p0001_ReceiveFrameValid" Address="0x40003698" Size="1"/>
+      <Symbol Name="RxSlot_3700p0001_ReceiveFrame" Address="0x4000369C" Size="16"/>
+      <Symbol Name="RxSlot_4047p0001_ReceiveFrameValid" Address="0x400036AC" Size="1"/>
+      <Symbol Name="RxSlot_4047p0001_ReceiveFrame" Address="0x400036B0" Size="16"/>
+      <Symbol Name="RxSlot_3889p0001_ReceiveFrameValid" Address="0x400036C0" Size="1"/>
+      <Symbol Name="RxSlot_3889p0001_ReceiveFrame" Address="0x400036C4" Size="16"/>
+      <Symbol Name="RxSlot_3888p0001_ReceiveFrameValid" Address="0x400036D4" Size="1"/>
+      <Symbol Name="RxSlot_3888p0001_ReceiveFrame" Address="0x400036D8" Size="16"/>
+      <Symbol Name="RxSlot_3887p0001_ReceiveFrameValid" Address="0x400036E8" Size="1"/>
+      <Symbol Name="RxSlot_3887p0001_ReceiveFrame" Address="0x400036EC" Size="16"/>
+      <Symbol Name="RxSlot_3757p0001_ReceiveFrameValid" Address="0x400036FC" Size="1"/>
+      <Symbol Name="RxSlot_3757p0001_ReceiveFrame" Address="0x40003700" Size="16"/>
+      <Symbol Name="RxSlot_3698p0001_ReceiveFrameValid" Address="0x40003710" Size="1"/>
+      <Symbol Name="RxSlot_3698p0001_ReceiveFrame" Address="0x40003714" Size="16"/>
+      <Symbol Name="RxSlot_3478p0004_ReceiveFrameValid" Address="0x40003724" Size="1"/>
+      <Symbol Name="RxSlot_3478p0004_ReceiveFrame" Address="0x40003728" Size="16"/>
+      <Symbol Name="RxSlot_3066p0001_ReceiveFrameValid" Address="0x40003738" Size="1"/>
+      <Symbol Name="RxSlot_3066p0001_ReceiveFrame" Address="0x4000373C" Size="16"/>
+      <Symbol Name="RxSlot_3065p0001_ReceiveFrameValid" Address="0x4000374C" Size="1"/>
+      <Symbol Name="RxSlot_3065p0001_ReceiveFrame" Address="0x40003750" Size="16"/>
+      <Symbol Name="RxSlot_3064p0002_ReceiveFrameValid" Address="0x40003760" Size="1"/>
+      <Symbol Name="RxSlot_3064p0002_ReceiveFrame" Address="0x40003764" Size="16"/>
       <Symbol Name="FLEXCAN2_C_TransmitQueue" Address="0x40003774" Size="16"/>
       <Symbol Name="FLEXCAN2_B_TransmitQueue" Address="0x40003784" Size="16"/>
       <Symbol Name="FLEXCAN2_A_TransmitQueue" Address="0x40003794" Size="16"/>
       <Symbol Name="CAN_3_KeySuite_ReceiveQueue" Address="0x400037A4" Size="16"/>
       <Symbol Name="CAN_2_KeySuite_ReceiveQueue" Address="0x400037B4" Size="16"/>
       <Symbol Name="CAN_1_KeySuite_ReceiveQueue" Address="0x400037C4" Size="16"/>
-      <Symbol Name="RxSlot_3858p0001_ReceiveQueue" Address="0x400037D4" Size="16"/>
+      <Symbol Name="RxSlot_3886p0001_ReceiveQueue" Address="0x400037D4" Size="16"/>
       <Symbol Name="FLEXCAN2_C_ReceiveQueue" Address="0x400037E4" Size="16"/>
       <Symbol Name="FLEXCAN2_B_ReceiveQueue" Address="0x400037F4" Size="16"/>
       <Symbol Name="FLEXCAN2_A_ReceiveQueue" Address="0x40003804" Size="16"/>
@@ -1292,7 +1292,7 @@
       <Symbol Name="CAN_2_KeySuite_ReceiveQueueFrames" Address="0x40003C54" Size="64"/>
       <Symbol Name="FLEXCAN2_A_TransmitQueueFrames" Address="0x40003C94" Size="320"/>
       <Symbol Name="FLEXCAN2_A_ReceiveQueueFrames" Address="0x40003DD4" Size="352"/>
-      <Symbol Name="RxSlot_3858p0001_ReceiveQueueFrames" Address="0x40003F34" Size="32"/>
+      <Symbol Name="RxSlot_3886p0001_ReceiveQueueFrames" Address="0x40003F34" Size="32"/>
       <Symbol Name="CAN_1_KeySuite_ReceiveQueueFrames" Address="0x40003F54" Size="64"/>
       <Symbol Name="NonVolatile_NonVolatileStatus" Address="0x40003F94" Size="1"/>
       <Symbol Name="NonVolatile_NonVolatileCRC" Address="0x40003F98" Size="4"/>
@@ -1302,27 +1302,27 @@
       <Symbol Name="Debug_CAN_1_TransmitOverrun" Address="0x4000452C" Size="2"/>
       <Symbol Name="Debug_CAN_2_TransmitOverrun" Address="0x4000452E" Size="2"/>
       <Symbol Name="Debug_CAN_3_TransmitOverrun" Address="0x40004530" Size="2"/>
-      <Symbol Name="DOut4325p0001_State" Address="0x40004534" Size="1"/>
-      <Symbol Name="DOut4326p0001_State" Address="0x40004535" Size="1"/>
-      <Symbol Name="DOut4327p0001_State" Address="0x40004536" Size="1"/>
-      <Symbol Name="DOut4328p0001_State" Address="0x40004537" Size="1"/>
-      <Symbol Name="DOut4329p0001_State" Address="0x40004538" Size="1"/>
-      <Symbol Name="DOut4330p0001_State" Address="0x40004539" Size="1"/>
-      <Symbol Name="DOut4331p0001_State" Address="0x4000453A" Size="1"/>
-      <Symbol Name="DOut4332p0001_State" Address="0x4000453B" Size="1"/>
-      <Symbol Name="DOut4561p0001_State" Address="0x4000453C" Size="1"/>
-      <Symbol Name="DOut4564p0001_State" Address="0x4000453D" Size="1"/>
-      <Symbol Name="DOut4565p0001_State" Address="0x4000453E" Size="1"/>
-      <Symbol Name="DOut5628p0004_State" Address="0x4000453F" Size="1"/>
+      <Symbol Name="DOut4364p0004_State" Address="0x40004534" Size="1"/>
+      <Symbol Name="DOut4365p0004_State" Address="0x40004535" Size="1"/>
+      <Symbol Name="DOut4366p0004_State" Address="0x40004536" Size="1"/>
+      <Symbol Name="DOut4367p0004_State" Address="0x40004537" Size="1"/>
+      <Symbol Name="DOut4368p0004_State" Address="0x40004538" Size="1"/>
+      <Symbol Name="DOut4369p0004_State" Address="0x40004539" Size="1"/>
+      <Symbol Name="DOut4370p0004_State" Address="0x4000453A" Size="1"/>
+      <Symbol Name="DOut4371p0004_State" Address="0x4000453B" Size="1"/>
+      <Symbol Name="DOut4600p0004_State" Address="0x4000453C" Size="1"/>
+      <Symbol Name="DOut4603p0004_State" Address="0x4000453D" Size="1"/>
+      <Symbol Name="DOut4604p0004_State" Address="0x4000453E" Size="1"/>
+      <Symbol Name="DOut5671p0001_State" Address="0x4000453F" Size="1"/>
       <Symbol Name="H1_InhibitB_State" Address="0x40004540" Size="1"/>
-      <Symbol Name="DOut4566p0001_State" Address="0x40004541" Size="1"/>
-      <Symbol Name="DOut4563p0001_State" Address="0x40004542" Size="1"/>
-      <Symbol Name="DOut4562p0001_State" Address="0x40004543" Size="1"/>
-      <Symbol Name="DOut4335p0001_State" Address="0x40004544" Size="1"/>
-      <Symbol Name="DOut4334p0001_State" Address="0x40004545" Size="1"/>
-      <Symbol Name="DOut4333p0001_State" Address="0x40004546" Size="1"/>
-      <Symbol Name="DOut4324p0001_State" Address="0x40004547" Size="1"/>
-      <Symbol Name="DOut4323p0001_State" Address="0x40004548" Size="1"/>
+      <Symbol Name="DOut4605p0004_State" Address="0x40004541" Size="1"/>
+      <Symbol Name="DOut4602p0004_State" Address="0x40004542" Size="1"/>
+      <Symbol Name="DOut4601p0004_State" Address="0x40004543" Size="1"/>
+      <Symbol Name="DOut4374p0004_State" Address="0x40004544" Size="1"/>
+      <Symbol Name="DOut4373p0004_State" Address="0x40004545" Size="1"/>
+      <Symbol Name="DOut4372p0004_State" Address="0x40004546" Size="1"/>
+      <Symbol Name="DOut4363p0004_State" Address="0x40004547" Size="1"/>
+      <Symbol Name="DOut4362p0004_State" Address="0x40004548" Size="1"/>
       <Symbol Name="S_SHRC_3Runtime" Address="0x4000454C" Size="56"/>
       <Symbol Name="S_SHRC_4Runtime" Address="0x40004584" Size="56"/>
       <Symbol Name="VISTA_1Runtime" Address="0x400045BC" Size="1"/>

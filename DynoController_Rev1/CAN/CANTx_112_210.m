@@ -134,7 +134,7 @@ function msg = CANTx_112_210()
   msg.fields{2}.name          = 'Gen_Load';
   msg.fields{2}.units         = '';
   msg.fields{2}.start_bit     = 62;
-  msg.fields{2}.bit_length    = 8;
+  msg.fields{2}.bit_length    = 1;
   msg.fields{2}.byte_order    = 'BIG_ENDIAN';
   msg.fields{2}.data_type     = 'UNSIGNED';
   msg.fields{2}.scale         = 1;
@@ -142,7 +142,7 @@ function msg = CANTx_112_210()
   
   msg.fields{3}.name          = 'Vehicle_Speed';
   msg.fields{3}.units         = 'MPH';
-  msg.fields{3}.start_bit     = 32;
+  msg.fields{3}.start_bit     = 24;
   msg.fields{3}.bit_length    = 8;
   msg.fields{3}.byte_order    = 'BIG_ENDIAN';
   msg.fields{3}.data_type     = 'UNSIGNED';
@@ -151,7 +151,7 @@ function msg = CANTx_112_210()
   
   msg.fields{4}.name          = 'Load_Throttle';
   msg.fields{4}.units         = '%';
-  msg.fields{4}.start_bit     = 40;
+  msg.fields{4}.start_bit     = 32;
   msg.fields{4}.bit_length    = 8;
   msg.fields{4}.byte_order    = 'BIG_ENDIAN';
   msg.fields{4}.data_type     = 'UNSIGNED';
@@ -160,8 +160,8 @@ function msg = CANTx_112_210()
   
   msg.fields{5}.name          = 'Load_RPM';
   msg.fields{5}.units         = 'RPM';
-  msg.fields{5}.start_bit     = 48;
-  msg.fields{5}.bit_length    = 8;
+  msg.fields{5}.start_bit     = 43;
+  msg.fields{5}.bit_length    = 13;
   msg.fields{5}.byte_order    = 'BIG_ENDIAN';
   msg.fields{5}.data_type     = 'UNSIGNED';
   msg.fields{5}.scale         = 1;

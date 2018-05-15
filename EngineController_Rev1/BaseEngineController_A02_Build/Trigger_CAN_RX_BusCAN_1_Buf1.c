@@ -30,18 +30,18 @@
  */
 
 /*---------------------------------------------------------------*/
-MHCAN_directslot MHCAN_directslot_RxSlot_6151p0004 = { 0 };
+MHCAN_directslot MHCAN_directslot_RxSlot_6156p0001 = { 0 };
 
-static boolean_T MHCAN_handler_RxSlot_6151p0004(S_CANMessage *messageObj)
+static boolean_T MHCAN_handler_RxSlot_6156p0001(S_CANMessage *messageObj)
 {
   if ((messageObj->u4MessageID & 0x000007FF) == 0x00000210) {
     messageObj->u1Length = messageObj->u1Length > 8 ? 8 : messageObj->u1Length;
 
     {
       boolean_T new_message;
-      new_message = !MHCAN_directslot_RxSlot_6151p0004.ready;
-      MHCAN_directslot_RxSlot_6151p0004.message = *messageObj;
-      MHCAN_directslot_RxSlot_6151p0004.ready = 1;
+      new_message = !MHCAN_directslot_RxSlot_6156p0001.ready;
+      MHCAN_directslot_RxSlot_6156p0001.message = *messageObj;
+      MHCAN_directslot_RxSlot_6156p0001.ready = 1;
     }
 
     return 1;
@@ -51,7 +51,7 @@ static boolean_T MHCAN_handler_RxSlot_6151p0004(S_CANMessage *messageObj)
 }
 
 static const MHCAN_id_dispatcher_T MHCAN_consumers_0x000007FF[] = {
-  { 0x00000210, MHCAN_handler_RxSlot_6151p0004 },
+  { 0x00000210, MHCAN_handler_RxSlot_6156p0001 },
 };
 
 static const MHCAN_mask_dispatcher_T masks[] = {

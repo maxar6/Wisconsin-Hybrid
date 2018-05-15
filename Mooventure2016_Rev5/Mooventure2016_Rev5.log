@@ -4,16 +4,16 @@
 ###  Starting MotoHawk Build              ###
 ###  MotoHawk version: 2011a_sp0.184      ###
 ###    MATLAB version: 7.12.0.635 (R2011a)###
-###        07-Apr-2018 15:00:13           ###
+###        08-Apr-2018 00:46:09           ###
 ###                                       ###
 #############################################
  
 Target Module:   ECM-5554-112-0904-xD (DEV)
-DEV Executable:  Mooventure2016_Rev5_211.srz
-MotoTune DLL:    Mooventur_211.dll
+DEV Executable:  Mooventure2016_Rev5_212.srz
+MotoTune DLL:    Mooventur_212.dll
  
 Project GUID:    0339744d-1465-4569-a1-b4-32-b1-a7-fa-5f
-Build GUID:      7fc06f66-a1b4-4e8d-98-25-57-3d-ec-f3-92
+Build GUID:      d562e537-da09-4a78-9f-6b-d4-e6-15-d6-aa
  
 ### Starting build procedure for model: Mooventure2016_Rev5
 ### Generating code into build folder: C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build
@@ -1521,9 +1521,9 @@ compile:
   [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\MotoHawk_DataStores.c 
   [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\rt_nonfinite.c 
   [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TableLookupFunctions.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Trigger_BGND_BASE_PERIODIC_5678p0001.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Trigger_BGND_BASE_PERIODIC_5721p0001.c 
   [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Trigger_Fault_active_0_8.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Trigger_FGND_RTI_PERIODIC_5687p0001.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Trigger_FGND_RTI_PERIODIC_5730p0001.c 
   [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\VarDecs.c 
   [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\TableDB.c 
  
@@ -1537,7 +1537,7 @@ application:
  
 BUILD SUCCEEDED - 0 non-fatal error(s), 2 warning(s) 
  
-Total time: 14 seconds. 
+Total time: 13.7 seconds. 
  
 ### Generating Symbol file and Processing Map file 
 Project format is MPC55xx 
@@ -1555,7 +1555,7 @@ Complete.
 Writing file sr://Target\Mooventure2016_Rev5.sr... 
 Encrypting 'sr://Target\Mooventure2016_Rev5.sr' into 'srz://Target\Mooventure2016_Rev5.srz' ... 
 Done. 
-### Copy Mooventur_211.dll and Mooventure2016_Rev5_211.srz 
+### Copy Mooventur_212.dll and Mooventure2016_Rev5_212.srz 
 ### Creating Build Statistics 
 Memory Summary:
 	FLASH_RCHW:                           4 bytes  100% of      4
@@ -1578,7 +1578,7 @@ Memory Summary:
 	SERIAL_EE:                          115 bytes    0% of  32768
 
 ### Successful Build with MotoCoder 
-Elapsed Build Time: 2 minutes, 57.0 seconds  (177.0 seconds)
+Elapsed Build Time: 2 minutes, 57.8 seconds  (177.8 seconds)
 {Warning: Block diagram 'Mooventure2016_Rev5' contains
 disabled library links.  Use Model Advisor to find the
 disabled links in non-library models.  The diagram has been
@@ -1587,8 +1587,8 @@ saved but may not contain what you intended.}
 #############################################################################
 ###
 ### Target Module: ECM-5554-112-0904-xD
-### Created Development Executable: Mooventure2016_Rev5_211.srz
-### Created MotoTune DLL: Mooventur_211.dll
+### Created Development Executable: Mooventure2016_Rev5_212.srz
+### Created MotoTune DLL: Mooventur_212.dll
 ###
 ### Successful MotoHawk Build for model: Mooventure2016_Rev5
 ###

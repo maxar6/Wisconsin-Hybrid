@@ -1,13 +1,12 @@
 /*
  * File: BuckyWagon_01_data.c
  *
- * Real-Time Workshop code generated for Simulink model BuckyWagon_01.
+ * Code generated for Simulink model 'BuckyWagon_01'.
  *
- * Model version                        : 1.1518
- * Real-Time Workshop file version      : 7.5  (R2010a)  25-Jan-2010
- * Real-Time Workshop file generated on : Sun Jan 21 12:54:58 2018
- * TLC version                          : 7.5 (Jan 19 2010)
- * C/C++ source code generated on       : Sun Jan 21 12:55:01 2018
+ * Model version                  : 1.1520
+ * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
+ * TLC version                    : 8.0 (Feb  3 2011)
+ * C/C++ source code generated on : Mon Apr 23 14:25:32 2018
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -19,13 +18,13 @@
 #include "BuckyWagon_01_private.h"
 
 /* Invariant block signals (auto storage) */
-ConstBlockIO_BuckyWagon_01 BuckyWagon_01_ConstB = {
+const ConstBlockIO_BuckyWagon_01 BuckyWagon_01_ConstB = {
   0.0
-  ,                                    /* '<S215>/Saturation3' */
+  ,                                    /* '<S218>/Saturation3' */
   0
-  ,                                    /* '<S215>/Data Type Conversion3' */
+  ,                                    /* '<S218>/Data Type Conversion3' */
   0
-  /* '<S125>/Data Type Conversion' */
+  /* '<S128>/Data Type Conversion' */
 };
 
 /* Constant parameters (auto storage) */
@@ -99,13 +98,13 @@ const ConstParam_BuckyWagon_01 BuckyWagon_01_ConstP = {
   { 0U, 0U, 2U, 0U, 2U, 0U, 2U, 0U, 0U, 0U, 0U, 0U, 3U, 0U, 0U, 0U, 0U, 1U },
 
   /* Computed Parameter: CombinatorialLogic_table
-   * Referenced by: '<S126>/Combinatorial  Logic'
+   * Referenced by: '<S129>/Combinatorial  Logic'
    */
   { 0, 0, 1, 0, 0, 1, 1, 0 }
 };
 
 /*
- * File trailer for Real-Time Workshop generated code.
+ * File trailer for generated code.
  *
  * [EOF]
  */

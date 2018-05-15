@@ -10571,6 +10571,47 @@
       </enum>
    </VarDec>
    <VarDec>
+      <name>ESTOP_FuelInj_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Outputs|Injector Control | ESTOP_FuelInj_Ovr Override</group>
+      <struct>VolatileWork_BSS.ESTOP_FuelInj_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>ESTOP_FuelInj_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Outputs|Injector Control | ESTOP_FuelInj_Ovr Override</group>
+      <struct>VolatileWork_BSS.ESTOP_FuelInj_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
       <name>InjEnable_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -21032,7 +21073,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut7474p0004</help>
+      <help>Digital output pin selection for DOut7481p0001</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.FuelPumpPin</struct>
       <storage>FLASH</storage>
@@ -21136,7 +21177,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut7752p0005</help>
+      <help>Digital output pin selection for DOut7765p0004</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.OilPumpPin</struct>
       <storage>FLASH</storage>
@@ -21188,7 +21229,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut7762p0005</help>
+      <help>Digital output pin selection for DOut7775p0004</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.O2_Heater</struct>
       <storage>FLASH</storage>

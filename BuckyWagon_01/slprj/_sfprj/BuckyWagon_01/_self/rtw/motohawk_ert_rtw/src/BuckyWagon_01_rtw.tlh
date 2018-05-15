@@ -12,7 +12,6 @@
 %closefile definesBuf
 %<SLibCacheCodeToFile("sf_machine_data_define",definesBuf)>
 %openfile externDataBuf
-   extern int32_T %<SLibGetSFEventName()>;         
             
 %closefile externDataBuf
 %<SLibCacheCodeToFile("sf_machine_extern_data_decl",externDataBuf)>

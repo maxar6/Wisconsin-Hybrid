@@ -8,14 +8,14 @@
 #include "BuckyWagon_01.h"
 
 /*---- DEFINES --------------------------------------------------------------------------------------------*/
-#define DLL_NAME                       "BuckyWago_170"
-#define SRZ_NAME                       "BuckyWagon_01_170"
+#define DLL_NAME                       "BuckyWago_171"
+#define SRZ_NAME                       "BuckyWagon_01_171"
 #define MODEL_NAME                     "BuckyWagon_01"
 #define MODEL_GUID                     "3c32a120-d49a-4164-87-fe-ac-4b-55-ed-6f"
-#define BUILD_GUID                     "130491af-4976-4b93-85-f3-4b-64-fe-01-54"
-#define TOKEN_GUID                     "no token"
-#define MOTOHAWK_VERSION               "MotoHawk 2010a_sp1.49"
-#define MATLAB_VERSION                 "MATLAB 7.10.0"
+#define BUILD_GUID                     "f6bced0b-f3ce-4c1d-a0-1c-47-b3-99-ef-d3"
+#define TOKEN_GUID                     "DD8AD11F95A6FC42BFF9AC780840E4B4"
+#define MOTOHAWK_VERSION               "MotoHawk 2011a_sp0.184"
+#define MATLAB_VERSION                 "MATLAB 7.12.0"
 #define COMPILER_VERSION               "gcc-powerpc-eabi 4.4.0"
 
 /*---- TYPEDEF --------------------------------------------------------------------------------------------*/
@@ -96,7 +96,7 @@ const uint1 MatlabVersionTxt[80] __SECTION_ROSDATA_CONSTANTS__ = MATLAB_VERSION;
 const uint1 MotoHawkModelGUID[80] __SECTION_ROSDATA_CONSTANTS__ = MODEL_GUID;
 
 /* Name: MotoHawkBuildGUID CType:uint1 ClassID:TEXT StorageID:CODE Access:RO4+RO3+RO2+RO1 UpdateID:ONCE TextLen:80
-   Struct:MotoHawkTokenGUID[0] Group:"System | Version" Help:"GUID identifying the MotoHawk build session" */
+   Struct:MotoHawkBuildGUID[0] Group:"System | Version" Help:"GUID identifying the MotoHawk build session" */
 const uint1 MotoHawkBuildGUID[80] __SECTION_ROSDATA_CONSTANTS__ = BUILD_GUID;
 
 /* Name: MotoHawkTokenGUID CType:uint1 ClassID:TEXT StorageID:CODE Access:RO4+RO3+RO2+RO1 UpdateID:ONCE TextLen:80
@@ -211,8 +211,8 @@ void ApplicationCallback(E_ExecutionEvent in_eEvent)
     {
       if (SHUTDOWN_EVENT_RunCnt != 0) {
         if (ApplicationStatus == APPLICATION_RUN) {
-          extern void Trigger_SHUTDOWN_EVENT_4178p0001(void);
-          Trigger_SHUTDOWN_EVENT_4178p0001();
+          extern void Trigger_SHUTDOWN_EVENT_4290p0005(void);
+          Trigger_SHUTDOWN_EVENT_4290p0005();
         }
 
         if (SHUTDOWN_EVENT_RunCnt > 0)
@@ -225,8 +225,8 @@ void ApplicationCallback(E_ExecutionEvent in_eEvent)
     {
       if (STARTUP_EVENT_RunCnt != 0) {
         if (ApplicationStatus == APPLICATION_INIT) {
-          extern void Trigger_STARTUP_EVENT_4176p0001(void);
-          Trigger_STARTUP_EVENT_4176p0001();
+          extern void Trigger_STARTUP_EVENT_4288p0005(void);
+          Trigger_STARTUP_EVENT_4288p0005();
         }
 
         if (STARTUP_EVENT_RunCnt > 0)
@@ -239,8 +239,8 @@ void ApplicationCallback(E_ExecutionEvent in_eEvent)
     {
       if (BGND_BASEx20_PERIODIC_RunCnt != 0) {
         if (ApplicationStatus == APPLICATION_RUN) {
-          extern void Trigger_BGND_BASEx20_PERIODIC_4177p0001(void);
-          Trigger_BGND_BASEx20_PERIODIC_4177p0001();
+          extern void Trigger_BGND_BASEx20_PERIODIC_4289p0005(void);
+          Trigger_BGND_BASEx20_PERIODIC_4289p0005();
         }
 
         if (BGND_BASEx20_PERIODIC_RunCnt > 0)
@@ -272,8 +272,8 @@ void ApplicationCallback(E_ExecutionEvent in_eEvent)
     {
       if (FGND_20XRTI_PERIODIC_RunCnt != 0) {
         if (ApplicationStatus == APPLICATION_RUN) {
-          extern void Trigger_FGND_20XRTI_PERIODIC_3974p0001(void);
-          Trigger_FGND_20XRTI_PERIODIC_3974p0001();
+          extern void Trigger_FGND_20XRTI_PERIODIC_4086p0002(void);
+          Trigger_FGND_20XRTI_PERIODIC_4086p0002();
         }
 
         if (FGND_20XRTI_PERIODIC_RunCnt > 0)
@@ -286,13 +286,13 @@ void ApplicationCallback(E_ExecutionEvent in_eEvent)
     {
       if (FGND_RTI_PERIODIC_RunCnt != 0) {
         if (ApplicationStatus == APPLICATION_RUN) {
-          extern void Trigger_FGND_RTI_PERIODIC_4175p0001(void);
-          Trigger_FGND_RTI_PERIODIC_4175p0001();
+          extern void Trigger_FGND_RTI_PERIODIC_4287p0005(void);
+          Trigger_FGND_RTI_PERIODIC_4287p0005();
         }
 
         if (ApplicationStatus == APPLICATION_RUN) {
-          extern void Trigger_FGND_RTI_PERIODIC_3973p0004(void);
-          Trigger_FGND_RTI_PERIODIC_3973p0004();
+          extern void Trigger_FGND_RTI_PERIODIC_4085p0005(void);
+          Trigger_FGND_RTI_PERIODIC_4085p0005();
         }
 
         if (FGND_RTI_PERIODIC_RunCnt > 0)
@@ -305,8 +305,8 @@ void ApplicationCallback(E_ExecutionEvent in_eEvent)
     {
       if (BGND_BASE_PERIODIC_RunCnt != 0) {
         if (ApplicationStatus == APPLICATION_RUN) {
-          extern void Trigger_BGND_BASE_PERIODIC_4167p0001(void);
-          Trigger_BGND_BASE_PERIODIC_4167p0001();
+          extern void Trigger_BGND_BASE_PERIODIC_4279p0005(void);
+          Trigger_BGND_BASE_PERIODIC_4279p0005();
         }
 
         if (BGND_BASE_PERIODIC_RunCnt > 0)
@@ -706,11 +706,15 @@ void OpenApplication(E_OpenEventType open_type)
 
   {
     ECUP_AnalogInput_Create();
+    DOut4231p0005_DiscreteOutput_Create();
+    DOut150p001_DiscreteOutput_Create();
     Fan_Pin_PWMOutput_PWMOutput_Create();
-    Accel_Pedal_Pin_AnalogInput_Create();
-    Reverse_Switch_Pin_AnalogInput_Create();
-    Brake_Pedal_Pin_AnalogInput_Create();
+    DOut151p001_DiscreteOutput_Create();
+    DOut152p001_DiscreteOutput_Create();
     EStop_Switch_Pin_DigitalInput_Create();
+    Reverse_Switch_Pin_AnalogInput_Create();
+    Accel_Pedal_Pin_AnalogInput_Create();
+    Brake_Pedal_Pin_AnalogInput_Create();
     LV_Voltage_Pin_AnalogInput_Create();
   }
 

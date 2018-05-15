@@ -55,9 +55,9 @@ SHELL           = cmd
 
 
 MODEL           = BuckyWagon_01
-MODULES         = AppMonitor.c Application.c ApplicationSecurity.c BuckyWagon_01_Foreground.c BuckyWagon_01_MiniViewDisplay.c BuckyWagon_01_data.c CANReceiveDispatcher.c CodeCoverage.c FaultManager.c MotoHawk_CAN.c MotoHawk_DataStores.c MotoHawk_IO.c TableLookupFunctions.c Trigger_BGND_BASE_PERIODIC_4167p0001.c Trigger_BGND_BASEx20_PERIODIC_4177p0001.c Trigger_CAN_RX_BusCAN_1_Buf1.c Trigger_CAN_RX_BusCAN_1_Buf14.c Trigger_CAN_RX_BusCAN_2_Buf1.c Trigger_CAN_RX_BusCAN_2_Buf14.c Trigger_CAN_Slot_miniview_button_down_2043p0004.c Trigger_CAN_Slot_miniview_button_menu_2301p0001.c Trigger_CAN_Slot_miniview_button_up_2552p0001.c Trigger_FGND_20XRTI_PERIODIC_3974p0001.c Trigger_FGND_RTI_PERIODIC_3973p0004.c Trigger_FGND_RTI_PERIODIC_4175p0001.c Trigger_SHUTDOWN_EVENT_4178p0001.c Trigger_STARTUP_EVENT_4176p0001.c VarDecs.c 
+MODULES         = AppMonitor.c Application.c ApplicationSecurity.c BuckyWagon_01_Foreground.c BuckyWagon_01_MiniViewDisplay.c BuckyWagon_01_data.c CANReceiveDispatcher.c CodeCoverage.c FaultManager.c MotoHawk_CAN.c MotoHawk_DataStores.c MotoHawk_IO.c TableLookupFunctions.c Trigger_BGND_BASE_PERIODIC_4279p0005.c Trigger_BGND_BASEx20_PERIODIC_4289p0005.c Trigger_CAN_RX_BusCAN_1_Buf1.c Trigger_CAN_RX_BusCAN_1_Buf14.c Trigger_CAN_RX_BusCAN_2_Buf1.c Trigger_CAN_RX_BusCAN_2_Buf14.c Trigger_CAN_Slot_miniview_button_down_2150p0001.c Trigger_CAN_Slot_miniview_button_menu_2408p0001.c Trigger_CAN_Slot_miniview_button_up_2659p0004.c Trigger_FGND_20XRTI_PERIODIC_4086p0002.c Trigger_FGND_RTI_PERIODIC_4085p0005.c Trigger_FGND_RTI_PERIODIC_4287p0005.c Trigger_SHUTDOWN_EVENT_4290p0005.c Trigger_STARTUP_EVENT_4288p0005.c VarDecs.c 
 MAKEFILE        = BuckyWagon_01.mk
-MATLAB_ROOT     = C:\Program Files (x86)\MATLAB\R2010a
+MATLAB_ROOT     = C:\Program Files (x86)\MATLAB\R2011a
 S_FUNCTIONS     = 
 S_FUNCTIONS_LIB = 
 SOLVER          = 

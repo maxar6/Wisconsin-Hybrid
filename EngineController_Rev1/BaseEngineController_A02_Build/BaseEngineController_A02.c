@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BaseEngineController_A02'.
  *
- * Model version                  : 1.1615
+ * Model version                  : 1.1626
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Sat Apr 07 14:22:48 2018
+ * C/C++ source code generated on : Sun Apr 22 15:55:33 2018
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -17,7 +17,7 @@
 #include "BaseEngineController_A02.h"
 #include "BaseEngineController_A02_private.h"
 
-/* Named constants for Stateflow: '<S805>/ECUP Latch' */
+/* Named constants for Stateflow: '<S808>/ECUP Latch' */
 #define BaseEngineController_A02_IN_PowerDown (1U)
 #define BaseEngineController_A02_IN_PowerUp (2U)
 
@@ -95,6 +95,7 @@ void BaseEngineController_A02_initialize(boolean_T firstTime)
     BaseEngineController_A02_B.s365_GensetEnable_a = 0.0;
     BaseEngineController_A02_B.s365_ReadCANMessage_o4 = 0.0;
     BaseEngineController_A02_B.s365_ReadCANMessage_o5 = 0.0;
+    BaseEngineController_A02_B.s365_Product = 0.0;
     BaseEngineController_A02_B.s529_Sum1 = 0.0;
     BaseEngineController_A02_B.s597_Merge = 0.0;
     BaseEngineController_A02_B.s632_Switch = 0.0;
@@ -294,7 +295,7 @@ void BaseEngineController_A02_initialize(boolean_T firstTime)
     BaseEngineController_A02_B.s51_In1 = 0.0;
     BaseEngineController_A02_B.s25_TestTime = 0.0;
     BaseEngineController_A02_B.s20_enout = 0.0;
-    BaseEngineController_A02_B.s821_Switch = 0.0;
+    BaseEngineController_A02_B.s824_Switch = 0.0;
     BaseEngineController_A02_B.s303_MultiplyandDivideavoidingdivdebyzero1.s156_chargemass
       = 0.0;
     BaseEngineController_A02_B.s151_MultiplyandDivideavoidingdivdebyzero.s156_chargemass
@@ -433,8 +434,8 @@ void BaseEngineController_A02_initialize(boolean_T firstTime)
   BaseEngineController_A02_DWork.s43_UnitDelay_DSTATE = 0.0;
   BaseEngineController_A02_DWork.s46_UnitDelay_DSTATE = 0.0;
   BaseEngineController_A02_DWork.s47_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s811_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_A02_DWork.s811_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s814_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_A02_DWork.s814_UnitDelay1_DSTATE = 0.0;
   BaseEngineController_A02_DWork.s280_TOld = 0.0;
   BaseEngineController_A02_DWork.s127_count = 0.0;
   BaseEngineController_A02_DWork.s25_TimerOld = 0.0;
@@ -444,14 +445,14 @@ void BaseEngineController_A02_initialize(boolean_T firstTime)
 
   /* Start for function-call system: '<S2>/Main Power Relay' */
 
-  /* Start for Triggered SubSystem: '<S807>/Clear' incorporates:
-   *  Start for S-Function (fcncallgen): '<S815>/Function-Call Generator'
-   *  Start for SubSystem: '<S805>/motohawk_restore_nvmem'
+  /* Start for Triggered SubSystem: '<S810>/Clear' incorporates:
+   *  Start for S-Function (fcncallgen): '<S818>/Function-Call Generator'
+   *  Start for SubSystem: '<S808>/motohawk_restore_nvmem'
    */
 
-  /* Start for Triggered SubSystem: '<S808>/Clear' incorporates:
-   *  Start for S-Function (fcncallgen): '<S816>/Function-Call Generator'
-   *  Start for SubSystem: '<S805>/motohawk_store_nvmem'
+  /* Start for Triggered SubSystem: '<S811>/Clear' incorporates:
+   *  Start for S-Function (fcncallgen): '<S819>/Function-Call Generator'
+   *  Start for SubSystem: '<S808>/motohawk_store_nvmem'
    */
   BaseEngineController_A02_PrevZCSigState.HitCrossing1_Input_ZCE =
     UNINITIALIZED_ZCSIG;
@@ -482,7 +483,7 @@ void BaseEngineController_A02_initialize(boolean_T firstTime)
 
   /* Initial conditions for function-call system: '<S2>/Main Power Relay' */
 
-  /* S-Function Block: <S821>/motohawk_delta_time */
+  /* S-Function Block: <S824>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -490,19 +491,19 @@ void BaseEngineController_A02_initialize(boolean_T firstTime)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_A02_DWork.s821_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_A02_DWork.s824_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
   }
 
-  /* InitializeConditions for Stateflow: '<S805>/ECUP Latch' */
+  /* InitializeConditions for Stateflow: '<S808>/ECUP Latch' */
 
   /* Entry: Main Power Relay/Main Power Relay/ECUP Latch */
-  /* Transition: '<S809>:3' */
-  BaseEngineController_A02_DWork.s809_is_c8_BaseEngineController_A02 =
+  /* Transition: '<S812>:3' */
+  BaseEngineController_A02_DWork.s812_is_c8_BaseEngineController_A02 =
     BaseEngineController_A02_IN_PowerDown;
 
-  /* Entry 'PowerDown': '<S809>:1' */
-  BaseEngineController_A02_B.s809_MPRDState = FALSE;
+  /* Entry 'PowerDown': '<S812>:1' */
+  BaseEngineController_A02_B.s812_MPRDState = FALSE;
 
   /* set "at time zero" to false */
   if (rtmIsFirstInitCond(BaseEngineController_A02_M)) {

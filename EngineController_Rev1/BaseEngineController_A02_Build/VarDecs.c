@@ -12,11 +12,11 @@
 /*---- RAM VARIABLES --------------------------------------------------------------------------------------*/
 #include <Pragma_Section_Start_sbss_zerovars.h>
 
-/* Name: ForcedShutDownTimer ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s821_Switch Mask:FFFFFFFF
+/* Name: ForcedShutDownTimer ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s824_Switch Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"System | Main Power Relay" Help:""   */
 
-/* Name: ECUP_Enabled ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s805_RelationalOperator Mask:FFFFFFFF
+/* Name: ECUP_Enabled ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s808_RelationalOperator Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"System | Main Power Relay" Help:""  EnumDec:VarDecEnum_3 */
 
@@ -508,11 +508,11 @@
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000 Max:1.000000
    XLen:8 YLen:1   Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Outputs|Injector Control" Help:"Enable state for injectors." Unit:bool  */
 
-/* Name: OILP ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s797_LogicalOperator Mask:FFFFFFFF
+/* Name: OILP ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s800_LogicalOperator Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Outputs|OilPump | OILP" Help:"Display output in engineering units" Unit:bool  */
 
-/* Name: Oxygen_Heater ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s801_LogicalOperator Mask:FFFFFFFF
+/* Name: Oxygen_Heater ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s804_LogicalOperator Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Outputs|Oxygen Heater | O2_Heater" Help:"Display output in engineering units" Unit:bool  */
 
@@ -664,7 +664,7 @@
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|112" Help:""   */
 
-/* Name: Load_RPM_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s365_ReadCANMessage_o5 Mask:FFFFFFFF
+/* Name: Load_RPM_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_A02 Struct:BaseEngineController_A02_B.s365_Product Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_A02|Foreground|Inputs|CAN Inputs|112" Help:""   */
 
@@ -1066,10 +1066,10 @@ uint8_T ain_create_ECUP = RESOURCE_NOT_CREATED;
    UpdateID:BACKGND Group:"System | Debug | Resources | AnalogIn" Help:"Debug Variable" */
 uint8_T ain_read_ECUP = RESOURCE_NOT_CREATED;
 
-/* Name: dout_create_DOut8007p0005 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:dout_create_DOut8007p0005 Mask:FFFFFFFF EnumDec:E_NativeFWError
+/* Name: dout_create_DOut8020p0004 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:dout_create_DOut8020p0004 Mask:FFFFFFFF EnumDec:E_NativeFWError
    UpdateID:BACKGND Group:"System | Debug | Resources | DiscreteOut" Help:"Debug Variable" */
-uint8_T dout_create_DOut8007p0005 = 7;
+uint8_T dout_create_DOut8020p0004 = 7;
 
 /* Name: ain_create_MAPSensorPin ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
    CType:E_NativeFWError Struct:ain_create_MAPSensorPin Mask:FFFFFFFF EnumDec:E_NativeFWError
@@ -1181,10 +1181,10 @@ uint8_T ain_create_EGRPin = RESOURCE_NOT_CREATED;
    UpdateID:BACKGND Group:"System | Debug | Resources | AnalogIn" Help:"Debug Variable" */
 uint8_T ain_read_EGRPin = RESOURCE_NOT_CREATED;
 
-/* Name: dout_create_DOut7474p0004 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:dout_create_DOut7474p0004 Mask:FFFFFFFF EnumDec:E_NativeFWError
+/* Name: dout_create_DOut7481p0001 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:dout_create_DOut7481p0001 Mask:FFFFFFFF EnumDec:E_NativeFWError
    UpdateID:BACKGND Group:"System | Debug | Resources | DiscreteOut" Help:"Debug Variable" */
-uint8_T dout_create_DOut7474p0004 = 7;
+uint8_T dout_create_DOut7481p0001 = 7;
 
 /* Name: pwm_create_ETCPin_PWMOutput ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
    CType:E_NativeFWError Struct:pwm_create_ETCPin_PWMOutput Mask:FFFFFFFF EnumDec:E_NativeFWError
@@ -1196,15 +1196,15 @@ uint8_T pwm_create_ETCPin_PWMOutput = 7;
    UpdateID:BACKGND Group:"System | Debug | Resources | PWM" Help:"Debug Variable" */
 uint8_T pwm_set_ETCPin_PWMOutput = 0;
 
-/* Name: dout_create_DOut7752p0005 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:dout_create_DOut7752p0005 Mask:FFFFFFFF EnumDec:E_NativeFWError
+/* Name: dout_create_DOut7765p0004 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:dout_create_DOut7765p0004 Mask:FFFFFFFF EnumDec:E_NativeFWError
    UpdateID:BACKGND Group:"System | Debug | Resources | DiscreteOut" Help:"Debug Variable" */
-uint8_T dout_create_DOut7752p0005 = 7;
+uint8_T dout_create_DOut7765p0004 = 7;
 
-/* Name: dout_create_DOut7762p0005 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:dout_create_DOut7762p0005 Mask:FFFFFFFF EnumDec:E_NativeFWError
+/* Name: dout_create_DOut7775p0004 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:dout_create_DOut7775p0004 Mask:FFFFFFFF EnumDec:E_NativeFWError
    UpdateID:BACKGND Group:"System | Debug | Resources | DiscreteOut" Help:"Debug Variable" */
-uint8_T dout_create_DOut7762p0005 = 7;
+uint8_T dout_create_DOut7775p0004 = 7;
 
 /* Name: ain_create_FuelPresPin ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
    CType:E_NativeFWError Struct:ain_create_FuelPresPin Mask:FFFFFFFF EnumDec:E_NativeFWError

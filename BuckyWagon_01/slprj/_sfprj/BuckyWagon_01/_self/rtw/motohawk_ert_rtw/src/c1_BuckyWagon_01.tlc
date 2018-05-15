@@ -7,11 +7,16 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   7 \
+    NumChartData   8 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
       IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "sfEvent"\
+      SFName       ""\
+      Path         ""\
     }\
     ChartData {\
       Name         "is_active_c1_BuckyWagon_01"\

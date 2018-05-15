@@ -23,7 +23,6 @@
 #define CALL_EVENT                     (-1)
 
 /* Variable Declarations */
-extern int32_T _sfEvent_;
 extern uint32_T _BuckyWagon_01MachineNumber_;
 extern real_T _sfTime_;
 

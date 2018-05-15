@@ -12,16 +12,16 @@
 @if ERRORLEVEL 1 exit junk
 @"c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\motocoder\Bin\Transform" -o TDB/ParsedAndCombinedVardecs.xml TDB/ParsedVardecs.xml "c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\motocoder\Transforms\VarDecs_Merge.xsl" AdditionalVardecsXML="file:///C:/Users/HYBRID/Documents/GitHub/Wisconsin-Hybrid/Mooventure2016_Rev5/Mooventure2016_Rev5_Build/MotoCoderVarDecs.xml"
 @if ERRORLEVEL 1 exit junk
-@"c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\motocoder\Bin\Transform" -o TDB/Mooventur_211.xml TDB/ParsedAndCombinedVardecs.xml "c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\motocoder\Transforms\VarDecs_Reorder.xsl" intermediate-url="file:///C:/Users/HYBRID/Documents/GitHub/Wisconsin-Hybrid/Mooventure2016_Rev5/Mooventure2016_Rev5_Build/MotoCoder_Intermediate.xml" maxTableSize=65535
+@"c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\motocoder\Bin\Transform" -o TDB/Mooventur_212.xml TDB/ParsedAndCombinedVardecs.xml "c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\motocoder\Transforms\VarDecs_Reorder.xsl" intermediate-url="file:///C:/Users/HYBRID/Documents/GitHub/Wisconsin-Hybrid/Mooventure2016_Rev5/Mooventure2016_Rev5_Build/MotoCoder_Intermediate.xml" maxTableSize=65535
 @if ERRORLEVEL 1 exit junk
-@"c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\motocoder\Bin\Transform" TDB/Mooventur_211.xml "c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\motocoder\Transforms\VarDecs_Transform.xsl" includeFiles="CommonInclude.h,Mooventure2016_Rev5.h,TaskKernel_GenAPI.h,ERIRequestTables_GenAPI.h,MotoCoder.h" GenDLL=1 GenTDB=1
+@"c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\motocoder\Bin\Transform" TDB/Mooventur_212.xml "c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\motocoder\Transforms\VarDecs_Transform.xsl" includeFiles="CommonInclude.h,Mooventure2016_Rev5.h,TaskKernel_GenAPI.h,ERIRequestTables_GenAPI.h,MotoCoder.h" GenDLL=1 GenTDB=1
 @if ERRORLEVEL 1 exit junk
 
 
 @echo ### Generating MotoTune DLL
 @copy "c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\motocoder\TDB\*.*" .\TDB > NUL
 @if ERRORLEVEL 1 exit junk
-@"c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\motocoder\bin\nant\bin\nant" -buildfile:TDB\Database.build -D:required.installdir="C:\Program Files (x86)\Woodward\DevelopmentTools\Toolchains\GCC\win32-pe\4_4_0" -D:database.basename=Mooventur_211 -q -nologo rebuild
+@"c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\motocoder\bin\nant\bin\nant" -buildfile:TDB\Database.build -D:required.installdir="C:\Program Files (x86)\Woodward\DevelopmentTools\Toolchains\GCC\win32-pe\4_4_0" -D:database.basename=Mooventur_212 -q -nologo rebuild
 @if ERRORLEVEL 1 exit junk
 
 
@@ -35,10 +35,10 @@
 @if ERRORLEVEL 1 exit junk
 
 
-@echo ### Copy Mooventur_211.dll and Mooventure2016_Rev5_211.srz
-@if exist C:\ECUFiles\TDBDLL\*.* copy /Y .\TDB\Mooventur_211.dll C:\ECUFiles\TDBDLL > NUL
+@echo ### Copy Mooventur_212.dll and Mooventure2016_Rev5_212.srz
+@if exist C:\ECUFiles\TDBDLL\*.* copy /Y .\TDB\Mooventur_212.dll C:\ECUFiles\TDBDLL > NUL
 @if ERRORLEVEL 1 exit junk
-@if exist C:\ECUFiles\Programs\*.* copy /Y .\Target\Mooventure2016_Rev5.srz C:\ECUFiles\Programs\Mooventure2016_Rev5_211.srz > NUL
+@if exist C:\ECUFiles\Programs\*.* copy /Y .\Target\Mooventure2016_Rev5.srz C:\ECUFiles\Programs\Mooventure2016_Rev5_212.srz > NUL
 @if ERRORLEVEL 1 exit junk
 
 

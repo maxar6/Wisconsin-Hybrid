@@ -769,15 +769,15 @@ Discarded input sections
  .data          0x00000000        0x0 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\TableLookupFunctions.o
  .bss           0x00000000        0x0 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\TableLookupFunctions.o
  .eh_frame      0x00000000        0x0 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\TableLookupFunctions.o
- .data          0x00000000        0x0 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5678p0001.o
- .bss           0x00000000        0x0 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5678p0001.o
- .eh_frame      0x00000000        0x0 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5678p0001.o
+ .data          0x00000000        0x0 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5721p0001.o
+ .bss           0x00000000        0x0 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5721p0001.o
+ .eh_frame      0x00000000        0x0 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5721p0001.o
  .data          0x00000000        0x0 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_Fault_active_0_8.o
  .bss           0x00000000        0x0 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_Fault_active_0_8.o
  .eh_frame      0x00000000        0x0 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_Fault_active_0_8.o
- .data          0x00000000        0x0 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5687p0001.o
- .bss           0x00000000        0x0 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5687p0001.o
- .eh_frame      0x00000000        0x0 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5687p0001.o
+ .data          0x00000000        0x0 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5730p0001.o
+ .bss           0x00000000        0x0 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5730p0001.o
+ .eh_frame      0x00000000        0x0 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5730p0001.o
  .text          0x00000000        0x0 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\VarDecs.o
  .data          0x00000000        0x0 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\VarDecs.o
  .bss           0x00000000        0x0 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\VarDecs.o
@@ -2176,35 +2176,35 @@ LOAD c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eab
                 0x00050e04                OpenMemory
                 0x00050b40                App_RTITimer_OnTick
  .text          0x000511b0     0x315c C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-                0x0005201c                RxSlot_3859p0001_Receive
-                0x00052cd8                RxSlot_3858p0001_Receive
+                0x00051954                RxSlot_3264p0001_Receive
                 0x00051250                CAN_1_KeySuite_SetIDFilter
-                0x00051d34                RxSlot_4019p0001_Receive
-                0x00051e2c                RxSlot_3861p0001_Receive
-                0x00051384                RxSlot_3671p0001_Receive
-                0x000523fc                RxSlot_3055p0001_Receive
-                0x0005166c                RxSlot_3256p0001_Receive
-                0x00052114                RxSlot_3729p0001_Receive
+                0x00051f24                RxSlot_3888p0001_Receive
+                0x0005166c                RxSlot_3267p0001_Receive
+                0x00051b44                RxSlot_3262p0001_Receive
+                0x00052cd8                RxSlot_3886p0001_Receive
                 0x00053d78                CAN_1_Transmit
-                0x0005185c                RxSlot_3254p0001_Receive
+                0x000524f4                RxSlot_3065p0001_Receive
+                0x00052114                RxSlot_3757p0001_Receive
+                0x00051c3c                RxSlot_3700p0001_Receive
+                0x00051574                RxSlot_3268p0001_Receive
                 0x0005395c                CAN_LoadTransmitBuffer
-                0x00051b44                RxSlot_3251p0001_Receive
-                0x00052304                RxSlot_10273p001_Receive
+                0x0005201c                RxSlot_3887p0001_Receive
+                0x00051764                RxSlot_3266p0001_Receive
+                0x0005185c                RxSlot_3265p0001_Receive
                 0x00052740                CAN_3_TransmitQueueDepth
+                0x00051384                RxSlot_3699p0001_Receive
                 0x00053a6c                CAN_Tx_Buffer_ISR
-                0x00051954                RxSlot_3253p0001_Receive
-                0x00051764                RxSlot_3255p0001_Receive
+                0x000523fc                RxSlot_3066p0001_Receive
+                0x0005220c                RxSlot_3698p0001_Receive
+                0x0005128c                RxSlot_3836p0001_Receive
                 0x00053cc8                CAN_3_Transmit
                 0x00053d20                CAN_2_Transmit
-                0x00051c3c                RxSlot_3672p0001_Receive
                 0x00053acc                CAN_Queued_PeriodicKick
                 0x000535e0                CAN_Rx_Buffer_ISR
-                0x000525ec                RxSlot_3053p0002_Receive
                 0x00051278                CAN_3_KeySuite_SetIDFilter
                 0x00052e5c                CAN_3_ReceiveDispatch
                 0x000526e4                CANFrame_Queue_Depth
                 0x00053b5c                CAN_Queued_Transmit
-                0x00051a4c                RxSlot_3252p0001_Receive
                 0x00052a68                CAN_3_KeySuite_Receive
                 0x000511b0                CAN_FillMotoTronBootObj
                 0x00052b38                CAN_2_KeySuite_Receive
@@ -2214,25 +2214,25 @@ LOAD c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eab
                 0x00052da8                CANFrame_Queue_Enqueue
                 0x00052760                CAN_1_TransmitQueueDepth
                 0x00052770                CAN_3_Error_Status_Get
+                0x0005147c                RxSlot_3697p0004_Receive
                 0x000529bc                CANFrame_Queue_Dequeue
                 0x00052750                CAN_2_TransmitQueueDepth
                 0x00052c08                CAN_1_KeySuite_Receive
                 0x00053f14                CAN_3_Create
+                0x00052304                RxSlot_3478p0004_Receive
                 0x00054274                CAN_1_Create
-                0x0005128c                RxSlot_3808p0001_Receive
-                0x00051574                RxSlot_3257p0001_Receive
+                0x00051d34                RxSlot_4047p0001_Receive
                 0x00053170                CAN_2_ReceiveDispatch
-                0x00051f24                RxSlot_3860p0001_Receive
-                0x0005147c                RxSlot_3669p0004_Receive
-                0x0005220c                RxSlot_3670p0001_Receive
+                0x00051a4c                RxSlot_3263p0001_Receive
                 0x00052834                CAN_2_Error_Status_Get
                 0x00053a18                CAN_Queued_TransmitComplete
                 0x00053f90                FLEXCAN2_B_Create
-                0x000524f4                RxSlot_3054p0001_Receive
                 0x000540d8                CAN_2_Create
                 0x00054130                FLEXCAN2_A_Create
                 0x00051264                CAN_2_KeySuite_SetIDFilter
+                0x000525ec                RxSlot_3064p0002_Receive
                 0x00051238                CANFrame_Queue_Create
+                0x00051e2c                RxSlot_3889p0001_Receive
  .text          0x0005430c      0x424 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_DataStore.o
                 0x00054388                NonVolatile_CloseDataStore
                 0x0005448c                NonVolatile_RestoreDefaultNonVolatile
@@ -2242,130 +2242,130 @@ LOAD c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eab
                 0x0005438c                NonVolatile_StoreNonVolatile
                 0x0005430c                NonVolatile_NonVolatileStatus_Reset
  .text          0x00054730     0x1f28 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-                0x00055300                DOut4328p0001_DiscreteOutput_Set
-                0x00054f68                DOut5628p0004_DiscreteOutput_Stop
-                0x00054bdc                DOut4327p0001_DiscreteOutput_Get
+                0x00054bf0                DOut4367p0004_DiscreteOutput_Get
+                0x00054bdc                DOut4366p0004_DiscreteOutput_Get
+                0x00055f2c                DOut4601p0004_DiscreteOutput_Set
                 0x00055478                VISTA_1_Register_Write
-                0x00055064                DOut4327p0001_DiscreteOutput_Stop
-                0x00054c04                DOut4329p0001_DiscreteOutput_Get
+                0x0005509c                DOut4364p0004_DiscreteOutput_Stop
+                0x00055220                DOut4604p0004_DiscreteOutput_Set
                 0x00054800                VISTA_1_Knock_IIR_Coefficient_Convert_RealToFixedPt
-                0x00055320                DOut4327p0001_DiscreteOutput_Set
-                0x00055d8c                DOut4566p0001_DiscreteOutput_Set
                 0x00054d4c                MotoCoder_DiscreteOutput_UpdateOnChange_Create
-                0x00055200                DOut5628p0004_DiscreteOutput_Set
+                0x00054fa0                DOut4603p0004_DiscreteOutput_Stop
+                0x00054f84                DOut4604p0004_DiscreteOutput_Stop
                 0x00055644                MC33800_LSO10_DiscreteOutput_Create
-                0x00054c40                DOut4332p0001_DiscreteOutput_Get
-                0x000560cc                DOut4334p0001_DiscreteOutput_Set
                 0x000559a8                MC33800_INJ3_DiscreteOutput_Create
-                0x00054e44                DOut4331p0001_DiscreteOutput_Create
                 0x00055b3c                MC33800_INJ7_DiscreteOutput_Create
-                0x000552c0                DOut4330p0001_DiscreteOutput_Set
-                0x00055d4c                DOut4566p0001_DiscreteOutput_Stop
-                0x00055010                DOut4330p0001_DiscreteOutput_Stop
-                0x0005619c                DOut4333p0001_DiscreteOutput_Set
-                0x000558d4                DOut4333p0001_DiscreteOutput_Create
-                0x00055eec                DOut4562p0001_DiscreteOutput_Stop
+                0x0005502c                DOut4368p0004_DiscreteOutput_Stop
+                0x000552e0                DOut4368p0004_DiscreteOutput_Set
+                0x00055010                DOut4369p0004_DiscreteOutput_Stop
+                0x00055c68                DOut4363p0004_DiscreteOutput_Create
+                0x00054c40                DOut4371p0004_DiscreteOutput_Get
+                0x000558d4                DOut4372p0004_DiscreteOutput_Create
                 0x0005543c                VISTA_1_Register_Read
                 0x00054844                ContinuousScan_eQADCQueue_Create
-                0x00054ec4                DOut4327p0001_DiscreteOutput_Create
-                0x0005571c                DOut4562p0001_DiscreteOutput_Create
-                0x00054e24                DOut4332p0001_DiscreteOutput_Create
-                0x00055cdc                DOut4323p0001_DiscreteOutput_Create
-                0x00055fbc                DOut4335p0001_DiscreteOutput_Stop
-                0x00055864                DOut4334p0001_DiscreteOutput_Create
-                0x00054ea4                DOut4328p0001_DiscreteOutput_Create
-                0x00054c68                DOut4564p0001_DiscreteOutput_Get
+                0x00054bb4                DOut4364p0004_DiscreteOutput_Get
+                0x00055300                DOut4367p0004_DiscreteOutput_Set
+                0x0005622c                DOut4363p0004_DiscreteOutput_Stop
+                0x00055eec                DOut4601p0004_DiscreteOutput_Stop
+                0x000556ac                DOut4602p0004_DiscreteOutput_Create
                 0x00055144                H1_InhibitB_DiscreteOutput_Set
+                0x00055080                DOut4365p0004_DiscreteOutput_Stop
                 0x00054ca4                H1_InhibitB_DiscreteOutput_Get
                 0x000554b4                VISTA_1_Create
                 0x00054730                SPI_C_Create
+                0x00054f04                DOut4364p0004_DiscreteOutput_Create
+                0x00055d8c                DOut4605p0004_DiscreteOutput_Set
                 0x00055a0c                MC33800_INJ4_DiscreteOutput_Create
-                0x000552a0                DOut4331p0001_DiscreteOutput_Set
+                0x00054ec4                DOut4366p0004_DiscreteOutput_Create
+                0x000557f4                DOut4374p0004_DiscreteOutput_Create
+                0x00054e64                DOut4369p0004_DiscreteOutput_Create
+                0x00054ee4                DOut4365p0004_DiscreteOutput_Create
                 0x00054d84                H1_InhibitB_DiscreteOutput_Create
                 0x00055504                MC33800_MPRD_DiscreteOutput_Create
+                0x00054e24                DOut4371p0004_DiscreteOutput_Create
+                0x00054bc8                DOut4365p0004_DiscreteOutput_Get
                 0x00056440                S_SHRC_4_Create
-                0x00054c2c                DOut4331p0001_DiscreteOutput_Get
                 0x000564b0                ESTOP2_DigitalInput_Get
-                0x0005502c                DOut4329p0001_DiscreteOutput_Stop
-                0x0005622c                DOut4324p0001_DiscreteOutput_Stop
+                0x000562fc                DOut4362p0004_DiscreteOutput_Stop
+                0x00054f68                DOut5671p0001_DiscreteOutput_Stop
+                0x00055280                DOut4371p0004_DiscreteOutput_Set
                 0x00054a44                ECUP_AnalogInput_Get
-                0x00055220                DOut4565p0001_DiscreteOutput_Set
+                0x00054e04                DOut4600p0004_DiscreteOutput_Create
                 0x00054d04                MotoCoder_DiscreteOutput_UpdateAlways_Create
-                0x00054f84                DOut4565p0001_DiscreteOutput_Stop
-                0x0005556c                DOut4566p0001_DiscreteOutput_Create
+                0x00054c54                DOut4600p0004_DiscreteOutput_Get
+                0x00055fbc                DOut4374p0004_DiscreteOutput_Stop
+                0x00054e44                DOut4370p0004_DiscreteOutput_Create
                 0x000553a8                DRVP_AnalogInput_Get
+                0x00054c04                DOut4368p0004_DiscreteOutput_Get
+                0x00055cdc                DOut4362p0004_DiscreteOutput_Create
                 0x00054960                DCDC_Conveter_AnalogInput_Get
-                0x00054e84                DOut4329p0001_DiscreteOutput_Create
-                0x00054bf0                DOut4328p0001_DiscreteOutput_Get
-                0x0005608c                DOut4334p0001_DiscreteOutput_Stop
+                0x000552a0                DOut4370p0004_DiscreteOutput_Set
+                0x00054de4                DOut4603p0004_DiscreteOutput_Create
+                0x0005615c                DOut4372p0004_DiscreteOutput_Stop
                 0x0005487c                Heater_Core_Blend_Position_AnalogInput_Get
                 0x00056478                S_SHRC_3_Create
-                0x00055c68                DOut4324p0001_DiscreteOutput_Create
-                0x000562fc                DOut4323p0001_DiscreteOutput_Stop
-                0x00055e5c                DOut4563p0001_DiscreteOutput_Set
-                0x00054fd8                DOut4332p0001_DiscreteOutput_Stop
-                0x00054c90                DOut5628p0004_DiscreteOutput_Get
+                0x00054ea4                DOut4367p0004_DiscreteOutput_Create
                 0x000549f8                Throttle_Position_AnalogInput_Get
+                0x0005619c                DOut4372p0004_DiscreteOutput_Set
+                0x00055340                DOut4365p0004_DiscreteOutput_Set
                 0x00055ba0                MC33800_INJ6_DiscreteOutput_Create
-                0x00055340                DOut4326p0001_DiscreteOutput_Set
+                0x00055360                DOut4364p0004_DiscreteOutput_Set
+                0x00054c18                DOut4369p0004_DiscreteOutput_Get
                 0x00054914                Heater_Temp_AnalogInput_Get
+                0x00055ffc                DOut4374p0004_DiscreteOutput_Set
                 0x0005537c                EEPROM_1_Create
-                0x00054bc8                DOut4326p0001_DiscreteOutput_Get
+                0x0005571c                DOut4601p0004_DiscreteOutput_Create
+                0x00054e84                DOut4368p0004_DiscreteOutput_Create
                 0x00054b28                H1m_PWMOutput_Stop
                 0x000549ac                Cruise_Control_AnalogInput_Get
                 0x0005578c                MC33800_LSO9_DiscreteOutput_Create
                 0x00055198                H1m_PWMOutput_PWMOutput_Set
-                0x00054da4                DOut5628p0004_DiscreteOutput_Create
-                0x00055e1c                DOut4563p0001_DiscreteOutput_Stop
+                0x00055d4c                DOut4605p0004_DiscreteOutput_Stop
                 0x00054ad8                H1m_PWMOutput_Set
                 0x00054788                SPI_B_Create
                 0x0005633c                IO_Stop
-                0x0005509c                DOut4325p0001_DiscreteOutput_Stop
+                0x00054da4                DOut5671p0001_DiscreteOutput_Create
                 0x000564f0                ESTOP2_DigitalInput_Create
                 0x00054d38                ODRC_DiscreteOutput_Create
+                0x00055e5c                DOut4602p0004_DiscreteOutput_Set
+                0x00055200                DOut5671p0001_DiscreteOutput_Set
+                0x00054ff4                DOut4370p0004_DiscreteOutput_Stop
+                0x00054c68                DOut4603p0004_DiscreteOutput_Get
                 0x00055a70                MC33800_LSO2_DiscreteOutput_Create
-                0x000557f4                DOut4335p0001_DiscreteOutput_Create
-                0x00054c18                DOut4330p0001_DiscreteOutput_Get
-                0x00055048                DOut4328p0001_DiscreteOutput_Stop
                 0x00054f20                MotoCoder_DiscreteOutput_UpdateOnChange_Stop
-                0x00054f04                DOut4325p0001_DiscreteOutput_Create
-                0x000552e0                DOut4329p0001_DiscreteOutput_Set
                 0x00055944                MC33800_INJ2_DiscreteOutput_Create
+                0x00054fbc                DOut4600p0004_DiscreteOutput_Stop
                 0x000555dc                MC33800_LSO8_DiscreteOutput_Create
-                0x00055080                DOut4326p0001_DiscreteOutput_Stop
-                0x00055f2c                DOut4562p0001_DiscreteOutput_Set
-                0x00054bb4                DOut4325p0001_DiscreteOutput_Get
                 0x00054a90                H1m_PWMOutput_Create
-                0x00054e64                DOut4330p0001_DiscreteOutput_Create
-                0x00054fa0                DOut4564p0001_DiscreteOutput_Stop
-                0x00054dc4                DOut4565p0001_DiscreteOutput_Create
+                0x000552c0                DOut4369p0004_DiscreteOutput_Set
+                0x00055864                DOut4373p0004_DiscreteOutput_Create
+                0x00054fd8                DOut4371p0004_DiscreteOutput_Stop
                 0x000550b4                MotoCoder_DiscreteOutput_UpdateOnChange_Set
                 0x00055c04                MC33800_INJ8_DiscreteOutput_Create
                 0x000547e0                VISTA_1_Knock_IIR_Coefficient_Convert_FixedPtToReal
                 0x00055ad8                MC33800_INJ5_DiscreteOutput_Create
-                0x00054de4                DOut4564p0001_DiscreteOutput_Create
+                0x00055064                DOut4366p0004_DiscreteOutput_Stop
                 0x000553fc                DRVP_Create
-                0x00055240                DOut4564p0001_DiscreteOutput_Set
-                0x0005626c                DOut4324p0001_DiscreteOutput_Set
-                0x00054c54                DOut4561p0001_DiscreteOutput_Get
-                0x00054ff4                DOut4331p0001_DiscreteOutput_Stop
+                0x0005556c                DOut4605p0004_DiscreteOutput_Create
+                0x00054c2c                DOut4370p0004_DiscreteOutput_Get
+                0x0005626c                DOut4363p0004_DiscreteOutput_Set
+                0x00054c7c                DOut4604p0004_DiscreteOutput_Get
                 0x00055164                H1m_PWMOutput_PWMOutput_Stop
-                0x00055280                DOut4332p0001_DiscreteOutput_Set
+                0x00054dc4                DOut4604p0004_DiscreteOutput_Create
+                0x00055e1c                DOut4602p0004_DiscreteOutput_Stop
+                0x00054c90                DOut5671p0001_DiscreteOutput_Get
                 0x00056528                IO_Create
-                0x00054ee4                DOut4326p0001_DiscreteOutput_Create
+                0x000560cc                DOut4373p0004_DiscreteOutput_Set
+                0x00055240                DOut4603p0004_DiscreteOutput_Set
+                0x0005608c                DOut4373p0004_DiscreteOutput_Stop
                 0x000548c8                Radiator_Blend_Position_AnalogInput_Get
-                0x00054fbc                DOut4561p0001_DiscreteOutput_Stop
                 0x00054f4c                H1_InhibitB_DiscreteOutput_Stop
-                0x00054c7c                DOut4565p0001_DiscreteOutput_Get
-                0x000563b0                DOut4323p0001_DiscreteOutput_Set
-                0x00055ffc                DOut4335p0001_DiscreteOutput_Set
-                0x00055260                DOut4561p0001_DiscreteOutput_Set
-                0x00054e04                DOut4561p0001_DiscreteOutput_Create
-                0x0005615c                DOut4333p0001_DiscreteOutput_Stop
+                0x00055260                DOut4600p0004_DiscreteOutput_Set
+                0x00055320                DOut4366p0004_DiscreteOutput_Set
+                0x000563b0                DOut4362p0004_DiscreteOutput_Set
                 0x00054b5c                SPI_D_Create
                 0x00054cb8                ODRC_DiscreteOutput_Get
-                0x000556ac                DOut4563p0001_DiscreteOutput_Create
-                0x00055360                DOut4325p0001_DiscreteOutput_Set
+                0x00055048                DOut4367p0004_DiscreteOutput_Stop
  .text          0x00056658     0x13a0 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_KeySuite.o
                 0x00057870                KeySuite_MessageHandler
                 0x00056e3c                KeySuite_Manager_Connection_Find
@@ -2424,12 +2424,12 @@ LOAD c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eab
  .text          0x00057c40      0x1c0 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\TableLookupFunctions.o
                 0x00057c40                TablePrelookup_real_T
                 0x00057db0                TableInterpolation1D_real_T
- .text          0x00057e00      0x3f4 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5678p0001.o
-                0x00057e00                Trigger_BGND_BASE_PERIODIC_5678p0001
+ .text          0x00057e00      0x3f4 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5721p0001.o
+                0x00057e00                Trigger_BGND_BASE_PERIODIC_5721p0001
  .text          0x000581f4      0x12c C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_Fault_active_0_8.o
                 0x000581f4                Trigger_Fault_active_0_8
- .text          0x00058320       0x44 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5687p0001.o
-                0x00058320                Trigger_FGND_RTI_PERIODIC_5687p0001
+ .text          0x00058320       0x44 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5730p0001.o
+                0x00058320                Trigger_FGND_RTI_PERIODIC_5730p0001
  .text          0x00058364       0x40 c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eabispe/4_4_0/bin/../lib/gcc/powerpc-eabispe/4.4.0/../../../../powerpc-eabispe/lib\libc.a(lib_a-exit.o)
                 0x00058364                exit
  .text          0x000583a4       0x58 c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eabispe/4_4_0/bin/../lib/gcc/powerpc-eabispe/4.4.0/../../../../powerpc-eabispe/lib\libc.a(lib_a-malloc.o)
@@ -3272,146 +3272,146 @@ LOAD c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eab
                 0x000664b4                g_FlexCANBufferConfig_CAN_Rx_Buffer_ISR
                 0x000665c0                g_FLEXCAN2_B_ConfigObj
  .rodata        0x000667dc      0x898 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-                0x00067004                DOut4565p0001_CPUOut_Methods
-                0x00066b8c                DOut4323p0001_MC33800DigitalOut
-                0x00066b98                DOut4324p0001_MC33800_Methods
+                0x00066cf0                DOut4374p0004_MC33800_Methods
+                0x00066f34                DOut4366p0004_CPUDigitalOut
+                0x00066a14                DOut4372p0004
                 0x00066a8c                MC33800_INJ5
-                0x00066efc                DOut4325p0001_CPUDigitalOut
-                0x00067030                DOut5628p0004_CPUDigitalOut
                 0x00066de4                VISTA_1DeviceAttrib
+                0x00066fe8                DOut4603p0004_CPUOut_Methods
+                0x00066f50                DOut4367p0004_CPUDigitalOut
+                0x00066cd4                DOut4373p0004_MC33800_Methods
+                0x00066cc8                DOut4372p0004_MC33800DigitalOut
                 0x00066c3c                MC33800_INJ5_MC33800DigitalOut
                 0x00066854                ODRC
                 0x00066bb4                S_SHRC_4SPIDeviceMethods
                 0x00066dd0                SPI_BMethods
                 0x00066e08                VISTA_1DevicePLLUnlockedAttrib
-                0x00066b04                DOut4323p0001
+                0x00066954                DOut4605p0004
                 0x00066edc                EEPROM_1_Methods
-                0x00066da8                DOut4566p0001_MC33800DigitalOut
-                0x00066954                DOut4566p0001
+                0x000669fc                DOut4373p0004
                 0x00066d0c                MC33800_LSO9_MC33800_Methods
                 0x00066db4                MC33800_MPRD_MC33800_Methods
-                0x00066d54                DOut4563p0001_MC33800DigitalOut
-                0x00066fdc                DOut4561p0001_CPUDigitalOut
+                0x00066f78                DOut4369p0004_CPUOut_Methods
+                0x00066efc                DOut4364p0004_CPUDigitalOut
                 0x00066e3c                ContinuousScan_eQADCQueue_QueueMethod
+                0x00066d54                DOut4602p0004_MC33800DigitalOut
                 0x00066d60                MC33800_LSO10_MC33800_Methods
                 0x00066e80                SPI_DMethods
                 0x00066b1c                S_SHRC_4
+                0x00066cb8                DOut4372p0004_MC33800_Methods
                 0x00066a2c                MC33800_INJ2
-                0x00066fcc                DOut4561p0001_CPUOut_Methods
-                0x00066cd4                DOut4334p0001_MC33800_Methods
-                0x00066a14                DOut4333p0001
+                0x000668a8                DOut4370p0004
+                0x00066b98                DOut4363p0004_MC33800_Methods
                 0x0006703c                H1_InhibitB_CPUOut_Methods
                 0x00066b3c                ESTOP2_CPUDGIn_Methods
-                0x00066f6c                DOut4329p0001_CPUDigitalOut
+                0x00066f6c                DOut4368p0004_CPUDigitalOut
+                0x000669e4                DOut4374p0004
+                0x000668e4                DOut4365p0004
                 0x00066bc8                S_SHRC_4SPIDevice
-                0x000668f0                DOut4325p0001
                 0x00066930                VISTA_1
+                0x00067004                DOut4604p0004_CPUOut_Methods
                 0x00066aa4                MC33800_INJ7
-                0x00066d38                DOut4562p0001_MC33800DigitalOut
+                0x00066fdc                DOut4600p0004_CPUDigitalOut
                 0x00067068                ODRC_CPUDigitalOut
-                0x00066f5c                DOut4329p0001_CPUOut_Methods
                 0x00066b58                S_SHRC_3SPIDeviceMethods
+                0x000668cc                DOut4367p0004
                 0x00066dec                VISTA_1Device
-                0x00066b7c                DOut4323p0001_MC33800_Methods
                 0x00066c20                MC33800_INJ7_MC33800DigitalOut
+                0x00066ba8                DOut4363p0004_MC33800DigitalOut
+                0x00067014                DOut4604p0004_CPUDigitalOut
+                0x00067030                DOut5671p0001_CPUDigitalOut
                 0x00066b28                S_SHRC_3
-                0x00066878                DOut4565p0001
-                0x00066d98                DOut4566p0001_MC33800_Methods
+                0x00066f08                DOut4365p0004_CPUOut_Methods
+                0x000668c0                DOut4368p0004
                 0x00066c64                MC33800_INJ4_MC33800_Methods
-                0x00066fe8                DOut4564p0001_CPUOut_Methods
-                0x00067014                DOut4565p0001_CPUDigitalOut
                 0x00066d70                MC33800_LSO10_MC33800DigitalOut
-                0x00066fa4                DOut4331p0001_CPUDigitalOut
-                0x000668d8                DOut4327p0001
                 0x00066984                MC33800_LSO10
+                0x00066878                DOut4604p0004
                 0x000669cc                MC33800_LSO9
                 0x00066bf4                MC33800_INJ6_MC33800_Methods
-                0x000669b4                DOut4562p0001
                 0x00066c9c                MC33800_INJ2_MC33800_Methods
-                0x0006699c                DOut4563p0001
+                0x00066fcc                DOut4600p0004_CPUOut_Methods
+                0x000668f0                DOut4364p0004
+                0x00066fa4                DOut4370p0004_CPUDigitalOut
+                0x00066d44                DOut4602p0004_MC33800_Methods
                 0x00066eac                EEPROM_1_Memory
                 0x00066abc                MC33800_INJ6
                 0x00066c2c                MC33800_INJ5_MC33800_Methods
-                0x000669e4                DOut4335p0001
                 0x00066e6c                H1m_Methods
                 0x00066e10                VISTA_1DevicePLLUnlocked
                 0x0006693c                MC33800_MPRD
                 0x00066e58                ContinuousScan_eQADCQueueCommandQueueDefn
+                0x0006689c                DOut4371p0004
                 0x00066c90                MC33800_INJ3_MC33800DigitalOut
+                0x00066884                DOut4603p0004
                 0x00066bd8                MC33800_INJ8_MC33800_Methods
-                0x00066f08                DOut4326p0001_CPUOut_Methods
-                0x00066d00                DOut4335p0001_MC33800DigitalOut
+                0x00066eec                DOut4364p0004_CPUOut_Methods
                 0x00066a44                MC33800_INJ3
                 0x00066bc0                S_SHRC_4SPIDeviceAttrib
                 0x00066b34                ESTOP2
                 0x00066ed0                EEPROM_1_AccessSemaphore
-                0x000668a8                DOut4331p0001
-                0x00066ce4                DOut4334p0001_MC33800DigitalOut
+                0x00066f5c                DOut4368p0004_CPUOut_Methods
+                0x00066aec                DOut4363p0004
+                0x00066ce4                DOut4373p0004_MC33800DigitalOut
+                0x000669b4                DOut4601p0004
                 0x000667e4                SPI_C
-                0x00066d28                DOut4562p0001_MC33800_Methods
-                0x00066f18                DOut4326p0001_CPUDigitalOut
-                0x000668cc                DOut4328p0001
+                0x00066b8c                DOut4362p0004_MC33800DigitalOut
                 0x00066d1c                MC33800_LSO9_MC33800DigitalOut
+                0x00066f40                DOut4367p0004_CPUOut_Methods
                 0x00066cac                MC33800_INJ2_MC33800DigitalOut
-                0x00066f24                DOut4327p0001_CPUOut_Methods
                 0x00066e94                EEPROM_1SPIDeviceAttrib
                 0x000667f8                SPI_B
                 0x00066b6c                S_SHRC_3SPIDevice
                 0x0006696c                MC33800_LSO8
+                0x00066f94                DOut4370p0004_CPUOut_Methods
                 0x000668fc                EEPROM_1
                 0x00066ad4                MC33800_INJ8
+                0x00066ff8                DOut4603p0004_CPUDigitalOut
                 0x00066b50                SPI_CMethods
-                0x0006689c                DOut4332p0001
                 0x00066c58                MC33800_LSO2_MC33800DigitalOut
                 0x00066b44                ESTOP2_CPUDigitalIn
                 0x00066a74                MC33800_LSO2
                 0x00066860                H1_InhibitB
                 0x00066dc4                MC33800_MPRD_MC33800DigitalOut
-                0x00066fc0                DOut4332p0001_CPUDigitalOut
                 0x0006704c                H1_InhibitB_CPUDigitalOut
                 0x00066c04                MC33800_INJ6_MC33800DigitalOut
-                0x00066f88                DOut4330p0001_CPUDigitalOut
-                0x00066eec                DOut4325p0001_CPUOut_Methods
-                0x00066f78                DOut4330p0001_CPUOut_Methods
-                0x000668e4                DOut4326p0001
+                0x00066d00                DOut4374p0004_MC33800DigitalOut
+                0x0006699c                DOut4602p0004
+                0x00066d98                DOut4605p0004_MC33800_Methods
+                0x000668d8                DOut4366p0004
+                0x00066f88                DOut4369p0004_CPUDigitalOut
                 0x00066e64                ContinuousScan_eQADCQueueResultQueueDefn
+                0x0006686c                DOut5671p0001
                 0x00066c10                MC33800_INJ7_MC33800_Methods
                 0x00066b64                S_SHRC_3SPIDeviceAttrib
+                0x00066b04                DOut4362p0004
+                0x00066fc0                DOut4371p0004_CPUDigitalOut
                 0x00066dfc                VISTA_1DevicePLLUnlockedMethods
-                0x00066aec                DOut4324p0001
-                0x00067020                DOut5628p0004_CPUOut_Methods
                 0x00066d8c                MC33800_LSO8_MC33800DigitalOut
                 0x00067058                ODRC_CPUOut_Methods
                 0x00066804                ContinuousScan_eQADCQueue
                 0x00066848                SPI_D
-                0x00066cb8                DOut4333p0001_MC33800_Methods
-                0x00066ff8                DOut4564p0001_CPUDigitalOut
-                0x00066f40                DOut4328p0001_CPUOut_Methods
-                0x0006686c                DOut5628p0004
-                0x000668b4                DOut4330p0001
-                0x00066cc8                DOut4333p0001_MC33800DigitalOut
+                0x00066da8                DOut4605p0004_MC33800DigitalOut
                 0x00066c74                MC33800_INJ4_MC33800DigitalOut
-                0x00066ba8                DOut4324p0001_MC33800DigitalOut
-                0x00066f34                DOut4327p0001_CPUDigitalOut
-                0x00066fb0                DOut4332p0001_CPUOut_Methods
                 0x00066a5c                MC33800_INJ4
-                0x00066f50                DOut4328p0001_CPUDigitalOut
+                0x00066fb0                DOut4371p0004_CPUOut_Methods
                 0x00066e9c                EEPROM_1SPIDevice
+                0x00067020                DOut5671p0001_CPUOut_Methods
                 0x00066c48                MC33800_LSO2_MC33800_Methods
-                0x00066d44                DOut4563p0001_MC33800_Methods
                 0x00066be8                MC33800_INJ8_MC33800DigitalOut
-                0x00066f94                DOut4331p0001_CPUOut_Methods
                 0x00066c80                MC33800_INJ3_MC33800_Methods
+                0x00066d28                DOut4601p0004_MC33800_Methods
                 0x00066d7c                MC33800_LSO8_MC33800_Methods
-                0x000668c0                DOut4329p0001
                 0x00066dd8                VISTA_1DeviceMethods
-                0x00066884                DOut4564p0001
-                0x000669fc                DOut4334p0001
+                0x000668b4                DOut4369p0004
+                0x00066f18                DOut4365p0004_CPUDigitalOut
+                0x00066890                DOut4600p0004
                 0x00066828                H1m
-                0x00066cf0                DOut4335p0001_MC33800_Methods
+                0x00066b7c                DOut4362p0004_MC33800_Methods
+                0x00066f24                DOut4366p0004_CPUOut_Methods
                 0x00066e88                EEPROM_1SPIDeviceMethods
                 0x00066e20                g_eQADCCommandQueueBuffer5
-                0x00066890                DOut4561p0001
+                0x00066d38                DOut4601p0004_MC33800DigitalOut
  .rodata.str1.4
                 0x00067074       0x13 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
  *fill*         0x00067087        0x1 00
@@ -3891,70 +3891,70 @@ LOAD c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eab
                 0x400018e0                g_BGNDTaskStack
                 0x40000e64                g_AppTaskTCB
  .bss           0x400035c4      0x9d0 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-                0x40003750                RxSlot_3054p0001_ReceiveFrame
-                0x400035fc                RxSlot_3669p0004_ReceiveFrame
-                0x40003610                RxSlot_3257p0001_ReceiveFrame
-                0x400035e8                RxSlot_3671p0001_ReceiveFrame
+                0x40003624                RxSlot_3267p0001_ReceiveFrame
+                0x40003660                RxSlot_3264p0001_ReceiveFrame
+                0x40003714                RxSlot_3698p0001_ReceiveFrame
+                0x40003620                RxSlot_3267p0001_ReceiveFrameValid
+                0x40003688                RxSlot_3262p0001_ReceiveFrame
+                0x40003648                RxSlot_3265p0001_ReceiveFrameValid
+                0x400036d4                RxSlot_3888p0001_ReceiveFrameValid
+                0x40003764                RxSlot_3064p0002_ReceiveFrame
                 0x40003914                FLEXCAN2_C_ReceiveQueueFrames
-                0x40003638                RxSlot_3255p0001_ReceiveFrame
-                0x400036fc                RxSlot_3729p0001_ReceiveFrameValid
-                0x400035e4                RxSlot_3671p0001_ReceiveFrameValid
+                0x400035f8                RxSlot_3697p0004_ReceiveFrameValid
+                0x40003750                RxSlot_3065p0001_ReceiveFrame
                 0x40003a54                FLEXCAN2_B_TransmitQueueFrames
-                0x400036e8                RxSlot_3859p0001_ReceiveFrameValid
-                0x40003724                RxSlot_10273p001_ReceiveFrameValid
                 0x40003a14                CAN_3_KeySuite_ReceiveQueueFrames
-                0x400036ac                RxSlot_4019p0001_ReceiveFrameValid
-                0x40003620                RxSlot_3256p0001_ReceiveFrameValid
-                0x40003688                RxSlot_3251p0001_ReceiveFrame
+                0x40003710                RxSlot_3698p0001_ReceiveFrameValid
                 0x400037a4                CAN_3_KeySuite_ReceiveQueue
-                0x400037d4                RxSlot_3858p0001_ReceiveQueue
-                0x40003624                RxSlot_3256p0001_ReceiveFrame
-                0x40003700                RxSlot_3729p0001_ReceiveFrame
-                0x400035d0                RxSlot_3808p0001_ReceiveFrameValid
                 0x40003b54                FLEXCAN2_B_ReceiveQueueFrames
-                0x40003714                RxSlot_3670p0001_ReceiveFrame
+                0x40003728                RxSlot_3478p0004_ReceiveFrame
                 0x400037c4                CAN_1_KeySuite_ReceiveQueue
-                0x40003764                RxSlot_3053p0002_ReceiveFrame
-                0x40003710                RxSlot_3670p0001_ReceiveFrameValid
                 0x40003c54                CAN_2_KeySuite_ReceiveQueueFrames
                 0x40003784                FLEXCAN2_B_TransmitQueue
-                0x40003648                RxSlot_3254p0001_ReceiveFrameValid
                 0x400037f4                FLEXCAN2_B_ReceiveQueue
-                0x400036c4                RxSlot_3861p0001_ReceiveFrame
-                0x4000374c                RxSlot_3054p0001_ReceiveFrameValid
-                0x40003684                RxSlot_3251p0001_ReceiveFrameValid
-                0x4000360c                RxSlot_3257p0001_ReceiveFrameValid
+                0x400036ec                RxSlot_3887p0001_ReceiveFrame
+                0x400037d4                RxSlot_3886p0001_ReceiveQueue
+                0x400036ac                RxSlot_4047p0001_ReceiveFrameValid
+                0x4000374c                RxSlot_3065p0001_ReceiveFrameValid
+                0x400036d8                RxSlot_3888p0001_ReceiveFrame
+                0x4000364c                RxSlot_3265p0001_ReceiveFrame
                 0x40003f54                CAN_1_KeySuite_ReceiveQueueFrames
                 0x400037e4                FLEXCAN2_C_ReceiveQueue
                 0x40003814                FLEXCAN2_C_TransmitQueueFrames
-                0x40003634                RxSlot_3255p0001_ReceiveFrameValid
-                0x4000364c                RxSlot_3254p0001_ReceiveFrame
+                0x400035e8                RxSlot_3699p0001_ReceiveFrame
+                0x40003674                RxSlot_3263p0001_ReceiveFrame
+                0x40003700                RxSlot_3757p0001_ReceiveFrame
+                0x40003f34                RxSlot_3886p0001_ReceiveQueueFrames
+                0x40003610                RxSlot_3268p0001_ReceiveFrame
+                0x40003760                RxSlot_3064p0002_ReceiveFrameValid
                 0x400037b4                CAN_2_KeySuite_ReceiveQueue
-                0x400036b0                RxSlot_4019p0001_ReceiveFrame
-                0x400036ec                RxSlot_3859p0001_ReceiveFrame
+                0x40003638                RxSlot_3266p0001_ReceiveFrame
+                0x40003670                RxSlot_3263p0001_ReceiveFrameValid
+                0x400035d0                RxSlot_3836p0001_ReceiveFrameValid
+                0x400035fc                RxSlot_3697p0004_ReceiveFrame
+                0x40003738                RxSlot_3066p0001_ReceiveFrameValid
+                0x40003724                RxSlot_3478p0004_ReceiveFrameValid
                 0x40003c94                FLEXCAN2_A_TransmitQueueFrames
-                0x40003670                RxSlot_3252p0001_ReceiveFrameValid
-                0x400036d4                RxSlot_3860p0001_ReceiveFrameValid
-                0x4000373c                RxSlot_3055p0001_ReceiveFrame
-                0x400035d4                RxSlot_3808p0001_ReceiveFrame
-                0x40003760                RxSlot_3053p0002_ReceiveFrameValid
-                0x40003728                RxSlot_10273p001_ReceiveFrame
-                0x40003660                RxSlot_3253p0001_ReceiveFrame
+                0x40003634                RxSlot_3266p0001_ReceiveFrameValid
+                0x400036b0                RxSlot_4047p0001_ReceiveFrame
+                0x400036c4                RxSlot_3889p0001_ReceiveFrame
+                0x400035d4                RxSlot_3836p0001_ReceiveFrame
                 0x40003804                FLEXCAN2_A_ReceiveQueue
-                0x400036d8                RxSlot_3860p0001_ReceiveFrame
-                0x4000369c                RxSlot_3672p0001_ReceiveFrame
-                0x40003f34                RxSlot_3858p0001_ReceiveQueueFrames
-                0x40003698                RxSlot_3672p0001_ReceiveFrameValid
+                0x4000373c                RxSlot_3066p0001_ReceiveFrame
+                0x4000365c                RxSlot_3264p0001_ReceiveFrameValid
+                0x4000360c                RxSlot_3268p0001_ReceiveFrameValid
+                0x400036c0                RxSlot_3889p0001_ReceiveFrameValid
+                0x4000369c                RxSlot_3700p0001_ReceiveFrame
+                0x40003698                RxSlot_3700p0001_ReceiveFrameValid
+                0x400035e4                RxSlot_3699p0001_ReceiveFrameValid
                 0x40003794                FLEXCAN2_A_TransmitQueue
-                0x40003674                RxSlot_3252p0001_ReceiveFrame
-                0x400036c0                RxSlot_3861p0001_ReceiveFrameValid
+                0x400036fc                RxSlot_3757p0001_ReceiveFrameValid
+                0x40003684                RxSlot_3262p0001_ReceiveFrameValid
+                0x400036e8                RxSlot_3887p0001_ReceiveFrameValid
                 0x400035c4                CAN_1_KeySuite_DynamicID
                 0x40003774                FLEXCAN2_C_TransmitQueue
-                0x400035f8                RxSlot_3669p0004_ReceiveFrameValid
                 0x40003dd4                FLEXCAN2_A_ReceiveQueueFrames
                 0x400035c8                CAN_2_KeySuite_DynamicID
-                0x40003738                RxSlot_3055p0001_ReceiveFrameValid
-                0x4000365c                RxSlot_3253p0001_ReceiveFrameValid
                 0x400035cc                CAN_3_KeySuite_DynamicID
  .bss           0x40003f94      0x594 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_DataStore.o
                 0x40003f9c                VolatileWork_BSS
@@ -3968,34 +3968,34 @@ LOAD c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eab
                 0x4000452c                Debug_CAN_1_TransmitOverrun
  *fill*         0x40004532        0x2 00
  .bss           0x40004534       0xc8 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-                0x40004538                DOut4329p0001_State
-                0x40004535                DOut4326p0001_State
-                0x40004542                DOut4563p0001_State
-                0x4000453f                DOut5628p0004_State
-                0x40004546                DOut4333p0001_State
+                0x40004543                DOut4601p0004_State
                 0x40004540                H1_InhibitB_State
-                0x40004545                DOut4334p0001_State
+                0x40004534                DOut4364p0004_State
+                0x4000453f                DOut5671p0001_State
+                0x40004538                DOut4368p0004_State
                 0x400045dc                EEPROM_1_PageBuffer
-                0x4000453c                DOut4561p0001_State
+                0x4000453e                DOut4604p0004_State
+                0x40004535                DOut4365p0004_State
+                0x40004546                DOut4372p0004_State
                 0x4000454c                S_SHRC_3Runtime
-                0x4000453d                DOut4564p0001_State
+                0x40004537                DOut4367p0004_State
+                0x40004539                DOut4369p0004_State
+                0x4000453b                DOut4371p0004_State
                 0x400045be                g_eQADCResultQueueBuffer5
-                0x4000453b                DOut4332p0001_State
                 0x400045cc                H1m_Runtime
-                0x40004536                DOut4327p0001_State
-                0x40004547                DOut4324p0001_State
-                0x40004539                DOut4330p0001_State
                 0x40004584                S_SHRC_4Runtime
-                0x40004544                DOut4335p0001_State
-                0x40004548                DOut4323p0001_State
-                0x4000453e                DOut4565p0001_State
+                0x40004542                DOut4602p0004_State
+                0x40004547                DOut4363p0004_State
+                0x4000453a                DOut4370p0004_State
                 0x400045d0                EEPROM_1_AccessSemaphoreECB
-                0x4000453a                DOut4331p0001_State
-                0x40004534                DOut4325p0001_State
-                0x40004541                DOut4566p0001_State
+                0x40004548                DOut4362p0004_State
+                0x40004544                DOut4374p0004_State
                 0x400045bc                VISTA_1Runtime
-                0x40004537                DOut4328p0001_State
-                0x40004543                DOut4562p0001_State
+                0x40004545                DOut4373p0004_State
+                0x40004541                DOut4605p0004_State
+                0x4000453c                DOut4600p0004_State
+                0x40004536                DOut4366p0004_State
+                0x4000453d                DOut4603p0004_State
  .bss           0x400045fc       0xa8 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_KeySuite.o
                 0x400045fc                g_ConnectionArr
                 0x40004680                s_ERIProtocolSpecificDataArr
@@ -4320,11 +4320,11 @@ LOAD c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eab
  .debug_aranges
                 0x00000248       0x20 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\TableLookupFunctions.o
  .debug_aranges
-                0x00000268       0x20 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5678p0001.o
+                0x00000268       0x20 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5721p0001.o
  .debug_aranges
                 0x00000288       0x20 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_Fault_active_0_8.o
  .debug_aranges
-                0x000002a8       0x20 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5687p0001.o
+                0x000002a8       0x20 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5730p0001.o
  .debug_aranges
                 0x000002c8       0x20 c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eabispe/4_4_0/bin/../lib/gcc/powerpc-eabispe/4.4.0/../../../../powerpc-eabispe/lib\libc.a(lib_a-atexit.o)
  .debug_aranges
@@ -4484,11 +4484,11 @@ LOAD c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eab
  .debug_pubnames
                 0x0000511c       0x4c C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\TableLookupFunctions.o
  .debug_pubnames
-                0x00005168       0x3b C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5678p0001.o
+                0x00005168       0x3b C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5721p0001.o
  .debug_pubnames
                 0x000051a3       0x2f C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_Fault_active_0_8.o
  .debug_pubnames
-                0x000051d2       0x3a C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5687p0001.o
+                0x000051d2       0x3a C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5730p0001.o
  .debug_pubnames
                 0x0000520c       0x1d c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eabispe/4_4_0/bin/../lib/gcc/powerpc-eabispe/4.4.0/../../../../powerpc-eabispe/lib\libc.a(lib_a-atexit.o)
  .debug_pubnames
@@ -4628,9 +4628,9 @@ LOAD c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eab
  .debug_info    0x00023cd7      0x2c0 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\rt_nonfinite.o
  .debug_info    0x00023f97     0x47a9 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\TableDB.o
  .debug_info    0x00028740      0x1f1 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\TableLookupFunctions.o
- .debug_info    0x00028931     0x3715 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5678p0001.o
+ .debug_info    0x00028931     0x3715 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5721p0001.o
  .debug_info    0x0002c046     0x2d68 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_Fault_active_0_8.o
- .debug_info    0x0002edae      0x149 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5687p0001.o
+ .debug_info    0x0002edae      0x149 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5730p0001.o
  .debug_info    0x0002eef7       0x80 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\VarDecs.o
  .debug_info    0x0002ef77       0xc5 c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eabispe/4_4_0/bin/../lib/gcc/powerpc-eabispe/4.4.0/../../../../powerpc-eabispe/lib\libc.a(lib_a-atexit.o)
  .debug_info    0x0002f03c      0x93c c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eabispe/4_4_0/bin/../lib/gcc/powerpc-eabispe/4.4.0/../../../../powerpc-eabispe/lib\libc.a(lib_a-exit.o)
@@ -4716,9 +4716,9 @@ LOAD c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eab
  .debug_abbrev  0x0000208e       0xf8 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\rt_nonfinite.o
  .debug_abbrev  0x00002186      0x1bc C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\TableDB.o
  .debug_abbrev  0x00002342       0xf1 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\TableLookupFunctions.o
- .debug_abbrev  0x00002433      0x15e C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5678p0001.o
+ .debug_abbrev  0x00002433      0x15e C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5721p0001.o
  .debug_abbrev  0x00002591      0x15c C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_Fault_active_0_8.o
- .debug_abbrev  0x000026ed       0xb7 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5687p0001.o
+ .debug_abbrev  0x000026ed       0xb7 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5730p0001.o
  .debug_abbrev  0x000027a4       0x31 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\VarDecs.o
  .debug_abbrev  0x000027d5       0x81 c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eabispe/4_4_0/bin/../lib/gcc/powerpc-eabispe/4.4.0/../../../../powerpc-eabispe/lib\libc.a(lib_a-atexit.o)
  .debug_abbrev  0x00002856      0x177 c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eabispe/4_4_0/bin/../lib/gcc/powerpc-eabispe/4.4.0/../../../../powerpc-eabispe/lib\libc.a(lib_a-exit.o)
@@ -4804,9 +4804,9 @@ LOAD c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eab
  .debug_line    0x00006b3b      0x21f C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\rt_nonfinite.o
  .debug_line    0x00006d5a      0x44d C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\TableDB.o
  .debug_line    0x000071a7      0x1a8 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\TableLookupFunctions.o
- .debug_line    0x0000734f      0x35c C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5678p0001.o
+ .debug_line    0x0000734f      0x35c C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5721p0001.o
  .debug_line    0x000076ab      0x2b7 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_Fault_active_0_8.o
- .debug_line    0x00007962      0x1c8 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5687p0001.o
+ .debug_line    0x00007962      0x1c8 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5730p0001.o
  .debug_line    0x00007b2a       0x1d C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\VarDecs.o
  .debug_line    0x00007b47       0xe0 c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eabispe/4_4_0/bin/../lib/gcc/powerpc-eabispe/4.4.0/../../../../powerpc-eabispe/lib\libc.a(lib_a-atexit.o)
  .debug_line    0x00007c27      0x19d c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eabispe/4_4_0/bin/../lib/gcc/powerpc-eabispe/4.4.0/../../../../powerpc-eabispe/lib\libc.a(lib_a-exit.o)
@@ -4915,11 +4915,11 @@ LOAD c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eab
                                0x5c02 (size before relaxing)
  .debug_str     0x0001688c       0xed C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\TableLookupFunctions.o
                                 0x1ad (size before relaxing)
- .debug_str     0x00016979      0x1ad C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5678p0001.o
+ .debug_str     0x00016979      0x1ad C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5721p0001.o
                                0x4e98 (size before relaxing)
  .debug_str     0x00016b26      0x126 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_Fault_active_0_8.o
                                0x3b70 (size before relaxing)
- .debug_str     0x00016c4c       0xaa C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5687p0001.o
+ .debug_str     0x00016c4c       0xaa C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5730p0001.o
                                 0x1d1 (size before relaxing)
  .debug_str     0x00016cf6       0x6a C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\VarDecs.o
                                 0x10c (size before relaxing)
@@ -5054,9 +5054,9 @@ LOAD c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eab
  .debug_loc     0x0000731b       0x76 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\rt_nonfinite.o
  .debug_loc     0x00007391       0x13 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\TableDB.o
  .debug_loc     0x000073a4      0x1ef C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\TableLookupFunctions.o
- .debug_loc     0x00007593      0x19b C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5678p0001.o
+ .debug_loc     0x00007593      0x19b C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5721p0001.o
  .debug_loc     0x0000772e       0x60 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_Fault_active_0_8.o
- .debug_loc     0x0000778e       0x14 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5687p0001.o
+ .debug_loc     0x0000778e       0x14 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5730p0001.o
  .debug_loc     0x000077a2       0x32 c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eabispe/4_4_0/bin/../lib/gcc/powerpc-eabispe/4.4.0/../../../../powerpc-eabispe/lib\libc.a(lib_a-atexit.o)
  .debug_loc     0x000077d4       0x32 c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eabispe/4_4_0/bin/../lib/gcc/powerpc-eabispe/4.4.0/../../../../powerpc-eabispe/lib\libc.a(lib_a-exit.o)
  .debug_loc     0x00007806       0x64 c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eabispe/4_4_0/bin/../lib/gcc/powerpc-eabispe/4.4.0/../../../../powerpc-eabispe/lib\libc.a(lib_a-malloc.o)
@@ -5137,9 +5137,9 @@ LOAD c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eab
  .debug_ranges  0x00001018       0x40 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
  .debug_ranges  0x00001058      0x240 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_KeySuite.o
  .debug_ranges  0x00001298       0x70 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_Services_CRC.o
- .debug_ranges  0x00001308       0x30 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5678p0001.o
+ .debug_ranges  0x00001308       0x30 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5721p0001.o
  .debug_ranges  0x00001338       0x78 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_Fault_active_0_8.o
- .debug_ranges  0x000013b0       0x18 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5687p0001.o
+ .debug_ranges  0x000013b0       0x18 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5730p0001.o
  .debug_ranges  0x000013c8       0x50 c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eabispe/4_4_0/bin/../lib/gcc/powerpc-eabispe/4.4.0/../../../../powerpc-eabispe/lib\libc.a(lib_a-mallocr.o)
  .debug_ranges  0x00001418       0x30 c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eabispe/4_4_0/bin/../lib/gcc/powerpc-eabispe/4.4.0/../../../../powerpc-eabispe/lib\libc.a(lib_a-__call_atexit.o)
  .debug_ranges  0x00001448       0x28 c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eabispe/4_4_0/bin/../lib/gcc/powerpc-eabispe/4.4.0/../../../../powerpc-eabispe/lib\libm.a(lib_a-s_floor.o)
@@ -5258,11 +5258,11 @@ LOAD c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eab
  .gnu.attributes
                 0x000003c0       0x14 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\TableLookupFunctions.o
  .gnu.attributes
-                0x000003d4       0x14 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5678p0001.o
+                0x000003d4       0x14 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5721p0001.o
  .gnu.attributes
                 0x000003e8       0x14 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_Fault_active_0_8.o
  .gnu.attributes
-                0x000003fc       0x14 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5687p0001.o
+                0x000003fc       0x14 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5730p0001.o
  .gnu.attributes
                 0x00000410       0x14 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\VarDecs.o
  .gnu.attributes
@@ -5539,9 +5539,9 @@ LOAD C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Moove
 LOAD C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\rt_nonfinite.o
 LOAD C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\TableDB.o
 LOAD C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\TableLookupFunctions.o
-LOAD C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5678p0001.o
+LOAD C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5721p0001.o
 LOAD C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_Fault_active_0_8.o
-LOAD C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5687p0001.o
+LOAD C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5730p0001.o
 LOAD C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\VarDecs.o
 END GROUP
 LOAD c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eabispe/4_4_0/bin/../lib/gcc/powerpc-eabispe/4.4.0\libgcc.a
@@ -5602,9 +5602,9 @@ OUTPUT(C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Moo
  .comment       0x0000034a       0x12 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\rt_nonfinite.o
  .comment       0x0000035c       0x12 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\TableDB.o
  .comment       0x0000036e       0x12 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\TableLookupFunctions.o
- .comment       0x00000380       0x12 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5678p0001.o
+ .comment       0x00000380       0x12 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5721p0001.o
  .comment       0x00000392       0x12 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_Fault_active_0_8.o
- .comment       0x000003a4       0x12 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5687p0001.o
+ .comment       0x000003a4       0x12 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5730p0001.o
  .comment       0x000003b6       0x12 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\VarDecs.o
  .comment       0x000003c8       0x12 c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eabispe/4_4_0/bin/../lib/gcc/powerpc-eabispe/4.4.0/../../../../powerpc-eabispe/lib\libc.a(lib_a-atexit.o)
  .comment       0x000003da       0x12 c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eabispe/4_4_0/bin/../lib/gcc/powerpc-eabispe/4.4.0/../../../../powerpc-eabispe/lib\libc.a(lib_a-exit.o)
@@ -5764,7 +5764,7 @@ OUTPUT(C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Moo
  .PPC.EMB.apuinfo
                 0x00000188       0x18 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\TableLookupFunctions.o
  .PPC.EMB.apuinfo
-                0x000001a0       0x1c C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5678p0001.o
+                0x000001a0       0x1c C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5721p0001.o
  .PPC.EMB.apuinfo
                 0x000001bc       0x18 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_Fault_active_0_8.o
  .PPC.EMB.apuinfo
@@ -5945,7 +5945,7 @@ ConfigureFlexCAN2Pads                             c:\program files (x86)\woodwar
                                                   c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\Controllers\SharedComponents\ControlCore\Processor\MPC55xx\Archives\MPC5554\gcc-powerpc-eabispe\4_4_0\MPC5554.a(FlexCAN2.o)
 ConstantStorage                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_DataStore.o
 ConstantWork                                      C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_DataStore.o
-                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5678p0001.o
+                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5721p0001.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\TableDB.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\FaultManager.o
@@ -6004,178 +6004,178 @@ DGIn_FreqIn_Create                                c:\program files (x86)\woodwar
 DGIn_FreqIn_GetAverage                            c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\Controllers\SharedComponents\ControlCore\DeviceDrivers\Generic\Archives\MPC5554\gcc-powerpc-eabispe\4_4_0\Generic.a(DGInput.o)
 DGIn_FreqIn_GetInstant                            c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\Controllers\SharedComponents\ControlCore\DeviceDrivers\Generic\Archives\MPC5554\gcc-powerpc-eabispe\4_4_0\Generic.a(DGInput.o)
 DGIn_FreqIn_ISR                                   c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\Controllers\SharedComponents\ControlCore\DeviceDrivers\Generic\Archives\MPC5554\gcc-powerpc-eabispe\4_4_0\Generic.a(DGInput.o)
-DOut4323p0001                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4323p0001_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4323p0001_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4362p0004                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4362p0004_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4362p0004_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-DOut4323p0001_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4323p0001_MC33800DigitalOut                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4323p0001_MC33800_Methods                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4323p0001_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4324p0001                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4324p0001_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4324p0001_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4362p0004_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4362p0004_MC33800DigitalOut                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4362p0004_MC33800_Methods                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4362p0004_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4363p0004                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4363p0004_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4363p0004_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-DOut4324p0001_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4324p0001_MC33800DigitalOut                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4324p0001_MC33800_Methods                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4324p0001_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4325p0001                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4325p0001_CPUDigitalOut                       C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4325p0001_CPUOut_Methods                      C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4325p0001_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4325p0001_DiscreteOutput_Get                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4325p0001_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4363p0004_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4363p0004_MC33800DigitalOut                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4363p0004_MC33800_Methods                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4363p0004_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4364p0004                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4364p0004_CPUDigitalOut                       C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4364p0004_CPUOut_Methods                      C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4364p0004_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4364p0004_DiscreteOutput_Get                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4364p0004_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-DOut4325p0001_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4325p0001_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4326p0001                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4326p0001_CPUDigitalOut                       C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4326p0001_CPUOut_Methods                      C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4326p0001_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4326p0001_DiscreteOutput_Get                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4326p0001_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4364p0004_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4364p0004_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4365p0004                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4365p0004_CPUDigitalOut                       C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4365p0004_CPUOut_Methods                      C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4365p0004_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4365p0004_DiscreteOutput_Get                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4365p0004_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-DOut4326p0001_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4326p0001_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4327p0001                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4327p0001_CPUDigitalOut                       C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4327p0001_CPUOut_Methods                      C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4327p0001_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4327p0001_DiscreteOutput_Get                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4327p0001_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4365p0004_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4365p0004_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4366p0004                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4366p0004_CPUDigitalOut                       C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4366p0004_CPUOut_Methods                      C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4366p0004_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4366p0004_DiscreteOutput_Get                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4366p0004_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-DOut4327p0001_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4327p0001_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4328p0001                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4328p0001_CPUDigitalOut                       C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4328p0001_CPUOut_Methods                      C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4328p0001_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4328p0001_DiscreteOutput_Get                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4328p0001_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4366p0004_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4366p0004_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4367p0004                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4367p0004_CPUDigitalOut                       C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4367p0004_CPUOut_Methods                      C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4367p0004_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4367p0004_DiscreteOutput_Get                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4367p0004_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-DOut4328p0001_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4328p0001_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4329p0001                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4329p0001_CPUDigitalOut                       C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4329p0001_CPUOut_Methods                      C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4329p0001_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4329p0001_DiscreteOutput_Get                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4329p0001_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4367p0004_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4367p0004_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4368p0004                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4368p0004_CPUDigitalOut                       C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4368p0004_CPUOut_Methods                      C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4368p0004_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4368p0004_DiscreteOutput_Get                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4368p0004_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-DOut4329p0001_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4329p0001_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4330p0001                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4330p0001_CPUDigitalOut                       C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4330p0001_CPUOut_Methods                      C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4330p0001_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4330p0001_DiscreteOutput_Get                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4330p0001_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4368p0004_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4368p0004_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4369p0004                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4369p0004_CPUDigitalOut                       C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4369p0004_CPUOut_Methods                      C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4369p0004_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4369p0004_DiscreteOutput_Get                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4369p0004_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-DOut4330p0001_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4330p0001_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4331p0001                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4331p0001_CPUDigitalOut                       C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4331p0001_CPUOut_Methods                      C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4331p0001_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4331p0001_DiscreteOutput_Get                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4331p0001_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4369p0004_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4369p0004_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4370p0004                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4370p0004_CPUDigitalOut                       C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4370p0004_CPUOut_Methods                      C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4370p0004_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4370p0004_DiscreteOutput_Get                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4370p0004_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-DOut4331p0001_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4331p0001_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4332p0001                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4332p0001_CPUDigitalOut                       C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4332p0001_CPUOut_Methods                      C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4332p0001_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4332p0001_DiscreteOutput_Get                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4332p0001_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4370p0004_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4370p0004_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4371p0004                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4371p0004_CPUDigitalOut                       C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4371p0004_CPUOut_Methods                      C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4371p0004_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4371p0004_DiscreteOutput_Get                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4371p0004_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-DOut4332p0001_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4332p0001_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4333p0001                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4333p0001_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4333p0001_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4371p0004_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4371p0004_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4372p0004                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4372p0004_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4372p0004_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-DOut4333p0001_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4333p0001_MC33800DigitalOut                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4333p0001_MC33800_Methods                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4333p0001_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4334p0001                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4334p0001_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4334p0001_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4372p0004_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4372p0004_MC33800DigitalOut                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4372p0004_MC33800_Methods                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4372p0004_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4373p0004                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4373p0004_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4373p0004_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-DOut4334p0001_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4334p0001_MC33800DigitalOut                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4334p0001_MC33800_Methods                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4334p0001_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4335p0001                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4335p0001_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4335p0001_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4373p0004_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4373p0004_MC33800DigitalOut                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4373p0004_MC33800_Methods                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4373p0004_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4374p0004                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4374p0004_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4374p0004_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-DOut4335p0001_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4335p0001_MC33800DigitalOut                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4335p0001_MC33800_Methods                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4335p0001_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4561p0001                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4561p0001_CPUDigitalOut                       C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4561p0001_CPUOut_Methods                      C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4561p0001_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4561p0001_DiscreteOutput_Get                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4561p0001_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4374p0004_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4374p0004_MC33800DigitalOut                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4374p0004_MC33800_Methods                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4374p0004_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4600p0004                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4600p0004_CPUDigitalOut                       C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4600p0004_CPUOut_Methods                      C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4600p0004_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4600p0004_DiscreteOutput_Get                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4600p0004_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-DOut4561p0001_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4561p0001_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4562p0001                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4562p0001_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4562p0001_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4600p0004_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4600p0004_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4601p0004                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4601p0004_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4601p0004_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-DOut4562p0001_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4562p0001_MC33800DigitalOut                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4562p0001_MC33800_Methods                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4562p0001_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4563p0001                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4563p0001_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4563p0001_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4601p0004_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4601p0004_MC33800DigitalOut                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4601p0004_MC33800_Methods                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4601p0004_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4602p0004                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4602p0004_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4602p0004_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-DOut4563p0001_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4563p0001_MC33800DigitalOut                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4563p0001_MC33800_Methods                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4563p0001_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4564p0001                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4564p0001_CPUDigitalOut                       C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4564p0001_CPUOut_Methods                      C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4564p0001_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4564p0001_DiscreteOutput_Get                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4564p0001_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4602p0004_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4602p0004_MC33800DigitalOut                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4602p0004_MC33800_Methods                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4602p0004_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4603p0004                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4603p0004_CPUDigitalOut                       C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4603p0004_CPUOut_Methods                      C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4603p0004_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4603p0004_DiscreteOutput_Get                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4603p0004_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-DOut4564p0001_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4564p0001_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4565p0001                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4565p0001_CPUDigitalOut                       C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4565p0001_CPUOut_Methods                      C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4565p0001_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4565p0001_DiscreteOutput_Get                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4565p0001_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4603p0004_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4603p0004_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4604p0004                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4604p0004_CPUDigitalOut                       C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4604p0004_CPUOut_Methods                      C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4604p0004_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4604p0004_DiscreteOutput_Get                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4604p0004_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-DOut4565p0001_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4565p0001_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4566p0001                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4566p0001_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4566p0001_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4604p0004_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4604p0004_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4605p0004                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4605p0004_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4605p0004_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-DOut4566p0001_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4566p0001_MC33800DigitalOut                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4566p0001_MC33800_Methods                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut4566p0001_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut5628p0004                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut5628p0004_CPUDigitalOut                       C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut5628p0004_CPUOut_Methods                      C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut5628p0004_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut5628p0004_DiscreteOutput_Get                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut5628p0004_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5678p0001.o
-DOut5628p0004_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-DOut5628p0004_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4605p0004_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4605p0004_MC33800DigitalOut                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4605p0004_MC33800_Methods                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut4605p0004_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut5671p0001                                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut5671p0001_CPUDigitalOut                       C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut5671p0001_CPUOut_Methods                      C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut5671p0001_DiscreteOutput_Create               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut5671p0001_DiscreteOutput_Get                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut5671p0001_DiscreteOutput_Set                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5721p0001.o
+DOut5671p0001_DiscreteOutput_Stop                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
+DOut5671p0001_State                               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
 DRVP_AnalogInput_Get                              C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
 DRVP_Create                                       C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
@@ -6204,7 +6204,7 @@ ECSM_IRQHandler                                   c:\program files (x86)\woodwar
                                                   c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\Controllers\SharedComponents\ControlCore\Processor\MPC55xx\Archives\MPC5554\gcc-powerpc-eabispe\4_4_0\MPC5554.a(Exceptions.o)
 ECSM_SetFault                                     c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\Controllers\SharedComponents\ControlCore\Processor\MPC55xx\Archives\MPC5554\gcc-powerpc-eabispe\4_4_0\MPC5554.a(ECSM.o)
 ECUP_AnalogInput_Get                              C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
-                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5678p0001.o
+                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5721p0001.o
 EEPROM_1                                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
 EEPROM_1SPIDevice                                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
 EEPROM_1SPIDeviceAttrib                           C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
@@ -6727,7 +6727,7 @@ MC_Services_CRC32_Perform_Sync                    C:\Users\HYBRID\Documents\GitH
 MC_Services_CRC32_ReturnValue                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_Services_CRC.o
 MC_Services_CRC32_Verify                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_Services_CRC.o
 MH_CodeCovered                                    C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\CodeCoverage.o
-                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5678p0001.o
+                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5721p0001.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
 MMU_Open                                          c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\Controllers\SharedComponents\ControlCore\Processor\MPC55xx\Archives\MPC5554\gcc-powerpc-eabispe\4_4_0\MPC5554.a(MMU.o)
                                                   c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\Controllers\SharedComponents\ControlCore\Processor\MPC55xx\Archives\MPC5554\gcc-powerpc-eabispe\4_4_0\MPC5554.a(Entry.o)
@@ -6816,7 +6816,7 @@ ModuleSupport_PowerSupply_Create                  c:\program files (x86)\woodwar
 ModuleSupport_PowerSupply_Shutdown                c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\Controllers\SharedComponents\ControlCore\ModuleSupport\PCM09xx\Archives\MPC5554\gcc-powerpc-eabispe\4_4_0\DV_Pcm0904_Cal.a(ModuleSupport_PowerSupply.o)
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder.o
 ModuleSupport_Reset                               c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\Controllers\SharedComponents\ControlCore\ModuleSupport\PCM09xx\Archives\MPC5554\gcc-powerpc-eabispe\4_4_0\DV_Pcm0904_Cal.a(ModuleSupport_Reset.o)
-                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5678p0001.o
+                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5721p0001.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder.o
                                                   c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\Controllers\SharedComponents\ControlCore\Processor\MPC55xx\Archives\MPC5554\gcc-powerpc-eabispe\4_4_0\MPC5554.a(ECSM.o)
 ModuleSupport_Watchdog_MPC555x_TCR_WRC_Get        c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\Controllers\SharedComponents\ControlCore\ModuleSupport\PCM09xx\Archives\MPC5554\gcc-powerpc-eabispe\4_4_0\DV_Pcm0904_Cal.a(ModuleSupport_PowerSupply.o)
@@ -6827,7 +6827,7 @@ ModuleSupport_Watchdog_Reset                      c:\program files (x86)\woodwar
                                                   c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\Controllers\SharedComponents\ControlCore\ModuleSupport\PCM09xx\Archives\MPC5554\gcc-powerpc-eabispe\4_4_0\DV_Pcm0904_Cal.a(ModuleSupport_Reset.o)
 ModuleSupprtReg_Memory_UnsupportedWriteSynch      c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\Controllers\SharedComponents\ControlCore\ModuleSupport\PCM09xx\Archives\MPC5554\gcc-powerpc-eabispe\4_4_0\DV_Pcm0904_Cal.a(ModuleSupportRegister.o)
 Module_Shutdown                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder.o
-                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5678p0001.o
+                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5721p0001.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_KeySuite.o
 Mooventure2016_Rev5_B                             C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_Fault_active_0_8.o
@@ -6839,11 +6839,11 @@ Mooventure2016_Rev5_Chart_Init                    C:\Users\HYBRID\Documents\GitH
 Mooventure2016_Rev5_ConstB                        C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_data.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
 Mooventure2016_Rev5_DWork                         C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5.o
-                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5678p0001.o
+                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5721p0001.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
 Mooventure2016_Rev5_DataCorrectionMotorFault      C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
 Mooventure2016_Rev5_Foreground                    C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5687p0001.o
+                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5730p0001.o
 Mooventure2016_Rev5_Foreground_Disable            C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
 Mooventure2016_Rev5_Foreground_Enable             C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
 Mooventure2016_Rev5_Foreground_Init               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
@@ -6853,13 +6853,13 @@ Mooventure2016_Rev5_Foreground_Start              C:\Users\HYBRID\Documents\GitH
 Mooventure2016_Rev5_GasPedalScaling               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
 Mooventure2016_Rev5_HeaterCoreMotionControl       C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
 Mooventure2016_Rev5_M                             C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5.o
-                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5687p0001.o
+                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5730p0001.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_Fault_active_0_8.o
-                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5678p0001.o
+                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5721p0001.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
 Mooventure2016_Rev5_M_                            C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5.o
 Mooventure2016_Rev5_PrevZCSigState                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5.o
-                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5678p0001.o
+                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5721p0001.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
 Mooventure2016_Rev5_initialize                    C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Application.o
@@ -6932,14 +6932,14 @@ NonVolatile_NonVolatileCRC                        C:\Users\HYBRID\Documents\GitH
 NonVolatile_NonVolatileStatus                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_DataStore.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\TableDB.o
 NonVolatile_NonVolatileStatus_Reset               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_DataStore.o
-                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5678p0001.o
+                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5721p0001.o
 NonVolatile_OpenDataStore                         C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_DataStore.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder.o
 NonVolatile_OpenNonVolatile                       C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_DataStore.o
 NonVolatile_RestoreDefaultNonVolatile             C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_DataStore.o
-                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5678p0001.o
+                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5721p0001.o
 NonVolatile_StoreNonVolatile                      C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_DataStore.o
-                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5678p0001.o
+                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5721p0001.o
 NullFault                                         C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\FaultManager.o
 ODRC                                              C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
 ODRC_CPUDigitalOut                                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_IO.o
@@ -6972,94 +6972,94 @@ Reboot_ControlCore                                c:\program files (x86)\woodwar
 RefreshFaultActionReferenceCounts                 C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\FaultManager.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Application.o
 ResetFaultXY                                      C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\FaultManager.o
-RxSlot_10273p001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3064p0002_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-RxSlot_10273p001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_10273p001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3053p0002_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3064p0002_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3064p0002_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3065p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-RxSlot_3053p0002_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3053p0002_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3054p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3065p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3065p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3066p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-RxSlot_3054p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3054p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3055p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3066p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3066p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3262p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-RxSlot_3055p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3055p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3251p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3262p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3262p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3263p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-RxSlot_3251p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3251p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3252p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3263p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3263p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3264p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-RxSlot_3252p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3252p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3253p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3264p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3264p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3265p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-RxSlot_3253p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3253p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3254p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3265p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3265p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3266p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-RxSlot_3254p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3254p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3255p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3266p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3266p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3267p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-RxSlot_3255p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3255p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3256p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3267p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3267p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3268p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-RxSlot_3256p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3256p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3257p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3268p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3268p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3478p0004_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-RxSlot_3257p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3257p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3669p0004_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3478p0004_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3478p0004_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3697p0004_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-RxSlot_3669p0004_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3669p0004_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3670p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3697p0004_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3697p0004_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3698p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-RxSlot_3670p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3670p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3671p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3698p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3698p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3699p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-RxSlot_3671p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3671p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3672p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3699p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3699p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3700p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-RxSlot_3672p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3672p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3729p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3700p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3700p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3757p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-RxSlot_3729p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3729p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3808p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3757p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3757p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3836p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-RxSlot_3808p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3808p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3858p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3836p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3836p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3886p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-RxSlot_3858p0001_ReceiveQueue                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3858p0001_ReceiveQueueFrames               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3859p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3886p0001_ReceiveQueue                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3886p0001_ReceiveQueueFrames               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3887p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-RxSlot_3859p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3859p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3860p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3887p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3887p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3888p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-RxSlot_3860p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3860p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3861p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3888p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3888p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3889p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-RxSlot_3861p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_3861p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_4019p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3889p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_3889p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_4047p0001_Receive                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
-RxSlot_4019p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
-RxSlot_4019p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_4047p0001_ReceiveFrame                     C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
+RxSlot_4047p0001_ReceiveFrameValid                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_CAN.o
 SCI_BaudRate_Get                                  c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\Controllers\SharedComponents\ControlCore\Processor\MPC55xx\Archives\MPC5554\gcc-powerpc-eabispe\4_4_0\MPC5554.a(eSCI.o)
 SCI_BaudRate_Set                                  c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\Controllers\SharedComponents\ControlCore\Processor\MPC55xx\Archives\MPC5554\gcc-powerpc-eabispe\4_4_0\MPC5554.a(eSCI.o)
 SCI_CombinedISR                                   c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\Controllers\SharedComponents\ControlCore\Processor\MPC55xx\Archives\MPC5554\gcc-powerpc-eabispe\4_4_0\MPC5554.a(eSCI.o)
@@ -7095,7 +7095,7 @@ SCI_eDMA_TxOpen                                   c:\program files (x86)\woodwar
 SCI_eDMA_TxQueueDepth_Get                         c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\Controllers\SharedComponents\ControlCore\Processor\MPC55xx\Archives\MPC5554\gcc-powerpc-eabispe\4_4_0\MPC5554.a(eSCI_eDMA.o)
 SCI_eDMA_TxQueue_Purge                            c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\Controllers\SharedComponents\ControlCore\Processor\MPC55xx\Archives\MPC5554\gcc-powerpc-eabispe\4_4_0\MPC5554.a(eSCI_eDMA.o)
 SHUTDOWNTask_PostEvent                            C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder.o
-                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5678p0001.o
+                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5721p0001.o
 SHUTDOWNTask_SendEvent                            C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder.o
 SIU_Open                                          c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\Controllers\SharedComponents\ControlCore\Processor\MPC55xx\Archives\MPC5554\gcc-powerpc-eabispe\4_4_0\MPC5554.a(SIU.o)
                                                   c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\Controllers\SharedComponents\ControlCore\Processor\MPC55xx\Archives\MPC5554\gcc-powerpc-eabispe\4_4_0\MPC5554.a(OsMain.o)
@@ -7312,9 +7312,9 @@ Timer_FreeRunningCounter_GetRawTicksFromTime      C:\Users\HYBRID\Documents\GitH
 Timer_FreeRunningCounter_GetTicksFromTime         c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\Controllers\SharedComponents\ControlCore\Processor\MPC55xx\Archives\MPC5554\gcc-powerpc-eabispe\4_4_0\MPC5554.a(Timer_CPU.o)
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder.o
 Timer_FreeRunningCounter_GetTime                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder.o
-                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5687p0001.o
+                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5730p0001.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_Fault_active_0_8.o
-                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5678p0001.o
+                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5721p0001.o
 Timer_FreeRunningCounter_GetTimeFromTicks         c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\Controllers\SharedComponents\ControlCore\Processor\MPC55xx\Archives\MPC5554\gcc-powerpc-eabispe\4_4_0\MPC5554.a(Timer_CPU.o)
 Timer_FreeRunningCounter_ResetTime                C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder.o
 Timer_Open                                        c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\Controllers\SharedComponents\ControlCore\Processor\MPC55xx\Archives\MPC5554\gcc-powerpc-eabispe\4_4_0\MPC5554.a(Timer_CPU.o)
@@ -7328,9 +7328,9 @@ Timer_Watchdog_ResetStarvation                    c:\program files (x86)\woodwar
 Timer_Watchdog_Starvation_Get                     c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\Controllers\SharedComponents\ControlCore\Processor\MPC55xx\Archives\MPC5554\gcc-powerpc-eabispe\4_4_0\MPC5554.a(Timer_CPU.o)
 Timer_Watchdog_Starvation_IsExpired               c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\Controllers\SharedComponents\ControlCore\Processor\MPC55xx\Archives\MPC5554\gcc-powerpc-eabispe\4_4_0\MPC5554.a(Timer_CPU.o)
                                                   c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\Controllers\SharedComponents\ControlCore\DeviceDrivers\Generic\Archives\MPC5554\gcc-powerpc-eabispe\4_4_0\Generic.a(TLE7368.o)
-Trigger_BGND_BASE_PERIODIC_5678p0001              C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5678p0001.o
+Trigger_BGND_BASE_PERIODIC_5721p0001              C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5721p0001.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder.o
-Trigger_FGND_RTI_PERIODIC_5687p0001               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5687p0001.o
+Trigger_FGND_RTI_PERIODIC_5730p0001               C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_FGND_RTI_PERIODIC_5730p0001.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder.o
 Trigger_Fault_active_0_8                          C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_Fault_active_0_8.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\FaultManager.o
@@ -7483,7 +7483,7 @@ VolatileWork                                      C:\Users\HYBRID\Documents\GitH
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\FaultManager.o
 VolatileWork_BSS                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\MotoCoder_DataStore.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_Fault_active_0_8.o
-                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5678p0001.o
+                                                  C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Trigger_BGND_BASE_PERIODIC_5721p0001.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\TableDB.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\Mooventure2016_Rev5_Foreground.o
                                                   C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Obj\FaultManager.o

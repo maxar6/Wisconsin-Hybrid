@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'Mooventure2016_Rev5'.
  *
- * Model version                  : 1.2067
+ * Model version                  : 1.2069
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Sat Apr 07 15:01:22 2018
+ * C/C++ source code generated on : Sun Apr 08 00:47:19 2018
  *
  * Target selection: motohawk_motocoder_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -1294,9 +1294,9 @@ void Mooventure2016_Rev5_Foreground(void)
     uint8_T msg_data[8];
     uint32_T msg_id;
     boolean_T msg_valid;
-    extern boolean_T RxSlot_3860p0001_Receive(boolean_T *extended, uint32_T *id,
+    extern boolean_T RxSlot_3888p0001_Receive(boolean_T *extended, uint32_T *id,
       uint8_T *length, uint8_T data[]);
-    msg_valid = RxSlot_3860p0001_Receive(0, &msg_id, 0, msg_data);
+    msg_valid = RxSlot_3888p0001_Receive(0, &msg_id, 0, msg_data);
     if ((Mooventure2016_Rev5_B.s177_AgeCount + 1) >
         Mooventure2016_Rev5_B.s177_AgeCount)
       Mooventure2016_Rev5_B.s177_AgeCount++;
@@ -1829,9 +1829,9 @@ void Mooventure2016_Rev5_Foreground(void)
     uint8_T msg_data[8];
     uint32_T msg_id;
     boolean_T msg_valid;
-    extern boolean_T RxSlot_3669p0004_Receive(boolean_T *extended, uint32_T *id,
+    extern boolean_T RxSlot_3697p0004_Receive(boolean_T *extended, uint32_T *id,
       uint8_T *length, uint8_T data[]);
-    msg_valid = RxSlot_3669p0004_Receive(0, &msg_id, 0, msg_data);
+    msg_valid = RxSlot_3697p0004_Receive(0, &msg_id, 0, msg_data);
     if ((Mooventure2016_Rev5_B.s174_AgeCount + 1) >
         Mooventure2016_Rev5_B.s174_AgeCount)
       Mooventure2016_Rev5_B.s174_AgeCount++;
@@ -2029,9 +2029,9 @@ void Mooventure2016_Rev5_Foreground(void)
     uint8_T msg_data[8];
     uint32_T msg_id;
     boolean_T msg_valid;
-    extern boolean_T RxSlot_3670p0001_Receive(boolean_T *extended, uint32_T *id,
+    extern boolean_T RxSlot_3698p0001_Receive(boolean_T *extended, uint32_T *id,
       uint8_T *length, uint8_T data[]);
-    msg_valid = RxSlot_3670p0001_Receive(0, &msg_id, 0, msg_data);
+    msg_valid = RxSlot_3698p0001_Receive(0, &msg_id, 0, msg_data);
     if ((Mooventure2016_Rev5_B.s174_AgeCount_j + 1) >
         Mooventure2016_Rev5_B.s174_AgeCount_j)
       Mooventure2016_Rev5_B.s174_AgeCount_j++;
@@ -2050,9 +2050,9 @@ void Mooventure2016_Rev5_Foreground(void)
     uint8_T msg_data[8];
     uint32_T msg_id;
     boolean_T msg_valid;
-    extern boolean_T RxSlot_3251p0001_Receive(boolean_T *extended, uint32_T *id,
+    extern boolean_T RxSlot_3262p0001_Receive(boolean_T *extended, uint32_T *id,
       uint8_T *length, uint8_T data[]);
-    msg_valid = RxSlot_3251p0001_Receive(0, &msg_id, 0, msg_data);
+    msg_valid = RxSlot_3262p0001_Receive(0, &msg_id, 0, msg_data);
     if ((Mooventure2016_Rev5_B.s170_AgeCount + 1) >
         Mooventure2016_Rev5_B.s170_AgeCount)
       Mooventure2016_Rev5_B.s170_AgeCount++;
@@ -3226,9 +3226,9 @@ void Mooventure2016_Rev5_Foreground(void)
     uint8_T msg_data[8];
     uint32_T msg_id;
     boolean_T msg_valid;
-    extern boolean_T RxSlot_3254p0001_Receive(boolean_T *extended, uint32_T *id,
+    extern boolean_T RxSlot_3265p0001_Receive(boolean_T *extended, uint32_T *id,
       uint8_T *length, uint8_T data[]);
-    msg_valid = RxSlot_3254p0001_Receive(0, &msg_id, 0, msg_data);
+    msg_valid = RxSlot_3265p0001_Receive(0, &msg_id, 0, msg_data);
     if (msg_valid) {
       uint16_T tmp0 = 0;
       uint16_T tmp1 = 0;
@@ -3574,9 +3574,9 @@ void Mooventure2016_Rev5_Foreground(void)
     uint8_T msg_data[8];
     uint32_T msg_id;
     boolean_T msg_valid;
-    extern boolean_T RxSlot_10273p001_Receive(boolean_T *extended, uint32_T *id,
+    extern boolean_T RxSlot_3478p0004_Receive(boolean_T *extended, uint32_T *id,
       uint8_T *length, uint8_T data[]);
-    msg_valid = RxSlot_10273p001_Receive(0, &msg_id, 0, msg_data);
+    msg_valid = RxSlot_3478p0004_Receive(0, &msg_id, 0, msg_data);
     if (msg_valid) {
       uint8_T tmp0 = 0;
       uint8_T tmp1 = 0;
@@ -3795,9 +3795,9 @@ void Mooventure2016_Rev5_Foreground(void)
     uint8_T msg_data[8];
     uint32_T msg_id;
     boolean_T msg_valid;
-    extern boolean_T RxSlot_3729p0001_Receive(boolean_T *extended, uint32_T *id,
+    extern boolean_T RxSlot_3757p0001_Receive(boolean_T *extended, uint32_T *id,
       uint8_T *length, uint8_T data[]);
-    msg_valid = RxSlot_3729p0001_Receive(0, &msg_id, 0, msg_data);
+    msg_valid = RxSlot_3757p0001_Receive(0, &msg_id, 0, msg_data);
     if ((Mooventure2016_Rev5_B.s175_AgeCount + 1) >
         Mooventure2016_Rev5_B.s175_AgeCount)
       Mooventure2016_Rev5_B.s175_AgeCount++;
@@ -3890,9 +3890,9 @@ void Mooventure2016_Rev5_Foreground(void)
     uint8_T msg_data[8];
     uint32_T msg_id;
     boolean_T msg_valid;
-    extern boolean_T RxSlot_3858p0001_Receive(boolean_T *extended, uint32_T *id,
+    extern boolean_T RxSlot_3886p0001_Receive(boolean_T *extended, uint32_T *id,
       uint8_T *length, uint8_T data[]);
-    msg_valid = RxSlot_3858p0001_Receive(0, &msg_id, 0, msg_data);
+    msg_valid = RxSlot_3886p0001_Receive(0, &msg_id, 0, msg_data);
     if ((Mooventure2016_Rev5_B.s177_AgeCount_m + 1) >
         Mooventure2016_Rev5_B.s177_AgeCount_m)
       Mooventure2016_Rev5_B.s177_AgeCount_m++;
@@ -3950,9 +3950,9 @@ void Mooventure2016_Rev5_Foreground(void)
     uint8_T msg_data[8];
     uint32_T msg_id;
     boolean_T msg_valid;
-    extern boolean_T RxSlot_3255p0001_Receive(boolean_T *extended, uint32_T *id,
+    extern boolean_T RxSlot_3266p0001_Receive(boolean_T *extended, uint32_T *id,
       uint8_T *length, uint8_T data[]);
-    msg_valid = RxSlot_3255p0001_Receive(0, &msg_id, 0, msg_data);
+    msg_valid = RxSlot_3266p0001_Receive(0, &msg_id, 0, msg_data);
     if (msg_valid) {
       uint16_T tmp0 = 0;
       uint16_T tmp1 = 0;
@@ -4038,9 +4038,9 @@ void Mooventure2016_Rev5_Foreground(void)
     uint8_T msg_data[8];
     uint32_T msg_id;
     boolean_T msg_valid;
-    extern boolean_T RxSlot_3672p0001_Receive(boolean_T *extended, uint32_T *id,
+    extern boolean_T RxSlot_3700p0001_Receive(boolean_T *extended, uint32_T *id,
       uint8_T *length, uint8_T data[]);
-    msg_valid = RxSlot_3672p0001_Receive(0, &msg_id, 0, msg_data);
+    msg_valid = RxSlot_3700p0001_Receive(0, &msg_id, 0, msg_data);
     if (msg_valid) {
       uint8_T tmp0 = 0;
       uint8_T tmp1 = 0;
@@ -4676,9 +4676,9 @@ void Mooventure2016_Rev5_Foreground(void)
     uint8_T msg_data[8];
     uint32_T msg_id;
     boolean_T msg_valid;
-    extern boolean_T RxSlot_3808p0001_Receive(boolean_T *extended, uint32_T *id,
+    extern boolean_T RxSlot_3836p0001_Receive(boolean_T *extended, uint32_T *id,
       uint8_T *length, uint8_T data[]);
-    msg_valid = RxSlot_3808p0001_Receive(0, &msg_id, 0, msg_data);
+    msg_valid = RxSlot_3836p0001_Receive(0, &msg_id, 0, msg_data);
     if (msg_valid) {
       uint16_T tmp0 = 0;
       uint8_T tmp1 = 0;
@@ -9158,9 +9158,9 @@ void Mooventure2016_Rev5_Foreground(void)
     uint8_T msg_data[8];
     uint32_T msg_id;
     boolean_T msg_valid;
-    extern boolean_T RxSlot_3256p0001_Receive(boolean_T *extended, uint32_T *id,
+    extern boolean_T RxSlot_3267p0001_Receive(boolean_T *extended, uint32_T *id,
       uint8_T *length, uint8_T data[]);
-    msg_valid = RxSlot_3256p0001_Receive(0, &msg_id, 0, msg_data);
+    msg_valid = RxSlot_3267p0001_Receive(0, &msg_id, 0, msg_data);
     if (msg_valid) {
       uint16_T tmp0 = 0;
       uint16_T tmp1 = 0;
@@ -12590,9 +12590,9 @@ void Mooventure2016_Rev5_Foreground(void)
     uint8_T msg_data[8];
     uint32_T msg_id;
     boolean_T msg_valid;
-    extern boolean_T RxSlot_3252p0001_Receive(boolean_T *extended, uint32_T *id,
+    extern boolean_T RxSlot_3263p0001_Receive(boolean_T *extended, uint32_T *id,
       uint8_T *length, uint8_T data[]);
-    msg_valid = RxSlot_3252p0001_Receive(0, &msg_id, 0, msg_data);
+    msg_valid = RxSlot_3263p0001_Receive(0, &msg_id, 0, msg_data);
     if (msg_valid) {
       uint16_T tmp0 = 0;
       uint16_T tmp1 = 0;
@@ -13013,9 +13013,9 @@ void Mooventure2016_Rev5_Foreground(void)
     uint8_T msg_data[8];
     uint32_T msg_id;
     boolean_T msg_valid;
-    extern boolean_T RxSlot_3671p0001_Receive(boolean_T *extended, uint32_T *id,
+    extern boolean_T RxSlot_3699p0001_Receive(boolean_T *extended, uint32_T *id,
       uint8_T *length, uint8_T data[]);
-    msg_valid = RxSlot_3671p0001_Receive(0, &msg_id, 0, msg_data);
+    msg_valid = RxSlot_3699p0001_Receive(0, &msg_id, 0, msg_data);
     if (msg_valid) {
       uint8_T tmp0 = 0;
       ((uint8_T *)(&tmp0))[0] = ((msg_data[4])) ;
@@ -13034,9 +13034,9 @@ void Mooventure2016_Rev5_Foreground(void)
     uint8_T msg_data[8];
     uint32_T msg_id;
     boolean_T msg_valid;
-    extern boolean_T RxSlot_3859p0001_Receive(boolean_T *extended, uint32_T *id,
+    extern boolean_T RxSlot_3887p0001_Receive(boolean_T *extended, uint32_T *id,
       uint8_T *length, uint8_T data[]);
-    msg_valid = RxSlot_3859p0001_Receive(0, &msg_id, 0, msg_data);
+    msg_valid = RxSlot_3887p0001_Receive(0, &msg_id, 0, msg_data);
     if ((Mooventure2016_Rev5_B.s177_AgeCount_j + 1) >
         Mooventure2016_Rev5_B.s177_AgeCount_j)
       Mooventure2016_Rev5_B.s177_AgeCount_j++;
@@ -13076,9 +13076,9 @@ void Mooventure2016_Rev5_Foreground(void)
     uint8_T msg_data[8];
     uint32_T msg_id;
     boolean_T msg_valid;
-    extern boolean_T RxSlot_3861p0001_Receive(boolean_T *extended, uint32_T *id,
+    extern boolean_T RxSlot_3889p0001_Receive(boolean_T *extended, uint32_T *id,
       uint8_T *length, uint8_T data[]);
-    msg_valid = RxSlot_3861p0001_Receive(0, &msg_id, 0, msg_data);
+    msg_valid = RxSlot_3889p0001_Receive(0, &msg_id, 0, msg_data);
     if ((Mooventure2016_Rev5_B.s177_AgeCount_o + 1) >
         Mooventure2016_Rev5_B.s177_AgeCount_o)
       Mooventure2016_Rev5_B.s177_AgeCount_o++;
@@ -13112,9 +13112,9 @@ void Mooventure2016_Rev5_Foreground(void)
     uint8_T msg_data[8];
     uint32_T msg_id;
     boolean_T msg_valid;
-    extern boolean_T RxSlot_3257p0001_Receive(boolean_T *extended, uint32_T *id,
+    extern boolean_T RxSlot_3268p0001_Receive(boolean_T *extended, uint32_T *id,
       uint8_T *length, uint8_T data[]);
-    msg_valid = RxSlot_3257p0001_Receive(0, &msg_id, 0, msg_data);
+    msg_valid = RxSlot_3268p0001_Receive(0, &msg_id, 0, msg_data);
     if (msg_valid) {
       uint32_T tmp0 = 0;
       uint8_T tmp1 = 0;
@@ -13135,9 +13135,9 @@ void Mooventure2016_Rev5_Foreground(void)
     uint8_T msg_data[8];
     uint32_T msg_id;
     boolean_T msg_valid;
-    extern boolean_T RxSlot_3253p0001_Receive(boolean_T *extended, uint32_T *id,
+    extern boolean_T RxSlot_3264p0001_Receive(boolean_T *extended, uint32_T *id,
       uint8_T *length, uint8_T data[]);
-    msg_valid = RxSlot_3253p0001_Receive(0, &msg_id, 0, msg_data);
+    msg_valid = RxSlot_3264p0001_Receive(0, &msg_id, 0, msg_data);
     if (msg_valid) {
       uint16_T tmp0 = 0;
       uint16_T tmp1 = 0;
@@ -13161,9 +13161,9 @@ void Mooventure2016_Rev5_Foreground(void)
     uint8_T msg_data[8];
     uint32_T msg_id;
     boolean_T msg_valid;
-    extern boolean_T RxSlot_3053p0002_Receive(boolean_T *extended, uint32_T *id,
+    extern boolean_T RxSlot_3064p0002_Receive(boolean_T *extended, uint32_T *id,
       uint8_T *length, uint8_T data[]);
-    msg_valid = RxSlot_3053p0002_Receive(0, &msg_id, 0, msg_data);
+    msg_valid = RxSlot_3064p0002_Receive(0, &msg_id, 0, msg_data);
     if ((Mooventure2016_Rev5_B.s168_AgeCount + 1) >
         Mooventure2016_Rev5_B.s168_AgeCount)
       Mooventure2016_Rev5_B.s168_AgeCount++;
@@ -13222,9 +13222,9 @@ void Mooventure2016_Rev5_Foreground(void)
     uint8_T msg_data[8];
     uint32_T msg_id;
     boolean_T msg_valid;
-    extern boolean_T RxSlot_3055p0001_Receive(boolean_T *extended, uint32_T *id,
+    extern boolean_T RxSlot_3066p0001_Receive(boolean_T *extended, uint32_T *id,
       uint8_T *length, uint8_T data[]);
-    msg_valid = RxSlot_3055p0001_Receive(0, &msg_id, 0, msg_data);
+    msg_valid = RxSlot_3066p0001_Receive(0, &msg_id, 0, msg_data);
     if ((Mooventure2016_Rev5_B.s168_AgeCount_e + 1) >
         Mooventure2016_Rev5_B.s168_AgeCount_e)
       Mooventure2016_Rev5_B.s168_AgeCount_e++;
@@ -13374,9 +13374,9 @@ void Mooventure2016_Rev5_Foreground(void)
     uint8_T msg_data[8];
     uint32_T msg_id;
     boolean_T msg_valid;
-    extern boolean_T RxSlot_3054p0001_Receive(boolean_T *extended, uint32_T *id,
+    extern boolean_T RxSlot_3065p0001_Receive(boolean_T *extended, uint32_T *id,
       uint8_T *length, uint8_T data[]);
-    msg_valid = RxSlot_3054p0001_Receive(0, &msg_id, 0, msg_data);
+    msg_valid = RxSlot_3065p0001_Receive(0, &msg_id, 0, msg_data);
     if ((Mooventure2016_Rev5_B.s168_AgeCount_n + 1) >
         Mooventure2016_Rev5_B.s168_AgeCount_n)
       Mooventure2016_Rev5_B.s168_AgeCount_n++;
@@ -13866,9 +13866,9 @@ void Mooventure2016_Rev5_Foreground(void)
     uint8_T msg_data[8];
     uint32_T msg_id;
     boolean_T msg_valid;
-    extern boolean_T RxSlot_4019p0001_Receive(boolean_T *extended, uint32_T *id,
+    extern boolean_T RxSlot_4047p0001_Receive(boolean_T *extended, uint32_T *id,
       uint8_T *length, uint8_T data[]);
-    msg_valid = RxSlot_4019p0001_Receive(0, &msg_id, 0, msg_data);
+    msg_valid = RxSlot_4047p0001_Receive(0, &msg_id, 0, msg_data);
     if ((Mooventure2016_Rev5_B.s178_AgeCount + 1) >
         Mooventure2016_Rev5_B.s178_AgeCount)
       Mooventure2016_Rev5_B.s178_AgeCount++;
@@ -15448,93 +15448,93 @@ void Mooventure2016_Rev5_Foreground(void)
 
   /* Update for S-Function (motohawk_sfun_dout): '<S345>/motohawk_dout1' */
 
-  /* S-Function Block: DOut4323p0001 */
+  /* S-Function Block: DOut4362p0004 */
   {
-    DOut4323p0001_DiscreteOutput_Set(rtb_Merge_lq);
+    DOut4362p0004_DiscreteOutput_Set(rtb_Merge_lq);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S345>/motohawk_dout10' */
 
-  /* S-Function Block: DOut4324p0001 */
+  /* S-Function Block: DOut4363p0004 */
   {
-    DOut4324p0001_DiscreteOutput_Set(rtb_Merge_of1);
+    DOut4363p0004_DiscreteOutput_Set(rtb_Merge_of1);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S345>/motohawk_dout11' */
 
-  /* S-Function Block: DOut4325p0001 */
+  /* S-Function Block: DOut4364p0004 */
   {
-    DOut4325p0001_DiscreteOutput_Set(rtb_DataTypeConversion6);
+    DOut4364p0004_DiscreteOutput_Set(rtb_DataTypeConversion6);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S345>/motohawk_dout12' */
 
-  /* S-Function Block: DOut4326p0001 */
+  /* S-Function Block: DOut4365p0004 */
   {
-    DOut4326p0001_DiscreteOutput_Set(rtb_DataTypeConversion_gi);
+    DOut4365p0004_DiscreteOutput_Set(rtb_DataTypeConversion_gi);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S345>/motohawk_dout13' */
 
-  /* S-Function Block: DOut4327p0001 */
+  /* S-Function Block: DOut4366p0004 */
   {
-    DOut4327p0001_DiscreteOutput_Set(rtb_DataTypeConversion3_i);
+    DOut4366p0004_DiscreteOutput_Set(rtb_DataTypeConversion3_i);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S345>/motohawk_dout2' */
 
-  /* S-Function Block: DOut4328p0001 */
+  /* S-Function Block: DOut4367p0004 */
   {
-    DOut4328p0001_DiscreteOutput_Set(rtb_Merge_dm);
+    DOut4367p0004_DiscreteOutput_Set(rtb_Merge_dm);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S345>/motohawk_dout3' */
 
-  /* S-Function Block: DOut4329p0001 */
+  /* S-Function Block: DOut4368p0004 */
   {
-    DOut4329p0001_DiscreteOutput_Set(rtb_Merge_ay5);
+    DOut4368p0004_DiscreteOutput_Set(rtb_Merge_ay5);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S345>/motohawk_dout4' */
 
-  /* S-Function Block: DOut4330p0001 */
+  /* S-Function Block: DOut4369p0004 */
   {
-    DOut4330p0001_DiscreteOutput_Set(rtb_Merge_l1);
+    DOut4369p0004_DiscreteOutput_Set(rtb_Merge_l1);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S345>/motohawk_dout5' */
 
-  /* S-Function Block: DOut4331p0001 */
+  /* S-Function Block: DOut4370p0004 */
   {
-    DOut4331p0001_DiscreteOutput_Set(rtb_Merge_cg);
+    DOut4370p0004_DiscreteOutput_Set(rtb_Merge_cg);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S345>/motohawk_dout6' */
 
-  /* S-Function Block: DOut4332p0001 */
+  /* S-Function Block: DOut4371p0004 */
   {
-    DOut4332p0001_DiscreteOutput_Set(rtb_Merge_oqt);
+    DOut4371p0004_DiscreteOutput_Set(rtb_Merge_oqt);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S345>/motohawk_dout7' */
 
-  /* S-Function Block: DOut4333p0001 */
+  /* S-Function Block: DOut4372p0004 */
   {
-    DOut4333p0001_DiscreteOutput_Set(rtb_Merge_pi3);
+    DOut4372p0004_DiscreteOutput_Set(rtb_Merge_pi3);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S345>/motohawk_dout8' */
 
-  /* S-Function Block: DOut4334p0001 */
+  /* S-Function Block: DOut4373p0004 */
   {
-    DOut4334p0001_DiscreteOutput_Set(rtb_Merge_gd);
+    DOut4373p0004_DiscreteOutput_Set(rtb_Merge_gd);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S345>/motohawk_dout9' */
 
-  /* S-Function Block: DOut4335p0001 */
+  /* S-Function Block: DOut4374p0004 */
   {
-    DOut4335p0001_DiscreteOutput_Set(rtb_Merge_ln);
+    DOut4374p0004_DiscreteOutput_Set(rtb_Merge_ln);
   }
 
   /* Update for UnitDelay: '<S222>/Unit Delay' */
@@ -15545,44 +15545,44 @@ void Mooventure2016_Rev5_Foreground(void)
 
   /* Update for S-Function (motohawk_sfun_dout): '<S346>/motohawk_dout1' */
 
-  /* S-Function Block: DOut4561p0001 */
+  /* S-Function Block: DOut4600p0004 */
   {
-    DOut4561p0001_DiscreteOutput_Set(rtb_Merge_iu);
+    DOut4600p0004_DiscreteOutput_Set(rtb_Merge_iu);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S346>/motohawk_dout2' */
 
-  /* S-Function Block: DOut4562p0001 */
+  /* S-Function Block: DOut4601p0004 */
   {
-    DOut4562p0001_DiscreteOutput_Set(rtb_Merge_nv);
+    DOut4601p0004_DiscreteOutput_Set(rtb_Merge_nv);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S346>/motohawk_dout6' */
 
-  /* S-Function Block: DOut4566p0001 */
+  /* S-Function Block: DOut4605p0004 */
   {
-    DOut4566p0001_DiscreteOutput_Set(rtb_Merge_ef);
+    DOut4605p0004_DiscreteOutput_Set(rtb_Merge_ef);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S346>/motohawk_dout4' */
 
-  /* S-Function Block: DOut4564p0001 */
+  /* S-Function Block: DOut4603p0004 */
   {
-    DOut4564p0001_DiscreteOutput_Set(rtb_DataTypeConversion6_c);
+    DOut4603p0004_DiscreteOutput_Set(rtb_DataTypeConversion6_c);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S346>/motohawk_dout5' */
 
-  /* S-Function Block: DOut4565p0001 */
+  /* S-Function Block: DOut4604p0004 */
   {
-    DOut4565p0001_DiscreteOutput_Set(rtb_DataTypeConversion5);
+    DOut4604p0004_DiscreteOutput_Set(rtb_DataTypeConversion5);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S346>/motohawk_dout3' */
 
-  /* S-Function Block: DOut4563p0001 */
+  /* S-Function Block: DOut4602p0004 */
   {
-    DOut4563p0001_DiscreteOutput_Set(rtb_DataTypeConversion8);
+    DOut4602p0004_DiscreteOutput_Set(rtb_DataTypeConversion8);
   }
 
   /* Update for S-Function (motohawk_sfun_pwm): '<S350>/motohawk_pwm' */

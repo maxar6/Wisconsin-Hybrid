@@ -616,10 +616,10 @@ unsigned int sf_Mooventure2016_Rev5_process_check_sum_call( int nlhs, mxArray *
       return 0;
     }
   } else {
-    ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(2226705603U);
-    ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(1864711806U);
-    ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(2703741097U);
-    ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(4258427071U);
+    ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(4088121907U);
+    ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(2694478339U);
+    ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(1984082204U);
+    ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(3917247921U);
   }
 
   return 1;

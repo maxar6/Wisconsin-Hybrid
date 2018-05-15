@@ -221,45 +221,10 @@ void CheckApplicationStatus(void)
   if (stopApplication) {
     ApplicationStatus = APPLICATION_STOP;
 
-    /* Turn off discrete output */
-    {
-      if ((init_resource_MPRD_DataStore()) >= 0) {
-        SetDiscreteOutState((E_ModuleResource) ((init_resource_MPRD_DataStore())),
-                            RES_OFF);
-      }
-    }
-
-    /* Turn off discrete output */
-    {
-      if ((init_resource_ReverseOut_Pin_DataStore()) >= 0) {
-        SetDiscreteOutState((E_ModuleResource)
-                            ((init_resource_ReverseOut_Pin_DataStore())),
-                            RES_OFF);
-      }
-    }
-
     {
       /* Turn off PWM output */
       extern void Fan_Pin_PWMOutput_PWMOutput_Stop(void);
       Fan_Pin_PWMOutput_PWMOutput_Stop();
-    }
-
-    /* Turn off discrete output */
-    {
-      if ((init_resource_DCDCInhibit_Out_Pin_DataStore()) >= 0) {
-        SetDiscreteOutState((E_ModuleResource)
-                            ((init_resource_DCDCInhibit_Out_Pin_DataStore())),
-                            RES_OFF);
-      }
-    }
-
-    /* Turn off discrete output */
-    {
-      if ((init_resource_Brake_Light_Out_DataStore()) >= 0) {
-        SetDiscreteOutState((E_ModuleResource)
-                            ((init_resource_Brake_Light_Out_DataStore())),
-                            RES_OFF);
-      }
     }
   } else {
     boolean_T zeroSeen = 0;

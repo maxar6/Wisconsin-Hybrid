@@ -7,9 +7,19 @@
 #define MOTOHAWK_IO_H
 #include "CommonInclude.h"
 
-/* S-Function Block: <S398>/motohawk_ain5 Resource: ECUP */
+/* S-Function Block: <S401>/motohawk_ain5 Resource: ECUP */
 NativeError_S ECUP_AnalogInput_Get(uint16_T *adc, uint16_T *status);
 NativeError_S ECUP_AnalogInput_Create(void);
+
+/* S-Function Block: <S401>/motohawk_dout Resource: MPRD */
+extern NativeError_S DOut4231p0005_DiscreteOutput_Set(boolean_T in);
+extern NativeError_S DOut4231p0005_DiscreteOutputPushPull_Set(int8_T in);
+extern NativeError_S DOut4231p0005_DiscreteOutput_Create(void);
+
+/* S-Function Block: <S14>/motohawk_dout1 Resource: LSD9 */
+extern NativeError_S DOut150p001_DiscreteOutput_Set(boolean_T in);
+extern NativeError_S DOut150p001_DiscreteOutputPushPull_Set(int8_T in);
+extern NativeError_S DOut150p001_DiscreteOutput_Create(void);
 
 /* S-Function Block: <S14>/motohawk_pwm2 Resource: Fan_Pin_PWMOutput */
 void Fan_Pin_PWMOutput_PWMOutput_Create(void);
@@ -17,21 +27,31 @@ void Fan_Pin_PWMOutput_PWMOutput_Set(uint32_T freq, int16_T duty, boolean_T
   brake, boolean_T enable);
 void Fan_Pin_PWMOutput_PWMOutput_Stop(void);
 
-/* S-Function Block: <S12>/motohawk_ain Resource: Accel_Pedal_Pin */
-NativeError_S Accel_Pedal_Pin_AnalogInput_Get(uint16_T *adc, uint16_T *status);
-NativeError_S Accel_Pedal_Pin_AnalogInput_Create(void);
+/* S-Function Block: <S14>/motohawk_dout2 Resource: LSD7 */
+extern NativeError_S DOut151p001_DiscreteOutput_Set(boolean_T in);
+extern NativeError_S DOut151p001_DiscreteOutputPushPull_Set(int8_T in);
+extern NativeError_S DOut151p001_DiscreteOutput_Create(void);
+
+/* S-Function Block: <S14>/motohawk_dout3 Resource: LSD10 */
+extern NativeError_S DOut152p001_DiscreteOutput_Set(boolean_T in);
+extern NativeError_S DOut152p001_DiscreteOutputPushPull_Set(int8_T in);
+extern NativeError_S DOut152p001_DiscreteOutput_Create(void);
+
+/* S-Function Block: <S12>/motohawk_din Resource: EStop_Switch_Pin */
+NativeError_S EStop_Switch_Pin_DigitalInput_Get(boolean_T *out, uint16_T *status);
+NativeError_S EStop_Switch_Pin_DigitalInput_Create(void);
 
 /* S-Function Block: <S12>/motohawk_ain2 Resource: Reverse_Switch_Pin */
 NativeError_S Reverse_Switch_Pin_AnalogInput_Get(uint16_T *adc, uint16_T *status);
 NativeError_S Reverse_Switch_Pin_AnalogInput_Create(void);
 
+/* S-Function Block: <S12>/motohawk_ain Resource: Accel_Pedal_Pin */
+NativeError_S Accel_Pedal_Pin_AnalogInput_Get(uint16_T *adc, uint16_T *status);
+NativeError_S Accel_Pedal_Pin_AnalogInput_Create(void);
+
 /* S-Function Block: <S12>/motohawk_ain1 Resource: Brake_Pedal_Pin */
 NativeError_S Brake_Pedal_Pin_AnalogInput_Get(uint16_T *adc, uint16_T *status);
 NativeError_S Brake_Pedal_Pin_AnalogInput_Create(void);
-
-/* S-Function Block: <S12>/motohawk_din Resource: EStop_Switch_Pin */
-NativeError_S EStop_Switch_Pin_DigitalInput_Get(boolean_T *out, uint16_T *status);
-NativeError_S EStop_Switch_Pin_DigitalInput_Create(void);
 
 /* S-Function Block: <S12>/motohawk_ain5 Resource: LV_Voltage_Pin */
 NativeError_S LV_Voltage_Pin_AnalogInput_Get(uint16_T *adc, uint16_T *status);

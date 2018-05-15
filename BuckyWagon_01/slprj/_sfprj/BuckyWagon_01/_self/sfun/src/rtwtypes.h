@@ -17,6 +17,9 @@
     #ifndef FALSE  
     # define FALSE (0U)  
     #endif  
+    #ifndef MAT_FILE  
+    # define MAT_FILE 0  
+    #endif  
 
 /*
  * MultiWord supporting definitions
