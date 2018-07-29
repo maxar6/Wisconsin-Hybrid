@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BuckyWagon_01'.
  *
- * Model version                  : 1.1520
+ * Model version                  : 1.1530
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Mon Apr 23 14:25:32 2018
+ * C/C++ source code generated on : Sun Jul 29 18:42:46 2018
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -30,63 +30,63 @@
 
 /* Block signals for system '<S11>/Chart' */
 typedef struct {
-  uint8_T s200_mode;                   /* '<S11>/Chart' */
-  uint8_T s200_x0;                     /* '<S11>/Chart' */
-  uint8_T s200_x1;                     /* '<S11>/Chart' */
-  uint8_T s200_y0;                     /* '<S11>/Chart' */
-  uint8_T s200_y1;                     /* '<S11>/Chart' */
-  uint8_T s200_lineColor;              /* '<S11>/Chart' */
-  uint8_T s200_fillColor;              /* '<S11>/Chart' */
-  uint8_T s200_stringNum;              /* '<S11>/Chart' */
-  uint8_T s200_string[18];             /* '<S11>/Chart' */
-  uint8_T s200_font;                   /* '<S11>/Chart' */
-  uint8_T s200_hCenter;                /* '<S11>/Chart' */
-  uint8_T s200_vCenter;                /* '<S11>/Chart' */
-  uint8_T s200_listIndexO;             /* '<S11>/Chart' */
-  uint8_T s200_screenO;                /* '<S11>/Chart' */
-  uint8_T s200_dualIndexO[2];          /* '<S11>/Chart' */
-  uint8_T s200_quadIndexO[4];          /* '<S11>/Chart' */
-  uint8_T s200_singleIndexO;           /* '<S11>/Chart' */
-} rtB_Chart_BuckyWagon_01_n;
+  uint8_T s176_mode;                   /* '<S11>/Chart' */
+  uint8_T s176_x0;                     /* '<S11>/Chart' */
+  uint8_T s176_x1;                     /* '<S11>/Chart' */
+  uint8_T s176_y0;                     /* '<S11>/Chart' */
+  uint8_T s176_y1;                     /* '<S11>/Chart' */
+  uint8_T s176_lineColor;              /* '<S11>/Chart' */
+  uint8_T s176_fillColor;              /* '<S11>/Chart' */
+  uint8_T s176_stringNum;              /* '<S11>/Chart' */
+  uint8_T s176_string[18];             /* '<S11>/Chart' */
+  uint8_T s176_font;                   /* '<S11>/Chart' */
+  uint8_T s176_hCenter;                /* '<S11>/Chart' */
+  uint8_T s176_vCenter;                /* '<S11>/Chart' */
+  uint8_T s176_listIndexO;             /* '<S11>/Chart' */
+  uint8_T s176_screenO;                /* '<S11>/Chart' */
+  uint8_T s176_dualIndexO[2];          /* '<S11>/Chart' */
+  uint8_T s176_quadIndexO[4];          /* '<S11>/Chart' */
+  uint8_T s176_singleIndexO;           /* '<S11>/Chart' */
+} rtB_Chart_BuckyWagon_01;
 
 /* Block states (auto storage) for system '<S11>/Chart' */
 typedef struct {
-  int32_T s200_sfEvent;                /* '<S11>/Chart' */
-  int16_T s200_oldData[6];             /* '<S11>/Chart' */
-  uint16_T s200_timer;                 /* '<S11>/Chart' */
-  uint8_T s200_is_active_c2_BuckyWagon_01;/* '<S11>/Chart' */
-  uint8_T s200_is_c2_BuckyWagon_01;    /* '<S11>/Chart' */
-  uint8_T s200_is_List;                /* '<S11>/Chart' */
-  uint8_T s200_is_Single;              /* '<S11>/Chart' */
-  uint8_T s200_is_Setup;               /* '<S11>/Chart' */
-  uint8_T s200_is_Dual;                /* '<S11>/Chart' */
-  uint8_T s200_is_Quad;                /* '<S11>/Chart' */
-  uint8_T s200_is_select_var;          /* '<S11>/Chart' */
-  uint8_T s200_setupIndex;             /* '<S11>/Chart' */
-  uint8_T s200_setupVIndex;            /* '<S11>/Chart' */
-  uint8_T s200_selectIndex;            /* '<S11>/Chart' */
-  uint8_T s200_selectVIndex;           /* '<S11>/Chart' */
-} rtDW_Chart_BuckyWagon_01_o;
+  int32_T s176_sfEvent;                /* '<S11>/Chart' */
+  int16_T s176_oldData[6];             /* '<S11>/Chart' */
+  uint16_T s176_timer;                 /* '<S11>/Chart' */
+  uint8_T s176_is_active_c2_BuckyWagon_01;/* '<S11>/Chart' */
+  uint8_T s176_is_c2_BuckyWagon_01;    /* '<S11>/Chart' */
+  uint8_T s176_is_List;                /* '<S11>/Chart' */
+  uint8_T s176_is_Single;              /* '<S11>/Chart' */
+  uint8_T s176_is_Setup;               /* '<S11>/Chart' */
+  uint8_T s176_is_Dual;                /* '<S11>/Chart' */
+  uint8_T s176_is_Quad;                /* '<S11>/Chart' */
+  uint8_T s176_is_select_var;          /* '<S11>/Chart' */
+  uint8_T s176_setupIndex;             /* '<S11>/Chart' */
+  uint8_T s176_setupVIndex;            /* '<S11>/Chart' */
+  uint8_T s176_selectIndex;            /* '<S11>/Chart' */
+  uint8_T s176_selectVIndex;           /* '<S11>/Chart' */
+} rtDW_Chart_BuckyWagon_01;
 
 /* Zero-crossing (trigger) state for system '<S11>/Chart' */
 typedef struct {
   ZCSigState Chart_Trig_ZCE[7];        /* '<S11>/Chart' */
-} rtZCE_Chart_BuckyWagon_01_o;
+} rtZCE_Chart_BuckyWagon_01;
 
 /* Block signals for system '<S11>/Enabled Subsystem' */
 typedef struct {
-  uint8_T s208_In;                     /* '<S208>/In' */
+  uint8_T s184_In;                     /* '<S184>/In' */
 } rtB_EnabledSubsystem_BuckyWagon_01;
 
-/* Block signals for system '<S216>/Fault Iterator' */
+/* Block signals for system '<S192>/Fault Iterator' */
 typedef struct {
-  uint8_T s230_motohawk_fault_name[27];/* '<S230>/motohawk_fault_name' */
-  boolean_T s230_motohawk_fault_iterator_o1;/* '<S230>/motohawk_fault_iterator' */
+  uint8_T s206_motohawk_fault_name[27];/* '<S206>/motohawk_fault_name' */
+  boolean_T s206_motohawk_fault_iterator_o1;/* '<S206>/motohawk_fault_iterator' */
 } rtB_FaultIterator_BuckyWagon_01;
 
-/* Block states (auto storage) for system '<S216>/Fault Iterator' */
+/* Block states (auto storage) for system '<S192>/Fault Iterator' */
 typedef struct {
-  fault_T s230_UnitDelay_DSTATE;       /* '<S230>/Unit Delay' */
+  fault_T s206_UnitDelay_DSTATE;       /* '<S206>/Unit Delay' */
 } rtDW_FaultIterator_BuckyWagon_01;
 
 extern void BuckyWagon_01_ClearScreen_Start(void);
@@ -113,11 +113,11 @@ extern void BuckyWagon_01_DrawHLine(uint8_T rtu_x0, uint8_T rtu_x1, uint8_T
   rtu_y, uint8_T rtu_linecolor, uint8_T rtu_fillcolor);
 extern void BuckyWagon_01_FunctionCallSubsystem(uint8_T rtu_Value);
 extern void BuckyWagon_01_FunctionCallSubsystem1(uint8_T rtu_Value);
-extern void BuckyWagon_01_Chart_f_Init(rtB_Chart_BuckyWagon_01_n *localB,
-  rtDW_Chart_BuckyWagon_01_o *localDW);
-extern void BuckyWagon_01_Chart_h_Start(rtB_Chart_BuckyWagon_01_n *localB,
-  rtDW_Chart_BuckyWagon_01_o *localDW);
-extern void BuckyWagon_01_Chart_o(const boolean_T rtu_0[7], uint8_T rtu_menuTime,
+extern void BuckyWagon_01_Chart_Init(rtB_Chart_BuckyWagon_01 *localB,
+  rtDW_Chart_BuckyWagon_01 *localDW);
+extern void BuckyWagon_01_Chart_Start(rtB_Chart_BuckyWagon_01 *localB,
+  rtDW_Chart_BuckyWagon_01 *localDW);
+extern void BuckyWagon_01_Chart(const boolean_T rtu_0[7], uint8_T rtu_menuTime,
   uint16_T rtu_startupDelay, uint8_T rtu_listIndex, uint8_T rtu_singleIndex,
   const uint8_T rtu_dualIndex[2], const uint8_T rtu_quadIndex[4], uint8_T
   rtu_screen, const uint8_T rtu_setupNames[104], const uint8_T rtu_names[180],
@@ -125,8 +125,8 @@ extern void BuckyWagon_01_Chart_o(const boolean_T rtu_0[7], uint8_T rtu_menuTime
   rtu_namesline2[126], const uint8_T rtu_barGraphMode[18], const int32_T
   rtu_barMax[18], const int16_T rtu_barMin[18], const uint8_T rtu_statusTxt[10],
   uint8_T rtu_statusTxtMode, const int16_T rtu_data[18], uint8_T rtu_21,
-  rtB_Chart_BuckyWagon_01_n *localB, rtDW_Chart_BuckyWagon_01_o *localDW,
-  rtZCE_Chart_BuckyWagon_01_o *localZCE);
+  rtB_Chart_BuckyWagon_01 *localB, rtDW_Chart_BuckyWagon_01 *localDW,
+  rtZCE_Chart_BuckyWagon_01 *localZCE);
 extern void BuckyWagon_01_EnabledSubsystem(boolean_T rtu_0, uint8_T rtu_1,
   rtB_EnabledSubsystem_BuckyWagon_01 *localB);
 extern void BuckyWagon_01_FaultIterator_Init(rtDW_FaultIterator_BuckyWagon_01

@@ -4,16 +4,16 @@
 ###  Starting MotoHawk Build              ###
 ###  MotoHawk version: 2011a_sp0.184      ###
 ###    MATLAB version: 7.12.0.635 (R2011a)###
-###        23-Apr-2018 14:24:03           ###
+###        29-Jul-2018 18:41:52           ###
 ###                                       ###
 #############################################
  
 Target Module:   ECU565-128 (DEV)
-DEV Executable:  BuckyWagon_01_171.srz
-MotoTune DLL:    BuckyWago_171.dll
+DEV Executable:  BuckyWagon_01_173.srz
+MotoTune DLL:    BuckyWago_173.dll
  
 Project GUID:    3c32a120-d49a-4164-87-fe-ac-4b-55-ed-6f
-Build GUID:      f6bced0b-f3ce-4c1d-a0-1c-47-b3-99-ef-d3
+Build GUID:      e4694f84-49af-4e0e-8b-b3-f7-55-0d-b1-c5
  
 ### Starting build procedure for model: BuckyWagon_01
 ### Generating code into build folder: C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build
@@ -53,12 +53,11 @@ Strategy/Calculations/motohawk_probe9</a>' is not connected.}
 ### Invoking Target Language Compiler on BuckyWagon_01.rtw
 ### Using System Target File: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tlc
 ### Loading TLC function libraries
-...............
+..............
 ### Initial pass through model to cache user defined code
 ...............................................................................
 ...............................................................................
-...............................................................................
-.......................
+....................................................................
 ### Caching model source code
 ...............................................................................
 ...............................................................................
@@ -78,31 +77,29 @@ Strategy/Calculations/motohawk_probe9</a>' is not connected.}
 ...............................................................................
 ...............................................................................
 ...............................................................................
-..........................................................
+.........................
 ### Writing source file BuckyWagon_01.c
-.
 ### Writing header file BuckyWagon_01_private.h
+.
 ### Writing header file BuckyWagon_01.h
-.
 ### Writing header file BuckyWagon_01_types.h
+.
 ### Writing source file BuckyWagon_01_Foreground.c
-.
 ### Writing source file BuckyWagon_01_MiniViewDisplay.c
+.
 ### Writing header file BuckyWagon_01_Foreground.h
-.
 ### Writing header file BuckyWagon_01_MiniViewDisplay.h
+.
 ### Writing header file rtwtypes.h
-.
 ### Writing header file rt_nonfinite.h
-### Writing source file rt_nonfinite.c
 .
+### Writing source file rt_nonfinite.c
 ### Writing source file BuckyWagon_01_data.c
 ### TLC code generation complete.
 ...............................................................................
 ...............................................................................
 ...............................................................................
-........### Creating project marker file: rtw_proj.tmw
-.
+......
 ### Processing Template Makefile: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tmf
 ### Creating BuckyWagon_01.mk from C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tmf
 ### Building BuckyWagon_01: .\BuckyWagon_01.bat
@@ -163,20 +160,20 @@ compile:
   [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\MotoHawk_IO.c 
   [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\rt_nonfinite.c 
   [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\TableLookupFunctions.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_BGND_BASEx20_PERIODIC_4289p0005.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_BGND_BASE_PERIODIC_4279p0005.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_BGND_BASEx20_PERIODIC_4354p0004.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_BGND_BASE_PERIODIC_4344p0004.c 
   [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_CAN_RX_BusCAN_1_Buf1.c 
   [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_CAN_RX_BusCAN_1_Buf14.c 
   [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_CAN_RX_BusCAN_2_Buf1.c 
   [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_CAN_RX_BusCAN_2_Buf14.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_CAN_Slot_miniview_button_down_2150p0001.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_CAN_Slot_miniview_button_menu_2408p0001.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_CAN_Slot_miniview_button_up_2659p0004.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_FGND_20XRTI_PERIODIC_4086p0002.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_FGND_RTI_PERIODIC_4085p0005.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_FGND_RTI_PERIODIC_4287p0005.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_SHUTDOWN_EVENT_4290p0005.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_STARTUP_EVENT_4288p0005.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_CAN_Slot_miniview_button_down_2215p0004.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_CAN_Slot_miniview_button_menu_2473p0004.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_CAN_Slot_miniview_button_up_2724p0004.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_FGND_20XRTI_PERIODIC_4151p0004.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_FGND_RTI_PERIODIC_4150p0006.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_FGND_RTI_PERIODIC_4352p0004.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_SHUTDOWN_EVENT_4355p0004.c 
+  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_STARTUP_EVENT_4353p0004.c 
   [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\VarDecs.c 
   [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\TDB\TableDB.c 
  
@@ -190,51 +187,51 @@ s-records:
  
 BUILD SUCCEEDED 
  
-Total time: 9.9 seconds. 
+Total time: 10.7 seconds. 
  
 ### Call MotoConvert 
 Project format is MPC5xx 
 Toolchain format is GCC 
 Transforming range 0x00400000-0x0041FFFF into 64 byte pages... 
 Transforming range 0x00000000-0x000FFFFF into 64 byte pages... 
-Searching for Table Database address 'EriRequestTableList'...Found at 0x0004A2A4 
+Searching for Table Database address 'EriRequestTableList'...Found at 0x00048D60 
 Searching for CRC Table address 'g_pCRCBlockPtr' ...Found at 0x00010000 
 Calculating Application defined CRC's...OK. 
 Searching for initialised section '.fixed_ramcals' aliased to '.fixed_romcals' ... 
 Searching for initialised section '.ramcals' aliased to '.romcals' ... 
-    Adding RAM[0x003F8288], ROM[0x00051670], Length[0x0000003C] 
+    Adding RAM[0x003F8288], ROM[0x0004FEE0], Length[0x00000038] 
 Searching for initialised section '.sdata' aliased to '.romsdata' ... 
-    Adding RAM[0x003F7000], ROM[0x000516DC], Length[0x00000019] 
+    Adding RAM[0x003F7000], ROM[0x0004FF48], Length[0x00000019] 
 Searching for initialised section '.data' aliased to '.romdata' ... 
-    Ignoring zero length section at RAM[0x003F8288], ROM[0x000516F8] 
+    Ignoring zero length section at RAM[0x003F8288], ROM[0x0004FF64] 
 Complete. 
 Writing file sr://BuckyWagon_01.sr... 
-Encrypting 'sr://BuckyWagon_01.sr' into 'srz://.\Target\BuckyWagon_01_171.srz' ... 
+Encrypting 'sr://BuckyWagon_01.sr' into 'srz://.\Target\BuckyWagon_01_173.srz' ... 
 Done. 
 ### Creating Build Statistics 
 Memory Summary:
-	FLASH:                     264521 bytes   27% of 982784
-	    NonVolatileDefault:        60 bytes    0% of 982784
-	    BuckyWagon_01_Foreground:24772 bytes    3% of 982784
+	FLASH:                     258617 bytes   26% of 982784
+	    NonVolatileDefault:        56 bytes    0% of 982784
+	    BuckyWagon_01_Foreground:20532 bytes    2% of 982784
 	DECRAM:                      4096 bytes  100% of   4096
 	    FgndTimeStack:           3072 bytes   75% of   4096
 	    IdleStack:               1024 bytes   25% of   4096
-	INTERNAL_RAM:                8280 bytes   23% of  36720
-	    NonVolatileWork:           60 bytes    0% of  36720
+	INTERNAL_RAM:                8276 bytes   23% of  36720
+	    NonVolatileWork:           56 bytes    0% of  36720
 	    BgndStack:               2048 bytes    6% of  36720
 	    InterruptStack:          1536 bytes    4% of  36720
-	EXTENDED_RAM:                6071 bytes    1% of  1024K
-	    BuckyWagon_01_B:         1052 bytes    0% of  1024K
-	    BuckyWagon_01_DWork:      336 bytes    0% of  1024K
+	EXTENDED_RAM:                5655 bytes    1% of  1024K
+	    BuckyWagon_01_B:          768 bytes    0% of  1024K
+	    BuckyWagon_01_DWork:      300 bytes    0% of  1024K
 	    BuckyWagon_01_M_:           4 bytes    0% of  1024K
 	    VolatileWork:              12 bytes    0% of  1024K
-	CAL_SPACE:                   2764 bytes    4% of  65536
-	    ConstantWork:            2608 bytes    4% of  65536
-	EEPROM_SPACE:                  63 bytes    1% of   8192
+	CAL_SPACE:                   9796 bytes   15% of  65536
+	    ConstantWork:            9640 bytes   15% of  65536
+	EEPROM_SPACE:                  59 bytes    1% of   8192
 
-### Copy BuckyWago_171.dll and BuckyWagon_01_171.srz 
+### Copy BuckyWago_173.dll and BuckyWagon_01_173.srz 
 ### Successful Build with MotoCoder 
-Elapsed Build Time: 3 minutes, 9.9 seconds  (189.9 seconds)
+Elapsed Build Time: 2 minutes, 21.6 seconds  (141.6 seconds)
 {Warning: Block diagram 'BuckyWagon_01' contains one or more
 parameterized library links.  To find the parameterized
 links use the Model Advisor.  The diagram has been saved but
@@ -247,8 +244,8 @@ not contain what you intended.}
 #############################################################################
 ###
 ### Target Module: ECU565-128
-### Created Development Executable: BuckyWagon_01_171.srz
-### Created MotoTune DLL: BuckyWago_171.dll
+### Created Development Executable: BuckyWagon_01_173.srz
+### Created MotoTune DLL: BuckyWago_173.dll
 ###
 ### Successful MotoHawk Build for model: BuckyWagon_01
 ###

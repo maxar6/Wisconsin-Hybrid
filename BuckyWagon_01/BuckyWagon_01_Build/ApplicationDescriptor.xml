@@ -4,7 +4,7 @@
 	<Name>BuckyWagon_01</Name>
 	<Author>HYBRID</Author>
 	<Copyright>2018 Woodward.</Copyright>
-	<CreateDate>23-Apr-2018</CreateDate>
+	<CreateDate>29-Jul-2018</CreateDate>
 	<MemoryLayout>DEV</MemoryLayout>
 	<Module>ClassicModule-MPC565</Module>
 	<Memory/>
@@ -25,9 +25,9 @@
 			</TableDatabase>
 			<ProjectID>6</ProjectID>
 			<ProductID>1</ProductID>
-			<SwIdTxt>BuckyWago_171</SwIdTxt>
-			<SwRevisionTxt>BuckyWagon_01_171</SwRevisionTxt>
-			<CalIdTxt>BuckyWagon_01_171_000</CalIdTxt>
+			<SwIdTxt>BuckyWago_173</SwIdTxt>
+			<SwRevisionTxt>BuckyWagon_01_173</SwRevisionTxt>
+			<CalIdTxt>BuckyWagon_01_173_000</CalIdTxt>
 		</VarDecs>
 		<DatabaseBuild>
 			<Toolchain>
@@ -38,10 +38,10 @@
 			</Toolchain>
 		</DatabaseBuild>
 		<Command>
-			<Description>Copy BuckyWago_171.dll and BuckyWagon_01_171.srz</Description>
+			<Description>Copy BuckyWago_173.dll and BuckyWagon_01_173.srz</Description>
 			<Order>99</Order>
-			<Execute>@if exist C:\ECUFiles\TDBDLL\\*.* copy /Y .\TDB\BuckyWago_171.dll C:\ECUFiles\TDBDLL\ &gt; NUL</Execute>
-			<Execute>@if exist C:\ECUFiles\Programs\*.* copy /Y .\Target\BuckyWagon_01_171.srz C:\ECUFiles\Programs &gt; NUL</Execute>
+			<Execute>@if exist C:\ECUFiles\TDBDLL\\*.* copy /Y .\TDB\BuckyWago_173.dll C:\ECUFiles\TDBDLL\ &gt; NUL</Execute>
+			<Execute>@if exist C:\ECUFiles\Programs\*.* copy /Y .\Target\BuckyWagon_01_173.srz C:\ECUFiles\Programs &gt; NUL</Execute>
 		</Command>
 	</ToolInterface>
 	<Build>
@@ -71,20 +71,20 @@
 			<File>MotoHawk_DataStores.c</File>
 			<File>MotoHawk_IO.c</File>
 			<File>TableLookupFunctions.c</File>
-			<File>Trigger_BGND_BASE_PERIODIC_4279p0005.c</File>
-			<File>Trigger_BGND_BASEx20_PERIODIC_4289p0005.c</File>
+			<File>Trigger_BGND_BASE_PERIODIC_4344p0004.c</File>
+			<File>Trigger_BGND_BASEx20_PERIODIC_4354p0004.c</File>
 			<File>Trigger_CAN_RX_BusCAN_1_Buf1.c</File>
 			<File>Trigger_CAN_RX_BusCAN_1_Buf14.c</File>
 			<File>Trigger_CAN_RX_BusCAN_2_Buf1.c</File>
 			<File>Trigger_CAN_RX_BusCAN_2_Buf14.c</File>
-			<File>Trigger_CAN_Slot_miniview_button_down_2150p0001.c</File>
-			<File>Trigger_CAN_Slot_miniview_button_menu_2408p0001.c</File>
-			<File>Trigger_CAN_Slot_miniview_button_up_2659p0004.c</File>
-			<File>Trigger_FGND_20XRTI_PERIODIC_4086p0002.c</File>
-			<File>Trigger_FGND_RTI_PERIODIC_4085p0005.c</File>
-			<File>Trigger_FGND_RTI_PERIODIC_4287p0005.c</File>
-			<File>Trigger_SHUTDOWN_EVENT_4290p0005.c</File>
-			<File>Trigger_STARTUP_EVENT_4288p0005.c</File>
+			<File>Trigger_CAN_Slot_miniview_button_down_2215p0004.c</File>
+			<File>Trigger_CAN_Slot_miniview_button_menu_2473p0004.c</File>
+			<File>Trigger_CAN_Slot_miniview_button_up_2724p0004.c</File>
+			<File>Trigger_FGND_20XRTI_PERIODIC_4151p0004.c</File>
+			<File>Trigger_FGND_RTI_PERIODIC_4150p0006.c</File>
+			<File>Trigger_FGND_RTI_PERIODIC_4352p0004.c</File>
+			<File>Trigger_SHUTDOWN_EVENT_4355p0004.c</File>
+			<File>Trigger_STARTUP_EVENT_4353p0004.c</File>
 			<File>VarDecs.c</File>
 			<File>rt_nonfinite.c</File>
 			<File>BuckyWagon_01.c</File>
@@ -107,7 +107,7 @@
 		</Command>
 		<Command>
 			<Description>Call MotoConvert</Description>
-			<Execute>@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\BuckyWagon_01.map -srec=.\Target\BuckyWagon_01.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=BuckyWagon_01.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x000FFFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\BuckyWagon_01_171.srz</Execute>
+			<Execute>@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\BuckyWagon_01.map -srec=.\Target\BuckyWagon_01.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=BuckyWagon_01.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x000FFFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\BuckyWagon_01_173.srz</Execute>
 			<Order>55</Order>
 		</Command>
 		<Compiler>
@@ -141,5 +141,5 @@
 			<Execute>@if exist .\rtwtypes.h del /Q /F .\rtwtypes.h &gt; NUL</Execute>
 		</Command>
 	</Build>
-	<Signature>a101edce-9cc3-4784-9e-91-73-d7-eb-a4-e5</Signature>
+	<Signature>e3b33c89-0d45-42dc-b4-1b-94-80-63-f5-fa</Signature>
 </Application>

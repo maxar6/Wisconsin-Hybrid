@@ -8,11 +8,11 @@
 #include "BuckyWagon_01.h"
 
 /*---- DEFINES --------------------------------------------------------------------------------------------*/
-#define DLL_NAME                       "BuckyWago_171"
-#define SRZ_NAME                       "BuckyWagon_01_171"
+#define DLL_NAME                       "BuckyWago_173"
+#define SRZ_NAME                       "BuckyWagon_01_173"
 #define MODEL_NAME                     "BuckyWagon_01"
 #define MODEL_GUID                     "3c32a120-d49a-4164-87-fe-ac-4b-55-ed-6f"
-#define BUILD_GUID                     "f6bced0b-f3ce-4c1d-a0-1c-47-b3-99-ef-d3"
+#define BUILD_GUID                     "e4694f84-49af-4e0e-8b-b3-f7-55-0d-b1-c5"
 #define TOKEN_GUID                     "DD8AD11F95A6FC42BFF9AC780840E4B4"
 #define MOTOHAWK_VERSION               "MotoHawk 2011a_sp0.184"
 #define MATLAB_VERSION                 "MATLAB 7.12.0"
@@ -211,8 +211,8 @@ void ApplicationCallback(E_ExecutionEvent in_eEvent)
     {
       if (SHUTDOWN_EVENT_RunCnt != 0) {
         if (ApplicationStatus == APPLICATION_RUN) {
-          extern void Trigger_SHUTDOWN_EVENT_4290p0005(void);
-          Trigger_SHUTDOWN_EVENT_4290p0005();
+          extern void Trigger_SHUTDOWN_EVENT_4355p0004(void);
+          Trigger_SHUTDOWN_EVENT_4355p0004();
         }
 
         if (SHUTDOWN_EVENT_RunCnt > 0)
@@ -225,8 +225,8 @@ void ApplicationCallback(E_ExecutionEvent in_eEvent)
     {
       if (STARTUP_EVENT_RunCnt != 0) {
         if (ApplicationStatus == APPLICATION_INIT) {
-          extern void Trigger_STARTUP_EVENT_4288p0005(void);
-          Trigger_STARTUP_EVENT_4288p0005();
+          extern void Trigger_STARTUP_EVENT_4353p0004(void);
+          Trigger_STARTUP_EVENT_4353p0004();
         }
 
         if (STARTUP_EVENT_RunCnt > 0)
@@ -239,8 +239,8 @@ void ApplicationCallback(E_ExecutionEvent in_eEvent)
     {
       if (BGND_BASEx20_PERIODIC_RunCnt != 0) {
         if (ApplicationStatus == APPLICATION_RUN) {
-          extern void Trigger_BGND_BASEx20_PERIODIC_4289p0005(void);
-          Trigger_BGND_BASEx20_PERIODIC_4289p0005();
+          extern void Trigger_BGND_BASEx20_PERIODIC_4354p0004(void);
+          Trigger_BGND_BASEx20_PERIODIC_4354p0004();
         }
 
         if (BGND_BASEx20_PERIODIC_RunCnt > 0)
@@ -272,8 +272,8 @@ void ApplicationCallback(E_ExecutionEvent in_eEvent)
     {
       if (FGND_20XRTI_PERIODIC_RunCnt != 0) {
         if (ApplicationStatus == APPLICATION_RUN) {
-          extern void Trigger_FGND_20XRTI_PERIODIC_4086p0002(void);
-          Trigger_FGND_20XRTI_PERIODIC_4086p0002();
+          extern void Trigger_FGND_20XRTI_PERIODIC_4151p0004(void);
+          Trigger_FGND_20XRTI_PERIODIC_4151p0004();
         }
 
         if (FGND_20XRTI_PERIODIC_RunCnt > 0)
@@ -286,13 +286,13 @@ void ApplicationCallback(E_ExecutionEvent in_eEvent)
     {
       if (FGND_RTI_PERIODIC_RunCnt != 0) {
         if (ApplicationStatus == APPLICATION_RUN) {
-          extern void Trigger_FGND_RTI_PERIODIC_4287p0005(void);
-          Trigger_FGND_RTI_PERIODIC_4287p0005();
+          extern void Trigger_FGND_RTI_PERIODIC_4352p0004(void);
+          Trigger_FGND_RTI_PERIODIC_4352p0004();
         }
 
         if (ApplicationStatus == APPLICATION_RUN) {
-          extern void Trigger_FGND_RTI_PERIODIC_4085p0005(void);
-          Trigger_FGND_RTI_PERIODIC_4085p0005();
+          extern void Trigger_FGND_RTI_PERIODIC_4150p0006(void);
+          Trigger_FGND_RTI_PERIODIC_4150p0006();
         }
 
         if (FGND_RTI_PERIODIC_RunCnt > 0)
@@ -305,8 +305,8 @@ void ApplicationCallback(E_ExecutionEvent in_eEvent)
     {
       if (BGND_BASE_PERIODIC_RunCnt != 0) {
         if (ApplicationStatus == APPLICATION_RUN) {
-          extern void Trigger_BGND_BASE_PERIODIC_4279p0005(void);
-          Trigger_BGND_BASE_PERIODIC_4279p0005();
+          extern void Trigger_BGND_BASE_PERIODIC_4344p0004(void);
+          Trigger_BGND_BASE_PERIODIC_4344p0004();
         }
 
         if (BGND_BASE_PERIODIC_RunCnt > 0)
@@ -400,7 +400,7 @@ void OpenApplication(E_OpenEventType open_type)
   /* Initialize Fault Manager */
   {
     uint32_T i;
-    for (i=0; i < 36; i++) {
+    for (i=0; i < 30; i++) {
       if ((FaultManager_DataStore_ByIndex(i).mode ==
            FAULT_MODE_STICKYDASHPERSISTENT) ||
           (FaultManager_DataStore_ByIndex(i).mode ==
@@ -638,7 +638,7 @@ void OpenApplication(E_OpenEventType open_type)
         0;
       TouCANMessageDefnObjArr[1].BufferDefnObj.NotifyObj.eEventMaskToNotifyOn =
         CAN_RECEIPT;
-      TouCANMessageDefnObjArr[1].BufferDefnObj.ConfigObj.u4MessageIDMask = 0x5c8;
+      TouCANMessageDefnObjArr[1].BufferDefnObj.ConfigObj.u4MessageIDMask = 0x7cf;
       TouCANMessageDefnObjArr[1].BufferDefnObj.ConfigObj.u4MessageID = 0x400;
       TouCANMessageDefnObjArr[1].BufferDefnObj.ConfigObj.eFlags =
         CAN_MESSAGE_STANDARD | CAN_MESSAGE_RECEIVE;
@@ -706,11 +706,11 @@ void OpenApplication(E_OpenEventType open_type)
 
   {
     ECUP_AnalogInput_Create();
-    DOut4231p0005_DiscreteOutput_Create();
-    DOut150p001_DiscreteOutput_Create();
+    DOut4296p0004_DiscreteOutput_Create();
+    DOut177p001_DiscreteOutput_Create();
     Fan_Pin_PWMOutput_PWMOutput_Create();
-    DOut151p001_DiscreteOutput_Create();
-    DOut152p001_DiscreteOutput_Create();
+    DOut178p001_DiscreteOutput_Create();
+    DOut179p001_DiscreteOutput_Create();
     EStop_Switch_Pin_DigitalInput_Create();
     Reverse_Switch_Pin_AnalogInput_Create();
     Accel_Pedal_Pin_AnalogInput_Create();

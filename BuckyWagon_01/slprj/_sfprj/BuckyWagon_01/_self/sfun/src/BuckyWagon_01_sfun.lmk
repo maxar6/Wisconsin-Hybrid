@@ -15,9 +15,7 @@ OBJECTS = \
 	"c5_BuckyWagon_01.obj"\
 	"c6_BuckyWagon_01.obj"\
 	"c7_BuckyWagon_01.obj"\
-	"c8_BuckyWagon_01.obj"\
 	"c9_BuckyWagon_01.obj"\
-	"c10_BuckyWagon_01.obj"\
 	"c11_BuckyWagon_01.obj"\
 	"c24_BuckyWagon_01.obj"\
 	"c32_BuckyWagon_01.obj"\
@@ -56,12 +54,8 @@ c6_BuckyWagon_01.obj :	"c6_BuckyWagon_01.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c6_BuckyWagon_01.c"
 c7_BuckyWagon_01.obj :	"c7_BuckyWagon_01.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c7_BuckyWagon_01.c"
-c8_BuckyWagon_01.obj :	"c8_BuckyWagon_01.c"
-	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c8_BuckyWagon_01.c"
 c9_BuckyWagon_01.obj :	"c9_BuckyWagon_01.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c9_BuckyWagon_01.c"
-c10_BuckyWagon_01.obj :	"c10_BuckyWagon_01.c"
-	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c10_BuckyWagon_01.c"
 c11_BuckyWagon_01.obj :	"c11_BuckyWagon_01.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c11_BuckyWagon_01.c"
 c24_BuckyWagon_01.obj :	"c24_BuckyWagon_01.c"

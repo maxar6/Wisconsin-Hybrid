@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BuckyWagon_01'.
  *
- * Model version                  : 1.1520
+ * Model version                  : 1.1530
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Mon Apr 23 14:25:32 2018
+ * C/C++ source code generated on : Sun Jul 29 18:42:46 2018
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -31,41 +31,25 @@
 /* Child system includes */
 #include "BuckyWagon_01_MiniViewDisplay.h"
 
-/* Block signals for system '<S147>/Downsapmle' */
+/* Block signals for system '<S127>/Downsapmle' */
 typedef struct {
-  real_T s148_Out_1;                   /* '<S147>/Downsapmle' */
-  real_T s148_Out_2;                   /* '<S147>/Downsapmle' */
+  real_T s128_Out_1;                   /* '<S127>/Downsapmle' */
+  real_T s128_Out_2;                   /* '<S127>/Downsapmle' */
 } rtB_Downsapmle_BuckyWagon_01;
 
-/* Block states (auto storage) for system '<S147>/Downsapmle' */
+/* Block states (auto storage) for system '<S127>/Downsapmle' */
 typedef struct {
-  real_T s148_count;                   /* '<S147>/Downsapmle' */
-  real_T s148_Val1;                    /* '<S147>/Downsapmle' */
-  real_T s148_Val2;                    /* '<S147>/Downsapmle' */
-  uint8_T s148_is_active_c11_BuckyWagon_01;/* '<S147>/Downsapmle' */
-  uint8_T s148_is_c11_BuckyWagon_01;   /* '<S147>/Downsapmle' */
+  real_T s128_count;                   /* '<S127>/Downsapmle' */
+  real_T s128_Val1;                    /* '<S127>/Downsapmle' */
+  real_T s128_Val2;                    /* '<S127>/Downsapmle' */
+  uint8_T s128_is_active_c11_BuckyWagon_01;/* '<S127>/Downsapmle' */
+  uint8_T s128_is_c11_BuckyWagon_01;   /* '<S127>/Downsapmle' */
 } rtDW_Downsapmle_BuckyWagon_01;
-
-/* Block signals for system '<S288>/Chart' */
-typedef struct {
-  boolean_T s290_pluggedIn;            /* '<S288>/Chart' */
-} rtB_Chart_BuckyWagon_01;
-
-/* Block states (auto storage) for system '<S288>/Chart' */
-typedef struct {
-  int16_T s290_timer;                  /* '<S288>/Chart' */
-  uint8_T s290_is_active_c10_BuckyWagon_01;/* '<S288>/Chart' */
-  uint8_T s290_is_c10_BuckyWagon_01;   /* '<S288>/Chart' */
-} rtDW_Chart_BuckyWagon_01;
 
 extern void BuckyWagon_01_Downsapmle_Init(rtB_Downsapmle_BuckyWagon_01 *localB,
   rtDW_Downsapmle_BuckyWagon_01 *localDW);
 extern void BuckyWagon_01_Downsapmle(real_T rtu_Val_In, real_T rtu_numb_downsamp,
   rtB_Downsapmle_BuckyWagon_01 *localB, rtDW_Downsapmle_BuckyWagon_01 *localDW);
-extern void BuckyWagon_01_Chart_Init(rtB_Chart_BuckyWagon_01 *localB,
-  rtDW_Chart_BuckyWagon_01 *localDW);
-extern void BuckyWagon_01_Chart(real_T rtu_histTime, boolean_T rtu_mainsOn,
-  rtB_Chart_BuckyWagon_01 *localB, rtDW_Chart_BuckyWagon_01 *localDW);
 extern void BuckyWagon_01_IfActionSubsystem(real_T rtu_0, real_T *rty_Out);
 extern void BuckyWagon_01_Foreground_Init(void);
 extern void BuckyWagon_01_Foreground_Enable(void);

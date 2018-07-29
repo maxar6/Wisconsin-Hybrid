@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BuckyWagon_01'.
  *
- * Model version                  : 1.1520
+ * Model version                  : 1.1530
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Mon Apr 23 14:25:32 2018
+ * C/C++ source code generated on : Sun Jul 29 18:42:46 2018
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -20,11 +20,11 @@
 /* Invariant block signals (auto storage) */
 const ConstBlockIO_BuckyWagon_01 BuckyWagon_01_ConstB = {
   0.0
-  ,                                    /* '<S218>/Saturation3' */
+  ,                                    /* '<S194>/Saturation3' */
   0
-  ,                                    /* '<S218>/Data Type Conversion3' */
+  ,                                    /* '<S194>/Data Type Conversion3' */
   0
-  /* '<S128>/Data Type Conversion' */
+  /* '<S114>/Data Type Conversion' */
 };
 
 /* Constant parameters (auto storage) */
@@ -98,7 +98,7 @@ const ConstParam_BuckyWagon_01 BuckyWagon_01_ConstP = {
   { 0U, 0U, 2U, 0U, 2U, 0U, 2U, 0U, 0U, 0U, 0U, 0U, 3U, 0U, 0U, 0U, 0U, 1U },
 
   /* Computed Parameter: CombinatorialLogic_table
-   * Referenced by: '<S129>/Combinatorial  Logic'
+   * Referenced by: '<S115>/Combinatorial  Logic'
    */
   { 0, 0, 1, 0, 0, 1, 1, 0 }
 };

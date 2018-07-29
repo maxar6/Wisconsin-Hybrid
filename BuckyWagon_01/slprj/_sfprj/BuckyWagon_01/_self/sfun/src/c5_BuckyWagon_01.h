@@ -17,11 +17,8 @@ typedef struct {
   uint8_T c5_doSetSimStateSideEffects;
   uint8_T c5_is_active_c5_BuckyWagon_01;
   uint8_T c5_is_c5_BuckyWagon_01;
-  uint8_T c5_tp_Begin;
-  uint8_T c5_tp_Braking;
-  uint8_T c5_tp_Driving;
-  uint8_T c5_tp_Rolling;
-  uint8_T c5_tp_Stopped;
+  uint8_T c5_tp_Off;
+  uint8_T c5_tp_On;
   ChartInfoStruct chartInfo;
 } SFc5_BuckyWagon_01InstanceStruct;
 
