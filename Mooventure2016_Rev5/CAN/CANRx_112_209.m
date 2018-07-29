@@ -185,6 +185,15 @@ function msg = CANTx_112_209()
   msg.fields{7}.scale         = 1;
   msg.fields{7}.offset        = 0;
   
+  msg.fields{8}.name          = 'Inverter_Temp';
+  msg.fields{8}.units         = 'C';
+  msg.fields{8}.start_bit     = 25;
+  msg.fields{8}.bit_length    = 8;
+  msg.fields{8}.byte_order    = 'BIG_ENDIAN';
+  msg.fields{8}.data_type     = 'UNSIGNED';
+  msg.fields{8}.scale         = 1;
+  msg.fields{8}.offset        = -40;
+  
    
 % Equation: (CAN_msg_field_value) * 1e-2 + 250.0 = (Simulink_model_value)
 % example:             1245       * 1e-2 + 250.0 =     262.45 degK
