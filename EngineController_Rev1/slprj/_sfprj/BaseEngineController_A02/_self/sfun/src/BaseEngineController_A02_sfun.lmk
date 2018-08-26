@@ -13,6 +13,7 @@ OBJECTS = \
 	"c3_BaseEngineController_A02.obj"\
 	"c4_BaseEngineController_A02.obj"\
 	"c5_BaseEngineController_A02.obj"\
+	"c6_BaseEngineController_A02.obj"\
 	"c7_BaseEngineController_A02.obj"\
 	"c8_BaseEngineController_A02.obj"\
 	"c9_BaseEngineController_A02.obj"\
@@ -50,6 +51,8 @@ c4_BaseEngineController_A02.obj :	"c4_BaseEngineController_A02.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c4_BaseEngineController_A02.c"
 c5_BaseEngineController_A02.obj :	"c5_BaseEngineController_A02.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c5_BaseEngineController_A02.c"
+c6_BaseEngineController_A02.obj :	"c6_BaseEngineController_A02.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c6_BaseEngineController_A02.c"
 c7_BaseEngineController_A02.obj :	"c7_BaseEngineController_A02.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c7_BaseEngineController_A02.c"
 c8_BaseEngineController_A02.obj :	"c8_BaseEngineController_A02.c"

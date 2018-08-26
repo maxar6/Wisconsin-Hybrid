@@ -8,6 +8,7 @@
 
 /* Type Definitions */
 typedef struct {
+  real_T c15_lastTorque;
   SimStruct *S;
   const mxArray *c15_setSimStateSideEffectsInfo;
   int32_T c15_sfEvent;
@@ -17,8 +18,10 @@ typedef struct {
   uint8_T c15_doSetSimStateSideEffects;
   uint8_T c15_is_active_c15_Mooventure2016_Rev5;
   uint8_T c15_is_c15_Mooventure2016_Rev5;
-  uint8_T c15_tp_PumpOff;
-  uint8_T c15_tp_PumpOn;
+  uint8_T c15_tp_Default;
+  uint8_T c15_tp_RampIn;
+  uint8_T c15_tp_RampOut;
+  uint8_T c15_tp_Saturated;
   ChartInfoStruct chartInfo;
 } SFc15_Mooventure2016_Rev5InstanceStruct;
 

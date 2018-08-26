@@ -8,11 +8,11 @@
 #include "Mooventure2016_Rev5.h"
 
 /*---- DEFINES --------------------------------------------------------------------------------------------*/
-#define DLL_NAME                       "Mooventur_212"
-#define SRZ_NAME                       "Mooventure2016_Rev5_212"
+#define DLL_NAME                       "Mooventur_214"
+#define SRZ_NAME                       "Mooventure2016_Rev5_214"
 #define MODEL_NAME                     "Mooventure2016_Rev5"
 #define MODEL_GUID                     "0339744d-1465-4569-a1-b4-32-b1-a7-fa-5f"
-#define BUILD_GUID                     "d562e537-da09-4a78-9f-6b-d4-e6-15-d6-aa"
+#define BUILD_GUID                     "876101ae-5051-4aa8-ba-1b-f7-f0-92-8c-fe"
 #define TOKEN_GUID                     "DD8AD11F95A6FC42BFF9AC780840E4B4"
 #define MOTOHAWK_VERSION               "MotoHawk 2011a_sp0.184"
 #define MATLAB_VERSION                 "MATLAB 7.12.0"
@@ -102,7 +102,7 @@ void OpenApplication(void)
   /* Initialize Fault Manager */
   {
     uint32_T i;
-    for (i=0; i < 93; i++) {
+    for (i=0; i < 96; i++) {
       if ((FaultManager_DataStore_ByIndex(i).mode ==
            FAULT_MODE_STICKYDASHPERSISTENT) ||
           (FaultManager_DataStore_ByIndex(i).mode ==

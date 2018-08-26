@@ -13,10 +13,23 @@
       <include name="Mooventure2016_Rev5_data.c"/>
       <include name="MotoHawk_DataStores.c"/>
       <include name="TableLookupFunctions.c"/>
-      <include name="Trigger_BGND_BASE_PERIODIC_5721p0001.c"/>
-      <include name="Trigger_FGND_RTI_PERIODIC_5730p0001.c"/>
-      <include name="Trigger_Fault_active_0_8.c"/>
+      <include name="Trigger_BGND_BASE_PERIODIC_18255p0001.c"/>
+      <include name="Trigger_BGND_BASE_PERIODIC_6013p0004.c"/>
+      <include name="Trigger_BGND_BASEx10_PERIODIC_18257p0001.c"/>
+      <include name="Trigger_BGND_BASEx2_PERIODIC_18256p0001.c"/>
+      <include name="Trigger_FGND_10XRTI_PERIODIC_18253p0001.c"/>
+      <include name="Trigger_FGND_20XRTI_PERIODIC_18254p0001.c"/>
+      <include name="Trigger_FGND_2XRTI_PERIODIC_18251p0001.c"/>
+      <include name="Trigger_FGND_RTI_PERIODIC_18252p0001.c"/>
+      <include name="Trigger_FGND_RTI_PERIODIC_6022p0004.c"/>
+      <include name="Trigger_Fault_active_0_10.c"/>
+      <include name="Trigger_IDLE_EVENT_17123p0007.c"/>
+      <include name="Trigger_IDLE_EVENT_18182p0001.c"/>
+      <include name="Trigger_ONE_SECOND_EVENT_18258p0001.c"/>
+      <include name="Trigger_STARTUP_EVENT_18157p0005.c"/>
       <include name="VarDecs.c"/>
+      <include name="mh_ccp_protocol.c"/>
+      <include name="mh_ccp_protocol_CCP1.c"/>
       <include name="rt_nonfinite.c"/>
       <include name="Mooventure2016_Rev5.c"/>
       <include name="MotoCoder_Services_CRC.c"/>
@@ -132,7 +145,7 @@
    </target>
    <target name="link" depends="compile" description="Links the code">
       <gcc-ld installdir="${target.toolchain.installdir}" outputdir="${target.dir}"
-              linkerscript="C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Mooventure2016_Rev5.ld"
+              linkerscript="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\Mooventure2016_Rev5.ld"
               mapfile="Mooventure2016_Rev5.map"
               output="Mooventure2016_Rev5.elf">
          <options>

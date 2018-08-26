@@ -8,6 +8,7 @@
 
 /* Type Definitions */
 typedef struct {
+  real_T c12_lastTorque;
   SimStruct *S;
   const mxArray *c12_setSimStateSideEffectsInfo;
   int32_T c12_sfEvent;
@@ -17,14 +18,10 @@ typedef struct {
   uint8_T c12_doSetSimStateSideEffects;
   uint8_T c12_is_active_c12_Mooventure2016_Rev5;
   uint8_T c12_is_c12_Mooventure2016_Rev5;
-  uint8_T c12_tp_Heat1;
-  uint8_T c12_tp_Heat2;
-  uint8_T c12_tp_Heat3;
-  uint8_T c12_tp_Heat4;
-  uint8_T c12_tp_HeatOn;
-  uint8_T c12_tp_SystemIdle;
-  uint8_T c12_tp_SystemWarmup;
-  uint8_T c12_tp_UserWantsHeat_NotHot;
+  uint8_T c12_tp_Default;
+  uint8_T c12_tp_RampIn;
+  uint8_T c12_tp_RampOut;
+  uint8_T c12_tp_Saturated;
   ChartInfoStruct chartInfo;
 } SFc12_Mooventure2016_Rev5InstanceStruct;
 

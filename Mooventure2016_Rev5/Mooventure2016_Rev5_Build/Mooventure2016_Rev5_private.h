@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'Mooventure2016_Rev5'.
  *
- * Model version                  : 1.2069
+ * Model version                  : 1.2141
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Sun Apr 08 00:47:19 2018
+ * C/C++ source code generated on : Sat Aug 25 21:19:10 2018
  *
  * Target selection: motohawk_motocoder_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -34,6 +34,8 @@
 
 extern boolean_T GetFaultActionStatus(uint32_T action);
 extern boolean_T GetFaultActionStatus(uint32_T action);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T GetFaultActionStatus(uint32_T action);
 extern boolean_T GetFaultActionStatus(uint32_T action);
 extern boolean_T GetFaultActionStatus(uint32_T action);
@@ -54,6 +56,7 @@ extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
 extern real_T rt_powd_snf(real_T u0, real_T u1);
+extern void Mooventure2016_Rev5_CCPDaqProcessing(int_T controlPortIdx);
 
 #endif                                 /* RTW_HEADER_Mooventure2016_Rev5_private_h_ */
 

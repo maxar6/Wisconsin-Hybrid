@@ -3,6 +3,7 @@
 
 /*---- INCLUDE FILES --------------------------------------------------------------------------------------*/
 #include "CommonInclude.h"
+#include "mh_ccp_protocol.h"
 #include "FaultManager.h"
 #include "TableLookupFunctions.h"
 

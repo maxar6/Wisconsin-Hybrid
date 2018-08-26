@@ -270,7 +270,7 @@ static void sf_c8_Mooventure2016_Rev5(SFc8_Mooventure2016_Rev5InstanceStruct
       c8_temp = (_SFD_CCP_CALL(1U, 0, *c8_TorqueRequest == 0.0 != 0U,
                   chartInstance->c8_sfEvent) != 0);
       if (c8_temp) {
-        c8_temp = (_SFD_CCP_CALL(1U, 1, *c8_BatteryVoltage >= 250.0 != 0U,
+        c8_temp = (_SFD_CCP_CALL(1U, 1, *c8_BatteryVoltage >= 50.0 != 0U,
                     chartInstance->c8_sfEvent) != 0);
       }
 
@@ -572,10 +572,10 @@ static void init_dsm_address_info(SFc8_Mooventure2016_Rev5InstanceStruct
 /* SFunction Glue Code */
 void sf_c8_Mooventure2016_Rev5_get_check_sum(mxArray *plhs[])
 {
-  ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(2977048112U);
-  ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(912426473U);
-  ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(4140855946U);
-  ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(2336602080U);
+  ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(761825614U);
+  ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(4274589840U);
+  ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(3089381973U);
+  ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(3799533394U);
 }
 
 mxArray *sf_c8_Mooventure2016_Rev5_get_autoinheritance_info(void)
@@ -779,9 +779,9 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
         _SFD_CV_INIT_TRANS(0,0,NULL,NULL,0,NULL);
 
         {
-          static unsigned int sStartGuardMap[] = { 2, 24, 48 };
+          static unsigned int sStartGuardMap[] = { 2, 24, 47 };
 
-          static unsigned int sEndGuardMap[] = { 18, 43, 62 };
+          static unsigned int sEndGuardMap[] = { 18, 42, 61 };
 
           static int sPostFixPredicateTree[] = { 0, 1, -3, 2, -3 };
 
@@ -811,9 +811,9 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
 
         _SFD_TRANS_COV_WTS(1,0,3,0,0);
         if (chartAlreadyPresent==0) {
-          static unsigned int sStartGuardMap[] = { 2, 24, 48 };
+          static unsigned int sStartGuardMap[] = { 2, 24, 47 };
 
-          static unsigned int sEndGuardMap[] = { 18, 43, 62 };
+          static unsigned int sEndGuardMap[] = { 18, 42, 61 };
 
           _SFD_TRANS_COV_MAPS(1,
                               0,NULL,NULL,
@@ -1027,10 +1027,10 @@ static void mdlSetWorkWidths_c8_Mooventure2016_Rev5(SimStruct *S)
   }
 
   ssSetOptions(S,ssGetOptions(S)|SS_OPTION_WORKS_WITH_CODE_REUSE);
-  ssSetChecksum0(S,(530668651U));
-  ssSetChecksum1(S,(2689965746U));
-  ssSetChecksum2(S,(1331325237U));
-  ssSetChecksum3(S,(405709324U));
+  ssSetChecksum0(S,(628436219U));
+  ssSetChecksum1(S,(55205513U));
+  ssSetChecksum2(S,(1353541198U));
+  ssSetChecksum3(S,(3522601381U));
   ssSetmdlDerivatives(S, NULL);
   ssSetExplicitFCSSCtrl(S,1);
 }

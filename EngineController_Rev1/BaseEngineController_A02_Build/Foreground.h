@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BaseEngineController_A02'.
  *
- * Model version                  : 1.1626
+ * Model version                  : 1.1639
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Sun Apr 22 15:55:33 2018
+ * C/C++ source code generated on : Sat Aug 25 19:54:14 2018
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -31,9 +31,9 @@
 /* Child system includes */
 #include "BaseEngineController_A02_IdleStateMachine.h"
 
-/* Block signals for system '<S151>/Multiply and Divide, avoiding divde by zero' */
+/* Block signals for system '<S167>/Multiply and Divide, avoiding divde by zero' */
 typedef struct {
-  real_T s156_chargemass;              /* '<S156>/charge mass' */
+  real_T s172_chargemass;              /* '<S172>/charge mass' */
 } rtB_MultiplyandDivideavoidingdivdebyzero_BaseEngineController_A02;
 
 extern void BaseEngineController_A02_MultiplyandDivideavoidingdivdebyzero

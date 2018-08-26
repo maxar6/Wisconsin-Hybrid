@@ -3,6 +3,7 @@
 
 /*---- INCLUDE FILES --------------------------------------------------------------------------------------*/
 #include "CommonInclude.h"
+#include "mh_ccp_protocol.h"
 #include "AppMonitor.h"
 #include "FaultManager.h"
 #include "MotoHawk_IO.h"

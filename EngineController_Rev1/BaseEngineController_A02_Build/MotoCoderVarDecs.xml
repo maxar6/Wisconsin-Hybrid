@@ -1,6 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <VarDecs>
    <VarDec>
+      <name>CCP1_StationAddr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>65535</max>
+      <min>0</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Station ID for CCP handler: CCP1</help>
+      <group>System | CCP | CCP1</group>
+      <struct>ConstantWork.CCP1_StationAddr</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint16</type>
+   </VarDec>
+   <VarDec>
+      <name>CCP1TxID</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>4.294967295E9</max>
+      <min>0</min>
+      <format>8.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Transmit CAN ID for CCP handler: CCP1</help>
+      <group>System | CCP | CCP1</group>
+      <struct>ConstantWork.CCP1TxID</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint32</type>
+   </VarDec>
+   <VarDec>
+      <name>CCP1RxID</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>4.294967295E9</max>
+      <min>0</min>
+      <format>8.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Receive CAN ID for CCP handler: CCP1</help>
+      <group>System | CCP | CCP1</group>
+      <struct>ConstantWork.CCP1RxID</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint32</type>
+   </VarDec>
+   <VarDec>
+      <name>CCP1RxIDMask</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>4.294967295E9</max>
+      <min>0</min>
+      <format>8.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Receive CAN ID Mask for CCP handler: CCP1</help>
+      <group>System | CCP | CCP1</group>
+      <struct>ConstantWork.CCP1RxIDMask</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint32</type>
+   </VarDec>
+   <VarDec>
       <name>ECUP_Threshold</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -1337,6 +1413,29 @@
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>O2DisablmentMult</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>127</max>
+      <min>-128</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|Controller|Run|O2 Control</group>
+      <struct>ConstantWork.O2DisablmentMult</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>int8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Disabled" value="0"/>
+         <item name="Enabled" value="1"/>
+         <default>Unknown</default>
+      </enum>
    </VarDec>
    <VarDec>
       <name>EquivRatioDelta</name>
@@ -2776,6 +2875,26 @@
       </enum>
    </VarDec>
    <VarDec>
+      <name>VEAdaptFilt</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant</help>
+      <group>BaseEngineController_A02|Foreground|Control|Controller|Run|AirFlow Manager|VE Adapt</group>
+      <struct>ConstantWork.VEAdaptFilt</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
       <name>VE_Adapt_Enable</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -2792,6 +2911,119 @@
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>StableEngine_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|Controller|Run|AirFlow Manager|VE Adapt|Stable Engine | StableEngine_Ovr Override</group>
+      <struct>VolatileWork_BSS.StableEngine_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>StableRPM_</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|Controller|Run|AirFlow Manager|VE Adapt|Stable Engine</group>
+      <struct>ConstantWork.StableRPM_</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>StableRPM_t</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|Controller|Run|AirFlow Manager|VE Adapt|Stable Engine</group>
+      <struct>ConstantWork.StableRPM_t</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>StableLoad_</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|Controller|Run|AirFlow Manager|VE Adapt|Stable Engine</group>
+      <struct>ConstantWork.StableLoad_</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>StableLoad_t</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|Controller|Run|AirFlow Manager|VE Adapt|Stable Engine</group>
+      <struct>ConstantWork.StableLoad_t</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>StableEngine_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|Controller|Run|AirFlow Manager|VE Adapt|Stable Engine | StableEngine_Ovr Override</group>
+      <struct>VolatileWork_BSS.StableEngine_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>FuelPumpStartTime</name>
@@ -3287,6 +3519,78 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
+      <name>CAN_Timeout_Phoenix_1</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|Diagnostics|Phoenix AgeCount Fault|Phoenix 1 CAN Faults</group>
+      <struct>ConstantWork.CAN_Timeout_Phoenix_1</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>CAN_Timeout_Phoenix_2</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|Diagnostics|Phoenix AgeCount Fault|Phoenix 2 CAN Faults</group>
+      <struct>ConstantWork.CAN_Timeout_Phoenix_2</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>CAN_Timeout_Phoenix_3</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|Diagnostics|Phoenix AgeCount Fault|Phoenix 3 CAN Faults</group>
+      <struct>ConstantWork.CAN_Timeout_Phoenix_3</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>CAN_Timeout_Phoenix_4</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|Diagnostics|Phoenix AgeCount Fault|Phoenix 4 CAN Faults</group>
+      <struct>ConstantWork.CAN_Timeout_Phoenix_4</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
       <name>FuelPres_DeltaTarget</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -3441,6 +3745,78 @@
       <help>After no oil pressure for this long the NoOilFault becomes active.</help>
       <group>BaseEngineController_A02|Foreground|Control|Diagnostics|Low Oil Pressure Fault Logic</group>
       <struct>ConstantWork.NoOilPres_FaultTime</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Motor_Hot</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|Diagnostics|Motor Overheat Fault Logic</group>
+      <struct>ConstantWork.Motor_Hot</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Motor_Warm</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|Diagnostics|Motor Overheat Fault Logic</group>
+      <struct>ConstantWork.Motor_Warm</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Drive_Warm</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|Diagnostics|Motor Overheat Fault Logic</group>
+      <struct>ConstantWork.Drive_Warm</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Drive_Hot</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|Diagnostics|Motor Overheat Fault Logic</group>
+      <struct>ConstantWork.Drive_Hot</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
@@ -4570,6 +4946,65 @@
       </enum>
    </VarDec>
    <VarDec>
+      <name>Motor_Temp_Offset</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Outputs|CAN Out|112|Temp Sensor Arbitration</group>
+      <struct>ConstantWork.Motor_Temp_Offset</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Motor_Temp_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix | Motor_Temp_Ovr Override</group>
+      <struct>VolatileWork_BSS.Motor_Temp_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Motor_Temp_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix | Motor_Temp_Ovr Override</group>
+      <struct>VolatileWork_BSS.Motor_Temp_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
       <name>Temp_Guage_Ovr_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -4773,6 +5208,413 @@
       </enum>
    </VarDec>
    <VarDec>
+      <name>Torque_Filter</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant</help>
+      <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix</group>
+      <struct>ConstantWork.Torque_Filter</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Est_Absolute_Torque_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix | Est_Absolute_Torque_Ovr Override</group>
+      <struct>VolatileWork_BSS.Est_Absolute_Torque_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Est_Absolute_Torque_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix | Est_Absolute_Torque_Ovr Override</group>
+      <struct>VolatileWork_BSS.Est_Absolute_Torque_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Load_On</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Outputs|CAN Out|112</group>
+      <struct>ConstantWork.Load_On</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Load_On_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Outputs|CAN Out|112 | Load_On_Ovr Override</group>
+      <struct>VolatileWork_BSS.Load_On_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
+      <name>Fault_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Outputs|CAN Out|112 | Fault_Ovr Override</group>
+      <struct>VolatileWork_BSS.Fault_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Fault_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Outputs|CAN Out|112 | Fault_Ovr Override</group>
+      <struct>VolatileWork_BSS.Fault_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Faults_Light_Status_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Outputs|CAN Out|112|MIL States | Faults_Light_Status_Ovr Override</group>
+      <struct>VolatileWork_BSS.Faults_Light_Status_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>CEL_Status_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Outputs|CAN Out|112|MIL States | CEL_Status_Ovr Override</group>
+      <struct>VolatileWork_BSS.CEL_Status_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>CEL_Status_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Outputs|CAN Out|112|MIL States | CEL_Status_Ovr Override</group>
+      <struct>VolatileWork_BSS.CEL_Status_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
+      <name>Wrench_Status_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Outputs|CAN Out|112|MIL States | Wrench_Status_Ovr Override</group>
+      <struct>VolatileWork_BSS.Wrench_Status_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Wrench_Status_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Outputs|CAN Out|112|MIL States | Wrench_Status_Ovr Override</group>
+      <struct>VolatileWork_BSS.Wrench_Status_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
+      <name>Faults_Light_Status_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Outputs|CAN Out|112|MIL States | Faults_Light_Status_Ovr Override</group>
+      <struct>VolatileWork_BSS.Faults_Light_Status_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Inverter_Temp_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Outputs|CAN Out|112 | Inverter_Temp_Ovr Override</group>
+      <struct>VolatileWork_BSS.Inverter_Temp_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Inverter_Temp_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Outputs|CAN Out|112 | Inverter_Temp_Ovr Override</group>
+      <struct>VolatileWork_BSS.Inverter_Temp_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Drive_Temp_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix | Drive_Temp_Ovr Override</group>
+      <struct>VolatileWork_BSS.Drive_Temp_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Drive_Temp_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix | Drive_Temp_Ovr Override</group>
+      <struct>VolatileWork_BSS.Drive_Temp_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Run_Request_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Outputs|CAN Out|Phoenix | Run_Request_Ovr Override</group>
+      <struct>VolatileWork_BSS.Run_Request_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Genset_Enable_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|112 | Genset_Enable_Ovr Override</group>
+      <struct>VolatileWork_BSS.Genset_Enable_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Genset_Enable_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|112 | Genset_Enable_Ovr Override</group>
+      <struct>VolatileWork_BSS.Genset_Enable_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
       <name>Crank_Time</name>
       <access>RW RW RW RW</access>
       <gain>0.005</gain>
@@ -4883,47 +5725,6 @@
       <struct>ConstantWork.Generating_Max_Torque</struct>
       <class>var</class>
       <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Genset_Enable_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|112 | Genset_Enable_Ovr Override</group>
-      <struct>VolatileWork_BSS.Genset_Enable_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Genset_Enable_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|112 | Genset_Enable_Ovr Override</group>
-      <struct>VolatileWork_BSS.Genset_Enable_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -5049,106 +5850,6 @@
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Load_On_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BaseEngineController_A02|Foreground|Outputs|CAN Out|112 | Load_On_Ovr Override</group>
-      <struct>VolatileWork_BSS.Load_On_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-   </VarDec>
-   <VarDec>
-      <name>Fault_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BaseEngineController_A02|Foreground|Outputs|CAN Out|112 | Fault_Ovr Override</group>
-      <struct>VolatileWork_BSS.Fault_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Fault_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BaseEngineController_A02|Foreground|Outputs|CAN Out|112 | Fault_Ovr Override</group>
-      <struct>VolatileWork_BSS.Fault_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Fault_Prb</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BaseEngineController_A02|Foreground|Outputs|CAN Out|112</group>
-      <struct>VolatileWork_BSS.Fault_Prb</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Run_Request_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BaseEngineController_A02|Foreground|Outputs|CAN Out|Phoenix | Run_Request_Ovr Override</group>
-      <struct>VolatileWork_BSS.Run_Request_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
    </VarDec>
    <VarDec>
       <name>Run_Request_Ovr_new</name>
@@ -6461,11 +7162,11 @@
       <min>0</min>
       <format>3.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Selects the source for the fueling algorithm</help>
       <group>BaseEngineController_A02|Foreground|Control|VirtualSensors|AirCalcs|SpeedDensityMAPReferenced</group>
-      <struct>VolatileWork.MAF_Source</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.MAF_Source</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -10982,67 +11683,6 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Torque_Filter</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>sec</units>
-      <ctype>const Constant_T</ctype>
-      <help>Filter time constant</help>
-      <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix</group>
-      <struct>ConstantWork.Torque_Filter</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Est_Absolute_Torque_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix | Est_Absolute_Torque_Ovr Override</group>
-      <struct>VolatileWork_BSS.Est_Absolute_Torque_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Est_Absolute_Torque_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix | Est_Absolute_Torque_Ovr Override</group>
-      <struct>VolatileWork_BSS.Est_Absolute_Torque_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
       <name>Vehicle_Speed_Ovr_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -11324,88 +11964,6 @@
       <ctype>Volatile_BSS_T</ctype>
       <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix | Estimating_VBATT_Lv_Ovr Override</group>
       <struct>VolatileWork_BSS.Estimating_VBATT_Lv_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Motor_Temp_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix | Motor_Temp_Ovr Override</group>
-      <struct>VolatileWork_BSS.Motor_Temp_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Motor_Temp_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix | Motor_Temp_Ovr Override</group>
-      <struct>VolatileWork_BSS.Motor_Temp_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Drive_Temp_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix | Drive_Temp_Ovr Override</group>
-      <struct>VolatileWork_BSS.Drive_Temp_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Drive_Temp_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|Phoenix | Drive_Temp_Ovr Override</group>
-      <struct>VolatileWork_BSS.Drive_Temp_Ovr_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -12823,6 +13381,24 @@
       <help>Specifies the maximum allowable deviation between the two sensors</help>
       <group>BaseEngineController_A02|Foreground|Control|VirtualSensors|RawProcessed|TPS  Sensor Arbitration</group>
       <struct>ConstantWork.TPS1_TPS2_Max_Deviation</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>CAN_Timeout_112</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Inputs|CAN Inputs|112|112 CAN Faults</group>
+      <struct>ConstantWork.CAN_Timeout_112</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
@@ -17110,6 +17686,64 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
+      <name>TimeSinceRun09IdxArr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|VirtualSensors|Virtual Indexes</group>
+      <struct>ConstantWork.TimeSinceRun09IdxArr</struct>
+      <class>prelookup</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+      <len>9</len>
+      <input>TimeSinceRun09In</input>
+      <index>TimeSinceRun09Idx</index>
+   </VarDec>
+   <VarDec>
+      <name>TimeSinceRun09Idx</name>
+      <access>RO RO RO RO</access>
+      <gain>0.001953125</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>127.998046875</max>
+      <min>0</min>
+      <format>4.2</format>
+      <mask>0x0000FFFF</mask>
+      <units>idx.frac</units>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|VirtualSensors|Virtual Indexes</group>
+      <struct>VolatileWork_BSS.TimeSinceRun09Idx</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint16</type>
+   </VarDec>
+   <VarDec>
+      <name>TimeSinceRun09In</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02|Foreground|Control|VirtualSensors|Virtual Indexes</group>
+      <struct>VolatileWork_BSS.TimeSinceRun09In</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
       <name>WarmUpEqRatioMultMap</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -17149,6 +17783,141 @@
       <help>Multiplier on base eq. ratio as a function of NECCT and Ind Power.</help>
       <group>BaseEngineController_A02|Foreground|Control|Controller|Run|Base Equiv Ratio</group>
       <struct>VolatileWork_BSS.WarmUpEqRatioMult</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>WarmUpTimeMultMap</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>mult</units>
+      <ctype>const Constant_T</ctype>
+      <help>Multiplier on base eq. ratio as a function of TimeSinceRun and ECT</help>
+      <group>BaseEngineController_A02|Foreground|Control|Controller|Run|Base Equiv Ratio</group>
+      <struct>ConstantWork.WarmUpTimeMultMap.data</struct>
+      <class>interpolation_2d</class>
+      <storage>FLASH</storage>
+      <update>REMOTE</update>
+      <type>real32</type>
+      <output>WarmUpTimeMult</output>
+      <col_prelookup>ECT05IdxArr</col_prelookup>
+      <col_len>5</col_len>
+      <row_prelookup>TimeSinceRun09IdxArr</row_prelookup>
+      <row_len>9</row_len>
+   </VarDec>
+   <VarDec>
+      <name>WarmUpTimeMult</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>mult</units>
+      <ctype>Volatile_BSS_T</ctype>
+      <help>Multiplier on base eq. ratio as a function of TimeSinceRun and ECT</help>
+      <group>BaseEngineController_A02|Foreground|Control|Controller|Run|Base Equiv Ratio</group>
+      <struct>VolatileWork_BSS.WarmUpTimeMult</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>CoolantTempEnrichmentMap</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>mult</units>
+      <ctype>const Constant_T</ctype>
+      <help>Multiplier on base eq. ratio as a function of Load and ECT</help>
+      <group>BaseEngineController_A02|Foreground|Control|Controller|Run|Base Equiv Ratio</group>
+      <struct>ConstantWork.CoolantTempEnrichmentMap.data</struct>
+      <class>interpolation_2d</class>
+      <storage>FLASH</storage>
+      <update>REMOTE</update>
+      <type>real32</type>
+      <output>CoolantTempEnrichment</output>
+      <col_prelookup>ECT05IdxArr</col_prelookup>
+      <col_len>5</col_len>
+      <row_prelookup>IndLoadNom09IdxArr</row_prelookup>
+      <row_len>9</row_len>
+   </VarDec>
+   <VarDec>
+      <name>CoolantTempEnrichment</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>mult</units>
+      <ctype>Volatile_BSS_T</ctype>
+      <help>Multiplier on base eq. ratio as a function of Load and ECT</help>
+      <group>BaseEngineController_A02|Foreground|Control|Controller|Run|Base Equiv Ratio</group>
+      <struct>VolatileWork_BSS.CoolantTempEnrichment</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>IntakeAirTempEnrichmentMap</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>mult</units>
+      <ctype>const Constant_T</ctype>
+      <help>Multiplier on base eq. ratio as a function of IAT and ECT</help>
+      <group>BaseEngineController_A02|Foreground|Control|Controller|Run|Base Equiv Ratio</group>
+      <struct>ConstantWork.IntakeAirTempEnrichmentMap.data</struct>
+      <class>interpolation_2d</class>
+      <storage>FLASH</storage>
+      <update>REMOTE</update>
+      <type>real32</type>
+      <output>IntakeAirTempEnrichment</output>
+      <col_prelookup>IAT05IdxArr</col_prelookup>
+      <col_len>5</col_len>
+      <row_prelookup>IndLoadNom09IdxArr</row_prelookup>
+      <row_len>9</row_len>
+   </VarDec>
+   <VarDec>
+      <name>IntakeAirTempEnrichment</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>mult</units>
+      <ctype>Volatile_BSS_T</ctype>
+      <help>Multiplier on base eq. ratio as a function of IAT and ECT</help>
+      <group>BaseEngineController_A02|Foreground|Control|Controller|Run|Base Equiv Ratio</group>
+      <struct>VolatileWork_BSS.IntakeAirTempEnrichment</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -19166,14 +19935,16 @@
       </col_enum>
       <col_enum column="5">
          <enum>
-            <item name="CutThrottle" value="0"/>
-            <item name="DelayedEngineShutdown" value="1"/>
-            <item name="DisableO2Ctrl" value="2"/>
-            <item name="EngineShutdown" value="3"/>
-            <item name="HardRevLimit" value="4"/>
-            <item name="MediumRevLimit" value="5"/>
-            <item name="SoftRevLimit" value="6"/>
-            <item name="(None)" value="7"/>
+            <item name="CEL" value="0"/>
+            <item name="CutThrottle" value="1"/>
+            <item name="DelayedEngineShutdown" value="2"/>
+            <item name="DisableO2Ctrl" value="3"/>
+            <item name="EngineShutdown" value="4"/>
+            <item name="HardRevLimit" value="5"/>
+            <item name="MediumRevLimit" value="6"/>
+            <item name="SoftRevLimit" value="7"/>
+            <item name="Wrench_Light" value="8"/>
+            <item name="(None)" value="9"/>
             <default>Unknown</default>
          </enum>
       </col_enum>
@@ -19192,14 +19963,16 @@
       </col_enum>
       <col_enum column="7">
          <enum>
-            <item name="CutThrottle" value="0"/>
-            <item name="DelayedEngineShutdown" value="1"/>
-            <item name="DisableO2Ctrl" value="2"/>
-            <item name="EngineShutdown" value="3"/>
-            <item name="HardRevLimit" value="4"/>
-            <item name="MediumRevLimit" value="5"/>
-            <item name="SoftRevLimit" value="6"/>
-            <item name="(None)" value="7"/>
+            <item name="CEL" value="0"/>
+            <item name="CutThrottle" value="1"/>
+            <item name="DelayedEngineShutdown" value="2"/>
+            <item name="DisableO2Ctrl" value="3"/>
+            <item name="EngineShutdown" value="4"/>
+            <item name="HardRevLimit" value="5"/>
+            <item name="MediumRevLimit" value="6"/>
+            <item name="SoftRevLimit" value="7"/>
+            <item name="Wrench_Light" value="8"/>
+            <item name="(None)" value="9"/>
             <default>Unknown</default>
          </enum>
       </col_enum>
@@ -19218,14 +19991,16 @@
       </col_enum>
       <col_enum column="9">
          <enum>
-            <item name="CutThrottle" value="0"/>
-            <item name="DelayedEngineShutdown" value="1"/>
-            <item name="DisableO2Ctrl" value="2"/>
-            <item name="EngineShutdown" value="3"/>
-            <item name="HardRevLimit" value="4"/>
-            <item name="MediumRevLimit" value="5"/>
-            <item name="SoftRevLimit" value="6"/>
-            <item name="(None)" value="7"/>
+            <item name="CEL" value="0"/>
+            <item name="CutThrottle" value="1"/>
+            <item name="DelayedEngineShutdown" value="2"/>
+            <item name="DisableO2Ctrl" value="3"/>
+            <item name="EngineShutdown" value="4"/>
+            <item name="HardRevLimit" value="5"/>
+            <item name="MediumRevLimit" value="6"/>
+            <item name="SoftRevLimit" value="7"/>
+            <item name="Wrench_Light" value="8"/>
+            <item name="(None)" value="9"/>
             <default>Unknown</default>
          </enum>
       </col_enum>
@@ -19244,14 +20019,16 @@
       </col_enum>
       <col_enum column="11">
          <enum>
-            <item name="CutThrottle" value="0"/>
-            <item name="DelayedEngineShutdown" value="1"/>
-            <item name="DisableO2Ctrl" value="2"/>
-            <item name="EngineShutdown" value="3"/>
-            <item name="HardRevLimit" value="4"/>
-            <item name="MediumRevLimit" value="5"/>
-            <item name="SoftRevLimit" value="6"/>
-            <item name="(None)" value="7"/>
+            <item name="CEL" value="0"/>
+            <item name="CutThrottle" value="1"/>
+            <item name="DelayedEngineShutdown" value="2"/>
+            <item name="DisableO2Ctrl" value="3"/>
+            <item name="EngineShutdown" value="4"/>
+            <item name="HardRevLimit" value="5"/>
+            <item name="MediumRevLimit" value="6"/>
+            <item name="SoftRevLimit" value="7"/>
+            <item name="Wrench_Light" value="8"/>
+            <item name="(None)" value="9"/>
             <default>Unknown</default>
          </enum>
       </col_enum>
@@ -19288,76 +20065,85 @@
       </col_header>
       <row_header>
          <enum>
-            <item name="CamEdgesFault" value="0"/>
-            <item name="CamSyncFault" value="1"/>
-            <item name="CrankEdgesFault" value="2"/>
-            <item name="CrankSyncFault" value="3"/>
-            <item name="ECTOverTempFault" value="4"/>
-            <item name="ECTRangeHigh" value="5"/>
-            <item name="ECTRangeLow" value="6"/>
-            <item name="ECTSevereOverTempFault" value="7"/>
-            <item name="EGRSenseRangeHigh" value="8"/>
-            <item name="EGRSenseRangeLow" value="9"/>
-            <item name="EST1_Open" value="10"/>
-            <item name="EST1_Short" value="11"/>
-            <item name="EST2_Open" value="12"/>
-            <item name="EST2_Short" value="13"/>
-            <item name="ETCSpringTest" value="14"/>
-            <item name="ETC_Open_Fault" value="15"/>
-            <item name="ETC_Sticking" value="16"/>
-            <item name="FuelAdaptRangeHi" value="17"/>
-            <item name="FuelAdaptRangeLow" value="18"/>
-            <item name="FuelPresHigh_Fault" value="19"/>
-            <item name="FuelPresLow_Fault" value="20"/>
-            <item name="FuelPresRangeHigh" value="21"/>
-            <item name="FuelPresRangeLow" value="22"/>
-            <item name="FuelSensRangeHigh" value="23"/>
-            <item name="FuelSensRangeLow" value="24"/>
-            <item name="HardOverspeed" value="25"/>
-            <item name="IATRangeHigh" value="26"/>
-            <item name="IATRangeLow" value="27"/>
-            <item name="Inj1Open" value="28"/>
-            <item name="Inj2Open" value="29"/>
-            <item name="MAFRangeHigh" value="30"/>
-            <item name="MAFRangeLow" value="31"/>
-            <item name="MAPRangeHigh" value="32"/>
-            <item name="MAPRangeLow" value="33"/>
-            <item name="MAPTimeRangeHigh" value="34"/>
-            <item name="MAPTimeRangeLow" value="35"/>
-            <item name="MAP_IR_HI" value="36"/>
-            <item name="MAP_IR_LO" value="37"/>
-            <item name="MAP_STICKING" value="38"/>
-            <item name="MediumOverspeed" value="39"/>
-            <item name="NoOil_Fault" value="40"/>
-            <item name="O2FailedLean" value="41"/>
-            <item name="O2FailedRich" value="42"/>
-            <item name="O2NotActive" value="43"/>
-            <item name="O2_PostCatRangeHigh" value="44"/>
-            <item name="O2_PostCatRangeLow" value="45"/>
-            <item name="OilPresRangeHigh" value="46"/>
-            <item name="OilPresRangeLow" value="47"/>
-            <item name="SensVoltRangeHigh" value="48"/>
-            <item name="SensVoltRangeLow" value="49"/>
-            <item name="SoftOverspeed" value="50"/>
-            <item name="SysVoltRangeHigh" value="51"/>
-            <item name="SysVoltRangeLow" value="52"/>
-            <item name="TPS1AdaptHiMax" value="53"/>
-            <item name="TPS1AdaptHiMin" value="54"/>
-            <item name="TPS1AdaptLoMax" value="55"/>
-            <item name="TPS1AdaptLoMin" value="56"/>
-            <item name="TPS1RangeHigh" value="57"/>
-            <item name="TPS1RangeLow" value="58"/>
-            <item name="TPS2AdaptHiMax" value="59"/>
-            <item name="TPS2AdaptHiMin" value="60"/>
-            <item name="TPS2AdaptLoMax" value="61"/>
-            <item name="TPS2AdaptLoMin" value="62"/>
-            <item name="TPS2RangeHigh" value="63"/>
-            <item name="TPS2RangeLow" value="64"/>
-            <item name="TPS_Sensors_Conflict" value="65"/>
+            <item name="CAN_Timeout_112" value="0"/>
+            <item name="CAN_Timeout_Phoenix_1" value="1"/>
+            <item name="CAN_Timeout_Phoenix_2" value="2"/>
+            <item name="CAN_Timeout_Phoenix_3" value="3"/>
+            <item name="CAN_Timeout_Phoenix_4" value="4"/>
+            <item name="CamEdgesFault" value="5"/>
+            <item name="CamSyncFault" value="6"/>
+            <item name="CrankEdgesFault" value="7"/>
+            <item name="CrankSyncFault" value="8"/>
+            <item name="Drive_Hot" value="9"/>
+            <item name="Drive_Warm" value="10"/>
+            <item name="ECTOverTempFault" value="11"/>
+            <item name="ECTRangeHigh" value="12"/>
+            <item name="ECTRangeLow" value="13"/>
+            <item name="ECTSevereOverTempFault" value="14"/>
+            <item name="EGRSenseRangeHigh" value="15"/>
+            <item name="EGRSenseRangeLow" value="16"/>
+            <item name="EST1_Open" value="17"/>
+            <item name="EST1_Short" value="18"/>
+            <item name="EST2_Open" value="19"/>
+            <item name="EST2_Short" value="20"/>
+            <item name="ETCSpringTest" value="21"/>
+            <item name="ETC_Open_Fault" value="22"/>
+            <item name="ETC_Sticking" value="23"/>
+            <item name="FuelAdaptRangeHi" value="24"/>
+            <item name="FuelAdaptRangeLow" value="25"/>
+            <item name="FuelPresHigh_Fault" value="26"/>
+            <item name="FuelPresLow_Fault" value="27"/>
+            <item name="FuelPresRangeHigh" value="28"/>
+            <item name="FuelPresRangeLow" value="29"/>
+            <item name="FuelSensRangeHigh" value="30"/>
+            <item name="FuelSensRangeLow" value="31"/>
+            <item name="HardOverspeed" value="32"/>
+            <item name="IATRangeHigh" value="33"/>
+            <item name="IATRangeLow" value="34"/>
+            <item name="Inj1Open" value="35"/>
+            <item name="Inj2Open" value="36"/>
+            <item name="MAFRangeHigh" value="37"/>
+            <item name="MAFRangeLow" value="38"/>
+            <item name="MAPRangeHigh" value="39"/>
+            <item name="MAPRangeLow" value="40"/>
+            <item name="MAPTimeRangeHigh" value="41"/>
+            <item name="MAPTimeRangeLow" value="42"/>
+            <item name="MAP_IR_HI" value="43"/>
+            <item name="MAP_IR_LO" value="44"/>
+            <item name="MAP_STICKING" value="45"/>
+            <item name="MediumOverspeed" value="46"/>
+            <item name="Motor_Hot" value="47"/>
+            <item name="Motor_Warm" value="48"/>
+            <item name="NoOil_Fault" value="49"/>
+            <item name="O2FailedLean" value="50"/>
+            <item name="O2FailedRich" value="51"/>
+            <item name="O2NotActive" value="52"/>
+            <item name="O2_PostCatRangeHigh" value="53"/>
+            <item name="O2_PostCatRangeLow" value="54"/>
+            <item name="OilPresRangeHigh" value="55"/>
+            <item name="OilPresRangeLow" value="56"/>
+            <item name="SensVoltRangeHigh" value="57"/>
+            <item name="SensVoltRangeLow" value="58"/>
+            <item name="SoftOverspeed" value="59"/>
+            <item name="SysVoltRangeHigh" value="60"/>
+            <item name="SysVoltRangeLow" value="61"/>
+            <item name="TPS1AdaptHiMax" value="62"/>
+            <item name="TPS1AdaptHiMin" value="63"/>
+            <item name="TPS1AdaptLoMax" value="64"/>
+            <item name="TPS1AdaptLoMin" value="65"/>
+            <item name="TPS1RangeHigh" value="66"/>
+            <item name="TPS1RangeLow" value="67"/>
+            <item name="TPS2AdaptHiMax" value="68"/>
+            <item name="TPS2AdaptHiMin" value="69"/>
+            <item name="TPS2AdaptLoMax" value="70"/>
+            <item name="TPS2AdaptLoMin" value="71"/>
+            <item name="TPS2RangeHigh" value="72"/>
+            <item name="TPS2RangeLow" value="73"/>
+            <item name="TPS_Sensors_Conflict" value="74"/>
          </enum>
       </row_header>
       <col_len>13</col_len>
-      <row_len>66</row_len>
+      <row_len>75</row_len>
    </VarDec>
    <VarDec>
       <name>FaultMarquees</name>
@@ -19379,217 +20165,244 @@
       <type>uint8</type>
       <col_enum column="0">
          <enum>
-            <item name="CamEdgesFault" value="0"/>
-            <item name="CamSyncFault" value="1"/>
-            <item name="EST1_Open" value="10"/>
-            <item name="EST1_Short" value="11"/>
-            <item name="EST2_Open" value="12"/>
-            <item name="EST2_Short" value="13"/>
-            <item name="ETCSpringTest" value="14"/>
-            <item name="ETC_Open_Fault" value="15"/>
-            <item name="ETC_Sticking" value="16"/>
-            <item name="FuelAdaptRangeHi" value="17"/>
-            <item name="FuelAdaptRangeLow" value="18"/>
-            <item name="FuelPresHigh_Fault" value="19"/>
-            <item name="CrankEdgesFault" value="2"/>
-            <item name="FuelPresLow_Fault" value="20"/>
-            <item name="FuelPresRangeHigh" value="21"/>
-            <item name="FuelPresRangeLow" value="22"/>
-            <item name="FuelSensRangeHigh" value="23"/>
-            <item name="FuelSensRangeLow" value="24"/>
-            <item name="HardOverspeed" value="25"/>
-            <item name="IATRangeHigh" value="26"/>
-            <item name="IATRangeLow" value="27"/>
-            <item name="Inj1Open" value="28"/>
-            <item name="Inj2Open" value="29"/>
-            <item name="CrankSyncFault" value="3"/>
-            <item name="MAFRangeHigh" value="30"/>
-            <item name="MAFRangeLow" value="31"/>
-            <item name="MAPRangeHigh" value="32"/>
-            <item name="MAPRangeLow" value="33"/>
-            <item name="MAPTimeRangeHigh" value="34"/>
-            <item name="MAPTimeRangeLow" value="35"/>
-            <item name="MAP_IR_HI" value="36"/>
-            <item name="MAP_IR_LO" value="37"/>
-            <item name="MAP_STICKING" value="38"/>
-            <item name="MediumOverspeed" value="39"/>
-            <item name="ECTOverTempFault" value="4"/>
-            <item name="NoOil_Fault" value="40"/>
-            <item name="O2FailedLean" value="41"/>
-            <item name="O2FailedRich" value="42"/>
-            <item name="O2NotActive" value="43"/>
-            <item name="O2_PostCatRangeHigh" value="44"/>
-            <item name="O2_PostCatRangeLow" value="45"/>
-            <item name="OilPresRangeHigh" value="46"/>
-            <item name="OilPresRangeLow" value="47"/>
-            <item name="SensVoltRangeHigh" value="48"/>
-            <item name="SensVoltRangeLow" value="49"/>
-            <item name="ECTRangeHigh" value="5"/>
-            <item name="SoftOverspeed" value="50"/>
-            <item name="SysVoltRangeHigh" value="51"/>
-            <item name="SysVoltRangeLow" value="52"/>
-            <item name="TPS1AdaptHiMax" value="53"/>
-            <item name="TPS1AdaptHiMin" value="54"/>
-            <item name="TPS1AdaptLoMax" value="55"/>
-            <item name="TPS1AdaptLoMin" value="56"/>
-            <item name="TPS1RangeHigh" value="57"/>
-            <item name="TPS1RangeLow" value="58"/>
-            <item name="TPS2AdaptHiMax" value="59"/>
-            <item name="ECTRangeLow" value="6"/>
-            <item name="TPS2AdaptHiMin" value="60"/>
-            <item name="TPS2AdaptLoMax" value="61"/>
-            <item name="TPS2AdaptLoMin" value="62"/>
-            <item name="TPS2RangeHigh" value="63"/>
-            <item name="TPS2RangeLow" value="64"/>
-            <item name="TPS_Sensors_Conflict" value="65"/>
-            <item name="(None)" value="66"/>
-            <item name="ECTSevereOverTempFault" value="7"/>
-            <item name="EGRSenseRangeHigh" value="8"/>
-            <item name="EGRSenseRangeLow" value="9"/>
+            <item name="CAN_Timeout_112" value="0"/>
+            <item name="CAN_Timeout_Phoenix_1" value="1"/>
+            <item name="Drive_Warm" value="10"/>
+            <item name="ECTOverTempFault" value="11"/>
+            <item name="ECTRangeHigh" value="12"/>
+            <item name="ECTRangeLow" value="13"/>
+            <item name="ECTSevereOverTempFault" value="14"/>
+            <item name="EGRSenseRangeHigh" value="15"/>
+            <item name="EGRSenseRangeLow" value="16"/>
+            <item name="EST1_Open" value="17"/>
+            <item name="EST1_Short" value="18"/>
+            <item name="EST2_Open" value="19"/>
+            <item name="CAN_Timeout_Phoenix_2" value="2"/>
+            <item name="EST2_Short" value="20"/>
+            <item name="ETCSpringTest" value="21"/>
+            <item name="ETC_Open_Fault" value="22"/>
+            <item name="ETC_Sticking" value="23"/>
+            <item name="FuelAdaptRangeHi" value="24"/>
+            <item name="FuelAdaptRangeLow" value="25"/>
+            <item name="FuelPresHigh_Fault" value="26"/>
+            <item name="FuelPresLow_Fault" value="27"/>
+            <item name="FuelPresRangeHigh" value="28"/>
+            <item name="FuelPresRangeLow" value="29"/>
+            <item name="CAN_Timeout_Phoenix_3" value="3"/>
+            <item name="FuelSensRangeHigh" value="30"/>
+            <item name="FuelSensRangeLow" value="31"/>
+            <item name="HardOverspeed" value="32"/>
+            <item name="IATRangeHigh" value="33"/>
+            <item name="IATRangeLow" value="34"/>
+            <item name="Inj1Open" value="35"/>
+            <item name="Inj2Open" value="36"/>
+            <item name="MAFRangeHigh" value="37"/>
+            <item name="MAFRangeLow" value="38"/>
+            <item name="MAPRangeHigh" value="39"/>
+            <item name="CAN_Timeout_Phoenix_4" value="4"/>
+            <item name="MAPRangeLow" value="40"/>
+            <item name="MAPTimeRangeHigh" value="41"/>
+            <item name="MAPTimeRangeLow" value="42"/>
+            <item name="MAP_IR_HI" value="43"/>
+            <item name="MAP_IR_LO" value="44"/>
+            <item name="MAP_STICKING" value="45"/>
+            <item name="MediumOverspeed" value="46"/>
+            <item name="Motor_Hot" value="47"/>
+            <item name="Motor_Warm" value="48"/>
+            <item name="NoOil_Fault" value="49"/>
+            <item name="CamEdgesFault" value="5"/>
+            <item name="O2FailedLean" value="50"/>
+            <item name="O2FailedRich" value="51"/>
+            <item name="O2NotActive" value="52"/>
+            <item name="O2_PostCatRangeHigh" value="53"/>
+            <item name="O2_PostCatRangeLow" value="54"/>
+            <item name="OilPresRangeHigh" value="55"/>
+            <item name="OilPresRangeLow" value="56"/>
+            <item name="SensVoltRangeHigh" value="57"/>
+            <item name="SensVoltRangeLow" value="58"/>
+            <item name="SoftOverspeed" value="59"/>
+            <item name="CamSyncFault" value="6"/>
+            <item name="SysVoltRangeHigh" value="60"/>
+            <item name="SysVoltRangeLow" value="61"/>
+            <item name="TPS1AdaptHiMax" value="62"/>
+            <item name="TPS1AdaptHiMin" value="63"/>
+            <item name="TPS1AdaptLoMax" value="64"/>
+            <item name="TPS1AdaptLoMin" value="65"/>
+            <item name="TPS1RangeHigh" value="66"/>
+            <item name="TPS1RangeLow" value="67"/>
+            <item name="TPS2AdaptHiMax" value="68"/>
+            <item name="TPS2AdaptHiMin" value="69"/>
+            <item name="CrankEdgesFault" value="7"/>
+            <item name="TPS2AdaptLoMax" value="70"/>
+            <item name="TPS2AdaptLoMin" value="71"/>
+            <item name="TPS2RangeHigh" value="72"/>
+            <item name="TPS2RangeLow" value="73"/>
+            <item name="TPS_Sensors_Conflict" value="74"/>
+            <item name="(None)" value="75"/>
+            <item name="CrankSyncFault" value="8"/>
+            <item name="Drive_Hot" value="9"/>
             <default>Unknown</default>
          </enum>
       </col_enum>
       <col_enum column="1">
          <enum>
-            <item name="CamEdgesFault" value="0"/>
-            <item name="CamSyncFault" value="1"/>
-            <item name="EST1_Open" value="10"/>
-            <item name="EST1_Short" value="11"/>
-            <item name="EST2_Open" value="12"/>
-            <item name="EST2_Short" value="13"/>
-            <item name="ETCSpringTest" value="14"/>
-            <item name="ETC_Open_Fault" value="15"/>
-            <item name="ETC_Sticking" value="16"/>
-            <item name="FuelAdaptRangeHi" value="17"/>
-            <item name="FuelAdaptRangeLow" value="18"/>
-            <item name="FuelPresHigh_Fault" value="19"/>
-            <item name="CrankEdgesFault" value="2"/>
-            <item name="FuelPresLow_Fault" value="20"/>
-            <item name="FuelPresRangeHigh" value="21"/>
-            <item name="FuelPresRangeLow" value="22"/>
-            <item name="FuelSensRangeHigh" value="23"/>
-            <item name="FuelSensRangeLow" value="24"/>
-            <item name="HardOverspeed" value="25"/>
-            <item name="IATRangeHigh" value="26"/>
-            <item name="IATRangeLow" value="27"/>
-            <item name="Inj1Open" value="28"/>
-            <item name="Inj2Open" value="29"/>
-            <item name="CrankSyncFault" value="3"/>
-            <item name="MAFRangeHigh" value="30"/>
-            <item name="MAFRangeLow" value="31"/>
-            <item name="MAPRangeHigh" value="32"/>
-            <item name="MAPRangeLow" value="33"/>
-            <item name="MAPTimeRangeHigh" value="34"/>
-            <item name="MAPTimeRangeLow" value="35"/>
-            <item name="MAP_IR_HI" value="36"/>
-            <item name="MAP_IR_LO" value="37"/>
-            <item name="MAP_STICKING" value="38"/>
-            <item name="MediumOverspeed" value="39"/>
-            <item name="ECTOverTempFault" value="4"/>
-            <item name="NoOil_Fault" value="40"/>
-            <item name="O2FailedLean" value="41"/>
-            <item name="O2FailedRich" value="42"/>
-            <item name="O2NotActive" value="43"/>
-            <item name="O2_PostCatRangeHigh" value="44"/>
-            <item name="O2_PostCatRangeLow" value="45"/>
-            <item name="OilPresRangeHigh" value="46"/>
-            <item name="OilPresRangeLow" value="47"/>
-            <item name="SensVoltRangeHigh" value="48"/>
-            <item name="SensVoltRangeLow" value="49"/>
-            <item name="ECTRangeHigh" value="5"/>
-            <item name="SoftOverspeed" value="50"/>
-            <item name="SysVoltRangeHigh" value="51"/>
-            <item name="SysVoltRangeLow" value="52"/>
-            <item name="TPS1AdaptHiMax" value="53"/>
-            <item name="TPS1AdaptHiMin" value="54"/>
-            <item name="TPS1AdaptLoMax" value="55"/>
-            <item name="TPS1AdaptLoMin" value="56"/>
-            <item name="TPS1RangeHigh" value="57"/>
-            <item name="TPS1RangeLow" value="58"/>
-            <item name="TPS2AdaptHiMax" value="59"/>
-            <item name="ECTRangeLow" value="6"/>
-            <item name="TPS2AdaptHiMin" value="60"/>
-            <item name="TPS2AdaptLoMax" value="61"/>
-            <item name="TPS2AdaptLoMin" value="62"/>
-            <item name="TPS2RangeHigh" value="63"/>
-            <item name="TPS2RangeLow" value="64"/>
-            <item name="TPS_Sensors_Conflict" value="65"/>
-            <item name="(None)" value="66"/>
-            <item name="ECTSevereOverTempFault" value="7"/>
-            <item name="EGRSenseRangeHigh" value="8"/>
-            <item name="EGRSenseRangeLow" value="9"/>
+            <item name="CAN_Timeout_112" value="0"/>
+            <item name="CAN_Timeout_Phoenix_1" value="1"/>
+            <item name="Drive_Warm" value="10"/>
+            <item name="ECTOverTempFault" value="11"/>
+            <item name="ECTRangeHigh" value="12"/>
+            <item name="ECTRangeLow" value="13"/>
+            <item name="ECTSevereOverTempFault" value="14"/>
+            <item name="EGRSenseRangeHigh" value="15"/>
+            <item name="EGRSenseRangeLow" value="16"/>
+            <item name="EST1_Open" value="17"/>
+            <item name="EST1_Short" value="18"/>
+            <item name="EST2_Open" value="19"/>
+            <item name="CAN_Timeout_Phoenix_2" value="2"/>
+            <item name="EST2_Short" value="20"/>
+            <item name="ETCSpringTest" value="21"/>
+            <item name="ETC_Open_Fault" value="22"/>
+            <item name="ETC_Sticking" value="23"/>
+            <item name="FuelAdaptRangeHi" value="24"/>
+            <item name="FuelAdaptRangeLow" value="25"/>
+            <item name="FuelPresHigh_Fault" value="26"/>
+            <item name="FuelPresLow_Fault" value="27"/>
+            <item name="FuelPresRangeHigh" value="28"/>
+            <item name="FuelPresRangeLow" value="29"/>
+            <item name="CAN_Timeout_Phoenix_3" value="3"/>
+            <item name="FuelSensRangeHigh" value="30"/>
+            <item name="FuelSensRangeLow" value="31"/>
+            <item name="HardOverspeed" value="32"/>
+            <item name="IATRangeHigh" value="33"/>
+            <item name="IATRangeLow" value="34"/>
+            <item name="Inj1Open" value="35"/>
+            <item name="Inj2Open" value="36"/>
+            <item name="MAFRangeHigh" value="37"/>
+            <item name="MAFRangeLow" value="38"/>
+            <item name="MAPRangeHigh" value="39"/>
+            <item name="CAN_Timeout_Phoenix_4" value="4"/>
+            <item name="MAPRangeLow" value="40"/>
+            <item name="MAPTimeRangeHigh" value="41"/>
+            <item name="MAPTimeRangeLow" value="42"/>
+            <item name="MAP_IR_HI" value="43"/>
+            <item name="MAP_IR_LO" value="44"/>
+            <item name="MAP_STICKING" value="45"/>
+            <item name="MediumOverspeed" value="46"/>
+            <item name="Motor_Hot" value="47"/>
+            <item name="Motor_Warm" value="48"/>
+            <item name="NoOil_Fault" value="49"/>
+            <item name="CamEdgesFault" value="5"/>
+            <item name="O2FailedLean" value="50"/>
+            <item name="O2FailedRich" value="51"/>
+            <item name="O2NotActive" value="52"/>
+            <item name="O2_PostCatRangeHigh" value="53"/>
+            <item name="O2_PostCatRangeLow" value="54"/>
+            <item name="OilPresRangeHigh" value="55"/>
+            <item name="OilPresRangeLow" value="56"/>
+            <item name="SensVoltRangeHigh" value="57"/>
+            <item name="SensVoltRangeLow" value="58"/>
+            <item name="SoftOverspeed" value="59"/>
+            <item name="CamSyncFault" value="6"/>
+            <item name="SysVoltRangeHigh" value="60"/>
+            <item name="SysVoltRangeLow" value="61"/>
+            <item name="TPS1AdaptHiMax" value="62"/>
+            <item name="TPS1AdaptHiMin" value="63"/>
+            <item name="TPS1AdaptLoMax" value="64"/>
+            <item name="TPS1AdaptLoMin" value="65"/>
+            <item name="TPS1RangeHigh" value="66"/>
+            <item name="TPS1RangeLow" value="67"/>
+            <item name="TPS2AdaptHiMax" value="68"/>
+            <item name="TPS2AdaptHiMin" value="69"/>
+            <item name="CrankEdgesFault" value="7"/>
+            <item name="TPS2AdaptLoMax" value="70"/>
+            <item name="TPS2AdaptLoMin" value="71"/>
+            <item name="TPS2RangeHigh" value="72"/>
+            <item name="TPS2RangeLow" value="73"/>
+            <item name="TPS_Sensors_Conflict" value="74"/>
+            <item name="(None)" value="75"/>
+            <item name="CrankSyncFault" value="8"/>
+            <item name="Drive_Hot" value="9"/>
             <default>Unknown</default>
          </enum>
       </col_enum>
       <col_enum column="2">
          <enum>
-            <item name="CamEdgesFault" value="0"/>
-            <item name="CamSyncFault" value="1"/>
-            <item name="EST1_Open" value="10"/>
-            <item name="EST1_Short" value="11"/>
-            <item name="EST2_Open" value="12"/>
-            <item name="EST2_Short" value="13"/>
-            <item name="ETCSpringTest" value="14"/>
-            <item name="ETC_Open_Fault" value="15"/>
-            <item name="ETC_Sticking" value="16"/>
-            <item name="FuelAdaptRangeHi" value="17"/>
-            <item name="FuelAdaptRangeLow" value="18"/>
-            <item name="FuelPresHigh_Fault" value="19"/>
-            <item name="CrankEdgesFault" value="2"/>
-            <item name="FuelPresLow_Fault" value="20"/>
-            <item name="FuelPresRangeHigh" value="21"/>
-            <item name="FuelPresRangeLow" value="22"/>
-            <item name="FuelSensRangeHigh" value="23"/>
-            <item name="FuelSensRangeLow" value="24"/>
-            <item name="HardOverspeed" value="25"/>
-            <item name="IATRangeHigh" value="26"/>
-            <item name="IATRangeLow" value="27"/>
-            <item name="Inj1Open" value="28"/>
-            <item name="Inj2Open" value="29"/>
-            <item name="CrankSyncFault" value="3"/>
-            <item name="MAFRangeHigh" value="30"/>
-            <item name="MAFRangeLow" value="31"/>
-            <item name="MAPRangeHigh" value="32"/>
-            <item name="MAPRangeLow" value="33"/>
-            <item name="MAPTimeRangeHigh" value="34"/>
-            <item name="MAPTimeRangeLow" value="35"/>
-            <item name="MAP_IR_HI" value="36"/>
-            <item name="MAP_IR_LO" value="37"/>
-            <item name="MAP_STICKING" value="38"/>
-            <item name="MediumOverspeed" value="39"/>
-            <item name="ECTOverTempFault" value="4"/>
-            <item name="NoOil_Fault" value="40"/>
-            <item name="O2FailedLean" value="41"/>
-            <item name="O2FailedRich" value="42"/>
-            <item name="O2NotActive" value="43"/>
-            <item name="O2_PostCatRangeHigh" value="44"/>
-            <item name="O2_PostCatRangeLow" value="45"/>
-            <item name="OilPresRangeHigh" value="46"/>
-            <item name="OilPresRangeLow" value="47"/>
-            <item name="SensVoltRangeHigh" value="48"/>
-            <item name="SensVoltRangeLow" value="49"/>
-            <item name="ECTRangeHigh" value="5"/>
-            <item name="SoftOverspeed" value="50"/>
-            <item name="SysVoltRangeHigh" value="51"/>
-            <item name="SysVoltRangeLow" value="52"/>
-            <item name="TPS1AdaptHiMax" value="53"/>
-            <item name="TPS1AdaptHiMin" value="54"/>
-            <item name="TPS1AdaptLoMax" value="55"/>
-            <item name="TPS1AdaptLoMin" value="56"/>
-            <item name="TPS1RangeHigh" value="57"/>
-            <item name="TPS1RangeLow" value="58"/>
-            <item name="TPS2AdaptHiMax" value="59"/>
-            <item name="ECTRangeLow" value="6"/>
-            <item name="TPS2AdaptHiMin" value="60"/>
-            <item name="TPS2AdaptLoMax" value="61"/>
-            <item name="TPS2AdaptLoMin" value="62"/>
-            <item name="TPS2RangeHigh" value="63"/>
-            <item name="TPS2RangeLow" value="64"/>
-            <item name="TPS_Sensors_Conflict" value="65"/>
-            <item name="(None)" value="66"/>
-            <item name="ECTSevereOverTempFault" value="7"/>
-            <item name="EGRSenseRangeHigh" value="8"/>
-            <item name="EGRSenseRangeLow" value="9"/>
+            <item name="CAN_Timeout_112" value="0"/>
+            <item name="CAN_Timeout_Phoenix_1" value="1"/>
+            <item name="Drive_Warm" value="10"/>
+            <item name="ECTOverTempFault" value="11"/>
+            <item name="ECTRangeHigh" value="12"/>
+            <item name="ECTRangeLow" value="13"/>
+            <item name="ECTSevereOverTempFault" value="14"/>
+            <item name="EGRSenseRangeHigh" value="15"/>
+            <item name="EGRSenseRangeLow" value="16"/>
+            <item name="EST1_Open" value="17"/>
+            <item name="EST1_Short" value="18"/>
+            <item name="EST2_Open" value="19"/>
+            <item name="CAN_Timeout_Phoenix_2" value="2"/>
+            <item name="EST2_Short" value="20"/>
+            <item name="ETCSpringTest" value="21"/>
+            <item name="ETC_Open_Fault" value="22"/>
+            <item name="ETC_Sticking" value="23"/>
+            <item name="FuelAdaptRangeHi" value="24"/>
+            <item name="FuelAdaptRangeLow" value="25"/>
+            <item name="FuelPresHigh_Fault" value="26"/>
+            <item name="FuelPresLow_Fault" value="27"/>
+            <item name="FuelPresRangeHigh" value="28"/>
+            <item name="FuelPresRangeLow" value="29"/>
+            <item name="CAN_Timeout_Phoenix_3" value="3"/>
+            <item name="FuelSensRangeHigh" value="30"/>
+            <item name="FuelSensRangeLow" value="31"/>
+            <item name="HardOverspeed" value="32"/>
+            <item name="IATRangeHigh" value="33"/>
+            <item name="IATRangeLow" value="34"/>
+            <item name="Inj1Open" value="35"/>
+            <item name="Inj2Open" value="36"/>
+            <item name="MAFRangeHigh" value="37"/>
+            <item name="MAFRangeLow" value="38"/>
+            <item name="MAPRangeHigh" value="39"/>
+            <item name="CAN_Timeout_Phoenix_4" value="4"/>
+            <item name="MAPRangeLow" value="40"/>
+            <item name="MAPTimeRangeHigh" value="41"/>
+            <item name="MAPTimeRangeLow" value="42"/>
+            <item name="MAP_IR_HI" value="43"/>
+            <item name="MAP_IR_LO" value="44"/>
+            <item name="MAP_STICKING" value="45"/>
+            <item name="MediumOverspeed" value="46"/>
+            <item name="Motor_Hot" value="47"/>
+            <item name="Motor_Warm" value="48"/>
+            <item name="NoOil_Fault" value="49"/>
+            <item name="CamEdgesFault" value="5"/>
+            <item name="O2FailedLean" value="50"/>
+            <item name="O2FailedRich" value="51"/>
+            <item name="O2NotActive" value="52"/>
+            <item name="O2_PostCatRangeHigh" value="53"/>
+            <item name="O2_PostCatRangeLow" value="54"/>
+            <item name="OilPresRangeHigh" value="55"/>
+            <item name="OilPresRangeLow" value="56"/>
+            <item name="SensVoltRangeHigh" value="57"/>
+            <item name="SensVoltRangeLow" value="58"/>
+            <item name="SoftOverspeed" value="59"/>
+            <item name="CamSyncFault" value="6"/>
+            <item name="SysVoltRangeHigh" value="60"/>
+            <item name="SysVoltRangeLow" value="61"/>
+            <item name="TPS1AdaptHiMax" value="62"/>
+            <item name="TPS1AdaptHiMin" value="63"/>
+            <item name="TPS1AdaptLoMax" value="64"/>
+            <item name="TPS1AdaptLoMin" value="65"/>
+            <item name="TPS1RangeHigh" value="66"/>
+            <item name="TPS1RangeLow" value="67"/>
+            <item name="TPS2AdaptHiMax" value="68"/>
+            <item name="TPS2AdaptHiMin" value="69"/>
+            <item name="CrankEdgesFault" value="7"/>
+            <item name="TPS2AdaptLoMax" value="70"/>
+            <item name="TPS2AdaptLoMin" value="71"/>
+            <item name="TPS2RangeHigh" value="72"/>
+            <item name="TPS2RangeLow" value="73"/>
+            <item name="TPS_Sensors_Conflict" value="74"/>
+            <item name="(None)" value="75"/>
+            <item name="CrankSyncFault" value="8"/>
+            <item name="Drive_Hot" value="9"/>
             <default>Unknown</default>
          </enum>
       </col_enum>
@@ -19653,517 +20466,744 @@
       <type>uint8</type>
       <col_enum column="0">
          <enum>
-            <item name="CamEdgesFault" value="0"/>
-            <item name="CamSyncFault" value="1"/>
-            <item name="EST1_Open" value="10"/>
-            <item name="EST1_Short" value="11"/>
-            <item name="EST2_Open" value="12"/>
-            <item name="EST2_Short" value="13"/>
-            <item name="ETCSpringTest" value="14"/>
-            <item name="ETC_Open_Fault" value="15"/>
-            <item name="ETC_Sticking" value="16"/>
-            <item name="FuelAdaptRangeHi" value="17"/>
-            <item name="FuelAdaptRangeLow" value="18"/>
-            <item name="FuelPresHigh_Fault" value="19"/>
-            <item name="CrankEdgesFault" value="2"/>
-            <item name="FuelPresLow_Fault" value="20"/>
-            <item name="FuelPresRangeHigh" value="21"/>
-            <item name="FuelPresRangeLow" value="22"/>
-            <item name="FuelSensRangeHigh" value="23"/>
-            <item name="FuelSensRangeLow" value="24"/>
-            <item name="HardOverspeed" value="25"/>
-            <item name="IATRangeHigh" value="26"/>
-            <item name="IATRangeLow" value="27"/>
-            <item name="Inj1Open" value="28"/>
-            <item name="Inj2Open" value="29"/>
-            <item name="CrankSyncFault" value="3"/>
-            <item name="MAFRangeHigh" value="30"/>
-            <item name="MAFRangeLow" value="31"/>
-            <item name="MAPRangeHigh" value="32"/>
-            <item name="MAPRangeLow" value="33"/>
-            <item name="MAPTimeRangeHigh" value="34"/>
-            <item name="MAPTimeRangeLow" value="35"/>
-            <item name="MAP_IR_HI" value="36"/>
-            <item name="MAP_IR_LO" value="37"/>
-            <item name="MAP_STICKING" value="38"/>
-            <item name="MediumOverspeed" value="39"/>
-            <item name="ECTOverTempFault" value="4"/>
-            <item name="NoOil_Fault" value="40"/>
-            <item name="O2FailedLean" value="41"/>
-            <item name="O2FailedRich" value="42"/>
-            <item name="O2NotActive" value="43"/>
-            <item name="O2_PostCatRangeHigh" value="44"/>
-            <item name="O2_PostCatRangeLow" value="45"/>
-            <item name="OilPresRangeHigh" value="46"/>
-            <item name="OilPresRangeLow" value="47"/>
-            <item name="SensVoltRangeHigh" value="48"/>
-            <item name="SensVoltRangeLow" value="49"/>
-            <item name="ECTRangeHigh" value="5"/>
-            <item name="SoftOverspeed" value="50"/>
-            <item name="SysVoltRangeHigh" value="51"/>
-            <item name="SysVoltRangeLow" value="52"/>
-            <item name="TPS1AdaptHiMax" value="53"/>
-            <item name="TPS1AdaptHiMin" value="54"/>
-            <item name="TPS1AdaptLoMax" value="55"/>
-            <item name="TPS1AdaptLoMin" value="56"/>
-            <item name="TPS1RangeHigh" value="57"/>
-            <item name="TPS1RangeLow" value="58"/>
-            <item name="TPS2AdaptHiMax" value="59"/>
-            <item name="ECTRangeLow" value="6"/>
-            <item name="TPS2AdaptHiMin" value="60"/>
-            <item name="TPS2AdaptLoMax" value="61"/>
-            <item name="TPS2AdaptLoMin" value="62"/>
-            <item name="TPS2RangeHigh" value="63"/>
-            <item name="TPS2RangeLow" value="64"/>
-            <item name="TPS_Sensors_Conflict" value="65"/>
-            <item name="(None)" value="66"/>
-            <item name="ECTSevereOverTempFault" value="7"/>
-            <item name="EGRSenseRangeHigh" value="8"/>
-            <item name="EGRSenseRangeLow" value="9"/>
+            <item name="CAN_Timeout_112" value="0"/>
+            <item name="CAN_Timeout_Phoenix_1" value="1"/>
+            <item name="Drive_Warm" value="10"/>
+            <item name="ECTOverTempFault" value="11"/>
+            <item name="ECTRangeHigh" value="12"/>
+            <item name="ECTRangeLow" value="13"/>
+            <item name="ECTSevereOverTempFault" value="14"/>
+            <item name="EGRSenseRangeHigh" value="15"/>
+            <item name="EGRSenseRangeLow" value="16"/>
+            <item name="EST1_Open" value="17"/>
+            <item name="EST1_Short" value="18"/>
+            <item name="EST2_Open" value="19"/>
+            <item name="CAN_Timeout_Phoenix_2" value="2"/>
+            <item name="EST2_Short" value="20"/>
+            <item name="ETCSpringTest" value="21"/>
+            <item name="ETC_Open_Fault" value="22"/>
+            <item name="ETC_Sticking" value="23"/>
+            <item name="FuelAdaptRangeHi" value="24"/>
+            <item name="FuelAdaptRangeLow" value="25"/>
+            <item name="FuelPresHigh_Fault" value="26"/>
+            <item name="FuelPresLow_Fault" value="27"/>
+            <item name="FuelPresRangeHigh" value="28"/>
+            <item name="FuelPresRangeLow" value="29"/>
+            <item name="CAN_Timeout_Phoenix_3" value="3"/>
+            <item name="FuelSensRangeHigh" value="30"/>
+            <item name="FuelSensRangeLow" value="31"/>
+            <item name="HardOverspeed" value="32"/>
+            <item name="IATRangeHigh" value="33"/>
+            <item name="IATRangeLow" value="34"/>
+            <item name="Inj1Open" value="35"/>
+            <item name="Inj2Open" value="36"/>
+            <item name="MAFRangeHigh" value="37"/>
+            <item name="MAFRangeLow" value="38"/>
+            <item name="MAPRangeHigh" value="39"/>
+            <item name="CAN_Timeout_Phoenix_4" value="4"/>
+            <item name="MAPRangeLow" value="40"/>
+            <item name="MAPTimeRangeHigh" value="41"/>
+            <item name="MAPTimeRangeLow" value="42"/>
+            <item name="MAP_IR_HI" value="43"/>
+            <item name="MAP_IR_LO" value="44"/>
+            <item name="MAP_STICKING" value="45"/>
+            <item name="MediumOverspeed" value="46"/>
+            <item name="Motor_Hot" value="47"/>
+            <item name="Motor_Warm" value="48"/>
+            <item name="NoOil_Fault" value="49"/>
+            <item name="CamEdgesFault" value="5"/>
+            <item name="O2FailedLean" value="50"/>
+            <item name="O2FailedRich" value="51"/>
+            <item name="O2NotActive" value="52"/>
+            <item name="O2_PostCatRangeHigh" value="53"/>
+            <item name="O2_PostCatRangeLow" value="54"/>
+            <item name="OilPresRangeHigh" value="55"/>
+            <item name="OilPresRangeLow" value="56"/>
+            <item name="SensVoltRangeHigh" value="57"/>
+            <item name="SensVoltRangeLow" value="58"/>
+            <item name="SoftOverspeed" value="59"/>
+            <item name="CamSyncFault" value="6"/>
+            <item name="SysVoltRangeHigh" value="60"/>
+            <item name="SysVoltRangeLow" value="61"/>
+            <item name="TPS1AdaptHiMax" value="62"/>
+            <item name="TPS1AdaptHiMin" value="63"/>
+            <item name="TPS1AdaptLoMax" value="64"/>
+            <item name="TPS1AdaptLoMin" value="65"/>
+            <item name="TPS1RangeHigh" value="66"/>
+            <item name="TPS1RangeLow" value="67"/>
+            <item name="TPS2AdaptHiMax" value="68"/>
+            <item name="TPS2AdaptHiMin" value="69"/>
+            <item name="CrankEdgesFault" value="7"/>
+            <item name="TPS2AdaptLoMax" value="70"/>
+            <item name="TPS2AdaptLoMin" value="71"/>
+            <item name="TPS2RangeHigh" value="72"/>
+            <item name="TPS2RangeLow" value="73"/>
+            <item name="TPS_Sensors_Conflict" value="74"/>
+            <item name="(None)" value="75"/>
+            <item name="CrankSyncFault" value="8"/>
+            <item name="Drive_Hot" value="9"/>
             <default>Unknown</default>
          </enum>
       </col_enum>
       <col_enum column="1">
          <enum>
-            <item name="CamEdgesFault" value="0"/>
-            <item name="CamSyncFault" value="1"/>
-            <item name="EST1_Open" value="10"/>
-            <item name="EST1_Short" value="11"/>
-            <item name="EST2_Open" value="12"/>
-            <item name="EST2_Short" value="13"/>
-            <item name="ETCSpringTest" value="14"/>
-            <item name="ETC_Open_Fault" value="15"/>
-            <item name="ETC_Sticking" value="16"/>
-            <item name="FuelAdaptRangeHi" value="17"/>
-            <item name="FuelAdaptRangeLow" value="18"/>
-            <item name="FuelPresHigh_Fault" value="19"/>
-            <item name="CrankEdgesFault" value="2"/>
-            <item name="FuelPresLow_Fault" value="20"/>
-            <item name="FuelPresRangeHigh" value="21"/>
-            <item name="FuelPresRangeLow" value="22"/>
-            <item name="FuelSensRangeHigh" value="23"/>
-            <item name="FuelSensRangeLow" value="24"/>
-            <item name="HardOverspeed" value="25"/>
-            <item name="IATRangeHigh" value="26"/>
-            <item name="IATRangeLow" value="27"/>
-            <item name="Inj1Open" value="28"/>
-            <item name="Inj2Open" value="29"/>
-            <item name="CrankSyncFault" value="3"/>
-            <item name="MAFRangeHigh" value="30"/>
-            <item name="MAFRangeLow" value="31"/>
-            <item name="MAPRangeHigh" value="32"/>
-            <item name="MAPRangeLow" value="33"/>
-            <item name="MAPTimeRangeHigh" value="34"/>
-            <item name="MAPTimeRangeLow" value="35"/>
-            <item name="MAP_IR_HI" value="36"/>
-            <item name="MAP_IR_LO" value="37"/>
-            <item name="MAP_STICKING" value="38"/>
-            <item name="MediumOverspeed" value="39"/>
-            <item name="ECTOverTempFault" value="4"/>
-            <item name="NoOil_Fault" value="40"/>
-            <item name="O2FailedLean" value="41"/>
-            <item name="O2FailedRich" value="42"/>
-            <item name="O2NotActive" value="43"/>
-            <item name="O2_PostCatRangeHigh" value="44"/>
-            <item name="O2_PostCatRangeLow" value="45"/>
-            <item name="OilPresRangeHigh" value="46"/>
-            <item name="OilPresRangeLow" value="47"/>
-            <item name="SensVoltRangeHigh" value="48"/>
-            <item name="SensVoltRangeLow" value="49"/>
-            <item name="ECTRangeHigh" value="5"/>
-            <item name="SoftOverspeed" value="50"/>
-            <item name="SysVoltRangeHigh" value="51"/>
-            <item name="SysVoltRangeLow" value="52"/>
-            <item name="TPS1AdaptHiMax" value="53"/>
-            <item name="TPS1AdaptHiMin" value="54"/>
-            <item name="TPS1AdaptLoMax" value="55"/>
-            <item name="TPS1AdaptLoMin" value="56"/>
-            <item name="TPS1RangeHigh" value="57"/>
-            <item name="TPS1RangeLow" value="58"/>
-            <item name="TPS2AdaptHiMax" value="59"/>
-            <item name="ECTRangeLow" value="6"/>
-            <item name="TPS2AdaptHiMin" value="60"/>
-            <item name="TPS2AdaptLoMax" value="61"/>
-            <item name="TPS2AdaptLoMin" value="62"/>
-            <item name="TPS2RangeHigh" value="63"/>
-            <item name="TPS2RangeLow" value="64"/>
-            <item name="TPS_Sensors_Conflict" value="65"/>
-            <item name="(None)" value="66"/>
-            <item name="ECTSevereOverTempFault" value="7"/>
-            <item name="EGRSenseRangeHigh" value="8"/>
-            <item name="EGRSenseRangeLow" value="9"/>
+            <item name="CAN_Timeout_112" value="0"/>
+            <item name="CAN_Timeout_Phoenix_1" value="1"/>
+            <item name="Drive_Warm" value="10"/>
+            <item name="ECTOverTempFault" value="11"/>
+            <item name="ECTRangeHigh" value="12"/>
+            <item name="ECTRangeLow" value="13"/>
+            <item name="ECTSevereOverTempFault" value="14"/>
+            <item name="EGRSenseRangeHigh" value="15"/>
+            <item name="EGRSenseRangeLow" value="16"/>
+            <item name="EST1_Open" value="17"/>
+            <item name="EST1_Short" value="18"/>
+            <item name="EST2_Open" value="19"/>
+            <item name="CAN_Timeout_Phoenix_2" value="2"/>
+            <item name="EST2_Short" value="20"/>
+            <item name="ETCSpringTest" value="21"/>
+            <item name="ETC_Open_Fault" value="22"/>
+            <item name="ETC_Sticking" value="23"/>
+            <item name="FuelAdaptRangeHi" value="24"/>
+            <item name="FuelAdaptRangeLow" value="25"/>
+            <item name="FuelPresHigh_Fault" value="26"/>
+            <item name="FuelPresLow_Fault" value="27"/>
+            <item name="FuelPresRangeHigh" value="28"/>
+            <item name="FuelPresRangeLow" value="29"/>
+            <item name="CAN_Timeout_Phoenix_3" value="3"/>
+            <item name="FuelSensRangeHigh" value="30"/>
+            <item name="FuelSensRangeLow" value="31"/>
+            <item name="HardOverspeed" value="32"/>
+            <item name="IATRangeHigh" value="33"/>
+            <item name="IATRangeLow" value="34"/>
+            <item name="Inj1Open" value="35"/>
+            <item name="Inj2Open" value="36"/>
+            <item name="MAFRangeHigh" value="37"/>
+            <item name="MAFRangeLow" value="38"/>
+            <item name="MAPRangeHigh" value="39"/>
+            <item name="CAN_Timeout_Phoenix_4" value="4"/>
+            <item name="MAPRangeLow" value="40"/>
+            <item name="MAPTimeRangeHigh" value="41"/>
+            <item name="MAPTimeRangeLow" value="42"/>
+            <item name="MAP_IR_HI" value="43"/>
+            <item name="MAP_IR_LO" value="44"/>
+            <item name="MAP_STICKING" value="45"/>
+            <item name="MediumOverspeed" value="46"/>
+            <item name="Motor_Hot" value="47"/>
+            <item name="Motor_Warm" value="48"/>
+            <item name="NoOil_Fault" value="49"/>
+            <item name="CamEdgesFault" value="5"/>
+            <item name="O2FailedLean" value="50"/>
+            <item name="O2FailedRich" value="51"/>
+            <item name="O2NotActive" value="52"/>
+            <item name="O2_PostCatRangeHigh" value="53"/>
+            <item name="O2_PostCatRangeLow" value="54"/>
+            <item name="OilPresRangeHigh" value="55"/>
+            <item name="OilPresRangeLow" value="56"/>
+            <item name="SensVoltRangeHigh" value="57"/>
+            <item name="SensVoltRangeLow" value="58"/>
+            <item name="SoftOverspeed" value="59"/>
+            <item name="CamSyncFault" value="6"/>
+            <item name="SysVoltRangeHigh" value="60"/>
+            <item name="SysVoltRangeLow" value="61"/>
+            <item name="TPS1AdaptHiMax" value="62"/>
+            <item name="TPS1AdaptHiMin" value="63"/>
+            <item name="TPS1AdaptLoMax" value="64"/>
+            <item name="TPS1AdaptLoMin" value="65"/>
+            <item name="TPS1RangeHigh" value="66"/>
+            <item name="TPS1RangeLow" value="67"/>
+            <item name="TPS2AdaptHiMax" value="68"/>
+            <item name="TPS2AdaptHiMin" value="69"/>
+            <item name="CrankEdgesFault" value="7"/>
+            <item name="TPS2AdaptLoMax" value="70"/>
+            <item name="TPS2AdaptLoMin" value="71"/>
+            <item name="TPS2RangeHigh" value="72"/>
+            <item name="TPS2RangeLow" value="73"/>
+            <item name="TPS_Sensors_Conflict" value="74"/>
+            <item name="(None)" value="75"/>
+            <item name="CrankSyncFault" value="8"/>
+            <item name="Drive_Hot" value="9"/>
             <default>Unknown</default>
          </enum>
       </col_enum>
       <col_enum column="2">
          <enum>
-            <item name="CamEdgesFault" value="0"/>
-            <item name="CamSyncFault" value="1"/>
-            <item name="EST1_Open" value="10"/>
-            <item name="EST1_Short" value="11"/>
-            <item name="EST2_Open" value="12"/>
-            <item name="EST2_Short" value="13"/>
-            <item name="ETCSpringTest" value="14"/>
-            <item name="ETC_Open_Fault" value="15"/>
-            <item name="ETC_Sticking" value="16"/>
-            <item name="FuelAdaptRangeHi" value="17"/>
-            <item name="FuelAdaptRangeLow" value="18"/>
-            <item name="FuelPresHigh_Fault" value="19"/>
-            <item name="CrankEdgesFault" value="2"/>
-            <item name="FuelPresLow_Fault" value="20"/>
-            <item name="FuelPresRangeHigh" value="21"/>
-            <item name="FuelPresRangeLow" value="22"/>
-            <item name="FuelSensRangeHigh" value="23"/>
-            <item name="FuelSensRangeLow" value="24"/>
-            <item name="HardOverspeed" value="25"/>
-            <item name="IATRangeHigh" value="26"/>
-            <item name="IATRangeLow" value="27"/>
-            <item name="Inj1Open" value="28"/>
-            <item name="Inj2Open" value="29"/>
-            <item name="CrankSyncFault" value="3"/>
-            <item name="MAFRangeHigh" value="30"/>
-            <item name="MAFRangeLow" value="31"/>
-            <item name="MAPRangeHigh" value="32"/>
-            <item name="MAPRangeLow" value="33"/>
-            <item name="MAPTimeRangeHigh" value="34"/>
-            <item name="MAPTimeRangeLow" value="35"/>
-            <item name="MAP_IR_HI" value="36"/>
-            <item name="MAP_IR_LO" value="37"/>
-            <item name="MAP_STICKING" value="38"/>
-            <item name="MediumOverspeed" value="39"/>
-            <item name="ECTOverTempFault" value="4"/>
-            <item name="NoOil_Fault" value="40"/>
-            <item name="O2FailedLean" value="41"/>
-            <item name="O2FailedRich" value="42"/>
-            <item name="O2NotActive" value="43"/>
-            <item name="O2_PostCatRangeHigh" value="44"/>
-            <item name="O2_PostCatRangeLow" value="45"/>
-            <item name="OilPresRangeHigh" value="46"/>
-            <item name="OilPresRangeLow" value="47"/>
-            <item name="SensVoltRangeHigh" value="48"/>
-            <item name="SensVoltRangeLow" value="49"/>
-            <item name="ECTRangeHigh" value="5"/>
-            <item name="SoftOverspeed" value="50"/>
-            <item name="SysVoltRangeHigh" value="51"/>
-            <item name="SysVoltRangeLow" value="52"/>
-            <item name="TPS1AdaptHiMax" value="53"/>
-            <item name="TPS1AdaptHiMin" value="54"/>
-            <item name="TPS1AdaptLoMax" value="55"/>
-            <item name="TPS1AdaptLoMin" value="56"/>
-            <item name="TPS1RangeHigh" value="57"/>
-            <item name="TPS1RangeLow" value="58"/>
-            <item name="TPS2AdaptHiMax" value="59"/>
-            <item name="ECTRangeLow" value="6"/>
-            <item name="TPS2AdaptHiMin" value="60"/>
-            <item name="TPS2AdaptLoMax" value="61"/>
-            <item name="TPS2AdaptLoMin" value="62"/>
-            <item name="TPS2RangeHigh" value="63"/>
-            <item name="TPS2RangeLow" value="64"/>
-            <item name="TPS_Sensors_Conflict" value="65"/>
-            <item name="(None)" value="66"/>
-            <item name="ECTSevereOverTempFault" value="7"/>
-            <item name="EGRSenseRangeHigh" value="8"/>
-            <item name="EGRSenseRangeLow" value="9"/>
+            <item name="CAN_Timeout_112" value="0"/>
+            <item name="CAN_Timeout_Phoenix_1" value="1"/>
+            <item name="Drive_Warm" value="10"/>
+            <item name="ECTOverTempFault" value="11"/>
+            <item name="ECTRangeHigh" value="12"/>
+            <item name="ECTRangeLow" value="13"/>
+            <item name="ECTSevereOverTempFault" value="14"/>
+            <item name="EGRSenseRangeHigh" value="15"/>
+            <item name="EGRSenseRangeLow" value="16"/>
+            <item name="EST1_Open" value="17"/>
+            <item name="EST1_Short" value="18"/>
+            <item name="EST2_Open" value="19"/>
+            <item name="CAN_Timeout_Phoenix_2" value="2"/>
+            <item name="EST2_Short" value="20"/>
+            <item name="ETCSpringTest" value="21"/>
+            <item name="ETC_Open_Fault" value="22"/>
+            <item name="ETC_Sticking" value="23"/>
+            <item name="FuelAdaptRangeHi" value="24"/>
+            <item name="FuelAdaptRangeLow" value="25"/>
+            <item name="FuelPresHigh_Fault" value="26"/>
+            <item name="FuelPresLow_Fault" value="27"/>
+            <item name="FuelPresRangeHigh" value="28"/>
+            <item name="FuelPresRangeLow" value="29"/>
+            <item name="CAN_Timeout_Phoenix_3" value="3"/>
+            <item name="FuelSensRangeHigh" value="30"/>
+            <item name="FuelSensRangeLow" value="31"/>
+            <item name="HardOverspeed" value="32"/>
+            <item name="IATRangeHigh" value="33"/>
+            <item name="IATRangeLow" value="34"/>
+            <item name="Inj1Open" value="35"/>
+            <item name="Inj2Open" value="36"/>
+            <item name="MAFRangeHigh" value="37"/>
+            <item name="MAFRangeLow" value="38"/>
+            <item name="MAPRangeHigh" value="39"/>
+            <item name="CAN_Timeout_Phoenix_4" value="4"/>
+            <item name="MAPRangeLow" value="40"/>
+            <item name="MAPTimeRangeHigh" value="41"/>
+            <item name="MAPTimeRangeLow" value="42"/>
+            <item name="MAP_IR_HI" value="43"/>
+            <item name="MAP_IR_LO" value="44"/>
+            <item name="MAP_STICKING" value="45"/>
+            <item name="MediumOverspeed" value="46"/>
+            <item name="Motor_Hot" value="47"/>
+            <item name="Motor_Warm" value="48"/>
+            <item name="NoOil_Fault" value="49"/>
+            <item name="CamEdgesFault" value="5"/>
+            <item name="O2FailedLean" value="50"/>
+            <item name="O2FailedRich" value="51"/>
+            <item name="O2NotActive" value="52"/>
+            <item name="O2_PostCatRangeHigh" value="53"/>
+            <item name="O2_PostCatRangeLow" value="54"/>
+            <item name="OilPresRangeHigh" value="55"/>
+            <item name="OilPresRangeLow" value="56"/>
+            <item name="SensVoltRangeHigh" value="57"/>
+            <item name="SensVoltRangeLow" value="58"/>
+            <item name="SoftOverspeed" value="59"/>
+            <item name="CamSyncFault" value="6"/>
+            <item name="SysVoltRangeHigh" value="60"/>
+            <item name="SysVoltRangeLow" value="61"/>
+            <item name="TPS1AdaptHiMax" value="62"/>
+            <item name="TPS1AdaptHiMin" value="63"/>
+            <item name="TPS1AdaptLoMax" value="64"/>
+            <item name="TPS1AdaptLoMin" value="65"/>
+            <item name="TPS1RangeHigh" value="66"/>
+            <item name="TPS1RangeLow" value="67"/>
+            <item name="TPS2AdaptHiMax" value="68"/>
+            <item name="TPS2AdaptHiMin" value="69"/>
+            <item name="CrankEdgesFault" value="7"/>
+            <item name="TPS2AdaptLoMax" value="70"/>
+            <item name="TPS2AdaptLoMin" value="71"/>
+            <item name="TPS2RangeHigh" value="72"/>
+            <item name="TPS2RangeLow" value="73"/>
+            <item name="TPS_Sensors_Conflict" value="74"/>
+            <item name="(None)" value="75"/>
+            <item name="CrankSyncFault" value="8"/>
+            <item name="Drive_Hot" value="9"/>
             <default>Unknown</default>
          </enum>
       </col_enum>
       <col_enum column="3">
          <enum>
-            <item name="CamEdgesFault" value="0"/>
-            <item name="CamSyncFault" value="1"/>
-            <item name="EST1_Open" value="10"/>
-            <item name="EST1_Short" value="11"/>
-            <item name="EST2_Open" value="12"/>
-            <item name="EST2_Short" value="13"/>
-            <item name="ETCSpringTest" value="14"/>
-            <item name="ETC_Open_Fault" value="15"/>
-            <item name="ETC_Sticking" value="16"/>
-            <item name="FuelAdaptRangeHi" value="17"/>
-            <item name="FuelAdaptRangeLow" value="18"/>
-            <item name="FuelPresHigh_Fault" value="19"/>
-            <item name="CrankEdgesFault" value="2"/>
-            <item name="FuelPresLow_Fault" value="20"/>
-            <item name="FuelPresRangeHigh" value="21"/>
-            <item name="FuelPresRangeLow" value="22"/>
-            <item name="FuelSensRangeHigh" value="23"/>
-            <item name="FuelSensRangeLow" value="24"/>
-            <item name="HardOverspeed" value="25"/>
-            <item name="IATRangeHigh" value="26"/>
-            <item name="IATRangeLow" value="27"/>
-            <item name="Inj1Open" value="28"/>
-            <item name="Inj2Open" value="29"/>
-            <item name="CrankSyncFault" value="3"/>
-            <item name="MAFRangeHigh" value="30"/>
-            <item name="MAFRangeLow" value="31"/>
-            <item name="MAPRangeHigh" value="32"/>
-            <item name="MAPRangeLow" value="33"/>
-            <item name="MAPTimeRangeHigh" value="34"/>
-            <item name="MAPTimeRangeLow" value="35"/>
-            <item name="MAP_IR_HI" value="36"/>
-            <item name="MAP_IR_LO" value="37"/>
-            <item name="MAP_STICKING" value="38"/>
-            <item name="MediumOverspeed" value="39"/>
-            <item name="ECTOverTempFault" value="4"/>
-            <item name="NoOil_Fault" value="40"/>
-            <item name="O2FailedLean" value="41"/>
-            <item name="O2FailedRich" value="42"/>
-            <item name="O2NotActive" value="43"/>
-            <item name="O2_PostCatRangeHigh" value="44"/>
-            <item name="O2_PostCatRangeLow" value="45"/>
-            <item name="OilPresRangeHigh" value="46"/>
-            <item name="OilPresRangeLow" value="47"/>
-            <item name="SensVoltRangeHigh" value="48"/>
-            <item name="SensVoltRangeLow" value="49"/>
-            <item name="ECTRangeHigh" value="5"/>
-            <item name="SoftOverspeed" value="50"/>
-            <item name="SysVoltRangeHigh" value="51"/>
-            <item name="SysVoltRangeLow" value="52"/>
-            <item name="TPS1AdaptHiMax" value="53"/>
-            <item name="TPS1AdaptHiMin" value="54"/>
-            <item name="TPS1AdaptLoMax" value="55"/>
-            <item name="TPS1AdaptLoMin" value="56"/>
-            <item name="TPS1RangeHigh" value="57"/>
-            <item name="TPS1RangeLow" value="58"/>
-            <item name="TPS2AdaptHiMax" value="59"/>
-            <item name="ECTRangeLow" value="6"/>
-            <item name="TPS2AdaptHiMin" value="60"/>
-            <item name="TPS2AdaptLoMax" value="61"/>
-            <item name="TPS2AdaptLoMin" value="62"/>
-            <item name="TPS2RangeHigh" value="63"/>
-            <item name="TPS2RangeLow" value="64"/>
-            <item name="TPS_Sensors_Conflict" value="65"/>
-            <item name="(None)" value="66"/>
-            <item name="ECTSevereOverTempFault" value="7"/>
-            <item name="EGRSenseRangeHigh" value="8"/>
-            <item name="EGRSenseRangeLow" value="9"/>
+            <item name="CAN_Timeout_112" value="0"/>
+            <item name="CAN_Timeout_Phoenix_1" value="1"/>
+            <item name="Drive_Warm" value="10"/>
+            <item name="ECTOverTempFault" value="11"/>
+            <item name="ECTRangeHigh" value="12"/>
+            <item name="ECTRangeLow" value="13"/>
+            <item name="ECTSevereOverTempFault" value="14"/>
+            <item name="EGRSenseRangeHigh" value="15"/>
+            <item name="EGRSenseRangeLow" value="16"/>
+            <item name="EST1_Open" value="17"/>
+            <item name="EST1_Short" value="18"/>
+            <item name="EST2_Open" value="19"/>
+            <item name="CAN_Timeout_Phoenix_2" value="2"/>
+            <item name="EST2_Short" value="20"/>
+            <item name="ETCSpringTest" value="21"/>
+            <item name="ETC_Open_Fault" value="22"/>
+            <item name="ETC_Sticking" value="23"/>
+            <item name="FuelAdaptRangeHi" value="24"/>
+            <item name="FuelAdaptRangeLow" value="25"/>
+            <item name="FuelPresHigh_Fault" value="26"/>
+            <item name="FuelPresLow_Fault" value="27"/>
+            <item name="FuelPresRangeHigh" value="28"/>
+            <item name="FuelPresRangeLow" value="29"/>
+            <item name="CAN_Timeout_Phoenix_3" value="3"/>
+            <item name="FuelSensRangeHigh" value="30"/>
+            <item name="FuelSensRangeLow" value="31"/>
+            <item name="HardOverspeed" value="32"/>
+            <item name="IATRangeHigh" value="33"/>
+            <item name="IATRangeLow" value="34"/>
+            <item name="Inj1Open" value="35"/>
+            <item name="Inj2Open" value="36"/>
+            <item name="MAFRangeHigh" value="37"/>
+            <item name="MAFRangeLow" value="38"/>
+            <item name="MAPRangeHigh" value="39"/>
+            <item name="CAN_Timeout_Phoenix_4" value="4"/>
+            <item name="MAPRangeLow" value="40"/>
+            <item name="MAPTimeRangeHigh" value="41"/>
+            <item name="MAPTimeRangeLow" value="42"/>
+            <item name="MAP_IR_HI" value="43"/>
+            <item name="MAP_IR_LO" value="44"/>
+            <item name="MAP_STICKING" value="45"/>
+            <item name="MediumOverspeed" value="46"/>
+            <item name="Motor_Hot" value="47"/>
+            <item name="Motor_Warm" value="48"/>
+            <item name="NoOil_Fault" value="49"/>
+            <item name="CamEdgesFault" value="5"/>
+            <item name="O2FailedLean" value="50"/>
+            <item name="O2FailedRich" value="51"/>
+            <item name="O2NotActive" value="52"/>
+            <item name="O2_PostCatRangeHigh" value="53"/>
+            <item name="O2_PostCatRangeLow" value="54"/>
+            <item name="OilPresRangeHigh" value="55"/>
+            <item name="OilPresRangeLow" value="56"/>
+            <item name="SensVoltRangeHigh" value="57"/>
+            <item name="SensVoltRangeLow" value="58"/>
+            <item name="SoftOverspeed" value="59"/>
+            <item name="CamSyncFault" value="6"/>
+            <item name="SysVoltRangeHigh" value="60"/>
+            <item name="SysVoltRangeLow" value="61"/>
+            <item name="TPS1AdaptHiMax" value="62"/>
+            <item name="TPS1AdaptHiMin" value="63"/>
+            <item name="TPS1AdaptLoMax" value="64"/>
+            <item name="TPS1AdaptLoMin" value="65"/>
+            <item name="TPS1RangeHigh" value="66"/>
+            <item name="TPS1RangeLow" value="67"/>
+            <item name="TPS2AdaptHiMax" value="68"/>
+            <item name="TPS2AdaptHiMin" value="69"/>
+            <item name="CrankEdgesFault" value="7"/>
+            <item name="TPS2AdaptLoMax" value="70"/>
+            <item name="TPS2AdaptLoMin" value="71"/>
+            <item name="TPS2RangeHigh" value="72"/>
+            <item name="TPS2RangeLow" value="73"/>
+            <item name="TPS_Sensors_Conflict" value="74"/>
+            <item name="(None)" value="75"/>
+            <item name="CrankSyncFault" value="8"/>
+            <item name="Drive_Hot" value="9"/>
             <default>Unknown</default>
          </enum>
       </col_enum>
       <col_enum column="4">
          <enum>
-            <item name="CamEdgesFault" value="0"/>
-            <item name="CamSyncFault" value="1"/>
-            <item name="EST1_Open" value="10"/>
-            <item name="EST1_Short" value="11"/>
-            <item name="EST2_Open" value="12"/>
-            <item name="EST2_Short" value="13"/>
-            <item name="ETCSpringTest" value="14"/>
-            <item name="ETC_Open_Fault" value="15"/>
-            <item name="ETC_Sticking" value="16"/>
-            <item name="FuelAdaptRangeHi" value="17"/>
-            <item name="FuelAdaptRangeLow" value="18"/>
-            <item name="FuelPresHigh_Fault" value="19"/>
-            <item name="CrankEdgesFault" value="2"/>
-            <item name="FuelPresLow_Fault" value="20"/>
-            <item name="FuelPresRangeHigh" value="21"/>
-            <item name="FuelPresRangeLow" value="22"/>
-            <item name="FuelSensRangeHigh" value="23"/>
-            <item name="FuelSensRangeLow" value="24"/>
-            <item name="HardOverspeed" value="25"/>
-            <item name="IATRangeHigh" value="26"/>
-            <item name="IATRangeLow" value="27"/>
-            <item name="Inj1Open" value="28"/>
-            <item name="Inj2Open" value="29"/>
-            <item name="CrankSyncFault" value="3"/>
-            <item name="MAFRangeHigh" value="30"/>
-            <item name="MAFRangeLow" value="31"/>
-            <item name="MAPRangeHigh" value="32"/>
-            <item name="MAPRangeLow" value="33"/>
-            <item name="MAPTimeRangeHigh" value="34"/>
-            <item name="MAPTimeRangeLow" value="35"/>
-            <item name="MAP_IR_HI" value="36"/>
-            <item name="MAP_IR_LO" value="37"/>
-            <item name="MAP_STICKING" value="38"/>
-            <item name="MediumOverspeed" value="39"/>
-            <item name="ECTOverTempFault" value="4"/>
-            <item name="NoOil_Fault" value="40"/>
-            <item name="O2FailedLean" value="41"/>
-            <item name="O2FailedRich" value="42"/>
-            <item name="O2NotActive" value="43"/>
-            <item name="O2_PostCatRangeHigh" value="44"/>
-            <item name="O2_PostCatRangeLow" value="45"/>
-            <item name="OilPresRangeHigh" value="46"/>
-            <item name="OilPresRangeLow" value="47"/>
-            <item name="SensVoltRangeHigh" value="48"/>
-            <item name="SensVoltRangeLow" value="49"/>
-            <item name="ECTRangeHigh" value="5"/>
-            <item name="SoftOverspeed" value="50"/>
-            <item name="SysVoltRangeHigh" value="51"/>
-            <item name="SysVoltRangeLow" value="52"/>
-            <item name="TPS1AdaptHiMax" value="53"/>
-            <item name="TPS1AdaptHiMin" value="54"/>
-            <item name="TPS1AdaptLoMax" value="55"/>
-            <item name="TPS1AdaptLoMin" value="56"/>
-            <item name="TPS1RangeHigh" value="57"/>
-            <item name="TPS1RangeLow" value="58"/>
-            <item name="TPS2AdaptHiMax" value="59"/>
-            <item name="ECTRangeLow" value="6"/>
-            <item name="TPS2AdaptHiMin" value="60"/>
-            <item name="TPS2AdaptLoMax" value="61"/>
-            <item name="TPS2AdaptLoMin" value="62"/>
-            <item name="TPS2RangeHigh" value="63"/>
-            <item name="TPS2RangeLow" value="64"/>
-            <item name="TPS_Sensors_Conflict" value="65"/>
-            <item name="(None)" value="66"/>
-            <item name="ECTSevereOverTempFault" value="7"/>
-            <item name="EGRSenseRangeHigh" value="8"/>
-            <item name="EGRSenseRangeLow" value="9"/>
+            <item name="CAN_Timeout_112" value="0"/>
+            <item name="CAN_Timeout_Phoenix_1" value="1"/>
+            <item name="Drive_Warm" value="10"/>
+            <item name="ECTOverTempFault" value="11"/>
+            <item name="ECTRangeHigh" value="12"/>
+            <item name="ECTRangeLow" value="13"/>
+            <item name="ECTSevereOverTempFault" value="14"/>
+            <item name="EGRSenseRangeHigh" value="15"/>
+            <item name="EGRSenseRangeLow" value="16"/>
+            <item name="EST1_Open" value="17"/>
+            <item name="EST1_Short" value="18"/>
+            <item name="EST2_Open" value="19"/>
+            <item name="CAN_Timeout_Phoenix_2" value="2"/>
+            <item name="EST2_Short" value="20"/>
+            <item name="ETCSpringTest" value="21"/>
+            <item name="ETC_Open_Fault" value="22"/>
+            <item name="ETC_Sticking" value="23"/>
+            <item name="FuelAdaptRangeHi" value="24"/>
+            <item name="FuelAdaptRangeLow" value="25"/>
+            <item name="FuelPresHigh_Fault" value="26"/>
+            <item name="FuelPresLow_Fault" value="27"/>
+            <item name="FuelPresRangeHigh" value="28"/>
+            <item name="FuelPresRangeLow" value="29"/>
+            <item name="CAN_Timeout_Phoenix_3" value="3"/>
+            <item name="FuelSensRangeHigh" value="30"/>
+            <item name="FuelSensRangeLow" value="31"/>
+            <item name="HardOverspeed" value="32"/>
+            <item name="IATRangeHigh" value="33"/>
+            <item name="IATRangeLow" value="34"/>
+            <item name="Inj1Open" value="35"/>
+            <item name="Inj2Open" value="36"/>
+            <item name="MAFRangeHigh" value="37"/>
+            <item name="MAFRangeLow" value="38"/>
+            <item name="MAPRangeHigh" value="39"/>
+            <item name="CAN_Timeout_Phoenix_4" value="4"/>
+            <item name="MAPRangeLow" value="40"/>
+            <item name="MAPTimeRangeHigh" value="41"/>
+            <item name="MAPTimeRangeLow" value="42"/>
+            <item name="MAP_IR_HI" value="43"/>
+            <item name="MAP_IR_LO" value="44"/>
+            <item name="MAP_STICKING" value="45"/>
+            <item name="MediumOverspeed" value="46"/>
+            <item name="Motor_Hot" value="47"/>
+            <item name="Motor_Warm" value="48"/>
+            <item name="NoOil_Fault" value="49"/>
+            <item name="CamEdgesFault" value="5"/>
+            <item name="O2FailedLean" value="50"/>
+            <item name="O2FailedRich" value="51"/>
+            <item name="O2NotActive" value="52"/>
+            <item name="O2_PostCatRangeHigh" value="53"/>
+            <item name="O2_PostCatRangeLow" value="54"/>
+            <item name="OilPresRangeHigh" value="55"/>
+            <item name="OilPresRangeLow" value="56"/>
+            <item name="SensVoltRangeHigh" value="57"/>
+            <item name="SensVoltRangeLow" value="58"/>
+            <item name="SoftOverspeed" value="59"/>
+            <item name="CamSyncFault" value="6"/>
+            <item name="SysVoltRangeHigh" value="60"/>
+            <item name="SysVoltRangeLow" value="61"/>
+            <item name="TPS1AdaptHiMax" value="62"/>
+            <item name="TPS1AdaptHiMin" value="63"/>
+            <item name="TPS1AdaptLoMax" value="64"/>
+            <item name="TPS1AdaptLoMin" value="65"/>
+            <item name="TPS1RangeHigh" value="66"/>
+            <item name="TPS1RangeLow" value="67"/>
+            <item name="TPS2AdaptHiMax" value="68"/>
+            <item name="TPS2AdaptHiMin" value="69"/>
+            <item name="CrankEdgesFault" value="7"/>
+            <item name="TPS2AdaptLoMax" value="70"/>
+            <item name="TPS2AdaptLoMin" value="71"/>
+            <item name="TPS2RangeHigh" value="72"/>
+            <item name="TPS2RangeLow" value="73"/>
+            <item name="TPS_Sensors_Conflict" value="74"/>
+            <item name="(None)" value="75"/>
+            <item name="CrankSyncFault" value="8"/>
+            <item name="Drive_Hot" value="9"/>
             <default>Unknown</default>
          </enum>
       </col_enum>
       <col_enum column="5">
          <enum>
-            <item name="CamEdgesFault" value="0"/>
-            <item name="CamSyncFault" value="1"/>
-            <item name="EST1_Open" value="10"/>
-            <item name="EST1_Short" value="11"/>
-            <item name="EST2_Open" value="12"/>
-            <item name="EST2_Short" value="13"/>
-            <item name="ETCSpringTest" value="14"/>
-            <item name="ETC_Open_Fault" value="15"/>
-            <item name="ETC_Sticking" value="16"/>
-            <item name="FuelAdaptRangeHi" value="17"/>
-            <item name="FuelAdaptRangeLow" value="18"/>
-            <item name="FuelPresHigh_Fault" value="19"/>
-            <item name="CrankEdgesFault" value="2"/>
-            <item name="FuelPresLow_Fault" value="20"/>
-            <item name="FuelPresRangeHigh" value="21"/>
-            <item name="FuelPresRangeLow" value="22"/>
-            <item name="FuelSensRangeHigh" value="23"/>
-            <item name="FuelSensRangeLow" value="24"/>
-            <item name="HardOverspeed" value="25"/>
-            <item name="IATRangeHigh" value="26"/>
-            <item name="IATRangeLow" value="27"/>
-            <item name="Inj1Open" value="28"/>
-            <item name="Inj2Open" value="29"/>
-            <item name="CrankSyncFault" value="3"/>
-            <item name="MAFRangeHigh" value="30"/>
-            <item name="MAFRangeLow" value="31"/>
-            <item name="MAPRangeHigh" value="32"/>
-            <item name="MAPRangeLow" value="33"/>
-            <item name="MAPTimeRangeHigh" value="34"/>
-            <item name="MAPTimeRangeLow" value="35"/>
-            <item name="MAP_IR_HI" value="36"/>
-            <item name="MAP_IR_LO" value="37"/>
-            <item name="MAP_STICKING" value="38"/>
-            <item name="MediumOverspeed" value="39"/>
-            <item name="ECTOverTempFault" value="4"/>
-            <item name="NoOil_Fault" value="40"/>
-            <item name="O2FailedLean" value="41"/>
-            <item name="O2FailedRich" value="42"/>
-            <item name="O2NotActive" value="43"/>
-            <item name="O2_PostCatRangeHigh" value="44"/>
-            <item name="O2_PostCatRangeLow" value="45"/>
-            <item name="OilPresRangeHigh" value="46"/>
-            <item name="OilPresRangeLow" value="47"/>
-            <item name="SensVoltRangeHigh" value="48"/>
-            <item name="SensVoltRangeLow" value="49"/>
-            <item name="ECTRangeHigh" value="5"/>
-            <item name="SoftOverspeed" value="50"/>
-            <item name="SysVoltRangeHigh" value="51"/>
-            <item name="SysVoltRangeLow" value="52"/>
-            <item name="TPS1AdaptHiMax" value="53"/>
-            <item name="TPS1AdaptHiMin" value="54"/>
-            <item name="TPS1AdaptLoMax" value="55"/>
-            <item name="TPS1AdaptLoMin" value="56"/>
-            <item name="TPS1RangeHigh" value="57"/>
-            <item name="TPS1RangeLow" value="58"/>
-            <item name="TPS2AdaptHiMax" value="59"/>
-            <item name="ECTRangeLow" value="6"/>
-            <item name="TPS2AdaptHiMin" value="60"/>
-            <item name="TPS2AdaptLoMax" value="61"/>
-            <item name="TPS2AdaptLoMin" value="62"/>
-            <item name="TPS2RangeHigh" value="63"/>
-            <item name="TPS2RangeLow" value="64"/>
-            <item name="TPS_Sensors_Conflict" value="65"/>
-            <item name="(None)" value="66"/>
-            <item name="ECTSevereOverTempFault" value="7"/>
-            <item name="EGRSenseRangeHigh" value="8"/>
-            <item name="EGRSenseRangeLow" value="9"/>
+            <item name="CAN_Timeout_112" value="0"/>
+            <item name="CAN_Timeout_Phoenix_1" value="1"/>
+            <item name="Drive_Warm" value="10"/>
+            <item name="ECTOverTempFault" value="11"/>
+            <item name="ECTRangeHigh" value="12"/>
+            <item name="ECTRangeLow" value="13"/>
+            <item name="ECTSevereOverTempFault" value="14"/>
+            <item name="EGRSenseRangeHigh" value="15"/>
+            <item name="EGRSenseRangeLow" value="16"/>
+            <item name="EST1_Open" value="17"/>
+            <item name="EST1_Short" value="18"/>
+            <item name="EST2_Open" value="19"/>
+            <item name="CAN_Timeout_Phoenix_2" value="2"/>
+            <item name="EST2_Short" value="20"/>
+            <item name="ETCSpringTest" value="21"/>
+            <item name="ETC_Open_Fault" value="22"/>
+            <item name="ETC_Sticking" value="23"/>
+            <item name="FuelAdaptRangeHi" value="24"/>
+            <item name="FuelAdaptRangeLow" value="25"/>
+            <item name="FuelPresHigh_Fault" value="26"/>
+            <item name="FuelPresLow_Fault" value="27"/>
+            <item name="FuelPresRangeHigh" value="28"/>
+            <item name="FuelPresRangeLow" value="29"/>
+            <item name="CAN_Timeout_Phoenix_3" value="3"/>
+            <item name="FuelSensRangeHigh" value="30"/>
+            <item name="FuelSensRangeLow" value="31"/>
+            <item name="HardOverspeed" value="32"/>
+            <item name="IATRangeHigh" value="33"/>
+            <item name="IATRangeLow" value="34"/>
+            <item name="Inj1Open" value="35"/>
+            <item name="Inj2Open" value="36"/>
+            <item name="MAFRangeHigh" value="37"/>
+            <item name="MAFRangeLow" value="38"/>
+            <item name="MAPRangeHigh" value="39"/>
+            <item name="CAN_Timeout_Phoenix_4" value="4"/>
+            <item name="MAPRangeLow" value="40"/>
+            <item name="MAPTimeRangeHigh" value="41"/>
+            <item name="MAPTimeRangeLow" value="42"/>
+            <item name="MAP_IR_HI" value="43"/>
+            <item name="MAP_IR_LO" value="44"/>
+            <item name="MAP_STICKING" value="45"/>
+            <item name="MediumOverspeed" value="46"/>
+            <item name="Motor_Hot" value="47"/>
+            <item name="Motor_Warm" value="48"/>
+            <item name="NoOil_Fault" value="49"/>
+            <item name="CamEdgesFault" value="5"/>
+            <item name="O2FailedLean" value="50"/>
+            <item name="O2FailedRich" value="51"/>
+            <item name="O2NotActive" value="52"/>
+            <item name="O2_PostCatRangeHigh" value="53"/>
+            <item name="O2_PostCatRangeLow" value="54"/>
+            <item name="OilPresRangeHigh" value="55"/>
+            <item name="OilPresRangeLow" value="56"/>
+            <item name="SensVoltRangeHigh" value="57"/>
+            <item name="SensVoltRangeLow" value="58"/>
+            <item name="SoftOverspeed" value="59"/>
+            <item name="CamSyncFault" value="6"/>
+            <item name="SysVoltRangeHigh" value="60"/>
+            <item name="SysVoltRangeLow" value="61"/>
+            <item name="TPS1AdaptHiMax" value="62"/>
+            <item name="TPS1AdaptHiMin" value="63"/>
+            <item name="TPS1AdaptLoMax" value="64"/>
+            <item name="TPS1AdaptLoMin" value="65"/>
+            <item name="TPS1RangeHigh" value="66"/>
+            <item name="TPS1RangeLow" value="67"/>
+            <item name="TPS2AdaptHiMax" value="68"/>
+            <item name="TPS2AdaptHiMin" value="69"/>
+            <item name="CrankEdgesFault" value="7"/>
+            <item name="TPS2AdaptLoMax" value="70"/>
+            <item name="TPS2AdaptLoMin" value="71"/>
+            <item name="TPS2RangeHigh" value="72"/>
+            <item name="TPS2RangeLow" value="73"/>
+            <item name="TPS_Sensors_Conflict" value="74"/>
+            <item name="(None)" value="75"/>
+            <item name="CrankSyncFault" value="8"/>
+            <item name="Drive_Hot" value="9"/>
             <default>Unknown</default>
          </enum>
       </col_enum>
       <col_enum column="6">
          <enum>
-            <item name="CamEdgesFault" value="0"/>
-            <item name="CamSyncFault" value="1"/>
-            <item name="EST1_Open" value="10"/>
-            <item name="EST1_Short" value="11"/>
-            <item name="EST2_Open" value="12"/>
-            <item name="EST2_Short" value="13"/>
-            <item name="ETCSpringTest" value="14"/>
-            <item name="ETC_Open_Fault" value="15"/>
-            <item name="ETC_Sticking" value="16"/>
-            <item name="FuelAdaptRangeHi" value="17"/>
-            <item name="FuelAdaptRangeLow" value="18"/>
-            <item name="FuelPresHigh_Fault" value="19"/>
-            <item name="CrankEdgesFault" value="2"/>
-            <item name="FuelPresLow_Fault" value="20"/>
-            <item name="FuelPresRangeHigh" value="21"/>
-            <item name="FuelPresRangeLow" value="22"/>
-            <item name="FuelSensRangeHigh" value="23"/>
-            <item name="FuelSensRangeLow" value="24"/>
-            <item name="HardOverspeed" value="25"/>
-            <item name="IATRangeHigh" value="26"/>
-            <item name="IATRangeLow" value="27"/>
-            <item name="Inj1Open" value="28"/>
-            <item name="Inj2Open" value="29"/>
-            <item name="CrankSyncFault" value="3"/>
-            <item name="MAFRangeHigh" value="30"/>
-            <item name="MAFRangeLow" value="31"/>
-            <item name="MAPRangeHigh" value="32"/>
-            <item name="MAPRangeLow" value="33"/>
-            <item name="MAPTimeRangeHigh" value="34"/>
-            <item name="MAPTimeRangeLow" value="35"/>
-            <item name="MAP_IR_HI" value="36"/>
-            <item name="MAP_IR_LO" value="37"/>
-            <item name="MAP_STICKING" value="38"/>
-            <item name="MediumOverspeed" value="39"/>
-            <item name="ECTOverTempFault" value="4"/>
-            <item name="NoOil_Fault" value="40"/>
-            <item name="O2FailedLean" value="41"/>
-            <item name="O2FailedRich" value="42"/>
-            <item name="O2NotActive" value="43"/>
-            <item name="O2_PostCatRangeHigh" value="44"/>
-            <item name="O2_PostCatRangeLow" value="45"/>
-            <item name="OilPresRangeHigh" value="46"/>
-            <item name="OilPresRangeLow" value="47"/>
-            <item name="SensVoltRangeHigh" value="48"/>
-            <item name="SensVoltRangeLow" value="49"/>
-            <item name="ECTRangeHigh" value="5"/>
-            <item name="SoftOverspeed" value="50"/>
-            <item name="SysVoltRangeHigh" value="51"/>
-            <item name="SysVoltRangeLow" value="52"/>
-            <item name="TPS1AdaptHiMax" value="53"/>
-            <item name="TPS1AdaptHiMin" value="54"/>
-            <item name="TPS1AdaptLoMax" value="55"/>
-            <item name="TPS1AdaptLoMin" value="56"/>
-            <item name="TPS1RangeHigh" value="57"/>
-            <item name="TPS1RangeLow" value="58"/>
-            <item name="TPS2AdaptHiMax" value="59"/>
-            <item name="ECTRangeLow" value="6"/>
-            <item name="TPS2AdaptHiMin" value="60"/>
-            <item name="TPS2AdaptLoMax" value="61"/>
-            <item name="TPS2AdaptLoMin" value="62"/>
-            <item name="TPS2RangeHigh" value="63"/>
-            <item name="TPS2RangeLow" value="64"/>
-            <item name="TPS_Sensors_Conflict" value="65"/>
-            <item name="(None)" value="66"/>
-            <item name="ECTSevereOverTempFault" value="7"/>
-            <item name="EGRSenseRangeHigh" value="8"/>
-            <item name="EGRSenseRangeLow" value="9"/>
+            <item name="CAN_Timeout_112" value="0"/>
+            <item name="CAN_Timeout_Phoenix_1" value="1"/>
+            <item name="Drive_Warm" value="10"/>
+            <item name="ECTOverTempFault" value="11"/>
+            <item name="ECTRangeHigh" value="12"/>
+            <item name="ECTRangeLow" value="13"/>
+            <item name="ECTSevereOverTempFault" value="14"/>
+            <item name="EGRSenseRangeHigh" value="15"/>
+            <item name="EGRSenseRangeLow" value="16"/>
+            <item name="EST1_Open" value="17"/>
+            <item name="EST1_Short" value="18"/>
+            <item name="EST2_Open" value="19"/>
+            <item name="CAN_Timeout_Phoenix_2" value="2"/>
+            <item name="EST2_Short" value="20"/>
+            <item name="ETCSpringTest" value="21"/>
+            <item name="ETC_Open_Fault" value="22"/>
+            <item name="ETC_Sticking" value="23"/>
+            <item name="FuelAdaptRangeHi" value="24"/>
+            <item name="FuelAdaptRangeLow" value="25"/>
+            <item name="FuelPresHigh_Fault" value="26"/>
+            <item name="FuelPresLow_Fault" value="27"/>
+            <item name="FuelPresRangeHigh" value="28"/>
+            <item name="FuelPresRangeLow" value="29"/>
+            <item name="CAN_Timeout_Phoenix_3" value="3"/>
+            <item name="FuelSensRangeHigh" value="30"/>
+            <item name="FuelSensRangeLow" value="31"/>
+            <item name="HardOverspeed" value="32"/>
+            <item name="IATRangeHigh" value="33"/>
+            <item name="IATRangeLow" value="34"/>
+            <item name="Inj1Open" value="35"/>
+            <item name="Inj2Open" value="36"/>
+            <item name="MAFRangeHigh" value="37"/>
+            <item name="MAFRangeLow" value="38"/>
+            <item name="MAPRangeHigh" value="39"/>
+            <item name="CAN_Timeout_Phoenix_4" value="4"/>
+            <item name="MAPRangeLow" value="40"/>
+            <item name="MAPTimeRangeHigh" value="41"/>
+            <item name="MAPTimeRangeLow" value="42"/>
+            <item name="MAP_IR_HI" value="43"/>
+            <item name="MAP_IR_LO" value="44"/>
+            <item name="MAP_STICKING" value="45"/>
+            <item name="MediumOverspeed" value="46"/>
+            <item name="Motor_Hot" value="47"/>
+            <item name="Motor_Warm" value="48"/>
+            <item name="NoOil_Fault" value="49"/>
+            <item name="CamEdgesFault" value="5"/>
+            <item name="O2FailedLean" value="50"/>
+            <item name="O2FailedRich" value="51"/>
+            <item name="O2NotActive" value="52"/>
+            <item name="O2_PostCatRangeHigh" value="53"/>
+            <item name="O2_PostCatRangeLow" value="54"/>
+            <item name="OilPresRangeHigh" value="55"/>
+            <item name="OilPresRangeLow" value="56"/>
+            <item name="SensVoltRangeHigh" value="57"/>
+            <item name="SensVoltRangeLow" value="58"/>
+            <item name="SoftOverspeed" value="59"/>
+            <item name="CamSyncFault" value="6"/>
+            <item name="SysVoltRangeHigh" value="60"/>
+            <item name="SysVoltRangeLow" value="61"/>
+            <item name="TPS1AdaptHiMax" value="62"/>
+            <item name="TPS1AdaptHiMin" value="63"/>
+            <item name="TPS1AdaptLoMax" value="64"/>
+            <item name="TPS1AdaptLoMin" value="65"/>
+            <item name="TPS1RangeHigh" value="66"/>
+            <item name="TPS1RangeLow" value="67"/>
+            <item name="TPS2AdaptHiMax" value="68"/>
+            <item name="TPS2AdaptHiMin" value="69"/>
+            <item name="CrankEdgesFault" value="7"/>
+            <item name="TPS2AdaptLoMax" value="70"/>
+            <item name="TPS2AdaptLoMin" value="71"/>
+            <item name="TPS2RangeHigh" value="72"/>
+            <item name="TPS2RangeLow" value="73"/>
+            <item name="TPS_Sensors_Conflict" value="74"/>
+            <item name="(None)" value="75"/>
+            <item name="CrankSyncFault" value="8"/>
+            <item name="Drive_Hot" value="9"/>
+            <default>Unknown</default>
+         </enum>
+      </col_enum>
+      <col_enum column="7">
+         <enum>
+            <item name="CAN_Timeout_112" value="0"/>
+            <item name="CAN_Timeout_Phoenix_1" value="1"/>
+            <item name="Drive_Warm" value="10"/>
+            <item name="ECTOverTempFault" value="11"/>
+            <item name="ECTRangeHigh" value="12"/>
+            <item name="ECTRangeLow" value="13"/>
+            <item name="ECTSevereOverTempFault" value="14"/>
+            <item name="EGRSenseRangeHigh" value="15"/>
+            <item name="EGRSenseRangeLow" value="16"/>
+            <item name="EST1_Open" value="17"/>
+            <item name="EST1_Short" value="18"/>
+            <item name="EST2_Open" value="19"/>
+            <item name="CAN_Timeout_Phoenix_2" value="2"/>
+            <item name="EST2_Short" value="20"/>
+            <item name="ETCSpringTest" value="21"/>
+            <item name="ETC_Open_Fault" value="22"/>
+            <item name="ETC_Sticking" value="23"/>
+            <item name="FuelAdaptRangeHi" value="24"/>
+            <item name="FuelAdaptRangeLow" value="25"/>
+            <item name="FuelPresHigh_Fault" value="26"/>
+            <item name="FuelPresLow_Fault" value="27"/>
+            <item name="FuelPresRangeHigh" value="28"/>
+            <item name="FuelPresRangeLow" value="29"/>
+            <item name="CAN_Timeout_Phoenix_3" value="3"/>
+            <item name="FuelSensRangeHigh" value="30"/>
+            <item name="FuelSensRangeLow" value="31"/>
+            <item name="HardOverspeed" value="32"/>
+            <item name="IATRangeHigh" value="33"/>
+            <item name="IATRangeLow" value="34"/>
+            <item name="Inj1Open" value="35"/>
+            <item name="Inj2Open" value="36"/>
+            <item name="MAFRangeHigh" value="37"/>
+            <item name="MAFRangeLow" value="38"/>
+            <item name="MAPRangeHigh" value="39"/>
+            <item name="CAN_Timeout_Phoenix_4" value="4"/>
+            <item name="MAPRangeLow" value="40"/>
+            <item name="MAPTimeRangeHigh" value="41"/>
+            <item name="MAPTimeRangeLow" value="42"/>
+            <item name="MAP_IR_HI" value="43"/>
+            <item name="MAP_IR_LO" value="44"/>
+            <item name="MAP_STICKING" value="45"/>
+            <item name="MediumOverspeed" value="46"/>
+            <item name="Motor_Hot" value="47"/>
+            <item name="Motor_Warm" value="48"/>
+            <item name="NoOil_Fault" value="49"/>
+            <item name="CamEdgesFault" value="5"/>
+            <item name="O2FailedLean" value="50"/>
+            <item name="O2FailedRich" value="51"/>
+            <item name="O2NotActive" value="52"/>
+            <item name="O2_PostCatRangeHigh" value="53"/>
+            <item name="O2_PostCatRangeLow" value="54"/>
+            <item name="OilPresRangeHigh" value="55"/>
+            <item name="OilPresRangeLow" value="56"/>
+            <item name="SensVoltRangeHigh" value="57"/>
+            <item name="SensVoltRangeLow" value="58"/>
+            <item name="SoftOverspeed" value="59"/>
+            <item name="CamSyncFault" value="6"/>
+            <item name="SysVoltRangeHigh" value="60"/>
+            <item name="SysVoltRangeLow" value="61"/>
+            <item name="TPS1AdaptHiMax" value="62"/>
+            <item name="TPS1AdaptHiMin" value="63"/>
+            <item name="TPS1AdaptLoMax" value="64"/>
+            <item name="TPS1AdaptLoMin" value="65"/>
+            <item name="TPS1RangeHigh" value="66"/>
+            <item name="TPS1RangeLow" value="67"/>
+            <item name="TPS2AdaptHiMax" value="68"/>
+            <item name="TPS2AdaptHiMin" value="69"/>
+            <item name="CrankEdgesFault" value="7"/>
+            <item name="TPS2AdaptLoMax" value="70"/>
+            <item name="TPS2AdaptLoMin" value="71"/>
+            <item name="TPS2RangeHigh" value="72"/>
+            <item name="TPS2RangeLow" value="73"/>
+            <item name="TPS_Sensors_Conflict" value="74"/>
+            <item name="(None)" value="75"/>
+            <item name="CrankSyncFault" value="8"/>
+            <item name="Drive_Hot" value="9"/>
+            <default>Unknown</default>
+         </enum>
+      </col_enum>
+      <col_enum column="8">
+         <enum>
+            <item name="CAN_Timeout_112" value="0"/>
+            <item name="CAN_Timeout_Phoenix_1" value="1"/>
+            <item name="Drive_Warm" value="10"/>
+            <item name="ECTOverTempFault" value="11"/>
+            <item name="ECTRangeHigh" value="12"/>
+            <item name="ECTRangeLow" value="13"/>
+            <item name="ECTSevereOverTempFault" value="14"/>
+            <item name="EGRSenseRangeHigh" value="15"/>
+            <item name="EGRSenseRangeLow" value="16"/>
+            <item name="EST1_Open" value="17"/>
+            <item name="EST1_Short" value="18"/>
+            <item name="EST2_Open" value="19"/>
+            <item name="CAN_Timeout_Phoenix_2" value="2"/>
+            <item name="EST2_Short" value="20"/>
+            <item name="ETCSpringTest" value="21"/>
+            <item name="ETC_Open_Fault" value="22"/>
+            <item name="ETC_Sticking" value="23"/>
+            <item name="FuelAdaptRangeHi" value="24"/>
+            <item name="FuelAdaptRangeLow" value="25"/>
+            <item name="FuelPresHigh_Fault" value="26"/>
+            <item name="FuelPresLow_Fault" value="27"/>
+            <item name="FuelPresRangeHigh" value="28"/>
+            <item name="FuelPresRangeLow" value="29"/>
+            <item name="CAN_Timeout_Phoenix_3" value="3"/>
+            <item name="FuelSensRangeHigh" value="30"/>
+            <item name="FuelSensRangeLow" value="31"/>
+            <item name="HardOverspeed" value="32"/>
+            <item name="IATRangeHigh" value="33"/>
+            <item name="IATRangeLow" value="34"/>
+            <item name="Inj1Open" value="35"/>
+            <item name="Inj2Open" value="36"/>
+            <item name="MAFRangeHigh" value="37"/>
+            <item name="MAFRangeLow" value="38"/>
+            <item name="MAPRangeHigh" value="39"/>
+            <item name="CAN_Timeout_Phoenix_4" value="4"/>
+            <item name="MAPRangeLow" value="40"/>
+            <item name="MAPTimeRangeHigh" value="41"/>
+            <item name="MAPTimeRangeLow" value="42"/>
+            <item name="MAP_IR_HI" value="43"/>
+            <item name="MAP_IR_LO" value="44"/>
+            <item name="MAP_STICKING" value="45"/>
+            <item name="MediumOverspeed" value="46"/>
+            <item name="Motor_Hot" value="47"/>
+            <item name="Motor_Warm" value="48"/>
+            <item name="NoOil_Fault" value="49"/>
+            <item name="CamEdgesFault" value="5"/>
+            <item name="O2FailedLean" value="50"/>
+            <item name="O2FailedRich" value="51"/>
+            <item name="O2NotActive" value="52"/>
+            <item name="O2_PostCatRangeHigh" value="53"/>
+            <item name="O2_PostCatRangeLow" value="54"/>
+            <item name="OilPresRangeHigh" value="55"/>
+            <item name="OilPresRangeLow" value="56"/>
+            <item name="SensVoltRangeHigh" value="57"/>
+            <item name="SensVoltRangeLow" value="58"/>
+            <item name="SoftOverspeed" value="59"/>
+            <item name="CamSyncFault" value="6"/>
+            <item name="SysVoltRangeHigh" value="60"/>
+            <item name="SysVoltRangeLow" value="61"/>
+            <item name="TPS1AdaptHiMax" value="62"/>
+            <item name="TPS1AdaptHiMin" value="63"/>
+            <item name="TPS1AdaptLoMax" value="64"/>
+            <item name="TPS1AdaptLoMin" value="65"/>
+            <item name="TPS1RangeHigh" value="66"/>
+            <item name="TPS1RangeLow" value="67"/>
+            <item name="TPS2AdaptHiMax" value="68"/>
+            <item name="TPS2AdaptHiMin" value="69"/>
+            <item name="CrankEdgesFault" value="7"/>
+            <item name="TPS2AdaptLoMax" value="70"/>
+            <item name="TPS2AdaptLoMin" value="71"/>
+            <item name="TPS2RangeHigh" value="72"/>
+            <item name="TPS2RangeLow" value="73"/>
+            <item name="TPS_Sensors_Conflict" value="74"/>
+            <item name="(None)" value="75"/>
+            <item name="CrankSyncFault" value="8"/>
+            <item name="Drive_Hot" value="9"/>
             <default>Unknown</default>
          </enum>
       </col_enum>
       <col_header>
          <enum>
-            <item name="CutThrottle" value="0"/>
-            <item name="DelayedEngineShutdown" value="1"/>
-            <item name="DisableO2Ctrl" value="2"/>
-            <item name="EngineShutdown" value="3"/>
-            <item name="HardRevLimit" value="4"/>
-            <item name="MediumRevLimit" value="5"/>
-            <item name="SoftRevLimit" value="6"/>
+            <item name="CEL" value="0"/>
+            <item name="CutThrottle" value="1"/>
+            <item name="DelayedEngineShutdown" value="2"/>
+            <item name="DisableO2Ctrl" value="3"/>
+            <item name="EngineShutdown" value="4"/>
+            <item name="HardRevLimit" value="5"/>
+            <item name="MediumRevLimit" value="6"/>
+            <item name="SoftRevLimit" value="7"/>
+            <item name="Wrench_Light" value="8"/>
             <default>Unknown</default>
          </enum>
       </col_header>
@@ -20173,7 +21213,7 @@
             <default>Unknown</default>
          </enum>
       </row_header>
-      <col_len>7</col_len>
+      <col_len>9</col_len>
       <row_len>1</row_len>
    </VarDec>
    <VarDec>
@@ -21073,7 +22113,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut7481p0001</help>
+      <help>Digital output pin selection for DOut7679p0004</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.FuelPumpPin</struct>
       <storage>FLASH</storage>
@@ -21177,7 +22217,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut7765p0004</help>
+      <help>Digital output pin selection for DOut7963p0001</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.OilPumpPin</struct>
       <storage>FLASH</storage>
@@ -21229,7 +22269,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut7775p0004</help>
+      <help>Digital output pin selection for DOut7973p0001</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.O2_Heater</struct>
       <storage>FLASH</storage>
@@ -21504,6 +22544,63 @@
       <help>Last received std CAN message on bus CAN_1, which was unhandled</help>
       <group>System | Debug | Resources | CAN</group>
       <struct>VolatileWork_BSS.CAN_1_std_last_unhandled_id</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint32</type>
+   </VarDec>
+   <VarDec>
+      <name>CAN_1_ext_receive_count</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>4.294967295E9</max>
+      <min>0</min>
+      <format>8.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <help>Total number of received ext CAN messages on bus CAN_1</help>
+      <group>System | Debug | Resources | CAN</group>
+      <struct>VolatileWork_BSS.CAN_1_ext_receive_count</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint32</type>
+   </VarDec>
+   <VarDec>
+      <name>CAN_1_ext_handled_count</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>4.294967295E9</max>
+      <min>0</min>
+      <format>8.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <help>Total number of handled ext CAN messages on bus CAN_1</help>
+      <group>System | Debug | Resources | CAN</group>
+      <struct>VolatileWork_BSS.CAN_1_ext_handled_count</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint32</type>
+   </VarDec>
+   <VarDec>
+      <name>CAN_1_ext_last_unhandled_id</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>4.294967295E9</max>
+      <min>0</min>
+      <format>8.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <help>Last received ext CAN message on bus CAN_1, which was unhandled</help>
+      <group>System | Debug | Resources | CAN</group>
+      <struct>VolatileWork_BSS.CAN_1_ext_last_unhandled_id</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>

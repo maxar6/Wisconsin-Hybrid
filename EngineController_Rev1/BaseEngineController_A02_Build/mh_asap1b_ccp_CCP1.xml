@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<if_data_asap1b_ccp name="CCP1">
+	<source name="List 1">
+		<period>0</period>
+		<rate>0</rate>
+		<display_identifier>DAQ1</display_identifier>
+		<qp_blob>
+			<daq_number>0</daq_number>
+			<length>8</length>
+			<can_id_fixed>0x98EF3102</can_id_fixed>
+			<raster>0</raster>
+			<reduction_allowed />
+			<first_pid>0</first_pid>
+		</qp_blob>
+	</source >
+	<source name="List 2">
+		<period>0</period>
+		<rate>0</rate>
+		<display_identifier>DAQ2</display_identifier>
+		<qp_blob>
+			<daq_number>1</daq_number>
+			<length>8</length>
+			<can_id_fixed>0x98EF3102</can_id_fixed>
+			<raster>1</raster>
+			<reduction_allowed />
+			<first_pid>8</first_pid>
+		</qp_blob>
+	</source >
+	<source name="List 3">
+		<period>0</period>
+		<rate>0</rate>
+		<display_identifier>DAQ3</display_identifier>
+		<qp_blob>
+			<daq_number>2</daq_number>
+			<length>8</length>
+			<can_id_fixed>0x98EF3102</can_id_fixed>
+			<raster>2</raster>
+			<reduction_allowed />
+			<first_pid>16</first_pid>
+		</qp_blob>
+	</source >
+	<source name="List 4">
+		<period>0</period>
+		<rate>0</rate>
+		<display_identifier>DAQ4</display_identifier>
+		<qp_blob>
+			<daq_number>3</daq_number>
+			<length>8</length>
+			<can_id_fixed>0x98EF3102</can_id_fixed>
+			<raster>3</raster>
+			<reduction_allowed />
+			<first_pid>24</first_pid>
+		</qp_blob>
+	</source >
+	<raster number="0">
+		<channel_name>FGND_RTI_PERIODIC</channel_name>
+		<short_channel_name>FGND_RTI_PERIODIC</short_channel_name>
+		<!-- Period definition :  basic scaling unit in CSE as defined in ASAP1b -->
+		<cse>3</cse>
+		<!-- ECU sample rate of the event channel, period definition based on the basic scaling unit -->
+		<sample_rate>5</sample_rate>
+	</raster>
+	<raster number="1">
+		<channel_name>FGND_2XRTI_PERIODIC</channel_name>
+		<short_channel_name>FGND_2XRTI_PERIODIC</short_channel_name>
+		<!-- Period definition :  basic scaling unit in CSE as defined in ASAP1b -->
+		<cse>3</cse>
+		<!-- ECU sample rate of the event channel, period definition based on the basic scaling unit -->
+		<sample_rate>10</sample_rate>
+	</raster>
+	<raster number="2">
+		<channel_name>FGND_10XRTI_PERIODIC</channel_name>
+		<short_channel_name>FGND_10XRTI_PERIODIC</short_channel_name>
+		<!-- Period definition :  basic scaling unit in CSE as defined in ASAP1b -->
+		<cse>3</cse>
+		<!-- ECU sample rate of the event channel, period definition based on the basic scaling unit -->
+		<sample_rate>50</sample_rate>
+	</raster>
+	<raster number="3">
+		<channel_name>FGND_20XRTI_PERIODIC</channel_name>
+		<short_channel_name>FGND_20XRTI_PERIODIC</short_channel_name>
+		<!-- Period definition :  basic scaling unit in CSE as defined in ASAP1b -->
+		<cse>3</cse>
+		<!-- ECU sample rate of the event channel, period definition based on the basic scaling unit -->
+		<sample_rate>100</sample_rate>
+	</raster>
+	<raster number="4">
+		<channel_name>BGND_BASE_PERIODIC</channel_name>
+		<short_channel_name>BGND_BASE_PERIODIC</short_channel_name>
+		<!-- Period definition :  basic scaling unit in CSE as defined in ASAP1b -->
+		<cse>3</cse>
+		<!-- ECU sample rate of the event channel, period definition based on the basic scaling unit -->
+		<sample_rate>50</sample_rate>
+	</raster>
+	<raster number="5">
+		<channel_name>BGND_BASEx2_PERIODIC</channel_name>
+		<short_channel_name>BGND_BASEx2_PERIODIC</short_channel_name>
+		<!-- Period definition :  basic scaling unit in CSE as defined in ASAP1b -->
+		<cse>3</cse>
+		<!-- ECU sample rate of the event channel, period definition based on the basic scaling unit -->
+		<sample_rate>100</sample_rate>
+	</raster>
+	<raster number="6">
+		<channel_name>BGND_BASEx10_PERIODIC</channel_name>
+		<short_channel_name>BGND_BASEx10_PERIODIC</short_channel_name>
+		<!-- Period definition :  basic scaling unit in CSE as defined in ASAP1b -->
+		<cse>3</cse>
+		<!-- ECU sample rate of the event channel, period definition based on the basic scaling unit -->
+		<sample_rate>500</sample_rate>
+	</raster>
+	<raster number="7">
+		<channel_name>ONE_SECOND_EVENT</channel_name>
+		<short_channel_name>ONE_SECOND_EVENT</short_channel_name>
+		<!-- Period definition :  basic scaling unit in CSE as defined in ASAP1b -->
+		<cse>3</cse>
+		<!-- ECU sample rate of the event channel, period definition based on the basic scaling unit -->
+		<sample_rate>1000</sample_rate>
+	</raster>
+	<tp_blob>
+		<ccp_version>0x201</ccp_version>
+		<blob_version>0x204</blob_version>
+		<!-- CAN IDs from the PC perspective -->
+		<can_id_send>0x98EF0231</can_id_send>
+		<can_id_receive>0x98EF3102</can_id_receive>
+		<station_address>0x31</station_address>
+		<byte_order>1</byte_order>
+		<baudrate>500000</baudrate>
+	</tp_blob>
+</if_data_asap1b_ccp>
+
+

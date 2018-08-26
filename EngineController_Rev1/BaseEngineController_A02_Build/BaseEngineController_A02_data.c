@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BaseEngineController_A02'.
  *
- * Model version                  : 1.1626
+ * Model version                  : 1.1639
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Sun Apr 22 15:55:33 2018
+ * C/C++ source code generated on : Sat Aug 25 19:54:14 2018
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -20,30 +20,30 @@
 /* Invariant block signals (auto storage) */
 const ConstBlockIO_BaseEngineController_A02 BaseEngineController_A02_ConstB = {
   0.0
-  ,                                    /* '<S679>/Gain4' */
+  ,                                    /* '<S702>/Gain4' */
   0.0
-  ,                                    /* '<S123>/motohawk_replicate2' */
+  ,                                    /* '<S131>/motohawk_replicate2' */
 
   { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 }
-  ,                                    /* '<S123>/motohawk_replicate' */
+  ,                                    /* '<S131>/motohawk_replicate' */
   0U
-  /* '<S679>/Data Type Conversion5' */
+  /* '<S702>/Data Type Conversion5' */
 };
 
 /* Constant parameters (auto storage) */
 const ConstParam_BaseEngineController_A02 BaseEngineController_A02_ConstP = {
   /* Computed Parameter: Logic_table
-   * Referenced by: '<S828>/Logic'
+   * Referenced by: '<S865>/Logic'
    */
   { 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0 },
 
   /* Pooled Parameter (Expression: )
    * Referenced by:
-   *   '<S270>/Combinatorial  Logic'
-   *   '<S271>/Combinatorial  Logic'
-   *   '<S272>/Combinatorial  Logic'
-   *   '<S44>/Combinatorial  Logic'
-   *   '<S234>/Combinatorial  Logic'
+   *   '<S288>/Combinatorial  Logic'
+   *   '<S289>/Combinatorial  Logic'
+   *   '<S290>/Combinatorial  Logic'
+   *   '<S52>/Combinatorial  Logic'
+   *   '<S250>/Combinatorial  Logic'
    */
   { 0, 0, 1, 0, 0, 1, 1, 0 }
 };

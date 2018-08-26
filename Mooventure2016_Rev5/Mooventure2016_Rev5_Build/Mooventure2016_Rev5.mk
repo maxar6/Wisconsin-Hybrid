@@ -55,7 +55,7 @@ SHELL           = cmd
 
 
 MODEL           = Mooventure2016_Rev5
-MODULES         = Application.c CodeCoverage.c FaultManager.c Mooventure2016_Rev5_Foreground.c Mooventure2016_Rev5_data.c MotoHawk_DataStores.c TableLookupFunctions.c Trigger_BGND_BASE_PERIODIC_5721p0001.c Trigger_FGND_RTI_PERIODIC_5730p0001.c Trigger_Fault_active_0_8.c VarDecs.c 
+MODULES         = Application.c CodeCoverage.c FaultManager.c Mooventure2016_Rev5_Foreground.c Mooventure2016_Rev5_data.c MotoHawk_DataStores.c TableLookupFunctions.c Trigger_BGND_BASE_PERIODIC_18255p0001.c Trigger_BGND_BASE_PERIODIC_6013p0004.c Trigger_BGND_BASEx10_PERIODIC_18257p0001.c Trigger_BGND_BASEx2_PERIODIC_18256p0001.c Trigger_FGND_10XRTI_PERIODIC_18253p0001.c Trigger_FGND_20XRTI_PERIODIC_18254p0001.c Trigger_FGND_2XRTI_PERIODIC_18251p0001.c Trigger_FGND_RTI_PERIODIC_18252p0001.c Trigger_FGND_RTI_PERIODIC_6022p0004.c Trigger_Fault_active_0_10.c Trigger_IDLE_EVENT_17123p0007.c Trigger_IDLE_EVENT_18182p0001.c Trigger_ONE_SECOND_EVENT_18258p0001.c Trigger_STARTUP_EVENT_18157p0005.c VarDecs.c mh_ccp_protocol.c mh_ccp_protocol_CCP1.c 
 MAKEFILE        = Mooventure2016_Rev5.mk
 MATLAB_ROOT     = C:\Program Files (x86)\MATLAB\R2011a
 S_FUNCTIONS     = 

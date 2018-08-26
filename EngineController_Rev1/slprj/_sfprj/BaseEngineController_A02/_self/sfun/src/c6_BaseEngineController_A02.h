@@ -9,16 +9,12 @@
 /* Type Definitions */
 typedef struct {
   SimStruct *S;
-  const mxArray *c6_setSimStateSideEffectsInfo;
   int32_T c6_sfEvent;
   uint32_T chartNumber;
   uint32_T instanceNumber;
+  boolean_T c6_doneDoubleBufferReInit;
   boolean_T c6_isStable;
-  uint8_T c6_doSetSimStateSideEffects;
   uint8_T c6_is_active_c6_BaseEngineController_A02;
-  uint8_T c6_is_c6_BaseEngineController_A02;
-  uint8_T c6_tp_Off;
-  uint8_T c6_tp_On;
   ChartInfoStruct chartInfo;
 } SFc6_BaseEngineController_A02InstanceStruct;
 

@@ -33,12 +33,9 @@ OBJECTS = \
 	"c23_Mooventure2016_Rev5.obj"\
 	"c24_Mooventure2016_Rev5.obj"\
 	"c25_Mooventure2016_Rev5.obj"\
-	"c26_Mooventure2016_Rev5.obj"\
-	"c27_Mooventure2016_Rev5.obj"\
 	"c28_Mooventure2016_Rev5.obj"\
 	"c29_Mooventure2016_Rev5.obj"\
 	"c30_Mooventure2016_Rev5.obj"\
-	"c31_Mooventure2016_Rev5.obj"\
 	"c32_Mooventure2016_Rev5.obj"\
 	"c33_Mooventure2016_Rev5.obj"\
 	"c53_Mooventure2016_Rev5.obj"\
@@ -120,18 +117,12 @@ c24_Mooventure2016_Rev5.obj :	"c24_Mooventure2016_Rev5.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c24_Mooventure2016_Rev5.c"
 c25_Mooventure2016_Rev5.obj :	"c25_Mooventure2016_Rev5.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c25_Mooventure2016_Rev5.c"
-c26_Mooventure2016_Rev5.obj :	"c26_Mooventure2016_Rev5.c"
-	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c26_Mooventure2016_Rev5.c"
-c27_Mooventure2016_Rev5.obj :	"c27_Mooventure2016_Rev5.c"
-	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c27_Mooventure2016_Rev5.c"
 c28_Mooventure2016_Rev5.obj :	"c28_Mooventure2016_Rev5.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c28_Mooventure2016_Rev5.c"
 c29_Mooventure2016_Rev5.obj :	"c29_Mooventure2016_Rev5.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c29_Mooventure2016_Rev5.c"
 c30_Mooventure2016_Rev5.obj :	"c30_Mooventure2016_Rev5.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c30_Mooventure2016_Rev5.c"
-c31_Mooventure2016_Rev5.obj :	"c31_Mooventure2016_Rev5.c"
-	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c31_Mooventure2016_Rev5.c"
 c32_Mooventure2016_Rev5.obj :	"c32_Mooventure2016_Rev5.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c32_Mooventure2016_Rev5.c"
 c33_Mooventure2016_Rev5.obj :	"c33_Mooventure2016_Rev5.c"

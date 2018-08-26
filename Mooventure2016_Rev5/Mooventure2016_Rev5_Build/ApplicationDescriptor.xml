@@ -2,9 +2,9 @@
 <Application>
 	<GUID>0339744d-1465-4569-a1-b4-32-b1-a7-fa-5f</GUID>
 	<Name>Mooventure2016_Rev5</Name>
-	<Author>HYBRID</Author>
+	<Author>maxar</Author>
 	<Copyright>2018 Woodward.</Copyright>
-	<CreateDate>08-Apr-2018</CreateDate>
+	<CreateDate>25-Aug-2018</CreateDate>
 	<MemoryLayout>DEV</MemoryLayout>
 	<Module>ECM-5554-112-0904-xD</Module>
 	<OS>
@@ -73,19 +73,93 @@
 			<Order>0</Order>
 			<Function>CloseApplication</Function>
 		</Trigger>
+		<Trigger type="startup">
+			<Name>STARTUP_EVENT</Name>
+			<Task ref="MainAppTask"/>
+			<Order>0</Order>
+			<Function>Trigger_STARTUP_EVENT_18157p0005</Function>
+		</Trigger>
+		<Trigger type="idle">
+			<Name>IDLE_EVENT</Name>
+			<Task ref="MainAppTask"/>
+			<Order>255</Order>
+			<Function>Trigger_IDLE_EVENT_18182p0001</Function>
+		</Trigger>
+		<Trigger type="periodic">
+			<Multiplier>2</Multiplier>
+			<Name>FGND_2XRTI_PERIODIC</Name>
+			<Task ref="FGNDTask"/>
+			<Order>255</Order>
+			<Function>Trigger_FGND_2XRTI_PERIODIC_18251p0001</Function>
+		</Trigger>
+		<Trigger type="periodic">
+			<Multiplier>1</Multiplier>
+			<Name>FGND_RTI_PERIODIC</Name>
+			<Task ref="FGNDTask"/>
+			<Order>255</Order>
+			<Function>Trigger_FGND_RTI_PERIODIC_18252p0001</Function>
+		</Trigger>
+		<Trigger type="periodic">
+			<Multiplier>10</Multiplier>
+			<Name>FGND_10XRTI_PERIODIC</Name>
+			<Task ref="FGNDTask"/>
+			<Order>255</Order>
+			<Function>Trigger_FGND_10XRTI_PERIODIC_18253p0001</Function>
+		</Trigger>
+		<Trigger type="periodic">
+			<Multiplier>20</Multiplier>
+			<Name>FGND_20XRTI_PERIODIC</Name>
+			<Task ref="FGNDTask"/>
+			<Order>255</Order>
+			<Function>Trigger_FGND_20XRTI_PERIODIC_18254p0001</Function>
+		</Trigger>
 		<Trigger type="periodic">
 			<Multiplier>1</Multiplier>
 			<Name>BGND_BASE_PERIODIC</Name>
 			<Task ref="BGNDTask"/>
 			<Order>255</Order>
-			<Function>Trigger_BGND_BASE_PERIODIC_5721p0001</Function>
+			<Function>Trigger_BGND_BASE_PERIODIC_18255p0001</Function>
+		</Trigger>
+		<Trigger type="periodic">
+			<Multiplier>2</Multiplier>
+			<Name>BGND_BASEx2_PERIODIC</Name>
+			<Task ref="BGNDTask"/>
+			<Order>255</Order>
+			<Function>Trigger_BGND_BASEx2_PERIODIC_18256p0001</Function>
+		</Trigger>
+		<Trigger type="periodic">
+			<Multiplier>10</Multiplier>
+			<Name>BGND_BASEx10_PERIODIC</Name>
+			<Task ref="BGNDTask"/>
+			<Order>255</Order>
+			<Function>Trigger_BGND_BASEx10_PERIODIC_18257p0001</Function>
+		</Trigger>
+		<Trigger type="periodic">
+			<Period>1000000</Period>
+			<Name>ONE_SECOND_EVENT</Name>
+			<Task ref="BGNDTask"/>
+			<Order>255</Order>
+			<Function>Trigger_ONE_SECOND_EVENT_18258p0001</Function>
+		</Trigger>
+		<Trigger type="idle">
+			<Name>IDLE_EVENT</Name>
+			<Task ref="MainAppTask"/>
+			<Order>255</Order>
+			<Function>Trigger_IDLE_EVENT_17123p0007</Function>
+		</Trigger>
+		<Trigger type="periodic">
+			<Multiplier>1</Multiplier>
+			<Name>BGND_BASE_PERIODIC</Name>
+			<Task ref="BGNDTask"/>
+			<Order>255</Order>
+			<Function>Trigger_BGND_BASE_PERIODIC_6013p0004</Function>
 		</Trigger>
 		<Trigger type="periodic">
 			<Multiplier>1</Multiplier>
 			<Name>FGND_RTI_PERIODIC</Name>
 			<Task ref="FGNDTask"/>
 			<Order>0</Order>
-			<Function>Trigger_FGND_RTI_PERIODIC_5730p0001</Function>
+			<Function>Trigger_FGND_RTI_PERIODIC_6022p0004</Function>
 		</Trigger>
 	</Triggers>
 	<Memory>
@@ -97,108 +171,103 @@
 	</Memory>
 	<Types/>
 	<IO>
-		<DigitalInput>
-			<Name>ESTOP2</Name>
-			<ModuleResource>ESTOP</ModuleResource>
-			<AppLink>Mooventure2016_Rev5/Foreground/Control/Vehicle Run//Stop Determination/motohawk_din</AppLink>
-		</DigitalInput>
 		<DiscreteOutput>
-			<Name>DOut4362p0004</Name>
+			<Name>DOut4594p0001</Name>
 			<ModuleResource>LSO1</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout1</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut4363p0004</Name>
+			<Name>DOut4595p0001</Name>
 			<ModuleResource>LSO3</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout10</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut4364p0004</Name>
+			<Name>DOut4596p0001</Name>
 			<ModuleResource>INJ8</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout11</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut4365p0004</Name>
+			<Name>DOut4597p0001</Name>
 			<ModuleResource>INJ6</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout12</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut4366p0004</Name>
+			<Name>DOut4598p0001</Name>
 			<ModuleResource>INJ7</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout13</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut4367p0004</Name>
+			<Name>DOut4599p0001</Name>
 			<ModuleResource>INJ5</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout2</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut4368p0004</Name>
+			<Name>DOut4600p0001</Name>
 			<ModuleResource>LSO2</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout3</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut4369p0004</Name>
+			<Name>DOut4601p0001</Name>
 			<ModuleResource>INJ4</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout4</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut4370p0004</Name>
+			<Name>DOut4602p0001</Name>
 			<ModuleResource>INJ3</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout5</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut4371p0004</Name>
-			<ModuleResource>INJ2</ModuleResource>
+			<Name>DOut4603p0001</Name>
+			<ModuleResource>INJ1</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout6</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut4372p0004</Name>
+			<Name>DOut4604p0001</Name>
 			<ModuleResource>LSO12</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout7</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut4373p0004</Name>
+			<Name>DOut4605p0001</Name>
 			<ModuleResource>LSO11</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout8</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut4374p0004</Name>
+			<Name>DOut4606p0001</Name>
 			<ModuleResource>LSO5</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout9</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut4600p0004</Name>
+			<Name>DOut4820p0001</Name>
 			<ModuleResource>LSO9</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout1</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut4601p0004</Name>
+			<Name>DOut4821p0001</Name>
 			<ModuleResource>LSO7</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout2</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut4602p0004</Name>
+			<Name>DOut4822p0001</Name>
 			<ModuleResource>LSO4</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout3</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut4603p0004</Name>
+			<Name>DOut4823p0001</Name>
 			<ModuleResource>LSO10</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout4</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut4604p0004</Name>
-			<ModuleResource>LSO8</ModuleResource>
+			<Name>DOut4824p0001</Name>
+			<ModuleResource>EST8</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout5</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut4605p0004</Name>
-			<ModuleResource>LSO6</ModuleResource>
+			<Name>DOut4825p0001</Name>
+			<ModuleResource>EST6</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout6</AppLink>
 		</DiscreteOutput>
 		<DiscreteOutput>
-			<Name>DOut5671p0001</Name>
+			<Name>DOut5963p0004</Name>
 			<ModuleResource>MPRD</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Main Power Relay1/Background/motohawk_dout</AppLink>
 		</DiscreteOutput>
@@ -213,7 +282,7 @@
 			<Name>Heater_Core_Blend_Position</Name>
 			<ModuleResource>AN14</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Inputs/Analog Inputs/Coolant/motohawk_ain1</AppLink>
-			<DataType>uint16</DataType>
+			<DataType>int32</DataType>
 			<scaling>8</scaling>
 		</AnalogInput>
 		<AnalogInput>
@@ -231,6 +300,13 @@
 			<scaling>8</scaling>
 		</AnalogInput>
 		<AnalogInput>
+			<Name>Cruise_Control</Name>
+			<ModuleResource>AN23</ModuleResource>
+			<AppLink>Mooventure2016_Rev5/Foreground/Inputs/Analog Inputs/Cruise Control In/motohawk_ain4</AppLink>
+			<DataType>uint16</DataType>
+			<scaling>12</scaling>
+		</AnalogInput>
+		<AnalogInput>
 			<Name>DCDC_Conveter</Name>
 			<ModuleResource>AN22</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Inputs/Analog Inputs/DCDC Converter/motohawk_ain4</AppLink>
@@ -238,16 +314,9 @@
 			<scaling>8</scaling>
 		</AnalogInput>
 		<AnalogInput>
-			<Name>Cruise_Control</Name>
-			<ModuleResource>AN23</ModuleResource>
-			<AppLink>Mooventure2016_Rev5/Foreground/Inputs/Cruise Control/motohawk_ain4</AppLink>
-			<DataType>uint16</DataType>
-			<scaling>12</scaling>
-		</AnalogInput>
-		<AnalogInput>
 			<Name>Throttle_Position</Name>
 			<ModuleResource>AN15</ModuleResource>
-			<AppLink>Mooventure2016_Rev5/Foreground/Inputs/Driver Inputs/motohawk_ain4</AppLink>
+			<AppLink>Mooventure2016_Rev5/Foreground/Inputs/Analog Inputs/Throttle Position/motohawk_ain4</AppLink>
 			<DataType>uint16</DataType>
 			<scaling>8</scaling>
 		</AnalogInput>
@@ -259,7 +328,7 @@
 			<scaling>10</scaling>
 		</AnalogInput>
 		<PWMOutput>
-			<Name>H1m_PWMOutput</Name>
+			<Name>IPT_PWMOutput</Name>
 			<ModuleResource>H1-</ModuleResource>
 			<AppLink>Mooventure2016_Rev5/Foreground/Outputs/IPT Outputs/motohawk_pwm</AppLink>
 			<MinimumFrequency>2.00</MinimumFrequency>
@@ -277,7 +346,7 @@
 					<Task ref="ApplicationInterruptTask"/>
 				</Dispatcher>
 				<Slot>
-					<Name>RxSlot_3064p0002</Name>
+					<Name>RxSlot_3129p0005</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>535</Value>
@@ -291,7 +360,7 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_3065p0001</Name>
+					<Name>RxSlot_3130p0004</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>1200</Value>
@@ -305,7 +374,7 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_3066p0001</Name>
+					<Name>RxSlot_3131p0004</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>1047</Value>
@@ -319,7 +388,7 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_3478p0004</Name>
+					<Name>RxSlot_3553p0006</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>1072</Value>
@@ -333,7 +402,7 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_3698p0001</Name>
+					<Name>RxSlot_3791p0001</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>786</Value>
@@ -347,7 +416,7 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_3757p0001</Name>
+					<Name>RxSlot_3904p0001</Name>
 					<ID>
 						<Type>Extended</Type>
 						<Value>419381321</Value>
@@ -361,7 +430,7 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_3886p0001</Name>
+					<Name>RxSlot_4058p0001</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>632</Value>
@@ -375,7 +444,7 @@
 					<QueueSize>2</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_3887p0001</Name>
+					<Name>RxSlot_4059p0001</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>1572</Value>
@@ -389,7 +458,7 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_3888p0001</Name>
+					<Name>RxSlot_4060p0001</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>608</Value>
@@ -403,7 +472,7 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_3889p0001</Name>
+					<Name>RxSlot_4061p0001</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>1424</Value>
@@ -417,7 +486,7 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_4047p0001</Name>
+					<Name>RxSlot_4263p0001</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>128</Value>
@@ -429,6 +498,19 @@
 						<Mask>0 0 0 0 0 0 0 0</Mask>
 					</Payload>
 					<QueueSize>1</QueueSize>
+				</Slot>
+				<Slot>
+					<Name>CCP1</Name>
+					<ID dynamic="true">
+						<Type>Extended</Type>
+						<Value>418316849</Value>
+						<Mask>536870911</Mask>
+					</ID>
+					<Payload>
+						<Value>0 0 0 0 0 0 0 0</Value>
+						<Mask>0 0 0 0 0 0 0 0</Mask>
+					</Payload>
+					<QueueSize>4</QueueSize>
 				</Slot>
 			</Receive>
 			<AppLink>Mooventure2016_Rev5/CAN Definition</AppLink>
@@ -446,7 +528,7 @@
 					<Task ref="ApplicationInterruptTask"/>
 				</Dispatcher>
 				<Slot>
-					<Name>RxSlot_3700p0001</Name>
+					<Name>RxSlot_3793p0001</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>968</Value>
@@ -475,7 +557,7 @@
 					<Task ref="ApplicationInterruptTask"/>
 				</Dispatcher>
 				<Slot>
-					<Name>RxSlot_3262p0001</Name>
+					<Name>RxSlot_3337p0004</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>762</Value>
@@ -489,7 +571,7 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_3263p0001</Name>
+					<Name>RxSlot_3338p0004</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>763</Value>
@@ -503,7 +585,7 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_3264p0001</Name>
+					<Name>RxSlot_3339p0004</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>764</Value>
@@ -517,7 +599,7 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_3265p0001</Name>
+					<Name>RxSlot_3340p0004</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>765</Value>
@@ -531,7 +613,7 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_3266p0001</Name>
+					<Name>RxSlot_3341p0004</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>766</Value>
@@ -545,7 +627,7 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_3267p0001</Name>
+					<Name>RxSlot_3342p0004</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>767</Value>
@@ -559,7 +641,7 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_3268p0001</Name>
+					<Name>RxSlot_3343p0004</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>768</Value>
@@ -573,7 +655,7 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_3697p0004</Name>
+					<Name>RxSlot_3790p0004</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>1296</Value>
@@ -587,7 +669,7 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_3699p0001</Name>
+					<Name>RxSlot_3792p0001</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>1832</Value>
@@ -601,7 +683,7 @@
 					<QueueSize>1</QueueSize>
 				</Slot>
 				<Slot>
-					<Name>RxSlot_3836p0001</Name>
+					<Name>RxSlot_4001p0001</Name>
 					<ID>
 						<Type>Standard</Type>
 						<Value>521</Value>
@@ -642,9 +724,9 @@
 			</TableDatabase>
 			<ProjectID>6</ProjectID>
 			<ProductID>1</ProductID>
-			<SwIdTxt>Mooventur_212</SwIdTxt>
-			<SwRevisionTxt>Mooventure2016_Rev5_212</SwRevisionTxt>
-			<CalIdTxt>Mooventure2016_Rev5_212_000</CalIdTxt>
+			<SwIdTxt>Mooventur_214</SwIdTxt>
+			<SwRevisionTxt>Mooventure2016_Rev5_214</SwRevisionTxt>
+			<CalIdTxt>Mooventure2016_Rev5_214_000</CalIdTxt>
 		</VarDecs>
 		<DatabaseBuild>
 			<Toolchain>
@@ -675,10 +757,23 @@
 			<File>Mooventure2016_Rev5_data.c</File>
 			<File>MotoHawk_DataStores.c</File>
 			<File>TableLookupFunctions.c</File>
-			<File>Trigger_BGND_BASE_PERIODIC_5721p0001.c</File>
-			<File>Trigger_FGND_RTI_PERIODIC_5730p0001.c</File>
-			<File>Trigger_Fault_active_0_8.c</File>
+			<File>Trigger_BGND_BASE_PERIODIC_18255p0001.c</File>
+			<File>Trigger_BGND_BASE_PERIODIC_6013p0004.c</File>
+			<File>Trigger_BGND_BASEx10_PERIODIC_18257p0001.c</File>
+			<File>Trigger_BGND_BASEx2_PERIODIC_18256p0001.c</File>
+			<File>Trigger_FGND_10XRTI_PERIODIC_18253p0001.c</File>
+			<File>Trigger_FGND_20XRTI_PERIODIC_18254p0001.c</File>
+			<File>Trigger_FGND_2XRTI_PERIODIC_18251p0001.c</File>
+			<File>Trigger_FGND_RTI_PERIODIC_18252p0001.c</File>
+			<File>Trigger_FGND_RTI_PERIODIC_6022p0004.c</File>
+			<File>Trigger_Fault_active_0_10.c</File>
+			<File>Trigger_IDLE_EVENT_17123p0007.c</File>
+			<File>Trigger_IDLE_EVENT_18182p0001.c</File>
+			<File>Trigger_ONE_SECOND_EVENT_18258p0001.c</File>
+			<File>Trigger_STARTUP_EVENT_18157p0005.c</File>
 			<File>VarDecs.c</File>
+			<File>mh_ccp_protocol.c</File>
+			<File>mh_ccp_protocol_CCP1.c</File>
 			<File>rt_nonfinite.c</File>
 			<File>Mooventure2016_Rev5.c</File>
 		</Source>
@@ -718,5 +813,5 @@
 			<Execute>@if exist .\rtwtypes.h del /Q /F .\rtwtypes.h &gt; NUL</Execute>
 		</Command>
 	</Build>
-	<Signature>10f84ad4-d887-4cc8-9c-60-82-7b-5b-56-9e</Signature>
+	<Signature>7c70e099-da09-4bf1-a2-b6-a5-fc-71-81-00</Signature>
 </Application>

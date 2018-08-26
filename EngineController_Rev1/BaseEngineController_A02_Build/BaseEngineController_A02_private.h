@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BaseEngineController_A02'.
  *
- * Model version                  : 1.1626
+ * Model version                  : 1.1639
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Sun Apr 22 15:55:33 2018
+ * C/C++ source code generated on : Sat Aug 25 19:54:14 2018
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -86,6 +86,11 @@ extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultSuspected(uint32_T fault);
 extern boolean_T IsFaultSuspected(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
@@ -98,46 +103,26 @@ extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultSuspected(uint32_T fault);
 extern boolean_T IsFaultSuspected(uint32_T fault);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultSuspected(uint32_T fault);
-extern boolean_T IsFaultSuspected(uint32_T fault);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultSuspected(uint32_T fault);
-extern boolean_T IsFaultSuspected(uint32_T fault);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultSuspected(uint32_T fault);
-extern boolean_T IsFaultSuspected(uint32_T fault);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T GetFaultActionStatus(uint32_T action);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultSuspected(uint32_T fault);
-extern boolean_T IsFaultSuspected(uint32_T fault);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultSuspected(uint32_T fault);
-extern boolean_T IsFaultSuspected(uint32_T fault);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultSuspected(uint32_T fault);
-extern boolean_T IsFaultSuspected(uint32_T fault);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultSuspected(uint32_T fault);
-extern boolean_T IsFaultSuspected(uint32_T fault);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultSuspected(uint32_T fault);
-extern boolean_T IsFaultSuspected(uint32_T fault);
 extern boolean_T GetFaultActionStatus(uint32_T action);
 extern boolean_T GetFaultActionStatus(uint32_T action);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultSuspected(uint32_T fault);
+extern boolean_T IsFaultSuspected(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultSuspected(uint32_T fault);
+extern boolean_T IsFaultSuspected(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultSuspected(uint32_T fault);
+extern boolean_T IsFaultSuspected(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T GetFaultActionStatus(uint32_T action);
 extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
@@ -151,6 +136,30 @@ extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultSuspected(uint32_T fault);
 extern boolean_T IsFaultSuspected(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultSuspected(uint32_T fault);
+extern boolean_T IsFaultSuspected(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultSuspected(uint32_T fault);
+extern boolean_T IsFaultSuspected(uint32_T fault);
+extern boolean_T GetFaultActionStatus(uint32_T action);
+extern boolean_T GetFaultActionStatus(uint32_T action);
+extern boolean_T GetFaultActionStatus(uint32_T action);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultSuspected(uint32_T fault);
+extern boolean_T IsFaultSuspected(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultSuspected(uint32_T fault);
+extern boolean_T IsFaultSuspected(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultSuspected(uint32_T fault);
+extern boolean_T IsFaultSuspected(uint32_T fault);
+extern void BaseEngineController_A02_CCPDaqProcessing(int_T controlPortIdx);
 
 #endif                                 /* RTW_HEADER_BaseEngineController_A02_private_h_ */
 

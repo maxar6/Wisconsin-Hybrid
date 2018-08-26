@@ -10,13 +10,12 @@
 /* Type Definitions */
 
 /* Named Constants */
-#define c6_IN_NO_ACTIVE_CHILD          (0U)
-#define c6_IN_Off                      (1U)
-#define c6_IN_On                       (2U)
 
 /* Variable Declarations */
 
 /* Variable Definitions */
+static const char * c6_debug_family_names[5] = { "nargin", "nargout", "wrench",
+  "cel", "faults" };
 
 /* Function Declarations */
 static void initialize_c6_BaseEngineController_A02
@@ -34,8 +33,6 @@ static const mxArray *get_sim_state_c6_BaseEngineController_A02
 static void set_sim_state_c6_BaseEngineController_A02
   (SFc6_BaseEngineController_A02InstanceStruct *chartInstance, const mxArray
    *c6_st);
-static void c6_set_sim_state_side_effects_c6_BaseEngineController_A02
-  (SFc6_BaseEngineController_A02InstanceStruct *chartInstance);
 static void finalize_c6_BaseEngineController_A02
   (SFc6_BaseEngineController_A02InstanceStruct *chartInstance);
 static void sf_c6_BaseEngineController_A02
@@ -45,36 +42,25 @@ static void initSimStructsc6_BaseEngineController_A02
 static void init_script_number_translation(uint32_T c6_machineNumber, uint32_T
   c6_chartNumber);
 static const mxArray *c6_sf_marshallOut(void *chartInstanceVoid, void *c6_inData);
-static int32_T c6_emlrt_marshallIn(SFc6_BaseEngineController_A02InstanceStruct
-  *chartInstance, const mxArray *c6_u, const emlrtMsgIdentifier *c6_parentId);
+static real_T c6_emlrt_marshallIn(SFc6_BaseEngineController_A02InstanceStruct
+  *chartInstance, const mxArray *c6_faults, const char_T *c6_identifier);
+static real_T c6_b_emlrt_marshallIn(SFc6_BaseEngineController_A02InstanceStruct *
+  chartInstance, const mxArray *c6_u, const emlrtMsgIdentifier *c6_parentId);
 static void c6_sf_marshallIn(void *chartInstanceVoid, const mxArray
   *c6_mxArrayInData, const char_T *c6_varName, void *c6_outData);
 static const mxArray *c6_b_sf_marshallOut(void *chartInstanceVoid, void
   *c6_inData);
-static uint8_T c6_b_emlrt_marshallIn(SFc6_BaseEngineController_A02InstanceStruct
-  *chartInstance, const mxArray *c6_b_tp_Off, const char_T *c6_identifier);
-static uint8_T c6_c_emlrt_marshallIn(SFc6_BaseEngineController_A02InstanceStruct
+static const mxArray *c6_c_sf_marshallOut(void *chartInstanceVoid, void
+  *c6_inData);
+static int32_T c6_c_emlrt_marshallIn(SFc6_BaseEngineController_A02InstanceStruct
   *chartInstance, const mxArray *c6_u, const emlrtMsgIdentifier *c6_parentId);
 static void c6_b_sf_marshallIn(void *chartInstanceVoid, const mxArray
   *c6_mxArrayInData, const char_T *c6_varName, void *c6_outData);
-static const mxArray *c6_c_sf_marshallOut(void *chartInstanceVoid, void
-  *c6_inData);
-static const mxArray *c6_d_sf_marshallOut(void *chartInstanceVoid, void
-  *c6_inData);
-static boolean_T c6_d_emlrt_marshallIn
-  (SFc6_BaseEngineController_A02InstanceStruct *chartInstance, const mxArray
-   *c6_HEATER, const char_T *c6_identifier);
-static boolean_T c6_e_emlrt_marshallIn
-  (SFc6_BaseEngineController_A02InstanceStruct *chartInstance, const mxArray
-   *c6_u, const emlrtMsgIdentifier *c6_parentId);
-static void c6_c_sf_marshallIn(void *chartInstanceVoid, const mxArray
-  *c6_mxArrayInData, const char_T *c6_varName, void *c6_outData);
-static const mxArray *c6_f_emlrt_marshallIn
-  (SFc6_BaseEngineController_A02InstanceStruct *chartInstance, const mxArray
-   *c6_b_setSimStateSideEffectsInfo, const char_T *c6_identifier);
-static const mxArray *c6_g_emlrt_marshallIn
-  (SFc6_BaseEngineController_A02InstanceStruct *chartInstance, const mxArray
-   *c6_u, const emlrtMsgIdentifier *c6_parentId);
+static uint8_T c6_d_emlrt_marshallIn(SFc6_BaseEngineController_A02InstanceStruct
+  *chartInstance, const mxArray *c6_b_is_active_c6_BaseEngineController_A02,
+  const char_T *c6_identifier);
+static uint8_T c6_e_emlrt_marshallIn(SFc6_BaseEngineController_A02InstanceStruct
+  *chartInstance, const mxArray *c6_u, const emlrtMsgIdentifier *c6_parentId);
 static void init_dsm_address_info(SFc6_BaseEngineController_A02InstanceStruct
   *chartInstance);
 
@@ -82,19 +68,9 @@ static void init_dsm_address_info(SFc6_BaseEngineController_A02InstanceStruct
 static void initialize_c6_BaseEngineController_A02
   (SFc6_BaseEngineController_A02InstanceStruct *chartInstance)
 {
-  boolean_T *c6_HEATER;
-  c6_HEATER = (boolean_T *)ssGetOutputPortSignal(chartInstance->S, 1);
   chartInstance->c6_sfEvent = CALL_EVENT;
   _sfTime_ = (real_T)ssGetT(chartInstance->S);
-  chartInstance->c6_doSetSimStateSideEffects = 0U;
-  chartInstance->c6_setSimStateSideEffectsInfo = NULL;
-  chartInstance->c6_tp_Off = 0U;
-  chartInstance->c6_tp_On = 0U;
   chartInstance->c6_is_active_c6_BaseEngineController_A02 = 0U;
-  chartInstance->c6_is_c6_BaseEngineController_A02 = 0U;
-  if (!(cdrGetOutputPortReusable(chartInstance->S, 1) != 0)) {
-    *c6_HEATER = FALSE;
-  }
 }
 
 static void initialize_params_c6_BaseEngineController_A02
@@ -117,27 +93,6 @@ static void disable_c6_BaseEngineController_A02
 static void c6_update_debugger_state_c6_BaseEngineController_A02
   (SFc6_BaseEngineController_A02InstanceStruct *chartInstance)
 {
-  uint32_T c6_prevAniVal;
-  c6_prevAniVal = sf_debug_get_animation();
-  sf_debug_set_animation(0U);
-  if ((int16_T)chartInstance->c6_is_active_c6_BaseEngineController_A02 == 1) {
-    _SFD_CC_CALL(CHART_ACTIVE_TAG, 4U, chartInstance->c6_sfEvent);
-  }
-
-  if (chartInstance->c6_is_c6_BaseEngineController_A02 == c6_IN_Off) {
-    _SFD_CS_CALL(STATE_ACTIVE_TAG, 0U, chartInstance->c6_sfEvent);
-  } else {
-    _SFD_CS_CALL(STATE_INACTIVE_TAG, 0U, chartInstance->c6_sfEvent);
-  }
-
-  if (chartInstance->c6_is_c6_BaseEngineController_A02 == c6_IN_On) {
-    _SFD_CS_CALL(STATE_ACTIVE_TAG, 1U, chartInstance->c6_sfEvent);
-  } else {
-    _SFD_CS_CALL(STATE_INACTIVE_TAG, 1U, chartInstance->c6_sfEvent);
-  }
-
-  sf_debug_set_animation(c6_prevAniVal);
-  _SFD_ANIMATE();
 }
 
 static const mxArray *get_sim_state_c6_BaseEngineController_A02
@@ -145,36 +100,28 @@ static const mxArray *get_sim_state_c6_BaseEngineController_A02
 {
   const mxArray *c6_st;
   const mxArray *c6_y = NULL;
-  boolean_T c6_hoistedGlobal;
-  boolean_T c6_u;
+  real_T c6_hoistedGlobal;
+  real_T c6_u;
   const mxArray *c6_b_y = NULL;
   uint8_T c6_b_hoistedGlobal;
   uint8_T c6_b_u;
   const mxArray *c6_c_y = NULL;
-  uint8_T c6_c_hoistedGlobal;
-  uint8_T c6_c_u;
-  const mxArray *c6_d_y = NULL;
-  boolean_T *c6_HEATER;
-  c6_HEATER = (boolean_T *)ssGetOutputPortSignal(chartInstance->S, 1);
+  real_T *c6_faults;
+  c6_faults = (real_T *)ssGetOutputPortSignal(chartInstance->S, 1);
   c6_st = NULL;
   c6_st = NULL;
   c6_y = NULL;
-  sf_mex_assign(&c6_y, sf_mex_createcellarray(3));
-  c6_hoistedGlobal = *c6_HEATER;
+  sf_mex_assign(&c6_y, sf_mex_createcellarray(2));
+  c6_hoistedGlobal = *c6_faults;
   c6_u = c6_hoistedGlobal;
   c6_b_y = NULL;
-  sf_mex_assign(&c6_b_y, sf_mex_create("y", &c6_u, 11, 0U, 0U, 0U, 0));
+  sf_mex_assign(&c6_b_y, sf_mex_create("y", &c6_u, 0, 0U, 0U, 0U, 0));
   sf_mex_setcell(c6_y, 0, c6_b_y);
   c6_b_hoistedGlobal = chartInstance->c6_is_active_c6_BaseEngineController_A02;
   c6_b_u = c6_b_hoistedGlobal;
   c6_c_y = NULL;
   sf_mex_assign(&c6_c_y, sf_mex_create("y", &c6_b_u, 3, 0U, 0U, 0U, 0));
   sf_mex_setcell(c6_y, 1, c6_c_y);
-  c6_c_hoistedGlobal = chartInstance->c6_is_c6_BaseEngineController_A02;
-  c6_c_u = c6_c_hoistedGlobal;
-  c6_d_y = NULL;
-  sf_mex_assign(&c6_d_y, sf_mex_create("y", &c6_c_u, 3, 0U, 0U, 0U, 0));
-  sf_mex_setcell(c6_y, 2, c6_d_y);
   sf_mex_assign(&c6_st, c6_y);
   return c6_st;
 }
@@ -184,134 +131,103 @@ static void set_sim_state_c6_BaseEngineController_A02
    *c6_st)
 {
   const mxArray *c6_u;
-  boolean_T *c6_HEATER;
-  c6_HEATER = (boolean_T *)ssGetOutputPortSignal(chartInstance->S, 1);
+  real_T *c6_faults;
+  c6_faults = (real_T *)ssGetOutputPortSignal(chartInstance->S, 1);
+  chartInstance->c6_doneDoubleBufferReInit = TRUE;
   c6_u = sf_mex_dup(c6_st);
-  *c6_HEATER = c6_d_emlrt_marshallIn(chartInstance, sf_mex_dup(sf_mex_getcell
-    (c6_u, 0)), "HEATER");
+  *c6_faults = c6_emlrt_marshallIn(chartInstance, sf_mex_dup(sf_mex_getcell(c6_u,
+    0)), "faults");
   chartInstance->c6_is_active_c6_BaseEngineController_A02 =
-    c6_b_emlrt_marshallIn(chartInstance, sf_mex_dup(sf_mex_getcell(c6_u, 1)),
+    c6_d_emlrt_marshallIn(chartInstance, sf_mex_dup(sf_mex_getcell(c6_u, 1)),
     "is_active_c6_BaseEngineController_A02");
-  chartInstance->c6_is_c6_BaseEngineController_A02 = c6_b_emlrt_marshallIn
-    (chartInstance, sf_mex_dup(sf_mex_getcell(c6_u, 2)),
-     "is_c6_BaseEngineController_A02");
-  sf_mex_assign(&chartInstance->c6_setSimStateSideEffectsInfo,
-                c6_f_emlrt_marshallIn(chartInstance, sf_mex_dup(sf_mex_getcell
-    (c6_u, 3)), "setSimStateSideEffectsInfo"));
   sf_mex_destroy(&c6_u);
-  chartInstance->c6_doSetSimStateSideEffects = 1U;
   c6_update_debugger_state_c6_BaseEngineController_A02(chartInstance);
   sf_mex_destroy(&c6_st);
-}
-
-static void c6_set_sim_state_side_effects_c6_BaseEngineController_A02
-  (SFc6_BaseEngineController_A02InstanceStruct *chartInstance)
-{
-  if (chartInstance->c6_doSetSimStateSideEffects != 0) {
-    if (chartInstance->c6_is_c6_BaseEngineController_A02 == c6_IN_Off) {
-      chartInstance->c6_tp_Off = 1U;
-    } else {
-      chartInstance->c6_tp_Off = 0U;
-    }
-
-    if (chartInstance->c6_is_c6_BaseEngineController_A02 == c6_IN_On) {
-      chartInstance->c6_tp_On = 1U;
-    } else {
-      chartInstance->c6_tp_On = 0U;
-    }
-
-    chartInstance->c6_doSetSimStateSideEffects = 0U;
-  }
 }
 
 static void finalize_c6_BaseEngineController_A02
   (SFc6_BaseEngineController_A02InstanceStruct *chartInstance)
 {
-  sf_mex_destroy(&chartInstance->c6_setSimStateSideEffectsInfo);
 }
 
 static void sf_c6_BaseEngineController_A02
   (SFc6_BaseEngineController_A02InstanceStruct *chartInstance)
 {
-  real_T *c6_NEECT;
-  real_T *c6_CAL;
-  boolean_T *c6_HEATER;
-  c6_HEATER = (boolean_T *)ssGetOutputPortSignal(chartInstance->S, 1);
-  c6_CAL = (real_T *)ssGetInputPortSignal(chartInstance->S, 1);
-  c6_NEECT = (real_T *)ssGetInputPortSignal(chartInstance->S, 0);
-  c6_set_sim_state_side_effects_c6_BaseEngineController_A02(chartInstance);
+  boolean_T c6_hoistedGlobal;
+  boolean_T c6_b_hoistedGlobal;
+  boolean_T c6_wrench;
+  boolean_T c6_cel;
+  uint32_T c6_debug_family_var_map[5];
+  real_T c6_nargin = 2.0;
+  real_T c6_nargout = 1.0;
+  real_T c6_faults;
+  boolean_T *c6_b_wrench;
+  real_T *c6_b_faults;
+  boolean_T *c6_b_cel;
+  boolean_T guard1 = FALSE;
+  c6_b_cel = (boolean_T *)ssGetInputPortSignal(chartInstance->S, 1);
+  c6_b_faults = (real_T *)ssGetOutputPortSignal(chartInstance->S, 1);
+  c6_b_wrench = (boolean_T *)ssGetInputPortSignal(chartInstance->S, 0);
   _sfTime_ = (real_T)ssGetT(chartInstance->S);
-  _SFD_CC_CALL(CHART_ENTER_SFUNCTION_TAG, 4U, chartInstance->c6_sfEvent);
-  _SFD_DATA_RANGE_CHECK(*c6_NEECT, 0U);
-  _SFD_DATA_RANGE_CHECK(*c6_CAL, 1U);
-  _SFD_DATA_RANGE_CHECK((real_T)*c6_HEATER, 2U);
+  _SFD_CC_CALL(CHART_ENTER_SFUNCTION_TAG, 5U, chartInstance->c6_sfEvent);
+  _SFD_DATA_RANGE_CHECK((real_T)*c6_b_wrench, 0U);
+  _SFD_DATA_RANGE_CHECK(*c6_b_faults, 1U);
+  _SFD_DATA_RANGE_CHECK((real_T)*c6_b_cel, 2U);
   chartInstance->c6_sfEvent = CALL_EVENT;
-  _SFD_CC_CALL(CHART_ENTER_DURING_FUNCTION_TAG, 4U, chartInstance->c6_sfEvent);
-  if ((int16_T)chartInstance->c6_is_active_c6_BaseEngineController_A02 == 0) {
-    _SFD_CC_CALL(CHART_ENTER_ENTRY_FUNCTION_TAG, 4U, chartInstance->c6_sfEvent);
-    chartInstance->c6_is_active_c6_BaseEngineController_A02 = 1U;
-    _SFD_CC_CALL(EXIT_OUT_OF_FUNCTION_TAG, 4U, chartInstance->c6_sfEvent);
-    _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 0U, chartInstance->c6_sfEvent);
-    _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 0U, chartInstance->c6_sfEvent);
-    chartInstance->c6_is_c6_BaseEngineController_A02 = c6_IN_Off;
-    _SFD_CS_CALL(STATE_ACTIVE_TAG, 0U, chartInstance->c6_sfEvent);
-    chartInstance->c6_tp_Off = 1U;
+  _SFD_CC_CALL(CHART_ENTER_DURING_FUNCTION_TAG, 5U, chartInstance->c6_sfEvent);
+  c6_hoistedGlobal = *c6_b_wrench;
+  c6_b_hoistedGlobal = *c6_b_cel;
+  c6_wrench = c6_hoistedGlobal;
+  c6_cel = c6_b_hoistedGlobal;
+  sf_debug_symbol_scope_push_eml(0U, 5U, 5U, c6_debug_family_names,
+    c6_debug_family_var_map);
+  sf_debug_symbol_scope_add_eml_importable(&c6_nargin, 0U, c6_sf_marshallOut,
+    c6_sf_marshallIn);
+  sf_debug_symbol_scope_add_eml_importable(&c6_nargout, 1U, c6_sf_marshallOut,
+    c6_sf_marshallIn);
+  sf_debug_symbol_scope_add_eml(&c6_wrench, 2U, c6_b_sf_marshallOut);
+  sf_debug_symbol_scope_add_eml(&c6_cel, 3U, c6_b_sf_marshallOut);
+  sf_debug_symbol_scope_add_eml_importable(&c6_faults, 4U, c6_sf_marshallOut,
+    c6_sf_marshallIn);
+  CV_EML_FCN(0, 0);
+  _SFD_EML_CALL(0U, chartInstance->c6_sfEvent, 3);
+  guard1 = FALSE;
+  if (CV_EML_COND(0, 0, c6_wrench)) {
+    if (CV_EML_COND(0, 1, c6_cel)) {
+      CV_EML_MCDC(0, 0, TRUE);
+      CV_EML_IF(0, 0, TRUE);
+      _SFD_EML_CALL(0U, chartInstance->c6_sfEvent, 4);
+      c6_faults = 3.0;
+    } else {
+      guard1 = TRUE;
+    }
   } else {
-    switch (chartInstance->c6_is_c6_BaseEngineController_A02) {
-     case c6_IN_Off:
-      CV_CHART_EVAL(4, 0, 1);
-      _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 0U,
-                   chartInstance->c6_sfEvent);
-      _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 1U,
-                   chartInstance->c6_sfEvent);
-      if (CV_TRANSITION_EVAL(1U, (int32_T)_SFD_CCP_CALL(1U, 0, *c6_NEECT <=
-            *c6_CAL - 1.0 != 0U, chartInstance->c6_sfEvent))) {
-        _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 1U, chartInstance->c6_sfEvent);
-        chartInstance->c6_tp_Off = 0U;
-        _SFD_CS_CALL(STATE_INACTIVE_TAG, 0U, chartInstance->c6_sfEvent);
-        chartInstance->c6_is_c6_BaseEngineController_A02 = c6_IN_On;
-        _SFD_CS_CALL(STATE_ACTIVE_TAG, 1U, chartInstance->c6_sfEvent);
-        chartInstance->c6_tp_On = 1U;
+    guard1 = TRUE;
+  }
+
+  if (guard1 == TRUE) {
+    CV_EML_MCDC(0, 0, FALSE);
+    CV_EML_IF(0, 0, FALSE);
+    _SFD_EML_CALL(0U, chartInstance->c6_sfEvent, 5);
+    if (CV_EML_IF(0, 1, c6_wrench)) {
+      _SFD_EML_CALL(0U, chartInstance->c6_sfEvent, 6);
+      c6_faults = 1.0;
+    } else {
+      _SFD_EML_CALL(0U, chartInstance->c6_sfEvent, 7);
+      if (CV_EML_IF(0, 2, c6_cel)) {
+        _SFD_EML_CALL(0U, chartInstance->c6_sfEvent, 8);
+        c6_faults = 2.0;
       } else {
-        *c6_HEATER = FALSE;
-        _SFD_DATA_RANGE_CHECK((real_T)*c6_HEATER, 2U);
+        _SFD_EML_CALL(0U, chartInstance->c6_sfEvent, 10);
+        c6_faults = 0.0;
       }
-
-      _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 0U, chartInstance->c6_sfEvent);
-      break;
-
-     case c6_IN_On:
-      CV_CHART_EVAL(4, 0, 2);
-      _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 1U,
-                   chartInstance->c6_sfEvent);
-      _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 2U,
-                   chartInstance->c6_sfEvent);
-      if (CV_TRANSITION_EVAL(2U, (int32_T)_SFD_CCP_CALL(2U, 0, *c6_NEECT >=
-            *c6_CAL + 1.0 != 0U, chartInstance->c6_sfEvent))) {
-        _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 2U, chartInstance->c6_sfEvent);
-        chartInstance->c6_tp_On = 0U;
-        _SFD_CS_CALL(STATE_INACTIVE_TAG, 1U, chartInstance->c6_sfEvent);
-        chartInstance->c6_is_c6_BaseEngineController_A02 = c6_IN_Off;
-        _SFD_CS_CALL(STATE_ACTIVE_TAG, 0U, chartInstance->c6_sfEvent);
-        chartInstance->c6_tp_Off = 1U;
-      } else {
-        *c6_HEATER = TRUE;
-        _SFD_DATA_RANGE_CHECK((real_T)*c6_HEATER, 2U);
-      }
-
-      _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 1U, chartInstance->c6_sfEvent);
-      break;
-
-     default:
-      CV_CHART_EVAL(4, 0, 0);
-      chartInstance->c6_is_c6_BaseEngineController_A02 = (uint8_T)
-        c6_IN_NO_ACTIVE_CHILD;
-      _SFD_CS_CALL(STATE_INACTIVE_TAG, 0U, chartInstance->c6_sfEvent);
-      break;
     }
   }
 
-  _SFD_CC_CALL(EXIT_OUT_OF_FUNCTION_TAG, 4U, chartInstance->c6_sfEvent);
+  _SFD_EML_CALL(0U, chartInstance->c6_sfEvent, -10);
+  sf_debug_symbol_scope_pop();
+  *c6_b_faults = c6_faults;
+  _SFD_CC_CALL(EXIT_OUT_OF_FUNCTION_TAG, 5U, chartInstance->c6_sfEvent);
   sf_debug_check_for_state_inconsistency(_BaseEngineController_A02MachineNumber_,
     chartInstance->chartNumber, chartInstance->instanceNumber);
 }
@@ -326,127 +242,7 @@ static void init_script_number_translation(uint32_T c6_machineNumber, uint32_T
 {
 }
 
-const mxArray *sf_c6_BaseEngineController_A02_get_eml_resolved_functions_info
-  (void)
-{
-  const mxArray *c6_nameCaptureInfo = NULL;
-  c6_nameCaptureInfo = NULL;
-  sf_mex_assign(&c6_nameCaptureInfo, sf_mex_create("nameCaptureInfo", NULL, 0,
-    0U, 1U, 0U, 2, 0, 1));
-  return c6_nameCaptureInfo;
-}
-
 static const mxArray *c6_sf_marshallOut(void *chartInstanceVoid, void *c6_inData)
-{
-  const mxArray *c6_mxArrayOutData = NULL;
-  int32_T c6_u;
-  const mxArray *c6_y = NULL;
-  SFc6_BaseEngineController_A02InstanceStruct *chartInstance;
-  chartInstance = (SFc6_BaseEngineController_A02InstanceStruct *)
-    chartInstanceVoid;
-  c6_mxArrayOutData = NULL;
-  c6_u = *(int32_T *)c6_inData;
-  c6_y = NULL;
-  sf_mex_assign(&c6_y, sf_mex_create("y", &c6_u, 6, 0U, 0U, 0U, 0));
-  sf_mex_assign(&c6_mxArrayOutData, c6_y);
-  return c6_mxArrayOutData;
-}
-
-static int32_T c6_emlrt_marshallIn(SFc6_BaseEngineController_A02InstanceStruct
-  *chartInstance, const mxArray *c6_u, const emlrtMsgIdentifier *c6_parentId)
-{
-  int32_T c6_y;
-  int32_T c6_i0;
-  sf_mex_import(c6_parentId, sf_mex_dup(c6_u), &c6_i0, 1, 6, 0U, 0, 0U, 0);
-  c6_y = c6_i0;
-  sf_mex_destroy(&c6_u);
-  return c6_y;
-}
-
-static void c6_sf_marshallIn(void *chartInstanceVoid, const mxArray
-  *c6_mxArrayInData, const char_T *c6_varName, void *c6_outData)
-{
-  const mxArray *c6_b_sfEvent;
-  const char_T *c6_identifier;
-  emlrtMsgIdentifier c6_thisId;
-  int32_T c6_y;
-  SFc6_BaseEngineController_A02InstanceStruct *chartInstance;
-  chartInstance = (SFc6_BaseEngineController_A02InstanceStruct *)
-    chartInstanceVoid;
-  c6_b_sfEvent = sf_mex_dup(c6_mxArrayInData);
-  c6_identifier = c6_varName;
-  c6_thisId.fIdentifier = c6_identifier;
-  c6_thisId.fParent = NULL;
-  c6_y = c6_emlrt_marshallIn(chartInstance, sf_mex_dup(c6_b_sfEvent), &c6_thisId);
-  sf_mex_destroy(&c6_b_sfEvent);
-  *(int32_T *)c6_outData = c6_y;
-  sf_mex_destroy(&c6_mxArrayInData);
-}
-
-static const mxArray *c6_b_sf_marshallOut(void *chartInstanceVoid, void
-  *c6_inData)
-{
-  const mxArray *c6_mxArrayOutData = NULL;
-  uint8_T c6_u;
-  const mxArray *c6_y = NULL;
-  SFc6_BaseEngineController_A02InstanceStruct *chartInstance;
-  chartInstance = (SFc6_BaseEngineController_A02InstanceStruct *)
-    chartInstanceVoid;
-  c6_mxArrayOutData = NULL;
-  c6_u = *(uint8_T *)c6_inData;
-  c6_y = NULL;
-  sf_mex_assign(&c6_y, sf_mex_create("y", &c6_u, 3, 0U, 0U, 0U, 0));
-  sf_mex_assign(&c6_mxArrayOutData, c6_y);
-  return c6_mxArrayOutData;
-}
-
-static uint8_T c6_b_emlrt_marshallIn(SFc6_BaseEngineController_A02InstanceStruct
-  *chartInstance, const mxArray *c6_b_tp_Off, const char_T *c6_identifier)
-{
-  uint8_T c6_y;
-  emlrtMsgIdentifier c6_thisId;
-  c6_thisId.fIdentifier = c6_identifier;
-  c6_thisId.fParent = NULL;
-  c6_y = c6_c_emlrt_marshallIn(chartInstance, sf_mex_dup(c6_b_tp_Off),
-    &c6_thisId);
-  sf_mex_destroy(&c6_b_tp_Off);
-  return c6_y;
-}
-
-static uint8_T c6_c_emlrt_marshallIn(SFc6_BaseEngineController_A02InstanceStruct
-  *chartInstance, const mxArray *c6_u, const emlrtMsgIdentifier *c6_parentId)
-{
-  uint8_T c6_y;
-  uint8_T c6_u0;
-  sf_mex_import(c6_parentId, sf_mex_dup(c6_u), &c6_u0, 1, 3, 0U, 0, 0U, 0);
-  c6_y = c6_u0;
-  sf_mex_destroy(&c6_u);
-  return c6_y;
-}
-
-static void c6_b_sf_marshallIn(void *chartInstanceVoid, const mxArray
-  *c6_mxArrayInData, const char_T *c6_varName, void *c6_outData)
-{
-  const mxArray *c6_b_tp_Off;
-  const char_T *c6_identifier;
-  emlrtMsgIdentifier c6_thisId;
-  uint8_T c6_y;
-  SFc6_BaseEngineController_A02InstanceStruct *chartInstance;
-  chartInstance = (SFc6_BaseEngineController_A02InstanceStruct *)
-    chartInstanceVoid;
-  c6_b_tp_Off = sf_mex_dup(c6_mxArrayInData);
-  c6_identifier = c6_varName;
-  c6_thisId.fIdentifier = c6_identifier;
-  c6_thisId.fParent = NULL;
-  c6_y = c6_c_emlrt_marshallIn(chartInstance, sf_mex_dup(c6_b_tp_Off),
-    &c6_thisId);
-  sf_mex_destroy(&c6_b_tp_Off);
-  *(uint8_T *)c6_outData = c6_y;
-  sf_mex_destroy(&c6_mxArrayInData);
-}
-
-static const mxArray *c6_c_sf_marshallOut(void *chartInstanceVoid, void
-  *c6_inData)
 {
   const mxArray *c6_mxArrayOutData = NULL;
   real_T c6_u;
@@ -462,7 +258,50 @@ static const mxArray *c6_c_sf_marshallOut(void *chartInstanceVoid, void
   return c6_mxArrayOutData;
 }
 
-static const mxArray *c6_d_sf_marshallOut(void *chartInstanceVoid, void
+static real_T c6_emlrt_marshallIn(SFc6_BaseEngineController_A02InstanceStruct
+  *chartInstance, const mxArray *c6_faults, const char_T *c6_identifier)
+{
+  real_T c6_y;
+  emlrtMsgIdentifier c6_thisId;
+  c6_thisId.fIdentifier = c6_identifier;
+  c6_thisId.fParent = NULL;
+  c6_y = c6_b_emlrt_marshallIn(chartInstance, sf_mex_dup(c6_faults), &c6_thisId);
+  sf_mex_destroy(&c6_faults);
+  return c6_y;
+}
+
+static real_T c6_b_emlrt_marshallIn(SFc6_BaseEngineController_A02InstanceStruct *
+  chartInstance, const mxArray *c6_u, const emlrtMsgIdentifier *c6_parentId)
+{
+  real_T c6_y;
+  real_T c6_d0;
+  sf_mex_import(c6_parentId, sf_mex_dup(c6_u), &c6_d0, 1, 0, 0U, 0, 0U, 0);
+  c6_y = c6_d0;
+  sf_mex_destroy(&c6_u);
+  return c6_y;
+}
+
+static void c6_sf_marshallIn(void *chartInstanceVoid, const mxArray
+  *c6_mxArrayInData, const char_T *c6_varName, void *c6_outData)
+{
+  const mxArray *c6_faults;
+  const char_T *c6_identifier;
+  emlrtMsgIdentifier c6_thisId;
+  real_T c6_y;
+  SFc6_BaseEngineController_A02InstanceStruct *chartInstance;
+  chartInstance = (SFc6_BaseEngineController_A02InstanceStruct *)
+    chartInstanceVoid;
+  c6_faults = sf_mex_dup(c6_mxArrayInData);
+  c6_identifier = c6_varName;
+  c6_thisId.fIdentifier = c6_identifier;
+  c6_thisId.fParent = NULL;
+  c6_y = c6_b_emlrt_marshallIn(chartInstance, sf_mex_dup(c6_faults), &c6_thisId);
+  sf_mex_destroy(&c6_faults);
+  *(real_T *)c6_outData = c6_y;
+  sf_mex_destroy(&c6_mxArrayInData);
+}
+
+static const mxArray *c6_b_sf_marshallOut(void *chartInstanceVoid, void
   *c6_inData)
 {
   const mxArray *c6_mxArrayOutData = NULL;
@@ -479,73 +318,86 @@ static const mxArray *c6_d_sf_marshallOut(void *chartInstanceVoid, void
   return c6_mxArrayOutData;
 }
 
-static boolean_T c6_d_emlrt_marshallIn
-  (SFc6_BaseEngineController_A02InstanceStruct *chartInstance, const mxArray
-   *c6_HEATER, const char_T *c6_identifier)
+const mxArray *sf_c6_BaseEngineController_A02_get_eml_resolved_functions_info
+  (void)
 {
-  boolean_T c6_y;
-  emlrtMsgIdentifier c6_thisId;
-  c6_thisId.fIdentifier = c6_identifier;
-  c6_thisId.fParent = NULL;
-  c6_y = c6_e_emlrt_marshallIn(chartInstance, sf_mex_dup(c6_HEATER), &c6_thisId);
-  sf_mex_destroy(&c6_HEATER);
-  return c6_y;
+  const mxArray *c6_nameCaptureInfo = NULL;
+  c6_nameCaptureInfo = NULL;
+  sf_mex_assign(&c6_nameCaptureInfo, sf_mex_create("nameCaptureInfo", NULL, 0,
+    0U, 1U, 0U, 2, 0, 1));
+  return c6_nameCaptureInfo;
 }
 
-static boolean_T c6_e_emlrt_marshallIn
-  (SFc6_BaseEngineController_A02InstanceStruct *chartInstance, const mxArray
-   *c6_u, const emlrtMsgIdentifier *c6_parentId)
+static const mxArray *c6_c_sf_marshallOut(void *chartInstanceVoid, void
+  *c6_inData)
 {
-  boolean_T c6_y;
-  boolean_T c6_b0;
-  sf_mex_import(c6_parentId, sf_mex_dup(c6_u), &c6_b0, 1, 11, 0U, 0, 0U, 0);
-  c6_y = c6_b0;
+  const mxArray *c6_mxArrayOutData = NULL;
+  int32_T c6_u;
+  const mxArray *c6_y = NULL;
+  SFc6_BaseEngineController_A02InstanceStruct *chartInstance;
+  chartInstance = (SFc6_BaseEngineController_A02InstanceStruct *)
+    chartInstanceVoid;
+  c6_mxArrayOutData = NULL;
+  c6_u = *(int32_T *)c6_inData;
+  c6_y = NULL;
+  sf_mex_assign(&c6_y, sf_mex_create("y", &c6_u, 6, 0U, 0U, 0U, 0));
+  sf_mex_assign(&c6_mxArrayOutData, c6_y);
+  return c6_mxArrayOutData;
+}
+
+static int32_T c6_c_emlrt_marshallIn(SFc6_BaseEngineController_A02InstanceStruct
+  *chartInstance, const mxArray *c6_u, const emlrtMsgIdentifier *c6_parentId)
+{
+  int32_T c6_y;
+  int32_T c6_i0;
+  sf_mex_import(c6_parentId, sf_mex_dup(c6_u), &c6_i0, 1, 6, 0U, 0, 0U, 0);
+  c6_y = c6_i0;
   sf_mex_destroy(&c6_u);
   return c6_y;
 }
 
-static void c6_c_sf_marshallIn(void *chartInstanceVoid, const mxArray
+static void c6_b_sf_marshallIn(void *chartInstanceVoid, const mxArray
   *c6_mxArrayInData, const char_T *c6_varName, void *c6_outData)
 {
-  const mxArray *c6_HEATER;
+  const mxArray *c6_b_sfEvent;
   const char_T *c6_identifier;
   emlrtMsgIdentifier c6_thisId;
-  boolean_T c6_y;
+  int32_T c6_y;
   SFc6_BaseEngineController_A02InstanceStruct *chartInstance;
   chartInstance = (SFc6_BaseEngineController_A02InstanceStruct *)
     chartInstanceVoid;
-  c6_HEATER = sf_mex_dup(c6_mxArrayInData);
+  c6_b_sfEvent = sf_mex_dup(c6_mxArrayInData);
   c6_identifier = c6_varName;
   c6_thisId.fIdentifier = c6_identifier;
   c6_thisId.fParent = NULL;
-  c6_y = c6_e_emlrt_marshallIn(chartInstance, sf_mex_dup(c6_HEATER), &c6_thisId);
-  sf_mex_destroy(&c6_HEATER);
-  *(boolean_T *)c6_outData = c6_y;
+  c6_y = c6_c_emlrt_marshallIn(chartInstance, sf_mex_dup(c6_b_sfEvent),
+    &c6_thisId);
+  sf_mex_destroy(&c6_b_sfEvent);
+  *(int32_T *)c6_outData = c6_y;
   sf_mex_destroy(&c6_mxArrayInData);
 }
 
-static const mxArray *c6_f_emlrt_marshallIn
-  (SFc6_BaseEngineController_A02InstanceStruct *chartInstance, const mxArray
-   *c6_b_setSimStateSideEffectsInfo, const char_T *c6_identifier)
+static uint8_T c6_d_emlrt_marshallIn(SFc6_BaseEngineController_A02InstanceStruct
+  *chartInstance, const mxArray *c6_b_is_active_c6_BaseEngineController_A02,
+  const char_T *c6_identifier)
 {
-  const mxArray *c6_y = NULL;
+  uint8_T c6_y;
   emlrtMsgIdentifier c6_thisId;
-  c6_y = NULL;
   c6_thisId.fIdentifier = c6_identifier;
   c6_thisId.fParent = NULL;
-  sf_mex_assign(&c6_y, c6_g_emlrt_marshallIn(chartInstance, sf_mex_dup
-    (c6_b_setSimStateSideEffectsInfo), &c6_thisId));
-  sf_mex_destroy(&c6_b_setSimStateSideEffectsInfo);
+  c6_y = c6_e_emlrt_marshallIn(chartInstance, sf_mex_dup
+    (c6_b_is_active_c6_BaseEngineController_A02), &c6_thisId);
+  sf_mex_destroy(&c6_b_is_active_c6_BaseEngineController_A02);
   return c6_y;
 }
 
-static const mxArray *c6_g_emlrt_marshallIn
-  (SFc6_BaseEngineController_A02InstanceStruct *chartInstance, const mxArray
-   *c6_u, const emlrtMsgIdentifier *c6_parentId)
+static uint8_T c6_e_emlrt_marshallIn(SFc6_BaseEngineController_A02InstanceStruct
+  *chartInstance, const mxArray *c6_u, const emlrtMsgIdentifier *c6_parentId)
 {
-  const mxArray *c6_y = NULL;
-  c6_y = NULL;
-  sf_mex_assign(&c6_y, sf_mex_duplicatearraysafe(&c6_u));
+  uint8_T c6_y;
+  uint8_T c6_u0;
+  sf_mex_import(c6_parentId, sf_mex_dup(c6_u), &c6_u0, 1, 3, 0U, 0, 0U, 0);
+  c6_y = c6_u0;
   sf_mex_destroy(&c6_u);
   return c6_y;
 }
@@ -558,10 +410,10 @@ static void init_dsm_address_info(SFc6_BaseEngineController_A02InstanceStruct
 /* SFunction Glue Code */
 void sf_c6_BaseEngineController_A02_get_check_sum(mxArray *plhs[])
 {
-  ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(2023509343U);
-  ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(1873384252U);
-  ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(3339964571U);
-  ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(486641379U);
+  ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(2979546898U);
+  ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(2421387992U);
+  ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(298088284U);
+  ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(1214054596U);
 }
 
 mxArray *sf_c6_BaseEngineController_A02_get_autoinheritance_info(void)
@@ -575,10 +427,10 @@ mxArray *sf_c6_BaseEngineController_A02_get_autoinheritance_info(void)
   {
     mxArray *mxChecksum = mxCreateDoubleMatrix(4,1,mxREAL);
     double *pr = mxGetPr(mxChecksum);
-    pr[0] = (double)(1982016254U);
-    pr[1] = (double)(2889265612U);
-    pr[2] = (double)(4263048762U);
-    pr[3] = (double)(575933756U);
+    pr[0] = (double)(721871360U);
+    pr[1] = (double)(2842968399U);
+    pr[2] = (double)(2047683206U);
+    pr[3] = (double)(3536472907U);
     mxSetField(mxAutoinheritanceInfo,0,"checksum",mxChecksum);
   }
 
@@ -599,7 +451,7 @@ mxArray *sf_c6_BaseEngineController_A02_get_autoinheritance_info(void)
       const char *typeFields[] = { "base", "fixpt" };
 
       mxArray *mxType = mxCreateStructMatrix(1,1,2,typeFields);
-      mxSetField(mxType,0,"base",mxCreateDoubleScalar(10));
+      mxSetField(mxType,0,"base",mxCreateDoubleScalar(1));
       mxSetField(mxType,0,"fixpt",mxCreateDoubleMatrix(0,0,mxREAL));
       mxSetField(mxData,0,"type",mxType);
     }
@@ -618,7 +470,7 @@ mxArray *sf_c6_BaseEngineController_A02_get_autoinheritance_info(void)
       const char *typeFields[] = { "base", "fixpt" };
 
       mxArray *mxType = mxCreateStructMatrix(1,1,2,typeFields);
-      mxSetField(mxType,0,"base",mxCreateDoubleScalar(10));
+      mxSetField(mxType,0,"base",mxCreateDoubleScalar(1));
       mxSetField(mxType,0,"fixpt",mxCreateDoubleMatrix(0,0,mxREAL));
       mxSetField(mxData,1,"type",mxType);
     }
@@ -649,7 +501,7 @@ mxArray *sf_c6_BaseEngineController_A02_get_autoinheritance_info(void)
       const char *typeFields[] = { "base", "fixpt" };
 
       mxArray *mxType = mxCreateStructMatrix(1,1,2,typeFields);
-      mxSetField(mxType,0,"base",mxCreateDoubleScalar(1));
+      mxSetField(mxType,0,"base",mxCreateDoubleScalar(10));
       mxSetField(mxType,0,"fixpt",mxCreateDoubleMatrix(0,0,mxREAL));
       mxSetField(mxData,0,"type",mxType);
     }
@@ -671,10 +523,10 @@ static const mxArray *sf_get_sim_state_info_c6_BaseEngineController_A02(void)
 
   mxArray *mxInfo = mxCreateStructMatrix(1, 1, 2, infoFields);
   const char *infoEncStr[] = {
-    "100 S1x3'type','srcId','name','auxInfo'{{M[1],M[3],T\"HEATER\",},{M[8],M[0],T\"is_active_c6_BaseEngineController_A02\",},{M[9],M[0],T\"is_c6_BaseEngineController_A02\",}}"
+    "100 S1x2'type','srcId','name','auxInfo'{{M[1],M[5],T\"faults\",},{M[8],M[0],T\"is_active_c6_BaseEngineController_A02\",}}"
   };
 
-  mxArray *mxVarInfo = sf_mex_decode_encoded_mx_struct_array(infoEncStr, 3, 10);
+  mxArray *mxVarInfo = sf_mex_decode_encoded_mx_struct_array(infoEncStr, 2, 10);
   mxArray *mxChecksum = mxCreateDoubleMatrix(1, 4, mxREAL);
   sf_c6_BaseEngineController_A02_get_check_sum(&mxChecksum);
   mxSetField(mxInfo, 0, infoFields[0], mxChecksum);
@@ -696,8 +548,8 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
         chartAlreadyPresent = sf_debug_initialize_chart
           (_BaseEngineController_A02MachineNumber_,
            6,
-           2,
-           3,
+           1,
+           1,
            3,
            0,
            0,
@@ -721,105 +573,66 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
              0,
              0,
              0);
-          _SFD_SET_DATA_PROPS(0,1,1,0,"NEECT");
-          _SFD_SET_DATA_PROPS(1,1,1,0,"CAL");
-          _SFD_SET_DATA_PROPS(2,2,0,1,"HEATER");
-          _SFD_STATE_INFO(0,0,0);
-          _SFD_STATE_INFO(1,0,0);
-          _SFD_CH_SUBSTATE_COUNT(2);
+          _SFD_SET_DATA_PROPS(0,1,1,0,"wrench");
+          _SFD_SET_DATA_PROPS(1,2,0,1,"faults");
+          _SFD_SET_DATA_PROPS(2,1,1,0,"cel");
+          _SFD_STATE_INFO(0,0,2);
+          _SFD_CH_SUBSTATE_COUNT(0);
           _SFD_CH_SUBSTATE_DECOMP(0);
-          _SFD_CH_SUBSTATE_INDEX(0,0);
-          _SFD_CH_SUBSTATE_INDEX(1,1);
-          _SFD_ST_SUBSTATE_COUNT(0,0);
-          _SFD_ST_SUBSTATE_COUNT(1,0);
         }
 
-        _SFD_CV_INIT_CHART(2,1,0,0);
+        _SFD_CV_INIT_CHART(0,0,0,0);
 
         {
           _SFD_CV_INIT_STATE(0,0,0,0,0,0,NULL,NULL);
         }
 
-        {
-          _SFD_CV_INIT_STATE(1,0,0,0,0,0,NULL,NULL);
-        }
-
         _SFD_CV_INIT_TRANS(0,0,NULL,NULL,0,NULL);
 
-        {
-          static unsigned int sStartGuardMap[] = { 1 };
-
-          static unsigned int sEndGuardMap[] = { 15 };
-
-          static int sPostFixPredicateTree[] = { 0 };
-
-          _SFD_CV_INIT_TRANS(1,1,&(sStartGuardMap[0]),&(sEndGuardMap[0]),1,
-                             &(sPostFixPredicateTree[0]));
-        }
+        /* Initialization of MATLAB Function Model Coverage */
+        _SFD_CV_INIT_EML(0,1,3,0,0,0,0,2,1);
+        _SFD_CV_INIT_EML_FCN(0,0,"eML_blk_kernel",0,-1,151);
+        _SFD_CV_INIT_EML_IF(0,0,35,53,70,151);
+        _SFD_CV_INIT_EML_IF(0,1,70,83,100,151);
+        _SFD_CV_INIT_EML_IF(0,2,100,110,127,151);
 
         {
-          static unsigned int sStartGuardMap[] = { 1 };
+          static int condStart[] = { 39, 49 };
 
-          static unsigned int sEndGuardMap[] = { 15 };
+          static int condEnd[] = { 45, 52 };
 
-          static int sPostFixPredicateTree[] = { 0 };
+          static int pfixExpr[] = { 0, 1, -3 };
 
-          _SFD_CV_INIT_TRANS(2,1,&(sStartGuardMap[0]),&(sEndGuardMap[0]),1,
-                             &(sPostFixPredicateTree[0]));
+          _SFD_CV_INIT_EML_MCDC(0,0,39,52,2,0,&(condStart[0]),&(condEnd[0]),3,
+                                &(pfixExpr[0]));
         }
 
-        _SFD_TRANS_COV_WTS(0,0,0,0,0);
+        _SFD_TRANS_COV_WTS(0,0,0,1,0);
         if (chartAlreadyPresent==0) {
           _SFD_TRANS_COV_MAPS(0,
                               0,NULL,NULL,
                               0,NULL,NULL,
-                              0,NULL,NULL,
+                              1,NULL,NULL,
                               0,NULL,NULL);
         }
 
-        _SFD_TRANS_COV_WTS(1,0,1,0,0);
-        if (chartAlreadyPresent==0) {
-          static unsigned int sStartGuardMap[] = { 1 };
-
-          static unsigned int sEndGuardMap[] = { 15 };
-
-          _SFD_TRANS_COV_MAPS(1,
-                              0,NULL,NULL,
-                              1,&(sStartGuardMap[0]),&(sEndGuardMap[0]),
-                              0,NULL,NULL,
-                              0,NULL,NULL);
-        }
-
-        _SFD_TRANS_COV_WTS(2,0,1,0,0);
-        if (chartAlreadyPresent==0) {
-          static unsigned int sStartGuardMap[] = { 1 };
-
-          static unsigned int sEndGuardMap[] = { 15 };
-
-          _SFD_TRANS_COV_MAPS(2,
-                              0,NULL,NULL,
-                              1,&(sStartGuardMap[0]),&(sEndGuardMap[0]),
-                              0,NULL,NULL,
-                              0,NULL,NULL);
-        }
-
-        _SFD_SET_DATA_COMPILED_PROPS(0,SF_DOUBLE,0,NULL,0,0,0,0.0,1.0,0,0,
-          (MexFcnForType)c6_c_sf_marshallOut,(MexInFcnForType)NULL);
+        _SFD_SET_DATA_COMPILED_PROPS(0,SF_UINT8,0,NULL,0,0,0,0.0,1.0,0,0,
+          (MexFcnForType)c6_b_sf_marshallOut,(MexInFcnForType)NULL);
         _SFD_SET_DATA_COMPILED_PROPS(1,SF_DOUBLE,0,NULL,0,0,0,0.0,1.0,0,0,
-          (MexFcnForType)c6_c_sf_marshallOut,(MexInFcnForType)NULL);
+          (MexFcnForType)c6_sf_marshallOut,(MexInFcnForType)c6_sf_marshallIn);
         _SFD_SET_DATA_COMPILED_PROPS(2,SF_UINT8,0,NULL,0,0,0,0.0,1.0,0,0,
-          (MexFcnForType)c6_d_sf_marshallOut,(MexInFcnForType)c6_c_sf_marshallIn);
+          (MexFcnForType)c6_b_sf_marshallOut,(MexInFcnForType)NULL);
 
         {
-          real_T *c6_NEECT;
-          real_T *c6_CAL;
-          boolean_T *c6_HEATER;
-          c6_HEATER = (boolean_T *)ssGetOutputPortSignal(chartInstance->S, 1);
-          c6_CAL = (real_T *)ssGetInputPortSignal(chartInstance->S, 1);
-          c6_NEECT = (real_T *)ssGetInputPortSignal(chartInstance->S, 0);
-          _SFD_SET_DATA_VALUE_PTR(0U, c6_NEECT);
-          _SFD_SET_DATA_VALUE_PTR(1U, c6_CAL);
-          _SFD_SET_DATA_VALUE_PTR(2U, c6_HEATER);
+          boolean_T *c6_wrench;
+          real_T *c6_faults;
+          boolean_T *c6_cel;
+          c6_cel = (boolean_T *)ssGetInputPortSignal(chartInstance->S, 1);
+          c6_faults = (real_T *)ssGetOutputPortSignal(chartInstance->S, 1);
+          c6_wrench = (boolean_T *)ssGetInputPortSignal(chartInstance->S, 0);
+          _SFD_SET_DATA_VALUE_PTR(0U, c6_wrench);
+          _SFD_SET_DATA_VALUE_PTR(1U, c6_faults);
+          _SFD_SET_DATA_VALUE_PTR(2U, c6_cel);
         }
       }
     } else {
@@ -993,10 +806,10 @@ static void mdlSetWorkWidths_c6_BaseEngineController_A02(SimStruct *S)
   }
 
   ssSetOptions(S,ssGetOptions(S)|SS_OPTION_WORKS_WITH_CODE_REUSE);
-  ssSetChecksum0(S,(3062274002U));
-  ssSetChecksum1(S,(1101833783U));
-  ssSetChecksum2(S,(820650794U));
-  ssSetChecksum3(S,(1000624451U));
+  ssSetChecksum0(S,(857395925U));
+  ssSetChecksum1(S,(4153771893U));
+  ssSetChecksum2(S,(698559517U));
+  ssSetChecksum3(S,(507122178U));
   ssSetmdlDerivatives(S, NULL);
   ssSetExplicitFCSSCtrl(S,1);
 }
@@ -1006,7 +819,7 @@ static void mdlRTW_c6_BaseEngineController_A02(SimStruct *S)
   if (sim_mode_is_rtw_gen(S)) {
     sf_write_symbol_mapping(S, "BaseEngineController_A02",
       "BaseEngineController_A02",6);
-    ssWriteRTWStrParam(S, "StateflowChartType", "Stateflow");
+    ssWriteRTWStrParam(S, "StateflowChartType", "Embedded MATLAB");
   }
 }
 
@@ -1021,7 +834,7 @@ static void mdlStart_c6_BaseEngineController_A02(SimStruct *S)
   }
 
   chartInstance->chartInfo.chartInstance = chartInstance;
-  chartInstance->chartInfo.isEMLChart = 0;
+  chartInstance->chartInfo.isEMLChart = 1;
   chartInstance->chartInfo.chartInitialized = 0;
   chartInstance->chartInfo.sFunctionGateway =
     sf_opaque_gateway_c6_BaseEngineController_A02;

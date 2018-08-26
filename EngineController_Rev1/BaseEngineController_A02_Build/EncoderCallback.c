@@ -3,9 +3,9 @@
  *
  * Code generation for model "BaseEngineController_A02.mdl".
  *
- * Model version              : 1.1626
+ * Model version              : 1.1639
  * Simulink Coder version : 8.0 (R2011a) 09-Mar-2011
- * C source code generated on : Sun Apr 22 15:55:33 2018
+ * C source code generated on : Sat Aug 25 19:54:14 2018
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -29,12 +29,12 @@ void EncoderDiagnosticsCallback(E_EncoderError in_eEncoderError,
   motohawk_encoder_fault = ((uint8_T) in_eEncoderError) + 1;
 
   {
-    extern void ReSyncAfterCrankUnsync_19(void);
-    ReSyncAfterCrankUnsync_19();
+    extern void ReSyncAfterCrankUnsync_20(void);
+    ReSyncAfterCrankUnsync_20();
   }
 
   {
-    extern void Trigger_Encoder_Fault_28(void);
-    Trigger_Encoder_Fault_28();
+    extern void Trigger_Encoder_Fault_29(void);
+    Trigger_Encoder_Fault_29();
   }
 }

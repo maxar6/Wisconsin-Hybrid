@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.581"
+    ComputedModelVersion    "1.587"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -26,39 +26,39 @@ Model {
   InitFcn		  "try, eval([bdroot '_setup']); catch, eval('model_setup', ''); end"
   UserBdParams		  "MotoHawkBuildVersion;MotoHawkBuildStats;MotoHawkModelSavedName;MotoHawkModelGUID;MotoHawkModelOpenT"
   "ime;MotoHawkModelElapsedTime;MotoHawkBuildInfo;MotoHawkBuildGUID"
-  MotoHawkBuildVersion	  "072"
+  MotoHawkBuildVersion	  "073"
   MotoHawkBuildStats	  "struct('TotalFLASH',{0},'TotalEEPROM',{0},'TotalRAM',{0},'AppFLASH',{0},'AppEEPROM',{0},'AppRA"
-  "M',{0},'HeapRAM',{0},'BuildSuccessCount',{72},'BuildErrorCount',{0})"
+  "M',{0},'HeapRAM',{0},'BuildSuccessCount',{73},'BuildErrorCount',{2})"
   MotoHawkModelSavedName  "BatteryController_Rev1"
   MotoHawkModelGUID	  "1c823790-94c1-4f9f-95-ed-5c-78-f7-df-2e"
-  MotoHawkModelOpenTime	  "2018 5 17 19 31 6.811 "
-  MotoHawkModelElapsedTime "15669400.31"
-  MotoHawkBuildInfo	  "struct('model_name',{'BatteryController_Rev1'},'motohawk_version',{'2010a_sp1.49'},'motohawk_co"
-  "mponent_version',{'0.0.7'},'matlab_version',{'7.10.0'},'build_version',{'071'},'module_type',{'ECU555-48-0707'},'lay"
-  "out_type',{'PROD'},'processor_family',{'PPC'},'processor_type',{'MPC555'},'toolchain_vendor',{'gcc-powerpc-eabi'},'t"
-  "oolchain_version',{'4.4.0'},'component',{0},'archive_file',{'ECM.a'},'enable_build',{1},'fptype',{0},'flash_size',{3"
-  "68640},'ee_size',{4096},'ram_size',{26624},'decram_size',{0},'module_memory_def',{'MPC555_ModMemoryDef_4KEE_Prod'},'"
-  "eri_table0_rev',{9},'max_eri_table_size',{65535},'use_debug_vardecs',{1},'use_info_vardecs',{1},'fgnd_base_period_ms"
-  "',{5},'bgnd_base_period_ms',{50},'root_build_dir',{'C:\\Users\\Owner\\Documents\\MATLAB\\Mooventure Code\\BatteryCon"
-  "troller_Rev1'},'build_dir',{'C:\\Users\\Owner\\Documents\\MATLAB\\Mooventure Code\\BatteryController_Rev1\\BatteryCo"
-  "ntroller_Rev1_Build'},'dll_name',{'BatteryCo_071'},'srz_name',{'BatteryController_Rev1_071'},'fgnd_stack_size',{3072"
-  "},'fgnd_angle_stack_size',{0},'bgnd_stack_size',{2048},'idle_stack_size',{1024},'irq_stack_size',{1536},'heap_size',"
-  "{4096},'heap_margin',{409},'install_dll_dir',{'C:\\ECUFiles\\TDBDLL\\'},'install_srz_dir',{'C:\\ECUFiles\\Programs\\"
-  "'},'app_int_stack_size',{1024},'shutdown_stack_size',{1024},'mingw_dir',{'C:\\PROGRA~2\\Woodward\\DEVELO~1\\TOOLCH~1"
-  "\\GCC\\win32-pe\\4_4_0\\'},'motohawk_dir',{'C:\\PROGRA~2\\Woodward\\MCS\\MotoHawk\\2010A_~1.49'},'toolchain_dir',{'C"
-  ":\\Program Files (x86)\\Woodward\\DevelopmentTools\\Toolchains\\GCC\\powerpc-eabi\\4_4_0\\'},'matlab_root',{'C:\\Pro"
-  "gram Files (x86)\\MATLAB\\R2010a'},'model_guid',{'1c823790-94c1-4f9f-95-ed-5c-78-f7-df-2e'},'build_guid',{'ae3cfb20-"
-  "323a-4b0e-a1-50-a3-c1-82-35-7e'},'token_guid',{'no token'})"
-  MotoHawkBuildGUID	  "ae3cfb20-323a-4b0e-a1-50-a3-c1-82-35-7e"
+  MotoHawkModelOpenTime	  "2018 8 25 20 24 10.197 "
+  MotoHawkModelElapsedTime "15675530.773"
+  MotoHawkBuildInfo	  "struct('model_name',{'BatteryController_Rev1'},'motohawk_version',{'2011a_sp0.184'},'motohawk_c"
+  "omponent_version',{'0.0.7'},'matlab_version',{'7.12.0'},'build_version',{'072'},'module_type',{'ECU555-48-0707'},'la"
+  "yout_type',{'PROD'},'processor_family',{'PPC'},'processor_type',{'MPC555'},'toolchain_vendor',{'gcc-powerpc-eabi'},'"
+  "toolchain_version',{'4.4.0'},'component',{0},'archive_file',{'ECM.a'},'enable_build',{1},'fptype',{0},'flash_size',{"
+  "368640},'ee_size',{4096},'ram_size',{26624},'decram_size',{0},'module_memory_def',{'MPC555_ModMemoryDef_4KEE_Prod'},"
+  "'eri_table0_rev',{9},'max_eri_table_size',{65535},'use_debug_vardecs',{1},'use_info_vardecs',{1},'fgnd_base_period_m"
+  "s',{5},'bgnd_base_period_ms',{50},'root_build_dir',{'C:\\Users\\maxar\\Documents\\GitHub\\Wisconsin-Hybrid\\BatteryC"
+  "ontroller_Rev1'},'build_dir',{'C:\\Users\\maxar\\Documents\\GitHub\\Wisconsin-Hybrid\\BatteryController_Rev1\\Batter"
+  "yController_Rev1_Build'},'dll_name',{'BatteryCo_072'},'srz_name',{'BatteryController_Rev1_072'},'fgnd_stack_size',{3"
+  "072},'fgnd_angle_stack_size',{0},'bgnd_stack_size',{2048},'idle_stack_size',{1024},'irq_stack_size',{1536},'heap_siz"
+  "e',{4096},'heap_margin',{409},'install_dll_dir',{'C:\\ECUFiles\\TDBDLL\\'},'install_srz_dir',{'C:\\ECUFiles\\Program"
+  "s'},'app_int_stack_size',{1024},'shutdown_stack_size',{1024},'mingw_dir',{'C:\\PROGRA~2\\Woodward\\DEVELO~1\\TOOLCH~"
+  "1\\GCC\\win32-pe\\4_4_0\\'},'motohawk_dir',{'C:\\PROGRA~2\\Woodward\\MCS\\MotoHawk\\2011A_~1.184'},'toolchain_dir',{"
+  "'C:\\Program Files (x86)\\Woodward\\DevelopmentTools\\Toolchains\\GCC\\powerpc-eabi\\4_4_0\\'},'matlab_root',{'C:\\P"
+  "rogram Files (x86)\\MATLAB\\R2011a'},'model_guid',{'1c823790-94c1-4f9f-95-ed-5c-78-f7-df-2e'},'build_guid',{'2c20b1f"
+  "2-2f68-4f6b-8e-8e-5f-43-f8-60-40'},'token_guid',{'DD8AD11F95A6FC42BFF9AC780840E4B4'})"
+  MotoHawkBuildGUID	  "2c20b1f2-2f68-4f6b-8e-8e-5f-43-f8-60-40"
   Created		  "Mon May 16 15:00:08 2005"
   Creator		  "Owner"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "maxar"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu May 17 22:22:15 2018"
-  RTWModifiedTimeStamp	  448401704
-  ModelVersionFormat	  "1.%<AutoIncrement:581>"
+  LastModifiedDate	  "Sat Aug 25 20:26:05 2018"
+  RTWModifiedTimeStamp	  457129565
+  ModelVersionFormat	  "1.%<AutoIncrement:587>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1447,7 +1447,7 @@ Model {
   }
   System {
     Name		    "BatteryController_Rev1"
-    Location		    [202, 75, 1245, 684]
+    Location		    [377, 83, 1420, 692]
     Open		    off
     ModelBrowserVisibility  on
     ModelBrowserWidth	    200
@@ -1461,7 +1461,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "73"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "806"
+    SIDHighWatermark	    "807"
     Block {
       BlockType		      Reference
       Name		      "CAN Definition"
@@ -1998,7 +1998,7 @@ Model {
 		    Position		    [180, 100, 230, 180]
 		    FunctionName	    "sf_sfun"
 		    PortCounts		    "[3 2]"
-		    EnableBusSupport	    off
+		    EnableBusSupport	    on
 		    Port {
 		    PortNumber		    2
 		    Name		    "Offset_Out"
@@ -2199,7 +2199,7 @@ Model {
 		    Position		    [180, 106, 230, 209]
 		    FunctionName	    "sf_sfun"
 		    PortCounts		    "[4 2]"
-		    EnableBusSupport	    off
+		    EnableBusSupport	    on
 		    Port {
 		    PortNumber		    2
 		    Name		    "amps"
@@ -2928,7 +2928,7 @@ Model {
 		  }
 		  System {
 		    Name		    "Battery States"
-		    Location		    [202, 83, 1348, 739]
+		    Location		    [202, 75, 1364, 707]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -2940,7 +2940,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "158"
+		    ZoomFactor		    "51"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "In1"
@@ -3167,7 +3167,7 @@ Model {
 		    Position		    [180, 100, 230, 260]
 		    FunctionName	    "sf_sfun"
 		    PortCounts		    "[3 7]"
-		    EnableBusSupport	    off
+		    EnableBusSupport	    on
 		    Port {
 		    PortNumber		    2
 		    Name		    "Negative"
@@ -3462,7 +3462,7 @@ Model {
 		    Position		    [180, 100, 230, 160]
 		    FunctionName	    "sf_sfun"
 		    PortCounts		    "[1 2]"
-		    EnableBusSupport	    off
+		    EnableBusSupport	    on
 		    Port {
 		    PortNumber		    2
 		    Name		    "write"
@@ -3522,7 +3522,7 @@ Model {
 		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
 		    SourceType		    "MotoHawk Calibration"
 		    nam			    "'Delay_3_Cal'"
-		    val			    "5"
+		    val			    "60"
 		    storage		    "Calibration"
 		    show_more		    on
 		    name_source		    "Use Parameter"
@@ -3589,7 +3589,7 @@ Model {
 		    MaskHideContents	    off
 		    System {
 		    Name		    "Delay5"
-		    Location		    [202, 82, 1348, 739]
+		    Location		    [202, 83, 1348, 739]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -3676,7 +3676,7 @@ Model {
 		    Position		    [180, 100, 230, 160]
 		    FunctionName	    "sf_sfun"
 		    PortCounts		    "[1 2]"
-		    EnableBusSupport	    off
+		    EnableBusSupport	    on
 		    Port {
 		    PortNumber		    2
 		    Name		    "write"
@@ -3800,7 +3800,7 @@ Model {
 		    MaskHideContents	    off
 		    System {
 		    Name		    "Delays"
-		    Location		    [433, 403, 931, 703]
+		    Location		    [202, 83, 1348, 715]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -3821,10 +3821,18 @@ Model {
 		    IconDisplay		    "Port number"
 		    }
 		    Block {
+		    BlockType		    DataTypeConversion
+		    Name		    "Data Type Conversion"
+		    SID			    "807"
+		    Position		    [215, 88, 290, 122]
+		    RndMeth		    "Floor"
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
 		    BlockType		    UnitDelay
 		    Name		    "Unit Delay"
 		    SID			    "666"
-		    Position		    [200, 88, 235, 122]
+		    Position		    [410, 88, 445, 122]
 		    InputProcessing	    "Elements as channels (sample based)"
 		    SampleTime		    "-1"
 		    }
@@ -3832,7 +3840,7 @@ Model {
 		    BlockType		    UnitDelay
 		    Name		    "Unit Delay1"
 		    SID			    "667"
-		    Position		    [270, 88, 305, 122]
+		    Position		    [480, 88, 515, 122]
 		    InputProcessing	    "Elements as channels (sample based)"
 		    SampleTime		    "-1"
 		    }
@@ -3840,7 +3848,7 @@ Model {
 		    BlockType		    UnitDelay
 		    Name		    "Unit Delay2"
 		    SID			    "668"
-		    Position		    [335, 88, 370, 122]
+		    Position		    [545, 88, 580, 122]
 		    InputProcessing	    "Elements as channels (sample based)"
 		    SampleTime		    "-1"
 		    }
@@ -3848,7 +3856,7 @@ Model {
 		    BlockType		    UnitDelay
 		    Name		    "Unit Delay3"
 		    SID			    "669"
-		    Position		    [400, 88, 435, 122]
+		    Position		    [610, 88, 645, 122]
 		    InputProcessing	    "Elements as channels (sample based)"
 		    SampleTime		    "-1"
 		    }
@@ -3856,7 +3864,7 @@ Model {
 		    BlockType		    UnitDelay
 		    Name		    "Unit Delay4"
 		    SID			    "670"
-		    Position		    [475, 88, 510, 122]
+		    Position		    [685, 88, 720, 122]
 		    InputProcessing	    "Elements as channels (sample based)"
 		    SampleTime		    "-1"
 		    }
@@ -3864,13 +3872,13 @@ Model {
 		    BlockType		    Outport
 		    Name		    "Out1"
 		    SID			    "665"
-		    Position		    [545, 98, 575, 112]
+		    Position		    [755, 98, 785, 112]
 		    IconDisplay		    "Port number"
 		    }
 		    Line {
 		    SrcBlock		    "In1"
 		    SrcPort		    1
-		    DstBlock		    "Unit Delay"
+		    DstBlock		    "Data Type Conversion"
 		    DstPort		    1
 		    }
 		    Line {
@@ -3901,6 +3909,12 @@ Model {
 		    SrcBlock		    "Unit Delay4"
 		    SrcPort		    1
 		    DstBlock		    "Out1"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Data Type Conversion"
+		    SrcPort		    1
+		    DstBlock		    "Unit Delay"
 		    DstPort		    1
 		    }
 		    }
@@ -3981,7 +3995,7 @@ Model {
 		    Position		    [180, 100, 230, 160]
 		    FunctionName	    "sf_sfun"
 		    PortCounts		    "[2 2]"
-		    EnableBusSupport	    off
+		    EnableBusSupport	    on
 		    Port {
 		    PortNumber		    2
 		    Name		    "PackState"
@@ -4144,7 +4158,7 @@ Model {
 		    Position		    [180, 102, 230, 243]
 		    FunctionName	    "sf_sfun"
 		    PortCounts		    "[6 4]"
-		    EnableBusSupport	    off
+		    EnableBusSupport	    on
 		    Port {
 		    PortNumber		    2
 		    Name		    "state"
@@ -4509,7 +4523,7 @@ Model {
 		    RTWMemSecDataInternal   "Inherit from model"
 		    RTWMemSecDataParameters "Inherit from model"
 		    GeneratePreprocessorConditionals off
-		    parent_name		    "'PrechargeState_Ovr'"
+		    parent_name		    "'PrechargeState__Ovr'"
 		    parent_val		    "0"
 		    show_more		    on
 		    name_source		    "Use Parameter"
@@ -4556,7 +4570,7 @@ Model {
 		    RTWMemSecDataInternal   "Inherit from model"
 		    RTWMemSecDataParameters "Inherit from model"
 		    GeneratePreprocessorConditionals off
-		    parent_name		    "'PackState_Ovr'"
+		    parent_name		    "'PackState__Ovr'"
 		    parent_val		    "0"
 		    show_more		    on
 		    name_source		    "Use Parameter"
@@ -4594,7 +4608,7 @@ Model {
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
 		    SourceType		    "MotoHawk Probe"
-		    nam			    "'PreChargeState_Prb'"
+		    nam			    "'PreChargeState__Prb'"
 		    show_more		    on
 		    name_source		    "Use Parameter"
 		    read_level		    "1"
@@ -4625,7 +4639,7 @@ Model {
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
 		    SourceType		    "MotoHawk Probe"
-		    nam			    "'PackState_Prb'"
+		    nam			    "'PackState__Prb'"
 		    show_more		    on
 		    name_source		    "Use Parameter"
 		    read_level		    "1"
@@ -4944,10 +4958,10 @@ Model {
 		  }
 		  System {
 		    Name		    "SOC"
-		    Location		    [202, 82, 1348, 725]
+		    Location		    [202, 83, 1262, 675]
 		    Open		    on
 		    ModelBrowserVisibility  on
-		    ModelBrowserWidth	    200
+		    ModelBrowserWidth	    375
 		    ScreenColor		    "white"
 		    PaperOrientation	    "landscape"
 		    PaperPositionMode	    "auto"
@@ -4956,7 +4970,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "56"
+		    ZoomFactor		    "87"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "In1"
@@ -5284,7 +5298,7 @@ Model {
 		    BlockType		    SubSystem
 		    Name		    "SOC States"
 		    SID			    "425"
-		    Ports		    [6, 3]
+		    Ports		    [6, 2]
 		    Position		    [625, 81, 955, 284]
 		    LibraryVersion	    "1.234"
 		    ErrorFcn		    "Stateflow.Translate.translate"
@@ -5341,7 +5355,7 @@ Model {
 		    }
 		    Block {
 		    BlockType		    Inport
-		    Name		    "hyst"
+		    Name		    "highAmperage"
 		    SID			    "425::25"
 		    Position		    [20, 171, 40, 189]
 		    Port		    "3"
@@ -5349,7 +5363,7 @@ Model {
 		    }
 		    Block {
 		    BlockType		    Inport
-		    Name		    "amperageSwitch"
+		    Name		    "lowAmperage"
 		    SID			    "425::26"
 		    Position		    [20, 206, 40, 224]
 		    Port		    "4"
@@ -5384,11 +5398,11 @@ Model {
 		    Name		    " SFunction "
 		    SID			    "425::35"
 		    Tag			    "Stateflow S-Function BatteryController_Rev1 4"
-		    Ports		    [6, 4]
+		    Ports		    [6, 3]
 		    Position		    [180, 102, 230, 243]
 		    FunctionName	    "sf_sfun"
-		    PortCounts		    "[6 4]"
-		    EnableBusSupport	    off
+		    PortCounts		    "[6 3]"
+		    EnableBusSupport	    on
 		    Port {
 		    PortNumber		    2
 		    Name		    "voltageOut"
@@ -5398,12 +5412,6 @@ Model {
 		    Port {
 		    PortNumber		    3
 		    Name		    "currState"
-		    RTWStorageClass	    "Auto"
-		    DataLoggingNameMode	    "SignalName"
-		    }
-		    Port {
-		    PortNumber		    4
-		    Name		    "vdiff"
 		    RTWStorageClass	    "Auto"
 		    DataLoggingNameMode	    "SignalName"
 		    }
@@ -5429,14 +5437,6 @@ Model {
 		    Port		    "2"
 		    IconDisplay		    "Port number"
 		    }
-		    Block {
-		    BlockType		    Outport
-		    Name		    "vdiff"
-		    SID			    "425::33"
-		    Position		    [460, 171, 480, 189]
-		    Port		    "3"
-		    IconDisplay		    "Port number"
-		    }
 		    Line {
 		    SrcBlock		    "voltageIn"
 		    SrcPort		    1
@@ -5450,13 +5450,13 @@ Model {
 		    DstPort		    2
 		    }
 		    Line {
-		    SrcBlock		    "hyst"
+		    SrcBlock		    "highAmperage"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    3
 		    }
 		    Line {
-		    SrcBlock		    "amperageSwitch"
+		    SrcBlock		    "lowAmperage"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    4
@@ -5475,7 +5475,7 @@ Model {
 		    }
 		    Line {
 		    Name		    "voltageOut"
-		    Labels		    [0, 0]
+		    Labels		    [0, 0; 0, 0]
 		    SrcBlock		    " SFunction "
 		    SrcPort		    2
 		    DstBlock		    "voltageOut"
@@ -5483,18 +5483,10 @@ Model {
 		    }
 		    Line {
 		    Name		    "currState"
-		    Labels		    [0, 0]
+		    Labels		    [0, 0; 0, 0]
 		    SrcBlock		    " SFunction "
 		    SrcPort		    3
 		    DstBlock		    "currState"
-		    DstPort		    1
-		    }
-		    Line {
-		    Name		    "vdiff"
-		    Labels		    [0, 0]
-		    SrcBlock		    " SFunction "
-		    SrcPort		    4
-		    DstBlock		    "vdiff"
 		    DstPort		    1
 		    }
 		    Line {
@@ -5521,8 +5513,8 @@ Model {
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
 		    SourceType		    "MotoHawk Calibration"
-		    nam			    "'hystoresis'"
-		    val			    "1.5"
+		    nam			    "'highAmperage'"
+		    val			    "25"
 		    storage		    "Calibration NV"
 		    show_more		    on
 		    name_source		    "Use Parameter"
@@ -5560,7 +5552,7 @@ Model {
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
 		    SourceType		    "MotoHawk Calibration"
-		    nam			    "'Ampeage_Switch'"
+		    nam			    "'lowAmperage'"
 		    val			    "20"
 		    storage		    "Calibration NV"
 		    show_more		    on
@@ -5693,7 +5685,7 @@ Model {
 		    offset		    "0"
 		    exp			    "1"
 		    use_links		    on
-		    prelookup_block	    "'SOC_Table'"
+		    prelookup_block	    "'Temp_IR_Table'"
 		    output_name		    "''"
 		    use_mototune_group	    off
 		    mototune_group	    "motohawk_vardec_path(gcb)"
@@ -5991,13 +5983,14 @@ Model {
 		    Labels		    [2, 0]
 		    SrcBlock		    "SOC States"
 		    SrcPort		    1
-		    Points		    [0, -5]
+		    Points		    [0, -20]
 		    DstBlock		    "motohawk_prelookup"
 		    DstPort		    1
 		    }
 		    Line {
 		    SrcBlock		    "SOC States"
 		    SrcPort		    2
+		    Points		    [0, -50]
 		    DstBlock		    "motohawk_probe1"
 		    DstPort		    1
 		    }
@@ -6042,8 +6035,7 @@ Model {
 		    DstPort		    5
 		    }
 		    Line {
-		    SrcBlock		    "SOC States"
-		    SrcPort		    3
+		    Points		    [960, 250]
 		    DstBlock		    "motohawk_probe2"
 		    DstPort		    1
 		    }
@@ -6256,7 +6248,7 @@ Model {
 		  }
 		  System {
 		    Name		    "2G BMS"
-		    Location		    [433, 403, 931, 703]
+		    Location		    [202, 75, 1347, 690]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -6268,7 +6260,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "41"
+		    ZoomFactor		    "82"
 		    Block {
 		    BlockType		    BusCreator
 		    Name		    "Bus\nCreator"
@@ -6557,7 +6549,7 @@ Model {
 		    RTWMemSecDataInternal   "Inherit from model"
 		    RTWMemSecDataParameters "Inherit from model"
 		    GeneratePreprocessorConditionals off
-		    parent_name		    "'MaxCellVoltage_Ovr'"
+		    parent_name		    "'MaxCellVoltage__Ovr'"
 		    parent_val		    "0"
 		    show_more		    on
 		    name_source		    "Use Parameter"
@@ -6604,7 +6596,7 @@ Model {
 		    RTWMemSecDataInternal   "Inherit from model"
 		    RTWMemSecDataParameters "Inherit from model"
 		    GeneratePreprocessorConditionals off
-		    parent_name		    "'MinCellVoltage_Ovr'"
+		    parent_name		    "'MinCellVoltage__Ovr'"
 		    parent_val		    "0"
 		    show_more		    on
 		    name_source		    "Use Parameter"
@@ -6877,7 +6869,7 @@ Model {
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
 		    SourceType		    "MotoHawk Probe"
-		    nam			    "'MaxCellVoltage_Prb'"
+		    nam			    "'MaxCellVoltage__Prb'"
 		    show_more		    on
 		    name_source		    "Use Parameter"
 		    read_level		    "1"
@@ -6908,7 +6900,7 @@ Model {
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
 		    SourceType		    "MotoHawk Probe"
-		    nam			    "'MinCellVoltage_Prb'"
+		    nam			    "'MinCellVoltage__Prb'"
 		    show_more		    on
 		    name_source		    "Use Parameter"
 		    read_level		    "1"
@@ -8452,7 +8444,7 @@ Model {
 		  MaskHideContents	  off
 		  System {
 		    Name		    "Battery"
-		    Location		    [202, 82, 1331, 708]
+		    Location		    [433, 403, 948, 720]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -8464,7 +8456,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "19"
+		    ZoomFactor		    "82"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Inputs"
@@ -8550,10 +8542,10 @@ Model {
 		    Ports		    [1, 1]
 		    Position		    [935, 2381, 940, 2419]
 		    ShowName		    off
-		    OutputSignals	    "2G BMS.FaulsDTC"
+		    OutputSignals	    "2G BMS.FaultsDTC"
 		    Port {
 		    PortNumber		    1
-		    Name		    "<FaulsDTC>"
+		    Name		    "<FaultsDTC>"
 		    RTWStorageClass	    "Auto"
 		    DataLoggingNameMode	    "SignalName"
 		    }
@@ -8629,7 +8621,7 @@ Model {
 		    Name		    "Bus\nSelector8"
 		    SID			    "728"
 		    Ports		    [1, 1]
-		    Position		    [395, 1590, 405, 1640]
+		    Position		    [395, 1690, 405, 1740]
 		    ShowName		    off
 		    OutputSignals	    "2G BMS.MaxCellTemp"
 		    Port {
@@ -8644,7 +8636,7 @@ Model {
 		    Name		    "Bus\nSelector9"
 		    SID			    "729"
 		    Ports		    [1, 1]
-		    Position		    [395, 1685, 405, 1735]
+		    Position		    [395, 1590, 405, 1640]
 		    ShowName		    off
 		    OutputSignals	    "SOC.SOC"
 		    Port {
@@ -8787,10 +8779,10 @@ Model {
 		    MaskHideContents	    off
 		    System {
 		    Name		    "TripAmpHours"
-		    Location		    [433, 403, 931, 703]
+		    Location		    [299, 83, 1262, 675]
 		    Open		    off
 		    ModelBrowserVisibility  on
-		    ModelBrowserWidth	    200
+		    ModelBrowserWidth	    375
 		    ScreenColor		    "white"
 		    PaperOrientation	    "landscape"
 		    PaperPositionMode	    "auto"
@@ -9464,7 +9456,7 @@ Model {
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
 		    SourceType		    "MotoHawk Calibration"
-		    nam			    "'Max_Amphours'"
+		    nam			    "'Max_AmphoursIn'"
 		    val			    "100000"
 		    storage		    "Calibration NV"
 		    show_more		    off
@@ -9542,7 +9534,7 @@ Model {
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
 		    SourceType		    "MotoHawk Calibration"
-		    nam			    "'Max_Amphours'"
+		    nam			    "'Max_AmphoursOut'"
 		    val			    "100000"
 		    storage		    "Calibration NV"
 		    show_more		    off
@@ -9581,7 +9573,7 @@ Model {
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
 		    SourceType		    "MotoHawk Calibration"
-		    nam			    "'Reset_AmpHoursIn'"
+		    nam			    "'Reset_AmpHoursOut'"
 		    val			    "0"
 		    storage		    "Display NV"
 		    show_more		    off
@@ -12178,7 +12170,7 @@ Model {
 		    Name		    "motohawk_prelookup"
 		    SID			    "721"
 		    Ports		    [1, 1]
-		    Position		    [495, 1672, 665, 1748]
+		    Position		    [495, 1577, 665, 1653]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Lookup Tables/motohawk_prelookup"
@@ -12212,7 +12204,7 @@ Model {
 		    Name		    "motohawk_prelookup1"
 		    SID			    "723"
 		    Ports		    [1, 1]
-		    Position		    [495, 1577, 665, 1653]
+		    Position		    [495, 1677, 665, 1753]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Lookup Tables/motohawk_prelookup"
@@ -13388,6 +13380,7 @@ Model {
 		    }
 		    }
 		    Branch {
+		    Points		    [70, 0]
 		    DstBlock		    "Bus\nSelector9"
 		    DstPort		    1
 		    }
@@ -13418,7 +13411,36 @@ Model {
 		    Line {
 		    SrcBlock		    "motohawk_prelookup1"
 		    SrcPort		    1
-		    Points		    [115, 0]
+		    Points		    [110, 0]
+		    Branch {
+		    Points		    [0, -60]
+		    DstBlock		    "motohawk_interpolation_2d"
+		    DstPort		    2
+		    }
+		    Branch {
+		    Points		    [0, 95]
+		    Branch {
+		    DstBlock		    "motohawk_interpolation_2d1"
+		    DstPort		    2
+		    }
+		    Branch {
+		    Points		    [0, 325]
+		    Branch {
+		    DstBlock		    "motohawk_interpolation_2d2"
+		    DstPort		    2
+		    }
+		    Branch {
+		    Points		    [0, 95]
+		    DstBlock		    "motohawk_interpolation_2d3"
+		    DstPort		    2
+		    }
+		    }
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "motohawk_prelookup"
+		    SrcPort		    1
+		    Points		    [95, 0]
 		    Branch {
 		    DstBlock		    "motohawk_interpolation_2d"
 		    DstPort		    1
@@ -13430,44 +13452,16 @@ Model {
 		    DstPort		    1
 		    }
 		    Branch {
-		    Points		    [0, 325]
+		    Points		    [0, 320]
 		    Branch {
+		    Points		    [0, 5]
 		    DstBlock		    "motohawk_interpolation_2d2"
 		    DstPort		    1
-		    }
-		    Branch {
-		    Points		    [0, 95]
-		    DstBlock		    "motohawk_interpolation_2d3"
-		    DstPort		    1
-		    }
-		    }
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "motohawk_prelookup"
-		    SrcPort		    1
-		    Points		    [95, 0]
-		    Branch {
-		    Points		    [0, -55]
-		    DstBlock		    "motohawk_interpolation_2d"
-		    DstPort		    2
 		    }
 		    Branch {
 		    Points		    [0, 100]
-		    Branch {
-		    DstBlock		    "motohawk_interpolation_2d1"
-		    DstPort		    2
-		    }
-		    Branch {
-		    Points		    [0, 325]
-		    Branch {
-		    DstBlock		    "motohawk_interpolation_2d2"
-		    DstPort		    2
-		    }
-		    Branch {
-		    Points		    [0, 95]
 		    DstBlock		    "motohawk_interpolation_2d3"
-		    DstPort		    2
+		    DstPort		    1
 		    }
 		    }
 		    }
@@ -13897,7 +13891,7 @@ Model {
 		    DstPort		    4
 		    }
 		    Line {
-		    Name		    "<FaulsDTC>"
+		    Name		    "<FaultsDTC>"
 		    Labels		    [0, 0; 0, 0]
 		    SrcBlock		    "Bus\nSelector3"
 		    SrcPort		    1
@@ -15362,7 +15356,7 @@ Model {
       SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
       SourceType	      "MotoHawk Function Trigger"
       trigger		      "FGND_RTI_PERIODIC"
-      function_name	      "Trigger_FGND_RTI_PERIODIC_2548p0001"
+      function_name	      "Trigger_FGND_RTI_PERIODIC_1023p0001"
       priority_order	      "0"
       inherited		      off
       run_disabled	      off
@@ -15412,7 +15406,7 @@ Stateflow {
     name		    "BatteryController_Rev1"
     created		    "11-Feb-2017 22:08:14"
     isLibrary		    0
-    firstTarget		    140
+    firstTarget		    137
     sfVersion		    75014001
   }
   chart {
@@ -16309,28 +16303,27 @@ Stateflow {
     id			    53
     name		    "Foreground/Battery/Control/SOC/SOC States"
     windowPosition	    [21.75 24 1024.5 488.25]
-    viewLimits		    [0 965.304 0 445.014]
-    zoomFactor		    0.984
+    viewLimits		    [0 870.776 0 401.436]
+    zoomFactor		    0.888
     screen		    [1 1 1366 768 1.333333333333333]
     treeNode		    [0 55 0 0]
-    firstTransition	    58
+    firstTransition	    57
     viewObj		    53
     machine		    1
     subviewS {
       zoomFactor	      0.984
     }
-    ssIdHighWaterMark	    37
+    ssIdHighWaterMark	    40
     decomposition	    CLUSTER_CHART
-    firstData		    64
+    firstData		    62
     chartFileNumber	    4
     userSpecifiedStateTransitionExecutionOrder 1
     disableImplicitCasting  1
   }
   state {
     id			    54
-    labelString		    "LowAmperage\n\nduring: voltageOut = voltageIn;\nduring: currState = 0;\nexit: lastVoltage = volt"
-    "ageIn;"
-    position		    [11.5 60.75 192.4863 150.0652]
+    labelString		    "LowAmperage\n\nduring: voltageOut = voltageIn;\nduring: currState = 0;"
+    position		    [11.5 60.75 187.9371 123.7688]
     fontSize		    12
     chart		    53
     treeNode		    [53 0 55 56]
@@ -16341,8 +16334,8 @@ Stateflow {
   }
   state {
     id			    55
-    labelString		    "HighAmpearge\n\nduring: voltageOut = vEst;\nduring: currState = 1;"
-    position		    [460.25 59.25 164.7036 155.0047]
+    labelString		    "HighAmpearge\n\nduring: voltageOut = voltageIn + (amperage * IR);\nduring: currState = 1;"
+    position		    [460.25 59.25 299.4031 91.7603]
     fontSize		    12
     chart		    53
     treeNode		    [53 0 0 54]
@@ -16353,65 +16346,54 @@ Stateflow {
   }
   state {
     id			    56
-    labelString		    "SwitchingBack\n\nentry: tick = 0;\nduring: voltageOut = vEst;\nduring: currState = 1;"
-    position		    [641.445 287.451 197.292 72.324]
+    labelString		    "Counting\nen: tick = 0;\nduring: tick++;\nduring: voltageOut = voltageIn + (amperage * IR);\ndur"
+    "ing: currState = 1;"
+    position		    [444.5558 297.8706 330.6601 88.3015]
     fontSize		    12
     chart		    53
-    treeNode		    [53 0 54 57]
-    subviewer		    53
-    ssIdNumber		    30
-    type		    OR_STATE
-    decomposition	    CLUSTER_STATE
-  }
-  state {
-    id			    57
-    labelString		    "Counting\n\nduring: tick++;\nduring: voltageOut = vEst;\nduring: currState = 1;"
-    position		    [387.081 291.879 197.292 72.324]
-    fontSize		    12
-    chart		    53
-    treeNode		    [53 0 56 0]
+    treeNode		    [53 0 54 0]
     subviewer		    53
     ssIdNumber		    33
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   transition {
-    id			    58
-    labelPosition	    [42.654 39.141 8.114 14.731]
+    id			    57
+    labelPosition	    [41.585 39.141 8.65 15.946]
     fontSize		    12
     src {
-      intersection	      [0 0 1 0 57.0536 30.75 0 0]
+      intersection	      [0 0 1 0 55.9847 30.75 0 0]
     }
     dst {
       id		      54
-      intersection	      [1 0 -1 0.2367 57.0536 60.75 0 0]
+      intersection	      [1 0 -1 0.2367 55.9847 60.75 0 0]
     }
-    midPoint		    [57.0536 42.1415]
+    midPoint		    [55.9847 42.1415]
     chart		    53
-    linkNode		    [53 0 59]
-    dataLimits		    [54.654 59.454 30.75 60.75]
+    linkNode		    [53 0 58]
+    dataLimits		    [53.585 58.385 30.75 60.75]
     subviewer		    53
     drawStyle		    SMART
     executionOrder	    1
     ssIdNumber		    2
   }
   transition {
-    id			    59
-    labelString		    "[abs(amperage)+hyst >= amperageSwitch]"
-    labelPosition	    [231.609 96.309 219.818 14.731]
+    id			    58
+    labelString		    "[abs(amperage) >= highAmperage]"
+    labelPosition	    [231.609 96.305 197.626 15.946]
     fontSize		    12
     src {
       id		      54
-      intersection	      [2 1 0 0.4048 203.9863 121.5 0 -50.0625]
+      intersection	      [2 1 0 0.4908 199.4371 121.4964 0 -50.0625]
     }
     dst {
       id		      55
-      intersection	      [4 -1 0 0.5984 460.25 121.5 0 50.0625]
+      intersection	      [4 -1 0 0.3216 460.25 121.4964 0 50.0625]
     }
-    midPoint		    [333.4284 121.5]
+    midPoint		    [331.2527 121.4964]
     chart		    53
-    linkNode		    [53 58 62]
-    dataLimits		    [203.986 460.25 119.1 123.9]
+    linkNode		    [53 57 60]
+    dataLimits		    [199.437 460.25 119.096 123.896]
     stampAngle		    NaN
     subviewer		    53
     drawStyle		    SMART
@@ -16419,71 +16401,68 @@ Stateflow {
     ssIdNumber		    13
   }
   transition {
-    id			    60
-    labelString		    "[abs(amperage)-hyst <= amperageSwitch]"
-    labelPosition	    [615.343 245.47 216.867 14.731]
+    id			    59
+    labelString		    "[abs(amperage) <= lowAmperage]"
+    labelPosition	    [617.643 196.689 192.969 15.946]
     fontSize		    12
     src {
       id		      55
-      intersection	      [3 0 1 0.0665 614.0008 214.2547 0 10.9528]
+      intersection	      [3 0 1 0.4897 613.027 151.0103 0 -69.8253]
     }
     dst {
       id		      56
-      intersection	      [4 -1 0 0.6412 641.445 313.404 0 -25.953]
+      intersection	      [1 0 -1 0.5095 613.027 297.8706 0 69.2705]
     }
-    midPoint		    [610.9631 279.3378]
+    midPoint		    [613.027 223.3723]
     chart		    53
-    linkNode		    [53 62 63]
-    dataLimits		    [609.545 641.445 214.255 315.804]
+    linkNode		    [53 60 61]
+    dataLimits		    [610.627 615.427 151.01 297.871]
     stampAngle		    NaN
     subviewer		    53
     drawStyle		    SMART
-    slide {
-      mode		      MIRROR_SLIDE
-      sticky		      BOTH_STICK
-    }
     executionOrder	    1
     ssIdNumber		    31
   }
   transition {
-    id			    61
-    labelPosition	    [611.989 346.655 8.114 14.731]
+    id			    60
+    labelString		    "[abs(amperage) >= highAmperage]"
+    labelPosition	    [317.99 209.496 197.626 15.946]
     fontSize		    12
     src {
       id		      56
-      intersection	      [4 -1 0 0.1814 641.445 346.6551 0 -1.107]
+      intersection	      [1 0 -1 0.2337 521.8219 297.8706 0 -21.3798]
     }
     dst {
-      id		      57
-      intersection	      [2 1 0 0.7574 584.373 346.6551 0 -4.059]
+      id		      55
+      intersection	      [3 0 1 0.7944 521.8219 151.0103 0 21.3798]
     }
-    midPoint		    [615.929 346.6551]
+    midPoint		    [521.8219 225.5085]
     chart		    53
-    linkNode		    [53 63 0]
-    dataLimits		    [584.373 641.445 344.255 349.055]
+    linkNode		    [53 58 59]
+    dataLimits		    [519.422 524.222 151.01 297.871]
     stampAngle		    NaN
     subviewer		    53
     drawStyle		    SMART
-    executionOrder	    1
-    ssIdNumber		    34
+    executionOrder	    2
+    ssIdNumber		    37
   }
   transition {
-    id			    62
+    id			    61
     labelString		    "[tick >= waitTime]"
-    labelPosition	    [134.964 283.621 90.73 14.731]
+    labelPosition	    [131.29 270.876 97.815 15.946]
     fontSize		    12
     src {
-      id		      57
-      intersection	      [4 -1 0 0.5204 387.081 326.565 0 -34.686]
+      id		      56
+      intersection	      [4 -1 0 0.6072 444.5558 332.5566 0 -34.686]
     }
     dst {
       id		      54
-      intersection	      [3 0 1 0.1102 182.778 210.8152 0 21.2083]
+      intersection	      [3 0 1 0.1128 178.2288 184.5188 0 21.2083]
     }
-    midPoint		    [250.2491 299.7488]
+    midPoint		    [266.3499 297.6431]
     chart		    53
-    linkNode		    [53 59 60]
-    dataLimits		    [180.378 387.081 210.815 326.565]
+    linkNode		    [53 59 0]
+    dataLimits		    [175.829 444.556 184.519 332.557]
     stampAngle		    NaN
     subviewer		    53
     drawStyle		    SMART
@@ -16494,34 +16473,11 @@ Stateflow {
     executionOrder	    1
     ssIdNumber		    36
   }
-  transition {
-    id			    63
-    labelString		    "[abs(amperage)+hyst >= amperageSwitch]"
-    labelPosition	    [274.993 246.411 219.818 14.731]
-    fontSize		    12
-    src {
-      id		      57
-      intersection	      [1 0 -1 0.5505 495.69 291.879 0 9.963]
-    }
-    dst {
-      id		      55
-      intersection	      [3 0 1 0.7848 495.69 214.2547 0 -11.086]
-    }
-    midPoint		    [495.69 255.6401]
-    chart		    53
-    linkNode		    [53 60 61]
-    dataLimits		    [493.29 498.09 214.255 291.879]
-    stampAngle		    NaN
-    subviewer		    53
-    drawStyle		    SMART
-    executionOrder	    2
-    ssIdNumber		    37
-  }
   data {
-    id			    64
+    id			    62
     ssIdNumber		    8
     name		    "voltageIn"
-    linkNode		    [53 0 65]
+    linkNode		    [53 0 63]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -16534,10 +16490,10 @@ Stateflow {
     dataType		    "double"
   }
   data {
-    id			    65
+    id			    63
     ssIdNumber		    9
     name		    "voltageOut"
-    linkNode		    [53 64 66]
+    linkNode		    [53 62 64]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -16551,9 +16507,41 @@ Stateflow {
     dataType		    "double"
   }
   data {
-    id			    66
+    id			    64
     ssIdNumber		    10
     name		    "amperage"
+    linkNode		    [53 63 65]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "double"
+  }
+  data {
+    id			    65
+    ssIdNumber		    12
+    name		    "highAmperage"
+    linkNode		    [53 64 66]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "double"
+  }
+  data {
+    id			    66
+    ssIdNumber		    15
+    name		    "lowAmperage"
     linkNode		    [53 65 67]
     scope		    INPUT_DATA
     machine		    1
@@ -16568,41 +16556,9 @@ Stateflow {
   }
   data {
     id			    67
-    ssIdNumber		    12
-    name		    "hyst"
-    linkNode		    [53 66 68]
-    scope		    INPUT_DATA
-    machine		    1
-    props {
-      type {
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-    }
-    dataType		    "double"
-  }
-  data {
-    id			    68
-    ssIdNumber		    15
-    name		    "amperageSwitch"
-    linkNode		    [53 67 69]
-    scope		    INPUT_DATA
-    machine		    1
-    props {
-      type {
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-    }
-    dataType		    "double"
-  }
-  data {
-    id			    69
     ssIdNumber		    29
     name		    "waitTime"
-    linkNode		    [53 68 70]
+    linkNode		    [53 66 68]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -16615,10 +16571,10 @@ Stateflow {
     dataType		    "int32"
   }
   data {
-    id			    70
+    id			    68
     ssIdNumber		    17
     name		    "currState"
-    linkNode		    [53 69 71]
+    linkNode		    [53 67 69]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -16632,10 +16588,10 @@ Stateflow {
     dataType		    "double"
   }
   data {
-    id			    71
+    id			    69
     ssIdNumber		    21
     name		    "IR"
-    linkNode		    [53 70 72]
+    linkNode		    [53 68 70]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -16649,27 +16605,10 @@ Stateflow {
     dataType		    "double"
   }
   data {
-    id			    72
-    ssIdNumber		    27
-    name		    "vdiff"
-    linkNode		    [53 71 73]
-    scope		    OUTPUT_DATA
-    machine		    1
-    props {
-      type {
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-      frame		      SF_FRAME_NO
-    }
-    dataType		    "double"
-  }
-  data {
-    id			    73
+    id			    70
     ssIdNumber		    28
     name		    "tick"
-    linkNode		    [53 72 0]
+    linkNode		    [53 69 0]
     scope		    LOCAL_DATA
     machine		    1
     props {
@@ -16682,27 +16621,27 @@ Stateflow {
     dataType		    "double"
   }
   instance {
-    id			    74
+    id			    71
     name		    "Foreground/Battery/Control/SOC/SOC States"
     machine		    1
     chart		    53
   }
   chart {
-    id			    75
+    id			    72
     name		    "Foreground/Battery/Control/Battery States/Pack State"
     windowPosition	    [300.747 330 200.25 189.75]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 1366 768 1.333333333333333]
-    treeNode		    [0 76 0 0]
-    firstTransition	    78
-    firstJunction	    77
-    viewObj		    75
+    treeNode		    [0 73 0 0]
+    firstTransition	    75
+    firstJunction	    74
+    viewObj		    72
     machine		    1
     toolbarMode		    LIBRARY_TOOLBAR
     ssIdHighWaterMark	    6
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
-    firstData		    79
+    firstData		    76
     chartFileNumber	    7
     disableImplicitCasting  1
     eml {
@@ -16710,14 +16649,14 @@ Stateflow {
     }
   }
   state {
-    id			    76
+    id			    73
     labelString		    "eML_blk_kernel()"
     position		    [18 64.5 118 66]
     fontSize		    12
-    chart		    75
-    treeNode		    [75 0 0 0]
+    chart		    72
+    treeNode		    [72 0 0 0]
     superState		    SUBCHART
-    subviewer		    75
+    subviewer		    72
     ssIdNumber		    1
     type		    FUNC_STATE
     decomposition	    CLUSTER_STATE
@@ -16730,16 +16669,16 @@ Stateflow {
     }
   }
   junction {
-    id			    77
+    id			    74
     position		    [23.5747 49.5747 7]
-    chart		    75
-    linkNode		    [75 0 0]
-    subviewer		    75
+    chart		    72
+    linkNode		    [72 0 0]
+    subviewer		    72
     ssIdNumber		    3
     type		    CONNECTIVE_JUNCTION
   }
   transition {
-    id			    78
+    id			    75
     labelString		    "{eML_blk_kernel();}"
     labelPosition	    [32.125 19.875 102.544 14.964]
     fontSize		    12
@@ -16747,23 +16686,23 @@ Stateflow {
       intersection	      [0 0 1 0 23.5747 14.625 0 0]
     }
     dst {
-      id		      77
+      id		      74
       intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
     }
     midPoint		    [23.5747 24.9468]
-    chart		    75
-    linkNode		    [75 0 0]
+    chart		    72
+    linkNode		    [72 0 0]
     dataLimits		    [23.575 23.575 14.625 34.575]
-    subviewer		    75
+    subviewer		    72
     drawStyle		    SMART
     executionOrder	    1
     ssIdNumber		    2
   }
   data {
-    id			    79
+    id			    76
     ssIdNumber		    4
     name		    "precharge"
-    linkNode		    [75 0 80]
+    linkNode		    [72 0 77]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -16779,10 +16718,10 @@ Stateflow {
     dataType		    "Inherit: Same as Simulink"
   }
   data {
-    id			    80
+    id			    77
     ssIdNumber		    5
     name		    "PackState"
-    linkNode		    [75 79 81]
+    linkNode		    [72 76 78]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -16799,10 +16738,10 @@ Stateflow {
     dataType		    "Inherit: Same as Simulink"
   }
   data {
-    id			    81
+    id			    78
     ssIdNumber		    6
     name		    "positive"
-    linkNode		    [75 80 0]
+    linkNode		    [72 77 0]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -16821,217 +16760,217 @@ Stateflow {
     dataType		    "Inherit: Same as Simulink"
   }
   instance {
-    id			    82
+    id			    79
     name		    "Foreground/Battery/Control/Battery States/Pack State"
     machine		    1
-    chart		    75
+    chart		    72
   }
   chart {
-    id			    83
+    id			    80
     name		    "Foreground/Battery/Control/Battery States/Precharge State"
     windowPosition	    [18.75 23.25 987 496.5]
     viewLimits		    [0 1179.375 0 575.625]
     zoomFactor		    1.25
     screen		    [1 1 1366 768 1.333333333333333]
-    treeNode		    [0 84 0 0]
-    firstTransition	    102
-    viewObj		    83
+    treeNode		    [0 81 0 0]
+    firstTransition	    99
+    viewObj		    80
     machine		    1
     subviewS {
       zoomFactor	      1.25
     }
     ssIdHighWaterMark	    46
     decomposition	    CLUSTER_CHART
-    firstData		    106
+    firstData		    103
     chartFileNumber	    8
     userSpecifiedStateTransitionExecutionOrder 1
     disableImplicitCasting  1
   }
   state {
-    id			    84
+    id			    81
     labelString		    "Init\nduring: state=0;"
     position		    [77.25 67.5 99.5 39.75]
     fontSize		    12
-    chart		    83
-    treeNode		    [83 0 0 91]
-    subviewer		    83
+    chart		    80
+    treeNode		    [80 0 0 88]
+    subviewer		    80
     ssIdNumber		    6
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    85
+    id			    82
     labelString		    "Precharging\nduring: state=2;"
     position		    [479.3438 77.7188 108.25 39]
     fontSize		    12
-    chart		    83
-    treeNode		    [83 0 91 88]
-    subviewer		    83
+    chart		    80
+    treeNode		    [80 0 88 85]
+    subviewer		    80
     ssIdNumber		    9
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    86
+    id			    83
     labelString		    "Successful\nduring: state=3;"
     position		    [607.0938 246.0938 108.25 39]
     fontSize		    12
-    chart		    83
-    treeNode		    [83 0 88 87]
-    subviewer		    83
+    chart		    80
+    treeNode		    [80 0 85 84]
+    subviewer		    80
     ssIdNumber		    12
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    87
+    id			    84
     labelString		    "Failed\nduring: state=4;"
     position		    [435.2188 247.2188 108.25 39]
     fontSize		    12
-    chart		    83
-    treeNode		    [83 0 86 93]
-    subviewer		    83
+    chart		    80
+    treeNode		    [80 0 83 90]
+    subviewer		    80
     ssIdNumber		    13
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    88
+    id			    85
     labelString		    "Wait1\nduring: state=2"
     position		    [492.5938 147.8438 108.25 39]
     fontSize		    12
-    chart		    83
-    treeNode		    [83 0 85 86]
-    subviewer		    83
+    chart		    80
+    treeNode		    [80 0 82 83]
+    subviewer		    80
     ssIdNumber		    17
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    89
+    id			    86
     labelString		    "Wait2\nduring: state=4;"
     position		    [439.3438 336.0938 108.25 39]
     fontSize		    12
-    chart		    83
-    treeNode		    [83 0 92 90]
-    subviewer		    83
+    chart		    80
+    treeNode		    [80 0 89 87]
+    subviewer		    80
     ssIdNumber		    21
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    90
+    id			    87
     labelString		    "Wait3\nduring: state=3;"
     position		    [621.7188 337.9688 108.25 39]
     fontSize		    12
-    chart		    83
-    treeNode		    [83 0 89 0]
-    subviewer		    83
+    chart		    80
+    treeNode		    [80 0 86 0]
+    subviewer		    80
     ssIdNumber		    23
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    91
+    id			    88
     labelString		    "Delay3\nduring: delay3Out=1;"
     position		    [726.3438 74.6669 127.875 39.375]
     fontSize		    12
-    chart		    83
-    treeNode		    [83 0 84 85]
-    subviewer		    83
+    chart		    80
+    treeNode		    [80 0 81 82]
+    subviewer		    80
     ssIdNumber		    30
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    92
+    id			    89
     labelString		    "Delay52\nduring: delay5Out=1;"
     position		    [795.2813 309.9794 127.875 39.375]
     fontSize		    12
-    chart		    83
-    treeNode		    [83 0 93 89]
-    subviewer		    83
+    chart		    80
+    treeNode		    [80 0 90 86]
+    subviewer		    80
     ssIdNumber		    34
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    93
+    id			    90
     labelString		    "Delay51\nduring: delay5Out=1;"
     position		    [264 286.2607 127.875 39.375]
     fontSize		    12
-    chart		    83
-    treeNode		    [83 0 87 92]
-    subviewer		    83
+    chart		    80
+    treeNode		    [80 0 84 89]
+    subviewer		    80
     ssIdNumber		    37
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   transition {
-    id			    94
+    id			    91
     labelString		    "[precharge==1]"
     labelPosition	    [252.301 82.573 84.334 16.842]
     fontSize		    12
     src {
-      id		      84
+      id		      81
       intersection	      [2 1 0 0.7948 176.75 99.0918 0 -14.625]
     }
     dst {
-      id		      85
+      id		      82
       intersection	      [4 -1 0 0.452 479.3438 99.0918 0 -1.875]
     }
     midPoint		    [330.3643 99.0918]
-    chart		    83
-    linkNode		    [83 95 101]
+    chart		    80
+    linkNode		    [80 92 98]
     dataLimits		    [176.75 479.344 96.692 101.492]
     stampAngle		    NaN
-    subviewer		    83
+    subviewer		    80
     drawStyle		    SMART
     executionOrder	    1
     ssIdNumber		    11
   }
   transition {
-    id			    95
+    id			    92
     labelString		    "[state==2]"
     labelPosition	    [632.291 81.792 58.097 16.842]
     fontSize		    12
     src {
-      id		      85
+      id		      82
       intersection	      [2 1 0 0.4602 587.5938 95.6669 0 -1.5518]
     }
     dst {
-      id		      91
+      id		      88
       intersection	      [4 -1 0 0.4667 726.3438 95.6669 0 1.5518]
     }
     midPoint		    [655.7243 95.6669]
-    chart		    83
-    linkNode		    [83 102 94]
+    chart		    80
+    linkNode		    [80 99 91]
     dataLimits		    [587.594 726.344 93.267 98.067]
     stampAngle		    NaN
-    subviewer		    83
+    subviewer		    80
     drawStyle		    SMART
     executionOrder	    1
     ssIdNumber		    31
   }
   transition {
-    id			    96
+    id			    93
     labelString		    "[current<cal]"
     labelPosition	    [527.22 219.834 70.278 16.842]
     fontSize		    12
     src {
-      id		      88
+      id		      85
       intersection	      [3 0 1 0.4457 552.5967 186.8438 0 -9.125]
     }
     dst {
-      id		      87
+      id		      84
       intersection	      [1 0 -1 0.7171 512.8448 247.2188 0 -30.625]
     }
     midPoint		    [531.4234 213.9539]
-    chart		    83
-    linkNode		    [83 99 97]
+    chart		    80
+    linkNode		    [80 96 94]
     dataLimits		    [510.445 552.597 186.844 247.219]
     stampAngle		    NaN
-    subviewer		    83
+    subviewer		    80
     drawStyle		    SMART
     slide {
       mode		      MIRROR_SLIDE
@@ -17041,24 +16980,24 @@ Stateflow {
     ssIdNumber		    19
   }
   transition {
-    id			    97
+    id			    94
     labelString		    "[current>=cal]"
     labelPosition	    [655.42 206.453 77.775 16.842]
     fontSize		    12
     src {
-      id		      88
+      id		      85
       intersection	      [3 0 1 0.1547 584.0975 186.8438 0 16.75]
     }
     dst {
-      id		      86
+      id		      83
       intersection	      [1 0 -1 0.5566 667.3457 246.0938 0 60.25]
     }
     midPoint		    [628.4317 213.0304]
-    chart		    83
-    linkNode		    [83 96 104]
+    chart		    80
+    linkNode		    [80 93 101]
     dataLimits		    [584.098 669.746 186.844 246.094]
     stampAngle		    NaN
-    subviewer		    83
+    subviewer		    80
     drawStyle		    SMART
     slide {
       mode		      MIRROR_SLIDE
@@ -17068,24 +17007,24 @@ Stateflow {
     ssIdNumber		    20
   }
   transition {
-    id			    98
+    id			    95
     labelString		    "[delay5In==1]"
     labelPosition	    [774.015 370.087 75.901 16.842]
     fontSize		    12
     src {
-      id		      92
+      id		      89
       intersection	      [3 0 1 0.8636 812.7188 349.3544 0 -17.4375]
     }
     dst {
-      id		      90
+      id		      87
       intersection	      [2 1 0 0.6141 729.9688 361.9169 0 12.5625]
     }
     midPoint		    [783.8043 366.0335]
-    chart		    83
-    linkNode		    [83 105 0]
+    chart		    80
+    linkNode		    [80 102 0]
     dataLimits		    [729.969 812.719 349.354 366.332]
     stampAngle		    NaN
-    subviewer		    83
+    subviewer		    80
     drawStyle		    SMART
     slide {
       mode		      MIRROR_SLIDE
@@ -17095,24 +17034,24 @@ Stateflow {
     ssIdNumber		    36
   }
   transition {
-    id			    99
+    id			    96
     labelString		    "[delay3In==1]"
     labelPosition	    [749.165 150.116 75.901 16.842]
     fontSize		    12
     src {
-      id		      91
+      id		      88
       intersection	      [3 0 1 0.6178 775.2188 114.0419 0 -48.875]
     }
     dst {
-      id		      88
+      id		      85
       intersection	      [2 1 0 0.5275 600.8438 168.4169 0 20.5732]
     }
     midPoint		    [710.3891 164.7995]
-    chart		    83
-    linkNode		    [83 100 96]
+    chart		    80
+    linkNode		    [80 97 93]
     dataLimits		    [600.844 775.219 114.042 170.817]
     stampAngle		    NaN
-    subviewer		    83
+    subviewer		    80
     drawStyle		    SMART
     slide {
       mode		      MIRROR_SLIDE
@@ -17122,24 +17061,24 @@ Stateflow {
     ssIdNumber		    32
   }
   transition {
-    id			    100
+    id			    97
     labelString		    "[positive==1]"
     labelPosition	    [153.818 180.14 71.216 16.842]
     fontSize		    12
     src {
-      id		      89
+      id		      86
       intersection	      [3 0 1 0.3776 506.7188 375.0938 0 -106.375]
     }
     dst {
-      id		      84
+      id		      81
       intersection	      [3 0 1 0.2412 152.75 107.25 0 24]
     }
     midPoint		    [308.125 428.3669]
-    chart		    83
-    linkNode		    [83 101 99]
+    chart		    80
+    linkNode		    [80 98 96]
     dataLimits		    [147.404 506.719 107.25 437.407]
     stampAngle		    NaN
-    subviewer		    83
+    subviewer		    80
     drawStyle		    SMART
     slide {
       mode		      MIRROR_SLIDE
@@ -17150,24 +17089,24 @@ Stateflow {
     ssIdNumber		    25
   }
   transition {
-    id			    101
+    id			    98
     labelString		    "[positive==1]"
     labelPosition	    [451.799 462.33 71.216 16.842]
     fontSize		    12
     src {
-      id		      90
+      id		      87
       intersection	      [3 0 1 0.4688 679.2188 376.9688 0 -96.5]
     }
     dst {
-      id		      84
+      id		      81
       intersection	      [3 0 1 0.6181 115.25 107.25 0 61.5]
     }
     midPoint		    [554.1394 476.1223]
-    chart		    83
-    linkNode		    [83 94 100]
+    chart		    80
+    linkNode		    [80 91 97]
     dataLimits		    [112.85 679.219 107.25 488.835]
     stampAngle		    NaN
-    subviewer		    83
+    subviewer		    80
     drawStyle		    SMART
     slide {
       mode		      MIRROR_SLIDE
@@ -17178,44 +17117,44 @@ Stateflow {
     ssIdNumber		    26
   }
   transition {
-    id			    102
+    id			    99
     labelPosition	    [115.85 45.891 8.433 16.842]
     fontSize		    12
     src {
       intersection	      [0 0 1 0 130.25 37.5 0 0]
     }
     dst {
-      id		      84
+      id		      81
       intersection	      [1 0 -1 0.5327 130.25 67.5 0 0]
     }
     midPoint		    [130.25 48.8915]
-    chart		    83
-    linkNode		    [83 0 95]
+    chart		    80
+    linkNode		    [80 0 92]
     dataLimits		    [127.85 132.65 37.5 67.5]
-    subviewer		    83
+    subviewer		    80
     drawStyle		    SMART
     executionOrder	    1
     ssIdNumber		    27
   }
   transition {
-    id			    103
+    id			    100
     labelString		    "[state==3]"
     labelPosition	    [820.076 273.138 58.097 16.842]
     fontSize		    12
     src {
-      id		      86
+      id		      83
       intersection	      [2 1 0 0.6814 715.3438 272.6669 0 -12.4268]
     }
     dst {
-      id		      92
+      id		      89
       intersection	      [1 0 -1 0.2419 826.2188 309.9794 0 30.9375]
     }
     midPoint		    [788.3554 273.0484]
-    chart		    83
-    linkNode		    [83 104 105]
+    chart		    80
+    linkNode		    [80 101 102]
     dataLimits		    [715.344 828.619 269.7 309.979]
     stampAngle		    NaN
-    subviewer		    83
+    subviewer		    80
     drawStyle		    SMART
     slide {
       mode		      MIRROR_SLIDE
@@ -17225,24 +17164,24 @@ Stateflow {
     ssIdNumber		    35
   }
   transition {
-    id			    104
+    id			    101
     labelString		    "[state==4]"
     labelPosition	    [358.637 251.795 58.097 16.842]
     fontSize		    12
     src {
-      id		      87
+      id		      84
       intersection	      [4 -1 0 0.492 435.2188 267.0313 0 19.1875]
     }
     dst {
-      id		      93
+      id		      90
       intersection	      [1 0 -1 0.9009 379.203 286.2607 0 -12.672]
     }
     midPoint		    [398.3177 265.3016]
-    chart		    83
-    linkNode		    [83 97 103]
+    chart		    80
+    linkNode		    [80 94 100]
     dataLimits		    [376.803 435.219 264.427 286.261]
     stampAngle		    NaN
-    subviewer		    83
+    subviewer		    80
     drawStyle		    SMART
     slide {
       mode		      MIRROR_SLIDE
@@ -17252,24 +17191,24 @@ Stateflow {
     ssIdNumber		    40
   }
   transition {
-    id			    105
+    id			    102
     labelString		    "[delay5In==1]"
     labelPosition	    [399.338 330.938 75.901 16.842]
     fontSize		    12
     src {
-      id		      93
+      id		      90
       intersection	      [3 0 1 0.3133 351.8125 325.6357 0 40.0625]
     }
     dst {
-      id		      89
+      id		      86
       intersection	      [4 -1 0 0.7561 439.3438 345.6044 0 -9.5107]
     }
     midPoint		    [382.4816 346.9851]
-    chart		    83
-    linkNode		    [83 103 98]
+    chart		    80
+    linkNode		    [80 100 95]
     dataLimits		    [351.813 439.344 325.636 348.294]
     stampAngle		    NaN
-    subviewer		    83
+    subviewer		    80
     drawStyle		    SMART
     slide {
       mode		      MIRROR_SLIDE
@@ -17279,10 +17218,58 @@ Stateflow {
     ssIdNumber		    41
   }
   data {
-    id			    106
+    id			    103
     ssIdNumber		    1
     name		    "precharge"
-    linkNode		    [83 0 107]
+    linkNode		    [80 0 104]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "double"
+  }
+  data {
+    id			    104
+    ssIdNumber		    2
+    name		    "positive"
+    linkNode		    [80 103 105]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "double"
+  }
+  data {
+    id			    105
+    ssIdNumber		    3
+    name		    "current"
+    linkNode		    [80 104 106]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "double"
+  }
+  data {
+    id			    106
+    ssIdNumber		    4
+    name		    "cal"
+    linkNode		    [80 105 107]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -17296,10 +17283,10 @@ Stateflow {
   }
   data {
     id			    107
-    ssIdNumber		    2
-    name		    "positive"
-    linkNode		    [83 106 108]
-    scope		    INPUT_DATA
+    ssIdNumber		    5
+    name		    "state"
+    linkNode		    [80 106 108]
+    scope		    OUTPUT_DATA
     machine		    1
     props {
       type {
@@ -17307,31 +17294,33 @@ Stateflow {
 	isSigned		1
 	wordLength		"16"
       }
+      frame		      SF_FRAME_NO
     }
     dataType		    "double"
   }
   data {
     id			    108
-    ssIdNumber		    3
-    name		    "current"
-    linkNode		    [83 107 109]
+    ssIdNumber		    43
+    name		    "delay3In"
+    linkNode		    [80 107 109]
     scope		    INPUT_DATA
     machine		    1
     props {
       type {
-	primitive		SF_DOUBLE_TYPE
+	primitive		SF_BOOLEAN_TYPE
 	isSigned		1
 	wordLength		"16"
       }
+      frame		      SF_FRAME_NO
     }
-    dataType		    "double"
+    dataType		    "boolean"
   }
   data {
     id			    109
-    ssIdNumber		    4
-    name		    "cal"
-    linkNode		    [83 108 110]
-    scope		    INPUT_DATA
+    ssIdNumber		    44
+    name		    "delay3Out"
+    linkNode		    [80 108 110]
+    scope		    OUTPUT_DATA
     machine		    1
     props {
       type {
@@ -17339,82 +17328,32 @@ Stateflow {
 	isSigned		1
 	wordLength		"16"
       }
+      frame		      SF_FRAME_NO
     }
     dataType		    "double"
   }
   data {
     id			    110
-    ssIdNumber		    5
-    name		    "state"
-    linkNode		    [83 109 111]
-    scope		    OUTPUT_DATA
+    ssIdNumber		    45
+    name		    "delay5In"
+    linkNode		    [80 109 111]
+    scope		    INPUT_DATA
     machine		    1
     props {
       type {
-	primitive		SF_DOUBLE_TYPE
+	primitive		SF_BOOLEAN_TYPE
 	isSigned		1
 	wordLength		"16"
       }
       frame		      SF_FRAME_NO
     }
-    dataType		    "double"
+    dataType		    "boolean"
   }
   data {
     id			    111
-    ssIdNumber		    43
-    name		    "delay3In"
-    linkNode		    [83 110 112]
-    scope		    INPUT_DATA
-    machine		    1
-    props {
-      type {
-	primitive		SF_BOOLEAN_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-      frame		      SF_FRAME_NO
-    }
-    dataType		    "boolean"
-  }
-  data {
-    id			    112
-    ssIdNumber		    44
-    name		    "delay3Out"
-    linkNode		    [83 111 113]
-    scope		    OUTPUT_DATA
-    machine		    1
-    props {
-      type {
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-      frame		      SF_FRAME_NO
-    }
-    dataType		    "double"
-  }
-  data {
-    id			    113
-    ssIdNumber		    45
-    name		    "delay5In"
-    linkNode		    [83 112 114]
-    scope		    INPUT_DATA
-    machine		    1
-    props {
-      type {
-	primitive		SF_BOOLEAN_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-      frame		      SF_FRAME_NO
-    }
-    dataType		    "boolean"
-  }
-  data {
-    id			    114
     ssIdNumber		    46
     name		    "delay5Out"
-    linkNode		    [83 113 0]
+    linkNode		    [80 110 0]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -17428,27 +17367,27 @@ Stateflow {
     dataType		    "double"
   }
   instance {
-    id			    115
+    id			    112
     name		    "Foreground/Battery/Control/Battery States/Precharge State"
     machine		    1
-    chart		    83
+    chart		    80
   }
   chart {
-    id			    116
+    id			    113
     name		    "Foreground/Battery/Control/AMP Clamp/Curret Calculation Instantaneos"
     windowPosition	    [300.747 330 200.25 189.75]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 1366 768 1.333333333333333]
-    treeNode		    [0 117 0 0]
-    firstTransition	    119
-    firstJunction	    118
-    viewObj		    116
+    treeNode		    [0 114 0 0]
+    firstTransition	    116
+    firstJunction	    115
+    viewObj		    113
     machine		    1
     toolbarMode		    LIBRARY_TOOLBAR
     ssIdHighWaterMark	    9
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
-    firstData		    120
+    firstData		    117
     chartFileNumber	    9
     disableImplicitCasting  1
     eml {
@@ -17456,14 +17395,14 @@ Stateflow {
     }
   }
   state {
-    id			    117
+    id			    114
     labelString		    "eML_blk_kernel()"
     position		    [18 64.5 118 66]
     fontSize		    12
-    chart		    116
-    treeNode		    [116 0 0 0]
+    chart		    113
+    treeNode		    [113 0 0 0]
     superState		    SUBCHART
-    subviewer		    116
+    subviewer		    113
     ssIdNumber		    1
     type		    FUNC_STATE
     decomposition	    CLUSTER_STATE
@@ -17474,16 +17413,16 @@ Stateflow {
     }
   }
   junction {
-    id			    118
+    id			    115
     position		    [23.5747 49.5747 7]
-    chart		    116
-    linkNode		    [116 0 0]
-    subviewer		    116
+    chart		    113
+    linkNode		    [113 0 0]
+    subviewer		    113
     ssIdNumber		    3
     type		    CONNECTIVE_JUNCTION
   }
   transition {
-    id			    119
+    id			    116
     labelString		    "{eML_blk_kernel();}"
     labelPosition	    [32.125 19.875 102.544 14.964]
     fontSize		    12
@@ -17491,23 +17430,87 @@ Stateflow {
       intersection	      [0 0 1 0 23.5747 14.625 0 0]
     }
     dst {
-      id		      118
+      id		      115
       intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
     }
     midPoint		    [23.5747 24.9468]
-    chart		    116
-    linkNode		    [116 0 0]
+    chart		    113
+    linkNode		    [113 0 0]
     dataLimits		    [23.575 23.575 14.625 34.575]
-    subviewer		    116
+    subviewer		    113
     drawStyle		    SMART
     executionOrder	    1
     ssIdNumber		    2
   }
   data {
-    id			    120
+    id			    117
     ssIdNumber		    9
     name		    "offset"
-    linkNode		    [116 0 121]
+    linkNode		    [113 0 118]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    118
+    ssIdNumber		    7
+    name		    "curr"
+    linkNode		    [113 117 119]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    119
+    ssIdNumber		    5
+    name		    "amps"
+    linkNode		    [113 118 120]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    120
+    ssIdNumber		    6
+    name		    "ref"
+    linkNode		    [113 119 121]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -17527,73 +17530,9 @@ Stateflow {
   }
   data {
     id			    121
-    ssIdNumber		    7
-    name		    "curr"
-    linkNode		    [116 120 122]
-    scope		    INPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"-1"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-      complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_INHERITED
-    }
-    dataType		    "Inherit: Same as Simulink"
-  }
-  data {
-    id			    122
-    ssIdNumber		    5
-    name		    "amps"
-    linkNode		    [116 121 123]
-    scope		    OUTPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"-1"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-      }
-      complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_NO
-    }
-    dataType		    "Inherit: Same as Simulink"
-  }
-  data {
-    id			    123
-    ssIdNumber		    6
-    name		    "ref"
-    linkNode		    [116 122 124]
-    scope		    INPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"-1"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-      complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_INHERITED
-    }
-    dataType		    "Inherit: Same as Simulink"
-  }
-  data {
-    id			    124
     ssIdNumber		    8
     name		    "sens"
-    linkNode		    [116 123 0]
+    linkNode		    [113 120 0]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -17612,193 +17551,193 @@ Stateflow {
     dataType		    "Inherit: Same as Simulink"
   }
   instance {
-    id			    125
+    id			    122
     name		    "Foreground/Battery/Control/AMP Clamp/Curret Calculation Instantaneos"
     machine		    1
-    chart		    116
+    chart		    113
   }
   chart {
-    id			    126
+    id			    123
     name		    "Foreground/Battery/Control/Battery States/Delay3/Delay 3 Chart"
-    windowPosition	    [-64.5 -42 987 501]
+    windowPosition	    [18.75 -42 987 501]
     viewLimits		    [0 943.5 0 465]
     screen		    [1 1 1366 768 1.333333333333333]
-    treeNode		    [0 127 0 0]
-    firstTransition	    131
-    viewObj		    126
+    treeNode		    [0 124 0 0]
+    firstTransition	    128
+    viewObj		    123
     machine		    1
     ssIdHighWaterMark	    13
     decomposition	    CLUSTER_CHART
-    firstData		    136
+    firstData		    133
     chartFileNumber	    36
     userSpecifiedStateTransitionExecutionOrder 1
     disableImplicitCasting  1
   }
   state {
-    id			    127
+    id			    124
     labelString		    "Init\nduring: write=0;"
     position		    [144.5 129.75 90 60]
     fontSize		    12
-    chart		    126
-    treeNode		    [126 0 0 128]
-    subviewer		    126
+    chart		    123
+    treeNode		    [123 0 0 125]
+    subviewer		    123
     ssIdNumber		    1
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    128
+    id			    125
     labelString		    "Counting\nduring: count++;"
     position		    [401.875 130.875 90 60]
     fontSize		    12
-    chart		    126
-    treeNode		    [126 0 127 129]
-    subviewer		    126
+    chart		    123
+    treeNode		    [123 0 124 126]
+    subviewer		    123
     ssIdNumber		    3
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    129
+    id			    126
     labelString		    "Write\nduring: write=1;"
     position		    [406.375 262.125 90 60]
     fontSize		    12
-    chart		    126
-    treeNode		    [126 0 128 130]
-    subviewer		    126
+    chart		    123
+    treeNode		    [123 0 125 127]
+    subviewer		    123
     ssIdNumber		    6
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    130
+    id			    127
     labelString		    "Clear\nduring: write=0;\nduring: count=0;"
     position		    [149.125 264.375 90 60]
     fontSize		    12
-    chart		    126
-    treeNode		    [126 0 129 0]
-    subviewer		    126
+    chart		    123
+    treeNode		    [123 0 126 0]
+    subviewer		    123
     ssIdNumber		    8
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   transition {
-    id			    131
+    id			    128
     labelPosition	    [175.1 108.141 8.246 14.971]
     fontSize		    12
     src {
       intersection	      [0 0 1 0 189.5 99.75 0 0]
     }
     dst {
-      id		      127
+      id		      124
       intersection	      [1 0 -1 0.5 189.5 129.75 0 0]
     }
     midPoint		    [189.5 111.1415]
-    chart		    126
-    linkNode		    [126 0 132]
+    chart		    123
+    linkNode		    [123 0 129]
     dataLimits		    [187.1 191.9 99.75 129.75]
-    subviewer		    126
+    subviewer		    123
     drawStyle		    SMART
     executionOrder	    1
     ssIdNumber		    4
   }
   transition {
-    id			    132
+    id			    129
     labelString		    "[write==0]"
     labelPosition	    [297.625 148.125 52.475 14.971]
     fontSize		    12
     src {
-      id		      127
+      id		      124
       intersection	      [2 1 0 0.5375 234.5 162 0 2.25]
     }
     dst {
-      id		      128
+      id		      125
       intersection	      [4 -1 -0 0.4813 401.875 162 0 -2.25]
     }
     midPoint		    [317.5654 162]
-    chart		    126
-    linkNode		    [126 131 135]
+    chart		    123
+    linkNode		    [123 128 132]
     dataLimits		    [234.5 401.875 159.6 164.4]
     stampAngle		    NaN
-    subviewer		    126
+    subviewer		    123
     drawStyle		    SMART
     executionOrder	    1
     ssIdNumber		    5
   }
   transition {
-    id			    133
+    id			    130
     labelString		    "[count>=delay]"
     labelPosition	    [450.625 220.875 76.463 14.971]
     fontSize		    12
     src {
-      id		      128
+      id		      125
       intersection	      [3 0 1 0.5347 443.75 190.875 0 3.125]
     }
     dst {
-      id		      129
+      id		      126
       intersection	      [1 0 -1 0.4153 443.75 262.125 0 -3.125]
     }
     midPoint		    [443.75 223.7882]
-    chart		    126
-    linkNode		    [126 135 134]
+    chart		    123
+    linkNode		    [123 132 131]
     dataLimits		    [441.35 446.15 190.875 262.125]
     stampAngle		    NaN
-    subviewer		    126
+    subviewer		    123
     drawStyle		    SMART
     executionOrder	    1
     ssIdNumber		    7
   }
   transition {
-    id			    134
+    id			    131
     labelString		    "[write==1]"
     labelPosition	    [285.625 272.625 52.475 14.971]
     fontSize		    12
     src {
-      id		      129
+      id		      126
       intersection	      [4 -1 0 0.5438 406.375 289.5 0 2.625]
     }
     dst {
-      id		      130
+      id		      127
       intersection	      [2 1 -0 0.4187 239.125 289.5 0 -2.625]
     }
     midPoint		    [323.3748 289.5]
-    chart		    126
-    linkNode		    [126 133 0]
+    chart		    123
+    linkNode		    [123 130 0]
     dataLimits		    [239.125 406.375 287.1 291.9]
     stampAngle		    NaN
-    subviewer		    126
+    subviewer		    123
     drawStyle		    SMART
     executionOrder	    1
     ssIdNumber		    9
   }
   transition {
-    id			    135
+    id			    132
     labelString		    "[write==0]"
     labelPosition	    [190.25 204.75 52.475 14.971]
     fontSize		    12
     src {
-      id		      130
+      id		      127
       intersection	      [1 0 -1 0.4403 188.75 264.375 0 -4.625]
     }
     dst {
-      id		      127
+      id		      124
       intersection	      [3 0 1 0.5083 188.75 189.75 0 5.375]
     }
     midPoint		    [188.75 229.7009]
-    chart		    126
-    linkNode		    [126 132 133]
+    chart		    123
+    linkNode		    [123 129 130]
     dataLimits		    [186.35 191.15 189.75 264.375]
     stampAngle		    NaN
-    subviewer		    126
+    subviewer		    123
     drawStyle		    SMART
     executionOrder	    1
     ssIdNumber		    10
   }
   data {
-    id			    136
+    id			    133
     ssIdNumber		    11
     name		    "write"
-    linkNode		    [126 0 137]
+    linkNode		    [123 0 134]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -17812,10 +17751,10 @@ Stateflow {
     dataType		    "boolean"
   }
   data {
-    id			    137
+    id			    134
     ssIdNumber		    12
     name		    "count"
-    linkNode		    [126 136 138]
+    linkNode		    [123 133 135]
     scope		    LOCAL_DATA
     machine		    1
     props {
@@ -17828,10 +17767,10 @@ Stateflow {
     dataType		    "double"
   }
   data {
-    id			    138
+    id			    135
     ssIdNumber		    13
     name		    "delay"
-    linkNode		    [126 137 0]
+    linkNode		    [123 134 0]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -17844,22 +17783,22 @@ Stateflow {
     dataType		    "double"
   }
   instance {
-    id			    139
+    id			    136
     name		    "Foreground/Battery/Control/Battery States/Delay3/Delay 3 Chart"
     machine		    1
-    chart		    126
+    chart		    123
   }
   target {
-    id			    140
+    id			    137
     name		    "sfun"
     description		    "Default Simulink S-Function Target."
     machine		    1
-    linkNode		    [1 0 141]
+    linkNode		    [1 0 138]
   }
   target {
-    id			    141
+    id			    138
     name		    "rtw"
     machine		    1
-    linkNode		    [1 140 0]
+    linkNode		    [1 137 0]
   }
 }

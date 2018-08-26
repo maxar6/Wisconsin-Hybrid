@@ -73,10 +73,6 @@ E_ApplicationStatus ApplicationStatus = APPLICATION_INIT;
 uint32_T ApplicationStopReason = 0;
 uint32_T ApplicationStopReasonBlock = 0;
 
-/* Name: ONE_SECOND_EVENT_RunCnt ClassID:VAR StorageID:RAM Access:RW4+RW3+NA2+NA1 TypeID:SINT4 CType:int32_T Struct:ONE_SECOND_EVENT_RunCnt Gain:1 Min:-1 Max:2147483646
-   Format:5.0 UpdateID:BACKGND Group:"System | Debug | Event Pause Counters" Help:"The number of times to execute ONE_SECOND_EVENT before pausing.  -1 means run forever" */
-int32_T ONE_SECOND_EVENT_RunCnt = -1;
-
 /* Name: FGND_TDC_EVENT_RunCnt ClassID:VAR StorageID:RAM Access:RW4+RW3+NA2+NA1 TypeID:SINT4 CType:int32_T Struct:FGND_TDC_EVENT_RunCnt Gain:1 Min:-1 Max:2147483646
    Format:5.0 UpdateID:BACKGND Group:"System | Debug | Event Pause Counters" Help:"The number of times to execute FGND_TDC_EVENT before pausing.  -1 means run forever" */
 int32_T FGND_TDC_EVENT_RunCnt = -1;
@@ -100,6 +96,34 @@ int32_T FGND_5XRTI_PERIODIC_RunCnt = -1;
 /* Name: FGND_RTI_PERIODIC_RunCnt ClassID:VAR StorageID:RAM Access:RW4+RW3+NA2+NA1 TypeID:SINT4 CType:int32_T Struct:FGND_RTI_PERIODIC_RunCnt Gain:1 Min:-1 Max:2147483646
    Format:5.0 UpdateID:BACKGND Group:"System | Debug | Event Pause Counters" Help:"The number of times to execute FGND_RTI_PERIODIC before pausing.  -1 means run forever" */
 int32_T FGND_RTI_PERIODIC_RunCnt = -1;
+
+/* Name: FGND_2XRTI_PERIODIC_RunCnt ClassID:VAR StorageID:RAM Access:RW4+RW3+NA2+NA1 TypeID:SINT4 CType:int32_T Struct:FGND_2XRTI_PERIODIC_RunCnt Gain:1 Min:-1 Max:2147483646
+   Format:5.0 UpdateID:BACKGND Group:"System | Debug | Event Pause Counters" Help:"The number of times to execute FGND_2XRTI_PERIODIC before pausing.  -1 means run forever" */
+int32_T FGND_2XRTI_PERIODIC_RunCnt = -1;
+
+/* Name: FGND_10XRTI_PERIODIC_RunCnt ClassID:VAR StorageID:RAM Access:RW4+RW3+NA2+NA1 TypeID:SINT4 CType:int32_T Struct:FGND_10XRTI_PERIODIC_RunCnt Gain:1 Min:-1 Max:2147483646
+   Format:5.0 UpdateID:BACKGND Group:"System | Debug | Event Pause Counters" Help:"The number of times to execute FGND_10XRTI_PERIODIC before pausing.  -1 means run forever" */
+int32_T FGND_10XRTI_PERIODIC_RunCnt = -1;
+
+/* Name: FGND_20XRTI_PERIODIC_RunCnt ClassID:VAR StorageID:RAM Access:RW4+RW3+NA2+NA1 TypeID:SINT4 CType:int32_T Struct:FGND_20XRTI_PERIODIC_RunCnt Gain:1 Min:-1 Max:2147483646
+   Format:5.0 UpdateID:BACKGND Group:"System | Debug | Event Pause Counters" Help:"The number of times to execute FGND_20XRTI_PERIODIC before pausing.  -1 means run forever" */
+int32_T FGND_20XRTI_PERIODIC_RunCnt = -1;
+
+/* Name: BGND_BASEx2_PERIODIC_RunCnt ClassID:VAR StorageID:RAM Access:RW4+RW3+NA2+NA1 TypeID:SINT4 CType:int32_T Struct:BGND_BASEx2_PERIODIC_RunCnt Gain:1 Min:-1 Max:2147483646
+   Format:5.0 UpdateID:BACKGND Group:"System | Debug | Event Pause Counters" Help:"The number of times to execute BGND_BASEx2_PERIODIC before pausing.  -1 means run forever" */
+int32_T BGND_BASEx2_PERIODIC_RunCnt = -1;
+
+/* Name: BGND_BASEx10_PERIODIC_RunCnt ClassID:VAR StorageID:RAM Access:RW4+RW3+NA2+NA1 TypeID:SINT4 CType:int32_T Struct:BGND_BASEx10_PERIODIC_RunCnt Gain:1 Min:-1 Max:2147483646
+   Format:5.0 UpdateID:BACKGND Group:"System | Debug | Event Pause Counters" Help:"The number of times to execute BGND_BASEx10_PERIODIC before pausing.  -1 means run forever" */
+int32_T BGND_BASEx10_PERIODIC_RunCnt = -1;
+
+/* Name: ONE_SECOND_EVENT_RunCnt ClassID:VAR StorageID:RAM Access:RW4+RW3+NA2+NA1 TypeID:SINT4 CType:int32_T Struct:ONE_SECOND_EVENT_RunCnt Gain:1 Min:-1 Max:2147483646
+   Format:5.0 UpdateID:BACKGND Group:"System | Debug | Event Pause Counters" Help:"The number of times to execute ONE_SECOND_EVENT before pausing.  -1 means run forever" */
+int32_T ONE_SECOND_EVENT_RunCnt = -1;
+
+/* Name: IDLE_EVENT_RunCnt ClassID:VAR StorageID:RAM Access:RW4+RW3+NA2+NA1 TypeID:SINT4 CType:int32_T Struct:IDLE_EVENT_RunCnt Gain:1 Min:-1 Max:2147483646
+   Format:5.0 UpdateID:BACKGND Group:"System | Debug | Event Pause Counters" Help:"The number of times to execute IDLE_EVENT before pausing.  -1 means run forever" */
+int32_T IDLE_EVENT_RunCnt = -1;
 
 /* Name: BGND_BASE_PERIODIC_RunCnt ClassID:VAR StorageID:RAM Access:RW4+RW3+NA2+NA1 TypeID:SINT4 CType:int32_T Struct:BGND_BASE_PERIODIC_RunCnt Gain:1 Min:-1 Max:2147483646
    Format:5.0 UpdateID:BACKGND Group:"System | Debug | Event Pause Counters" Help:"The number of times to execute BGND_BASE_PERIODIC before pausing.  -1 means run forever" */
@@ -225,7 +249,7 @@ void CheckApplicationStatus(void)
   if (stopApplication) {
     ApplicationStatus = APPLICATION_STOP;
 
-    /* S-Function Block: <S361>/motohawk_encoder_pseudo */
+    /* S-Function Block: <S383>/motohawk_encoder_pseudo */
     {
       /* Turn off Pseudo-Encoder on Stop */
       S_EncoderResourceAttributes EncoderAttribsObj;
@@ -246,21 +270,21 @@ void CheckApplicationStatus(void)
               index), 1, SEQ_DISABLED);
           }
 
-          (&BaseEngineController_A02_DWork.s679_InjectorSequence_DWORK1[0])
+          (&BaseEngineController_A02_DWork.s702_InjectorSequence_DWORK1[0])
             [index] = SEQ_DISABLED;
         } else if ((INJ_SequenceType_DataStore()) == 1) {
           SetSeqOutCond((E_ModuleResource) ((INJ_InitialPin_DataStore()) + index),
                         0, SEQ_DISABLED);
           SetSeqOutCond((E_ModuleResource) ((INJ_InitialPin_DataStore()) + index),
                         1, SEQ_DISABLED);
-          (&BaseEngineController_A02_DWork.s679_InjectorSequence_DWORK1[0])
+          (&BaseEngineController_A02_DWork.s702_InjectorSequence_DWORK1[0])
             [index] = SEQ_DISABLED;
         } else if ((INJ_SequenceType_DataStore()) == 2) {
           SetSeqOutCond((E_ModuleResource) ((INJ_InitialPin_DataStore()) + index),
                         0, SEQ_DISABLED);
           SetSeqOutCond((E_ModuleResource) ((INJ_InitialPin_DataStore()) + index),
                         1, SEQ_DISABLED);
-          (&BaseEngineController_A02_DWork.s679_InjectorSequence_DWORK1[0])
+          (&BaseEngineController_A02_DWork.s702_InjectorSequence_DWORK1[0])
             [index] = SEQ_DISABLED;
         }
       }
@@ -301,10 +325,6 @@ void CheckApplicationStatus(void)
 
     /* Check the debug execution counters for each event
        and pause the application when all enabled counters have reached zero */
-    if (ONE_SECOND_EVENT_RunCnt == 0)
-      zeroSeen = 1;
-    if (ONE_SECOND_EVENT_RunCnt > 0)
-      countingSeen = 1;
     if (FGND_TDC_EVENT_RunCnt == 0)
       zeroSeen = 1;
     if (FGND_TDC_EVENT_RunCnt > 0)
@@ -328,6 +348,34 @@ void CheckApplicationStatus(void)
     if (FGND_RTI_PERIODIC_RunCnt == 0)
       zeroSeen = 1;
     if (FGND_RTI_PERIODIC_RunCnt > 0)
+      countingSeen = 1;
+    if (FGND_2XRTI_PERIODIC_RunCnt == 0)
+      zeroSeen = 1;
+    if (FGND_2XRTI_PERIODIC_RunCnt > 0)
+      countingSeen = 1;
+    if (FGND_10XRTI_PERIODIC_RunCnt == 0)
+      zeroSeen = 1;
+    if (FGND_10XRTI_PERIODIC_RunCnt > 0)
+      countingSeen = 1;
+    if (FGND_20XRTI_PERIODIC_RunCnt == 0)
+      zeroSeen = 1;
+    if (FGND_20XRTI_PERIODIC_RunCnt > 0)
+      countingSeen = 1;
+    if (BGND_BASEx2_PERIODIC_RunCnt == 0)
+      zeroSeen = 1;
+    if (BGND_BASEx2_PERIODIC_RunCnt > 0)
+      countingSeen = 1;
+    if (BGND_BASEx10_PERIODIC_RunCnt == 0)
+      zeroSeen = 1;
+    if (BGND_BASEx10_PERIODIC_RunCnt > 0)
+      countingSeen = 1;
+    if (ONE_SECOND_EVENT_RunCnt == 0)
+      zeroSeen = 1;
+    if (ONE_SECOND_EVENT_RunCnt > 0)
+      countingSeen = 1;
+    if (IDLE_EVENT_RunCnt == 0)
+      zeroSeen = 1;
+    if (IDLE_EVENT_RunCnt > 0)
       countingSeen = 1;
     if (BGND_BASE_PERIODIC_RunCnt == 0)
       zeroSeen = 1;
