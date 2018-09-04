@@ -70,8 +70,6 @@ static real_T c22_e_emlrt_marshallIn(SFc22_Mooventure2016_Rev5InstanceStruct
   *chartInstance, const mxArray *c22_u, const emlrtMsgIdentifier *c22_parentId);
 static void c22_c_sf_marshallIn(void *chartInstanceVoid, const mxArray
   *c22_mxArrayInData, const char_T *c22_varName, void *c22_outData);
-static const mxArray *c22_d_sf_marshallOut(void *chartInstanceVoid, void
-  *c22_inData);
 static const mxArray *c22_f_emlrt_marshallIn
   (SFc22_Mooventure2016_Rev5InstanceStruct *chartInstance, const mxArray
    *c22_b_setSimStateSideEffectsInfo, const char_T *c22_identifier);
@@ -87,8 +85,6 @@ static void initialize_c22_Mooventure2016_Rev5
 {
   real_T *c22_engTemp;
   real_T *c22_transTemp;
-  real_T *c22_timerOut;
-  c22_timerOut = (real_T *)ssGetOutputPortSignal(chartInstance->S, 3);
   c22_transTemp = (real_T *)ssGetOutputPortSignal(chartInstance->S, 2);
   c22_engTemp = (real_T *)ssGetOutputPortSignal(chartInstance->S, 1);
   chartInstance->c22_sfEvent = CALL_EVENT;
@@ -102,16 +98,13 @@ static void initialize_c22_Mooventure2016_Rev5
   chartInstance->c22_tp_Wait = 0U;
   chartInstance->c22_is_active_c22_Mooventure2016_Rev5 = 0U;
   chartInstance->c22_is_c22_Mooventure2016_Rev5 = 0U;
+  chartInstance->c22_count = 0.0;
   if (!(cdrGetOutputPortReusable(chartInstance->S, 1) != 0)) {
     *c22_engTemp = 0.0;
   }
 
   if (!(cdrGetOutputPortReusable(chartInstance->S, 2) != 0)) {
     *c22_transTemp = 0.0;
-  }
-
-  if (!(cdrGetOutputPortReusable(chartInstance->S, 3) != 0)) {
-    *c22_timerOut = 0.0;
   }
 }
 
@@ -139,7 +132,7 @@ static void c22_update_debugger_state_c22_Mooventure2016_Rev5
   c22_prevAniVal = sf_debug_get_animation();
   sf_debug_set_animation(0U);
   if ((int16_T)chartInstance->c22_is_active_c22_Mooventure2016_Rev5 == 1) {
-    _SFD_CC_CALL(CHART_ACTIVE_TAG, 21U, chartInstance->c22_sfEvent);
+    _SFD_CC_CALL(CHART_ACTIVE_TAG, 15U, chartInstance->c22_sfEvent);
   }
 
   if (chartInstance->c22_is_c22_Mooventure2016_Rev5 == c22_IN_Normal) {
@@ -197,9 +190,7 @@ static const mxArray *get_sim_state_c22_Mooventure2016_Rev5
   uint8_T c22_e_u;
   const mxArray *c22_f_y = NULL;
   real_T *c22_engTemp;
-  real_T *c22_timerOut;
   real_T *c22_transTemp;
-  c22_timerOut = (real_T *)ssGetOutputPortSignal(chartInstance->S, 3);
   c22_transTemp = (real_T *)ssGetOutputPortSignal(chartInstance->S, 2);
   c22_engTemp = (real_T *)ssGetOutputPortSignal(chartInstance->S, 1);
   c22_st = NULL;
@@ -211,12 +202,12 @@ static const mxArray *get_sim_state_c22_Mooventure2016_Rev5
   c22_b_y = NULL;
   sf_mex_assign(&c22_b_y, sf_mex_create("y", &c22_u, 0, 0U, 0U, 0U, 0));
   sf_mex_setcell(c22_y, 0, c22_b_y);
-  c22_b_hoistedGlobal = *c22_timerOut;
+  c22_b_hoistedGlobal = *c22_transTemp;
   c22_b_u = c22_b_hoistedGlobal;
   c22_c_y = NULL;
   sf_mex_assign(&c22_c_y, sf_mex_create("y", &c22_b_u, 0, 0U, 0U, 0U, 0));
   sf_mex_setcell(c22_y, 1, c22_c_y);
-  c22_c_hoistedGlobal = *c22_transTemp;
+  c22_c_hoistedGlobal = chartInstance->c22_count;
   c22_c_u = c22_c_hoistedGlobal;
   c22_d_y = NULL;
   sf_mex_assign(&c22_d_y, sf_mex_create("y", &c22_c_u, 0, 0U, 0U, 0U, 0));
@@ -240,18 +231,16 @@ static void set_sim_state_c22_Mooventure2016_Rev5
 {
   const mxArray *c22_u;
   real_T *c22_engTemp;
-  real_T *c22_timerOut;
   real_T *c22_transTemp;
-  c22_timerOut = (real_T *)ssGetOutputPortSignal(chartInstance->S, 3);
   c22_transTemp = (real_T *)ssGetOutputPortSignal(chartInstance->S, 2);
   c22_engTemp = (real_T *)ssGetOutputPortSignal(chartInstance->S, 1);
   c22_u = sf_mex_dup(c22_st);
   *c22_engTemp = c22_d_emlrt_marshallIn(chartInstance, sf_mex_dup(sf_mex_getcell
     (c22_u, 0)), "engTemp");
-  *c22_timerOut = c22_d_emlrt_marshallIn(chartInstance, sf_mex_dup
-    (sf_mex_getcell(c22_u, 1)), "timerOut");
   *c22_transTemp = c22_d_emlrt_marshallIn(chartInstance, sf_mex_dup
-    (sf_mex_getcell(c22_u, 2)), "transTemp");
+    (sf_mex_getcell(c22_u, 1)), "transTemp");
+  chartInstance->c22_count = c22_d_emlrt_marshallIn(chartInstance, sf_mex_dup
+    (sf_mex_getcell(c22_u, 2)), "count");
   chartInstance->c22_is_active_c22_Mooventure2016_Rev5 = c22_b_emlrt_marshallIn
     (chartInstance, sf_mex_dup(sf_mex_getcell(c22_u, 3)),
      "is_active_c22_Mooventure2016_Rev5");
@@ -318,23 +307,21 @@ static void sf_c22_Mooventure2016_Rev5(SFc22_Mooventure2016_Rev5InstanceStruct
   real_T *c22_transTemp;
   real_T *c22_solid;
   real_T *c22_flash;
-  boolean_T *c22_timerIn;
-  real_T *c22_timerOut;
-  c22_timerOut = (real_T *)ssGetOutputPortSignal(chartInstance->S, 3);
-  c22_timerIn = (boolean_T *)ssGetInputPortSignal(chartInstance->S, 2);
+  real_T *c22_timerIn;
+  c22_timerIn = (real_T *)ssGetInputPortSignal(chartInstance->S, 2);
   c22_flash = (real_T *)ssGetInputPortSignal(chartInstance->S, 1);
   c22_solid = (real_T *)ssGetInputPortSignal(chartInstance->S, 0);
   c22_transTemp = (real_T *)ssGetOutputPortSignal(chartInstance->S, 2);
   c22_engTemp = (real_T *)ssGetOutputPortSignal(chartInstance->S, 1);
   c22_set_sim_state_side_effects_c22_Mooventure2016_Rev5(chartInstance);
   _sfTime_ = (real_T)ssGetT(chartInstance->S);
-  _SFD_CC_CALL(CHART_ENTER_SFUNCTION_TAG, 21U, chartInstance->c22_sfEvent);
+  _SFD_CC_CALL(CHART_ENTER_SFUNCTION_TAG, 15U, chartInstance->c22_sfEvent);
   _SFD_DATA_RANGE_CHECK(*c22_engTemp, 0U);
   _SFD_DATA_RANGE_CHECK(*c22_transTemp, 1U);
   _SFD_DATA_RANGE_CHECK(*c22_solid, 2U);
   _SFD_DATA_RANGE_CHECK(*c22_flash, 3U);
-  _SFD_DATA_RANGE_CHECK((real_T)*c22_timerIn, 4U);
-  _SFD_DATA_RANGE_CHECK(*c22_timerOut, 5U);
+  _SFD_DATA_RANGE_CHECK(*c22_timerIn, 4U);
+  _SFD_DATA_RANGE_CHECK(chartInstance->c22_count, 5U);
   chartInstance->c22_sfEvent = CALL_EVENT;
   c22_chartstep_c22_Mooventure2016_Rev5(chartInstance);
   sf_debug_check_for_state_inconsistency(_Mooventure2016_Rev5MachineNumber_,
@@ -347,20 +334,18 @@ static void c22_chartstep_c22_Mooventure2016_Rev5
   real_T *c22_flash;
   real_T *c22_engTemp;
   real_T *c22_transTemp;
-  real_T *c22_timerOut;
   real_T *c22_solid;
-  boolean_T *c22_timerIn;
-  c22_timerOut = (real_T *)ssGetOutputPortSignal(chartInstance->S, 3);
-  c22_timerIn = (boolean_T *)ssGetInputPortSignal(chartInstance->S, 2);
+  real_T *c22_timerIn;
+  c22_timerIn = (real_T *)ssGetInputPortSignal(chartInstance->S, 2);
   c22_flash = (real_T *)ssGetInputPortSignal(chartInstance->S, 1);
   c22_solid = (real_T *)ssGetInputPortSignal(chartInstance->S, 0);
   c22_transTemp = (real_T *)ssGetOutputPortSignal(chartInstance->S, 2);
   c22_engTemp = (real_T *)ssGetOutputPortSignal(chartInstance->S, 1);
-  _SFD_CC_CALL(CHART_ENTER_DURING_FUNCTION_TAG, 21U, chartInstance->c22_sfEvent);
+  _SFD_CC_CALL(CHART_ENTER_DURING_FUNCTION_TAG, 15U, chartInstance->c22_sfEvent);
   if ((int16_T)chartInstance->c22_is_active_c22_Mooventure2016_Rev5 == 0) {
-    _SFD_CC_CALL(CHART_ENTER_ENTRY_FUNCTION_TAG, 21U, chartInstance->c22_sfEvent);
+    _SFD_CC_CALL(CHART_ENTER_ENTRY_FUNCTION_TAG, 15U, chartInstance->c22_sfEvent);
     chartInstance->c22_is_active_c22_Mooventure2016_Rev5 = 1U;
-    _SFD_CC_CALL(EXIT_OUT_OF_FUNCTION_TAG, 21U, chartInstance->c22_sfEvent);
+    _SFD_CC_CALL(EXIT_OUT_OF_FUNCTION_TAG, 15U, chartInstance->c22_sfEvent);
     _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 0U,
                  chartInstance->c22_sfEvent);
     _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 0U, chartInstance->c22_sfEvent);
@@ -370,7 +355,7 @@ static void c22_chartstep_c22_Mooventure2016_Rev5
   } else {
     switch (chartInstance->c22_is_c22_Mooventure2016_Rev5) {
      case c22_IN_FlashOff:
-      CV_CHART_EVAL(21, 0, 1);
+      CV_CHART_EVAL(15, 0, 1);
       _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 0U,
                    chartInstance->c22_sfEvent);
       _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 5U,
@@ -388,15 +373,13 @@ static void c22_chartstep_c22_Mooventure2016_Rev5
         _SFD_DATA_RANGE_CHECK(*c22_engTemp, 0U);
         *c22_transTemp = 23.0;
         _SFD_DATA_RANGE_CHECK(*c22_transTemp, 1U);
-        *c22_timerOut = 0.0;
-        _SFD_DATA_RANGE_CHECK(*c22_timerOut, 5U);
       }
 
       _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 0U, chartInstance->c22_sfEvent);
       break;
 
      case c22_IN_FlashOn:
-      CV_CHART_EVAL(21, 0, 2);
+      CV_CHART_EVAL(15, 0, 2);
       _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 1U,
                    chartInstance->c22_sfEvent);
       _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 4U,
@@ -436,6 +419,8 @@ static void c22_chartstep_c22_Mooventure2016_Rev5
           chartInstance->c22_is_c22_Mooventure2016_Rev5 = c22_IN_Wait;
           _SFD_CS_CALL(STATE_ACTIVE_TAG, 4U, chartInstance->c22_sfEvent);
           chartInstance->c22_tp_Wait = 1U;
+          chartInstance->c22_count = 0.0;
+          _SFD_DATA_RANGE_CHECK(chartInstance->c22_count, 5U);
         } else {
           *c22_engTemp = 200.0;
           _SFD_DATA_RANGE_CHECK(*c22_engTemp, 0U);
@@ -448,7 +433,7 @@ static void c22_chartstep_c22_Mooventure2016_Rev5
       break;
 
      case c22_IN_Normal:
-      CV_CHART_EVAL(21, 0, 3);
+      CV_CHART_EVAL(15, 0, 3);
       _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 2U,
                    chartInstance->c22_sfEvent);
       _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 1U,
@@ -500,7 +485,7 @@ static void c22_chartstep_c22_Mooventure2016_Rev5
       break;
 
      case c22_IN_Solid:
-      CV_CHART_EVAL(21, 0, 4);
+      CV_CHART_EVAL(15, 0, 4);
       _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 3U,
                    chartInstance->c22_sfEvent);
       _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 2U,
@@ -524,13 +509,14 @@ static void c22_chartstep_c22_Mooventure2016_Rev5
       break;
 
      case c22_IN_Wait:
-      CV_CHART_EVAL(21, 0, 5);
+      CV_CHART_EVAL(15, 0, 5);
       _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 4U,
                    chartInstance->c22_sfEvent);
       _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 7U,
                    chartInstance->c22_sfEvent);
-      if (CV_TRANSITION_EVAL(7U, (int32_T)_SFD_CCP_CALL(7U, 0, (int16_T)
-            *c22_timerIn == 1 != 0U, chartInstance->c22_sfEvent))) {
+      if (CV_TRANSITION_EVAL(7U, (int32_T)_SFD_CCP_CALL(7U, 0,
+            chartInstance->c22_count >= *c22_timerIn != 0U,
+            chartInstance->c22_sfEvent))) {
         _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 7U, chartInstance->c22_sfEvent);
         chartInstance->c22_tp_Wait = 0U;
         _SFD_CS_CALL(STATE_INACTIVE_TAG, 4U, chartInstance->c22_sfEvent);
@@ -538,15 +524,15 @@ static void c22_chartstep_c22_Mooventure2016_Rev5
         _SFD_CS_CALL(STATE_ACTIVE_TAG, 0U, chartInstance->c22_sfEvent);
         chartInstance->c22_tp_FlashOff = 1U;
       } else {
-        *c22_timerOut = 1.0;
-        _SFD_DATA_RANGE_CHECK(*c22_timerOut, 5U);
+        chartInstance->c22_count++;
+        _SFD_DATA_RANGE_CHECK(chartInstance->c22_count, 5U);
       }
 
       _SFD_CS_CALL(EXIT_OUT_OF_FUNCTION_TAG, 4U, chartInstance->c22_sfEvent);
       break;
 
      default:
-      CV_CHART_EVAL(21, 0, 0);
+      CV_CHART_EVAL(15, 0, 0);
       chartInstance->c22_is_c22_Mooventure2016_Rev5 = (uint8_T)
         c22_IN_NO_ACTIVE_CHILD;
       _SFD_CS_CALL(STATE_INACTIVE_TAG, 0U, chartInstance->c22_sfEvent);
@@ -554,7 +540,7 @@ static void c22_chartstep_c22_Mooventure2016_Rev5
     }
   }
 
-  _SFD_CC_CALL(EXIT_OUT_OF_FUNCTION_TAG, 21U, chartInstance->c22_sfEvent);
+  _SFD_CC_CALL(EXIT_OUT_OF_FUNCTION_TAG, 15U, chartInstance->c22_sfEvent);
 }
 
 static void initSimStructsc22_Mooventure2016_Rev5
@@ -743,22 +729,6 @@ static void c22_c_sf_marshallIn(void *chartInstanceVoid, const mxArray
   sf_mex_destroy(&c22_mxArrayInData);
 }
 
-static const mxArray *c22_d_sf_marshallOut(void *chartInstanceVoid, void
-  *c22_inData)
-{
-  const mxArray *c22_mxArrayOutData = NULL;
-  boolean_T c22_u;
-  const mxArray *c22_y = NULL;
-  SFc22_Mooventure2016_Rev5InstanceStruct *chartInstance;
-  chartInstance = (SFc22_Mooventure2016_Rev5InstanceStruct *)chartInstanceVoid;
-  c22_mxArrayOutData = NULL;
-  c22_u = *(boolean_T *)c22_inData;
-  c22_y = NULL;
-  sf_mex_assign(&c22_y, sf_mex_create("y", &c22_u, 11, 0U, 0U, 0U, 0));
-  sf_mex_assign(&c22_mxArrayOutData, c22_y);
-  return c22_mxArrayOutData;
-}
-
 static const mxArray *c22_f_emlrt_marshallIn
   (SFc22_Mooventure2016_Rev5InstanceStruct *chartInstance, const mxArray
    *c22_b_setSimStateSideEffectsInfo, const char_T *c22_identifier)
@@ -793,10 +763,10 @@ static void init_dsm_address_info(SFc22_Mooventure2016_Rev5InstanceStruct
 /* SFunction Glue Code */
 void sf_c22_Mooventure2016_Rev5_get_check_sum(mxArray *plhs[])
 {
-  ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(3137161759U);
-  ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(3660911397U);
-  ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(3680031804U);
-  ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(4078892429U);
+  ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(907219232U);
+  ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(3639037107U);
+  ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(3572881572U);
+  ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(2496053390U);
 }
 
 mxArray *sf_c22_Mooventure2016_Rev5_get_autoinheritance_info(void)
@@ -810,10 +780,10 @@ mxArray *sf_c22_Mooventure2016_Rev5_get_autoinheritance_info(void)
   {
     mxArray *mxChecksum = mxCreateDoubleMatrix(4,1,mxREAL);
     double *pr = mxGetPr(mxChecksum);
-    pr[0] = (double)(2996120848U);
-    pr[1] = (double)(2471589029U);
-    pr[2] = (double)(113238847U);
-    pr[3] = (double)(1503381188U);
+    pr[0] = (double)(1629414548U);
+    pr[1] = (double)(619043161U);
+    pr[2] = (double)(153510429U);
+    pr[3] = (double)(4285936184U);
     mxSetField(mxAutoinheritanceInfo,0,"checksum",mxChecksum);
   }
 
@@ -872,7 +842,7 @@ mxArray *sf_c22_Mooventure2016_Rev5_get_autoinheritance_info(void)
       const char *typeFields[] = { "base", "fixpt" };
 
       mxArray *mxType = mxCreateStructMatrix(1,1,2,typeFields);
-      mxSetField(mxType,0,"base",mxCreateDoubleScalar(1));
+      mxSetField(mxType,0,"base",mxCreateDoubleScalar(10));
       mxSetField(mxType,0,"fixpt",mxCreateDoubleMatrix(0,0,mxREAL));
       mxSetField(mxData,2,"type",mxType);
     }
@@ -889,7 +859,7 @@ mxArray *sf_c22_Mooventure2016_Rev5_get_autoinheritance_info(void)
   {
     const char *dataFields[] = { "size", "type", "complexity" };
 
-    mxArray *mxData = mxCreateStructMatrix(1,3,3,dataFields);
+    mxArray *mxData = mxCreateStructMatrix(1,2,3,dataFields);
 
     {
       mxArray *mxSize = mxCreateDoubleMatrix(1,2,mxREAL);
@@ -928,25 +898,6 @@ mxArray *sf_c22_Mooventure2016_Rev5_get_autoinheritance_info(void)
     }
 
     mxSetField(mxData,1,"complexity",mxCreateDoubleScalar(0));
-
-    {
-      mxArray *mxSize = mxCreateDoubleMatrix(1,2,mxREAL);
-      double *pr = mxGetPr(mxSize);
-      pr[0] = (double)(1);
-      pr[1] = (double)(1);
-      mxSetField(mxData,2,"size",mxSize);
-    }
-
-    {
-      const char *typeFields[] = { "base", "fixpt" };
-
-      mxArray *mxType = mxCreateStructMatrix(1,1,2,typeFields);
-      mxSetField(mxType,0,"base",mxCreateDoubleScalar(10));
-      mxSetField(mxType,0,"fixpt",mxCreateDoubleMatrix(0,0,mxREAL));
-      mxSetField(mxData,2,"type",mxType);
-    }
-
-    mxSetField(mxData,2,"complexity",mxCreateDoubleScalar(0));
     mxSetField(mxAutoinheritanceInfo,0,"outputs",mxData);
   }
 
@@ -963,7 +914,7 @@ static const mxArray *sf_get_sim_state_info_c22_Mooventure2016_Rev5(void)
 
   mxArray *mxInfo = mxCreateStructMatrix(1, 1, 2, infoFields);
   const char *infoEncStr[] = {
-    "100 S1x5'type','srcId','name','auxInfo'{{M[1],M[15],T\"engTemp\",},{M[1],M[27],T\"timerOut\",},{M[1],M[16],T\"transTemp\",},{M[8],M[0],T\"is_active_c22_Mooventure2016_Rev5\",},{M[9],M[0],T\"is_c22_Mooventure2016_Rev5\",}}"
+    "100 S1x5'type','srcId','name','auxInfo'{{M[1],M[15],T\"engTemp\",},{M[1],M[16],T\"transTemp\",},{M[3],M[28],T\"count\",},{M[8],M[0],T\"is_active_c22_Mooventure2016_Rev5\",},{M[9],M[0],T\"is_c22_Mooventure2016_Rev5\",}}"
   };
 
   mxArray *mxVarInfo = sf_mex_decode_encoded_mx_struct_array(infoEncStr, 5, 10);
@@ -1016,7 +967,7 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
           _SFD_SET_DATA_PROPS(2,1,1,0,"solid");
           _SFD_SET_DATA_PROPS(3,1,1,0,"flash");
           _SFD_SET_DATA_PROPS(4,1,1,0,"timerIn");
-          _SFD_SET_DATA_PROPS(5,2,0,1,"timerOut");
+          _SFD_SET_DATA_PROPS(5,0,0,0,"count");
           _SFD_STATE_INFO(0,0,0);
           _SFD_STATE_INFO(1,0,0);
           _SFD_STATE_INFO(2,0,0);
@@ -1129,7 +1080,7 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
         {
           static unsigned int sStartGuardMap[] = { 1 };
 
-          static unsigned int sEndGuardMap[] = { 11 };
+          static unsigned int sEndGuardMap[] = { 17 };
 
           static int sPostFixPredicateTree[] = { 0 };
 
@@ -1228,7 +1179,7 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
         if (chartAlreadyPresent==0) {
           static unsigned int sStartGuardMap[] = { 1 };
 
-          static unsigned int sEndGuardMap[] = { 11 };
+          static unsigned int sEndGuardMap[] = { 17 };
 
           _SFD_TRANS_COV_MAPS(7,
                               0,NULL,NULL,
@@ -1247,8 +1198,8 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
           (MexFcnForType)c22_c_sf_marshallOut,(MexInFcnForType)NULL);
         _SFD_SET_DATA_COMPILED_PROPS(3,SF_DOUBLE,0,NULL,0,0,0,0.0,1.0,0,0,
           (MexFcnForType)c22_c_sf_marshallOut,(MexInFcnForType)NULL);
-        _SFD_SET_DATA_COMPILED_PROPS(4,SF_UINT8,0,NULL,0,0,0,0.0,1.0,0,0,
-          (MexFcnForType)c22_d_sf_marshallOut,(MexInFcnForType)NULL);
+        _SFD_SET_DATA_COMPILED_PROPS(4,SF_DOUBLE,0,NULL,0,0,0,0.0,1.0,0,0,
+          (MexFcnForType)c22_c_sf_marshallOut,(MexInFcnForType)NULL);
         _SFD_SET_DATA_COMPILED_PROPS(5,SF_DOUBLE,0,NULL,0,0,0,0.0,1.0,0,0,
           (MexFcnForType)c22_c_sf_marshallOut,(MexInFcnForType)
           c22_c_sf_marshallIn);
@@ -1258,10 +1209,8 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
           real_T *c22_transTemp;
           real_T *c22_solid;
           real_T *c22_flash;
-          boolean_T *c22_timerIn;
-          real_T *c22_timerOut;
-          c22_timerOut = (real_T *)ssGetOutputPortSignal(chartInstance->S, 3);
-          c22_timerIn = (boolean_T *)ssGetInputPortSignal(chartInstance->S, 2);
+          real_T *c22_timerIn;
+          c22_timerIn = (real_T *)ssGetInputPortSignal(chartInstance->S, 2);
           c22_flash = (real_T *)ssGetInputPortSignal(chartInstance->S, 1);
           c22_solid = (real_T *)ssGetInputPortSignal(chartInstance->S, 0);
           c22_transTemp = (real_T *)ssGetOutputPortSignal(chartInstance->S, 2);
@@ -1271,7 +1220,7 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
           _SFD_SET_DATA_VALUE_PTR(2U, c22_solid);
           _SFD_SET_DATA_VALUE_PTR(3U, c22_flash);
           _SFD_SET_DATA_VALUE_PTR(4U, c22_timerIn);
-          _SFD_SET_DATA_VALUE_PTR(5U, c22_timerOut);
+          _SFD_SET_DATA_VALUE_PTR(5U, &chartInstance->c22_count);
         }
       }
     } else {
@@ -1432,7 +1381,7 @@ static void mdlSetWorkWidths_c22_Mooventure2016_Rev5(SimStruct *S)
       sf_mark_chart_expressionable_inputs(S,"Mooventure2016_Rev5",
         "Mooventure2016_Rev5",22,3);
       sf_mark_chart_reusable_outputs(S,"Mooventure2016_Rev5",
-        "Mooventure2016_Rev5",22,3);
+        "Mooventure2016_Rev5",22,2);
     }
 
     sf_set_rtw_dwork_info(S,"Mooventure2016_Rev5","Mooventure2016_Rev5",22);
@@ -1441,10 +1390,10 @@ static void mdlSetWorkWidths_c22_Mooventure2016_Rev5(SimStruct *S)
   }
 
   ssSetOptions(S,ssGetOptions(S)|SS_OPTION_WORKS_WITH_CODE_REUSE);
-  ssSetChecksum0(S,(3978194798U));
-  ssSetChecksum1(S,(1904716766U));
-  ssSetChecksum2(S,(1556498791U));
-  ssSetChecksum3(S,(464287570U));
+  ssSetChecksum0(S,(4209595944U));
+  ssSetChecksum1(S,(3582319196U));
+  ssSetChecksum2(S,(1285668679U));
+  ssSetChecksum3(S,(2579043480U));
   ssSetmdlDerivatives(S, NULL);
   ssSetExplicitFCSSCtrl(S,1);
 }

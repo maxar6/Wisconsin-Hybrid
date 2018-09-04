@@ -497,11 +497,6 @@
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
-               <Default>1200.0</Default>
-               <Name>Temp_Flash</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
                <Default>0.03</Default>
                <Name>Max_Dist_Travel_In_Sec</Name>
              </DataStore>
@@ -685,6 +680,51 @@
                <Default>0.0</Default>
                <Name>Shift_Position_Raw_Ovr_new</Name>
              </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Brake_Position_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Brake_Position_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Brake_Position_PreIn</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>-32767.0 -29567.0 -26367.0 -23167.0 -19967.0 -16767.0 -13567.0 -10367.0 -7167.0 -3967.0 -767.0 2433.0 5633.0 8833.0 12033.0 15233.0 18433.0 21633.0 24833.0 28033.0 31233.0 </Default>
+               <Name>Brake_Position_PreIdxArr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>uint16</DataType>
+               <Default>0U</Default>
+               <Name>Brake_Position_PreIdx</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Brake_Position_Tbl</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.0 0.9 0.8 0.7 0.6 0.5 0.4 0.3 0.2 0.1 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 </Default>
+               <Name>Brake_Position_TblTbl</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Throttle_Position_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>uint16</DataType>
+               <Default>0.0</Default>
+               <Name>Throttle_Position_Ovr_new</Name>
+             </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>5.0</Default>
@@ -719,36 +759,6 @@
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>HybridStateOverride_new</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>boolean</DataType>
-               <Default>0</Default>
-               <Name>Brake_Position_Ovr_ovr</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>Brake_Position_Ovr_new</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>boolean</DataType>
-               <Default>0</Default>
-               <Name>Throttle_Position_Raw_Ovr_ovr</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>uint16</DataType>
-               <Default>0.0</Default>
-               <Name>Throttle_Position_Raw_Ovr_new</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>boolean</DataType>
-               <Default>0</Default>
-               <Name>Throttle_Position_Ovr_ovr</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>uint16</DataType>
-               <Default>0.0</Default>
-               <Name>Throttle_Position_Ovr_new</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
@@ -1690,6 +1700,11 @@
                <Default>0</Default>
                <Name>Eng_Cool_Temp_Ovr_ovr</Name>
              </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>200.0</Default>
+               <Name>Flash_Timer</Name>
+             </DataStore>
             <DataStore ref="Volatile">
                <DataType>real32</DataType>
                <Default>0.0</Default>
@@ -2344,11 +2359,6 @@
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>VEH_ID_Prb</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>boolean</DataType>
-               <Default>0</Default>
-               <Name>TimerOne1</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>real32</DataType>
@@ -3344,6 +3354,41 @@
                <DataType>uint32</DataType>
                <Default>0.0</Default>
                <Name>ABS_4B0_AgeCount_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Throttle_Position_Raw_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Throttle_Position_Raw_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Throttle_Position_PreIn</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>0.0 15.5 31.0 46.5 62.0 77.5 93.0 108.5 124.0 139.5 155.0 170.5 186.0 201.5 217.0 232.5 248.0 </Default>
+               <Name>Throttle_Position_PreIdxArr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>uint16</DataType>
+               <Default>0U</Default>
+               <Name>Throttle_Position_PreIdx</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Throttle_Position_Tbl</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>0.0 0.061 0.122 0.183 0.244 0.305 0.366 0.427 0.488 0.54899999999999993 0.61 0.671 0.732 0.79299999999999993 0.854 0.915 0.976 </Default>
+               <Name>Throttle_Position_TblTbl</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>boolean</DataType>
@@ -9632,21 +9677,6 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Temp_Flash">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>0.05</gain>
-        		                <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|Enabled Subsystem</group>
-        		                <max>5000000000000000.000000</max>
-        		                <min>-5000000000000000.000000</min>
-        		                <name>Temp_Flash</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="Max_Dist_Travel_In_Sec">
         		                <access>RW RW RW RW</access>
         		                <class>VAR</class>
@@ -10146,6 +10176,68 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Brake_Position_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs | Brake_Position_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Brake_Position_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Brake_Position_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs | Brake_Position_Ovr Override</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Brake_Position_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Throttle_Position_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>Mooventure2016_Rev5|Foreground|Inputs|Analog Inputs|Throttle Position | Throttle_Position_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Throttle_Position_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Throttle_Position_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>5.0</format>
+        		                <gain>1.0</gain>
+        		                <group>Mooventure2016_Rev5|Foreground|Inputs|Analog Inputs|Throttle Position | Throttle_Position_Ovr Override</group>
+        		                <max>65535.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Throttle_Position_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="SafetyModeEnterSOC">
         		                <access>RW RW RW RW</access>
         		                <class>VAR</class>
@@ -10254,99 +10346,6 @@
         		                <max>100000000000000000.000000</max>
         		                <min>-100000000000000000.000000</min>
         		                <name>HybridStateOverride_new</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Brake_Position_Ovr_ovr">
-        		                <access>RW RW RW RW</access>
-        		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_2</enum_name>
-        		                <exp>1.0</exp>
-        		                <format>1.0</format>
-        		                <gain>1.0</gain>
-        		                <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs | Brake_Position_Ovr Override</group>
-        		                <max>1.000000</max>
-        		                <min>0.000000</min>
-        		                <name>Brake_Position_Ovr_ovr</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Brake_Position_Ovr_new">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs | Brake_Position_Ovr Override</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>Brake_Position_Ovr_new</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Throttle_Position_Raw_Ovr_ovr">
-        		                <access>RW RW RW RW</access>
-        		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_2</enum_name>
-        		                <exp>1.0</exp>
-        		                <format>1.0</format>
-        		                <gain>1.0</gain>
-        		                <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs | Throttle_Position_Raw_Ovr Override</group>
-        		                <max>1.000000</max>
-        		                <min>0.000000</min>
-        		                <name>Throttle_Position_Raw_Ovr_ovr</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Throttle_Position_Raw_Ovr_new">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>5.0</format>
-        		                <gain>1.0</gain>
-        		                <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs | Throttle_Position_Raw_Ovr Override</group>
-        		                <max>65535.000000</max>
-        		                <min>0.000000</min>
-        		                <name>Throttle_Position_Raw_Ovr_new</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Throttle_Position_Ovr_ovr">
-        		                <access>RW RW RW RW</access>
-        		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_2</enum_name>
-        		                <exp>1.0</exp>
-        		                <format>1.0</format>
-        		                <gain>1.0</gain>
-        		                <group>Mooventure2016_Rev5|Foreground|Inputs|Analog Inputs|Throttle Position | Throttle_Position_Ovr Override</group>
-        		                <max>1.000000</max>
-        		                <min>0.000000</min>
-        		                <name>Throttle_Position_Ovr_ovr</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Throttle_Position_Ovr_new">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>5.0</format>
-        		                <gain>1.0</gain>
-        		                <group>Mooventure2016_Rev5|Foreground|Inputs|Analog Inputs|Throttle Position | Throttle_Position_Ovr Override</group>
-        		                <max>65535.000000</max>
-        		                <min>0.000000</min>
-        		                <name>Throttle_Position_Ovr_new</name>
         		                <offset>0.0</offset>
         		                <storage>RAM</storage>
         		                <update>BACKGND</update>
@@ -13189,6 +13188,21 @@
         		                <name>Eng_Cool_Temp_Ovr_ovr</name>
         		                <offset>0.0</offset>
         		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Flash_Timer">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Flash_Timer</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -18128,6 +18142,37 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Throttle_Position_Raw_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs | Throttle_Position_Raw_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Throttle_Position_Raw_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Throttle_Position_Raw_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs | Throttle_Position_Raw_Ovr Override</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Throttle_Position_Raw_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="RT_Wheel_Rolling_Count_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
@@ -20550,6 +20595,87 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Brake_Position_PreIdxArr">
+        		                <access>RW RW RW RW</access>
+        		                <class>prelookup</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
+        		                <index>Brake_Position_PreIdx</index>
+        		                <input>Brake_Position_PreIn</input>
+        		                <len>21</len>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Brake_Position_PreIdxArr</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Brake_Position_PreIdx">
+        		                <access>RO RO RO RO</access>
+        		                <class>VAR</class>
+        		                <exp>1</exp>
+        		                <format>4.2</format>
+        		                <gain>0.001953125</gain>
+        		                <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
+        		                <max>127.998047</max>
+        		                <min>0.000000</min>
+        		                <name>Brake_Position_PreIdx</name>
+        		                <offset>0</offset>
+        		                <storage>RAM</storage>
+        		                <units>idx.frac</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Brake_Position_PreIn">
+        		                <access>RO RO RO RO</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <gain>1.0</gain>
+        		                <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Brake_Position_PreIn</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Brake_Position_TblTbl">
+        		                <access>RW RW RW RW</access>
+        		                <class>interpolation_1d</class>
+        		                <exp>1.0</exp>
+        		                <format>1.2</format>
+        		                <gain>1.0</gain>
+        		                <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
+        		                <len>21</len>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Brake_Position_TblTbl</name>
+        		                <offset>0.0</offset>
+        		                <output>Brake_Position_Tbl</output>
+        		                <prelookup>Brake_Position_PreIdxArr</prelookup>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Brake_Position_Tbl">
+        		                <access>RO RO RO RO</access>
+        		                <class>var</class>
+        		                <exp>1.0</exp>
+        		                <format>1.2</format>
+        		                <gain>1.0</gain>
+        		                <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Brake_Position_Tbl</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="safetyMode_AccelIdxArr">
         		                <access>RW RW RW RW</access>
         		                <class>prelookup</class>
@@ -21117,6 +21243,87 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Throttle_Position_PreIdxArr">
+        		                <access>RW RW RW RW</access>
+        		                <class>prelookup</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
+        		                <index>Throttle_Position_PreIdx</index>
+        		                <input>Throttle_Position_PreIn</input>
+        		                <len>17</len>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Throttle_Position_PreIdxArr</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Throttle_Position_PreIdx">
+        		                <access>RO RO RO RO</access>
+        		                <class>VAR</class>
+        		                <exp>1</exp>
+        		                <format>4.2</format>
+        		                <gain>0.001953125</gain>
+        		                <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
+        		                <max>127.998047</max>
+        		                <min>0.000000</min>
+        		                <name>Throttle_Position_PreIdx</name>
+        		                <offset>0</offset>
+        		                <storage>RAM</storage>
+        		                <units>idx.frac</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Throttle_Position_PreIn">
+        		                <access>RO RO RO RO</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <gain>1.0</gain>
+        		                <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Throttle_Position_PreIn</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Throttle_Position_TblTbl">
+        		                <access>RW RW RW RW</access>
+        		                <class>interpolation_1d</class>
+        		                <exp>1.0</exp>
+        		                <format>1.2</format>
+        		                <gain>1.0</gain>
+        		                <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
+        		                <len>17</len>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Throttle_Position_TblTbl</name>
+        		                <offset>0.0</offset>
+        		                <output>Throttle_Position_Tbl</output>
+        		                <prelookup>Throttle_Position_PreIdxArr</prelookup>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Throttle_Position_Tbl">
+        		                <access>RO RO RO RO</access>
+        		                <class>var</class>
+        		                <exp>1.0</exp>
+        		                <format>1.2</format>
+        		                <gain>1.0</gain>
+        		                <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Throttle_Position_Tbl</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="FaultManager">
         		                <access>RW RW RW RW</access>
         		                <format>3.0</format>
@@ -21208,17 +21415,17 @@
                 <Command>
                     <Description>Dumping DLL to XML</Description>
                     <Order>10000</Order>
-                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\motohawk_dumpdll.exe" -xml  "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\Mooventur_214.dll" > "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\Mooventur_214.xml"</Execute>
+                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\motohawk_dumpdll.exe" -xml  "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\Mooventur_215.dll" > "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\Mooventur_215.xml"</Execute>
                 </Command>
                 <Command>
                     <Description>Generating ASAP2 file</Description>
                     <Order>10001</Order>
-                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\ASAP2.exe" -m  "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\Mooventur_214.xml" -o  "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\Mooventur_214.a2l" -u VirtualCalSpace -asap1b "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\mh_asap1b_ccp_CCP1.xml"</Execute>
+                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\ASAP2.exe" -m  "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\Mooventur_215.xml" -o  "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\Mooventur_215.a2l" -u VirtualCalSpace -asap1b "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\mh_asap1b_ccp_CCP1.xml"</Execute>
                 </Command>
                 <Command>
                     <Description>Installing ASAP2 file in C:\ECUFiles\TDBDLL\</Description>
                     <Order>10002</Order>
-                    <Execute>@copy "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\Mooventur_214.a2l" "C:\ECUFiles\TDBDLL\" > NUL</Execute>
+                    <Execute>@copy "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\Mooventur_215.a2l" "C:\ECUFiles\TDBDLL\" > NUL</Execute>
                 </Command>
         </Add>
     

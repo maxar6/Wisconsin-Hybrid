@@ -284,8 +284,8 @@ const mxArray *sf_c5_Mooventure2016_Rev5_get_eml_resolved_functions_info(void)
   (*c5_b_info)[0].dominantType = "double";
   (*c5_b_info)[0].resolved =
     "[ILXE]$matlabroot$/toolbox/eml/lib/matlab/ops/mtimes.m";
-  (*c5_b_info)[0].fileTimeLo = 2169964032U;
-  (*c5_b_info)[0].fileTimeHi = 30114358U;
+  (*c5_b_info)[0].fileTimeLo = 529702400U;
+  (*c5_b_info)[0].fileTimeHi = 30114350U;
   (*c5_b_info)[0].mFileTimeLo = 0U;
   (*c5_b_info)[0].mFileTimeHi = 0U;
   sf_mex_assign(&c5_m0, sf_mex_createstruct("nameCaptureInfo", 1, 1));
@@ -770,10 +770,10 @@ static void mdlSetWorkWidths_c5_Mooventure2016_Rev5(SimStruct *S)
   }
 
   ssSetOptions(S,ssGetOptions(S)|SS_OPTION_WORKS_WITH_CODE_REUSE);
-  ssSetChecksum0(S,(2559289342U));
-  ssSetChecksum1(S,(327734145U));
-  ssSetChecksum2(S,(2009395998U));
-  ssSetChecksum3(S,(3070343618U));
+  ssSetChecksum0(S,(1267591202U));
+  ssSetChecksum1(S,(1276278601U));
+  ssSetChecksum2(S,(2451534357U));
+  ssSetChecksum3(S,(2441303476U));
   ssSetmdlDerivatives(S, NULL);
   ssSetExplicitFCSSCtrl(S,1);
 }

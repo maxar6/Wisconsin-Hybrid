@@ -6,22 +6,16 @@
 #include "c3_Mooventure2016_Rev5.h"
 #include "c4_Mooventure2016_Rev5.h"
 #include "c5_Mooventure2016_Rev5.h"
-#include "c6_Mooventure2016_Rev5.h"
 #include "c7_Mooventure2016_Rev5.h"
 #include "c8_Mooventure2016_Rev5.h"
 #include "c9_Mooventure2016_Rev5.h"
 #include "c10_Mooventure2016_Rev5.h"
-#include "c11_Mooventure2016_Rev5.h"
 #include "c12_Mooventure2016_Rev5.h"
 #include "c13_Mooventure2016_Rev5.h"
 #include "c14_Mooventure2016_Rev5.h"
 #include "c15_Mooventure2016_Rev5.h"
 #include "c16_Mooventure2016_Rev5.h"
-#include "c17_Mooventure2016_Rev5.h"
-#include "c18_Mooventure2016_Rev5.h"
-#include "c19_Mooventure2016_Rev5.h"
 #include "c20_Mooventure2016_Rev5.h"
-#include "c21_Mooventure2016_Rev5.h"
 #include "c22_Mooventure2016_Rev5.h"
 #include "c23_Mooventure2016_Rev5.h"
 #include "c24_Mooventure2016_Rev5.h"
@@ -33,7 +27,6 @@
 #include "c33_Mooventure2016_Rev5.h"
 #include "c53_Mooventure2016_Rev5.h"
 #include "c54_Mooventure2016_Rev5.h"
-#include "c55_Mooventure2016_Rev5.h"
 #include "c56_Mooventure2016_Rev5.h"
 #include "c57_Mooventure2016_Rev5.h"
 #include "c58_Mooventure2016_Rev5.h"
@@ -90,11 +83,6 @@ unsigned int sf_Mooventure2016_Rev5_method_dispatcher(SimStruct *simstructPtr,
     return 1;
   }
 
-  if (chartFileNumber==6) {
-    c6_Mooventure2016_Rev5_method_dispatcher(simstructPtr, method, data);
-    return 1;
-  }
-
   if (chartFileNumber==7) {
     c7_Mooventure2016_Rev5_method_dispatcher(simstructPtr, method, data);
     return 1;
@@ -112,11 +100,6 @@ unsigned int sf_Mooventure2016_Rev5_method_dispatcher(SimStruct *simstructPtr,
 
   if (chartFileNumber==10) {
     c10_Mooventure2016_Rev5_method_dispatcher(simstructPtr, method, data);
-    return 1;
-  }
-
-  if (chartFileNumber==11) {
-    c11_Mooventure2016_Rev5_method_dispatcher(simstructPtr, method, data);
     return 1;
   }
 
@@ -145,28 +128,8 @@ unsigned int sf_Mooventure2016_Rev5_method_dispatcher(SimStruct *simstructPtr,
     return 1;
   }
 
-  if (chartFileNumber==17) {
-    c17_Mooventure2016_Rev5_method_dispatcher(simstructPtr, method, data);
-    return 1;
-  }
-
-  if (chartFileNumber==18) {
-    c18_Mooventure2016_Rev5_method_dispatcher(simstructPtr, method, data);
-    return 1;
-  }
-
-  if (chartFileNumber==19) {
-    c19_Mooventure2016_Rev5_method_dispatcher(simstructPtr, method, data);
-    return 1;
-  }
-
   if (chartFileNumber==20) {
     c20_Mooventure2016_Rev5_method_dispatcher(simstructPtr, method, data);
-    return 1;
-  }
-
-  if (chartFileNumber==21) {
-    c21_Mooventure2016_Rev5_method_dispatcher(simstructPtr, method, data);
     return 1;
   }
 
@@ -222,11 +185,6 @@ unsigned int sf_Mooventure2016_Rev5_method_dispatcher(SimStruct *simstructPtr,
 
   if (chartFileNumber==54) {
     c54_Mooventure2016_Rev5_method_dispatcher(simstructPtr, method, data);
-    return 1;
-  }
-
-  if (chartFileNumber==55) {
-    c55_Mooventure2016_Rev5_method_dispatcher(simstructPtr, method, data);
     return 1;
   }
 
@@ -288,10 +246,10 @@ unsigned int sf_Mooventure2016_Rev5_process_check_sum_call( int nlhs, mxArray *
       ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(0U);
       ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(0U);
     } else if (!strcmp(commandName,"makefile")) {
-      ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(4291072399U);
-      ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(3880001859U);
-      ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(3287441694U);
-      ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(3484703506U);
+      ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(1749804194U);
+      ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(22243791U);
+      ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(3064189956U);
+      ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(3816415234U);
     } else if (nrhs==3 && !strcmp(commandName,"chart")) {
       unsigned int chartFileNumber;
       chartFileNumber = (unsigned int)mxGetScalar(prhs[2]);
@@ -331,13 +289,6 @@ unsigned int sf_Mooventure2016_Rev5_process_check_sum_call( int nlhs, mxArray *
           break;
         }
 
-       case 6:
-        {
-          extern void sf_c6_Mooventure2016_Rev5_get_check_sum(mxArray *plhs[]);
-          sf_c6_Mooventure2016_Rev5_get_check_sum(plhs);
-          break;
-        }
-
        case 7:
         {
           extern void sf_c7_Mooventure2016_Rev5_get_check_sum(mxArray *plhs[]);
@@ -363,13 +314,6 @@ unsigned int sf_Mooventure2016_Rev5_process_check_sum_call( int nlhs, mxArray *
         {
           extern void sf_c10_Mooventure2016_Rev5_get_check_sum(mxArray *plhs[]);
           sf_c10_Mooventure2016_Rev5_get_check_sum(plhs);
-          break;
-        }
-
-       case 11:
-        {
-          extern void sf_c11_Mooventure2016_Rev5_get_check_sum(mxArray *plhs[]);
-          sf_c11_Mooventure2016_Rev5_get_check_sum(plhs);
           break;
         }
 
@@ -408,38 +352,10 @@ unsigned int sf_Mooventure2016_Rev5_process_check_sum_call( int nlhs, mxArray *
           break;
         }
 
-       case 17:
-        {
-          extern void sf_c17_Mooventure2016_Rev5_get_check_sum(mxArray *plhs[]);
-          sf_c17_Mooventure2016_Rev5_get_check_sum(plhs);
-          break;
-        }
-
-       case 18:
-        {
-          extern void sf_c18_Mooventure2016_Rev5_get_check_sum(mxArray *plhs[]);
-          sf_c18_Mooventure2016_Rev5_get_check_sum(plhs);
-          break;
-        }
-
-       case 19:
-        {
-          extern void sf_c19_Mooventure2016_Rev5_get_check_sum(mxArray *plhs[]);
-          sf_c19_Mooventure2016_Rev5_get_check_sum(plhs);
-          break;
-        }
-
        case 20:
         {
           extern void sf_c20_Mooventure2016_Rev5_get_check_sum(mxArray *plhs[]);
           sf_c20_Mooventure2016_Rev5_get_check_sum(plhs);
-          break;
-        }
-
-       case 21:
-        {
-          extern void sf_c21_Mooventure2016_Rev5_get_check_sum(mxArray *plhs[]);
-          sf_c21_Mooventure2016_Rev5_get_check_sum(plhs);
           break;
         }
 
@@ -520,13 +436,6 @@ unsigned int sf_Mooventure2016_Rev5_process_check_sum_call( int nlhs, mxArray *
           break;
         }
 
-       case 55:
-        {
-          extern void sf_c55_Mooventure2016_Rev5_get_check_sum(mxArray *plhs[]);
-          sf_c55_Mooventure2016_Rev5_get_check_sum(plhs);
-          break;
-        }
-
        case 56:
         {
           extern void sf_c56_Mooventure2016_Rev5_get_check_sum(mxArray *plhs[]);
@@ -577,10 +486,10 @@ unsigned int sf_Mooventure2016_Rev5_process_check_sum_call( int nlhs, mxArray *
       return 0;
     }
   } else {
-    ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(2486696225U);
-    ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(2098331096U);
-    ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(777778534U);
-    ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(4148488538U);
+    ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(893887697U);
+    ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(767259741U);
+    ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(1907627286U);
+    ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(1190502318U);
   }
 
   return 1;
@@ -648,13 +557,6 @@ unsigned int sf_Mooventure2016_Rev5_autoinheritance_info( int nlhs, mxArray *
         break;
       }
 
-     case 6:
-      {
-        extern mxArray *sf_c6_Mooventure2016_Rev5_get_autoinheritance_info(void);
-        plhs[0] = sf_c6_Mooventure2016_Rev5_get_autoinheritance_info();
-        break;
-      }
-
      case 7:
       {
         extern mxArray *sf_c7_Mooventure2016_Rev5_get_autoinheritance_info(void);
@@ -680,13 +582,6 @@ unsigned int sf_Mooventure2016_Rev5_autoinheritance_info( int nlhs, mxArray *
       {
         extern mxArray *sf_c10_Mooventure2016_Rev5_get_autoinheritance_info(void);
         plhs[0] = sf_c10_Mooventure2016_Rev5_get_autoinheritance_info();
-        break;
-      }
-
-     case 11:
-      {
-        extern mxArray *sf_c11_Mooventure2016_Rev5_get_autoinheritance_info(void);
-        plhs[0] = sf_c11_Mooventure2016_Rev5_get_autoinheritance_info();
         break;
       }
 
@@ -725,38 +620,10 @@ unsigned int sf_Mooventure2016_Rev5_autoinheritance_info( int nlhs, mxArray *
         break;
       }
 
-     case 17:
-      {
-        extern mxArray *sf_c17_Mooventure2016_Rev5_get_autoinheritance_info(void);
-        plhs[0] = sf_c17_Mooventure2016_Rev5_get_autoinheritance_info();
-        break;
-      }
-
-     case 18:
-      {
-        extern mxArray *sf_c18_Mooventure2016_Rev5_get_autoinheritance_info(void);
-        plhs[0] = sf_c18_Mooventure2016_Rev5_get_autoinheritance_info();
-        break;
-      }
-
-     case 19:
-      {
-        extern mxArray *sf_c19_Mooventure2016_Rev5_get_autoinheritance_info(void);
-        plhs[0] = sf_c19_Mooventure2016_Rev5_get_autoinheritance_info();
-        break;
-      }
-
      case 20:
       {
         extern mxArray *sf_c20_Mooventure2016_Rev5_get_autoinheritance_info(void);
         plhs[0] = sf_c20_Mooventure2016_Rev5_get_autoinheritance_info();
-        break;
-      }
-
-     case 21:
-      {
-        extern mxArray *sf_c21_Mooventure2016_Rev5_get_autoinheritance_info(void);
-        plhs[0] = sf_c21_Mooventure2016_Rev5_get_autoinheritance_info();
         break;
       }
 
@@ -834,13 +701,6 @@ unsigned int sf_Mooventure2016_Rev5_autoinheritance_info( int nlhs, mxArray *
       {
         extern mxArray *sf_c54_Mooventure2016_Rev5_get_autoinheritance_info(void);
         plhs[0] = sf_c54_Mooventure2016_Rev5_get_autoinheritance_info();
-        break;
-      }
-
-     case 55:
-      {
-        extern mxArray *sf_c55_Mooventure2016_Rev5_get_autoinheritance_info(void);
-        plhs[0] = sf_c55_Mooventure2016_Rev5_get_autoinheritance_info();
         break;
       }
 
@@ -969,17 +829,6 @@ unsigned int sf_Mooventure2016_Rev5_get_eml_resolved_functions_info( int nlhs,
         break;
       }
 
-     case 6:
-      {
-        extern const mxArray
-          *sf_c6_Mooventure2016_Rev5_get_eml_resolved_functions_info(void);
-        mxArray *persistentMxArray = (mxArray *)
-          sf_c6_Mooventure2016_Rev5_get_eml_resolved_functions_info();
-        plhs[0] = mxDuplicateArray(persistentMxArray);
-        mxDestroyArray(persistentMxArray);
-        break;
-      }
-
      case 7:
       {
         extern const mxArray
@@ -1019,17 +868,6 @@ unsigned int sf_Mooventure2016_Rev5_get_eml_resolved_functions_info( int nlhs,
           *sf_c10_Mooventure2016_Rev5_get_eml_resolved_functions_info(void);
         mxArray *persistentMxArray = (mxArray *)
           sf_c10_Mooventure2016_Rev5_get_eml_resolved_functions_info();
-        plhs[0] = mxDuplicateArray(persistentMxArray);
-        mxDestroyArray(persistentMxArray);
-        break;
-      }
-
-     case 11:
-      {
-        extern const mxArray
-          *sf_c11_Mooventure2016_Rev5_get_eml_resolved_functions_info(void);
-        mxArray *persistentMxArray = (mxArray *)
-          sf_c11_Mooventure2016_Rev5_get_eml_resolved_functions_info();
         plhs[0] = mxDuplicateArray(persistentMxArray);
         mxDestroyArray(persistentMxArray);
         break;
@@ -1090,56 +928,12 @@ unsigned int sf_Mooventure2016_Rev5_get_eml_resolved_functions_info( int nlhs,
         break;
       }
 
-     case 17:
-      {
-        extern const mxArray
-          *sf_c17_Mooventure2016_Rev5_get_eml_resolved_functions_info(void);
-        mxArray *persistentMxArray = (mxArray *)
-          sf_c17_Mooventure2016_Rev5_get_eml_resolved_functions_info();
-        plhs[0] = mxDuplicateArray(persistentMxArray);
-        mxDestroyArray(persistentMxArray);
-        break;
-      }
-
-     case 18:
-      {
-        extern const mxArray
-          *sf_c18_Mooventure2016_Rev5_get_eml_resolved_functions_info(void);
-        mxArray *persistentMxArray = (mxArray *)
-          sf_c18_Mooventure2016_Rev5_get_eml_resolved_functions_info();
-        plhs[0] = mxDuplicateArray(persistentMxArray);
-        mxDestroyArray(persistentMxArray);
-        break;
-      }
-
-     case 19:
-      {
-        extern const mxArray
-          *sf_c19_Mooventure2016_Rev5_get_eml_resolved_functions_info(void);
-        mxArray *persistentMxArray = (mxArray *)
-          sf_c19_Mooventure2016_Rev5_get_eml_resolved_functions_info();
-        plhs[0] = mxDuplicateArray(persistentMxArray);
-        mxDestroyArray(persistentMxArray);
-        break;
-      }
-
      case 20:
       {
         extern const mxArray
           *sf_c20_Mooventure2016_Rev5_get_eml_resolved_functions_info(void);
         mxArray *persistentMxArray = (mxArray *)
           sf_c20_Mooventure2016_Rev5_get_eml_resolved_functions_info();
-        plhs[0] = mxDuplicateArray(persistentMxArray);
-        mxDestroyArray(persistentMxArray);
-        break;
-      }
-
-     case 21:
-      {
-        extern const mxArray
-          *sf_c21_Mooventure2016_Rev5_get_eml_resolved_functions_info(void);
-        mxArray *persistentMxArray = (mxArray *)
-          sf_c21_Mooventure2016_Rev5_get_eml_resolved_functions_info();
         plhs[0] = mxDuplicateArray(persistentMxArray);
         mxDestroyArray(persistentMxArray);
         break;
@@ -1266,17 +1060,6 @@ unsigned int sf_Mooventure2016_Rev5_get_eml_resolved_functions_info( int nlhs,
         break;
       }
 
-     case 55:
-      {
-        extern const mxArray
-          *sf_c55_Mooventure2016_Rev5_get_eml_resolved_functions_info(void);
-        mxArray *persistentMxArray = (mxArray *)
-          sf_c55_Mooventure2016_Rev5_get_eml_resolved_functions_info();
-        plhs[0] = mxDuplicateArray(persistentMxArray);
-        mxDestroyArray(persistentMxArray);
-        break;
-      }
-
      case 56:
       {
         extern const mxArray
@@ -1350,7 +1133,7 @@ unsigned int sf_Mooventure2016_Rev5_get_eml_resolved_functions_info( int nlhs,
 void Mooventure2016_Rev5_debug_initialize(void)
 {
   _Mooventure2016_Rev5MachineNumber_ = sf_debug_initialize_machine(
-    "Mooventure2016_Rev5","sfun",0,38,0,0,0);
+    "Mooventure2016_Rev5","sfun",0,31,0,0,0);
   sf_debug_set_machine_event_thresholds(_Mooventure2016_Rev5MachineNumber_,0,0);
   sf_debug_set_machine_data_thresholds(_Mooventure2016_Rev5MachineNumber_,0);
 }

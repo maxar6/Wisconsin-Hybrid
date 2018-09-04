@@ -7,7 +7,7 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   2 \
+    NumChartData   3 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
@@ -20,6 +20,11 @@
     }\
     ChartData {\
       Name         "is_c22_Mooventure2016_Rev5"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "count"\
       SFName       ""\
       Path         ""\
     }\

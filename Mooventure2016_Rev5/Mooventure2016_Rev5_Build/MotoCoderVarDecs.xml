@@ -1286,24 +1286,6 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Temp_Flash</name>
-      <access>RW RW RW RW</access>
-      <gain>0.05</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>5.0E15</max>
-      <min>-5.0E15</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Constant_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|Enabled Subsystem</group>
-      <struct>ConstantWork.Temp_Flash</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
       <name>Max_Dist_Travel_In_Sec</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -1932,6 +1914,88 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
+      <name>Brake_Position_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs | Brake_Position_Ovr Override</group>
+      <struct>VolatileWork_BSS.Brake_Position_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Brake_Position_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs | Brake_Position_Ovr Override</group>
+      <struct>VolatileWork_BSS.Brake_Position_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Throttle_Position_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Analog Inputs|Throttle Position | Throttle_Position_Ovr Override</group>
+      <struct>VolatileWork_BSS.Throttle_Position_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Throttle_Position_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>65535</max>
+      <min>0</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Analog Inputs|Throttle Position | Throttle_Position_Ovr Override</group>
+      <struct>VolatileWork_BSS.Throttle_Position_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint16</type>
+   </VarDec>
+   <VarDec>
       <name>SafetyModeEnterSOC</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -2072,129 +2136,6 @@
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Brake_Position_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs | Brake_Position_Ovr Override</group>
-      <struct>VolatileWork_BSS.Brake_Position_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Brake_Position_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs | Brake_Position_Ovr Override</group>
-      <struct>VolatileWork_BSS.Brake_Position_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Throttle_Position_Raw_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs | Throttle_Position_Raw_Ovr Override</group>
-      <struct>VolatileWork_BSS.Throttle_Position_Raw_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Throttle_Position_Raw_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>65535</max>
-      <min>0</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs | Throttle_Position_Raw_Ovr Override</group>
-      <struct>VolatileWork_BSS.Throttle_Position_Raw_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint16</type>
-   </VarDec>
-   <VarDec>
-      <name>Throttle_Position_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Inputs|Analog Inputs|Throttle Position | Throttle_Position_Ovr Override</group>
-      <struct>VolatileWork_BSS.Throttle_Position_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Throttle_Position_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>65535</max>
-      <min>0</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Inputs|Analog Inputs|Throttle Position | Throttle_Position_Ovr Override</group>
-      <struct>VolatileWork_BSS.Throttle_Position_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint16</type>
    </VarDec>
    <VarDec>
       <name>FiltConst</name>
@@ -5859,6 +5800,24 @@
          <item name="Override" value="1"/>
          <default>Unknown</default>
       </enum>
+   </VarDec>
+   <VarDec>
+      <name>Flash_Timer</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Constant_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs</group>
+      <struct>ConstantWork.Flash_Timer</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>Eng_Cool_Temp_Ovr_new</name>
@@ -12118,6 +12077,47 @@
       <type>uint32</type>
    </VarDec>
    <VarDec>
+      <name>Throttle_Position_Raw_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs | Throttle_Position_Raw_Ovr Override</group>
+      <struct>VolatileWork_BSS.Throttle_Position_Raw_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Throttle_Position_Raw_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs | Throttle_Position_Raw_Ovr Override</group>
+      <struct>VolatileWork_BSS.Throttle_Position_Raw_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
       <name>RT_Wheel_Rolling_Count_Ovr_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -15236,6 +15236,103 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
+      <name>Brake_Position_PreIdxArr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Constant_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
+      <struct>ConstantWork.Brake_Position_PreIdxArr</struct>
+      <class>prelookup</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+      <len>21</len>
+      <input>Brake_Position_PreIn</input>
+      <index>Brake_Position_PreIdx</index>
+   </VarDec>
+   <VarDec>
+      <name>Brake_Position_PreIdx</name>
+      <access>RO RO RO RO</access>
+      <gain>0.001953125</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>127.998046875</max>
+      <min>0</min>
+      <format>4.2</format>
+      <mask>0x0000FFFF</mask>
+      <units>idx.frac</units>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
+      <struct>VolatileWork_BSS.Brake_Position_PreIdx</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint16</type>
+   </VarDec>
+   <VarDec>
+      <name>Brake_Position_PreIn</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
+      <struct>VolatileWork_BSS.Brake_Position_PreIn</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Brake_Position_TblTbl</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Constant_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
+      <struct>ConstantWork.Brake_Position_TblTbl</struct>
+      <class>interpolation_1d</class>
+      <storage>FLASH</storage>
+      <update>REMOTE</update>
+      <type>real32</type>
+      <len>21</len>
+      <output>Brake_Position_Tbl</output>
+      <prelookup>Brake_Position_PreIdxArr</prelookup>
+   </VarDec>
+   <VarDec>
+      <name>Brake_Position_Tbl</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>1.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
+      <struct>VolatileWork_BSS.Brake_Position_Tbl</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
       <name>safetyMode_AccelIdxArr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -15909,6 +16006,103 @@
       <ctype>Volatile_BSS_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|Cruise Control|Speed Control</group>
       <struct>VolatileWork_BSS.Cruise_Control_Map</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Throttle_Position_PreIdxArr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Constant_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
+      <struct>ConstantWork.Throttle_Position_PreIdxArr</struct>
+      <class>prelookup</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+      <len>17</len>
+      <input>Throttle_Position_PreIn</input>
+      <index>Throttle_Position_PreIdx</index>
+   </VarDec>
+   <VarDec>
+      <name>Throttle_Position_PreIdx</name>
+      <access>RO RO RO RO</access>
+      <gain>0.001953125</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>127.998046875</max>
+      <min>0</min>
+      <format>4.2</format>
+      <mask>0x0000FFFF</mask>
+      <units>idx.frac</units>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
+      <struct>VolatileWork_BSS.Throttle_Position_PreIdx</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint16</type>
+   </VarDec>
+   <VarDec>
+      <name>Throttle_Position_PreIn</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
+      <struct>VolatileWork_BSS.Throttle_Position_PreIn</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Throttle_Position_TblTbl</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Constant_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
+      <struct>ConstantWork.Throttle_Position_TblTbl</struct>
+      <class>interpolation_1d</class>
+      <storage>FLASH</storage>
+      <update>REMOTE</update>
+      <type>real32</type>
+      <len>17</len>
+      <output>Throttle_Position_Tbl</output>
+      <prelookup>Throttle_Position_PreIdxArr</prelookup>
+   </VarDec>
+   <VarDec>
+      <name>Throttle_Position_Tbl</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>1.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
+      <struct>VolatileWork_BSS.Throttle_Position_Tbl</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>

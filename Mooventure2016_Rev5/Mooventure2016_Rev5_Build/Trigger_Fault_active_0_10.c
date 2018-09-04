@@ -3,9 +3,9 @@
  *
  * Code generation for model "Mooventure2016_Rev5.mdl".
  *
- * Model version              : 1.2141
+ * Model version              : 1.2150
  * Simulink Coder version : 8.0 (R2011a) 09-Mar-2011
- * C source code generated on : Sat Aug 25 21:19:10 2018
+ * C source code generated on : Tue Sep 04 13:37:31 2018
  *
  * Target selection: motohawk_motocoder_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -55,14 +55,14 @@ void Trigger_Fault_active_0_10(void)
      */
     rtb_TmpSignalConversionAtSFunctionInport1[0] = rtb_motohawk_abs_time;
     rtb_TmpSignalConversionAtSFunctionInport1[1] =
-      Mooventure2016_Rev5_B.s431_Merge;
+      Mooventure2016_Rev5_B.s425_Merge;
     rtb_TmpSignalConversionAtSFunctionInport1[2] =
-      Mooventure2016_Rev5_B.s453_Merge;
+      Mooventure2016_Rev5_B.s447_Merge;
     rtb_TmpSignalConversionAtSFunctionInport1[3] = rtb_Torque_Request;
     rtb_TmpSignalConversionAtSFunctionInport1[4] =
-      Mooventure2016_Rev5_B.s454_Merge;
+      Mooventure2016_Rev5_B.s448_Merge;
     rtb_TmpSignalConversionAtSFunctionInport1[5] =
-      Mooventure2016_Rev5_B.s458_Merge;
+      Mooventure2016_Rev5_B.s452_Merge;
 
     /* MATLAB Function Block: '<S95>/Data Iterator' incorporates:
      *  S-Function (motohawk_sfun_data_sizeof): '<S95>/motohawk_data_sizeof'

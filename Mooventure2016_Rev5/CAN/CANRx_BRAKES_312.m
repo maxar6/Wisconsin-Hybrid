@@ -129,7 +129,7 @@ function msg = CANRx_BRAKES_312()
   msg.fields{1}.byte_order    = 'BIG_ENDIAN';
   msg.fields{1}.data_type     = 'UNSIGNED';
   msg.fields{1}.scale         = 1;
-  msg.fields{1}.offset        = 0;
+  msg.fields{1}.offset        = -32767;
 
 
 % Equation: (CAN_msg_field_value) * 1e-2 + 250.0 = (Simulink_model_value)

@@ -5,7 +5,7 @@
       <Name>Mooventure2016_Rev5</Name>
       <Author>maxar</Author>
       <Copyright>2018 Woodward.</Copyright>
-      <CreateDate>25-Aug-2018</CreateDate>
+      <CreateDate>04-Sep-2018</CreateDate>
       <MemoryLayout>DEV</MemoryLayout>
       <Module>ECM-5554-112-0904-xD</Module>
       <OS>
@@ -78,89 +78,89 @@
             <Name>STARTUP_EVENT</Name>
             <Task ref="MainAppTask"/>
             <Order>0</Order>
-            <Function>Trigger_STARTUP_EVENT_18157p0005</Function>
+            <Function>Trigger_STARTUP_EVENT_10377p0001</Function>
          </Trigger>
          <Trigger type="idle">
             <Name>IDLE_EVENT</Name>
             <Task ref="MainAppTask"/>
             <Order>255</Order>
-            <Function>Trigger_IDLE_EVENT_18182p0001</Function>
+            <Function>Trigger_IDLE_EVENT_10402p0001</Function>
          </Trigger>
          <Trigger type="periodic">
             <Multiplier>2</Multiplier>
             <Name>FGND_2XRTI_PERIODIC</Name>
             <Task ref="FGNDTask"/>
             <Order>255</Order>
-            <Function>Trigger_FGND_2XRTI_PERIODIC_18251p0001</Function>
+            <Function>Trigger_FGND_2XRTI_PERIODIC_10471p0001</Function>
          </Trigger>
          <Trigger type="periodic">
             <Multiplier>1</Multiplier>
             <Name>FGND_RTI_PERIODIC</Name>
             <Task ref="FGNDTask"/>
             <Order>255</Order>
-            <Function>Trigger_FGND_RTI_PERIODIC_18252p0001</Function>
+            <Function>Trigger_FGND_RTI_PERIODIC_10472p0001</Function>
          </Trigger>
          <Trigger type="periodic">
             <Multiplier>10</Multiplier>
             <Name>FGND_10XRTI_PERIODIC</Name>
             <Task ref="FGNDTask"/>
             <Order>255</Order>
-            <Function>Trigger_FGND_10XRTI_PERIODIC_18253p0001</Function>
+            <Function>Trigger_FGND_10XRTI_PERIODIC_10473p0001</Function>
          </Trigger>
          <Trigger type="periodic">
             <Multiplier>20</Multiplier>
             <Name>FGND_20XRTI_PERIODIC</Name>
             <Task ref="FGNDTask"/>
             <Order>255</Order>
-            <Function>Trigger_FGND_20XRTI_PERIODIC_18254p0001</Function>
+            <Function>Trigger_FGND_20XRTI_PERIODIC_10474p0001</Function>
          </Trigger>
          <Trigger type="periodic">
             <Multiplier>1</Multiplier>
             <Name>BGND_BASE_PERIODIC</Name>
             <Task ref="BGNDTask"/>
             <Order>255</Order>
-            <Function>Trigger_BGND_BASE_PERIODIC_18255p0001</Function>
+            <Function>Trigger_BGND_BASE_PERIODIC_10475p0001</Function>
          </Trigger>
          <Trigger type="periodic">
             <Multiplier>2</Multiplier>
             <Name>BGND_BASEx2_PERIODIC</Name>
             <Task ref="BGNDTask"/>
             <Order>255</Order>
-            <Function>Trigger_BGND_BASEx2_PERIODIC_18256p0001</Function>
+            <Function>Trigger_BGND_BASEx2_PERIODIC_10476p0001</Function>
          </Trigger>
          <Trigger type="periodic">
             <Multiplier>10</Multiplier>
             <Name>BGND_BASEx10_PERIODIC</Name>
             <Task ref="BGNDTask"/>
             <Order>255</Order>
-            <Function>Trigger_BGND_BASEx10_PERIODIC_18257p0001</Function>
+            <Function>Trigger_BGND_BASEx10_PERIODIC_10477p0001</Function>
          </Trigger>
          <Trigger type="periodic">
             <Period>1000000</Period>
             <Name>ONE_SECOND_EVENT</Name>
             <Task ref="BGNDTask"/>
             <Order>255</Order>
-            <Function>Trigger_ONE_SECOND_EVENT_18258p0001</Function>
+            <Function>Trigger_ONE_SECOND_EVENT_10478p0001</Function>
          </Trigger>
          <Trigger type="idle">
             <Name>IDLE_EVENT</Name>
             <Task ref="MainAppTask"/>
             <Order>255</Order>
-            <Function>Trigger_IDLE_EVENT_17123p0007</Function>
+            <Function>Trigger_IDLE_EVENT_7280p0001</Function>
          </Trigger>
          <Trigger type="periodic">
             <Multiplier>1</Multiplier>
             <Name>BGND_BASE_PERIODIC</Name>
             <Task ref="BGNDTask"/>
             <Order>255</Order>
-            <Function>Trigger_BGND_BASE_PERIODIC_6013p0004</Function>
+            <Function>Trigger_BGND_BASE_PERIODIC_6019p0004</Function>
          </Trigger>
          <Trigger type="periodic">
             <Multiplier>1</Multiplier>
             <Name>FGND_RTI_PERIODIC</Name>
             <Task ref="FGNDTask"/>
             <Order>0</Order>
-            <Function>Trigger_FGND_RTI_PERIODIC_6022p0004</Function>
+            <Function>Trigger_FGND_RTI_PERIODIC_6028p0004</Function>
          </Trigger>
          <Trigger type="periodic">
             <Name>FaultManagerPeriodicTick</Name>
@@ -668,11 +668,6 @@
          </DataStore>
          <DataStore ref="Constant">
             <DataType>real32</DataType>
-            <Default>1200.0</Default>
-            <Name>Temp_Flash</Name>
-         </DataStore>
-         <DataStore ref="Constant">
-            <DataType>real32</DataType>
             <Default>0.03</Default>
             <Name>Max_Dist_Travel_In_Sec</Name>
          </DataStore>
@@ -856,6 +851,51 @@
             <Default>0.0</Default>
             <Name>Shift_Position_Raw_Ovr_new</Name>
          </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>boolean</DataType>
+            <Default>0</Default>
+            <Name>Brake_Position_Ovr_ovr</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>real32</DataType>
+            <Default>0.0</Default>
+            <Name>Brake_Position_Ovr_new</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>real32</DataType>
+            <Default>0.0</Default>
+            <Name>Brake_Position_PreIn</Name>
+         </DataStore>
+         <DataStore ref="Constant">
+            <DataType>real32</DataType>
+            <Default>-32767.0 -29567.0 -26367.0 -23167.0 -19967.0 -16767.0 -13567.0 -10367.0 -7167.0 -3967.0 -767.0 2433.0 5633.0 8833.0 12033.0 15233.0 18433.0 21633.0 24833.0 28033.0 31233.0 </Default>
+            <Name>Brake_Position_PreIdxArr</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>uint16</DataType>
+            <Default>0U</Default>
+            <Name>Brake_Position_PreIdx</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>real32</DataType>
+            <Default>0.0</Default>
+            <Name>Brake_Position_Tbl</Name>
+         </DataStore>
+         <DataStore ref="Constant">
+            <DataType>real32</DataType>
+            <Default>1.0 0.9 0.8 0.7 0.6 0.5 0.4 0.3 0.2 0.1 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 </Default>
+            <Name>Brake_Position_TblTbl</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>boolean</DataType>
+            <Default>0</Default>
+            <Name>Throttle_Position_Ovr_ovr</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>uint16</DataType>
+            <Default>0.0</Default>
+            <Name>Throttle_Position_Ovr_new</Name>
+         </DataStore>
          <DataStore ref="Constant">
             <DataType>real32</DataType>
             <Default>5.0</Default>
@@ -890,36 +930,6 @@
             <DataType>real32</DataType>
             <Default>0.0</Default>
             <Name>HybridStateOverride_new</Name>
-         </DataStore>
-         <DataStore ref="Volatile">
-            <DataType>boolean</DataType>
-            <Default>0</Default>
-            <Name>Brake_Position_Ovr_ovr</Name>
-         </DataStore>
-         <DataStore ref="Volatile">
-            <DataType>real32</DataType>
-            <Default>0.0</Default>
-            <Name>Brake_Position_Ovr_new</Name>
-         </DataStore>
-         <DataStore ref="Volatile">
-            <DataType>boolean</DataType>
-            <Default>0</Default>
-            <Name>Throttle_Position_Raw_Ovr_ovr</Name>
-         </DataStore>
-         <DataStore ref="Volatile">
-            <DataType>uint16</DataType>
-            <Default>0.0</Default>
-            <Name>Throttle_Position_Raw_Ovr_new</Name>
-         </DataStore>
-         <DataStore ref="Volatile">
-            <DataType>boolean</DataType>
-            <Default>0</Default>
-            <Name>Throttle_Position_Ovr_ovr</Name>
-         </DataStore>
-         <DataStore ref="Volatile">
-            <DataType>uint16</DataType>
-            <Default>0.0</Default>
-            <Name>Throttle_Position_Ovr_new</Name>
          </DataStore>
          <DataStore ref="Constant">
             <DataType>real32</DataType>
@@ -1861,6 +1871,11 @@
             <Default>0</Default>
             <Name>Eng_Cool_Temp_Ovr_ovr</Name>
          </DataStore>
+         <DataStore ref="Constant">
+            <DataType>real32</DataType>
+            <Default>200.0</Default>
+            <Name>Flash_Timer</Name>
+         </DataStore>
          <DataStore ref="Volatile">
             <DataType>real32</DataType>
             <Default>0.0</Default>
@@ -2515,11 +2530,6 @@
             <DataType>real32</DataType>
             <Default>0.0</Default>
             <Name>VEH_ID_Prb</Name>
-         </DataStore>
-         <DataStore ref="Volatile">
-            <DataType>boolean</DataType>
-            <Default>0</Default>
-            <Name>TimerOne1</Name>
          </DataStore>
          <DataStore ref="Volatile">
             <DataType>real32</DataType>
@@ -3515,6 +3525,41 @@
             <DataType>uint32</DataType>
             <Default>0.0</Default>
             <Name>ABS_4B0_AgeCount_Ovr_new</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>boolean</DataType>
+            <Default>0</Default>
+            <Name>Throttle_Position_Raw_Ovr_ovr</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>real32</DataType>
+            <Default>0.0</Default>
+            <Name>Throttle_Position_Raw_Ovr_new</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>real32</DataType>
+            <Default>0.0</Default>
+            <Name>Throttle_Position_PreIn</Name>
+         </DataStore>
+         <DataStore ref="Constant">
+            <DataType>real32</DataType>
+            <Default>0.0 15.5 31.0 46.5 62.0 77.5 93.0 108.5 124.0 139.5 155.0 170.5 186.0 201.5 217.0 232.5 248.0 </Default>
+            <Name>Throttle_Position_PreIdxArr</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>uint16</DataType>
+            <Default>0U</Default>
+            <Name>Throttle_Position_PreIdx</Name>
+         </DataStore>
+         <DataStore ref="Volatile">
+            <DataType>real32</DataType>
+            <Default>0.0</Default>
+            <Name>Throttle_Position_Tbl</Name>
+         </DataStore>
+         <DataStore ref="Constant">
+            <DataType>real32</DataType>
+            <Default>0.0 0.061 0.122 0.183 0.244 0.305 0.366 0.427 0.488 0.54899999999999993 0.61 0.671 0.732 0.79299999999999993 0.854 0.915 0.976 </Default>
+            <Name>Throttle_Position_TblTbl</Name>
          </DataStore>
          <DataStore ref="Volatile">
             <DataType>boolean</DataType>
@@ -8920,103 +8965,108 @@
          </Enum>
       </Types>
       <IO>
+         <DigitalInput>
+            <Name>ESTOP2</Name>
+            <ModuleResource>ESTOP</ModuleResource>
+            <AppLink>Mooventure2016_Rev5/Foreground/Control/Vehicle Run//Stop Determination/motohawk_din</AppLink>
+         </DigitalInput>
          <DiscreteOutput>
-            <Name>DOut4594p0001</Name>
+            <Name>DOut4600p0001</Name>
             <ModuleResource>LSO1</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout1</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut4595p0001</Name>
+            <Name>DOut4601p0001</Name>
             <ModuleResource>LSO3</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout10</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut4596p0001</Name>
+            <Name>DOut4602p0001</Name>
             <ModuleResource>INJ8</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout11</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut4597p0001</Name>
+            <Name>DOut4603p0001</Name>
             <ModuleResource>INJ6</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout12</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut4598p0001</Name>
+            <Name>DOut4604p0001</Name>
             <ModuleResource>INJ7</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout13</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut4599p0001</Name>
+            <Name>DOut4605p0001</Name>
             <ModuleResource>INJ5</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout2</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut4600p0001</Name>
+            <Name>DOut4606p0001</Name>
             <ModuleResource>LSO2</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout3</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut4601p0001</Name>
+            <Name>DOut4607p0001</Name>
             <ModuleResource>INJ4</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout4</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut4602p0001</Name>
+            <Name>DOut4608p0001</Name>
             <ModuleResource>INJ3</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout5</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut4603p0001</Name>
+            <Name>DOut4609p0001</Name>
             <ModuleResource>INJ1</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout6</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut4604p0001</Name>
+            <Name>DOut4610p0001</Name>
             <ModuleResource>LSO12</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout7</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut4605p0001</Name>
+            <Name>DOut4611p0001</Name>
             <ModuleResource>LSO11</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout8</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut4606p0001</Name>
+            <Name>DOut4612p0001</Name>
             <ModuleResource>LSO5</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout9</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut4820p0001</Name>
+            <Name>DOut4826p0001</Name>
             <ModuleResource>LSO9</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout1</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut4821p0001</Name>
+            <Name>DOut4827p0001</Name>
             <ModuleResource>LSO7</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout2</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut4822p0001</Name>
+            <Name>DOut4828p0001</Name>
             <ModuleResource>LSO4</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout3</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut4823p0001</Name>
+            <Name>DOut4829p0001</Name>
             <ModuleResource>LSO10</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout4</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut4824p0001</Name>
+            <Name>DOut4830p0001</Name>
             <ModuleResource>EST8</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout5</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut4825p0001</Name>
+            <Name>DOut4831p0001</Name>
             <ModuleResource>EST6</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout6</AppLink>
          </DiscreteOutput>
          <DiscreteOutput>
-            <Name>DOut5963p0004</Name>
+            <Name>DOut5969p0004</Name>
             <ModuleResource>MPRD</ModuleResource>
             <AppLink>Mooventure2016_Rev5/Main Power Relay1/Background/motohawk_dout</AppLink>
          </DiscreteOutput>
@@ -9095,7 +9145,7 @@
                   <Task ref="ApplicationInterruptTask"/>
                </Dispatcher>
                <Slot>
-                  <Name>RxSlot_3129p0005</Name>
+                  <Name>RxSlot_3140p0002</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>535</Value>
@@ -9109,7 +9159,7 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_3130p0004</Name>
+                  <Name>RxSlot_3141p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>1200</Value>
@@ -9123,7 +9173,7 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_3131p0004</Name>
+                  <Name>RxSlot_3142p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>1047</Value>
@@ -9137,7 +9187,7 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_3553p0006</Name>
+                  <Name>RxSlot_3564p0004</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>1072</Value>
@@ -9151,7 +9201,7 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_3791p0001</Name>
+                  <Name>RxSlot_3802p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>786</Value>
@@ -9165,7 +9215,7 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_3904p0001</Name>
+                  <Name>RxSlot_3910p0001</Name>
                   <ID>
                      <Type>Extended</Type>
                      <Value>419381321</Value>
@@ -9179,7 +9229,7 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_4058p0001</Name>
+                  <Name>RxSlot_4064p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>632</Value>
@@ -9193,7 +9243,7 @@
                   <QueueSize>2</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_4059p0001</Name>
+                  <Name>RxSlot_4065p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>1572</Value>
@@ -9207,7 +9257,7 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_4060p0001</Name>
+                  <Name>RxSlot_4066p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>608</Value>
@@ -9221,7 +9271,7 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_4061p0001</Name>
+                  <Name>RxSlot_4067p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>1424</Value>
@@ -9235,7 +9285,7 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_4263p0001</Name>
+                  <Name>RxSlot_4269p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>128</Value>
@@ -9277,7 +9327,7 @@
                   <Task ref="ApplicationInterruptTask"/>
                </Dispatcher>
                <Slot>
-                  <Name>RxSlot_3793p0001</Name>
+                  <Name>RxSlot_3804p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>968</Value>
@@ -9306,7 +9356,7 @@
                   <Task ref="ApplicationInterruptTask"/>
                </Dispatcher>
                <Slot>
-                  <Name>RxSlot_3337p0004</Name>
+                  <Name>RxSlot_3348p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>762</Value>
@@ -9320,7 +9370,7 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_3338p0004</Name>
+                  <Name>RxSlot_3349p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>763</Value>
@@ -9334,7 +9384,7 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_3339p0004</Name>
+                  <Name>RxSlot_3350p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>764</Value>
@@ -9348,7 +9398,7 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_3340p0004</Name>
+                  <Name>RxSlot_3351p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>765</Value>
@@ -9362,7 +9412,7 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_3341p0004</Name>
+                  <Name>RxSlot_3352p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>766</Value>
@@ -9376,7 +9426,7 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_3342p0004</Name>
+                  <Name>RxSlot_3353p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>767</Value>
@@ -9390,7 +9440,7 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_3343p0004</Name>
+                  <Name>RxSlot_3354p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>768</Value>
@@ -9404,7 +9454,7 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_3790p0004</Name>
+                  <Name>RxSlot_3801p0004</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>1296</Value>
@@ -9418,7 +9468,7 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_3792p0001</Name>
+                  <Name>RxSlot_3803p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>1832</Value>
@@ -9432,7 +9482,7 @@
                   <QueueSize>1</QueueSize>
                </Slot>
                <Slot>
-                  <Name>RxSlot_4001p0001</Name>
+                  <Name>RxSlot_4007p0001</Name>
                   <ID>
                      <Type>Standard</Type>
                      <Value>521</Value>
@@ -9482,9 +9532,9 @@
             </TableDatabase>
             <ProjectID adjustable="true" adjust-data-type="uint8_T">6</ProjectID>
             <ProductID adjustable="true" adjust-data-type="uint32_T">1</ProductID>
-            <SwIdTxt>Mooventur_214</SwIdTxt>
-            <SwRevisionTxt>Mooventure2016_Rev5_214</SwRevisionTxt>
-            <CalIdTxt>Mooventure2016_Rev5_214_000</CalIdTxt>
+            <SwIdTxt>Mooventur_215</SwIdTxt>
+            <SwRevisionTxt>Mooventure2016_Rev5_215</SwRevisionTxt>
+            <CalIdTxt>Mooventure2016_Rev5_215_000</CalIdTxt>
          </VarDecs>
          <DatabaseBuild>
             <Toolchain>
@@ -9515,20 +9565,20 @@
             <File>Mooventure2016_Rev5_data.c</File>
             <File>MotoHawk_DataStores.c</File>
             <File>TableLookupFunctions.c</File>
-            <File>Trigger_BGND_BASE_PERIODIC_18255p0001.c</File>
-            <File>Trigger_BGND_BASE_PERIODIC_6013p0004.c</File>
-            <File>Trigger_BGND_BASEx10_PERIODIC_18257p0001.c</File>
-            <File>Trigger_BGND_BASEx2_PERIODIC_18256p0001.c</File>
-            <File>Trigger_FGND_10XRTI_PERIODIC_18253p0001.c</File>
-            <File>Trigger_FGND_20XRTI_PERIODIC_18254p0001.c</File>
-            <File>Trigger_FGND_2XRTI_PERIODIC_18251p0001.c</File>
-            <File>Trigger_FGND_RTI_PERIODIC_18252p0001.c</File>
-            <File>Trigger_FGND_RTI_PERIODIC_6022p0004.c</File>
+            <File>Trigger_BGND_BASE_PERIODIC_10475p0001.c</File>
+            <File>Trigger_BGND_BASE_PERIODIC_6019p0004.c</File>
+            <File>Trigger_BGND_BASEx10_PERIODIC_10477p0001.c</File>
+            <File>Trigger_BGND_BASEx2_PERIODIC_10476p0001.c</File>
+            <File>Trigger_FGND_10XRTI_PERIODIC_10473p0001.c</File>
+            <File>Trigger_FGND_20XRTI_PERIODIC_10474p0001.c</File>
+            <File>Trigger_FGND_2XRTI_PERIODIC_10471p0001.c</File>
+            <File>Trigger_FGND_RTI_PERIODIC_10472p0001.c</File>
+            <File>Trigger_FGND_RTI_PERIODIC_6028p0004.c</File>
             <File>Trigger_Fault_active_0_10.c</File>
-            <File>Trigger_IDLE_EVENT_17123p0007.c</File>
-            <File>Trigger_IDLE_EVENT_18182p0001.c</File>
-            <File>Trigger_ONE_SECOND_EVENT_18258p0001.c</File>
-            <File>Trigger_STARTUP_EVENT_18157p0005.c</File>
+            <File>Trigger_IDLE_EVENT_10402p0001.c</File>
+            <File>Trigger_IDLE_EVENT_7280p0001.c</File>
+            <File>Trigger_ONE_SECOND_EVENT_10478p0001.c</File>
+            <File>Trigger_STARTUP_EVENT_10377p0001.c</File>
             <File>VarDecs.c</File>
             <File>mh_ccp_protocol.c</File>
             <File>mh_ccp_protocol_CCP1.c</File>
@@ -9584,20 +9634,20 @@
          <Command>
             <Description>Dumping DLL to XML</Description>
             <Order>10000</Order>
-            <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\motohawk_dumpdll.exe" -xml  "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\Mooventur_214.dll" &gt; "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\Mooventur_214.xml"</Execute>
+            <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\motohawk_dumpdll.exe" -xml  "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\Mooventur_215.dll" &gt; "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\Mooventur_215.xml"</Execute>
          </Command>
          <Command>
             <Description>Generating ASAP2 file</Description>
             <Order>10001</Order>
-            <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\ASAP2.exe" -m  "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\Mooventur_214.xml" -o  "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\Mooventur_214.a2l" -u VirtualCalSpace -asap1b "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\mh_asap1b_ccp_CCP1.xml"</Execute>
+            <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\ASAP2.exe" -m  "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\Mooventur_215.xml" -o  "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\Mooventur_215.a2l" -u VirtualCalSpace -asap1b "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\mh_asap1b_ccp_CCP1.xml"</Execute>
          </Command>
          <Command>
             <Description>Installing ASAP2 file in C:\ECUFiles\TDBDLL\</Description>
             <Order>10002</Order>
-            <Execute>@copy "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\Mooventur_214.a2l" "C:\ECUFiles\TDBDLL\" &gt; NUL</Execute>
+            <Execute>@copy "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\Mooventur_215.a2l" "C:\ECUFiles\TDBDLL\" &gt; NUL</Execute>
          </Command>
       </Build>
-      <Signature>7c70e099-da09-4bf1-a2-b6-a5-fc-71-81-00</Signature>
+      <Signature>fbe6069d-44db-4c7b-8e-24-3c-84-ae-53-8e</Signature>
       <VarDecs>
          <DataStoreVarDec ref="CCP1_StationAddr">
             <access>RW RW RW RW</access>
@@ -10528,21 +10578,6 @@
             <update>BACKGND</update>
             <vector_style>wide</vector_style>
          </DataStoreVarDec>
-         <DataStoreVarDec ref="Temp_Flash">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>0.05</gain>
-            <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|Enabled Subsystem</group>
-            <max>5000000000000000.000000</max>
-            <min>-5000000000000000.000000</min>
-            <name>Temp_Flash</name>
-            <offset>0.0</offset>
-            <storage>FLASH</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
          <DataStoreVarDec ref="Max_Dist_Travel_In_Sec">
             <access>RW RW RW RW</access>
             <class>VAR</class>
@@ -11042,6 +11077,68 @@
             <update>BACKGND</update>
             <vector_style>wide</vector_style>
          </DataStoreVarDec>
+         <DataStoreVarDec ref="Brake_Position_Ovr_ovr">
+            <access>RW RW RW RW</access>
+            <class>ENUM</class>
+            <enum_name>VarDecEnum_2</enum_name>
+            <exp>1.0</exp>
+            <format>1.0</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs | Brake_Position_Ovr Override</group>
+            <max>1.000000</max>
+            <min>0.000000</min>
+            <name>Brake_Position_Ovr_ovr</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Brake_Position_Ovr_new">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs | Brake_Position_Ovr Override</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>Brake_Position_Ovr_new</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Throttle_Position_Ovr_ovr">
+            <access>RW RW RW RW</access>
+            <class>ENUM</class>
+            <enum_name>VarDecEnum_2</enum_name>
+            <exp>1.0</exp>
+            <format>1.0</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|Analog Inputs|Throttle Position | Throttle_Position_Ovr Override</group>
+            <max>1.000000</max>
+            <min>0.000000</min>
+            <name>Throttle_Position_Ovr_ovr</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Throttle_Position_Ovr_new">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>5.0</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|Analog Inputs|Throttle Position | Throttle_Position_Ovr Override</group>
+            <max>65535.000000</max>
+            <min>0.000000</min>
+            <name>Throttle_Position_Ovr_new</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
          <DataStoreVarDec ref="SafetyModeEnterSOC">
             <access>RW RW RW RW</access>
             <class>VAR</class>
@@ -11150,99 +11247,6 @@
             <max>100000000000000000.000000</max>
             <min>-100000000000000000.000000</min>
             <name>HybridStateOverride_new</name>
-            <offset>0.0</offset>
-            <storage>RAM</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Brake_Position_Ovr_ovr">
-            <access>RW RW RW RW</access>
-            <class>ENUM</class>
-            <enum_name>VarDecEnum_2</enum_name>
-            <exp>1.0</exp>
-            <format>1.0</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs | Brake_Position_Ovr Override</group>
-            <max>1.000000</max>
-            <min>0.000000</min>
-            <name>Brake_Position_Ovr_ovr</name>
-            <offset>0.0</offset>
-            <storage>RAM</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Brake_Position_Ovr_new">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>4.2</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs | Brake_Position_Ovr Override</group>
-            <max>100000000000000000.000000</max>
-            <min>-100000000000000000.000000</min>
-            <name>Brake_Position_Ovr_new</name>
-            <offset>0.0</offset>
-            <storage>RAM</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Throttle_Position_Raw_Ovr_ovr">
-            <access>RW RW RW RW</access>
-            <class>ENUM</class>
-            <enum_name>VarDecEnum_2</enum_name>
-            <exp>1.0</exp>
-            <format>1.0</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs | Throttle_Position_Raw_Ovr Override</group>
-            <max>1.000000</max>
-            <min>0.000000</min>
-            <name>Throttle_Position_Raw_Ovr_ovr</name>
-            <offset>0.0</offset>
-            <storage>RAM</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Throttle_Position_Raw_Ovr_new">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>5.0</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs | Throttle_Position_Raw_Ovr Override</group>
-            <max>65535.000000</max>
-            <min>0.000000</min>
-            <name>Throttle_Position_Raw_Ovr_new</name>
-            <offset>0.0</offset>
-            <storage>RAM</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Throttle_Position_Ovr_ovr">
-            <access>RW RW RW RW</access>
-            <class>ENUM</class>
-            <enum_name>VarDecEnum_2</enum_name>
-            <exp>1.0</exp>
-            <format>1.0</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Inputs|Analog Inputs|Throttle Position | Throttle_Position_Ovr Override</group>
-            <max>1.000000</max>
-            <min>0.000000</min>
-            <name>Throttle_Position_Ovr_ovr</name>
-            <offset>0.0</offset>
-            <storage>RAM</storage>
-            <update>BACKGND</update>
-            <vector_style>wide</vector_style>
-         </DataStoreVarDec>
-         <DataStoreVarDec ref="Throttle_Position_Ovr_new">
-            <access>RW RW RW RW</access>
-            <class>VAR</class>
-            <exp>1.0</exp>
-            <format>5.0</format>
-            <gain>1.0</gain>
-            <group>Mooventure2016_Rev5|Foreground|Inputs|Analog Inputs|Throttle Position | Throttle_Position_Ovr Override</group>
-            <max>65535.000000</max>
-            <min>0.000000</min>
-            <name>Throttle_Position_Ovr_new</name>
             <offset>0.0</offset>
             <storage>RAM</storage>
             <update>BACKGND</update>
@@ -14085,6 +14089,21 @@
             <name>Eng_Cool_Temp_Ovr_ovr</name>
             <offset>0.0</offset>
             <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Flash_Timer">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>Flash_Timer</name>
+            <offset>0.0</offset>
+            <storage>FLASH</storage>
             <update>BACKGND</update>
             <vector_style>wide</vector_style>
          </DataStoreVarDec>
@@ -19024,6 +19043,37 @@
             <update>BACKGND</update>
             <vector_style>wide</vector_style>
          </DataStoreVarDec>
+         <DataStoreVarDec ref="Throttle_Position_Raw_Ovr_ovr">
+            <access>RW RW RW RW</access>
+            <class>ENUM</class>
+            <enum_name>VarDecEnum_2</enum_name>
+            <exp>1.0</exp>
+            <format>1.0</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs | Throttle_Position_Raw_Ovr Override</group>
+            <max>1.000000</max>
+            <min>0.000000</min>
+            <name>Throttle_Position_Raw_Ovr_ovr</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Throttle_Position_Raw_Ovr_new">
+            <access>RW RW RW RW</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs | Throttle_Position_Raw_Ovr Override</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>Throttle_Position_Raw_Ovr_new</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
          <DataStoreVarDec ref="RT_Wheel_Rolling_Count_Ovr_ovr">
             <access>RW RW RW RW</access>
             <class>ENUM</class>
@@ -21446,6 +21496,87 @@
             <update>BACKGND</update>
             <vector_style>wide</vector_style>
          </DataStoreVarDec>
+         <DataStoreVarDec ref="Brake_Position_PreIdxArr">
+            <access>RW RW RW RW</access>
+            <class>prelookup</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
+            <index>Brake_Position_PreIdx</index>
+            <input>Brake_Position_PreIn</input>
+            <len>21</len>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>Brake_Position_PreIdxArr</name>
+            <offset>0.0</offset>
+            <storage>FLASH</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Brake_Position_PreIdx">
+            <access>RO RO RO RO</access>
+            <class>VAR</class>
+            <exp>1</exp>
+            <format>4.2</format>
+            <gain>0.001953125</gain>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
+            <max>127.998047</max>
+            <min>0.000000</min>
+            <name>Brake_Position_PreIdx</name>
+            <offset>0</offset>
+            <storage>RAM</storage>
+            <units>idx.frac</units>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Brake_Position_PreIn">
+            <access>RO RO RO RO</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>Brake_Position_PreIn</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Brake_Position_TblTbl">
+            <access>RW RW RW RW</access>
+            <class>interpolation_1d</class>
+            <exp>1.0</exp>
+            <format>1.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
+            <len>21</len>
+            <max>1.000000</max>
+            <min>0.000000</min>
+            <name>Brake_Position_TblTbl</name>
+            <offset>0.0</offset>
+            <output>Brake_Position_Tbl</output>
+            <prelookup>Brake_Position_PreIdxArr</prelookup>
+            <storage>FLASH</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Brake_Position_Tbl">
+            <access>RO RO RO RO</access>
+            <class>var</class>
+            <exp>1.0</exp>
+            <format>1.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>Brake_Position_Tbl</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
          <DataStoreVarDec ref="safetyMode_AccelIdxArr">
             <access>RW RW RW RW</access>
             <class>prelookup</class>
@@ -22008,6 +22139,87 @@
             <max>100000000000000000.000000</max>
             <min>-100000000000000000.000000</min>
             <name>Cruise_Control_Map</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Throttle_Position_PreIdxArr">
+            <access>RW RW RW RW</access>
+            <class>prelookup</class>
+            <exp>1.0</exp>
+            <format>4.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
+            <index>Throttle_Position_PreIdx</index>
+            <input>Throttle_Position_PreIn</input>
+            <len>17</len>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>Throttle_Position_PreIdxArr</name>
+            <offset>0.0</offset>
+            <storage>FLASH</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Throttle_Position_PreIdx">
+            <access>RO RO RO RO</access>
+            <class>VAR</class>
+            <exp>1</exp>
+            <format>4.2</format>
+            <gain>0.001953125</gain>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
+            <max>127.998047</max>
+            <min>0.000000</min>
+            <name>Throttle_Position_PreIdx</name>
+            <offset>0</offset>
+            <storage>RAM</storage>
+            <units>idx.frac</units>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Throttle_Position_PreIn">
+            <access>RO RO RO RO</access>
+            <class>VAR</class>
+            <exp>1.0</exp>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>Throttle_Position_PreIn</name>
+            <offset>0.0</offset>
+            <storage>RAM</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Throttle_Position_TblTbl">
+            <access>RW RW RW RW</access>
+            <class>interpolation_1d</class>
+            <exp>1.0</exp>
+            <format>1.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
+            <len>17</len>
+            <max>1.000000</max>
+            <min>0.000000</min>
+            <name>Throttle_Position_TblTbl</name>
+            <offset>0.0</offset>
+            <output>Throttle_Position_Tbl</output>
+            <prelookup>Throttle_Position_PreIdxArr</prelookup>
+            <storage>FLASH</storage>
+            <update>BACKGND</update>
+            <vector_style>wide</vector_style>
+         </DataStoreVarDec>
+         <DataStoreVarDec ref="Throttle_Position_Tbl">
+            <access>RO RO RO RO</access>
+            <class>var</class>
+            <exp>1.0</exp>
+            <format>1.2</format>
+            <gain>1.0</gain>
+            <group>Mooventure2016_Rev5|Foreground|Inputs|Driver Inputs</group>
+            <max>100000000000000000.000000</max>
+            <min>-100000000000000000.000000</min>
+            <name>Throttle_Position_Tbl</name>
             <offset>0.0</offset>
             <storage>RAM</storage>
             <update>BACKGND</update>
@@ -28580,6 +28792,26 @@
       <Order>11</Order>
    </Trigger>
    <IOMerge>
+      <Object name="CPUCore_0_GPIO_180_AE15" claim="DGIn_ESTOP"/>
+      <DigitalInput_DGIn_GPIO name="CPUCore_0_GPIO_180_AE15_DigitalInput_DGIn">
+         <Channel>180</Channel>
+         <Name>ESTOP2</Name>
+         <Behavior>DigitalInput</Behavior>
+      </DigitalInput_DGIn_GPIO>
+      <DigitalInput_DGIn name="DGIn_ESTOP" claim="ESTOP2">
+         <CPUName>CPUCore_0</CPUName>
+         <CPUType>CPU</CPUType>
+         <CPUResource>GPIO_180_AE15</CPUResource>
+         <CPUPinType>GPIO</CPUPinType>
+         <Invert>true</Invert>
+         <Channel>180</Channel>
+         <Behavior>DigitalInput</Behavior>
+         <ModuleResource>ESTOP</ModuleResource>
+         <DeviceDriver>DGIn</DeviceDriver>
+         <Name>ESTOP2</Name>
+         <AppLink>Mooventure2016_Rev5/Foreground/Control/Vehicle Run//Stop Determination/motohawk_din</AppLink>
+         <DisableOnStop>true</DisableOnStop>
+      </DigitalInput_DGIn>
       <Object name="ApplicationVector">
          <ISR merge="unique">
             <Name/>
@@ -28624,10 +28856,10 @@
       </MC33800>
       <Object name="S_SHRC_3_MC33800_CCD1" claim="MC33800_LSO1"/>
       <Object name="FaultStatus_MC33800_LSO1">
-         <RuntimeObjectName>DOut4594p0001</RuntimeObjectName>
+         <RuntimeObjectName>DOut4600p0001</RuntimeObjectName>
          <ResourceBehavior>DiscreteOutput</ResourceBehavior>
       </Object>
-      <DiscreteOutput_MC33800 name="MC33800_LSO1" claim="DOut4594p0001">
+      <DiscreteOutput_MC33800 name="MC33800_LSO1" claim="DOut4600p0001">
          <MC33800Instance>S_SHRC_3</MC33800Instance>
          <MC33800Pin>MC33800_CCD1</MC33800Pin>
          <MC33800SubModule>CCD</MC33800SubModule>
@@ -28643,16 +28875,16 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO1</ModuleResource>
          <DeviceDriver>MC33800</DeviceDriver>
-         <Name>DOut4594p0001</Name>
+         <Name>DOut4600p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout1</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_MC33800>
       <Object name="S_SHRC_3_MC33800_OUT1" claim="MC33800_LSO3"/>
       <Object name="FaultStatus_MC33800_LSO3">
-         <RuntimeObjectName>DOut4595p0001</RuntimeObjectName>
+         <RuntimeObjectName>DOut4601p0001</RuntimeObjectName>
          <ResourceBehavior>DiscreteOutput</ResourceBehavior>
       </Object>
-      <DiscreteOutput_MC33800 name="MC33800_LSO3" claim="DOut4595p0001">
+      <DiscreteOutput_MC33800 name="MC33800_LSO3" claim="DOut4601p0001">
          <MC33800Instance>S_SHRC_3</MC33800Instance>
          <MC33800Pin>MC33800_OUT1</MC33800Pin>
          <MC33800SubModule>OSS</MC33800SubModule>
@@ -28668,7 +28900,7 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO3</ModuleResource>
          <DeviceDriver>MC33800</DeviceDriver>
-         <Name>DOut4595p0001</Name>
+         <Name>DOut4601p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout10</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_MC33800>
@@ -28704,7 +28936,7 @@
          <Name>MC33800_INJ8</Name>
       </DiscreteOutput_MC33800>
       <Object name="CPUCore_0_GPIO_137_G1" claim="BasicOut_INJ8"/>
-      <DiscreteOutput_BasicOut name="BasicOut_INJ8" claim="DOut4596p0001">
+      <DiscreteOutput_BasicOut name="BasicOut_INJ8" claim="DOut4602p0001">
          <CPUName>CPUCore_0</CPUName>
          <CPUType>CPU</CPUType>
          <CPUResource>GPIO_137_G1</CPUResource>
@@ -28720,7 +28952,7 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>INJ8</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut4596p0001</Name>
+         <Name>DOut4602p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout11</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_BasicOut>
@@ -28747,7 +28979,7 @@
          <Name>MC33800_INJ6</Name>
       </DiscreteOutput_MC33800>
       <Object name="CPUCore_0_GPIO_135_G4" claim="BasicOut_INJ6"/>
-      <DiscreteOutput_BasicOut name="BasicOut_INJ6" claim="DOut4597p0001">
+      <DiscreteOutput_BasicOut name="BasicOut_INJ6" claim="DOut4603p0001">
          <CPUName>CPUCore_0</CPUName>
          <CPUType>CPU</CPUType>
          <CPUResource>GPIO_135_G4</CPUResource>
@@ -28763,7 +28995,7 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>INJ6</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut4597p0001</Name>
+         <Name>DOut4603p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout12</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_BasicOut>
@@ -28790,7 +29022,7 @@
          <Name>MC33800_INJ7</Name>
       </DiscreteOutput_MC33800>
       <Object name="CPUCore_0_GPIO_136_G2" claim="BasicOut_INJ7"/>
-      <DiscreteOutput_BasicOut name="BasicOut_INJ7" claim="DOut4598p0001">
+      <DiscreteOutput_BasicOut name="BasicOut_INJ7" claim="DOut4604p0001">
          <CPUName>CPUCore_0</CPUName>
          <CPUType>CPU</CPUType>
          <CPUResource>GPIO_136_G2</CPUResource>
@@ -28806,7 +29038,7 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>INJ7</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut4598p0001</Name>
+         <Name>DOut4604p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout13</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_BasicOut>
@@ -28833,7 +29065,7 @@
          <Name>MC33800_INJ5</Name>
       </DiscreteOutput_MC33800>
       <Object name="CPUCore_0_GPIO_134_H1" claim="BasicOut_INJ5"/>
-      <DiscreteOutput_BasicOut name="BasicOut_INJ5" claim="DOut4599p0001">
+      <DiscreteOutput_BasicOut name="BasicOut_INJ5" claim="DOut4605p0001">
          <CPUName>CPUCore_0</CPUName>
          <CPUType>CPU</CPUType>
          <CPUResource>GPIO_134_H1</CPUResource>
@@ -28849,7 +29081,7 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>INJ5</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut4599p0001</Name>
+         <Name>DOut4605p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout2</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_BasicOut>
@@ -28876,7 +29108,7 @@
          <Name>MC33800_LSO2</Name>
       </DiscreteOutput_MC33800>
       <Object name="CPUCore_0_GPIO_138_F1" claim="BasicOut_LSO2"/>
-      <DiscreteOutput_BasicOut name="BasicOut_LSO2" claim="DOut4600p0001">
+      <DiscreteOutput_BasicOut name="BasicOut_LSO2" claim="DOut4606p0001">
          <CPUName>CPUCore_0</CPUName>
          <CPUType>CPU</CPUType>
          <CPUResource>GPIO_138_F1</CPUResource>
@@ -28890,7 +29122,7 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO2</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut4600p0001</Name>
+         <Name>DOut4606p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout3</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_BasicOut>
@@ -28917,7 +29149,7 @@
          <Name>MC33800_INJ4</Name>
       </DiscreteOutput_MC33800>
       <Object name="CPUCore_0_GPIO_133_H2" claim="BasicOut_INJ4"/>
-      <DiscreteOutput_BasicOut name="BasicOut_INJ4" claim="DOut4601p0001">
+      <DiscreteOutput_BasicOut name="BasicOut_INJ4" claim="DOut4607p0001">
          <CPUName>CPUCore_0</CPUName>
          <CPUType>CPU</CPUType>
          <CPUResource>GPIO_133_H2</CPUResource>
@@ -28933,7 +29165,7 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>INJ4</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut4601p0001</Name>
+         <Name>DOut4607p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout4</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_BasicOut>
@@ -28960,7 +29192,7 @@
          <Name>MC33800_INJ3</Name>
       </DiscreteOutput_MC33800>
       <Object name="CPUCore_0_GPIO_132_H3" claim="BasicOut_INJ3"/>
-      <DiscreteOutput_BasicOut name="BasicOut_INJ3" claim="DOut4602p0001">
+      <DiscreteOutput_BasicOut name="BasicOut_INJ3" claim="DOut4608p0001">
          <CPUName>CPUCore_0</CPUName>
          <CPUType>CPU</CPUType>
          <CPUResource>GPIO_132_H3</CPUResource>
@@ -28976,7 +29208,7 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>INJ3</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut4602p0001</Name>
+         <Name>DOut4608p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout5</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_BasicOut>
@@ -29003,7 +29235,7 @@
          <Name>MC33800_INJ1</Name>
       </DiscreteOutput_MC33800>
       <Object name="CPUCore_0_GPIO_130_J1" claim="BasicOut_INJ1"/>
-      <DiscreteOutput_BasicOut name="BasicOut_INJ1" claim="DOut4603p0001">
+      <DiscreteOutput_BasicOut name="BasicOut_INJ1" claim="DOut4609p0001">
          <CPUName>CPUCore_0</CPUName>
          <CPUType>CPU</CPUType>
          <CPUResource>GPIO_130_J1</CPUResource>
@@ -29019,16 +29251,16 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>INJ1</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut4603p0001</Name>
+         <Name>DOut4609p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout6</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_BasicOut>
       <Object name="S_SHRC_4_MC33800_OUT2" claim="MC33800_LSO12"/>
       <Object name="FaultStatus_MC33800_LSO12">
-         <RuntimeObjectName>DOut4604p0001</RuntimeObjectName>
+         <RuntimeObjectName>DOut4610p0001</RuntimeObjectName>
          <ResourceBehavior>DiscreteOutput</ResourceBehavior>
       </Object>
-      <DiscreteOutput_MC33800 name="MC33800_LSO12" claim="DOut4604p0001">
+      <DiscreteOutput_MC33800 name="MC33800_LSO12" claim="DOut4610p0001">
          <MC33800Instance>S_SHRC_4</MC33800Instance>
          <MC33800Pin>MC33800_OUT2</MC33800Pin>
          <MC33800SubModule>OSS</MC33800SubModule>
@@ -29044,16 +29276,16 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO12</ModuleResource>
          <DeviceDriver>MC33800</DeviceDriver>
-         <Name>DOut4604p0001</Name>
+         <Name>DOut4610p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout7</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_MC33800>
       <Object name="S_SHRC_4_MC33800_OUT1" claim="MC33800_LSO11"/>
       <Object name="FaultStatus_MC33800_LSO11">
-         <RuntimeObjectName>DOut4605p0001</RuntimeObjectName>
+         <RuntimeObjectName>DOut4611p0001</RuntimeObjectName>
          <ResourceBehavior>DiscreteOutput</ResourceBehavior>
       </Object>
-      <DiscreteOutput_MC33800 name="MC33800_LSO11" claim="DOut4605p0001">
+      <DiscreteOutput_MC33800 name="MC33800_LSO11" claim="DOut4611p0001">
          <MC33800Instance>S_SHRC_4</MC33800Instance>
          <MC33800Pin>MC33800_OUT1</MC33800Pin>
          <MC33800SubModule>OSS</MC33800SubModule>
@@ -29069,16 +29301,16 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO11</ModuleResource>
          <DeviceDriver>MC33800</DeviceDriver>
-         <Name>DOut4605p0001</Name>
+         <Name>DOut4611p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout8</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_MC33800>
       <Object name="S_SHRC_3_MC33800_PWM6" claim="MC33800_LSO5"/>
       <Object name="FaultStatus_MC33800_LSO5">
-         <RuntimeObjectName>DOut4606p0001</RuntimeObjectName>
+         <RuntimeObjectName>DOut4612p0001</RuntimeObjectName>
          <ResourceBehavior>DiscreteOutput</ResourceBehavior>
       </Object>
-      <DiscreteOutput_MC33800 name="MC33800_LSO5" claim="DOut4606p0001">
+      <DiscreteOutput_MC33800 name="MC33800_LSO5" claim="DOut4612p0001">
          <MC33800Instance>S_SHRC_3</MC33800Instance>
          <MC33800Pin>MC33800_PWM6</MC33800Pin>
          <MC33800SubModule>PWM</MC33800SubModule>
@@ -29094,7 +29326,7 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO5</ModuleResource>
          <DeviceDriver>MC33800</DeviceDriver>
-         <Name>DOut4606p0001</Name>
+         <Name>DOut4612p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout9</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_MC33800>
@@ -29121,7 +29353,7 @@
          <Name>MC33800_LSO9</Name>
       </DiscreteOutput_MC33800>
       <Object name="CPUCore_0_GPIO_159_J24" claim="BasicOut_LSO9"/>
-      <DiscreteOutput_BasicOut name="BasicOut_LSO9" claim="DOut4820p0001">
+      <DiscreteOutput_BasicOut name="BasicOut_LSO9" claim="DOut4826p0001">
          <CPUName>CPUCore_0</CPUName>
          <CPUType>CPU</CPUType>
          <CPUResource>GPIO_159_J24</CPUResource>
@@ -29135,16 +29367,16 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO9</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut4820p0001</Name>
+         <Name>DOut4826p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout1</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_BasicOut>
       <Object name="S_SHRC_4_MC33800_PWM6" claim="MC33800_LSO7"/>
       <Object name="FaultStatus_MC33800_LSO7">
-         <RuntimeObjectName>DOut4821p0001</RuntimeObjectName>
+         <RuntimeObjectName>DOut4827p0001</RuntimeObjectName>
          <ResourceBehavior>DiscreteOutput</ResourceBehavior>
       </Object>
-      <DiscreteOutput_MC33800 name="MC33800_LSO7" claim="DOut4821p0001">
+      <DiscreteOutput_MC33800 name="MC33800_LSO7" claim="DOut4827p0001">
          <MC33800Instance>S_SHRC_4</MC33800Instance>
          <MC33800Pin>MC33800_PWM6</MC33800Pin>
          <MC33800SubModule>PWM</MC33800SubModule>
@@ -29160,16 +29392,16 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO7</ModuleResource>
          <DeviceDriver>MC33800</DeviceDriver>
-         <Name>DOut4821p0001</Name>
+         <Name>DOut4827p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout2</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_MC33800>
       <Object name="S_SHRC_3_MC33800_PWM5" claim="MC33800_LSO4"/>
       <Object name="FaultStatus_MC33800_LSO4">
-         <RuntimeObjectName>DOut4822p0001</RuntimeObjectName>
+         <RuntimeObjectName>DOut4828p0001</RuntimeObjectName>
          <ResourceBehavior>DiscreteOutput</ResourceBehavior>
       </Object>
-      <DiscreteOutput_MC33800 name="MC33800_LSO4" claim="DOut4822p0001">
+      <DiscreteOutput_MC33800 name="MC33800_LSO4" claim="DOut4828p0001">
          <MC33800Instance>S_SHRC_3</MC33800Instance>
          <MC33800Pin>MC33800_PWM5</MC33800Pin>
          <MC33800SubModule>PWM</MC33800SubModule>
@@ -29185,7 +29417,7 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO4</ModuleResource>
          <DeviceDriver>MC33800</DeviceDriver>
-         <Name>DOut4822p0001</Name>
+         <Name>DOut4828p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout3</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_MC33800>
@@ -29212,7 +29444,7 @@
          <Name>MC33800_LSO10</Name>
       </DiscreteOutput_MC33800>
       <Object name="CPUCore_0_GPIO_158_J25" claim="BasicOut_LSO10"/>
-      <DiscreteOutput_BasicOut name="BasicOut_LSO10" claim="DOut4823p0001">
+      <DiscreteOutput_BasicOut name="BasicOut_LSO10" claim="DOut4829p0001">
          <CPUName>CPUCore_0</CPUName>
          <CPUType>CPU</CPUType>
          <CPUResource>GPIO_158_J25</CPUResource>
@@ -29226,7 +29458,7 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO10</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut4823p0001</Name>
+         <Name>DOut4829p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout4</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_BasicOut>
@@ -29241,10 +29473,10 @@
          <InitialState>on</InitialState>
          <Invariant>true</Invariant>
          <UseUpdateOnlyOnChange>true</UseUpdateOnlyOnChange>
-         <Name>DOut4824p0001_DiagDisable</Name>
+         <Name>DOut4830p0001_DiagDisable</Name>
       </DiscreteOutput_BasicOut>
       <Object name="CPUCore_0_GPIO_124_K3" claim="BasicOut_EST8"/>
-      <DiscreteOutput_BasicOut name="BasicOut_EST8" claim="DOut4824p0001">
+      <DiscreteOutput_BasicOut name="BasicOut_EST8" claim="DOut4830p0001">
          <CPUName>CPUCore_0</CPUName>
          <CPUType>CPU</CPUType>
          <CPUResource>GPIO_124_K3</CPUResource>
@@ -29259,7 +29491,7 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>EST8</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut4824p0001</Name>
+         <Name>DOut4830p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout5</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_BasicOut>
@@ -29274,10 +29506,10 @@
          <InitialState>on</InitialState>
          <Invariant>true</Invariant>
          <UseUpdateOnlyOnChange>true</UseUpdateOnlyOnChange>
-         <Name>DOut4825p0001_DiagDisable</Name>
+         <Name>DOut4831p0001_DiagDisable</Name>
       </DiscreteOutput_BasicOut>
       <Object name="CPUCore_0_GPIO_122_L1" claim="BasicOut_EST6"/>
-      <DiscreteOutput_BasicOut name="BasicOut_EST6" claim="DOut4825p0001">
+      <DiscreteOutput_BasicOut name="BasicOut_EST6" claim="DOut4831p0001">
          <CPUName>CPUCore_0</CPUName>
          <CPUType>CPU</CPUType>
          <CPUResource>GPIO_122_L1</CPUResource>
@@ -29292,7 +29524,7 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>EST6</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut4825p0001</Name>
+         <Name>DOut4831p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout6</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_BasicOut>
@@ -29319,7 +29551,7 @@
          <Name>MC33800_MPRD</Name>
       </DiscreteOutput_MC33800>
       <Object name="CPUCore_0_GPIO_198_AE20" claim="BasicOut_MPRD"/>
-      <DiscreteOutput_BasicOut name="BasicOut_MPRD" claim="DOut5963p0004">
+      <DiscreteOutput_BasicOut name="BasicOut_MPRD" claim="DOut5969p0004">
          <CPUName>CPUCore_0</CPUName>
          <CPUType>CPU</CPUType>
          <CPUResource>GPIO_198_AE20</CPUResource>
@@ -29333,7 +29565,7 @@
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>MPRD</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut5963p0004</Name>
+         <Name>DOut5969p0004</Name>
          <AppLink>Mooventure2016_Rev5/Main Power Relay1/Background/motohawk_dout</AppLink>
          <DisableOnStop>true</DisableOnStop>
       </DiscreteOutput_BasicOut>
@@ -29611,144 +29843,151 @@
          <Channel>1</Channel>
       </eMIOS_TickTimer>
       <Object name="TickTimer" instantiate="true"/>
+      <DigitalInput root="true">
+         <Behavior>DigitalInput</Behavior>
+         <ModuleResource>ESTOP</ModuleResource>
+         <DeviceDriver>DGIn</DeviceDriver>
+         <Name>ESTOP2</Name>
+         <AppLink>Mooventure2016_Rev5/Foreground/Control/Vehicle Run//Stop Determination/motohawk_din</AppLink>
+      </DigitalInput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO1</ModuleResource>
          <DeviceDriver>MC33800</DeviceDriver>
-         <Name>DOut4594p0001</Name>
+         <Name>DOut4600p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout1</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO3</ModuleResource>
          <DeviceDriver>MC33800</DeviceDriver>
-         <Name>DOut4595p0001</Name>
+         <Name>DOut4601p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout10</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>INJ8</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut4596p0001</Name>
+         <Name>DOut4602p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout11</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>INJ6</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut4597p0001</Name>
+         <Name>DOut4603p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout12</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>INJ7</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut4598p0001</Name>
+         <Name>DOut4604p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout13</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>INJ5</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut4599p0001</Name>
+         <Name>DOut4605p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout2</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO2</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut4600p0001</Name>
+         <Name>DOut4606p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout3</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>INJ4</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut4601p0001</Name>
+         <Name>DOut4607p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout4</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>INJ3</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut4602p0001</Name>
+         <Name>DOut4608p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout5</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>INJ1</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut4603p0001</Name>
+         <Name>DOut4609p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout6</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO12</ModuleResource>
          <DeviceDriver>MC33800</DeviceDriver>
-         <Name>DOut4604p0001</Name>
+         <Name>DOut4610p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout7</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO11</ModuleResource>
          <DeviceDriver>MC33800</DeviceDriver>
-         <Name>DOut4605p0001</Name>
+         <Name>DOut4611p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout8</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO5</ModuleResource>
          <DeviceDriver>MC33800</DeviceDriver>
-         <Name>DOut4606p0001</Name>
+         <Name>DOut4612p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout9</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO9</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut4820p0001</Name>
+         <Name>DOut4826p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout1</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO7</ModuleResource>
          <DeviceDriver>MC33800</DeviceDriver>
-         <Name>DOut4821p0001</Name>
+         <Name>DOut4827p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout2</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO4</ModuleResource>
          <DeviceDriver>MC33800</DeviceDriver>
-         <Name>DOut4822p0001</Name>
+         <Name>DOut4828p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout3</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>LSO10</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut4823p0001</Name>
+         <Name>DOut4829p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout4</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>EST8</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut4824p0001</Name>
+         <Name>DOut4830p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout5</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>EST6</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut4825p0001</Name>
+         <Name>DOut4831p0001</Name>
          <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout6</AppLink>
       </DiscreteOutput>
       <DiscreteOutput root="true">
          <Behavior>DiscreteOutput</Behavior>
          <ModuleResource>MPRD</ModuleResource>
          <DeviceDriver>BasicOut</DeviceDriver>
-         <Name>DOut5963p0004</Name>
+         <Name>DOut5969p0004</Name>
          <AppLink>Mooventure2016_Rev5/Main Power Relay1/Background/motohawk_dout</AppLink>
       </DiscreteOutput>
       <AnalogInput root="true">
@@ -29850,7 +30089,7 @@
                <Task ref="ApplicationInterruptTask"/>
             </Dispatcher>
             <Slot>
-               <Name>RxSlot_3129p0005</Name>
+               <Name>RxSlot_3140p0002</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>535</Value>
@@ -29864,7 +30103,7 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_3130p0004</Name>
+               <Name>RxSlot_3141p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>1200</Value>
@@ -29878,7 +30117,7 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_3131p0004</Name>
+               <Name>RxSlot_3142p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>1047</Value>
@@ -29892,7 +30131,7 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_3553p0006</Name>
+               <Name>RxSlot_3564p0004</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>1072</Value>
@@ -29906,7 +30145,7 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_3791p0001</Name>
+               <Name>RxSlot_3802p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>786</Value>
@@ -29920,7 +30159,7 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_3904p0001</Name>
+               <Name>RxSlot_3910p0001</Name>
                <ID>
                   <Type>Extended</Type>
                   <Value>419381321</Value>
@@ -29934,7 +30173,7 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_4058p0001</Name>
+               <Name>RxSlot_4064p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>632</Value>
@@ -29948,7 +30187,7 @@
                <QueueSize>2</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_4059p0001</Name>
+               <Name>RxSlot_4065p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>1572</Value>
@@ -29962,7 +30201,7 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_4060p0001</Name>
+               <Name>RxSlot_4066p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>608</Value>
@@ -29976,7 +30215,7 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_4061p0001</Name>
+               <Name>RxSlot_4067p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>1424</Value>
@@ -29990,7 +30229,7 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_4263p0001</Name>
+               <Name>RxSlot_4269p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>128</Value>
@@ -30035,7 +30274,7 @@
                <Task ref="ApplicationInterruptTask"/>
             </Dispatcher>
             <Slot>
-               <Name>RxSlot_3793p0001</Name>
+               <Name>RxSlot_3804p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>968</Value>
@@ -30067,7 +30306,7 @@
                <Task ref="ApplicationInterruptTask"/>
             </Dispatcher>
             <Slot>
-               <Name>RxSlot_3337p0004</Name>
+               <Name>RxSlot_3348p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>762</Value>
@@ -30081,7 +30320,7 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_3338p0004</Name>
+               <Name>RxSlot_3349p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>763</Value>
@@ -30095,7 +30334,7 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_3339p0004</Name>
+               <Name>RxSlot_3350p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>764</Value>
@@ -30109,7 +30348,7 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_3340p0004</Name>
+               <Name>RxSlot_3351p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>765</Value>
@@ -30123,7 +30362,7 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_3341p0004</Name>
+               <Name>RxSlot_3352p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>766</Value>
@@ -30137,7 +30376,7 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_3342p0004</Name>
+               <Name>RxSlot_3353p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>767</Value>
@@ -30151,7 +30390,7 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_3343p0004</Name>
+               <Name>RxSlot_3354p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>768</Value>
@@ -30165,7 +30404,7 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_3790p0004</Name>
+               <Name>RxSlot_3801p0004</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>1296</Value>
@@ -30179,7 +30418,7 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_3792p0001</Name>
+               <Name>RxSlot_3803p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>1832</Value>
@@ -30193,7 +30432,7 @@
                <QueueSize>1</QueueSize>
             </Slot>
             <Slot>
-               <Name>RxSlot_4001p0001</Name>
+               <Name>RxSlot_4007p0001</Name>
                <ID>
                   <Type>Standard</Type>
                   <Value>521</Value>

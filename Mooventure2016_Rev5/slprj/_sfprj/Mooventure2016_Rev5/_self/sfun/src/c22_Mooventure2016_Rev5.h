@@ -8,6 +8,7 @@
 
 /* Type Definitions */
 typedef struct {
+  real_T c22_count;
   SimStruct *S;
   const mxArray *c22_setSimStateSideEffectsInfo;
   int32_T c22_sfEvent;
