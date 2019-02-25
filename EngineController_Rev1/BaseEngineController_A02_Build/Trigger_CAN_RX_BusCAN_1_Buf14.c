@@ -21,11 +21,11 @@
    Masked IDs: CAN_1 (ext)
 
 
-   masked_id = 0x18EF0231
+   masked_id = 0x18EF0233
 
    Masks: CAN_1 (ext)
    computed mask = 0x1FFFFFFF
-   computed id   = 0x18EF0231
+   computed id   = 0x18EF0233
 
  */
 
@@ -33,21 +33,21 @@
 struct {
   uint32_T head;
   S_CANMessage messages[4];
-} MHCAN_queue_CCP1 = { 0 };
+} MHCAN_queue_Engine_Controller = { 0 };
 
-uint32_T RxSlot_CCP1_ID = 0;
-uint32_T RxSlot_CCP1_IDMask = 0;
-static boolean_T MHCAN_handler_CCP1(S_CANMessage *messageObj)
+uint32_T RxSlot_Engine_Controller_ID = 0;
+uint32_T RxSlot_Engine_Controller_IDMask = 0;
+static boolean_T MHCAN_handler_Engine_Controller(S_CANMessage *messageObj)
 {
-  if ((messageObj->u4MessageID & 0x1FFFFFFF) == 0x18EF0231) {
-    if ((messageObj->u4MessageID & RxSlot_CCP1_IDMask) == (RxSlot_CCP1_ID &
-         RxSlot_CCP1_IDMask)) {
+  if ((messageObj->u4MessageID & 0x1FFFFFFF) == 0x18EF0233) {
+    if ((messageObj->u4MessageID & RxSlot_Engine_Controller_IDMask) ==
+        (RxSlot_Engine_Controller_ID & RxSlot_Engine_Controller_IDMask)) {
       boolean_T good_payload = 1;
       messageObj->u1Length = messageObj->u1Length > 8 ? 8 : messageObj->u1Length;
       if (good_payload) {
         boolean_T new_message;
-        new_message = MHCAN_enqueue((MHCAN_queue *) &MHCAN_queue_CCP1, 4,
-          messageObj);
+        new_message = MHCAN_enqueue((MHCAN_queue *)
+          &MHCAN_queue_Engine_Controller, 4, messageObj);
       }
 
       return good_payload;
@@ -58,7 +58,7 @@ static boolean_T MHCAN_handler_CCP1(S_CANMessage *messageObj)
 }
 
 static const MHCAN_id_dispatcher_T MHCAN_consumers_0x1FFFFFFF[] = {
-  { 0x18ef0231, MHCAN_handler_CCP1 },
+  { 0x18ef0233, MHCAN_handler_Engine_Controller },
 };
 
 static const MHCAN_mask_dispatcher_T masks[] = {

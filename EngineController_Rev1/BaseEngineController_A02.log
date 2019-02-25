@@ -4,16 +4,16 @@
 ###  Starting MotoHawk Build              ###
 ###  MotoHawk version: 2011a_sp0.184      ###
 ###    MATLAB version: 7.12.0.635 (R2011a)###
-###        25-Aug-2018 19:52:45           ###
+###        07-Sep-2018 11:00:02           ###
 ###                                       ###
 #############################################
  
 Target Module:   ECU555-80 (DEV)
-DEV Executable:  BaseEngineController_A02_133.srz
-MotoTune DLL:    BaseEngin_133.dll
+DEV Executable:  BaseEngineController_A02_134.srz
+MotoTune DLL:    BaseEngin_134.dll
  
 Project GUID:    34a85f28-21b7-4112-82-b0-87-11-cc-cb-8f
-Build GUID:      9481e718-21b4-4e5c-b8-ca-ed-9f-a1-d4-9b
+Build GUID:      1015cea6-d10f-4afa-af-80-ba-c7-22-70-e9
  
 ### Starting build procedure for model: BaseEngineController_A02
 ### Generating code into build folder: C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build
@@ -203,7 +203,7 @@ compile:
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\InjectorSequenceCallback_39.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\IOCallbacks.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\mh_ccp_protocol.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\mh_ccp_protocol_CCP1.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\mh_ccp_protocol_Engine_Controller.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\MotoCoder_DataStore.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\MotoCoder_Timer.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\MotoHawk_CAN.c 
@@ -212,33 +212,33 @@ compile:
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\rt_nonfinite.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\rt_zcfcn.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\TableLookupFunctions.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_BGND_BASEx10_PERIODIC_19781p0004.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_BGND_BASEx2_PERIODIC_19780p0004.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_BGND_BASE_PERIODIC_19779p0004.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_BGND_BASE_PERIODIC_8250p0001.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_BGND_BASEx10_PERIODIC_10118p0005.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_BGND_BASEx2_PERIODIC_10117p0005.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_BGND_BASE_PERIODIC_10116p0005.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_BGND_BASE_PERIODIC_8373p0001.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_CAN_RX_BusCAN_1_Buf1.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_CAN_RX_BusCAN_1_Buf14.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_CAN_RX_BusCAN_2_Buf14.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_Encoder_Fault_29.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_10XRTI_PERIODIC_19777p0004.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_20XRTI_PERIODIC_19778p0004.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_2XRTI_PERIODIC_19775p0004.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_1408p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_10XRTI_PERIODIC_10114p0005.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_20XRTI_PERIODIC_10115p0005.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_2XRTI_PERIODIC_10112p0005.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_1409p0004.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_4024p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_7130p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_7978p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_MID_TDC_EVENT_6947p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_RTI_PERIODIC_19776p0004.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_RTI_PERIODIC_8256p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_TDC1_EVENT_1156p0004.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_TDC_EVENT_5811p0002.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_TDC_EVENT_7485p0004.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_IDLE_EVENT_11352p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_IDLE_EVENT_11406p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_ONE_SECOND_EVENT_19782p0004.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_STARTUP_EVENT_11381p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_STARTUP_EVENT_6946p0001.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_1410p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_4141p0001.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_7253p0001.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_8101p0001.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_MID_TDC_EVENT_7070p0005.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_RTI_PERIODIC_10113p0005.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_RTI_PERIODIC_8379p0001.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_TDC1_EVENT_1157p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_TDC_EVENT_5928p0005.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_TDC_EVENT_7608p0001.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_IDLE_EVENT_10038p0005.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_IDLE_EVENT_9487p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_ONE_SECOND_EVENT_10119p0005.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_STARTUP_EVENT_10013p0005.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_STARTUP_EVENT_7069p0005.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\VarDecs.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\TDB\TableDB.c 
  
@@ -252,7 +252,7 @@ s-records:
  
 BUILD SUCCEEDED 
  
-Total time: 19.3 seconds. 
+Total time: 19.6 seconds. 
  
 ### Call MotoConvert 
 Project format is MPC5xx 
@@ -271,7 +271,7 @@ Searching for initialised section '.data' aliased to '.romdata' ...
     Adding RAM[0x003FA8E0], ROM[0x00054470], Length[0x000008CC] 
 Complete. 
 Writing file sr://BaseEngineController_A02.sr... 
-Encrypting 'sr://BaseEngineController_A02.sr' into 'srz://.\Target\BaseEngineController_A02_133.srz' ... 
+Encrypting 'sr://BaseEngineController_A02.sr' into 'srz://.\Target\BaseEngineController_A02_134.srz' ... 
 Done. 
 ### Creating Build Statistics 
 Memory Summary:
@@ -293,12 +293,12 @@ Memory Summary:
 	    ConstantWork:                      15576 bytes   24% of  65536
 	EEPROM_SPACE:                           1595 bytes   19% of   8192
 
-### Copy BaseEngin_133.dll and BaseEngineController_A02_133.srz 
+### Copy BaseEngin_134.dll and BaseEngineController_A02_134.srz 
 ### Dumping DLL to XML 
 ### Generating ASAP2 file 
 ### Installing ASAP2 file in C:\ECUFiles\TDBDLL\ 
 ### Successful Build with MotoCoder 
-Elapsed Build Time: 4 minutes, 22.9 seconds  (262.9 seconds)
+Elapsed Build Time: 3 minutes, 50.4 seconds  (230.4 seconds)
 {Warning: Block diagram 'BaseEngineController_A02' contains disabled library links.  Use
 Model Advisor to find the disabled links in non-library models.  The diagram has been
 saved but may not contain what you intended.} 
@@ -306,8 +306,8 @@ saved but may not contain what you intended.}
 #############################################################################
 ###
 ### Target Module: ECU555-80
-### Created Development Executable: BaseEngineController_A02_133.srz
-### Created MotoTune DLL: BaseEngin_133.dll
+### Created Development Executable: BaseEngineController_A02_134.srz
+### Created MotoTune DLL: BaseEngin_134.dll
 ###
 ### Successful MotoHawk Build for model: BaseEngineController_A02
 ###

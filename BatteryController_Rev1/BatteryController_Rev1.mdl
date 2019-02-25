@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.587"
+    ComputedModelVersion    "1.591"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -26,39 +26,39 @@ Model {
   InitFcn		  "try, eval([bdroot '_setup']); catch, eval('model_setup', ''); end"
   UserBdParams		  "MotoHawkBuildVersion;MotoHawkBuildStats;MotoHawkModelSavedName;MotoHawkModelGUID;MotoHawkModelOpenT"
   "ime;MotoHawkModelElapsedTime;MotoHawkBuildInfo;MotoHawkBuildGUID"
-  MotoHawkBuildVersion	  "073"
+  MotoHawkBuildVersion	  "075"
   MotoHawkBuildStats	  "struct('TotalFLASH',{0},'TotalEEPROM',{0},'TotalRAM',{0},'AppFLASH',{0},'AppEEPROM',{0},'AppRA"
-  "M',{0},'HeapRAM',{0},'BuildSuccessCount',{73},'BuildErrorCount',{2})"
+  "M',{0},'HeapRAM',{0},'BuildSuccessCount',{75},'BuildErrorCount',{2})"
   MotoHawkModelSavedName  "BatteryController_Rev1"
   MotoHawkModelGUID	  "1c823790-94c1-4f9f-95-ed-5c-78-f7-df-2e"
-  MotoHawkModelOpenTime	  "2018 8 25 20 24 10.197 "
-  MotoHawkModelElapsedTime "15675530.773"
+  MotoHawkModelOpenTime	  "2018 9 7 8 59 36.628 "
+  MotoHawkModelElapsedTime "15682847.076"
   MotoHawkBuildInfo	  "struct('model_name',{'BatteryController_Rev1'},'motohawk_version',{'2011a_sp0.184'},'motohawk_c"
-  "omponent_version',{'0.0.7'},'matlab_version',{'7.12.0'},'build_version',{'072'},'module_type',{'ECU555-48-0707'},'la"
+  "omponent_version',{'0.0.7'},'matlab_version',{'7.12.0'},'build_version',{'074'},'module_type',{'ECU555-48-0707'},'la"
   "yout_type',{'PROD'},'processor_family',{'PPC'},'processor_type',{'MPC555'},'toolchain_vendor',{'gcc-powerpc-eabi'},'"
   "toolchain_version',{'4.4.0'},'component',{0},'archive_file',{'ECM.a'},'enable_build',{1},'fptype',{0},'flash_size',{"
   "368640},'ee_size',{4096},'ram_size',{26624},'decram_size',{0},'module_memory_def',{'MPC555_ModMemoryDef_4KEE_Prod'},"
   "'eri_table0_rev',{9},'max_eri_table_size',{65535},'use_debug_vardecs',{1},'use_info_vardecs',{1},'fgnd_base_period_m"
   "s',{5},'bgnd_base_period_ms',{50},'root_build_dir',{'C:\\Users\\maxar\\Documents\\GitHub\\Wisconsin-Hybrid\\BatteryC"
   "ontroller_Rev1'},'build_dir',{'C:\\Users\\maxar\\Documents\\GitHub\\Wisconsin-Hybrid\\BatteryController_Rev1\\Batter"
-  "yController_Rev1_Build'},'dll_name',{'BatteryCo_072'},'srz_name',{'BatteryController_Rev1_072'},'fgnd_stack_size',{3"
+  "yController_Rev1_Build'},'dll_name',{'BatteryCo_074'},'srz_name',{'BatteryController_Rev1_074'},'fgnd_stack_size',{3"
   "072},'fgnd_angle_stack_size',{0},'bgnd_stack_size',{2048},'idle_stack_size',{1024},'irq_stack_size',{1536},'heap_siz"
   "e',{4096},'heap_margin',{409},'install_dll_dir',{'C:\\ECUFiles\\TDBDLL\\'},'install_srz_dir',{'C:\\ECUFiles\\Program"
   "s'},'app_int_stack_size',{1024},'shutdown_stack_size',{1024},'mingw_dir',{'C:\\PROGRA~2\\Woodward\\DEVELO~1\\TOOLCH~"
   "1\\GCC\\win32-pe\\4_4_0\\'},'motohawk_dir',{'C:\\PROGRA~2\\Woodward\\MCS\\MotoHawk\\2011A_~1.184'},'toolchain_dir',{"
   "'C:\\Program Files (x86)\\Woodward\\DevelopmentTools\\Toolchains\\GCC\\powerpc-eabi\\4_4_0\\'},'matlab_root',{'C:\\P"
-  "rogram Files (x86)\\MATLAB\\R2011a'},'model_guid',{'1c823790-94c1-4f9f-95-ed-5c-78-f7-df-2e'},'build_guid',{'2c20b1f"
-  "2-2f68-4f6b-8e-8e-5f-43-f8-60-40'},'token_guid',{'DD8AD11F95A6FC42BFF9AC780840E4B4'})"
-  MotoHawkBuildGUID	  "2c20b1f2-2f68-4f6b-8e-8e-5f-43-f8-60-40"
+  "rogram Files (x86)\\MATLAB\\R2011a'},'model_guid',{'1c823790-94c1-4f9f-95-ed-5c-78-f7-df-2e'},'build_guid',{'e1f85e8"
+  "2-e3d0-432c-9d-9e-3a-a3-84-db-cc'},'token_guid',{'DD8AD11F95A6FC42BFF9AC780840E4B4'})"
+  MotoHawkBuildGUID	  "e1f85e82-e3d0-432c-9d-9e-3a-a3-84-db-cc"
   Created		  "Mon May 16 15:00:08 2005"
   Creator		  "Owner"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "maxar"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sat Aug 25 20:26:05 2018"
-  RTWModifiedTimeStamp	  457129565
-  ModelVersionFormat	  "1.%<AutoIncrement:587>"
+  LastModifiedDate	  "Fri Sep 07 09:44:09 2018"
+  RTWModifiedTimeStamp	  458212409
+  ModelVersionFormat	  "1.%<AutoIncrement:591>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1447,8 +1447,8 @@ Model {
   }
   System {
     Name		    "BatteryController_Rev1"
-    Location		    [377, 83, 1420, 692]
-    Open		    off
+    Location		    [202, 75, 1245, 684]
+    Open		    on
     ModelBrowserVisibility  on
     ModelBrowserWidth	    200
     ScreenColor		    "white"
@@ -1461,7 +1461,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "73"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "807"
+    SIDHighWatermark	    "810"
     Block {
       BlockType		      Reference
       Name		      "CAN Definition"
@@ -1491,6 +1491,41 @@ Model {
       city_id		      "hex2dec('D')"
       access_level	      "4"
       mototune_group	      "'System | System Config | Communication Config'"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "CCP CAN Protocol"
+      SID		      "810"
+      Ports		      []
+      Position		      [960, 478, 1350, 724]
+      LibraryVersion	      "MotoHawk 0.2.3"
+      SourceBlock	      "MotoHawk_lib/CCP Slave/CCP CAN Protocol"
+      SourceType	      "MotoHawk CCP CAN Protocol Handler"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      GeneratePreprocessorConditionals off
+      image_file	      "'ccp.jpg'"
+      mtninstance	      "'CCP_BAT'"
+      stataddr		      "hex2dec('32')"
+      channel_name	      "'CAN_1'"
+      channel		      "-2"
+      rxid		      "hex2dec('18ef0232')"
+      rxidtype		      "1"
+      rxidmasknom	      "hex2dec('1fffffff')"
+      txid		      "hex2dec('18ef3103')"
+      txidtype		      "1"
+      daqs		      "4"
+      odts		      "8"
+      nvodt		      "0"
+      send_cpb_resp	      off
+      use_mototune_group      off
+      mototune_group	      "['System | CCP | ', motohawk_get_param_ws(gcb, 'mtninstance')]"
     }
     Block {
       BlockType		      SubSystem
@@ -4959,9 +4994,9 @@ Model {
 		  System {
 		    Name		    "SOC"
 		    Location		    [202, 83, 1262, 675]
-		    Open		    on
+		    Open		    off
 		    ModelBrowserVisibility  on
-		    ModelBrowserWidth	    375
+		    ModelBrowserWidth	    200
 		    ScreenColor		    "white"
 		    PaperOrientation	    "landscape"
 		    PaperPositionMode	    "auto"
@@ -4970,7 +5005,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "87"
+		    ZoomFactor		    "56"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "In1"
@@ -5000,10 +5035,10 @@ Model {
 		    BlockType		    BusSelector
 		    Name		    "Bus\nSelector"
 		    SID			    "383"
-		    Ports		    [1, 2]
+		    Ports		    [1, 3]
 		    Position		    [100, 79, 105, 161]
 		    ShowName		    off
-		    OutputSignals	    "2G BMS.Voltage,2G BMS.MaxCellVoltage"
+		    OutputSignals	    "2G BMS.Voltage,2G BMS.MaxCellTemp,2G BMS.MaxCellVoltage"
 		    Port {
 		    PortNumber		    1
 		    Name		    "<Voltage>"
@@ -5012,6 +5047,12 @@ Model {
 		    }
 		    Port {
 		    PortNumber		    2
+		    Name		    "<MaxCellTemp>"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    Port {
+		    PortNumber		    3
 		    Name		    "<MaxCellVoltage>"
 		    RTWStorageClass	    "Auto"
 		    DataLoggingNameMode	    "SignalName"
@@ -5047,7 +5088,7 @@ Model {
 		    MaskHideContents	    off
 		    System {
 		    Name		    "SOC Conditioning"
-		    Location		    [202, 75, 1364, 707]
+		    Location		    [202, 83, 1348, 715]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -5657,18 +5698,20 @@ Model {
 		    }
 		    Block {
 		    BlockType		    Reference
-		    Name		    "motohawk_interpolation_1d1"
-		    SID			    "673"
-		    Ports		    [1, 1]
-		    Position		    [400, 277, 570, 353]
+		    Name		    "motohawk_interpolation_2d"
+		    SID			    "809"
+		    Ports		    [2, 1]
+		    Position		    [405, 296, 575, 374]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Lookup Tables/motohawk_interpolation_1d"
-		    SourceType		    "MotoHawk Interpolation (1-D)"
-		    nam			    "'Temp_IR_Map'"
-		    table_data		    "[0.9,0.5,0.2,0.1,0.1]"
+		    SourceBlock		    "MotoHawk_lib/Lookup Tables/motohawk_interpolation_2d"
+		    SourceType		    "MotoHawk Interpolation (2-D)"
+		    nam			    "'MotoHawkInterpolation2D'"
+		    table_data		    "[0.9 0.5 0.2 0.1 0.1 0.1 0.1 0.1;0.9 0.5 0.2 0.1 0.1 0.1 0.1 0.1;0.9 0.5 0.2 0.1 0.1 0.1 0.1 0."
+		    "1;0.9 0.5 0.2 0.1 0.1 0.1 0.1 0.1;0.9 0.5 0.2 0.1 0.1 0.1 0.1 0.1;0.9 0.5 0.2 0.1 0.1 0.1 0.1 0.1;0.9 0.5 0.2 0."
+		    "1 0.1 0.1 0.1 0.1;0.9 0.5 0.2 0.1 0.1 0.1 0.1 0.1]"
 		    show_more		    on
-		    data_type		    "double"
+		    data_type		    "Inherit from 'Table Data'"
 		    storage		    "Adaptive - NonVolatile"
 		    read_level		    "1"
 		    write_level		    "1"
@@ -5676,16 +5719,17 @@ Model {
 		    use_help		    off
 		    help		    "''"
 		    units		    "''"
-		    use_min_max		    on
-		    min_val		    "0"
-		    max_val		    "100"
+		    use_min_max		    off
+		    min_val		    "-inf"
+		    max_val		    "inf"
 		    use_precision	    off
-		    precision		    "'1.2'"
+		    precision		    "''"
 		    gain		    "1"
 		    offset		    "0"
 		    exp			    "1"
-		    use_links		    on
-		    prelookup_block	    "'Temp_IR_Table'"
+		    use_links		    off
+		    row_prelookup_block	    "''"
+		    col_prelookup_block	    "''"
 		    output_name		    "''"
 		    use_mototune_group	    off
 		    mototune_group	    "motohawk_vardec_path(gcb)"
@@ -5781,8 +5825,8 @@ Model {
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Lookup Tables/motohawk_prelookup"
 		    SourceType		    "MotoHawk Prelookup Index Search"
-		    nam			    "'Temp_IR_Table'"
-		    breakpoint_data	    "[-40,-20,0,20,40]"
+		    nam			    "'Temp_IR_Pre'"
+		    breakpoint_data	    "[-40,-20,0,5,10,15,20,40]"
 		    show_more		    on
 		    data_type		    "double"
 		    storage		    "NonVolatile"
@@ -5804,13 +5848,59 @@ Model {
 		    input_name		    "''"
 		    use_mototune_group	    off
 		    mototune_group	    "motohawk_vardec_path(gcb)"
+		    Port {
+		    PortNumber		    1
+		    Name		    "Temp"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_prelookup2"
+		    SID			    "808"
+		    Ports		    [1, 1]
+		    Position		    [175, 367, 345, 443]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Lookup Tables/motohawk_prelookup"
+		    SourceType		    "MotoHawk Prelookup Index Search"
+		    nam			    "'Volt_IR_Pre'"
+		    breakpoint_data	    "[2 2.5 2.75 3 3.25 3.5 2.75 4]"
+		    show_more		    on
+		    data_type		    "double"
+		    storage		    "NonVolatile"
+		    read_level		    "1"
+		    write_level		    "1"
+		    ovr_cals		    on
+		    use_help		    off
+		    help		    "''"
+		    units		    "''"
+		    use_min_max		    off
+		    min_val		    "-inf"
+		    max_val		    "inf"
+		    use_precision	    off
+		    precision		    "''"
+		    gain		    "1"
+		    offset		    "0"
+		    exp			    "1"
+		    use_links		    off
+		    input_name		    "''"
+		    use_mototune_group	    off
+		    mototune_group	    "motohawk_vardec_path(gcb)"
+		    Port {
+		    PortNumber		    1
+		    Name		    "Volt"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
 		    }
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_probe1"
 		    SID			    "427"
 		    Ports		    [1]
-		    Position		    [1050, 172, 1200, 198]
+		    Position		    [1050, 222, 1200, 248]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
@@ -5838,46 +5928,15 @@ Model {
 		    }
 		    Block {
 		    BlockType		    Reference
-		    Name		    "motohawk_probe2"
-		    SID			    "671"
-		    Ports		    [1]
-		    Position		    [1045, 237, 1195, 263]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
-		    SourceType		    "MotoHawk Probe"
-		    nam			    "'vdiff_est_Prb'"
-		    show_more		    off
-		    name_source		    "Use Parameter"
-		    read_level		    "1"
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    off
-		    help		    "''"
-		    units		    "''"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Reference
 		    Name		    "motohawk_probe3"
 		    SID			    "737"
 		    Ports		    [1]
-		    Position		    [645, 317, 795, 343]
+		    Position		    [645, 322, 795, 348]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
 		    SourceType		    "MotoHawk Probe"
-		    nam			    "'Temp_IR_Map_Prb'"
+		    nam			    "'IT_Table_Prb'"
 		    show_more		    off
 		    name_source		    "Use Parameter"
 		    read_level		    "1"
@@ -5990,7 +6049,6 @@ Model {
 		    Line {
 		    SrcBlock		    "SOC States"
 		    SrcPort		    2
-		    Points		    [0, -50]
 		    DstBlock		    "motohawk_probe1"
 		    DstPort		    1
 		    }
@@ -6035,39 +6093,20 @@ Model {
 		    DstPort		    5
 		    }
 		    Line {
-		    Points		    [960, 250]
-		    DstBlock		    "motohawk_probe2"
-		    DstPort		    1
-		    }
-		    Line {
 		    Name		    "<Voltage>"
 		    Labels		    [0, 0; 0, 0]
 		    SrcBlock		    "Bus\nSelector"
 		    SrcPort		    1
-		    Points		    [0, -5]
 		    DstBlock		    "SOC States"
 		    DstPort		    1
 		    }
 		    Line {
+		    Name		    "Temp"
+		    Labels		    [0, 0]
 		    SrcBlock		    "motohawk_prelookup1"
 		    SrcPort		    1
-		    DstBlock		    "motohawk_interpolation_1d1"
+		    DstBlock		    "motohawk_interpolation_2d"
 		    DstPort		    1
-		    }
-		    Line {
-		    SrcBlock		    "motohawk_interpolation_1d1"
-		    SrcPort		    1
-		    Points		    [15, 0; 0, -5]
-		    Branch {
-		    Points		    [0, -40]
-		    DstBlock		    "SOC States"
-		    DstPort		    6
-		    }
-		    Branch {
-		    Points		    [0, 20]
-		    DstBlock		    "motohawk_probe3"
-		    DstPort		    1
-		    }
 		    }
 		    Line {
 		    Name		    "<Current>"
@@ -6077,15 +6116,6 @@ Model {
 		    Points		    [20, 0; 0, 5]
 		    DstBlock		    "SOC States"
 		    DstPort		    2
-		    }
-		    Line {
-		    Name		    "<MaxCellVoltage>"
-		    Labels		    [0, 0; 0, 0]
-		    SrcBlock		    "Bus\nSelector"
-		    SrcPort		    2
-		    Points		    [25, 0; 0, 175]
-		    DstBlock		    "motohawk_prelookup1"
-		    DstPort		    1
 		    }
 		    Line {
 		    SrcBlock		    "motohawk_interpolation_1d"
@@ -6114,6 +6144,50 @@ Model {
 		    DstBlock		    "motohawk_probe9"
 		    DstPort		    1
 		    }
+		    }
+		    Line {
+		    Name		    "<MaxCellTemp>"
+		    Labels		    [0, 0; 0, 0]
+		    SrcBlock		    "Bus\nSelector"
+		    SrcPort		    2
+		    Points		    [25, 0; 0, 195]
+		    DstBlock		    "motohawk_prelookup1"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "<MaxCellVoltage>"
+		    Labels		    [0, 0; 0, 0]
+		    SrcBlock		    "Bus\nSelector"
+		    SrcPort		    3
+		    Points		    [15, 0; 0, 260]
+		    DstBlock		    "motohawk_prelookup2"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "Volt"
+		    Labels		    [3, 0]
+		    SrcBlock		    "motohawk_prelookup2"
+		    SrcPort		    1
+		    Points		    [20, 0; 0, -50]
+		    DstBlock		    "motohawk_interpolation_2d"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "motohawk_interpolation_2d"
+		    SrcPort		    1
+		    Points		    [15, 0]
+		    Branch {
+		    Points		    [0, -65]
+		    DstBlock		    "SOC States"
+		    DstPort		    6
+		    }
+		    Branch {
+		    DstBlock		    "motohawk_probe3"
+		    DstPort		    1
+		    }
+		    }
+		    Annotation {
+		    Position		    [106, 108]
 		    }
 		  }
 		}
@@ -15860,6 +15934,9 @@ Stateflow {
     firstTransition	    30
     viewObj		    26
     machine		    1
+    subviewS {
+      x1		      50.248
+    }
     ssIdHighWaterMark	    14
     decomposition	    CLUSTER_CHART
     firstData		    34
@@ -15985,7 +16062,7 @@ Stateflow {
     midPoint		    [272.1962 214.6489]
     chart		    26
     linkNode		    [26 32 0]
-    dataLimits		    [184.098 437.359 136.875 221.112]
+    dataLimits		    [184.098 437.359 136.875 224.88]
     stampAngle		    NaN
     subviewer		    26
     drawStyle		    SMART

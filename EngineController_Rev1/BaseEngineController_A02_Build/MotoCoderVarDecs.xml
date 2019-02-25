@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <VarDecs>
    <VarDec>
-      <name>CCP1_StationAddr</name>
+      <name>Engine_Controller_StationAddr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -11,16 +11,16 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Station ID for CCP handler: CCP1</help>
-      <group>System | CCP | CCP1</group>
-      <struct>ConstantWork.CCP1_StationAddr</struct>
+      <help>Station ID for CCP handler: Engine_Controller</help>
+      <group>System | CCP | Engine_Controller</group>
+      <struct>ConstantWork.Engine_Controller_StationAddr</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint16</type>
    </VarDec>
    <VarDec>
-      <name>CCP1TxID</name>
+      <name>Engine_ControllerTxID</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -30,16 +30,16 @@
       <format>8.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Transmit CAN ID for CCP handler: CCP1</help>
-      <group>System | CCP | CCP1</group>
-      <struct>ConstantWork.CCP1TxID</struct>
+      <help>Transmit CAN ID for CCP handler: Engine_Controller</help>
+      <group>System | CCP | Engine_Controller</group>
+      <struct>ConstantWork.Engine_ControllerTxID</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint32</type>
    </VarDec>
    <VarDec>
-      <name>CCP1RxID</name>
+      <name>Engine_ControllerRxID</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -49,16 +49,16 @@
       <format>8.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Receive CAN ID for CCP handler: CCP1</help>
-      <group>System | CCP | CCP1</group>
-      <struct>ConstantWork.CCP1RxID</struct>
+      <help>Receive CAN ID for CCP handler: Engine_Controller</help>
+      <group>System | CCP | Engine_Controller</group>
+      <struct>ConstantWork.Engine_ControllerRxID</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint32</type>
    </VarDec>
    <VarDec>
-      <name>CCP1RxIDMask</name>
+      <name>Engine_ControllerRxIDMask</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -68,9 +68,9 @@
       <format>8.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Receive CAN ID Mask for CCP handler: CCP1</help>
-      <group>System | CCP | CCP1</group>
-      <struct>ConstantWork.CCP1RxIDMask</struct>
+      <help>Receive CAN ID Mask for CCP handler: Engine_Controller</help>
+      <group>System | CCP | Engine_Controller</group>
+      <struct>ConstantWork.Engine_ControllerRxIDMask</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
@@ -22113,7 +22113,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut7679p0004</help>
+      <help>Digital output pin selection for DOut7802p0001</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.FuelPumpPin</struct>
       <storage>FLASH</storage>
@@ -22217,7 +22217,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut7963p0001</help>
+      <help>Digital output pin selection for DOut8086p0001</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.OilPumpPin</struct>
       <storage>FLASH</storage>
@@ -22269,7 +22269,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut7973p0001</help>
+      <help>Digital output pin selection for DOut8096p0001</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.O2_Heater</struct>
       <storage>FLASH</storage>

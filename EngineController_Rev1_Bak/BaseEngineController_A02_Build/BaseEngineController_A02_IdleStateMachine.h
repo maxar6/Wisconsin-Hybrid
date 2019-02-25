@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BaseEngineController_A02'.
  *
- * Model version                  : 1.1522
+ * Model version                  : 1.1524
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Tue Jan 23 13:00:54 2018
+ * C/C++ source code generated on : Tue Jan 01 03:08:50 2019
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified

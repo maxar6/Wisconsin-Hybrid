@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BaseEngineController_A02'.
  *
- * Model version                  : 1.1639
+ * Model version                  : 1.1640
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Sat Aug 25 19:54:14 2018
+ * C/C++ source code generated on : Fri Sep 07 11:01:26 2018
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -51,14 +51,14 @@ void BaseEngineController_A02_CCPDaqProcessing(int_T controlPortIdx)
 
   rtb_f_f[controlPortIdx] = 2;
 
-  /* <S7>/motohawk_sfun_ccp_protocol: CCP Protocol CCP1 */
+  /* <S7>/motohawk_sfun_ccp_protocol: CCP Protocol Engine_Controller */
   {
-    extern S_CCPHandlerInstance mh_CCP1_CCPHandlerInstance;
-    extern S_CCPHandlerConfig mh_CCP1_CCPHandlerConfig;
+    extern S_CCPHandlerInstance mh_Engine_Controller_CCPHandlerInstance;
+    extern S_CCPHandlerConfig mh_Engine_Controller_CCPHandlerConfig;
 
     /* Tick */
-    mh_ProcessCCPTick(rtb_f_f, &mh_CCP1_CCPHandlerConfig,
-                      &mh_CCP1_CCPHandlerInstance);
+    mh_ProcessCCPTick(rtb_f_f, &mh_Engine_Controller_CCPHandlerConfig,
+                      &mh_Engine_Controller_CCPHandlerInstance);
   }
 }
 
@@ -66,61 +66,61 @@ void BaseEngineController_A02_CCPDaqProcessing(int_T controlPortIdx)
 void BaseEngineController_A02_step(void)
 {
   /* S-Function (motohawk_sfun_trigger): '<S1>/motohawk_trigger1' */
-  /* Enable for Trigger_IDLE_EVENT_11352p0001 */
+  /* Enable for Trigger_IDLE_EVENT_9487p0004 */
   if (BaseEngineController_A02_DWork.s1_motohawk_trigger1_DWORK1 == 0) {
     BaseEngineController_A02_DWork.s1_motohawk_trigger1_DWORK1 = 1;
   }
 
   /* S-Function (motohawk_sfun_trigger): '<S5>/motohawk_trigger1' */
-  /* Enable for Trigger_FGND_RTI_PERIODIC_19776p0004 */
+  /* Enable for Trigger_FGND_RTI_PERIODIC_10113p0005 */
   if (BaseEngineController_A02_DWork.s5_motohawk_trigger1_DWORK1 == 0) {
     BaseEngineController_A02_DWork.s5_motohawk_trigger1_DWORK1 = 1;
   }
 
   /* S-Function (motohawk_sfun_trigger): '<S5>/motohawk_trigger' */
-  /* Enable for Trigger_FGND_2XRTI_PERIODIC_19775p0004 */
+  /* Enable for Trigger_FGND_2XRTI_PERIODIC_10112p0005 */
   if (BaseEngineController_A02_DWork.s5_motohawk_trigger_DWORK1 == 0) {
     BaseEngineController_A02_DWork.s5_motohawk_trigger_DWORK1 = 1;
   }
 
   /* S-Function (motohawk_sfun_trigger): '<S5>/motohawk_trigger2' */
-  /* Enable for Trigger_FGND_10XRTI_PERIODIC_19777p0004 */
+  /* Enable for Trigger_FGND_10XRTI_PERIODIC_10114p0005 */
   if (BaseEngineController_A02_DWork.s5_motohawk_trigger2_DWORK1 == 0) {
     BaseEngineController_A02_DWork.s5_motohawk_trigger2_DWORK1 = 1;
   }
 
   /* S-Function (motohawk_sfun_trigger): '<S5>/motohawk_trigger3' */
-  /* Enable for Trigger_FGND_20XRTI_PERIODIC_19778p0004 */
+  /* Enable for Trigger_FGND_20XRTI_PERIODIC_10115p0005 */
   if (BaseEngineController_A02_DWork.s5_motohawk_trigger3_DWORK1 == 0) {
     BaseEngineController_A02_DWork.s5_motohawk_trigger3_DWORK1 = 1;
   }
 
   /* S-Function (motohawk_sfun_trigger): '<S5>/motohawk_trigger4' */
-  /* Enable for Trigger_BGND_BASE_PERIODIC_19779p0004 */
+  /* Enable for Trigger_BGND_BASE_PERIODIC_10116p0005 */
   if (BaseEngineController_A02_DWork.s5_motohawk_trigger4_DWORK1 == 0) {
     BaseEngineController_A02_DWork.s5_motohawk_trigger4_DWORK1 = 1;
   }
 
   /* S-Function (motohawk_sfun_trigger): '<S5>/motohawk_trigger5' */
-  /* Enable for Trigger_BGND_BASEx2_PERIODIC_19780p0004 */
+  /* Enable for Trigger_BGND_BASEx2_PERIODIC_10117p0005 */
   if (BaseEngineController_A02_DWork.s5_motohawk_trigger5_DWORK1 == 0) {
     BaseEngineController_A02_DWork.s5_motohawk_trigger5_DWORK1 = 1;
   }
 
   /* S-Function (motohawk_sfun_trigger): '<S5>/motohawk_trigger6' */
-  /* Enable for Trigger_BGND_BASEx10_PERIODIC_19781p0004 */
+  /* Enable for Trigger_BGND_BASEx10_PERIODIC_10118p0005 */
   if (BaseEngineController_A02_DWork.s5_motohawk_trigger6_DWORK1 == 0) {
     BaseEngineController_A02_DWork.s5_motohawk_trigger6_DWORK1 = 1;
   }
 
   /* S-Function (motohawk_sfun_trigger): '<S5>/motohawk_trigger7' */
-  /* Enable for Trigger_ONE_SECOND_EVENT_19782p0004 */
+  /* Enable for Trigger_ONE_SECOND_EVENT_10119p0005 */
   if (BaseEngineController_A02_DWork.s5_motohawk_trigger7_DWORK1 == 0) {
     BaseEngineController_A02_DWork.s5_motohawk_trigger7_DWORK1 = 1;
   }
 
   /* S-Function (motohawk_sfun_trigger): '<S4>/motohawk_trigger1' */
-  /* Enable for Trigger_IDLE_EVENT_11406p0001 */
+  /* Enable for Trigger_IDLE_EVENT_10038p0005 */
   if (BaseEngineController_A02_DWork.s4_motohawk_trigger1_DWORK1 == 0) {
     BaseEngineController_A02_DWork.s4_motohawk_trigger1_DWORK1 = 1;
   }
@@ -536,52 +536,52 @@ void BaseEngineController_A02_initialize(boolean_T firstTime)
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S1>/motohawk_trigger1' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_IDLE_EVENT_11352p0001 */
+  /* Clear enable/disable state for embedded trigger Trigger_IDLE_EVENT_9487p0004 */
   BaseEngineController_A02_DWork.s1_motohawk_trigger1_DWORK1 = 0;
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S5>/motohawk_trigger1' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_FGND_RTI_PERIODIC_19776p0004 */
+  /* Clear enable/disable state for embedded trigger Trigger_FGND_RTI_PERIODIC_10113p0005 */
   BaseEngineController_A02_DWork.s5_motohawk_trigger1_DWORK1 = 0;
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S5>/motohawk_trigger' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_FGND_2XRTI_PERIODIC_19775p0004 */
+  /* Clear enable/disable state for embedded trigger Trigger_FGND_2XRTI_PERIODIC_10112p0005 */
   BaseEngineController_A02_DWork.s5_motohawk_trigger_DWORK1 = 0;
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S5>/motohawk_trigger2' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_FGND_10XRTI_PERIODIC_19777p0004 */
+  /* Clear enable/disable state for embedded trigger Trigger_FGND_10XRTI_PERIODIC_10114p0005 */
   BaseEngineController_A02_DWork.s5_motohawk_trigger2_DWORK1 = 0;
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S5>/motohawk_trigger3' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_FGND_20XRTI_PERIODIC_19778p0004 */
+  /* Clear enable/disable state for embedded trigger Trigger_FGND_20XRTI_PERIODIC_10115p0005 */
   BaseEngineController_A02_DWork.s5_motohawk_trigger3_DWORK1 = 0;
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S5>/motohawk_trigger4' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_BGND_BASE_PERIODIC_19779p0004 */
+  /* Clear enable/disable state for embedded trigger Trigger_BGND_BASE_PERIODIC_10116p0005 */
   BaseEngineController_A02_DWork.s5_motohawk_trigger4_DWORK1 = 0;
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S5>/motohawk_trigger5' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_BGND_BASEx2_PERIODIC_19780p0004 */
+  /* Clear enable/disable state for embedded trigger Trigger_BGND_BASEx2_PERIODIC_10117p0005 */
   BaseEngineController_A02_DWork.s5_motohawk_trigger5_DWORK1 = 0;
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S5>/motohawk_trigger6' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_BGND_BASEx10_PERIODIC_19781p0004 */
+  /* Clear enable/disable state for embedded trigger Trigger_BGND_BASEx10_PERIODIC_10118p0005 */
   BaseEngineController_A02_DWork.s5_motohawk_trigger6_DWORK1 = 0;
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S5>/motohawk_trigger7' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_ONE_SECOND_EVENT_19782p0004 */
+  /* Clear enable/disable state for embedded trigger Trigger_ONE_SECOND_EVENT_10119p0005 */
   BaseEngineController_A02_DWork.s5_motohawk_trigger7_DWORK1 = 0;
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S4>/motohawk_trigger1' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_IDLE_EVENT_11406p0001 */
+  /* Clear enable/disable state for embedded trigger Trigger_IDLE_EVENT_10038p0005 */
   BaseEngineController_A02_DWork.s4_motohawk_trigger1_DWORK1 = 0;
 
   /* Start for function-call system: '<S3>/Main Power Relay' */
@@ -653,52 +653,52 @@ void BaseEngineController_A02_initialize(boolean_T firstTime)
 
   /* Level2 S-Function Block: '<S1>/motohawk_trigger1' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_IDLE_EVENT_11352p0001 */
+  /* Enable for Trigger_IDLE_EVENT_9487p0004 */
   BaseEngineController_A02_DWork.s1_motohawk_trigger1_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S5>/motohawk_trigger1' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_FGND_RTI_PERIODIC_19776p0004 */
+  /* Enable for Trigger_FGND_RTI_PERIODIC_10113p0005 */
   BaseEngineController_A02_DWork.s5_motohawk_trigger1_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S5>/motohawk_trigger' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_FGND_2XRTI_PERIODIC_19775p0004 */
+  /* Enable for Trigger_FGND_2XRTI_PERIODIC_10112p0005 */
   BaseEngineController_A02_DWork.s5_motohawk_trigger_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S5>/motohawk_trigger2' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_FGND_10XRTI_PERIODIC_19777p0004 */
+  /* Enable for Trigger_FGND_10XRTI_PERIODIC_10114p0005 */
   BaseEngineController_A02_DWork.s5_motohawk_trigger2_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S5>/motohawk_trigger3' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_FGND_20XRTI_PERIODIC_19778p0004 */
+  /* Enable for Trigger_FGND_20XRTI_PERIODIC_10115p0005 */
   BaseEngineController_A02_DWork.s5_motohawk_trigger3_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S5>/motohawk_trigger4' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_BGND_BASE_PERIODIC_19779p0004 */
+  /* Enable for Trigger_BGND_BASE_PERIODIC_10116p0005 */
   BaseEngineController_A02_DWork.s5_motohawk_trigger4_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S5>/motohawk_trigger5' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_BGND_BASEx2_PERIODIC_19780p0004 */
+  /* Enable for Trigger_BGND_BASEx2_PERIODIC_10117p0005 */
   BaseEngineController_A02_DWork.s5_motohawk_trigger5_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S5>/motohawk_trigger6' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_BGND_BASEx10_PERIODIC_19781p0004 */
+  /* Enable for Trigger_BGND_BASEx10_PERIODIC_10118p0005 */
   BaseEngineController_A02_DWork.s5_motohawk_trigger6_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S5>/motohawk_trigger7' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_ONE_SECOND_EVENT_19782p0004 */
+  /* Enable for Trigger_ONE_SECOND_EVENT_10119p0005 */
   BaseEngineController_A02_DWork.s5_motohawk_trigger7_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S4>/motohawk_trigger1' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_IDLE_EVENT_11406p0001 */
+  /* Enable for Trigger_IDLE_EVENT_10038p0005 */
   BaseEngineController_A02_DWork.s4_motohawk_trigger1_DWORK1 = 1;
 }
 

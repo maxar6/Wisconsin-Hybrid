@@ -12,16 +12,16 @@
 @if ERRORLEVEL 1 exit junk
 @"c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\motocoder\Bin\Transform" -o TDB/ParsedAndCombinedVardecs.xml TDB/ParsedVardecs.xml "c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\motocoder\Transforms\VarDecs_Merge.xsl" AdditionalVardecsXML="file:///C:/Users/maxar/Documents/GitHub/Wisconsin-Hybrid/Mooventure2016_Rev5/Mooventure2016_Rev5_Build/MotoCoderVarDecs.xml"
 @if ERRORLEVEL 1 exit junk
-@"c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\motocoder\Bin\Transform" -o TDB/Mooventur_215.xml TDB/ParsedAndCombinedVardecs.xml "c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\motocoder\Transforms\VarDecs_Reorder.xsl" intermediate-url="file:///C:/Users/maxar/Documents/GitHub/Wisconsin-Hybrid/Mooventure2016_Rev5/Mooventure2016_Rev5_Build/MotoCoder_Intermediate.xml" maxTableSize=65535
+@"c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\motocoder\Bin\Transform" -o TDB/Mooventur_219.xml TDB/ParsedAndCombinedVardecs.xml "c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\motocoder\Transforms\VarDecs_Reorder.xsl" intermediate-url="file:///C:/Users/maxar/Documents/GitHub/Wisconsin-Hybrid/Mooventure2016_Rev5/Mooventure2016_Rev5_Build/MotoCoder_Intermediate.xml" maxTableSize=65535
 @if ERRORLEVEL 1 exit junk
-@"c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\motocoder\Bin\Transform" TDB/Mooventur_215.xml "c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\motocoder\Transforms\VarDecs_Transform.xsl" includeFiles="CommonInclude.h,Mooventure2016_Rev5.h,TaskKernel_GenAPI.h,ERIRequestTables_GenAPI.h,MotoCoder.h" GenDLL=1 GenTDB=1
+@"c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\motocoder\Bin\Transform" TDB/Mooventur_219.xml "c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\motocoder\Transforms\VarDecs_Transform.xsl" includeFiles="CommonInclude.h,Mooventure2016_Rev5.h,TaskKernel_GenAPI.h,ERIRequestTables_GenAPI.h,MotoCoder.h" GenDLL=1 GenTDB=1
 @if ERRORLEVEL 1 exit junk
 
 
 @echo ### Generating MotoTune DLL
 @copy "c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\motocoder\TDB\*.*" .\TDB > NUL
 @if ERRORLEVEL 1 exit junk
-@"c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\motocoder\bin\nant\bin\nant" -buildfile:TDB\Database.build -D:required.installdir="C:\Program Files (x86)\Woodward\DevelopmentTools\Toolchains\GCC\win32-pe\4_4_0" -D:database.basename=Mooventur_215 -q -nologo rebuild
+@"c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\motocoder\bin\nant\bin\nant" -buildfile:TDB\Database.build -D:required.installdir="C:\Program Files (x86)\Woodward\DevelopmentTools\Toolchains\GCC\win32-pe\4_4_0" -D:database.basename=Mooventur_219 -q -nologo rebuild
 @if ERRORLEVEL 1 exit junk
 
 
@@ -35,15 +35,15 @@
 @if ERRORLEVEL 1 exit junk
 
 
-@echo ### Copy Mooventur_215.dll and Mooventure2016_Rev5_215.srz
-@if exist C:\ECUFiles\TDBDLL\*.* copy /Y .\TDB\Mooventur_215.dll C:\ECUFiles\TDBDLL > NUL
+@echo ### Copy Mooventur_219.dll and Mooventure2016_Rev5_219.srz
+@if exist C:\ECUFiles\TDBDLL\*.* copy /Y .\TDB\Mooventur_219.dll C:\ECUFiles\TDBDLL > NUL
 @if ERRORLEVEL 1 exit junk
-@if exist C:\ECUFiles\Programs\*.* copy /Y .\Target\Mooventure2016_Rev5.srz C:\ECUFiles\Programs\Mooventure2016_Rev5_215.srz > NUL
+@if exist C:\ECUFiles\Programs\*.* copy /Y .\Target\Mooventure2016_Rev5.srz C:\ECUFiles\Programs\Mooventure2016_Rev5_219.srz > NUL
 @if ERRORLEVEL 1 exit junk
 
 
 @echo ### Dumping DLL to XML
-@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\motohawk_dumpdll.exe" -xml "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\Mooventur_215.dll" > "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\Mooventur_215.xml"
+@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\motohawk_dumpdll.exe" -xml "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\Mooventur_219.dll" > "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\Mooventur_219.xml"
 @if ERRORLEVEL 1 exit junk
 
 
@@ -57,12 +57,12 @@
 
 
 @echo ### Generating ASAP2 file
-@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\ASAP2.exe" -m "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\Mooventur_215.xml" -o "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\Mooventur_215.a2l" -u VirtualCalSpace -asap1b "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\mh_asap1b_ccp_CCP1.xml"
+@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\ASAP2.exe" -m "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\Mooventur_219.xml" -o "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\Mooventur_219.a2l" -u VirtualCalSpace -asap1b "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\mh_asap1b_ccp_CCP1.xml"
 @if ERRORLEVEL 1 exit junk
 
 
 @echo ### Installing ASAP2 file in C:\ECUFiles\TDBDLL\
-@copy "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\Mooventur_215.a2l" "C:\ECUFiles\TDBDLL\" > NUL
+@copy "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\Mooventur_219.a2l" "C:\ECUFiles\TDBDLL\" > NUL
 @if ERRORLEVEL 1 exit junk
 
 

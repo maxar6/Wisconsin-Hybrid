@@ -405,6 +405,24 @@
       </enum>
    </VarDec>
    <VarDec>
+      <name>ECUP</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Main Power Relay1|Background</group>
+      <struct>VolatileWork_BSS.ECUP</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
       <name>Shutdown_Req</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -603,7 +621,7 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>ETC_DampGainDown</name>
+      <name>CRUISE_DampGainDown</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -616,14 +634,14 @@
       <ctype>Constant_T</ctype>
       <help>PID Damper Gain - Down Direction</help>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|Cruise Control|Speed Control</group>
-      <struct>ConstantWork.ETC_DampGainDown</struct>
+      <struct>ConstantWork.CRUISE_DampGainDown</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>ETC_DampGainUp</name>
+      <name>CRUISE_DampGainUp</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -636,7 +654,7 @@
       <ctype>Constant_T</ctype>
       <help>PID Damper Gain - Up Direction</help>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|Cruise Control|Speed Control</group>
-      <struct>ConstantWork.ETC_DampGainUp</struct>
+      <struct>ConstantWork.CRUISE_DampGainUp</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
@@ -745,7 +763,7 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>RPM_to_Wheel_Speed_Multiplier_safetyMode</name>
+      <name>RPM_to_Wheel_Speed_Multiplier_crawlMode</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -756,14 +774,14 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Constant_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|CrawlHomeMode</group>
-      <struct>ConstantWork.RPM_to_Wheel_Speed_Multiplier_safetyMode</struct>
+      <struct>ConstantWork.RPM_to_Wheel_Speed_Multiplier_crawlMode</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>accelStart_Pedal_safetyMode</name>
+      <name>accelStart_Pedal_crawlMode</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -774,14 +792,14 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Constant_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|CrawlHomeMode</group>
-      <struct>ConstantWork.accelStart_Pedal_safetyMode</struct>
+      <struct>ConstantWork.accelStart_Pedal_crawlMode</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>accelEnd_Pedal_safetyMode</name>
+      <name>accelEnd_Pedal_crawlMode</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -792,14 +810,14 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Constant_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|CrawlHomeMode</group>
-      <struct>ConstantWork.accelEnd_Pedal_safetyMode</struct>
+      <struct>ConstantWork.accelEnd_Pedal_crawlMode</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>brakeStart_Pedal_safetyMode</name>
+      <name>brakeStart_Pedal_crawlMode</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -810,14 +828,14 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Constant_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|CrawlHomeMode</group>
-      <struct>ConstantWork.brakeStart_Pedal_safetyMode</struct>
+      <struct>ConstantWork.brakeStart_Pedal_crawlMode</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>brakeEnd_Pedal_safetyMode</name>
+      <name>brakeEnd_Pedal_crawlMode</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -828,14 +846,14 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Constant_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|CrawlHomeMode</group>
-      <struct>ConstantWork.brakeEnd_Pedal_safetyMode</struct>
+      <struct>ConstantWork.brakeEnd_Pedal_crawlMode</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>regenStart_Speed_safetyMode</name>
+      <name>regenStart_Speed_crawlMode</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -846,14 +864,14 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Constant_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|CrawlHomeMode</group>
-      <struct>ConstantWork.regenStart_Speed_safetyMode</struct>
+      <struct>ConstantWork.regenStart_Speed_crawlMode</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>regenEnd_Speed_safetyMode</name>
+      <name>regenEnd_Speed_crawlMode</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -864,14 +882,14 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Constant_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|CrawlHomeMode</group>
-      <struct>ConstantWork.regenEnd_Speed_safetyMode</struct>
+      <struct>ConstantWork.regenEnd_Speed_crawlMode</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>dragTorque_safetyMode</name>
+      <name>dragTorque_crawlMode</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -882,14 +900,14 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Constant_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|CrawlHomeMode</group>
-      <struct>ConstantWork.dragTorque_safetyMode</struct>
+      <struct>ConstantWork.dragTorque_crawlMode</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>driveMaxTorque_safetyMode</name>
+      <name>driveMaxTorque_crawlMode</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -900,14 +918,14 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Constant_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|CrawlHomeMode</group>
-      <struct>ConstantWork.driveMaxTorque_safetyMode</struct>
+      <struct>ConstantWork.driveMaxTorque_crawlMode</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>regenMaxTorque_safetyMode</name>
+      <name>regenMaxTorque_crawlMode</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -918,7 +936,7 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Constant_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|CrawlHomeMode</group>
-      <struct>ConstantWork.regenMaxTorque_safetyMode</struct>
+      <struct>ConstantWork.regenMaxTorque_crawlMode</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
@@ -1351,7 +1369,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>ETC_DCOffset</name>
+      <name>CRUISE_DCOffset</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -1363,7 +1381,7 @@
       <ctype>Constant_T</ctype>
       <help>PID Output DC Offset</help>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|Cruise Control|Speed Control</group>
-      <struct>ConstantWork.ETC_DCOffset</struct>
+      <struct>ConstantWork.CRUISE_DCOffset</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
@@ -1429,7 +1447,7 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>ETC_DGain</name>
+      <name>CRUISE_DGain</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -1442,14 +1460,14 @@
       <ctype>Constant_T</ctype>
       <help>PID Derivative Gain</help>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|Cruise Control|Speed Control</group>
-      <struct>ConstantWork.ETC_DGain</struct>
+      <struct>ConstantWork.CRUISE_DGain</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>ETC_ErrorGain</name>
+      <name>CRUISE_ErrorGain</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -1462,14 +1480,14 @@
       <ctype>Constant_T</ctype>
       <help>PID Error Gain</help>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|Cruise Control|Speed Control</group>
-      <struct>ConstantWork.ETC_ErrorGain</struct>
+      <struct>ConstantWork.CRUISE_ErrorGain</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>ETC_PGain</name>
+      <name>CRUISE_PGain</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -1482,14 +1500,14 @@
       <ctype>Constant_T</ctype>
       <help>PID Proportional Gain</help>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|Cruise Control|Speed Control</group>
-      <struct>ConstantWork.ETC_PGain</struct>
+      <struct>ConstantWork.CRUISE_PGain</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>ETC_LwrLim</name>
+      <name>CRUISE_LwrLim</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -1501,14 +1519,14 @@
       <ctype>Constant_T</ctype>
       <help>Lower Limit Value</help>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|Cruise Control|Speed Control</group>
-      <struct>ConstantWork.ETC_LwrLim</struct>
+      <struct>ConstantWork.CRUISE_LwrLim</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>ETC_UprLim</name>
+      <name>CRUISE_UprLim</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -1520,7 +1538,7 @@
       <ctype>Constant_T</ctype>
       <help>Upper Limit Value</help>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|Cruise Control|Speed Control</group>
-      <struct>ConstantWork.ETC_UprLim</struct>
+      <struct>ConstantWork.CRUISE_UprLim</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
@@ -2547,6 +2565,24 @@
       </enum>
    </VarDec>
    <VarDec>
+      <name>Power_train_torq_actual_ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>4</max>
+      <min>0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|ABS Outputs | Power_train_torq_actual_ovr Override</group>
+      <struct>VolatileWork_BSS.Power_train_torq_actual_ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
       <name>IPT_Wheel_Torque_Delivered_Ovr_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -2582,24 +2618,6 @@
       <ctype>Volatile_BSS_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Inputs|IPT CAN Inputs | IPT_Wheel_Torque_Delivered_Ovr Override</group>
       <struct>VolatileWork_BSS.IPT_Wheel_Torque_Delivered_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Power_train_torq_actual_ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>4</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Outputs|ABS Outputs | Power_train_torq_actual_ovr Override</group>
-      <struct>VolatileWork_BSS.Power_train_torq_actual_ovr_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -6352,6 +6370,314 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
+      <name>Mode_1_2_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing | Mode_1_2_Ovr Override</group>
+      <struct>VolatileWork_BSS.Mode_1_2_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Mode_1_2</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Constant_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing</group>
+      <struct>ConstantWork.Mode_1_2</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Mode_1_2_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing | Mode_1_2_Ovr Override</group>
+      <struct>VolatileWork_BSS.Mode_1_2_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Mode_2_2_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing | Mode_2_2_Ovr Override</group>
+      <struct>VolatileWork_BSS.Mode_2_2_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Mode_2_2</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Constant_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing</group>
+      <struct>ConstantWork.Mode_2_2</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Mode_2_2_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing | Mode_2_2_Ovr Override</group>
+      <struct>VolatileWork_BSS.Mode_2_2_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Mode_3_2_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing | Mode_3_2_Ovr Override</group>
+      <struct>VolatileWork_BSS.Mode_3_2_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Mode_3_2</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Constant_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing</group>
+      <struct>ConstantWork.Mode_3_2</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Mode_3_2_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing | Mode_3_2_Ovr Override</group>
+      <struct>VolatileWork_BSS.Mode_3_2_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Mode_4_2_Ovr_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing | Mode_4_2_Ovr Override</group>
+      <struct>VolatileWork_BSS.Mode_4_2_Ovr_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Mode_4_2</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Constant_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing</group>
+      <struct>ConstantWork.Mode_4_2</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Mode_4_2_Ovr_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing | Mode_4_2_Ovr Override</group>
+      <struct>VolatileWork_BSS.Mode_4_2_Ovr_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Mode_1_2_Prb</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing</group>
+      <struct>VolatileWork_BSS.Mode_1_2_Prb</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Mode_2_2_Prb</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing</group>
+      <struct>VolatileWork_BSS.Mode_2_2_Prb</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Mode_3_2_Prb</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing</group>
+      <struct>VolatileWork_BSS.Mode_3_2_Prb</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Mode_4_2_Prb</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing</group>
+      <struct>VolatileWork_BSS.Mode_4_2_Prb</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
       <name>DATA_MODE_2_Ovr_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -7892,7 +8218,7 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Mode_1_Ovr_ovr</name>
+      <name>Mode_1_1_Ovr_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -7902,8 +8228,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing | Mode_1_Ovr Override</group>
-      <struct>VolatileWork_BSS.Mode_1_Ovr_ovr</struct>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing | Mode_1_1_Ovr Override</group>
+      <struct>VolatileWork_BSS.Mode_1_1_Ovr_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -7915,7 +8241,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>Mode_1</name>
+      <name>Mode_1_1</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -7926,14 +8252,14 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Constant_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing</group>
-      <struct>ConstantWork.Mode_1</struct>
+      <struct>ConstantWork.Mode_1_1</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Mode_1_Ovr_new</name>
+      <name>Mode_1_1_Ovr_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -7943,15 +8269,15 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing | Mode_1_Ovr Override</group>
-      <struct>VolatileWork_BSS.Mode_1_Ovr_new</struct>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing | Mode_1_1_Ovr Override</group>
+      <struct>VolatileWork_BSS.Mode_1_1_Ovr_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Mode_2_Ovr_ovr</name>
+      <name>Mode_2_1_Ovr_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -7961,8 +8287,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing | Mode_2_Ovr Override</group>
-      <struct>VolatileWork_BSS.Mode_2_Ovr_ovr</struct>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing | Mode_2_1_Ovr Override</group>
+      <struct>VolatileWork_BSS.Mode_2_1_Ovr_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -7974,7 +8300,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>Mode_2</name>
+      <name>Mode_2_1</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -7985,14 +8311,14 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Constant_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing</group>
-      <struct>ConstantWork.Mode_2</struct>
+      <struct>ConstantWork.Mode_2_1</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Mode_2_Ovr_new</name>
+      <name>Mode_2_1_Ovr_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -8002,15 +8328,15 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing | Mode_2_Ovr Override</group>
-      <struct>VolatileWork_BSS.Mode_2_Ovr_new</struct>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing | Mode_2_1_Ovr Override</group>
+      <struct>VolatileWork_BSS.Mode_2_1_Ovr_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Mode_3_Ovr_ovr</name>
+      <name>Mode_3_3_Ovr_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -8020,8 +8346,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing | Mode_3_Ovr Override</group>
-      <struct>VolatileWork_BSS.Mode_3_Ovr_ovr</struct>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing | Mode_3_3_Ovr Override</group>
+      <struct>VolatileWork_BSS.Mode_3_3_Ovr_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -8033,7 +8359,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>Mode_3</name>
+      <name>Mode_3_1</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -8044,14 +8370,14 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Constant_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing</group>
-      <struct>ConstantWork.Mode_3</struct>
+      <struct>ConstantWork.Mode_3_1</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Mode_3_Ovr_new</name>
+      <name>Mode_3_3_Ovr_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -8061,15 +8387,15 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing | Mode_3_Ovr Override</group>
-      <struct>VolatileWork_BSS.Mode_3_Ovr_new</struct>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing | Mode_3_3_Ovr Override</group>
+      <struct>VolatileWork_BSS.Mode_3_3_Ovr_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Mode_4_Ovr_ovr</name>
+      <name>Mode_4_4_Ovr_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -8079,8 +8405,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing | Mode_4_Ovr Override</group>
-      <struct>VolatileWork_BSS.Mode_4_Ovr_ovr</struct>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing | Mode_4_4_Ovr Override</group>
+      <struct>VolatileWork_BSS.Mode_4_4_Ovr_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -8092,7 +8418,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>Mode_4</name>
+      <name>Mode_4_1</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -8103,14 +8429,14 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Constant_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing</group>
-      <struct>ConstantWork.Mode_4</struct>
+      <struct>ConstantWork.Mode_4_1</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Mode_4_Ovr_new</name>
+      <name>Mode_4_4_Ovr_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -8120,15 +8446,15 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing | Mode_4_Ovr Override</group>
-      <struct>VolatileWork_BSS.Mode_4_Ovr_new</struct>
+      <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing | Mode_4_4_Ovr Override</group>
+      <struct>VolatileWork_BSS.Mode_4_4_Ovr_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Mode_1_Prb</name>
+      <name>Mode_1_1_Prb</name>
       <access>RO RO RO RO</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -8139,14 +8465,14 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing</group>
-      <struct>VolatileWork_BSS.Mode_1_Prb</struct>
+      <struct>VolatileWork_BSS.Mode_1_1_Prb</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Mode_2_Prb</name>
+      <name>Mode_2_1_Prb</name>
       <access>RO RO RO RO</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -8157,14 +8483,14 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing</group>
-      <struct>VolatileWork_BSS.Mode_2_Prb</struct>
+      <struct>VolatileWork_BSS.Mode_2_1_Prb</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Mode_3_Prb</name>
+      <name>Mode_3_3_Prb</name>
       <access>RO RO RO RO</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -8175,14 +8501,14 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing</group>
-      <struct>VolatileWork_BSS.Mode_3_Prb</struct>
+      <struct>VolatileWork_BSS.Mode_3_3_Prb</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Mode_4_Prb</name>
+      <name>Mode_4_4_Prb</name>
       <access>RO RO RO RO</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -8193,7 +8519,7 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Outputs|Driver Ouputs|VIN Output and Button Probing</group>
-      <struct>VolatileWork_BSS.Mode_4_Prb</struct>
+      <struct>VolatileWork_BSS.Mode_4_4_Prb</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -14916,7 +15242,7 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>ETC_IGain</name>
+      <name>CRUISE_IGain</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -14929,14 +15255,14 @@
       <ctype>Constant_T</ctype>
       <help>PID Integral Gain</help>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|Cruise Control|Speed Control</group>
-      <struct>ConstantWork.ETC_IGain</struct>
+      <struct>ConstantWork.CRUISE_IGain</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>ETC_IMin</name>
+      <name>CRUISE_IMin</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -14948,14 +15274,14 @@
       <ctype>Constant_T</ctype>
       <help>PID Integrator Lower Limit</help>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|Cruise Control|Speed Control</group>
-      <struct>ConstantWork.ETC_IMin</struct>
+      <struct>ConstantWork.CRUISE_IMin</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>ETC_IMax</name>
+      <name>CRUISE_IMax</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -14967,11 +15293,47 @@
       <ctype>Constant_T</ctype>
       <help>PID Integrator Upper Limit</help>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|Cruise Control|Speed Control</group>
-      <struct>ConstantWork.ETC_IMax</struct>
+      <struct>ConstantWork.CRUISE_IMax</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>CruiseSpeed</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|Cruise Control</group>
+      <struct>VolatileWork_BSS.CruiseSpeed</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>CruiseOn</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|Cruise Control</group>
+      <struct>VolatileWork_BSS.CruiseOn</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>Hybrid_State</name>
@@ -15333,7 +15695,7 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>safetyMode_AccelIdxArr</name>
+      <name>crawlMode_AccelIdxArr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -15344,17 +15706,17 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Constant_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|CrawlHomeMode</group>
-      <struct>ConstantWork.safetyMode_AccelIdxArr</struct>
+      <struct>ConstantWork.crawlMode_AccelIdxArr</struct>
       <class>prelookup</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
-      <len>21</len>
-      <input>safetyMode_AccelIn</input>
-      <index>safetyMode_AccelIdx</index>
+      <len>11</len>
+      <input>crawlMode_AccelIn</input>
+      <index>crawlMode_AccelIdx</index>
    </VarDec>
    <VarDec>
-      <name>safetyMode_AccelIdx</name>
+      <name>crawlMode_AccelIdx</name>
       <access>RO RO RO RO</access>
       <gain>0.001953125</gain>
       <offset>0</offset>
@@ -15366,14 +15728,14 @@
       <units>idx.frac</units>
       <ctype>Volatile_BSS_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|CrawlHomeMode</group>
-      <struct>VolatileWork_BSS.safetyMode_AccelIdx</struct>
+      <struct>VolatileWork_BSS.crawlMode_AccelIdx</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint16</type>
    </VarDec>
    <VarDec>
-      <name>safetyMode_AccelIn</name>
+      <name>crawlMode_AccelIn</name>
       <access>RO RO RO RO</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -15384,14 +15746,14 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|CrawlHomeMode</group>
-      <struct>VolatileWork_BSS.safetyMode_AccelIn</struct>
+      <struct>VolatileWork_BSS.crawlMode_AccelIn</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>safetyMode_Accel_MapTbl</name>
+      <name>crawlMode_Accel_MapTbl</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -15402,17 +15764,17 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Constant_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|CrawlHomeMode</group>
-      <struct>ConstantWork.safetyMode_Accel_MapTbl</struct>
+      <struct>ConstantWork.crawlMode_Accel_MapTbl</struct>
       <class>interpolation_1d</class>
       <storage>FLASH</storage>
       <update>REMOTE</update>
       <type>real32</type>
-      <len>21</len>
-      <output>safetyMode_Accel_Map</output>
-      <prelookup>safetyMode_AccelIdxArr</prelookup>
+      <len>11</len>
+      <output>crawlMode_Accel_Map</output>
+      <prelookup>crawlMode_AccelIdxArr</prelookup>
    </VarDec>
    <VarDec>
-      <name>safetyMode_Accel_Map</name>
+      <name>crawlMode_Accel_Map</name>
       <access>RO RO RO RO</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -15423,14 +15785,14 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|CrawlHomeMode</group>
-      <struct>VolatileWork_BSS.safetyMode_Accel_Map</struct>
+      <struct>VolatileWork_BSS.crawlMode_Accel_Map</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>safetyMode_BrakeIdxArr</name>
+      <name>crawlMode_BrakeIdxArr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -15441,17 +15803,17 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Constant_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|CrawlHomeMode</group>
-      <struct>ConstantWork.safetyMode_BrakeIdxArr</struct>
+      <struct>ConstantWork.crawlMode_BrakeIdxArr</struct>
       <class>prelookup</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
-      <len>21</len>
-      <input>safetyMode_BrakeIn</input>
-      <index>safetyMode_BrakeIdx</index>
+      <len>11</len>
+      <input>crawlMode_BrakeIn</input>
+      <index>crawlMode_BrakeIdx</index>
    </VarDec>
    <VarDec>
-      <name>safetyMode_BrakeIdx</name>
+      <name>crawlMode_BrakeIdx</name>
       <access>RO RO RO RO</access>
       <gain>0.001953125</gain>
       <offset>0</offset>
@@ -15463,14 +15825,14 @@
       <units>idx.frac</units>
       <ctype>Volatile_BSS_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|CrawlHomeMode</group>
-      <struct>VolatileWork_BSS.safetyMode_BrakeIdx</struct>
+      <struct>VolatileWork_BSS.crawlMode_BrakeIdx</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint16</type>
    </VarDec>
    <VarDec>
-      <name>safetyMode_BrakeIn</name>
+      <name>crawlMode_BrakeIn</name>
       <access>RO RO RO RO</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -15481,14 +15843,14 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|CrawlHomeMode</group>
-      <struct>VolatileWork_BSS.safetyMode_BrakeIn</struct>
+      <struct>VolatileWork_BSS.crawlMode_BrakeIn</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>safetyMode_Brake_MapTbl</name>
+      <name>crawlMode_Brake_MapTbl</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -15499,17 +15861,17 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Constant_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|CrawlHomeMode</group>
-      <struct>ConstantWork.safetyMode_Brake_MapTbl</struct>
+      <struct>ConstantWork.crawlMode_Brake_MapTbl</struct>
       <class>interpolation_1d</class>
       <storage>FLASH</storage>
       <update>REMOTE</update>
       <type>real32</type>
-      <len>21</len>
-      <output>safetyMode_Brake_Map</output>
-      <prelookup>safetyMode_BrakeIdxArr</prelookup>
+      <len>11</len>
+      <output>crawlMode_Brake_Map</output>
+      <prelookup>crawlMode_BrakeIdxArr</prelookup>
    </VarDec>
    <VarDec>
-      <name>safetyMode_Brake_Map</name>
+      <name>crawlMode_Brake_Map</name>
       <access>RO RO RO RO</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -15520,7 +15882,7 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|CrawlHomeMode</group>
-      <struct>VolatileWork_BSS.safetyMode_Brake_Map</struct>
+      <struct>VolatileWork_BSS.crawlMode_Brake_Map</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -15543,7 +15905,7 @@
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
-      <len>21</len>
+      <len>11</len>
       <input>EcoMode_AccelIn</input>
       <index>EcoMode_AccelIdx</index>
    </VarDec>
@@ -15601,7 +15963,7 @@
       <storage>FLASH</storage>
       <update>REMOTE</update>
       <type>real32</type>
-      <len>21</len>
+      <len>11</len>
       <output>EcoMode_Accel_Map</output>
       <prelookup>EcoMode_AccelIdxArr</prelookup>
    </VarDec>
@@ -15640,7 +16002,7 @@
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
-      <len>21</len>
+      <len>11</len>
       <input>EcoMode_BrakeIn</input>
       <index>EcoMode_BrakeIdx</index>
    </VarDec>
@@ -15698,7 +16060,7 @@
       <storage>FLASH</storage>
       <update>REMOTE</update>
       <type>real32</type>
-      <len>21</len>
+      <len>11</len>
       <output>EcoMode_Brake_Map</output>
       <prelookup>EcoMode_BrakeIdxArr</prelookup>
    </VarDec>
@@ -15737,7 +16099,7 @@
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
-      <len>21</len>
+      <len>11</len>
       <input>SUVMode_AccelIn</input>
       <index>SUVMode_AccelIdx</index>
    </VarDec>
@@ -15795,7 +16157,7 @@
       <storage>FLASH</storage>
       <update>REMOTE</update>
       <type>real32</type>
-      <len>21</len>
+      <len>11</len>
       <output>SUVMode_Accel_Map</output>
       <prelookup>SUVMode_AccelIdxArr</prelookup>
    </VarDec>
@@ -15834,7 +16196,7 @@
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
-      <len>21</len>
+      <len>11</len>
       <input>SUVMode_BrakeIn</input>
       <index>SUVMode_BrakeIdx</index>
    </VarDec>
@@ -15892,7 +16254,7 @@
       <storage>FLASH</storage>
       <update>REMOTE</update>
       <type>real32</type>
-      <len>21</len>
+      <len>11</len>
       <output>SUVMode_Brake_Map</output>
       <prelookup>SUVMode_BrakeIdxArr</prelookup>
    </VarDec>
@@ -15915,7 +16277,7 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Cruise_Control_PreIdxArr</name>
+      <name>Cruise_Control_VSpeed_PreIdxArr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -15926,17 +16288,17 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Constant_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|Cruise Control|Speed Control</group>
-      <struct>ConstantWork.Cruise_Control_PreIdxArr</struct>
+      <struct>ConstantWork.Cruise_Control_VSpeed_PreIdxArr</struct>
       <class>prelookup</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
-      <len>121</len>
-      <input>Cruise_Control_PreIn</input>
-      <index>Cruise_Control_PreIdx</index>
+      <len>11</len>
+      <input>Cruise_Control_VSpeed_PreIn</input>
+      <index>Cruise_Control_VSpeed_PreIdx</index>
    </VarDec>
    <VarDec>
-      <name>Cruise_Control_PreIdx</name>
+      <name>Cruise_Control_VSpeed_PreIdx</name>
       <access>RO RO RO RO</access>
       <gain>0.001953125</gain>
       <offset>0</offset>
@@ -15948,14 +16310,14 @@
       <units>idx.frac</units>
       <ctype>Volatile_BSS_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|Cruise Control|Speed Control</group>
-      <struct>VolatileWork_BSS.Cruise_Control_PreIdx</struct>
+      <struct>VolatileWork_BSS.Cruise_Control_VSpeed_PreIdx</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint16</type>
    </VarDec>
    <VarDec>
-      <name>Cruise_Control_PreIn</name>
+      <name>Cruise_Control_VSpeed_PreIn</name>
       <access>RO RO RO RO</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -15966,46 +16328,207 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|Cruise Control|Speed Control</group>
-      <struct>VolatileWork_BSS.Cruise_Control_PreIn</struct>
+      <struct>VolatileWork_BSS.Cruise_Control_VSpeed_PreIn</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Cruise_Control_MapTbl</name>
+      <name>Cruise_Control_PID_PreIdxArr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.2</format>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Constant_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|Cruise Control|Speed Control</group>
-      <struct>ConstantWork.Cruise_Control_MapTbl</struct>
-      <class>interpolation_1d</class>
+      <struct>ConstantWork.Cruise_Control_PID_PreIdxArr</struct>
+      <class>prelookup</class>
       <storage>FLASH</storage>
-      <update>REMOTE</update>
+      <update>BACKGND</update>
       <type>real32</type>
-      <len>121</len>
-      <output>Cruise_Control_Map</output>
-      <prelookup>Cruise_Control_PreIdxArr</prelookup>
+      <len>11</len>
+      <input>Cruise_Control_PID_PreIn</input>
+      <index>Cruise_Control_PID_PreIdx</index>
    </VarDec>
    <VarDec>
-      <name>Cruise_Control_Map</name>
+      <name>Cruise_Control_PID_PreIdx</name>
+      <access>RO RO RO RO</access>
+      <gain>0.001953125</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>127.998046875</max>
+      <min>0</min>
+      <format>4.2</format>
+      <mask>0x0000FFFF</mask>
+      <units>idx.frac</units>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|Cruise Control|Speed Control</group>
+      <struct>VolatileWork_BSS.Cruise_Control_PID_PreIdx</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint16</type>
+   </VarDec>
+   <VarDec>
+      <name>Cruise_Control_PID_PreIn</name>
       <access>RO RO RO RO</access>
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
       <max>1.0E17</max>
       <min>-1.0E17</min>
-      <format>1.2</format>
+      <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
       <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|Cruise Control|Speed Control</group>
-      <struct>VolatileWork_BSS.Cruise_Control_Map</struct>
+      <struct>VolatileWork_BSS.Cruise_Control_PID_PreIn</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Cruise_Control_Tq_TableMap</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Constant_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|Cruise Control|Speed Control</group>
+      <struct>ConstantWork.Cruise_Control_Tq_TableMap.data</struct>
+      <class>interpolation_2d</class>
+      <storage>FLASH</storage>
+      <update>REMOTE</update>
+      <type>real32</type>
+      <output>Cruise_Control_Tq_Table</output>
+      <col_prelookup>Cruise_Control_VSpeed_PreIdxArr</col_prelookup>
+      <col_len>11</col_len>
+      <row_prelookup>Cruise_Control_PID_PreIdxArr</row_prelookup>
+      <row_len>11</row_len>
+   </VarDec>
+   <VarDec>
+      <name>Cruise_Control_Tq_Table</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Control|Hybrid Control Code|Cruise Control|Speed Control</group>
+      <struct>VolatileWork_BSS.Cruise_Control_Tq_Table</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Htr_Therm_PreIdxArr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Constant_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Analog Inputs|Coolant</group>
+      <struct>ConstantWork.Htr_Therm_PreIdxArr</struct>
+      <class>prelookup</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+      <len>11</len>
+      <input>Htr_Therm_PreIn</input>
+      <index>Htr_Therm_PreIdx</index>
+   </VarDec>
+   <VarDec>
+      <name>Htr_Therm_PreIdx</name>
+      <access>RO RO RO RO</access>
+      <gain>0.001953125</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>127.998046875</max>
+      <min>0</min>
+      <format>4.2</format>
+      <mask>0x0000FFFF</mask>
+      <units>idx.frac</units>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Analog Inputs|Coolant</group>
+      <struct>VolatileWork_BSS.Htr_Therm_PreIdx</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint16</type>
+   </VarDec>
+   <VarDec>
+      <name>Htr_Therm_PreIn</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Analog Inputs|Coolant</group>
+      <struct>VolatileWork_BSS.Htr_Therm_PreIn</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Htr_Therm_Trnsfr_FuncTbl</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>100</max>
+      <min>-40</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>C</units>
+      <ctype>Constant_T</ctype>
+      <help>Eletric heater transfer function</help>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Analog Inputs|Coolant</group>
+      <struct>ConstantWork.Htr_Therm_Trnsfr_FuncTbl</struct>
+      <class>interpolation_1d</class>
+      <storage>FLASH</storage>
+      <update>REMOTE</update>
+      <type>real32</type>
+      <len>11</len>
+      <output>Htr_Therm_Trnsfr_Func</output>
+      <prelookup>Htr_Therm_PreIdxArr</prelookup>
+   </VarDec>
+   <VarDec>
+      <name>Htr_Therm_Trnsfr_Func</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>C</units>
+      <ctype>Volatile_BSS_T</ctype>
+      <help>Eletric heater transfer function</help>
+      <group>Mooventure2016_Rev5|Foreground|Inputs|Analog Inputs|Coolant</group>
+      <struct>VolatileWork_BSS.Htr_Therm_Trnsfr_Func</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -16028,7 +16551,7 @@
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
-      <len>17</len>
+      <len>11</len>
       <input>Throttle_Position_PreIn</input>
       <index>Throttle_Position_PreIdx</index>
    </VarDec>
@@ -16086,7 +16609,7 @@
       <storage>FLASH</storage>
       <update>REMOTE</update>
       <type>real32</type>
-      <len>17</len>
+      <len>11</len>
       <output>Throttle_Position_Tbl</output>
       <prelookup>Throttle_Position_PreIdxArr</prelookup>
    </VarDec>

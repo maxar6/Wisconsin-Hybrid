@@ -4,80 +4,82 @@
 ###  Starting MotoHawk Build              ###
 ###  MotoHawk version: 2011a_sp0.184      ###
 ###    MATLAB version: 7.12.0.635 (R2011a)###
-###        23-Jan-2018 12:59:40           ###
+###        01-Jan-2019 03:07:27           ###
 ###                                       ###
 #############################################
  
 Target Module:   ECU555-80 (DEV)
-DEV Executable:  BaseEngineController_A02_115.srz
-MotoTune DLL:    BaseEngin_115.dll
+DEV Executable:  BaseEngineController_A02_117.srz
+MotoTune DLL:    BaseEngin_117.dll
  
 Project GUID:    34a85f28-21b7-4112-82-b0-87-11-cc-cb-8f
-Build GUID:      66e2ce16-351c-4ae6-a6-cb-00-88-ae-da-ff
+Build GUID:      4bec7544-22d6-4657-9b-7b-bb-78-95-0c-6d
  
 ### Starting build procedure for model: BaseEngineController_A02
-### Generating code into build folder: C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build
+### Generating code into build folder: C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build
 {Warning: Unconnected output line found on
-'BaseEngineController_A02/Foreground/Control/VirtualSensors/RawProcessed/Bus Selector4' (output port:
-2)} 
+'BaseEngineController_A02/Foreground/Control/VirtualSensors/RawProcessed/Bus Selector4'
+(output port: 2)} 
 {Warning: Outport
 '<a href="matlab:open_and_hilite_system ('BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/SequencyCutMachine/CylsToCut')">BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/SequencyCutMachine/CylsToCut</a>'
 and
 '<a href="matlab:open_and_hilite_system ('BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/Out1')">BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/Out1</a>'
-which are driven by the same signal must have the same setting for the "Output when disabled"
-parameter} 
+which are driven by the same signal must have the same setting for the "Output when
+disabled" parameter} 
 {Warning: Outport
 '<a href="matlab:open_and_hilite_system ('BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/SequencyCutMachine/CylsToCut')">BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/SequencyCutMachine/CylsToCut</a>'
 and
 '<a href="matlab:open_and_hilite_system ('BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/Out1')">BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/Out1</a>'
-which are driven by the same signal must have the same setting for the "Output when disabled"
-parameter} 
+which are driven by the same signal must have the same setting for the "Output when
+disabled" parameter} 
 {Warning: Outport
 '<a href="matlab:open_and_hilite_system ('BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/SequencyCutMachine/CylsToCut')">BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/SequencyCutMachine/CylsToCut</a>'
 and
 '<a href="matlab:open_and_hilite_system ('BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/Out1')">BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/Out1</a>'
-which are driven by the same signal must have the same setting for the "Output when disabled"
-parameter} 
+which are driven by the same signal must have the same setting for the "Output when
+disabled" parameter} 
 {Warning: Outport
 '<a href="matlab:open_and_hilite_system ('BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/SequencyCutMachine/CylsToCut')">BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/SequencyCutMachine/CylsToCut</a>'
 and
 '<a href="matlab:open_and_hilite_system ('BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/Out1')">BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/Out1</a>'
-which are driven by the same signal must have the same setting for the "Output when disabled"
-parameter} 
+which are driven by the same signal must have the same setting for the "Output when
+disabled" parameter} 
 {Warning: Outport
 '<a href="matlab:open_and_hilite_system ('BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/SequencyCutMachine/CylsToCut')">BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/SequencyCutMachine/CylsToCut</a>'
 and
 '<a href="matlab:open_and_hilite_system ('BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/Out1')">BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/Out1</a>'
-which are driven by the same signal must have the same setting for the "Output when disabled"
-parameter} 
+which are driven by the same signal must have the same setting for the "Output when
+disabled" parameter} 
 {Warning: Outport
 '<a href="matlab:open_and_hilite_system ('BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/SequencyCutMachine/CylsToCut')">BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/SequencyCutMachine/CylsToCut</a>'
 and
 '<a href="matlab:open_and_hilite_system ('BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/Out1')">BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/Out1</a>'
-which are driven by the same signal must have the same setting for the "Output when disabled"
-parameter} 
+which are driven by the same signal must have the same setting for the "Output when
+disabled" parameter} 
 {Warning: Outport
 '<a href="matlab:open_and_hilite_system ('BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/SequencyCutMachine/CylsToCut')">BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/SequencyCutMachine/CylsToCut</a>'
 and
 '<a href="matlab:open_and_hilite_system ('BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/Out1')">BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/Out1</a>'
-which are driven by the same signal must have the same setting for the "Output when disabled"
-parameter} 
+which are driven by the same signal must have the same setting for the "Output when
+disabled" parameter} 
 {Warning: Outport
 '<a href="matlab:open_and_hilite_system ('BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/SequencyCutMachine/CylsToCut')">BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/SequencyCutMachine/CylsToCut</a>'
 and
 '<a href="matlab:open_and_hilite_system ('BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/Out1')">BaseEngineController_A02/Foreground/Control/ActuatorCharacterization/SequenceCutPattern/SequenceCutMachine/Out1</a>'
-which are driven by the same signal must have the same setting for the "Output when disabled"
-parameter} 
-{Warning: The block diagram '<a href="matlab:open_system ('BaseEngineController_A02')">BaseEngineController_A02</a>' improperly uses 1 Mux blocks as Bus Creators.
-This can lead to modeling errors (see the Mux block documentation for more information). Use the
-Model Advisor and slreplace_mux command to fix improper use of Mux blocks. Then enable strict bus
-modeling  by setting 'Mux blocks used to create bus signals' (in the Configuration Parameters dialog
-box -> Diagnostics -> Connectivity) to 'Error'. Please note that the 'None' and 'Warning' options for
-this diagnostic will be removed in a future version of Simulink.
+which are driven by the same signal must have the same setting for the "Output when
+disabled" parameter} 
+{Warning: The block diagram '<a href="matlab:open_system ('BaseEngineController_A02')">BaseEngineController_A02</a>' improperly uses 1 Mux blocks as Bus
+Creators. This can lead to modeling errors (see the Mux block documentation for more
+information). Use the Model Advisor and slreplace_mux command to fix improper use of Mux
+blocks. Then enable strict bus modeling  by setting 'Mux blocks used to create bus
+signals' (in the Configuration Parameters dialog box -> Diagnostics -> Connectivity) to
+'Error'. Please note that the 'None' and 'Warning' options for this diagnostic will be
+removed in a future version of Simulink.
  Individual warnings (up to a maximum of 10) are reported below for each Mux block.} 
-{Warning: The output of Mux block '<a href="matlab:open_and_hilite_system ('BaseEngineController_A02/Foreground/Control/Diagnostics/Mux')">BaseEngineController_A02/Foreground/Control/Diagnostics/Mux</a>' is
-treated as a bus signal by block '<a href="matlab:open_and_hilite_system ('BaseEngineController_A02/Foreground/Control/Diagnostics/Freeze Frames/Freeze Frame Data Storage/Bus Selector')">BaseEngineController_A02/Foreground/Control/Diagnostics/Freeze
-Frames/Freeze Frame Data Storage/Bus Selector</a>'} 
+{Warning: The output of Mux block
+'<a href="matlab:open_and_hilite_system ('BaseEngineController_A02/Foreground/Control/Diagnostics/Mux')">BaseEngineController_A02/Foreground/Control/Diagnostics/Mux</a>' is treated as a bus signal
+by block '<a href="matlab:open_and_hilite_system ('BaseEngineController_A02/Foreground/Control/Diagnostics/Freeze Frames/Freeze Frame Data Storage/Bus Selector')">BaseEngineController_A02/Foreground/Control/Diagnostics/Freeze Frames/Freeze
+Frame Data Storage/Bus Selector</a>'} 
 ### Invoking Target Language Compiler on BaseEngineController_A02.rtw
 ### Using System Target File: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tlc
 ### Loading TLC function libraries
@@ -155,8 +157,7 @@ Frames/Freeze Frame Data Storage/Bus Selector</a>'}
 ...............................................................................
 ...............................................................................
 ...............................................................................
-..................................................................### Creating project marker file: rtw_proj.tmw
-.
+...................................................................
 ### Processing Template Makefile: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tmf
 ### BaseEngineController_A02.mk which is generated from C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tmf is up to date
 ### Building BaseEngineController_A02: .\BaseEngineController_A02.bat
@@ -173,10 +174,10 @@ Application Configuration File: .\MotoHawk_Extensions.xml
 ### Generating MotoTune DLL 
 Parser mode is C Source Code 
 Searching for files to parse 
-Writing Vardec Library C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\TDB/ParsedVardecs.xml 
+Writing Vardec Library C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\TDB/ParsedVardecs.xml 
 ### Completed MotoTune DLL 
 ### Compiling and Linking 
-Buildfile: file:///C:/Users/HYBRID/Documents/GitHub/Wisconsin-Hybrid/EngineController_Rev1/BaseEngineController_A02_Build/BaseEngineController_A02.build 
+Buildfile: file:///C:/Users/maxar/Documents/GitHub/Wisconsin-Hybrid/EngineController_Rev1_Bak/BaseEngineController_A02_Build/BaseEngineController_A02.build 
 Target framework: Microsoft .NET Framework 3.5 
 Target(s) specified: rebuild  
  
@@ -186,58 +187,58 @@ rebuild:
  
 clean: 
  
-   [delete] Deleting directory 'C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Build'. 
-   [delete] Deleting directory 'C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Archive'. 
+   [delete] Deleting directory 'C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\Build'. 
+   [delete] Deleting directory 'C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\Archive'. 
  
 all: 
  
  
 init: 
  
-    [mkdir] Creating directory 'C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Build\Obj'. 
-    [mkdir] Creating directory 'C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Archive'. 
-     [copy] Copying 4 files to 'C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Archive'. 
+    [mkdir] Creating directory 'C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\Build\Obj'. 
+    [mkdir] Creating directory 'C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\Archive'. 
+     [copy] Copying 4 files to 'C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\Archive'. 
  
 compile: 
  
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Application.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\ApplicationSecurity.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\AppMonitor.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\BaseEngineController_A02.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\BaseEngineController_A02_data.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\BaseEngineController_A02_IdleStateMachine.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\CANReceiveDispatcher.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\EncoderCallback.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\FaultManager.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Foreground.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\InjectorSequenceCallback_41.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\IOCallbacks.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\MotoCoder_DataStore.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\MotoCoder_Timer.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\MotoHawk_CAN.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\MotoHawk_DataStores.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\MotoHawk_IO.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\rt_nonfinite.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\rt_zcfcn.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\TableLookupFunctions.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_BGND_BASEx20_PERIODIC_6201p0004.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_BGND_BASE_PERIODIC_9474p0004.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_CAN_RX_BusCAN_1_Buf1.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_CAN_RX_BusCAN_2_Buf14.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_Encoder_Fault_31.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_1407p0004.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_1408p0004.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_4476p0004.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_8397p0001.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_9202p0004.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_MID_TDC_EVENT_8214p0001.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_RTI_PERIODIC_9480p0004.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_TDC1_EVENT_1155p0004.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_TDC_EVENT_7320p0004.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_TDC_EVENT_8688p0001.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_STARTUP_EVENT_8213p0001.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\VarDecs.c 
-  [gcc-cpp] Compiling C:\Users\HYBRID\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\TDB\TableDB.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\Application.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\ApplicationSecurity.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\AppMonitor.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\BaseEngineController_A02.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\BaseEngineController_A02_data.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\BaseEngineController_A02_IdleStateMachine.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\CANReceiveDispatcher.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\EncoderCallback.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\FaultManager.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\Foreground.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\InjectorSequenceCallback_41.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\IOCallbacks.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\MotoCoder_DataStore.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\MotoCoder_Timer.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\MotoHawk_CAN.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\MotoHawk_DataStores.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\MotoHawk_IO.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\rt_nonfinite.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\rt_zcfcn.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\TableLookupFunctions.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\Trigger_BGND_BASEx20_PERIODIC_6201p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\Trigger_BGND_BASE_PERIODIC_9474p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\Trigger_CAN_RX_BusCAN_1_Buf1.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\Trigger_CAN_RX_BusCAN_2_Buf14.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\Trigger_Encoder_Fault_31.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_1407p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_1408p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_4476p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_8397p0001.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_9202p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\Trigger_FGND_MID_TDC_EVENT_8214p0001.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\Trigger_FGND_RTI_PERIODIC_9480p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\Trigger_FGND_TDC1_EVENT_1155p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\Trigger_FGND_TDC_EVENT_7320p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\Trigger_FGND_TDC_EVENT_8688p0001.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\Trigger_STARTUP_EVENT_8213p0001.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\VarDecs.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1_Bak\BaseEngineController_A02_Build\TDB\TableDB.c 
  
 link: 
  
@@ -268,7 +269,7 @@ Searching for initialised section '.data' aliased to '.romdata' ...
     Adding RAM[0x003FA8E0], ROM[0x000552F0], Length[0x000008BC] 
 Complete. 
 Writing file sr://BaseEngineController_A02.sr... 
-Encrypting 'sr://BaseEngineController_A02.sr' into 'srz://.\Target\BaseEngineController_A02_115.srz' ... 
+Encrypting 'sr://BaseEngineController_A02.sr' into 'srz://.\Target\BaseEngineController_A02_117.srz' ... 
 Done. 
 ### Creating Build Statistics 
 Memory Summary:
@@ -291,18 +292,18 @@ Memory Summary:
 	    ConstantWork:                      17328 bytes   26% of  65536
 	EEPROM_SPACE:                            587 bytes    7% of   8192
 
-### Copy BaseEngin_115.dll and BaseEngineController_A02_115.srz 
+### Copy BaseEngin_117.dll and BaseEngineController_A02_117.srz 
 ### Successful Build with MotoCoder 
-Elapsed Build Time: 3 minutes, 16.5 seconds  (196.5 seconds)
-{Warning: Block diagram 'BaseEngineController_A02' contains disabled library links.  Use Model Advisor
-to find the disabled links in non-library models.  The diagram has been saved but may not contain
-what you intended.} 
+Elapsed Build Time: 3 minutes, 34.0 seconds  (214.0 seconds)
+{Warning: Block diagram 'BaseEngineController_A02' contains disabled library links.  Use
+Model Advisor to find the disabled links in non-library models.  The diagram has been
+saved but may not contain what you intended.} 
  
 #############################################################################
 ###
 ### Target Module: ECU555-80
-### Created Development Executable: BaseEngineController_A02_115.srz
-### Created MotoTune DLL: BaseEngin_115.dll
+### Created Development Executable: BaseEngineController_A02_117.srz
+### Created MotoTune DLL: BaseEngin_117.dll
 ###
 ### Successful MotoHawk Build for model: BaseEngineController_A02
 ###

@@ -12,163 +12,163 @@
 /*---- RAM VARIABLES --------------------------------------------------------------------------------------*/
 #include <Pragma_Section_Start_sbss_zerovars.h>
 
-/* Name: TripAmoHoursOut_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s82_Sum1 Mask:FFFFFFFF
+/* Name: TripAmoHoursOut_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s90_Sum1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Outputs|Battery" Help:""   */
 
-/* Name: BatteryVoltage_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s44_Merge Mask:FFFFFFFF
+/* Name: BatteryVoltage_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s52_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Outputs|Battery" Help:""   */
 
-/* Name: BatteryCurrent_prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s13_Merge Mask:FFFFFFFF
+/* Name: BatteryCurrent_prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s21_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Outputs|Battery" Help:""   */
 
-/* Name: BusVoltage_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s44_Merge Mask:FFFFFFFF
+/* Name: BusVoltage_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s52_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Outputs|Battery" Help:""   */
 
-/* Name: MaximumDischargePower_Continuos_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s79_motohawk_interpolation_2d Mask:FFFFFFFF
+/* Name: MaximumDischargePower_Continuos_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s87_motohawk_interpolation_2d Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Outputs|Battery" Help:""   */
 
-/* Name: MaximumRegenPower_Continuous_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s79_motohawk_interpolation_2d1 Mask:FFFFFFFF
+/* Name: MaximumRegenPower_Continuous_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s87_motohawk_interpolation_2d1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Outputs|Battery" Help:""   */
 
-/* Name: MaximumDischargePower_10s_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s79_motohawk_interpolation_2d2 Mask:FFFFFFFF
+/* Name: MaximumDischargePower_10s_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s87_motohawk_interpolation_2d2 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Outputs|Battery" Help:""   */
 
-/* Name: MaximumRegenPower_10s_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s79_motohawk_interpolation_2d3 Mask:FFFFFFFF
+/* Name: MaximumRegenPower_10s_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s87_motohawk_interpolation_2d3 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Outputs|Battery" Help:""   */
 
-/* Name: PackState_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s23_Merge Mask:FFFFFFFF
+/* Name: PackState_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s31_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Outputs|Battery" Help:""   */
 
-/* Name: PrechargeState_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s22_Merge Mask:FFFFFFFF
+/* Name: PrechargeState_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s30_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Outputs|Battery" Help:""   */
 
-/* Name: CellBalancingActive_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s81_Compare Mask:FFFFFFFF
+/* Name: CellBalancingActive_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s89_Compare Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:255.000000 Format:3.0 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Outputs|Battery" Help:""   */
 
-/* Name: StateOfCharge_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s32_Merge Mask:FFFFFFFF
+/* Name: StateOfCharge_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s40_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Outputs|Battery" Help:""   */
 
-/* Name: MaxCellVoltage_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s38_Merge Mask:FFFFFFFF
+/* Name: MaxCellVoltage_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s46_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Outputs|Battery" Help:""   */
 
-/* Name: MinCellVoltage_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s39_Merge Mask:FFFFFFFF
+/* Name: MinCellVoltage_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s47_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Outputs|Battery" Help:""   */
 
-/* Name: TripAmpsHoursIn_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s82_Sum Mask:FFFFFFFF
+/* Name: TripAmpsHoursIn_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s90_Sum Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Outputs|Battery" Help:""   */
 
-/* Name: Coil1_Pos_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s16_Positive Mask:FFFFFFFF
+/* Name: Coil1_Pos_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s24_Positive Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Outputs|Contactors" Help:""   */
 
-/* Name: Coil2_Pos_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s16_PreChargeCoil Mask:FFFFFFFF
+/* Name: Coil2_Pos_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s24_PreChargeCoil Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Outputs|Contactors" Help:""   */
 
-/* Name: PreCharge_Enable_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s16_PreChargeEnable Mask:FFFFFFFF
+/* Name: PreCharge_Enable_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s24_PreChargeEnable Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Outputs|Contactors" Help:""   */
 
-/* Name: PreCharge_Duty_Cycle_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:SINT2 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s37_DutyCycle Mask:FFFFFFFF
+/* Name: PreCharge_Duty_Cycle_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:SINT2 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s45_DutyCycle Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-32768.000000
    Max:32767.000000 Format:5.0 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Outputs|Contactors" Help:""   */
 
-/* Name: PreCharge_Freq_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s80_DataTypeConversion3 Mask:FFFFFFFF
+/* Name: PreCharge_Freq_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s88_DataTypeConversion3 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:4294967295.000000 Format:8.0 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Outputs|Contactors" Help:""   */
 
-/* Name: Coil1_Neg_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s16_Negative Mask:FFFFFFFF
+/* Name: Coil1_Neg_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s24_Negative Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Outputs|Contactors" Help:""   */
 
-/* Name: AMPCurrent_Pre_Filter_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s7_Sum Mask:FFFFFFFF
+/* Name: AMPCurrent_Pre_Filter_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s15_Sum Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:1.5 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Control|AMP Clamp" Help:"" Unit:A  */
 
-/* Name: AMPCurrent_Pre_Offset_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s12_amps Mask:FFFFFFFF
+/* Name: AMPCurrent_Pre_Offset_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s20_amps Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:1.5 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Control|AMP Clamp" Help:"" Unit:A  */
 
-/* Name: AMPCurrent_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s7_Product Mask:FFFFFFFF
+/* Name: AMPCurrent_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s15_Product Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:1.5 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Control|AMP Clamp" Help:"" Unit:A  */
 
-/* Name: PreChargeState__Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s21_state Mask:FFFFFFFF
+/* Name: PreChargeState__Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s29_state Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Control|Battery States" Help:""   */
 
-/* Name: PackState__Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s20_PackState Mask:FFFFFFFF
+/* Name: PackState__Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s28_PackState Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Control|Battery States" Help:""   */
 
-/* Name: currState_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s31_currState Mask:FFFFFFFF
+/* Name: currState_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s39_currState Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Control|SOC" Help:""   */
 
-/* Name: Temp_IR_Map_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s9_motohawk_interpolation_1d1 Mask:FFFFFFFF
+/* Name: IT_Table_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s17_motohawk_interpolation_2d Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Control|SOC" Help:""   */
 
-/* Name: SOC_PreFilter_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s9_motohawk_interpolation_1d Mask:FFFFFFFF
+/* Name: SOC_PreFilter_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s17_motohawk_interpolation_1d Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Control|SOC" Help:""   */
 
-/* Name: SOC_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s30_Switch Mask:FFFFFFFF
+/* Name: SOC_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s38_Switch Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Control|SOC" Help:""   */
 
-/* Name: MaxCellVoltage__Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s35_Gain1 Mask:FFFFFFFF
+/* Name: MaxCellVoltage__Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s43_Gain1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Inputs|2G BMS" Help:""   */
 
-/* Name: MinCellVoltage__Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s35_Gain2 Mask:FFFFFFFF
+/* Name: MinCellVoltage__Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s43_Gain2 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Inputs|2G BMS" Help:""   */
 
-/* Name: MaxCellTemp_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s35_ReadCANMessage3_o3 Mask:FFFFFFFF
+/* Name: MaxCellTemp_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s43_ReadCANMessage3_o3 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Inputs|2G BMS" Help:""   */
 
-/* Name: MinCellTemp_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s35_ReadCANMessage3_o4 Mask:FFFFFFFF
+/* Name: MinCellTemp_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s43_ReadCANMessage3_o4 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Inputs|2G BMS" Help:""   */
 
-/* Name: BalancingCount_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s35_ReadCANMessage1 Mask:FFFFFFFF
+/* Name: BalancingCount_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s43_ReadCANMessage1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Inputs|2G BMS" Help:""   */
 
-/* Name: Voltage_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s35_Gain Mask:FFFFFFFF
+/* Name: Voltage_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s43_Gain Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Inputs|2G BMS" Help:""   */
 
-/* Name: FaultsDTC_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s35_ReadCANMessage Mask:FFFFFFFF
+/* Name: FaultsDTC_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s43_ReadCANMessage Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Inputs|2G BMS" Help:""   */
 
-/* Name: Current_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT2 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s36_motohawk_ain Mask:FFFFFFFF
+/* Name: Current_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT2 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s44_motohawk_ain Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:65535.000000 Format:5.0 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Inputs|AMP Clamp" Help:""   */
 
-/* Name: V5V_Reference_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT2 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s36_motohawk_ain1 Mask:FFFFFFFF
+/* Name: V5V_Reference_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT2 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s44_motohawk_ain1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:65535.000000 Format:5.0 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Inputs|AMP Clamp" Help:""   */
 
-/* Name: Battey_Enable_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s37_ReadCANMessage_o1 Mask:FFFFFFFF
+/* Name: Battey_Enable_Prb ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BatteryController_Rev1 Struct:BatteryController_Rev1_B.s45_ReadCANMessage_o1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BatteryController_Rev1|Foreground|Battery|Inputs|Contactors" Help:""   */
 

@@ -4,7 +4,7 @@
 	<Name>BatteryController_Rev1</Name>
 	<Author>maxar</Author>
 	<Copyright>2018 Woodward.</Copyright>
-	<CreateDate>25-Aug-2018</CreateDate>
+	<CreateDate>07-Sep-2018</CreateDate>
 	<MemoryLayout>PROD</MemoryLayout>
 	<Module>ClassicModule-MPC555</Module>
 	<Memory/>
@@ -25,9 +25,9 @@
 			</TableDatabase>
 			<ProjectID>6</ProjectID>
 			<ProductID>1</ProductID>
-			<SwIdTxt>BatteryCo_072</SwIdTxt>
-			<SwRevisionTxt>BatteryController_Rev1_072</SwRevisionTxt>
-			<CalIdTxt>BatteryController_Rev1_072_000</CalIdTxt>
+			<SwIdTxt>BatteryCo_074</SwIdTxt>
+			<SwRevisionTxt>BatteryController_Rev1_074</SwRevisionTxt>
+			<CalIdTxt>BatteryController_Rev1_074_000</CalIdTxt>
 		</VarDecs>
 		<DatabaseBuild>
 			<Toolchain>
@@ -38,10 +38,10 @@
 			</Toolchain>
 		</DatabaseBuild>
 		<Command>
-			<Description>Copy BatteryCo_072.dll and BatteryController_Rev1_072.srz</Description>
+			<Description>Copy BatteryCo_074.dll and BatteryController_Rev1_074.srz</Description>
 			<Order>99</Order>
-			<Execute>@if exist C:\ECUFiles\TDBDLL\\*.* copy /Y .\TDB\BatteryCo_072.dll C:\ECUFiles\TDBDLL\ &gt; NUL</Execute>
-			<Execute>@if exist C:\ECUFiles\Programs\*.* copy /Y .\Target\BatteryController_Rev1_072.srz C:\ECUFiles\Programs &gt; NUL</Execute>
+			<Execute>@if exist C:\ECUFiles\TDBDLL\\*.* copy /Y .\TDB\BatteryCo_074.dll C:\ECUFiles\TDBDLL\ &gt; NUL</Execute>
+			<Execute>@if exist C:\ECUFiles\Programs\*.* copy /Y .\Target\BatteryController_Rev1_074.srz C:\ECUFiles\Programs &gt; NUL</Execute>
 		</Command>
 	</ToolInterface>
 	<Build>
@@ -68,9 +68,23 @@
 			<File>MotoHawk_IO.c</File>
 			<File>TableLookupFunctions.c</File>
 			<File>Trigger_BGND_BASE_PERIODIC_2304p0006.c</File>
+			<File>Trigger_BGND_BASE_PERIODIC_6876p0001.c</File>
+			<File>Trigger_BGND_BASEx10_PERIODIC_6878p0001.c</File>
+			<File>Trigger_BGND_BASEx2_PERIODIC_6877p0001.c</File>
 			<File>Trigger_CAN_RX_BusCAN_1_Buf1.c</File>
+			<File>Trigger_CAN_RX_BusCAN_1_Buf14.c</File>
+			<File>Trigger_FGND_10XRTI_PERIODIC_6874p0001.c</File>
+			<File>Trigger_FGND_20XRTI_PERIODIC_6875p0001.c</File>
+			<File>Trigger_FGND_2XRTI_PERIODIC_6872p0001.c</File>
 			<File>Trigger_FGND_RTI_PERIODIC_1023p0001.c</File>
+			<File>Trigger_FGND_RTI_PERIODIC_6873p0001.c</File>
+			<File>Trigger_IDLE_EVENT_6749p0009.c</File>
+			<File>Trigger_IDLE_EVENT_6803p0001.c</File>
+			<File>Trigger_ONE_SECOND_EVENT_6879p0001.c</File>
+			<File>Trigger_STARTUP_EVENT_6778p0001.c</File>
 			<File>VarDecs.c</File>
+			<File>mh_ccp_protocol.c</File>
+			<File>mh_ccp_protocol_CCP_BAT.c</File>
 			<File>rt_zcfcn.c</File>
 			<File>rt_nonfinite.c</File>
 			<File>BatteryController_Rev1.c</File>
@@ -93,7 +107,7 @@
 		</Command>
 		<Command>
 			<Description>Call MotoConvert</Description>
-			<Execute>@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\BatteryController_Rev1.map -srec=.\Target\BatteryController_Rev1.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=BatteryController_Rev1.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x0006FFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\BatteryController_Rev1_072.srz</Execute>
+			<Execute>@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\BatteryController_Rev1.map -srec=.\Target\BatteryController_Rev1.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=BatteryController_Rev1.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x0006FFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\BatteryController_Rev1_074.srz</Execute>
 			<Order>55</Order>
 		</Command>
 		<Compiler>
@@ -127,5 +141,5 @@
 			<Execute>@if exist .\rtwtypes.h del /Q /F .\rtwtypes.h &gt; NUL</Execute>
 		</Command>
 	</Build>
-	<Signature>cdc1fbe1-4b97-4185-af-c4-23-a7-68-36-9c</Signature>
+	<Signature>c7841ae6-7144-4e25-83-16-c9-df-b0-4f-cf</Signature>
 </Application>

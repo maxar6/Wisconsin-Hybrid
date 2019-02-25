@@ -80,6 +80,8 @@ C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BatteryController_Rev1\BatteryC
  C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BatteryController_Rev1\BatteryController_Rev1_Build/MotoCoder.h \
  C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BatteryController_Rev1\BatteryController_Rev1_Build/Application.h \
  C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BatteryController_Rev1\BatteryController_Rev1_Build/CommonInclude.h \
+ C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BatteryController_Rev1\BatteryController_Rev1_Build/mh_ccp_protocol.h \
+ c:\program\ files\ (x86)\woodward\mcs\motohawk\2011a_sp0.184\ControlCoreClassic\Framework\MultiTask\API/ERIRequestTables.h \
  C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BatteryController_Rev1\BatteryController_Rev1_Build/AppMonitor.h \
  C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BatteryController_Rev1\BatteryController_Rev1_Build/MotoHawk_IO.h \
  C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BatteryController_Rev1\BatteryController_Rev1_Build/MotoHawk_CAN.h \
@@ -94,7 +96,6 @@ C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BatteryController_Rev1\BatteryC
  C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BatteryController_Rev1\BatteryController_Rev1_Build/BatteryController_Rev1_Foreground.h \
  c:\program\ files\ (x86)\woodward\mcs\motohawk\2011a_sp0.184\ControlCoreClassic/TDB_Includes.h \
  c:\program\ files\ (x86)\woodward\mcs\motohawk\2011a_sp0.184\ControlCoreClassic\Framework\MultiTask\API/CRC32.h \
- c:\program\ files\ (x86)\woodward\mcs\motohawk\2011a_sp0.184\ControlCoreClassic\Framework\MultiTask\API/ERIRequestTables.h \
  c:\program\ files\ (x86)\woodward\mcs\motohawk\2011a_sp0.184\ControlCoreClassic\Framework\MultiTask\API/FreeStore.h \
  c:\program\ files\ (x86)\woodward\mcs\motohawk\2011a_sp0.184\ControlCoreClassic\ModuleDefinitions\Motorola/ModuleConfig.h \
  c:\program\ files\ (x86)\woodward\mcs\motohawk\2011a_sp0.184\ControlCoreClassic\ModuleDefinitions\Motorola/ModuleDefn.h \
@@ -267,6 +268,10 @@ C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BatteryController_Rev1\BatteryC
 
 C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BatteryController_Rev1\BatteryController_Rev1_Build/CommonInclude.h:
 
+C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BatteryController_Rev1\BatteryController_Rev1_Build/mh_ccp_protocol.h:
+
+c:\program\ files\ (x86)\woodward\mcs\motohawk\2011a_sp0.184\ControlCoreClassic\Framework\MultiTask\API/ERIRequestTables.h:
+
 C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BatteryController_Rev1\BatteryController_Rev1_Build/AppMonitor.h:
 
 C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BatteryController_Rev1\BatteryController_Rev1_Build/MotoHawk_IO.h:
@@ -294,8 +299,6 @@ C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BatteryController_Rev1\BatteryC
 c:\program\ files\ (x86)\woodward\mcs\motohawk\2011a_sp0.184\ControlCoreClassic/TDB_Includes.h:
 
 c:\program\ files\ (x86)\woodward\mcs\motohawk\2011a_sp0.184\ControlCoreClassic\Framework\MultiTask\API/CRC32.h:
-
-c:\program\ files\ (x86)\woodward\mcs\motohawk\2011a_sp0.184\ControlCoreClassic\Framework\MultiTask\API/ERIRequestTables.h:
 
 c:\program\ files\ (x86)\woodward\mcs\motohawk\2011a_sp0.184\ControlCoreClassic\Framework\MultiTask\API/FreeStore.h:
 

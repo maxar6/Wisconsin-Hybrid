@@ -35,7 +35,6 @@
     <Symbol Name="TerminateTask" Address="0x000133DC" Section=".text" Size="144" />
     <Symbol Name="g_u4RegisteredProductID" Address="0x003F9814" Section=".sdata" Size="4" />
     <Symbol Name="RebootHard" Address="0x0001E104" Section=".text" Size="128" />
-    <Symbol Name="MHCAN_directslot_RxSlot_6362p0004" Address="0x003FCAC9" Section=".bss" Size="15" />
     <Symbol Name="SetSequenceOutMinDuration" Address="0x000222FC" Section=".text" Size="52" />
     <Symbol Name="g_pfDefaultMIOS1_ISRArr" Address="0x0004EDCC" Section=".sdata2" Size="128" />
     <Symbol Name="CanKingExceptionNotify" Address="0x00045150" Section=".text" Size="12" />
@@ -67,6 +66,7 @@
     <Symbol Name="TPS1AnalogInput_AnalogInput_Get" Address="0x0003ADAC" Section=".text" Size="132" />
     <Symbol Name="AlterMultiplexedSequenceOutForEncPhase" Address="0x0000EA50" Section=".text" Size="48" />
     <Symbol Name="SendEvent" Address="0x0000C3F8" Section=".text" Size="100" />
+    <Symbol Name="Trigger_FGND_RTI_PERIODIC_8379p0001" Address="0x0003FDA8" Section=".text" Size="32" />
     <Symbol Name="MemReadSynchSPIEE" Address="0x0001D7A4" Section=".text" Size="272" />
     <Symbol Name="SetTPUPWMPeak" Address="0x0000B000" Section=".text" Size="44" />
     <Symbol Name="SetFaultActive" Address="0x0002A5D4" Section=".text" Size="92" />
@@ -111,11 +111,12 @@
     <Symbol Name="FGND_20XRTI_PERIODIC_RunCnt" Address="0x003FA914" Section=".data" Size="4" />
     <Symbol Name="u1NM25C160WriteStatusOpcode" Address="0x0004F512" Section=".sdata2" Size="1" />
     <Symbol Name="AddToCANTransmitQueue" Address="0x0002409C" Section=".text" Size="216" />
-    <Symbol Name="ain_read_MAPSensorPin" Address="0x003FA952" Section=".data" Size="1" />
+    <Symbol Name="ain_read_MAPSensorPin" Address="0x003FA951" Section=".data" Size="1" />
     <Symbol Name="SetStandardSequenceOutMaxDur" Address="0x000116E8" Section=".text" Size="188" />
     <Symbol Name="MotProgExceptionHandler" Address="0x00047694" Section=".text" Size="200" />
     <Symbol Name="g_u1CurrentMidTDC" Address="0x003F9A1D" Section=".sbss" Size="1" />
     <Symbol Name="OpenDevelopmentMemory" Address="0x00012864" Section=".text" Size="228" />
+    <Symbol Name="DOut7802p0001_DiscreteOutput_Create" Address="0x0003BCB4" Section=".text" Size="176" />
     <Symbol Name="FreeTaskMemoryContextSwitchOnTaskDestroy" Address="0x0001346C" Section=".text" Size="156" />
     <Symbol Name="PrimSPIEEWriteQueueEntryArr" Address="0x003F9C4A" Section=".sbss" Size="345" />
     <Symbol Name="IsECUExtNORFlashCapable" Address="0x00009F58" Section=".text" Size="48" />
@@ -129,7 +130,6 @@
     <Symbol Name="g_u1NumTDCs" Address="0x003F9A2F" Section=".sbss" Size="1" />
     <Symbol Name="SetResourceAttributesBEHAVIOUR_SCHEDULER" Address="0x0000C710" Section=".text" Size="80" />
     <Symbol Name="g_CANBufferOwner" Address="0x003FA77C" Section=".sbss" Size="4" />
-    <Symbol Name="RxSlot_CCP1_ID" Address="0x003FCA94" Section=".bss" Size="4" />
     <Symbol Name="ONESHOT_OneShotOutput_Create" Address="0x0003AA74" Section=".text" Size="164" />
     <Symbol Name="DestroyMDAFreqIn" Address="0x0001C724" Section=".text" Size="152" />
     <Symbol Name="g_AngleEventDefnArr" Address="0x000523BC" Section=".sdata2" Size="12" />
@@ -189,9 +189,8 @@
     <Symbol Name="CalcPSPDuration" Address="0x0002774C" Section=".text" Size="24" />
     <Symbol Name="ModuleConfig_CreateCamEncInputSelect" Address="0x0000A204" Section=".text" Size="76" />
     <Symbol Name="MHCAN_getdirect" Address="0x00029F8C" Section=".text" Size="60" />
-    <Symbol Name="can_create_CAN_2" Address="0x003FA968" Section=".data" Size="1" />
+    <Symbol Name="can_create_CAN_2" Address="0x003FA967" Section=".data" Size="1" />
     <Symbol Name="RelayResourceHandlerDataArr" Address="0x0005324C" Section=".sdata2" Size="124" />
-    <Symbol Name="Trigger_STARTUP_EVENT_11381p0001" Address="0x0004017C" Section=".text" Size="60" />
     <Symbol Name="UnsupportedSwitch" Address="0x00052344" Section=".sdata2" Size="8" />
     <Symbol Name="GetResourceAttribPtrUnprotected" Address="0x0002528C" Section=".text" Size="16" />
     <Symbol Name="s_pTaskKernelFgndTaskCreateObj" Address="0x003F9ED0" Section=".sbss" Size="4" />
@@ -206,6 +205,7 @@
     <Symbol Name="g_pfPostISRHook" Address="0x0004ED54" Section=".sdata2" Size="4" />
     <Symbol Name="TransformAnalogueInput" Address="0x00025A8C" Section=".text" Size="236" />
     <Symbol Name="FGND_10XRTI_PERIODIC_RunCnt" Address="0x003FA904" Section=".data" Size="4" />
+    <Symbol Name="DOut8086p0001_DiscreteOutput_Set" Address="0x0003BA88" Section=".text" Size="68" />
     <Symbol Name="OnIDLETaskExecutionLoop" Address="0x000145B0" Section=".text" Size="12" />
     <Symbol Name="OnFPDenormalizedNumberException" Address="0x00008E74" Section=".text" Size="140" />
     <Symbol Name="GetPSPFunctionCode" Address="0x0000E278" Section=".text" Size="88" />
@@ -224,14 +224,15 @@
     <Symbol Name="RefreshMDAFreqInFreq" Address="0x0001B60C" Section=".text" Size="248" />
     <Symbol Name="MDASwitchMethods" Address="0x0005233C" Section=".sdata2" Size="8" />
     <Symbol Name="RegisterBlackBoxHandlers" Address="0x000456C8" Section=".text" Size="148" />
+    <Symbol Name="Trigger_FGND_TDC_EVENT_5928p0005" Address="0x0003FE88" Section=".text" Size="100" />
     <Symbol Name="ESTDiag_CreateHardwareFromResource" Address="0x0001D238" Section=".text" Size="84" />
     <Symbol Name="EncoderErrorCback" Address="0x0001FDDC" Section=".text" Size="52" />
     <Symbol Name="TPIC_2_QSPIDevice" Address="0x0004F131" Section=".sdata2" Size="14" />
+    <Symbol Name="Trigger_BGND_BASEx10_PERIODIC_10118p0005" Address="0x0003C768" Section=".text" Size="52" />
     <Symbol Name="g_pSIMASKReg" Address="0x0004ED48" Section=".sdata2" Size="4" />
     <Symbol Name="EriFastMapEnablePktHandler" Address="0x00047F20" Section=".text" Size="124" />
     <Symbol Name="GetCreatePWMFuncPtr" Address="0x0000A984" Section=".text" Size="20" />
     <Symbol Name="SetRPMToZero" Address="0x00016E84" Section=".text" Size="100" />
-    <Symbol Name="Trigger_IDLE_EVENT_11406p0001" Address="0x00040108" Section=".text" Size="64" />
     <Symbol Name="OpenNativeErrorSupport" Address="0x0001DCDC" Section=".text" Size="32" />
     <Symbol Name="NextCylinderToSpark" Address="0x003FCADE" Section=".bss" Size="1" />
     <Symbol Name="s_CamInputSelectStateObj" Address="0x003F99B9" Section=".sbss" Size="1" />
@@ -256,7 +257,7 @@
     <Symbol Name="g_bOneMinuteDue" Address="0x003FA23A" Section=".sbss" Size="1" />
     <Symbol Name="__errno" Address="0x00048744" Section=".text" Size="60" />
     <Symbol Name="IssueSeqDiagReportCback" Address="0x0001A3DC" Section=".text" Size="80" />
-    <Symbol Name="ain_read_IATSensorPin" Address="0x003FA96B" Section=".data" Size="1" />
+    <Symbol Name="ain_read_IATSensorPin" Address="0x003FA96A" Section=".data" Size="1" />
     <Symbol Name="u1NM25C160WriteOpcode" Address="0x0004F514" Section=".sdata2" Size="1" />
     <Symbol Name="EriProtocolHandler" Address="0x00046FF8" Section=".text" Size="116" />
     <Symbol Name="GetSCIRXQueueDepth" Address="0x00011C90" Section=".text" Size="24" />
@@ -332,7 +333,6 @@
     <Symbol Name="OpenESTDiagnosticSystem" Address="0x0001CEB0" Section=".text" Size="32" />
     <Symbol Name="Trigger_Encoder_Fault_29" Address="0x0003D4C4" Section=".text" Size="32" />
     <Symbol Name="RequestSeqOutPulseAttributeAccess" Address="0x0000DB64" Section=".text" Size="84" />
-    <Symbol Name="MHCAN_directslot_RxSlot_6285p0001" Address="0x003FCA48" Section=".bss" Size="15" />
     <Symbol Name="FWModulesSetDisplayInfo" Address="0x003FA46C" Section=".sbss" Size="14" />
     <Symbol Name="TestAndModifySet" Address="0x00015F54" Section=".text" Size="88" />
     <Symbol Name="g_u2ISRPerfTimerValueArr" Address="0x003F983C" Section=".sbss" Size="32" />
@@ -356,8 +356,8 @@
     <Symbol Name="EncDual_SecondarySourceISR" Address="0x00018F08" Section=".text" Size="240" />
     <Symbol Name="g_u2ZeroPktTimeout" Address="0x00053ADC" Section=".sdata2" Size="2" />
     <Symbol Name="CreatePWM" Address="0x00025224" Section=".text" Size="104" />
-    <Symbol Name="Trigger_FGND_RTI_PERIODIC_19776p0004" Address="0x0003FD74" Section=".text" Size="52" />
     <Symbol Name="ExecuteSeqDiagOn50ms" Address="0x0000D7CC" Section=".text" Size="52" />
+    <Symbol Name="dout_create_DOut7802p0001" Address="0x003FA94A" Section=".data" Size="1" />
     <Symbol Name="OnSeqDiag50msTick" Address="0x0000D940" Section=".text" Size="116" />
     <Symbol Name="EncVCam_DestroyEncoderHW" Address="0x00019B08" Section=".text" Size="72" />
     <Symbol Name="MDASMConfigToITCFallEdge" Address="0x0004EE56" Section=".sdata2" Size="2" />
@@ -370,7 +370,6 @@
     <Symbol Name="EncOS_IgnoreDelay_IsIgnoreState" Address="0x00017D70" Section=".text" Size="164" />
     <Symbol Name="MotoHawkModelName" Address="0x000533CC" Section=".sdata2" Size="80" />
     <Symbol Name="FreeFreqInResource" Address="0x0001CB64" Section=".text" Size="24" />
-    <Symbol Name="mh_CCP1_CCPHandlerConfigFrameReady" Address="0x003FBB88" Section=".bss" Size="4" />
     <Symbol Name="Trigger_CAN_RX_BusCAN_1_Buf14" Address="0x0003CF60" Section=".text" Size="332" />
     <Symbol Name="GetSetPWMPeakTimeFuncPtr" Address="0x0000A9E8" Section=".text" Size="20" />
     <Symbol Name="g_uNumRelaysSupported" Address="0x003FA660" Section=".sbss" Size="1" />
@@ -447,7 +446,6 @@
     <Symbol Name="VarCam_CalcVelocity" Address="0x00025738" Section=".text" Size="124" />
     <Symbol Name="SetFixedAngSchdMask" Address="0x0000C8E4" Section=".text" Size="8" />
     <Symbol Name="SetMDAOutputPinLow" Address="0x00009770" Section=".text" Size="20" />
-    <Symbol Name="Trigger_FGND_TDC_EVENT_7485p0004" Address="0x0003FEEC" Section=".text" Size="92" />
     <Symbol Name="ProSAKBgndAQSPIDevice" Address="0x0004F0CF" Section=".sdata2" Size="14" />
     <Symbol Name="ClrMIOS1IntEnable" Address="0x00009570" Section=".text" Size="52" />
     <Symbol Name="CreateStandardEncoderHW" Address="0x00019984" Section=".text" Size="280" />
@@ -459,10 +457,10 @@
     <Symbol Name="RequestTPUChannelWithPtr" Address="0x00015164" Section=".text" Size="40" />
     <Symbol Name="g_BgndTaskDefn" Address="0x0004F653" Section=".sdata2" Size="28" />
     <Symbol Name="MSTPU_Register" Address="0x00027EA8" Section=".text" Size="372" />
+    <Symbol Name="mh_Engine_Controller_CCPHandlerConfigFrameReady" Address="0x003FBC04" Section=".bss" Size="4" />
     <Symbol Name="OpenCRC" Address="0x00045EDC" Section=".text" Size="16" />
     <Symbol Name="SetMultiStrikeSequenceOutMultiStrike" Address="0x0000E8EC" Section=".text" Size="96" />
     <Symbol Name="ChangeToProtocol" Address="0x0004690C" Section=".text" Size="112" />
-    <Symbol Name="Trigger_FGND_TDC_EVENT_5811p0002" Address="0x0003FE88" Section=".text" Size="100" />
     <Symbol Name="g_ESTDiagObjArr" Address="0x003FA420" Section=".sbss" Size="4" />
     <Symbol Name="RemoveFromCANReceiptQueue" Address="0x000242FC" Section=".text" Size="172" />
     <Symbol Name="s_StandardEncMethods" Address="0x0004FE48" Section=".sdata2" Size="32" />
@@ -518,7 +516,7 @@
     <Symbol Name="ClearFault" Address="0x0002A7F4" Section=".text" Size="128" />
     <Symbol Name="mh_ProcessCCP_SetDAQPointer" Address="0x00037B90" Section=".text" Size="236" />
     <Symbol Name="EncDual_SetEncoderCond" Address="0x00018558" Section=".text" Size="464" />
-    <Symbol Name="oneshot_create_ONESHOT" Address="0x003FA96E" Section=".data" Size="1" />
+    <Symbol Name="oneshot_create_ONESHOT" Address="0x003FA96D" Section=".data" Size="1" />
     <Symbol Name="SetEncoderPhaseState" Address="0x00019128" Section=".text" Size="136" />
     <Symbol Name="OSErrorDisplay" Address="0x003F9E31" Section=".sbss" Size="1" />
     <Symbol Name="LoadTouCANTXBuffer" Address="0x000162F8" Section=".text" Size="244" />
@@ -526,6 +524,7 @@
     <Symbol Name="CreateRelay" Address="0x00044C78" Section=".text" Size="212" />
     <Symbol Name="TransmitOnTouCAN" Address="0x00043A28" Section=".text" Size="100" />
     <Symbol Name="g_TPICSObjArr" Address="0x003FA098" Section=".sbss" Size="96" />
+    <Symbol Name="Trigger_STARTUP_EVENT_7069p0005" Address="0x000401B8" Section=".text" Size="84" />
     <Symbol Name="MotProgTermPktHandler" Address="0x000482A4" Section=".text" Size="116" />
     <Symbol Name="SetMultiplexedSequenceOutCond" Address="0x0000ECF0" Section=".text" Size="328" />
     <Symbol Name="__kernel_cos" Address="0x00042298" Section=".text" Size="436" />
@@ -565,7 +564,6 @@
     <Symbol Name="SetBankedSequenceOutMaxDur" Address="0x0000E5A4" Section=".text" Size="76" />
     <Symbol Name="ProSAKMemoryDefnArr" Address="0x000529C2" Section=".sdata2" Size="16" />
     <Symbol Name="MotProgRecCntPkt32Handler" Address="0x00048318" Section=".text" Size="68" />
-    <Symbol Name="DOut7679p0004_DiscreteOutput_Set" Address="0x0003BACC" Section=".text" Size="68" />
     <Symbol Name="SetupTouCANMessageBuffer" Address="0x00023D00" Section=".text" Size="472" />
     <Symbol Name="Enc18Tooth_SchedulerObjArr" Address="0x00052530" Section=".sdata2" Size="72" />
     <Symbol Name="GetSeqOutRuntimeDataPtrFromTPUChan" Address="0x0000DAA8" Section=".text" Size="32" />
@@ -573,7 +571,6 @@
     <Symbol Name="ApplicationCompatibilityArr" Address="0x00053A14" Section=".sdata2" Size="100" />
     <Symbol Name="TPUMCR_init_val" Address="0x0004F6A4" Section=".sdata2" Size="2" />
     <Symbol Name="CreateMDAOutputPWMPin" Address="0x00009734" Section=".text" Size="20" />
-    <Symbol Name="Trigger_BGND_BASE_PERIODIC_19779p0004" Address="0x0003C7D0" Section=".text" Size="52" />
     <Symbol Name="CreateSequenceMultiplexed" Address="0x00021EF8" Section=".text" Size="324" />
     <Symbol Name="GetCANReadAttributes" Address="0x00023404" Section=".text" Size="436" />
     <Symbol Name="TPIC_1_QSPIDevice" Address="0x0004F123" Section=".sdata2" Size="14" />
@@ -624,11 +621,11 @@
     <Symbol Name="EriRequestTableList" Address="0x0004B9A3" Section=".text" Size="48" />
     <Symbol Name="SPI_EEPROMErrorAddr" Address="0x003F99CC" Section=".sbss" Size="4" />
     <Symbol Name="GetSCIMinRXQueueFree" Address="0x00011C78" Section=".text" Size="24" />
+    <Symbol Name="Trigger_FGND_10XRTI_PERIODIC_10114p0005" Address="0x0003D4E4" Section=".text" Size="52" />
     <Symbol Name="UnexpectedTPUISRSourceArr" Address="0x0004F6B0" Section=".sdata2" Size="32" />
     <Symbol Name="GetTPUFreeRunningTCR1" Address="0x00026068" Section=".text" Size="12" />
     <Symbol Name="idleCpuSeenNonZero" Address="0x003FB1DC" Section=".bss" Size="1" />
     <Symbol Name="ProSAKReSyncCallback" Address="0x0001E45C" Section=".text" Size="88" />
-    <Symbol Name="DOut7679p0004_DiscreteOutput_Create" Address="0x0003BCB4" Section=".text" Size="176" />
     <Symbol Name="GetThreadPriority" Address="0x00012C48" Section=".text" Size="40" />
     <Symbol Name="ETCPin_PWMOutput_PWMOutput_Create" Address="0x0003AA04" Section=".text" Size="16" />
     <Symbol Name="WaitOnSyncObject" Address="0x00014448" Section=".text" Size="252" />
@@ -638,13 +635,13 @@
     <Symbol Name="FreqInOnDG3M" Address="0x003FA3E8" Section=".sbss" Size="12" />
     <Symbol Name="TransmitOnTouCANWithHandle" Address="0x000438E0" Section=".text" Size="56" />
     <Symbol Name="MDA_MSMethods" Address="0x00051C92" Section=".sdata2" Size="8" />
-    <Symbol Name="mh_CCP1_CCPHandlerInstance" Address="0x003FBB94" Section=".bss" Size="116" />
     <Symbol Name="BankedESTSeqOutMethods" Address="0x00052264" Section=".sdata2" Size="36" />
     <Symbol Name="Table5Rev_cu1" Address="0x000533C7" Section=".sdata2" Size="1" />
     <Symbol Name="MotProgPacketHandlers" Address="0x00053C08" Section=".sdata2" Size="36" />
     <Symbol Name="GetADCTriggerBasedResult" Address="0x000159E4" Section=".text" Size="392" />
     <Symbol Name="__malloc_max_sbrked_mem" Address="0x003FA678" Section=".sbss" Size="4" />
     <Symbol Name="GetSetPWMFreqFuncPtr" Address="0x0000A998" Section=".text" Size="20" />
+    <Symbol Name="Trigger_BGND_BASEx2_PERIODIC_10117p0005" Address="0x0003C79C" Section=".text" Size="52" />
     <Symbol Name="g_nAllocatedSyncObj" Address="0x003FA06C" Section=".sbss" Size="1" />
     <Symbol Name="IsDualPulsePSPPulseActive" Address="0x00010204" Section=".text" Size="224" />
     <Symbol Name="IsECUInvertingTheEncVRInput" Address="0x00009F28" Section=".text" Size="48" />
@@ -661,8 +658,8 @@
     <Symbol Name="SetSequenceOutEndEventReportCond" Address="0x00022098" Section=".text" Size="92" />
     <Symbol Name="EriKeyPktHandler" Address="0x000481DC" Section=".text" Size="8" />
     <Symbol Name="Enc6Tooth_SchedulerObjArr" Address="0x00052698" Section=".sdata2" Size="24" />
+    <Symbol Name="MHCAN_directslot_RxSlot_6408p0004" Address="0x003FCA48" Section=".bss" Size="15" />
     <Symbol Name="CreateMDA_PWM" Address="0x0001EE60" Section=".text" Size="260" />
-    <Symbol Name="Trigger_FGND_20XRTI_PERIODIC_19778p0004" Address="0x0003D518" Section=".text" Size="52" />
     <Symbol Name="ReapplySequenceOutCond" Address="0x000221F8" Section=".text" Size="76" />
     <Symbol Name="EnableTPUPWM" Address="0x0000AB64" Section=".text" Size="76" />
     <Symbol Name="g_u1TPUMaskVers" Address="0x003FA668" Section=".sbss" Size="1" />
@@ -679,13 +676,13 @@
     <Symbol Name="g_u1ToothRatio" Address="0x003FA8E1" Section=".data" Size="1" />
     <Symbol Name="HandleHardwareCallbackSetup" Address="0x000248B8" Section=".text" Size="4" />
     <Symbol Name="GetFrequencyInDutyCycle" Address="0x000443E8" Section=".text" Size="136" />
-    <Symbol Name="mh_CCP1_CCPHandlerConfigPrescalers" Address="0x003FBB8C" Section=".bss" Size="8" />
     <Symbol Name="g_PCMMuxAddressDefnObjArr" Address="0x0004F23C" Section=".sdata2" Size="18" />
     <Symbol Name="mh_ProcessCCP_Upload" Address="0x00039CA0" Section=".text" Size="376" />
     <Symbol Name="AllocateSwitchResourceMemory" Address="0x00022B44" Section=".text" Size="136" />
     <Symbol Name="INJ_InjectorCreate" Address="0x003FA960" Section=".data" Size="1" />
     <Symbol Name="s_CamToothSyncEncMethods" Address="0x0004FE68" Section=".sdata2" Size="32" />
     <Symbol Name="OpenSequenceOut" Address="0x0000E4B4" Section=".text" Size="32" />
+    <Symbol Name="Trigger_FGND_20XRTI_PERIODIC_10115p0005" Address="0x0003D518" Section=".text" Size="52" />
     <Symbol Name="GetTPUChannelPtr" Address="0x0001562C" Section=".text" Size="16" />
     <Symbol Name="__fdlib_version" Address="0x003F9810" Section=".sdata" Size="4" />
     <Symbol Name="SetDiscreteOutState" Address="0x00043C50" Section=".text" Size="68" />
@@ -703,7 +700,7 @@
     <Symbol Name="HBridgeModuleDefnArr" Address="0x00051CA2" Section=".sdata2" Size="98" />
     <Symbol Name="BaseEngineController_A02_ConstP" Address="0x0004B728" Section=".text" Size="24" />
     <Symbol Name="_global_impure_ptr" Address="0x003F9804" Section=".sdata" Size="4" />
-    <Symbol Name="resource_allocation" Address="0x003FA966" Section=".data" Size="1" />
+    <Symbol Name="resource_allocation" Address="0x003FA965" Section=".data" Size="1" />
     <Symbol Name="ResetFreeRunningCounter64Bits" Address="0x0000C36C" Section=".text" Size="96" />
     <Symbol Name="Am29BL162State" Address="0x003FA390" Section=".sbss" Size="18" />
     <Symbol Name="ExecuteLevelShiftedTouCANErrorNotificationISR" Address="0x00023158" Section=".text" Size="60" />
@@ -728,7 +725,6 @@
     <Symbol Name="ReqBaudCCHandler" Address="0x000480EC" Section=".text" Size="16" />
     <Symbol Name="DisableMDAFreqIn" Address="0x00051C11" Section=".sdata2" Size="1" />
     <Symbol Name="SetMultiplexedSeqReportCallbackCond" Address="0x0000EA80" Section=".text" Size="184" />
-    <Symbol Name="DOut7973p0001_DiscreteOutput_Set" Address="0x0003BA44" Section=".text" Size="68" />
     <Symbol Name="IsDualPulsePSPEventTheLastActive" Address="0x00014A90" Section=".text" Size="84" />
     <Symbol Name="CPUIdleTimeISRService" Address="0x0000A880" Section=".text" Size="36" />
     <Symbol Name="SetStandardSequenceOutCond" Address="0x00010A2C" Section=".text" Size="1504" />
@@ -737,8 +733,7 @@
     <Symbol Name="IsKernelStateLegalForWait" Address="0x00012D40" Section=".text" Size="60" />
     <Symbol Name="OnPWMPeakEvent" Address="0x0000AD80" Section=".text" Size="48" />
     <Symbol Name="SetSeqOutStartPSPAngle" Address="0x0000E1F8" Section=".text" Size="24" />
-    <Symbol Name="ain_create_SensVoltSensorPin" Address="0x003FA96D" Section=".data" Size="1" />
-    <Symbol Name="Trigger_FGND_MID_TDC_EVENT_6947p0001" Address="0x0003FD10" Section=".text" Size="100" />
+    <Symbol Name="ain_create_SensVoltSensorPin" Address="0x003FA96C" Section=".data" Size="1" />
     <Symbol Name="b1BATTLoss" Address="0x003F9E50" Section=".sbss" Size="1" />
     <Symbol Name="RefreshSequenceTimers" Address="0x0000DF98" Section=".text" Size="364" />
     <Symbol Name="NMaskExtBPISR" Address="0x00008E64" Section=".text" Size="16" />
@@ -750,7 +745,6 @@
     <Symbol Name="GetNextOccurredFault" Address="0x0002A77C" Section=".text" Size="120" />
     <Symbol Name="ProtocolHandler" Address="0x00046AF0" Section=".text" Size="84" />
     <Symbol Name="OpenTPUParamRAM" Address="0x000155BC" Section=".text" Size="48" />
-    <Symbol Name="Trigger_FGND_RTI_PERIODIC_8256p0001" Address="0x0003FDA8" Section=".text" Size="32" />
     <Symbol Name="CreateMC3388xOnMPWM_HBridge" Address="0x0001EA9C" Section=".text" Size="288" />
     <Symbol Name="ReadQSPITPICs" Address="0x0000C1B4" Section=".text" Size="108" />
     <Symbol Name="SetEncoderRPMRaw" Address="0x00019350" Section=".text" Size="208" />
@@ -790,6 +784,7 @@
     <Symbol Name="SetSeqOutStopPSPAngle" Address="0x0000E1E0" Section=".text" Size="24" />
     <Symbol Name="g_pHeadOfProtocolLinkList" Address="0x003FA7CC" Section=".sbss" Size="4" />
     <Symbol Name="mh_ProcessCCP_UnSupported" Address="0x00038048" Section=".text" Size="44" />
+    <Symbol Name="Trigger_FGND_MID_TDC_EVENT_7070p0005" Address="0x0003FD10" Section=".text" Size="100" />
     <Symbol Name="MPWMSMConfigToSetPinLow" Address="0x0004EE50" Section=".sdata2" Size="2" />
     <Symbol Name="mh_InitCCP" Address="0x000392A0" Section=".text" Size="204" />
     <Symbol Name="EncDual_PrimarySourceISR" Address="0x00018B94" Section=".text" Size="884" />
@@ -804,7 +799,6 @@
     <Symbol Name="RefreshTPUFreqInDuty" Address="0x0001C020" Section=".text" Size="92" />
     <Symbol Name="EncDual_OnSetSpeedZero_DualSrc" Address="0x00018370" Section=".text" Size="208" />
     <Symbol Name="BaseEngineController_A02_PrevZCSigState" Address="0x003FB72C" Section=".bss" Size="13" />
-    <Symbol Name="RxSlot_CCP1_IDMask" Address="0x003FCA98" Section=".bss" Size="4" />
     <Symbol Name="ApplicationInitStatus" Address="0x003FB1DF" Section=".bss" Size="1" />
     <Symbol Name="DefaultISRIRM_2" Address="0x0000929C" Section=".text" Size="24" />
     <Symbol Name="GetCreateRelayFuncPtr" Address="0x00025C14" Section=".text" Size="20" />
@@ -822,11 +816,12 @@
     <Symbol Name="Table7Rev_cu1" Address="0x000533C9" Section=".sdata2" Size="1" />
     <Symbol Name="ain_create_SysVoltage" Address="0x003FA94B" Section=".data" Size="1" />
     <Symbol Name="PreStartOSProcess" Address="0x0000D414" Section=".text" Size="88" />
-    <Symbol Name="Trigger_FGND_5XRTI_PERIODIC_1409p0004" Address="0x0003D5CC" Section=".text" Size="264" />
+    <Symbol Name="Trigger_FGND_5XRTI_PERIODIC_1409p0004" Address="0x0003D580" Section=".text" Size="76" />
     <Symbol Name="TransformADCToCurrent" Address="0x00025A30" Section=".text" Size="92" />
     <Symbol Name="ProSAKWr16bitCmdOnPCS3_6" Address="0x00052930" Section=".sdata2" Size="8" />
     <Symbol Name="SleepTask" Address="0x00012E88" Section=".text" Size="280" />
     <Symbol Name="AdjustFaultActionReferenceCount" Address="0x0002A2F8" Section=".text" Size="364" />
+    <Symbol Name="DOut8096p0001_DiscreteOutput_Create" Address="0x0003BB54" Section=".text" Size="176" />
     <Symbol Name="CompilerVersion" Address="0x0005341C" Section=".sdata2" Size="80" />
     <Symbol Name="HandleNotification" Address="0x00045068" Section=".text" Size="152" />
     <Symbol Name="IssueSPIEECback" Address="0x0001A318" Section=".text" Size="36" />
@@ -843,6 +838,7 @@
     <Symbol Name="g_pSWISRCurrQueueSize" Address="0x00051ADC" Section=".sdata2" Size="4" />
     <Symbol Name="CalcDualPulsePSPPulseNumber" Address="0x0000F9D8" Section=".text" Size="68" />
     <Symbol Name="GetPersonalInfoCCHandler" Address="0x000457D4" Section=".text" Size="24" />
+    <Symbol Name="mh_Engine_Controller_CCPHandlerConfig" Address="0x0004B96C" Section=".text" Size="24" />
     <Symbol Name="g_ppSeqOutRuntimeDataObjArr" Address="0x003F9A88" Section=".sbss" Size="80" />
     <Symbol Name="g_u8CANFrameReceiptFlag" Address="0x003FA628" Section=".sbss" Size="8" />
     <Symbol Name="g_pCPUTime_TPU" Address="0x0004ED14" Section=".sdata2" Size="4" />
@@ -855,6 +851,7 @@
     <Symbol Name="GlobalFaultClear" Address="0x0002AA6C" Section=".text" Size="176" />
     <Symbol Name="g_pSchedulerLinkedListHead" Address="0x003F99E0" Section=".sbss" Size="4" />
     <Symbol Name="KeyExceptionHandler" Address="0x0004733C" Section=".text" Size="72" />
+    <Symbol Name="MHCAN_directslot_RxSlot_6485p0006" Address="0x003FCAC9" Section=".bss" Size="15" />
     <Symbol Name="SetTPUEncoderTeethPerCycle" Address="0x000260A0" Section=".text" Size="88" />
     <Symbol Name="TPICAllQSPIDevice" Address="0x0004F115" Section=".sdata2" Size="14" />
     <Symbol Name="PWM_MPWM_SetDuty" Address="0x0001EFD4" Section=".text" Size="48" />
@@ -879,6 +876,7 @@
     <Symbol Name="RefreshResetSource" Address="0x000127A8" Section=".text" Size="180" />
     <Symbol Name="g_eBankedMode" Address="0x003F9AFC" Section=".sbss" Size="1" />
     <Symbol Name="g_AngleEventHasSync" Address="0x003FA57B" Section=".sbss" Size="1" />
+    <Symbol Name="Trigger_BGND_BASE_PERIODIC_10116p0005" Address="0x0003C7D0" Section=".text" Size="52" />
     <Symbol Name="GetTouCANHandle" Address="0x00043918" Section=".text" Size="120" />
     <Symbol Name="CreateMDAInputPulseWidthPin" Address="0x000096D8" Section=".text" Size="92" />
     <Symbol Name="GetPWMHardwareResourceIndex" Address="0x0001EBC0" Section=".text" Size="16" />
@@ -886,9 +884,9 @@
     <Symbol Name="GetDevelopmentMemorySize" Address="0x00009B7C" Section=".text" Size="32" />
     <Symbol Name="AnalogVoltageTransformFnArr" Address="0x00053208" Section=".sdata2" Size="20" />
     <Symbol Name="g_RequestedTXTransactionCnt" Address="0x003FA240" Section=".sbss" Size="4" />
+    <Symbol Name="DOut8086p0001_DiscreteOutput_Create" Address="0x0003BC04" Section=".text" Size="176" />
     <Symbol Name="SetCRCState" Address="0x00045ED4" Section=".text" Size="8" />
     <Symbol Name="BaseEngineController_A02_M" Address="0x0004B6F8" Section=".text" Size="4" />
-    <Symbol Name="dout_create_DOut7679p0004" Address="0x003FA951" Section=".data" Size="1" />
     <Symbol Name="PWM_MPWM_Create" Address="0x0001F148" Section=".text" Size="208" />
     <Symbol Name="GetEncoderTPUChanPtr" Address="0x0001568C" Section=".text" Size="24" />
     <Symbol Name="GetEncoderRPMToothInline" Address="0x0001810C" Section=".text" Size="204" />
@@ -896,7 +894,6 @@
     <Symbol Name="InstProtectISR" Address="0x00008E14" Section=".text" Size="16" />
     <Symbol Name="FreqTPU_Methods" Address="0x00051C14" Section=".sdata2" Size="28" />
     <Symbol Name="InterruptStackOverrun" Address="0x0000830C" Section=".text" Size="4" />
-    <Symbol Name="Trigger_FGND_5XRTI_PERIODIC_7978p0001" Address="0x0003F14C" Section=".text" Size="3012" />
     <Symbol Name="g_uPostedEventCnt" Address="0x003F9A18" Section=".sbss" Size="1" />
     <Symbol Name="mh_ProcessCCP_Download6" Address="0x00039614" Section=".text" Size="320" />
     <Symbol Name="g_pCurrentTaskDefn" Address="0x003F9EDC" Section=".sbss" Size="4" />
@@ -918,6 +915,7 @@
     <Symbol Name="WriteTPUChPriorityWithPtr" Address="0x00015230" Section=".text" Size="152" />
     <Symbol Name="Table3" Address="0x0004E6AB" Section=".text" Size="8" />
     <Symbol Name="CanKingHeaderHandler" Address="0x00046EEC" Section=".text" Size="196" />
+    <Symbol Name="Trigger_IDLE_EVENT_9487p0004" Address="0x0003FF88" Section=".text" Size="448" />
     <Symbol Name="g_u4TPICData" Address="0x003FA0F8" Section=".sbss" Size="4" />
     <Symbol Name="g_pu2FgndTimePerfTimerValue" Address="0x0004F69C" Section=".sdata2" Size="4" />
     <Symbol Name="ESTDiag_LS_ModeRequest" Address="0x0001CD28" Section=".text" Size="256" />
@@ -937,6 +935,7 @@
     <Symbol Name="RegisterTPUPWMWithPeak" Address="0x00026FE8" Section=".text" Size="484" />
     <Symbol Name="OnTaskKernelTimerTick" Address="0x00012C78" Section=".text" Size="200" />
     <Symbol Name="OSMain" Address="0x0000A534" Section=".text" Size="104" />
+    <Symbol Name="Trigger_STARTUP_EVENT_10013p0005" Address="0x0004017C" Section=".text" Size="60" />
     <Symbol Name="g_pfCANKingConnectCback" Address="0x003FA7A0" Section=".sbss" Size="4" />
     <Symbol Name="g_u2Encoder_DelayBeforeSynch" Address="0x003FA2A8" Section=".sbss" Size="2" />
     <Symbol Name="SetTouCANMessageBuffer" Address="0x00043990" Section=".text" Size="68" />
@@ -946,10 +945,9 @@
     <Symbol Name="TPUA_Module" Address="0x0004F750" Section=".sdata2" Size="8" />
     <Symbol Name="IssueAngleEventNotify" Address="0x0001A228" Section=".text" Size="48" />
     <Symbol Name="FlagTouCANBufferUsage" Address="0x00022FB8" Section=".text" Size="144" />
-    <Symbol Name="ain_read_ECUP" Address="0x003FA947" Section=".data" Size="1" />
+    <Symbol Name="ain_read_ECUP" Address="0x003FA952" Section=".data" Size="1" />
     <Symbol Name="FgndProcessPeriod_ru1" Address="0x003F9A1E" Section=".sbss" Size="1" />
     <Symbol Name="SetBankedSeqReportCallbackCond" Address="0x0000E5F0" Section=".text" Size="264" />
-    <Symbol Name="DOut7963p0001_DiscreteOutput_Set" Address="0x0003BA88" Section=".text" Size="68" />
     <Symbol Name="InjectorSeqDiagInfo_39" Address="0x003FBB28" Section=".bss" Size="40" />
     <Symbol Name="HandleMuxPSPEndOfSeqCback" Address="0x0000F3DC" Section=".text" Size="156" />
     <Symbol Name="Enc24Tooth_SchedulerObjArr" Address="0x00052608" Section=".sdata2" Size="96" />
@@ -966,6 +964,7 @@
     <Symbol Name="SetPWMPhase" Address="0x00024E70" Section=".text" Size="68" />
     <Symbol Name="encoder_create" Address="0x003FA958" Section=".data" Size="1" />
     <Symbol Name="g_pHighestPriorityTaskDefn" Address="0x003F9ED8" Section=".sbss" Size="4" />
+    <Symbol Name="Trigger_FGND_5XRTI_PERIODIC_8101p0001" Address="0x0003F14C" Section=".text" Size="3012" />
     <Symbol Name="ProSAKBgndBQSPIDevice" Address="0x0004F0DD" Section=".sdata2" Size="14" />
     <Symbol Name="CAN_2_Transmit" Address="0x0003A86C" Section=".text" Size="192" />
     <Symbol Name="GetNumBuffersCCHandler" Address="0x0004575C" Section=".text" Size="24" />
@@ -1001,7 +1000,7 @@
     <Symbol Name="FunctionThatReturnsFALSE" Address="0x0000A0F0" Section=".text" Size="8" />
     <Symbol Name="GetADCTimeBasedResult" Address="0x0001598C" Section=".text" Size="88" />
     <Symbol Name="g_u4MIOS1Allocation" Address="0x003F9980" Section=".sbss" Size="4" />
-    <Symbol Name="Trigger_STARTUP_EVENT_6946p0001" Address="0x000401B8" Section=".text" Size="84" />
+    <Symbol Name="Trigger_FGND_5XRTI_PERIODIC_1410p0004" Address="0x0003D5CC" Section=".text" Size="264" />
     <Symbol Name="SeqStdOS_BuzzProtect" Address="0x000111FC" Section=".text" Size="340" />
     <Symbol Name="ClearOSInternalError" Address="0x00012784" Section=".text" Size="32" />
     <Symbol Name="OneShotResourceHandlerDataArr" Address="0x0004B5EC" Section=".text" Size="80" />
@@ -1009,7 +1008,6 @@
     <Symbol Name="fmod" Address="0x000419DC" Section=".text" Size="300" />
     <Symbol Name="u1NM25C160ReadStatusOpcode" Address="0x0004F511" Section=".sdata2" Size="1" />
     <Symbol Name="TPUuCode_SelfModify_IgnoreTeeth" Address="0x00027AFC" Section=".text" Size="96" />
-    <Symbol Name="DOut7963p0001_DiscreteOutput_Create" Address="0x0003BC04" Section=".text" Size="176" />
     <Symbol Name="ClrMIOS1IntStatus" Address="0x000097C0" Section=".text" Size="60" />
     <Symbol Name="SetSeqOutDiagCond" Address="0x0000D800" Section=".text" Size="40" />
     <Symbol Name="OnFPDivideByZeroException" Address="0x00008F00" Section=".text" Size="44" />
@@ -1045,19 +1043,19 @@
     <Symbol Name="StepApplicationStartup" Address="0x000293C0" Section=".text" Size="268" />
     <Symbol Name="GetPWMCond" Address="0x00024E3C" Section=".text" Size="52" />
     <Symbol Name="MotProgHeaderHandler" Address="0x00047820" Section=".text" Size="156" />
-    <Symbol Name="ain_read_SysVoltage" Address="0x003FA965" Section=".data" Size="1" />
+    <Symbol Name="ain_read_SysVoltage" Address="0x003FA964" Section=".data" Size="1" />
     <Symbol Name="FlagConnectionAttempt" Address="0x00046584" Section=".text" Size="148" />
     <Symbol Name="AllocatePWMResourceMemory" Address="0x0000AA50" Section=".text" Size="132" />
     <Symbol Name="DataBPISR" Address="0x00008E34" Section=".text" Size="16" />
     <Symbol Name="CRCStatusRequest" Address="0x00045F18" Section=".text" Size="212" />
     <Symbol Name="__malloc_sbrk_base" Address="0x003F980C" Section=".sdata" Size="4" />
     <Symbol Name="_start" Address="0x00008F88" Section=".text" Size="608" />
+    <Symbol Name="dout_create_DOut8086p0001" Address="0x003FA96E" Section=".data" Size="1" />
     <Symbol Name="IsTDCToothMatch" Address="0x0000CF58" Section=".text" Size="236" />
     <Symbol Name="GetBufferInfoPktHandler" Address="0x00045830" Section=".text" Size="140" />
     <Symbol Name="CPUMargin" Address="0x00400094" Section=".cals" Size="2" />
     <Symbol Name="TransmitPacketUnsupported" Address="0x00045278" Section=".text" Size="4" />
     <Symbol Name="IsCRCBusy" Address="0x00045EC4" Section=".text" Size="16" />
-    <Symbol Name="MHCAN_directslot_RxSlot_6363p0001" Address="0x003FCABA" Section=".bss" Size="15" />
     <Symbol Name="OnChangeFaultOccurred" Address="0x0002A524" Section=".text" Size="84" />
     <Symbol Name="s_uRegisterVarCamCnt" Address="0x003FA2B2" Section=".sbss" Size="1" />
     <Symbol Name="sin" Address="0x000418D8" Section=".text" Size="256" />
@@ -1088,7 +1086,7 @@
     <Symbol Name="SetResourceAttributesBEHAVIOUR_TOUCAN" Address="0x00043AE8" Section=".text" Size="216" />
     <Symbol Name="prevApplicationStatus" Address="0x003FB1DD" Section=".bss" Size="1" />
     <Symbol Name="FgndAngleTask" Address="0x00013394" Section=".text" Size="36" />
-    <Symbol Name="EST_SparkCreate" Address="0x003FA969" Section=".data" Size="1" />
+    <Symbol Name="EST_SparkCreate" Address="0x003FA968" Section=".data" Size="1" />
     <Symbol Name="AddToReadyList" Address="0x00012BA8" Section=".text" Size="48" />
     <Symbol Name="s_EndOfQueueEntry" Address="0x0004FB62" Section=".sdata2" Size="2" />
     <Symbol Name="g_u1StallDiagSamplePeriodIn50msTicks" Address="0x0004F1F1" Section=".sdata2" Size="1" />
@@ -1099,7 +1097,6 @@
     <Symbol Name="EncOS_DestroyEncoderInputSelector" Address="0x00017C24" Section=".text" Size="44" />
     <Symbol Name="ExecuteLevelShiftedCommWakeNotify" Address="0x00011BD4" Section=".text" Size="60" />
     <Symbol Name="GetTCR1Frequency" Address="0x00027800" Section=".text" Size="12" />
-    <Symbol Name="DOut7973p0001_DiscreteOutput_Create" Address="0x0003BB54" Section=".text" Size="176" />
     <Symbol Name="GetCANProtocolRuntimeDataPtr" Address="0x00045190" Section=".text" Size="40" />
     <Symbol Name="SetSequenceOutMaxDuration" Address="0x000220F4" Section=".text" Size="92" />
     <Symbol Name="ClrTPUIntStatusWithPtr" Address="0x0001512C" Section=".text" Size="32" />
@@ -1108,7 +1105,7 @@
     <Symbol Name="OpenFreqIn" Address="0x0001CAC8" Section=".text" Size="4" />
     <Symbol Name="BaseEngineController_A02_IfActionSubsystem" Address="0x0002ADE4" Section=".text" Size="8" />
     <Symbol Name="SetSeqDiagCondInPSP" Address="0x0000DCB0" Section=".text" Size="240" />
-    <Symbol Name="ain_create_IATSensorPin" Address="0x003FA967" Section=".data" Size="1" />
+    <Symbol Name="ain_create_IATSensorPin" Address="0x003FA966" Section=".data" Size="1" />
     <Symbol Name="RegisterTPUFreqAvg" Address="0x000265BC" Section=".text" Size="8" />
     <Symbol Name="g_CRCBlockInfo" Address="0x0004ED08" Section=".sdata2" Size="8" />
     <Symbol Name="RequestEvent" Address="0x000218F0" Section=".text" Size="68" />
@@ -1118,9 +1115,9 @@
     <Symbol Name="SetTPUIntEnableWithPtr" Address="0x000150BC" Section=".text" Size="32" />
     <Symbol Name="IsECUDevelopmentMemoryCapable" Address="0x00009B54" Section=".text" Size="40" />
     <Symbol Name="g_bFPAssistDenormLogged" Address="0x003F9861" Section=".sbss" Size="1" />
+    <Symbol Name="mh_Engine_Controller_CCPHandlerInstance" Address="0x003FBB90" Section=".bss" Size="116" />
     <Symbol Name="SetOneShotCbackCond" Address="0x00044754" Section=".text" Size="84" />
     <Symbol Name="BaseEngineController_A02_IdleStateMachine" Address="0x00029D88" Section=".text" Size="340" />
-    <Symbol Name="dout_create_DOut8218p0001" Address="0x003FA963" Section=".data" Size="1" />
     <Symbol Name="rtInf" Address="0x003FCA44" Section=".bss" Size="4" />
     <Symbol Name="NativeErrorServiceArr" Address="0x003FA42C" Section=".sbss" Size="52" />
     <Symbol Name="SeqOutIDWithTPUCrossRefArr" Address="0x0004F4D8" Section=".sdata2" Size="32" />
@@ -1131,13 +1128,12 @@
     <Symbol Name="AppAssertBase_" Address="0x003FA8F0" Section=".data" Size="4" />
     <Symbol Name="GetFreeRunningCounter32Bits" Address="0x0000C308" Section=".text" Size="16" />
     <Symbol Name="FreqInDefnArr" Address="0x00051B50" Section=".sdata2" Size="192" />
-    <Symbol Name="ain_read_FuelPresPin" Address="0x003FA96A" Section=".data" Size="1" />
+    <Symbol Name="ain_read_FuelPresPin" Address="0x003FA969" Section=".data" Size="1" />
     <Symbol Name="CanKingProtocolHandler" Address="0x00046E78" Section=".text" Size="116" />
     <Symbol Name="g_pTaskDefnPriorityArr" Address="0x003F9EF8" Section=".sbss" Size="60" />
     <Symbol Name="protocol_register_CAN_2" Address="0x003FA95D" Section=".data" Size="1" />
     <Symbol Name="__eabi_uconvert" Address="0x00048A28" Section=".text" Size="56" />
     <Symbol Name="RefreshMDAFreqInState" Address="0x0001C124" Section=".text" Size="80" />
-    <Symbol Name="Trigger_BGND_BASEx2_PERIODIC_19780p0004" Address="0x0003C79C" Section=".text" Size="52" />
     <Symbol Name="MemReadSPIEE" Address="0x0001D8B4" Section=".text" Size="116" />
     <Symbol Name="RequestProtocolHandlerPtr" Address="0x00046B44" Section=".text" Size="228" />
     <Symbol Name="CreateResourceBEHAVIOUR_BANK_EST_SEQ" Address="0x000217BC" Section=".text" Size="156" />
@@ -1157,9 +1153,9 @@
     <Symbol Name="FuncCodeFor4KMaskArr" Address="0x00053348" Section=".sdata2" Size="53" />
     <Symbol Name="ProSAKFgndBQSPIDevice" Address="0x0004F107" Section=".sdata2" Size="14" />
     <Symbol Name="GetResourceValueBEHAVIOUR_ANALOGIN" Address="0x00043658" Section=".text" Size="296" />
+    <Symbol Name="Trigger_ONE_SECOND_EVENT_10119p0005" Address="0x00040148" Section=".text" Size="52" />
     <Symbol Name="MemReadSynch" Address="0x000432CC" Section=".text" Size="240" />
     <Symbol Name="CopyEvent13ToTPUBuffer" Address="0x0000DE6C" Section=".text" Size="300" />
-    <Symbol Name="DOut8218p0001_DiscreteOutput_Create" Address="0x0003BD64" Section=".text" Size="152" />
     <Symbol Name="VCamHW_CamTPUISRHandler" Address="0x00022C88" Section=".text" Size="272" />
     <Symbol Name="EriExtended2PktHandler" Address="0x000479F0" Section=".text" Size="420" />
     <Symbol Name="SetMultiplexedSequenceOutTiming" Address="0x0000F49C" Section=".text" Size="288" />
@@ -1206,6 +1202,7 @@
     <Symbol Name="RefreshSwitchStates" Address="0x00022A64" Section=".text" Size="200" />
     <Symbol Name="IsECUHallCapableOnCrnk" Address="0x00009F20" Section=".text" Size="8" />
     <Symbol Name="IDLE_EVENT_RunCnt" Address="0x003FA8E4" Section=".data" Size="4" />
+    <Symbol Name="RxSlot_Engine_Controller_ID" Address="0x003FCA98" Section=".bss" Size="4" />
     <Symbol Name="g_TPUAInjDiagObj" Address="0x00051C6A" Section=".sdata2" Size="12" />
     <Symbol Name="g_u2PITCBaseRateCalCopy" Address="0x00403D70" Section=".cals" Size="2" />
     <Symbol Name="BgndAngleScheduler" Address="0x0000CAEC" Section=".text" Size="220" />
@@ -1277,6 +1274,7 @@
     <Symbol Name="AlterTPURelay" Address="0x00025E00" Section=".text" Size="56" />
     <Symbol Name="KeyKeyCCHandler" Address="0x000481BC" Section=".text" Size="16" />
     <Symbol Name="g_BehaviourUnsupportedTransportObj" Address="0x00053AC8" Section=".sdata2" Size="20" />
+    <Symbol Name="DOut7802p0001_DiscreteOutput_Set" Address="0x0003BACC" Section=".text" Size="68" />
     <Symbol Name="SetFrequencyInCond" Address="0x00044534" Section=".text" Size="100" />
     <Symbol Name="g_eRegisteredProjectID" Address="0x003F9818" Section=".sdata" Size="1" />
     <Symbol Name="PrimSPIEEWriteSyncEntry" Address="0x003F9DBA" Section=".sbss" Size="23" />
@@ -1284,6 +1282,7 @@
     <Symbol Name="CreateCANReceiptQueueOnHeap" Address="0x00024400" Section=".text" Size="200" />
     <Symbol Name="MemWriteExtFlashAM29BL162" Address="0x0001B1E0" Section=".text" Size="408" />
     <Symbol Name="pwm_set_ETCPin_PWMOutput" Address="0x003FCAE0" Section=".bss" Size="1" />
+    <Symbol Name="mh_Engine_Controller_CCPHandlerConfigPrescalers" Address="0x003FBB88" Section=".bss" Size="8" />
     <Symbol Name="ReqBaudPktHandler" Address="0x000480FC" Section=".text" Size="192" />
     <Symbol Name="AddToReceiveQueue" Address="0x00016B30" Section=".text" Size="228" />
     <Symbol Name="SupportedEncodersArr" Address="0x00051F86" Section=".sdata2" Size="660" />
@@ -1305,6 +1304,7 @@
     <Symbol Name="RefreshMDASwitchState" Address="0x000254EC" Section=".text" Size="92" />
     <Symbol Name="inStepApplicationStartup" Address="0x003FB1DE" Section=".bss" Size="1" />
     <Symbol Name="ReqAccPktHandler" Address="0x00046444" Section=".text" Size="8" />
+    <Symbol Name="Trigger_FGND_RTI_PERIODIC_10113p0005" Address="0x0003FD74" Section=".text" Size="52" />
     <Symbol Name="ValidateCreatedResourceBEHAVIOUR_PWM" Address="0x00020AC8" Section=".text" Size="76" />
     <Symbol Name="WriteAM29BL162" Address="0x0001AB7C" Section=".text" Size="1064" />
     <Symbol Name="EventQueue_PreStartOSProcess" Address="0x0001A2B4" Section=".text" Size="64" />
@@ -1318,6 +1318,7 @@
     <Symbol Name="RequestMIOS1Channel" Address="0x0000983C" Section=".text" Size="96" />
     <Symbol Name="rtMinusInf" Address="0x003FCA38" Section=".bss" Size="4" />
     <Symbol Name="ProtocolArchiveSchdTaskCback" Address="0x00045064" Section=".text" Size="4" />
+    <Symbol Name="DOut8096p0001_DiscreteOutput_Set" Address="0x0003BA44" Section=".text" Size="68" />
     <Symbol Name="memset" Address="0x00040DA4" Section=".text" Size="300" />
     <Symbol Name="g_u1MotProgRev" Address="0x00053AC6" Section=".sdata2" Size="1" />
     <Symbol Name="g_pfHBridgeCallback" Address="0x003FA41C" Section=".sbss" Size="4" />
@@ -1349,6 +1350,7 @@
     <Symbol Name="AlterESCHBridgeOneShot" Address="0x000249FC" Section=".text" Size="36" />
     <Symbol Name="GetEncoderEngTDC" Address="0x00019084" Section=".text" Size="68" />
     <Symbol Name="IsSequenceDoingMultiStrikeNow" Address="0x00014AE4" Section=".text" Size="16" />
+    <Symbol Name="Trigger_BGND_BASE_PERIODIC_8373p0001" Address="0x0003C804" Section=".text" Size="1452" />
     <Symbol Name="IsTriggerADCCreated" Address="0x00015950" Section=".text" Size="44" />
     <Symbol Name="MotoHFB_CreateChannel" Address="0x00026988" Section=".text" Size="336" />
     <Symbol Name="TPUMask_4K" Address="0x00048ACC" Section=".text" Size="4096" />
@@ -1356,7 +1358,6 @@
     <Symbol Name="MAPSensorPin_AnalogInput_Get" Address="0x0003B040" Section=".text" Size="132" />
     <Symbol Name="g_HardwareBootstrapPointerArr" Address="0x003F99B4" Section=".sbss" Size="4" />
     <Symbol Name="SwRevisionTxt" Address="0x00053390" Section=".sdata2" Size="50" />
-    <Symbol Name="mh_CCP1_CCPHandlerConfig" Address="0x0004B96C" Section=".text" Size="24" />
     <Symbol Name="Prot_SetERIPktTimeout" Address="0x00046A08" Section=".text" Size="32" />
     <Symbol Name="ValidateCreatedResourceBEHAVIOUR_DISCRETE_OUT" Address="0x00020A7C" Section=".text" Size="76" />
     <Symbol Name="GetEncoderRuntimeDataPtr" Address="0x00016DB8" Section=".text" Size="8" />
@@ -1401,6 +1402,7 @@
     <Symbol Name="GetPWMLoadCurrent" Address="0x00024EF8" Section=".text" Size="188" />
     <Symbol Name="ThreadSafeFree" Address="0x0001B378" Section=".text" Size="116" />
     <Symbol Name="UnhandledISR" Address="0x00008AC8" Section=".text" Size="224" />
+    <Symbol Name="Trigger_FGND_2XRTI_PERIODIC_10112p0005" Address="0x0003D54C" Section=".text" Size="52" />
     <Symbol Name="GetAlterOneShotFuncPtr" Address="0x0001DEB4" Section=".text" Size="24" />
     <Symbol Name="g_pFgndTimeMaxQueueSize" Address="0x00051AE4" Section=".sdata2" Size="4" />
     <Symbol Name="SetOpenEventType" Address="0x00012680" Section=".text" Size="8" />
@@ -1423,6 +1425,7 @@
     <Symbol Name="PrimSPIEEReadQueueEntryArr" Address="0x003F9B64" Section=".sbss" Size="230" />
     <Symbol Name="GetEncoderNumTeethInCycle" Address="0x00017108" Section=".text" Size="16" />
     <Symbol Name="OpenSWInterruptSystem" Address="0x000125F8" Section=".text" Size="136" />
+    <Symbol Name="Trigger_FGND_TDC1_EVENT_1157p0004" Address="0x0003FDC8" Section=".text" Size="192" />
     <Symbol Name="OpenPWMs" Address="0x0000AAD4" Section=".text" Size="32" />
     <Symbol Name="MotProgBeginPktHandler" Address="0x00048444" Section=".text" Size="116" />
     <Symbol Name="TransCount_AllocateResourceMemory" Address="0x0002563C" Section=".text" Size="32" />
@@ -1455,15 +1458,14 @@
     <Symbol Name="g_pCPUTime_AppISR" Address="0x0004ED10" Section=".sdata2" Size="4" />
     <Symbol Name="ResourceCreateStatusArr" Address="0x003FA4C8" Section=".sbss" Size="144" />
     <Symbol Name="g_pu2FgndAnglePerfValue" Address="0x003F9F34" Section=".sbss" Size="4" />
-    <Symbol Name="Trigger_FGND_5XRTI_PERIODIC_1408p0004" Address="0x0003D580" Section=".text" Size="76" />
     <Symbol Name="GetBootStatus" Address="0x0001E26C" Section=".text" Size="108" />
     <Symbol Name="g_u2TaskKernelTimerPeriodInMicroSecs" Address="0x003F9EE4" Section=".sbss" Size="2" />
     <Symbol Name="SetOneShotPWM" Address="0x00044610" Section=".text" Size="132" />
     <Symbol Name="ECTSensorPin_AnalogInput_Create" Address="0x0003B82C" Section=".text" Size="196" />
-    <Symbol Name="DOut8218p0001_DiscreteOutput_Set" Address="0x0003BB10" Section=".text" Size="68" />
     <Symbol Name="g_pCPUTime_Serial" Address="0x0004ED1C" Section=".sdata2" Size="4" />
     <Symbol Name="TransmitOnTouCANBuffer" Address="0x00023894" Section=".text" Size="312" />
     <Symbol Name="SwIdTxt" Address="0x00053380" Section=".sdata2" Size="13" />
+    <Symbol Name="DOut8341p0001_DiscreteOutput_Set" Address="0x0003BB10" Section=".text" Size="68" />
     <Symbol Name="GetTPUFreqAvgDuty" Address="0x000261E8" Section=".text" Size="256" />
     <Symbol Name="g_Am29BL162DefnArr" Address="0x00051AF0" Section=".sdata2" Size="88" />
     <Symbol Name="GetEncoderDegPerTooth" Address="0x00017128" Section=".text" Size="16" />
@@ -1476,6 +1478,7 @@
     <Symbol Name="CreateAnalogueInput" Address="0x00015798" Section=".text" Size="144" />
     <Symbol Name="PreStartOS" Address="0x000280FC" Section=".text" Size="140" />
     <Symbol Name="g_u1CriticalSectionCnt" Address="0x003F9ED5" Section=".sbss" Size="1" />
+    <Symbol Name="MHCAN_directslot_RxSlot_6487p0004" Address="0x003FCAAB" Section=".bss" Size="15" />
     <Symbol Name="s_RedundantDualEncMethods" Address="0x0004FEA8" Section=".sdata2" Size="32" />
     <Symbol Name="MemWriteX28C512" Address="0x00024680" Section=".text" Size="228" />
     <Symbol Name="EnableMPWM_PWM" Address="0x0001F048" Section=".text" Size="56" />
@@ -1497,11 +1500,12 @@
     <Symbol Name="g_u1KeyRev" Address="0x00053AC4" Section=".sdata2" Size="1" />
     <Symbol Name="ValidateResourceSequenceOut" Address="0x00020CC4" Section=".text" Size="88" />
     <Symbol Name="RefreshInterruptStackDepthMetric" Address="0x00012FA0" Section=".text" Size="84" />
-    <Symbol Name="dout_create_DOut7973p0001" Address="0x003FA94A" Section=".data" Size="1" />
+    <Symbol Name="DOut8341p0001_DiscreteOutput_Create" Address="0x0003BD64" Section=".text" Size="152" />
     <Symbol Name="KeyPacketHandlers" Address="0x00053BE0" Section=".sdata2" Size="40" />
     <Symbol Name="mh_ProcessCCP_ExchangeID" Address="0x00038788" Section=".text" Size="280" />
     <Symbol Name="CSAngleToTCR2Angle" Address="0x0000E210" Section=".text" Size="104" />
     <Symbol Name="GetCrankEncEdgeSetup" Address="0x00017554" Section=".text" Size="136" />
+    <Symbol Name="Trigger_FGND_TDC_EVENT_7608p0001" Address="0x0003FEEC" Section=".text" Size="92" />
     <Symbol Name="FaultManagerPeriodicTick" Address="0x0002AB1C" Section=".text" Size="684" />
     <Symbol Name="GetEnablePWMFuncPtr" Address="0x0000A9C0" Section=".text" Size="20" />
     <Symbol Name="SetTransientSeqOutReportCallbackCond" Address="0x000229B4" Section=".text" Size="80" />
@@ -1522,7 +1526,7 @@
     <Symbol Name="GetTPUFreqAvgInstantFreq" Address="0x00026314" Section=".text" Size="100" />
     <Symbol Name="AddNewEventToQueue" Address="0x0001A498" Section=".text" Size="408" />
     <Symbol Name="IsAddressInProSAKWriteSpace" Address="0x00043574" Section=".text" Size="108" />
-    <Symbol Name="can_create_CAN_1" Address="0x003FA964" Section=".data" Size="1" />
+    <Symbol Name="can_create_CAN_1" Address="0x003FA963" Section=".data" Size="1" />
     <Symbol Name="OpenPeakPins" Address="0x0000A7C0" Section=".text" Size="144" />
     <Symbol Name="DeallocateEncoderTPUChannels" Address="0x0001953C" Section=".text" Size="76" />
     <Symbol Name="g_SCIDeviceDefnObjArr" Address="0x0004F4FF" Section=".sdata2" Size="16" />
@@ -1539,7 +1543,6 @@
     <Symbol Name="s_u1CANISRLevel" Address="0x003FB1D1" Section=".bss" Size="1" />
     <Symbol Name="ValidateResourceBEHAVIOUR_PWM" Address="0x00020EE8" Section=".text" Size="92" />
     <Symbol Name="TriggerRuntimeData" Address="0x003FA215" Section=".sbss" Size="18" />
-    <Symbol Name="Trigger_FGND_5XRTI_PERIODIC_4024p0001" Address="0x0003D6D4" Section=".text" Size="5520" />
     <Symbol Name="MemWriteSynchProSAK" Address="0x000435E0" Section=".text" Size="120" />
     <Symbol Name="MotProgProtocolHandler" Address="0x0004775C" Section=".text" Size="196" />
     <Symbol Name="g_uNumOneshotsSupported" Address="0x003FA480" Section=".sbss" Size="1" />
@@ -1547,6 +1550,7 @@
     <Symbol Name="Table4Rev_cu1" Address="0x000533C6" Section=".sdata2" Size="1" />
     <Symbol Name="ExecuteLevelShiftedTXCompleteNotify" Address="0x00011CA8" Section=".text" Size="44" />
     <Symbol Name="ain_read_TPS1AnalogInput" Address="0x003FA94F" Section=".data" Size="1" />
+    <Symbol Name="Trigger_FGND_5XRTI_PERIODIC_4141p0001" Address="0x0003D6D4" Section=".text" Size="5520" />
     <Symbol Name="s_sRedundantEncoderTrackingCnt" Address="0x003FA2AE" Section=".sbss" Size="1" />
     <Symbol Name="OnSWISRQueueEmpty" Address="0x00012598" Section=".text" Size="28" />
     <Symbol Name="IsDualPulsePSPEventATheLastActive" Address="0x00014A2C" Section=".text" Size="36" />
@@ -1582,9 +1586,7 @@
     <Symbol Name="CRCCalcRequest" Address="0x00045FEC" Section=".text" Size="220" />
     <Symbol Name="OpenEventCback" Address="0x0000C3CC" Section=".text" Size="44" />
     <Symbol Name="RegisterMotoTronSecurity" Address="0x00048660" Section=".text" Size="104" />
-    <Symbol Name="Trigger_BGND_BASE_PERIODIC_8250p0001" Address="0x0003C804" Section=".text" Size="1452" />
     <Symbol Name="MotProgCCHandler" Address="0x00048250" Section=".text" Size="24" />
-    <Symbol Name="MHCAN_directslot_RxSlot_6365p0001" Address="0x003FCA9C" Section=".bss" Size="15" />
     <Symbol Name="DefaultISRIRM_7" Address="0x000092FC" Section=".text" Size="24" />
     <Symbol Name="SetSequenceOutPeakTime" Address="0x000221A4" Section=".text" Size="84" />
     <Symbol Name="MotoHawkModelGUID" Address="0x000534F0" Section=".sdata2" Size="80" />
@@ -1613,12 +1615,12 @@
     <Symbol Name="g_u4ProductID" Address="0x00400084" Section=".cals" Size="4" />
     <Symbol Name="ReqDataCCHandler" Address="0x00045B58" Section=".text" Size="16" />
     <Symbol Name="Table2" Address="0x0004E6A3" Section=".text" Size="8" />
+    <Symbol Name="MHCAN_directslot_RxSlot_6486p0004" Address="0x003FCABA" Section=".bss" Size="15" />
     <Symbol Name="OpenSPI_EEPROM" Address="0x0000B4D0" Section=".text" Size="40" />
     <Symbol Name="ExtFlashEraseManager" Address="0x0001B0C0" Section=".text" Size="4" />
-    <Symbol Name="Trigger_BGND_BASEx10_PERIODIC_19781p0004" Address="0x0003C768" Section=".text" Size="52" />
     <Symbol Name="FreePWMResource" Address="0x0000AA10" Section=".text" Size="64" />
     <Symbol Name="SynchReadFromTouCAN" Address="0x000439D4" Section=".text" Size="84" />
-    <Symbol Name="Trigger_FGND_10XRTI_PERIODIC_19777p0004" Address="0x0003D4E4" Section=".text" Size="52" />
+    <Symbol Name="dout_create_DOut8096p0001" Address="0x003FA947" Section=".data" Size="1" />
     <Symbol Name="FuncCodeFor6KMaskArr" Address="0x00053310" Section=".sdata2" Size="53" />
     <Symbol Name="EncDual_GetEncoderEngTDC" Address="0x00018350" Section=".text" Size="32" />
     <Symbol Name="ReadTPUMaskCEntry" Address="0x000151B8" Section=".text" Size="8" />
@@ -1641,13 +1643,13 @@
     <Symbol Name="FgndTimeStack" Address="0x003FD558" Section=".bss_zerovars" Size="3072" />
     <Symbol Name="PerformOperationOnAllTPUModules" Address="0x000155EC" Section=".text" Size="64" />
     <Symbol Name="SetSeqOutDurationPSP" Address="0x0000DB10" Section=".text" Size="8" />
-    <Symbol Name="Trigger_ONE_SECOND_EVENT_19782p0004" Address="0x00040148" Section=".text" Size="52" />
     <Symbol Name="IsECUDG3MCapable" Address="0x00009EF8" Section=".text" Size="24" />
     <Symbol Name="ReqAccCback" Address="0x00046474" Section=".text" Size="44" />
     <Symbol Name="FGND_TDC_EVENT_RunCnt" Address="0x003FA908" Section=".data" Size="4" />
     <Symbol Name="ExecuteLevelShiftedTouCANTXCompleteISR" Address="0x00023AD4" Section=".text" Size="136" />
     <Symbol Name="SysVoltage_AnalogInput_Create" Address="0x0003B5E0" Section=".text" Size="196" />
     <Symbol Name="IsEncoderDefined" Address="0x00016DF0" Section=".text" Size="8" />
+    <Symbol Name="MHCAN_queue_Engine_Controller" Address="0x003FCA58" Section=".bss" Size="60" />
     <Symbol Name="g_u1FgndPeriodicBaseRate_ms" Address="0x003FA097" Section=".sbss" Size="1" />
     <Symbol Name="EcuRevReqCCHandler" Address="0x00047520" Section=".text" Size="16" />
     <Symbol Name="MemWriteSynch" Address="0x000433EC" Section=".text" Size="244" />
@@ -1671,7 +1673,6 @@
     <Symbol Name="WriteQSPITxBufferDATA_AS_BYTES" Address="0x0000B1CC" Section=".text" Size="60" />
     <Symbol Name="SynchReadFromTouCANWithHandle" Address="0x000438A8" Section=".text" Size="56" />
     <Symbol Name="SparkSeqDiagCallback_20" Address="0x000377B0" Section=".text" Size="268" />
-    <Symbol Name="MHCAN_directslot_RxSlot_6364p0001" Address="0x003FCAAB" Section=".bss" Size="15" />
     <Symbol Name="ValidateUnknownCreatedResourceSequenceOut" Address="0x00020B14" Section=".text" Size="128" />
     <Symbol Name="OpenMIOS1" Address="0x000098D0" Section=".text" Size="360" />
     <Symbol Name="OnSerialCommError" Address="0x00011DA4" Section=".text" Size="116" />
@@ -1704,7 +1705,6 @@
     <Symbol Name="g_pfEventDispatcherArr" Address="0x00051AA4" Section=".sdata2" Size="52" />
     <Symbol Name="EraseManagerExtFlashAM29BL162" Address="0x0001AFD8" Section=".text" Size="232" />
     <Symbol Name="g_BehaviourTouCANTransportObj" Address="0x00053AB0" Section=".sdata2" Size="20" />
-    <Symbol Name="MHCAN_queue_CCP1" Address="0x003FCA58" Section=".bss" Size="60" />
     <Symbol Name="IssueIgnSeqCback" Address="0x0001A33C" Section=".text" Size="80" />
     <Symbol Name="g_pBgndStackMinBytesFree" Address="0x0004F694" Section=".sdata2" Size="4" />
     <Symbol Name="UpdateTransientDualPulsePSPNormal" Address="0x00022384" Section=".text" Size="172" />
@@ -1769,7 +1769,7 @@
     <Symbol Name="g_TouCANAGlobalFilterMaskOwner" Address="0x003FA230" Section=".sbss" Size="4" />
     <Symbol Name="u1NM25C160ReadOpcode" Address="0x0004F513" Section=".sdata2" Size="1" />
     <Symbol Name="GetEncoderNumTeethInRevFromID" Address="0x00017118" Section=".text" Size="16" />
-    <Symbol Name="Trigger_FGND_TDC1_EVENT_1156p0004" Address="0x0003FDC8" Section=".text" Size="192" />
+    <Symbol Name="Trigger_IDLE_EVENT_10038p0005" Address="0x0003FF48" Section=".text" Size="64" />
     <Symbol Name="SetAppOpenState" Address="0x0000C8B0" Section=".text" Size="8" />
     <Symbol Name="g_pTouCANBufferDataObjArr" Address="0x003FA580" Section=".sbss" Size="128" />
     <Symbol Name="ain_create_EGRPin" Address="0x003FA955" Section=".data" Size="1" />
@@ -1788,6 +1788,7 @@
     <Symbol Name="ETCPin_PWMOutput_PWMOutput_Set" Address="0x0003BE88" Section=".text" Size="276" />
     <Symbol Name="g_u1TaskKernelVersion" Address="0x0004F590" Section=".sdata2" Size="1" />
     <Symbol Name="OpenQSPI" Address="0x0000B40C" Section=".text" Size="48" />
+    <Symbol Name="Trigger_FGND_5XRTI_PERIODIC_7253p0001" Address="0x0003EC64" Section=".text" Size="1256" />
     <Symbol Name="DeregisterTPUPWM" Address="0x00026FA8" Section=".text" Size="64" />
     <Symbol Name="BGND_BASEx2_PERIODIC_RunCnt" Address="0x003FA8FC" Section=".data" Size="4" />
     <Symbol Name="HandleDualPulsePSPSeqOutISR" Address="0x0000FA1C" Section=".text" Size="628" />
@@ -1839,6 +1840,7 @@
     <Symbol Name="RelayDiagReportCback" Address="0x00025D48" Section=".text" Size="116" />
     <Symbol Name="g_b1IsMidTDCEnabled" Address="0x003F9A22" Section=".sbss" Size="1" />
     <Symbol Name="RemoveOldestFromCANReceiptQueue" Address="0x000243A8" Section=".text" Size="88" />
+    <Symbol Name="dout_create_DOut8341p0001" Address="0x003FA957" Section=".data" Size="1" />
     <Symbol Name="g_uNextPostedEventInIndex" Address="0x003F9A16" Section=".sbss" Size="1" />
     <Symbol Name="CreateMDAInputPin" Address="0x000095D8" Section=".text" Size="72" />
     <Symbol Name="GetFromTransmitQueue" Address="0x00016A9C" Section=".text" Size="148" />
@@ -1854,7 +1856,6 @@
     <Symbol Name="NoMIOS1_ISR" Address="0x00009434" Section=".text" Size="68" />
     <Symbol Name="g_LegacyConfig" Address="0x003F99A8" Section=".sbss" Size="12" />
     <Symbol Name="pwm_create_ETCPin_PWMOutput" Address="0x003FA95B" Section=".data" Size="1" />
-    <Symbol Name="dout_create_DOut7963p0001" Address="0x003FA957" Section=".data" Size="1" />
     <Symbol Name="g_SWISRQueue" Address="0x003FA2B3" Section=".sbss" Size="11" />
     <Symbol Name="GetPWMResourceCurrent" Address="0x00020F44" Section=".text" Size="128" />
     <Symbol Name="GetSetPWMDutyFuncPtr" Address="0x0000A9AC" Section=".text" Size="20" />
@@ -1882,7 +1883,6 @@
     <Symbol Name="SetTPUPWMPin" Address="0x00026EEC" Section=".text" Size="104" />
     <Symbol Name="RefreshUnlockTimers" Address="0x000467C8" Section=".text" Size="116" />
     <Symbol Name="SetAnalogInputAltRef" Address="0x00015B6C" Section=".text" Size="12" />
-    <Symbol Name="Trigger_FGND_2XRTI_PERIODIC_19775p0004" Address="0x0003D54C" Section=".text" Size="52" />
     <Symbol Name="__eabi_convert" Address="0x000489F4" Section=".text" Size="52" />
     <Symbol Name="s_s4COPStarvationResetTime" Address="0x003FA08C" Section=".sbss" Size="4" />
     <Symbol Name="SetAllSequencesBankMode" Address="0x0000DC30" Section=".text" Size="128" />
@@ -1911,7 +1911,6 @@
     <Symbol Name="g_PCMMuxDefnObjArr" Address="0x0004F20C" Section=".sdata2" Size="48" />
     <Symbol Name="OnAddEventToFgndTimeQueue" Address="0x0001334C" Section=".text" Size="36" />
     <Symbol Name="IsCapableIfVCM03" Address="0x0000A0C0" Section=".text" Size="24" />
-    <Symbol Name="Trigger_IDLE_EVENT_11352p0001" Address="0x0003FF48" Section=".text" Size="448" />
     <Symbol Name="GetSeqOutRuntimeDataPtr" Address="0x0000DA90" Section=".text" Size="24" />
     <Symbol Name="SetMPIOOutputPin" Address="0x000094C4" Section=".text" Size="92" />
     <Symbol Name="g_EventQueueDefnArr" Address="0x00051A44" Section=".sdata2" Size="96" />
@@ -1920,7 +1919,7 @@
     <Symbol Name="SetStandardSeqOutUpdateMode" Address="0x000109C8" Section=".text" Size="100" />
     <Symbol Name="g_TPUBInjDiagRuntimeDataObj" Address="0x003FA42A" Section=".sbss" Size="2" />
     <Symbol Name="GetSeqOutDefnPtr" Address="0x0000DA80" Section=".text" Size="16" />
-    <Symbol Name="ain_create_TPS1AnalogInput" Address="0x003FA96C" Section=".data" Size="1" />
+    <Symbol Name="ain_create_TPS1AnalogInput" Address="0x003FA96B" Section=".data" Size="1" />
     <Symbol Name="DataStorageISR" Address="0x00008BB8" Section=".text" Size="16" />
     <Symbol Name="BgndTask" Address="0x00015DFC" Section=".text" Size="72" />
     <Symbol Name="can_tx_err_CAN_1_0_50" Address="0x003FCAEC" Section=".bss" Size="1" />
@@ -1932,7 +1931,6 @@
     <Symbol Name="mh_ProcessCCP_GetMTAVal" Address="0x00038074" Section=".text" Size="156" />
     <Symbol Name="ValidateResourceBEHAVIOUR_ANALOGIN" Address="0x00020DD4" Section=".text" Size="92" />
     <Symbol Name="DFMUpdateRequest" Address="0x000462EC" Section=".text" Size="96" />
-    <Symbol Name="Trigger_FGND_5XRTI_PERIODIC_7130p0001" Address="0x0003EC64" Section=".text" Size="1256" />
     <Symbol Name="ClrTPUHostSeqBit0WithPtr" Address="0x0001506C" Section=".text" Size="80" />
     <Symbol Name="LastRandomNumber_ru4" Address="0x003FA4A0" Section=".sbss" Size="4" />
     <Symbol Name="ReapplyMultiplexedSequenceOutCond" Address="0x0000EB38" Section=".text" Size="440" />
@@ -1972,6 +1970,7 @@
     <Symbol Name="RegisterTPUVarCam_EVO9" Address="0x00026050" Section=".text" Size="12" />
     <Symbol Name="TPUFuncCodeForSeqBehaviourArr" Address="0x0004F4F8" Section=".sdata2" Size="7" />
     <Symbol Name="SoftwareEmulationISR" Address="0x00008E04" Section=".text" Size="16" />
+    <Symbol Name="RxSlot_Engine_Controller_IDMask" Address="0x003FCA94" Section=".bss" Size="4" />
     <Symbol Name="ProSAKWr16bitCmdOnPCS3_3" Address="0x00052918" Section=".sdata2" Size="5" />
     <Symbol Name="g_uNumFreqInsSupported" Address="0x003FA410" Section=".sbss" Size="1" />
     <Symbol Name="PerformOperationOnAllSerialEEDevices" Address="0x00012524" Section=".text" Size="44" />
@@ -1996,6 +1995,7 @@
     <Symbol Name="g_u2NoRatioOverflowRPM" Address="0x003F9AFA" Section=".sbss" Size="2" />
     <Symbol Name="DualPulsePSPWithPeakISR" Address="0x0000E430" Section=".text" Size="132" />
     <Symbol Name="ReadMDAInputPin" Address="0x0000975C" Section=".text" Size="20" />
+    <Symbol Name="MHCAN_directslot_RxSlot_6488p0004" Address="0x003FCA9C" Section=".bss" Size="15" />
     <Symbol Name="OpenHBridgeHardware" Address="0x0001E5F8" Section=".text" Size="88" />
     <Symbol Name="ReadSPIProSAK" Address="0x0001F3C8" Section=".text" Size="556" />
     <Symbol Name="free" Address="0x00040268" Section=".text" Size="68" />
@@ -8914,12 +8914,12 @@
         </Subprogram>
       </Subprograms>
     </CompilationUnit>
-    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\mh_ccp_protocol_CCP1.c">
+    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\mh_ccp_protocol_Engine_Controller.c">
       <Producer>GNU C 4.4.0</Producer>
       <StartingAddress>0x00000000</StartingAddress>
       <EndingAddress>0x00000000</EndingAddress>
       <Variables>
-        <Variable Name="mh_CCP1_CCPHandlerConfigPrescalers" Address="0x003FBB8C" SizeInBytes="8">
+        <Variable Name="mh_Engine_Controller_CCPHandlerConfigPrescalers" Address="0x003FBB88" SizeInBytes="8">
           <TypeReference Name="uint16_T" Namespace="TypeDefinition">
             <TypeModifiers>
               <Array>
@@ -8928,7 +8928,7 @@
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="mh_CCP1_CCPHandlerConfigFrameReady" Address="0x003FBB88" SizeInBytes="4">
+        <Variable Name="mh_Engine_Controller_CCPHandlerConfigFrameReady" Address="0x003FBC04" SizeInBytes="4">
           <TypeReference Name="uint8_T" Namespace="TypeDefinition">
             <TypeModifiers>
               <Array>
@@ -8937,10 +8937,10 @@
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="mh_CCP1_CCPHandlerInstance" Address="0x003FBB94" SizeInBytes="116">
+        <Variable Name="mh_Engine_Controller_CCPHandlerInstance" Address="0x003FBB90" SizeInBytes="116">
           <TypeReference Name="S_CCPHandlerInstance" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="mh_CCP1_CCPHandlerConfig" Address="0x0004B96C" SizeInBytes="24">
+        <Variable Name="mh_Engine_Controller_CCPHandlerConfig" Address="0x0004B96C" SizeInBytes="24">
           <TypeReference Name="S_CCPHandlerConfig" Namespace="TypeDefinition">
             <TypeModifiers>
               <Const />
@@ -11470,15 +11470,15 @@
             <TypeReference Name="real32_T" Namespace="TypeDefinition" />
             <OffsetSpecified>true</OffsetSpecified>
           </Member>
-          <Member Name="CCP1RxID" Offset="5228">
+          <Member Name="Engine_ControllerRxID" Offset="5228">
             <TypeReference Name="uint32_T" Namespace="TypeDefinition" />
             <OffsetSpecified>true</OffsetSpecified>
           </Member>
-          <Member Name="CCP1RxIDMask" Offset="5232">
+          <Member Name="Engine_ControllerRxIDMask" Offset="5232">
             <TypeReference Name="uint32_T" Namespace="TypeDefinition" />
             <OffsetSpecified>true</OffsetSpecified>
           </Member>
-          <Member Name="CCP1TxID" Offset="5236">
+          <Member Name="Engine_ControllerTxID" Offset="5236">
             <TypeReference Name="uint32_T" Namespace="TypeDefinition" />
             <OffsetSpecified>true</OffsetSpecified>
           </Member>
@@ -11498,19 +11498,19 @@
             <TypeReference Name="uint16_T" Namespace="TypeDefinition" />
             <OffsetSpecified>true</OffsetSpecified>
           </Member>
-          <Member Name="CCP1_StationAddr" Offset="5252">
+          <Member Name="CrankToRunRPMThresh" Offset="5252">
             <TypeReference Name="uint16_T" Namespace="TypeDefinition" />
             <OffsetSpecified>true</OffsetSpecified>
           </Member>
-          <Member Name="CrankToRunRPMThresh" Offset="5254">
+          <Member Name="ECUP_Threshold" Offset="5254">
             <TypeReference Name="uint16_T" Namespace="TypeDefinition" />
             <OffsetSpecified>true</OffsetSpecified>
           </Member>
-          <Member Name="ECUP_Threshold" Offset="5256">
+          <Member Name="EST_OpenThreshold" Offset="5256">
             <TypeReference Name="uint16_T" Namespace="TypeDefinition" />
             <OffsetSpecified>true</OffsetSpecified>
           </Member>
-          <Member Name="EST_OpenThreshold" Offset="5258">
+          <Member Name="Engine_Controller_StationAddr" Offset="5258">
             <TypeReference Name="uint16_T" Namespace="TypeDefinition" />
             <OffsetSpecified>true</OffsetSpecified>
           </Member>
@@ -14242,19 +14242,19 @@
             <TypeReference Name="uint16_T" Namespace="TypeDefinition" />
             <OffsetSpecified>true</OffsetSpecified>
           </Member>
-          <Member Name="init_resource_DOut7679p0004" Offset="1136">
+          <Member Name="init_resource_DOut7802p0001" Offset="1136">
             <TypeReference Name="int16_T" Namespace="TypeDefinition" />
             <OffsetSpecified>true</OffsetSpecified>
           </Member>
-          <Member Name="init_resource_DOut7963p0001" Offset="1138">
+          <Member Name="init_resource_DOut8086p0001" Offset="1138">
             <TypeReference Name="int16_T" Namespace="TypeDefinition" />
             <OffsetSpecified>true</OffsetSpecified>
           </Member>
-          <Member Name="init_resource_DOut7973p0001" Offset="1140">
+          <Member Name="init_resource_DOut8096p0001" Offset="1140">
             <TypeReference Name="int16_T" Namespace="TypeDefinition" />
             <OffsetSpecified>true</OffsetSpecified>
           </Member>
-          <Member Name="init_resource_DOut8218p0001" Offset="1142">
+          <Member Name="init_resource_DOut8341p0001" Offset="1142">
             <TypeReference Name="int16_T" Namespace="TypeDefinition" />
             <OffsetSpecified>true</OffsetSpecified>
           </Member>
@@ -14934,7 +14934,7 @@
             </TypeReference>
             <OffsetSpecified>true</OffsetSpecified>
           </Member>
-          <Member Name="mh_CCP1_CCPHandlerInstanceDAQs" Offset="1644">
+          <Member Name="mh_Engine_Controller_CCPHandlerInstanceDAQs" Offset="1644">
             <TypeReference Name="S_CCPDAQ_T" Namespace="TypeDefinition">
               <TypeModifiers>
                 <Array>
@@ -14944,7 +14944,7 @@
             </TypeReference>
             <OffsetSpecified>true</OffsetSpecified>
           </Member>
-          <Member Name="mh_CCP1_CCPHandlerInstanceODTs" Offset="1692">
+          <Member Name="mh_Engine_Controller_CCPHandlerInstanceODTs" Offset="1692">
             <TypeReference Name="S_CCPODT_T" Namespace="TypeDefinition">
               <TypeModifiers>
                 <Array>
@@ -15738,7 +15738,7 @@
             <TypeReference Name="NativeError_S" Namespace="TypeDefinition" />
           </ReturnValue>
         </Subprogram>
-        <Subprogram Name="DOut7973p0001_DiscreteOutputPushPull_Set">
+        <Subprogram Name="DOut8096p0001_DiscreteOutputPushPull_Set">
           <StartingAddress>0x00000000</StartingAddress>
           <EndingAddress>0x00000000</EndingAddress>
           <ReturnValue>
@@ -15751,7 +15751,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut7973p0001_DiscreteOutput_Set">
+        <Subprogram Name="DOut8096p0001_DiscreteOutput_Set">
           <StartingAddress>0x0003BA44</StartingAddress>
           <EndingAddress>0x0003BA88</EndingAddress>
           <ReturnValue>
@@ -15764,7 +15764,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut7963p0001_DiscreteOutputPushPull_Set">
+        <Subprogram Name="DOut8086p0001_DiscreteOutputPushPull_Set">
           <StartingAddress>0x00000000</StartingAddress>
           <EndingAddress>0x00000000</EndingAddress>
           <ReturnValue>
@@ -15777,7 +15777,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut7963p0001_DiscreteOutput_Set">
+        <Subprogram Name="DOut8086p0001_DiscreteOutput_Set">
           <StartingAddress>0x0003BA88</StartingAddress>
           <EndingAddress>0x0003BACC</EndingAddress>
           <ReturnValue>
@@ -15790,7 +15790,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut7679p0004_DiscreteOutputPushPull_Set">
+        <Subprogram Name="DOut7802p0001_DiscreteOutputPushPull_Set">
           <StartingAddress>0x00000000</StartingAddress>
           <EndingAddress>0x00000000</EndingAddress>
           <ReturnValue>
@@ -15803,7 +15803,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut7679p0004_DiscreteOutput_Set">
+        <Subprogram Name="DOut7802p0001_DiscreteOutput_Set">
           <StartingAddress>0x0003BACC</StartingAddress>
           <EndingAddress>0x0003BB10</EndingAddress>
           <ReturnValue>
@@ -15816,7 +15816,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut8218p0001_DiscreteOutputPushPull_Set">
+        <Subprogram Name="DOut8341p0001_DiscreteOutputPushPull_Set">
           <StartingAddress>0x00000000</StartingAddress>
           <EndingAddress>0x00000000</EndingAddress>
           <ReturnValue>
@@ -15829,7 +15829,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut8218p0001_DiscreteOutput_Set">
+        <Subprogram Name="DOut8341p0001_DiscreteOutput_Set">
           <StartingAddress>0x0003BB10</StartingAddress>
           <EndingAddress>0x0003BB54</EndingAddress>
           <ReturnValue>
@@ -15842,28 +15842,28 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="DOut7973p0001_DiscreteOutput_Create">
+        <Subprogram Name="DOut8096p0001_DiscreteOutput_Create">
           <StartingAddress>0x0003BB54</StartingAddress>
           <EndingAddress>0x0003BC04</EndingAddress>
           <ReturnValue>
             <TypeReference Name="NativeError_S" Namespace="TypeDefinition" />
           </ReturnValue>
         </Subprogram>
-        <Subprogram Name="DOut7963p0001_DiscreteOutput_Create">
+        <Subprogram Name="DOut8086p0001_DiscreteOutput_Create">
           <StartingAddress>0x0003BC04</StartingAddress>
           <EndingAddress>0x0003BCB4</EndingAddress>
           <ReturnValue>
             <TypeReference Name="NativeError_S" Namespace="TypeDefinition" />
           </ReturnValue>
         </Subprogram>
-        <Subprogram Name="DOut7679p0004_DiscreteOutput_Create">
+        <Subprogram Name="DOut7802p0001_DiscreteOutput_Create">
           <StartingAddress>0x0003BCB4</StartingAddress>
           <EndingAddress>0x0003BD64</EndingAddress>
           <ReturnValue>
             <TypeReference Name="NativeError_S" Namespace="TypeDefinition" />
           </ReturnValue>
         </Subprogram>
-        <Subprogram Name="DOut8218p0001_DiscreteOutput_Create">
+        <Subprogram Name="DOut8341p0001_DiscreteOutput_Create">
           <StartingAddress>0x0003BD64</StartingAddress>
           <EndingAddress>0x0003BDFC</EndingAddress>
           <ReturnValue>
@@ -16602,41 +16602,41 @@
         </Subprogram>
       </Subprograms>
     </CompilationUnit>
-    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_BGND_BASEx10_PERIODIC_19781p0004.c">
+    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_BGND_BASEx10_PERIODIC_10118p0005.c">
       <Producer>GNU C 4.4.0</Producer>
       <StartingAddress>0x00000000</StartingAddress>
       <Subprograms>
-        <Subprogram Name="Trigger_BGND_BASEx10_PERIODIC_19781p0004">
+        <Subprogram Name="Trigger_BGND_BASEx10_PERIODIC_10118p0005">
           <StartingAddress>0x0003C768</StartingAddress>
           <EndingAddress>0x0003C79C</EndingAddress>
         </Subprogram>
       </Subprograms>
     </CompilationUnit>
-    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_BGND_BASEx2_PERIODIC_19780p0004.c">
+    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_BGND_BASEx2_PERIODIC_10117p0005.c">
       <Producer>GNU C 4.4.0</Producer>
       <StartingAddress>0x00000000</StartingAddress>
       <Subprograms>
-        <Subprogram Name="Trigger_BGND_BASEx2_PERIODIC_19780p0004">
+        <Subprogram Name="Trigger_BGND_BASEx2_PERIODIC_10117p0005">
           <StartingAddress>0x0003C79C</StartingAddress>
           <EndingAddress>0x0003C7D0</EndingAddress>
         </Subprogram>
       </Subprograms>
     </CompilationUnit>
-    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_BGND_BASE_PERIODIC_19779p0004.c">
+    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_BGND_BASE_PERIODIC_10116p0005.c">
       <Producer>GNU C 4.4.0</Producer>
       <StartingAddress>0x00000000</StartingAddress>
       <Subprograms>
-        <Subprogram Name="Trigger_BGND_BASE_PERIODIC_19779p0004">
+        <Subprogram Name="Trigger_BGND_BASE_PERIODIC_10116p0005">
           <StartingAddress>0x0003C7D0</StartingAddress>
           <EndingAddress>0x0003C804</EndingAddress>
         </Subprogram>
       </Subprograms>
     </CompilationUnit>
-    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_BGND_BASE_PERIODIC_8250p0001.c">
+    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_BGND_BASE_PERIODIC_8373p0001.c">
       <Producer>GNU C 4.4.0</Producer>
       <StartingAddress>0x00000000</StartingAddress>
       <Subprograms>
-        <Subprogram Name="Trigger_BGND_BASE_PERIODIC_8250p0001">
+        <Subprogram Name="Trigger_BGND_BASE_PERIODIC_8373p0001">
           <StartingAddress>0x0003C804</StartingAddress>
           <EndingAddress>0x0003CDB0</EndingAddress>
         </Subprogram>
@@ -16666,7 +16666,7 @@
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="MHCAN_directslot_RxSlot_6285p0001" Address="0x003FCA48" SizeInBytes="15">
+        <Variable Name="MHCAN_directslot_RxSlot_6408p0004" Address="0x003FCA48" SizeInBytes="15">
           <TypeReference Name="MHCAN_directslot" Namespace="TypeDefinition" />
         </Variable>
       </Variables>
@@ -16840,7 +16840,7 @@
         </Subroutine>
       </Subroutines>
       <Subprograms>
-        <Subprogram Name="MHCAN_handler_RxSlot_6285p0001">
+        <Subprogram Name="MHCAN_handler_RxSlot_6408p0004">
           <StartingAddress>0x0003CDB0</StartingAddress>
           <EndingAddress>0x0003CE14</EndingAddress>
           <ReturnValue>
@@ -16901,13 +16901,13 @@
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="MHCAN_queue_CCP1" Address="0x003FCA58" SizeInBytes="60">
+        <Variable Name="MHCAN_queue_Engine_Controller" Address="0x003FCA58" SizeInBytes="60">
           <TypeReference Name="UnspecifiedStructureName_3" Namespace="Struct" />
         </Variable>
-        <Variable Name="RxSlot_CCP1_ID" Address="0x003FCA94" SizeInBytes="4">
+        <Variable Name="RxSlot_Engine_Controller_ID" Address="0x003FCA98" SizeInBytes="4">
           <TypeReference Name="uint32_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="RxSlot_CCP1_IDMask" Address="0x003FCA98" SizeInBytes="4">
+        <Variable Name="RxSlot_Engine_Controller_IDMask" Address="0x003FCA94" SizeInBytes="4">
           <TypeReference Name="uint32_T" Namespace="TypeDefinition" />
         </Variable>
       </Variables>
@@ -17102,7 +17102,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="MHCAN_handler_CCP1">
+        <Subprogram Name="MHCAN_handler_Engine_Controller">
           <StartingAddress>0x0003D0AC</StartingAddress>
           <EndingAddress>0x0003D12C</EndingAddress>
           <ReturnValue>
@@ -17145,16 +17145,16 @@
             </TypeModifiers>
           </TypeReference>
         </Variable>
-        <Variable Name="MHCAN_directslot_RxSlot_6363p0001" Address="0x003FCABA" SizeInBytes="15">
+        <Variable Name="MHCAN_directslot_RxSlot_6486p0004" Address="0x003FCABA" SizeInBytes="15">
           <TypeReference Name="MHCAN_directslot" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="MHCAN_directslot_RxSlot_6362p0004" Address="0x003FCAC9" SizeInBytes="15">
+        <Variable Name="MHCAN_directslot_RxSlot_6485p0006" Address="0x003FCAC9" SizeInBytes="15">
           <TypeReference Name="MHCAN_directslot" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="MHCAN_directslot_RxSlot_6364p0001" Address="0x003FCAAB" SizeInBytes="15">
+        <Variable Name="MHCAN_directslot_RxSlot_6487p0004" Address="0x003FCAAB" SizeInBytes="15">
           <TypeReference Name="MHCAN_directslot" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="MHCAN_directslot_RxSlot_6365p0001" Address="0x003FCA9C" SizeInBytes="15">
+        <Variable Name="MHCAN_directslot_RxSlot_6488p0004" Address="0x003FCA9C" SizeInBytes="15">
           <TypeReference Name="MHCAN_directslot" Namespace="TypeDefinition" />
         </Variable>
       </Variables>
@@ -17328,7 +17328,7 @@
         </Subroutine>
       </Subroutines>
       <Subprograms>
-        <Subprogram Name="MHCAN_handler_RxSlot_6363p0001">
+        <Subprogram Name="MHCAN_handler_RxSlot_6486p0004">
           <StartingAddress>0x0003D12C</StartingAddress>
           <EndingAddress>0x0003D1C0</EndingAddress>
           <ReturnValue>
@@ -17345,7 +17345,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="MHCAN_handler_RxSlot_6362p0004">
+        <Subprogram Name="MHCAN_handler_RxSlot_6485p0006">
           <StartingAddress>0x0003D1C0</StartingAddress>
           <EndingAddress>0x0003D250</EndingAddress>
           <ReturnValue>
@@ -17362,7 +17362,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="MHCAN_handler_RxSlot_6364p0001">
+        <Subprogram Name="MHCAN_handler_RxSlot_6487p0004">
           <StartingAddress>0x0003D250</StartingAddress>
           <EndingAddress>0x0003D2E4</EndingAddress>
           <ReturnValue>
@@ -17379,7 +17379,7 @@
             </Parameter>
           </Parameters>
         </Subprogram>
-        <Subprogram Name="MHCAN_handler_RxSlot_6365p0001">
+        <Subprogram Name="MHCAN_handler_RxSlot_6488p0004">
           <StartingAddress>0x0003D2E4</StartingAddress>
           <EndingAddress>0x0003D378</EndingAddress>
           <ReturnValue>
@@ -17426,43 +17426,33 @@
         </Subprogram>
       </Subprograms>
     </CompilationUnit>
-    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_10XRTI_PERIODIC_19777p0004.c">
+    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_10XRTI_PERIODIC_10114p0005.c">
       <Producer>GNU C 4.4.0</Producer>
       <StartingAddress>0x00000000</StartingAddress>
       <Subprograms>
-        <Subprogram Name="Trigger_FGND_10XRTI_PERIODIC_19777p0004">
+        <Subprogram Name="Trigger_FGND_10XRTI_PERIODIC_10114p0005">
           <StartingAddress>0x0003D4E4</StartingAddress>
           <EndingAddress>0x0003D518</EndingAddress>
         </Subprogram>
       </Subprograms>
     </CompilationUnit>
-    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_20XRTI_PERIODIC_19778p0004.c">
+    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_20XRTI_PERIODIC_10115p0005.c">
       <Producer>GNU C 4.4.0</Producer>
       <StartingAddress>0x00000000</StartingAddress>
       <Subprograms>
-        <Subprogram Name="Trigger_FGND_20XRTI_PERIODIC_19778p0004">
+        <Subprogram Name="Trigger_FGND_20XRTI_PERIODIC_10115p0005">
           <StartingAddress>0x0003D518</StartingAddress>
           <EndingAddress>0x0003D54C</EndingAddress>
         </Subprogram>
       </Subprograms>
     </CompilationUnit>
-    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_2XRTI_PERIODIC_19775p0004.c">
+    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_2XRTI_PERIODIC_10112p0005.c">
       <Producer>GNU C 4.4.0</Producer>
       <StartingAddress>0x00000000</StartingAddress>
       <Subprograms>
-        <Subprogram Name="Trigger_FGND_2XRTI_PERIODIC_19775p0004">
+        <Subprogram Name="Trigger_FGND_2XRTI_PERIODIC_10112p0005">
           <StartingAddress>0x0003D54C</StartingAddress>
           <EndingAddress>0x0003D580</EndingAddress>
-        </Subprogram>
-      </Subprograms>
-    </CompilationUnit>
-    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_1408p0004.c">
-      <Producer>GNU C 4.4.0</Producer>
-      <StartingAddress>0x00000000</StartingAddress>
-      <Subprograms>
-        <Subprogram Name="Trigger_FGND_5XRTI_PERIODIC_1408p0004">
-          <StartingAddress>0x0003D580</StartingAddress>
-          <EndingAddress>0x0003D5CC</EndingAddress>
         </Subprogram>
       </Subprograms>
     </CompilationUnit>
@@ -17471,102 +17461,122 @@
       <StartingAddress>0x00000000</StartingAddress>
       <Subprograms>
         <Subprogram Name="Trigger_FGND_5XRTI_PERIODIC_1409p0004">
+          <StartingAddress>0x0003D580</StartingAddress>
+          <EndingAddress>0x0003D5CC</EndingAddress>
+        </Subprogram>
+      </Subprograms>
+    </CompilationUnit>
+    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_1410p0004.c">
+      <Producer>GNU C 4.4.0</Producer>
+      <StartingAddress>0x00000000</StartingAddress>
+      <Subprograms>
+        <Subprogram Name="Trigger_FGND_5XRTI_PERIODIC_1410p0004">
           <StartingAddress>0x0003D5CC</StartingAddress>
           <EndingAddress>0x0003D6D4</EndingAddress>
         </Subprogram>
       </Subprograms>
     </CompilationUnit>
-    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_4024p0001.c">
+    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_4141p0001.c">
       <Producer>GNU C 4.4.0</Producer>
       <StartingAddress>0x00000000</StartingAddress>
       <Subprograms>
-        <Subprogram Name="Trigger_FGND_5XRTI_PERIODIC_4024p0001">
+        <Subprogram Name="Trigger_FGND_5XRTI_PERIODIC_4141p0001">
           <StartingAddress>0x0003D6D4</StartingAddress>
           <EndingAddress>0x0003EC64</EndingAddress>
         </Subprogram>
       </Subprograms>
     </CompilationUnit>
-    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_7130p0001.c">
+    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_7253p0001.c">
       <Producer>GNU C 4.4.0</Producer>
       <StartingAddress>0x00000000</StartingAddress>
       <Subprograms>
-        <Subprogram Name="Trigger_FGND_5XRTI_PERIODIC_7130p0001">
+        <Subprogram Name="Trigger_FGND_5XRTI_PERIODIC_7253p0001">
           <StartingAddress>0x0003EC64</StartingAddress>
           <EndingAddress>0x0003F14C</EndingAddress>
         </Subprogram>
       </Subprograms>
     </CompilationUnit>
-    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_7978p0001.c">
+    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_5XRTI_PERIODIC_8101p0001.c">
       <Producer>GNU C 4.4.0</Producer>
       <StartingAddress>0x00000000</StartingAddress>
       <Subprograms>
-        <Subprogram Name="Trigger_FGND_5XRTI_PERIODIC_7978p0001">
+        <Subprogram Name="Trigger_FGND_5XRTI_PERIODIC_8101p0001">
           <StartingAddress>0x0003F14C</StartingAddress>
           <EndingAddress>0x0003FD10</EndingAddress>
         </Subprogram>
       </Subprograms>
     </CompilationUnit>
-    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_MID_TDC_EVENT_6947p0001.c">
+    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_MID_TDC_EVENT_7070p0005.c">
       <Producer>GNU C 4.4.0</Producer>
       <StartingAddress>0x00000000</StartingAddress>
       <Subprograms>
-        <Subprogram Name="Trigger_FGND_MID_TDC_EVENT_6947p0001">
+        <Subprogram Name="Trigger_FGND_MID_TDC_EVENT_7070p0005">
           <StartingAddress>0x0003FD10</StartingAddress>
           <EndingAddress>0x0003FD74</EndingAddress>
         </Subprogram>
       </Subprograms>
     </CompilationUnit>
-    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_RTI_PERIODIC_19776p0004.c">
+    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_RTI_PERIODIC_10113p0005.c">
       <Producer>GNU C 4.4.0</Producer>
       <StartingAddress>0x00000000</StartingAddress>
       <Subprograms>
-        <Subprogram Name="Trigger_FGND_RTI_PERIODIC_19776p0004">
+        <Subprogram Name="Trigger_FGND_RTI_PERIODIC_10113p0005">
           <StartingAddress>0x0003FD74</StartingAddress>
           <EndingAddress>0x0003FDA8</EndingAddress>
         </Subprogram>
       </Subprograms>
     </CompilationUnit>
-    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_RTI_PERIODIC_8256p0001.c">
+    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_RTI_PERIODIC_8379p0001.c">
       <Producer>GNU C 4.4.0</Producer>
       <StartingAddress>0x00000000</StartingAddress>
       <Subprograms>
-        <Subprogram Name="Trigger_FGND_RTI_PERIODIC_8256p0001">
+        <Subprogram Name="Trigger_FGND_RTI_PERIODIC_8379p0001">
           <StartingAddress>0x0003FDA8</StartingAddress>
           <EndingAddress>0x0003FDC8</EndingAddress>
         </Subprogram>
       </Subprograms>
     </CompilationUnit>
-    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_TDC1_EVENT_1156p0004.c">
+    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_TDC1_EVENT_1157p0004.c">
       <Producer>GNU C 4.4.0</Producer>
       <StartingAddress>0x00000000</StartingAddress>
       <Subprograms>
-        <Subprogram Name="Trigger_FGND_TDC1_EVENT_1156p0004">
+        <Subprogram Name="Trigger_FGND_TDC1_EVENT_1157p0004">
           <StartingAddress>0x0003FDC8</StartingAddress>
           <EndingAddress>0x0003FE88</EndingAddress>
         </Subprogram>
       </Subprograms>
     </CompilationUnit>
-    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_TDC_EVENT_5811p0002.c">
+    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_TDC_EVENT_5928p0005.c">
       <Producer>GNU C 4.4.0</Producer>
       <StartingAddress>0x00000000</StartingAddress>
       <Subprograms>
-        <Subprogram Name="Trigger_FGND_TDC_EVENT_5811p0002">
+        <Subprogram Name="Trigger_FGND_TDC_EVENT_5928p0005">
           <StartingAddress>0x0003FE88</StartingAddress>
           <EndingAddress>0x0003FEEC</EndingAddress>
         </Subprogram>
       </Subprograms>
     </CompilationUnit>
-    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_TDC_EVENT_7485p0004.c">
+    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_FGND_TDC_EVENT_7608p0001.c">
       <Producer>GNU C 4.4.0</Producer>
       <StartingAddress>0x00000000</StartingAddress>
       <Subprograms>
-        <Subprogram Name="Trigger_FGND_TDC_EVENT_7485p0004">
+        <Subprogram Name="Trigger_FGND_TDC_EVENT_7608p0001">
           <StartingAddress>0x0003FEEC</StartingAddress>
           <EndingAddress>0x0003FF48</EndingAddress>
         </Subprogram>
       </Subprograms>
     </CompilationUnit>
-    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_IDLE_EVENT_11352p0001.c">
+    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_IDLE_EVENT_10038p0005.c">
+      <Producer>GNU C 4.4.0</Producer>
+      <StartingAddress>0x00000000</StartingAddress>
+      <Subprograms>
+        <Subprogram Name="Trigger_IDLE_EVENT_10038p0005">
+          <StartingAddress>0x0003FF48</StartingAddress>
+          <EndingAddress>0x0003FF88</EndingAddress>
+        </Subprogram>
+      </Subprograms>
+    </CompilationUnit>
+    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_IDLE_EVENT_9487p0004.c">
       <Producer>GNU C 4.4.0</Producer>
       <StartingAddress>0x00000000</StartingAddress>
       <TypeDefs>
@@ -17575,9 +17585,9 @@
         </TypeDefinition>
       </TypeDefs>
       <Subprograms>
-        <Subprogram Name="Trigger_IDLE_EVENT_11352p0001">
-          <StartingAddress>0x0003FF48</StartingAddress>
-          <EndingAddress>0x00040108</EndingAddress>
+        <Subprogram Name="Trigger_IDLE_EVENT_9487p0004">
+          <StartingAddress>0x0003FF88</StartingAddress>
+          <EndingAddress>0x00040148</EndingAddress>
           <Variables>
             <Variable Name="queue_tail" Address="0x003FCAD8" SizeInBytes="4">
               <TypeReference Name="uint32_T" Namespace="TypeDefinition" />
@@ -17586,41 +17596,31 @@
         </Subprogram>
       </Subprograms>
     </CompilationUnit>
-    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_IDLE_EVENT_11406p0001.c">
+    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_ONE_SECOND_EVENT_10119p0005.c">
       <Producer>GNU C 4.4.0</Producer>
       <StartingAddress>0x00000000</StartingAddress>
       <Subprograms>
-        <Subprogram Name="Trigger_IDLE_EVENT_11406p0001">
-          <StartingAddress>0x00040108</StartingAddress>
-          <EndingAddress>0x00040148</EndingAddress>
-        </Subprogram>
-      </Subprograms>
-    </CompilationUnit>
-    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_ONE_SECOND_EVENT_19782p0004.c">
-      <Producer>GNU C 4.4.0</Producer>
-      <StartingAddress>0x00000000</StartingAddress>
-      <Subprograms>
-        <Subprogram Name="Trigger_ONE_SECOND_EVENT_19782p0004">
+        <Subprogram Name="Trigger_ONE_SECOND_EVENT_10119p0005">
           <StartingAddress>0x00040148</StartingAddress>
           <EndingAddress>0x0004017C</EndingAddress>
         </Subprogram>
       </Subprograms>
     </CompilationUnit>
-    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_STARTUP_EVENT_11381p0001.c">
+    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_STARTUP_EVENT_10013p0005.c">
       <Producer>GNU C 4.4.0</Producer>
       <StartingAddress>0x00000000</StartingAddress>
       <Subprograms>
-        <Subprogram Name="Trigger_STARTUP_EVENT_11381p0001">
+        <Subprogram Name="Trigger_STARTUP_EVENT_10013p0005">
           <StartingAddress>0x0004017C</StartingAddress>
           <EndingAddress>0x000401B8</EndingAddress>
         </Subprogram>
       </Subprograms>
     </CompilationUnit>
-    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_STARTUP_EVENT_6946p0001.c">
+    <CompilationUnit Name="C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\Trigger_STARTUP_EVENT_7069p0005.c">
       <Producer>GNU C 4.4.0</Producer>
       <StartingAddress>0x00000000</StartingAddress>
       <Subprograms>
-        <Subprogram Name="Trigger_STARTUP_EVENT_6946p0001">
+        <Subprogram Name="Trigger_STARTUP_EVENT_7069p0005">
           <StartingAddress>0x000401B8</StartingAddress>
           <EndingAddress>0x0004020C</EndingAddress>
         </Subprogram>
@@ -17634,7 +17634,7 @@
         <Variable Name="encoder_create" Address="0x003FA958" SizeInBytes="1">
           <TypeReference Name="uint8_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="EST_SparkCreate" Address="0x003FA969" SizeInBytes="1">
+        <Variable Name="EST_SparkCreate" Address="0x003FA968" SizeInBytes="1">
           <TypeReference Name="uint8_T" Namespace="TypeDefinition" />
         </Variable>
         <Variable Name="NextSparkAngle" Address="0x003FCAE4" SizeInBytes="4">
@@ -17658,16 +17658,16 @@
         <Variable Name="ain_create_ECUP" Address="0x003FA948" SizeInBytes="1">
           <TypeReference Name="uint8_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="ain_read_ECUP" Address="0x003FA947" SizeInBytes="1">
+        <Variable Name="ain_read_ECUP" Address="0x003FA952" SizeInBytes="1">
           <TypeReference Name="uint8_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="dout_create_DOut8218p0001" Address="0x003FA963" SizeInBytes="1">
+        <Variable Name="dout_create_DOut8341p0001" Address="0x003FA957" SizeInBytes="1">
           <TypeReference Name="uint8_T" Namespace="TypeDefinition" />
         </Variable>
         <Variable Name="ain_create_MAPSensorPin" Address="0x003FA970" SizeInBytes="1">
           <TypeReference Name="uint8_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="ain_read_MAPSensorPin" Address="0x003FA952" SizeInBytes="1">
+        <Variable Name="ain_read_MAPSensorPin" Address="0x003FA951" SizeInBytes="1">
           <TypeReference Name="uint8_T" Namespace="TypeDefinition" />
         </Variable>
         <Variable Name="ain_create_ECTSensorPin" Address="0x003FA953" SizeInBytes="1">
@@ -17676,10 +17676,10 @@
         <Variable Name="ain_read_ECTSensorPin" Address="0x003FA95E" SizeInBytes="1">
           <TypeReference Name="uint8_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="ain_create_IATSensorPin" Address="0x003FA967" SizeInBytes="1">
+        <Variable Name="ain_create_IATSensorPin" Address="0x003FA966" SizeInBytes="1">
           <TypeReference Name="uint8_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="ain_read_IATSensorPin" Address="0x003FA96B" SizeInBytes="1">
+        <Variable Name="ain_read_IATSensorPin" Address="0x003FA96A" SizeInBytes="1">
           <TypeReference Name="uint8_T" Namespace="TypeDefinition" />
         </Variable>
         <Variable Name="ain_create_OilPresPin" Address="0x003FA95F" SizeInBytes="1">
@@ -17691,10 +17691,10 @@
         <Variable Name="ain_create_SysVoltage" Address="0x003FA94B" SizeInBytes="1">
           <TypeReference Name="uint8_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="ain_read_SysVoltage" Address="0x003FA965" SizeInBytes="1">
+        <Variable Name="ain_read_SysVoltage" Address="0x003FA964" SizeInBytes="1">
           <TypeReference Name="uint8_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="ain_create_TPS1AnalogInput" Address="0x003FA96C" SizeInBytes="1">
+        <Variable Name="ain_create_TPS1AnalogInput" Address="0x003FA96B" SizeInBytes="1">
           <TypeReference Name="uint8_T" Namespace="TypeDefinition" />
         </Variable>
         <Variable Name="ain_read_TPS1AnalogInput" Address="0x003FA94F" SizeInBytes="1">
@@ -17730,7 +17730,7 @@
         <Variable Name="ain_read_EGRPin" Address="0x003FA959" SizeInBytes="1">
           <TypeReference Name="uint8_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="dout_create_DOut7679p0004" Address="0x003FA951" SizeInBytes="1">
+        <Variable Name="dout_create_DOut7802p0001" Address="0x003FA94A" SizeInBytes="1">
           <TypeReference Name="uint8_T" Namespace="TypeDefinition" />
         </Variable>
         <Variable Name="pwm_create_ETCPin_PWMOutput" Address="0x003FA95B" SizeInBytes="1">
@@ -17739,28 +17739,28 @@
         <Variable Name="pwm_set_ETCPin_PWMOutput" Address="0x003FCAE0" SizeInBytes="1">
           <TypeReference Name="uint8_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="dout_create_DOut7963p0001" Address="0x003FA957" SizeInBytes="1">
+        <Variable Name="dout_create_DOut8086p0001" Address="0x003FA96E" SizeInBytes="1">
           <TypeReference Name="uint8_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="dout_create_DOut7973p0001" Address="0x003FA94A" SizeInBytes="1">
+        <Variable Name="dout_create_DOut8096p0001" Address="0x003FA947" SizeInBytes="1">
           <TypeReference Name="uint8_T" Namespace="TypeDefinition" />
         </Variable>
         <Variable Name="ain_create_FuelPresPin" Address="0x003FA949" SizeInBytes="1">
           <TypeReference Name="uint8_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="ain_read_FuelPresPin" Address="0x003FA96A" SizeInBytes="1">
+        <Variable Name="ain_read_FuelPresPin" Address="0x003FA969" SizeInBytes="1">
           <TypeReference Name="uint8_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="ain_create_SensVoltSensorPin" Address="0x003FA96D" SizeInBytes="1">
+        <Variable Name="ain_create_SensVoltSensorPin" Address="0x003FA96C" SizeInBytes="1">
           <TypeReference Name="uint8_T" Namespace="TypeDefinition" />
         </Variable>
         <Variable Name="ain_read_SensVoltSensorPin" Address="0x003FA94C" SizeInBytes="1">
           <TypeReference Name="uint8_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="oneshot_create_ONESHOT" Address="0x003FA96E" SizeInBytes="1">
+        <Variable Name="oneshot_create_ONESHOT" Address="0x003FA96D" SizeInBytes="1">
           <TypeReference Name="uint8_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="resource_allocation" Address="0x003FA966" SizeInBytes="1">
+        <Variable Name="resource_allocation" Address="0x003FA965" SizeInBytes="1">
           <TypeReference Name="uint8_T" Namespace="TypeDefinition" />
         </Variable>
         <Variable Name="can_tx_err_CAN_1_0" Address="0x003FCAE2" SizeInBytes="1">
@@ -17775,13 +17775,13 @@
         <Variable Name="can_tx_err_CAN_2_0_51" Address="0x003FCADF" SizeInBytes="1">
           <TypeReference Name="uint8_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="can_create_CAN_1" Address="0x003FA964" SizeInBytes="1">
+        <Variable Name="can_create_CAN_1" Address="0x003FA963" SizeInBytes="1">
           <TypeReference Name="uint8_T" Namespace="TypeDefinition" />
         </Variable>
         <Variable Name="protocol_register_CAN_1" Address="0x003FA95C" SizeInBytes="1">
           <TypeReference Name="uint8_T" Namespace="TypeDefinition" />
         </Variable>
-        <Variable Name="can_create_CAN_2" Address="0x003FA968" SizeInBytes="1">
+        <Variable Name="can_create_CAN_2" Address="0x003FA967" SizeInBytes="1">
           <TypeReference Name="uint8_T" Namespace="TypeDefinition" />
         </Variable>
         <Variable Name="protocol_register_CAN_2" Address="0x003FA95D" SizeInBytes="1">
@@ -24204,18 +24204,18 @@
     <Section Name=".ee_unused" Address="0x00070090" Size="20" Type="NOBITS" />
     <Section Name=".ee_engcode" Address="0x000700A4" Size="1595" Type="PROGBITS" />
     <Section Name=".debug_aranges" Address="0x00000000" Size="3912" Type="PROGBITS" />
-    <Section Name=".debug_pubnames" Address="0x00000000" Size="12939" Type="PROGBITS" />
+    <Section Name=".debug_pubnames" Address="0x00000000" Size="13029" Type="PROGBITS" />
     <Section Name=".debug_info" Address="0x00000000" Size="615103" Type="PROGBITS" />
     <Section Name=".debug_abbrev" Address="0x00000000" Size="25126" Type="PROGBITS" />
-    <Section Name=".debug_line" Address="0x00000000" Size="62397" Type="PROGBITS" />
-    <Section Name=".debug_str" Address="0x00000000" Size="92776" Type="PROGBITS" />
+    <Section Name=".debug_line" Address="0x00000000" Size="62411" Type="PROGBITS" />
+    <Section Name=".debug_str" Address="0x00000000" Size="92969" Type="PROGBITS" />
     <Section Name=".debug_loc" Address="0x00000000" Size="52845" Type="PROGBITS" />
     <Section Name=".debug_ranges" Address="0x00000000" Size="7336" Type="PROGBITS" />
     <Section Name=".gnu.attributes" Address="0x00000000" Size="18" Type="OS" />
     <Section Name=".comment" Address="0x00000000" Size="4474" Type="PROGBITS" />
     <Section Name=".shstrtab" Address="0x00000000" Size="422" Type="STRTAB" />
     <Section Name=".symtab" Address="0x00000000" Size="38352" Type="SYMTAB" />
-    <Section Name=".strtab" Address="0x00000000" Size="50748" Type="STRTAB" />
+    <Section Name=".strtab" Address="0x00000000" Size="50863" Type="STRTAB" />
   </Sections>
   <NonGlobalSymbols>
     <Symbol Name="__JCR_LIST__" Address="0x0004EB8C" Section=".jcr" Size="0" />
@@ -24393,15 +24393,15 @@
     <Symbol Name="tmp_word2.6525" Address="0x003FBC0C" Section=".bss" Size="4" />
     <Symbol Name="eventMatrix.1676" Address="0x0004B990" Section=".text" Size="16" />
     <Symbol Name="CSWTCH.4" Address="0x0004B9A0" Section=".text" Size="3" />
-    <Symbol Name="MHCAN_handler_RxSlot_6285p0001" Address="0x0003CDB0" Section=".text" Size="100" />
+    <Symbol Name="MHCAN_handler_RxSlot_6408p0004" Address="0x0003CDB0" Section=".text" Size="100" />
     <Symbol Name="masks" Address="0x0004E70C" Section=".text" Size="16" />
     <Symbol Name="MHCAN_consumers_0x000007FF" Address="0x0004E6EC" Section=".text" Size="8" />
-    <Symbol Name="MHCAN_handler_CCP1" Address="0x0003D0AC" Section=".text" Size="128" />
+    <Symbol Name="MHCAN_handler_Engine_Controller" Address="0x0003D0AC" Section=".text" Size="128" />
     <Symbol Name="MHCAN_consumers_0x1FFFFFFF" Address="0x0004E71C" Section=".text" Size="32" />
-    <Symbol Name="MHCAN_handler_RxSlot_6363p0001" Address="0x0003D12C" Section=".text" Size="148" />
-    <Symbol Name="MHCAN_handler_RxSlot_6362p0004" Address="0x0003D1C0" Section=".text" Size="144" />
-    <Symbol Name="MHCAN_handler_RxSlot_6364p0001" Address="0x0003D250" Section=".text" Size="148" />
-    <Symbol Name="MHCAN_handler_RxSlot_6365p0001" Address="0x0003D2E4" Section=".text" Size="148" />
+    <Symbol Name="MHCAN_handler_RxSlot_6486p0004" Address="0x0003D12C" Section=".text" Size="148" />
+    <Symbol Name="MHCAN_handler_RxSlot_6485p0006" Address="0x0003D1C0" Section=".text" Size="144" />
+    <Symbol Name="MHCAN_handler_RxSlot_6487p0004" Address="0x0003D250" Section=".text" Size="148" />
+    <Symbol Name="MHCAN_handler_RxSlot_6488p0004" Address="0x0003D2E4" Section=".text" Size="148" />
     <Symbol Name="queue_tail.8931" Address="0x003FCAD8" Section=".bss" Size="4" />
     <Symbol Name="Zero" Address="0x0004E758" Section=".text" Size="16" />
     <Symbol Name="npio2_hw" Address="0x0004E768" Section=".text" Size="128" />

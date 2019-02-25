@@ -8,32 +8,32 @@
             <DataStore ref="Volatile">
                <DataType>S_CCPDAQ</DataType>
                <Default> </Default>
-               <Name>mh_CCP1_CCPHandlerInstanceDAQs</Name>
+               <Name>mh_Engine_Controller_CCPHandlerInstanceDAQs</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>S_CCPODT</DataType>
                <Default> </Default>
-               <Name>mh_CCP1_CCPHandlerInstanceODTs</Name>
+               <Name>mh_Engine_Controller_CCPHandlerInstanceODTs</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>uint16</DataType>
-               <Default>49U</Default>
-               <Name>CCP1_StationAddr</Name>
+               <Default>51U</Default>
+               <Name>Engine_Controller_StationAddr</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>uint32</DataType>
-               <Default>418328834U</Default>
-               <Name>CCP1TxID</Name>
+               <Default>418328836U</Default>
+               <Name>Engine_ControllerTxID</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>uint32</DataType>
-               <Default>418316849U</Default>
-               <Name>CCP1RxID</Name>
+               <Default>418316851U</Default>
+               <Name>Engine_ControllerRxID</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>uint32</DataType>
                <Default>0U</Default>
-               <Name>CCP1RxIDMask</Name>
+               <Name>Engine_ControllerRxIDMask</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>uint16</DataType>
@@ -5043,7 +5043,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut8218p0001</Name>
+               <Name>init_resource_DOut8341p0001</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -5248,7 +5248,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut7679p0004</Name>
+               <Name>init_resource_DOut7802p0001</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
@@ -5268,7 +5268,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut7963p0001</Name>
+               <Name>init_resource_DOut8086p0001</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -5278,7 +5278,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut7973p0001</Name>
+               <Name>init_resource_DOut8096p0001</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -5371,147 +5371,147 @@
                <Name>MotoHawkModelSecondsInUse</Name>
              </DataStore>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceODTs</Container>
            		<Name>ODT0</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceODTs</Container>
            		<Name>ODT1</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceODTs</Container>
            		<Name>ODT2</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceODTs</Container>
            		<Name>ODT3</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceODTs</Container>
            		<Name>ODT4</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceODTs</Container>
            		<Name>ODT5</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceODTs</Container>
            		<Name>ODT6</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceODTs</Container>
            		<Name>ODT7</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceODTs</Container>
            		<Name>ODT8</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceODTs</Container>
            		<Name>ODT9</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceODTs</Container>
            		<Name>ODT10</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceODTs</Container>
            		<Name>ODT11</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceODTs</Container>
            		<Name>ODT12</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceODTs</Container>
            		<Name>ODT13</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceODTs</Container>
            		<Name>ODT14</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceODTs</Container>
            		<Name>ODT15</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceODTs</Container>
            		<Name>ODT16</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceODTs</Container>
            		<Name>ODT17</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceODTs</Container>
            		<Name>ODT18</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceODTs</Container>
            		<Name>ODT19</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceODTs</Container>
            		<Name>ODT20</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceODTs</Container>
            		<Name>ODT21</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceODTs</Container>
            		<Name>ODT22</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceODTs</Container>
            		<Name>ODT23</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceODTs</Container>
            		<Name>ODT24</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceODTs</Container>
            		<Name>ODT25</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceODTs</Container>
            		<Name>ODT26</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceODTs</Container>
            		<Name>ODT27</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceODTs</Container>
            		<Name>ODT28</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceODTs</Container>
            		<Name>ODT29</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceODTs</Container>
            		<Name>ODT30</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceODTs</Container>
            		<Name>ODT31</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceDAQs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceDAQs</Container>
            		<Name>DAQ0</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceDAQs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceDAQs</Container>
            		<Name>DAQ1</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceDAQs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceDAQs</Container>
            		<Name>DAQ2</Name>
      		</StructInstance>
 			<StructInstance>
-           		<Container>mh_CCP1_CCPHandlerInstanceDAQs</Container>
+           		<Container>mh_Engine_Controller_CCPHandlerInstanceDAQs</Container>
            		<Name>DAQ3</Name>
      		</StructInstance>
 			<StructInstance>
@@ -8497,65 +8497,65 @@
 		<Add xpath="Application">
 		
 		    <VarDecs>
-			    <DataStoreVarDec ref="CCP1_StationAddr">
+			    <DataStoreVarDec ref="Engine_Controller_StationAddr">
         		                <access>RW RW RW RW</access>
         		                <class>VAR</class>
         		                <exp>1.0</exp>
         		                <format>5.0</format>
         		                <gain>1.0</gain>
-        		                <group>System | CCP | CCP1</group>
-        		                <help>Station ID for CCP handler&#58; CCP1</help>
+        		                <group>System | CCP | Engine_Controller</group>
+        		                <help>Station ID for CCP handler&#58; Engine_Controller</help>
         		                <max>65535.000000</max>
         		                <min>0.000000</min>
-        		                <name>CCP1_StationAddr</name>
+        		                <name>Engine_Controller_StationAddr</name>
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="CCP1TxID">
+			    <DataStoreVarDec ref="Engine_ControllerTxID">
         		                <access>RW RW RW RW</access>
         		                <class>VAR</class>
         		                <exp>1.0</exp>
         		                <format>8.0</format>
         		                <gain>1.0</gain>
-        		                <group>System | CCP | CCP1</group>
-        		                <help>Transmit CAN ID for CCP handler&#58; CCP1</help>
+        		                <group>System | CCP | Engine_Controller</group>
+        		                <help>Transmit CAN ID for CCP handler&#58; Engine_Controller</help>
         		                <max>4294967295.000000</max>
         		                <min>0.000000</min>
-        		                <name>CCP1TxID</name>
+        		                <name>Engine_ControllerTxID</name>
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="CCP1RxID">
+			    <DataStoreVarDec ref="Engine_ControllerRxID">
         		                <access>RW RW RW RW</access>
         		                <class>VAR</class>
         		                <exp>1.0</exp>
         		                <format>8.0</format>
         		                <gain>1.0</gain>
-        		                <group>System | CCP | CCP1</group>
-        		                <help>Receive CAN ID for CCP handler&#58; CCP1</help>
+        		                <group>System | CCP | Engine_Controller</group>
+        		                <help>Receive CAN ID for CCP handler&#58; Engine_Controller</help>
         		                <max>4294967295.000000</max>
         		                <min>0.000000</min>
-        		                <name>CCP1RxID</name>
+        		                <name>Engine_ControllerRxID</name>
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="CCP1RxIDMask">
+			    <DataStoreVarDec ref="Engine_ControllerRxIDMask">
         		                <access>RW RW RW RW</access>
         		                <class>VAR</class>
         		                <exp>1.0</exp>
         		                <format>8.0</format>
         		                <gain>1.0</gain>
-        		                <group>System | CCP | CCP1</group>
-        		                <help>Receive CAN ID Mask for CCP handler&#58; CCP1</help>
+        		                <group>System | CCP | Engine_Controller</group>
+        		                <help>Receive CAN ID Mask for CCP handler&#58; Engine_Controller</help>
         		                <max>4294967295.000000</max>
         		                <min>0.000000</min>
-        		                <name>CCP1RxIDMask</name>
+        		                <name>Engine_ControllerRxIDMask</name>
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
@@ -24945,7 +24945,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut7679p0004</help>
+        		                <help>Digital output pin selection for DOut7802p0001</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>FuelPumpPin</name>
@@ -24979,7 +24979,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut7963p0001</help>
+        		                <help>Digital output pin selection for DOut8086p0001</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>OilPumpPin</name>
@@ -24996,7 +24996,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut7973p0001</help>
+        		                <help>Digital output pin selection for DOut8096p0001</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>O2_Heater</name>
@@ -25269,17 +25269,17 @@
                 <Command>
                     <Description>Dumping DLL to XML</Description>
                     <Order>10000</Order>
-                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\motohawk_dumpdll.exe" -xml  "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\TDB\BaseEngin_133.dll" > "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\TDB\BaseEngin_133.xml"</Execute>
+                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\motohawk_dumpdll.exe" -xml  "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\TDB\BaseEngin_134.dll" > "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\TDB\BaseEngin_134.xml"</Execute>
                 </Command>
                 <Command>
                     <Description>Generating ASAP2 file</Description>
                     <Order>10001</Order>
-                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\ASAP2.exe" -m  "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\TDB\BaseEngin_133.xml" -o  "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\TDB\BaseEngin_133.a2l" -u VirtualCalSpace -asap1b "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\mh_asap1b_ccp_CCP1.xml"</Execute>
+                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\ASAP2.exe" -m  "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\TDB\BaseEngin_134.xml" -o  "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\TDB\BaseEngin_134.a2l" -u VirtualCalSpace -asap1b "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\mh_asap1b_ccp_Engine_Controller.xml"</Execute>
                 </Command>
                 <Command>
                     <Description>Installing ASAP2 file in C:\ECUFiles\TDBDLL\</Description>
                     <Order>10002</Order>
-                    <Execute>@copy "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\TDB\BaseEngin_133.a2l" "C:\ECUFiles\TDBDLL\" > NUL</Execute>
+                    <Execute>@copy "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\EngineController_Rev1\BaseEngineController_A02_Build\TDB\BaseEngin_134.a2l" "C:\ECUFiles\TDBDLL\" > NUL</Execute>
                 </Command>
         </Add>
     

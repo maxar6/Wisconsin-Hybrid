@@ -1167,14 +1167,14 @@
       <Symbol Name="ECTSensorPin_AnalogInput_Create" Address="0x0003B82C" Size="196"/>
       <Symbol Name="MAPSensorPin_AnalogInput_Create" Address="0x0003B8F0" Size="196"/>
       <Symbol Name="ECUP_AnalogInput_Create" Address="0x0003B9B4" Size="144"/>
-      <Symbol Name="DOut7973p0001_DiscreteOutput_Set" Address="0x0003BA44" Size="68"/>
-      <Symbol Name="DOut7963p0001_DiscreteOutput_Set" Address="0x0003BA88" Size="68"/>
-      <Symbol Name="DOut7679p0004_DiscreteOutput_Set" Address="0x0003BACC" Size="68"/>
-      <Symbol Name="DOut8218p0001_DiscreteOutput_Set" Address="0x0003BB10" Size="68"/>
-      <Symbol Name="DOut7973p0001_DiscreteOutput_Create" Address="0x0003BB54" Size="176"/>
-      <Symbol Name="DOut7963p0001_DiscreteOutput_Create" Address="0x0003BC04" Size="176"/>
-      <Symbol Name="DOut7679p0004_DiscreteOutput_Create" Address="0x0003BCB4" Size="176"/>
-      <Symbol Name="DOut8218p0001_DiscreteOutput_Create" Address="0x0003BD64" Size="152"/>
+      <Symbol Name="DOut8096p0001_DiscreteOutput_Set" Address="0x0003BA44" Size="68"/>
+      <Symbol Name="DOut8086p0001_DiscreteOutput_Set" Address="0x0003BA88" Size="68"/>
+      <Symbol Name="DOut7802p0001_DiscreteOutput_Set" Address="0x0003BACC" Size="68"/>
+      <Symbol Name="DOut8341p0001_DiscreteOutput_Set" Address="0x0003BB10" Size="68"/>
+      <Symbol Name="DOut8096p0001_DiscreteOutput_Create" Address="0x0003BB54" Size="176"/>
+      <Symbol Name="DOut8086p0001_DiscreteOutput_Create" Address="0x0003BC04" Size="176"/>
+      <Symbol Name="DOut7802p0001_DiscreteOutput_Create" Address="0x0003BCB4" Size="176"/>
+      <Symbol Name="DOut8341p0001_DiscreteOutput_Create" Address="0x0003BD64" Size="152"/>
       <Symbol Name="ETCPin_PWMOutput_PWMOutput_Stop" Address="0x0003BDFC" Size="64"/>
       <Symbol Name="ETCPin_PWMOutput_PWMOutput_Outputs" Address="0x0003BE3C" Size="76"/>
       <Symbol Name="ETCPin_PWMOutput_PWMOutput_Set" Address="0x0003BE88" Size="276"/>
@@ -1190,39 +1190,39 @@
       <Symbol Name="TablePrelookup_real_T" Address="0x0003C3C4" Size="444"/>
       <Symbol Name="TableInterpolation2D_real_T" Address="0x0003C580" Size="368"/>
       <Symbol Name="TableInterpolation1D_real_T" Address="0x0003C6F0" Size="120"/>
-      <Symbol Name="Trigger_BGND_BASEx10_PERIODIC_19781p0004" Address="0x0003C768" Size="52"/>
-      <Symbol Name="Trigger_BGND_BASEx2_PERIODIC_19780p0004" Address="0x0003C79C" Size="52"/>
-      <Symbol Name="Trigger_BGND_BASE_PERIODIC_19779p0004" Address="0x0003C7D0" Size="52"/>
-      <Symbol Name="Trigger_BGND_BASE_PERIODIC_8250p0001" Address="0x0003C804" Size="1452"/>
-      <Symbol Name="MHCAN_handler_RxSlot_6285p0001" Address="0x0003CDB0" Size="100"/>
+      <Symbol Name="Trigger_BGND_BASEx10_PERIODIC_10118p0005" Address="0x0003C768" Size="52"/>
+      <Symbol Name="Trigger_BGND_BASEx2_PERIODIC_10117p0005" Address="0x0003C79C" Size="52"/>
+      <Symbol Name="Trigger_BGND_BASE_PERIODIC_10116p0005" Address="0x0003C7D0" Size="52"/>
+      <Symbol Name="Trigger_BGND_BASE_PERIODIC_8373p0001" Address="0x0003C804" Size="1452"/>
+      <Symbol Name="MHCAN_handler_RxSlot_6408p0004" Address="0x0003CDB0" Size="100"/>
       <Symbol Name="Trigger_CAN_RX_BusCAN_1_Buf1" Address="0x0003CE14" Size="332"/>
       <Symbol Name="Trigger_CAN_RX_BusCAN_1_Buf14" Address="0x0003CF60" Size="332"/>
-      <Symbol Name="MHCAN_handler_CCP1" Address="0x0003D0AC" Size="128"/>
-      <Symbol Name="MHCAN_handler_RxSlot_6363p0001" Address="0x0003D12C" Size="148"/>
-      <Symbol Name="MHCAN_handler_RxSlot_6362p0004" Address="0x0003D1C0" Size="144"/>
-      <Symbol Name="MHCAN_handler_RxSlot_6364p0001" Address="0x0003D250" Size="148"/>
-      <Symbol Name="MHCAN_handler_RxSlot_6365p0001" Address="0x0003D2E4" Size="148"/>
+      <Symbol Name="MHCAN_handler_Engine_Controller" Address="0x0003D0AC" Size="128"/>
+      <Symbol Name="MHCAN_handler_RxSlot_6486p0004" Address="0x0003D12C" Size="148"/>
+      <Symbol Name="MHCAN_handler_RxSlot_6485p0006" Address="0x0003D1C0" Size="144"/>
+      <Symbol Name="MHCAN_handler_RxSlot_6487p0004" Address="0x0003D250" Size="148"/>
+      <Symbol Name="MHCAN_handler_RxSlot_6488p0004" Address="0x0003D2E4" Size="148"/>
       <Symbol Name="Trigger_CAN_RX_BusCAN_2_Buf14" Address="0x0003D378" Size="332"/>
       <Symbol Name="Trigger_Encoder_Fault_29" Address="0x0003D4C4" Size="32"/>
-      <Symbol Name="Trigger_FGND_10XRTI_PERIODIC_19777p0004" Address="0x0003D4E4" Size="52"/>
-      <Symbol Name="Trigger_FGND_20XRTI_PERIODIC_19778p0004" Address="0x0003D518" Size="52"/>
-      <Symbol Name="Trigger_FGND_2XRTI_PERIODIC_19775p0004" Address="0x0003D54C" Size="52"/>
-      <Symbol Name="Trigger_FGND_5XRTI_PERIODIC_1408p0004" Address="0x0003D580" Size="76"/>
-      <Symbol Name="Trigger_FGND_5XRTI_PERIODIC_1409p0004" Address="0x0003D5CC" Size="264"/>
-      <Symbol Name="Trigger_FGND_5XRTI_PERIODIC_4024p0001" Address="0x0003D6D4" Size="5520"/>
-      <Symbol Name="Trigger_FGND_5XRTI_PERIODIC_7130p0001" Address="0x0003EC64" Size="1256"/>
-      <Symbol Name="Trigger_FGND_5XRTI_PERIODIC_7978p0001" Address="0x0003F14C" Size="3012"/>
-      <Symbol Name="Trigger_FGND_MID_TDC_EVENT_6947p0001" Address="0x0003FD10" Size="100"/>
-      <Symbol Name="Trigger_FGND_RTI_PERIODIC_19776p0004" Address="0x0003FD74" Size="52"/>
-      <Symbol Name="Trigger_FGND_RTI_PERIODIC_8256p0001" Address="0x0003FDA8" Size="32"/>
-      <Symbol Name="Trigger_FGND_TDC1_EVENT_1156p0004" Address="0x0003FDC8" Size="192"/>
-      <Symbol Name="Trigger_FGND_TDC_EVENT_5811p0002" Address="0x0003FE88" Size="100"/>
-      <Symbol Name="Trigger_FGND_TDC_EVENT_7485p0004" Address="0x0003FEEC" Size="92"/>
-      <Symbol Name="Trigger_IDLE_EVENT_11352p0001" Address="0x0003FF48" Size="448"/>
-      <Symbol Name="Trigger_IDLE_EVENT_11406p0001" Address="0x00040108" Size="64"/>
-      <Symbol Name="Trigger_ONE_SECOND_EVENT_19782p0004" Address="0x00040148" Size="52"/>
-      <Symbol Name="Trigger_STARTUP_EVENT_11381p0001" Address="0x0004017C" Size="60"/>
-      <Symbol Name="Trigger_STARTUP_EVENT_6946p0001" Address="0x000401B8" Size="84"/>
+      <Symbol Name="Trigger_FGND_10XRTI_PERIODIC_10114p0005" Address="0x0003D4E4" Size="52"/>
+      <Symbol Name="Trigger_FGND_20XRTI_PERIODIC_10115p0005" Address="0x0003D518" Size="52"/>
+      <Symbol Name="Trigger_FGND_2XRTI_PERIODIC_10112p0005" Address="0x0003D54C" Size="52"/>
+      <Symbol Name="Trigger_FGND_5XRTI_PERIODIC_1409p0004" Address="0x0003D580" Size="76"/>
+      <Symbol Name="Trigger_FGND_5XRTI_PERIODIC_1410p0004" Address="0x0003D5CC" Size="264"/>
+      <Symbol Name="Trigger_FGND_5XRTI_PERIODIC_4141p0001" Address="0x0003D6D4" Size="5520"/>
+      <Symbol Name="Trigger_FGND_5XRTI_PERIODIC_7253p0001" Address="0x0003EC64" Size="1256"/>
+      <Symbol Name="Trigger_FGND_5XRTI_PERIODIC_8101p0001" Address="0x0003F14C" Size="3012"/>
+      <Symbol Name="Trigger_FGND_MID_TDC_EVENT_7070p0005" Address="0x0003FD10" Size="100"/>
+      <Symbol Name="Trigger_FGND_RTI_PERIODIC_10113p0005" Address="0x0003FD74" Size="52"/>
+      <Symbol Name="Trigger_FGND_RTI_PERIODIC_8379p0001" Address="0x0003FDA8" Size="32"/>
+      <Symbol Name="Trigger_FGND_TDC1_EVENT_1157p0004" Address="0x0003FDC8" Size="192"/>
+      <Symbol Name="Trigger_FGND_TDC_EVENT_5928p0005" Address="0x0003FE88" Size="100"/>
+      <Symbol Name="Trigger_FGND_TDC_EVENT_7608p0001" Address="0x0003FEEC" Size="92"/>
+      <Symbol Name="Trigger_IDLE_EVENT_10038p0005" Address="0x0003FF48" Size="64"/>
+      <Symbol Name="Trigger_IDLE_EVENT_9487p0004" Address="0x0003FF88" Size="448"/>
+      <Symbol Name="Trigger_ONE_SECOND_EVENT_10119p0005" Address="0x00040148" Size="52"/>
+      <Symbol Name="Trigger_STARTUP_EVENT_10013p0005" Address="0x0004017C" Size="60"/>
+      <Symbol Name="Trigger_STARTUP_EVENT_7069p0005" Address="0x000401B8" Size="84"/>
       <Symbol Name="exit" Address="0x00040210" Size="84"/>
       <Symbol Name="free" Address="0x00040268" Size="68"/>
       <Symbol Name="malloc" Address="0x000402B0" Size="68"/>
@@ -1485,7 +1485,7 @@
       <Symbol Name="BaseEngineController_A02_M" Address="0x0004B6F8" Size="4"/>
       <Symbol Name="BaseEngineController_A02_ConstB" Address="0x0004B6FC" Size="44"/>
       <Symbol Name="BaseEngineController_A02_ConstP" Address="0x0004B728" Size="24"/>
-      <Symbol Name="mh_CCP1_CCPHandlerConfig" Address="0x0004B96C" Size="24"/>
+      <Symbol Name="mh_Engine_Controller_CCPHandlerConfig" Address="0x0004B96C" Size="24"/>
       <Symbol Name="eventMatrix.1676" Address="0x0004B990" Size="16"/>
       <Symbol Name="CSWTCH.4" Address="0x0004B9A0" Size="3"/>
       <Symbol Name="EriRequestTableList" Address="0x0004B9A3" Size="48"/>
@@ -2067,23 +2067,23 @@
       <Symbol Name="BGND_BASEx10_PERIODIC_RunCnt" Address="0x003FA91C" Size="4"/>
       <Symbol Name="SparkSeqDiag_20_LastPin" Address="0x003FA920" Size="4"/>
       <Symbol Name="VolatileWork" Address="0x003FA924" Size="35"/>
-      <Symbol Name="ain_read_ECUP" Address="0x003FA947" Size="1"/>
+      <Symbol Name="dout_create_DOut8096p0001" Address="0x003FA947" Size="1"/>
       <Symbol Name="ain_create_ECUP" Address="0x003FA948" Size="1"/>
       <Symbol Name="ain_create_FuelPresPin" Address="0x003FA949" Size="1"/>
-      <Symbol Name="dout_create_DOut7973p0001" Address="0x003FA94A" Size="1"/>
+      <Symbol Name="dout_create_DOut7802p0001" Address="0x003FA94A" Size="1"/>
       <Symbol Name="ain_create_SysVoltage" Address="0x003FA94B" Size="1"/>
       <Symbol Name="ain_read_SensVoltSensorPin" Address="0x003FA94C" Size="1"/>
       <Symbol Name="ain_read_OilPresPin" Address="0x003FA94D" Size="1"/>
       <Symbol Name="ain_create_PostO2Pin" Address="0x003FA94E" Size="1"/>
       <Symbol Name="ain_read_TPS1AnalogInput" Address="0x003FA94F" Size="1"/>
       <Symbol Name="freq_in_read_MAF_Pin" Address="0x003FA950" Size="1"/>
-      <Symbol Name="dout_create_DOut7679p0004" Address="0x003FA951" Size="1"/>
-      <Symbol Name="ain_read_MAPSensorPin" Address="0x003FA952" Size="1"/>
+      <Symbol Name="ain_read_MAPSensorPin" Address="0x003FA951" Size="1"/>
+      <Symbol Name="ain_read_ECUP" Address="0x003FA952" Size="1"/>
       <Symbol Name="ain_create_ECTSensorPin" Address="0x003FA953" Size="1"/>
       <Symbol Name="ain_create_TPS2AnalogInput" Address="0x003FA954" Size="1"/>
       <Symbol Name="ain_create_EGRPin" Address="0x003FA955" Size="1"/>
       <Symbol Name="freq_in_create_FuelSensorPin" Address="0x003FA956" Size="1"/>
-      <Symbol Name="dout_create_DOut7963p0001" Address="0x003FA957" Size="1"/>
+      <Symbol Name="dout_create_DOut8341p0001" Address="0x003FA957" Size="1"/>
       <Symbol Name="encoder_create" Address="0x003FA958" Size="1"/>
       <Symbol Name="ain_read_EGRPin" Address="0x003FA959" Size="1"/>
       <Symbol Name="freq_in_read_FuelSensorPin" Address="0x003FA95A" Size="1"/>
@@ -2095,18 +2095,18 @@
       <Symbol Name="INJ_InjectorCreate" Address="0x003FA960" Size="1"/>
       <Symbol Name="freq_in_create_MAF_Pin" Address="0x003FA961" Size="1"/>
       <Symbol Name="ain_read_TPS2AnalogInput" Address="0x003FA962" Size="1"/>
-      <Symbol Name="dout_create_DOut8218p0001" Address="0x003FA963" Size="1"/>
-      <Symbol Name="can_create_CAN_1" Address="0x003FA964" Size="1"/>
-      <Symbol Name="ain_read_SysVoltage" Address="0x003FA965" Size="1"/>
-      <Symbol Name="resource_allocation" Address="0x003FA966" Size="1"/>
-      <Symbol Name="ain_create_IATSensorPin" Address="0x003FA967" Size="1"/>
-      <Symbol Name="can_create_CAN_2" Address="0x003FA968" Size="1"/>
-      <Symbol Name="EST_SparkCreate" Address="0x003FA969" Size="1"/>
-      <Symbol Name="ain_read_FuelPresPin" Address="0x003FA96A" Size="1"/>
-      <Symbol Name="ain_read_IATSensorPin" Address="0x003FA96B" Size="1"/>
-      <Symbol Name="ain_create_TPS1AnalogInput" Address="0x003FA96C" Size="1"/>
-      <Symbol Name="ain_create_SensVoltSensorPin" Address="0x003FA96D" Size="1"/>
-      <Symbol Name="oneshot_create_ONESHOT" Address="0x003FA96E" Size="1"/>
+      <Symbol Name="can_create_CAN_1" Address="0x003FA963" Size="1"/>
+      <Symbol Name="ain_read_SysVoltage" Address="0x003FA964" Size="1"/>
+      <Symbol Name="resource_allocation" Address="0x003FA965" Size="1"/>
+      <Symbol Name="ain_create_IATSensorPin" Address="0x003FA966" Size="1"/>
+      <Symbol Name="can_create_CAN_2" Address="0x003FA967" Size="1"/>
+      <Symbol Name="EST_SparkCreate" Address="0x003FA968" Size="1"/>
+      <Symbol Name="ain_read_FuelPresPin" Address="0x003FA969" Size="1"/>
+      <Symbol Name="ain_read_IATSensorPin" Address="0x003FA96A" Size="1"/>
+      <Symbol Name="ain_create_TPS1AnalogInput" Address="0x003FA96B" Size="1"/>
+      <Symbol Name="ain_create_SensVoltSensorPin" Address="0x003FA96C" Size="1"/>
+      <Symbol Name="oneshot_create_ONESHOT" Address="0x003FA96D" Size="1"/>
+      <Symbol Name="dout_create_DOut8086p0001" Address="0x003FA96E" Size="1"/>
       <Symbol Name="ain_read_PostO2Pin" Address="0x003FA96F" Size="1"/>
       <Symbol Name="ain_create_MAPSensorPin" Address="0x003FA970" Size="1"/>
       <Symbol Name="impure_data" Address="0x003FA978" Size="1064"/>
@@ -2151,9 +2151,11 @@
       <Symbol Name="SparkSeqDiag_20_OpenADC" Address="0x003FBB60" Size="16"/>
       <Symbol Name="SparkSeqDiag_20_Open" Address="0x003FBB70" Size="8"/>
       <Symbol Name="SparkSeqDiag_20_OnTime" Address="0x003FBB78" Size="16"/>
-      <Symbol Name="mh_CCP1_CCPHandlerConfigFrameReady" Address="0x003FBB88" Size="4"/>
-      <Symbol Name="mh_CCP1_CCPHandlerConfigPrescalers" Address="0x003FBB8C" Size="8"/>
-      <Symbol Name="mh_CCP1_CCPHandlerInstance" Address="0x003FBB94" Size="116"/>
+      <Symbol Name="mh_Engine_Controller_CCPHandlerConfigPrescalers" Address="0x003FBB88"
+              Size="8"/>
+      <Symbol Name="mh_Engine_Controller_CCPHandlerInstance" Address="0x003FBB90" Size="116"/>
+      <Symbol Name="mh_Engine_Controller_CCPHandlerConfigFrameReady" Address="0x003FBC04"
+              Size="4"/>
       <Symbol Name="NonVolatile_NonVolatileCRC" Address="0x003FBC08" Size="4"/>
       <Symbol Name="tmp_word2.6525" Address="0x003FBC0C" Size="4"/>
       <Symbol Name="NonVolatile_NonVolatileStatus" Address="0x003FBC10" Size="1"/>
@@ -2164,14 +2166,14 @@
       <Symbol Name="rtNaNF" Address="0x003FCA3C" Size="4"/>
       <Symbol Name="rtInfF" Address="0x003FCA40" Size="4"/>
       <Symbol Name="rtInf" Address="0x003FCA44" Size="4"/>
-      <Symbol Name="MHCAN_directslot_RxSlot_6285p0001" Address="0x003FCA48" Size="15"/>
-      <Symbol Name="MHCAN_queue_CCP1" Address="0x003FCA58" Size="60"/>
-      <Symbol Name="RxSlot_CCP1_ID" Address="0x003FCA94" Size="4"/>
-      <Symbol Name="RxSlot_CCP1_IDMask" Address="0x003FCA98" Size="4"/>
-      <Symbol Name="MHCAN_directslot_RxSlot_6365p0001" Address="0x003FCA9C" Size="15"/>
-      <Symbol Name="MHCAN_directslot_RxSlot_6364p0001" Address="0x003FCAAB" Size="15"/>
-      <Symbol Name="MHCAN_directslot_RxSlot_6363p0001" Address="0x003FCABA" Size="15"/>
-      <Symbol Name="MHCAN_directslot_RxSlot_6362p0004" Address="0x003FCAC9" Size="15"/>
+      <Symbol Name="MHCAN_directslot_RxSlot_6408p0004" Address="0x003FCA48" Size="15"/>
+      <Symbol Name="MHCAN_queue_Engine_Controller" Address="0x003FCA58" Size="60"/>
+      <Symbol Name="RxSlot_Engine_Controller_IDMask" Address="0x003FCA94" Size="4"/>
+      <Symbol Name="RxSlot_Engine_Controller_ID" Address="0x003FCA98" Size="4"/>
+      <Symbol Name="MHCAN_directslot_RxSlot_6488p0004" Address="0x003FCA9C" Size="15"/>
+      <Symbol Name="MHCAN_directslot_RxSlot_6487p0004" Address="0x003FCAAB" Size="15"/>
+      <Symbol Name="MHCAN_directslot_RxSlot_6486p0004" Address="0x003FCABA" Size="15"/>
+      <Symbol Name="MHCAN_directslot_RxSlot_6485p0006" Address="0x003FCAC9" Size="15"/>
       <Symbol Name="queue_tail.8931" Address="0x003FCAD8" Size="4"/>
       <Symbol Name="NextCylinderToInject" Address="0x003FCADC" Size="1"/>
       <Symbol Name="EST_Spark" Address="0x003FCADD" Size="1"/>

@@ -6,6 +6,36 @@
 	<Extension>	
 		<Add xpath="Application/Memory">
             <DataStore ref="Volatile">
+               <DataType>S_CCPDAQ</DataType>
+               <Default> </Default>
+               <Name>mh_CCP_BAT_CCPHandlerInstanceDAQs</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>S_CCPODT</DataType>
+               <Default> </Default>
+               <Name>mh_CCP_BAT_CCPHandlerInstanceODTs</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>uint16</DataType>
+               <Default>50U</Default>
+               <Name>CCP_BAT_StationAddr</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>uint32</DataType>
+               <Default>418328835U</Default>
+               <Name>CCP_BATTxID</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>uint32</DataType>
+               <Default>418316850U</Default>
+               <Name>CCP_BATRxID</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>uint32</DataType>
+               <Default>0U</Default>
+               <Name>CCP_BATRxIDMask</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>ProcessorReboot</Name>
@@ -373,27 +403,42 @@
             <DataStore ref="Volatile">
                <DataType>real32</DataType>
                <Default>0.0</Default>
-               <Name>Temp_IR_TableIn</Name>
+               <Name>Temp_IR_PreIn</Name>
              </DataStore>
             <DataStore ref="NonVolatile">
                <DataType>real32</DataType>
-               <Default>-40.0 -20.0 0.0 20.0 40.0 </Default>
-               <Name>Temp_IR_TableIdxArr</Name>
+               <Default>-40.0 -20.0 0.0 5.0 10.0 15.0 20.0 40.0 </Default>
+               <Name>Temp_IR_PreIdxArr</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>uint16</DataType>
                <Default>0U</Default>
-               <Name>Temp_IR_TableIdx</Name>
+               <Name>Temp_IR_PreIdx</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>real32</DataType>
                <Default>0.0</Default>
-               <Name>Temp_IR_Map</Name>
+               <Name>Volt_IR_PreIn</Name>
              </DataStore>
             <DataStore ref="NonVolatile">
                <DataType>real32</DataType>
-               <Default>0.9 0.5 0.2 0.1 0.1 </Default>
-               <Name>Temp_IR_MapTbl</Name>
+               <Default>2.0 2.5 2.75 3.0 3.25 3.5 2.75 4.0 </Default>
+               <Name>Volt_IR_PreIdxArr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>uint16</DataType>
+               <Default>0U</Default>
+               <Name>Volt_IR_PreIdx</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>MotoHawkInterpolation2D</Name>
+             </DataStore>
+            <DataStore ref="NonVolatile">
+               <DataType>real32</DataType>
+               <Default>0.9 0.5 0.2 0.1 0.1 0.1 0.1 0.1 ;0.9 0.5 0.2 0.1 0.1 0.1 0.1 0.1 ;0.9 0.5 0.2 0.1 0.1 0.1 0.1 0.1 ;0.9 0.5 0.2 0.1 0.1 0.1 0.1 0.1 ;0.9 0.5 0.2 0.1 0.1 0.1 0.1 0.1 ;0.9 0.5 0.2 0.1 0.1 0.1 0.1 0.1 ;0.9 0.5 0.2 0.1 0.1 0.1 0.1 0.1 ;0.9 0.5 0.2 0.1 0.1 0.1 0.1 0.1 </Default>
+               <Name>MotoHawkInterpolation2DMap</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>real32</DataType>
@@ -1031,11 +1076,6 @@
                <Name>Delay3</Name>
              </DataStore>
             <DataStore ref="Volatile">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>vdiff_est_Prb</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>MaxCellTemp_Ovr_ovr</Name>
@@ -1145,56 +1185,281 @@
                <Default>0</Default>
                <Name>CAN_1_std_last_unhandled_id</Name>
              </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>uint32</DataType>
+               <Default>0</Default>
+               <Name>CAN_1_ext_receive_count</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>uint32</DataType>
+               <Default>0</Default>
+               <Name>CAN_1_ext_handled_count</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>uint32</DataType>
+               <Default>0</Default>
+               <Name>CAN_1_ext_last_unhandled_id</Name>
+             </DataStore>
             <DataStore ref="NonVolatile">
                <DataType>uint32</DataType>
                <Default>0</Default>
                <Name>MotoHawkModelSecondsInUse</Name>
              </DataStore>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT0</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT1</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT2</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT3</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT4</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT5</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT6</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT7</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT8</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT9</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT10</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT11</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT12</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT13</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT14</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT15</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT16</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT17</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT18</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT19</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT20</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT21</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT22</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT23</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT24</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT25</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT26</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT27</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT28</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT29</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT30</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT31</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceDAQs</Container>
+           		<Name>DAQ0</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceDAQs</Container>
+           		<Name>DAQ1</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceDAQs</Container>
+           		<Name>DAQ2</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP_BAT_CCPHandlerInstanceDAQs</Container>
+           		<Name>DAQ3</Name>
+     		</StructInstance>
         
         </Add>
 
 		<Add xpath="Application/Types">
+                <StructDef>
+				    <Field>
+        		        <DataType>uint8</DataType>
+        		        <Default>0</Default>
+        		        <Name>DAQStatus</Name>
+        		        <Order>3</Order>
+        			</Field>
+				    <Field>
+        		        <DataType>uint8</DataType>
+        		        <Default>0</Default>
+        		        <Name>EventChannelNumber</Name>
+        		        <Order>5</Order>
+        			</Field>
+				    <Field>
+        		        <DataType>uint8</DataType>
+        		        <Default>0</Default>
+        		        <Name>LastODTNumber</Name>
+        		        <Order>4</Order>
+        			</Field>
+				    <Field>
+        		        <DataType>uint16</DataType>
+        		        <Default>0</Default>
+        		        <Name>Prescaler</Name>
+        		        <Order>2</Order>
+        			</Field>
+				    <Field>
+        		        <DataType>uint32</DataType>
+        		        <Default>0</Default>
+        		        <Name>TxID</Name>
+        		        <Order>1</Order>
+        			</Field>
+        		    <Name>S_CCPDAQ</Name>
+                </StructDef>
+                
+                <StructDef>
+				    <Field>
+        		        <DataType>uint8</DataType>
+        		        <Default>0</Default>
+        		        <Name>DataSize</Name>
+        		        <Order>2</Order>
+        			</Field>
+				    <Field>
+        		        <DataType>reference</DataType>
+        		        <Default>0</Default>
+        		        <Name>pData</Name>
+        		        <Order>1</Order>
+        			</Field>
+        		    <Name>S_CCPODTItem</Name>
+                </StructDef>
+                
+                <StructDef>
+				    <Field>
+        		        <DataType>S_CCPODTItem</DataType>
+        		        <Default>{NULL} {NULL} {NULL} {NULL} {NULL} {NULL} {NULL} </Default>
+        		        <Name>ODTList</Name>
+        		        <Order>2</Order>
+        			</Field>
+				    <Field>
+        		        <DataType>uint8</DataType>
+        		        <Default>0</Default>
+        		        <Name>ODTSize</Name>
+        		        <Order>1</Order>
+        			</Field>
+        		    <Name>S_CCPODT</Name>
+                </StructDef>
+                
 
                 <Enum>
-                    <Name>VarDecEnum_0</Name>
-                    <Item name="Run" value="0" symbol="VARDECENUM_0_RUN"/>
-                    <Item name="Reboot" value="1" symbol="VARDECENUM_0_REBOOT"/>
-                </Enum>
-                
-                <Enum>
                     <Name>VarDecEnum_1</Name>
-                    <Item name="Pass-Through" value="0" symbol="VARDECENUM_1_PASSDASHTHROUGH"/>
-                    <Item name="Override" value="1" symbol="VARDECENUM_1_OVERRIDE"/>
+                    <Item name="Run" value="0" symbol="VARDECENUM_1_RUN"/>
+                    <Item name="Reboot" value="1" symbol="VARDECENUM_1_REBOOT"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_2</Name>
-                    <Item name="Off" value="0" symbol="VARDECENUM_2_OFF"/>
-                    <Item name="On" value="1" symbol="VARDECENUM_2_ON"/>
+                    <Item name="Pass-Through" value="0" symbol="VARDECENUM_2_PASSDASHTHROUGH"/>
+                    <Item name="Override" value="1" symbol="VARDECENUM_2_OVERRIDE"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_3</Name>
-                    <Item name="Run" value="0" symbol="VARDECENUM_3_RUN"/>
-                    <Item name="Restore To Defaults" value="1" symbol="VARDECENUM_3_RESTORETODEFAULTS"/>
+                    <Item name="Off" value="0" symbol="VARDECENUM_3_OFF"/>
+                    <Item name="On" value="1" symbol="VARDECENUM_3_ON"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_4</Name>
                     <Item name="Run" value="0" symbol="VARDECENUM_4_RUN"/>
-                    <Item name="Store To EEPROM" value="1" symbol="VARDECENUM_4_STORETOEEPROM"/>
+                    <Item name="Restore To Defaults" value="1" symbol="VARDECENUM_4_RESTORETODEFAULTS"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_5</Name>
-                    <Item name="Disabled" value="0" symbol="VARDECENUM_5_DISABLED"/>
-                    <Item name="Enabled" value="1" symbol="VARDECENUM_5_ENABLED"/>
+                    <Item name="Run" value="0" symbol="VARDECENUM_5_RUN"/>
+                    <Item name="Store To EEPROM" value="1" symbol="VARDECENUM_5_STORETOEEPROM"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_6</Name>
-                    <Item name="Disable on low ECUP" value="0" symbol="VARDECENUM_6_DISABLEONLOWECUP"/>
-                    <Item name="Keep alive" value="1" symbol="VARDECENUM_6_KEEPALIVE"/>
+                    <Item name="Disabled" value="0" symbol="VARDECENUM_6_DISABLED"/>
+                    <Item name="Enabled" value="1" symbol="VARDECENUM_6_ENABLED"/>
+                </Enum>
+                
+                <Enum>
+                    <Name>VarDecEnum_7</Name>
+                    <Item name="Disable on low ECUP" value="0" symbol="VARDECENUM_7_DISABLEONLOWECUP"/>
+                    <Item name="Keep alive" value="1" symbol="VARDECENUM_7_KEEPALIVE"/>
                 </Enum>
                 
         </Add>
@@ -1202,10 +1467,74 @@
 		<Add xpath="Application">
 		
 		    <VarDecs>
+			    <DataStoreVarDec ref="CCP_BAT_StationAddr">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>5.0</format>
+        		                <gain>1.0</gain>
+        		                <group>System | CCP | CCP_BAT</group>
+        		                <help>Station ID for CCP handler&#58; CCP_BAT</help>
+        		                <max>65535.000000</max>
+        		                <min>0.000000</min>
+        		                <name>CCP_BAT_StationAddr</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="CCP_BATTxID">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>8.0</format>
+        		                <gain>1.0</gain>
+        		                <group>System | CCP | CCP_BAT</group>
+        		                <help>Transmit CAN ID for CCP handler&#58; CCP_BAT</help>
+        		                <max>4294967295.000000</max>
+        		                <min>0.000000</min>
+        		                <name>CCP_BATTxID</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="CCP_BATRxID">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>8.0</format>
+        		                <gain>1.0</gain>
+        		                <group>System | CCP | CCP_BAT</group>
+        		                <help>Receive CAN ID for CCP handler&#58; CCP_BAT</help>
+        		                <max>4294967295.000000</max>
+        		                <min>0.000000</min>
+        		                <name>CCP_BATRxID</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="CCP_BATRxIDMask">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>8.0</format>
+        		                <gain>1.0</gain>
+        		                <group>System | CCP | CCP_BAT</group>
+        		                <help>Receive CAN ID Mask for CCP handler&#58; CCP_BAT</help>
+        		                <max>4294967295.000000</max>
+        		                <min>0.000000</min>
+        		                <name>CCP_BATRxIDMask</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="ProcessorReboot">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_0</enum_name>
+        		                <enum_name>VarDecEnum_1</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -1239,7 +1568,7 @@
 			    <DataStoreVarDec ref="MPRD_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -1255,7 +1584,7 @@
 			    <DataStoreVarDec ref="MPRD_new">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <enum_name>VarDecEnum_3</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -1273,7 +1602,7 @@
 			    <DataStoreVarDec ref="RestoreNVFactoryDefaults">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_3</enum_name>
+        		                <enum_name>VarDecEnum_4</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -1290,7 +1619,7 @@
 			    <DataStoreVarDec ref="StoreNV">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_4</enum_name>
+        		                <enum_name>VarDecEnum_5</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -1307,7 +1636,7 @@
 			    <DataStoreVarDec ref="MPRD">
         		                <access>RO RO RO RO</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_5</enum_name>
+        		                <enum_name>VarDecEnum_6</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -1324,7 +1653,7 @@
 			    <DataStoreVarDec ref="MPRD_KeepAlive">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_6</enum_name>
+        		                <enum_name>VarDecEnum_7</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -1401,7 +1730,7 @@
 			    <DataStoreVarDec ref="TrimpAmpHoursOut_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -1447,7 +1776,7 @@
 			    <DataStoreVarDec ref="StateOfChargeMax_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -1493,7 +1822,7 @@
 			    <DataStoreVarDec ref="StateOfChargeMin_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -1539,7 +1868,7 @@
 			    <DataStoreVarDec ref="TAH_RollingCounter_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -1585,7 +1914,7 @@
 			    <DataStoreVarDec ref="TripAmpsHoursIn_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -1631,7 +1960,7 @@
 			    <DataStoreVarDec ref="CoolantTemperature_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -1677,7 +2006,7 @@
 			    <DataStoreVarDec ref="DPI_RollingCounter_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -1723,7 +2052,7 @@
 			    <DataStoreVarDec ref="MaxCellVoltage_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -1754,7 +2083,7 @@
 			    <DataStoreVarDec ref="MaxCellVoltage__Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -1785,7 +2114,7 @@
 			    <DataStoreVarDec ref="MinCellVoltage_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -1816,7 +2145,7 @@
 			    <DataStoreVarDec ref="MinCellVoltage__Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -1847,7 +2176,7 @@
 			    <DataStoreVarDec ref="MaxCellTemperature_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -1893,7 +2222,7 @@
 			    <DataStoreVarDec ref="MinCellTemperature_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -1939,7 +2268,7 @@
 			    <DataStoreVarDec ref="BatteryVoltage_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -1970,7 +2299,7 @@
 			    <DataStoreVarDec ref="Voltage_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -2001,7 +2330,7 @@
 			    <DataStoreVarDec ref="BatteryCurrent_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -2032,7 +2361,7 @@
 			    <DataStoreVarDec ref="AMPCurrent_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -2078,7 +2407,7 @@
 			    <DataStoreVarDec ref="Current_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -2124,7 +2453,7 @@
 			    <DataStoreVarDec ref="V5V_Reference_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -2186,7 +2515,7 @@
 			    <DataStoreVarDec ref="BusVoltage_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -2217,7 +2546,7 @@
 			    <DataStoreVarDec ref="PVC_RollingCounter_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -2263,7 +2592,7 @@
 			    <DataStoreVarDec ref="MaximumDischargePower_Continuos_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -2279,7 +2608,7 @@
 			    <DataStoreVarDec ref="SOC_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -2370,7 +2699,7 @@
 			    <DataStoreVarDec ref="MaximumRegenPower_Continuous_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -2401,7 +2730,7 @@
 			    <DataStoreVarDec ref="PPLCont_RollingCounter_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -2447,7 +2776,7 @@
 			    <DataStoreVarDec ref="MaximumDischargePower_10s_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -2478,7 +2807,7 @@
 			    <DataStoreVarDec ref="MaximumRegenPower_10s_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -2509,7 +2838,7 @@
 			    <DataStoreVarDec ref="IsolationLevel_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -2555,7 +2884,7 @@
 			    <DataStoreVarDec ref="ActiveDTC_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -2601,7 +2930,7 @@
 			    <DataStoreVarDec ref="PPL10s_RollingCounter_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -2647,7 +2976,7 @@
 			    <DataStoreVarDec ref="JCS_PackIdentifier_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -2693,7 +3022,7 @@
 			    <DataStoreVarDec ref="PackState_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -2724,7 +3053,7 @@
 			    <DataStoreVarDec ref="PackState__Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -2740,7 +3069,7 @@
 			    <DataStoreVarDec ref="FreqStart_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -2786,7 +3115,7 @@
 			    <DataStoreVarDec ref="FreqEnd_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -2847,7 +3176,7 @@
 			    <DataStoreVarDec ref="PrechargeState_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -2878,7 +3207,7 @@
 			    <DataStoreVarDec ref="PrechargeState__Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -2924,7 +3253,7 @@
 			    <DataStoreVarDec ref="HVIL_Status_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -2970,7 +3299,7 @@
 			    <DataStoreVarDec ref="IsolationStatus_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -3016,7 +3345,7 @@
 			    <DataStoreVarDec ref="WakeSignal_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -3062,7 +3391,7 @@
 			    <DataStoreVarDec ref="SleepInhibited_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -3108,7 +3437,7 @@
 			    <DataStoreVarDec ref="CellBalancingActive_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -3124,7 +3453,7 @@
 			    <DataStoreVarDec ref="BalancingCount_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -3170,7 +3499,7 @@
 			    <DataStoreVarDec ref="MIL_Status_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -3216,7 +3545,7 @@
 			    <DataStoreVarDec ref="StateOfCharge_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -3247,7 +3576,7 @@
 			    <DataStoreVarDec ref="PS_RollingCounter_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -3638,7 +3967,7 @@
 			    <DataStoreVarDec ref="DutyCycle_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -3684,7 +4013,7 @@
 			    <DataStoreVarDec ref="Coil1_Pos_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -3715,7 +4044,7 @@
 			    <DataStoreVarDec ref="Coil2_Pos_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -3746,7 +4075,7 @@
 			    <DataStoreVarDec ref="PreCharge_Enable_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -3777,7 +4106,7 @@
 			    <DataStoreVarDec ref="PreCharge_Duty_Cyle_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -3808,7 +4137,7 @@
 			    <DataStoreVarDec ref="PreCharge_Freq_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -3839,7 +4168,7 @@
 			    <DataStoreVarDec ref="Coil1_Neg_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -3885,7 +4214,7 @@
 			    <DataStoreVarDec ref="Coil3_Pos_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -3916,7 +4245,7 @@
 			    <DataStoreVarDec ref="Battery_Enable_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -3989,25 +4318,10 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="vdiff_est_Prb">
-        		                <access>RO RO RO RO</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BatteryController_Rev1|Foreground|Battery|Control|SOC</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>vdiff_est_Prb</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="MaxCellTemp_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -4038,7 +4352,7 @@
 			    <DataStoreVarDec ref="MinCellTemp_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -4069,7 +4383,7 @@
 			    <DataStoreVarDec ref="FaultsDTC_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -4154,25 +4468,25 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Temp_IR_TableIdxArr">
+			    <DataStoreVarDec ref="Temp_IR_PreIdxArr">
         		                <access>RW RW RW RW</access>
         		                <class>prelookup</class>
         		                <exp>1.0</exp>
         		                <format>4.2</format>
         		                <gain>1.0</gain>
         		                <group>BatteryController_Rev1|Foreground|Battery|Control|SOC</group>
-        		                <index>Temp_IR_TableIdx</index>
-        		                <input>Temp_IR_TableIn</input>
-        		                <len>5</len>
+        		                <index>Temp_IR_PreIdx</index>
+        		                <input>Temp_IR_PreIn</input>
+        		                <len>8</len>
         		                <max>100000000000000000.000000</max>
         		                <min>-100000000000000000.000000</min>
-        		                <name>Temp_IR_TableIdxArr</name>
+        		                <name>Temp_IR_PreIdxArr</name>
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Temp_IR_TableIdx">
+			    <DataStoreVarDec ref="Temp_IR_PreIdx">
         		                <access>RO RO RO RO</access>
         		                <class>VAR</class>
         		                <exp>1</exp>
@@ -4181,14 +4495,14 @@
         		                <group>BatteryController_Rev1|Foreground|Battery|Control|SOC</group>
         		                <max>127.998047</max>
         		                <min>0.000000</min>
-        		                <name>Temp_IR_TableIdx</name>
+        		                <name>Temp_IR_PreIdx</name>
         		                <offset>0</offset>
         		                <storage>RAM</storage>
         		                <units>idx.frac</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Temp_IR_TableIn">
+			    <DataStoreVarDec ref="Temp_IR_PreIn">
         		                <access>RO RO RO RO</access>
         		                <class>VAR</class>
         		                <exp>1.0</exp>
@@ -4196,40 +4510,90 @@
         		                <group>BatteryController_Rev1|Foreground|Battery|Control|SOC</group>
         		                <max>100000000000000000.000000</max>
         		                <min>-100000000000000000.000000</min>
-        		                <name>Temp_IR_TableIn</name>
+        		                <name>Temp_IR_PreIn</name>
         		                <offset>0.0</offset>
         		                <storage>RAM</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Temp_IR_MapTbl">
+			    <DataStoreVarDec ref="Volt_IR_PreIdxArr">
         		                <access>RW RW RW RW</access>
-        		                <class>interpolation_1d</class>
+        		                <class>prelookup</class>
         		                <exp>1.0</exp>
-        		                <format>1.2</format>
+        		                <format>4.2</format>
         		                <gain>1.0</gain>
         		                <group>BatteryController_Rev1|Foreground|Battery|Control|SOC</group>
-        		                <len>5</len>
-        		                <max>100.000000</max>
-        		                <min>0.000000</min>
-        		                <name>Temp_IR_MapTbl</name>
+        		                <index>Volt_IR_PreIdx</index>
+        		                <input>Volt_IR_PreIn</input>
+        		                <len>8</len>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Volt_IR_PreIdxArr</name>
         		                <offset>0.0</offset>
-        		                <output>Temp_IR_Map</output>
-        		                <prelookup>Temp_IR_TableIdxArr</prelookup>
         		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Temp_IR_Map">
+			    <DataStoreVarDec ref="Volt_IR_PreIdx">
         		                <access>RO RO RO RO</access>
-        		                <class>var</class>
+        		                <class>VAR</class>
+        		                <exp>1</exp>
+        		                <format>4.2</format>
+        		                <gain>0.001953125</gain>
+        		                <group>BatteryController_Rev1|Foreground|Battery|Control|SOC</group>
+        		                <max>127.998047</max>
+        		                <min>0.000000</min>
+        		                <name>Volt_IR_PreIdx</name>
+        		                <offset>0</offset>
+        		                <storage>RAM</storage>
+        		                <units>idx.frac</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Volt_IR_PreIn">
+        		                <access>RO RO RO RO</access>
+        		                <class>VAR</class>
         		                <exp>1.0</exp>
-        		                <format>1.2</format>
         		                <gain>1.0</gain>
         		                <group>BatteryController_Rev1|Foreground|Battery|Control|SOC</group>
         		                <max>100000000000000000.000000</max>
         		                <min>-100000000000000000.000000</min>
-        		                <name>Temp_IR_Map</name>
+        		                <name>Volt_IR_PreIn</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="MotoHawkInterpolation2DMap">
+        		                <access>RW RW RW RW</access>
+        		                <class>interpolation_2d</class>
+        		                <col_len>8</col_len>
+        		                <col_prelookup>Volt_IR_PreIdxArr</col_prelookup>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BatteryController_Rev1|Foreground|Battery|Control|SOC</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>MotoHawkInterpolation2DMap</name>
+        		                <offset>0.0</offset>
+        		                <output>MotoHawkInterpolation2D</output>
+        		                <row_len>8</row_len>
+        		                <row_prelookup>Temp_IR_PreIdxArr</row_prelookup>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="MotoHawkInterpolation2D">
+        		                <access>RO RO RO RO</access>
+        		                <class>var</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BatteryController_Rev1|Foreground|Battery|Control|SOC</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>MotoHawkInterpolation2D</name>
         		                <offset>0.0</offset>
         		                <storage>RAM</storage>
         		                <update>BACKGND</update>
@@ -4600,6 +4964,54 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="CAN_1_ext_receive_count">
+        		                <access>RO RO RO RO</access>
+        		                <class>VAR</class>
+        		                <exp>1</exp>
+        		                <format>8.0</format>
+        		                <gain>1</gain>
+        		                <group>System | Debug | Resources | CAN</group>
+        		                <help>Total number of received ext CAN messages on bus CAN_1</help>
+        		                <max>4294967295.000000</max>
+        		                <min>0.000000</min>
+        		                <name>CAN_1_ext_receive_count</name>
+        		                <offset>0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="CAN_1_ext_handled_count">
+        		                <access>RO RO RO RO</access>
+        		                <class>VAR</class>
+        		                <exp>1</exp>
+        		                <format>8.0</format>
+        		                <gain>1</gain>
+        		                <group>System | Debug | Resources | CAN</group>
+        		                <help>Total number of handled ext CAN messages on bus CAN_1</help>
+        		                <max>4294967295.000000</max>
+        		                <min>0.000000</min>
+        		                <name>CAN_1_ext_handled_count</name>
+        		                <offset>0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="CAN_1_ext_last_unhandled_id">
+        		                <access>RO RO RO RO</access>
+        		                <class>VAR</class>
+        		                <exp>1</exp>
+        		                <format>8.0</format>
+        		                <gain>1</gain>
+        		                <group>System | Debug | Resources | CAN</group>
+        		                <help>Last received ext CAN message on bus CAN_1, which was unhandled</help>
+        		                <max>4294967295.000000</max>
+        		                <min>0.000000</min>
+        		                <name>CAN_1_ext_last_unhandled_id</name>
+        		                <offset>0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="MotoHawkModelSecondsInUse">
         		                <access>RO RO RO RO</access>
         		                <class>VAR</class>
@@ -4632,6 +5044,21 @@
 			    <Directory>C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\MOTOCO~1\..\ControlCoreClassic\Framework\MultiTask\Source\TPU\Generic\Archives\gcc-powerpc-eabi\4_4_0</Directory>
 			    <File>TPU_ISDL.a</File>
 		    </Library>
+                <Command>
+                    <Description>Dumping DLL to XML</Description>
+                    <Order>10000</Order>
+                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\motohawk_dumpdll.exe" -xml  "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BatteryController_Rev1\BatteryController_Rev1_Build\TDB\BatteryCo_074.dll" > "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BatteryController_Rev1\BatteryController_Rev1_Build\TDB\BatteryCo_074.xml"</Execute>
+                </Command>
+                <Command>
+                    <Description>Generating ASAP2 file</Description>
+                    <Order>10001</Order>
+                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\ASAP2.exe" -m  "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BatteryController_Rev1\BatteryController_Rev1_Build\TDB\BatteryCo_074.xml" -o  "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BatteryController_Rev1\BatteryController_Rev1_Build\TDB\BatteryCo_074.a2l" -u VirtualCalSpace -asap1b "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BatteryController_Rev1\BatteryController_Rev1_Build\mh_asap1b_ccp_CCP_BAT.xml"</Execute>
+                </Command>
+                <Command>
+                    <Description>Installing ASAP2 file in C:\ECUFiles\TDBDLL\</Description>
+                    <Order>10002</Order>
+                    <Execute>@copy "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BatteryController_Rev1\BatteryController_Rev1_Build\TDB\BatteryCo_074.a2l" "C:\ECUFiles\TDBDLL\" > NUL</Execute>
+                </Command>
         </Add>
     
 	</Extension>

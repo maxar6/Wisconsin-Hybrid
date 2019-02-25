@@ -64,28 +64,6 @@ uint16_T TablePrelookup_real_T(real_T in, const volatile real_T ordarr[],
   return ord;
 }
 
-real_T TableInterpolation1D_real_T(uint16_T idx, real_T *tbl_data, uint32_T sz)
-{
-  real_T out;
-  real_T range;
-  real_T lo_value;
-  real_T hi_value;
-  uint16_T frac;
-  uint16_T ord = (idx) >> 9;
-  if (ord >= sz-1) {
-    ord = (uint16_T)(sz-1);
-    out = tbl_data[ord];
-  } else {
-    lo_value = tbl_data[ord];
-    hi_value = tbl_data[ord+1];
-    range = hi_value - lo_value;
-    frac = (idx) & 0x1FF;
-    out = (real_T)(lo_value + ((real_T)((real_T)(frac * range) / 512.0F)));
-  }
-
-  return out;
-}
-
 real_T TableInterpolation2D_real_T(uint16_T row_in, uint16_T col_in, real_T
   *map_data, uint32_T row_sz, uint32_T col_sz)
 {
@@ -123,5 +101,27 @@ real_T TableInterpolation2D_real_T(uint16_T row_in, uint16_T col_in, real_T
   result += (col_frac - q_frac) * r0c1_value;
   result += (q_frac) * r1c1_value;
   out = (real_T)(result / 512.0F);
+  return out;
+}
+
+real_T TableInterpolation1D_real_T(uint16_T idx, real_T *tbl_data, uint32_T sz)
+{
+  real_T out;
+  real_T range;
+  real_T lo_value;
+  real_T hi_value;
+  uint16_T frac;
+  uint16_T ord = (idx) >> 9;
+  if (ord >= sz-1) {
+    ord = (uint16_T)(sz-1);
+    out = tbl_data[ord];
+  } else {
+    lo_value = tbl_data[ord];
+    hi_value = tbl_data[ord+1];
+    range = hi_value - lo_value;
+    frac = (idx) & 0x1FF;
+    out = (real_T)(lo_value + ((real_T)((real_T)(frac * range) / 512.0F)));
+  }
+
   return out;
 }

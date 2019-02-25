@@ -15,8 +15,27 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s35_ReadCANMessage</struct>
+      <struct>BatteryController_Rev1_B.s43_ReadCANMessage</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Inputs|2G BMS</group>
+   </VarDec>
+   <VarDec>
+      <name>BGND_BASEx10_PERIODIC_RunCnt</name>
+      <class>var</class>
+      <access>NA NA RW RW</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>int32</type>
+      <gain>1</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>2147483646</max>
+      <min>-1</min>
+      <format>5.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>int32_T</ctype>
+      <struct>BGND_BASEx10_PERIODIC_RunCnt</struct>
+      <help>The number of times to execute BGND_BASEx10_PERIODIC before pausing.  -1 means run forever</help>
+      <group>System | Debug | Event Pause Counters</group>
    </VarDec>
    <VarDec>
       <name>FgndTimeStackMargin</name>
@@ -71,7 +90,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s16_Positive</struct>
+      <struct>BatteryController_Rev1_B.s24_Positive</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Outputs|Contactors</group>
    </VarDec>
    <VarDec>
@@ -89,7 +108,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s81_Compare</struct>
+      <struct>BatteryController_Rev1_B.s89_Compare</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Outputs|Battery</group>
    </VarDec>
    <VarDec>
@@ -145,7 +164,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s35_Gain2</struct>
+      <struct>BatteryController_Rev1_B.s43_Gain2</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Inputs|2G BMS</group>
    </VarDec>
    <VarDec>
@@ -163,25 +182,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s9_motohawk_interpolation_1d</struct>
-      <group>BatteryController_Rev1|Foreground|Battery|Control|SOC</group>
-   </VarDec>
-   <VarDec>
-      <name>Temp_IR_Map_Prb</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s9_motohawk_interpolation_1d1</struct>
+      <struct>BatteryController_Rev1_B.s17_motohawk_interpolation_1d</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Control|SOC</group>
    </VarDec>
    <VarDec>
@@ -200,7 +201,7 @@
       <format>1.5</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s7_Product</struct>
+      <struct>BatteryController_Rev1_B.s15_Product</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Control|AMP Clamp</group>
    </VarDec>
    <VarDec>
@@ -218,7 +219,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s79_motohawk_interpolation_2d3</struct>
+      <struct>BatteryController_Rev1_B.s87_motohawk_interpolation_2d3</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Outputs|Battery</group>
    </VarDec>
    <VarDec>
@@ -274,7 +275,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s35_Gain</struct>
+      <struct>BatteryController_Rev1_B.s43_Gain</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Inputs|2G BMS</group>
    </VarDec>
    <VarDec>
@@ -369,7 +370,7 @@
       <format>1.5</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s7_Sum</struct>
+      <struct>BatteryController_Rev1_B.s15_Sum</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Control|AMP Clamp</group>
    </VarDec>
    <VarDec>
@@ -387,7 +388,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s44_Merge</struct>
+      <struct>BatteryController_Rev1_B.s52_Merge</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Outputs|Battery</group>
    </VarDec>
    <VarDec>
@@ -424,8 +425,27 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s23_Merge</struct>
+      <struct>BatteryController_Rev1_B.s31_Merge</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Outputs|Battery</group>
+   </VarDec>
+   <VarDec>
+      <name>FGND_20XRTI_PERIODIC_RunCnt</name>
+      <class>var</class>
+      <access>NA NA RW RW</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>int32</type>
+      <gain>1</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>2147483646</max>
+      <min>-1</min>
+      <format>5.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>int32_T</ctype>
+      <struct>FGND_20XRTI_PERIODIC_RunCnt</struct>
+      <help>The number of times to execute FGND_20XRTI_PERIODIC before pausing.  -1 means run forever</help>
+      <group>System | Debug | Event Pause Counters</group>
    </VarDec>
    <VarDec>
       <name>CPUMargin</name>
@@ -499,7 +519,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s20_PackState</struct>
+      <struct>BatteryController_Rev1_B.s28_PackState</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Control|Battery States</group>
    </VarDec>
    <VarDec>
@@ -517,7 +537,7 @@
       <format>8.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s80_DataTypeConversion3</struct>
+      <struct>BatteryController_Rev1_B.s88_DataTypeConversion3</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Outputs|Contactors</group>
    </VarDec>
    <VarDec>
@@ -535,7 +555,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s38_Merge</struct>
+      <struct>BatteryController_Rev1_B.s46_Merge</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Outputs|Battery</group>
    </VarDec>
    <VarDec>
@@ -572,7 +592,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s35_Gain1</struct>
+      <struct>BatteryController_Rev1_B.s43_Gain1</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Inputs|2G BMS</group>
    </VarDec>
    <VarDec>
@@ -591,7 +611,7 @@
       <format>1.5</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s12_amps</struct>
+      <struct>BatteryController_Rev1_B.s20_amps</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Control|AMP Clamp</group>
    </VarDec>
    <VarDec>
@@ -609,7 +629,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s39_Merge</struct>
+      <struct>BatteryController_Rev1_B.s47_Merge</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Outputs|Battery</group>
    </VarDec>
    <VarDec>
@@ -627,8 +647,27 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s31_currState</struct>
+      <struct>BatteryController_Rev1_B.s39_currState</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Control|SOC</group>
+   </VarDec>
+   <VarDec>
+      <name>FGND_2XRTI_PERIODIC_RunCnt</name>
+      <class>var</class>
+      <access>NA NA RW RW</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>int32</type>
+      <gain>1</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>2147483646</max>
+      <min>-1</min>
+      <format>5.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>int32_T</ctype>
+      <struct>FGND_2XRTI_PERIODIC_RunCnt</struct>
+      <help>The number of times to execute FGND_2XRTI_PERIODIC before pausing.  -1 means run forever</help>
+      <group>System | Debug | Event Pause Counters</group>
    </VarDec>
    <VarDec>
       <name>FGND_RTI_PERIODIC_RunCnt</name>
@@ -664,8 +703,45 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s35_ReadCANMessage1</struct>
+      <struct>BatteryController_Rev1_B.s43_ReadCANMessage1</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Inputs|2G BMS</group>
+   </VarDec>
+   <VarDec>
+      <name>IT_Table_Prb</name>
+      <class>var</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+      <gain>1.0</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>100000000000000000.000000</max>
+      <min>-100000000000000000.000000</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>BlockIO_BatteryController_Rev1</ctype>
+      <struct>BatteryController_Rev1_B.s17_motohawk_interpolation_2d</struct>
+      <group>BatteryController_Rev1|Foreground|Battery|Control|SOC</group>
+   </VarDec>
+   <VarDec>
+      <name>BGND_BASEx2_PERIODIC_RunCnt</name>
+      <class>var</class>
+      <access>NA NA RW RW</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>int32</type>
+      <gain>1</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>2147483646</max>
+      <min>-1</min>
+      <format>5.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>int32_T</ctype>
+      <struct>BGND_BASEx2_PERIODIC_RunCnt</struct>
+      <help>The number of times to execute BGND_BASEx2_PERIODIC before pausing.  -1 means run forever</help>
+      <group>System | Debug | Event Pause Counters</group>
    </VarDec>
    <VarDec>
       <name>InterruptStackMargin</name>
@@ -720,7 +796,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s37_DutyCycle</struct>
+      <struct>BatteryController_Rev1_B.s45_DutyCycle</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Outputs|Contactors</group>
    </VarDec>
    <VarDec>
@@ -738,7 +814,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s32_Merge</struct>
+      <struct>BatteryController_Rev1_B.s40_Merge</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Outputs|Battery</group>
    </VarDec>
    <VarDec>
@@ -756,8 +832,27 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s22_Merge</struct>
+      <struct>BatteryController_Rev1_B.s30_Merge</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Outputs|Battery</group>
+   </VarDec>
+   <VarDec>
+      <name>STARTUP_EVENT_RunCnt</name>
+      <class>var</class>
+      <access>NA NA RW RW</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>int32</type>
+      <gain>1</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>2147483646</max>
+      <min>-1</min>
+      <format>5.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>int32_T</ctype>
+      <struct>STARTUP_EVENT_RunCnt</struct>
+      <help>The number of times to execute STARTUP_EVENT before pausing.  -1 means run forever</help>
+      <group>System | Debug | Event Pause Counters</group>
    </VarDec>
    <VarDec>
       <name>HeapMargin</name>
@@ -793,7 +888,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s37_ReadCANMessage_o1</struct>
+      <struct>BatteryController_Rev1_B.s45_ReadCANMessage_o1</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Inputs|Contactors</group>
    </VarDec>
    <VarDec>
@@ -811,7 +906,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s82_Sum1</struct>
+      <struct>BatteryController_Rev1_B.s90_Sum1</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Outputs|Battery</group>
    </VarDec>
    <VarDec>
@@ -834,6 +929,25 @@
       <group>System | NonVolatile Storage</group>
    </VarDec>
    <VarDec>
+      <name>FGND_10XRTI_PERIODIC_RunCnt</name>
+      <class>var</class>
+      <access>NA NA RW RW</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>int32</type>
+      <gain>1</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>2147483646</max>
+      <min>-1</min>
+      <format>5.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>int32_T</ctype>
+      <struct>FGND_10XRTI_PERIODIC_RunCnt</struct>
+      <help>The number of times to execute FGND_10XRTI_PERIODIC before pausing.  -1 means run forever</help>
+      <group>System | Debug | Event Pause Counters</group>
+   </VarDec>
+   <VarDec>
       <name>Current_Prb</name>
       <class>var</class>
       <access>RO RO RO RO</access>
@@ -848,7 +962,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s36_motohawk_ain</struct>
+      <struct>BatteryController_Rev1_B.s44_motohawk_ain</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Inputs|AMP Clamp</group>
    </VarDec>
    <VarDec>
@@ -866,7 +980,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s79_motohawk_interpolation_2d1</struct>
+      <struct>BatteryController_Rev1_B.s87_motohawk_interpolation_2d1</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Outputs|Battery</group>
    </VarDec>
    <VarDec>
@@ -884,7 +998,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s79_motohawk_interpolation_2d</struct>
+      <struct>BatteryController_Rev1_B.s87_motohawk_interpolation_2d</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Outputs|Battery</group>
    </VarDec>
    <VarDec>
@@ -902,7 +1016,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s13_Merge</struct>
+      <struct>BatteryController_Rev1_B.s21_Merge</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Outputs|Battery</group>
    </VarDec>
    <VarDec>
@@ -940,7 +1054,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s35_ReadCANMessage3_o4</struct>
+      <struct>BatteryController_Rev1_B.s43_ReadCANMessage3_o4</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Inputs|2G BMS</group>
    </VarDec>
    <VarDec>
@@ -958,7 +1072,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s35_ReadCANMessage3_o3</struct>
+      <struct>BatteryController_Rev1_B.s43_ReadCANMessage3_o3</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Inputs|2G BMS</group>
    </VarDec>
    <VarDec>
@@ -976,7 +1090,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s21_state</struct>
+      <struct>BatteryController_Rev1_B.s29_state</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Control|Battery States</group>
    </VarDec>
    <VarDec>
@@ -994,7 +1108,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s44_Merge</struct>
+      <struct>BatteryController_Rev1_B.s52_Merge</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Outputs|Battery</group>
    </VarDec>
    <VarDec>
@@ -1012,7 +1126,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s30_Switch</struct>
+      <struct>BatteryController_Rev1_B.s38_Switch</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Control|SOC</group>
    </VarDec>
    <VarDec>
@@ -1030,7 +1144,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s16_Negative</struct>
+      <struct>BatteryController_Rev1_B.s24_Negative</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Outputs|Contactors</group>
    </VarDec>
    <VarDec>
@@ -1048,7 +1162,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s16_PreChargeEnable</struct>
+      <struct>BatteryController_Rev1_B.s24_PreChargeEnable</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Outputs|Contactors</group>
    </VarDec>
    <VarDec>
@@ -1066,7 +1180,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s16_PreChargeCoil</struct>
+      <struct>BatteryController_Rev1_B.s24_PreChargeCoil</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Outputs|Contactors</group>
    </VarDec>
    <VarDec>
@@ -1084,7 +1198,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s82_Sum</struct>
+      <struct>BatteryController_Rev1_B.s90_Sum</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Outputs|Battery</group>
    </VarDec>
    <VarDec>
@@ -1102,7 +1216,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s79_motohawk_interpolation_2d2</struct>
+      <struct>BatteryController_Rev1_B.s87_motohawk_interpolation_2d2</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Outputs|Battery</group>
    </VarDec>
    <VarDec>
@@ -1139,8 +1253,27 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BatteryController_Rev1</ctype>
-      <struct>BatteryController_Rev1_B.s36_motohawk_ain1</struct>
+      <struct>BatteryController_Rev1_B.s44_motohawk_ain1</struct>
       <group>BatteryController_Rev1|Foreground|Battery|Inputs|AMP Clamp</group>
+   </VarDec>
+   <VarDec>
+      <name>IDLE_EVENT_RunCnt</name>
+      <class>var</class>
+      <access>NA NA RW RW</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>int32</type>
+      <gain>1</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>2147483646</max>
+      <min>-1</min>
+      <format>5.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>int32_T</ctype>
+      <struct>IDLE_EVENT_RunCnt</struct>
+      <help>The number of times to execute IDLE_EVENT before pausing.  -1 means run forever</help>
+      <group>System | Debug | Event Pause Counters</group>
    </VarDec>
    <VarDec>
       <name>table_0_rev</name>
@@ -1178,7 +1311,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>29</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/Contactors/motohawk_override_abs10/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/AMP Clamp/motohawk_override_abs1/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000018</name>
@@ -1186,7 +1319,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>18</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/2G BMS/motohawk_override_abs7/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/2G BMS/motohawk_override_abs5/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000007</name>
@@ -1194,7 +1327,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>7</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Control/SOC/motohawk_override_abs9/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Control/AMP Clamp/motohawk_override_abs9/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000019</name>
@@ -1202,7 +1335,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>19</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/2G BMS/motohawk_override_abs8/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/2G BMS/motohawk_override_abs5/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000008</name>
@@ -1210,7 +1343,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>8</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Control/SOC/motohawk_override_abs9/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Control/Battery States/motohawk_override_abs1/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000009</name>
@@ -1218,7 +1351,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>9</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/2G BMS/motohawk_override_abs3/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Control/Battery States/motohawk_override_abs1/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000030</name>
@@ -1226,7 +1359,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>30</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/Contactors/motohawk_override_abs10/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/AMP Clamp/motohawk_override_abs9/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000031</name>
@@ -1234,7 +1367,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>31</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/Contactors/motohawk_override_abs11/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/AMP Clamp/motohawk_override_abs9/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000020</name>
@@ -1242,7 +1375,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>20</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/2G BMS/motohawk_override_abs8/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/2G BMS/motohawk_override_abs6/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000021</name>
@@ -1250,7 +1383,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>21</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/2G BMS/motohawk_override_abs9/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/2G BMS/motohawk_override_abs6/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000010</name>
@@ -1258,7 +1391,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>10</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/2G BMS/motohawk_override_abs3/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Control/Battery States/motohawk_override_abs9/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000022</name>
@@ -1266,7 +1399,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>22</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/2G BMS/motohawk_override_abs9/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/2G BMS/motohawk_override_abs7/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000011</name>
@@ -1274,7 +1407,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>11</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/2G BMS/motohawk_override_abs4/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Control/Battery States/motohawk_override_abs9/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000000</name>
@@ -1282,7 +1415,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>0</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground</false_text>
+            <false_text>BatteryController_Rev1/CCP CAN Protocol/CCP CAN Protocol External Trig1/CCP Command Driver</false_text>
          </item>
          <item>
             <name>CodeCover000023</name>
@@ -1290,7 +1423,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>23</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/AMP Clamp/motohawk_override_abs1/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/2G BMS/motohawk_override_abs7/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000012</name>
@@ -1298,7 +1431,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>12</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/2G BMS/motohawk_override_abs4/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Control/SOC/motohawk_override_abs9/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000001</name>
@@ -1306,7 +1439,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>1</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Control/AMP Clamp/motohawk_override_abs9/NewValue</false_text>
+            <false_text>BatteryController_Rev1/CCP CAN Protocol/CCP CAN Protocol External Trig1/CCP Command Driver/While new CCP Command</false_text>
          </item>
          <item>
             <name>CodeCover000024</name>
@@ -1314,7 +1447,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>24</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/AMP Clamp/motohawk_override_abs1/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/2G BMS/motohawk_override_abs8/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000013</name>
@@ -1322,7 +1455,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>13</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/2G BMS/motohawk_override_abs5/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Control/SOC/motohawk_override_abs9/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000002</name>
@@ -1330,7 +1463,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>2</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Control/AMP Clamp/motohawk_override_abs9/OldValue</false_text>
+            <false_text>BatteryController_Rev1/CCP CAN Protocol/CCP CAN Protocol External Trig1/CCP Command Driver/While new CCP Command/Adjust ID</false_text>
          </item>
          <item>
             <name>CodeCover000025</name>
@@ -1338,7 +1471,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>25</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/AMP Clamp/motohawk_override_abs9/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/2G BMS/motohawk_override_abs8/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000014</name>
@@ -1346,7 +1479,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>14</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/2G BMS/motohawk_override_abs5/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/2G BMS/motohawk_override_abs3/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000003</name>
@@ -1354,7 +1487,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>3</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Control/Battery States/motohawk_override_abs1/NewValue</false_text>
+            <false_text>BatteryController_Rev1/CCP CAN Protocol/CCP CAN Protocol External Trig1/CCP Daq Processing</false_text>
          </item>
          <item>
             <name>CodeCover000026</name>
@@ -1362,7 +1495,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>26</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/AMP Clamp/motohawk_override_abs9/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/2G BMS/motohawk_override_abs9/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000015</name>
@@ -1370,7 +1503,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>15</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/2G BMS/motohawk_override_abs6/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/2G BMS/motohawk_override_abs3/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000004</name>
@@ -1378,7 +1511,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>4</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Control/Battery States/motohawk_override_abs1/OldValue</false_text>
+            <false_text>BatteryController_Rev1/CCP CAN Protocol/CCP CAN Protocol External Trig1/CCP IDLE Processing</false_text>
          </item>
          <item>
             <name>CodeCover000027</name>
@@ -1386,7 +1519,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>27</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/Contactors/Save NV on disconnect</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/2G BMS/motohawk_override_abs9/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000016</name>
@@ -1394,7 +1527,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>16</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/2G BMS/motohawk_override_abs6/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/2G BMS/motohawk_override_abs4/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000005</name>
@@ -1402,7 +1535,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>5</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Control/Battery States/motohawk_override_abs9/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground</false_text>
          </item>
          <item>
             <name>CodeCover000028</name>
@@ -1410,7 +1543,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>28</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/Contactors/Save NV on disconnect/Save NV Vars one tick before MPRD off</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/AMP Clamp/motohawk_override_abs1/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000017</name>
@@ -1418,7 +1551,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>17</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/2G BMS/motohawk_override_abs7/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/2G BMS/motohawk_override_abs4/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000006</name>
@@ -1426,7 +1559,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>6</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Control/Battery States/motohawk_override_abs9/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Control/AMP Clamp/motohawk_override_abs9/NewValue</false_text>
          </item>
       </bits>
    </VarDec>
@@ -1447,7 +1580,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>28</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs2/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs18/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000061</name>
@@ -1455,7 +1588,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>29</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs20/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs18/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000050</name>
@@ -1463,7 +1596,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>18</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs15/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs13/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000062</name>
@@ -1471,7 +1604,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>30</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs20/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs19/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000051</name>
@@ -1479,7 +1612,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>19</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs16/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs13/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000040</name>
@@ -1487,7 +1620,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>8</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs10/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/Contactors/motohawk_override_abs9/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000063</name>
@@ -1495,7 +1628,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>31</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs21/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs19/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000052</name>
@@ -1503,7 +1636,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>20</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs16/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs14/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000041</name>
@@ -1511,7 +1644,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>9</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs11/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/Contactors/motohawk_override_abs9/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000053</name>
@@ -1519,7 +1652,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>21</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs17/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs14/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000042</name>
@@ -1527,7 +1660,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>10</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs11/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs1/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000054</name>
@@ -1535,7 +1668,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>22</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs17/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs15/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000043</name>
@@ -1543,7 +1676,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>11</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs12/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs1/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000032</name>
@@ -1551,7 +1684,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>0</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/Contactors/motohawk_override_abs11/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/Contactors/Save NV on disconnect</false_text>
          </item>
          <item>
             <name>CodeCover000055</name>
@@ -1559,7 +1692,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>23</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs18/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs15/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000044</name>
@@ -1567,7 +1700,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>12</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs12/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs10/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000033</name>
@@ -1575,7 +1708,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>1</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/Contactors/motohawk_override_abs8/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/Contactors/Save NV on disconnect/Save NV Vars one tick before MPRD off</false_text>
          </item>
          <item>
             <name>CodeCover000056</name>
@@ -1583,7 +1716,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>24</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs18/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs16/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000045</name>
@@ -1591,7 +1724,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>13</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs13/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs10/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000034</name>
@@ -1599,7 +1732,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>2</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/Contactors/motohawk_override_abs8/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/Contactors/motohawk_override_abs10/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000057</name>
@@ -1607,7 +1740,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>25</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs19/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs16/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000046</name>
@@ -1615,7 +1748,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>14</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs13/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs11/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000035</name>
@@ -1623,7 +1756,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>3</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/Contactors/motohawk_override_abs9/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/Contactors/motohawk_override_abs10/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000058</name>
@@ -1631,7 +1764,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>26</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs19/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs17/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000047</name>
@@ -1639,7 +1772,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>15</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs14/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs11/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000036</name>
@@ -1647,7 +1780,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>4</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/Contactors/motohawk_override_abs9/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/Contactors/motohawk_override_abs11/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000059</name>
@@ -1655,7 +1788,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>27</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs2/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs17/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000048</name>
@@ -1663,7 +1796,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>16</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs14/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs12/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000037</name>
@@ -1671,7 +1804,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>5</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs1/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/Contactors/motohawk_override_abs11/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000049</name>
@@ -1679,7 +1812,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>17</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs15/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs12/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000038</name>
@@ -1687,7 +1820,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>6</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs1/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/Contactors/motohawk_override_abs8/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000039</name>
@@ -1695,7 +1828,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>7</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs10/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Inputs/Contactors/motohawk_override_abs8/OldValue</false_text>
          </item>
       </bits>
    </VarDec>
@@ -1716,7 +1849,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>26</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs33/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs31/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000091</name>
@@ -1724,7 +1857,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>27</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs34/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs31/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000080</name>
@@ -1732,7 +1865,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>16</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs29/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs27/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000092</name>
@@ -1740,7 +1873,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>28</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs34/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs32/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000081</name>
@@ -1748,7 +1881,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>17</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs3/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs27/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000070</name>
@@ -1756,7 +1889,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>6</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs24/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs22/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000093</name>
@@ -1764,7 +1897,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>29</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs4/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs32/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000082</name>
@@ -1772,7 +1905,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>18</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs3/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs28/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000071</name>
@@ -1780,7 +1913,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>7</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs25/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs22/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000094</name>
@@ -1788,7 +1921,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>30</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs4/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs33/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000083</name>
@@ -1796,7 +1929,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>19</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs30/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs28/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000072</name>
@@ -1804,7 +1937,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>8</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs25/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs23/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000095</name>
@@ -1812,7 +1945,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>31</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs5/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs33/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000084</name>
@@ -1820,7 +1953,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>20</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs30/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs29/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000073</name>
@@ -1828,7 +1961,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>9</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs26/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs23/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000085</name>
@@ -1836,7 +1969,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>21</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs31/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs29/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000074</name>
@@ -1844,7 +1977,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>10</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs26/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs24/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000086</name>
@@ -1852,7 +1985,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>22</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs31/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs3/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000075</name>
@@ -1860,7 +1993,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>11</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs27/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs24/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000064</name>
@@ -1868,7 +2001,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>0</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs21/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs2/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000087</name>
@@ -1876,7 +2009,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>23</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs32/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs3/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000076</name>
@@ -1884,7 +2017,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>12</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs27/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs25/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000065</name>
@@ -1892,7 +2025,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>1</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs22/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs2/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000088</name>
@@ -1900,7 +2033,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>24</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs32/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs30/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000077</name>
@@ -1908,7 +2041,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>13</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs28/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs25/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000066</name>
@@ -1916,7 +2049,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>2</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs22/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs20/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000089</name>
@@ -1924,7 +2057,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>25</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs33/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs30/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000078</name>
@@ -1932,7 +2065,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>14</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs28/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs26/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000067</name>
@@ -1940,7 +2073,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>3</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs23/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs20/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000079</name>
@@ -1948,7 +2081,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>15</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs29/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs26/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000068</name>
@@ -1956,7 +2089,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>4</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs23/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs21/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000069</name>
@@ -1964,7 +2097,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>5</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs24/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs21/OldValue</false_text>
          </item>
       </bits>
    </VarDec>
@@ -1985,7 +2118,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>21</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Contactors/motohawk_override_abs7/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Contactors/motohawk_override_abs4/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000106</name>
@@ -1993,7 +2126,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>10</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Contactors/motohawk_override_abs1/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs8/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000118</name>
@@ -2001,7 +2134,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>22</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Contactors/motohawk_override_abs7/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Contactors/motohawk_override_abs5/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000107</name>
@@ -2009,7 +2142,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>11</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Contactors/motohawk_override_abs2/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs8/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000119</name>
@@ -2017,7 +2150,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>23</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Main Power Relay/Background</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Contactors/motohawk_override_abs5/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000108</name>
@@ -2025,7 +2158,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>12</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Contactors/motohawk_override_abs2/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs9/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000109</name>
@@ -2033,7 +2166,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>13</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Contactors/motohawk_override_abs3/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs9/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000096</name>
@@ -2041,7 +2174,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>0</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs5/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs34/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000097</name>
@@ -2049,7 +2182,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>1</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs6/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs34/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000120</name>
@@ -2057,7 +2190,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>24</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Main Power Relay/Background/Display Variable Event Function-Call/Clear</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Contactors/motohawk_override_abs6/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000098</name>
@@ -2065,7 +2198,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>2</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs6/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs4/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000121</name>
@@ -2073,7 +2206,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>25</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Main Power Relay/Background/Display Variable Event Function-Call1/Clear</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Contactors/motohawk_override_abs6/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000110</name>
@@ -2081,7 +2214,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>14</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Contactors/motohawk_override_abs3/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Contactors/motohawk_override_abs1/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000099</name>
@@ -2089,7 +2222,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>3</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs7/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs4/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000122</name>
@@ -2097,7 +2230,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>26</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Main Power Relay/Background/Post Shutdown two ticks before MPRD off</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Contactors/motohawk_override_abs7/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000111</name>
@@ -2105,7 +2238,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>15</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Contactors/motohawk_override_abs4/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Contactors/motohawk_override_abs1/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000100</name>
@@ -2113,7 +2246,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>4</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs7/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs5/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000123</name>
@@ -2121,7 +2254,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>27</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Main Power Relay/Background/Post Shutdown two ticks before MPRD off/Post Shutdown two ticks before MPRD off</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Contactors/motohawk_override_abs7/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000112</name>
@@ -2129,7 +2262,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>16</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Contactors/motohawk_override_abs4/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Contactors/motohawk_override_abs2/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000101</name>
@@ -2137,7 +2270,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>5</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs8/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs5/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000124</name>
@@ -2145,7 +2278,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>28</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Main Power Relay/Background/Processor Reboot</false_text>
+            <false_text>BatteryController_Rev1/Main Power Relay/Background</false_text>
          </item>
          <item>
             <name>CodeCover000113</name>
@@ -2153,7 +2286,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>17</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Contactors/motohawk_override_abs5/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Contactors/motohawk_override_abs2/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000102</name>
@@ -2161,7 +2294,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>6</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs8/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs6/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000125</name>
@@ -2169,7 +2302,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>29</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Main Power Relay/Background/Save NV Vars one tick before MPRD off</false_text>
+            <false_text>BatteryController_Rev1/Main Power Relay/Background/Display Variable Event Function-Call/Clear</false_text>
          </item>
          <item>
             <name>CodeCover000114</name>
@@ -2177,7 +2310,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>18</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Contactors/motohawk_override_abs5/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Contactors/motohawk_override_abs3/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000103</name>
@@ -2185,7 +2318,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>7</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs9/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs6/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000126</name>
@@ -2193,7 +2326,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>30</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Main Power Relay/Background/Save NV Vars one tick before MPRD off/Save NV Vars one tick before MPRD off</false_text>
+            <false_text>BatteryController_Rev1/Main Power Relay/Background/Display Variable Event Function-Call1/Clear</false_text>
          </item>
          <item>
             <name>CodeCover000115</name>
@@ -2201,7 +2334,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>19</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Contactors/motohawk_override_abs6/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Contactors/motohawk_override_abs3/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000104</name>
@@ -2209,7 +2342,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>8</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs9/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs7/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000127</name>
@@ -2217,7 +2350,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>31</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Main Power Relay/Background/Shutdown power on ECU565-128</false_text>
+            <false_text>BatteryController_Rev1/Main Power Relay/Background/Post Shutdown two ticks before MPRD off</false_text>
          </item>
          <item>
             <name>CodeCover000116</name>
@@ -2225,7 +2358,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>20</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Contactors/motohawk_override_abs6/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Contactors/motohawk_override_abs4/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000105</name>
@@ -2233,7 +2366,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>9</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Contactors/motohawk_override_abs1/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Foreground/Battery/Outputs/Battery/motohawk_override_abs7/OldValue</false_text>
          </item>
       </bits>
    </VarDec>
@@ -2254,7 +2387,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>0</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Main Power Relay/Background/Shutdown power on ECU565-128/Shutdown power on ECU565-128</false_text>
+            <false_text>BatteryController_Rev1/Main Power Relay/Background/Post Shutdown two ticks before MPRD off/Post Shutdown two ticks before MPRD off</false_text>
          </item>
          <item>
             <name>CodeCover000129</name>
@@ -2262,7 +2395,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>1</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Main Power Relay/Background/motohawk_override_abs/NewValue</false_text>
+            <false_text>BatteryController_Rev1/Main Power Relay/Background/Processor Reboot</false_text>
          </item>
          <item>
             <name>CodeCover000130</name>
@@ -2270,7 +2403,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>2</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Main Power Relay/Background/motohawk_override_abs/OldValue</false_text>
+            <false_text>BatteryController_Rev1/Main Power Relay/Background/Save NV Vars one tick before MPRD off</false_text>
          </item>
          <item>
             <name>CodeCover000131</name>
@@ -2278,7 +2411,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>3</bit>
             <true_text>-</true_text>
-            <false_text>BatteryController_Rev1/Main Power Relay/Background/motohawk_restore_nvmem</false_text>
+            <false_text>BatteryController_Rev1/Main Power Relay/Background/Save NV Vars one tick before MPRD off/Save NV Vars one tick before MPRD off</false_text>
          </item>
          <item>
             <name>CodeCover000132</name>
@@ -2286,7 +2419,85 @@
             <help>Determines if this subsystem has run</help>
             <bit>4</bit>
             <true_text>-</true_text>
+            <false_text>BatteryController_Rev1/Main Power Relay/Background/Shutdown power on ECU565-128</false_text>
+         </item>
+         <item>
+            <name>CodeCover000133</name>
+            <group>System | Code Coverage</group>
+            <help>Determines if this subsystem has run</help>
+            <bit>5</bit>
+            <true_text>-</true_text>
+            <false_text>BatteryController_Rev1/Main Power Relay/Background/Shutdown power on ECU565-128/Shutdown power on ECU565-128</false_text>
+         </item>
+         <item>
+            <name>CodeCover000134</name>
+            <group>System | Code Coverage</group>
+            <help>Determines if this subsystem has run</help>
+            <bit>6</bit>
+            <true_text>-</true_text>
+            <false_text>BatteryController_Rev1/Main Power Relay/Background/motohawk_override_abs/NewValue</false_text>
+         </item>
+         <item>
+            <name>CodeCover000135</name>
+            <group>System | Code Coverage</group>
+            <help>Determines if this subsystem has run</help>
+            <bit>7</bit>
+            <true_text>-</true_text>
+            <false_text>BatteryController_Rev1/Main Power Relay/Background/motohawk_override_abs/OldValue</false_text>
+         </item>
+         <item>
+            <name>CodeCover000136</name>
+            <group>System | Code Coverage</group>
+            <help>Determines if this subsystem has run</help>
+            <bit>8</bit>
+            <true_text>-</true_text>
+            <false_text>BatteryController_Rev1/Main Power Relay/Background/motohawk_restore_nvmem</false_text>
+         </item>
+         <item>
+            <name>CodeCover000137</name>
+            <group>System | Code Coverage</group>
+            <help>Determines if this subsystem has run</help>
+            <bit>9</bit>
+            <true_text>-</true_text>
             <false_text>BatteryController_Rev1/Main Power Relay/Background/motohawk_store_nvmem</false_text>
+         </item>
+      </bits>
+   </VarDec>
+   <VarDec>
+      <name>CCP_CCP_BAT_Access</name>
+      <class>bitfield</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <ctype>S_CCPHandlerInstance</ctype>
+      <struct>mh_CCP_BAT_CCPHandlerInstance.UnlockStatus</struct>
+      <help>Current Access Code for CCP Handler CCP_BAT</help>
+      <group>System | CCP | CCP_BAT</group>
+      <bits>
+         <item>
+            <name>CCP_CCP_BAT_CAL</name>
+            <group>System | CCP | CCP_BAT</group>
+            <help>Calibration Authentication Status for CCP Handler CCP_BAT</help>
+            <bit>0</bit>
+            <true_text>Calibration Unlocked</true_text>
+            <false_text>Calibration Locked</false_text>
+         </item>
+         <item>
+            <name>CCP_CCP_BAT_DAQ</name>
+            <group>System | CCP | CCP_BAT</group>
+            <help>Data Acquisition Authentication Status for CCP Handler CCP_BAT</help>
+            <bit>1</bit>
+            <true_text>Data Acquisition Unlocked</true_text>
+            <false_text>Data Acquisition Locked</false_text>
+         </item>
+         <item>
+            <name>CCP_CCP_BAT_PGM</name>
+            <group>System | CCP | CCP_BAT</group>
+            <help>Programming Authentication Status for CCP Handler CCP_BAT</help>
+            <bit>6</bit>
+            <true_text>Programming Unlocked</true_text>
+            <false_text>Programming Locked</false_text>
          </item>
       </bits>
    </VarDec>
@@ -4293,6 +4504,30 @@
          <item name="TPU Error 0x5E" value="94"/>
          <item name="TPU Error 0x5F" value="95"/>
          <default>Illegal Error</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>CCP_CCP_BAT_ConnectionStatus</name>
+      <class>enum</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <gain>1.0</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>255</max>
+      <min>0.000000</min>
+      <format>1.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>S_CCPHandlerInstance</ctype>
+      <struct>mh_CCP_BAT_CCPHandlerInstance.Connected</struct>
+      <help>CCP Handler CCP_BAT connection status</help>
+      <group>System | CCP | CCP_BAT </group>
+      <enum name="VarDecEnum_0">
+         <item name="Not Connected" value="0"/>
+         <item name="Connected" value="1"/>
+         <default>Unknown</default>
       </enum>
    </VarDec>
    <VarDec>

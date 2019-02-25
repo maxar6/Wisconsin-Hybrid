@@ -8,11 +8,11 @@
 #include "BatteryController_Rev1.h"
 
 /*---- DEFINES --------------------------------------------------------------------------------------------*/
-#define DLL_NAME                       "BatteryCo_072"
-#define SRZ_NAME                       "BatteryController_Rev1_072"
+#define DLL_NAME                       "BatteryCo_074"
+#define SRZ_NAME                       "BatteryController_Rev1_074"
 #define MODEL_NAME                     "BatteryController_Rev1"
 #define MODEL_GUID                     "1c823790-94c1-4f9f-95-ed-5c-78-f7-df-2e"
-#define BUILD_GUID                     "2c20b1f2-2f68-4f6b-8e-8e-5f-43-f8-60-40"
+#define BUILD_GUID                     "e1f85e82-e3d0-432c-9d-9e-3a-a3-84-db-cc"
 #define TOKEN_GUID                     "DD8AD11F95A6FC42BFF9AC780840E4B4"
 #define MOTOHAWK_VERSION               "MotoHawk 2011a_sp0.184"
 #define MATLAB_VERSION                 "MATLAB 7.12.0"
@@ -207,16 +207,16 @@ void ApplicationCallback(E_ExecutionEvent in_eEvent)
 
   switch (in_eEvent)
   {
-   case ONE_SECOND_EVENT:
+   case STARTUP_EVENT:
     {
-      if (ONE_SECOND_EVENT_RunCnt != 0) {
-        if (ApplicationStatus == APPLICATION_RUN) {
-          extern void MotoHawkModelSecondsInUseTick(void);
-          MotoHawkModelSecondsInUseTick();
+      if (STARTUP_EVENT_RunCnt != 0) {
+        if (ApplicationStatus == APPLICATION_INIT) {
+          extern void Trigger_STARTUP_EVENT_6778p0001(void);
+          Trigger_STARTUP_EVENT_6778p0001();
         }
 
-        if (ONE_SECOND_EVENT_RunCnt > 0)
-          ONE_SECOND_EVENT_RunCnt--;
+        if (STARTUP_EVENT_RunCnt > 0)
+          STARTUP_EVENT_RunCnt--;
       }
     }
     break;
@@ -229,8 +229,121 @@ void ApplicationCallback(E_ExecutionEvent in_eEvent)
           Trigger_FGND_RTI_PERIODIC_1023p0001();
         }
 
+        if (ApplicationStatus == APPLICATION_RUN) {
+          extern void Trigger_FGND_RTI_PERIODIC_6873p0001(void);
+          Trigger_FGND_RTI_PERIODIC_6873p0001();
+        }
+
         if (FGND_RTI_PERIODIC_RunCnt > 0)
           FGND_RTI_PERIODIC_RunCnt--;
+      }
+    }
+    break;
+
+   case FGND_2XRTI_PERIODIC:
+    {
+      if (FGND_2XRTI_PERIODIC_RunCnt != 0) {
+        if (ApplicationStatus == APPLICATION_RUN) {
+          extern void Trigger_FGND_2XRTI_PERIODIC_6872p0001(void);
+          Trigger_FGND_2XRTI_PERIODIC_6872p0001();
+        }
+
+        if (FGND_2XRTI_PERIODIC_RunCnt > 0)
+          FGND_2XRTI_PERIODIC_RunCnt--;
+      }
+    }
+    break;
+
+   case FGND_10XRTI_PERIODIC:
+    {
+      if (FGND_10XRTI_PERIODIC_RunCnt != 0) {
+        if (ApplicationStatus == APPLICATION_RUN) {
+          extern void Trigger_FGND_10XRTI_PERIODIC_6874p0001(void);
+          Trigger_FGND_10XRTI_PERIODIC_6874p0001();
+        }
+
+        if (FGND_10XRTI_PERIODIC_RunCnt > 0)
+          FGND_10XRTI_PERIODIC_RunCnt--;
+      }
+    }
+    break;
+
+   case FGND_20XRTI_PERIODIC:
+    {
+      if (FGND_20XRTI_PERIODIC_RunCnt != 0) {
+        if (ApplicationStatus == APPLICATION_RUN) {
+          extern void Trigger_FGND_20XRTI_PERIODIC_6875p0001(void);
+          Trigger_FGND_20XRTI_PERIODIC_6875p0001();
+        }
+
+        if (FGND_20XRTI_PERIODIC_RunCnt > 0)
+          FGND_20XRTI_PERIODIC_RunCnt--;
+      }
+    }
+    break;
+
+   case BGND_BASEx2_PERIODIC:
+    {
+      if (BGND_BASEx2_PERIODIC_RunCnt != 0) {
+        if (ApplicationStatus == APPLICATION_RUN) {
+          extern void Trigger_BGND_BASEx2_PERIODIC_6877p0001(void);
+          Trigger_BGND_BASEx2_PERIODIC_6877p0001();
+        }
+
+        if (BGND_BASEx2_PERIODIC_RunCnt > 0)
+          BGND_BASEx2_PERIODIC_RunCnt--;
+      }
+    }
+    break;
+
+   case BGND_BASEx10_PERIODIC:
+    {
+      if (BGND_BASEx10_PERIODIC_RunCnt != 0) {
+        if (ApplicationStatus == APPLICATION_RUN) {
+          extern void Trigger_BGND_BASEx10_PERIODIC_6878p0001(void);
+          Trigger_BGND_BASEx10_PERIODIC_6878p0001();
+        }
+
+        if (BGND_BASEx10_PERIODIC_RunCnt > 0)
+          BGND_BASEx10_PERIODIC_RunCnt--;
+      }
+    }
+    break;
+
+   case ONE_SECOND_EVENT:
+    {
+      if (ONE_SECOND_EVENT_RunCnt != 0) {
+        if (ApplicationStatus == APPLICATION_RUN) {
+          extern void MotoHawkModelSecondsInUseTick(void);
+          MotoHawkModelSecondsInUseTick();
+        }
+
+        if (ApplicationStatus == APPLICATION_RUN) {
+          extern void Trigger_ONE_SECOND_EVENT_6879p0001(void);
+          Trigger_ONE_SECOND_EVENT_6879p0001();
+        }
+
+        if (ONE_SECOND_EVENT_RunCnt > 0)
+          ONE_SECOND_EVENT_RunCnt--;
+      }
+    }
+    break;
+
+   case IDLE_EVENT:
+    {
+      if (IDLE_EVENT_RunCnt != 0) {
+        {
+          extern void Trigger_IDLE_EVENT_6749p0009(void);
+          Trigger_IDLE_EVENT_6749p0009();
+        }
+
+        {
+          extern void Trigger_IDLE_EVENT_6803p0001(void);
+          Trigger_IDLE_EVENT_6803p0001();
+        }
+
+        if (IDLE_EVENT_RunCnt > 0)
+          IDLE_EVENT_RunCnt--;
       }
     }
     break;
@@ -238,6 +351,11 @@ void ApplicationCallback(E_ExecutionEvent in_eEvent)
    case BGND_BASE_PERIODIC:
     {
       if (BGND_BASE_PERIODIC_RunCnt != 0) {
+        if (ApplicationStatus == APPLICATION_RUN) {
+          extern void Trigger_BGND_BASE_PERIODIC_6876p0001(void);
+          Trigger_BGND_BASE_PERIODIC_6876p0001();
+        }
+
         if (ApplicationStatus == APPLICATION_RUN) {
           extern void Trigger_BGND_BASE_PERIODIC_2304p0006(void);
           Trigger_BGND_BASE_PERIODIC_2304p0006();
@@ -341,7 +459,19 @@ void OpenApplication(E_OpenEventType open_type)
 
       { FGND_RTI_PERIODIC, RES_ENABLED },
 
+      { IDLE_EVENT, RES_ENABLED },
+
+      { FGND_2XRTI_PERIODIC, RES_ENABLED },
+
+      { FGND_10XRTI_PERIODIC, RES_ENABLED },
+
+      { FGND_20XRTI_PERIODIC, RES_ENABLED },
+
       { BGND_BASE_PERIODIC, RES_ENABLED },
+
+      { BGND_BASEx2_PERIODIC, RES_ENABLED },
+
+      { BGND_BASEx10_PERIODIC, RES_ENABLED },
     };
 
     SchedulerCreateAttribObj.pfAppCback = ApplicationCallback;
@@ -349,7 +479,7 @@ void OpenApplication(E_OpenEventType open_type)
       USE_SCHD_CONDITION;
     SchedulerCreateAttribObj.DynamicObj.EventCondObj.pEventCondObjArr =
       EventCondObjArr;
-    SchedulerCreateAttribObj.DynamicObj.EventCondObj.uNumEventsInArray = 3;
+    SchedulerCreateAttribObj.DynamicObj.EventCondObj.uNumEventsInArray = 9;
     SchedulerCreateAttribObj.uValidAttributesMask = USE_SCHD_DYNAMIC_ON_CREATE |
       USE_SCHD_TASK_MANAGER;
     CreateResource(RES_SCHEDULER, &SchedulerCreateAttribObj, BEHAVIOUR_SCHEDULER);
@@ -382,11 +512,11 @@ void OpenApplication(E_OpenEventType open_type)
   {
     S_CANCreateResourceAttributes CANCreateObj;
     NativeError_S sErrorResult;
-    S_CANQueueDefn QueueDefnObjArr[2];
+    S_CANQueueDefn QueueDefnObjArr[3];
 
     /* Initialize Message Buffers */
-    S_TouCANMessageBufferInfo TouCANMessageDefnObjArr[2];
-    CANCreateObj.DynamicObj.BufferInfoObj.u1NumBuffersDefined = 2;
+    S_TouCANMessageBufferInfo TouCANMessageDefnObjArr[3];
+    CANCreateObj.DynamicObj.BufferInfoObj.u1NumBuffersDefined = 3;
     CANCreateObj.DynamicObj.BufferInfoObj.pTouCANBufferObjArr =
       TouCANMessageDefnObjArr;
 
@@ -418,9 +548,30 @@ void OpenApplication(E_OpenEventType open_type)
       TouCANMessageDefnObjArr[1].eBufferID = TOUCAN_BUFF1;
     }
 
+    {
+      /* Receive Buffer */
+      extern void Trigger_CAN_RX_BusCAN_1_Buf14(E_TouCANNotificationEventMask,
+        TouCANBufferHandle, NativePtrSizedInt_U);
+      TouCANMessageDefnObjArr[2].BufferDefnObj.NotifyObj.pfNotify =
+        Trigger_CAN_RX_BusCAN_1_Buf14;
+      TouCANMessageDefnObjArr[2].BufferDefnObj.NotifyObj.uAppDataToSendOnNotify =
+        0;
+      TouCANMessageDefnObjArr[2].BufferDefnObj.NotifyObj.eEventMaskToNotifyOn =
+        CAN_RECEIPT;
+      TouCANMessageDefnObjArr[2].BufferDefnObj.ConfigObj.u4MessageIDMask =
+        0x1fffffff;
+      TouCANMessageDefnObjArr[2].BufferDefnObj.ConfigObj.u4MessageID =
+        0x18ef0232;
+      TouCANMessageDefnObjArr[2].BufferDefnObj.ConfigObj.eFlags =
+        CAN_MESSAGE_EXTENDED | CAN_MESSAGE_RECEIVE;
+      TouCANMessageDefnObjArr[2].BufferDefnObj.uValidAttributesMask =
+        USE_CAN_BUFFER_SETTING | USE_CAN_BUFFER_NOTIFY;
+      TouCANMessageDefnObjArr[2].eBufferID = TOUCAN_BUFF14;
+    }
+
     /* Initialize CAN Message Queues */
     CANCreateObj.SWQueueObj.pQueueDefnObjArr = QueueDefnObjArr;
-    CANCreateObj.SWQueueObj.uNumQueueDefns = 2;
+    CANCreateObj.SWQueueObj.uNumQueueDefns = 3;
 
     /* Queue 0: Buffer 0 */
     QueueDefnObjArr[0].eBufferId = TOUCAN_BUFF0;
@@ -431,6 +582,11 @@ void OpenApplication(E_OpenEventType open_type)
     QueueDefnObjArr[1].eBufferId = TOUCAN_BUFF1;
     QueueDefnObjArr[1].b1IsForTransmission = FALSE;
     QueueDefnObjArr[1].u2MinQueueDepth = 16;
+
+    /* Queue 2: Buffer 14 */
+    QueueDefnObjArr[2].eBufferId = TOUCAN_BUFF14;
+    QueueDefnObjArr[2].b1IsForTransmission = FALSE;
+    QueueDefnObjArr[2].u2MinQueueDepth = 16;
 
     /* Setup Baud Rate */
     CANCreateObj.eBaud = CAN_BAUD_500K;

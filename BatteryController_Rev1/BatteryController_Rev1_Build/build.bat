@@ -26,11 +26,11 @@
 							@if ERRORLEVEL 1 exit junk
 					@"%MOTOCODER_DIR%\bin\Transform" -o TDB/ParsedAndCombinedVardecs.xml TDB/ParsedAndCCVardecs.xml "%MOTOCODER_DIR%\Transforms\VarDecs_Merge.xsl" AdditionalVardecsXML="%cd%\MotoCoderVarDecs.xml"
 							@if ERRORLEVEL 1 exit junk
-					@"%MOTOCODER_DIR%\bin\Transform" -o TDB/BatteryCo_072.xml TDB/ParsedAndCombinedVardecs.xml "%MOTOCODER_DIR%\Transforms\VarDecs_Reorder.xsl" application-url="%CD%\ApplicationDescriptor.xml" maxTableSize=65535
+					@"%MOTOCODER_DIR%\bin\Transform" -o TDB/BatteryCo_074.xml TDB/ParsedAndCombinedVardecs.xml "%MOTOCODER_DIR%\Transforms\VarDecs_Reorder.xsl" application-url="%CD%\ApplicationDescriptor.xml" maxTableSize=65535
 							@if ERRORLEVEL 1 exit junk
-					@"%MOTOCODER_DIR%\bin\Transform" TDB/BatteryCo_072.xml "%MOTOCODER_DIR%\Transforms\VarDecs_Transform.xsl" includeFiles="CommonInclude.h,BatteryController_Rev1.h,TDB_Includes.h" GenDLL=1 GenTDB=1
+					@"%MOTOCODER_DIR%\bin\Transform" TDB/BatteryCo_074.xml "%MOTOCODER_DIR%\Transforms\VarDecs_Transform.xsl" includeFiles="CommonInclude.h,BatteryController_Rev1.h,TDB_Includes.h" GenDLL=1 GenTDB=1
 							@if ERRORLEVEL 1 exit junk
-					@"%MOTOCODER_DIR%\bin\nant\bin\nant.exe" -buildfile:TDB\Database.build -D:required.installdir="C:\Program Files (x86)\Woodward\DevelopmentTools\Toolchains\GCC\win32-pe\4_4_0" -D:database.basename=BatteryCo_072 -q -nologo rebuild
+					@"%MOTOCODER_DIR%\bin\nant\bin\nant.exe" -buildfile:TDB\Database.build -D:required.installdir="C:\Program Files (x86)\Woodward\DevelopmentTools\Toolchains\GCC\win32-pe\4_4_0" -D:database.basename=BatteryCo_074 -q -nologo rebuild
 							@if ERRORLEVEL 1 exit junk
 					@echo ### Completed MotoTune DLL
 							@if ERRORLEVEL 1 exit junk
@@ -42,7 +42,7 @@
 					
 				
 					@echo ### Call MotoConvert
-					@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\BatteryController_Rev1.map -srec=.\Target\BatteryController_Rev1.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=BatteryController_Rev1.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x0006FFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\BatteryController_Rev1_072.srz
+					@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\BatteryController_Rev1.map -srec=.\Target\BatteryController_Rev1.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=BatteryController_Rev1.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x0006FFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\BatteryController_Rev1_074.srz
 							@if ERRORLEVEL 1 exit junk
 					
 				
@@ -55,16 +55,31 @@
 							@if ERRORLEVEL 1 exit junk
 					
 				
-					@echo ### Copy BatteryCo_072.dll and BatteryController_Rev1_072.srz
-					@if exist C:\ECUFiles\TDBDLL\\*.* copy /Y .\TDB\BatteryCo_072.dll C:\ECUFiles\TDBDLL\ > NUL
+					@echo ### Copy BatteryCo_074.dll and BatteryController_Rev1_074.srz
+					@if exist C:\ECUFiles\TDBDLL\\*.* copy /Y .\TDB\BatteryCo_074.dll C:\ECUFiles\TDBDLL\ > NUL
 							@if ERRORLEVEL 1 exit junk
-					@if exist C:\ECUFiles\Programs\*.* copy /Y .\Target\BatteryController_Rev1_072.srz C:\ECUFiles\Programs > NUL
+					@if exist C:\ECUFiles\Programs\*.* copy /Y .\Target\BatteryController_Rev1_074.srz C:\ECUFiles\Programs > NUL
 							@if ERRORLEVEL 1 exit junk
 					
 				@"C:\Program Files (x86)\Woodward\DevelopmentTools\Toolchains\GCC\powerpc-eabi\4_4_0\\bin\nm.exe" -f sysv .\Target\BatteryController_Rev1.elf > .\Target\BatteryController_Rev1.sym
 							@if ERRORLEVEL 1 exit junk
 					
 				@if exist "%MOTOCODER_DIR%\bin\ESTconvert.exe" "%MOTOCODER_DIR%\bin\ESTconvert.exe" .\Target\BatteryController_Rev1.elf -b -c > NUL 2>&1
+					
+				
+					@echo ### Dumping DLL to XML
+					@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\motohawk_dumpdll.exe" -xml "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BatteryController_Rev1\BatteryController_Rev1_Build\TDB\BatteryCo_074.dll" > "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BatteryController_Rev1\BatteryController_Rev1_Build\TDB\BatteryCo_074.xml"
+							@if ERRORLEVEL 1 exit junk
+					
+				
+					@echo ### Generating ASAP2 file
+					@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\ASAP2.exe" -m "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BatteryController_Rev1\BatteryController_Rev1_Build\TDB\BatteryCo_074.xml" -o "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BatteryController_Rev1\BatteryController_Rev1_Build\TDB\BatteryCo_074.a2l" -u VirtualCalSpace -asap1b "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BatteryController_Rev1\BatteryController_Rev1_Build\mh_asap1b_ccp_CCP_BAT.xml"
+							@if ERRORLEVEL 1 exit junk
+					
+				
+					@echo ### Installing ASAP2 file in C:\ECUFiles\TDBDLL\
+					@copy "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BatteryController_Rev1\BatteryController_Rev1_Build\TDB\BatteryCo_074.a2l" "C:\ECUFiles\TDBDLL\" > NUL
+							@if ERRORLEVEL 1 exit junk
 					
 			
 			@echo ### Successful Build with MotoCoder

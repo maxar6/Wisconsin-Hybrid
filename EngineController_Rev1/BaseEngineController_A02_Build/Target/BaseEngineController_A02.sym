@@ -108,8 +108,8 @@ CRCDataRequest      |000461e0|   T  |              FUNC|0000005c|     |.text
 CRCStatusRequest    |00045f18|   T  |              FUNC|000000d4|     |.text
 CRCTableArr         |00054424|   R  |            OBJECT|00000030|     |.crcconstants
 CSAngleToTCR2Angle  |0000e210|   T  |              FUNC|00000068|     |.text
-CSWTCH.10           |0004ea70|   t  |            OBJECT|00000002|     |.text
 CSWTCH.10           |0004b348|   t  |            OBJECT|00000014|     |.text
+CSWTCH.10           |0004ea70|   t  |            OBJECT|00000002|     |.text
 CSWTCH.13           |0004ea74|   t  |            OBJECT|00000040|     |.text
 CSWTCH.17           |0004b400|   t  |            OBJECT|0000000c|     |.text
 CSWTCH.19           |0004ea34|   t  |            OBJECT|0000003c|     |.text
@@ -122,8 +122,8 @@ CSWTCH.40           |0004b368|   t  |            OBJECT|00000016|     |.text
 CSWTCH.43           |0004b390|   t  |            OBJECT|00000005|     |.text
 CSWTCH.46           |0004b398|   t  |            OBJECT|00000012|     |.text
 CSWTCH.46           |0004b598|   t  |            OBJECT|0000002c|     |.text
-CSWTCH.49           |0004b3b0|   t  |            OBJECT|00000008|     |.text
 CSWTCH.49           |0004b5c4|   t  |            OBJECT|00000028|     |.text
+CSWTCH.49           |0004b3b0|   t  |            OBJECT|00000008|     |.text
 CSWTCH.52           |0004b3ac|   t  |            OBJECT|00000003|     |.text
 CSWTCH.55           |0004b3b8|   t  |            OBJECT|00000011|     |.text
 CSWTCH.58           |0004b3e0|   t  |            OBJECT|00000017|     |.text
@@ -249,14 +249,14 @@ DFMCommandCback     |0004623c|   T  |              FUNC|00000044|     |.text
 DFMInitRequest      |0004628c|   T  |              FUNC|00000060|     |.text
 DFMStatusRequest    |0004634c|   T  |              FUNC|00000060|     |.text
 DFMUpdateRequest    |000462ec|   T  |              FUNC|00000060|     |.text
-DOut7679p0004_DiscreteOutput_Create|0003bcb4|   T  |              FUNC|000000b0|     |.text
-DOut7679p0004_DiscreteOutput_Set|0003bacc|   T  |              FUNC|00000044|     |.text
-DOut7963p0001_DiscreteOutput_Create|0003bc04|   T  |              FUNC|000000b0|     |.text
-DOut7963p0001_DiscreteOutput_Set|0003ba88|   T  |              FUNC|00000044|     |.text
-DOut7973p0001_DiscreteOutput_Create|0003bb54|   T  |              FUNC|000000b0|     |.text
-DOut7973p0001_DiscreteOutput_Set|0003ba44|   T  |              FUNC|00000044|     |.text
-DOut8218p0001_DiscreteOutput_Create|0003bd64|   T  |              FUNC|00000098|     |.text
-DOut8218p0001_DiscreteOutput_Set|0003bb10|   T  |              FUNC|00000044|     |.text
+DOut7802p0001_DiscreteOutput_Create|0003bcb4|   T  |              FUNC|000000b0|     |.text
+DOut7802p0001_DiscreteOutput_Set|0003bacc|   T  |              FUNC|00000044|     |.text
+DOut8086p0001_DiscreteOutput_Create|0003bc04|   T  |              FUNC|000000b0|     |.text
+DOut8086p0001_DiscreteOutput_Set|0003ba88|   T  |              FUNC|00000044|     |.text
+DOut8096p0001_DiscreteOutput_Create|0003bb54|   T  |              FUNC|000000b0|     |.text
+DOut8096p0001_DiscreteOutput_Set|0003ba44|   T  |              FUNC|00000044|     |.text
+DOut8341p0001_DiscreteOutput_Create|0003bd64|   T  |              FUNC|00000098|     |.text
+DOut8341p0001_DiscreteOutput_Set|0003bb10|   T  |              FUNC|00000044|     |.text
 DPTMCR_init_val     |0004f6ae|   G  |            OBJECT|00000002|     |.sdata2
 DataBPISR           |00008e34|   T  |              FUNC|00000010|     |.text
 DataProtectISR      |00008e24|   T  |              FUNC|00000010|     |.text
@@ -312,7 +312,7 @@ ESTDiag_LS_ModeRequest|0001cd28|   T  |              FUNC|00000100|     |.text
 ESTDiag_LS_StateUpdate|0001ce28|   T  |              FUNC|00000088|     |.text
 ESTSeqOutMethods    |000522ac|   G  |            OBJECT|00000024|     |.sdata2
 EST_Spark           |003fcadd|   B  |            OBJECT|00000001|     |.bss
-EST_SparkCreate     |003fa969|   D  |            OBJECT|00000001|     |.data
+EST_SparkCreate     |003fa968|   D  |            OBJECT|00000001|     |.data
 ETCPin_PWMOutput_PWMOutput_Create|0003aa04|   T  |              FUNC|00000010|     |.text
 ETCPin_PWMOutput_PWMOutput_Outputs|0003be3c|   T  |              FUNC|0000004c|     |.text
 ETCPin_PWMOutput_PWMOutput_Set|0003be88|   T  |              FUNC|00000114|     |.text
@@ -849,23 +849,23 @@ MDA_MSMethods       |00051c92|   G  |            OBJECT|00000008|     |.sdata2
 MDA_Methods         |0004ef4e|   G  |            OBJECT|00000020|     |.sdata2
 MDA_Relay           |00053244|   G  |            OBJECT|00000008|     |.sdata2
 MHCAN_consumers_0x000007FF|0004e6ec|   t  |            OBJECT|00000008|     |.text
-MHCAN_consumers_0x1FFFFFFF|0004e71c|   t  |            OBJECT|00000020|     |.text
 MHCAN_consumers_0x1FFFFFFF|0004e704|   t  |            OBJECT|00000008|     |.text
+MHCAN_consumers_0x1FFFFFFF|0004e71c|   t  |            OBJECT|00000020|     |.text
 MHCAN_dequeue       |00029f28|   T  |              FUNC|00000064|     |.text
-MHCAN_directslot_RxSlot_6285p0001|003fca48|   B  |            OBJECT|0000000f|     |.bss
-MHCAN_directslot_RxSlot_6362p0004|003fcac9|   B  |            OBJECT|0000000f|     |.bss
-MHCAN_directslot_RxSlot_6363p0001|003fcaba|   B  |            OBJECT|0000000f|     |.bss
-MHCAN_directslot_RxSlot_6364p0001|003fcaab|   B  |            OBJECT|0000000f|     |.bss
-MHCAN_directslot_RxSlot_6365p0001|003fca9c|   B  |            OBJECT|0000000f|     |.bss
+MHCAN_directslot_RxSlot_6408p0004|003fca48|   B  |            OBJECT|0000000f|     |.bss
+MHCAN_directslot_RxSlot_6485p0006|003fcac9|   B  |            OBJECT|0000000f|     |.bss
+MHCAN_directslot_RxSlot_6486p0004|003fcaba|   B  |            OBJECT|0000000f|     |.bss
+MHCAN_directslot_RxSlot_6487p0004|003fcaab|   B  |            OBJECT|0000000f|     |.bss
+MHCAN_directslot_RxSlot_6488p0004|003fca9c|   B  |            OBJECT|0000000f|     |.bss
 MHCAN_enqueue       |00029edc|   T  |              FUNC|0000004c|     |.text
 MHCAN_getdirect     |00029f8c|   T  |              FUNC|0000003c|     |.text
-MHCAN_handler_CCP1  |0003d0ac|   t  |              FUNC|00000080|     |.text
-MHCAN_handler_RxSlot_6285p0001|0003cdb0|   t  |              FUNC|00000064|     |.text
-MHCAN_handler_RxSlot_6362p0004|0003d1c0|   t  |              FUNC|00000090|     |.text
-MHCAN_handler_RxSlot_6363p0001|0003d12c|   t  |              FUNC|00000094|     |.text
-MHCAN_handler_RxSlot_6364p0001|0003d250|   t  |              FUNC|00000094|     |.text
-MHCAN_handler_RxSlot_6365p0001|0003d2e4|   t  |              FUNC|00000094|     |.text
-MHCAN_queue_CCP1    |003fca58|   B  |            OBJECT|0000003c|     |.bss
+MHCAN_handler_Engine_Controller|0003d0ac|   t  |              FUNC|00000080|     |.text
+MHCAN_handler_RxSlot_6408p0004|0003cdb0|   t  |              FUNC|00000064|     |.text
+MHCAN_handler_RxSlot_6485p0006|0003d1c0|   t  |              FUNC|00000090|     |.text
+MHCAN_handler_RxSlot_6486p0004|0003d12c|   t  |              FUNC|00000094|     |.text
+MHCAN_handler_RxSlot_6487p0004|0003d250|   t  |              FUNC|00000094|     |.text
+MHCAN_handler_RxSlot_6488p0004|0003d2e4|   t  |              FUNC|00000094|     |.text
+MHCAN_queue_Engine_Controller|003fca58|   B  |            OBJECT|0000003c|     |.bss
 MIOS1ISRs           |00009378|   T  |              FUNC|00000090|     |.text
 MPRD_Relay          |00053234|   G  |            OBJECT|00000008|     |.sdata2
 MPWMSMConfigToSetPinHi|0004ee52|   G  |            OBJECT|00000002|     |.sdata2
@@ -1287,8 +1287,8 @@ ResourceCreateStatusArr|003fa4c8|   S  |            OBJECT|00000090|     |.sbss
 ResourcesAttribArr  |000529d2|   G  |            OBJECT|00000750|     |.sdata2
 ReturnCRC32Value    |00043224|   T  |              FUNC|0000000c|     |.text
 RflctdCRC32Tbl      |00053614|   G  |            OBJECT|00000400|     |.sdata2
-RxSlot_CCP1_ID      |003fca94|   B  |            OBJECT|00000004|     |.bss
-RxSlot_CCP1_IDMask  |003fca98|   B  |            OBJECT|00000004|     |.bss
+RxSlot_Engine_Controller_ID|003fca98|   B  |            OBJECT|00000004|     |.bss
+RxSlot_Engine_Controller_IDMask|003fca94|   B  |            OBJECT|00000004|     |.bss
 SPI_EEPROMErrorAddr |003f99cc|   S  |            OBJECT|00000004|     |.sbss
 SPI_EEPROMErrorCnt_ru1|003f99d0|   S  |            OBJECT|00000001|     |.sbss
 STARTUP_EVENT_RunCnt|003fa90c|   D  |            OBJECT|00000004|     |.data
@@ -1616,33 +1616,33 @@ TransmitPacketOnTouCAN|0004527c|   T  |              FUNC|00000238|     |.text
 TransmitPacketUnsupported|00045278|   T  |              FUNC|00000004|     |.text
 TransmitQueuedPacketUsingQueuedTX|00011f84|   t  |              FUNC|00000160|     |.text
 TriggerRuntimeData  |003fa215|   S  |            OBJECT|00000012|     |.sbss
-Trigger_BGND_BASE_PERIODIC_19779p0004|0003c7d0|   T  |              FUNC|00000034|     |.text
-Trigger_BGND_BASE_PERIODIC_8250p0001|0003c804|   T  |              FUNC|000005ac|     |.text
-Trigger_BGND_BASEx10_PERIODIC_19781p0004|0003c768|   T  |              FUNC|00000034|     |.text
-Trigger_BGND_BASEx2_PERIODIC_19780p0004|0003c79c|   T  |              FUNC|00000034|     |.text
+Trigger_BGND_BASE_PERIODIC_10116p0005|0003c7d0|   T  |              FUNC|00000034|     |.text
+Trigger_BGND_BASE_PERIODIC_8373p0001|0003c804|   T  |              FUNC|000005ac|     |.text
+Trigger_BGND_BASEx10_PERIODIC_10118p0005|0003c768|   T  |              FUNC|00000034|     |.text
+Trigger_BGND_BASEx2_PERIODIC_10117p0005|0003c79c|   T  |              FUNC|00000034|     |.text
 Trigger_CAN_RX_BusCAN_1_Buf1|0003ce14|   T  |              FUNC|0000014c|     |.text
 Trigger_CAN_RX_BusCAN_1_Buf14|0003cf60|   T  |              FUNC|0000014c|     |.text
 Trigger_CAN_RX_BusCAN_2_Buf14|0003d378|   T  |              FUNC|0000014c|     |.text
 Trigger_Encoder_Fault_29|0003d4c4|   T  |              FUNC|00000020|     |.text
-Trigger_FGND_10XRTI_PERIODIC_19777p0004|0003d4e4|   T  |              FUNC|00000034|     |.text
-Trigger_FGND_20XRTI_PERIODIC_19778p0004|0003d518|   T  |              FUNC|00000034|     |.text
-Trigger_FGND_2XRTI_PERIODIC_19775p0004|0003d54c|   T  |              FUNC|00000034|     |.text
-Trigger_FGND_5XRTI_PERIODIC_1408p0004|0003d580|   T  |              FUNC|0000004c|     |.text
-Trigger_FGND_5XRTI_PERIODIC_1409p0004|0003d5cc|   T  |              FUNC|00000108|     |.text
-Trigger_FGND_5XRTI_PERIODIC_4024p0001|0003d6d4|   T  |              FUNC|00001590|     |.text
-Trigger_FGND_5XRTI_PERIODIC_7130p0001|0003ec64|   T  |              FUNC|000004e8|     |.text
-Trigger_FGND_5XRTI_PERIODIC_7978p0001|0003f14c|   T  |              FUNC|00000bc4|     |.text
-Trigger_FGND_MID_TDC_EVENT_6947p0001|0003fd10|   T  |              FUNC|00000064|     |.text
-Trigger_FGND_RTI_PERIODIC_19776p0004|0003fd74|   T  |              FUNC|00000034|     |.text
-Trigger_FGND_RTI_PERIODIC_8256p0001|0003fda8|   T  |              FUNC|00000020|     |.text
-Trigger_FGND_TDC1_EVENT_1156p0004|0003fdc8|   T  |              FUNC|000000c0|     |.text
-Trigger_FGND_TDC_EVENT_5811p0002|0003fe88|   T  |              FUNC|00000064|     |.text
-Trigger_FGND_TDC_EVENT_7485p0004|0003feec|   T  |              FUNC|0000005c|     |.text
-Trigger_IDLE_EVENT_11352p0001|0003ff48|   T  |              FUNC|000001c0|     |.text
-Trigger_IDLE_EVENT_11406p0001|00040108|   T  |              FUNC|00000040|     |.text
-Trigger_ONE_SECOND_EVENT_19782p0004|00040148|   T  |              FUNC|00000034|     |.text
-Trigger_STARTUP_EVENT_11381p0001|0004017c|   T  |              FUNC|0000003c|     |.text
-Trigger_STARTUP_EVENT_6946p0001|000401b8|   T  |              FUNC|00000054|     |.text
+Trigger_FGND_10XRTI_PERIODIC_10114p0005|0003d4e4|   T  |              FUNC|00000034|     |.text
+Trigger_FGND_20XRTI_PERIODIC_10115p0005|0003d518|   T  |              FUNC|00000034|     |.text
+Trigger_FGND_2XRTI_PERIODIC_10112p0005|0003d54c|   T  |              FUNC|00000034|     |.text
+Trigger_FGND_5XRTI_PERIODIC_1409p0004|0003d580|   T  |              FUNC|0000004c|     |.text
+Trigger_FGND_5XRTI_PERIODIC_1410p0004|0003d5cc|   T  |              FUNC|00000108|     |.text
+Trigger_FGND_5XRTI_PERIODIC_4141p0001|0003d6d4|   T  |              FUNC|00001590|     |.text
+Trigger_FGND_5XRTI_PERIODIC_7253p0001|0003ec64|   T  |              FUNC|000004e8|     |.text
+Trigger_FGND_5XRTI_PERIODIC_8101p0001|0003f14c|   T  |              FUNC|00000bc4|     |.text
+Trigger_FGND_MID_TDC_EVENT_7070p0005|0003fd10|   T  |              FUNC|00000064|     |.text
+Trigger_FGND_RTI_PERIODIC_10113p0005|0003fd74|   T  |              FUNC|00000034|     |.text
+Trigger_FGND_RTI_PERIODIC_8379p0001|0003fda8|   T  |              FUNC|00000020|     |.text
+Trigger_FGND_TDC1_EVENT_1157p0004|0003fdc8|   T  |              FUNC|000000c0|     |.text
+Trigger_FGND_TDC_EVENT_5928p0005|0003fe88|   T  |              FUNC|00000064|     |.text
+Trigger_FGND_TDC_EVENT_7608p0001|0003feec|   T  |              FUNC|0000005c|     |.text
+Trigger_IDLE_EVENT_10038p0005|0003ff48|   T  |              FUNC|00000040|     |.text
+Trigger_IDLE_EVENT_9487p0004|0003ff88|   T  |              FUNC|000001c0|     |.text
+Trigger_ONE_SECOND_EVENT_10119p0005|00040148|   T  |              FUNC|00000034|     |.text
+Trigger_STARTUP_EVENT_10013p0005|0004017c|   T  |              FUNC|0000003c|     |.text
+Trigger_STARTUP_EVENT_7069p0005|000401b8|   T  |              FUNC|00000054|     |.text
 UnexpectedExtISR    |003f9862|   S  |            OBJECT|00000001|     |.sbss
 UnexpectedExtISRCnt |003f9863|   S  |            OBJECT|00000001|     |.sbss
 UnexpectedExtISRHandler|00009240|   T  |              FUNC|00000014|     |.text
@@ -1726,8 +1726,8 @@ __CTOR_END__        |0004eb80|   D  |            OBJECT|        |     |.ctors
 __CTOR_LIST__       |0004eb7c|   d  |            OBJECT|        |     |.ctors
 __CTOR_LIST__       |0004eb80|   D  |            OBJECT|        |     |.ctors
 __DTOR_END__        |0004eb88|   D  |            OBJECT|        |     |.dtors
-__DTOR_LIST__       |0004eb84|   d  |            OBJECT|        |     |.dtors
 __DTOR_LIST__       |0004eb88|   D  |            OBJECT|        |     |.dtors
+__DTOR_LIST__       |0004eb84|   d  |            OBJECT|        |     |.dtors
 __JCR_END__         |0004eb8c|   d  |            OBJECT|        |     |.jcr
 __JCR_LIST__        |0004eb8c|   d  |            OBJECT|        |     |.jcr
 __SBSS2_END__       |00053dec|   R  |            OBJECT|        |     |.romcals
@@ -1806,24 +1806,24 @@ ain_create_ECTSensorPin|003fa953|   D  |            OBJECT|00000001|     |.data
 ain_create_ECUP     |003fa948|   D  |            OBJECT|00000001|     |.data
 ain_create_EGRPin   |003fa955|   D  |            OBJECT|00000001|     |.data
 ain_create_FuelPresPin|003fa949|   D  |            OBJECT|00000001|     |.data
-ain_create_IATSensorPin|003fa967|   D  |            OBJECT|00000001|     |.data
+ain_create_IATSensorPin|003fa966|   D  |            OBJECT|00000001|     |.data
 ain_create_MAPSensorPin|003fa970|   D  |            OBJECT|00000001|     |.data
 ain_create_OilPresPin|003fa95f|   D  |            OBJECT|00000001|     |.data
 ain_create_PostO2Pin|003fa94e|   D  |            OBJECT|00000001|     |.data
-ain_create_SensVoltSensorPin|003fa96d|   D  |            OBJECT|00000001|     |.data
+ain_create_SensVoltSensorPin|003fa96c|   D  |            OBJECT|00000001|     |.data
 ain_create_SysVoltage|003fa94b|   D  |            OBJECT|00000001|     |.data
-ain_create_TPS1AnalogInput|003fa96c|   D  |            OBJECT|00000001|     |.data
+ain_create_TPS1AnalogInput|003fa96b|   D  |            OBJECT|00000001|     |.data
 ain_create_TPS2AnalogInput|003fa954|   D  |            OBJECT|00000001|     |.data
 ain_read_ECTSensorPin|003fa95e|   D  |            OBJECT|00000001|     |.data
-ain_read_ECUP       |003fa947|   D  |            OBJECT|00000001|     |.data
+ain_read_ECUP       |003fa952|   D  |            OBJECT|00000001|     |.data
 ain_read_EGRPin     |003fa959|   D  |            OBJECT|00000001|     |.data
-ain_read_FuelPresPin|003fa96a|   D  |            OBJECT|00000001|     |.data
-ain_read_IATSensorPin|003fa96b|   D  |            OBJECT|00000001|     |.data
-ain_read_MAPSensorPin|003fa952|   D  |            OBJECT|00000001|     |.data
+ain_read_FuelPresPin|003fa969|   D  |            OBJECT|00000001|     |.data
+ain_read_IATSensorPin|003fa96a|   D  |            OBJECT|00000001|     |.data
+ain_read_MAPSensorPin|003fa951|   D  |            OBJECT|00000001|     |.data
 ain_read_OilPresPin |003fa94d|   D  |            OBJECT|00000001|     |.data
 ain_read_PostO2Pin  |003fa96f|   D  |            OBJECT|00000001|     |.data
 ain_read_SensVoltSensorPin|003fa94c|   D  |            OBJECT|00000001|     |.data
-ain_read_SysVoltage |003fa965|   D  |            OBJECT|00000001|     |.data
+ain_read_SysVoltage |003fa964|   D  |            OBJECT|00000001|     |.data
 ain_read_TPS1AnalogInput|003fa94f|   D  |            OBJECT|00000001|     |.data
 ain_read_TPS2AnalogInput|003fa962|   D  |            OBJECT|00000001|     |.data
 array_entry_ru1.4854|003fb1d0|   b  |            OBJECT|00000001|     |.bss
@@ -1833,8 +1833,8 @@ calculate_crc       |0003a2c4|   T  |              FUNC|0000006c|     |.text
 call___do_global_ctors_aux|00048ab0|   t  |              FUNC|        |     |.text
 call___do_global_dtors_aux|000081cc|   t  |              FUNC|        |     |.text
 call_frame_dummy    |00008254|   t  |              FUNC|        |     |.text
-can_create_CAN_1    |003fa964|   D  |            OBJECT|00000001|     |.data
-can_create_CAN_2    |003fa968|   D  |            OBJECT|00000001|     |.data
+can_create_CAN_1    |003fa963|   D  |            OBJECT|00000001|     |.data
+can_create_CAN_2    |003fa967|   D  |            OBJECT|00000001|     |.data
 can_tx_err_CAN_1_0  |003fcae2|   B  |            OBJECT|00000001|     |.bss
 can_tx_err_CAN_1_0_50|003fcaec|   B  |            OBJECT|00000001|     |.bss
 can_tx_err_CAN_2_0  |003fcae1|   B  |            OBJECT|00000001|     |.bss
@@ -1842,10 +1842,10 @@ can_tx_err_CAN_2_0_51|003fcadf|   B  |            OBJECT|00000001|     |.bss
 ceil                |00041554|   T  |              FUNC|000001bc|     |.text
 completed.3529      |003fb1ac|   b  |            OBJECT|00000001|     |.bss
 copysign            |000431d8|   T  |              FUNC|00000040|     |.text
-dout_create_DOut7679p0004|003fa951|   D  |            OBJECT|00000001|     |.data
-dout_create_DOut7963p0001|003fa957|   D  |            OBJECT|00000001|     |.data
-dout_create_DOut7973p0001|003fa94a|   D  |            OBJECT|00000001|     |.data
-dout_create_DOut8218p0001|003fa963|   D  |            OBJECT|00000001|     |.data
+dout_create_DOut7802p0001|003fa94a|   D  |            OBJECT|00000001|     |.data
+dout_create_DOut8086p0001|003fa96e|   D  |            OBJECT|00000001|     |.data
+dout_create_DOut8096p0001|003fa947|   D  |            OBJECT|00000001|     |.data
+dout_create_DOut8341p0001|003fa957|   D  |            OBJECT|00000001|     |.data
 dtor_idx.3531       |003fb1b0|   b  |            OBJECT|00000004|     |.bss
 ee_app_status       |0007000c|   B  |            NOTYPE|        |     |.ee_app_status
 ee_crypto           |00070010|   B  |            NOTYPE|        |     |.ee_crypto
@@ -2159,10 +2159,6 @@ matherr             |00042ff4|   T  |              FUNC|00000008|     |.text
 memcmp              |00040bb8|   T  |              FUNC|000000d4|     |.text
 memcpy              |00040c8c|   T  |              FUNC|00000118|     |.text
 memset              |00040da4|   T  |              FUNC|0000012c|     |.text
-mh_CCP1_CCPHandlerConfig|0004b96c|   T  |            OBJECT|00000018|     |.text
-mh_CCP1_CCPHandlerConfigFrameReady|003fbb88|   B  |            OBJECT|00000004|     |.bss
-mh_CCP1_CCPHandlerConfigPrescalers|003fbb8c|   B  |            OBJECT|00000008|     |.bss
-mh_CCP1_CCPHandlerInstance|003fbb94|   B  |            OBJECT|00000074|     |.bss
 mh_CCPMemReadCallback|00039ec4|   T  |              FUNC|00000144|     |.text
 mh_CCPMemWriteCallback|000398e0|   T  |              FUNC|00000140|     |.text
 mh_CCPReplyOK       |00037958|   T  |              FUNC|0000005c|     |.text
@@ -2170,6 +2166,10 @@ mh_CCP_checksum     |000389b0|   T  |              FUNC|0000021c|     |.text
 mh_CCP_getmem       |00039a20|   T  |              FUNC|000000b8|     |.text
 mh_CCP_setmem       |0003945c|   T  |              FUNC|000001b8|     |.text
 mh_CCP_setmem_no_callback|00038be8|   T  |              FUNC|00000068|     |.text
+mh_Engine_Controller_CCPHandlerConfig|0004b96c|   T  |            OBJECT|00000018|     |.text
+mh_Engine_Controller_CCPHandlerConfigFrameReady|003fbc04|   B  |            OBJECT|00000004|     |.bss
+mh_Engine_Controller_CCPHandlerConfigPrescalers|003fbb88|   B  |            OBJECT|00000008|     |.bss
+mh_Engine_Controller_CCPHandlerInstance|003fbb90|   B  |            OBJECT|00000074|     |.bss
 mh_InitCCP          |000392a0|   T  |              FUNC|000000cc|     |.text
 mh_MTAIsCalibration |00038290|   T  |              FUNC|00000070|     |.text
 mh_MTAPostIncrement |000388a0|   T  |              FUNC|00000110|     |.text
@@ -2208,7 +2208,7 @@ motohawk_encoder_fault|003fbaa9|   B  |            OBJECT|00000001|     |.bss
 motohawk_encoder_status|003fbaa8|   B  |            OBJECT|00000001|     |.bss
 npio2_hw            |0004e768|   t  |            OBJECT|00000080|     |.text
 object.3558         |003fb1b4|   b  |            OBJECT|00000018|     |.bss
-oneshot_create_ONESHOT|003fa96e|   D  |            OBJECT|00000001|     |.data
+oneshot_create_ONESHOT|003fa96d|   D  |            OBJECT|00000001|     |.data
 pCmdAm29BL162_2AA   |00051aec|   G  |            OBJECT|00000004|     |.sdata2
 pCmdAm29BL162_555   |00051ae8|   G  |            OBJECT|00000004|     |.sdata2
 prevApplicationStatus|003fb1dd|   B  |            OBJECT|00000001|     |.bss
@@ -2218,7 +2218,7 @@ protocol_register_CAN_2|003fa95d|   D  |            OBJECT|00000001|     |.data
 pwm_create_ETCPin_PWMOutput|003fa95b|   D  |            OBJECT|00000001|     |.data
 pwm_set_ETCPin_PWMOutput|003fcae0|   B  |            OBJECT|00000001|     |.bss
 queue_tail.8931     |003fcad8|   b  |            OBJECT|00000004|     |.bss
-resource_allocation |003fa966|   D  |            OBJECT|00000001|     |.data
+resource_allocation |003fa965|   D  |            OBJECT|00000001|     |.data
 rtInf               |003fca44|   B  |            OBJECT|00000004|     |.bss
 rtInfF              |003fca40|   B  |            OBJECT|00000004|     |.bss
 rtIsInf             |0003c2b4|   T  |              FUNC|0000002c|     |.text

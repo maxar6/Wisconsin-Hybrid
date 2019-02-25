@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BaseEngineController_A02'.
  *
- * Model version                  : 1.1639
+ * Model version                  : 1.1640
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Sat Aug 25 19:54:14 2018
+ * C/C++ source code generated on : Fri Sep 07 11:01:26 2018
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -520,32 +520,32 @@ void BaseEngineController_A02_Foreground_Enable(void)
 {
   /* Level2 S-Function Block: '<S385>/motohawk_trigger' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_FGND_5XRTI_PERIODIC_7130p0001 */
+  /* Enable for Trigger_FGND_5XRTI_PERIODIC_7253p0001 */
   BaseEngineController_A02_DWork.s385_motohawk_trigger_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S347>/motohawk_trigger' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_FGND_TDC_EVENT_5811p0002 */
+  /* Enable for Trigger_FGND_TDC_EVENT_5928p0005 */
   BaseEngineController_A02_DWork.s347_motohawk_trigger_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S549>/motohawk_trigger5' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_FGND_MID_TDC_EVENT_6947p0001 */
+  /* Enable for Trigger_FGND_MID_TDC_EVENT_7070p0005 */
   BaseEngineController_A02_DWork.s549_motohawk_trigger5_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S14>/motohawk_trigger1' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_FGND_5XRTI_PERIODIC_1409p0004 */
+  /* Enable for Trigger_FGND_5XRTI_PERIODIC_1410p0004 */
   BaseEngineController_A02_DWork.s14_motohawk_trigger1_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S14>/motohawk_trigger' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_FGND_5XRTI_PERIODIC_1408p0004 */
+  /* Enable for Trigger_FGND_5XRTI_PERIODIC_1409p0004 */
   BaseEngineController_A02_DWork.s14_motohawk_trigger_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S13>/motohawk_trigger' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_FGND_5XRTI_PERIODIC_7978p0001 */
+  /* Enable for Trigger_FGND_5XRTI_PERIODIC_8101p0001 */
 
   /* Enable for function-call system: '<S13>/Coil Control' */
 
@@ -553,7 +553,7 @@ void BaseEngineController_A02_Foreground_Enable(void)
 
   /* Level2 S-Function Block: '<S789>/motohawk_trigger1' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_FGND_TDC_EVENT_7485p0004 */
+  /* Enable for Trigger_FGND_TDC_EVENT_7608p0001 */
   BaseEngineController_A02_DWork.s789_motohawk_trigger1_DWORK1 = 1;
 
   /* End of Enable for SubSystem: '<S784>/EST Enable TDC Counter' */
@@ -566,11 +566,11 @@ void BaseEngineController_A02_Foreground_Disable(void)
   int32_T i;
 
   /* Level2 S-Function Block: '<S385>/motohawk_trigger' (motohawk_sfun_trigger) */
-  /* Disable for Trigger_FGND_5XRTI_PERIODIC_7130p0001 */
+  /* Disable for Trigger_FGND_5XRTI_PERIODIC_7253p0001 */
   BaseEngineController_A02_DWork.s385_motohawk_trigger_DWORK1 = 0;
 
   /* Level2 S-Function Block: '<S347>/motohawk_trigger' (motohawk_sfun_trigger) */
-  /* Disable for Trigger_FGND_TDC_EVENT_5811p0002 */
+  /* Disable for Trigger_FGND_TDC_EVENT_5928p0005 */
   BaseEngineController_A02_DWork.s347_motohawk_trigger_DWORK1 = 0;
 
   /* Disable for Enabled SubSystem: '<S15>/Stall' */
@@ -593,7 +593,7 @@ void BaseEngineController_A02_Foreground_Disable(void)
   /* End of Disable for SubSystem: '<S297>/Capture Signal At Startup' */
 
   /* Level2 S-Function Block: '<S549>/motohawk_trigger5' (motohawk_sfun_trigger) */
-  /* Disable for Trigger_FGND_MID_TDC_EVENT_6947p0001 */
+  /* Disable for Trigger_FGND_MID_TDC_EVENT_7070p0005 */
   BaseEngineController_A02_DWork.s549_motohawk_trigger5_DWORK1 = 0;
 
   /* Disable for Enabled SubSystem: '<S300>/Capture ECT At Startup' */
@@ -608,7 +608,7 @@ void BaseEngineController_A02_Foreground_Disable(void)
   /* Disable for Enabled SubSystem: '<S15>/Run' */
 
   /* Level2 S-Function Block: '<S129>/motohawk_trigger1' (motohawk_sfun_trigger) */
-  /* Disable for Trigger_FGND_5XRTI_PERIODIC_4024p0001 */
+  /* Disable for Trigger_FGND_5XRTI_PERIODIC_4141p0001 */
   BaseEngineController_A02_DWork.s129_motohawk_trigger1_DWORK1 = 0;
 
   /* Disable for Atomic SubSystem: '<S129>/Fuel System Manager' */
@@ -632,11 +632,11 @@ void BaseEngineController_A02_Foreground_Disable(void)
 
   /* End of Disable for SubSystem: '<S15>/Run' */
   /* Level2 S-Function Block: '<S14>/motohawk_trigger1' (motohawk_sfun_trigger) */
-  /* Disable for Trigger_FGND_5XRTI_PERIODIC_1409p0004 */
+  /* Disable for Trigger_FGND_5XRTI_PERIODIC_1410p0004 */
   BaseEngineController_A02_DWork.s14_motohawk_trigger1_DWORK1 = 0;
 
   /* Level2 S-Function Block: '<S14>/motohawk_trigger' (motohawk_sfun_trigger) */
-  /* Disable for Trigger_FGND_5XRTI_PERIODIC_1408p0004 */
+  /* Disable for Trigger_FGND_5XRTI_PERIODIC_1409p0004 */
   BaseEngineController_A02_DWork.s14_motohawk_trigger_DWORK1 = 0;
 
   /* Disable for Enabled SubSystem: '<S23>/PassThrough1' */
@@ -659,7 +659,7 @@ void BaseEngineController_A02_Foreground_Disable(void)
   /* Disable for Enabled SubSystem: '<S23>/SequenceCutMachine' */
 
   /* Level2 S-Function Block: '<S107>/motohawk_trigger' (motohawk_sfun_trigger) */
-  /* Disable for Trigger_FGND_TDC1_EVENT_1156p0004 */
+  /* Disable for Trigger_FGND_TDC1_EVENT_1157p0004 */
   BaseEngineController_A02_DWork.s107_motohawk_trigger_DWORK1 = 0;
   BaseEngineController_A02_DWork.s23_SequenceCutMachine_MODE = FALSE;
 
@@ -678,14 +678,14 @@ void BaseEngineController_A02_Foreground_Disable(void)
   /* End of Disable for SubSystem: '<S23>/PassThrough4' */
 
   /* Level2 S-Function Block: '<S13>/motohawk_trigger' (motohawk_sfun_trigger) */
-  /* Disable for Trigger_FGND_5XRTI_PERIODIC_7978p0001 */
+  /* Disable for Trigger_FGND_5XRTI_PERIODIC_8101p0001 */
 
   /* Disable for function-call system: '<S13>/Coil Control' */
 
   /* Disable for Atomic SubSystem: '<S784>/EST Enable TDC Counter' */
 
   /* Level2 S-Function Block: '<S789>/motohawk_trigger1' (motohawk_sfun_trigger) */
-  /* Disable for Trigger_FGND_TDC_EVENT_7485p0004 */
+  /* Disable for Trigger_FGND_TDC_EVENT_7608p0001 */
   BaseEngineController_A02_DWork.s789_motohawk_trigger1_DWORK1 = 0;
 
   /* End of Disable for SubSystem: '<S784>/EST Enable TDC Counter' */
@@ -728,12 +728,12 @@ void BaseEngineController_A02_Foreground_Start(void)
 {
   /* Start for S-Function (motohawk_sfun_trigger): '<S385>/motohawk_trigger' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_FGND_5XRTI_PERIODIC_7130p0001 */
+  /* Clear enable/disable state for embedded trigger Trigger_FGND_5XRTI_PERIODIC_7253p0001 */
   BaseEngineController_A02_DWork.s385_motohawk_trigger_DWORK1 = 0;
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S347>/motohawk_trigger' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_FGND_TDC_EVENT_5811p0002 */
+  /* Clear enable/disable state for embedded trigger Trigger_FGND_TDC_EVENT_5928p0005 */
   BaseEngineController_A02_DWork.s347_motohawk_trigger_DWORK1 = 0;
 
   /* Start for Enabled SubSystem: '<S15>/Stall' */
@@ -777,7 +777,7 @@ void BaseEngineController_A02_Foreground_Start(void)
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S549>/motohawk_trigger5' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_FGND_MID_TDC_EVENT_6947p0001 */
+  /* Clear enable/disable state for embedded trigger Trigger_FGND_MID_TDC_EVENT_7070p0005 */
   BaseEngineController_A02_DWork.s549_motohawk_trigger5_DWORK1 = 0;
 
   /* Start for Enabled SubSystem: '<S317>/IncreasingFilter' */
@@ -841,7 +841,7 @@ void BaseEngineController_A02_Foreground_Start(void)
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S129>/motohawk_trigger1' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_FGND_5XRTI_PERIODIC_4024p0001 */
+  /* Clear enable/disable state for embedded trigger Trigger_FGND_5XRTI_PERIODIC_4141p0001 */
   BaseEngineController_A02_DWork.s129_motohawk_trigger1_DWORK1 = 0;
 
   /* Start for Atomic SubSystem: '<S129>/O2 Control' */
@@ -1109,12 +1109,12 @@ void BaseEngineController_A02_Foreground_Start(void)
   /* End of Start for SubSystem: '<S15>/Run' */
   /* Start for S-Function (motohawk_sfun_trigger): '<S14>/motohawk_trigger1' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_FGND_5XRTI_PERIODIC_1409p0004 */
+  /* Clear enable/disable state for embedded trigger Trigger_FGND_5XRTI_PERIODIC_1410p0004 */
   BaseEngineController_A02_DWork.s14_motohawk_trigger1_DWORK1 = 0;
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S14>/motohawk_trigger' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_FGND_5XRTI_PERIODIC_1408p0004 */
+  /* Clear enable/disable state for embedded trigger Trigger_FGND_5XRTI_PERIODIC_1409p0004 */
   BaseEngineController_A02_DWork.s14_motohawk_trigger_DWORK1 = 0;
 
   /* Start for Enabled SubSystem: '<S23>/SequenceCutMachine' */
@@ -1127,7 +1127,7 @@ void BaseEngineController_A02_Foreground_Start(void)
   /* VirtualOutportStart for Outport: '<S117>/CycleNumber' */
   BaseEngineController_A02_B.s117_Switch1 = 1.0;
 
-  /* Clear enable/disable state for embedded trigger Trigger_FGND_TDC1_EVENT_1156p0004 */
+  /* Clear enable/disable state for embedded trigger Trigger_FGND_TDC1_EVENT_1157p0004 */
   BaseEngineController_A02_DWork.s107_motohawk_trigger_DWORK1 = 0;
 
   /* InitializeConditions for UnitDelay: '<S107>/Unit Delay2' */
@@ -1144,7 +1144,7 @@ void BaseEngineController_A02_Foreground_Start(void)
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S789>/motohawk_trigger1' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_FGND_TDC_EVENT_7485p0004 */
+  /* Clear enable/disable state for embedded trigger Trigger_FGND_TDC_EVENT_7608p0001 */
   BaseEngineController_A02_DWork.s789_motohawk_trigger1_DWORK1 = 0;
 
   /* End of Start for SubSystem: '<S784>/EST Enable TDC Counter' */
@@ -1263,7 +1263,7 @@ void BaseEngineController_A02_Foreground_Start(void)
     }
   }
 
-  /* Clear enable/disable state for embedded trigger Trigger_FGND_5XRTI_PERIODIC_7978p0001 */
+  /* Clear enable/disable state for embedded trigger Trigger_FGND_5XRTI_PERIODIC_8101p0001 */
   BaseEngineController_A02_DWork.s13_motohawk_trigger_DWORK1 = 0;
 
   /* Start for Enabled SubSystem: '<S14>/Electronic Throttle Controller' */
@@ -2208,7 +2208,7 @@ void BaseEngineController_A02_Foreground(void)
   /* End of If: '<S712>/If' */
 
   /* S-Function (motohawk_sfun_trigger): '<S385>/motohawk_trigger' */
-  /* Enable for Trigger_FGND_5XRTI_PERIODIC_7130p0001 */
+  /* Enable for Trigger_FGND_5XRTI_PERIODIC_7253p0001 */
   if (BaseEngineController_A02_DWork.s385_motohawk_trigger_DWORK1 == 0) {
     BaseEngineController_A02_DWork.s385_motohawk_trigger_DWORK1 = 1;
   }
@@ -2217,10 +2217,10 @@ void BaseEngineController_A02_Foreground(void)
   /* MotoHawk Read CAN Message */
   {
     S_CANMessage messageObj;
-    extern MHCAN_directslot MHCAN_directslot_RxSlot_6363p0001;
+    extern MHCAN_directslot MHCAN_directslot_RxSlot_6486p0004;
     extern boolean_T MHCAN_getdirect(MHCAN_directslot *directslot, S_CANMessage *
       messageObj);
-    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_6363p0001,
+    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_6486p0004,
       &messageObj);
     if ((BaseEngineController_A02_B.s388_ReadCANMessage1_o1 + 1) >
         BaseEngineController_A02_B.s388_ReadCANMessage1_o1)
@@ -2391,7 +2391,7 @@ void BaseEngineController_A02_Foreground(void)
     BaseEngineController_A02_DWork.s347_UnitDelay_DSTATE;
 
   /* S-Function (motohawk_sfun_trigger): '<S347>/motohawk_trigger' */
-  /* Enable for Trigger_FGND_TDC_EVENT_5811p0002 */
+  /* Enable for Trigger_FGND_TDC_EVENT_5928p0005 */
   if (BaseEngineController_A02_DWork.s347_motohawk_trigger_DWORK1 == 0) {
     BaseEngineController_A02_DWork.s347_motohawk_trigger_DWORK1 = 1;
   }
@@ -2548,10 +2548,10 @@ void BaseEngineController_A02_Foreground(void)
   /* MotoHawk Read CAN Message */
   {
     S_CANMessage messageObj;
-    extern MHCAN_directslot MHCAN_directslot_RxSlot_6362p0004;
+    extern MHCAN_directslot MHCAN_directslot_RxSlot_6485p0006;
     extern boolean_T MHCAN_getdirect(MHCAN_directslot *directslot, S_CANMessage *
       messageObj);
-    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_6362p0004,
+    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_6485p0006,
       &messageObj);
     if ((BaseEngineController_A02_B.s388_ReadCANMessage_o1 + 1) >
         BaseEngineController_A02_B.s388_ReadCANMessage_o1)
@@ -2935,10 +2935,10 @@ void BaseEngineController_A02_Foreground(void)
   /* MotoHawk Read CAN Message */
   {
     S_CANMessage messageObj;
-    extern MHCAN_directslot MHCAN_directslot_RxSlot_6285p0001;
+    extern MHCAN_directslot MHCAN_directslot_RxSlot_6408p0004;
     extern boolean_T MHCAN_getdirect(MHCAN_directslot *directslot, S_CANMessage *
       messageObj);
-    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_6285p0001,
+    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_6408p0004,
       &messageObj);
     if ((BaseEngineController_A02_B.s387_AgeCount + 1) >
         BaseEngineController_A02_B.s387_AgeCount)
@@ -5448,7 +5448,7 @@ void BaseEngineController_A02_Foreground(void)
   rtb_LogicalOperator1_a = (IsFaultSuspected(39) || IsFaultSuspected(40));
 
   /* S-Function (motohawk_sfun_trigger): '<S549>/motohawk_trigger5' */
-  /* Enable for Trigger_FGND_MID_TDC_EVENT_6947p0001 */
+  /* Enable for Trigger_FGND_MID_TDC_EVENT_7070p0005 */
   if (BaseEngineController_A02_DWork.s549_motohawk_trigger5_DWORK1 == 0) {
     BaseEngineController_A02_DWork.s549_motohawk_trigger5_DWORK1 = 1;
   }
@@ -6691,7 +6691,7 @@ void BaseEngineController_A02_Foreground(void)
 
       /* Level2 S-Function Block: '<S129>/motohawk_trigger1' (motohawk_sfun_trigger) */
 
-      /* Enable for Trigger_FGND_5XRTI_PERIODIC_4024p0001 */
+      /* Enable for Trigger_FGND_5XRTI_PERIODIC_4141p0001 */
       BaseEngineController_A02_DWork.s129_motohawk_trigger1_DWORK1 = 1;
       BaseEngineController_A02_DWork.s15_Run_MODE = TRUE;
     }
@@ -7089,7 +7089,7 @@ void BaseEngineController_A02_Foreground(void)
     /* End of Outputs for SubSystem: '<S129>/Base Equiv Ratio' */
 
     /* S-Function (motohawk_sfun_trigger): '<S129>/motohawk_trigger1' */
-    /* Enable for Trigger_FGND_5XRTI_PERIODIC_4024p0001 */
+    /* Enable for Trigger_FGND_5XRTI_PERIODIC_4141p0001 */
     if (BaseEngineController_A02_DWork.s129_motohawk_trigger1_DWORK1 == 0) {
       BaseEngineController_A02_DWork.s129_motohawk_trigger1_DWORK1 = 1;
     }
@@ -8308,7 +8308,7 @@ void BaseEngineController_A02_Foreground(void)
   } else {
     if (BaseEngineController_A02_DWork.s15_Run_MODE) {
       /* Level2 S-Function Block: '<S129>/motohawk_trigger1' (motohawk_sfun_trigger) */
-      /* Disable for Trigger_FGND_5XRTI_PERIODIC_4024p0001 */
+      /* Disable for Trigger_FGND_5XRTI_PERIODIC_4141p0001 */
       BaseEngineController_A02_DWork.s129_motohawk_trigger1_DWORK1 = 0;
 
       /* Disable for Atomic SubSystem: '<S129>/Fuel System Manager' */
@@ -8335,13 +8335,13 @@ void BaseEngineController_A02_Foreground(void)
   /* End of Outputs for SubSystem: '<S15>/Run' */
 
   /* S-Function (motohawk_sfun_trigger): '<S14>/motohawk_trigger1' */
-  /* Enable for Trigger_FGND_5XRTI_PERIODIC_1409p0004 */
+  /* Enable for Trigger_FGND_5XRTI_PERIODIC_1410p0004 */
   if (BaseEngineController_A02_DWork.s14_motohawk_trigger1_DWORK1 == 0) {
     BaseEngineController_A02_DWork.s14_motohawk_trigger1_DWORK1 = 1;
   }
 
   /* S-Function (motohawk_sfun_trigger): '<S14>/motohawk_trigger' */
-  /* Enable for Trigger_FGND_5XRTI_PERIODIC_1408p0004 */
+  /* Enable for Trigger_FGND_5XRTI_PERIODIC_1409p0004 */
   if (BaseEngineController_A02_DWork.s14_motohawk_trigger_DWORK1 == 0) {
     BaseEngineController_A02_DWork.s14_motohawk_trigger_DWORK1 = 1;
   }
@@ -8737,7 +8737,7 @@ void BaseEngineController_A02_Foreground(void)
 
       /* Level2 S-Function Block: '<S107>/motohawk_trigger' (motohawk_sfun_trigger) */
 
-      /* Enable for Trigger_FGND_TDC1_EVENT_1156p0004 */
+      /* Enable for Trigger_FGND_TDC1_EVENT_1157p0004 */
       BaseEngineController_A02_DWork.s107_motohawk_trigger_DWORK1 = 1;
       BaseEngineController_A02_DWork.s23_SequenceCutMachine_MODE = TRUE;
     }
@@ -8784,7 +8784,7 @@ void BaseEngineController_A02_Foreground(void)
       BaseEngineController_A02_DWork.s107_UnitDelay1_DSTATE;
 
     /* S-Function (motohawk_sfun_trigger): '<S107>/motohawk_trigger' */
-    /* Enable for Trigger_FGND_TDC1_EVENT_1156p0004 */
+    /* Enable for Trigger_FGND_TDC1_EVENT_1157p0004 */
     if (BaseEngineController_A02_DWork.s107_motohawk_trigger_DWORK1 == 0) {
       BaseEngineController_A02_DWork.s107_motohawk_trigger_DWORK1 = 1;
     }
@@ -8799,7 +8799,7 @@ void BaseEngineController_A02_Foreground(void)
   } else {
     if (BaseEngineController_A02_DWork.s23_SequenceCutMachine_MODE) {
       /* Level2 S-Function Block: '<S107>/motohawk_trigger' (motohawk_sfun_trigger) */
-      /* Disable for Trigger_FGND_TDC1_EVENT_1156p0004 */
+      /* Disable for Trigger_FGND_TDC1_EVENT_1157p0004 */
       BaseEngineController_A02_DWork.s107_motohawk_trigger_DWORK1 = 0;
 
       /* Disable for Outport: '<S107>/Out1' */
@@ -8860,7 +8860,7 @@ void BaseEngineController_A02_Foreground(void)
   /* End of Logic: '<S23>/Logical Operator2' */
 
   /* S-Function (motohawk_sfun_trigger): '<S13>/motohawk_trigger' */
-  /* Enable for Trigger_FGND_5XRTI_PERIODIC_7978p0001 */
+  /* Enable for Trigger_FGND_5XRTI_PERIODIC_8101p0001 */
   if (BaseEngineController_A02_DWork.s13_motohawk_trigger_DWORK1 == 0) {
     /* Enable for function-call system: '<S13>/Coil Control' */
 
@@ -8868,7 +8868,7 @@ void BaseEngineController_A02_Foreground(void)
 
     /* Level2 S-Function Block: '<S789>/motohawk_trigger1' (motohawk_sfun_trigger) */
 
-    /* Enable for Trigger_FGND_TDC_EVENT_7485p0004 */
+    /* Enable for Trigger_FGND_TDC_EVENT_7608p0001 */
     BaseEngineController_A02_DWork.s789_motohawk_trigger1_DWORK1 = 1;
 
     /* End of Enable for SubSystem: '<S784>/EST Enable TDC Counter' */
@@ -12177,10 +12177,10 @@ void BaseEngineController_A02_Foreground(void)
   /* MotoHawk Read CAN Message */
   {
     S_CANMessage messageObj;
-    extern MHCAN_directslot MHCAN_directslot_RxSlot_6364p0001;
+    extern MHCAN_directslot MHCAN_directslot_RxSlot_6487p0004;
     extern boolean_T MHCAN_getdirect(MHCAN_directslot *directslot, S_CANMessage *
       messageObj);
-    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_6364p0001,
+    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_6487p0004,
       &messageObj);
     if ((BaseEngineController_A02_B.s388_ReadCANMessage2_o1 + 1) >
         BaseEngineController_A02_B.s388_ReadCANMessage2_o1)
@@ -12437,10 +12437,10 @@ void BaseEngineController_A02_Foreground(void)
   /* MotoHawk Read CAN Message */
   {
     S_CANMessage messageObj;
-    extern MHCAN_directslot MHCAN_directslot_RxSlot_6365p0001;
+    extern MHCAN_directslot MHCAN_directslot_RxSlot_6488p0004;
     extern boolean_T MHCAN_getdirect(MHCAN_directslot *directslot, S_CANMessage *
       messageObj);
-    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_6365p0001,
+    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_6488p0004,
       &messageObj);
     if ((BaseEngineController_A02_B.s388_ReadCANMessage3_o1 + 1) >
         BaseEngineController_A02_B.s388_ReadCANMessage3_o1)
@@ -15099,9 +15099,9 @@ void BaseEngineController_A02_Foreground(void)
 
   /* Update for S-Function (motohawk_sfun_dout): '<S700>/motohawk_dout' */
 
-  /* S-Function Block: DOut7679p0004 */
+  /* S-Function Block: DOut7802p0001 */
   {
-    DOut7679p0004_DiscreteOutput_Set
+    DOut7802p0001_DiscreteOutput_Set
       (BaseEngineController_A02_B.s806_LogicalOperator);
   }
 
@@ -15141,17 +15141,17 @@ void BaseEngineController_A02_Foreground(void)
 
   /* Update for S-Function (motohawk_sfun_dout): '<S703>/motohawk_dout' */
 
-  /* S-Function Block: DOut7963p0001 */
+  /* S-Function Block: DOut8086p0001 */
   {
-    DOut7963p0001_DiscreteOutput_Set
+    DOut8086p0001_DiscreteOutput_Set
       (BaseEngineController_A02_B.s837_LogicalOperator);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S704>/motohawk_dout' */
 
-  /* S-Function Block: DOut7973p0001 */
+  /* S-Function Block: DOut8096p0001 */
   {
-    DOut7973p0001_DiscreteOutput_Set
+    DOut8096p0001_DiscreteOutput_Set
       (BaseEngineController_A02_B.s841_LogicalOperator);
   }
 

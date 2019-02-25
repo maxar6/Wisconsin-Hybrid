@@ -12,9 +12,9 @@ NativeError_S ECUP_AnalogInput_Get(uint16_T *adc, uint16_T *status);
 NativeError_S ECUP_AnalogInput_Create(void);
 
 /* S-Function Block: <S845>/motohawk_dout Resource: MPRD */
-extern NativeError_S DOut8218p0001_DiscreteOutput_Set(boolean_T in);
-extern NativeError_S DOut8218p0001_DiscreteOutputPushPull_Set(int8_T in);
-extern NativeError_S DOut8218p0001_DiscreteOutput_Create(void);
+extern NativeError_S DOut8341p0001_DiscreteOutput_Set(boolean_T in);
+extern NativeError_S DOut8341p0001_DiscreteOutputPushPull_Set(int8_T in);
+extern NativeError_S DOut8341p0001_DiscreteOutput_Create(void);
 
 /* S-Function Block: <S599>/motohawk_ain Resource: MAPSensorPin */
 NativeError_S MAPSensorPin_AnalogInput_Get(uint16_T *adc, uint16_T *status);
@@ -67,9 +67,9 @@ NativeError_S EGRPin_AnalogInput_Get(uint16_T *adc, uint16_T *status);
 NativeError_S EGRPin_AnalogInput_Create(void);
 
 /* S-Function Block: <S700>/motohawk_dout Resource: FUELP */
-extern NativeError_S DOut7679p0004_DiscreteOutput_Set(boolean_T in);
-extern NativeError_S DOut7679p0004_DiscreteOutputPushPull_Set(int8_T in);
-extern NativeError_S DOut7679p0004_DiscreteOutput_Create(void);
+extern NativeError_S DOut7802p0001_DiscreteOutput_Set(boolean_T in);
+extern NativeError_S DOut7802p0001_DiscreteOutputPushPull_Set(int8_T in);
+extern NativeError_S DOut7802p0001_DiscreteOutput_Create(void);
 
 /* S-Function Block: <S701>/motohawk_pwm1 Resource: ETCPin_PWMOutput */
 void ETCPin_PWMOutput_PWMOutput_Create(void);
@@ -80,14 +80,14 @@ void ETCPin_PWMOutput_PWMOutput_Outputs(uint8_T * fault_addr, int16_T
   * current_addr);
 
 /* S-Function Block: <S703>/motohawk_dout Resource: OILP */
-extern NativeError_S DOut7963p0001_DiscreteOutput_Set(boolean_T in);
-extern NativeError_S DOut7963p0001_DiscreteOutputPushPull_Set(int8_T in);
-extern NativeError_S DOut7963p0001_DiscreteOutput_Create(void);
+extern NativeError_S DOut8086p0001_DiscreteOutput_Set(boolean_T in);
+extern NativeError_S DOut8086p0001_DiscreteOutputPushPull_Set(int8_T in);
+extern NativeError_S DOut8086p0001_DiscreteOutput_Create(void);
 
 /* S-Function Block: <S704>/motohawk_dout Resource: EST 1 */
-extern NativeError_S DOut7973p0001_DiscreteOutput_Set(boolean_T in);
-extern NativeError_S DOut7973p0001_DiscreteOutputPushPull_Set(int8_T in);
-extern NativeError_S DOut7973p0001_DiscreteOutput_Create(void);
+extern NativeError_S DOut8096p0001_DiscreteOutput_Set(boolean_T in);
+extern NativeError_S DOut8096p0001_DiscreteOutputPushPull_Set(int8_T in);
+extern NativeError_S DOut8096p0001_DiscreteOutput_Create(void);
 
 /* S-Function Block: <S384>/motohawk_ain2 Resource: FuelPresPin */
 NativeError_S FuelPresPin_AnalogInput_Get(uint16_T *adc, uint16_T *status);

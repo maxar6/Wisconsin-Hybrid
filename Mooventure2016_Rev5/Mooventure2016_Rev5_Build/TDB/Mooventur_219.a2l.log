@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application_Log xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Errors>0</Errors>
+  <Warnings>0</Warnings>
+  <Messages>
+    <Message>
+      <Category>Detail</Category>
+      <TimeStamp>2018-09-07T17:18:07.3795748-05:00</TimeStamp>
+      <Text>Loading MotoTuneDll xml format: C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\Mooventur_219.xml</Text>
+    </Message>
+    <Message>
+      <Category>Detail</Category>
+      <TimeStamp>2018-09-07T17:18:07.767836-05:00</TimeStamp>
+      <Text>Generating ASAP2 objects</Text>
+    </Message>
+    <Message>
+      <Category>Detail</Category>
+      <TimeStamp>2018-09-07T17:18:08.0742518-05:00</TimeStamp>
+      <Text>Creating Address Updater: VirtualCalSpace</Text>
+    </Message>
+    <Message>
+      <Category>Detail</Category>
+      <TimeStamp>2018-09-07T17:18:08.0812379-05:00</TimeStamp>
+      <Text>Updating ASAP2 addresses</Text>
+    </Message>
+    <Message>
+      <Category>Detail</Category>
+      <TimeStamp>2018-09-07T17:18:08.1341373-05:00</TimeStamp>
+      <Text>Saving ASAP2 file: C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\Mooventure2016_Rev5\Mooventure2016_Rev5_Build\TDB\Mooventur_219.a2l</Text>
+    </Message>
+    <Message>
+      <Category>Detail</Category>
+      <TimeStamp>2018-09-07T17:18:08.5258901-05:00</TimeStamp>
+      <Text>Loading transform: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Bin\ASAP2.xslt</Text>
+    </Message>
+    <Message>
+      <Category>Detail</Category>
+      <TimeStamp>2018-09-07T17:18:09.6831853-05:00</TimeStamp>
+      <Text>Generated 876 Measurements</Text>
+    </Message>
+    <Message>
+      <Category>Detail</Category>
+      <TimeStamp>2018-09-07T17:18:09.6831853-05:00</TimeStamp>
+      <Text>Generated 2019 Characteristics</Text>
+    </Message>
+  </Messages>
+</Application_Log>

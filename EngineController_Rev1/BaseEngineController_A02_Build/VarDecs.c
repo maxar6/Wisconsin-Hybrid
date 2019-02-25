@@ -1126,10 +1126,10 @@ uint8_T ain_create_ECUP = RESOURCE_NOT_CREATED;
    UpdateID:BACKGND Group:"System | Debug | Resources | AnalogIn" Help:"Debug Variable" */
 uint8_T ain_read_ECUP = RESOURCE_NOT_CREATED;
 
-/* Name: dout_create_DOut8218p0001 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:dout_create_DOut8218p0001 Mask:FFFFFFFF EnumDec:E_NativeFWError
+/* Name: dout_create_DOut8341p0001 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:dout_create_DOut8341p0001 Mask:FFFFFFFF EnumDec:E_NativeFWError
    UpdateID:BACKGND Group:"System | Debug | Resources | DiscreteOut" Help:"Debug Variable" */
-uint8_T dout_create_DOut8218p0001 = 7;
+uint8_T dout_create_DOut8341p0001 = 7;
 
 /* Name: ain_create_MAPSensorPin ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
    CType:E_NativeFWError Struct:ain_create_MAPSensorPin Mask:FFFFFFFF EnumDec:E_NativeFWError
@@ -1241,10 +1241,10 @@ uint8_T ain_create_EGRPin = RESOURCE_NOT_CREATED;
    UpdateID:BACKGND Group:"System | Debug | Resources | AnalogIn" Help:"Debug Variable" */
 uint8_T ain_read_EGRPin = RESOURCE_NOT_CREATED;
 
-/* Name: dout_create_DOut7679p0004 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:dout_create_DOut7679p0004 Mask:FFFFFFFF EnumDec:E_NativeFWError
+/* Name: dout_create_DOut7802p0001 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:dout_create_DOut7802p0001 Mask:FFFFFFFF EnumDec:E_NativeFWError
    UpdateID:BACKGND Group:"System | Debug | Resources | DiscreteOut" Help:"Debug Variable" */
-uint8_T dout_create_DOut7679p0004 = 7;
+uint8_T dout_create_DOut7802p0001 = 7;
 
 /* Name: pwm_create_ETCPin_PWMOutput ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
    CType:E_NativeFWError Struct:pwm_create_ETCPin_PWMOutput Mask:FFFFFFFF EnumDec:E_NativeFWError
@@ -1256,15 +1256,15 @@ uint8_T pwm_create_ETCPin_PWMOutput = 7;
    UpdateID:BACKGND Group:"System | Debug | Resources | PWM" Help:"Debug Variable" */
 uint8_T pwm_set_ETCPin_PWMOutput = 0;
 
-/* Name: dout_create_DOut7963p0001 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:dout_create_DOut7963p0001 Mask:FFFFFFFF EnumDec:E_NativeFWError
+/* Name: dout_create_DOut8086p0001 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:dout_create_DOut8086p0001 Mask:FFFFFFFF EnumDec:E_NativeFWError
    UpdateID:BACKGND Group:"System | Debug | Resources | DiscreteOut" Help:"Debug Variable" */
-uint8_T dout_create_DOut7963p0001 = 7;
+uint8_T dout_create_DOut8086p0001 = 7;
 
-/* Name: dout_create_DOut7973p0001 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
-   CType:E_NativeFWError Struct:dout_create_DOut7973p0001 Mask:FFFFFFFF EnumDec:E_NativeFWError
+/* Name: dout_create_DOut8096p0001 ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
+   CType:E_NativeFWError Struct:dout_create_DOut8096p0001 Mask:FFFFFFFF EnumDec:E_NativeFWError
    UpdateID:BACKGND Group:"System | Debug | Resources | DiscreteOut" Help:"Debug Variable" */
-uint8_T dout_create_DOut7973p0001 = 7;
+uint8_T dout_create_DOut8096p0001 = 7;
 
 /* Name: ain_create_FuelPresPin ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1
    CType:E_NativeFWError Struct:ain_create_FuelPresPin Mask:FFFFFFFF EnumDec:E_NativeFWError

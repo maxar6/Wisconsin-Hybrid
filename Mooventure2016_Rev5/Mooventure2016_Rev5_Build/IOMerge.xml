@@ -64,10 +64,10 @@
    </MC33800>
    <Object name="S_SHRC_3_MC33800_CCD1" claim="MC33800_LSO1"/>
    <Object name="FaultStatus_MC33800_LSO1">
-      <RuntimeObjectName>DOut4600p0001</RuntimeObjectName>
+      <RuntimeObjectName>DOut4475p0004</RuntimeObjectName>
       <ResourceBehavior>DiscreteOutput</ResourceBehavior>
    </Object>
-   <DiscreteOutput_MC33800 name="MC33800_LSO1" claim="DOut4600p0001">
+   <DiscreteOutput_MC33800 name="MC33800_LSO1" claim="DOut4475p0004">
       <MC33800Instance>S_SHRC_3</MC33800Instance>
       <MC33800Pin>MC33800_CCD1</MC33800Pin>
       <MC33800SubModule>CCD</MC33800SubModule>
@@ -83,16 +83,16 @@
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>LSO1</ModuleResource>
       <DeviceDriver>MC33800</DeviceDriver>
-      <Name>DOut4600p0001</Name>
+      <Name>DOut4475p0004</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout1</AppLink>
       <DisableOnStop>true</DisableOnStop>
    </DiscreteOutput_MC33800>
    <Object name="S_SHRC_3_MC33800_OUT1" claim="MC33800_LSO3"/>
    <Object name="FaultStatus_MC33800_LSO3">
-      <RuntimeObjectName>DOut4601p0001</RuntimeObjectName>
+      <RuntimeObjectName>DOut4476p0004</RuntimeObjectName>
       <ResourceBehavior>DiscreteOutput</ResourceBehavior>
    </Object>
-   <DiscreteOutput_MC33800 name="MC33800_LSO3" claim="DOut4601p0001">
+   <DiscreteOutput_MC33800 name="MC33800_LSO3" claim="DOut4476p0004">
       <MC33800Instance>S_SHRC_3</MC33800Instance>
       <MC33800Pin>MC33800_OUT1</MC33800Pin>
       <MC33800SubModule>OSS</MC33800SubModule>
@@ -108,7 +108,7 @@
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>LSO3</ModuleResource>
       <DeviceDriver>MC33800</DeviceDriver>
-      <Name>DOut4601p0001</Name>
+      <Name>DOut4476p0004</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout10</AppLink>
       <DisableOnStop>true</DisableOnStop>
    </DiscreteOutput_MC33800>
@@ -144,7 +144,7 @@
       <Name>MC33800_INJ8</Name>
    </DiscreteOutput_MC33800>
    <Object name="CPUCore_0_GPIO_137_G1" claim="BasicOut_INJ8"/>
-   <DiscreteOutput_BasicOut name="BasicOut_INJ8" claim="DOut4602p0001">
+   <DiscreteOutput_BasicOut name="BasicOut_INJ8" claim="DOut4477p0004">
       <CPUName>CPUCore_0</CPUName>
       <CPUType>CPU</CPUType>
       <CPUResource>GPIO_137_G1</CPUResource>
@@ -160,7 +160,7 @@
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>INJ8</ModuleResource>
       <DeviceDriver>BasicOut</DeviceDriver>
-      <Name>DOut4602p0001</Name>
+      <Name>DOut4477p0004</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout11</AppLink>
       <DisableOnStop>true</DisableOnStop>
    </DiscreteOutput_BasicOut>
@@ -187,7 +187,7 @@
       <Name>MC33800_INJ6</Name>
    </DiscreteOutput_MC33800>
    <Object name="CPUCore_0_GPIO_135_G4" claim="BasicOut_INJ6"/>
-   <DiscreteOutput_BasicOut name="BasicOut_INJ6" claim="DOut4603p0001">
+   <DiscreteOutput_BasicOut name="BasicOut_INJ6" claim="DOut4478p0004">
       <CPUName>CPUCore_0</CPUName>
       <CPUType>CPU</CPUType>
       <CPUResource>GPIO_135_G4</CPUResource>
@@ -203,7 +203,7 @@
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>INJ6</ModuleResource>
       <DeviceDriver>BasicOut</DeviceDriver>
-      <Name>DOut4603p0001</Name>
+      <Name>DOut4478p0004</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout12</AppLink>
       <DisableOnStop>true</DisableOnStop>
    </DiscreteOutput_BasicOut>
@@ -230,7 +230,7 @@
       <Name>MC33800_INJ7</Name>
    </DiscreteOutput_MC33800>
    <Object name="CPUCore_0_GPIO_136_G2" claim="BasicOut_INJ7"/>
-   <DiscreteOutput_BasicOut name="BasicOut_INJ7" claim="DOut4604p0001">
+   <DiscreteOutput_BasicOut name="BasicOut_INJ7" claim="DOut4479p0004">
       <CPUName>CPUCore_0</CPUName>
       <CPUType>CPU</CPUType>
       <CPUResource>GPIO_136_G2</CPUResource>
@@ -246,7 +246,7 @@
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>INJ7</ModuleResource>
       <DeviceDriver>BasicOut</DeviceDriver>
-      <Name>DOut4604p0001</Name>
+      <Name>DOut4479p0004</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout13</AppLink>
       <DisableOnStop>true</DisableOnStop>
    </DiscreteOutput_BasicOut>
@@ -273,7 +273,7 @@
       <Name>MC33800_INJ5</Name>
    </DiscreteOutput_MC33800>
    <Object name="CPUCore_0_GPIO_134_H1" claim="BasicOut_INJ5"/>
-   <DiscreteOutput_BasicOut name="BasicOut_INJ5" claim="DOut4605p0001">
+   <DiscreteOutput_BasicOut name="BasicOut_INJ5" claim="DOut4480p0004">
       <CPUName>CPUCore_0</CPUName>
       <CPUType>CPU</CPUType>
       <CPUResource>GPIO_134_H1</CPUResource>
@@ -289,7 +289,7 @@
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>INJ5</ModuleResource>
       <DeviceDriver>BasicOut</DeviceDriver>
-      <Name>DOut4605p0001</Name>
+      <Name>DOut4480p0004</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout2</AppLink>
       <DisableOnStop>true</DisableOnStop>
    </DiscreteOutput_BasicOut>
@@ -316,7 +316,7 @@
       <Name>MC33800_LSO2</Name>
    </DiscreteOutput_MC33800>
    <Object name="CPUCore_0_GPIO_138_F1" claim="BasicOut_LSO2"/>
-   <DiscreteOutput_BasicOut name="BasicOut_LSO2" claim="DOut4606p0001">
+   <DiscreteOutput_BasicOut name="BasicOut_LSO2" claim="DOut4481p0004">
       <CPUName>CPUCore_0</CPUName>
       <CPUType>CPU</CPUType>
       <CPUResource>GPIO_138_F1</CPUResource>
@@ -330,7 +330,7 @@
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>LSO2</ModuleResource>
       <DeviceDriver>BasicOut</DeviceDriver>
-      <Name>DOut4606p0001</Name>
+      <Name>DOut4481p0004</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout3</AppLink>
       <DisableOnStop>true</DisableOnStop>
    </DiscreteOutput_BasicOut>
@@ -357,7 +357,7 @@
       <Name>MC33800_INJ4</Name>
    </DiscreteOutput_MC33800>
    <Object name="CPUCore_0_GPIO_133_H2" claim="BasicOut_INJ4"/>
-   <DiscreteOutput_BasicOut name="BasicOut_INJ4" claim="DOut4607p0001">
+   <DiscreteOutput_BasicOut name="BasicOut_INJ4" claim="DOut4482p0004">
       <CPUName>CPUCore_0</CPUName>
       <CPUType>CPU</CPUType>
       <CPUResource>GPIO_133_H2</CPUResource>
@@ -373,7 +373,7 @@
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>INJ4</ModuleResource>
       <DeviceDriver>BasicOut</DeviceDriver>
-      <Name>DOut4607p0001</Name>
+      <Name>DOut4482p0004</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout4</AppLink>
       <DisableOnStop>true</DisableOnStop>
    </DiscreteOutput_BasicOut>
@@ -400,7 +400,7 @@
       <Name>MC33800_INJ3</Name>
    </DiscreteOutput_MC33800>
    <Object name="CPUCore_0_GPIO_132_H3" claim="BasicOut_INJ3"/>
-   <DiscreteOutput_BasicOut name="BasicOut_INJ3" claim="DOut4608p0001">
+   <DiscreteOutput_BasicOut name="BasicOut_INJ3" claim="DOut4483p0004">
       <CPUName>CPUCore_0</CPUName>
       <CPUType>CPU</CPUType>
       <CPUResource>GPIO_132_H3</CPUResource>
@@ -416,18 +416,18 @@
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>INJ3</ModuleResource>
       <DeviceDriver>BasicOut</DeviceDriver>
-      <Name>DOut4608p0001</Name>
+      <Name>DOut4483p0004</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout5</AppLink>
       <DisableOnStop>true</DisableOnStop>
    </DiscreteOutput_BasicOut>
-   <Object name="S_SHRC_3_MC33800_PWM1" claim="MC33800_INJ1"/>
-   <Object name="FaultStatus_MC33800_INJ1">
-      <RuntimeObjectName>MC33800_INJ1</RuntimeObjectName>
+   <Object name="S_SHRC_3_MC33800_PWM2" claim="MC33800_INJ2"/>
+   <Object name="FaultStatus_MC33800_INJ2">
+      <RuntimeObjectName>MC33800_INJ2</RuntimeObjectName>
       <ResourceBehavior>DiscreteOutput</ResourceBehavior>
    </Object>
-   <DiscreteOutput_MC33800 name="MC33800_INJ1">
+   <DiscreteOutput_MC33800 name="MC33800_INJ2">
       <MC33800Instance>S_SHRC_3</MC33800Instance>
-      <MC33800Pin>MC33800_PWM1</MC33800Pin>
+      <MC33800Pin>MC33800_PWM2</MC33800Pin>
       <MC33800SubModule>PWM</MC33800SubModule>
       <ShortFaultTimer>120</ShortFaultTimer>
       <VoltageThreshold>2000</VoltageThreshold>
@@ -439,36 +439,36 @@
       <UseParallelOutput>false</UseParallelOutput>
       <UseUpdateOnlyOnChange>true</UseUpdateOnlyOnChange>
       <Behavior>DiscreteOutput</Behavior>
-      <ModuleResource>INJ1</ModuleResource>
-      <Name>MC33800_INJ1</Name>
+      <ModuleResource>INJ2</ModuleResource>
+      <Name>MC33800_INJ2</Name>
    </DiscreteOutput_MC33800>
-   <Object name="CPUCore_0_GPIO_130_J1" claim="BasicOut_INJ1"/>
-   <DiscreteOutput_BasicOut name="BasicOut_INJ1" claim="DOut4609p0001">
+   <Object name="CPUCore_0_GPIO_131_H4" claim="BasicOut_INJ2"/>
+   <DiscreteOutput_BasicOut name="BasicOut_INJ2" claim="DOut4484p0004">
       <CPUName>CPUCore_0</CPUName>
       <CPUType>CPU</CPUType>
-      <CPUResource>GPIO_130_J1</CPUResource>
+      <CPUResource>GPIO_131_H4</CPUResource>
       <CPUPinType>GPIO</CPUPinType>
       <Assert>high</Assert>
       <Invert>false</Invert>
       <InitialState>off</InitialState>
       <Invariant>false</Invariant>
       <UseUpdateOnlyOnChange>true</UseUpdateOnlyOnChange>
-      <Channel>130</Channel>
+      <Channel>131</Channel>
       <ShortFaultTimer>120</ShortFaultTimer>
       <VoltageThreshold>2000</VoltageThreshold>
       <Behavior>DiscreteOutput</Behavior>
-      <ModuleResource>INJ1</ModuleResource>
+      <ModuleResource>INJ2</ModuleResource>
       <DeviceDriver>BasicOut</DeviceDriver>
-      <Name>DOut4609p0001</Name>
+      <Name>DOut4484p0004</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout6</AppLink>
       <DisableOnStop>true</DisableOnStop>
    </DiscreteOutput_BasicOut>
    <Object name="S_SHRC_4_MC33800_OUT2" claim="MC33800_LSO12"/>
    <Object name="FaultStatus_MC33800_LSO12">
-      <RuntimeObjectName>DOut4610p0001</RuntimeObjectName>
+      <RuntimeObjectName>DOut4485p0004</RuntimeObjectName>
       <ResourceBehavior>DiscreteOutput</ResourceBehavior>
    </Object>
-   <DiscreteOutput_MC33800 name="MC33800_LSO12" claim="DOut4610p0001">
+   <DiscreteOutput_MC33800 name="MC33800_LSO12" claim="DOut4485p0004">
       <MC33800Instance>S_SHRC_4</MC33800Instance>
       <MC33800Pin>MC33800_OUT2</MC33800Pin>
       <MC33800SubModule>OSS</MC33800SubModule>
@@ -484,16 +484,16 @@
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>LSO12</ModuleResource>
       <DeviceDriver>MC33800</DeviceDriver>
-      <Name>DOut4610p0001</Name>
+      <Name>DOut4485p0004</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout7</AppLink>
       <DisableOnStop>true</DisableOnStop>
    </DiscreteOutput_MC33800>
    <Object name="S_SHRC_4_MC33800_OUT1" claim="MC33800_LSO11"/>
    <Object name="FaultStatus_MC33800_LSO11">
-      <RuntimeObjectName>DOut4611p0001</RuntimeObjectName>
+      <RuntimeObjectName>DOut4486p0004</RuntimeObjectName>
       <ResourceBehavior>DiscreteOutput</ResourceBehavior>
    </Object>
-   <DiscreteOutput_MC33800 name="MC33800_LSO11" claim="DOut4611p0001">
+   <DiscreteOutput_MC33800 name="MC33800_LSO11" claim="DOut4486p0004">
       <MC33800Instance>S_SHRC_4</MC33800Instance>
       <MC33800Pin>MC33800_OUT1</MC33800Pin>
       <MC33800SubModule>OSS</MC33800SubModule>
@@ -509,16 +509,16 @@
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>LSO11</ModuleResource>
       <DeviceDriver>MC33800</DeviceDriver>
-      <Name>DOut4611p0001</Name>
+      <Name>DOut4486p0004</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout8</AppLink>
       <DisableOnStop>true</DisableOnStop>
    </DiscreteOutput_MC33800>
    <Object name="S_SHRC_3_MC33800_PWM6" claim="MC33800_LSO5"/>
    <Object name="FaultStatus_MC33800_LSO5">
-      <RuntimeObjectName>DOut4612p0001</RuntimeObjectName>
+      <RuntimeObjectName>DOut4487p0004</RuntimeObjectName>
       <ResourceBehavior>DiscreteOutput</ResourceBehavior>
    </Object>
-   <DiscreteOutput_MC33800 name="MC33800_LSO5" claim="DOut4612p0001">
+   <DiscreteOutput_MC33800 name="MC33800_LSO5" claim="DOut4487p0004">
       <MC33800Instance>S_SHRC_3</MC33800Instance>
       <MC33800Pin>MC33800_PWM6</MC33800Pin>
       <MC33800SubModule>PWM</MC33800SubModule>
@@ -534,7 +534,7 @@
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>LSO5</ModuleResource>
       <DeviceDriver>MC33800</DeviceDriver>
-      <Name>DOut4612p0001</Name>
+      <Name>DOut4487p0004</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout9</AppLink>
       <DisableOnStop>true</DisableOnStop>
    </DiscreteOutput_MC33800>
@@ -561,7 +561,7 @@
       <Name>MC33800_LSO9</Name>
    </DiscreteOutput_MC33800>
    <Object name="CPUCore_0_GPIO_159_J24" claim="BasicOut_LSO9"/>
-   <DiscreteOutput_BasicOut name="BasicOut_LSO9" claim="DOut4826p0001">
+   <DiscreteOutput_BasicOut name="BasicOut_LSO9" claim="DOut4701p0002">
       <CPUName>CPUCore_0</CPUName>
       <CPUType>CPU</CPUType>
       <CPUResource>GPIO_159_J24</CPUResource>
@@ -575,16 +575,16 @@
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>LSO9</ModuleResource>
       <DeviceDriver>BasicOut</DeviceDriver>
-      <Name>DOut4826p0001</Name>
+      <Name>DOut4701p0002</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout1</AppLink>
       <DisableOnStop>true</DisableOnStop>
    </DiscreteOutput_BasicOut>
    <Object name="S_SHRC_4_MC33800_PWM6" claim="MC33800_LSO7"/>
    <Object name="FaultStatus_MC33800_LSO7">
-      <RuntimeObjectName>DOut4827p0001</RuntimeObjectName>
+      <RuntimeObjectName>DOut4702p0002</RuntimeObjectName>
       <ResourceBehavior>DiscreteOutput</ResourceBehavior>
    </Object>
-   <DiscreteOutput_MC33800 name="MC33800_LSO7" claim="DOut4827p0001">
+   <DiscreteOutput_MC33800 name="MC33800_LSO7" claim="DOut4702p0002">
       <MC33800Instance>S_SHRC_4</MC33800Instance>
       <MC33800Pin>MC33800_PWM6</MC33800Pin>
       <MC33800SubModule>PWM</MC33800SubModule>
@@ -600,16 +600,16 @@
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>LSO7</ModuleResource>
       <DeviceDriver>MC33800</DeviceDriver>
-      <Name>DOut4827p0001</Name>
+      <Name>DOut4702p0002</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout2</AppLink>
       <DisableOnStop>true</DisableOnStop>
    </DiscreteOutput_MC33800>
    <Object name="S_SHRC_3_MC33800_PWM5" claim="MC33800_LSO4"/>
    <Object name="FaultStatus_MC33800_LSO4">
-      <RuntimeObjectName>DOut4828p0001</RuntimeObjectName>
+      <RuntimeObjectName>DOut4703p0002</RuntimeObjectName>
       <ResourceBehavior>DiscreteOutput</ResourceBehavior>
    </Object>
-   <DiscreteOutput_MC33800 name="MC33800_LSO4" claim="DOut4828p0001">
+   <DiscreteOutput_MC33800 name="MC33800_LSO4" claim="DOut4703p0002">
       <MC33800Instance>S_SHRC_3</MC33800Instance>
       <MC33800Pin>MC33800_PWM5</MC33800Pin>
       <MC33800SubModule>PWM</MC33800SubModule>
@@ -625,7 +625,7 @@
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>LSO4</ModuleResource>
       <DeviceDriver>MC33800</DeviceDriver>
-      <Name>DOut4828p0001</Name>
+      <Name>DOut4703p0002</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout3</AppLink>
       <DisableOnStop>true</DisableOnStop>
    </DiscreteOutput_MC33800>
@@ -652,7 +652,7 @@
       <Name>MC33800_LSO10</Name>
    </DiscreteOutput_MC33800>
    <Object name="CPUCore_0_GPIO_158_J25" claim="BasicOut_LSO10"/>
-   <DiscreteOutput_BasicOut name="BasicOut_LSO10" claim="DOut4829p0001">
+   <DiscreteOutput_BasicOut name="BasicOut_LSO10" claim="DOut4704p0002">
       <CPUName>CPUCore_0</CPUName>
       <CPUType>CPU</CPUType>
       <CPUResource>GPIO_158_J25</CPUResource>
@@ -666,7 +666,7 @@
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>LSO10</ModuleResource>
       <DeviceDriver>BasicOut</DeviceDriver>
-      <Name>DOut4829p0001</Name>
+      <Name>DOut4704p0002</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout4</AppLink>
       <DisableOnStop>true</DisableOnStop>
    </DiscreteOutput_BasicOut>
@@ -681,10 +681,10 @@
       <InitialState>on</InitialState>
       <Invariant>true</Invariant>
       <UseUpdateOnlyOnChange>true</UseUpdateOnlyOnChange>
-      <Name>DOut4830p0001_DiagDisable</Name>
+      <Name>DOut4705p0002_DiagDisable</Name>
    </DiscreteOutput_BasicOut>
    <Object name="CPUCore_0_GPIO_124_K3" claim="BasicOut_EST8"/>
-   <DiscreteOutput_BasicOut name="BasicOut_EST8" claim="DOut4830p0001">
+   <DiscreteOutput_BasicOut name="BasicOut_EST8" claim="DOut4705p0002">
       <CPUName>CPUCore_0</CPUName>
       <CPUType>CPU</CPUType>
       <CPUResource>GPIO_124_K3</CPUResource>
@@ -699,43 +699,35 @@
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>EST8</ModuleResource>
       <DeviceDriver>BasicOut</DeviceDriver>
-      <Name>DOut4830p0001</Name>
+      <Name>DOut4705p0002</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout5</AppLink>
       <DisableOnStop>true</DisableOnStop>
    </DiscreteOutput_BasicOut>
-   <Object name="CPUCore_0_GPIO_196_AD19" claim="BasicOut_EST6_DiagDisable"/>
-   <DiscreteOutput_BasicOut name="BasicOut_EST6_DiagDisable">
-      <CPUName>CPUCore_0</CPUName>
-      <CPUType>CPU</CPUType>
-      <CPUResource>GPIO_196_AD19</CPUResource>
-      <CPUPinType>GPIO</CPUPinType>
+   <Object name="S_SHRC_4_MC33800_PWM5" claim="MC33800_LSO6"/>
+   <Object name="FaultStatus_MC33800_LSO6">
+      <RuntimeObjectName>DOut4706p0002</RuntimeObjectName>
+      <ResourceBehavior>DiscreteOutput</ResourceBehavior>
+   </Object>
+   <DiscreteOutput_MC33800 name="MC33800_LSO6" claim="DOut4706p0002">
+      <MC33800Instance>S_SHRC_4</MC33800Instance>
+      <MC33800Pin>MC33800_PWM5</MC33800Pin>
+      <MC33800SubModule>PWM</MC33800SubModule>
+      <ShortFaultTimer>120</ShortFaultTimer>
+      <VoltageThreshold>2000</VoltageThreshold>
       <Assert>low</Assert>
-      <Invert>false</Invert>
-      <InitialState>on</InitialState>
-      <Invariant>true</Invariant>
-      <UseUpdateOnlyOnChange>true</UseUpdateOnlyOnChange>
-      <Name>DOut4831p0001_DiagDisable</Name>
-   </DiscreteOutput_BasicOut>
-   <Object name="CPUCore_0_GPIO_122_L1" claim="BasicOut_EST6"/>
-   <DiscreteOutput_BasicOut name="BasicOut_EST6" claim="DOut4831p0001">
-      <CPUName>CPUCore_0</CPUName>
-      <CPUType>CPU</CPUType>
-      <CPUResource>GPIO_122_L1</CPUResource>
-      <CPUPinType>GPIO</CPUPinType>
-      <Assert>high</Assert>
-      <Invert>false</Invert>
+      <Invert>true</Invert>
       <InitialState>off</InitialState>
       <Invariant>false</Invariant>
+      <UseParallelInput>false</UseParallelInput>
+      <UseParallelOutput>false</UseParallelOutput>
       <UseUpdateOnlyOnChange>true</UseUpdateOnlyOnChange>
-      <Channel>A8</Channel>
-      <PinId>L1</PinId>
       <Behavior>DiscreteOutput</Behavior>
-      <ModuleResource>EST6</ModuleResource>
-      <DeviceDriver>BasicOut</DeviceDriver>
-      <Name>DOut4831p0001</Name>
+      <ModuleResource>LSO6</ModuleResource>
+      <DeviceDriver>MC33800</DeviceDriver>
+      <Name>DOut4706p0002</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout6</AppLink>
       <DisableOnStop>true</DisableOnStop>
-   </DiscreteOutput_BasicOut>
+   </DiscreteOutput_MC33800>
    <Object name="S_SHRC_3_MC33800_OUT7" claim="MC33800_MPRD"/>
    <Object name="FaultStatus_MC33800_MPRD">
       <RuntimeObjectName>MC33800_MPRD</RuntimeObjectName>
@@ -759,7 +751,7 @@
       <Name>MC33800_MPRD</Name>
    </DiscreteOutput_MC33800>
    <Object name="CPUCore_0_GPIO_198_AE20" claim="BasicOut_MPRD"/>
-   <DiscreteOutput_BasicOut name="BasicOut_MPRD" claim="DOut5969p0004">
+   <DiscreteOutput_BasicOut name="BasicOut_MPRD" claim="DOut5853p0002">
       <CPUName>CPUCore_0</CPUName>
       <CPUType>CPU</CPUType>
       <CPUResource>GPIO_198_AE20</CPUResource>
@@ -773,7 +765,7 @@
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>MPRD</ModuleResource>
       <DeviceDriver>BasicOut</DeviceDriver>
-      <Name>DOut5969p0004</Name>
+      <Name>DOut5853p0002</Name>
       <AppLink>Mooventure2016_Rev5/Main Power Relay1/Background/motohawk_dout</AppLink>
       <DisableOnStop>true</DisableOnStop>
    </DiscreteOutput_BasicOut>
@@ -832,7 +824,7 @@
       <AnalogInput name="QADC_AN15" merge="unique"/>
       <AnalogInput name="QADC_ECUP" merge="unique"/>
    </eQADCQueue>
-   <AnalogInput_QADC name="QADC_AN14" claim="Heater_Core_Blend_Position">
+   <AnalogInput_QADC name="QADC_AN14" claim="AN14">
       <CPUResource>ADC_AN39_B4</CPUResource>
       <QueueName>ContinuousScan_eQADCQueue</QueueName>
       <CalibrateResult>true</CalibrateResult>
@@ -840,13 +832,13 @@
       <Behavior>AnalogInput</Behavior>
       <ModuleResource>AN14</ModuleResource>
       <DeviceDriver>QADC</DeviceDriver>
-      <Name>Heater_Core_Blend_Position</Name>
+      <Name>AN14</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Inputs/Analog Inputs/Coolant/motohawk_ain1</AppLink>
       <DataType>int32</DataType>
       <scaling>8</scaling>
       <DisableOnStop>true</DisableOnStop>
    </AnalogInput_QADC>
-   <AnalogInput_QADC name="QADC_AN2" claim="Radiator_Blend_Position">
+   <AnalogInput_QADC name="QADC_AN2" claim="AN2">
       <CPUResource>ADC_AN36_B3</CPUResource>
       <QueueName>ContinuousScan_eQADCQueue</QueueName>
       <CalibrateResult>true</CalibrateResult>
@@ -854,13 +846,13 @@
       <Behavior>AnalogInput</Behavior>
       <ModuleResource>AN2</ModuleResource>
       <DeviceDriver>QADC</DeviceDriver>
-      <Name>Radiator_Blend_Position</Name>
+      <Name>AN2</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Inputs/Analog Inputs/Coolant/motohawk_ain2</AppLink>
       <DataType>uint16</DataType>
       <scaling>8</scaling>
       <DisableOnStop>true</DisableOnStop>
    </AnalogInput_QADC>
-   <AnalogInput_QADC name="QADC_AN3" claim="Heater_Temp">
+   <AnalogInput_QADC name="QADC_AN3" claim="AN3">
       <CPUResource>ADC_AN11_A4</CPUResource>
       <QueueName>ContinuousScan_eQADCQueue</QueueName>
       <CalibrateResult>true</CalibrateResult>
@@ -868,13 +860,13 @@
       <Behavior>AnalogInput</Behavior>
       <ModuleResource>AN3</ModuleResource>
       <DeviceDriver>QADC</DeviceDriver>
-      <Name>Heater_Temp</Name>
+      <Name>AN3</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Inputs/Analog Inputs/Coolant/motohawk_ain4</AppLink>
       <DataType>uint16</DataType>
       <scaling>8</scaling>
       <DisableOnStop>true</DisableOnStop>
    </AnalogInput_QADC>
-   <AnalogInput_QADC name="QADC_AN23" claim="Cruise_Control">
+   <AnalogInput_QADC name="QADC_AN23" claim="AN23">
       <CPUResource>ADC_AN21_C7</CPUResource>
       <QueueName>ContinuousScan_eQADCQueue</QueueName>
       <CalibrateResult>true</CalibrateResult>
@@ -882,13 +874,13 @@
       <Behavior>AnalogInput</Behavior>
       <ModuleResource>AN23</ModuleResource>
       <DeviceDriver>QADC</DeviceDriver>
-      <Name>Cruise_Control</Name>
+      <Name>AN23</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Inputs/Analog Inputs/Cruise Control In/motohawk_ain4</AppLink>
       <DataType>uint16</DataType>
       <scaling>12</scaling>
       <DisableOnStop>true</DisableOnStop>
    </AnalogInput_QADC>
-   <AnalogInput_QADC name="QADC_AN22" claim="DCDC_Conveter">
+   <AnalogInput_QADC name="QADC_AN22" claim="AN22">
       <CPUResource>ADC_AN9_D6</CPUResource>
       <QueueName>ContinuousScan_eQADCQueue</QueueName>
       <CalibrateResult>true</CalibrateResult>
@@ -896,13 +888,13 @@
       <Behavior>AnalogInput</Behavior>
       <ModuleResource>AN22</ModuleResource>
       <DeviceDriver>QADC</DeviceDriver>
-      <Name>DCDC_Conveter</Name>
+      <Name>AN22</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Inputs/Analog Inputs/DCDC Converter/motohawk_ain4</AppLink>
       <DataType>uint16</DataType>
       <scaling>8</scaling>
       <DisableOnStop>true</DisableOnStop>
    </AnalogInput_QADC>
-   <AnalogInput_QADC name="QADC_AN15" claim="Throttle_Position">
+   <AnalogInput_QADC name="QADC_AN15" claim="AN15">
       <CPUResource>ADC_AN16_A6</CPUResource>
       <QueueName>ContinuousScan_eQADCQueue</QueueName>
       <CalibrateResult>true</CalibrateResult>
@@ -910,7 +902,7 @@
       <Behavior>AnalogInput</Behavior>
       <ModuleResource>AN15</ModuleResource>
       <DeviceDriver>QADC</DeviceDriver>
-      <Name>Throttle_Position</Name>
+      <Name>AN15</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Inputs/Analog Inputs/Throttle Position/motohawk_ain4</AppLink>
       <DataType>uint16</DataType>
       <scaling>8</scaling>
@@ -952,7 +944,7 @@
       <Name>H1m</Name>
       <Behavior>PWMOutput</Behavior>
    </PWMOutput_BasicOut_ETPU>
-   <PWMOutput_BasicOut name="BasicOut_H1-" claim="IPT_PWMOutput">
+   <PWMOutput_BasicOut name="BasicOut_H1-" claim="H1m_PWMOutput">
       <CPUName>CPUCore_0</CPUName>
       <CPUType>CPU</CPUType>
       <CPUResource>ETPU_B10_K23</CPUResource>
@@ -971,7 +963,7 @@
       <MinimumFrequency>2.00</MinimumFrequency>
    </PWMOutput_BasicOut>
    <Object name="CPUCore_0_GPIO_164_D17" claim="BasicOut_H1_InhibitB"/>
-   <DiscreteOutput_BasicOut name="BasicOut_H1_InhibitB" claim="IPT_PWMOutput">
+   <DiscreteOutput_BasicOut name="BasicOut_H1_InhibitB" claim="H1m_PWMOutput">
       <CPUName>CPUCore_0</CPUName>
       <CPUType>CPU</CPUType>
       <CPUResource>GPIO_164_D17</CPUResource>
@@ -987,14 +979,14 @@
       <PinId>D17</PinId>
       <DisableOnStop>true</DisableOnStop>
    </DiscreteOutput_BasicOut>
-   <PWMOutput_DiscreteEnable name="DiscreteEnable_H1-" claim="IPT_PWMOutput">
+   <PWMOutput_DiscreteEnable name="DiscreteEnable_H1-" claim="H1m_PWMOutput">
       <Behavior>PWMOutput</Behavior>
       <ModuleResource>H1-</ModuleResource>
       <DeviceDriver>DiscreteEnable</DeviceDriver>
       <SignedDutyCycle>false</SignedDutyCycle>
       <PWMResource ref="H1m"/>
       <DiscreteResource ref="H1_InhibitB"/>
-      <Name>IPT_PWMOutput</Name>
+      <Name>H1m_PWMOutput</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/IPT Outputs/motohawk_pwm</AppLink>
       <MinimumFrequency>2.00</MinimumFrequency>
       <DisableOnStop>true</DisableOnStop>
@@ -1062,140 +1054,140 @@
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>LSO1</ModuleResource>
       <DeviceDriver>MC33800</DeviceDriver>
-      <Name>DOut4600p0001</Name>
+      <Name>DOut4475p0004</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout1</AppLink>
    </DiscreteOutput>
    <DiscreteOutput root="true">
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>LSO3</ModuleResource>
       <DeviceDriver>MC33800</DeviceDriver>
-      <Name>DOut4601p0001</Name>
+      <Name>DOut4476p0004</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout10</AppLink>
    </DiscreteOutput>
    <DiscreteOutput root="true">
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>INJ8</ModuleResource>
       <DeviceDriver>BasicOut</DeviceDriver>
-      <Name>DOut4602p0001</Name>
+      <Name>DOut4477p0004</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout11</AppLink>
    </DiscreteOutput>
    <DiscreteOutput root="true">
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>INJ6</ModuleResource>
       <DeviceDriver>BasicOut</DeviceDriver>
-      <Name>DOut4603p0001</Name>
+      <Name>DOut4478p0004</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout12</AppLink>
    </DiscreteOutput>
    <DiscreteOutput root="true">
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>INJ7</ModuleResource>
       <DeviceDriver>BasicOut</DeviceDriver>
-      <Name>DOut4604p0001</Name>
+      <Name>DOut4479p0004</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout13</AppLink>
    </DiscreteOutput>
    <DiscreteOutput root="true">
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>INJ5</ModuleResource>
       <DeviceDriver>BasicOut</DeviceDriver>
-      <Name>DOut4605p0001</Name>
+      <Name>DOut4480p0004</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout2</AppLink>
    </DiscreteOutput>
    <DiscreteOutput root="true">
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>LSO2</ModuleResource>
       <DeviceDriver>BasicOut</DeviceDriver>
-      <Name>DOut4606p0001</Name>
+      <Name>DOut4481p0004</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout3</AppLink>
    </DiscreteOutput>
    <DiscreteOutput root="true">
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>INJ4</ModuleResource>
       <DeviceDriver>BasicOut</DeviceDriver>
-      <Name>DOut4607p0001</Name>
+      <Name>DOut4482p0004</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout4</AppLink>
    </DiscreteOutput>
    <DiscreteOutput root="true">
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>INJ3</ModuleResource>
       <DeviceDriver>BasicOut</DeviceDriver>
-      <Name>DOut4608p0001</Name>
+      <Name>DOut4483p0004</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout5</AppLink>
    </DiscreteOutput>
    <DiscreteOutput root="true">
       <Behavior>DiscreteOutput</Behavior>
-      <ModuleResource>INJ1</ModuleResource>
+      <ModuleResource>INJ2</ModuleResource>
       <DeviceDriver>BasicOut</DeviceDriver>
-      <Name>DOut4609p0001</Name>
+      <Name>DOut4484p0004</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout6</AppLink>
    </DiscreteOutput>
    <DiscreteOutput root="true">
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>LSO12</ModuleResource>
       <DeviceDriver>MC33800</DeviceDriver>
-      <Name>DOut4610p0001</Name>
+      <Name>DOut4485p0004</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout7</AppLink>
    </DiscreteOutput>
    <DiscreteOutput root="true">
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>LSO11</ModuleResource>
       <DeviceDriver>MC33800</DeviceDriver>
-      <Name>DOut4611p0001</Name>
+      <Name>DOut4486p0004</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout8</AppLink>
    </DiscreteOutput>
    <DiscreteOutput root="true">
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>LSO5</ModuleResource>
       <DeviceDriver>MC33800</DeviceDriver>
-      <Name>DOut4612p0001</Name>
+      <Name>DOut4487p0004</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/Coolant Outputs/motohawk_dout9</AppLink>
    </DiscreteOutput>
    <DiscreteOutput root="true">
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>LSO9</ModuleResource>
       <DeviceDriver>BasicOut</DeviceDriver>
-      <Name>DOut4826p0001</Name>
+      <Name>DOut4701p0002</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout1</AppLink>
    </DiscreteOutput>
    <DiscreteOutput root="true">
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>LSO7</ModuleResource>
       <DeviceDriver>MC33800</DeviceDriver>
-      <Name>DOut4827p0001</Name>
+      <Name>DOut4702p0002</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout2</AppLink>
    </DiscreteOutput>
    <DiscreteOutput root="true">
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>LSO4</ModuleResource>
       <DeviceDriver>MC33800</DeviceDriver>
-      <Name>DOut4828p0001</Name>
+      <Name>DOut4703p0002</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout3</AppLink>
    </DiscreteOutput>
    <DiscreteOutput root="true">
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>LSO10</ModuleResource>
       <DeviceDriver>BasicOut</DeviceDriver>
-      <Name>DOut4829p0001</Name>
+      <Name>DOut4704p0002</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout4</AppLink>
    </DiscreteOutput>
    <DiscreteOutput root="true">
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>EST8</ModuleResource>
       <DeviceDriver>BasicOut</DeviceDriver>
-      <Name>DOut4830p0001</Name>
+      <Name>DOut4705p0002</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout5</AppLink>
    </DiscreteOutput>
    <DiscreteOutput root="true">
       <Behavior>DiscreteOutput</Behavior>
-      <ModuleResource>EST6</ModuleResource>
-      <DeviceDriver>BasicOut</DeviceDriver>
-      <Name>DOut4831p0001</Name>
+      <ModuleResource>LSO6</ModuleResource>
+      <DeviceDriver>MC33800</DeviceDriver>
+      <Name>DOut4706p0002</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/DistributionBox/motohawk_dout6</AppLink>
    </DiscreteOutput>
    <DiscreteOutput root="true">
       <Behavior>DiscreteOutput</Behavior>
       <ModuleResource>MPRD</ModuleResource>
       <DeviceDriver>BasicOut</DeviceDriver>
-      <Name>DOut5969p0004</Name>
+      <Name>DOut5853p0002</Name>
       <AppLink>Mooventure2016_Rev5/Main Power Relay1/Background/motohawk_dout</AppLink>
    </DiscreteOutput>
    <AnalogInput root="true">
@@ -1211,7 +1203,7 @@
       <Behavior>AnalogInput</Behavior>
       <ModuleResource>AN14</ModuleResource>
       <DeviceDriver>QADC</DeviceDriver>
-      <Name>Heater_Core_Blend_Position</Name>
+      <Name>AN14</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Inputs/Analog Inputs/Coolant/motohawk_ain1</AppLink>
       <DataType>int32</DataType>
       <scaling>8</scaling>
@@ -1220,7 +1212,7 @@
       <Behavior>AnalogInput</Behavior>
       <ModuleResource>AN2</ModuleResource>
       <DeviceDriver>QADC</DeviceDriver>
-      <Name>Radiator_Blend_Position</Name>
+      <Name>AN2</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Inputs/Analog Inputs/Coolant/motohawk_ain2</AppLink>
       <DataType>uint16</DataType>
       <scaling>8</scaling>
@@ -1229,7 +1221,7 @@
       <Behavior>AnalogInput</Behavior>
       <ModuleResource>AN3</ModuleResource>
       <DeviceDriver>QADC</DeviceDriver>
-      <Name>Heater_Temp</Name>
+      <Name>AN3</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Inputs/Analog Inputs/Coolant/motohawk_ain4</AppLink>
       <DataType>uint16</DataType>
       <scaling>8</scaling>
@@ -1238,7 +1230,7 @@
       <Behavior>AnalogInput</Behavior>
       <ModuleResource>AN23</ModuleResource>
       <DeviceDriver>QADC</DeviceDriver>
-      <Name>Cruise_Control</Name>
+      <Name>AN23</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Inputs/Analog Inputs/Cruise Control In/motohawk_ain4</AppLink>
       <DataType>uint16</DataType>
       <scaling>12</scaling>
@@ -1247,7 +1239,7 @@
       <Behavior>AnalogInput</Behavior>
       <ModuleResource>AN22</ModuleResource>
       <DeviceDriver>QADC</DeviceDriver>
-      <Name>DCDC_Conveter</Name>
+      <Name>AN22</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Inputs/Analog Inputs/DCDC Converter/motohawk_ain4</AppLink>
       <DataType>uint16</DataType>
       <scaling>8</scaling>
@@ -1256,7 +1248,7 @@
       <Behavior>AnalogInput</Behavior>
       <ModuleResource>AN15</ModuleResource>
       <DeviceDriver>QADC</DeviceDriver>
-      <Name>Throttle_Position</Name>
+      <Name>AN15</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Inputs/Analog Inputs/Throttle Position/motohawk_ain4</AppLink>
       <DataType>uint16</DataType>
       <scaling>8</scaling>
@@ -1277,7 +1269,7 @@
       <SignedDutyCycle>false</SignedDutyCycle>
       <PWMResource ref="H1m"/>
       <DiscreteResource ref="H1_InhibitB"/>
-      <Name>IPT_PWMOutput</Name>
+      <Name>H1m_PWMOutput</Name>
       <AppLink>Mooventure2016_Rev5/Foreground/Outputs/IPT Outputs/motohawk_pwm</AppLink>
       <MinimumFrequency>2.00</MinimumFrequency>
    </PWMOutput>
@@ -1289,15 +1281,15 @@
       <Name>CAN_1</Name>
       <BaudRate>500000</BaudRate>
       <Transmit>
-         <QueueSize>20</QueueSize>
+         <QueueSize>30</QueueSize>
       </Transmit>
       <Receive>
          <Dispatcher>
-            <QueueSize>22</QueueSize>
+            <QueueSize>30</QueueSize>
             <Task ref="ApplicationInterruptTask"/>
          </Dispatcher>
          <Slot>
-            <Name>RxSlot_3140p0002</Name>
+            <Name>RxSlot_3024p0002</Name>
             <ID>
                <Type>Standard</Type>
                <Value>535</Value>
@@ -1311,7 +1303,7 @@
             <QueueSize>1</QueueSize>
          </Slot>
          <Slot>
-            <Name>RxSlot_3141p0001</Name>
+            <Name>RxSlot_3025p0001</Name>
             <ID>
                <Type>Standard</Type>
                <Value>1200</Value>
@@ -1325,7 +1317,7 @@
             <QueueSize>1</QueueSize>
          </Slot>
          <Slot>
-            <Name>RxSlot_3142p0001</Name>
+            <Name>RxSlot_3026p0001</Name>
             <ID>
                <Type>Standard</Type>
                <Value>1047</Value>
@@ -1339,7 +1331,7 @@
             <QueueSize>1</QueueSize>
          </Slot>
          <Slot>
-            <Name>RxSlot_3564p0004</Name>
+            <Name>RxSlot_3443p0007</Name>
             <ID>
                <Type>Standard</Type>
                <Value>1072</Value>
@@ -1353,7 +1345,7 @@
             <QueueSize>1</QueueSize>
          </Slot>
          <Slot>
-            <Name>RxSlot_3802p0001</Name>
+            <Name>RxSlot_3681p0001</Name>
             <ID>
                <Type>Standard</Type>
                <Value>786</Value>
@@ -1367,7 +1359,7 @@
             <QueueSize>1</QueueSize>
          </Slot>
          <Slot>
-            <Name>RxSlot_3910p0001</Name>
+            <Name>RxSlot_3796p0001</Name>
             <ID>
                <Type>Extended</Type>
                <Value>419381321</Value>
@@ -1381,7 +1373,7 @@
             <QueueSize>1</QueueSize>
          </Slot>
          <Slot>
-            <Name>RxSlot_4064p0001</Name>
+            <Name>RxSlot_3950p0001</Name>
             <ID>
                <Type>Standard</Type>
                <Value>632</Value>
@@ -1395,7 +1387,7 @@
             <QueueSize>2</QueueSize>
          </Slot>
          <Slot>
-            <Name>RxSlot_4065p0001</Name>
+            <Name>RxSlot_3951p0001</Name>
             <ID>
                <Type>Standard</Type>
                <Value>1572</Value>
@@ -1409,7 +1401,7 @@
             <QueueSize>1</QueueSize>
          </Slot>
          <Slot>
-            <Name>RxSlot_4066p0001</Name>
+            <Name>RxSlot_3952p0001</Name>
             <ID>
                <Type>Standard</Type>
                <Value>608</Value>
@@ -1423,7 +1415,7 @@
             <QueueSize>1</QueueSize>
          </Slot>
          <Slot>
-            <Name>RxSlot_4067p0001</Name>
+            <Name>RxSlot_3953p0001</Name>
             <ID>
                <Type>Standard</Type>
                <Value>1424</Value>
@@ -1437,7 +1429,7 @@
             <QueueSize>1</QueueSize>
          </Slot>
          <Slot>
-            <Name>RxSlot_4269p0001</Name>
+            <Name>RxSlot_4155p0004</Name>
             <ID>
                <Type>Standard</Type>
                <Value>128</Value>
@@ -1482,7 +1474,7 @@
             <Task ref="ApplicationInterruptTask"/>
          </Dispatcher>
          <Slot>
-            <Name>RxSlot_3804p0001</Name>
+            <Name>RxSlot_3683p0001</Name>
             <ID>
                <Type>Standard</Type>
                <Value>968</Value>
@@ -1514,7 +1506,7 @@
             <Task ref="ApplicationInterruptTask"/>
          </Dispatcher>
          <Slot>
-            <Name>RxSlot_3348p0001</Name>
+            <Name>RxSlot_3227p0005</Name>
             <ID>
                <Type>Standard</Type>
                <Value>762</Value>
@@ -1528,7 +1520,7 @@
             <QueueSize>1</QueueSize>
          </Slot>
          <Slot>
-            <Name>RxSlot_3349p0001</Name>
+            <Name>RxSlot_3228p0005</Name>
             <ID>
                <Type>Standard</Type>
                <Value>763</Value>
@@ -1542,7 +1534,7 @@
             <QueueSize>1</QueueSize>
          </Slot>
          <Slot>
-            <Name>RxSlot_3350p0001</Name>
+            <Name>RxSlot_3229p0005</Name>
             <ID>
                <Type>Standard</Type>
                <Value>764</Value>
@@ -1556,7 +1548,7 @@
             <QueueSize>1</QueueSize>
          </Slot>
          <Slot>
-            <Name>RxSlot_3351p0001</Name>
+            <Name>RxSlot_3230p0005</Name>
             <ID>
                <Type>Standard</Type>
                <Value>765</Value>
@@ -1570,7 +1562,7 @@
             <QueueSize>1</QueueSize>
          </Slot>
          <Slot>
-            <Name>RxSlot_3352p0001</Name>
+            <Name>RxSlot_3231p0005</Name>
             <ID>
                <Type>Standard</Type>
                <Value>766</Value>
@@ -1584,7 +1576,7 @@
             <QueueSize>1</QueueSize>
          </Slot>
          <Slot>
-            <Name>RxSlot_3353p0001</Name>
+            <Name>RxSlot_3232p0005</Name>
             <ID>
                <Type>Standard</Type>
                <Value>767</Value>
@@ -1598,7 +1590,7 @@
             <QueueSize>1</QueueSize>
          </Slot>
          <Slot>
-            <Name>RxSlot_3354p0001</Name>
+            <Name>RxSlot_3233p0005</Name>
             <ID>
                <Type>Standard</Type>
                <Value>768</Value>
@@ -1612,7 +1604,7 @@
             <QueueSize>1</QueueSize>
          </Slot>
          <Slot>
-            <Name>RxSlot_3801p0004</Name>
+            <Name>RxSlot_3680p0004</Name>
             <ID>
                <Type>Standard</Type>
                <Value>1296</Value>
@@ -1626,7 +1618,7 @@
             <QueueSize>1</QueueSize>
          </Slot>
          <Slot>
-            <Name>RxSlot_3803p0001</Name>
+            <Name>RxSlot_3682p0001</Name>
             <ID>
                <Type>Standard</Type>
                <Value>1832</Value>
@@ -1640,7 +1632,7 @@
             <QueueSize>1</QueueSize>
          </Slot>
          <Slot>
-            <Name>RxSlot_4007p0001</Name>
+            <Name>RxSlot_3893p0001</Name>
             <ID>
                <Type>Standard</Type>
                <Value>521</Value>

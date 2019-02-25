@@ -8,11 +8,11 @@
 #include "BaseEngineController_A02.h"
 
 /*---- DEFINES --------------------------------------------------------------------------------------------*/
-#define DLL_NAME                       "BaseEngin_115"
-#define SRZ_NAME                       "BaseEngineController_A02_115"
+#define DLL_NAME                       "BaseEngin_117"
+#define SRZ_NAME                       "BaseEngineController_A02_117"
 #define MODEL_NAME                     "BaseEngineController_A02"
 #define MODEL_GUID                     "34a85f28-21b7-4112-82-b0-87-11-cc-cb-8f"
-#define BUILD_GUID                     "66e2ce16-351c-4ae6-a6-cb-00-88-ae-da-ff"
+#define BUILD_GUID                     "4bec7544-22d6-4657-9b-7b-bb-78-95-0c-6d"
 #define TOKEN_GUID                     "DD8AD11F95A6FC42BFF9AC780840E4B4"
 #define MOTOHAWK_VERSION               "MotoHawk 2011a_sp0.184"
 #define MATLAB_VERSION                 "MATLAB 7.12.0"

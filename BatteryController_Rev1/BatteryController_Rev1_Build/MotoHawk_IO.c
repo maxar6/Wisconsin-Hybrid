@@ -3,9 +3,9 @@
  *
  * Code generation for model "BatteryController_Rev1.mdl".
  *
- * Model version              : 1.586
+ * Model version              : 1.590
  * Simulink Coder version : 8.0 (R2011a) 09-Mar-2011
- * C source code generated on : Sat Aug 25 20:25:04 2018
+ * C source code generated on : Fri Sep 07 09:42:57 2018
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -15,7 +15,7 @@
 
 #include "MotoHawk_IO.h"
 
-/* S-Function Block: <S210>/motohawk_ain5 Resource: ECUP */
+/* S-Function Block: <S218>/motohawk_ain5 Resource: ECUP */
 NativeError_S ECUP_AnalogInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -73,7 +73,7 @@ NativeError_S ECUP_AnalogInput_Get(uint16_T *adc, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S210>/motohawk_dout Resource: DOut2268p0004 */
+/* S-Function Block: <S218>/motohawk_dout Resource: DOut2268p0004 */
 NativeError_S DOut2268p0004_DiscreteOutput_Create(void)
 {
   NativeError_S sErrorResult;
@@ -124,7 +124,7 @@ NativeError_S DOut2268p0004_DiscreteOutputPushPull_Set(int8_T in)
   return ERROR_FAIL;                   /* Return an error */
 }
 
-/* S-Function Block: <S36>/motohawk_ain Resource: Current_Sensor */
+/* S-Function Block: <S44>/motohawk_ain Resource: Current_Sensor */
 NativeError_S Current_Sensor_AnalogInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -183,7 +183,7 @@ NativeError_S Current_Sensor_AnalogInput_Get(uint16_T *adc, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S36>/motohawk_ain1 Resource: V5V_Reference */
+/* S-Function Block: <S44>/motohawk_ain1 Resource: V5V_Reference */
 NativeError_S V5V_Reference_AnalogInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -242,7 +242,7 @@ NativeError_S V5V_Reference_AnalogInput_Get(uint16_T *adc, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S80>/motohawk_dout1 Resource: DOut953p0001 */
+/* S-Function Block: <S88>/motohawk_dout1 Resource: DOut953p0001 */
 NativeError_S DOut953p0001_DiscreteOutput_Create(void)
 {
   NativeError_S sErrorResult;
@@ -293,7 +293,7 @@ NativeError_S DOut953p0001_DiscreteOutputPushPull_Set(int8_T in)
   return ERROR_FAIL;                   /* Return an error */
 }
 
-/* S-Function Block: <S80>/motohawk_dout2 Resource: DOut954p0001 */
+/* S-Function Block: <S88>/motohawk_dout2 Resource: DOut954p0001 */
 NativeError_S DOut954p0001_DiscreteOutput_Create(void)
 {
   NativeError_S sErrorResult;
@@ -344,7 +344,7 @@ NativeError_S DOut954p0001_DiscreteOutputPushPull_Set(int8_T in)
   return ERROR_FAIL;                   /* Return an error */
 }
 
-/* S-Function Block: <S80>/motohawk_dout3 Resource: DOut955p0001 */
+/* S-Function Block: <S88>/motohawk_dout3 Resource: DOut955p0001 */
 NativeError_S DOut955p0001_DiscreteOutput_Create(void)
 {
   NativeError_S sErrorResult;
@@ -468,7 +468,7 @@ void EST1_PWMOutput_PWMOutput_Create()
   (init_resource_EST1_PWMOutput_DataStore()) = -1;
 }
 
-/* S-Function Block: <S80>/motohawk_dout4 Resource: DOut956p0001 */
+/* S-Function Block: <S88>/motohawk_dout4 Resource: DOut956p0001 */
 NativeError_S DOut956p0001_DiscreteOutput_Create(void)
 {
   NativeError_S sErrorResult;

@@ -1,6 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <VarDecs>
    <VarDec>
+      <name>CCP_BAT_StationAddr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>65535</max>
+      <min>0</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Station ID for CCP handler: CCP_BAT</help>
+      <group>System | CCP | CCP_BAT</group>
+      <struct>ConstantWork.CCP_BAT_StationAddr</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint16</type>
+   </VarDec>
+   <VarDec>
+      <name>CCP_BATTxID</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>4.294967295E9</max>
+      <min>0</min>
+      <format>8.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Transmit CAN ID for CCP handler: CCP_BAT</help>
+      <group>System | CCP | CCP_BAT</group>
+      <struct>ConstantWork.CCP_BATTxID</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint32</type>
+   </VarDec>
+   <VarDec>
+      <name>CCP_BATRxID</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>4.294967295E9</max>
+      <min>0</min>
+      <format>8.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Receive CAN ID for CCP handler: CCP_BAT</help>
+      <group>System | CCP | CCP_BAT</group>
+      <struct>ConstantWork.CCP_BATRxID</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint32</type>
+   </VarDec>
+   <VarDec>
+      <name>CCP_BATRxIDMask</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>4.294967295E9</max>
+      <min>0</min>
+      <format>8.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Receive CAN ID Mask for CCP handler: CCP_BAT</help>
+      <group>System | CCP | CCP_BAT</group>
+      <struct>ConstantWork.CCP_BATRxIDMask</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint32</type>
+   </VarDec>
+   <VarDec>
       <name>ProcessorReboot</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -3579,24 +3655,6 @@
       <type>uint8</type>
    </VarDec>
    <VarDec>
-      <name>vdiff_est_Prb</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BatteryController_Rev1|Foreground|Battery|Control|SOC</group>
-      <struct>VolatileWork_BSS.vdiff_est_Prb</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
       <name>MaxCellTemp_Ovr_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -3793,7 +3851,7 @@
       <type>uint8</type>
    </VarDec>
    <VarDec>
-      <name>Temp_IR_TableIdxArr</name>
+      <name>Temp_IR_PreIdxArr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -3804,17 +3862,17 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>NonVolatile_T</ctype>
       <group>BatteryController_Rev1|Foreground|Battery|Control|SOC</group>
-      <struct>NonVolatileWork.Temp_IR_TableIdxArr</struct>
+      <struct>NonVolatileWork.Temp_IR_PreIdxArr</struct>
       <class>prelookup</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
-      <len>5</len>
-      <input>Temp_IR_TableIn</input>
-      <index>Temp_IR_TableIdx</index>
+      <len>8</len>
+      <input>Temp_IR_PreIn</input>
+      <index>Temp_IR_PreIdx</index>
    </VarDec>
    <VarDec>
-      <name>Temp_IR_TableIdx</name>
+      <name>Temp_IR_PreIdx</name>
       <access>RO RO RO RO</access>
       <gain>0.001953125</gain>
       <offset>0</offset>
@@ -3826,14 +3884,14 @@
       <units>idx.frac</units>
       <ctype>Volatile_BSS_T</ctype>
       <group>BatteryController_Rev1|Foreground|Battery|Control|SOC</group>
-      <struct>VolatileWork_BSS.Temp_IR_TableIdx</struct>
+      <struct>VolatileWork_BSS.Temp_IR_PreIdx</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint16</type>
    </VarDec>
    <VarDec>
-      <name>Temp_IR_TableIn</name>
+      <name>Temp_IR_PreIn</name>
       <access>RO RO RO RO</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -3844,46 +3902,106 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
       <group>BatteryController_Rev1|Foreground|Battery|Control|SOC</group>
-      <struct>VolatileWork_BSS.Temp_IR_TableIn</struct>
+      <struct>VolatileWork_BSS.Temp_IR_PreIn</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Temp_IR_MapTbl</name>
+      <name>Volt_IR_PreIdxArr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>100</max>
-      <min>0</min>
-      <format>1.2</format>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>NonVolatile_T</ctype>
       <group>BatteryController_Rev1|Foreground|Battery|Control|SOC</group>
-      <struct>NonVolatileWork.Temp_IR_MapTbl</struct>
-      <class>interpolation_1d</class>
+      <struct>NonVolatileWork.Volt_IR_PreIdxArr</struct>
+      <class>prelookup</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
-      <len>5</len>
-      <output>Temp_IR_Map</output>
-      <prelookup>Temp_IR_TableIdxArr</prelookup>
+      <len>8</len>
+      <input>Volt_IR_PreIn</input>
+      <index>Volt_IR_PreIdx</index>
    </VarDec>
    <VarDec>
-      <name>Temp_IR_Map</name>
+      <name>Volt_IR_PreIdx</name>
+      <access>RO RO RO RO</access>
+      <gain>0.001953125</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>127.998046875</max>
+      <min>0</min>
+      <format>4.2</format>
+      <mask>0x0000FFFF</mask>
+      <units>idx.frac</units>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BatteryController_Rev1|Foreground|Battery|Control|SOC</group>
+      <struct>VolatileWork_BSS.Volt_IR_PreIdx</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint16</type>
+   </VarDec>
+   <VarDec>
+      <name>Volt_IR_PreIn</name>
       <access>RO RO RO RO</access>
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
       <max>1.0E17</max>
       <min>-1.0E17</min>
-      <format>1.2</format>
+      <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
       <group>BatteryController_Rev1|Foreground|Battery|Control|SOC</group>
-      <struct>VolatileWork_BSS.Temp_IR_Map</struct>
+      <struct>VolatileWork_BSS.Volt_IR_PreIn</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>MotoHawkInterpolation2DMap</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>NonVolatile_T</ctype>
+      <group>BatteryController_Rev1|Foreground|Battery|Control|SOC</group>
+      <struct>NonVolatileWork.MotoHawkInterpolation2DMap.data</struct>
+      <class>interpolation_2d</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+      <output>MotoHawkInterpolation2D</output>
+      <col_prelookup>Volt_IR_PreIdxArr</col_prelookup>
+      <col_len>8</col_len>
+      <row_prelookup>Temp_IR_PreIdxArr</row_prelookup>
+      <row_len>8</row_len>
+   </VarDec>
+   <VarDec>
+      <name>MotoHawkInterpolation2D</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BatteryController_Rev1|Foreground|Battery|Control|SOC</group>
+      <struct>VolatileWork_BSS.MotoHawkInterpolation2D</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -4318,6 +4436,63 @@
       <help>Last received std CAN message on bus CAN_1, which was unhandled</help>
       <group>System | Debug | Resources | CAN</group>
       <struct>VolatileWork_BSS.CAN_1_std_last_unhandled_id</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint32</type>
+   </VarDec>
+   <VarDec>
+      <name>CAN_1_ext_receive_count</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>4.294967295E9</max>
+      <min>0</min>
+      <format>8.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <help>Total number of received ext CAN messages on bus CAN_1</help>
+      <group>System | Debug | Resources | CAN</group>
+      <struct>VolatileWork_BSS.CAN_1_ext_receive_count</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint32</type>
+   </VarDec>
+   <VarDec>
+      <name>CAN_1_ext_handled_count</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>4.294967295E9</max>
+      <min>0</min>
+      <format>8.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <help>Total number of handled ext CAN messages on bus CAN_1</help>
+      <group>System | Debug | Resources | CAN</group>
+      <struct>VolatileWork_BSS.CAN_1_ext_handled_count</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint32</type>
+   </VarDec>
+   <VarDec>
+      <name>CAN_1_ext_last_unhandled_id</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>4.294967295E9</max>
+      <min>0</min>
+      <format>8.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <help>Last received ext CAN message on bus CAN_1, which was unhandled</help>
+      <group>System | Debug | Resources | CAN</group>
+      <struct>VolatileWork_BSS.CAN_1_ext_last_unhandled_id</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>

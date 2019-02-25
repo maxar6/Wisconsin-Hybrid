@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BatteryController_Rev1'.
  *
- * Model version                  : 1.586
+ * Model version                  : 1.590
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Sat Aug 25 20:25:04 2018
+ * C/C++ source code generated on : Fri Sep 07 09:42:57 2018
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -29,16 +29,16 @@
 
 #include "BatteryController_Rev1_types.h"
 
-/* Block signals for system '<S17>/Delay 3 Chart' */
+/* Block signals for system '<S25>/Delay 3 Chart' */
 typedef struct {
-  boolean_T s24_write;                 /* '<S17>/Delay 3 Chart' */
+  boolean_T s32_write;                 /* '<S25>/Delay 3 Chart' */
 } rtB_Delay3Chart_BatteryController_Rev1;
 
-/* Block states (auto storage) for system '<S17>/Delay 3 Chart' */
+/* Block states (auto storage) for system '<S25>/Delay 3 Chart' */
 typedef struct {
-  real_T s24_count;                    /* '<S17>/Delay 3 Chart' */
-  uint8_T s24_is_active_c36_BatteryController_Rev1;/* '<S17>/Delay 3 Chart' */
-  uint8_T s24_is_c36_BatteryController_Rev1;/* '<S17>/Delay 3 Chart' */
+  real_T s32_count;                    /* '<S25>/Delay 3 Chart' */
+  uint8_T s32_is_active_c36_BatteryController_Rev1;/* '<S25>/Delay 3 Chart' */
+  uint8_T s32_is_c36_BatteryController_Rev1;/* '<S25>/Delay 3 Chart' */
 } rtDW_Delay3Chart_BatteryController_Rev1;
 
 extern void BatteryController_Rev1_Delay3Chart_Init

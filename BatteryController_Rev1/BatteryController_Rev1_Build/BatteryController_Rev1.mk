@@ -55,7 +55,7 @@ SHELL           = cmd
 
 
 MODEL           = BatteryController_Rev1
-MODULES         = AppMonitor.c Application.c ApplicationSecurity.c BatteryController_Rev1_Foreground.c CANReceiveDispatcher.c CodeCoverage.c MotoHawk_CAN.c MotoHawk_DataStores.c MotoHawk_IO.c TableLookupFunctions.c Trigger_BGND_BASE_PERIODIC_2304p0006.c Trigger_CAN_RX_BusCAN_1_Buf1.c Trigger_FGND_RTI_PERIODIC_1023p0001.c VarDecs.c rt_zcfcn.c 
+MODULES         = AppMonitor.c Application.c ApplicationSecurity.c BatteryController_Rev1_Foreground.c CANReceiveDispatcher.c CodeCoverage.c MotoHawk_CAN.c MotoHawk_DataStores.c MotoHawk_IO.c TableLookupFunctions.c Trigger_BGND_BASE_PERIODIC_2304p0006.c Trigger_BGND_BASE_PERIODIC_6876p0001.c Trigger_BGND_BASEx10_PERIODIC_6878p0001.c Trigger_BGND_BASEx2_PERIODIC_6877p0001.c Trigger_CAN_RX_BusCAN_1_Buf1.c Trigger_CAN_RX_BusCAN_1_Buf14.c Trigger_FGND_10XRTI_PERIODIC_6874p0001.c Trigger_FGND_20XRTI_PERIODIC_6875p0001.c Trigger_FGND_2XRTI_PERIODIC_6872p0001.c Trigger_FGND_RTI_PERIODIC_1023p0001.c Trigger_FGND_RTI_PERIODIC_6873p0001.c Trigger_IDLE_EVENT_6749p0009.c Trigger_IDLE_EVENT_6803p0001.c Trigger_ONE_SECOND_EVENT_6879p0001.c Trigger_STARTUP_EVENT_6778p0001.c VarDecs.c mh_ccp_protocol.c mh_ccp_protocol_CCP_BAT.c rt_zcfcn.c 
 MAKEFILE        = BatteryController_Rev1.mk
 MATLAB_ROOT     = C:\Program Files (x86)\MATLAB\R2011a
 S_FUNCTIONS     = 
