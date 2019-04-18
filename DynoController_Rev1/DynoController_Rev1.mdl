@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.306"
+    ComputedModelVersion    "1.310"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -26,39 +26,39 @@ Model {
   InitFcn		  "try, eval([bdroot '_setup']); catch, eval('model_setup', ''); end"
   UserBdParams		  "MotoHawkBuildVersion;MotoHawkBuildStats;MotoHawkModelSavedName;MotoHawkModelGUID;MotoHawkModelOpenT"
   "ime;MotoHawkModelElapsedTime;MotoHawkBuildInfo;MotoHawkBuildGUID"
-  MotoHawkBuildVersion	  "012"
+  MotoHawkBuildVersion	  "014"
   MotoHawkBuildStats	  "struct('TotalFLASH',{0},'TotalEEPROM',{0},'TotalRAM',{0},'AppFLASH',{0},'AppEEPROM',{0},'AppRA"
-  "M',{0},'HeapRAM',{0},'BuildSuccessCount',{12},'BuildErrorCount',{1})"
+  "M',{0},'HeapRAM',{0},'BuildSuccessCount',{14},'BuildErrorCount',{1})"
   MotoHawkModelSavedName  "DynoController_Rev1"
   MotoHawkModelGUID	  "6a27880e-8e62-404a-92-11-3b-ad-79-73-ba"
-  MotoHawkModelOpenTime	  "2018 4 13 0 14 9.833 "
-  MotoHawkModelElapsedTime "1814633.537"
+  MotoHawkModelOpenTime	  "2019 2 28 16 9 36.542 "
+  MotoHawkModelElapsedTime "1816760.569"
   MotoHawkBuildInfo	  "struct('model_name',{'DynoController_Rev1'},'motohawk_version',{'2011a_sp0.184'},'motohawk_comp"
-  "onent_version',{'0.0.7'},'matlab_version',{'7.12.0'},'build_version',{'011'},'module_type',{'ECU555-48-0708'},'layou"
+  "onent_version',{'0.0.7'},'matlab_version',{'7.12.0'},'build_version',{'013'},'module_type',{'ECU555-48-0708'},'layou"
   "t_type',{'PROD'},'processor_family',{'PPC'},'processor_type',{'MPC555'},'toolchain_vendor',{'gcc-powerpc-eabi'},'too"
   "lchain_version',{'4.4.0'},'component',{0},'archive_file',{'ECM.a'},'enable_build',{1},'fptype',{0},'flash_size',{368"
   "640},'ee_size',{4096},'ram_size',{26624},'decram_size',{0},'module_memory_def',{'MPC555_ModMemoryDef_4KEE_Prod'},'er"
   "i_table0_rev',{9},'max_eri_table_size',{65535},'use_debug_vardecs',{1},'use_info_vardecs',{1},'fgnd_base_period_ms',"
-  "{5},'bgnd_base_period_ms',{50},'root_build_dir',{'C:\\Users\\HYBRID\\Documents\\GitHub\\Wisconsin-Hybrid\\DynoContro"
-  "ller_Rev1'},'build_dir',{'C:\\Users\\HYBRID\\Documents\\GitHub\\Wisconsin-Hybrid\\DynoController_Rev1\\DynoControlle"
-  "r_Rev1_Build'},'dll_name',{'DynoContr_011'},'srz_name',{'DynoController_Rev1_011'},'fgnd_stack_size',{3072},'fgnd_an"
-  "gle_stack_size',{0},'bgnd_stack_size',{2048},'idle_stack_size',{1024},'irq_stack_size',{1536},'heap_size',{4096},'he"
-  "ap_margin',{409},'install_dll_dir',{'C:\\ECUFiles\\TDBDLL\\'},'install_srz_dir',{'C:\\ECUFiles\\Programs'},'app_int_"
-  "stack_size',{1024},'shutdown_stack_size',{1024},'mingw_dir',{'C:\\PROGRA~2\\Woodward\\DEVELO~1\\TOOLCH~1\\GCC\\win32"
-  "-pe\\4_4_0\\'},'motohawk_dir',{'C:\\PROGRA~2\\Woodward\\MCS\\MotoHawk\\2011A_~1.184'},'toolchain_dir',{'C:\\Program "
-  "Files (x86)\\Woodward\\DevelopmentTools\\Toolchains\\GCC\\powerpc-eabi\\4_4_0\\'},'matlab_root',{'C:\\Program Files "
-  "(x86)\\MATLAB\\R2011a'},'model_guid',{'6a27880e-8e62-404a-92-11-3b-ad-79-73-ba'},'build_guid',{'0632f483-d0b9-425d-a"
-  "9-64-b8-95-1d-f8-ef'},'token_guid',{'DD8AD11F95A6FC42BFF9AC780840E4B4'})"
-  MotoHawkBuildGUID	  "0632f483-d0b9-425d-a9-64-b8-95-1d-f8-ef"
+  "{5},'bgnd_base_period_ms',{50},'root_build_dir',{'C:\\Users\\maxar\\Documents\\GitHub\\Wisconsin-Hybrid\\DynoControl"
+  "ler_Rev1'},'build_dir',{'C:\\Users\\maxar\\Documents\\GitHub\\Wisconsin-Hybrid\\DynoController_Rev1\\DynoController_"
+  "Rev1_Build'},'dll_name',{'DynoContr_013'},'srz_name',{'DynoController_Rev1_013'},'fgnd_stack_size',{3072},'fgnd_angl"
+  "e_stack_size',{0},'bgnd_stack_size',{2048},'idle_stack_size',{1024},'irq_stack_size',{1536},'heap_size',{4096},'heap"
+  "_margin',{409},'install_dll_dir',{'C:\\ECUFiles\\TDBDLL\\'},'install_srz_dir',{'C:\\ECUFiles\\Programs'},'app_int_st"
+  "ack_size',{1024},'shutdown_stack_size',{1024},'mingw_dir',{'C:\\PROGRA~2\\Woodward\\DEVELO~1\\TOOLCH~1\\GCC\\win32-p"
+  "e\\4_4_0\\'},'motohawk_dir',{'C:\\PROGRA~2\\Woodward\\MCS\\MotoHawk\\2011A_~1.184'},'toolchain_dir',{'C:\\Program Fi"
+  "les (x86)\\Woodward\\DevelopmentTools\\Toolchains\\GCC\\powerpc-eabi\\4_4_0\\'},'matlab_root',{'C:\\Program Files (x"
+  "86)\\MATLAB\\R2011a'},'model_guid',{'6a27880e-8e62-404a-92-11-3b-ad-79-73-ba'},'build_guid',{'e13afb7d-f8f2-42f9-b3-"
+  "79-bf-69-f2-73-3c'},'token_guid',{'DD8AD11F95A6FC42BFF9AC780840E4B4'})"
+  MotoHawkBuildGUID	  "e13afb7d-f8f2-42f9-b3-79-bf-69-f2-73-3c"
   Created		  "Mon May 16 15:00:08 2005"
   Creator		  "Owner"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "HYBRID"
+  LastModifiedBy	  "maxar"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri Apr 13 00:19:57 2018"
-  RTWModifiedTimeStamp	  445479331
-  ModelVersionFormat	  "1.%<AutoIncrement:306>"
+  LastModifiedDate	  "Thu Feb 28 16:21:12 2019"
+  RTWModifiedTimeStamp	  473271294
+  ModelVersionFormat	  "1.%<AutoIncrement:310>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1332,6 +1332,21 @@ Model {
       InitialOutput	      "[]"
     }
     Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
       BlockType		      RelationalOperator
       Operator		      ">="
       InputSameDT	      on
@@ -1443,7 +1458,7 @@ Model {
   }
   System {
     Name		    "DynoController_Rev1"
-    Location		    [202, 82, 1331, 725]
+    Location		    [202, 75, 1331, 714]
     Open		    off
     ModelBrowserVisibility  on
     ModelBrowserWidth	    200
@@ -1457,7 +1472,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "112"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "340"
+    SIDHighWatermark	    "342"
     Block {
       BlockType		      Reference
       Name		      "CAN Definition"
@@ -5978,7 +5993,7 @@ Model {
 	      System {
 		Name			"Analog Outputs"
 		Location		[202, 83, 1918, 1027]
-		Open			on
+		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -7258,7 +7273,7 @@ Model {
 		  System {
 		    Name		    "BATTERY OUT"
 		    Location		    [202, 74, 1364, 717]
-		    Open		    off
+		    Open		    on
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
 		    ScreenColor		    "white"
@@ -7269,7 +7284,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "106"
+		    ZoomFactor		    "127"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Control Inputs"
@@ -7391,11 +7406,27 @@ Model {
 		    }
 		    }
 		    Block {
+		    BlockType		    Product
+		    Name		    "Product"
+		    SID			    "341"
+		    Ports		    [2, 1]
+		    Position		    [505, 142, 535, 173]
+		    InputSameDT		    off
+		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
+		    SaturateOnIntegerOverflow off
+		    Port {
+		    PortNumber		    1
+		    Name		    "ConnectCommand"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
 		    BlockType		    Reference
 		    Name		    "Send CAN Messages"
 		    SID			    "186"
 		    Ports		    [5]
-		    Position		    [840, 118, 1600, 572]
+		    Position		    [840, 119, 1675, 571]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/CAN Blocks/Send CAN Messages"
@@ -7514,6 +7545,45 @@ Model {
 		    }
 		    Block {
 		    BlockType		    Reference
+		    Name		    "motohawk_calibration2"
+		    SID			    "342"
+		    Ports		    [0, 1]
+		    Position		    [300, 55, 450, 95]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
+		    SourceType		    "MotoHawk Calibration"
+		    nam			    "'Battery_Connect_Val'"
+		    val			    "1"
+		    storage		    "Calibration NV"
+		    show_more		    off
+		    name_source		    "Use Parameter"
+		    data_type		    "Inherit from 'Default Value'"
+		    read_level		    "1"
+		    write_level		    "1"
+		    ovr_cals		    on
+		    view_as		    "Number"
+		    enum_struct		    "{'Disabled', 'Enabled'}"
+		    vector_style	    "Wide Row"
+		    use_help_units	    off
+		    help		    "''"
+		    units		    "''"
+		    use_header_enum	    off
+		    row_header_enum	    "{}"
+		    col_header_enum	    "{}"
+		    use_min_max		    off
+		    min_val		    "-inf"
+		    max_val		    "inf"
+		    use_precision	    off
+		    precision		    "''"
+		    gain		    "1"
+		    offset		    "0"
+		    exp			    "1"
+		    use_mototune_group	    off
+		    mototune_group	    "motohawk_vardec_path(gcb)"
+		    }
+		    Block {
+		    BlockType		    Reference
 		    Name		    "motohawk_override_abs"
 		    SID			    "190"
 		    Ports		    [1, 1]
@@ -7543,8 +7613,8 @@ Model {
 		    parent_help		    "''"
 		    parent_units	    "''"
 		    use_min_max		    on
-		    parent_min		    "0"
-		    parent_max		    "4"
+		    parent_min		    "-inf"
+		    parent_max		    "inf"
 		    use_precision	    off
 		    parent_precision	    "''"
 		    parent_gain		    "1"
@@ -7689,23 +7759,6 @@ Model {
 		    Line {
 		    Name		    "ConnectCommand"
 		    Labels		    [0, 0; 1, 0]
-		    SrcBlock		    "Logical\nOperator2"
-		    SrcPort		    1
-		    Points		    [130, 0]
-		    Branch {
-		    Labels		    [1, 0]
-		    DstBlock		    "motohawk_override_abs"
-		    DstPort		    1
-		    }
-		    Branch {
-		    Points		    [0, -35]
-		    DstBlock		    "motohawk_probe"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    Name		    "ConnectCommand"
-		    Labels		    [0, 0; 1, 0]
 		    SrcBlock		    "motohawk_override_abs"
 		    SrcPort		    1
 		    DstBlock		    "Send CAN Messages"
@@ -7796,6 +7849,39 @@ Model {
 		    Points		    [95, 0; 0, 60]
 		    DstBlock		    "Logical\nOperator2"
 		    DstPort		    2
+		    }
+		    Line {
+		    Name		    "ConnectCommand"
+		    Labels		    [0, 0; 0, 0]
+		    SrcBlock		    "Logical\nOperator2"
+		    SrcPort		    1
+		    DstBlock		    "Product"
+		    DstPort		    2
+		    }
+		    Line {
+		    Name		    "ConnectCommand"
+		    Labels		    [0, 0]
+		    SrcBlock		    "Product"
+		    SrcPort		    1
+		    Points		    [25, 0]
+		    Branch {
+		    Labels		    [0, 0]
+		    Points		    [0, 5]
+		    DstBlock		    "motohawk_override_abs"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, -30]
+		    DstBlock		    "motohawk_probe"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "motohawk_calibration2"
+		    SrcPort		    1
+		    Points		    [15, 0; 0, 75]
+		    DstBlock		    "Product"
+		    DstPort		    1
 		    }
 		  }
 		}
@@ -9742,7 +9828,7 @@ Model {
 	      SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 	      SourceType	      "MotoHawk Function Trigger"
 	      trigger		      "FGND_20XRTI_PERIODIC"
-	      function_name	      "Trigger_FGND_20XRTI_PERIODIC_589p0009"
+	      function_name	      "Trigger_FGND_20XRTI_PERIODIC_589p0005"
 	      priority_order	      "200"
 	      inherited		      on
 	      run_disabled	      off
@@ -11753,7 +11839,7 @@ Model {
 	  SourceBlock		  "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 	  SourceType		  "MotoHawk Function Trigger"
 	  trigger		  "BGND_BASE_PERIODIC"
-	  function_name		  "Trigger_BGND_BASE_PERIODIC_783p0004"
+	  function_name		  "Trigger_BGND_BASE_PERIODIC_783p0002"
 	  priority_order	  "255"
 	  inherited		  on
 	  run_disabled		  on
@@ -11958,7 +12044,7 @@ Model {
       SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
       SourceType	      "MotoHawk Function Trigger"
       trigger		      "FGND_RTI_PERIODIC"
-      function_name	      "Trigger_FGND_RTI_PERIODIC_794p0004"
+      function_name	      "Trigger_FGND_RTI_PERIODIC_794p0002"
       priority_order	      "0"
       inherited		      off
       run_disabled	      off
@@ -11980,7 +12066,7 @@ Model {
       SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
       SourceType	      "MotoHawk Function Trigger"
       trigger		      "STARTUP_EVENT"
-      function_name	      "Trigger_STARTUP_EVENT_795p0004"
+      function_name	      "Trigger_STARTUP_EVENT_795p0002"
       priority_order	      "0"
       inherited		      off
       run_disabled	      off

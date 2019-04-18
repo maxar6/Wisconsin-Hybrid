@@ -14,7 +14,6 @@ OBJECTS = \
 	"c4_BuckyWagon_01.obj"\
 	"c5_BuckyWagon_01.obj"\
 	"c6_BuckyWagon_01.obj"\
-	"c7_BuckyWagon_01.obj"\
 	"c9_BuckyWagon_01.obj"\
 	"c11_BuckyWagon_01.obj"\
 	"c24_BuckyWagon_01.obj"\
@@ -31,7 +30,7 @@ OBJECTS = \
 	"C:\Program Files (x86)\MATLAB\R2011a\extern\lib\win32\lcc\libemlrt.lib"\
 	"C:\Program Files (x86)\MATLAB\R2011a\extern\lib\win32\lcc\libmwblascompat32.lib"\
 
-INCLUDE_PATH= -I"C:\Program Files (x86)\MATLAB\R2011a\sys\lcc\include"  -I"C:\Program Files (x86)\MATLAB\R2011a\extern\include"  -I"C:\Program Files (x86)\MATLAB\R2011a\simulink\include"  -I"C:\Program Files (x86)\MATLAB\R2011a\stateflow\c\mex\include"  -I"C:\Program Files (x86)\MATLAB\R2011a\stateflow\c\debugger\include"  -I"c:\users\hybrid\documents\github\wisconsin-hybrid\buckywagon_01\slprj\_sfprj\buckywagon_01\_self\sfun\src"  -I"c:\users\hybrid\documents\github\wisconsin-hybrid\buckywagon_01" 
+INCLUDE_PATH= -I"C:\Program Files (x86)\MATLAB\R2011a\sys\lcc\include"  -I"C:\Program Files (x86)\MATLAB\R2011a\extern\include"  -I"C:\Program Files (x86)\MATLAB\R2011a\simulink\include"  -I"C:\Program Files (x86)\MATLAB\R2011a\stateflow\c\mex\include"  -I"C:\Program Files (x86)\MATLAB\R2011a\stateflow\c\debugger\include"  -I"c:\users\maxar\documents\github\wisconsin-hybrid\buckywagon_01\slprj\_sfprj\buckywagon_01\_self\sfun\src"  -I"c:\users\maxar\documents\github\wisconsin-hybrid\buckywagon_01" 
  
 
 BuckyWagon_01_sfun.mexw32 : $(MAKEFILE) $(OBJECTS)
@@ -52,8 +51,6 @@ c5_BuckyWagon_01.obj :	"c5_BuckyWagon_01.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c5_BuckyWagon_01.c"
 c6_BuckyWagon_01.obj :	"c6_BuckyWagon_01.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c6_BuckyWagon_01.c"
-c7_BuckyWagon_01.obj :	"c7_BuckyWagon_01.c"
-	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c7_BuckyWagon_01.c"
 c9_BuckyWagon_01.obj :	"c9_BuckyWagon_01.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c9_BuckyWagon_01.c"
 c11_BuckyWagon_01.obj :	"c11_BuckyWagon_01.c"

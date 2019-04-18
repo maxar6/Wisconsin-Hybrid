@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'DynoController_Rev1'.
  *
- * Model version                  : 1.305
+ * Model version                  : 1.309
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Fri Apr 13 00:18:48 2018
+ * C/C++ source code generated on : Thu Feb 28 16:20:04 2019
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -83,7 +83,7 @@ void DynoController_Rev1_Foreground_Enable(void)
 {
   /* Level2 S-Function Block: '<S6>/motohawk_trigger1' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_FGND_20XRTI_PERIODIC_589p0009 */
+  /* Enable for Trigger_FGND_20XRTI_PERIODIC_589p0005 */
   DynoController_Rev1_DWork.s6_motohawk_trigger1_DWORK1 = 1;
 }
 
@@ -91,7 +91,7 @@ void DynoController_Rev1_Foreground_Enable(void)
 void DynoController_Rev1_Foreground_Disable(void)
 {
   /* Level2 S-Function Block: '<S6>/motohawk_trigger1' (motohawk_sfun_trigger) */
-  /* Disable for Trigger_FGND_20XRTI_PERIODIC_589p0009 */
+  /* Disable for Trigger_FGND_20XRTI_PERIODIC_589p0005 */
   DynoController_Rev1_DWork.s6_motohawk_trigger1_DWORK1 = 0;
 }
 
@@ -105,7 +105,7 @@ void DynoController_Rev1_Foreground_Start(void)
     GaugeChain_EZLinkOutput_Create();
   }
 
-  /* Clear enable/disable state for embedded trigger Trigger_FGND_20XRTI_PERIODIC_589p0009 */
+  /* Clear enable/disable state for embedded trigger Trigger_FGND_20XRTI_PERIODIC_589p0005 */
   DynoController_Rev1_DWork.s6_motohawk_trigger1_DWORK1 = 0;
 
   /* S-Function (motohawk_sfun_probe): '<S75>/motohawk_probe7' */
@@ -121,6 +121,7 @@ void DynoController_Rev1_Foreground(void)
   /* local block i/o variables */
   real_T rtb_motohawk_delta_time_h;
   real_T rtb_motohawk_delta_time_p;
+  real_T rtb_Merge_h;
   real_T rtb_Merge_oa;
   real_T rtb_Merge_b;
   real_T rtb_Merge_c4;
@@ -135,7 +136,6 @@ void DynoController_Rev1_Foreground(void)
   boolean_T rtb_Merge_p;
   boolean_T rtb_Merge_nn;
   boolean_T rtb_Ignition;
-  boolean_T rtb_Merge_h;
   boolean_T rtb_Merge_d;
   boolean_T rtb_Merge_ha;
   boolean_T rtb_Merge_j;
@@ -233,10 +233,10 @@ void DynoController_Rev1_Foreground(void)
   /* MotoHawk Read CAN Message */
   {
     S_CANMessage messageObj;
-    extern MHCAN_directslot MHCAN_directslot_RxSlot_220p0011;
+    extern MHCAN_directslot MHCAN_directslot_RxSlot_220p001;
     extern boolean_T MHCAN_getdirect(MHCAN_directslot *directslot, S_CANMessage *
       messageObj);
-    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_220p0011,
+    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_220p001,
       &messageObj);
     if (msg_valid) {
       uint8_T tmp1 = 0;
@@ -399,10 +399,10 @@ void DynoController_Rev1_Foreground(void)
   /* MotoHawk Read CAN Message */
   {
     S_CANMessage messageObj;
-    extern MHCAN_directslot MHCAN_directslot_RxSlot_259p0011;
+    extern MHCAN_directslot MHCAN_directslot_RxSlot_259p001;
     extern boolean_T MHCAN_getdirect(MHCAN_directslot *directslot, S_CANMessage *
       messageObj);
-    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_259p0011,
+    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_259p001,
       &messageObj);
     if (msg_valid) {
       uint16_T tmp0 = 0;
@@ -792,10 +792,10 @@ void DynoController_Rev1_Foreground(void)
   /* MotoHawk Read CAN Message */
   {
     S_CANMessage messageObj;
-    extern MHCAN_directslot MHCAN_directslot_RxSlot_222p0011;
+    extern MHCAN_directslot MHCAN_directslot_RxSlot_222p001;
     extern boolean_T MHCAN_getdirect(MHCAN_directslot *directslot, S_CANMessage *
       messageObj);
-    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_222p0011,
+    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_222p001,
       &messageObj);
     if (msg_valid) {
       uint16_T tmp0 = 0;
@@ -932,9 +932,13 @@ void DynoController_Rev1_Foreground(void)
 
   /* End of If: '<S20>/If' */
 
-  /* Logic: '<S102>/Logical Operator2' */
-  DynoController_Rev1_B.s102_ConnectCommand = ((rtb_LogicalOperator5 &&
-    DynoController_Rev1_B.s10_LogicalOperator2));
+  /* Product: '<S102>/Product' incorporates:
+   *  Logic: '<S102>/Logical Operator2'
+   *  S-Function (motohawk_sfun_calibration): '<S102>/motohawk_calibration2'
+   */
+  DynoController_Rev1_B.s102_ConnectCommand = (real_T)(rtb_LogicalOperator5 &&
+    DynoController_Rev1_B.s10_LogicalOperator2) * (Battery_Connect_Val_DataStore
+    ());
 
   /* If: '<S104>/If' incorporates:
    *  Inport: '<S106>/In1'
@@ -1044,7 +1048,14 @@ void DynoController_Rev1_Foreground(void)
         uint8_T tmp2;
         uint32_T tmp3;
         uint8_T tmp4;
-        tmp0 = (uint8_T)(rtb_Merge_h);
+        if (rtb_Merge_h < 0.0000000000F) {
+          tmp0 = (uint8_T)(0U);
+        } else if (rtb_Merge_h > 3.0000000000F) {
+          tmp0 = (uint8_T)(3U);
+        } else {
+          tmp0 = (uint8_T)(rtb_Merge_h);
+        }
+
         tmp1 = (uint8_T)(rtb_Merge_d);
         tmp2 = (uint8_T)(rtb_Ignition);
         if (DynoController_Rev1_ConstB.s102_OdometerValue < 0.0000000000F) {
@@ -1640,10 +1651,10 @@ void DynoController_Rev1_Foreground(void)
   /* MotoHawk Read CAN Message */
   {
     S_CANMessage messageObj;
-    extern MHCAN_directslot MHCAN_directslot_RxSlot_221p0011;
+    extern MHCAN_directslot MHCAN_directslot_RxSlot_221p001;
     extern boolean_T MHCAN_getdirect(MHCAN_directslot *directslot, S_CANMessage *
       messageObj);
-    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_221p0011,
+    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_221p001,
       &messageObj);
     if (msg_valid) {
       uint8_T tmp2 = 0;
@@ -1903,7 +1914,7 @@ void DynoController_Rev1_Foreground(void)
   /* End of If: '<S60>/If' */
 
   /* S-Function (motohawk_sfun_trigger): '<S6>/motohawk_trigger1' */
-  /* Enable for Trigger_FGND_20XRTI_PERIODIC_589p0009 */
+  /* Enable for Trigger_FGND_20XRTI_PERIODIC_589p0005 */
   if (DynoController_Rev1_DWork.s6_motohawk_trigger1_DWORK1 == 0) {
     DynoController_Rev1_DWork.s6_motohawk_trigger1_DWORK1 = 1;
   }
@@ -2015,58 +2026,58 @@ void DynoController_Rev1_Foreground(void)
 
   /* Update for S-Function (motohawk_sfun_dout): '<S75>/motohawk_dout' */
 
-  /* S-Function Block: DOut332p0011 */
+  /* S-Function Block: DOut332p001 */
   {
-    DOut332p0011_DiscreteOutput_Set(rtb_Merge_l);
+    DOut332p001_DiscreteOutput_Set(rtb_Merge_l);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S75>/motohawk_dout1' */
 
-  /* S-Function Block: DOut333p0011 */
+  /* S-Function Block: DOut333p001 */
   {
-    DOut333p0011_DiscreteOutput_Set(rtb_Merge_oaf);
+    DOut333p001_DiscreteOutput_Set(rtb_Merge_oaf);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S75>/motohawk_dout2' */
 
-  /* S-Function Block: DOut334p0011 */
+  /* S-Function Block: DOut334p001 */
   {
-    DOut334p0011_DiscreteOutput_Set(rtb_Merge_lo);
+    DOut334p001_DiscreteOutput_Set(rtb_Merge_lo);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S75>/motohawk_dout3' */
 
-  /* S-Function Block: DOut335p0011 */
+  /* S-Function Block: DOut335p001 */
   {
-    DOut335p0011_DiscreteOutput_Set(rtb_Merge_aw);
+    DOut335p001_DiscreteOutput_Set(rtb_Merge_aw);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S75>/motohawk_dout4' */
 
-  /* S-Function Block: DOut336p0011 */
+  /* S-Function Block: DOut336p001 */
   {
-    DOut336p0011_DiscreteOutput_Set(rtb_Merge_i);
+    DOut336p001_DiscreteOutput_Set(rtb_Merge_i);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S75>/motohawk_dout5' */
 
-  /* S-Function Block: DOut337p0011 */
+  /* S-Function Block: DOut337p001 */
   {
-    DOut337p0011_DiscreteOutput_Set(rtb_Merge_nt);
+    DOut337p001_DiscreteOutput_Set(rtb_Merge_nt);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S75>/motohawk_dout6' */
 
-  /* S-Function Block: DOut338p0011 */
+  /* S-Function Block: DOut338p001 */
   {
-    DOut338p0011_DiscreteOutput_Set(rtb_Merge_p);
+    DOut338p001_DiscreteOutput_Set(rtb_Merge_p);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S75>/motohawk_dout7' */
 
-  /* S-Function Block: DOut339p0011 */
+  /* S-Function Block: DOut339p001 */
   {
-    DOut339p0011_DiscreteOutput_Set(rtb_Merge_nn);
+    DOut339p001_DiscreteOutput_Set(rtb_Merge_nn);
   }
 }
 

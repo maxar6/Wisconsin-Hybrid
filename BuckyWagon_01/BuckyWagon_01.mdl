@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1543"
+    ComputedModelVersion    "1.1571"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -26,42 +26,42 @@ Model {
   InitFcn		  "try, eval([bdroot '_setup']); catch, eval('model_setup', ''); end"
   UserBdParams		  "MotoHawkBuildVersion;MotoHawkBuildStats;MotoHawkModelSavedName;MotoHawkModelGUID;MotoHawkModelOpenT"
   "ime;MotoHawkModelElapsedTime;MotoHawkBuildInfo;MotoHawkBuildGUID"
-  MotoHawkBuildVersion	  "174"
+  MotoHawkBuildVersion	  "183"
   MotoHawkBuildStats	  "struct('TotalFLASH',{281540},'TotalEEPROM',{370},'TotalRAM',{18696},'AppFLASH',{71914},'AppEEP"
-  "ROM',{196},'AppRAM',{2166},'HeapRAM',{4096},'BuildSuccessCount',{177},'BuildErrorCount',{29},'OSRAM',{4754},'StackRA"
+  "ROM',{196},'AppRAM',{2166},'HeapRAM',{4096},'BuildSuccessCount',{186},'BuildErrorCount',{29},'OSRAM',{4754},'StackRA"
   "M',{7680},'FgndTimeStackSize',{3072},'FgndAngleStackSize',{0},'BgndStackSize',{2048},'IdleStackSize',{1024},'Interru"
   "ptStackSize',{1536},'RTWBlockIOSize',{852},'RTWDWorkSize',{364},'RTWPrevZCSize',{0},'VolatileSize',{272},'NonVolatil"
   "eSize',{196},'ConstantSize',{2208})"
   MotoHawkModelSavedName  "BuckyWagon_01"
   MotoHawkModelGUID	  "3c32a120-d49a-4164-87-fe-ac-4b-55-ed-6f"
-  MotoHawkModelOpenTime	  "2019 2 25 14 55 49.85 "
-  MotoHawkModelElapsedTime "-4768747.164"
+  MotoHawkModelOpenTime	  "2019 4 17 14 50 33.484 "
+  MotoHawkModelElapsedTime "-3500057.061"
   MotoHawkBuildInfo	  "struct('model_name',{'BuckyWagon_01'},'motohawk_version',{'2011a_sp0.184'},'motohawk_component_"
-  "version',{'0.0.7'},'matlab_version',{'7.12.0'},'build_version',{'173'},'module_type',{'ECU565-128'},'layout_type',{'"
+  "version',{'0.0.7'},'matlab_version',{'7.12.0'},'build_version',{'182'},'module_type',{'ECU565-128'},'layout_type',{'"
   "DEV'},'processor_family',{'PPC'},'processor_type',{'MPC565'},'toolchain_vendor',{'gcc-powerpc-eabi'},'toolchain_vers"
   "ion',{'4.4.0'},'component',{0},'archive_file',{'PCM128.a'},'enable_build',{1},'fptype',{0},'flash_size',{1048576},'e"
   "e_size',{8192},'ram_size',{36864},'decram_size',{4096},'module_memory_def',{'MPC565_ModMemoryDef_Dev'},'eri_table0_r"
   "ev',{9},'max_eri_table_size',{65535},'use_debug_vardecs',{1},'use_info_vardecs',{1},'fgnd_base_period_ms',{5},'bgnd_"
-  "base_period_ms',{50},'root_build_dir',{'C:\\Users\\HYBRID\\Documents\\GitHub\\Wisconsin-Hybrid\\BuckyWagon_01'},'bui"
-  "ld_dir',{'C:\\Users\\HYBRID\\Documents\\GitHub\\Wisconsin-Hybrid\\BuckyWagon_01\\BuckyWagon_01_Build'},'dll_name',{'"
-  "BuckyWago_173'},'srz_name',{'BuckyWagon_01_173'},'fgnd_stack_size',{3072},'fgnd_angle_stack_size',{0},'bgnd_stack_si"
-  "ze',{2048},'idle_stack_size',{1024},'irq_stack_size',{1536},'heap_size',{4096},'heap_margin',{409},'install_dll_dir'"
-  ",{'C:\\ECUFiles\\TDBDLL\\'},'install_srz_dir',{'C:\\ECUFiles\\Programs'},'app_int_stack_size',{1024},'shutdown_stack"
-  "_size',{1024},'mingw_dir',{'C:\\PROGRA~2\\Woodward\\DEVELO~1\\TOOLCH~1\\GCC\\win32-pe\\4_4_0\\'},'motohawk_dir',{'C:"
-  "\\PROGRA~2\\Woodward\\MCS\\MotoHawk\\2011A_~1.184'},'toolchain_dir',{'C:\\Program Files (x86)\\Woodward\\Development"
-  "Tools\\Toolchains\\GCC\\powerpc-eabi\\4_4_0\\'},'matlab_root',{'C:\\Program Files (x86)\\MATLAB\\R2011a'},'model_gui"
-  "d',{'3c32a120-d49a-4164-87-fe-ac-4b-55-ed-6f'},'build_guid',{'e4694f84-49af-4e0e-8b-b3-f7-55-0d-b1-c5'},'token_guid'"
-  ",{'DD8AD11F95A6FC42BFF9AC780840E4B4'})"
-  MotoHawkBuildGUID	  "e4694f84-49af-4e0e-8b-b3-f7-55-0d-b1-c5"
+  "base_period_ms',{50},'root_build_dir',{'C:\\Users\\maxar\\Documents\\GitHub\\Wisconsin-Hybrid\\BuckyWagon_01'},'buil"
+  "d_dir',{'C:\\Users\\maxar\\Documents\\GitHub\\Wisconsin-Hybrid\\BuckyWagon_01\\BuckyWagon_01_Build'},'dll_name',{'Bu"
+  "ckyWago_182'},'srz_name',{'BuckyWagon_01_182'},'fgnd_stack_size',{3072},'fgnd_angle_stack_size',{0},'bgnd_stack_size"
+  "',{2048},'idle_stack_size',{1024},'irq_stack_size',{1536},'heap_size',{4096},'heap_margin',{409},'install_dll_dir',{"
+  "'C:\\ECUFiles\\TDBDLL\\'},'install_srz_dir',{'C:\\ECUFiles\\Programs'},'app_int_stack_size',{1024},'shutdown_stack_s"
+  "ize',{1024},'mingw_dir',{'C:\\PROGRA~2\\Woodward\\DEVELO~1\\TOOLCH~1\\GCC\\win32-pe\\4_4_0\\'},'motohawk_dir',{'C:\\"
+  "PROGRA~2\\Woodward\\MCS\\MotoHawk\\2011A_~1.184'},'toolchain_dir',{'C:\\Program Files (x86)\\Woodward\\DevelopmentTo"
+  "ols\\Toolchains\\GCC\\powerpc-eabi\\4_4_0\\'},'matlab_root',{'C:\\Program Files (x86)\\MATLAB\\R2011a'},'model_guid'"
+  ",{'3c32a120-d49a-4164-87-fe-ac-4b-55-ed-6f'},'build_guid',{'38ba9199-da5c-45bc-a3-2a-ec-41-da-ad-73'},'token_guid',{"
+  "'DD8AD11F95A6FC42BFF9AC780840E4B4'})"
+  MotoHawkBuildGUID	  "38ba9199-da5c-45bc-a3-2a-ec-41-da-ad-73"
   Created		  "Mon May 16 15:00:08 2005"
   Creator		  "Danny"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "maxar"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Feb 25 17:53:06 2019"
-  RTWModifiedTimeStamp	  473008966
-  ModelVersionFormat	  "1.%<AutoIncrement:1543>"
+  LastModifiedDate	  "Wed Apr 17 19:05:39 2019"
+  RTWModifiedTimeStamp	  477428739
+  ModelVersionFormat	  "1.%<AutoIncrement:1571>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1447,6 +1447,11 @@ Model {
       SampleTime	      "-1"
     }
     Block {
+      BlockType		      Rounding
+      Operator		      "floor"
+      SampleTime	      "-1"
+    }
+    Block {
       BlockType		      S-Function
       FunctionName	      "system"
       SFunctionModules	      "''"
@@ -1565,7 +1570,7 @@ Model {
   }
   System {
     Name		    "BuckyWagon_01"
-    Location		    [-1718, -548, -661, 78]
+    Location		    [-1646, -548, -589, 78]
     Open		    off
     ModelBrowserVisibility  on
     ModelBrowserWidth	    272
@@ -1579,7 +1584,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "108"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "4391"
+    SIDHighWatermark	    "4477"
     Block {
       BlockType		      SubSystem
       Name		      "Build Toolchain (GCC)"
@@ -4647,6 +4652,31 @@ Model {
 		  DstPort		  2
 		}
 		Line {
+		  SrcBlock		  "motohawk_override_abs4"
+		  SrcPort		  1
+		  DstBlock		  "Send CAN Messages"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "motohawk_override_abs1"
+		  SrcPort		  1
+		  Points		  [50, 0]
+		  Branch {
+		    DstBlock		    "Send CAN Messages"
+		    DstPort		    4
+		  }
+		  Branch {
+		    DstBlock		    "motohawk_probe5"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "PercentSpeed"
+		  SrcPort		  1
+		  DstBlock		  "Saturation"
+		  DstPort		  1
+		}
+		Line {
 		  Name			  "OperatingMode_cmd"
 		  Labels		  [0, 0]
 		  SrcBlock		  "Operating Mode: Normal"
@@ -4654,8 +4684,250 @@ Model {
 		  DstBlock		  "motohawk_override_abs4"
 		  DstPort		  1
 		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "EMP Cooling Fan"
+	      SID		      "4434"
+	      Ports		      [1]
+	      Position		      [345, 514, 470, 586]
+	      TreatAsAtomicUnit	      on
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"EMP Cooling Fan"
+		Location		[-1646, -548, -2, 516]
+		Open			off
+		ModelBrowserVisibility	on
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "PercentSpeed"
+		  SID			  "4435"
+		  Position		  [25, 483, 55, 497]
+		  IconDisplay		  "Port number"
+		  OutDataTypeStr	  "double"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Operating Mode - Activate1"
+		  SID			  "4437"
+		  Position		  [270, 352, 375, 388]
+		  ShowName		  off
+		  Value			  "hex2dec('FFFF')"
+		  OutDataTypeStr	  "uint16"
+		}
+		Block {
+		  BlockType		  Saturate
+		  Name			  "Saturation"
+		  SID			  "4439"
+		  Ports			  [1, 1]
+		  Position		  [175, 475, 205, 505]
+		  InputPortMap		  "u0"
+		  UpperLimit		  "100"
+		  LowerLimit		  "0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Send CAN Messages"
+		  SID			  "4440"
+		  Ports			  [4]
+		  Position		  [530, 74, 1340, 546]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/CAN Blocks/Send CAN Messages"
+		  SourceType		  "MotoHawk Send CAN Messages"
+		  bus			  "-2"
+		  nam			  "'CAN_1'"
+		  msgl			  "CANTx_EMPFan_Command"
+		  pace			  "5"
+		  labelwires		  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_calibration"
+		  SID			  "4444"
+		  Ports			  [0, 1]
+		  Position		  [105, 110, 255, 150]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
+		  SourceType		  "MotoHawk Calibration"
+		  nam			  "'Fan_Mode'"
+		  val			  "1"
+		  storage		  "Calibration"
+		  show_more		  on
+		  name_source		  "Use Parameter"
+		  data_type		  "uint8"
+		  read_level		  "1"
+		  write_level		  "1"
+		  ovr_cals		  on
+		  view_as		  "Enumeration"
+		  enum_struct		  "{'Off', 'Normal', 'Reverse'}"
+		  vector_style		  "Wide Row"
+		  use_help_units	  off
+		  help			  "''"
+		  units			  "''"
+		  use_header_enum	  off
+		  row_header_enum	  "{}"
+		  col_header_enum	  "{}"
+		  use_min_max		  off
+		  min_val		  "-inf"
+		  max_val		  "inf"
+		  use_precision		  off
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_mototune_group	  on
+		  mototune_group	  "'Actuators | EMP Cooling Fan'"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_calibration1"
+		  SID			  "4445"
+		  Ports			  [0, 1]
+		  Position		  [210, 230, 360, 270]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
+		  SourceType		  "MotoHawk Calibration"
+		  nam			  "'Fan_Hold_Mode'"
+		  val			  "0"
+		  storage		  "Calibration"
+		  show_more		  on
+		  name_source		  "Use Parameter"
+		  data_type		  "uint8"
+		  read_level		  "1"
+		  write_level		  "1"
+		  ovr_cals		  on
+		  view_as		  "Enumeration"
+		  enum_struct		  "{'Power_Off', 'Power_On'}"
+		  vector_style		  "Wide Row"
+		  use_help_units	  off
+		  help			  "''"
+		  units			  "''"
+		  use_header_enum	  off
+		  row_header_enum	  "{}"
+		  col_header_enum	  "{}"
+		  use_min_max		  off
+		  min_val		  "-inf"
+		  max_val		  "inf"
+		  use_precision		  off
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_mototune_group	  on
+		  mototune_group	  "'Actuators | EMP Cooling Fan'"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_override_abs1"
+		  SID			  "4441"
+		  Ports			  [1, 1]
+		  Position		  [245, 477, 395, 503]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_override_abs"
+		  SourceType		  "MotoHawk Absolute Override"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  GeneratePreprocessorConditionals off
+		  parent_name		  "'EMP_Fan_Speed'"
+		  parent_val		  "0"
+		  show_more		  on
+		  name_source		  "Use Parameter"
+		  parent_read_level	  "1"
+		  parent_override_level	  "1"
+		  view_as		  "Number"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  use_help_units	  off
+		  parent_help		  "''"
+		  parent_units		  "''"
+		  use_min_max		  off
+		  parent_min		  "-inf"
+		  parent_max		  "inf"
+		  use_precision		  off
+		  parent_precision	  "''"
+		  parent_gain		  "1"
+		  parent_offset		  "0"
+		  parent_exp		  "1"
+		  use_mototune_group	  on
+		  parent_group		  "'Actuators | EMP Cooling Fan'"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_probe5"
+		  SID			  "4443"
+		  Ports			  [1]
+		  Position		  [465, 562, 615, 588]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
+		  SourceType		  "MotoHawk Probe"
+		  nam			  "'EMP_Fan_Speed'"
+		  show_more		  on
+		  name_source		  "Use Parameter"
+		  read_level		  "1"
+		  view_as		  "Number"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  vector_style		  "Wide Row"
+		  use_help_units	  off
+		  help			  "''"
+		  units			  "''"
+		  use_header_enum	  off
+		  row_header_enum	  "{}"
+		  col_header_enum	  "{}"
+		  use_precision		  off
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_mototune_group	  on
+		  mototune_group	  "'Actuators | EMP Cooling Fan'"
+		}
 		Line {
-		  SrcBlock		  "motohawk_override_abs4"
+		  SrcBlock		  "Saturation"
+		  SrcPort		  1
+		  DstBlock		  "motohawk_override_abs1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Operating Mode - Activate1"
+		  SrcPort		  1
+		  DstBlock		  "Send CAN Messages"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "motohawk_calibration1"
+		  SrcPort		  1
+		  DstBlock		  "Send CAN Messages"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "motohawk_calibration"
 		  SrcPort		  1
 		  DstBlock		  "Send CAN Messages"
 		  DstPort		  1
@@ -5486,8 +5758,8 @@ Model {
 	      MaskHideContents	      off
 	      System {
 		Name			"UQM Motor"
-		Location		[202, 75, 1347, 690]
-		Open			on
+		Location		[274, 75, 1347, 690]
+		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -5498,13 +5770,20 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"115"
+		ZoomFactor		"112"
 		Block {
 		  BlockType		  Inport
 		  Name			  "Torque"
 		  SID			  "4353"
 		  Position		  [95, 408, 125, 422]
 		  IconDisplay		  "Port number"
+		  Port {
+		    PortNumber		    1
+		    Name		    "Requested_Torque_Value"
+		    PropagatedSignals	    "Motor_Torque"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
 		}
 		Block {
 		  BlockType		  Inport
@@ -5513,6 +5792,13 @@ Model {
 		  Position		  [275, 258, 305, 272]
 		  Port			  "2"
 		  IconDisplay		  "Port number"
+		  Port {
+		    PortNumber		    1
+		    Name		    "Enable"
+		    PropagatedSignals	    "Drive Enable"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
 		}
 		Block {
 		  BlockType		  Inport
@@ -5523,6 +5809,312 @@ Model {
 		  IconDisplay		  "Port number"
 		}
 		Block {
+		  BlockType		  SubSystem
+		  Name			  "Counter"
+		  SID			  "4395"
+		  Ports			  [0, 1]
+		  Position		  [200, 94, 300, 136]
+		  MinAlgLoopOccurrences	  off
+		  PropExecContextOutsideSubsystem off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  Opaque		  off
+		  RequestExecContextInheritance	off
+		  MaskHideContents	  off
+		  Port {
+		    PortNumber		    1
+		    Name		    "Command_Counter"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  System {
+		    Name		    "Counter"
+		    Location		    [274, 83, 1364, 715]
+		    Open		    off
+		    ModelBrowserVisibility  on
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Counter\nLimited"
+		    SID			    "4400"
+		    Ports		    [0, 1]
+		    Position		    [30, 195, 60, 225]
+		    LibraryVersion	    "1.236"
+		    SourceBlock		    "simulink/Sources/Counter\nLimited"
+		    SourceType		    "Counter Limited"
+		    ShowPortLabels	    "FromPortIcon"
+		    SystemSampleTime	    "-1"
+		    FunctionWithSeparateData off
+		    RTWMemSecFuncInitTerm   "Inherit from model"
+		    RTWMemSecFuncExecute    "Inherit from model"
+		    RTWMemSecDataConstants  "Inherit from model"
+		    RTWMemSecDataInternal   "Inherit from model"
+		    RTWMemSecDataParameters "Inherit from model"
+		    GeneratePreprocessorConditionals off
+		    uplimit		    "31"
+		    tsamp		    "-1"
+		    }
+		    Block {
+		    BlockType		    DataTypeConversion
+		    Name		    "Data Type Conversion"
+		    SID			    "4406"
+		    Position		    [100, 193, 175, 227]
+		    OutDataTypeStr	    "double"
+		    RndMeth		    "Floor"
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product"
+		    SID			    "4408"
+		    Ports		    [2, 1]
+		    Position		    [220, 202, 250, 233]
+		    InputSameDT		    off
+		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Rounding
+		    Name		    "Rounding\nFunction"
+		    SID			    "4405"
+		    Position		    [285, 195, 315, 225]
+		    }
+		    Block {
+		    BlockType		    Switch
+		    Name		    "Switch"
+		    SID			    "4401"
+		    Position		    [420, 105, 470, 145]
+		    Threshold		    "1"
+		    InputSameDT		    off
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_calibration1"
+		    SID			    "4398"
+		    Ports		    [0, 1]
+		    Position		    [100, 90, 250, 130]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
+		    SourceType		    "MotoHawk Calibration"
+		    nam			    "'Command_Counter'"
+		    val			    "0"
+		    storage		    "Calibration"
+		    show_more		    on
+		    name_source		    "Use Parameter"
+		    data_type		    "Inherit from 'Default Value'"
+		    read_level		    "1"
+		    write_level		    "1"
+		    ovr_cals		    on
+		    view_as		    "Number"
+		    enum_struct		    "{'None', 'Torque', 'Speed', 'Voltage'}"
+		    vector_style	    "Wide Row"
+		    use_help_units	    off
+		    help		    "''"
+		    units		    "''"
+		    use_header_enum	    off
+		    row_header_enum	    "{}"
+		    col_header_enum	    "{}"
+		    use_min_max		    off
+		    min_val		    "-inf"
+		    max_val		    "inf"
+		    use_precision	    off
+		    precision		    "''"
+		    gain		    "1"
+		    offset		    "0"
+		    exp			    "1"
+		    use_mototune_group	    on
+		    mototune_group	    "'Actuators | UQM | Counter'"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_calibration2"
+		    SID			    "4402"
+		    Ports		    [0, 1]
+		    Position		    [50, 139, 250, 181]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
+		    SourceType		    "MotoHawk Calibration"
+		    nam			    "'Counter_Mode_Select'"
+		    val			    "0"
+		    storage		    "Calibration"
+		    show_more		    on
+		    name_source		    "Use Parameter"
+		    data_type		    "uint8"
+		    read_level		    "1"
+		    write_level		    "1"
+		    ovr_cals		    on
+		    view_as		    "Enumeration"
+		    enum_struct		    "{'Counter', 'None'}"
+		    vector_style	    "Wide Row"
+		    use_help_units	    off
+		    help		    "''"
+		    units		    "''"
+		    use_header_enum	    off
+		    row_header_enum	    "{}"
+		    col_header_enum	    "{}"
+		    use_min_max		    off
+		    min_val		    "-inf"
+		    max_val		    "inf"
+		    use_precision	    off
+		    precision		    "''"
+		    gain		    "1"
+		    offset		    "0"
+		    exp			    "1"
+		    use_mototune_group	    on
+		    mototune_group	    "'Actuators | UQM | Counter'"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_calibration3"
+		    SID			    "4409"
+		    Ports		    [0, 1]
+		    Position		    [25, 260, 175, 300]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
+		    SourceType		    "MotoHawk Calibration"
+		    nam			    "'Counter_Multiplier'"
+		    val			    "0.41666"
+		    storage		    "Calibration"
+		    show_more		    on
+		    name_source		    "Use Parameter"
+		    data_type		    "Inherit from 'Default Value'"
+		    read_level		    "1"
+		    write_level		    "1"
+		    ovr_cals		    on
+		    view_as		    "Number"
+		    enum_struct		    "{'None', 'Torque', 'Speed', 'Voltage'}"
+		    vector_style	    "Wide Row"
+		    use_help_units	    off
+		    help		    "''"
+		    units		    "''"
+		    use_header_enum	    off
+		    row_header_enum	    "{}"
+		    col_header_enum	    "{}"
+		    use_min_max		    off
+		    min_val		    "-inf"
+		    max_val		    "inf"
+		    use_precision	    on
+		    precision		    "'1.5'"
+		    gain		    "1"
+		    offset		    "0"
+		    exp			    "1"
+		    use_mototune_group	    on
+		    mototune_group	    "'Actuators | UQM | Counter'"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_probe2"
+		    SID			    "4403"
+		    Ports		    [1]
+		    Position		    [535, 82, 685, 108]
+		    NamePlacement	    "alternate"
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
+		    SourceType		    "MotoHawk Probe"
+		    nam			    "'Counter_Prb'"
+		    show_more		    on
+		    name_source		    "Use Parameter"
+		    read_level		    "1"
+		    view_as		    "Number"
+		    enum_struct		    "{'Reverse', 'Forward'}"
+		    vector_style	    "Wide Row"
+		    use_help_units	    off
+		    help		    "''"
+		    units		    "''"
+		    use_header_enum	    off
+		    row_header_enum	    "{}"
+		    col_header_enum	    "{}"
+		    use_precision	    off
+		    precision		    "''"
+		    gain		    "1"
+		    offset		    "0"
+		    exp			    "1"
+		    use_mototune_group	    on
+		    mototune_group	    "'Actuators | UQM | Counter'"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "Out1"
+		    SID			    "4397"
+		    Position		    [710, 118, 740, 132]
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    SrcBlock		    "motohawk_calibration1"
+		    SrcPort		    1
+		    DstBlock		    "Switch"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "motohawk_calibration2"
+		    SrcPort		    1
+		    Points		    [55, 0; 0, -35]
+		    DstBlock		    "Switch"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Switch"
+		    SrcPort		    1
+		    Points		    [45, 0]
+		    Branch {
+		    DstBlock		    "Out1"
+		    DstPort		    1
+		    }
+		    Branch {
+		    DstBlock		    "motohawk_probe2"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "Counter\nLimited"
+		    SrcPort		    1
+		    DstBlock		    "Data Type Conversion"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Rounding\nFunction"
+		    SrcPort		    1
+		    Points		    [20, 0; 0, -70]
+		    DstBlock		    "Switch"
+		    DstPort		    3
+		    }
+		    Line {
+		    SrcBlock		    "Data Type Conversion"
+		    SrcPort		    1
+		    DstBlock		    "Product"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Product"
+		    SrcPort		    1
+		    Points		    [5, 0; 0, -10]
+		    DstBlock		    "Rounding\nFunction"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "motohawk_calibration3"
+		    SrcPort		    1
+		    Points		    [10, 0; 0, -55]
+		    DstBlock		    "Product"
+		    DstPort		    2
+		    }
+		  }
+		}
+		Block {
 		  BlockType		  Logic
 		  Name			  "Logical\nOperator"
 		  SID			  "4368"
@@ -5531,6 +6123,12 @@ Model {
 		  Operator		  "NOT"
 		  AllPortsSameDT	  off
 		  OutDataTypeStr	  "boolean"
+		  Port {
+		    PortNumber		    1
+		    Name		    "Direction"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
 		}
 		Block {
 		  BlockType		  Product
@@ -5541,6 +6139,12 @@ Model {
 		  InputSameDT		  off
 		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
 		  SaturateOnIntegerOverflow off
+		  Port {
+		    PortNumber		    1
+		    Name		    "Clear_Watchdog_Error"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
 		}
 		Block {
 		  BlockType		  Reference
@@ -5553,7 +6157,7 @@ Model {
 		  SourceBlock		  "MotoHawk_lib/CAN Blocks/Send CAN Messages"
 		  SourceType		  "MotoHawk Send CAN Messages"
 		  bus			  "-2"
-		  nam			  "['CAN_' num2str(2)]"
+		  nam			  "['CAN_' num2str(1)]"
 		  msgl			  "CANTx_UQM_1CEFrrss"
 		  pace			  "100"
 		  labelwires		  on
@@ -5569,7 +6173,7 @@ Model {
 		  SourceBlock		  "MotoHawk_lib/CAN Blocks/Send CAN Messages"
 		  SourceType		  "MotoHawk Send CAN Messages"
 		  bus			  "-2"
-		  nam			  "['CAN_' num2str(2)]"
+		  nam			  "['CAN_' num2str(1)]"
 		  msgl			  "CANTx_UQM_10EFrrss"
 		  pace			  "100"
 		  labelwires		  on
@@ -5585,7 +6189,7 @@ Model {
 		  SourceBlock		  "MotoHawk_lib/CAN Blocks/Send CAN Messages"
 		  SourceType		  "MotoHawk Send CAN Messages"
 		  bus			  "-2"
-		  nam			  "['CAN_' num2str(2)]"
+		  nam			  "['CAN_' num2str(1)]"
 		  msgl			  "CANTx_UQM_14EFrrss"
 		  pace			  "100"
 		  labelwires		  on
@@ -5628,45 +6232,12 @@ Model {
 		  exp			  "1"
 		  use_mototune_group	  on
 		  mototune_group	  "'Actuators | UQM'"
-		}
-		Block {
-		  BlockType		  Reference
-		  Name			  "motohawk_calibration1"
-		  SID			  "4363"
-		  Ports			  [0, 1]
-		  Position		  [360, 95, 510, 135]
-		  ShowName		  off
-		  LibraryVersion	  "MotoHawk 0.2.3"
-		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
-		  SourceType		  "MotoHawk Calibration"
-		  nam			  "'Command_Counter'"
-		  val			  "0"
-		  storage		  "Calibration"
-		  show_more		  on
-		  name_source		  "Use Parameter"
-		  data_type		  "Inherit from 'Default Value'"
-		  read_level		  "1"
-		  write_level		  "1"
-		  ovr_cals		  on
-		  view_as		  "Number"
-		  enum_struct		  "{'None', 'Torque', 'Speed', 'Voltage'}"
-		  vector_style		  "Wide Row"
-		  use_help_units	  off
-		  help			  "''"
-		  units			  "''"
-		  use_header_enum	  off
-		  row_header_enum	  "{}"
-		  col_header_enum	  "{}"
-		  use_min_max		  off
-		  min_val		  "-inf"
-		  max_val		  "inf"
-		  use_precision		  off
-		  precision		  "''"
-		  gain			  "1"
-		  offset		  "0"
-		  exp			  "1"
-		  use_mototune_group	  on
-		  mototune_group	  "'Actuators | UQM'"
+		  Port {
+		    PortNumber		    1
+		    Name		    "Control_Mode"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
 		}
 		Block {
 		  BlockType		  Reference
@@ -5745,6 +6316,12 @@ Model {
 		  exp			  "1"
 		  use_mototune_group	  on
 		  mototune_group	  "'Actuators | UQM'"
+		  Port {
+		    PortNumber		    1
+		    Name		    "Control_Mode"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
 		}
 		Block {
 		  BlockType		  Reference
@@ -5784,6 +6361,12 @@ Model {
 		  exp			  "1"
 		  use_mototune_group	  on
 		  mototune_group	  "'Actuators | UQM'"
+		  Port {
+		    PortNumber		    1
+		    Name		    "Acceleration_Limit"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
 		}
 		Block {
 		  BlockType		  Reference
@@ -5823,6 +6406,12 @@ Model {
 		  exp			  "1"
 		  use_mototune_group	  on
 		  mototune_group	  "'Actuators | UQM'"
+		  Port {
+		    PortNumber		    1
+		    Name		    "Suge_Limit"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
 		}
 		Block {
 		  BlockType		  Reference
@@ -5862,6 +6451,12 @@ Model {
 		  exp			  "1"
 		  use_mototune_group	  on
 		  mototune_group	  "'Actuators | UQM'"
+		  Port {
+		    PortNumber		    1
+		    Name		    "Use_Raw_Speed"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
 		}
 		Block {
 		  BlockType		  Reference
@@ -5901,6 +6496,12 @@ Model {
 		  exp			  "1"
 		  use_mototune_group	  on
 		  mototune_group	  "'Actuators | UQM'"
+		  Port {
+		    PortNumber		    1
+		    Name		    "Ignore_Accel_Limit"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
 		}
 		Block {
 		  BlockType		  Reference
@@ -5940,6 +6541,12 @@ Model {
 		  exp			  "1"
 		  use_mototune_group	  on
 		  mototune_group	  "'Actuators | UQM'"
+		  Port {
+		    PortNumber		    1
+		    Name		    "TurboMode"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
 		}
 		Block {
 		  BlockType		  Reference
@@ -5979,6 +6586,12 @@ Model {
 		  exp			  "1"
 		  use_mototune_group	  on
 		  mototune_group	  "'Actuators | UQM'"
+		  Port {
+		    PortNumber		    1
+		    Name		    "Forward_Speed_Limit"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
 		}
 		Block {
 		  BlockType		  Reference
@@ -6018,6 +6631,12 @@ Model {
 		  exp			  "1"
 		  use_mototune_group	  on
 		  mototune_group	  "'Actuators | UQM'"
+		  Port {
+		    PortNumber		    1
+		    Name		    "Reverse_Speed_Limit"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
 		}
 		Block {
 		  BlockType		  Reference
@@ -6057,6 +6676,12 @@ Model {
 		  exp			  "1"
 		  use_mototune_group	  on
 		  mototune_group	  "'Actuators | UQM'"
+		  Port {
+		    PortNumber		    1
+		    Name		    "Heartbeat_Identifier_1"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
 		}
 		Block {
 		  BlockType		  Reference
@@ -6096,6 +6721,12 @@ Model {
 		  exp			  "1"
 		  use_mototune_group	  on
 		  mototune_group	  "'Actuators | UQM'"
+		  Port {
+		    PortNumber		    1
+		    Name		    "Heartbeat_Identifier_2"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
 		}
 		Block {
 		  BlockType		  Reference
@@ -6176,6 +6807,12 @@ Model {
 		  parent_exp		  "1"
 		  use_mototune_group	  on
 		  parent_group		  "'Actuators | UQM'"
+		  Port {
+		    PortNumber		    1
+		    Name		    "Enable"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
 		}
 		Block {
 		  BlockType		  Reference
@@ -6217,6 +6854,12 @@ Model {
 		  parent_exp		  "1"
 		  use_mototune_group	  on
 		  parent_group		  "'Actuators | UQM'"
+		  Port {
+		    PortNumber		    1
+		    Name		    "Requested_Torque_Value"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
 		}
 		Block {
 		  BlockType		  Reference
@@ -6258,6 +6901,12 @@ Model {
 		  parent_exp		  "1"
 		  use_mototune_group	  on
 		  parent_group		  "'Actuators | UQM'"
+		  Port {
+		    PortNumber		    1
+		    Name		    "Direction"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
 		}
 		Block {
 		  BlockType		  Reference
@@ -6359,28 +7008,29 @@ Model {
 		  mototune_group	  "'Actuators | UQM'"
 		}
 		Line {
+		  Name			  "Control_Mode"
+		  Labels		  [0, 0]
 		  SrcBlock		  "motohawk_calibration"
 		  SrcPort		  1
 		  DstBlock		  "Send CAN Messages2"
 		  DstPort		  1
 		}
 		Line {
-		  SrcBlock		  "motohawk_calibration1"
-		  SrcPort		  1
-		  DstBlock		  "Send CAN Messages2"
-		  DstPort		  2
-		}
-		Line {
+		  Name			  "Use_Raw_Speed"
+		  Labels		  [0, 0]
 		  SrcBlock		  "motohawk_calibration2"
 		  SrcPort		  1
 		  DstBlock		  "Send CAN Messages2"
 		  DstPort		  3
 		}
 		Line {
+		  Name			  "Direction"
+		  Labels		  [0, 0]
 		  SrcBlock		  "motohawk_override_abs5"
 		  SrcPort		  1
 		  Points		  [15, 0]
 		  Branch {
+		    Labels		    [0, 0]
 		    DstBlock		    "Send CAN Messages2"
 		    DstPort		    4
 		  }
@@ -6397,10 +7047,13 @@ Model {
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Enable"
+		  Labels		  [0, 0]
 		  SrcBlock		  "motohawk_override_abs1"
 		  SrcPort		  1
 		  Points		  [10, 0]
 		  Branch {
+		    Labels		    [0, 0]
 		    DstBlock		    "Send CAN Messages2"
 		    DstPort		    5
 		  }
@@ -6410,34 +7063,45 @@ Model {
 		  }
 		}
 		Line {
+		  Name			  "Enable"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Drive Enable"
 		  SrcPort		  1
 		  DstBlock		  "motohawk_override_abs1"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Direction"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Logical\nOperator"
 		  SrcPort		  1
 		  DstBlock		  "motohawk_override_abs5"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Ignore_Accel_Limit"
+		  Labels		  [0, 0]
 		  SrcBlock		  "motohawk_calibration3"
 		  SrcPort		  1
 		  DstBlock		  "Send CAN Messages2"
 		  DstPort		  6
 		}
 		Line {
+		  Name			  "TurboMode"
+		  Labels		  [0, 0]
 		  SrcBlock		  "motohawk_calibration4"
 		  SrcPort		  1
 		  DstBlock		  "Send CAN Messages2"
 		  DstPort		  7
 		}
 		Line {
+		  Name			  "Requested_Torque_Value"
+		  Labels		  [0, 0]
 		  SrcBlock		  "motohawk_override_abs2"
 		  SrcPort		  1
 		  Points		  [10, 0]
 		  Branch {
+		    Labels		    [0, 0]
 		    DstBlock		    "Send CAN Messages2"
 		    DstPort		    8
 		  }
@@ -6447,30 +7111,40 @@ Model {
 		  }
 		}
 		Line {
+		  Name			  "Requested_Torque_Value"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Torque"
 		  SrcPort		  1
 		  DstBlock		  "motohawk_override_abs2"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Forward_Speed_Limit"
+		  Labels		  [0, 0]
 		  SrcBlock		  "motohawk_calibration5"
 		  SrcPort		  1
 		  DstBlock		  "Send CAN Messages2"
 		  DstPort		  9
 		}
 		Line {
+		  Name			  "Reverse_Speed_Limit"
+		  Labels		  [0, 0]
 		  SrcBlock		  "motohawk_calibration6"
 		  SrcPort		  1
 		  DstBlock		  "Send CAN Messages2"
 		  DstPort		  10
 		}
 		Line {
+		  Name			  "Heartbeat_Identifier_1"
+		  Labels		  [0, 0]
 		  SrcBlock		  "motohawk_calibration7"
 		  SrcPort		  1
 		  DstBlock		  "Send CAN Messages"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Heartbeat_Identifier_2"
+		  Labels		  [0, 0]
 		  SrcBlock		  "motohawk_calibration8"
 		  SrcPort		  1
 		  DstBlock		  "Send CAN Messages"
@@ -6483,6 +7157,8 @@ Model {
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Clear_Watchdog_Error"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Product"
 		  SrcPort		  1
 		  DstBlock		  "Send CAN Messages"
@@ -6496,22 +7172,36 @@ Model {
 		  DstPort		  2
 		}
 		Line {
+		  Name			  "Control_Mode"
+		  Labels		  [0, 0]
 		  SrcBlock		  "motohawk_calibration11"
 		  SrcPort		  1
 		  DstBlock		  "Send CAN Messages1"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Acceleration_Limit"
+		  Labels		  [0, 0]
 		  SrcBlock		  "motohawk_calibration12"
 		  SrcPort		  1
 		  DstBlock		  "Send CAN Messages1"
 		  DstPort		  2
 		}
 		Line {
+		  Name			  "Suge_Limit"
+		  Labels		  [0, 0]
 		  SrcBlock		  "motohawk_calibration13"
 		  SrcPort		  1
 		  DstBlock		  "Send CAN Messages1"
 		  DstPort		  3
+		}
+		Line {
+		  Name			  "Command_Counter"
+		  Labels		  [1, 0]
+		  SrcBlock		  "Counter"
+		  SrcPort		  1
+		  DstBlock		  "Send CAN Messages2"
+		  DstPort		  2
 		}
 	      }
 	    }
@@ -6643,8 +7333,16 @@ Model {
 	      Labels		      [0, 0]
 	      SrcBlock		      "Bus\nSelector2"
 	      SrcPort		      2
-	      DstBlock		      "Analog Out"
-	      DstPort		      2
+	      Points		      [120, 0]
+	      Branch {
+		DstBlock		"Analog Out"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, 195]
+		DstBlock		"EMP Cooling Fan"
+		DstPort			1
+	      }
 	    }
 	    Line {
 	      Name		      "<DC/DC Enable>"
@@ -9210,9 +9908,9 @@ Model {
 	  System {
 	    Name		    "Control Strategy"
 	    Location		    [-1718, -548, -2, 516]
-	    Open		    on
+	    Open		    off
 	    ModelBrowserVisibility  on
-	    ModelBrowserWidth	    266
+	    ModelBrowserWidth	    272
 	    ScreenColor		    "white"
 	    PaperOrientation	    "landscape"
 	    PaperPositionMode	    "auto"
@@ -9314,7 +10012,7 @@ Model {
 	      Ports		      [1, 2]
 	      Position		      [285, 627, 290, 683]
 	      ShowName		      off
-	      OutputSignals	      "InverterTemp,Eaton HV Charger.OutputCurrent"
+	      OutputSignals	      "InverterTemp,Eaton HV Charger.Eaton_HV_Charger_Temperature"
 	      Port {
 		PortNumber		1
 		Name			"<InverterTemp>"
@@ -9323,7 +10021,7 @@ Model {
 	      }
 	      Port {
 		PortNumber		2
-		Name			"<OutputCurrent>"
+		Name			"<Eaton_HV_Charger_Temperature>"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
@@ -11893,14 +12591,12 @@ Model {
 	      Port {
 		PortNumber		1
 		Name			"CoolantPumpSpeed"
-		PropagatedSignals	"CoolantPumpSpeed"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
 	      Port {
 		PortNumber		2
 		Name			"FanDutyCycle"
-		PropagatedSignals	"FanDutyCycle"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
@@ -11923,68 +12619,159 @@ Model {
 		  BlockType		  Inport
 		  Name			  "Inverter_Temp"
 		  SID			  "4338"
-		  Position		  [265, 228, 295, 242]
+		  Position		  [140, 113, 170, 127]
 		  IconDisplay		  "Port number"
 		}
 		Block {
 		  BlockType		  Inport
-		  Name			  "Charger_Current"
-		  SID			  "4340"
-		  Position		  [225, 333, 255, 347]
+		  Name			  "Charger_Temp"
+		  SID			  "4446"
+		  Position		  [135, 298, 165, 312]
 		  Port			  "2"
 		  IconDisplay		  "Port number"
 		}
 		Block {
+		  BlockType		  MinMax
+		  Name			  "MinMax"
+		  SID			  "4465"
+		  Ports			  [4, 1]
+		  Position		  [700, 64, 735, 291]
+		  Function		  "max"
+		  Inputs		  "4"
+		  InputSameDT		  off
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product"
+		  SID			  "4449"
+		  Ports			  [2, 1]
+		  Position		  [460, 37, 490, 148]
+		  InputSameDT		  off
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product1"
+		  SID			  "4453"
+		  Ports			  [2, 1]
+		  Position		  [460, 222, 490, 333]
+		  InputSameDT		  off
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product2"
+		  SID			  "4457"
+		  Ports			  [2, 1]
+		  Position		  [460, 407, 490, 518]
+		  InputSameDT		  off
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product3"
+		  SID			  "4461"
+		  Ports			  [2, 1]
+		  Position		  [460, 597, 490, 708]
+		  InputSameDT		  off
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
 		  BlockType		  RelationalOperator
 		  Name			  "Relational\nOperator"
-		  SID			  "4343"
+		  SID			  "4470"
 		  Ports			  [2, 1]
-		  Position		  [380, 366, 415, 404]
+		  Position		  [865, 87, 895, 118]
 		  InputSameDT		  off
 		  OutDataTypeStr	  "boolean"
 		}
 		Block {
+		  BlockType		  Sum
+		  Name			  "Sum"
+		  SID			  "4450"
+		  Ports			  [2, 1]
+		  Position		  [380, 110, 400, 130]
+		  ShowName		  off
+		  IconShape		  "round"
+		  Inputs		  "|++"
+		  InputSameDT		  off
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum1"
+		  SID			  "4454"
+		  Ports			  [2, 1]
+		  Position		  [380, 295, 400, 315]
+		  ShowName		  off
+		  IconShape		  "round"
+		  Inputs		  "|++"
+		  InputSameDT		  off
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum2"
+		  SID			  "4458"
+		  Ports			  [2, 1]
+		  Position		  [380, 480, 400, 500]
+		  ShowName		  off
+		  IconShape		  "round"
+		  Inputs		  "|++"
+		  InputSameDT		  off
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum3"
+		  SID			  "4462"
+		  Ports			  [2, 1]
+		  Position		  [380, 670, 400, 690]
+		  ShowName		  off
+		  IconShape		  "round"
+		  Inputs		  "|++"
+		  InputSameDT		  off
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
 		  BlockType		  Switch
 		  Name			  "Switch"
-		  SID			  "4344"
-		  Position		  [785, 230, 815, 260]
-		  Criteria		  "u2 > Threshold"
+		  SID			  "4475"
+		  Position		  [1380, 145, 1430, 185]
+		  Threshold		  "1"
 		  InputSameDT		  off
 		  SaturateOnIntegerOverflow off
-		  Port {
-		    PortNumber		    1
-		    Name		    "CoolantPumpSpeed"
-		    RTWStorageClass	    "Auto"
-		    DataLoggingNameMode	    "SignalName"
-		  }
 		}
 		Block {
 		  BlockType		  Switch
 		  Name			  "Switch1"
-		  SID			  "4345"
-		  Position		  [785, 285, 815, 315]
-		  Criteria		  "u2 > Threshold"
+		  SID			  "4476"
+		  Position		  [1380, 235, 1430, 275]
+		  Threshold		  "1"
 		  InputSameDT		  off
 		  SaturateOnIntegerOverflow off
-		  Port {
-		    PortNumber		    1
-		    Name		    "FanDutyCycle"
-		    RTWStorageClass	    "Auto"
-		    DataLoggingNameMode	    "SignalName"
-		  }
 		}
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_calibration"
-		  SID			  "4346"
+		  SID			  "4451"
 		  Ports			  [0, 1]
-		  Position		  [165, 376, 295, 414]
+		  Position		  [195, 150, 345, 190]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
 		  SourceType		  "MotoHawk Calibration"
-		  nam			  "'Charger_Curr'"
-		  val			  "8"
+		  nam			  "'Inverter_Temp_Offset'"
+		  val			  "0"
 		  storage		  "Calibration"
 		  show_more		  off
 		  name_source		  "Use Parameter"
@@ -12015,15 +12802,54 @@ Model {
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_calibration1"
-		  SID			  "4347"
+		  SID			  "4452"
 		  Ports			  [0, 1]
-		  Position		  [505, 130, 655, 170]
+		  Position		  [245, 45, 395, 85]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
 		  SourceType		  "MotoHawk Calibration"
-		  nam			  "'Charging_Cooling_Speed'"
-		  val			  "40"
+		  nam			  "'Inverter_Temp_Enable'"
+		  val			  "1"
+		  storage		  "Calibration"
+		  show_more		  on
+		  name_source		  "Use Parameter"
+		  data_type		  "uint8"
+		  read_level		  "1"
+		  write_level		  "1"
+		  ovr_cals		  on
+		  view_as		  "Enumeration"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  vector_style		  "Wide Row"
+		  use_help_units	  off
+		  help			  "''"
+		  units			  "''"
+		  use_header_enum	  off
+		  row_header_enum	  "{}"
+		  col_header_enum	  "{}"
+		  use_min_max		  off
+		  min_val		  "-inf"
+		  max_val		  "inf"
+		  use_precision		  off
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_mototune_group	  off
+		  mototune_group	  "motohawk_vardec_path(gcb)"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_calibration2"
+		  SID			  "4455"
+		  Ports			  [0, 1]
+		  Position		  [195, 335, 345, 375]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
+		  SourceType		  "MotoHawk Calibration"
+		  nam			  "'Charger_Temp_Offset'"
+		  val			  "0"
 		  storage		  "Calibration"
 		  show_more		  off
 		  name_source		  "Use Parameter"
@@ -12053,10 +12879,522 @@ Model {
 		}
 		Block {
 		  BlockType		  Reference
+		  Name			  "motohawk_calibration3"
+		  SID			  "4456"
+		  Ports			  [0, 1]
+		  Position		  [245, 230, 395, 270]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
+		  SourceType		  "MotoHawk Calibration"
+		  nam			  "'Charger_Temp_Enable'"
+		  val			  "1"
+		  storage		  "Calibration"
+		  show_more		  on
+		  name_source		  "Use Parameter"
+		  data_type		  "uint8"
+		  read_level		  "1"
+		  write_level		  "1"
+		  ovr_cals		  on
+		  view_as		  "Enumeration"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  vector_style		  "Wide Row"
+		  use_help_units	  off
+		  help			  "''"
+		  units			  "''"
+		  use_header_enum	  off
+		  row_header_enum	  "{}"
+		  col_header_enum	  "{}"
+		  use_min_max		  off
+		  min_val		  "-inf"
+		  max_val		  "inf"
+		  use_precision		  off
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_mototune_group	  off
+		  mototune_group	  "motohawk_vardec_path(gcb)"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_calibration4"
+		  SID			  "4459"
+		  Ports			  [0, 1]
+		  Position		  [195, 520, 345, 560]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
+		  SourceType		  "MotoHawk Calibration"
+		  nam			  "'Rotor_Temp_Offset'"
+		  val			  "0"
+		  storage		  "Calibration"
+		  show_more		  off
+		  name_source		  "Use Parameter"
+		  data_type		  "Inherit from 'Default Value'"
+		  read_level		  "1"
+		  write_level		  "1"
+		  ovr_cals		  on
+		  view_as		  "Number"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  vector_style		  "Wide Row"
+		  use_help_units	  off
+		  help			  "''"
+		  units			  "''"
+		  use_header_enum	  off
+		  row_header_enum	  "{}"
+		  col_header_enum	  "{}"
+		  use_min_max		  off
+		  min_val		  "-inf"
+		  max_val		  "inf"
+		  use_precision		  off
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_mototune_group	  off
+		  mototune_group	  "motohawk_vardec_path(gcb)"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_calibration5"
+		  SID			  "4460"
+		  Ports			  [0, 1]
+		  Position		  [245, 415, 395, 455]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
+		  SourceType		  "MotoHawk Calibration"
+		  nam			  "'Rotor_Temp_Enable'"
+		  val			  "1"
+		  storage		  "Calibration"
+		  show_more		  on
+		  name_source		  "Use Parameter"
+		  data_type		  "uint8"
+		  read_level		  "1"
+		  write_level		  "1"
+		  ovr_cals		  on
+		  view_as		  "Enumeration"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  vector_style		  "Wide Row"
+		  use_help_units	  off
+		  help			  "''"
+		  units			  "''"
+		  use_header_enum	  off
+		  row_header_enum	  "{}"
+		  col_header_enum	  "{}"
+		  use_min_max		  off
+		  min_val		  "-inf"
+		  max_val		  "inf"
+		  use_precision		  off
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_mototune_group	  off
+		  mototune_group	  "motohawk_vardec_path(gcb)"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_calibration6"
+		  SID			  "4463"
+		  Ports			  [0, 1]
+		  Position		  [195, 710, 345, 750]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
+		  SourceType		  "MotoHawk Calibration"
+		  nam			  "'Stator_Temp_Offset'"
+		  val			  "0"
+		  storage		  "Calibration"
+		  show_more		  off
+		  name_source		  "Use Parameter"
+		  data_type		  "Inherit from 'Default Value'"
+		  read_level		  "1"
+		  write_level		  "1"
+		  ovr_cals		  on
+		  view_as		  "Number"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  vector_style		  "Wide Row"
+		  use_help_units	  off
+		  help			  "''"
+		  units			  "''"
+		  use_header_enum	  off
+		  row_header_enum	  "{}"
+		  col_header_enum	  "{}"
+		  use_min_max		  off
+		  min_val		  "-inf"
+		  max_val		  "inf"
+		  use_precision		  off
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_mototune_group	  off
+		  mototune_group	  "motohawk_vardec_path(gcb)"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_calibration7"
+		  SID			  "4464"
+		  Ports			  [0, 1]
+		  Position		  [245, 605, 395, 645]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
+		  SourceType		  "MotoHawk Calibration"
+		  nam			  "'Stator_Temp_Enable'"
+		  val			  "1"
+		  storage		  "Calibration"
+		  show_more		  on
+		  name_source		  "Use Parameter"
+		  data_type		  "uint8"
+		  read_level		  "1"
+		  write_level		  "1"
+		  ovr_cals		  on
+		  view_as		  "Enumeration"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  vector_style		  "Wide Row"
+		  use_help_units	  off
+		  help			  "''"
+		  units			  "''"
+		  use_header_enum	  off
+		  row_header_enum	  "{}"
+		  col_header_enum	  "{}"
+		  use_min_max		  off
+		  min_val		  "-inf"
+		  max_val		  "inf"
+		  use_precision		  off
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_mototune_group	  off
+		  mototune_group	  "motohawk_vardec_path(gcb)"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_calibration8"
+		  SID			  "4471"
+		  Ports			  [0, 1]
+		  Position		  [580, 15, 730, 55]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
+		  SourceType		  "MotoHawk Calibration"
+		  nam			  "'Overheat_Threshold'"
+		  val			  "55"
+		  storage		  "Calibration"
+		  show_more		  off
+		  name_source		  "Use Parameter"
+		  data_type		  "Inherit from 'Default Value'"
+		  read_level		  "1"
+		  write_level		  "1"
+		  ovr_cals		  on
+		  view_as		  "Number"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  vector_style		  "Wide Row"
+		  use_help_units	  off
+		  help			  "''"
+		  units			  "''"
+		  use_header_enum	  off
+		  row_header_enum	  "{}"
+		  col_header_enum	  "{}"
+		  use_min_max		  off
+		  min_val		  "-inf"
+		  max_val		  "inf"
+		  use_precision		  off
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_mototune_group	  off
+		  mototune_group	  "motohawk_vardec_path(gcb)"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_calibration9"
+		  SID			  "4477"
+		  Ports			  [0, 1]
+		  Position		  [1145, 85, 1295, 125]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
+		  SourceType		  "MotoHawk Calibration"
+		  nam			  "'Overheat_PumpFan_Speed'"
+		  val			  "95"
+		  storage		  "Calibration"
+		  show_more		  off
+		  name_source		  "Use Parameter"
+		  data_type		  "Inherit from 'Default Value'"
+		  read_level		  "1"
+		  write_level		  "1"
+		  ovr_cals		  on
+		  view_as		  "Number"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  vector_style		  "Wide Row"
+		  use_help_units	  off
+		  help			  "''"
+		  units			  "''"
+		  use_header_enum	  off
+		  row_header_enum	  "{}"
+		  col_header_enum	  "{}"
+		  use_min_max		  off
+		  min_val		  "-inf"
+		  max_val		  "inf"
+		  use_precision		  off
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_mototune_group	  off
+		  mototune_group	  "motohawk_vardec_path(gcb)"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_data_read"
+		  SID			  "4447"
+		  Ports			  [0, 1]
+		  Position		  [30, 460, 165, 520]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Data Storage Blocks/motohawk_data_read"
+		  SourceType		  "MotoHawk Data Read"
+		  source		  "Lookup By Name"
+		  structure		  "Scalar"
+		  operation		  "Read scalar from location by index"
+		  sz_vec		  "4"
+		  sz_row		  "2"
+		  sz_col		  "3"
+		  typ			  "double"
+		  nam			  "'Rotor_Temp'"
+		  checkNull		  on
+		  struct_inst_name	  "'MyData'"
+		  struct_nam		  "'MyStruct'"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_data_read1"
+		  SID			  "4448"
+		  Ports			  [0, 1]
+		  Position		  [35, 650, 170, 710]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Data Storage Blocks/motohawk_data_read"
+		  SourceType		  "MotoHawk Data Read"
+		  source		  "Lookup By Name"
+		  structure		  "Scalar"
+		  operation		  "Read scalar from location by index"
+		  sz_vec		  "4"
+		  sz_row		  "2"
+		  sz_col		  "3"
+		  typ			  "double"
+		  nam			  "'Stator_Temp'"
+		  checkNull		  on
+		  struct_inst_name	  "'MyData'"
+		  struct_nam		  "'MyStruct'"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_fault_action"
+		  SID			  "4474"
+		  Ports			  [0, 1]
+		  Position		  [1105, 14, 1275, 56]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Fault Management Blocks/motohawk_fault_action"
+		  SourceType		  "MotoHawk Fault Action"
+		  nam			  "'PumpFan_Full'"
+		  output_status		  on
+		  eval_nam		  "PumpFan_Full"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_fault_def3"
+		  SID			  "4473"
+		  Ports			  [1]
+		  Position		  [945, 84, 1115, 126]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Fault Management Blocks/motohawk_fault_def"
+		  SourceType		  "MotoHawk Fault Definition"
+		  nam			  "'CoolingOverheat'"
+		  mode			  "Enabled"
+		  id			  "0"
+		  x			  "1000"
+		  y			  "2000"
+		  input_suspected	  on
+		  indeterminate		  off
+		  increment_xy		  on
+		  downsample_count	  "1"
+		  ovr_cals		  on
+		  ovr_actions		  on
+		  show_actions		  on
+		  action1_name		  "'PumpFan_Full'"
+		  action1_cond		  "Suspected or Active"
+		  action2_name		  "''"
+		  action2_cond		  "(None)"
+		  action3_name		  "''"
+		  action3_cond		  "(None)"
+		  action4_name		  "''"
+		  action4_cond		  "(None)"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_interpolation_1d"
+		  SID			  "4466"
+		  Ports			  [1, 1]
+		  Position		  [1065, 142, 1235, 218]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Lookup Tables/motohawk_interpolation_1d"
+		  SourceType		  "MotoHawk Interpolation (1-D)"
+		  nam			  "'Coolant_Pump'"
+		  table_data		  "[0 0 0 15 30 50 70 80 90 100]"
+		  show_more		  off
+		  data_type		  "Inherit from 'Table Data'"
+		  storage		  "NonAdaptive"
+		  read_level		  "1"
+		  write_level		  "1"
+		  ovr_cals		  on
+		  use_help		  off
+		  help			  "''"
+		  units			  "''"
+		  use_min_max		  off
+		  min_val		  "-inf"
+		  max_val		  "inf"
+		  use_precision		  off
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_links		  off
+		  prelookup_block	  "''"
+		  output_name		  "''"
+		  use_mototune_group	  off
+		  mototune_group	  "motohawk_vardec_path(gcb)"
+		  Port {
+		    PortNumber		    1
+		    Name		    "CoolantPumpSpeed"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_interpolation_1d1"
+		  SID			  "4468"
+		  Ports			  [1, 1]
+		  Position		  [1065, 232, 1235, 308]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Lookup Tables/motohawk_interpolation_1d"
+		  SourceType		  "MotoHawk Interpolation (1-D)"
+		  nam			  "'Coolant_Fan'"
+		  table_data		  "[0 0 0 15 30 50 70 80 90 100]"
+		  show_more		  off
+		  data_type		  "Inherit from 'Table Data'"
+		  storage		  "NonAdaptive"
+		  read_level		  "1"
+		  write_level		  "1"
+		  ovr_cals		  on
+		  use_help		  off
+		  help			  "''"
+		  units			  "''"
+		  use_min_max		  off
+		  min_val		  "-inf"
+		  max_val		  "inf"
+		  use_precision		  off
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_links		  off
+		  prelookup_block	  "''"
+		  output_name		  "''"
+		  use_mototune_group	  off
+		  mototune_group	  "motohawk_vardec_path(gcb)"
+		  Port {
+		    PortNumber		    1
+		    Name		    "FanDutyCycle"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_prelookup"
+		  SID			  "4467"
+		  Ports			  [1, 1]
+		  Position		  [865, 142, 1035, 218]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Lookup Tables/motohawk_prelookup"
+		  SourceType		  "MotoHawk Prelookup Index Search"
+		  nam			  "'Coolant_Pump'"
+		  breakpoint_data	  "[0 10 20 25 30 35 40 45 50 55]"
+		  show_more		  off
+		  data_type		  "Inherit from 'Table Data'"
+		  storage		  "Constant"
+		  read_level		  "1"
+		  write_level		  "1"
+		  ovr_cals		  on
+		  use_help		  off
+		  help			  "''"
+		  units			  "''"
+		  use_min_max		  off
+		  min_val		  "-inf"
+		  max_val		  "inf"
+		  use_precision		  off
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_links		  off
+		  input_name		  "''"
+		  use_mototune_group	  off
+		  mototune_group	  "motohawk_vardec_path(gcb)"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_prelookup1"
+		  SID			  "4469"
+		  Ports			  [1, 1]
+		  Position		  [865, 232, 1035, 308]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Lookup Tables/motohawk_prelookup"
+		  SourceType		  "MotoHawk Prelookup Index Search"
+		  nam			  "'Coolant_Fan'"
+		  breakpoint_data	  "[0 10 20 25 30 35 40 45 50 55]"
+		  show_more		  off
+		  data_type		  "Inherit from 'Table Data'"
+		  storage		  "Constant"
+		  read_level		  "1"
+		  write_level		  "1"
+		  ovr_cals		  on
+		  use_help		  off
+		  help			  "''"
+		  units			  "''"
+		  use_min_max		  off
+		  min_val		  "-inf"
+		  max_val		  "inf"
+		  use_precision		  off
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_links		  off
+		  input_name		  "''"
+		  use_mototune_group	  off
+		  mototune_group	  "motohawk_vardec_path(gcb)"
+		}
+		Block {
+		  BlockType		  Reference
 		  Name			  "motohawk_probe"
 		  SID			  "4348"
 		  Ports			  [1]
-		  Position		  [935, 232, 1085, 258]
+		  Position		  [1480, 152, 1630, 178]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
@@ -12087,7 +13425,7 @@ Model {
 		  Name			  "motohawk_probe2"
 		  SID			  "4349"
 		  Ports			  [1]
-		  Position		  [935, 287, 1085, 313]
+		  Position		  [1480, 242, 1630, 268]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
@@ -12114,191 +13452,239 @@ Model {
 		  mototune_group	  "motohawk_vardec_path(gcb)"
 		}
 		Block {
-		  BlockType		  Reference
-		  Name			  "motohawk_table_1d"
-		  SID			  "4350"
-		  Ports			  [1, 1]
-		  Position		  [485, 272, 655, 348]
-		  ShowName		  off
-		  LibraryVersion	  "MotoHawk 0.2.3"
-		  SourceBlock		  "MotoHawk_lib/Lookup Tables/motohawk_table_1d"
-		  SourceType		  "MotoHawk Lookup Table (1-D)"
-		  ShowPortLabels	  "FromPortIcon"
-		  SystemSampleTime	  "-1"
-		  FunctionWithSeparateData off
-		  RTWMemSecFuncInitTerm	  "Inherit from model"
-		  RTWMemSecFuncExecute	  "Inherit from model"
-		  RTWMemSecDataConstants  "Inherit from model"
-		  RTWMemSecDataInternal	  "Inherit from model"
-		  RTWMemSecDataParameters "Inherit from model"
-		  GeneratePreprocessorConditionals off
-		  nam			  "'RadiatorFanSpeed'"
-		  bp_nam		  "'RadiatorFanSpeed_InverterTemp'"
-		  breakpoint_data	  "[0 20 30 45 100]"
-		  table_data		  "[0 0 0 30 50]"
-		  show_more		  off
-		  bp_data_type		  "Inherit from 'Breakpoint Data'"
-		  bp_storage		  "Constant"
-		  table_data_type	  "Inherit from 'Table Data'"
-		  storage		  "NonAdaptive"
-		  read_level		  "1"
-		  write_level		  "1"
-		  ovr_cals		  on
-		  use_help		  off
-		  help			  "''"
-		  bp_units		  "''"
-		  table_units		  "''"
-		  use_min_max		  off
-		  bp_min_val		  "-inf"
-		  bp_max_val		  "inf"
-		  min_val		  "-inf"
-		  max_val		  "inf"
-		  use_precision		  off
-		  use_breakpoint	  off
-		  b_precision		  "''"
-		  b_gain		  "1"
-		  b_offset		  "0"
-		  b_exp			  "1"
-		  use_table		  off
-		  t_precision		  "''"
-		  t_gain		  "1"
-		  t_offset		  "0"
-		  t_exp			  "1"
-		  use_links		  off
-		  input_name		  "''"
-		  output_name		  "''"
-		  use_mototune_group	  off
-		  mototune_group	  "motohawk_vardec_path(gcb)"
-		  Port {
-		    PortNumber		    1
-		    Name		    "FanDutyCycle"
-		    RTWStorageClass	    "Auto"
-		    DataLoggingNameMode	    "SignalName"
-		  }
-		}
-		Block {
-		  BlockType		  Reference
-		  Name			  "motohawk_table_1d1"
-		  SID			  "4351"
-		  Ports			  [1, 1]
-		  Position		  [485, 197, 655, 273]
-		  ShowName		  off
-		  LibraryVersion	  "MotoHawk 0.2.3"
-		  SourceBlock		  "MotoHawk_lib/Lookup Tables/motohawk_table_1d"
-		  SourceType		  "MotoHawk Lookup Table (1-D)"
-		  ShowPortLabels	  "FromPortIcon"
-		  SystemSampleTime	  "-1"
-		  FunctionWithSeparateData off
-		  RTWMemSecFuncInitTerm	  "Inherit from model"
-		  RTWMemSecFuncExecute	  "Inherit from model"
-		  RTWMemSecDataConstants  "Inherit from model"
-		  RTWMemSecDataInternal	  "Inherit from model"
-		  RTWMemSecDataParameters "Inherit from model"
-		  GeneratePreprocessorConditionals off
-		  nam			  "'CoolantPumpSpeed'"
-		  bp_nam		  "''"
-		  breakpoint_data	  "[0 10 28 30 35 40 60 70 80 90 100]"
-		  table_data		  "[20 25 35 45 53 65 75 80 80 80 80]"
-		  show_more		  on
-		  bp_data_type		  "Inherit from 'Breakpoint Data'"
-		  bp_storage		  "Constant"
-		  table_data_type	  "Inherit from 'Table Data'"
-		  storage		  "NonAdaptive"
-		  read_level		  "1"
-		  write_level		  "1"
-		  ovr_cals		  on
-		  use_help		  off
-		  help			  "''"
-		  bp_units		  "''"
-		  table_units		  "''"
-		  use_min_max		  off
-		  bp_min_val		  "-inf"
-		  bp_max_val		  "inf"
-		  min_val		  "-inf"
-		  max_val		  "inf"
-		  use_precision		  off
-		  use_breakpoint	  off
-		  b_precision		  "''"
-		  b_gain		  "1"
-		  b_offset		  "0"
-		  b_exp			  "1"
-		  use_table		  off
-		  t_precision		  "''"
-		  t_gain		  "1"
-		  t_offset		  "0"
-		  t_exp			  "1"
-		  use_links		  off
-		  input_name		  "''"
-		  output_name		  "''"
-		  use_mototune_group	  off
-		  mototune_group	  "motohawk_vardec_path(gcb)"
-		  Port {
-		    PortNumber		    1
-		    Name		    "CoolantPumpSpeed"
-		    RTWStorageClass	    "Auto"
-		    DataLoggingNameMode	    "SignalName"
-		  }
-		}
-		Block {
 		  BlockType		  Outport
 		  Name			  "Pump_Speed"
 		  SID			  "4339"
-		  Position		  [880, 198, 910, 212]
+		  Position		  [1495, 118, 1525, 132]
 		  IconDisplay		  "Port number"
 		}
 		Block {
 		  BlockType		  Outport
 		  Name			  "Fan_Speed"
 		  SID			  "4342"
-		  Position		  [880, 263, 910, 277]
+		  Position		  [1490, 203, 1520, 217]
 		  Port			  "2"
 		  IconDisplay		  "Port number"
 		}
 		Line {
+		  SrcBlock		  "Inverter_Temp"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  1
+		}
+		Line {
 		  SrcBlock		  "motohawk_calibration"
 		  SrcPort		  1
+		  Points		  [40, 0]
+		  DstBlock		  "Sum"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Sum"
+		  SrcPort		  1
+		  DstBlock		  "Product"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "motohawk_calibration1"
+		  SrcPort		  1
+		  DstBlock		  "Product"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Charger_Temp"
+		  SrcPort		  1
+		  DstBlock		  "Sum1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "motohawk_calibration2"
+		  SrcPort		  1
+		  Points		  [40, 0]
+		  DstBlock		  "Sum1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Sum1"
+		  SrcPort		  1
+		  DstBlock		  "Product1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "motohawk_calibration3"
+		  SrcPort		  1
+		  DstBlock		  "Product1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "motohawk_data_read"
+		  SrcPort		  1
+		  DstBlock		  "Sum2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "motohawk_calibration4"
+		  SrcPort		  1
+		  Points		  [40, 0]
+		  DstBlock		  "Sum2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Sum2"
+		  SrcPort		  1
+		  DstBlock		  "Product2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "motohawk_calibration5"
+		  SrcPort		  1
+		  DstBlock		  "Product2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "motohawk_data_read1"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "motohawk_calibration6"
+		  SrcPort		  1
+		  Points		  [40, 0]
+		  DstBlock		  "Sum3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Sum3"
+		  SrcPort		  1
+		  DstBlock		  "Product3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "motohawk_calibration7"
+		  SrcPort		  1
+		  DstBlock		  "Product3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Product"
+		  SrcPort		  1
+		  DstBlock		  "MinMax"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Product1"
+		  SrcPort		  1
+		  Points		  [85, 0; 0, -130]
+		  DstBlock		  "MinMax"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Product2"
+		  SrcPort		  1
+		  Points		  [115, 0; 0, -260]
+		  DstBlock		  "MinMax"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "Product3"
+		  SrcPort		  1
+		  Points		  [155, 0; 0, -395]
+		  DstBlock		  "MinMax"
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "motohawk_prelookup"
+		  SrcPort		  1
+		  DstBlock		  "motohawk_interpolation_1d"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "MinMax"
+		  SrcPort		  1
+		  Points		  [85, 0]
+		  Branch {
+		    DstBlock		    "motohawk_prelookup"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 90]
+		    DstBlock		    "motohawk_prelookup1"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -85]
+		    DstBlock		    "Relational\nOperator"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "motohawk_prelookup1"
+		  SrcPort		  1
+		  DstBlock		  "motohawk_interpolation_1d1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "motohawk_calibration8"
+		  SrcPort		  1
+		  Points		  [110, 0; 0, 75]
 		  DstBlock		  "Relational\nOperator"
 		  DstPort		  2
 		}
 		Line {
-		  Name			  "CoolantPumpSpeed"
-		  Labels		  [0, 0]
-		  SrcBlock		  "motohawk_table_1d1"
+		  SrcBlock		  "Relational\nOperator"
 		  SrcPort		  1
-		  Points		  [110, 0]
+		  DstBlock		  "motohawk_fault_def3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "motohawk_fault_action"
+		  SrcPort		  1
+		  Points		  [45, 0; 0, 130]
+		  Branch {
+		    DstBlock		    "Switch"
+		    DstPort		    2
+		  }
+		  Branch {
+		    Points		    [0, 90]
+		    DstBlock		    "Switch1"
+		    DstPort		    2
+		  }
+		}
+		Line {
+		  Name			  "CoolantPumpSpeed"
+		  Labels		  [0, 0; 0, 0]
+		  SrcBlock		  "motohawk_interpolation_1d"
+		  SrcPort		  1
 		  DstBlock		  "Switch"
 		  DstPort		  3
 		}
 		Line {
 		  Name			  "FanDutyCycle"
-		  Labels		  [0, 0]
-		  SrcBlock		  "motohawk_table_1d"
+		  Labels		  [0, 0; 0, 0]
+		  SrcBlock		  "motohawk_interpolation_1d1"
 		  SrcPort		  1
 		  DstBlock		  "Switch1"
 		  DstPort		  3
 		}
 		Line {
-		  Name			  "FanDutyCycle"
-		  Labels		  [0, 0]
-		  SrcBlock		  "Switch1"
+		  SrcBlock		  "motohawk_calibration9"
 		  SrcPort		  1
-		  Points		  [40, 0]
+		  Points		  [65, 0; 0, 45]
 		  Branch {
-		    DstBlock		    "motohawk_probe2"
+		    DstBlock		    "Switch"
 		    DstPort		    1
 		  }
 		  Branch {
-		    Points		    [0, -30]
-		    DstBlock		    "Fan_Speed"
+		    DstBlock		    "Switch1"
 		    DstPort		    1
 		  }
 		}
 		Line {
-		  Name			  "CoolantPumpSpeed"
-		  Labels		  [0, 0]
+		  Labels		  [1, 0]
 		  SrcBlock		  "Switch"
 		  SrcPort		  1
-		  Points		  [40, 0]
+		  Points		  [20, 0]
 		  Branch {
 		    DstBlock		    "motohawk_probe"
 		    DstPort		    1
@@ -12310,52 +13696,16 @@ Model {
 		  }
 		}
 		Line {
-		  SrcBlock		  "Relational\nOperator"
+		  SrcBlock		  "Switch1"
 		  SrcPort		  1
-		  Points		  [295, 0; 0, -90]
+		  Points		  [20, 0]
 		  Branch {
-		    Points		    [55, 0]
-		    DstBlock		    "Switch1"
-		    DstPort		    2
-		  }
-		  Branch {
-		    Points		    [0, -50]
-		    DstBlock		    "Switch"
-		    DstPort		    2
-		  }
-		}
-		Line {
-		  SrcBlock		  "motohawk_calibration1"
-		  SrcPort		  1
-		  Points		  [75, 0; 0, 85]
-		  Branch {
-		    DstBlock		    "Switch"
+		    DstBlock		    "motohawk_probe2"
 		    DstPort		    1
 		  }
 		  Branch {
-		    Points		    [-35, 0; 0, 55]
-		    DstBlock		    "Switch1"
-		    DstPort		    1
-		  }
-		}
-		Line {
-		  SrcBlock		  "Charger_Current"
-		  SrcPort		  1
-		  Points		  [50, 0; 0, 35]
-		  DstBlock		  "Relational\nOperator"
-		  DstPort		  1
-		}
-		Line {
-		  SrcBlock		  "Inverter_Temp"
-		  SrcPort		  1
-		  Points		  [160, 0]
-		  Branch {
-		    DstBlock		    "motohawk_table_1d1"
-		    DstPort		    1
-		  }
-		  Branch {
-		    Points		    [0, 75]
-		    DstBlock		    "motohawk_table_1d"
+		    Points		    [0, -45]
+		    DstBlock		    "Fan_Speed"
 		    DstPort		    1
 		  }
 		}
@@ -12403,8 +13753,8 @@ Model {
 	      MaskHideContents	      off
 	      System {
 		Name			"Drive"
-		Location		[-1718, -548, -2, 516]
-		Open			on
+		Location		[-175, 83, 954, 722]
+		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -18196,7 +19546,7 @@ Model {
 	      }
 	      System {
 		Name			"HV Controller"
-		Location		[-1718, -548, -2, 516]
+		Location		[274, 83, 1364, 698]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -21849,12 +23199,11 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
-	      Name		      "<OutputCurrent>"
+	      Name		      "<Eaton_HV_Charger_Temperature>"
 	      Labels		      [0, 0; 0, 0]
 	      SrcBlock		      "Bus\nSelector5"
 	      SrcPort		      2
-	      DstBlock		      "Cooling"
-	      DstPort		      2
+	      Points		      [395, 0]
 	    }
 	    Line {
 	      Name		      "CoolantPumpSpeed"
@@ -24328,7 +25677,7 @@ Model {
 		  SourceType		  "MotoHawk CAN Receive  SlotTrigger"
 		  slot			  "'miniview_button_down'"
 		  inherited		  on
-		  function_name		  "Trigger_CAN_Slot_miniview_button_down_12887p0007"
+		  function_name		  "Trigger_CAN_Slot_miniview_button_down_10204p0002"
 		}
 		Block {
 		  BlockType		  Demux
@@ -27395,7 +28744,7 @@ Model {
 		  SourceType		  "MotoHawk CAN Receive  SlotTrigger"
 		  slot			  "'miniview_button_menu'"
 		  inherited		  on
-		  function_name		  "Trigger_CAN_Slot_miniview_button_menu_13068p004"
+		  function_name		  "Trigger_CAN_Slot_miniview_button_menu_10463p0005"
 		}
 		Block {
 		  BlockType		  Demux
@@ -29792,7 +31141,7 @@ Model {
 		  SourceType		  "MotoHawk CAN Receive  SlotTrigger"
 		  slot			  "'miniview_button_up'"
 		  inherited		  on
-		  function_name		  "Trigger_CAN_Slot_miniview_button_up_13068p0068"
+		  function_name		  "Trigger_CAN_Slot_miniview_button_up_10714p0004"
 		}
 		Block {
 		  BlockType		  Demux
@@ -31277,7 +32626,8 @@ Model {
 	    Name		    "Physical"
 	    PropagatedSignals	    "Accel, Brake, ReverseSw, DC_Current, DC_Voltage, MotorSpeed, MotorTorque, EStopSw, LVVolta"
 	    "ge, SOC, VehicleSpeed, BatteryReady, ContactorStatus, TimeSinceKeyOn, DriveReady, InverterTemp, ChargeContactor_S"
-	    "tatus, ChargerPresent, MCUDCVoltage, Eaton HV Charger, PowerSteering, Cooolant Pump, bcm_cell_overvolt"
+	    "tatus, ChargerPresent, MCUDCVoltage, Eaton HV Charger, PowerSteering, Cooolant Pump, bcm_cell_overvolt, Cooling F"
+	    "an"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
@@ -31295,7 +32645,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
+	    ZoomFactor		    "64"
 	    Block {
 	      BlockType		      SubSystem
 	      Name		      "A123 Battery Inputs"
@@ -33676,10 +35026,10 @@ Model {
 	      BlockType		      BusCreator
 	      Name		      "Bus\nCreator"
 	      SID		      "751"
-	      Ports		      [23, 1]
-	      Position		      [1550, 98, 1570, 802]
+	      Ports		      [24, 1]
+	      Position		      [1550, 15, 1570, 755]
 	      ShowName		      off
-	      Inputs		      "23"
+	      Inputs		      "24"
 	      DisplayOption	      "bar"
 	    }
 	    Block {
@@ -33687,7 +35037,7 @@ Model {
 	      Name		      "EHPAS Power Steering Pump Inputs"
 	      SID		      "2778"
 	      Ports		      [0, 1]
-	      Position		      [1040, 720, 1140, 770]
+	      Position		      [980, 615, 1080, 665]
 	      TreatAsAtomicUnit	      on
 	      MinAlgLoopOccurrences   off
 	      PropExecContextOutsideSubsystem off
@@ -34662,7 +36012,7 @@ Model {
 	      Name		      "EMP Coolant Pump Inputs"
 	      SID		      "2417"
 	      Ports		      [0, 1]
-	      Position		      [1040, 805, 1140, 845]
+	      Position		      [1155, 650, 1255, 690]
 	      TreatAsAtomicUnit	      on
 	      MinAlgLoopOccurrences   off
 	      PropExecContextOutsideSubsystem off
@@ -34680,7 +36030,7 @@ Model {
 	      }
 	      System {
 		Name			"EMP Coolant Pump Inputs"
-		Location		[469, 192, 1289, 683]
+		Location		[-1939, -357, -295, 707]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -34692,7 +36042,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"122"
+		ZoomFactor		"94"
 		Block {
 		  BlockType		  BusCreator
 		  Name			  "Bus\nCreator"
@@ -34896,8 +36246,8 @@ Model {
 		  parent_gain		  "1"
 		  parent_offset		  "0"
 		  parent_exp		  "1"
-		  use_mototune_group	  off
-		  parent_group		  "motohawk_vardec_path(gcb)"
+		  use_mototune_group	  on
+		  parent_group		  "'Sensors | EMP Coolant Pump'"
 		  Port {
 		    PortNumber		    1
 		    Name		    "EMP_Pump_Speed"
@@ -34943,8 +36293,8 @@ Model {
 		  parent_gain		  "1"
 		  parent_offset		  "0"
 		  parent_exp		  "1"
-		  use_mototune_group	  off
-		  parent_group		  "motohawk_vardec_path(gcb)"
+		  use_mototune_group	  on
+		  parent_group		  "'Sensors | EMP Coolant Pump'"
 		  Port {
 		    PortNumber		    1
 		    Name		    "EMP_Speed_Percent"
@@ -34990,8 +36340,8 @@ Model {
 		  parent_gain		  "1"
 		  parent_offset		  "0"
 		  parent_exp		  "1"
-		  use_mototune_group	  off
-		  parent_group		  "motohawk_vardec_path(gcb)"
+		  use_mototune_group	  on
+		  parent_group		  "'Sensors | EMP Coolant Pump'"
 		  Port {
 		    PortNumber		    1
 		    Name		    "EMP_Pump_Mode"
@@ -35037,8 +36387,8 @@ Model {
 		  parent_gain		  "1"
 		  parent_offset		  "0"
 		  parent_exp		  "1"
-		  use_mototune_group	  off
-		  parent_group		  "motohawk_vardec_path(gcb)"
+		  use_mototune_group	  on
+		  parent_group		  "'Sensors | EMP Coolant Pump'"
 		  Port {
 		    PortNumber		    1
 		    Name		    "EMP_Pump_Status"
@@ -35084,8 +36434,8 @@ Model {
 		  parent_gain		  "1"
 		  parent_offset		  "0"
 		  parent_exp		  "1"
-		  use_mototune_group	  off
-		  parent_group		  "motohawk_vardec_path(gcb)"
+		  use_mototune_group	  on
+		  parent_group		  "'Sensors | EMP Coolant Pump'"
 		  Port {
 		    PortNumber		    1
 		    Name		    "EMP_Board_Temp"
@@ -35131,8 +36481,8 @@ Model {
 		  parent_gain		  "1"
 		  parent_offset		  "0"
 		  parent_exp		  "1"
-		  use_mototune_group	  off
-		  parent_group		  "motohawk_vardec_path(gcb)"
+		  use_mototune_group	  on
+		  parent_group		  "'Sensors | EMP Coolant Pump'"
 		  Port {
 		    PortNumber		    1
 		    Name		    "EMP_Pump_Power"
@@ -35169,7 +36519,7 @@ Model {
 		  offset		  "0"
 		  exp			  "1"
 		  use_mototune_group	  on
-		  mototune_group	  "'Sensors | EHPAS'"
+		  mototune_group	  "'Sensors | EMP Coolant Pump'"
 		}
 		Block {
 		  BlockType		  Reference
@@ -35200,7 +36550,7 @@ Model {
 		  offset		  "0"
 		  exp			  "1"
 		  use_mototune_group	  on
-		  mototune_group	  "'Sensors | EHPAS'"
+		  mototune_group	  "'Sensors | EMP Coolant Pump'"
 		}
 		Block {
 		  BlockType		  Reference
@@ -35231,7 +36581,7 @@ Model {
 		  offset		  "0"
 		  exp			  "1"
 		  use_mototune_group	  on
-		  mototune_group	  "'Sensors | EHPAS'"
+		  mototune_group	  "'Sensors | EMP Coolant Pump'"
 		}
 		Block {
 		  BlockType		  Reference
@@ -35262,7 +36612,7 @@ Model {
 		  offset		  "0"
 		  exp			  "1"
 		  use_mototune_group	  on
-		  mototune_group	  "'Sensors | EHPAS'"
+		  mototune_group	  "'Sensors | EMP Coolant Pump'"
 		}
 		Block {
 		  BlockType		  Reference
@@ -35293,7 +36643,7 @@ Model {
 		  offset		  "0"
 		  exp			  "1"
 		  use_mototune_group	  on
-		  mototune_group	  "'Sensors | EHPAS'"
+		  mototune_group	  "'Sensors | EMP Coolant Pump'"
 		}
 		Block {
 		  BlockType		  Reference
@@ -35324,7 +36674,7 @@ Model {
 		  offset		  "0"
 		  exp			  "1"
 		  use_mototune_group	  on
-		  mototune_group	  "'Sensors | EHPAS'"
+		  mototune_group	  "'Sensors | EMP Coolant Pump'"
 		}
 		Block {
 		  BlockType		  Outport
@@ -35519,10 +36869,871 @@ Model {
 	    }
 	    Block {
 	      BlockType		      SubSystem
+	      Name		      "EMP Fan Inputs"
+	      SID		      "4414"
+	      Ports		      [0, 1]
+	      Position		      [1050, 710, 1150, 750]
+	      TreatAsAtomicUnit	      on
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      Port {
+		PortNumber		1
+		Name			"Cooling Fan"
+		PropagatedSignals	"EMP_Cooling_Fan_Status, EMP_Cooling_Fan_Mode, EMP_Cooling_Fan_Speed, EMP_Cooling_Fan_Board_Temp, "
+		"EMP_Cooling_Fan_Power, EMP_Cooling_Fan_Speed_Percent"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      System {
+		Name			"EMP Fan Inputs"
+		Location		[-1646, -548, -2, 499]
+		Open			on
+		ModelBrowserVisibility	on
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"119"
+		Block {
+		  BlockType		  BusCreator
+		  Name			  "Bus\nCreator"
+		  SID			  "4415"
+		  Ports			  [6, 1]
+		  Position		  [1245, 182, 1255, 608]
+		  ShowName		  off
+		  Inputs		  "6"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Read CAN Message"
+		  SID			  "4416"
+		  Ports			  [0, 8]
+		  Position		  [55, 37, 865, 613]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/CAN Blocks/Read CAN Message"
+		  SourceType		  "MotoHawk Read CAN Message"
+		  nam			  "'CAN_1'"
+		  bus			  "-2"
+		  msg			  "CANRx_EMPFan_Status"
+		  queue			  "1"
+		  slot			  "''"
+		  valid			  off
+		  stale			  on
+		  labelwires		  off
+		  Port {
+		    PortNumber		    1
+		    Name		    "AgeCount"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    3
+		    Name		    "EMP_Pump_Status"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    4
+		    Name		    "EMP_Pump_Mode"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    5
+		    Name		    "EMP_Pump_Speed"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    6
+		    Name		    "EMP_Board_Temp"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    7
+		    Name		    "EMP_Pump_Power"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    8
+		    Name		    "EMP_Speed_Percent"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  RelationalOperator
+		  Name			  "Relational\nOperator"
+		  SID			  "4417"
+		  Ports			  [2, 1]
+		  Position		  [1060, 72, 1090, 103]
+		  ShowName		  off
+		  Operator		  ">"
+		  InputSameDT		  off
+		  OutDataTypeStr	  "boolean"
+		  Port {
+		    PortNumber		    1
+		    Name		    "AgeCount"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  "Terminator5"
+		  SID			  "4418"
+		  Position		  [950, 140, 970, 160]
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_calibration2"
+		  SID			  "4419"
+		  Ports			  [0, 1]
+		  Position		  [875, 97, 1025, 133]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
+		  SourceType		  "MotoHawk Calibration"
+		  nam			  "'EMPFan_CAN_MaxAge'"
+		  val			  "2000"
+		  storage		  "Calibration"
+		  show_more		  on
+		  name_source		  "Use Parameter"
+		  data_type		  "Inherit from 'Default Value'"
+		  read_level		  "1"
+		  write_level		  "1"
+		  ovr_cals		  on
+		  view_as		  "Number"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  vector_style		  "Wide Row"
+		  use_help_units	  on
+		  help			  "'counts before EMP Cooling fan faults out'"
+		  units			  "''"
+		  use_header_enum	  off
+		  row_header_enum	  "{}"
+		  col_header_enum	  "{}"
+		  use_min_max		  on
+		  min_val		  "0"
+		  max_val		  "100000"
+		  use_precision		  on
+		  precision		  "'2.1'"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_mototune_group	  on
+		  mototune_group	  "'Sensors | EMP Cooling Fan'"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_fault_def3"
+		  SID			  "4420"
+		  Ports			  [1]
+		  Position		  [1165, 69, 1335, 111]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Fault Management Blocks/motohawk_fault_def"
+		  SourceType		  "MotoHawk Fault Definition"
+		  nam			  "'NoCAN_CoolingFan'"
+		  mode			  "Disabled"
+		  id			  "0"
+		  x			  "10"
+		  y			  "20"
+		  input_suspected	  on
+		  indeterminate		  off
+		  increment_xy		  on
+		  downsample_count	  "1"
+		  ovr_cals		  on
+		  ovr_actions		  on
+		  show_actions		  off
+		  action1_name		  "''"
+		  action1_cond		  "(None)"
+		  action2_name		  "''"
+		  action2_cond		  "(None)"
+		  action3_name		  "''"
+		  action3_cond		  "(None)"
+		  action4_name		  "''"
+		  action4_cond		  "(None)"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_override_abs1"
+		  SID			  "4421"
+		  Ports			  [1, 1]
+		  Position		  [990, 348, 1140, 372]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_override_abs"
+		  SourceType		  "MotoHawk Absolute Override"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  GeneratePreprocessorConditionals off
+		  parent_name		  "'EMP_Cooling_Fan_Speed'"
+		  parent_val		  "0"
+		  show_more		  on
+		  name_source		  "Use Parameter"
+		  parent_read_level	  "1"
+		  parent_override_level	  "1"
+		  view_as		  "Number"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  use_help_units	  off
+		  parent_help		  "''"
+		  parent_units		  "''"
+		  use_min_max		  off
+		  parent_min		  "-inf"
+		  parent_max		  "inf"
+		  use_precision		  off
+		  parent_precision	  "''"
+		  parent_gain		  "1"
+		  parent_offset		  "0"
+		  parent_exp		  "1"
+		  use_mototune_group	  on
+		  parent_group		  "'Sensors | EMP Cooling Fan'"
+		  Port {
+		    PortNumber		    1
+		    Name		    "EMP_Cooling_Fan_Speed"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_override_abs10"
+		  SID			  "4422"
+		  Ports			  [1, 1]
+		  Position		  [990, 558, 1140, 582]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_override_abs"
+		  SourceType		  "MotoHawk Absolute Override"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  GeneratePreprocessorConditionals off
+		  parent_name		  "'EMP_Cooling_Fan_Speed_Percent'"
+		  parent_val		  "0"
+		  show_more		  on
+		  name_source		  "Use Parameter"
+		  parent_read_level	  "1"
+		  parent_override_level	  "1"
+		  view_as		  "Number"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  use_help_units	  off
+		  parent_help		  "''"
+		  parent_units		  "''"
+		  use_min_max		  off
+		  parent_min		  "-inf"
+		  parent_max		  "inf"
+		  use_precision		  off
+		  parent_precision	  "''"
+		  parent_gain		  "1"
+		  parent_offset		  "0"
+		  parent_exp		  "1"
+		  use_mototune_group	  on
+		  parent_group		  "'Sensors | EMP Cooling Fan'"
+		  Port {
+		    PortNumber		    1
+		    Name		    "EMP_Cooling_Fan_Speed_Percent"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_override_abs2"
+		  SID			  "4423"
+		  Ports			  [1, 1]
+		  Position		  [990, 278, 1140, 302]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_override_abs"
+		  SourceType		  "MotoHawk Absolute Override"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  GeneratePreprocessorConditionals off
+		  parent_name		  "'EMP_Cooling_Fan_Mode'"
+		  parent_val		  "0"
+		  show_more		  on
+		  name_source		  "Use Parameter"
+		  parent_read_level	  "1"
+		  parent_override_level	  "1"
+		  view_as		  "Number"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  use_help_units	  off
+		  parent_help		  "''"
+		  parent_units		  "''"
+		  use_min_max		  off
+		  parent_min		  "-inf"
+		  parent_max		  "inf"
+		  use_precision		  off
+		  parent_precision	  "''"
+		  parent_gain		  "1"
+		  parent_offset		  "0"
+		  parent_exp		  "1"
+		  use_mototune_group	  on
+		  parent_group		  "'Sensors | EMP Cooling Fan'"
+		  Port {
+		    PortNumber		    1
+		    Name		    "EMP_Cooling_Fan_Mode"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_override_abs3"
+		  SID			  "4424"
+		  Ports			  [1, 1]
+		  Position		  [990, 208, 1140, 232]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_override_abs"
+		  SourceType		  "MotoHawk Absolute Override"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  GeneratePreprocessorConditionals off
+		  parent_name		  "'EMP_Cooling_Fan_Status'"
+		  parent_val		  "0"
+		  show_more		  on
+		  name_source		  "Use Parameter"
+		  parent_read_level	  "1"
+		  parent_override_level	  "1"
+		  view_as		  "Number"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  use_help_units	  off
+		  parent_help		  "''"
+		  parent_units		  "''"
+		  use_min_max		  off
+		  parent_min		  "-inf"
+		  parent_max		  "inf"
+		  use_precision		  off
+		  parent_precision	  "''"
+		  parent_gain		  "1"
+		  parent_offset		  "0"
+		  parent_exp		  "1"
+		  use_mototune_group	  on
+		  parent_group		  "'Sensors | EMP Cooling Fan'"
+		  Port {
+		    PortNumber		    1
+		    Name		    "EMP_Cooling_Fan_Status"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_override_abs8"
+		  SID			  "4425"
+		  Ports			  [1, 1]
+		  Position		  [990, 418, 1140, 442]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_override_abs"
+		  SourceType		  "MotoHawk Absolute Override"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  GeneratePreprocessorConditionals off
+		  parent_name		  "'EMP_Cooling_Fan_Board_Temp'"
+		  parent_val		  "0"
+		  show_more		  on
+		  name_source		  "Use Parameter"
+		  parent_read_level	  "1"
+		  parent_override_level	  "1"
+		  view_as		  "Number"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  use_help_units	  off
+		  parent_help		  "''"
+		  parent_units		  "''"
+		  use_min_max		  off
+		  parent_min		  "-inf"
+		  parent_max		  "inf"
+		  use_precision		  off
+		  parent_precision	  "''"
+		  parent_gain		  "1"
+		  parent_offset		  "0"
+		  parent_exp		  "1"
+		  use_mototune_group	  on
+		  parent_group		  "'Sensors | EMP Cooling Fan'"
+		  Port {
+		    PortNumber		    1
+		    Name		    "EMP_Cooling_Fan_Board_Temp"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_override_abs9"
+		  SID			  "4426"
+		  Ports			  [1, 1]
+		  Position		  [990, 488, 1140, 512]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_override_abs"
+		  SourceType		  "MotoHawk Absolute Override"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  GeneratePreprocessorConditionals off
+		  parent_name		  "'EMP_Cooling_Fan_Power'"
+		  parent_val		  "0"
+		  show_more		  on
+		  name_source		  "Use Parameter"
+		  parent_read_level	  "1"
+		  parent_override_level	  "1"
+		  view_as		  "Number"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  use_help_units	  off
+		  parent_help		  "''"
+		  parent_units		  "''"
+		  use_min_max		  off
+		  parent_min		  "-inf"
+		  parent_max		  "inf"
+		  use_precision		  off
+		  parent_precision	  "''"
+		  parent_gain		  "1"
+		  parent_offset		  "0"
+		  parent_exp		  "1"
+		  use_mototune_group	  on
+		  parent_group		  "'Sensors | EMP Cooling Fan'"
+		  Port {
+		    PortNumber		    1
+		    Name		    "EMP_Cooling_Fan_Power"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_probe10"
+		  SID			  "4427"
+		  Ports			  [1]
+		  Position		  [990, 322, 1140, 348]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
+		  SourceType		  "MotoHawk Probe"
+		  nam			  "'EMP_Cooling_Fan_Speed'"
+		  show_more		  on
+		  name_source		  "Use Parameter"
+		  read_level		  "1"
+		  view_as		  "Number"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  vector_style		  "Wide Row"
+		  use_help_units	  off
+		  help			  "''"
+		  units			  "''"
+		  use_header_enum	  off
+		  row_header_enum	  "{}"
+		  col_header_enum	  "{}"
+		  use_precision		  off
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_mototune_group	  on
+		  mototune_group	  "'Sensors | EMP Cooling Fan'"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_probe11"
+		  SID			  "4428"
+		  Ports			  [1]
+		  Position		  [990, 392, 1140, 418]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
+		  SourceType		  "MotoHawk Probe"
+		  nam			  "'EMP_Cooling_Fan_Board_Temp'"
+		  show_more		  on
+		  name_source		  "Use Parameter"
+		  read_level		  "1"
+		  view_as		  "Number"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  vector_style		  "Wide Row"
+		  use_help_units	  off
+		  help			  "''"
+		  units			  "''"
+		  use_header_enum	  off
+		  row_header_enum	  "{}"
+		  col_header_enum	  "{}"
+		  use_precision		  off
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_mototune_group	  on
+		  mototune_group	  "'Sensors | EMP Cooling Fan'"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_probe13"
+		  SID			  "4429"
+		  Ports			  [1]
+		  Position		  [990, 462, 1140, 488]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
+		  SourceType		  "MotoHawk Probe"
+		  nam			  "'EMP_Cooling_Fan_Power'"
+		  show_more		  on
+		  name_source		  "Use Parameter"
+		  read_level		  "1"
+		  view_as		  "Number"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  vector_style		  "Wide Row"
+		  use_help_units	  off
+		  help			  "''"
+		  units			  "''"
+		  use_header_enum	  off
+		  row_header_enum	  "{}"
+		  col_header_enum	  "{}"
+		  use_precision		  off
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_mototune_group	  on
+		  mototune_group	  "'Sensors | EMP Cooling Fan'"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_probe14"
+		  SID			  "4430"
+		  Ports			  [1]
+		  Position		  [990, 532, 1140, 558]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
+		  SourceType		  "MotoHawk Probe"
+		  nam			  "'EMP_Cooling_Fan_Speed_Percent'"
+		  show_more		  on
+		  name_source		  "Use Parameter"
+		  read_level		  "1"
+		  view_as		  "Number"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  vector_style		  "Wide Row"
+		  use_help_units	  off
+		  help			  "''"
+		  units			  "''"
+		  use_header_enum	  off
+		  row_header_enum	  "{}"
+		  col_header_enum	  "{}"
+		  use_precision		  off
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_mototune_group	  on
+		  mototune_group	  "'Sensors | EMP Cooling Fan'"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_probe8"
+		  SID			  "4431"
+		  Ports			  [1]
+		  Position		  [990, 182, 1140, 208]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
+		  SourceType		  "MotoHawk Probe"
+		  nam			  "'EMP_Cooling_Fan_Status'"
+		  show_more		  on
+		  name_source		  "Use Parameter"
+		  read_level		  "1"
+		  view_as		  "Number"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  vector_style		  "Wide Row"
+		  use_help_units	  off
+		  help			  "''"
+		  units			  "''"
+		  use_header_enum	  off
+		  row_header_enum	  "{}"
+		  col_header_enum	  "{}"
+		  use_precision		  off
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_mototune_group	  on
+		  mototune_group	  "'Sensors | EMP Cooling Fan'"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_probe9"
+		  SID			  "4432"
+		  Ports			  [1]
+		  Position		  [990, 252, 1140, 278]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
+		  SourceType		  "MotoHawk Probe"
+		  nam			  "'EMP_Cooling_Fan_Mode'"
+		  show_more		  on
+		  name_source		  "Use Parameter"
+		  read_level		  "1"
+		  view_as		  "Number"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  vector_style		  "Wide Row"
+		  use_help_units	  off
+		  help			  "''"
+		  units			  "''"
+		  use_header_enum	  off
+		  row_header_enum	  "{}"
+		  col_header_enum	  "{}"
+		  use_precision		  off
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_mototune_group	  on
+		  mototune_group	  "'Sensors | EMP Cooling Fan'"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "EMP Fan"
+		  SID			  "4433"
+		  Position		  [1310, 388, 1340, 402]
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  Name			  "AgeCount"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Relational\nOperator"
+		  SrcPort		  1
+		  DstBlock		  "motohawk_fault_def3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Read CAN Message"
+		  SrcPort		  2
+		  DstBlock		  "Terminator5"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "EMP_Pump_Status"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Read CAN Message"
+		  SrcPort		  3
+		  Points		  [95, 0]
+		  Branch {
+		    DstBlock		    "motohawk_override_abs3"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -25]
+		    DstBlock		    "motohawk_probe8"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  Name			  "EMP_Pump_Mode"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Read CAN Message"
+		  SrcPort		  4
+		  Points		  [95, 0]
+		  Branch {
+		    DstBlock		    "motohawk_override_abs2"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -25]
+		    DstBlock		    "motohawk_probe9"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  Name			  "EMP_Pump_Speed"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Read CAN Message"
+		  SrcPort		  5
+		  Points		  [95, 0]
+		  Branch {
+		    DstBlock		    "motohawk_override_abs1"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -25]
+		    DstBlock		    "motohawk_probe10"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  Name			  "EMP_Board_Temp"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Read CAN Message"
+		  SrcPort		  6
+		  Points		  [95, 0]
+		  Branch {
+		    DstBlock		    "motohawk_override_abs8"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -25]
+		    DstBlock		    "motohawk_probe11"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  Name			  "EMP_Pump_Power"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Read CAN Message"
+		  SrcPort		  7
+		  Points		  [95, 0]
+		  Branch {
+		    DstBlock		    "motohawk_override_abs9"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -25]
+		    DstBlock		    "motohawk_probe13"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  Name			  "EMP_Speed_Percent"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Read CAN Message"
+		  SrcPort		  8
+		  Points		  [95, 0]
+		  Branch {
+		    DstBlock		    "motohawk_override_abs10"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -25]
+		    DstBlock		    "motohawk_probe14"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  Name			  "AgeCount"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Read CAN Message"
+		  SrcPort		  1
+		  DstBlock		  "Relational\nOperator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "motohawk_calibration2"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "Relational\nOperator"
+		  DstPort		  2
+		}
+		Line {
+		  Name			  "EMP_Cooling_Fan_Status"
+		  Labels		  [0, 0]
+		  SrcBlock		  "motohawk_override_abs3"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "EMP_Cooling_Fan_Mode"
+		  Labels		  [0, 0]
+		  SrcBlock		  "motohawk_override_abs2"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  2
+		}
+		Line {
+		  Name			  "EMP_Cooling_Fan_Speed"
+		  Labels		  [0, 0]
+		  SrcBlock		  "motohawk_override_abs1"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  3
+		}
+		Line {
+		  Name			  "EMP_Cooling_Fan_Board_Temp"
+		  Labels		  [0, 0]
+		  SrcBlock		  "motohawk_override_abs8"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  4
+		}
+		Line {
+		  Name			  "EMP_Cooling_Fan_Power"
+		  Labels		  [0, 0]
+		  SrcBlock		  "motohawk_override_abs9"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  5
+		}
+		Line {
+		  Name			  "EMP_Cooling_Fan_Speed_Percent"
+		  Labels		  [0, 0]
+		  SrcBlock		  "motohawk_override_abs10"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  6
+		}
+		Line {
+		  SrcBlock		  "Bus\nCreator"
+		  SrcPort		  1
+		  DstBlock		  "EMP Fan"
+		  DstPort		  1
+		}
+		Annotation {
+		  Position		  [1230, 339]
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
 	      Name		      "Eaton HV Charger"
 	      SID		      "2846"
 	      Ports		      [0, 1]
-	      Position		      [1040, 654, 1140, 696]
+	      Position		      [1140, 574, 1240, 616]
 	      LibraryVersion	      "1.216"
 	      MinAlgLoopOccurrences   off
 	      PropExecContextOutsideSubsystem off
@@ -37221,7 +39432,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From"
 	      SID		      "757"
-	      Position		      [1355, 228, 1440, 252]
+	      Position		      [1355, 148, 1440, 172]
 	      BackgroundColor	      "lightBlue"
 	      ShowName		      off
 	      CloseFcn		      "tagdialog Close"
@@ -37238,7 +39449,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From1"
 	      SID		      "758"
-	      Position		      [1355, 258, 1440, 282]
+	      Position		      [1355, 178, 1440, 202]
 	      BackgroundColor	      "lightBlue"
 	      ShowName		      off
 	      CloseFcn		      "tagdialog Close"
@@ -37246,7 +39457,7 @@ Model {
 	      Port {
 		PortNumber		1
 		Name			"MotorSpeed"
-		PropagatedSignals	"Motor_Speed"
+		PropagatedSignals	"Accurate_Speed"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
@@ -37255,7 +39466,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From10"
 	      SID		      "1809"
-	      Position		      [1355, 438, 1440, 462]
+	      Position		      [1355, 358, 1440, 382]
 	      BackgroundColor	      "lightBlue"
 	      ShowName		      off
 	      CloseFcn		      "tagdialog Close"
@@ -37272,7 +39483,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From11"
 	      SID		      "1810"
-	      Position		      [1355, 467, 1455, 493]
+	      Position		      [1355, 387, 1455, 413]
 	      BackgroundColor	      "lightBlue"
 	      ShowName		      off
 	      CloseFcn		      "tagdialog Close"
@@ -37289,7 +39500,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From12"
 	      SID		      "2018"
-	      Position		      [1355, 497, 1455, 523]
+	      Position		      [1355, 417, 1455, 443]
 	      BackgroundColor	      "lightBlue"
 	      ShowName		      off
 	      CloseFcn		      "tagdialog Close"
@@ -37305,7 +39516,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From13"
 	      SID		      "760"
-	      Position		      [1355, 348, 1440, 372]
+	      Position		      [1355, 268, 1440, 292]
 	      BackgroundColor	      "lightBlue"
 	      ShowName		      off
 	      CloseFcn		      "tagdialog Close"
@@ -37321,7 +39532,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From14"
 	      SID		      "2059"
-	      Position		      [1355, 527, 1455, 553]
+	      Position		      [1355, 447, 1455, 473]
 	      BackgroundColor	      "lightBlue"
 	      ShowName		      off
 	      CloseFcn		      "tagdialog Close"
@@ -37337,7 +39548,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From16"
 	      SID		      "2206"
-	      Position		      [1355, 557, 1455, 583]
+	      Position		      [1355, 477, 1455, 503]
 	      BackgroundColor	      "lightBlue"
 	      ShowName		      off
 	      CloseFcn		      "tagdialog Close"
@@ -37364,7 +39575,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From18"
 	      SID		      "2698"
-	      Position		      [1270, 587, 1430, 613]
+	      Position		      [1270, 507, 1430, 533]
 	      BackgroundColor	      "lightBlue"
 	      ShowName		      off
 	      CloseFcn		      "tagdialog Close"
@@ -37381,7 +39592,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From19"
 	      SID		      "2707"
-	      Position		      [1270, 617, 1430, 643]
+	      Position		      [1270, 537, 1430, 563]
 	      BackgroundColor	      "lightBlue"
 	      ShowName		      off
 	      CloseFcn		      "tagdialog Close"
@@ -37398,7 +39609,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From2"
 	      SID		      "763"
-	      Position		      [1355, 288, 1440, 312]
+	      Position		      [1355, 208, 1440, 232]
 	      BackgroundColor	      "lightBlue"
 	      ShowName		      off
 	      CloseFcn		      "tagdialog Close"
@@ -37406,7 +39617,7 @@ Model {
 	      Port {
 		PortNumber		1
 		Name			"MotorTorque"
-		PropagatedSignals	"Motor_Torque"
+		PropagatedSignals	"Accurate_Torque"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
@@ -37415,7 +39626,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From20"
 	      SID		      "3776"
-	      Position		      [1280, 647, 1380, 673]
+	      Position		      [1280, 567, 1380, 593]
 	      BackgroundColor	      "lightBlue"
 	      ShowName		      off
 	      CloseFcn		      "tagdialog Close"
@@ -37423,7 +39634,7 @@ Model {
 	      Port {
 		PortNumber		1
 		Name			"MCUDCVoltage"
-		PropagatedSignals	"DC_Bus_Voltage"
+		PropagatedSignals	"Accurate_Voltage"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
@@ -37432,7 +39643,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From21"
 	      SID		      "3842"
-	      Position		      [1375, 767, 1475, 793]
+	      Position		      [1375, 687, 1475, 713]
 	      BackgroundColor	      "lightBlue"
 	      ShowName		      off
 	      CloseFcn		      "tagdialog Close"
@@ -37452,7 +39663,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From3"
 	      SID		      "764"
-	      Position		      [1355, 168, 1440, 192]
+	      Position		      [1355, 88, 1440, 112]
 	      BackgroundColor	      "lightBlue"
 	      ShowName		      off
 	      CloseFcn		      "tagdialog Close"
@@ -37468,7 +39679,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From4"
 	      SID		      "765"
-	      Position		      [1355, 198, 1440, 222]
+	      Position		      [1355, 118, 1440, 142]
 	      BackgroundColor	      "lightBlue"
 	      ShowName		      off
 	      CloseFcn		      "tagdialog Close"
@@ -37485,7 +39696,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From5"
 	      SID		      "1438"
-	      Position		      [1355, 408, 1440, 432]
+	      Position		      [1355, 328, 1440, 352]
 	      BackgroundColor	      "lightBlue"
 	      ShowName		      off
 	      CloseFcn		      "tagdialog Close"
@@ -37502,7 +39713,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From6"
 	      SID		      "767"
-	      Position		      [1355, 108, 1440, 132]
+	      Position		      [1355, 28, 1440, 52]
 	      BackgroundColor	      "lightBlue"
 	      ShowName		      off
 	      CloseFcn		      "tagdialog Close"
@@ -37518,7 +39729,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From7"
 	      SID		      "768"
-	      Position		      [1355, 138, 1440, 162]
+	      Position		      [1355, 58, 1440, 82]
 	      BackgroundColor	      "lightBlue"
 	      ShowName		      off
 	      CloseFcn		      "tagdialog Close"
@@ -37534,7 +39745,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From8"
 	      SID		      "769"
-	      Position		      [1355, 318, 1440, 342]
+	      Position		      [1355, 238, 1440, 262]
 	      BackgroundColor	      "lightBlue"
 	      ShowName		      off
 	      CloseFcn		      "tagdialog Close"
@@ -37551,7 +39762,7 @@ Model {
 	      BlockType		      From
 	      Name		      "From9"
 	      SID		      "1419"
-	      Position		      [1355, 378, 1440, 402]
+	      Position		      [1355, 298, 1440, 322]
 	      BackgroundColor	      "lightBlue"
 	      ShowName		      off
 	      CloseFcn		      "tagdialog Close"
@@ -37568,7 +39779,7 @@ Model {
 	      BlockType		      Goto
 	      Name		      "Goto"
 	      SID		      "2637"
-	      Position		      [1420, 959, 1510, 981]
+	      Position		      [1325, 1279, 1415, 1301]
 	      BackgroundColor	      "lightBlue"
 	      ShowName		      off
 	      GotoTag		      "motor_speed"
@@ -37578,7 +39789,7 @@ Model {
 	      BlockType		      Goto
 	      Name		      "Goto1"
 	      SID		      "2638"
-	      Position		      [1420, 1009, 1510, 1031]
+	      Position		      [1325, 1329, 1415, 1351]
 	      BackgroundColor	      "lightBlue"
 	      ShowName		      off
 	      GotoTag		      "motor_torque"
@@ -37626,7 +39837,7 @@ Model {
 	      BlockType		      Goto
 	      Name		      "Goto15"
 	      SID		      "2639"
-	      Position		      [1415, 1058, 1575, 1082]
+	      Position		      [1320, 1378, 1480, 1402]
 	      BackgroundColor	      "lightBlue"
 	      ShowName		      off
 	      GotoTag		      "DriveReady"
@@ -37666,7 +39877,7 @@ Model {
 	      BlockType		      Goto
 	      Name		      "Goto19"
 	      SID		      "2649"
-	      Position		      [1410, 1109, 1500, 1131]
+	      Position		      [1315, 1429, 1405, 1451]
 	      BackgroundColor	      "lightBlue"
 	      ShowName		      off
 	      GotoTag		      "MCU_Temp"
@@ -37686,7 +39897,7 @@ Model {
 	      BlockType		      Goto
 	      Name		      "Goto20"
 	      SID		      "3775"
-	      Position		      [1375, 1160, 1505, 1180]
+	      Position		      [1280, 1480, 1410, 1500]
 	      BackgroundColor	      "lightBlue"
 	      ShowName		      off
 	      GotoTag		      "MCU_DC_Voltage"
@@ -37716,7 +39927,7 @@ Model {
 	      BlockType		      Goto
 	      Name		      "Goto4"
 	      SID		      "2640"
-	      Position		      [1680, 899, 1770, 921]
+	      Position		      [1585, 1219, 1675, 1241]
 	      BackgroundColor	      "lightBlue"
 	      ShowName		      off
 	      GotoTag		      "VehicleSpeed"
@@ -40308,7 +42519,7 @@ Model {
 	      Name		      "Relational\nOperator6"
 	      SID		      "2650"
 	      Ports		      [2, 1]
-	      Position		      [1635, 1132, 1665, 1163]
+	      Position		      [1540, 1452, 1570, 1483]
 	      ShowName		      off
 	      Operator		      ">"
 	      InputSameDT	      off
@@ -40505,7 +42716,7 @@ Model {
 	      Name		      "UQM Motor Inouts"
 	      SID		      "4207"
 	      Ports		      [0, 5]
-	      Position		      [1190, 946, 1315, 1194]
+	      Position		      [1095, 1266, 1220, 1514]
 	      TreatAsAtomicUnit	      on
 	      MinAlgLoopOccurrences   off
 	      PropExecContextOutsideSubsystem off
@@ -40516,10 +42727,10 @@ Model {
 	      MaskHideContents	      off
 	      System {
 		Name			"UQM Motor Inouts"
-		Location		[231, 83, 1331, 709]
+		Location		[274, 75, 1347, 690]
 		Open			off
 		ModelBrowserVisibility	on
-		ModelBrowserWidth	200
+		ModelBrowserWidth	272
 		ScreenColor		"white"
 		PaperOrientation	"landscape"
 		PaperPositionMode	"auto"
@@ -40528,7 +42739,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"151"
+		ZoomFactor		"100"
 		Block {
 		  BlockType		  Reference
 		  Name			  "Compare\nTo Constant1"
@@ -40617,16 +42828,6 @@ Model {
 		  }
 		}
 		Block {
-		  BlockType		  Logic
-		  Name			  "Logical\nOperator"
-		  SID			  "4324"
-		  Ports			  [1, 1]
-		  Position		  [990, 1369, 1020, 1401]
-		  Operator		  "NOT"
-		  AllPortsSameDT	  off
-		  OutDataTypeStr	  "boolean"
-		}
-		Block {
 		  BlockType		  Reference
 		  Name			  "Read CAN Message1"
 		  SID			  "4245"
@@ -40636,7 +42837,7 @@ Model {
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/CAN Blocks/Read CAN Message"
 		  SourceType		  "MotoHawk Read CAN Message"
-		  nam			  "['CAN_' num2str(2)]"
+		  nam			  "['CAN_' num2str(1)]"
 		  bus			  "-2"
 		  msg			  "CANRx_UQM_1CEFrrss"
 		  queue			  "1"
@@ -40644,6 +42845,48 @@ Model {
 		  valid			  off
 		  stale			  off
 		  labelwires		  on
+		  Port {
+		    PortNumber		    1
+		    Name		    "Command_Watchdog_Status"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    2
+		    Name		    "Status_A"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    3
+		    Name		    "Software_Release_Sub_Version"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    4
+		    Name		    "Software_Release_Minor_Version"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    5
+		    Name		    "Software_Release_Major_Version"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    6
+		    Name		    "Status_C"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    7
+		    Name		    "Watchdog_Error"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
 		}
 		Block {
 		  BlockType		  Reference
@@ -40655,7 +42898,7 @@ Model {
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/CAN Blocks/Read CAN Message"
 		  SourceType		  "MotoHawk Read CAN Message"
-		  nam			  "['CAN_' num2str(2)]"
+		  nam			  "['CAN_' num2str(1)]"
 		  bus			  "-2"
 		  msg			  "CANRx_UQM_0CEFrrss"
 		  queue			  "1"
@@ -40663,6 +42906,18 @@ Model {
 		  valid			  off
 		  stale			  off
 		  labelwires		  on
+		  Port {
+		    PortNumber		    1
+		    Name		    "Derate"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    2
+		    Name		    "Shutdown"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
 		}
 		Block {
 		  BlockType		  Reference
@@ -40674,7 +42929,7 @@ Model {
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/CAN Blocks/Read CAN Message"
 		  SourceType		  "MotoHawk Read CAN Message"
-		  nam			  "['CAN_' num2str(2)]"
+		  nam			  "['CAN_' num2str(1)]"
 		  bus			  "-2"
 		  msg			  "CANRx_UQM_04EFrrss"
 		  queue			  "1"
@@ -40723,7 +42978,7 @@ Model {
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/CAN Blocks/Read CAN Message"
 		  SourceType		  "MotoHawk Read CAN Message"
-		  nam			  "['CAN_' num2str(2)]"
+		  nam			  "['CAN_' num2str(1)]"
 		  bus			  "-2"
 		  msg			  "CANRx_UQM_08EFrrss"
 		  queue			  "1"
@@ -40731,6 +42986,294 @@ Model {
 		  valid			  off
 		  stale			  off
 		  labelwires		  on
+		  Port {
+		    PortNumber		    1
+		    Name		    "Not_Enabled"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    2
+		    Name		    "Not_Enabled_Histroy"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    3
+		    Name		    "Over_Leg_Current"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    4
+		    Name		    "Over_Leg_Current_History"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    5
+		    Name		    "Over_Bus_Current"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    6
+		    Name		    "Over_Bus_Current_History"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    7
+		    Name		    "Over_Phase_Advance"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    8
+		    Name		    "Over_Phase_Advance_History"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    9
+		    Name		    "Under_Voltage_Warning"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    10
+		    Name		    "Under_Voltage_Warning_History"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    11
+		    Name		    "Rotor_Over_Temperature"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    12
+		    Name		    "Rotor_Over_Temperature_History"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    13
+		    Name		    "Stator_Over_Temperature"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    14
+		    Name		    "Stator_Over_Temperature_History"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    15
+		    Name		    "Inverter_Over_Temperature"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    16
+		    Name		    "Inverter_Over_Temperature_History"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    17
+		    Name		    "Over_Speed_Warning"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    18
+		    Name		    "Over_Speed_Warning_History"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    19
+		    Name		    "Over_Voltage_Warning"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    20
+		    Name		    "Over_Voltage_Warning_History"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    21
+		    Name		    "Over_Speed_Alarm"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    22
+		    Name		    "Over_Speed_Alarm_History"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    23
+		    Name		    "Over_Voltage_Alarm"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    24
+		    Name		    "Over_Voltage_Alarm_History"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    25
+		    Name		    "ADC_Calibration_Problem"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    26
+		    Name		    "ADC_Calibration_Problem_History"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    27
+		    Name		    "Limp_Home_Mode"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    28
+		    Name		    "Limp_Home_Mode_History"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    29
+		    Name		    "Inverter_Fault_Occured"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    30
+		    Name		    "Iverter_Fault_Occured_History"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    31
+		    Name		    "Inverter_Fault"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    32
+		    Name		    "Inverter_Fault_History"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    33
+		    Name		    "Forced_Voltage_Control"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    34
+		    Name		    "CAN_Limits_In_Effect"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    35
+		    Name		    "System_Disabled_In_Motion"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    36
+		    Name		    "ABC_Phase_Order"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    37
+		    Name		    "Regen_Switch_Open"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    38
+		    Name		    "Current_Transducer_Fault_Ibus/Ileg"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    39
+		    Name		    "Acceleration_Limited"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    40
+		    Name		    "Using_Raw_Speed"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    41
+		    Name		    "Turbo_Mode"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    42
+		    Name		    "Forced_Open_Loop"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    43
+		    Name		    "Motor_Stalled"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    44
+		    Name		    "Phase_Current_Sensor_Error"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    45
+		    Name		    "Bad_Position_Signal"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    46
+		    Name		    "Bad_Switch"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    47
+		    Name		    "Invalid_Power_Supply"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    48
+		    Name		    "Power_Switches_Off"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
 		}
 		Block {
 		  BlockType		  Reference
@@ -40742,7 +43285,7 @@ Model {
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/CAN Blocks/Read CAN Message"
 		  SourceType		  "MotoHawk Read CAN Message"
-		  nam			  "['CAN_' num2str(2)]"
+		  nam			  "['CAN_' num2str(1)]"
 		  bus			  "-2"
 		  msg			  "CANRx_UQM_14EFrrss"
 		  queue			  "1"
@@ -40753,6 +43296,42 @@ Model {
 		  Port {
 		    PortNumber		    1
 		    Name		    "AgeCount"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    2
+		    Name		    "Leg_Current"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    3
+		    Name		    "High_Bound"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    4
+		    Name		    "Low_Bound"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    5
+		    Name		    "Stall_Safety_Percentage"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    6
+		    Name		    "Angular_Distance"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    7
+		    Name		    "Torque_Desired"
 		    RTWStorageClass	    "Auto"
 		    DataLoggingNameMode	    "SignalName"
 		  }
@@ -40767,7 +43346,7 @@ Model {
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/CAN Blocks/Read CAN Message"
 		  SourceType		  "MotoHawk Read CAN Message"
-		  nam			  "['CAN_' num2str(2)]"
+		  nam			  "['CAN_' num2str(1)]"
 		  bus			  "-2"
 		  msg			  "CANRx_UQM_18EFrrss"
 		  queue			  "1"
@@ -40781,6 +43360,93 @@ Model {
 		    RTWStorageClass	    "Auto"
 		    DataLoggingNameMode	    "SignalName"
 		  }
+		  Port {
+		    PortNumber		    2
+		    Name		    "Inverter_Temperature"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    3
+		    Name		    "Rotor_Temp"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    4
+		    Name		    "Stator_Temp"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  RelationalOperator
+		  Name			  "Relational\nOperator"
+		  SID			  "4412"
+		  Ports			  [2, 1]
+		  Position		  [1130, 1317, 1160, 1348]
+		  InputSameDT		  off
+		  OutDataTypeStr	  "boolean"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Time Since Enabled"
+		  SID			  "4411"
+		  Ports			  [0, 1]
+		  Position		  [915, 1297, 1045, 1353]
+		  BackgroundColor	  "[0.815686, 0.976471, 0.674510]"
+		  LibraryVersion	  "1.490"
+		  SourceBlock		  "motohawk_control_primitives_lib/Time Since Enabled"
+		  SourceType		  "Time Since Enabled"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  GeneratePreprocessorConditionals off
+		  samp_time		  "-1"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_calibration"
+		  SID			  "4413"
+		  Ports			  [0, 1]
+		  Position		  [890, 1365, 1040, 1405]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
+		  SourceType		  "MotoHawk Calibration"
+		  nam			  "'Drive_Enable_Delay'"
+		  val			  "2"
+		  storage		  "Calibration"
+		  show_more		  on
+		  name_source		  "Use Parameter"
+		  data_type		  "Inherit from 'Default Value'"
+		  read_level		  "1"
+		  write_level		  "1"
+		  ovr_cals		  on
+		  view_as		  "Number"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  vector_style		  "Wide Row"
+		  use_help_units	  off
+		  help			  "''"
+		  units			  "''"
+		  use_header_enum	  off
+		  row_header_enum	  "{}"
+		  col_header_enum	  "{}"
+		  use_min_max		  off
+		  min_val		  "-inf"
+		  max_val		  "inf"
+		  use_precision		  off
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_mototune_group	  on
+		  mototune_group	  "'Sensors | UQMController'"
 		}
 		Block {
 		  BlockType		  Reference
@@ -41159,7 +43825,7 @@ Model {
 		  Name			  "motohawk_probe18"
 		  SID			  "4228"
 		  Ports			  [1]
-		  Position		  [1230, 1372, 1380, 1398]
+		  Position		  [1210, 1312, 1360, 1338]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
@@ -41183,7 +43849,7 @@ Model {
 		  offset		  "0"
 		  exp			  "1"
 		  use_mototune_group	  on
-		  mototune_group	  "'Sensors | EatonController'"
+		  mototune_group	  "'Sensors | UQMController'"
 		}
 		Block {
 		  BlockType		  Reference
@@ -42342,7 +45008,7 @@ Model {
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
 		  SourceType		  "MotoHawk Probe"
-		  nam			  "'Current_Transducer_Fault_Ibus/Ileg'"
+		  nam			  "'Current_Transducer_Fault_IbusIleg'"
 		  show_more		  on
 		  name_source		  "Use Parameter"
 		  read_level		  "1"
@@ -43095,7 +45761,7 @@ Model {
 		  BlockType		  Outport
 		  Name			  "Drive_Ready"
 		  SID			  "4239"
-		  Position		  [1230, 1408, 1260, 1422]
+		  Position		  [1210, 1348, 1240, 1362]
 		  Port			  "3"
 		  IconDisplay		  "Port number"
 		}
@@ -43124,54 +45790,72 @@ Model {
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Derate"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message2"
 		  SrcPort		  1
 		  DstBlock		  "motohawk_probe1"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Shutdown"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message2"
 		  SrcPort		  2
 		  DstBlock		  "motohawk_probe2"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Command_Watchdog_Status"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message1"
 		  SrcPort		  1
 		  DstBlock		  "motohawk_probe3"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Status_A"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message1"
 		  SrcPort		  2
 		  DstBlock		  "motohawk_probe4"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Software_Release_Sub_Version"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message1"
 		  SrcPort		  3
 		  DstBlock		  "motohawk_probe5"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Software_Release_Minor_Version"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message1"
 		  SrcPort		  4
 		  DstBlock		  "motohawk_probe6"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Software_Release_Major_Version"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message1"
 		  SrcPort		  5
 		  DstBlock		  "motohawk_probe7"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Status_C"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message1"
 		  SrcPort		  6
 		  DstBlock		  "motohawk_probe8"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Watchdog_Error"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message1"
 		  SrcPort		  7
 		  DstBlock		  "motohawk_probe9"
@@ -43242,296 +45926,384 @@ Model {
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Not_Enabled"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  1
-		  Points		  [40, 0]
-		  Branch {
-		    DstBlock		    "motohawk_probe14"
-		    DstPort		    1
-		  }
-		  Branch {
-		    Points		    [0, -55]
-		    DstBlock		    "Logical\nOperator"
-		    DstPort		    1
-		  }
+		  DstBlock		  "motohawk_probe14"
+		  DstPort		  1
 		}
 		Line {
+		  Name			  "Not_Enabled_Histroy"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  2
 		  DstBlock		  "motohawk_probe15"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Over_Leg_Current"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  3
 		  DstBlock		  "motohawk_probe16"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Over_Leg_Current_History"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  4
 		  DstBlock		  "motohawk_probe17"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Over_Bus_Current"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  5
 		  DstBlock		  "motohawk_probe19"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Over_Bus_Current_History"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  6
 		  DstBlock		  "motohawk_probe20"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Over_Phase_Advance"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  7
 		  DstBlock		  "motohawk_probe21"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Over_Phase_Advance_History"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  8
 		  DstBlock		  "motohawk_probe22"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Under_Voltage_Warning"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  9
 		  DstBlock		  "motohawk_probe23"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Under_Voltage_Warning_History"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  10
 		  DstBlock		  "motohawk_probe24"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Rotor_Over_Temperature"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  11
 		  DstBlock		  "motohawk_probe25"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Rotor_Over_Temperature_History"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  12
 		  DstBlock		  "motohawk_probe26"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Stator_Over_Temperature"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  13
 		  DstBlock		  "motohawk_probe27"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Stator_Over_Temperature_History"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  14
 		  DstBlock		  "motohawk_probe28"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Inverter_Over_Temperature"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  15
 		  DstBlock		  "motohawk_probe29"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Inverter_Over_Temperature_History"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  16
 		  DstBlock		  "motohawk_probe30"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Over_Speed_Warning"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  17
 		  DstBlock		  "motohawk_probe31"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Over_Speed_Warning_History"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  18
 		  DstBlock		  "motohawk_probe32"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Over_Voltage_Warning"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  19
 		  DstBlock		  "motohawk_probe33"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Over_Voltage_Warning_History"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  20
 		  DstBlock		  "motohawk_probe34"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Over_Speed_Alarm"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  21
 		  DstBlock		  "motohawk_probe35"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Over_Speed_Alarm_History"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  22
 		  DstBlock		  "motohawk_probe36"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Over_Voltage_Alarm"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  23
 		  DstBlock		  "motohawk_probe37"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Over_Voltage_Alarm_History"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  24
 		  DstBlock		  "motohawk_probe38"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "ADC_Calibration_Problem"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  25
 		  DstBlock		  "motohawk_probe39"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "ADC_Calibration_Problem_History"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  26
 		  DstBlock		  "motohawk_probe40"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Limp_Home_Mode"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  27
 		  DstBlock		  "motohawk_probe41"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Limp_Home_Mode_History"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  28
 		  DstBlock		  "motohawk_probe42"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Inverter_Fault_Occured"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  29
 		  DstBlock		  "motohawk_probe43"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Iverter_Fault_Occured_History"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  30
 		  DstBlock		  "motohawk_probe44"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Inverter_Fault"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  31
 		  DstBlock		  "motohawk_probe45"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Inverter_Fault_History"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  32
 		  DstBlock		  "motohawk_probe46"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Forced_Voltage_Control"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  33
 		  DstBlock		  "motohawk_probe47"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "CAN_Limits_In_Effect"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  34
 		  DstBlock		  "motohawk_probe48"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "System_Disabled_In_Motion"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  35
 		  DstBlock		  "motohawk_probe49"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "ABC_Phase_Order"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  36
 		  DstBlock		  "motohawk_probe50"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Regen_Switch_Open"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  37
 		  DstBlock		  "motohawk_probe51"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Current_Transducer_Fault_Ibus/Ileg"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  38
 		  DstBlock		  "motohawk_probe52"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Acceleration_Limited"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  39
 		  DstBlock		  "motohawk_probe53"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Using_Raw_Speed"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  40
 		  DstBlock		  "motohawk_probe54"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Turbo_Mode"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  41
 		  DstBlock		  "motohawk_probe55"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Forced_Open_Loop"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  42
 		  DstBlock		  "motohawk_probe56"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Motor_Stalled"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  43
 		  DstBlock		  "motohawk_probe57"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Phase_Current_Sensor_Error"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  44
 		  DstBlock		  "motohawk_probe58"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Bad_Position_Signal"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  45
 		  DstBlock		  "motohawk_probe59"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Bad_Switch"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  46
 		  DstBlock		  "motohawk_probe60"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Invalid_Power_Supply"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  47
 		  DstBlock		  "motohawk_probe61"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Power_Switches_Off"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message4"
 		  SrcPort		  48
 		  DstBlock		  "motohawk_probe62"
@@ -43554,36 +46326,48 @@ Model {
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Leg_Current"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message5"
 		  SrcPort		  2
 		  DstBlock		  "motohawk_probe63"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "High_Bound"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message5"
 		  SrcPort		  3
 		  DstBlock		  "motohawk_probe64"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Low_Bound"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message5"
 		  SrcPort		  4
 		  DstBlock		  "motohawk_probe65"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Stall_Safety_Percentage"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message5"
 		  SrcPort		  5
 		  DstBlock		  "motohawk_probe66"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Angular_Distance"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message5"
 		  SrcPort		  6
 		  DstBlock		  "motohawk_probe67"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Torque_Desired"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message5"
 		  SrcPort		  7
 		  DstBlock		  "motohawk_probe68"
@@ -43606,6 +46390,8 @@ Model {
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Inverter_Temperature"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message6"
 		  SrcPort		  2
 		  Points		  [25, 0]
@@ -43620,27 +46406,45 @@ Model {
 		  }
 		}
 		Line {
+		  Name			  "Rotor_Temp"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message6"
 		  SrcPort		  3
 		  DstBlock		  "motohawk_probe70"
 		  DstPort		  1
 		}
 		Line {
+		  Name			  "Stator_Temp"
+		  Labels		  [0, 0]
 		  SrcBlock		  "Read CAN Message6"
 		  SrcPort		  4
 		  DstBlock		  "motohawk_probe71"
 		  DstPort		  1
 		}
 		Line {
-		  SrcBlock		  "Logical\nOperator"
+		  SrcBlock		  "Time Since Enabled"
 		  SrcPort		  1
-		  Points		  [175, 0]
+		  DstBlock		  "Relational\nOperator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "motohawk_calibration"
+		  SrcPort		  1
+		  Points		  [35, 0; 0, -45]
+		  DstBlock		  "Relational\nOperator"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Relational\nOperator"
+		  SrcPort		  1
+		  Points		  [15, 0]
 		  Branch {
+		    Points		    [0, -10]
 		    DstBlock		    "motohawk_probe18"
 		    DstPort		    1
 		  }
 		  Branch {
-		    Points		    [0, 30]
+		    Points		    [0, 20]
 		    DstBlock		    "Drive_Ready"
 		    DstPort		    1
 		  }
@@ -43656,7 +46460,7 @@ Model {
 	      Name		      "Vehicle Speed"
 	      SID		      "2641"
 	      Ports		      [1, 1]
-	      Position		      [1435, 894, 1600, 936]
+	      Position		      [1340, 1214, 1505, 1256]
 	      MinAlgLoopOccurrences   off
 	      PropExecContextOutsideSubsystem off
 	      RTWSystemCode	      "Auto"
@@ -43675,7 +46479,7 @@ Model {
 		Location		[231, 82, 1527, 725]
 		Open			off
 		ModelBrowserVisibility	on
-		ModelBrowserWidth	229
+		ModelBrowserWidth	272
 		ScreenColor		"white"
 		PaperOrientation	"landscape"
 		PaperPositionMode	"auto"
@@ -43684,16 +46488,16 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"221"
+		ZoomFactor		"138"
 		Block {
 		  BlockType		  Inport
 		  Name			  "Motor_Speed"
 		  SID			  "2642"
-		  Position		  [30, 43, 60, 57]
+		  Position		  [30, 133, 60, 147]
 		  IconDisplay		  "Port number"
 		  Port {
 		    PortNumber		    1
-		    PropagatedSignals	    "Motor_Speed"
+		    PropagatedSignals	    "Accurate_Speed"
 		    ShowPropagatedSignals   "on"
 		    RTWStorageClass	    "Auto"
 		    DataLoggingNameMode	    "SignalName"
@@ -43703,37 +46507,23 @@ Model {
 		  BlockType		  Abs
 		  Name			  "Abs"
 		  SID			  "4167"
-		  Position		  [640, 220, 660, 250]
+		  Position		  [640, 235, 660, 265]
 		  SaturateOnIntegerOverflow off
-		}
-		Block {
-		  BlockType		  Constant
-		  Name			  "Constant1"
-		  SID			  "4330"
-		  Position		  [115, 236, 165, 264]
-		  Value			  "3.1415"
 		}
 		Block {
 		  BlockType		  Constant
 		  Name			  "Constant2"
 		  SID			  "4333"
-		  Position		  [115, 281, 165, 309]
-		  Value			  "63360"
-		}
-		Block {
-		  BlockType		  Constant
-		  Name			  "Constant3"
-		  SID			  "4335"
-		  Position		  [115, 326, 165, 354]
-		  Value			  "3600"
+		  Position		  [125, 321, 175, 349]
+		  Value			  "336"
 		}
 		Block {
 		  BlockType		  Product
 		  Name			  "Product1"
-		  SID			  "4327"
-		  Ports			  [2, 1]
-		  Position		  [190, 42, 220, 73]
-		  Inputs		  "*/"
+		  SID			  "4394"
+		  Ports			  [3, 1]
+		  Position		  [210, 209, 245, 361]
+		  Inputs		  "3"
 		  InputSameDT		  off
 		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
 		  SaturateOnIntegerOverflow off
@@ -43741,42 +46531,9 @@ Model {
 		Block {
 		  BlockType		  Product
 		  Name			  "Product2"
-		  SID			  "4328"
+		  SID			  "4393"
 		  Ports			  [2, 1]
-		  Position		  [255, 52, 285, 83]
-		  Inputs		  "*/"
-		  InputSameDT		  off
-		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
-		  SaturateOnIntegerOverflow off
-		}
-		Block {
-		  BlockType		  Product
-		  Name			  "Product3"
-		  SID			  "4331"
-		  Ports			  [2, 1]
-		  Position		  [200, 202, 230, 233]
-		  Inputs		  "**"
-		  InputSameDT		  off
-		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
-		  SaturateOnIntegerOverflow off
-		}
-		Block {
-		  BlockType		  Product
-		  Name			  "Product4"
-		  SID			  "4332"
-		  Ports			  [2, 1]
-		  Position		  [265, 212, 295, 243]
-		  Inputs		  "*/"
-		  InputSameDT		  off
-		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
-		  SaturateOnIntegerOverflow off
-		}
-		Block {
-		  BlockType		  Product
-		  Name			  "Product5"
-		  SID			  "4334"
-		  Ports			  [2, 1]
-		  Position		  [320, 222, 350, 253]
+		  Position		  [215, 132, 245, 163]
 		  Inputs		  "**"
 		  InputSameDT		  off
 		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
@@ -43787,8 +46544,8 @@ Model {
 		  Name			  "Product6"
 		  SID			  "4336"
 		  Ports			  [2, 1]
-		  Position		  [380, 217, 410, 248]
-		  Inputs		  "**"
+		  Position		  [380, 208, 410, 292]
+		  Inputs		  "*/"
 		  InputSameDT		  off
 		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
 		  SaturateOnIntegerOverflow off
@@ -43798,7 +46555,7 @@ Model {
 		  Name			  "motohawk_calibration"
 		  SID			  "2644"
 		  Ports			  [0, 1]
-		  Position		  [15, 140, 165, 180]
+		  Position		  [25, 215, 175, 255]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
@@ -43837,7 +46594,7 @@ Model {
 		  Name			  "motohawk_calibration1"
 		  SID			  "4325"
 		  Ports			  [0, 1]
-		  Position		  [15, 90, 165, 130]
+		  Position		  [25, 265, 175, 305]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
@@ -43876,7 +46633,7 @@ Model {
 		  Name			  "motohawk_calibration2"
 		  SID			  "4326"
 		  Ports			  [0, 1]
-		  Position		  [15, 190, 165, 230]
+		  Position		  [25, 170, 175, 210]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
@@ -43915,7 +46672,7 @@ Model {
 		  Name			  "motohawk_override_abs"
 		  SID			  "2645"
 		  Ports			  [1, 1]
-		  Position		  [460, 222, 610, 248]
+		  Position		  [460, 237, 610, 263]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_override_abs"
@@ -43956,7 +46713,7 @@ Model {
 		  Name			  "motohawk_probe"
 		  SID			  "2646"
 		  Ports			  [1]
-		  Position		  [460, 197, 610, 223]
+		  Position		  [460, 212, 610, 238]
 		  BlockMirror		  on
 		  NamePlacement		  "alternate"
 		  ShowName		  off
@@ -43988,7 +46745,7 @@ Model {
 		  BlockType		  Outport
 		  Name			  "Vehicle_Speed"
 		  SID			  "2647"
-		  Position		  [680, 228, 710, 242]
+		  Position		  [700, 243, 730, 257]
 		  IconDisplay		  "Port number"
 		}
 		Line {
@@ -44014,79 +46771,7 @@ Model {
 		  Labels		  [0, 0; 0, 0]
 		  SrcBlock		  "Motor_Speed"
 		  SrcPort		  1
-		  DstBlock		  "Product1"
-		  DstPort		  1
-		}
-		Line {
-		  SrcBlock		  "motohawk_calibration1"
-		  SrcPort		  1
-		  Points		  [0, -45]
-		  DstBlock		  "Product1"
-		  DstPort		  2
-		}
-		Line {
-		  SrcBlock		  "Product1"
-		  SrcPort		  1
 		  DstBlock		  "Product2"
-		  DstPort		  1
-		}
-		Line {
-		  SrcBlock		  "motohawk_calibration"
-		  SrcPort		  1
-		  Points		  [70, 0]
-		  DstBlock		  "Product2"
-		  DstPort		  2
-		}
-		Line {
-		  SrcBlock		  "motohawk_calibration2"
-		  SrcPort		  1
-		  DstBlock		  "Product3"
-		  DstPort		  1
-		}
-		Line {
-		  SrcBlock		  "Constant1"
-		  SrcPort		  1
-		  Points		  [0, -25]
-		  DstBlock		  "Product3"
-		  DstPort		  2
-		}
-		Line {
-		  SrcBlock		  "Product3"
-		  SrcPort		  1
-		  DstBlock		  "Product4"
-		  DstPort		  1
-		}
-		Line {
-		  SrcBlock		  "Constant2"
-		  SrcPort		  1
-		  Points		  [80, 0]
-		  DstBlock		  "Product4"
-		  DstPort		  2
-		}
-		Line {
-		  SrcBlock		  "Product4"
-		  SrcPort		  1
-		  DstBlock		  "Product5"
-		  DstPort		  1
-		}
-		Line {
-		  SrcBlock		  "Constant3"
-		  SrcPort		  1
-		  Points		  [135, 0]
-		  DstBlock		  "Product5"
-		  DstPort		  2
-		}
-		Line {
-		  SrcBlock		  "Product5"
-		  SrcPort		  1
-		  DstBlock		  "Product6"
-		  DstPort		  2
-		}
-		Line {
-		  SrcBlock		  "Product2"
-		  SrcPort		  1
-		  Points		  [75, 0]
-		  DstBlock		  "Product6"
 		  DstPort		  1
 		}
 		Line {
@@ -44094,6 +46779,45 @@ Model {
 		  SrcPort		  1
 		  DstBlock		  "motohawk_override_abs"
 		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "motohawk_calibration2"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -35]
+		  DstBlock		  "Product2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "motohawk_calibration"
+		  SrcPort		  1
+		  DstBlock		  "Product1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "motohawk_calibration1"
+		  SrcPort		  1
+		  DstBlock		  "Product1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Constant2"
+		  SrcPort		  1
+		  DstBlock		  "Product1"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "Product2"
+		  SrcPort		  1
+		  Points		  [55, 0; 0, 80]
+		  DstBlock		  "Product6"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Product1"
+		  SrcPort		  1
+		  Points		  [55, 0; 0, -15]
+		  DstBlock		  "Product6"
+		  DstPort		  2
 		}
 	      }
 	    }
@@ -44374,7 +47098,7 @@ Model {
 	      Name		      "motohawk_calibration6"
 	      SID		      "2651"
 	      Ports		      [0, 1]
-	      Position		      [1420, 1210, 1600, 1250]
+	      Position		      [1325, 1530, 1505, 1570]
 	      ShowName		      off
 	      LibraryVersion	      "MotoHawk 0.2.3"
 	      SourceBlock	      "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
@@ -44679,7 +47403,7 @@ Model {
 	      Name		      "motohawk_fault_def9"
 	      SID		      "2652"
 	      Ports		      [1]
-	      Position		      [1705, 1129, 1875, 1171]
+	      Position		      [1610, 1449, 1780, 1491]
 	      ShowName		      off
 	      LibraryVersion	      "MotoHawk 0.2.3"
 	      SourceBlock	      "MotoHawk_lib/Fault Management Blocks/motohawk_fault_def"
@@ -44788,7 +47512,7 @@ Model {
 	      BlockType		      Outport
 	      Name		      "Sensors"
 	      SID		      "860"
-	      Position		      [1615, 443, 1645, 457]
+	      Position		      [1615, 378, 1645, 392]
 	      IconDisplay	      "Port number"
 	    }
 	    Line {
@@ -45352,7 +48076,7 @@ Model {
 	      Labels		      [0, 0; 0, 0]
 	      SrcBlock		      "Eaton HV Charger"
 	      SrcPort		      1
-	      Points		      [195, 0; 0, 15]
+	      Points		      [0, 15]
 	      DstBlock		      "Bus\nCreator"
 	      DstPort		      20
 	    }
@@ -45361,11 +48085,11 @@ Model {
 	      Labels		      [0, 0; 0, 0]
 	      SrcBlock		      "EHPAS Power Steering Pump Inputs"
 	      SrcPort		      1
-	      Points		      [195, 0; 0, -25]
 	      DstBlock		      "Bus\nCreator"
 	      DstPort		      21
 	    }
 	    Line {
+	      Labels		      [0, 0]
 	      SrcBlock		      "From21"
 	      SrcPort		      1
 	      DstBlock		      "Bus\nCreator"
@@ -45376,9 +48100,16 @@ Model {
 	      Labels		      [0, 0; 0, 0]
 	      SrcBlock		      "EMP Coolant Pump Inputs"
 	      SrcPort		      1
-	      Points		      [195, 0; 0, -75]
 	      DstBlock		      "Bus\nCreator"
 	      DstPort		      22
+	    }
+	    Line {
+	      Name		      "Cooling Fan"
+	      Labels		      [0, 0]
+	      SrcBlock		      "EMP Fan Inputs"
+	      SrcPort		      1
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      24
 	    }
 	  }
 	}
@@ -45397,7 +48128,7 @@ Model {
 	  SourceBlock		  "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 	  SourceType		  "MotoHawk Function Trigger"
 	  trigger		  "FGND_RTI_PERIODIC"
-	  function_name		  "Trigger_FGND_RTI_PERIODIC_3487p0006"
+	  function_name		  "Trigger_FGND_RTI_PERIODIC_877p0013"
 	  priority_order	  "200"
 	  inherited		  on
 	  run_disabled		  off
@@ -45419,7 +48150,7 @@ Model {
 	  SourceBlock		  "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 	  SourceType		  "MotoHawk Function Trigger"
 	  trigger		  "FGND_20XRTI_PERIODIC"
-	  function_name		  "Trigger_FGND_20XRTI_PERIODIC_3487p0005"
+	  function_name		  "Trigger_FGND_20XRTI_PERIODIC_878p0011"
 	  priority_order	  "200"
 	  inherited		  on
 	  run_disabled		  off
@@ -47445,7 +50176,7 @@ Model {
 	  SourceBlock		  "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 	  SourceType		  "MotoHawk Function Trigger"
 	  trigger		  "BGND_BASE_PERIODIC"
-	  function_name		  "Trigger_BGND_BASE_PERIODIC_13068p0293"
+	  function_name		  "Trigger_BGND_BASE_PERIODIC_1070p0009"
 	  priority_order	  "255"
 	  inherited		  on
 	  run_disabled		  on
@@ -47588,7 +50319,7 @@ Model {
       SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
       SourceType	      "MotoHawk Function Trigger"
       trigger		      "FGND_RTI_PERIODIC"
-      function_name	      "Trigger_FGND_RTI_PERIODIC_4949p0007"
+      function_name	      "Trigger_FGND_RTI_PERIODIC_1078p0009"
       priority_order	      "0"
       inherited		      off
       run_disabled	      off
@@ -47610,7 +50341,7 @@ Model {
       SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
       SourceType	      "MotoHawk Function Trigger"
       trigger		      "STARTUP_EVENT"
-      function_name	      "Trigger_STARTUP_EVENT_4949p0006"
+      function_name	      "Trigger_STARTUP_EVENT_1079p0009"
       priority_order	      "0"
       inherited		      off
       run_disabled	      off
@@ -47632,7 +50363,7 @@ Model {
       SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
       SourceType	      "MotoHawk Function Trigger"
       trigger		      "BGND_BASEx20_PERIODIC"
-      function_name	      "Trigger_BGND_BASEx20_PERIODIC_4949p0005"
+      function_name	      "Trigger_BGND_BASEx20_PERIODIC_1080p0009"
       priority_order	      "0"
       inherited		      off
       run_disabled	      off
@@ -47655,7 +50386,7 @@ Model {
       SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
       SourceType	      "MotoHawk Function Trigger"
       trigger		      "SHUTDOWN_EVENT"
-      function_name	      "Trigger_SHUTDOWN_EVENT_4949p0004"
+      function_name	      "Trigger_SHUTDOWN_EVENT_1081p0009"
       priority_order	      "0"
       inherited		      off
       run_disabled	      off
@@ -48435,7 +51166,7 @@ Stateflow {
     }
     midPoint		    [532.8125 248.8015]
     chart		    2
-    linkNode		    [6 19 17]
+    linkNode		    [6 17 0]
     dataLimits		    [530.413 535.212 167.063 329.062]
     stampAngle		    -1
     subviewer		    2
@@ -48458,7 +51189,7 @@ Stateflow {
     }
     midPoint		    [387.021 247.3235]
     chart		    2
-    linkNode		    [6 16 0]
+    linkNode		    [6 19 16]
     dataLimits		    [384.621 389.421 167.063 329.063]
     stampAngle		    -0.0997
     subviewer		    2
@@ -48502,7 +51233,7 @@ Stateflow {
     }
     midPoint		    [479.676 86.4596]
     chart		    2
-    linkNode		    [6 0 16]
+    linkNode		    [6 0 17]
     dataLimits		    [477.276 482.076 74.438 104.438]
     subviewer		    2
     drawStyle		    SMART

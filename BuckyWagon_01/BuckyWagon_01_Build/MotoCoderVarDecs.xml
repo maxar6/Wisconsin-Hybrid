@@ -1017,6 +1017,130 @@
       <type>uint8</type>
    </VarDec>
    <VarDec>
+      <name>Fan_Mode</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>Actuators | EMP Cooling Fan</group>
+      <struct>ConstantWork.Fan_Mode</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Off" value="0"/>
+         <item name="Normal" value="1"/>
+         <item name="Reverse" value="2"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Fan_Hold_Mode</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>Actuators | EMP Cooling Fan</group>
+      <struct>ConstantWork.Fan_Hold_Mode</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Power_Off" value="0"/>
+         <item name="Power_On" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>EMP_Fan_Speed_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Actuators | EMP Cooling Fan | EMP_Fan_Speed Override</group>
+      <struct>VolatileWork_BSS.EMP_Fan_Speed_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>EMP_Fan_Speed_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Actuators | EMP Cooling Fan | EMP_Fan_Speed Override</group>
+      <struct>VolatileWork_BSS.EMP_Fan_Speed_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Counter_Multiplier</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>1.5</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>Actuators | UQM | Counter</group>
+      <struct>ConstantWork.Counter_Multiplier</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Command_Counter</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>Actuators | UQM | Counter</group>
+      <struct>ConstantWork.Command_Counter</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
       <name>AccelRstSpd</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -1336,17 +1460,22 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive</group>
       <struct>ConstantWork.DriveMode</struct>
-      <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Torque_Management" value="0"/>
+         <item name="Normal" value="1"/>
+         <default>Unknown</default>
+      </enum>
    </VarDec>
    <VarDec>
       <name>RegenDisableTq</name>
@@ -1477,6 +1606,29 @@
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Reverse_TQ_Negative_Enable</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BuckyWagon_01|Foreground|Control Strategy|Drive</group>
+      <struct>ConstantWork.Reverse_TQ_Negative_Enable</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Disable" value="0"/>
+         <item name="Enable" value="1"/>
+         <default>Unknown</default>
+      </enum>
    </VarDec>
    <VarDec>
       <name>EHPAS_stoppingEn</name>
@@ -2436,7 +2588,7 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Sensors|EMP Coolant Pump Inputs | EMP_Pump_Speed Override</group>
+      <group>Sensors | EMP Coolant Pump | EMP_Pump_Speed Override</group>
       <struct>VolatileWork_BSS.EMP_Pump_Speed_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -2459,7 +2611,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Sensors|EMP Coolant Pump Inputs | EMP_Pump_Speed Override</group>
+      <group>Sensors | EMP Coolant Pump | EMP_Pump_Speed Override</group>
       <struct>VolatileWork_BSS.EMP_Pump_Speed_new</struct>
       <class>var</class>
       <storage>RAM</storage>
@@ -2477,7 +2629,7 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Sensors|EMP Coolant Pump Inputs | EMP_Speed_Percent Override</group>
+      <group>Sensors | EMP Coolant Pump | EMP_Speed_Percent Override</group>
       <struct>VolatileWork_BSS.EMP_Speed_Percent_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -2500,7 +2652,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Sensors|EMP Coolant Pump Inputs | EMP_Speed_Percent Override</group>
+      <group>Sensors | EMP Coolant Pump | EMP_Speed_Percent Override</group>
       <struct>VolatileWork_BSS.EMP_Speed_Percent_new</struct>
       <class>var</class>
       <storage>RAM</storage>
@@ -2518,7 +2670,7 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Sensors|EMP Coolant Pump Inputs | EMP_Pump_Mode Override</group>
+      <group>Sensors | EMP Coolant Pump | EMP_Pump_Mode Override</group>
       <struct>VolatileWork_BSS.EMP_Pump_Mode_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -2541,7 +2693,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Sensors|EMP Coolant Pump Inputs | EMP_Pump_Mode Override</group>
+      <group>Sensors | EMP Coolant Pump | EMP_Pump_Mode Override</group>
       <struct>VolatileWork_BSS.EMP_Pump_Mode_new</struct>
       <class>var</class>
       <storage>RAM</storage>
@@ -2559,7 +2711,7 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Sensors|EMP Coolant Pump Inputs | EMP_Pump_Status Override</group>
+      <group>Sensors | EMP Coolant Pump | EMP_Pump_Status Override</group>
       <struct>VolatileWork_BSS.EMP_Pump_Status_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -2582,7 +2734,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Sensors|EMP Coolant Pump Inputs | EMP_Pump_Status Override</group>
+      <group>Sensors | EMP Coolant Pump | EMP_Pump_Status Override</group>
       <struct>VolatileWork_BSS.EMP_Pump_Status_new</struct>
       <class>var</class>
       <storage>RAM</storage>
@@ -2600,7 +2752,7 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Sensors|EMP Coolant Pump Inputs | EMP_Board_Temp Override</group>
+      <group>Sensors | EMP Coolant Pump | EMP_Board_Temp Override</group>
       <struct>VolatileWork_BSS.EMP_Board_Temp_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -2623,7 +2775,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Sensors|EMP Coolant Pump Inputs | EMP_Board_Temp Override</group>
+      <group>Sensors | EMP Coolant Pump | EMP_Board_Temp Override</group>
       <struct>VolatileWork_BSS.EMP_Board_Temp_new</struct>
       <class>var</class>
       <storage>RAM</storage>
@@ -2641,7 +2793,7 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Sensors|EMP Coolant Pump Inputs | EMP_Pump_Power Override</group>
+      <group>Sensors | EMP Coolant Pump | EMP_Pump_Power Override</group>
       <struct>VolatileWork_BSS.EMP_Pump_Power_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -2664,7 +2816,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Sensors|EMP Coolant Pump Inputs | EMP_Pump_Power Override</group>
+      <group>Sensors | EMP Coolant Pump | EMP_Pump_Power Override</group>
       <struct>VolatileWork_BSS.EMP_Pump_Power_new</struct>
       <class>var</class>
       <storage>RAM</storage>
@@ -2672,7 +2824,26 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Motor_Speed_ovr</name>
+      <name>EMPFan_CAN_MaxAge</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>100000</max>
+      <min>0</min>
+      <format>2.1</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>counts before EMP Cooling fan faults out</help>
+      <group>Sensors | EMP Cooling Fan</group>
+      <struct>ConstantWork.EMPFan_CAN_MaxAge</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>EMP_Cooling_Fan_Speed_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -2682,8 +2853,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Sensors | EatonController | Motor_Speed Override</group>
-      <struct>VolatileWork_BSS.Motor_Speed_ovr</struct>
+      <group>Sensors | EMP Cooling Fan | EMP_Cooling_Fan_Speed Override</group>
+      <struct>VolatileWork_BSS.EMP_Cooling_Fan_Speed_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -2695,7 +2866,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>Motor_Speed_new</name>
+      <name>EMP_Cooling_Fan_Speed_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -2705,15 +2876,220 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Sensors | EatonController | Motor_Speed Override</group>
-      <struct>VolatileWork_BSS.Motor_Speed_new</struct>
+      <group>Sensors | EMP Cooling Fan | EMP_Cooling_Fan_Speed Override</group>
+      <struct>VolatileWork_BSS.EMP_Cooling_Fan_Speed_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Drive_Ready</name>
+      <name>EMP_Cooling_Fan_Speed_Percent_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Sensors | EMP Cooling Fan | EMP_Cooling_Fan_Speed_Percent Override</group>
+      <struct>VolatileWork_BSS.EMP_Cooling_Fan_Speed_Percent_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>EMP_Cooling_Fan_Speed_Percent_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Sensors | EMP Cooling Fan | EMP_Cooling_Fan_Speed_Percent Override</group>
+      <struct>VolatileWork_BSS.EMP_Cooling_Fan_Speed_Percent_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>EMP_Cooling_Fan_Mode_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Sensors | EMP Cooling Fan | EMP_Cooling_Fan_Mode Override</group>
+      <struct>VolatileWork_BSS.EMP_Cooling_Fan_Mode_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>EMP_Cooling_Fan_Mode_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Sensors | EMP Cooling Fan | EMP_Cooling_Fan_Mode Override</group>
+      <struct>VolatileWork_BSS.EMP_Cooling_Fan_Mode_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>EMP_Cooling_Fan_Status_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Sensors | EMP Cooling Fan | EMP_Cooling_Fan_Status Override</group>
+      <struct>VolatileWork_BSS.EMP_Cooling_Fan_Status_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>EMP_Cooling_Fan_Status_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Sensors | EMP Cooling Fan | EMP_Cooling_Fan_Status Override</group>
+      <struct>VolatileWork_BSS.EMP_Cooling_Fan_Status_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>EMP_Cooling_Fan_Board_Temp_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Sensors | EMP Cooling Fan | EMP_Cooling_Fan_Board_Temp Override</group>
+      <struct>VolatileWork_BSS.EMP_Cooling_Fan_Board_Temp_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>EMP_Cooling_Fan_Board_Temp_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Sensors | EMP Cooling Fan | EMP_Cooling_Fan_Board_Temp Override</group>
+      <struct>VolatileWork_BSS.EMP_Cooling_Fan_Board_Temp_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>EMP_Cooling_Fan_Power_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Sensors | EMP Cooling Fan | EMP_Cooling_Fan_Power Override</group>
+      <struct>VolatileWork_BSS.EMP_Cooling_Fan_Power_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>EMP_Cooling_Fan_Power_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Sensors | EMP Cooling Fan | EMP_Cooling_Fan_Power Override</group>
+      <struct>VolatileWork_BSS.EMP_Cooling_Fan_Power_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Drive_Enable_Delay</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -2723,51 +3099,10 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>const Constant_T</ctype>
-      <group>Sensors | EatonController</group>
-      <struct>ConstantWork.Drive_Ready</struct>
+      <group>Sensors | UQMController</group>
+      <struct>ConstantWork.Drive_Enable_Delay</struct>
       <class>var</class>
       <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Motor_Torque_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Sensors | EatonController | Motor_Torque Override</group>
-      <struct>VolatileWork_BSS.Motor_Torque_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Motor_Torque_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Sensors | EatonController | Motor_Torque Override</group>
-      <struct>VolatileWork_BSS.Motor_Torque_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -3275,7 +3610,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>OverallRatio</name>
+      <name>TireSize</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -3284,11 +3619,49 @@
       <min>-1.0E17</min>
       <format>1.4</format>
       <mask>0xFFFFFFFF</mask>
-      <units>mph/rpm</units>
+      <units>in</units>
       <ctype>const Constant_T</ctype>
       <help>Used to calculate vehicle speed from motor speed</help>
       <group>Sensors | Vehicle Speed</group>
-      <struct>ConstantWork.OverallRatio</struct>
+      <struct>ConstantWork.TireSize</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>RearDiffRatio</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>1.4</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Used to calculate vehicle speed from motor speed</help>
+      <group>Sensors | Vehicle Speed</group>
+      <struct>ConstantWork.RearDiffRatio</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>IntermediaryGearRatio</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>1.4</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Used to calculate vehicle speed from motor speed</help>
+      <group>Sensors | Vehicle Speed</group>
+      <struct>ConstantWork.IntermediaryGearRatio</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
@@ -3680,7 +4053,7 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Charging_Cooling_Speed</name>
+      <name>Overheat_PumpFan_Speed</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -3690,56 +4063,38 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>const Constant_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy</group>
-      <struct>ConstantWork.Charging_Cooling_Speed</struct>
+      <group>BuckyWagon_01|Foreground|Control Strategy|Cooling</group>
+      <struct>ConstantWork.Overheat_PumpFan_Speed</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Charger_Curr</name>
+      <name>Inverter_Temp_Enable</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy</group>
-      <struct>ConstantWork.Charger_Curr</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>OutputCurrent_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
+      <max>255</max>
       <min>0</min>
-      <format>1.0</format>
+      <format>3.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Sensors | EatonCharger | OutputCurrent Override</group>
-      <struct>VolatileWork_BSS.OutputCurrent_ovr</struct>
-      <storage>RAM</storage>
+      <ctype>const Constant_T</ctype>
+      <group>BuckyWagon_01|Foreground|Control Strategy|Cooling</group>
+      <struct>ConstantWork.Inverter_Temp_Enable</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
       <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
+         <item name="Disabled" value="0"/>
+         <item name="Enabled" value="1"/>
          <default>Unknown</default>
       </enum>
    </VarDec>
    <VarDec>
-      <name>OutputCurrent_new</name>
+      <name>Inverter_Temp_Offset</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -3748,11 +4103,134 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Sensors | EatonCharger | OutputCurrent Override</group>
-      <struct>VolatileWork_BSS.OutputCurrent_new</struct>
+      <ctype>const Constant_T</ctype>
+      <group>BuckyWagon_01|Foreground|Control Strategy|Cooling</group>
+      <struct>ConstantWork.Inverter_Temp_Offset</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Charger_Temp_Enable</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BuckyWagon_01|Foreground|Control Strategy|Cooling</group>
+      <struct>ConstantWork.Charger_Temp_Enable</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Disabled" value="0"/>
+         <item name="Enabled" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Charger_Temp_Offset</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BuckyWagon_01|Foreground|Control Strategy|Cooling</group>
+      <struct>ConstantWork.Charger_Temp_Offset</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Rotor_Temp_Enable</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BuckyWagon_01|Foreground|Control Strategy|Cooling</group>
+      <struct>ConstantWork.Rotor_Temp_Enable</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Disabled" value="0"/>
+         <item name="Enabled" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Rotor_Temp_Offset</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BuckyWagon_01|Foreground|Control Strategy|Cooling</group>
+      <struct>ConstantWork.Rotor_Temp_Offset</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Stator_Temp_Enable</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BuckyWagon_01|Foreground|Control Strategy|Cooling</group>
+      <struct>ConstantWork.Stator_Temp_Enable</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Disabled" value="0"/>
+         <item name="Enabled" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Stator_Temp_Offset</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BuckyWagon_01|Foreground|Control Strategy|Cooling</group>
+      <struct>ConstantWork.Stator_Temp_Offset</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -3983,291 +4461,6 @@
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
-   </VarDec>
-   <VarDec>
-      <name>Speed</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>Actuators | EatonController</group>
-      <struct>ConstantWork.Speed</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Speed_Ramp_Rate</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>Actuators | EatonController</group>
-      <struct>ConstantWork.Speed_Ramp_Rate</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Torque_Ramp_Rate</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>Actuators | EatonController</group>
-      <struct>ConstantWork.Torque_Ramp_Rate</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Control_Mode_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | EatonController | Control_Mode_Ovr Override</group>
-      <struct>VolatileWork_BSS.Control_Mode_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Motor_Start_Delay</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>7</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>Actuators | EatonController</group>
-      <struct>ConstantWork.Motor_Start_Delay</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>initState</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>7</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>Actuators | EatonController</group>
-      <struct>ConstantWork.initState</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>onState</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>7</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>Actuators | EatonController</group>
-      <struct>ConstantWork.onState</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>offState</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>7</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>Actuators | EatonController</group>
-      <struct>ConstantWork.offState</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Motor_Start_Off_Delay</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>7</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>Actuators | EatonController</group>
-      <struct>ConstantWork.Motor_Start_Off_Delay</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Torqe_Threshold</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>7</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>Actuators | EatonController</group>
-      <struct>ConstantWork.Torqe_Threshold</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Control_Mode_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | EatonController | Control_Mode_Ovr Override</group>
-      <struct>VolatileWork_BSS.Control_Mode_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Torque_Command_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | EatonController | Torque_Command_Ovr Override</group>
-      <struct>VolatileWork_BSS.Torque_Command_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Torque_Command_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | EatonController | Torque_Command_Ovr Override</group>
-      <struct>VolatileWork_BSS.Torque_Command_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Message_Counter_Ovr_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | EatonController | Message_Counter_Ovr Override</group>
-      <struct>VolatileWork_BSS.Message_Counter_Ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Message_Counter_Ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | EatonController | Message_Counter_Ovr Override</group>
-      <struct>VolatileWork_BSS.Message_Counter_Ovr_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>Current_Limit_Override_ovr</name>
@@ -4517,7 +4710,151 @@
       <type>uint8</type>
    </VarDec>
    <VarDec>
-      <name>SpeedSet_ovr</name>
+      <name>Control_Mode</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>Actuators | UQM</group>
+      <struct>ConstantWork.Control_Mode</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="None" value="0"/>
+         <item name="Torque" value="1"/>
+         <item name="Speed" value="2"/>
+         <item name="Voltage" value="3"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Counter_Mode_Select</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>Actuators | UQM | Counter</group>
+      <struct>ConstantWork.Counter_Mode_Select</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Counter" value="0"/>
+         <item name="None" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Use_Raw_Speed</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>Actuators | UQM</group>
+      <struct>ConstantWork.Use_Raw_Speed</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Ignore_Accel_Limit</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>Actuators | UQM</group>
+      <struct>ConstantWork.Ignore_Accel_Limit</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>UQM_TurboMode</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>Actuators | UQM</group>
+      <struct>ConstantWork.UQM_TurboMode</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Default" value="0"/>
+         <item name="Efficiency" value="1"/>
+         <item name="Acoustic" value="2"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Forward_Speed_Limit</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>Actuators | UQM</group>
+      <struct>ConstantWork.Forward_Speed_Limit</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Reverse_Speed_Limit</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>Actuators | UQM</group>
+      <struct>ConstantWork.Reverse_Speed_Limit</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>UQM_Enable_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -4527,8 +4864,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | Solectria | SpeedSet Override</group>
-      <struct>VolatileWork_BSS.SpeedSet_ovr</struct>
+      <group>Actuators | UQM | UQM_Enable Override</group>
+      <struct>VolatileWork_BSS.UQM_Enable_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -4540,25 +4877,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>SpeedSet_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | Solectria | SpeedSet Override</group>
-      <struct>VolatileWork_BSS.SpeedSet_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>LowerTorqueLimit_ovr</name>
+      <name>UQM_Enable_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -4568,8 +4887,26 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | Solectria | LowerTorqueLimit Override</group>
-      <struct>VolatileWork_BSS.LowerTorqueLimit_ovr</struct>
+      <group>Actuators | UQM | UQM_Enable Override</group>
+      <struct>VolatileWork_BSS.UQM_Enable_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+   </VarDec>
+   <VarDec>
+      <name>UQM_Torque_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Actuators | UQM | UQM_Torque Override</group>
+      <struct>VolatileWork_BSS.UQM_Torque_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -4581,7 +4918,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>LowerTorqueLimit_new</name>
+      <name>UQM_Torque_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -4591,15 +4928,15 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | Solectria | LowerTorqueLimit Override</group>
-      <struct>VolatileWork_BSS.LowerTorqueLimit_new</struct>
+      <group>Actuators | UQM | UQM_Torque Override</group>
+      <struct>VolatileWork_BSS.UQM_Torque_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>TorqueControl_ovr</name>
+      <name>UQM_Direction_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -4609,8 +4946,8 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | Solectria | TorqueControl Override</group>
-      <struct>VolatileWork_BSS.TorqueControl_ovr</struct>
+      <group>Actuators | UQM | UQM_Direction Override</group>
+      <struct>VolatileWork_BSS.UQM_Direction_ovr</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -4622,25 +4959,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>TorqueControl_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | Solectria | TorqueControl Override</group>
-      <struct>VolatileWork_BSS.TorqueControl_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>UpperTorqueLimit_ovr</name>
+      <name>UQM_Direction_new</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -4650,20 +4969,38 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | Solectria | UpperTorqueLimit Override</group>
-      <struct>VolatileWork_BSS.UpperTorqueLimit_ovr</struct>
+      <group>Actuators | UQM | UQM_Direction Override</group>
+      <struct>VolatileWork_BSS.UQM_Direction_new</struct>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
       <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
+         <item name="Reverse" value="0"/>
+         <item name="Forward" value="1"/>
          <default>Unknown</default>
       </enum>
    </VarDec>
    <VarDec>
-      <name>UpperTorqueLimit_new</name>
+      <name>Heartbeat_Identifier_1</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>Actuators | UQM</group>
+      <struct>ConstantWork.Heartbeat_Identifier_1</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>CAN_Watchdog_Reset</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -4673,16 +5010,16 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | Solectria | UpperTorqueLimit Override</group>
-      <struct>VolatileWork_BSS.UpperTorqueLimit_new</struct>
+      <group>Actuators | UQM</group>
+      <struct>VolatileWork_BSS.CAN_Watchdog_Reset</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>SpeedSet</name>
-      <access>RO RO RO RO</access>
+      <name>Watchdog_Reset_Num</name>
+      <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
@@ -4690,11 +5027,88 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>Actuators | Solectria</group>
-      <struct>VolatileWork_BSS.SpeedSet</struct>
+      <ctype>const Constant_T</ctype>
+      <group>Actuators | UQM</group>
+      <struct>ConstantWork.Watchdog_Reset_Num</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Heartbeat_Identifier_2</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>Actuators | UQM</group>
+      <struct>ConstantWork.Heartbeat_Identifier_2</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Limits_Control_Mode</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>Actuators | UQM</group>
+      <struct>ConstantWork.Limits_Control_Mode</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Disabled" value="0"/>
+         <item name="Enabled" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Acceleration_Limit</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>Actuators | UQM</group>
+      <struct>ConstantWork.Acceleration_Limit</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Suge_Limit</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>Actuators | UQM</group>
+      <struct>ConstantWork.Suge_Limit</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -5198,6 +5612,47 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
+      <name>OutputCurrent_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Sensors | EatonCharger | OutputCurrent Override</group>
+      <struct>VolatileWork_BSS.OutputCurrent_ovr</struct>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>OutputCurrent_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>Sensors | EatonCharger | OutputCurrent Override</group>
+      <struct>VolatileWork_BSS.OutputCurrent_new</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
       <name>OutputVoltage_ovr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -5412,174 +5867,22 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>EHPAS_PumpState_ovr_ovr</name>
+      <name>Overheat_Threshold</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|EHPAS_PercentControl | EHPAS_PumpState_ovr Override</group>
-      <struct>VolatileWork_BSS.EHPAS_PumpState_ovr_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>EHPAS_PumpState_ovr_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>255</max>
-      <min>0</min>
-      <format>3.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|EHPAS_PercentControl | EHPAS_PumpState_ovr Override</group>
-      <struct>VolatileWork_BSS.EHPAS_PumpState_ovr_new</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Off" value="0"/>
-         <item name="Low_Speed_Maneuvering" value="1"/>
-         <item name="Normal_Driving" value="2"/>
-         <item name="Normal_DrivingWithBrake" value="3"/>
-         <item name="KeyUpActive" value="4"/>
-         <item name="ZeroSpeedBraking" value="5"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>EHPAS_LowSpeedManeuvering</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>65535</max>
-      <min>0</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
-      <units>%</units>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Percent Duty cycle for pump under given condition</help>
-      <group>BuckyWagon_01|Foreground|Control Strategy|EHPAS_PercentControl</group>
-      <struct>ConstantWork.EHPAS_LowSpeedManeuvering</struct>
+      <group>BuckyWagon_01|Foreground|Control Strategy|Cooling</group>
+      <struct>ConstantWork.Overheat_Threshold</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>uint16</type>
-   </VarDec>
-   <VarDec>
-      <name>EHPAS_NormalDriving</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>65535</max>
-      <min>0</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
-      <units>%</units>
-      <ctype>const Constant_T</ctype>
-      <help>Percent Duty cycle for pump under given condition</help>
-      <group>BuckyWagon_01|Foreground|Control Strategy|EHPAS_PercentControl</group>
-      <struct>ConstantWork.EHPAS_NormalDriving</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>uint16</type>
-   </VarDec>
-   <VarDec>
-      <name>EHPAS_BrakingNormalDriving</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>65535</max>
-      <min>0</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
-      <units>%</units>
-      <ctype>const Constant_T</ctype>
-      <help>Percent Duty cycle for pump under given condition</help>
-      <group>BuckyWagon_01|Foreground|Control Strategy|EHPAS_PercentControl</group>
-      <struct>ConstantWork.EHPAS_BrakingNormalDriving</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>uint16</type>
-   </VarDec>
-   <VarDec>
-      <name>EHPAS_KeyUpActive</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>65535</max>
-      <min>0</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
-      <units>%</units>
-      <ctype>const Constant_T</ctype>
-      <help>Percent Duty cycle for pump under given condition</help>
-      <group>BuckyWagon_01|Foreground|Control Strategy|EHPAS_PercentControl</group>
-      <struct>ConstantWork.EHPAS_KeyUpActive</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>uint16</type>
-   </VarDec>
-   <VarDec>
-      <name>EHPAS_BrakingZeroSpeed</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>65535</max>
-      <min>0</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
-      <units>%</units>
-      <ctype>const Constant_T</ctype>
-      <help>Percent Duty cycle for pump under given condition</help>
-      <group>BuckyWagon_01|Foreground|Control Strategy|EHPAS_PercentControl</group>
-      <struct>ConstantWork.EHPAS_BrakingZeroSpeed</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>uint16</type>
-   </VarDec>
-   <VarDec>
-      <name>EHPAS_ZeroCommand</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>65535</max>
-      <min>0</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
-      <units>%</units>
-      <ctype>const Constant_T</ctype>
-      <help>Percent Duty cycle for pump under given condition</help>
-      <group>BuckyWagon_01|Foreground|Control Strategy|EHPAS_PercentControl</group>
-      <struct>ConstantWork.EHPAS_ZeroCommand</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>uint16</type>
+      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>Battery_OverTemp_Threshold</name>
@@ -6028,103 +6331,6 @@
       <ctype>Volatile_BSS_T</ctype>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving|Regen</group>
       <struct>VolatileWork_BSS.MotoHawkTable2D</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>AccelPedalMapIdxArr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving</group>
-      <struct>ConstantWork.AccelPedalMapIdxArr</struct>
-      <class>prelookup</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <len>101</len>
-      <input>AccelPedalMapIn</input>
-      <index>AccelPedalMapIdx</index>
-   </VarDec>
-   <VarDec>
-      <name>AccelPedalMapIdx</name>
-      <access>RO RO RO RO</access>
-      <gain>0.001953125</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>127.998046875</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0x0000FFFF</mask>
-      <units>idx.frac</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving</group>
-      <struct>VolatileWork_BSS.AccelPedalMapIdx</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint16</type>
-   </VarDec>
-   <VarDec>
-      <name>AccelPedalMapIn</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving</group>
-      <struct>VolatileWork_BSS.AccelPedalMapIn</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>AccelPedalMapTbl</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>1.4</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving</group>
-      <struct>ConstantWork.AccelPedalMapTbl</struct>
-      <class>interpolation_1d</class>
-      <storage>FLASH</storage>
-      <update>REMOTE</update>
-      <type>real32</type>
-      <len>101</len>
-      <output>AccelPedalMap</output>
-      <prelookup>AccelPedalMapIdxArr</prelookup>
-   </VarDec>
-   <VarDec>
-      <name>AccelPedalMap</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>1.4</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving</group>
-      <struct>VolatileWork_BSS.AccelPedalMap</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -6609,7 +6815,7 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>RadiatorFanSpeed_InverterTempIdxArr</name>
+      <name>AccelPedalMapIdxArr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -6619,18 +6825,18 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>const Constant_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy</group>
-      <struct>ConstantWork.RadiatorFanSpeed_InverterTempIdxArr</struct>
+      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving</group>
+      <struct>ConstantWork.AccelPedalMapIdxArr</struct>
       <class>prelookup</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
-      <len>5</len>
-      <input>RadiatorFanSpeed_InverterTempIn</input>
-      <index>RadiatorFanSpeed_InverterTempIdx</index>
+      <len>101</len>
+      <input>AccelPedalMapIn</input>
+      <index>AccelPedalMapIdx</index>
    </VarDec>
    <VarDec>
-      <name>RadiatorFanSpeed_InverterTempIdx</name>
+      <name>AccelPedalMapIdx</name>
       <access>RO RO RO RO</access>
       <gain>0.001953125</gain>
       <offset>0</offset>
@@ -6641,15 +6847,15 @@
       <mask>0x0000FFFF</mask>
       <units>idx.frac</units>
       <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy</group>
-      <struct>VolatileWork_BSS.RadiatorFanSpeed_InverterTempIdx</struct>
+      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving</group>
+      <struct>VolatileWork_BSS.AccelPedalMapIdx</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint16</type>
    </VarDec>
    <VarDec>
-      <name>RadiatorFanSpeed_InverterTempIn</name>
+      <name>AccelPedalMapIn</name>
       <access>RO RO RO RO</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -6659,54 +6865,54 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy</group>
-      <struct>VolatileWork_BSS.RadiatorFanSpeed_InverterTempIn</struct>
+      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving</group>
+      <struct>VolatileWork_BSS.AccelPedalMapIn</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>RadiatorFanSpeedTbl</name>
+      <name>AccelPedalMapTbl</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
       <max>1.0E17</max>
       <min>-1.0E17</min>
-      <format>4.2</format>
+      <format>1.4</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>const Constant_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy</group>
-      <struct>ConstantWork.RadiatorFanSpeedTbl</struct>
+      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving</group>
+      <struct>ConstantWork.AccelPedalMapTbl</struct>
       <class>interpolation_1d</class>
       <storage>FLASH</storage>
       <update>REMOTE</update>
       <type>real32</type>
-      <len>5</len>
-      <output>RadiatorFanSpeed</output>
-      <prelookup>RadiatorFanSpeed_InverterTempIdxArr</prelookup>
+      <len>101</len>
+      <output>AccelPedalMap</output>
+      <prelookup>AccelPedalMapIdxArr</prelookup>
    </VarDec>
    <VarDec>
-      <name>RadiatorFanSpeed</name>
+      <name>AccelPedalMap</name>
       <access>RO RO RO RO</access>
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
       <max>1.0E17</max>
       <min>-1.0E17</min>
-      <format>4.2</format>
+      <format>1.4</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy</group>
-      <struct>VolatileWork_BSS.RadiatorFanSpeed</struct>
+      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving</group>
+      <struct>VolatileWork_BSS.AccelPedalMap</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>CoolantPumpSpeedIdxArr</name>
+      <name>Coolant_FanIdxArr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -6716,18 +6922,18 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>const Constant_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy</group>
-      <struct>ConstantWork.CoolantPumpSpeedIdxArr</struct>
+      <group>BuckyWagon_01|Foreground|Control Strategy|Cooling</group>
+      <struct>ConstantWork.Coolant_FanIdxArr</struct>
       <class>prelookup</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
-      <len>11</len>
-      <input>CoolantPumpSpeedIn</input>
-      <index>CoolantPumpSpeedIdx</index>
+      <len>10</len>
+      <input>Coolant_FanIn</input>
+      <index>Coolant_FanIdx</index>
    </VarDec>
    <VarDec>
-      <name>CoolantPumpSpeedIdx</name>
+      <name>Coolant_FanIdx</name>
       <access>RO RO RO RO</access>
       <gain>0.001953125</gain>
       <offset>0</offset>
@@ -6738,15 +6944,15 @@
       <mask>0x0000FFFF</mask>
       <units>idx.frac</units>
       <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy</group>
-      <struct>VolatileWork_BSS.CoolantPumpSpeedIdx</struct>
+      <group>BuckyWagon_01|Foreground|Control Strategy|Cooling</group>
+      <struct>VolatileWork_BSS.Coolant_FanIdx</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint16</type>
    </VarDec>
    <VarDec>
-      <name>CoolantPumpSpeedIn</name>
+      <name>Coolant_FanIn</name>
       <access>RO RO RO RO</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -6756,15 +6962,15 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy</group>
-      <struct>VolatileWork_BSS.CoolantPumpSpeedIn</struct>
+      <group>BuckyWagon_01|Foreground|Control Strategy|Cooling</group>
+      <struct>VolatileWork_BSS.Coolant_FanIn</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>CoolantPumpSpeedTbl</name>
+      <name>Coolant_FanTbl</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -6774,18 +6980,18 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>const Constant_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy</group>
-      <struct>ConstantWork.CoolantPumpSpeedTbl</struct>
+      <group>BuckyWagon_01|Foreground|Control Strategy|Cooling</group>
+      <struct>ConstantWork.Coolant_FanTbl</struct>
       <class>interpolation_1d</class>
       <storage>FLASH</storage>
       <update>REMOTE</update>
       <type>real32</type>
-      <len>11</len>
-      <output>CoolantPumpSpeed</output>
-      <prelookup>CoolantPumpSpeedIdxArr</prelookup>
+      <len>10</len>
+      <output>Coolant_Fan</output>
+      <prelookup>Coolant_FanIdxArr</prelookup>
    </VarDec>
    <VarDec>
-      <name>CoolantPumpSpeed</name>
+      <name>Coolant_Fan</name>
       <access>RO RO RO RO</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -6795,8 +7001,105 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy</group>
-      <struct>VolatileWork_BSS.CoolantPumpSpeed</struct>
+      <group>BuckyWagon_01|Foreground|Control Strategy|Cooling</group>
+      <struct>VolatileWork_BSS.Coolant_Fan</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Coolant_PumpIdxArr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BuckyWagon_01|Foreground|Control Strategy|Cooling</group>
+      <struct>ConstantWork.Coolant_PumpIdxArr</struct>
+      <class>prelookup</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+      <len>10</len>
+      <input>Coolant_PumpIn</input>
+      <index>Coolant_PumpIdx</index>
+   </VarDec>
+   <VarDec>
+      <name>Coolant_PumpIdx</name>
+      <access>RO RO RO RO</access>
+      <gain>0.001953125</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>127.998046875</max>
+      <min>0</min>
+      <format>4.2</format>
+      <mask>0x0000FFFF</mask>
+      <units>idx.frac</units>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BuckyWagon_01|Foreground|Control Strategy|Cooling</group>
+      <struct>VolatileWork_BSS.Coolant_PumpIdx</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint16</type>
+   </VarDec>
+   <VarDec>
+      <name>Coolant_PumpIn</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BuckyWagon_01|Foreground|Control Strategy|Cooling</group>
+      <struct>VolatileWork_BSS.Coolant_PumpIn</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Coolant_PumpTbl</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BuckyWagon_01|Foreground|Control Strategy|Cooling</group>
+      <struct>ConstantWork.Coolant_PumpTbl</struct>
+      <class>interpolation_1d</class>
+      <storage>FLASH</storage>
+      <update>REMOTE</update>
+      <type>real32</type>
+      <len>10</len>
+      <output>Coolant_Pump</output>
+      <prelookup>Coolant_PumpIdxArr</prelookup>
+   </VarDec>
+   <VarDec>
+      <name>Coolant_Pump</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BuckyWagon_01|Foreground|Control Strategy|Cooling</group>
+      <struct>VolatileWork_BSS.Coolant_Pump</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -6846,7 +7149,8 @@
             <item name="DisableDrive" value="3"/>
             <item name="EmergencyPowerOff" value="4"/>
             <item name="OpenContactors" value="5"/>
-            <item name="(None)" value="6"/>
+            <item name="PumpFan_Full" value="6"/>
+            <item name="(None)" value="7"/>
             <default>Unknown</default>
          </enum>
       </col_enum>
@@ -6871,7 +7175,8 @@
             <item name="DisableDrive" value="3"/>
             <item name="EmergencyPowerOff" value="4"/>
             <item name="OpenContactors" value="5"/>
-            <item name="(None)" value="6"/>
+            <item name="PumpFan_Full" value="6"/>
+            <item name="(None)" value="7"/>
             <default>Unknown</default>
          </enum>
       </col_enum>
@@ -6896,7 +7201,8 @@
             <item name="DisableDrive" value="3"/>
             <item name="EmergencyPowerOff" value="4"/>
             <item name="OpenContactors" value="5"/>
-            <item name="(None)" value="6"/>
+            <item name="PumpFan_Full" value="6"/>
+            <item name="(None)" value="7"/>
             <default>Unknown</default>
          </enum>
       </col_enum>
@@ -6921,7 +7227,8 @@
             <item name="DisableDrive" value="3"/>
             <item name="EmergencyPowerOff" value="4"/>
             <item name="OpenContactors" value="5"/>
-            <item name="(None)" value="6"/>
+            <item name="PumpFan_Full" value="6"/>
+            <item name="(None)" value="7"/>
             <default>Unknown</default>
          </enum>
       </col_enum>
@@ -6966,32 +7273,35 @@
             <item name="Brake_RangeHigh" value="5"/>
             <item name="Brake_RangeLow" value="6"/>
             <item name="ChargeComplete" value="7"/>
-            <item name="ESTOPped" value="8"/>
-            <item name="Eaton_CAN_Timeout" value="9"/>
-            <item name="GroundFault" value="10"/>
-            <item name="HV_BUS_OFFLINE_check_fuse" value="11"/>
-            <item name="High_Cell_Voltage_Shutdown" value="12"/>
-            <item name="High_SOC_Alert" value="13"/>
-            <item name="High_SOC_Shutdown" value="14"/>
-            <item name="Inverter_OverTemp" value="15"/>
-            <item name="LVVoltHigh" value="16"/>
-            <item name="LVVoltLow" value="17"/>
-            <item name="LVVolt_RangeHigh" value="18"/>
-            <item name="LVVolt_RangeLow" value="19"/>
-            <item name="LockedRotor" value="20"/>
-            <item name="Low_SOC_Alert" value="21"/>
-            <item name="Low_SOC_Shutdown" value="22"/>
-            <item name="NoCAN_BCM_410" value="23"/>
-            <item name="NoCAN_BCM_420" value="24"/>
-            <item name="NoCAN_BCM_430" value="25"/>
-            <item name="NoCAN_CoolantPump" value="26"/>
-            <item name="NoCAN_EatonM_FF30" value="27"/>
-            <item name="NoCAN_EatonM_FF31" value="28"/>
+            <item name="CoolingOverheat" value="8"/>
+            <item name="ESTOPped" value="9"/>
+            <item name="Eaton_CAN_Timeout" value="10"/>
+            <item name="GroundFault" value="11"/>
+            <item name="HV_BUS_OFFLINE_check_fuse" value="12"/>
+            <item name="High_Cell_Voltage_Shutdown" value="13"/>
+            <item name="High_SOC_Alert" value="14"/>
+            <item name="High_SOC_Shutdown" value="15"/>
+            <item name="Inverter_OverTemp" value="16"/>
+            <item name="LVVoltHigh" value="17"/>
+            <item name="LVVoltLow" value="18"/>
+            <item name="LVVolt_RangeHigh" value="19"/>
+            <item name="LVVolt_RangeLow" value="20"/>
+            <item name="LockedRotor" value="21"/>
+            <item name="Low_SOC_Alert" value="22"/>
+            <item name="Low_SOC_Shutdown" value="23"/>
+            <item name="NoCAN_BCM_410" value="24"/>
+            <item name="NoCAN_BCM_420" value="25"/>
+            <item name="NoCAN_BCM_430" value="26"/>
+            <item name="NoCAN_CoolantPump" value="27"/>
+            <item name="NoCAN_CoolingFan" value="28"/>
             <item name="NoCAN_PowerSteering" value="29"/>
+            <item name="NoCAN_UQM_04EF" value="30"/>
+            <item name="NoCAN_UQM_14EF" value="31"/>
+            <item name="NoCAN_UQM_18EF" value="32"/>
          </enum>
       </row_header>
       <col_len>13</col_len>
-      <row_len>30</row_len>
+      <row_len>33</row_len>
    </VarDec>
    <VarDec>
       <name>FaultMarquees</name>
@@ -7015,35 +7325,38 @@
          <enum>
             <item name="Accel_NeverZeroed" value="0"/>
             <item name="Accel_RangeHigh" value="1"/>
-            <item name="GroundFault" value="10"/>
-            <item name="HV_BUS_OFFLINE_check_fuse" value="11"/>
-            <item name="High_Cell_Voltage_Shutdown" value="12"/>
-            <item name="High_SOC_Alert" value="13"/>
-            <item name="High_SOC_Shutdown" value="14"/>
-            <item name="Inverter_OverTemp" value="15"/>
-            <item name="LVVoltHigh" value="16"/>
-            <item name="LVVoltLow" value="17"/>
-            <item name="LVVolt_RangeHigh" value="18"/>
-            <item name="LVVolt_RangeLow" value="19"/>
+            <item name="Eaton_CAN_Timeout" value="10"/>
+            <item name="GroundFault" value="11"/>
+            <item name="HV_BUS_OFFLINE_check_fuse" value="12"/>
+            <item name="High_Cell_Voltage_Shutdown" value="13"/>
+            <item name="High_SOC_Alert" value="14"/>
+            <item name="High_SOC_Shutdown" value="15"/>
+            <item name="Inverter_OverTemp" value="16"/>
+            <item name="LVVoltHigh" value="17"/>
+            <item name="LVVoltLow" value="18"/>
+            <item name="LVVolt_RangeHigh" value="19"/>
             <item name="Accel_RangeLow" value="2"/>
-            <item name="LockedRotor" value="20"/>
-            <item name="Low_SOC_Alert" value="21"/>
-            <item name="Low_SOC_Shutdown" value="22"/>
-            <item name="NoCAN_BCM_410" value="23"/>
-            <item name="NoCAN_BCM_420" value="24"/>
-            <item name="NoCAN_BCM_430" value="25"/>
-            <item name="NoCAN_CoolantPump" value="26"/>
-            <item name="NoCAN_EatonM_FF30" value="27"/>
-            <item name="NoCAN_EatonM_FF31" value="28"/>
+            <item name="LVVolt_RangeLow" value="20"/>
+            <item name="LockedRotor" value="21"/>
+            <item name="Low_SOC_Alert" value="22"/>
+            <item name="Low_SOC_Shutdown" value="23"/>
+            <item name="NoCAN_BCM_410" value="24"/>
+            <item name="NoCAN_BCM_420" value="25"/>
+            <item name="NoCAN_BCM_430" value="26"/>
+            <item name="NoCAN_CoolantPump" value="27"/>
+            <item name="NoCAN_CoolingFan" value="28"/>
             <item name="NoCAN_PowerSteering" value="29"/>
             <item name="Battery_OverTemp" value="3"/>
-            <item name="(None)" value="30"/>
+            <item name="NoCAN_UQM_04EF" value="30"/>
+            <item name="NoCAN_UQM_14EF" value="31"/>
+            <item name="NoCAN_UQM_18EF" value="32"/>
+            <item name="(None)" value="33"/>
             <item name="Battery_UnderTemp" value="4"/>
             <item name="Brake_RangeHigh" value="5"/>
             <item name="Brake_RangeLow" value="6"/>
             <item name="ChargeComplete" value="7"/>
-            <item name="ESTOPped" value="8"/>
-            <item name="Eaton_CAN_Timeout" value="9"/>
+            <item name="CoolingOverheat" value="8"/>
+            <item name="ESTOPped" value="9"/>
             <default>Unknown</default>
          </enum>
       </col_enum>
@@ -7051,35 +7364,38 @@
          <enum>
             <item name="Accel_NeverZeroed" value="0"/>
             <item name="Accel_RangeHigh" value="1"/>
-            <item name="GroundFault" value="10"/>
-            <item name="HV_BUS_OFFLINE_check_fuse" value="11"/>
-            <item name="High_Cell_Voltage_Shutdown" value="12"/>
-            <item name="High_SOC_Alert" value="13"/>
-            <item name="High_SOC_Shutdown" value="14"/>
-            <item name="Inverter_OverTemp" value="15"/>
-            <item name="LVVoltHigh" value="16"/>
-            <item name="LVVoltLow" value="17"/>
-            <item name="LVVolt_RangeHigh" value="18"/>
-            <item name="LVVolt_RangeLow" value="19"/>
+            <item name="Eaton_CAN_Timeout" value="10"/>
+            <item name="GroundFault" value="11"/>
+            <item name="HV_BUS_OFFLINE_check_fuse" value="12"/>
+            <item name="High_Cell_Voltage_Shutdown" value="13"/>
+            <item name="High_SOC_Alert" value="14"/>
+            <item name="High_SOC_Shutdown" value="15"/>
+            <item name="Inverter_OverTemp" value="16"/>
+            <item name="LVVoltHigh" value="17"/>
+            <item name="LVVoltLow" value="18"/>
+            <item name="LVVolt_RangeHigh" value="19"/>
             <item name="Accel_RangeLow" value="2"/>
-            <item name="LockedRotor" value="20"/>
-            <item name="Low_SOC_Alert" value="21"/>
-            <item name="Low_SOC_Shutdown" value="22"/>
-            <item name="NoCAN_BCM_410" value="23"/>
-            <item name="NoCAN_BCM_420" value="24"/>
-            <item name="NoCAN_BCM_430" value="25"/>
-            <item name="NoCAN_CoolantPump" value="26"/>
-            <item name="NoCAN_EatonM_FF30" value="27"/>
-            <item name="NoCAN_EatonM_FF31" value="28"/>
+            <item name="LVVolt_RangeLow" value="20"/>
+            <item name="LockedRotor" value="21"/>
+            <item name="Low_SOC_Alert" value="22"/>
+            <item name="Low_SOC_Shutdown" value="23"/>
+            <item name="NoCAN_BCM_410" value="24"/>
+            <item name="NoCAN_BCM_420" value="25"/>
+            <item name="NoCAN_BCM_430" value="26"/>
+            <item name="NoCAN_CoolantPump" value="27"/>
+            <item name="NoCAN_CoolingFan" value="28"/>
             <item name="NoCAN_PowerSteering" value="29"/>
             <item name="Battery_OverTemp" value="3"/>
-            <item name="(None)" value="30"/>
+            <item name="NoCAN_UQM_04EF" value="30"/>
+            <item name="NoCAN_UQM_14EF" value="31"/>
+            <item name="NoCAN_UQM_18EF" value="32"/>
+            <item name="(None)" value="33"/>
             <item name="Battery_UnderTemp" value="4"/>
             <item name="Brake_RangeHigh" value="5"/>
             <item name="Brake_RangeLow" value="6"/>
             <item name="ChargeComplete" value="7"/>
-            <item name="ESTOPped" value="8"/>
-            <item name="Eaton_CAN_Timeout" value="9"/>
+            <item name="CoolingOverheat" value="8"/>
+            <item name="ESTOPped" value="9"/>
             <default>Unknown</default>
          </enum>
       </col_enum>
@@ -7087,35 +7403,38 @@
          <enum>
             <item name="Accel_NeverZeroed" value="0"/>
             <item name="Accel_RangeHigh" value="1"/>
-            <item name="GroundFault" value="10"/>
-            <item name="HV_BUS_OFFLINE_check_fuse" value="11"/>
-            <item name="High_Cell_Voltage_Shutdown" value="12"/>
-            <item name="High_SOC_Alert" value="13"/>
-            <item name="High_SOC_Shutdown" value="14"/>
-            <item name="Inverter_OverTemp" value="15"/>
-            <item name="LVVoltHigh" value="16"/>
-            <item name="LVVoltLow" value="17"/>
-            <item name="LVVolt_RangeHigh" value="18"/>
-            <item name="LVVolt_RangeLow" value="19"/>
+            <item name="Eaton_CAN_Timeout" value="10"/>
+            <item name="GroundFault" value="11"/>
+            <item name="HV_BUS_OFFLINE_check_fuse" value="12"/>
+            <item name="High_Cell_Voltage_Shutdown" value="13"/>
+            <item name="High_SOC_Alert" value="14"/>
+            <item name="High_SOC_Shutdown" value="15"/>
+            <item name="Inverter_OverTemp" value="16"/>
+            <item name="LVVoltHigh" value="17"/>
+            <item name="LVVoltLow" value="18"/>
+            <item name="LVVolt_RangeHigh" value="19"/>
             <item name="Accel_RangeLow" value="2"/>
-            <item name="LockedRotor" value="20"/>
-            <item name="Low_SOC_Alert" value="21"/>
-            <item name="Low_SOC_Shutdown" value="22"/>
-            <item name="NoCAN_BCM_410" value="23"/>
-            <item name="NoCAN_BCM_420" value="24"/>
-            <item name="NoCAN_BCM_430" value="25"/>
-            <item name="NoCAN_CoolantPump" value="26"/>
-            <item name="NoCAN_EatonM_FF30" value="27"/>
-            <item name="NoCAN_EatonM_FF31" value="28"/>
+            <item name="LVVolt_RangeLow" value="20"/>
+            <item name="LockedRotor" value="21"/>
+            <item name="Low_SOC_Alert" value="22"/>
+            <item name="Low_SOC_Shutdown" value="23"/>
+            <item name="NoCAN_BCM_410" value="24"/>
+            <item name="NoCAN_BCM_420" value="25"/>
+            <item name="NoCAN_BCM_430" value="26"/>
+            <item name="NoCAN_CoolantPump" value="27"/>
+            <item name="NoCAN_CoolingFan" value="28"/>
             <item name="NoCAN_PowerSteering" value="29"/>
             <item name="Battery_OverTemp" value="3"/>
-            <item name="(None)" value="30"/>
+            <item name="NoCAN_UQM_04EF" value="30"/>
+            <item name="NoCAN_UQM_14EF" value="31"/>
+            <item name="NoCAN_UQM_18EF" value="32"/>
+            <item name="(None)" value="33"/>
             <item name="Battery_UnderTemp" value="4"/>
             <item name="Brake_RangeHigh" value="5"/>
             <item name="Brake_RangeLow" value="6"/>
             <item name="ChargeComplete" value="7"/>
-            <item name="ESTOPped" value="8"/>
-            <item name="Eaton_CAN_Timeout" value="9"/>
+            <item name="CoolingOverheat" value="8"/>
+            <item name="ESTOPped" value="9"/>
             <default>Unknown</default>
          </enum>
       </col_enum>
@@ -7181,35 +7500,38 @@
          <enum>
             <item name="Accel_NeverZeroed" value="0"/>
             <item name="Accel_RangeHigh" value="1"/>
-            <item name="GroundFault" value="10"/>
-            <item name="HV_BUS_OFFLINE_check_fuse" value="11"/>
-            <item name="High_Cell_Voltage_Shutdown" value="12"/>
-            <item name="High_SOC_Alert" value="13"/>
-            <item name="High_SOC_Shutdown" value="14"/>
-            <item name="Inverter_OverTemp" value="15"/>
-            <item name="LVVoltHigh" value="16"/>
-            <item name="LVVoltLow" value="17"/>
-            <item name="LVVolt_RangeHigh" value="18"/>
-            <item name="LVVolt_RangeLow" value="19"/>
+            <item name="Eaton_CAN_Timeout" value="10"/>
+            <item name="GroundFault" value="11"/>
+            <item name="HV_BUS_OFFLINE_check_fuse" value="12"/>
+            <item name="High_Cell_Voltage_Shutdown" value="13"/>
+            <item name="High_SOC_Alert" value="14"/>
+            <item name="High_SOC_Shutdown" value="15"/>
+            <item name="Inverter_OverTemp" value="16"/>
+            <item name="LVVoltHigh" value="17"/>
+            <item name="LVVoltLow" value="18"/>
+            <item name="LVVolt_RangeHigh" value="19"/>
             <item name="Accel_RangeLow" value="2"/>
-            <item name="LockedRotor" value="20"/>
-            <item name="Low_SOC_Alert" value="21"/>
-            <item name="Low_SOC_Shutdown" value="22"/>
-            <item name="NoCAN_BCM_410" value="23"/>
-            <item name="NoCAN_BCM_420" value="24"/>
-            <item name="NoCAN_BCM_430" value="25"/>
-            <item name="NoCAN_CoolantPump" value="26"/>
-            <item name="NoCAN_EatonM_FF30" value="27"/>
-            <item name="NoCAN_EatonM_FF31" value="28"/>
+            <item name="LVVolt_RangeLow" value="20"/>
+            <item name="LockedRotor" value="21"/>
+            <item name="Low_SOC_Alert" value="22"/>
+            <item name="Low_SOC_Shutdown" value="23"/>
+            <item name="NoCAN_BCM_410" value="24"/>
+            <item name="NoCAN_BCM_420" value="25"/>
+            <item name="NoCAN_BCM_430" value="26"/>
+            <item name="NoCAN_CoolantPump" value="27"/>
+            <item name="NoCAN_CoolingFan" value="28"/>
             <item name="NoCAN_PowerSteering" value="29"/>
             <item name="Battery_OverTemp" value="3"/>
-            <item name="(None)" value="30"/>
+            <item name="NoCAN_UQM_04EF" value="30"/>
+            <item name="NoCAN_UQM_14EF" value="31"/>
+            <item name="NoCAN_UQM_18EF" value="32"/>
+            <item name="(None)" value="33"/>
             <item name="Battery_UnderTemp" value="4"/>
             <item name="Brake_RangeHigh" value="5"/>
             <item name="Brake_RangeLow" value="6"/>
             <item name="ChargeComplete" value="7"/>
-            <item name="ESTOPped" value="8"/>
-            <item name="Eaton_CAN_Timeout" value="9"/>
+            <item name="CoolingOverheat" value="8"/>
+            <item name="ESTOPped" value="9"/>
             <default>Unknown</default>
          </enum>
       </col_enum>
@@ -7217,35 +7539,38 @@
          <enum>
             <item name="Accel_NeverZeroed" value="0"/>
             <item name="Accel_RangeHigh" value="1"/>
-            <item name="GroundFault" value="10"/>
-            <item name="HV_BUS_OFFLINE_check_fuse" value="11"/>
-            <item name="High_Cell_Voltage_Shutdown" value="12"/>
-            <item name="High_SOC_Alert" value="13"/>
-            <item name="High_SOC_Shutdown" value="14"/>
-            <item name="Inverter_OverTemp" value="15"/>
-            <item name="LVVoltHigh" value="16"/>
-            <item name="LVVoltLow" value="17"/>
-            <item name="LVVolt_RangeHigh" value="18"/>
-            <item name="LVVolt_RangeLow" value="19"/>
+            <item name="Eaton_CAN_Timeout" value="10"/>
+            <item name="GroundFault" value="11"/>
+            <item name="HV_BUS_OFFLINE_check_fuse" value="12"/>
+            <item name="High_Cell_Voltage_Shutdown" value="13"/>
+            <item name="High_SOC_Alert" value="14"/>
+            <item name="High_SOC_Shutdown" value="15"/>
+            <item name="Inverter_OverTemp" value="16"/>
+            <item name="LVVoltHigh" value="17"/>
+            <item name="LVVoltLow" value="18"/>
+            <item name="LVVolt_RangeHigh" value="19"/>
             <item name="Accel_RangeLow" value="2"/>
-            <item name="LockedRotor" value="20"/>
-            <item name="Low_SOC_Alert" value="21"/>
-            <item name="Low_SOC_Shutdown" value="22"/>
-            <item name="NoCAN_BCM_410" value="23"/>
-            <item name="NoCAN_BCM_420" value="24"/>
-            <item name="NoCAN_BCM_430" value="25"/>
-            <item name="NoCAN_CoolantPump" value="26"/>
-            <item name="NoCAN_EatonM_FF30" value="27"/>
-            <item name="NoCAN_EatonM_FF31" value="28"/>
+            <item name="LVVolt_RangeLow" value="20"/>
+            <item name="LockedRotor" value="21"/>
+            <item name="Low_SOC_Alert" value="22"/>
+            <item name="Low_SOC_Shutdown" value="23"/>
+            <item name="NoCAN_BCM_410" value="24"/>
+            <item name="NoCAN_BCM_420" value="25"/>
+            <item name="NoCAN_BCM_430" value="26"/>
+            <item name="NoCAN_CoolantPump" value="27"/>
+            <item name="NoCAN_CoolingFan" value="28"/>
             <item name="NoCAN_PowerSteering" value="29"/>
             <item name="Battery_OverTemp" value="3"/>
-            <item name="(None)" value="30"/>
+            <item name="NoCAN_UQM_04EF" value="30"/>
+            <item name="NoCAN_UQM_14EF" value="31"/>
+            <item name="NoCAN_UQM_18EF" value="32"/>
+            <item name="(None)" value="33"/>
             <item name="Battery_UnderTemp" value="4"/>
             <item name="Brake_RangeHigh" value="5"/>
             <item name="Brake_RangeLow" value="6"/>
             <item name="ChargeComplete" value="7"/>
-            <item name="ESTOPped" value="8"/>
-            <item name="Eaton_CAN_Timeout" value="9"/>
+            <item name="CoolingOverheat" value="8"/>
+            <item name="ESTOPped" value="9"/>
             <default>Unknown</default>
          </enum>
       </col_enum>
@@ -7253,35 +7578,38 @@
          <enum>
             <item name="Accel_NeverZeroed" value="0"/>
             <item name="Accel_RangeHigh" value="1"/>
-            <item name="GroundFault" value="10"/>
-            <item name="HV_BUS_OFFLINE_check_fuse" value="11"/>
-            <item name="High_Cell_Voltage_Shutdown" value="12"/>
-            <item name="High_SOC_Alert" value="13"/>
-            <item name="High_SOC_Shutdown" value="14"/>
-            <item name="Inverter_OverTemp" value="15"/>
-            <item name="LVVoltHigh" value="16"/>
-            <item name="LVVoltLow" value="17"/>
-            <item name="LVVolt_RangeHigh" value="18"/>
-            <item name="LVVolt_RangeLow" value="19"/>
+            <item name="Eaton_CAN_Timeout" value="10"/>
+            <item name="GroundFault" value="11"/>
+            <item name="HV_BUS_OFFLINE_check_fuse" value="12"/>
+            <item name="High_Cell_Voltage_Shutdown" value="13"/>
+            <item name="High_SOC_Alert" value="14"/>
+            <item name="High_SOC_Shutdown" value="15"/>
+            <item name="Inverter_OverTemp" value="16"/>
+            <item name="LVVoltHigh" value="17"/>
+            <item name="LVVoltLow" value="18"/>
+            <item name="LVVolt_RangeHigh" value="19"/>
             <item name="Accel_RangeLow" value="2"/>
-            <item name="LockedRotor" value="20"/>
-            <item name="Low_SOC_Alert" value="21"/>
-            <item name="Low_SOC_Shutdown" value="22"/>
-            <item name="NoCAN_BCM_410" value="23"/>
-            <item name="NoCAN_BCM_420" value="24"/>
-            <item name="NoCAN_BCM_430" value="25"/>
-            <item name="NoCAN_CoolantPump" value="26"/>
-            <item name="NoCAN_EatonM_FF30" value="27"/>
-            <item name="NoCAN_EatonM_FF31" value="28"/>
+            <item name="LVVolt_RangeLow" value="20"/>
+            <item name="LockedRotor" value="21"/>
+            <item name="Low_SOC_Alert" value="22"/>
+            <item name="Low_SOC_Shutdown" value="23"/>
+            <item name="NoCAN_BCM_410" value="24"/>
+            <item name="NoCAN_BCM_420" value="25"/>
+            <item name="NoCAN_BCM_430" value="26"/>
+            <item name="NoCAN_CoolantPump" value="27"/>
+            <item name="NoCAN_CoolingFan" value="28"/>
             <item name="NoCAN_PowerSteering" value="29"/>
             <item name="Battery_OverTemp" value="3"/>
-            <item name="(None)" value="30"/>
+            <item name="NoCAN_UQM_04EF" value="30"/>
+            <item name="NoCAN_UQM_14EF" value="31"/>
+            <item name="NoCAN_UQM_18EF" value="32"/>
+            <item name="(None)" value="33"/>
             <item name="Battery_UnderTemp" value="4"/>
             <item name="Brake_RangeHigh" value="5"/>
             <item name="Brake_RangeLow" value="6"/>
             <item name="ChargeComplete" value="7"/>
-            <item name="ESTOPped" value="8"/>
-            <item name="Eaton_CAN_Timeout" value="9"/>
+            <item name="CoolingOverheat" value="8"/>
+            <item name="ESTOPped" value="9"/>
             <default>Unknown</default>
          </enum>
       </col_enum>
@@ -7289,35 +7617,38 @@
          <enum>
             <item name="Accel_NeverZeroed" value="0"/>
             <item name="Accel_RangeHigh" value="1"/>
-            <item name="GroundFault" value="10"/>
-            <item name="HV_BUS_OFFLINE_check_fuse" value="11"/>
-            <item name="High_Cell_Voltage_Shutdown" value="12"/>
-            <item name="High_SOC_Alert" value="13"/>
-            <item name="High_SOC_Shutdown" value="14"/>
-            <item name="Inverter_OverTemp" value="15"/>
-            <item name="LVVoltHigh" value="16"/>
-            <item name="LVVoltLow" value="17"/>
-            <item name="LVVolt_RangeHigh" value="18"/>
-            <item name="LVVolt_RangeLow" value="19"/>
+            <item name="Eaton_CAN_Timeout" value="10"/>
+            <item name="GroundFault" value="11"/>
+            <item name="HV_BUS_OFFLINE_check_fuse" value="12"/>
+            <item name="High_Cell_Voltage_Shutdown" value="13"/>
+            <item name="High_SOC_Alert" value="14"/>
+            <item name="High_SOC_Shutdown" value="15"/>
+            <item name="Inverter_OverTemp" value="16"/>
+            <item name="LVVoltHigh" value="17"/>
+            <item name="LVVoltLow" value="18"/>
+            <item name="LVVolt_RangeHigh" value="19"/>
             <item name="Accel_RangeLow" value="2"/>
-            <item name="LockedRotor" value="20"/>
-            <item name="Low_SOC_Alert" value="21"/>
-            <item name="Low_SOC_Shutdown" value="22"/>
-            <item name="NoCAN_BCM_410" value="23"/>
-            <item name="NoCAN_BCM_420" value="24"/>
-            <item name="NoCAN_BCM_430" value="25"/>
-            <item name="NoCAN_CoolantPump" value="26"/>
-            <item name="NoCAN_EatonM_FF30" value="27"/>
-            <item name="NoCAN_EatonM_FF31" value="28"/>
+            <item name="LVVolt_RangeLow" value="20"/>
+            <item name="LockedRotor" value="21"/>
+            <item name="Low_SOC_Alert" value="22"/>
+            <item name="Low_SOC_Shutdown" value="23"/>
+            <item name="NoCAN_BCM_410" value="24"/>
+            <item name="NoCAN_BCM_420" value="25"/>
+            <item name="NoCAN_BCM_430" value="26"/>
+            <item name="NoCAN_CoolantPump" value="27"/>
+            <item name="NoCAN_CoolingFan" value="28"/>
             <item name="NoCAN_PowerSteering" value="29"/>
             <item name="Battery_OverTemp" value="3"/>
-            <item name="(None)" value="30"/>
+            <item name="NoCAN_UQM_04EF" value="30"/>
+            <item name="NoCAN_UQM_14EF" value="31"/>
+            <item name="NoCAN_UQM_18EF" value="32"/>
+            <item name="(None)" value="33"/>
             <item name="Battery_UnderTemp" value="4"/>
             <item name="Brake_RangeHigh" value="5"/>
             <item name="Brake_RangeLow" value="6"/>
             <item name="ChargeComplete" value="7"/>
-            <item name="ESTOPped" value="8"/>
-            <item name="Eaton_CAN_Timeout" value="9"/>
+            <item name="CoolingOverheat" value="8"/>
+            <item name="ESTOPped" value="9"/>
             <default>Unknown</default>
          </enum>
       </col_enum>
@@ -7325,35 +7656,38 @@
          <enum>
             <item name="Accel_NeverZeroed" value="0"/>
             <item name="Accel_RangeHigh" value="1"/>
-            <item name="GroundFault" value="10"/>
-            <item name="HV_BUS_OFFLINE_check_fuse" value="11"/>
-            <item name="High_Cell_Voltage_Shutdown" value="12"/>
-            <item name="High_SOC_Alert" value="13"/>
-            <item name="High_SOC_Shutdown" value="14"/>
-            <item name="Inverter_OverTemp" value="15"/>
-            <item name="LVVoltHigh" value="16"/>
-            <item name="LVVoltLow" value="17"/>
-            <item name="LVVolt_RangeHigh" value="18"/>
-            <item name="LVVolt_RangeLow" value="19"/>
+            <item name="Eaton_CAN_Timeout" value="10"/>
+            <item name="GroundFault" value="11"/>
+            <item name="HV_BUS_OFFLINE_check_fuse" value="12"/>
+            <item name="High_Cell_Voltage_Shutdown" value="13"/>
+            <item name="High_SOC_Alert" value="14"/>
+            <item name="High_SOC_Shutdown" value="15"/>
+            <item name="Inverter_OverTemp" value="16"/>
+            <item name="LVVoltHigh" value="17"/>
+            <item name="LVVoltLow" value="18"/>
+            <item name="LVVolt_RangeHigh" value="19"/>
             <item name="Accel_RangeLow" value="2"/>
-            <item name="LockedRotor" value="20"/>
-            <item name="Low_SOC_Alert" value="21"/>
-            <item name="Low_SOC_Shutdown" value="22"/>
-            <item name="NoCAN_BCM_410" value="23"/>
-            <item name="NoCAN_BCM_420" value="24"/>
-            <item name="NoCAN_BCM_430" value="25"/>
-            <item name="NoCAN_CoolantPump" value="26"/>
-            <item name="NoCAN_EatonM_FF30" value="27"/>
-            <item name="NoCAN_EatonM_FF31" value="28"/>
+            <item name="LVVolt_RangeLow" value="20"/>
+            <item name="LockedRotor" value="21"/>
+            <item name="Low_SOC_Alert" value="22"/>
+            <item name="Low_SOC_Shutdown" value="23"/>
+            <item name="NoCAN_BCM_410" value="24"/>
+            <item name="NoCAN_BCM_420" value="25"/>
+            <item name="NoCAN_BCM_430" value="26"/>
+            <item name="NoCAN_CoolantPump" value="27"/>
+            <item name="NoCAN_CoolingFan" value="28"/>
             <item name="NoCAN_PowerSteering" value="29"/>
             <item name="Battery_OverTemp" value="3"/>
-            <item name="(None)" value="30"/>
+            <item name="NoCAN_UQM_04EF" value="30"/>
+            <item name="NoCAN_UQM_14EF" value="31"/>
+            <item name="NoCAN_UQM_18EF" value="32"/>
+            <item name="(None)" value="33"/>
             <item name="Battery_UnderTemp" value="4"/>
             <item name="Brake_RangeHigh" value="5"/>
             <item name="Brake_RangeLow" value="6"/>
             <item name="ChargeComplete" value="7"/>
-            <item name="ESTOPped" value="8"/>
-            <item name="Eaton_CAN_Timeout" value="9"/>
+            <item name="CoolingOverheat" value="8"/>
+            <item name="ESTOPped" value="9"/>
             <default>Unknown</default>
          </enum>
       </col_enum>
@@ -7361,35 +7695,77 @@
          <enum>
             <item name="Accel_NeverZeroed" value="0"/>
             <item name="Accel_RangeHigh" value="1"/>
-            <item name="GroundFault" value="10"/>
-            <item name="HV_BUS_OFFLINE_check_fuse" value="11"/>
-            <item name="High_Cell_Voltage_Shutdown" value="12"/>
-            <item name="High_SOC_Alert" value="13"/>
-            <item name="High_SOC_Shutdown" value="14"/>
-            <item name="Inverter_OverTemp" value="15"/>
-            <item name="LVVoltHigh" value="16"/>
-            <item name="LVVoltLow" value="17"/>
-            <item name="LVVolt_RangeHigh" value="18"/>
-            <item name="LVVolt_RangeLow" value="19"/>
+            <item name="Eaton_CAN_Timeout" value="10"/>
+            <item name="GroundFault" value="11"/>
+            <item name="HV_BUS_OFFLINE_check_fuse" value="12"/>
+            <item name="High_Cell_Voltage_Shutdown" value="13"/>
+            <item name="High_SOC_Alert" value="14"/>
+            <item name="High_SOC_Shutdown" value="15"/>
+            <item name="Inverter_OverTemp" value="16"/>
+            <item name="LVVoltHigh" value="17"/>
+            <item name="LVVoltLow" value="18"/>
+            <item name="LVVolt_RangeHigh" value="19"/>
             <item name="Accel_RangeLow" value="2"/>
-            <item name="LockedRotor" value="20"/>
-            <item name="Low_SOC_Alert" value="21"/>
-            <item name="Low_SOC_Shutdown" value="22"/>
-            <item name="NoCAN_BCM_410" value="23"/>
-            <item name="NoCAN_BCM_420" value="24"/>
-            <item name="NoCAN_BCM_430" value="25"/>
-            <item name="NoCAN_CoolantPump" value="26"/>
-            <item name="NoCAN_EatonM_FF30" value="27"/>
-            <item name="NoCAN_EatonM_FF31" value="28"/>
+            <item name="LVVolt_RangeLow" value="20"/>
+            <item name="LockedRotor" value="21"/>
+            <item name="Low_SOC_Alert" value="22"/>
+            <item name="Low_SOC_Shutdown" value="23"/>
+            <item name="NoCAN_BCM_410" value="24"/>
+            <item name="NoCAN_BCM_420" value="25"/>
+            <item name="NoCAN_BCM_430" value="26"/>
+            <item name="NoCAN_CoolantPump" value="27"/>
+            <item name="NoCAN_CoolingFan" value="28"/>
             <item name="NoCAN_PowerSteering" value="29"/>
             <item name="Battery_OverTemp" value="3"/>
-            <item name="(None)" value="30"/>
+            <item name="NoCAN_UQM_04EF" value="30"/>
+            <item name="NoCAN_UQM_14EF" value="31"/>
+            <item name="NoCAN_UQM_18EF" value="32"/>
+            <item name="(None)" value="33"/>
             <item name="Battery_UnderTemp" value="4"/>
             <item name="Brake_RangeHigh" value="5"/>
             <item name="Brake_RangeLow" value="6"/>
             <item name="ChargeComplete" value="7"/>
-            <item name="ESTOPped" value="8"/>
-            <item name="Eaton_CAN_Timeout" value="9"/>
+            <item name="CoolingOverheat" value="8"/>
+            <item name="ESTOPped" value="9"/>
+            <default>Unknown</default>
+         </enum>
+      </col_enum>
+      <col_enum column="6">
+         <enum>
+            <item name="Accel_NeverZeroed" value="0"/>
+            <item name="Accel_RangeHigh" value="1"/>
+            <item name="Eaton_CAN_Timeout" value="10"/>
+            <item name="GroundFault" value="11"/>
+            <item name="HV_BUS_OFFLINE_check_fuse" value="12"/>
+            <item name="High_Cell_Voltage_Shutdown" value="13"/>
+            <item name="High_SOC_Alert" value="14"/>
+            <item name="High_SOC_Shutdown" value="15"/>
+            <item name="Inverter_OverTemp" value="16"/>
+            <item name="LVVoltHigh" value="17"/>
+            <item name="LVVoltLow" value="18"/>
+            <item name="LVVolt_RangeHigh" value="19"/>
+            <item name="Accel_RangeLow" value="2"/>
+            <item name="LVVolt_RangeLow" value="20"/>
+            <item name="LockedRotor" value="21"/>
+            <item name="Low_SOC_Alert" value="22"/>
+            <item name="Low_SOC_Shutdown" value="23"/>
+            <item name="NoCAN_BCM_410" value="24"/>
+            <item name="NoCAN_BCM_420" value="25"/>
+            <item name="NoCAN_BCM_430" value="26"/>
+            <item name="NoCAN_CoolantPump" value="27"/>
+            <item name="NoCAN_CoolingFan" value="28"/>
+            <item name="NoCAN_PowerSteering" value="29"/>
+            <item name="Battery_OverTemp" value="3"/>
+            <item name="NoCAN_UQM_04EF" value="30"/>
+            <item name="NoCAN_UQM_14EF" value="31"/>
+            <item name="NoCAN_UQM_18EF" value="32"/>
+            <item name="(None)" value="33"/>
+            <item name="Battery_UnderTemp" value="4"/>
+            <item name="Brake_RangeHigh" value="5"/>
+            <item name="Brake_RangeLow" value="6"/>
+            <item name="ChargeComplete" value="7"/>
+            <item name="CoolingOverheat" value="8"/>
+            <item name="ESTOPped" value="9"/>
             <default>Unknown</default>
          </enum>
       </col_enum>
@@ -7401,6 +7777,7 @@
             <item name="DisableDrive" value="3"/>
             <item name="EmergencyPowerOff" value="4"/>
             <item name="OpenContactors" value="5"/>
+            <item name="PumpFan_Full" value="6"/>
             <default>Unknown</default>
          </enum>
       </col_header>
@@ -7410,7 +7787,7 @@
             <default>Unknown</default>
          </enum>
       </row_header>
-      <col_len>6</col_len>
+      <col_len>7</col_len>
       <row_len>1</row_len>
    </VarDec>
    <VarDec>
@@ -7424,7 +7801,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut177p001</help>
+      <help>Digital output pin selection for DOut178p0011</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.ReverseOut_Pin</struct>
       <storage>FLASH</storage>
@@ -7552,7 +7929,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut178p001</help>
+      <help>Digital output pin selection for DOut179p0011</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.DCDCInhibit_Out_Pin</struct>
       <storage>FLASH</storage>
@@ -7615,7 +7992,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut179p001</help>
+      <help>Digital output pin selection for DOut180p0011</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.Brake_Light_Out</struct>
       <storage>FLASH</storage>

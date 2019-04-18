@@ -110,13 +110,13 @@ function msg = CANTx_UQM_14EFrrss()
   msg.channel                 = 1;
 
   msg.idext                   = 'EXTENDED';
-  msg.id                      = hex2dec('14EF0201');
+  msg.id                      = hex2dec('14EFEF03');
   msg.idmask                  = hex2dec('ffffffff');
   msg.idinherit               =  0;
   msg.payload_size            =  8;
   msg.payload_value           = [];
   msg.payload_mask            = [];
-  msg.interval                = 10;
+  msg.interval                = 12;
 
 %   msg.idcontent{1}.name       = 'Node ID';
 %   msg.idcontent{1}.start_bit  = 0;
@@ -124,7 +124,7 @@ function msg = CANTx_UQM_14EFrrss()
 
   msg.fields{1}.name          = 'Control_Mode';
   msg.fields{1}.units         = '';
-  msg.fields{1}.start_bit     = 0;
+  msg.fields{1}.start_bit     = 56;
   msg.fields{1}.bit_length    = 4;
   msg.fields{1}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{1}.data_type     = 'UNSIGNED';
@@ -133,7 +133,7 @@ function msg = CANTx_UQM_14EFrrss()
 
   msg.fields{2}.name          = 'Command_Counter';
   msg.fields{2}.units         = '';
-  msg.fields{2}.start_bit     = 4;
+  msg.fields{2}.start_bit     = 60;
   msg.fields{2}.bit_length    = 4;
   msg.fields{2}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{2}.data_type     = 'UNSIGNED';
@@ -142,7 +142,7 @@ function msg = CANTx_UQM_14EFrrss()
   
   msg.fields{3}.name          = 'Use_Raw_Speed';
   msg.fields{3}.units         = 'bool';
-  msg.fields{3}.start_bit     = 10;
+  msg.fields{3}.start_bit     = 50;
   msg.fields{3}.bit_length    = 1;
   msg.fields{3}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{3}.data_type     = 'UNSIGNED';
@@ -151,7 +151,7 @@ function msg = CANTx_UQM_14EFrrss()
   
   msg.fields{4}.name          = 'Direction';
   msg.fields{4}.units         = 'forward/reverse';
-  msg.fields{4}.start_bit     = 11;
+  msg.fields{4}.start_bit     = 51;
   msg.fields{4}.bit_length    = 1;
   msg.fields{4}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{4}.data_type     = 'UNSIGNED';
@@ -160,7 +160,7 @@ function msg = CANTx_UQM_14EFrrss()
   
   msg.fields{5}.name          = 'Enable';
   msg.fields{5}.units         = 'bool';
-  msg.fields{5}.start_bit     = 12;
+  msg.fields{5}.start_bit     = 52;
   msg.fields{5}.bit_length    = 1;
   msg.fields{5}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{5}.data_type     = 'UNSIGNED';
@@ -169,7 +169,7 @@ function msg = CANTx_UQM_14EFrrss()
   
   msg.fields{6}.name          = 'Ignore_Accel_Limit';
   msg.fields{6}.units         = 'bool';
-  msg.fields{6}.start_bit     = 13;
+  msg.fields{6}.start_bit     = 53;
   msg.fields{6}.bit_length    = 1;
   msg.fields{6}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{6}.data_type     = 'UNSIGNED';
@@ -178,7 +178,7 @@ function msg = CANTx_UQM_14EFrrss()
   
   msg.fields{7}.name          = 'TurboMode';
   msg.fields{7}.units         = 'bool';
-  msg.fields{7}.start_bit     = 14;
+  msg.fields{7}.start_bit     = 54;
   msg.fields{7}.bit_length    = 2;
   msg.fields{7}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{7}.data_type     = 'UNSIGNED';
@@ -187,7 +187,7 @@ function msg = CANTx_UQM_14EFrrss()
   
   msg.fields{8}.name          = 'Requested_Torque_Value';
   msg.fields{8}.units         = 'Nm';
-  msg.fields{8}.start_bit     = 16;
+  msg.fields{8}.start_bit     = 40;
   msg.fields{8}.bit_length    = 16;
   msg.fields{8}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{8}.data_type     = 'UNSIGNED';
@@ -196,7 +196,7 @@ function msg = CANTx_UQM_14EFrrss()
   
   msg.fields{9}.name          = 'Forward_Speed_Limit';
   msg.fields{9}.units         = 'rpm';
-  msg.fields{9}.start_bit     = 32;
+  msg.fields{9}.start_bit     = 24;
   msg.fields{9}.bit_length    = 16;
   msg.fields{9}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{9}.data_type     = 'UNSIGNED';
@@ -205,7 +205,7 @@ function msg = CANTx_UQM_14EFrrss()
   
   msg.fields{10}.name          = 'Reverse_Speed_Limit';
   msg.fields{10}.units         = 'rpm';
-  msg.fields{10}.start_bit     = 48;
+  msg.fields{10}.start_bit     = 8;
   msg.fields{10}.bit_length    = 16;
   msg.fields{10}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{10}.data_type     = 'UNSIGNED';

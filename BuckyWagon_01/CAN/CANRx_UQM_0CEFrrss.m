@@ -110,7 +110,7 @@ function msg = CANRx_UQM_0CEFrrss()
   msg.channel                 = 1;
 
   msg.idext                   = 'EXTENDED';
-  msg.id                      = hex2dec('0CEF0102');
+  msg.id                      = hex2dec('0CEF03EF');
   msg.idmask                  = hex2dec('ffffffff');
   msg.idinherit               =  0;
   msg.payload_size            =  8;
@@ -124,7 +124,7 @@ function msg = CANRx_UQM_0CEFrrss()
 
   msg.fields{1}.name          = 'Derate';
   msg.fields{1}.units         = 'bool';
-  msg.fields{1}.start_bit     = 16;
+  msg.fields{1}.start_bit     = 40;
   msg.fields{1}.bit_length    = 1;
   msg.fields{1}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{1}.data_type     = 'UNSIGNED';
@@ -133,7 +133,7 @@ function msg = CANRx_UQM_0CEFrrss()
 
   msg.fields{2}.name          = 'Shutdown';
   msg.fields{2}.units         = 'bool';
-  msg.fields{2}.start_bit     = 17;
+  msg.fields{2}.start_bit     = 41;
   msg.fields{2}.bit_length    = 1;
   msg.fields{2}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{2}.data_type     = 'UNSIGNED';

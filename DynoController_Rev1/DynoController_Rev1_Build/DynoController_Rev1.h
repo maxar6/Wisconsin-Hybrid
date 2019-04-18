@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'DynoController_Rev1'.
  *
- * Model version                  : 1.305
+ * Model version                  : 1.309
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Fri Apr 13 00:18:48 2018
+ * C/C++ source code generated on : Thu Feb 28 16:20:04 2019
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -56,6 +56,7 @@ typedef struct {
   real_T s38_ReadCANMessage_o7;        /* '<S38>/Read CAN Message' */
   real_T s37_BatteryVoltage;           /* '<S37>/Read CAN Message3' */
   real_T s37_BatteryCurrent;           /* '<S37>/Read CAN Message3' */
+  real_T s102_ConnectCommand;          /* '<S102>/Product' */
   real_T s37_MaxCellTemperature;       /* '<S37>/Read CAN Message1' */
   real_T s54_Merge;                    /* '<S54>/Merge' */
   real_T s56_Merge;                    /* '<S56>/Merge' */
@@ -78,7 +79,6 @@ typedef struct {
   boolean_T s75_LogicalOperator2;      /* '<S75>/Logical Operator2' */
   boolean_T s10_LogicalOperator2;      /* '<S10>/Logical Operator2' */
   boolean_T s17_motohawk_din;          /* '<S17>/motohawk_din' */
-  boolean_T s102_ConnectCommand;       /* '<S102>/Logical Operator2' */
   boolean_T s102_IsolationMeasurementEnable;/* '<S102>/Logical Operator' */
   boolean_T s17_motohawk_din2;         /* '<S17>/motohawk_din2' */
   boolean_T s103_Gen_Enable;           /* '<S103>/Logical Operator' */

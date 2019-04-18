@@ -110,7 +110,7 @@ function msg = CANRx_UQM_08EFrrss()
   msg.channel                 = 1;
 
   msg.idext                   = 'EXTENDED';
-  msg.id                      = hex2dec('08EF0102');
+  msg.id                      = hex2dec('08EF03EF');
   msg.idmask                  = hex2dec('ffffffff');
   msg.idinherit               =  0;
   msg.payload_size            =  8;
@@ -124,7 +124,7 @@ function msg = CANRx_UQM_08EFrrss()
 
   msg.fields{1}.name          = 'Not_Enabled';
   msg.fields{1}.units         = 'bool';
-  msg.fields{1}.start_bit     = 0;
+  msg.fields{1}.start_bit     = 56;
   msg.fields{1}.bit_length    = 1;
   msg.fields{1}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{1}.data_type     = 'UNSIGNED';
@@ -133,7 +133,7 @@ function msg = CANRx_UQM_08EFrrss()
 
   msg.fields{2}.name          = 'Not_Enabled_Histroy';
   msg.fields{2}.units         = 'bool';
-  msg.fields{2}.start_bit     = 16;
+  msg.fields{2}.start_bit     = 40;
   msg.fields{2}.bit_length    = 1;
   msg.fields{2}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{2}.data_type     = 'UNSIGNED';
@@ -142,7 +142,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{3}.name          = 'Over_Leg_Current';
   msg.fields{3}.units         = 'bool';
-  msg.fields{3}.start_bit     = 1;
+  msg.fields{3}.start_bit     = 57;
   msg.fields{3}.bit_length    = 1;
   msg.fields{3}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{3}.data_type     = 'UNSIGNED';
@@ -151,7 +151,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{4}.name          = 'Over_Leg_Current_History';
   msg.fields{4}.units         = 'bool';
-  msg.fields{4}.start_bit     = 17;
+  msg.fields{4}.start_bit     = 41;
   msg.fields{4}.bit_length    = 1;
   msg.fields{4}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{4}.data_type     = 'UNSIGNED';
@@ -160,7 +160,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{5}.name          = 'Over_Bus_Current';
   msg.fields{5}.units         = 'bool';
-  msg.fields{5}.start_bit     = 2;
+  msg.fields{5}.start_bit     = 58;
   msg.fields{5}.bit_length    = 1;
   msg.fields{5}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{5}.data_type     = 'UNSIGNED';
@@ -169,7 +169,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{6}.name          = 'Over_Bus_Current_History';
   msg.fields{6}.units         = 'bool';
-  msg.fields{6}.start_bit     = 18;
+  msg.fields{6}.start_bit     = 42;
   msg.fields{6}.bit_length    = 1;
   msg.fields{6}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{6}.data_type     = 'UNSIGNED';
@@ -178,7 +178,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{7}.name          = 'Over_Phase_Advance';
   msg.fields{7}.units         = 'bool';
-  msg.fields{7}.start_bit     = 3;
+  msg.fields{7}.start_bit     = 59;
   msg.fields{7}.bit_length    = 1;
   msg.fields{7}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{7}.data_type     = 'UNSIGNED';
@@ -187,7 +187,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{8}.name          = 'Over_Phase_Advance_History';
   msg.fields{8}.units         = 'bool';
-  msg.fields{8}.start_bit     = 19;
+  msg.fields{8}.start_bit     = 43;
   msg.fields{8}.bit_length    = 1;
   msg.fields{8}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{8}.data_type     = 'UNSIGNED';
@@ -196,7 +196,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{9}.name          = 'Under_Voltage_Warning';
   msg.fields{9}.units         = 'bool';
-  msg.fields{9}.start_bit     = 4;
+  msg.fields{9}.start_bit     = 60;
   msg.fields{9}.bit_length    = 1;
   msg.fields{9}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{9}.data_type     = 'UNSIGNED';
@@ -205,7 +205,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{10}.name          = 'Under_Voltage_Warning_History';
   msg.fields{10}.units         = 'bool';
-  msg.fields{10}.start_bit     = 20;
+  msg.fields{10}.start_bit     = 44;
   msg.fields{10}.bit_length    = 1;
   msg.fields{10}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{10}.data_type     = 'UNSIGNED';
@@ -214,7 +214,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{11}.name          = 'Rotor_Over_Temperature';
   msg.fields{11}.units         = 'bool';
-  msg.fields{11}.start_bit     = 5;
+  msg.fields{11}.start_bit     = 61;
   msg.fields{11}.bit_length    = 1;
   msg.fields{11}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{11}.data_type     = 'UNSIGNED';
@@ -223,7 +223,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{12}.name          = 'Rotor_Over_Temperature_History';
   msg.fields{12}.units         = 'bool';
-  msg.fields{12}.start_bit     = 21;
+  msg.fields{12}.start_bit     = 45;
   msg.fields{12}.bit_length    = 1;
   msg.fields{12}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{12}.data_type     = 'UNSIGNED';
@@ -232,7 +232,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{13}.name          = 'Stator_Over_Temperature';
   msg.fields{13}.units         = 'bool';
-  msg.fields{13}.start_bit     = 6;
+  msg.fields{13}.start_bit     = 62;
   msg.fields{13}.bit_length    = 1;
   msg.fields{13}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{13}.data_type     = 'UNSIGNED';
@@ -241,7 +241,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{14}.name          = 'Stator_Over_Temperature_History';
   msg.fields{14}.units         = 'bool';
-  msg.fields{14}.start_bit     = 22;
+  msg.fields{14}.start_bit     = 46;
   msg.fields{14}.bit_length    = 1;
   msg.fields{14}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{14}.data_type     = 'UNSIGNED';
@@ -250,7 +250,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{15}.name          = 'Inverter_Over_Temperature';
   msg.fields{15}.units         = 'bool';
-  msg.fields{15}.start_bit     = 7;
+  msg.fields{15}.start_bit     = 63;
   msg.fields{15}.bit_length    = 1;
   msg.fields{15}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{15}.data_type     = 'UNSIGNED';
@@ -259,7 +259,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{16}.name          = 'Inverter_Over_Temperature_History';
   msg.fields{16}.units         = 'bool';
-  msg.fields{16}.start_bit     = 23;
+  msg.fields{16}.start_bit     = 47;
   msg.fields{16}.bit_length    = 1;
   msg.fields{16}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{16}.data_type     = 'UNSIGNED';
@@ -268,7 +268,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{17}.name          = 'Over_Speed_Warning';
   msg.fields{17}.units         = 'bool';
-  msg.fields{17}.start_bit     = 8;
+  msg.fields{17}.start_bit     = 48;
   msg.fields{17}.bit_length    = 1;
   msg.fields{17}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{17}.data_type     = 'UNSIGNED';
@@ -277,7 +277,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{18}.name          = 'Over_Speed_Warning_History';
   msg.fields{18}.units         = 'bool';
-  msg.fields{18}.start_bit     = 24;
+  msg.fields{18}.start_bit     = 32;
   msg.fields{18}.bit_length    = 1;
   msg.fields{18}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{18}.data_type     = 'UNSIGNED';
@@ -286,7 +286,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{19}.name          = 'Over_Voltage_Warning';
   msg.fields{19}.units         = 'bool';
-  msg.fields{19}.start_bit     = 9;
+  msg.fields{19}.start_bit     = 49;
   msg.fields{19}.bit_length    = 1;
   msg.fields{19}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{19}.data_type     = 'UNSIGNED';
@@ -295,7 +295,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{20}.name          = 'Over_Voltage_Warning_History';
   msg.fields{20}.units         = 'bool';
-  msg.fields{20}.start_bit     = 25;
+  msg.fields{20}.start_bit     = 33;
   msg.fields{20}.bit_length    = 1;
   msg.fields{20}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{20}.data_type     = 'UNSIGNED';
@@ -304,7 +304,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{21}.name          = 'Over_Speed_Alarm';
   msg.fields{21}.units         = 'bool';
-  msg.fields{21}.start_bit     = 10;
+  msg.fields{21}.start_bit     = 50;
   msg.fields{21}.bit_length    = 1;
   msg.fields{21}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{21}.data_type     = 'UNSIGNED';
@@ -313,7 +313,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{22}.name          = 'Over_Speed_Alarm_History';
   msg.fields{22}.units         = 'bool';
-  msg.fields{22}.start_bit     = 26;
+  msg.fields{22}.start_bit     = 34;
   msg.fields{22}.bit_length    = 1;
   msg.fields{22}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{22}.data_type     = 'UNSIGNED';
@@ -322,7 +322,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{23}.name          = 'Over_Voltage_Alarm';
   msg.fields{23}.units         = 'bool';
-  msg.fields{23}.start_bit     = 11;
+  msg.fields{23}.start_bit     = 51;
   msg.fields{23}.bit_length    = 1;
   msg.fields{23}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{23}.data_type     = 'UNSIGNED';
@@ -331,7 +331,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{24}.name          = 'Over_Voltage_Alarm_History';
   msg.fields{24}.units         = 'bool';
-  msg.fields{24}.start_bit     = 27;
+  msg.fields{24}.start_bit     = 35;
   msg.fields{24}.bit_length    = 1;
   msg.fields{24}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{24}.data_type     = 'UNSIGNED';
@@ -340,7 +340,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{25}.name          = 'ADC_Calibration_Problem';
   msg.fields{25}.units         = 'bool';
-  msg.fields{25}.start_bit     = 12;
+  msg.fields{25}.start_bit     = 52;
   msg.fields{25}.bit_length    = 1;
   msg.fields{25}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{25}.data_type     = 'UNSIGNED';
@@ -349,7 +349,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{26}.name          = 'ADC_Calibration_Problem_History';
   msg.fields{26}.units         = 'bool';
-  msg.fields{26}.start_bit     = 28;
+  msg.fields{26}.start_bit     = 36;
   msg.fields{26}.bit_length    = 1;
   msg.fields{26}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{26}.data_type     = 'UNSIGNED';
@@ -358,7 +358,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{27}.name          = 'Limp_Home_Mode';
   msg.fields{27}.units         = 'bool';
-  msg.fields{27}.start_bit     = 13;
+  msg.fields{27}.start_bit     = 53;
   msg.fields{27}.bit_length    = 1;
   msg.fields{27}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{27}.data_type     = 'UNSIGNED';
@@ -367,7 +367,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{28}.name          = 'Limp_Home_Mode_History';
   msg.fields{28}.units         = 'bool';
-  msg.fields{28}.start_bit     = 29;
+  msg.fields{28}.start_bit     = 37;
   msg.fields{28}.bit_length    = 1;
   msg.fields{28}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{28}.data_type     = 'UNSIGNED';
@@ -376,7 +376,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{29}.name          = 'Inverter_Fault_Occured';
   msg.fields{29}.units         = 'bool';
-  msg.fields{29}.start_bit     = 14;
+  msg.fields{29}.start_bit     = 54;
   msg.fields{29}.bit_length    = 1;
   msg.fields{29}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{29}.data_type     = 'UNSIGNED';
@@ -385,7 +385,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{30}.name          = 'Iverter_Fault_Occured_History';
   msg.fields{30}.units         = 'bool';
-  msg.fields{30}.start_bit     = 30;
+  msg.fields{30}.start_bit     = 38;
   msg.fields{30}.bit_length    = 1;
   msg.fields{30}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{30}.data_type     = 'UNSIGNED';
@@ -394,7 +394,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{31}.name          = 'Inverter_Fault';
   msg.fields{31}.units         = 'bool';
-  msg.fields{31}.start_bit     = 15;
+  msg.fields{31}.start_bit     = 55;
   msg.fields{31}.bit_length    = 1;
   msg.fields{31}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{31}.data_type     = 'UNSIGNED';
@@ -403,7 +403,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{32}.name          = 'Inverter_Fault_History';
   msg.fields{32}.units         = 'bool';
-  msg.fields{32}.start_bit     = 31;
+  msg.fields{32}.start_bit     = 39;
   msg.fields{32}.bit_length    = 1;
   msg.fields{32}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{32}.data_type     = 'UNSIGNED';
@@ -412,7 +412,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{33}.name          = 'Forced_Voltage_Control';
   msg.fields{33}.units         = 'bool';
-  msg.fields{33}.start_bit     = 48;
+  msg.fields{33}.start_bit     = 8;
   msg.fields{33}.bit_length    = 1;
   msg.fields{33}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{33}.data_type     = 'UNSIGNED';
@@ -421,7 +421,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{34}.name          = 'CAN_Limits_In_Effect';
   msg.fields{34}.units         = 'bool';
-  msg.fields{34}.start_bit     = 49;
+  msg.fields{34}.start_bit     = 9;
   msg.fields{34}.bit_length    = 1;
   msg.fields{34}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{34}.data_type     = 'UNSIGNED';
@@ -430,7 +430,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{35}.name          = 'System_Disabled_In_Motion';
   msg.fields{35}.units         = 'bool';
-  msg.fields{35}.start_bit     = 50;
+  msg.fields{35}.start_bit     = 10;
   msg.fields{35}.bit_length    = 1;
   msg.fields{35}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{35}.data_type     = 'UNSIGNED';
@@ -439,7 +439,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{36}.name          = 'ABC_Phase_Order';
   msg.fields{36}.units         = 'bool';
-  msg.fields{36}.start_bit     = 51;
+  msg.fields{36}.start_bit     = 11;
   msg.fields{36}.bit_length    = 1;
   msg.fields{36}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{36}.data_type     = 'UNSIGNED';
@@ -448,7 +448,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{37}.name          = 'Regen_Switch_Open';
   msg.fields{37}.units         = 'bool';
-  msg.fields{37}.start_bit     = 52;
+  msg.fields{37}.start_bit     = 12;
   msg.fields{37}.bit_length    = 1;
   msg.fields{37}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{37}.data_type     = 'UNSIGNED';
@@ -457,7 +457,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{38}.name          = 'Current_Transducer_Fault_Ibus/Ileg';
   msg.fields{38}.units         = 'bool';
-  msg.fields{38}.start_bit     = 53;
+  msg.fields{38}.start_bit     = 13;
   msg.fields{38}.bit_length    = 1;
   msg.fields{38}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{38}.data_type     = 'UNSIGNED';
@@ -466,7 +466,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{39}.name          = 'Acceleration_Limited';
   msg.fields{39}.units         = 'bool';
-  msg.fields{39}.start_bit     = 54;
+  msg.fields{39}.start_bit     = 14;
   msg.fields{39}.bit_length    = 1;
   msg.fields{39}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{39}.data_type     = 'UNSIGNED';
@@ -475,7 +475,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{40}.name          = 'Using_Raw_Speed';
   msg.fields{40}.units         = 'bool';
-  msg.fields{40}.start_bit     = 55;
+  msg.fields{40}.start_bit     = 15;
   msg.fields{40}.bit_length    = 1;
   msg.fields{40}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{40}.data_type     = 'UNSIGNED';
@@ -484,7 +484,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{41}.name          = 'Turbo_Mode';
   msg.fields{41}.units         = 'bool';
-  msg.fields{41}.start_bit     = 56;
+  msg.fields{41}.start_bit     = 0;
   msg.fields{41}.bit_length    = 1;
   msg.fields{41}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{41}.data_type     = 'UNSIGNED';
@@ -493,7 +493,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{42}.name          = 'Forced_Open_Loop';
   msg.fields{42}.units         = 'bool';
-  msg.fields{42}.start_bit     = 57;
+  msg.fields{42}.start_bit     = 1;
   msg.fields{42}.bit_length    = 1;
   msg.fields{42}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{42}.data_type     = 'UNSIGNED';
@@ -502,7 +502,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{43}.name          = 'Motor_Stalled';
   msg.fields{43}.units         = 'bool';
-  msg.fields{43}.start_bit     = 58;
+  msg.fields{43}.start_bit     = 2;
   msg.fields{43}.bit_length    = 1;
   msg.fields{43}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{43}.data_type     = 'UNSIGNED';
@@ -511,7 +511,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{44}.name          = 'Phase_Current_Sensor_Error';
   msg.fields{44}.units         = 'bool';
-  msg.fields{44}.start_bit     = 59;
+  msg.fields{44}.start_bit     = 3;
   msg.fields{44}.bit_length    = 1;
   msg.fields{44}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{44}.data_type     = 'UNSIGNED';
@@ -520,7 +520,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{45}.name          = 'Bad_Position_Signal';
   msg.fields{45}.units         = 'bool';
-  msg.fields{45}.start_bit     = 60;
+  msg.fields{45}.start_bit     = 4;
   msg.fields{45}.bit_length    = 1;
   msg.fields{45}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{45}.data_type     = 'UNSIGNED';
@@ -529,7 +529,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{46}.name          = 'Bad_Switch';
   msg.fields{46}.units         = 'bool';
-  msg.fields{46}.start_bit     = 61;
+  msg.fields{46}.start_bit     = 5;
   msg.fields{46}.bit_length    = 1;
   msg.fields{46}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{46}.data_type     = 'UNSIGNED';
@@ -538,7 +538,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{47}.name          = 'Invalid_Power_Supply';
   msg.fields{47}.units         = 'bool';
-  msg.fields{47}.start_bit     = 62;
+  msg.fields{47}.start_bit     = 6;
   msg.fields{47}.bit_length    = 1;
   msg.fields{47}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{47}.data_type     = 'UNSIGNED';
@@ -547,7 +547,7 @@ function msg = CANRx_UQM_08EFrrss()
   
   msg.fields{48}.name          = 'Power_Switches_Off';
   msg.fields{48}.units         = 'bool';
-  msg.fields{48}.start_bit     = 63;
+  msg.fields{48}.start_bit     = 7;
   msg.fields{48}.bit_length    = 1;
   msg.fields{48}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{48}.data_type     = 'UNSIGNED';

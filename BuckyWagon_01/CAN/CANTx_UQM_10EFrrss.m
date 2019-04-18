@@ -110,7 +110,7 @@ function msg = CANTx_UQM_10EFrrss()
   msg.channel                 = 1;
 
   msg.idext                   = 'EXTENDED';
-  msg.id                      = hex2dec('10EF0201');
+  msg.id                      = hex2dec('10EFEF03');
   msg.idmask                  = hex2dec('ffffffff');
   msg.idinherit               =  0;
   msg.payload_size            =  8;
@@ -124,7 +124,7 @@ function msg = CANTx_UQM_10EFrrss()
 
   msg.fields{1}.name          = 'Control_Mode';
   msg.fields{1}.units         = 'enum';
-  msg.fields{1}.start_bit     = 0;
+  msg.fields{1}.start_bit     = 56;
   msg.fields{1}.bit_length    = 8;
   msg.fields{1}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{1}.data_type     = 'UNSIGNED';
@@ -133,7 +133,7 @@ function msg = CANTx_UQM_10EFrrss()
 
   msg.fields{2}.name          = 'Acceleration_Limit';
   msg.fields{2}.units         = 'rpm/s';
-  msg.fields{2}.start_bit     = 16;
+  msg.fields{2}.start_bit     = 40;
   msg.fields{2}.bit_length    = 16;
   msg.fields{2}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{2}.data_type     = 'UNSIGNED';
@@ -142,7 +142,7 @@ function msg = CANTx_UQM_10EFrrss()
   
   msg.fields{3}.name          = 'Suge_Limit';
   msg.fields{3}.units         = 'rpm/s';
-  msg.fields{3}.start_bit     = 32;
+  msg.fields{3}.start_bit     = 24;
   msg.fields{3}.bit_length    = 16;
   msg.fields{3}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{3}.data_type     = 'UNSIGNED';

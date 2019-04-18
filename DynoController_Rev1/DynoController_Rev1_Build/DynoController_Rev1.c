@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'DynoController_Rev1'.
  *
- * Model version                  : 1.305
+ * Model version                  : 1.309
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Fri Apr 13 00:18:48 2018
+ * C/C++ source code generated on : Thu Feb 28 16:20:04 2019
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -65,6 +65,7 @@ void DynoController_Rev1_initialize(boolean_T firstTime)
     DynoController_Rev1_B.s38_ReadCANMessage_o7 = 0.0;
     DynoController_Rev1_B.s37_BatteryVoltage = 0.0;
     DynoController_Rev1_B.s37_BatteryCurrent = 0.0;
+    DynoController_Rev1_B.s102_ConnectCommand = 0.0;
     DynoController_Rev1_B.s37_MaxCellTemperature = 0.0;
     DynoController_Rev1_B.s54_Merge = 0.0;
     DynoController_Rev1_B.s56_Merge = 0.0;

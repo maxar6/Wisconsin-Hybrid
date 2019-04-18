@@ -18,30 +18,184 @@
 
 
 
+
+
+
+
+
+
+
    Masked IDs: CAN_1 (ext)
 
 
+   masked_id = 0x04EF03EF
+   masked_id = 0x18EF03EF
+   masked_id = 0x14EF03EF
+   masked_id = 0x1CEF03EF
+   masked_id = 0x0CEF03EF
+   masked_id = 0x08EF03EF
+   masked_id = 0x18FF038B
    masked_id = 0x18FF0320
 
    Masks: CAN_1 (ext)
-   computed mask = 0x1FFFFFFF
-   computed id   = 0x18FF0320
+   computed mask = 0x03EFFF10
+   computed id   = 0x00EF0300
 
  */
 
 /*---------------------------------------------------------------*/
-MHCAN_directslot MHCAN_directslot_RxSlot_3511p0001 = { 0 };
+MHCAN_directslot MHCAN_directslot_RxSlot_561p0011 = { 0 };
 
-static boolean_T MHCAN_handler_RxSlot_3511p0001(S_CANMessage *messageObj)
+static boolean_T MHCAN_handler_RxSlot_561p0011(S_CANMessage *messageObj)
+{
+  if ((messageObj->u4MessageID & 0x1FFFFFFF) == 0x04EF03EF) {
+    messageObj->u1Length = messageObj->u1Length > 8 ? 8 : messageObj->u1Length;
+
+    {
+      boolean_T new_message;
+      new_message = !MHCAN_directslot_RxSlot_561p0011.ready;
+      MHCAN_directslot_RxSlot_561p0011.message = *messageObj;
+      MHCAN_directslot_RxSlot_561p0011.ready = 1;
+    }
+
+    return 1;
+  }
+
+  return 0;
+}
+
+MHCAN_directslot MHCAN_directslot_RxSlot_564p0011 = { 0 };
+
+static boolean_T MHCAN_handler_RxSlot_564p0011(S_CANMessage *messageObj)
+{
+  if ((messageObj->u4MessageID & 0x1FFFFFFF) == 0x18EF03EF) {
+    messageObj->u1Length = messageObj->u1Length > 8 ? 8 : messageObj->u1Length;
+
+    {
+      boolean_T new_message;
+      new_message = !MHCAN_directslot_RxSlot_564p0011.ready;
+      MHCAN_directslot_RxSlot_564p0011.message = *messageObj;
+      MHCAN_directslot_RxSlot_564p0011.ready = 1;
+    }
+
+    return 1;
+  }
+
+  return 0;
+}
+
+MHCAN_directslot MHCAN_directslot_RxSlot_563p0011 = { 0 };
+
+static boolean_T MHCAN_handler_RxSlot_563p0011(S_CANMessage *messageObj)
+{
+  if ((messageObj->u4MessageID & 0x1FFFFFFF) == 0x14EF03EF) {
+    messageObj->u1Length = messageObj->u1Length > 8 ? 8 : messageObj->u1Length;
+
+    {
+      boolean_T new_message;
+      new_message = !MHCAN_directslot_RxSlot_563p0011.ready;
+      MHCAN_directslot_RxSlot_563p0011.message = *messageObj;
+      MHCAN_directslot_RxSlot_563p0011.ready = 1;
+    }
+
+    return 1;
+  }
+
+  return 0;
+}
+
+MHCAN_directslot MHCAN_directslot_RxSlot_559p0011 = { 0 };
+
+static boolean_T MHCAN_handler_RxSlot_559p0011(S_CANMessage *messageObj)
+{
+  if ((messageObj->u4MessageID & 0x1FFFFFFF) == 0x1CEF03EF) {
+    messageObj->u1Length = messageObj->u1Length > 8 ? 8 : messageObj->u1Length;
+
+    {
+      boolean_T new_message;
+      new_message = !MHCAN_directslot_RxSlot_559p0011.ready;
+      MHCAN_directslot_RxSlot_559p0011.message = *messageObj;
+      MHCAN_directslot_RxSlot_559p0011.ready = 1;
+    }
+
+    return 1;
+  }
+
+  return 0;
+}
+
+MHCAN_directslot MHCAN_directslot_RxSlot_560p0011 = { 0 };
+
+static boolean_T MHCAN_handler_RxSlot_560p0011(S_CANMessage *messageObj)
+{
+  if ((messageObj->u4MessageID & 0x1FFFFFFF) == 0x0CEF03EF) {
+    messageObj->u1Length = messageObj->u1Length > 8 ? 8 : messageObj->u1Length;
+
+    {
+      boolean_T new_message;
+      new_message = !MHCAN_directslot_RxSlot_560p0011.ready;
+      MHCAN_directslot_RxSlot_560p0011.message = *messageObj;
+      MHCAN_directslot_RxSlot_560p0011.ready = 1;
+    }
+
+    return 1;
+  }
+
+  return 0;
+}
+
+MHCAN_directslot MHCAN_directslot_RxSlot_562p0011 = { 0 };
+
+static boolean_T MHCAN_handler_RxSlot_562p0011(S_CANMessage *messageObj)
+{
+  if ((messageObj->u4MessageID & 0x1FFFFFFF) == 0x08EF03EF) {
+    messageObj->u1Length = messageObj->u1Length > 8 ? 8 : messageObj->u1Length;
+
+    {
+      boolean_T new_message;
+      new_message = !MHCAN_directslot_RxSlot_562p0011.ready;
+      MHCAN_directslot_RxSlot_562p0011.message = *messageObj;
+      MHCAN_directslot_RxSlot_562p0011.ready = 1;
+    }
+
+    return 1;
+  }
+
+  return 0;
+}
+
+MHCAN_directslot MHCAN_directslot_RxSlot_11142p0005 = { 0 };
+
+static boolean_T MHCAN_handler_RxSlot_11142p0005(S_CANMessage *messageObj)
+{
+  if ((messageObj->u4MessageID & 0x1FFFFFFF) == 0x18FF038B) {
+    messageObj->u1Length = messageObj->u1Length > 8 ? 8 : messageObj->u1Length;
+
+    {
+      boolean_T new_message;
+      new_message = !MHCAN_directslot_RxSlot_11142p0005.ready;
+      MHCAN_directslot_RxSlot_11142p0005.message = *messageObj;
+      MHCAN_directslot_RxSlot_11142p0005.ready = 1;
+    }
+
+    return 1;
+  }
+
+  return 0;
+}
+
+MHCAN_directslot MHCAN_directslot_RxSlot_11092p0006 = { 0 };
+
+static boolean_T MHCAN_handler_RxSlot_11092p0006(S_CANMessage *messageObj)
 {
   if ((messageObj->u4MessageID & 0x1FFFFFFF) == 0x18FF0320) {
     messageObj->u1Length = messageObj->u1Length > 8 ? 8 : messageObj->u1Length;
 
     {
       boolean_T new_message;
-      new_message = !MHCAN_directslot_RxSlot_3511p0001.ready;
-      MHCAN_directslot_RxSlot_3511p0001.message = *messageObj;
-      MHCAN_directslot_RxSlot_3511p0001.ready = 1;
+      new_message = !MHCAN_directslot_RxSlot_11092p0006.ready;
+      MHCAN_directslot_RxSlot_11092p0006.message = *messageObj;
+      MHCAN_directslot_RxSlot_11092p0006.ready = 1;
     }
 
     return 1;
@@ -51,11 +205,25 @@ static boolean_T MHCAN_handler_RxSlot_3511p0001(S_CANMessage *messageObj)
 }
 
 static const MHCAN_id_dispatcher_T MHCAN_consumers_0x1FFFFFFF[] = {
-  { 0x18ff0320, MHCAN_handler_RxSlot_3511p0001 },
+  { 0x04ef03ef, MHCAN_handler_RxSlot_561p0011 },
+
+  { 0x18ef03ef, MHCAN_handler_RxSlot_564p0011 },
+
+  { 0x14ef03ef, MHCAN_handler_RxSlot_563p0011 },
+
+  { 0x1cef03ef, MHCAN_handler_RxSlot_559p0011 },
+
+  { 0x0cef03ef, MHCAN_handler_RxSlot_560p0011 },
+
+  { 0x08ef03ef, MHCAN_handler_RxSlot_562p0011 },
+
+  { 0x18ff038b, MHCAN_handler_RxSlot_11142p0005 },
+
+  { 0x18ff0320, MHCAN_handler_RxSlot_11092p0006 },
 };
 
 static const MHCAN_mask_dispatcher_T masks[] = {
-  { 0x1FFFFFFF, 1, 0, (MHCAN_id_dispatcher_T *) MHCAN_consumers_0x1FFFFFFF },
+  { 0x1FFFFFFF, 8, 0, (MHCAN_id_dispatcher_T *) MHCAN_consumers_0x1FFFFFFF },
 };
 
 /*---------------------------------------------------------------*/

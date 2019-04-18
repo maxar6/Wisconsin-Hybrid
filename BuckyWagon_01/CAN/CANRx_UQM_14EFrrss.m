@@ -110,7 +110,7 @@ function msg = CANRx_UQM_14EFrrss()
   msg.channel                 = 1;
 
   msg.idext                   = 'EXTENDED';
-  msg.id                      = hex2dec('14EF0102');
+  msg.id                      = hex2dec('14EF03EF');
   msg.idmask                  = hex2dec('ffffffff');
   msg.idinherit               =  0;
   msg.payload_size            =  8;
@@ -124,7 +124,7 @@ function msg = CANRx_UQM_14EFrrss()
 
   msg.fields{1}.name          = 'Leg_Current';
   msg.fields{1}.units         = 'Amps';
-  msg.fields{1}.start_bit     = 0;
+  msg.fields{1}.start_bit     = 56;
   msg.fields{1}.bit_length    = 8;
   msg.fields{1}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{1}.data_type     = 'UNSIGNED';
@@ -133,7 +133,7 @@ function msg = CANRx_UQM_14EFrrss()
 
   msg.fields{2}.name          = 'High_Bound';
   msg.fields{2}.units         = '%';
-  msg.fields{2}.start_bit     = 8;
+  msg.fields{2}.start_bit     = 48;
   msg.fields{2}.bit_length    = 8;
   msg.fields{2}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{2}.data_type     = 'UNSIGNED';
@@ -142,7 +142,7 @@ function msg = CANRx_UQM_14EFrrss()
   
   msg.fields{3}.name          = 'Low_Bound';
   msg.fields{3}.units         = '%';
-  msg.fields{3}.start_bit     = 16;
+  msg.fields{3}.start_bit     = 40;
   msg.fields{3}.bit_length    = 8;
   msg.fields{3}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{3}.data_type     = 'UNSIGNED';
@@ -151,7 +151,7 @@ function msg = CANRx_UQM_14EFrrss()
   
   msg.fields{4}.name          = 'Stall_Safety_Percentage';
   msg.fields{4}.units         = '%';
-  msg.fields{4}.start_bit     = 24;
+  msg.fields{4}.start_bit     = 32;
   msg.fields{4}.bit_length    = 8;
   msg.fields{4}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{4}.data_type     = 'UNSIGNED';
@@ -160,7 +160,7 @@ function msg = CANRx_UQM_14EFrrss()
   
   msg.fields{5}.name          = 'Angular_Distance';
   msg.fields{5}.units         = 'deg';
-  msg.fields{5}.start_bit     = 32;
+  msg.fields{5}.start_bit     = 24;
   msg.fields{5}.bit_length    = 16;
   msg.fields{5}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{5}.data_type     = 'UNSIGNED';
@@ -169,7 +169,7 @@ function msg = CANRx_UQM_14EFrrss()
  
   msg.fields{6}.name          = 'Torque_Desired';
   msg.fields{6}.units         = 'Nm';
-  msg.fields{6}.start_bit     = 48;
+  msg.fields{6}.start_bit     = 8;
   msg.fields{6}.bit_length    = 16;
   msg.fields{6}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{6}.data_type     = 'UNSIGNED';

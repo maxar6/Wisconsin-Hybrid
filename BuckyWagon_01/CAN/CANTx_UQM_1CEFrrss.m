@@ -110,13 +110,13 @@ function msg = CANTx_UQM_1CEFrrss()
   msg.channel                 = 1;
 
   msg.idext                   = 'EXTENDED';
-  msg.id                      = hex2dec('1CEF0201');
+  msg.id                      = hex2dec('1CEFEF03');
   msg.idmask                  = hex2dec('ffffffff');
   msg.idinherit               =  0;
   msg.payload_size            =  8;
   msg.payload_value           = [];
   msg.payload_mask            = [];
-  msg.interval                = 50;
+  msg.interval                = 12;
 
 %   msg.idcontent{1}.name       = 'Node ID';
 %   msg.idcontent{1}.start_bit  = 0;
@@ -124,7 +124,7 @@ function msg = CANTx_UQM_1CEFrrss()
 
   msg.fields{1}.name          = 'Heartbeat_Identifier_1';
   msg.fields{1}.units         = '';
-  msg.fields{1}.start_bit     = 0;
+  msg.fields{1}.start_bit     = 56;
   msg.fields{1}.bit_length    = 16;
   msg.fields{1}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{1}.data_type     = 'UNSIGNED';
@@ -133,7 +133,7 @@ function msg = CANTx_UQM_1CEFrrss()
 
   msg.fields{2}.name          = 'Clear_Watchdog_Error';
   msg.fields{2}.units         = 'enum';
-  msg.fields{2}.start_bit     = 16;
+  msg.fields{2}.start_bit     = 40;
   msg.fields{2}.bit_length    = 8;
   msg.fields{2}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{2}.data_type     = 'UNSIGNED';
@@ -142,7 +142,7 @@ function msg = CANTx_UQM_1CEFrrss()
   
   msg.fields{3}.name          = 'Heartbeat_Identifier_2';
   msg.fields{3}.units         = '';
-  msg.fields{3}.start_bit     = 24;
+  msg.fields{3}.start_bit     = 32;
   msg.fields{3}.bit_length    = 8;
   msg.fields{3}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{3}.data_type     = 'UNSIGNED';

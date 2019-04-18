@@ -110,7 +110,7 @@ function msg = CANRx_UQM_1CEFrrss()
   msg.channel                 = 1;
 
   msg.idext                   = 'EXTENDED';
-  msg.id                      = hex2dec('1CEF0102');
+  msg.id                      = hex2dec('1CEF03EF');
   msg.idmask                  = hex2dec('ffffffff');
   msg.idinherit               =  0;
   msg.payload_size            =  8;
@@ -124,7 +124,7 @@ function msg = CANRx_UQM_1CEFrrss()
 
   msg.fields{1}.name          = 'Command_Watchdog_Status';
   msg.fields{1}.units         = '';
-  msg.fields{1}.start_bit     = 0;
+  msg.fields{1}.start_bit     = 56;
   msg.fields{1}.bit_length    = 8;
   msg.fields{1}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{1}.data_type     = 'UNSIGNED';
@@ -133,7 +133,7 @@ function msg = CANRx_UQM_1CEFrrss()
 
   msg.fields{2}.name          = 'Status_A';
   msg.fields{2}.units         = '';
-  msg.fields{2}.start_bit     = 16;
+  msg.fields{2}.start_bit     = 32;
   msg.fields{2}.bit_length    = 16;
   msg.fields{2}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{2}.data_type     = 'UNSIGNED';
@@ -142,7 +142,7 @@ function msg = CANRx_UQM_1CEFrrss()
   
   msg.fields{3}.name          = 'Software_Release_Sub_Version';
   msg.fields{3}.units         = '';
-  msg.fields{3}.start_bit     = 32;
+  msg.fields{3}.start_bit     = 24;
   msg.fields{3}.bit_length    = 4;
   msg.fields{3}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{3}.data_type     = 'UNSIGNED';
@@ -151,7 +151,7 @@ function msg = CANRx_UQM_1CEFrrss()
   
   msg.fields{4}.name          = 'Software_Release_Minor_Version';
   msg.fields{4}.units         = '';
-  msg.fields{4}.start_bit     = 36;
+  msg.fields{4}.start_bit     = 28;
   msg.fields{4}.bit_length    = 8;
   msg.fields{4}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{4}.data_type     = 'UNSIGNED';
@@ -160,7 +160,7 @@ function msg = CANRx_UQM_1CEFrrss()
   
   msg.fields{5}.name          = 'Software_Release_Major_Version';
   msg.fields{5}.units         = '';
-  msg.fields{5}.start_bit     = 44;
+  msg.fields{5}.start_bit     = 20;
   msg.fields{5}.bit_length    = 4;
   msg.fields{5}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{5}.data_type     = 'UNSIGNED';
@@ -169,7 +169,7 @@ function msg = CANRx_UQM_1CEFrrss()
   
   msg.fields{6}.name          = 'Status_C';
   msg.fields{6}.units         = '';
-  msg.fields{6}.start_bit     = 48;
+  msg.fields{6}.start_bit     = 8;
   msg.fields{6}.bit_length    = 4;
   msg.fields{6}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{6}.data_type     = 'UNSIGNED';
@@ -178,7 +178,7 @@ function msg = CANRx_UQM_1CEFrrss()
   
   msg.fields{7}.name          = 'Watchdog_Error';
   msg.fields{7}.units         = '';
-  msg.fields{7}.start_bit     = 56;
+  msg.fields{7}.start_bit     = 0;
   msg.fields{7}.bit_length    = 1;
   msg.fields{7}.byte_order    = 'LITTLE_ENDIAN';
   msg.fields{7}.data_type     = 'UNSIGNED';
