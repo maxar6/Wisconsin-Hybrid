@@ -4,16 +4,16 @@
 ###  Starting MotoHawk Build              ###
 ###  MotoHawk version: 2011a_sp0.184      ###
 ###    MATLAB version: 7.12.0.635 (R2011a)###
-###        17-Apr-2019 19:03:01           ###
+###        18-Apr-2019 08:30:50           ###
 ###                                       ###
 #############################################
  
 Target Module:   ECU565-128 (DEV)
-DEV Executable:  BuckyWagon_01_182.srz
-MotoTune DLL:    BuckyWago_182.dll
+DEV Executable:  BuckyWagon_01_184.srz
+MotoTune DLL:    BuckyWago_184.dll
  
 Project GUID:    3c32a120-d49a-4164-87-fe-ac-4b-55-ed-6f
-Build GUID:      38ba9199-da5c-45bc-a3-2a-ec-41-da-ad-73
+Build GUID:      df5fc22c-1498-48ea-89-0c-9e-4e-62-43-4f
  
 ### Starting build procedure for model: BuckyWagon_01
 ### Generating code into build folder: C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build
@@ -37,8 +37,6 @@ changed from 125 to 87.5, to fit into the size of the field.
 Strategy/Calculations/Goto4</a>' not found} 
 {Warning: Matching "From" for "Goto" '<a href="matlab:open_and_hilite_system ('BuckyWagon_01/Foreground/Gauges/Goto')">BuckyWagon_01/Foreground/Gauges/Goto</a>' not
 found} 
-{Warning: Unconnected output line found on 'BuckyWagon_01/Foreground/Control
-Strategy/Bus Selector5' (output port: 2)} 
 {Warning: Unconnected line found in 'BuckyWagon_01/Foreground/Control
 Strategy/EHPAS_PercentControl' (starts 75% from left and 95% from top of view)} 
 {Warning: Output port 12 of '<a href="matlab:open_and_hilite_system ('BuckyWagon_01/Foreground/Control Strategy/Calculations/kW calculation1')">BuckyWagon_01/Foreground/Control
@@ -46,14 +44,6 @@ Strategy/Calculations/kW calculation1</a>' is not connected.}
 {Warning: Input port 1 of '<a href="matlab:open_and_hilite_system ('BuckyWagon_01/Foreground/Control Strategy/Calculations/kW calculation1/Instantaneous DC-DC Watts')">BuckyWagon_01/Foreground/Control
 Strategy/Calculations/kW calculation1/Instantaneous DC-DC Watts</a>' is not
 connected.} 
-{Warning: Input port 1 of '<a href="matlab:open_and_hilite_system ('BuckyWagon_01/Foreground/Control Strategy/Calculations/motohawk_probe11')">BuckyWagon_01/Foreground/Control
-Strategy/Calculations/motohawk_probe11</a>' is not connected.} 
-{Warning: Input port 1 of '<a href="matlab:open_and_hilite_system ('BuckyWagon_01/Foreground/Control Strategy/Calculations/motohawk_probe8')">BuckyWagon_01/Foreground/Control
-Strategy/Calculations/motohawk_probe8</a>' is not connected.} 
-{Warning: Input port 1 of '<a href="matlab:open_and_hilite_system ('BuckyWagon_01/Foreground/Control Strategy/Calculations/motohawk_probe9')">BuckyWagon_01/Foreground/Control
-Strategy/Calculations/motohawk_probe9</a>' is not connected.} 
-{Warning: Input port 2 of '<a href="matlab:open_and_hilite_system ('BuckyWagon_01/Foreground/Control Strategy/Cooling')">BuckyWagon_01/Foreground/Control Strategy/Cooling</a>' is
-not connected.} 
 ### Invoking Target Language Compiler on BuckyWagon_01.rtw
 ### Using System Target File: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tlc
 ### Loading TLC function libraries
@@ -62,7 +52,7 @@ not connected.}
 ...............................................................................
 ...............................................................................
 ...............................................................................
-.........................
+........................
 ### Caching model source code
 ...............................................................................
 ...............................................................................
@@ -89,14 +79,14 @@ not connected.}
 .
 ### Writing header file BuckyWagon_01.h
 ### Writing header file BuckyWagon_01_types.h
-.
 ### Writing source file BuckyWagon_01_Foreground.c
+.
 ### Writing source file BuckyWagon_01_MiniViewDisplay.c
-.
 ### Writing header file BuckyWagon_01_Foreground.h
-### Writing header file BuckyWagon_01_MiniViewDisplay.h
 .
+### Writing header file BuckyWagon_01_MiniViewDisplay.h
 ### Writing header file rtwtypes.h
+.
 ### Writing header file rt_nonfinite.h
 ### Writing source file rt_nonfinite.c
 .
@@ -105,9 +95,9 @@ not connected.}
 ...............................................................................
 ...............................................................................
 ...............................................................................
-.............
+............
 ### Processing Template Makefile: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tmf
-### Creating BuckyWagon_01.mk from C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tmf
+### BuckyWagon_01.mk which is generated from C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tmf is up to date
 ### Building BuckyWagon_01: .\BuckyWagon_01.bat
 ### Created Code and Build Scripts.  Ready to Build ### 
 ### Successful completion of build procedure for model: BuckyWagon_01
@@ -193,32 +183,32 @@ s-records:
  
 BUILD SUCCEEDED 
  
-Total time: 13.7 seconds. 
+Total time: 12.4 seconds. 
  
 ### Call MotoConvert 
 Project format is MPC5xx 
 Toolchain format is GCC 
 Transforming range 0x00400000-0x0041FFFF into 64 byte pages... 
 Transforming range 0x00000000-0x000FFFFF into 64 byte pages... 
-Searching for Table Database address 'EriRequestTableList'...Found at 0x00049A94 
+Searching for Table Database address 'EriRequestTableList'...Found at 0x00049A84 
 Searching for CRC Table address 'g_pCRCBlockPtr' ...Found at 0x00010000 
 Calculating Application defined CRC's...OK. 
 Searching for initialised section '.fixed_ramcals' aliased to '.fixed_romcals' ... 
 Searching for initialised section '.ramcals' aliased to '.romcals' ... 
-    Adding RAM[0x003F8288], ROM[0x00050E80], Length[0x0000003C] 
+    Adding RAM[0x003F8288], ROM[0x00050E60], Length[0x0000003C] 
 Searching for initialised section '.sdata' aliased to '.romsdata' ... 
-    Adding RAM[0x003F7000], ROM[0x00050EEC], Length[0x00000019] 
+    Adding RAM[0x003F7000], ROM[0x00050ECC], Length[0x00000019] 
 Searching for initialised section '.data' aliased to '.romdata' ... 
-    Ignoring zero length section at RAM[0x003F8288], ROM[0x00050F08] 
+    Ignoring zero length section at RAM[0x003F8288], ROM[0x00050EE8] 
 Complete. 
 Writing file sr://BuckyWagon_01.sr... 
-Encrypting 'sr://BuckyWagon_01.sr' into 'srz://.\Target\BuckyWagon_01_182.srz' ... 
+Encrypting 'sr://BuckyWagon_01.sr' into 'srz://.\Target\BuckyWagon_01_184.srz' ... 
 Done. 
 ### Creating Build Statistics 
 Memory Summary:
-	FLASH:                     262557 bytes   27% of 982784
+	FLASH:                     262533 bytes   27% of 982784
 	    NonVolatileDefault:        60 bytes    0% of 982784
-	    BuckyWagon_01_Foreground:23400 bytes    2% of 982784
+	    BuckyWagon_01_Foreground:23404 bytes    2% of 982784
 	DECRAM:                      4096 bytes  100% of   4096
 	    FgndTimeStack:           3072 bytes   75% of   4096
 	    IdleStack:               1024 bytes   25% of   4096
@@ -226,18 +216,18 @@ Memory Summary:
 	    NonVolatileWork:           60 bytes    0% of  36720
 	    BgndStack:               2048 bytes    6% of  36720
 	    InterruptStack:          1536 bytes    4% of  36720
-	EXTENDED_RAM:                5984 bytes    1% of  1024K
-	    BuckyWagon_01_B:         1008 bytes    0% of  1024K
+	EXTENDED_RAM:                5964 bytes    1% of  1024K
+	    BuckyWagon_01_B:         1004 bytes    0% of  1024K
 	    BuckyWagon_01_DWork:      300 bytes    0% of  1024K
 	    BuckyWagon_01_M_:           4 bytes    0% of  1024K
 	    VolatileWork:              12 bytes    0% of  1024K
-	CAL_SPACE:                   9940 bytes   15% of  65536
-	    ConstantWork:            9784 bytes   15% of  65536
+	CAL_SPACE:                   9944 bytes   15% of  65536
+	    ConstantWork:            9788 bytes   15% of  65536
 	EEPROM_SPACE:                  63 bytes    1% of   8192
 
-### Copy BuckyWago_182.dll and BuckyWagon_01_182.srz 
+### Copy BuckyWago_184.dll and BuckyWagon_01_184.srz 
 ### Successful Build with MotoCoder 
-Elapsed Build Time: 3 minutes, 13.5 seconds  (193.5 seconds)
+Elapsed Build Time: 2 minutes, 37.4 seconds  (157.4 seconds)
 {Warning: Block diagram 'BuckyWagon_01' contains one or more parameterized library
 links.  To find the parameterized links use the Model Advisor.  The diagram has
 been saved but may not behave as you intended.} 
@@ -248,8 +238,8 @@ been saved but may not contain what you intended.}
 #############################################################################
 ###
 ### Target Module: ECU565-128
-### Created Development Executable: BuckyWagon_01_182.srz
-### Created MotoTune DLL: BuckyWago_182.dll
+### Created Development Executable: BuckyWagon_01_184.srz
+### Created MotoTune DLL: BuckyWago_184.dll
 ###
 ### Successful MotoHawk Build for model: BuckyWagon_01
 ###

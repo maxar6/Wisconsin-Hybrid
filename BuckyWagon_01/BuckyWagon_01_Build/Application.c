@@ -8,11 +8,11 @@
 #include "BuckyWagon_01.h"
 
 /*---- DEFINES --------------------------------------------------------------------------------------------*/
-#define DLL_NAME                       "BuckyWago_182"
-#define SRZ_NAME                       "BuckyWagon_01_182"
+#define DLL_NAME                       "BuckyWago_184"
+#define SRZ_NAME                       "BuckyWagon_01_184"
 #define MODEL_NAME                     "BuckyWagon_01"
 #define MODEL_GUID                     "3c32a120-d49a-4164-87-fe-ac-4b-55-ed-6f"
-#define BUILD_GUID                     "38ba9199-da5c-45bc-a3-2a-ec-41-da-ad-73"
+#define BUILD_GUID                     "df5fc22c-1498-48ea-89-0c-9e-4e-62-43-4f"
 #define TOKEN_GUID                     "DD8AD11F95A6FC42BFF9AC780840E4B4"
 #define MOTOHAWK_VERSION               "MotoHawk 2011a_sp0.184"
 #define MATLAB_VERSION                 "MATLAB 7.12.0"

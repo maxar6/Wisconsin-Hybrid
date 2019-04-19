@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1570"
+    ComputedModelVersion    "1.1575"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -26,42 +26,42 @@ Model {
   InitFcn		  "try, eval([bdroot '_setup']); catch, eval('model_setup', ''); end"
   UserBdParams		  "MotoHawkBuildVersion;MotoHawkBuildStats;MotoHawkModelSavedName;MotoHawkModelGUID;MotoHawkModelOpenT"
   "ime;MotoHawkModelElapsedTime;MotoHawkBuildInfo;MotoHawkBuildGUID"
-  MotoHawkBuildVersion	  "182"
+  MotoHawkBuildVersion	  "184"
   MotoHawkBuildStats	  "struct('TotalFLASH',{281540},'TotalEEPROM',{370},'TotalRAM',{18696},'AppFLASH',{71914},'AppEEP"
-  "ROM',{196},'AppRAM',{2166},'HeapRAM',{4096},'BuildSuccessCount',{185},'BuildErrorCount',{29},'OSRAM',{4754},'StackRA"
+  "ROM',{196},'AppRAM',{2166},'HeapRAM',{4096},'BuildSuccessCount',{187},'BuildErrorCount',{29},'OSRAM',{4754},'StackRA"
   "M',{7680},'FgndTimeStackSize',{3072},'FgndAngleStackSize',{0},'BgndStackSize',{2048},'IdleStackSize',{1024},'Interru"
   "ptStackSize',{1536},'RTWBlockIOSize',{852},'RTWDWorkSize',{364},'RTWPrevZCSize',{0},'VolatileSize',{272},'NonVolatil"
   "eSize',{196},'ConstantSize',{2208})"
   MotoHawkModelSavedName  "BuckyWagon_01"
   MotoHawkModelGUID	  "3c32a120-d49a-4164-87-fe-ac-4b-55-ed-6f"
   MotoHawkModelOpenTime	  "2019 4 17 14 50 33.484 "
-  MotoHawkModelElapsedTime "-3515363.342"
+  MotoHawkModelElapsedTime "-3246475.07"
   MotoHawkBuildInfo	  "struct('model_name',{'BuckyWagon_01'},'motohawk_version',{'2011a_sp0.184'},'motohawk_component_"
-  "version',{'0.0.7'},'matlab_version',{'7.12.0'},'build_version',{'181'},'module_type',{'ECU565-128'},'layout_type',{'"
+  "version',{'0.0.7'},'matlab_version',{'7.12.0'},'build_version',{'183'},'module_type',{'ECU565-128'},'layout_type',{'"
   "DEV'},'processor_family',{'PPC'},'processor_type',{'MPC565'},'toolchain_vendor',{'gcc-powerpc-eabi'},'toolchain_vers"
   "ion',{'4.4.0'},'component',{0},'archive_file',{'PCM128.a'},'enable_build',{1},'fptype',{0},'flash_size',{1048576},'e"
   "e_size',{8192},'ram_size',{36864},'decram_size',{4096},'module_memory_def',{'MPC565_ModMemoryDef_Dev'},'eri_table0_r"
   "ev',{9},'max_eri_table_size',{65535},'use_debug_vardecs',{1},'use_info_vardecs',{1},'fgnd_base_period_ms',{5},'bgnd_"
   "base_period_ms',{50},'root_build_dir',{'C:\\Users\\maxar\\Documents\\GitHub\\Wisconsin-Hybrid\\BuckyWagon_01'},'buil"
   "d_dir',{'C:\\Users\\maxar\\Documents\\GitHub\\Wisconsin-Hybrid\\BuckyWagon_01\\BuckyWagon_01_Build'},'dll_name',{'Bu"
-  "ckyWago_181'},'srz_name',{'BuckyWagon_01_181'},'fgnd_stack_size',{3072},'fgnd_angle_stack_size',{0},'bgnd_stack_size"
+  "ckyWago_183'},'srz_name',{'BuckyWagon_01_183'},'fgnd_stack_size',{3072},'fgnd_angle_stack_size',{0},'bgnd_stack_size"
   "',{2048},'idle_stack_size',{1024},'irq_stack_size',{1536},'heap_size',{4096},'heap_margin',{409},'install_dll_dir',{"
   "'C:\\ECUFiles\\TDBDLL\\'},'install_srz_dir',{'C:\\ECUFiles\\Programs'},'app_int_stack_size',{1024},'shutdown_stack_s"
   "ize',{1024},'mingw_dir',{'C:\\PROGRA~2\\Woodward\\DEVELO~1\\TOOLCH~1\\GCC\\win32-pe\\4_4_0\\'},'motohawk_dir',{'C:\\"
   "PROGRA~2\\Woodward\\MCS\\MotoHawk\\2011A_~1.184'},'toolchain_dir',{'C:\\Program Files (x86)\\Woodward\\DevelopmentTo"
   "ols\\Toolchains\\GCC\\powerpc-eabi\\4_4_0\\'},'matlab_root',{'C:\\Program Files (x86)\\MATLAB\\R2011a'},'model_guid'"
-  ",{'3c32a120-d49a-4164-87-fe-ac-4b-55-ed-6f'},'build_guid',{'5ceaa09e-b500-46a9-83-91-54-b3-ae-70-40'},'token_guid',{"
+  ",{'3c32a120-d49a-4164-87-fe-ac-4b-55-ed-6f'},'build_guid',{'da407567-faa0-493f-ae-d0-87-63-de-1f-89'},'token_guid',{"
   "'DD8AD11F95A6FC42BFF9AC780840E4B4'})"
-  MotoHawkBuildGUID	  "5ceaa09e-b500-46a9-83-91-54-b3-ae-70-40"
+  MotoHawkBuildGUID	  "da407567-faa0-493f-ae-d0-87-63-de-1f-89"
   Created		  "Mon May 16 15:00:08 2005"
   Creator		  "Danny"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "maxar"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Apr 17 14:50:23 2019"
-  RTWModifiedTimeStamp	  477414253
-  ModelVersionFormat	  "1.%<AutoIncrement:1570>"
+  LastModifiedDate	  "Thu Apr 18 08:29:43 2019"
+  RTWModifiedTimeStamp	  477428739
+  ModelVersionFormat	  "1.%<AutoIncrement:1575>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1570,7 +1570,7 @@ Model {
   }
   System {
     Name		    "BuckyWagon_01"
-    Location		    [-1646, -548, -589, 78]
+    Location		    [274, 83, 1331, 709]
     Open		    off
     ModelBrowserVisibility  on
     ModelBrowserWidth	    272
@@ -4993,8 +4993,8 @@ Model {
 	      MaskValueString	      "'NLG5.jpg'"
 	      System {
 		Name			"Eaton HV Charger"
-		Location		[202, 74, 1364, 717]
-		Open			off
+		Location		[274, 83, 1310, 698]
+		Open			on
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	310
 		ScreenColor		"white"
@@ -5005,8 +5005,8 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"84"
-		SIDHighWatermark	"49"
+		ZoomFactor		"100"
+		SIDHighWatermark	"51"
 		SIDPrevWatermark	"36"
 		Block {
 		  BlockType		  Inport
@@ -5019,26 +5019,19 @@ Model {
 		  BlockType		  BusSelector
 		  Name			  "Bus\nSelector"
 		  SID			  "3088:48"
-		  Ports			  [1, 1]
+		  Ports			  [1, 2]
 		  Position		  [70, 66, 75, 104]
 		  ShowName		  off
-		  OutputSignals		  "DC/DC Enable"
+		  OutputSignals		  "DC/DC Enable,Sensor Bus.SOC"
 		  Port {
 		    PortNumber		    1
-		    Name		    "ChargeEnable"
+		    Name		    "<DC/DC Enable>"
 		    RTWStorageClass	    "Auto"
 		    DataLoggingNameMode	    "SignalName"
 		  }
-		}
-		Block {
-		  BlockType		  Constant
-		  Name			  "Constant"
-		  SID			  "3088:44"
-		  Position		  [95, 130, 125, 160]
-		  Value			  "0"
 		  Port {
-		    PortNumber		    1
-		    Name		    "ChargeComplete"
+		    PortNumber		    2
+		    Name		    "<SOC>"
 		    RTWStorageClass	    "Auto"
 		    DataLoggingNameMode	    "SignalName"
 		  }
@@ -5047,7 +5040,7 @@ Model {
 		  BlockType		  Constant
 		  Name			  "Constant1"
 		  SID			  "3088:26"
-		  Position		  [435, 370, 465, 400]
+		  Position		  [640, 360, 670, 390]
 		  ShowName		  off
 		  Value			  "15"
 		  Port {
@@ -5061,7 +5054,7 @@ Model {
 		  BlockType		  Constant
 		  Name			  "Constant2"
 		  SID			  "3088:49"
-		  Position		  [435, 430, 465, 460]
+		  Position		  [640, 420, 670, 450]
 		  Value			  "0"
 		  OutDataTypeStr	  "uint8"
 		  Port {
@@ -5075,7 +5068,7 @@ Model {
 		  BlockType		  Constant
 		  Name			  "Constant3"
 		  SID			  "3088:47"
-		  Position		  [95, 190, 125, 220]
+		  Position		  [300, 180, 330, 210]
 		  Value			  "0"
 		  OutDataTypeStr	  "uint8"
 		  Port {
@@ -5086,11 +5079,26 @@ Model {
 		  }
 		}
 		Block {
+		  BlockType		  RelationalOperator
+		  Name			  "Relational\nOperator"
+		  SID			  "3088:50"
+		  Ports			  [2, 1]
+		  Position		  [265, 117, 295, 148]
+		  InputSameDT		  off
+		  OutDataTypeStr	  "boolean"
+		  Port {
+		    PortNumber		    1
+		    Name		    "ChargeComplete"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
 		  BlockType		  Reference
 		  Name			  "Send CAN Messages"
 		  SID			  "3088:3"
 		  Ports			  [7]
-		  Position		  [555, 54, 1335, 476]
+		  Position		  [760, 44, 1540, 466]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/CAN Blocks/Send CAN Messages"
@@ -5106,7 +5114,7 @@ Model {
 		  Name			  "motohawk_calibration"
 		  SID			  "3088:42"
 		  Ports			  [0, 1]
-		  Position		  [15, 305, 165, 345]
+		  Position		  [220, 295, 370, 335]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
@@ -5151,7 +5159,7 @@ Model {
 		  Name			  "motohawk_calibration1"
 		  SID			  "3088:43"
 		  Ports			  [0, 1]
-		  Position		  [15, 245, 165, 285]
+		  Position		  [220, 235, 370, 275]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
@@ -5193,10 +5201,49 @@ Model {
 		}
 		Block {
 		  BlockType		  Reference
+		  Name			  "motohawk_calibration2"
+		  SID			  "3088:51"
+		  Ports			  [0, 1]
+		  Position		  [15, 130, 165, 170]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
+		  SourceType		  "MotoHawk Calibration"
+		  nam			  "'ChargeComplete_SOC'"
+		  val			  "98"
+		  storage		  "Calibration"
+		  show_more		  on
+		  name_source		  "Use Parameter"
+		  data_type		  "Inherit from 'Default Value'"
+		  read_level		  "1"
+		  write_level		  "1"
+		  ovr_cals		  on
+		  view_as		  "Number"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  vector_style		  "Wide Row"
+		  use_help_units	  on
+		  help			  "'Max SOC that causes charger shutdown'"
+		  units			  "'%'"
+		  use_header_enum	  off
+		  row_header_enum	  "{}"
+		  col_header_enum	  "{}"
+		  use_min_max		  on
+		  min_val		  "0"
+		  max_val		  "100"
+		  use_precision		  off
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_mototune_group	  on
+		  mototune_group	  "'Actuators | EatonCharger'"
+		}
+		Block {
+		  BlockType		  Reference
 		  Name			  "motohawk_override_abs1"
 		  SID			  "3088:5"
 		  Ports			  [1, 1]
-		  Position		  [185, 312, 335, 338]
+		  Position		  [390, 302, 540, 328]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_override_abs"
@@ -5243,7 +5290,7 @@ Model {
 		  Name			  "motohawk_override_abs2"
 		  SID			  "3088:6"
 		  Ports			  [1, 1]
-		  Position		  [185, 252, 335, 278]
+		  Position		  [390, 242, 540, 268]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_override_abs"
@@ -5290,7 +5337,7 @@ Model {
 		  Name			  "motohawk_override_abs3"
 		  SID			  "3088:7"
 		  Ports			  [1, 1]
-		  Position		  [210, 193, 330, 217]
+		  Position		  [415, 183, 535, 207]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_override_abs"
@@ -5338,7 +5385,7 @@ Model {
 		  Name			  "motohawk_override_abs4"
 		  SID			  "3088:8"
 		  Ports			  [1, 1]
-		  Position		  [180, 132, 330, 158]
+		  Position		  [385, 122, 535, 148]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_override_abs"
@@ -5385,7 +5432,7 @@ Model {
 		  Name			  "motohawk_override_abs5"
 		  SID			  "3088:9"
 		  Ports			  [1, 1]
-		  Position		  [180, 72, 330, 98]
+		  Position		  [385, 62, 535, 88]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_override_abs"
@@ -5432,7 +5479,7 @@ Model {
 		  Name			  "motohawk_probe1"
 		  SID			  "3088:11"
 		  Ports			  [1]
-		  Position		  [185, 287, 335, 313]
+		  Position		  [390, 277, 540, 303]
 		  BlockMirror		  on
 		  NamePlacement		  "alternate"
 		  ShowName		  off
@@ -5465,7 +5512,7 @@ Model {
 		  Name			  "motohawk_probe2"
 		  SID			  "3088:12"
 		  Ports			  [1]
-		  Position		  [185, 227, 335, 253]
+		  Position		  [390, 217, 540, 243]
 		  BlockMirror		  on
 		  NamePlacement		  "alternate"
 		  ShowName		  off
@@ -5498,7 +5545,7 @@ Model {
 		  Name			  "motohawk_probe3"
 		  SID			  "3088:13"
 		  Ports			  [1]
-		  Position		  [210, 162, 330, 188]
+		  Position		  [415, 152, 535, 178]
 		  BlockMirror		  on
 		  NamePlacement		  "alternate"
 		  ShowName		  off
@@ -5531,7 +5578,7 @@ Model {
 		  Name			  "motohawk_probe4"
 		  SID			  "3088:14"
 		  Ports			  [1]
-		  Position		  [180, 107, 330, 133]
+		  Position		  [385, 97, 535, 123]
 		  BlockMirror		  on
 		  NamePlacement		  "alternate"
 		  ShowName		  off
@@ -5564,7 +5611,7 @@ Model {
 		  Name			  "motohawk_probe5"
 		  SID			  "3088:15"
 		  Ports			  [1]
-		  Position		  [180, 47, 330, 73]
+		  Position		  [385, 37, 535, 63]
 		  BlockMirror		  on
 		  NamePlacement		  "alternate"
 		  ShowName		  off
@@ -5702,7 +5749,7 @@ Model {
 		Line {
 		  Name			  "ChargeComplete"
 		  Labels		  [0, 0]
-		  SrcBlock		  "Constant"
+		  SrcBlock		  "Relational\nOperator"
 		  SrcPort		  1
 		  DstBlock		  "motohawk_override_abs4"
 		  DstPort		  1
@@ -5722,7 +5769,7 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  Name			  "ChargeEnable"
+		  Name			  "<DC/DC Enable>"
 		  Labels		  [0, 0]
 		  SrcBlock		  "Bus\nSelector"
 		  SrcPort		  1
@@ -5737,9 +5784,25 @@ Model {
 		  DstBlock		  "Send CAN Messages"
 		  DstPort		  7
 		}
+		Line {
+		  Name			  "<SOC>"
+		  Labels		  [0, 0; 0, 0]
+		  SrcBlock		  "Bus\nSelector"
+		  SrcPort		  2
+		  Points		  [85, 0; 0, 30]
+		  DstBlock		  "Relational\nOperator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "motohawk_calibration2"
+		  SrcPort		  1
+		  Points		  [40, 0; 0, -10]
+		  DstBlock		  "Relational\nOperator"
+		  DstPort		  2
+		}
 		Annotation {
 		  Name			  "Not Available aka everything is fine"
-		  Position		  [371, 415]
+		  Position		  [576, 405]
 		}
 	      }
 	    }
@@ -9908,7 +9971,7 @@ Model {
 	  System {
 	    Name		    "Control Strategy"
 	    Location		    [-1718, -548, -2, 516]
-	    Open		    off
+	    Open		    on
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    272
 	    ScreenColor		    "white"
@@ -9919,7 +9982,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
+	    ZoomFactor		    "71"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Inputs"
@@ -10111,7 +10174,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"151"
+		ZoomFactor		"100"
 		Block {
 		  BlockType		  Inport
 		  Name			  "Vehcile Speed"
@@ -10546,7 +10609,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "125"
+		    ZoomFactor		    "81"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "KeyedOdometer"
@@ -12063,37 +12126,6 @@ Model {
 		}
 		Block {
 		  BlockType		  Reference
-		  Name			  "motohawk_probe11"
-		  SID			  "3727"
-		  Ports			  [1]
-		  Position		  [905, 307, 1055, 333]
-		  ShowName		  off
-		  LibraryVersion	  "MotoHawk 0.2.3"
-		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
-		  SourceType		  "MotoHawk Probe"
-		  nam			  "'RemyMechPowerkW'"
-		  show_more		  off
-		  name_source		  "Use Parameter"
-		  read_level		  "1"
-		  view_as		  "Number"
-		  enum_struct		  "{'Disabled', 'Enabled'}"
-		  vector_style		  "Wide Row"
-		  use_help_units	  off
-		  help			  "''"
-		  units			  "''"
-		  use_header_enum	  off
-		  row_header_enum	  "{}"
-		  col_header_enum	  "{}"
-		  use_precision		  off
-		  precision		  "''"
-		  gain			  "1"
-		  offset		  "0"
-		  exp			  "1"
-		  use_mototune_group	  off
-		  mototune_group	  "motohawk_vardec_path(gcb)"
-		}
-		Block {
-		  BlockType		  Reference
 		  Name			  "motohawk_probe12"
 		  SID			  "3728"
 		  Ports			  [1]
@@ -12341,68 +12373,6 @@ Model {
 		  mototune_group	  "motohawk_vardec_path(gcb)"
 		}
 		Block {
-		  BlockType		  Reference
-		  Name			  "motohawk_probe8"
-		  SID			  "3736"
-		  Ports			  [1]
-		  Position		  [955, 157, 1105, 183]
-		  ShowName		  off
-		  LibraryVersion	  "MotoHawk 0.2.3"
-		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
-		  SourceType		  "MotoHawk Probe"
-		  nam			  "'GenEfficiencyPct'"
-		  show_more		  off
-		  name_source		  "Use Parameter"
-		  read_level		  "1"
-		  view_as		  "Number"
-		  enum_struct		  "{'Disabled', 'Enabled'}"
-		  vector_style		  "Wide Row"
-		  use_help_units	  off
-		  help			  "''"
-		  units			  "''"
-		  use_header_enum	  off
-		  row_header_enum	  "{}"
-		  col_header_enum	  "{}"
-		  use_precision		  off
-		  precision		  "''"
-		  gain			  "1"
-		  offset		  "0"
-		  exp			  "1"
-		  use_mototune_group	  off
-		  mototune_group	  "motohawk_vardec_path(gcb)"
-		}
-		Block {
-		  BlockType		  Reference
-		  Name			  "motohawk_probe9"
-		  SID			  "3737"
-		  Ports			  [1]
-		  Position		  [920, 212, 1070, 238]
-		  ShowName		  off
-		  LibraryVersion	  "MotoHawk 0.2.3"
-		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
-		  SourceType		  "MotoHawk Probe"
-		  nam			  "'EngPowerkW'"
-		  show_more		  off
-		  name_source		  "Use Parameter"
-		  read_level		  "1"
-		  view_as		  "Number"
-		  enum_struct		  "{'Disabled', 'Enabled'}"
-		  vector_style		  "Wide Row"
-		  use_help_units	  off
-		  help			  "''"
-		  units			  "''"
-		  use_header_enum	  off
-		  row_header_enum	  "{}"
-		  col_header_enum	  "{}"
-		  use_precision		  off
-		  precision		  "''"
-		  gain			  "1"
-		  offset		  "0"
-		  exp			  "1"
-		  use_mototune_group	  off
-		  mototune_group	  "motohawk_vardec_path(gcb)"
-		}
-		Block {
 		  BlockType		  Outport
 		  Name			  "OdomTotal"
 		  SID			  "3738"
@@ -12591,14 +12561,12 @@ Model {
 	      Port {
 		PortNumber		1
 		Name			"CoolantPumpSpeed"
-		PropagatedSignals	"CoolantPumpSpeed"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
 	      Port {
 		PortNumber		2
 		Name			"FanDutyCycle"
-		PropagatedSignals	"FanDutyCycle"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
@@ -23201,13 +23169,6 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
-	      Name		      "<Eaton_HV_Charger_Temperature>"
-	      Labels		      [0, 0; 0, 0]
-	      SrcBlock		      "Bus\nSelector5"
-	      SrcPort		      2
-	      Points		      [395, 0]
-	    }
-	    Line {
 	      Name		      "CoolantPumpSpeed"
 	      Labels		      [0, 0]
 	      SrcBlock		      "Cooling"
@@ -23224,6 +23185,14 @@ Model {
 	      Points		      [160, 0; 0, -180]
 	      DstBlock		      "Bus\nCreator"
 	      DstPort		      9
+	    }
+	    Line {
+	      Name		      "<Eaton_HV_Charger_Temperature>"
+	      Labels		      [0, 0; 0, 0]
+	      SrcBlock		      "Bus\nSelector5"
+	      SrcPort		      2
+	      DstBlock		      "Cooling"
+	      DstPort		      2
 	    }
 	  }
 	}
@@ -25679,7 +25648,7 @@ Model {
 		  SourceType		  "MotoHawk CAN Receive  SlotTrigger"
 		  slot			  "'miniview_button_down'"
 		  inherited		  on
-		  function_name		  "Trigger_CAN_Slot_miniview_button_down_10125p0005"
+		  function_name		  "Trigger_CAN_Slot_miniview_button_down_10204p0002"
 		}
 		Block {
 		  BlockType		  Demux
@@ -28746,7 +28715,7 @@ Model {
 		  SourceType		  "MotoHawk CAN Receive  SlotTrigger"
 		  slot			  "'miniview_button_menu'"
 		  inherited		  on
-		  function_name		  "Trigger_CAN_Slot_miniview_button_menu_10306p0038"
+		  function_name		  "Trigger_CAN_Slot_miniview_button_menu_10463p0005"
 		}
 		Block {
 		  BlockType		  Demux
@@ -31143,7 +31112,7 @@ Model {
 		  SourceType		  "MotoHawk CAN Receive  SlotTrigger"
 		  slot			  "'miniview_button_up'"
 		  inherited		  on
-		  function_name		  "Trigger_CAN_Slot_miniview_button_up_10349p0026"
+		  function_name		  "Trigger_CAN_Slot_miniview_button_up_10714p0004"
 		}
 		Block {
 		  BlockType		  Demux
@@ -36894,9 +36863,9 @@ Model {
 	      System {
 		Name			"EMP Fan Inputs"
 		Location		[-1646, -548, -2, 499]
-		Open			on
+		Open			off
 		ModelBrowserVisibility	on
-		ModelBrowserWidth	200
+		ModelBrowserWidth	272
 		ScreenColor		"white"
 		PaperOrientation	"landscape"
 		PaperPositionMode	"auto"
@@ -36905,7 +36874,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"119"
+		ZoomFactor		"79"
 		Block {
 		  BlockType		  BusCreator
 		  Name			  "Bus\nCreator"
@@ -42741,7 +42710,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"100"
+		ZoomFactor		"8"
 		Block {
 		  BlockType		  Reference
 		  Name			  "Compare\nTo Constant1"
@@ -48130,7 +48099,7 @@ Model {
 	  SourceBlock		  "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 	  SourceType		  "MotoHawk Function Trigger"
 	  trigger		  "FGND_RTI_PERIODIC"
-	  function_name		  "Trigger_FGND_RTI_PERIODIC_10349p0299"
+	  function_name		  "Trigger_FGND_RTI_PERIODIC_877p0013"
 	  priority_order	  "200"
 	  inherited		  on
 	  run_disabled		  off
@@ -48152,7 +48121,7 @@ Model {
 	  SourceBlock		  "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 	  SourceType		  "MotoHawk Function Trigger"
 	  trigger		  "FGND_20XRTI_PERIODIC"
-	  function_name		  "Trigger_FGND_20XRTI_PERIODIC_10349p03"
+	  function_name		  "Trigger_FGND_20XRTI_PERIODIC_878p0011"
 	  priority_order	  "200"
 	  inherited		  on
 	  run_disabled		  off
@@ -50178,7 +50147,7 @@ Model {
 	  SourceBlock		  "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 	  SourceType		  "MotoHawk Function Trigger"
 	  trigger		  "BGND_BASE_PERIODIC"
-	  function_name		  "Trigger_BGND_BASE_PERIODIC_10349p0347"
+	  function_name		  "Trigger_BGND_BASE_PERIODIC_1070p0009"
 	  priority_order	  "255"
 	  inherited		  on
 	  run_disabled		  on
@@ -50321,7 +50290,7 @@ Model {
       SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
       SourceType	      "MotoHawk Function Trigger"
       trigger		      "FGND_RTI_PERIODIC"
-      function_name	      "Trigger_FGND_RTI_PERIODIC_1121p0012"
+      function_name	      "Trigger_FGND_RTI_PERIODIC_1078p0009"
       priority_order	      "0"
       inherited		      off
       run_disabled	      off
@@ -50343,7 +50312,7 @@ Model {
       SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
       SourceType	      "MotoHawk Function Trigger"
       trigger		      "STARTUP_EVENT"
-      function_name	      "Trigger_STARTUP_EVENT_1121p0011"
+      function_name	      "Trigger_STARTUP_EVENT_1079p0009"
       priority_order	      "0"
       inherited		      off
       run_disabled	      off
@@ -50365,7 +50334,7 @@ Model {
       SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
       SourceType	      "MotoHawk Function Trigger"
       trigger		      "BGND_BASEx20_PERIODIC"
-      function_name	      "Trigger_BGND_BASEx20_PERIODIC_1121p001"
+      function_name	      "Trigger_BGND_BASEx20_PERIODIC_1080p0009"
       priority_order	      "0"
       inherited		      off
       run_disabled	      off
@@ -50388,7 +50357,7 @@ Model {
       SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
       SourceType	      "MotoHawk Function Trigger"
       trigger		      "SHUTDOWN_EVENT"
-      function_name	      "Trigger_SHUTDOWN_EVENT_1121p0009"
+      function_name	      "Trigger_SHUTDOWN_EVENT_1081p0009"
       priority_order	      "0"
       inherited		      off
       run_disabled	      off

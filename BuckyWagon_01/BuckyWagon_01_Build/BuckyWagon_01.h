@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BuckyWagon_01'.
  *
- * Model version                  : 1.1570
+ * Model version                  : 1.1575
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Wed Apr 17 19:04:03 2019
+ * C/C++ source code generated on : Thu Apr 18 08:31:45 2019
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -72,7 +72,6 @@ typedef struct {
   real_T s110_Switch;                  /* '<S110>/Switch' */
   real_T s69_Merge;                    /* '<S69>/Merge' */
   real_T s70_Merge;                    /* '<S70>/Merge' */
-  real_T s72_Merge;                    /* '<S72>/Merge' */
   real_T s84_Switch;                   /* '<S84>/Switch' */
   real_T s86_Merge;                    /* '<S86>/Merge' */
   real_T s219_Sum1;                    /* '<S219>/Sum1' */
@@ -281,6 +280,7 @@ typedef struct {
   uint8_T s13_Switch;                  /* '<S13>/Switch' */
   boolean_T s225_Merge;                /* '<S225>/Merge' */
   boolean_T s244_Merge;                /* '<S244>/Merge' */
+  boolean_T s72_Merge;                 /* '<S72>/Merge' */
   boolean_T s73_Merge;                 /* '<S73>/Merge' */
   boolean_T s85_Merge;                 /* '<S85>/Merge' */
   boolean_T s87_Merge;                 /* '<S87>/Merge' */

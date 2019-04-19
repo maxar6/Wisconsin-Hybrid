@@ -4,7 +4,7 @@
 	<Name>BuckyWagon_01</Name>
 	<Author>maxar</Author>
 	<Copyright>2019 Woodward.</Copyright>
-	<CreateDate>17-Apr-2019</CreateDate>
+	<CreateDate>18-Apr-2019</CreateDate>
 	<MemoryLayout>DEV</MemoryLayout>
 	<Module>ClassicModule-MPC565</Module>
 	<Memory/>
@@ -25,9 +25,9 @@
 			</TableDatabase>
 			<ProjectID>6</ProjectID>
 			<ProductID>1</ProductID>
-			<SwIdTxt>BuckyWago_182</SwIdTxt>
-			<SwRevisionTxt>BuckyWagon_01_182</SwRevisionTxt>
-			<CalIdTxt>BuckyWagon_01_182_000</CalIdTxt>
+			<SwIdTxt>BuckyWago_184</SwIdTxt>
+			<SwRevisionTxt>BuckyWagon_01_184</SwRevisionTxt>
+			<CalIdTxt>BuckyWagon_01_184_000</CalIdTxt>
 		</VarDecs>
 		<DatabaseBuild>
 			<Toolchain>
@@ -38,10 +38,10 @@
 			</Toolchain>
 		</DatabaseBuild>
 		<Command>
-			<Description>Copy BuckyWago_182.dll and BuckyWagon_01_182.srz</Description>
+			<Description>Copy BuckyWago_184.dll and BuckyWagon_01_184.srz</Description>
 			<Order>99</Order>
-			<Execute>@if exist C:\ECUFiles\TDBDLL\\*.* copy /Y .\TDB\BuckyWago_182.dll C:\ECUFiles\TDBDLL\ &gt; NUL</Execute>
-			<Execute>@if exist C:\ECUFiles\Programs\*.* copy /Y .\Target\BuckyWagon_01_182.srz C:\ECUFiles\Programs &gt; NUL</Execute>
+			<Execute>@if exist C:\ECUFiles\TDBDLL\\*.* copy /Y .\TDB\BuckyWago_184.dll C:\ECUFiles\TDBDLL\ &gt; NUL</Execute>
+			<Execute>@if exist C:\ECUFiles\Programs\*.* copy /Y .\Target\BuckyWagon_01_184.srz C:\ECUFiles\Programs &gt; NUL</Execute>
 		</Command>
 	</ToolInterface>
 	<Build>
@@ -107,7 +107,7 @@
 		</Command>
 		<Command>
 			<Description>Call MotoConvert</Description>
-			<Execute>@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\BuckyWagon_01.map -srec=.\Target\BuckyWagon_01.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=BuckyWagon_01.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x000FFFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\BuckyWagon_01_182.srz</Execute>
+			<Execute>@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\BuckyWagon_01.map -srec=.\Target\BuckyWagon_01.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=BuckyWagon_01.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x000FFFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\BuckyWagon_01_184.srz</Execute>
 			<Order>55</Order>
 		</Command>
 		<Compiler>
@@ -141,5 +141,5 @@
 			<Execute>@if exist .\rtwtypes.h del /Q /F .\rtwtypes.h &gt; NUL</Execute>
 		</Command>
 	</Build>
-	<Signature>b13f047a-7f12-437c-8c-0c-54-17-5b-ac-d8</Signature>
+	<Signature>c3af1222-05fb-445f-86-2a-4a-f0-57-6b-de</Signature>
 </Application>

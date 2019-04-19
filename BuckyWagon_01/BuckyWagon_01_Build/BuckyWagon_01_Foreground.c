@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BuckyWagon_01'.
  *
- * Model version                  : 1.1570
+ * Model version                  : 1.1575
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Wed Apr 17 19:04:03 2019
+ * C/C++ source code generated on : Thu Apr 18 08:31:45 2019
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -676,15 +676,6 @@ void BuckyWagon_01_Foreground_Start(void)
 
   /* S-Function (motohawk_sfun_probe): '<S109>/motohawk_probe3' */
   (InstDCDCWatts_DataStore()) = 0.0;
-
-  /* S-Function (motohawk_sfun_probe): '<S109>/motohawk_probe9' */
-  (EngPowerkW_DataStore()) = 0.0;
-
-  /* S-Function (motohawk_sfun_probe): '<S109>/motohawk_probe8' */
-  (GenEfficiencyPct_DataStore()) = 0.0;
-
-  /* S-Function (motohawk_sfun_probe): '<S109>/motohawk_probe11' */
-  (RemyMechPowerkW_DataStore()) = 0.0;
 }
 
 /* Output and update for function-call system: '<Root>/Foreground' */
@@ -3441,10 +3432,48 @@ void BuckyWagon_01_Foreground(void)
   rtb_Product_p = (real_T)((uint8_T)(Inverter_Temp_Enable_DataStore())) *
     rtb_Sum3;
 
+  /* If: '<S310>/If' incorporates:
+   *  Inport: '<S323>/In1'
+   *  Inport: '<S324>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S310>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S310>/override_enable'
+   */
+  if ((Eaton_HV_Charger_Temperature_ovr_DataStore())) {
+    /* Outputs for IfAction SubSystem: '<S310>/NewValue' incorporates:
+     *  ActionPort: '<S323>/Action Port'
+     */
+    rtb_Merge_k = (Eaton_HV_Charger_Temperature_new_DataStore());
+
+    /* S-Function (motohawk_sfun_code_cover): '<S323>/motohawk_code_coverage' */
+    /* Code Coverage Test: BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs4/NewValue */
+    {
+      extern void MH_CodeCovered(uint32_T idx);
+      MH_CodeCovered(106);
+    }
+
+    /* End of Outputs for SubSystem: '<S310>/NewValue' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S310>/OldValue' incorporates:
+     *  ActionPort: '<S324>/Action Port'
+     */
+    rtb_Merge_k = BuckyWagon_01_B.s217_Eaton_HV_Charger_Temperature;
+
+    /* S-Function (motohawk_sfun_code_cover): '<S324>/motohawk_code_coverage' */
+    /* Code Coverage Test: BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs4/OldValue */
+    {
+      extern void MH_CodeCovered(uint32_T idx);
+      MH_CodeCovered(107);
+    }
+
+    /* End of Outputs for SubSystem: '<S310>/OldValue' */
+  }
+
+  /* End of If: '<S310>/If' */
+
   /* Sum: '<S110>/Sum1' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S110>/motohawk_calibration2'
    */
-  rtb_Sum3 = 0.0 + (Charger_Temp_Offset_DataStore());
+  rtb_Sum3 = rtb_Merge_k + (Charger_Temp_Offset_DataStore());
 
   /* Product: '<S110>/Product1' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S110>/motohawk_calibration3'
@@ -4906,8 +4935,13 @@ void BuckyWagon_01_Foreground(void)
 
   /* End of If: '<S71>/If' */
 
+  /* RelationalOperator: '<S18>/Relational Operator' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S18>/motohawk_calibration2'
+   */
+  rtb_RelationalOperator_k = (BuckyWagon_01_B.s232_Merge >=
+    (ChargeComplete_SOC_DataStore()));
+
   /* If: '<S72>/If' incorporates:
-   *  Constant: '<S18>/Constant'
    *  Inport: '<S80>/In1'
    *  Inport: '<S81>/In1'
    *  S-Function (motohawk_sfun_calibration): '<S72>/new_value'
@@ -4931,7 +4965,7 @@ void BuckyWagon_01_Foreground(void)
     /* Outputs for IfAction SubSystem: '<S72>/OldValue' incorporates:
      *  ActionPort: '<S81>/Action Port'
      */
-    BuckyWagon_01_B.s72_Merge = 0.0;
+    BuckyWagon_01_B.s72_Merge = rtb_RelationalOperator_k;
 
     /* S-Function (motohawk_sfun_code_cover): '<S81>/motohawk_code_coverage' */
     /* Code Coverage Test: BuckyWagon_01/Foreground/Actuators/Eaton HV Charger/motohawk_override_abs4/OldValue */
@@ -5012,14 +5046,7 @@ void BuckyWagon_01_Foreground(void)
         uint8_T tmp5;
         uint8_T tmp6;
         tmp0 = (uint8_T)(BuckyWagon_01_B.s73_Merge);
-        if (BuckyWagon_01_B.s72_Merge < 0.0000000000F) {
-          tmp1 = (uint8_T)(0U);
-        } else if (BuckyWagon_01_B.s72_Merge > 3.0000000000F) {
-          tmp1 = (uint8_T)(3U);
-        } else {
-          tmp1 = (uint8_T)(BuckyWagon_01_B.s72_Merge);
-        }
-
+        tmp1 = (uint8_T)(BuckyWagon_01_B.s72_Merge);
         if (BuckyWagon_01_B.s71_Merge > 3U) {
           tmp2 = (uint8_T)(3U);
         } else {
@@ -6835,39 +6862,6 @@ void BuckyWagon_01_Foreground(void)
   }
 
   /* End of If: '<S309>/If' */
-
-  /* If: '<S310>/If' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S310>/override_enable'
-   */
-  if ((Eaton_HV_Charger_Temperature_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S310>/NewValue' incorporates:
-     *  ActionPort: '<S323>/Action Port'
-     */
-
-    /* S-Function (motohawk_sfun_code_cover): '<S323>/motohawk_code_coverage' */
-    /* Code Coverage Test: BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs4/NewValue */
-    {
-      extern void MH_CodeCovered(uint32_T idx);
-      MH_CodeCovered(106);
-    }
-
-    /* End of Outputs for SubSystem: '<S310>/NewValue' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S310>/OldValue' incorporates:
-     *  ActionPort: '<S324>/Action Port'
-     */
-
-    /* S-Function (motohawk_sfun_code_cover): '<S324>/motohawk_code_coverage' */
-    /* Code Coverage Test: BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs4/OldValue */
-    {
-      extern void MH_CodeCovered(uint32_T idx);
-      MH_CodeCovered(107);
-    }
-
-    /* End of Outputs for SubSystem: '<S310>/OldValue' */
-  }
-
-  /* End of If: '<S310>/If' */
 
   /* If: '<S311>/If' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S311>/override_enable'

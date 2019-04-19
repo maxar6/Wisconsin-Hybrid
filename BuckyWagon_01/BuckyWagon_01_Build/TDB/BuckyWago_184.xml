@@ -5232,17 +5232,17 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
       <group>Actuators | EatonCharger | Charge_Complete_Override Override</group>
       <struct>VolatileWork_BSS.Charge_Complete_Override_new</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
       <table>1</table>
       <item>145</item>
    </VarDec>
@@ -5277,13 +5277,13 @@
       <access>RO RO RO RO</access>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
       <gain>1.0</gain>
       <offset>0.0</offset>
       <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
+      <max>1.000000</max>
+      <min>0.000000</min>
+      <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
       <struct>BuckyWagon_01_B.s72_Merge</struct>
@@ -5478,6 +5478,28 @@
       <item>155</item>
    </VarDec>
    <VarDec>
+      <name>ChargeComplete_SOC</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>100</max>
+      <min>0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>%</units>
+      <ctype>const Constant_T</ctype>
+      <help>Max SOC that causes charger shutdown</help>
+      <group>Actuators | EatonCharger</group>
+      <struct>ConstantWork.ChargeComplete_SOC</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+      <table>1</table>
+      <item>156</item>
+   </VarDec>
+   <VarDec>
       <name>ChargeInterruptor_Voltage</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -5497,7 +5519,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>156</item>
+      <item>157</item>
    </VarDec>
    <VarDec>
       <name>Charger_Temp_Enable</name>
@@ -5522,7 +5544,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>157</item>
+      <item>158</item>
    </VarDec>
    <VarDec>
       <name>Charger_Temp_Offset</name>
@@ -5542,7 +5564,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>158</item>
+      <item>159</item>
    </VarDec>
    <VarDec>
       <name>ChargerState</name>
@@ -5562,7 +5584,7 @@
       <struct>BuckyWagon_01_B.s217_ChargerState</struct>
       <group>Sensors | EatonCharger</group>
       <table>1</table>
-      <item>159</item>
+      <item>160</item>
    </VarDec>
    <VarDec>
       <name>ChargerState_new</name>
@@ -5582,7 +5604,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>160</item>
+      <item>161</item>
    </VarDec>
    <VarDec>
       <name>ChargerState_ovr</name>
@@ -5607,7 +5629,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>161</item>
+      <item>162</item>
    </VarDec>
    <VarDec>
       <name>CityID_CAN_1</name>
@@ -5628,7 +5650,7 @@
       <update>BACKGND</update>
       <type>uint8</type>
       <table>1</table>
-      <item>162</item>
+      <item>163</item>
    </VarDec>
    <VarDec>
       <name>Coast_Down_Tq_Probe</name>
@@ -5648,7 +5670,7 @@
       <struct>BuckyWagon_01_B.s124_Product2</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving|Regen</group>
       <table>1</table>
-      <item>163</item>
+      <item>164</item>
    </VarDec>
    <VarDec>
       <name>CodeCoverParent000</name>
@@ -5919,7 +5941,7 @@
          </item>
       </bits>
       <table>1</table>
-      <item>164</item>
+      <item>165</item>
    </VarDec>
    <VarDec>
       <name>CodeCoverParent001</name>
@@ -6190,7 +6212,7 @@
          </item>
       </bits>
       <table>1</table>
-      <item>165</item>
+      <item>166</item>
    </VarDec>
    <VarDec>
       <name>CodeCoverParent002</name>
@@ -6461,7 +6483,7 @@
          </item>
       </bits>
       <table>1</table>
-      <item>166</item>
+      <item>167</item>
    </VarDec>
    <VarDec>
       <name>CodeCoverParent003</name>
@@ -6732,7 +6754,7 @@
          </item>
       </bits>
       <table>1</table>
-      <item>167</item>
+      <item>168</item>
    </VarDec>
    <VarDec>
       <name>CodeCoverParent004</name>
@@ -6859,7 +6881,7 @@
          </item>
       </bits>
       <table>1</table>
-      <item>168</item>
+      <item>169</item>
    </VarDec>
    <VarDec>
       <name>Command_Counter</name>
@@ -6879,7 +6901,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>169</item>
+      <item>170</item>
    </VarDec>
    <VarDec>
       <name>CompilerVersion</name>
@@ -6894,7 +6916,7 @@
       <help>Compiler toolchain version used for the MotoHawk build</help>
       <group>System | Version</group>
       <table>1</table>
-      <item>170</item>
+      <item>171</item>
    </VarDec>
    <VarDec>
       <name>ConfigVerMaj</name>
@@ -6914,7 +6936,7 @@
       <struct>g_ConfigCopyObj.u1ConfigVerMaj</struct>
       <group>System | Status | Module Config</group>
       <table>1</table>
-      <item>171</item>
+      <item>172</item>
    </VarDec>
    <VarDec>
       <name>ConfigVerMin</name>
@@ -6934,7 +6956,7 @@
       <struct>g_ConfigCopyObj.u1ConfigVerMin</struct>
       <group>System | Status | Module Config</group>
       <table>1</table>
-      <item>172</item>
+      <item>173</item>
    </VarDec>
    <VarDec>
       <name>Contactor_Disable_Delay</name>
@@ -6954,7 +6976,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>173</item>
+      <item>174</item>
    </VarDec>
    <VarDec>
       <name>Contactor_Shutdown_Test_new</name>
@@ -6974,7 +6996,7 @@
       <update>BACKGND</update>
       <type>uint8</type>
       <table>1</table>
-      <item>174</item>
+      <item>175</item>
    </VarDec>
    <VarDec>
       <name>Contactor_Shutdown_Test_ovr</name>
@@ -6999,7 +7021,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>175</item>
+      <item>176</item>
    </VarDec>
    <VarDec>
       <name>Control_Mode</name>
@@ -7026,7 +7048,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>176</item>
+      <item>177</item>
    </VarDec>
    <VarDec>
       <name>ControlCoreSDKRelease</name>
@@ -7041,7 +7063,7 @@
       <help>ControlCoreSDK Build.</help>
       <group>System | Version</group>
       <table>1</table>
-      <item>177</item>
+      <item>178</item>
    </VarDec>
    <VarDec>
       <name>Coolant_Fan</name>
@@ -7061,7 +7083,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>178</item>
+      <item>179</item>
    </VarDec>
    <VarDec>
       <name>Coolant_FanIdx</name>
@@ -7082,7 +7104,7 @@
       <update>BACKGND</update>
       <type>uint16</type>
       <table>1</table>
-      <item>179</item>
+      <item>180</item>
    </VarDec>
    <VarDec>
       <name>Coolant_FanIdxArr</name>
@@ -7105,7 +7127,7 @@
       <input>Coolant_FanIn</input>
       <index>Coolant_FanIdx</index>
       <table>1</table>
-      <item>180</item>
+      <item>181</item>
    </VarDec>
    <VarDec>
       <name>Coolant_FanIn</name>
@@ -7125,7 +7147,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>181</item>
+      <item>182</item>
    </VarDec>
    <VarDec>
       <name>Coolant_FanTbl</name>
@@ -7148,7 +7170,7 @@
       <output>Coolant_Fan</output>
       <prelookup>Coolant_FanIdxArr</prelookup>
       <table>1</table>
-      <item>182</item>
+      <item>183</item>
    </VarDec>
    <VarDec>
       <name>Coolant_Pump</name>
@@ -7168,7 +7190,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>183</item>
+      <item>184</item>
    </VarDec>
    <VarDec>
       <name>Coolant_PumpIdx</name>
@@ -7189,7 +7211,7 @@
       <update>BACKGND</update>
       <type>uint16</type>
       <table>1</table>
-      <item>184</item>
+      <item>185</item>
    </VarDec>
    <VarDec>
       <name>Coolant_PumpIdxArr</name>
@@ -7212,7 +7234,7 @@
       <input>Coolant_PumpIn</input>
       <index>Coolant_PumpIdx</index>
       <table>1</table>
-      <item>185</item>
+      <item>186</item>
    </VarDec>
    <VarDec>
       <name>Coolant_PumpIn</name>
@@ -7232,7 +7254,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>186</item>
+      <item>187</item>
    </VarDec>
    <VarDec>
       <name>Coolant_PumpTbl</name>
@@ -7255,7 +7277,7 @@
       <output>Coolant_Pump</output>
       <prelookup>Coolant_PumpIdxArr</prelookup>
       <table>1</table>
-      <item>187</item>
+      <item>188</item>
    </VarDec>
    <VarDec>
       <name>CoolantPumpSpeed_out</name>
@@ -7275,7 +7297,7 @@
       <struct>BuckyWagon_01_B.s110_Switch</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Cooling</group>
       <table>1</table>
-      <item>188</item>
+      <item>189</item>
    </VarDec>
    <VarDec>
       <name>Counter_Mode_Select</name>
@@ -7300,7 +7322,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>189</item>
+      <item>190</item>
    </VarDec>
    <VarDec>
       <name>Counter_Multiplier</name>
@@ -7320,7 +7342,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>190</item>
+      <item>191</item>
    </VarDec>
    <VarDec>
       <name>Counter_Prb</name>
@@ -7340,7 +7362,7 @@
       <struct>BuckyWagon_01_B.s84_Switch</struct>
       <group>Actuators | UQM | Counter</group>
       <table>1</table>
-      <item>191</item>
+      <item>192</item>
    </VarDec>
    <VarDec>
       <name>CPUIdlePcent</name>
@@ -7362,7 +7384,7 @@
       <help>Percentage of the CPU time spent servicing idle priority work.</help>
       <group>System | Performance</group>
       <table>1</table>
-      <item>192</item>
+      <item>193</item>
    </VarDec>
    <VarDec>
       <name>CPUMargin</name>
@@ -7383,7 +7405,7 @@
       <help>When the available CPU idle time drops below this threshold, the application performs a safety stop</help>
       <group>System | Debug | Application Monitor Config</group>
       <table>1</table>
-      <item>193</item>
+      <item>194</item>
    </VarDec>
    <VarDec>
       <name>CPUTime_AppISR</name>
@@ -7405,7 +7427,7 @@
       <help>Percentage of the CPU time spent executing the periodic timer interrupt</help>
       <group>System | Performance</group>
       <table>1</table>
-      <item>194</item>
+      <item>195</item>
    </VarDec>
    <VarDec>
       <name>CPUTime_Bgnd</name>
@@ -7427,7 +7449,7 @@
       <help>Percentage of the CPU time spent servicing background priority tasks</help>
       <group>System | Performance</group>
       <table>1</table>
-      <item>195</item>
+      <item>196</item>
    </VarDec>
    <VarDec>
       <name>CPUTime_CAN</name>
@@ -7449,7 +7471,7 @@
       <help>Percentage of the CPU time spent executing CAN interrupts</help>
       <group>System | Performance</group>
       <table>1</table>
-      <item>196</item>
+      <item>197</item>
    </VarDec>
    <VarDec>
       <name>CPUTime_FgndAngle</name>
@@ -7471,7 +7493,7 @@
       <help>Percentage of the CPU time spent executing application callbacks due to framework events</help>
       <group>System | Performance</group>
       <table>1</table>
-      <item>197</item>
+      <item>198</item>
    </VarDec>
    <VarDec>
       <name>CPUTime_FgndTime</name>
@@ -7493,7 +7515,7 @@
       <help>Percentage of the CPU time spent servicing background priority tasks</help>
       <group>System | Performance</group>
       <table>1</table>
-      <item>198</item>
+      <item>199</item>
    </VarDec>
    <VarDec>
       <name>CPUTime_MIOS</name>
@@ -7515,7 +7537,7 @@
       <help>Percentage of the CPU time spent executing MIOS interrupts</help>
       <group>System | Performance</group>
       <table>1</table>
-      <item>199</item>
+      <item>200</item>
    </VarDec>
    <VarDec>
       <name>CPUTime_Serial</name>
@@ -7537,7 +7559,7 @@
       <help>Percentage of the CPU time spent executing serial interrupts</help>
       <group>System | Performance</group>
       <table>1</table>
-      <item>200</item>
+      <item>201</item>
    </VarDec>
    <VarDec>
       <name>CPUTime_TimerISR</name>
@@ -7559,7 +7581,7 @@
       <help>Percentage of the CPU time spent executing the periodic timer interrupt</help>
       <group>System | Performance</group>
       <table>1</table>
-      <item>201</item>
+      <item>202</item>
    </VarDec>
    <VarDec>
       <name>CPUTime_TPU</name>
@@ -7581,7 +7603,7 @@
       <help>Percentage of the CPU time spent executing TPU interrupts</help>
       <group>System | Performance</group>
       <table>1</table>
-      <item>202</item>
+      <item>203</item>
    </VarDec>
    <VarDec>
       <name>creepSpeed</name>
@@ -7603,7 +7625,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>203</item>
+      <item>204</item>
    </VarDec>
    <VarDec>
       <name>Current_Limit</name>
@@ -7623,7 +7645,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>204</item>
+      <item>205</item>
    </VarDec>
    <VarDec>
       <name>Current_Limit_Override_new</name>
@@ -7643,7 +7665,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>205</item>
+      <item>206</item>
    </VarDec>
    <VarDec>
       <name>Current_Limit_Override_ovr</name>
@@ -7668,7 +7690,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>206</item>
+      <item>207</item>
    </VarDec>
    <VarDec>
       <name>Current_Limit_Probe</name>
@@ -7688,7 +7710,7 @@
       <struct>BuckyWagon_01_B.s69_Merge</struct>
       <group>Actuators | EatonCharger</group>
       <table>1</table>
-      <item>207</item>
+      <item>208</item>
    </VarDec>
    <VarDec>
       <name>Current_Transducer_Fault_IbusIleg</name>
@@ -7708,7 +7730,7 @@
       <struct>BuckyWagon_01_B.s223_Current_Transducer_Fault_IbusIleg</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>208</item>
+      <item>209</item>
    </VarDec>
    <VarDec>
       <name>DC_Voltage</name>
@@ -7728,7 +7750,7 @@
       <struct>BuckyWagon_01_B.s212_bcm_vbat</struct>
       <group>Sensors</group>
       <table>1</table>
-      <item>209</item>
+      <item>210</item>
    </VarDec>
    <VarDec>
       <name>DCDCInhibit_Out_Pin</name>
@@ -7793,7 +7815,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>210</item>
+      <item>211</item>
    </VarDec>
    <VarDec>
       <name>din_create_EStop_Switch_Pin</name>
@@ -7907,7 +7929,7 @@
          <default>Illegal Error</default>
       </enum>
       <table>1</table>
-      <item>211</item>
+      <item>212</item>
    </VarDec>
    <VarDec>
       <name>din_read_EStop_Switch_Pin</name>
@@ -8021,7 +8043,7 @@
          <default>Illegal Error</default>
       </enum>
       <table>1</table>
-      <item>212</item>
+      <item>213</item>
    </VarDec>
    <VarDec>
       <name>DischargeClip</name>
@@ -8041,7 +8063,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>213</item>
+      <item>214</item>
    </VarDec>
    <VarDec>
       <name>DischargeClipMap</name>
@@ -8066,7 +8088,7 @@
       <row_prelookup>SOCPreIdxArr</row_prelookup>
       <row_len>17</row_len>
       <table>1</table>
-      <item>214</item>
+      <item>215</item>
    </VarDec>
    <VarDec>
       <name>DisplayFaults</name>
@@ -8092,7 +8114,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>215</item>
+      <item>216</item>
    </VarDec>
    <VarDec>
       <name>dispLength</name>
@@ -8113,7 +8135,7 @@
       <update>BACKGND</update>
       <type>uint8</type>
       <table>1</table>
-      <item>216</item>
+      <item>217</item>
    </VarDec>
    <VarDec>
       <name>dout_create_DOut1023p0011</name>
@@ -8227,7 +8249,7 @@
          <default>Illegal Error</default>
       </enum>
       <table>1</table>
-      <item>217</item>
+      <item>218</item>
    </VarDec>
    <VarDec>
       <name>dout_create_DOut178p0011</name>
@@ -8341,7 +8363,7 @@
          <default>Illegal Error</default>
       </enum>
       <table>1</table>
-      <item>218</item>
+      <item>219</item>
    </VarDec>
    <VarDec>
       <name>dout_create_DOut179p0011</name>
@@ -8455,7 +8477,7 @@
          <default>Illegal Error</default>
       </enum>
       <table>1</table>
-      <item>219</item>
+      <item>220</item>
    </VarDec>
    <VarDec>
       <name>dout_create_DOut180p0011</name>
@@ -8569,7 +8591,7 @@
          <default>Illegal Error</default>
       </enum>
       <table>1</table>
-      <item>220</item>
+      <item>221</item>
    </VarDec>
    <VarDec>
       <name>Downsample</name>
@@ -8590,7 +8612,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>221</item>
+      <item>222</item>
    </VarDec>
    <VarDec>
       <name>Drive_Enable_Delay</name>
@@ -8610,7 +8632,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>222</item>
+      <item>223</item>
    </VarDec>
    <VarDec>
       <name>Drive_Ready_Prb</name>
@@ -8630,7 +8652,7 @@
       <struct>BuckyWagon_01_B.s223_RelationalOperator</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>223</item>
+      <item>224</item>
    </VarDec>
    <VarDec>
       <name>DriveDemand_tq_Forward</name>
@@ -8650,7 +8672,7 @@
       <struct>BuckyWagon_01_B.s131_motohawk_interpolation_2d</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|DriverDemandBase</group>
       <table>1</table>
-      <item>224</item>
+      <item>225</item>
    </VarDec>
    <VarDec>
       <name>DriveDemand_tq_Out</name>
@@ -8670,7 +8692,7 @@
       <struct>BuckyWagon_01_B.s131_Switch</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|DriverDemandBase</group>
       <table>1</table>
-      <item>225</item>
+      <item>226</item>
    </VarDec>
    <VarDec>
       <name>DriveDemand_tq_Reverse</name>
@@ -8690,7 +8712,7 @@
       <struct>BuckyWagon_01_B.s131_motohawk_interpolation_2d1</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|DriverDemandBase</group>
       <table>1</table>
-      <item>226</item>
+      <item>227</item>
    </VarDec>
    <VarDec>
       <name>DriveMode</name>
@@ -8715,7 +8737,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>227</item>
+      <item>228</item>
    </VarDec>
    <VarDec>
       <name>DriverDemandBaseForward</name>
@@ -8735,7 +8757,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>228</item>
+      <item>229</item>
    </VarDec>
    <VarDec>
       <name>DriverDemandBaseForwardMap</name>
@@ -8760,7 +8782,7 @@
       <row_prelookup>AccelPedalPreIdxArr</row_prelookup>
       <row_len>17</row_len>
       <table>1</table>
-      <item>229</item>
+      <item>230</item>
    </VarDec>
    <VarDec>
       <name>DriverDemandBaseReverse</name>
@@ -8780,7 +8802,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>230</item>
+      <item>231</item>
    </VarDec>
    <VarDec>
       <name>DriverDemandBaseReverseMap</name>
@@ -8805,7 +8827,7 @@
       <row_prelookup>AccelPedalPreIdxArr</row_prelookup>
       <row_len>17</row_len>
       <table>1</table>
-      <item>231</item>
+      <item>232</item>
    </VarDec>
    <VarDec>
       <name>dualIndex</name>
@@ -8827,7 +8849,7 @@
       <col_len>1</col_len>
       <row_len>2</row_len>
       <table>1</table>
-      <item>232</item>
+      <item>233</item>
    </VarDec>
    <VarDec>
       <name>E_Stop_Invert</name>
@@ -8847,7 +8869,7 @@
       <update>BACKGND</update>
       <type>uint8</type>
       <table>1</table>
-      <item>233</item>
+      <item>234</item>
    </VarDec>
    <VarDec>
       <name>Eaton_HV_Charger_Temperature_new</name>
@@ -8867,7 +8889,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>234</item>
+      <item>235</item>
    </VarDec>
    <VarDec>
       <name>Eaton_HV_Charger_Temperature_ovr</name>
@@ -8892,7 +8914,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>235</item>
+      <item>236</item>
    </VarDec>
    <VarDec>
       <name>Eaton_HV_Charger_Temperature_probe</name>
@@ -8912,7 +8934,7 @@
       <struct>BuckyWagon_01_B.s217_Eaton_HV_Charger_Temperature</struct>
       <group>Sensors | EatonCharger</group>
       <table>1</table>
-      <item>236</item>
+      <item>237</item>
    </VarDec>
    <VarDec>
       <name>EatonpluggedIn</name>
@@ -8932,7 +8954,7 @@
       <struct>BuckyWagon_01_B.s316_pluggedIn</struct>
       <group>Sensors | EatonCharger</group>
       <table>1</table>
-      <item>237</item>
+      <item>238</item>
    </VarDec>
    <VarDec>
       <name>ECUP_Threshold</name>
@@ -8954,7 +8976,7 @@
       <update>BACKGND</update>
       <type>uint16</type>
       <table>1</table>
-      <item>238</item>
+      <item>239</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_brakeEn</name>
@@ -8976,7 +8998,7 @@
       <update>BACKGND</update>
       <type>uint16</type>
       <table>1</table>
-      <item>239</item>
+      <item>240</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_driveEn</name>
@@ -8998,7 +9020,7 @@
       <update>BACKGND</update>
       <type>uint16</type>
       <table>1</table>
-      <item>240</item>
+      <item>241</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_driveNbrakeEn</name>
@@ -9020,7 +9042,7 @@
       <update>BACKGND</update>
       <type>uint16</type>
       <table>1</table>
-      <item>241</item>
+      <item>242</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_Fault</name>
@@ -9040,7 +9062,7 @@
       <struct>BuckyWagon_01_B.s214_EHPAS_Fault</struct>
       <group>Sensors | EHPAS</group>
       <table>1</table>
-      <item>242</item>
+      <item>243</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_Fault_new</name>
@@ -9060,7 +9082,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>243</item>
+      <item>244</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_Fault_ovr</name>
@@ -9085,7 +9107,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>244</item>
+      <item>245</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_IdleEn</name>
@@ -9107,7 +9129,7 @@
       <update>BACKGND</update>
       <type>uint16</type>
       <table>1</table>
-      <item>245</item>
+      <item>246</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_Input_Current_NA</name>
@@ -9127,7 +9149,7 @@
       <struct>BuckyWagon_01_B.s214_EHPAS_Input_Current_NA</struct>
       <group>Sensors | EHPAS</group>
       <table>1</table>
-      <item>246</item>
+      <item>247</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_Input_Current_NA_new</name>
@@ -9147,7 +9169,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>247</item>
+      <item>248</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_Input_Current_NA_ovr</name>
@@ -9172,7 +9194,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>248</item>
+      <item>249</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_Input_Voltage</name>
@@ -9192,7 +9214,7 @@
       <struct>BuckyWagon_01_B.s214_EHPAS_Input_Voltage</struct>
       <group>Sensors | EHPAS</group>
       <table>1</table>
-      <item>249</item>
+      <item>250</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_Input_Voltage_new</name>
@@ -9212,7 +9234,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>250</item>
+      <item>251</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_Input_Voltage_ovr</name>
@@ -9237,7 +9259,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>251</item>
+      <item>252</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_keyUpEn</name>
@@ -9259,7 +9281,7 @@
       <update>BACKGND</update>
       <type>uint16</type>
       <table>1</table>
-      <item>252</item>
+      <item>253</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_lowSpeedEn</name>
@@ -9281,7 +9303,7 @@
       <update>BACKGND</update>
       <type>uint16</type>
       <table>1</table>
-      <item>253</item>
+      <item>254</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_Op_State</name>
@@ -9301,7 +9323,7 @@
       <struct>BuckyWagon_01_B.s214_EHPAS_Op_State</struct>
       <group>Sensors | EHPAS</group>
       <table>1</table>
-      <item>254</item>
+      <item>255</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_Op_State_new</name>
@@ -9321,7 +9343,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>255</item>
+      <item>256</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_Op_State_ovr</name>
@@ -9346,7 +9368,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>256</item>
+      <item>257</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_Operating_Mode_Cmd_new</name>
@@ -9366,7 +9388,7 @@
       <update>BACKGND</update>
       <type>uint8</type>
       <table>1</table>
-      <item>257</item>
+      <item>258</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_Operating_Mode_Cmd_ovr</name>
@@ -9391,7 +9413,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>258</item>
+      <item>259</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_Operating_Mode_Command</name>
@@ -9411,7 +9433,7 @@
       <struct>BuckyWagon_01_B.s15_OperatingMode_cmd</struct>
       <group>Actuators | EHPAS</group>
       <table>1</table>
-      <item>259</item>
+      <item>260</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_Performance_Limit</name>
@@ -9431,7 +9453,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>260</item>
+      <item>261</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_Pump_Speed</name>
@@ -9451,7 +9473,7 @@
       <struct>BuckyWagon_01_B.s214_EHPAS_Pump_Speed</struct>
       <group>Sensors | EHPAS</group>
       <table>1</table>
-      <item>261</item>
+      <item>262</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_Pump_Speed_new</name>
@@ -9471,7 +9493,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>262</item>
+      <item>263</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_Pump_Speed_ovr</name>
@@ -9496,7 +9518,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>263</item>
+      <item>264</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_PumpState_probe</name>
@@ -9525,7 +9547,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>264</item>
+      <item>265</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_PumpStateEnable_ovr_new</name>
@@ -9554,7 +9576,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>265</item>
+      <item>266</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_PumpStateEnable_ovr_ovr</name>
@@ -9579,7 +9601,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>266</item>
+      <item>267</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_slowingEn</name>
@@ -9601,7 +9623,7 @@
       <update>BACKGND</update>
       <type>uint16</type>
       <table>1</table>
-      <item>267</item>
+      <item>268</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_stoppingEn</name>
@@ -9623,7 +9645,7 @@
       <update>BACKGND</update>
       <type>uint16</type>
       <table>1</table>
-      <item>268</item>
+      <item>269</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_TempCur</name>
@@ -9643,7 +9665,7 @@
       <struct>BuckyWagon_01_B.s214_EHPAS_TempCur</struct>
       <group>Sensors | EHPAS</group>
       <table>1</table>
-      <item>269</item>
+      <item>270</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_TempCur_new</name>
@@ -9663,7 +9685,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>270</item>
+      <item>271</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_TempCur_ovr</name>
@@ -9688,7 +9710,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>271</item>
+      <item>272</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_TempMax</name>
@@ -9708,7 +9730,7 @@
       <struct>BuckyWagon_01_B.s214_EHPAS_TempMax</struct>
       <group>Sensors | EHPAS</group>
       <table>1</table>
-      <item>272</item>
+      <item>273</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_TempMax_new</name>
@@ -9728,7 +9750,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>273</item>
+      <item>274</item>
    </VarDec>
    <VarDec>
       <name>EHPAS_TempMax_ovr</name>
@@ -9753,7 +9775,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>274</item>
+      <item>275</item>
    </VarDec>
    <VarDec>
       <name>EMP_Board_Temp</name>
@@ -9773,7 +9795,7 @@
       <struct>BuckyWagon_01_B.s215_EMP_Board_Temp</struct>
       <group>Sensors | EMP Coolant Pump</group>
       <table>1</table>
-      <item>275</item>
+      <item>276</item>
    </VarDec>
    <VarDec>
       <name>EMP_Board_Temp_new</name>
@@ -9793,7 +9815,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>276</item>
+      <item>277</item>
    </VarDec>
    <VarDec>
       <name>EMP_Board_Temp_ovr</name>
@@ -9818,7 +9840,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>277</item>
+      <item>278</item>
    </VarDec>
    <VarDec>
       <name>EMP_CAN_MaxAge</name>
@@ -9839,7 +9861,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>278</item>
+      <item>279</item>
    </VarDec>
    <VarDec>
       <name>EMP_Cooling_Fan_Board_Temp</name>
@@ -9859,7 +9881,7 @@
       <struct>BuckyWagon_01_B.s216_EMP_Board_Temp</struct>
       <group>Sensors | EMP Cooling Fan</group>
       <table>1</table>
-      <item>279</item>
+      <item>280</item>
    </VarDec>
    <VarDec>
       <name>EMP_Cooling_Fan_Board_Temp_new</name>
@@ -9879,7 +9901,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>280</item>
+      <item>281</item>
    </VarDec>
    <VarDec>
       <name>EMP_Cooling_Fan_Board_Temp_ovr</name>
@@ -9904,7 +9926,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>281</item>
+      <item>282</item>
    </VarDec>
    <VarDec>
       <name>EMP_Cooling_Fan_Mode</name>
@@ -9924,7 +9946,7 @@
       <struct>BuckyWagon_01_B.s216_EMP_Pump_Mode</struct>
       <group>Sensors | EMP Cooling Fan</group>
       <table>1</table>
-      <item>282</item>
+      <item>283</item>
    </VarDec>
    <VarDec>
       <name>EMP_Cooling_Fan_Mode_new</name>
@@ -9944,7 +9966,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>283</item>
+      <item>284</item>
    </VarDec>
    <VarDec>
       <name>EMP_Cooling_Fan_Mode_ovr</name>
@@ -9969,7 +9991,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>284</item>
+      <item>285</item>
    </VarDec>
    <VarDec>
       <name>EMP_Cooling_Fan_Power</name>
@@ -9989,7 +10011,7 @@
       <struct>BuckyWagon_01_B.s216_EMP_Pump_Power</struct>
       <group>Sensors | EMP Cooling Fan</group>
       <table>1</table>
-      <item>285</item>
+      <item>286</item>
    </VarDec>
    <VarDec>
       <name>EMP_Cooling_Fan_Power_new</name>
@@ -10009,7 +10031,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>286</item>
+      <item>287</item>
    </VarDec>
    <VarDec>
       <name>EMP_Cooling_Fan_Power_ovr</name>
@@ -10034,7 +10056,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>287</item>
+      <item>288</item>
    </VarDec>
    <VarDec>
       <name>EMP_Cooling_Fan_Speed</name>
@@ -10054,7 +10076,7 @@
       <struct>BuckyWagon_01_B.s216_EMP_Pump_Speed</struct>
       <group>Sensors | EMP Cooling Fan</group>
       <table>1</table>
-      <item>288</item>
+      <item>289</item>
    </VarDec>
    <VarDec>
       <name>EMP_Cooling_Fan_Speed_new</name>
@@ -10074,7 +10096,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>289</item>
+      <item>290</item>
    </VarDec>
    <VarDec>
       <name>EMP_Cooling_Fan_Speed_ovr</name>
@@ -10099,7 +10121,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>290</item>
+      <item>291</item>
    </VarDec>
    <VarDec>
       <name>EMP_Cooling_Fan_Speed_Percent</name>
@@ -10119,7 +10141,7 @@
       <struct>BuckyWagon_01_B.s216_EMP_Speed_Percent</struct>
       <group>Sensors | EMP Cooling Fan</group>
       <table>1</table>
-      <item>291</item>
+      <item>292</item>
    </VarDec>
    <VarDec>
       <name>EMP_Cooling_Fan_Speed_Percent_new</name>
@@ -10139,7 +10161,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>292</item>
+      <item>293</item>
    </VarDec>
    <VarDec>
       <name>EMP_Cooling_Fan_Speed_Percent_ovr</name>
@@ -10164,7 +10186,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>293</item>
+      <item>294</item>
    </VarDec>
    <VarDec>
       <name>EMP_Cooling_Fan_Status</name>
@@ -10184,7 +10206,7 @@
       <struct>BuckyWagon_01_B.s216_EMP_Pump_Status</struct>
       <group>Sensors | EMP Cooling Fan</group>
       <table>1</table>
-      <item>294</item>
+      <item>295</item>
    </VarDec>
    <VarDec>
       <name>EMP_Cooling_Fan_Status_new</name>
@@ -10204,7 +10226,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>295</item>
+      <item>296</item>
    </VarDec>
    <VarDec>
       <name>EMP_Cooling_Fan_Status_ovr</name>
@@ -10229,7 +10251,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>296</item>
+      <item>297</item>
    </VarDec>
    <VarDec>
       <name>EMP_Fan_Speed</name>
@@ -10249,7 +10271,7 @@
       <struct>BuckyWagon_01_B.s66_Merge</struct>
       <group>Actuators | EMP Cooling Fan</group>
       <table>1</table>
-      <item>297</item>
+      <item>298</item>
    </VarDec>
    <VarDec>
       <name>EMP_Fan_Speed_new</name>
@@ -10269,7 +10291,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>298</item>
+      <item>299</item>
    </VarDec>
    <VarDec>
       <name>EMP_Fan_Speed_ovr</name>
@@ -10294,7 +10316,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>299</item>
+      <item>300</item>
    </VarDec>
    <VarDec>
       <name>EMP_Mode_new</name>
@@ -10314,7 +10336,7 @@
       <update>BACKGND</update>
       <type>uint8</type>
       <table>1</table>
-      <item>300</item>
+      <item>301</item>
    </VarDec>
    <VarDec>
       <name>EMP_Mode_ovr</name>
@@ -10339,7 +10361,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>301</item>
+      <item>302</item>
    </VarDec>
    <VarDec>
       <name>EMP_Pump_Mode</name>
@@ -10359,7 +10381,7 @@
       <struct>BuckyWagon_01_B.s215_EMP_Pump_Mode</struct>
       <group>Sensors | EMP Coolant Pump</group>
       <table>1</table>
-      <item>302</item>
+      <item>303</item>
    </VarDec>
    <VarDec>
       <name>EMP_Pump_Mode_new</name>
@@ -10379,7 +10401,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>303</item>
+      <item>304</item>
    </VarDec>
    <VarDec>
       <name>EMP_Pump_Mode_ovr</name>
@@ -10404,7 +10426,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>304</item>
+      <item>305</item>
    </VarDec>
    <VarDec>
       <name>EMP_Pump_Power</name>
@@ -10424,7 +10446,7 @@
       <struct>BuckyWagon_01_B.s215_EMP_Pump_Power</struct>
       <group>Sensors | EMP Coolant Pump</group>
       <table>1</table>
-      <item>305</item>
+      <item>306</item>
    </VarDec>
    <VarDec>
       <name>EMP_Pump_Power_new</name>
@@ -10444,7 +10466,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>306</item>
+      <item>307</item>
    </VarDec>
    <VarDec>
       <name>EMP_Pump_Power_ovr</name>
@@ -10469,7 +10491,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>307</item>
+      <item>308</item>
    </VarDec>
    <VarDec>
       <name>EMP_Pump_Speed</name>
@@ -10489,7 +10511,7 @@
       <struct>BuckyWagon_01_B.s215_EMP_Pump_Speed</struct>
       <group>Sensors | EMP Coolant Pump</group>
       <table>1</table>
-      <item>308</item>
+      <item>309</item>
    </VarDec>
    <VarDec>
       <name>EMP_Pump_Speed_new</name>
@@ -10509,7 +10531,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>309</item>
+      <item>310</item>
    </VarDec>
    <VarDec>
       <name>EMP_Pump_Speed_ovr</name>
@@ -10534,7 +10556,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>310</item>
+      <item>311</item>
    </VarDec>
    <VarDec>
       <name>EMP_Pump_Status</name>
@@ -10554,7 +10576,7 @@
       <struct>BuckyWagon_01_B.s215_EMP_Pump_Status</struct>
       <group>Sensors | EMP Coolant Pump</group>
       <table>1</table>
-      <item>311</item>
+      <item>312</item>
    </VarDec>
    <VarDec>
       <name>EMP_Pump_Status_new</name>
@@ -10574,7 +10596,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>312</item>
+      <item>313</item>
    </VarDec>
    <VarDec>
       <name>EMP_Pump_Status_ovr</name>
@@ -10599,7 +10621,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>313</item>
+      <item>314</item>
    </VarDec>
    <VarDec>
       <name>EMP_Speed</name>
@@ -10619,7 +10641,7 @@
       <struct>BuckyWagon_01_B.s60_Merge</struct>
       <group>Actuators | EMP Coolant Pump</group>
       <table>1</table>
-      <item>314</item>
+      <item>315</item>
    </VarDec>
    <VarDec>
       <name>EMP_Speed_new</name>
@@ -10639,7 +10661,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>315</item>
+      <item>316</item>
    </VarDec>
    <VarDec>
       <name>EMP_Speed_ovr</name>
@@ -10664,7 +10686,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>316</item>
+      <item>317</item>
    </VarDec>
    <VarDec>
       <name>EMP_Speed_Percent</name>
@@ -10684,7 +10706,7 @@
       <struct>BuckyWagon_01_B.s215_EMP_Speed_Percent</struct>
       <group>Sensors | EMP Coolant Pump</group>
       <table>1</table>
-      <item>317</item>
+      <item>318</item>
    </VarDec>
    <VarDec>
       <name>EMP_Speed_Percent_new</name>
@@ -10704,7 +10726,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>318</item>
+      <item>319</item>
    </VarDec>
    <VarDec>
       <name>EMP_Speed_Percent_ovr</name>
@@ -10729,7 +10751,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>319</item>
+      <item>320</item>
    </VarDec>
    <VarDec>
       <name>EMPFan_CAN_MaxAge</name>
@@ -10750,7 +10772,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>320</item>
+      <item>321</item>
    </VarDec>
    <VarDec>
       <name>Enable_Brake_Light_Out</name>
@@ -10770,7 +10792,7 @@
       <update>BACKGND</update>
       <type>uint8</type>
       <table>1</table>
-      <item>321</item>
+      <item>322</item>
    </VarDec>
    <VarDec>
       <name>Enable_Coast_Neg_Torque</name>
@@ -10791,7 +10813,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>322</item>
+      <item>323</item>
    </VarDec>
    <VarDec>
       <name>Enable_PowerSteering_CAN_Msg</name>
@@ -10811,7 +10833,7 @@
       <update>BACKGND</update>
       <type>uint8</type>
       <table>1</table>
-      <item>323</item>
+      <item>324</item>
    </VarDec>
    <VarDec>
       <name>Enable_Regen</name>
@@ -10830,26 +10852,6 @@
       <struct>ConstantWork.Enable_Regen</struct>
       <class>var</class>
       <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <table>1</table>
-      <item>324</item>
-   </VarDec>
-   <VarDec>
-      <name>EngPowerkW</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
-      <struct>VolatileWork_BSS.EngPowerkW</struct>
-      <class>var</class>
-      <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
@@ -12648,26 +12650,6 @@
       <item>366</item>
    </VarDec>
    <VarDec>
-      <name>GenEfficiencyPct</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
-      <struct>VolatileWork_BSS.GenEfficiencyPct</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <table>1</table>
-      <item>367</item>
-   </VarDec>
-   <VarDec>
       <name>GFD_Enable</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -12685,7 +12667,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>368</item>
+      <item>367</item>
    </VarDec>
    <VarDec>
       <name>GFD_Torque_Off</name>
@@ -12705,7 +12687,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>369</item>
+      <item>368</item>
    </VarDec>
    <VarDec>
       <name>hardBrakeLev</name>
@@ -12727,7 +12709,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>370</item>
+      <item>369</item>
    </VarDec>
    <VarDec>
       <name>HeapMargin</name>
@@ -12748,7 +12730,7 @@
       <help>When the available heap drops below this threshold, the application performs a safety stop</help>
       <group>System | Debug | Application Monitor Config</group>
       <table>1</table>
-      <item>371</item>
+      <item>370</item>
    </VarDec>
    <VarDec>
       <name>Heartbeat_Identifier_1</name>
@@ -12768,7 +12750,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>372</item>
+      <item>371</item>
    </VarDec>
    <VarDec>
       <name>Heartbeat_Identifier_2</name>
@@ -12788,7 +12770,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>373</item>
+      <item>372</item>
    </VarDec>
    <VarDec>
       <name>High_Bound</name>
@@ -12808,7 +12790,7 @@
       <struct>BuckyWagon_01_B.s223_High_Bound</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>374</item>
+      <item>373</item>
    </VarDec>
    <VarDec>
       <name>High12VThres</name>
@@ -12830,7 +12812,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>375</item>
+      <item>374</item>
    </VarDec>
    <VarDec>
       <name>hsc_bcm_enable</name>
@@ -12850,7 +12832,7 @@
       <update>BACKGND</update>
       <type>uint8</type>
       <table>1</table>
-      <item>376</item>
+      <item>375</item>
    </VarDec>
    <VarDec>
       <name>hsc_bcm_enable_new</name>
@@ -12870,7 +12852,7 @@
       <update>BACKGND</update>
       <type>uint8</type>
       <table>1</table>
-      <item>377</item>
+      <item>376</item>
    </VarDec>
    <VarDec>
       <name>hsc_bcm_enable_ovr</name>
@@ -12895,7 +12877,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>378</item>
+      <item>377</item>
    </VarDec>
    <VarDec>
       <name>hsc_bcm_epo</name>
@@ -12915,7 +12897,7 @@
       <struct>BuckyWagon_01_B.s13_Switch</struct>
       <group>Actuators | BCM</group>
       <table>1</table>
-      <item>379</item>
+      <item>378</item>
    </VarDec>
    <VarDec>
       <name>hsc_bcm_epo_new</name>
@@ -12935,7 +12917,7 @@
       <update>BACKGND</update>
       <type>uint8</type>
       <table>1</table>
-      <item>380</item>
+      <item>379</item>
    </VarDec>
    <VarDec>
       <name>hsc_bcm_epo_ovr</name>
@@ -12960,7 +12942,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>381</item>
+      <item>380</item>
    </VarDec>
    <VarDec>
       <name>hsc_bcm_leakage_enable</name>
@@ -12980,7 +12962,7 @@
       <struct>BuckyWagon_01_B.s20_LogicalOperator</struct>
       <group>Actuators | BCM</group>
       <table>1</table>
-      <item>382</item>
+      <item>381</item>
    </VarDec>
    <VarDec>
       <name>hsc_bcm_leakage_enable_new</name>
@@ -13000,7 +12982,7 @@
       <update>BACKGND</update>
       <type>uint8</type>
       <table>1</table>
-      <item>383</item>
+      <item>382</item>
    </VarDec>
    <VarDec>
       <name>hsc_bcm_leakage_enable_ovr</name>
@@ -13025,7 +13007,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>384</item>
+      <item>383</item>
    </VarDec>
    <VarDec>
       <name>hsc_bcm_mainc_enable</name>
@@ -13045,7 +13027,7 @@
       <struct>BuckyWagon_01_B.s114_LogicalOperator</struct>
       <group>Actuators | BCM</group>
       <table>1</table>
-      <item>385</item>
+      <item>384</item>
    </VarDec>
    <VarDec>
       <name>hsc_bcm_mainc_enable_new</name>
@@ -13065,7 +13047,7 @@
       <update>BACKGND</update>
       <type>uint8</type>
       <table>1</table>
-      <item>386</item>
+      <item>385</item>
    </VarDec>
    <VarDec>
       <name>hsc_bcm_mainc_enable_ovr</name>
@@ -13090,7 +13072,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>387</item>
+      <item>386</item>
    </VarDec>
    <VarDec>
       <name>HV_Bus_allowed_mismatch</name>
@@ -13111,7 +13093,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>388</item>
+      <item>387</item>
    </VarDec>
    <VarDec>
       <name>HV_Bus_offline_delay</name>
@@ -13133,7 +13115,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>389</item>
+      <item>388</item>
    </VarDec>
    <VarDec>
       <name>HV_GFI_Check</name>
@@ -13155,7 +13137,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>390</item>
+      <item>389</item>
    </VarDec>
    <VarDec>
       <name>IdleStackMargin</name>
@@ -13176,7 +13158,7 @@
       <help>When the available stack space drops below this threshold, the application performs a safety stop</help>
       <group>System | Debug | Application Monitor Config</group>
       <table>1</table>
-      <item>391</item>
+      <item>390</item>
    </VarDec>
    <VarDec>
       <name>IdleStackMinBytesFree</name>
@@ -13197,7 +13179,7 @@
       <help>Min bytes observed on the Idle Stack</help>
       <group>System | Status | OS</group>
       <table>1</table>
-      <item>392</item>
+      <item>391</item>
    </VarDec>
    <VarDec>
       <name>IgnitionStatus</name>
@@ -13217,7 +13199,7 @@
       <struct>BuckyWagon_01_B.s217_IgnitionStatus</struct>
       <group>Sensors | EatonCharger</group>
       <table>1</table>
-      <item>393</item>
+      <item>392</item>
    </VarDec>
    <VarDec>
       <name>IgnitionStatus_new</name>
@@ -13237,7 +13219,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>394</item>
+      <item>393</item>
    </VarDec>
    <VarDec>
       <name>IgnitionStatus_ovr</name>
@@ -13262,7 +13244,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>395</item>
+      <item>394</item>
    </VarDec>
    <VarDec>
       <name>Ignore_Accel_Limit</name>
@@ -13282,7 +13264,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>396</item>
+      <item>395</item>
    </VarDec>
    <VarDec>
       <name>In_Reverse</name>
@@ -13302,7 +13284,7 @@
       <struct>BuckyWagon_01_B.s159_Merge</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Reverse</group>
       <table>1</table>
-      <item>397</item>
+      <item>396</item>
    </VarDec>
    <VarDec>
       <name>In_Reverse_new</name>
@@ -13322,7 +13304,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>398</item>
+      <item>397</item>
    </VarDec>
    <VarDec>
       <name>In_Reverse_ovr</name>
@@ -13347,7 +13329,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>399</item>
+      <item>398</item>
    </VarDec>
    <VarDec>
       <name>InhibitDCDC_Out_</name>
@@ -13369,7 +13351,7 @@
       <help>Display output in engineering units</help>
       <group>Actuators | DC/DC | InhibitDCDC_Out</group>
       <table>1</table>
-      <item>400</item>
+      <item>399</item>
    </VarDec>
    <VarDec>
       <name>InhibitDCDC_Out__new</name>
@@ -13391,7 +13373,7 @@
       <update>BACKGND</update>
       <type>uint8</type>
       <table>1</table>
-      <item>401</item>
+      <item>400</item>
    </VarDec>
    <VarDec>
       <name>InhibitDCDC_Out__ovr</name>
@@ -13416,7 +13398,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>402</item>
+      <item>401</item>
    </VarDec>
    <VarDec>
       <name>InhibitDCDC_Out__Polarity</name>
@@ -13438,7 +13420,7 @@
       <update>BACKGND</update>
       <type>uint8</type>
       <table>1</table>
-      <item>403</item>
+      <item>402</item>
    </VarDec>
    <VarDec>
       <name>InputCurrent_new</name>
@@ -13458,7 +13440,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>404</item>
+      <item>403</item>
    </VarDec>
    <VarDec>
       <name>InputCurrent_ovr</name>
@@ -13483,7 +13465,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>405</item>
+      <item>404</item>
    </VarDec>
    <VarDec>
       <name>InputCurrentLimitMax</name>
@@ -13503,7 +13485,7 @@
       <struct>BuckyWagon_01_B.s217_InputCurrentLimitMax</struct>
       <group>Sensors | EatonCharger</group>
       <table>1</table>
-      <item>406</item>
+      <item>405</item>
    </VarDec>
    <VarDec>
       <name>InputCurrentLimitMax_new</name>
@@ -13523,7 +13505,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>407</item>
+      <item>406</item>
    </VarDec>
    <VarDec>
       <name>InputCurrentLimitMax_ovr</name>
@@ -13548,7 +13530,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>408</item>
+      <item>407</item>
    </VarDec>
    <VarDec>
       <name>InputVoltage_new</name>
@@ -13568,7 +13550,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>409</item>
+      <item>408</item>
    </VarDec>
    <VarDec>
       <name>InputVoltage_ovr</name>
@@ -13593,7 +13575,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>410</item>
+      <item>409</item>
    </VarDec>
    <VarDec>
       <name>InstBattKW</name>
@@ -13613,7 +13595,7 @@
       <struct>BuckyWagon_01_B.s118_Gain1</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
       <table>1</table>
-      <item>411</item>
+      <item>410</item>
    </VarDec>
    <VarDec>
       <name>InstDCDCWatts</name>
@@ -13633,7 +13615,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>412</item>
+      <item>411</item>
    </VarDec>
    <VarDec>
       <name>InstPhxCurrent</name>
@@ -13653,7 +13635,7 @@
       <struct>BuckyWagon_01_B.s118_Gain4</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
       <table>1</table>
-      <item>413</item>
+      <item>412</item>
    </VarDec>
    <VarDec>
       <name>InstPhxKW</name>
@@ -13673,7 +13655,7 @@
       <struct>BuckyWagon_01_B.s118_Gain5</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
       <table>1</table>
-      <item>414</item>
+      <item>413</item>
    </VarDec>
    <VarDec>
       <name>InstUQMKW</name>
@@ -13693,7 +13675,7 @@
       <struct>BuckyWagon_01_B.s118_Gain6</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
       <table>1</table>
-      <item>415</item>
+      <item>414</item>
    </VarDec>
    <VarDec>
       <name>InstVehicleKWUsed</name>
@@ -13713,7 +13695,7 @@
       <struct>BuckyWagon_01_B.s118_Gain</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
       <table>1</table>
-      <item>416</item>
+      <item>415</item>
    </VarDec>
    <VarDec>
       <name>InstWhperMile</name>
@@ -13733,7 +13715,7 @@
       <struct>BuckyWagon_01_B.s118_Saturation</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
       <table>1</table>
-      <item>417</item>
+      <item>416</item>
    </VarDec>
    <VarDec>
       <name>IntermediaryGearRatio</name>
@@ -13754,7 +13736,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>418</item>
+      <item>417</item>
    </VarDec>
    <VarDec>
       <name>InterruptStackMargin</name>
@@ -13775,7 +13757,7 @@
       <help>When the available stack space drops below this threshold, the application performs a safety stop</help>
       <group>System | Debug | Application Monitor Config</group>
       <table>1</table>
-      <item>419</item>
+      <item>418</item>
    </VarDec>
    <VarDec>
       <name>InterruptStackMinBytesFree</name>
@@ -13797,7 +13779,7 @@
       <help>Minimum observed stack free for use by the interrupts</help>
       <group>System | Status | OS</group>
       <table>1</table>
-      <item>420</item>
+      <item>419</item>
    </VarDec>
    <VarDec>
       <name>IntStallTorque</name>
@@ -13817,7 +13799,7 @@
       <struct>BuckyWagon_01_B.s106_Switch1</struct>
       <group>Diagnostics and Protection</group>
       <table>1</table>
-      <item>421</item>
+      <item>420</item>
    </VarDec>
    <VarDec>
       <name>Invalid_Power_Supply</name>
@@ -13837,7 +13819,7 @@
       <struct>BuckyWagon_01_B.s223_Invalid_Power_Supply</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>422</item>
+      <item>421</item>
    </VarDec>
    <VarDec>
       <name>Inverter_Fault</name>
@@ -13857,7 +13839,7 @@
       <struct>BuckyWagon_01_B.s223_Inverter_Fault</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>423</item>
+      <item>422</item>
    </VarDec>
    <VarDec>
       <name>Inverter_Fault_History</name>
@@ -13877,7 +13859,7 @@
       <struct>BuckyWagon_01_B.s223_Inverter_Fault_History</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>424</item>
+      <item>423</item>
    </VarDec>
    <VarDec>
       <name>Inverter_Fault_Occured</name>
@@ -13897,7 +13879,7 @@
       <struct>BuckyWagon_01_B.s223_Inverter_Fault_Occured</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>425</item>
+      <item>424</item>
    </VarDec>
    <VarDec>
       <name>Inverter_Fault_Occured_History</name>
@@ -13917,7 +13899,7 @@
       <struct>BuckyWagon_01_B.s223_Iverter_Fault_Occured_History</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>426</item>
+      <item>425</item>
    </VarDec>
    <VarDec>
       <name>Inverter_Over_Temperature_History</name>
@@ -13937,7 +13919,7 @@
       <struct>BuckyWagon_01_B.s223_Inverter_Over_Temperature_History</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>427</item>
+      <item>426</item>
    </VarDec>
    <VarDec>
       <name>Inverter_Over_Temperautre</name>
@@ -13957,7 +13939,7 @@
       <struct>BuckyWagon_01_B.s223_Inverter_Over_Temperature</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>428</item>
+      <item>427</item>
    </VarDec>
    <VarDec>
       <name>Inverter_Temp_Enable</name>
@@ -13982,7 +13964,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>429</item>
+      <item>428</item>
    </VarDec>
    <VarDec>
       <name>Inverter_Temp_Offset</name>
@@ -14002,7 +13984,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>430</item>
+      <item>429</item>
    </VarDec>
    <VarDec>
       <name>Inverter_Temperature</name>
@@ -14022,7 +14004,7 @@
       <struct>BuckyWagon_01_B.s223_Inverter_Temperature</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>431</item>
+      <item>430</item>
    </VarDec>
    <VarDec>
       <name>InverterOverheatHigh</name>
@@ -14042,7 +14024,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>432</item>
+      <item>431</item>
    </VarDec>
    <VarDec>
       <name>InverterOverheatLow</name>
@@ -14062,7 +14044,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>433</item>
+      <item>432</item>
    </VarDec>
    <VarDec>
       <name>InverterTemp_Overheat</name>
@@ -14084,7 +14066,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>434</item>
+      <item>433</item>
    </VarDec>
    <VarDec>
       <name>InvertMode</name>
@@ -14110,7 +14092,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>435</item>
+      <item>434</item>
    </VarDec>
    <VarDec>
       <name>KeyCycleKWh</name>
@@ -14130,7 +14112,7 @@
       <struct>BuckyWagon_01_B.s118_Gain3</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
       <table>1</table>
-      <item>436</item>
+      <item>435</item>
    </VarDec>
    <VarDec>
       <name>KeyCycleKWh_without_12v_dcdc_current</name>
@@ -14150,7 +14132,7 @@
       <struct>BuckyWagon_01_B.s118_Gain8</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
       <table>1</table>
-      <item>437</item>
+      <item>436</item>
    </VarDec>
    <VarDec>
       <name>KeyOnRuntime_Sec</name>
@@ -14172,7 +14154,7 @@
       <update>BACKGND</update>
       <type>uint16</type>
       <table>1</table>
-      <item>438</item>
+      <item>437</item>
    </VarDec>
    <VarDec>
       <name>LastOSError</name>
@@ -14270,7 +14252,7 @@
          <default>Unknown Error</default>
       </enum>
       <table>1</table>
-      <item>439</item>
+      <item>438</item>
    </VarDec>
    <VarDec>
       <name>lastScrollTime</name>
@@ -14292,7 +14274,7 @@
       <update>BACKGND</update>
       <type>uint16</type>
       <table>1</table>
-      <item>440</item>
+      <item>439</item>
    </VarDec>
    <VarDec>
       <name>Leg_Current</name>
@@ -14312,7 +14294,7 @@
       <struct>BuckyWagon_01_B.s223_Leg_Current</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>441</item>
+      <item>440</item>
    </VarDec>
    <VarDec>
       <name>Limits_Control_Mode</name>
@@ -14337,7 +14319,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>442</item>
+      <item>441</item>
    </VarDec>
    <VarDec>
       <name>Limp_Home_Mode</name>
@@ -14357,7 +14339,7 @@
       <struct>BuckyWagon_01_B.s223_Limp_Home_Mode</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>443</item>
+      <item>442</item>
    </VarDec>
    <VarDec>
       <name>Limp_Home_Mode_History</name>
@@ -14377,7 +14359,7 @@
       <struct>BuckyWagon_01_B.s223_Limp_Home_Mode_History</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>444</item>
+      <item>443</item>
    </VarDec>
    <VarDec>
       <name>LinkStatus</name>
@@ -14398,7 +14380,7 @@
       <help>This is the Status of the Comms link.</help>
       <group>System | Version</group>
       <table>1</table>
-      <item>445</item>
+      <item>444</item>
    </VarDec>
    <VarDec>
       <name>listIndex</name>
@@ -14418,7 +14400,7 @@
       <update>BACKGND</update>
       <type>uint8</type>
       <table>1</table>
-      <item>446</item>
+      <item>445</item>
    </VarDec>
    <VarDec>
       <name>Load_Enable_Delay</name>
@@ -14438,7 +14420,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>447</item>
+      <item>446</item>
    </VarDec>
    <VarDec>
       <name>Low_Bound</name>
@@ -14458,7 +14440,7 @@
       <struct>BuckyWagon_01_B.s223_Low_Bound</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>448</item>
+      <item>447</item>
    </VarDec>
    <VarDec>
       <name>Low12VThres</name>
@@ -14480,7 +14462,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>449</item>
+      <item>448</item>
    </VarDec>
    <VarDec>
       <name>LowSpeedManeuverRuntime</name>
@@ -14502,7 +14484,7 @@
       <update>BACKGND</update>
       <type>uint16</type>
       <table>1</table>
-      <item>450</item>
+      <item>449</item>
    </VarDec>
    <VarDec>
       <name>LV_Voltage_Pin</name>
@@ -14568,7 +14550,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>451</item>
+      <item>450</item>
    </VarDec>
    <VarDec>
       <name>LV_Voltage_Pin_ref</name>
@@ -14594,7 +14576,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>452</item>
+      <item>451</item>
    </VarDec>
    <VarDec>
       <name>LVVolt</name>
@@ -14616,7 +14598,7 @@
       <help>Final value after Linear Sensor Characterization</help>
       <group>Sensors | LVVolt | LVVolt</group>
       <table>1</table>
-      <item>453</item>
+      <item>452</item>
    </VarDec>
    <VarDec>
       <name>LVVolt_ADC</name>
@@ -14638,7 +14620,7 @@
       <help>Singal measured directly from sensor</help>
       <group>Sensors | LVVolt | LVVolt</group>
       <table>1</table>
-      <item>454</item>
+      <item>453</item>
    </VarDec>
    <VarDec>
       <name>LVVolt_DfltValue</name>
@@ -14660,7 +14642,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>455</item>
+      <item>454</item>
    </VarDec>
    <VarDec>
       <name>LVVolt_FilterConst</name>
@@ -14682,7 +14664,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>456</item>
+      <item>455</item>
    </VarDec>
    <VarDec>
       <name>LVVolt_Gain</name>
@@ -14704,7 +14686,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>457</item>
+      <item>456</item>
    </VarDec>
    <VarDec>
       <name>LVVolt_InputHiFltPos</name>
@@ -14726,7 +14708,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>458</item>
+      <item>457</item>
    </VarDec>
    <VarDec>
       <name>LVVolt_InputLoFltPos</name>
@@ -14748,7 +14730,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>459</item>
+      <item>458</item>
    </VarDec>
    <VarDec>
       <name>LVVolt_new</name>
@@ -14770,7 +14752,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>460</item>
+      <item>459</item>
    </VarDec>
    <VarDec>
       <name>LVVolt_Ofst</name>
@@ -14792,7 +14774,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>461</item>
+      <item>460</item>
    </VarDec>
    <VarDec>
       <name>LVVolt_ovr</name>
@@ -14817,7 +14799,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>462</item>
+      <item>461</item>
    </VarDec>
    <VarDec>
       <name>LVVolt_Raw</name>
@@ -14839,7 +14821,7 @@
       <help>After conversion to engineering units, before range checking</help>
       <group>Sensors | LVVolt | LVVolt</group>
       <table>1</table>
-      <item>463</item>
+      <item>462</item>
    </VarDec>
    <VarDec>
       <name>Mains_Current_Draw_Probe</name>
@@ -14859,7 +14841,7 @@
       <struct>BuckyWagon_01_B.s217_InputCurrent</struct>
       <group>Sensors | EatonCharger</group>
       <table>1</table>
-      <item>464</item>
+      <item>463</item>
    </VarDec>
    <VarDec>
       <name>Mains_Voltage_Probe</name>
@@ -14879,7 +14861,7 @@
       <struct>BuckyWagon_01_B.s217_InputVoltage</struct>
       <group>Sensors | EatonCharger</group>
       <table>1</table>
-      <item>465</item>
+      <item>464</item>
    </VarDec>
    <VarDec>
       <name>MatlabVersionTxt</name>
@@ -14894,7 +14876,7 @@
       <help>MATLAB version used to build the application.</help>
       <group>System | Version</group>
       <table>1</table>
-      <item>466</item>
+      <item>465</item>
    </VarDec>
    <VarDec>
       <name>Max_Coast_Tq</name>
@@ -14916,7 +14898,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>467</item>
+      <item>466</item>
    </VarDec>
    <VarDec>
       <name>Max_Regen_Tq</name>
@@ -14938,7 +14920,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>468</item>
+      <item>467</item>
    </VarDec>
    <VarDec>
       <name>Max_Slect_Tq_drive</name>
@@ -14958,7 +14940,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>469</item>
+      <item>468</item>
    </VarDec>
    <VarDec>
       <name>Max_SOC_For_Coast_Tq_EN</name>
@@ -14980,7 +14962,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>470</item>
+      <item>469</item>
    </VarDec>
    <VarDec>
       <name>MaxQueueDepth</name>
@@ -15001,7 +14983,7 @@
       <help>Debug Variable</help>
       <group>System | Debug | General | EZLink</group>
       <table>1</table>
-      <item>471</item>
+      <item>470</item>
    </VarDec>
    <VarDec>
       <name>MessageChecksum</name>
@@ -15021,7 +15003,7 @@
       <struct>BuckyWagon_01_B.s217_MessageChecksum</struct>
       <group>Sensors | EatonCharger</group>
       <table>1</table>
-      <item>472</item>
+      <item>471</item>
    </VarDec>
    <VarDec>
       <name>MessageCounter</name>
@@ -15041,7 +15023,7 @@
       <struct>BuckyWagon_01_B.s217_MessageCounter</struct>
       <group>Sensors | EatonCharger</group>
       <table>1</table>
-      <item>473</item>
+      <item>472</item>
    </VarDec>
    <VarDec>
       <name>mh_EZlink</name>
@@ -15155,7 +15137,7 @@
          <default>Illegal Error</default>
       </enum>
       <table>1</table>
-      <item>474</item>
+      <item>473</item>
    </VarDec>
    <VarDec>
       <name>MilesSinceKeyed</name>
@@ -15175,7 +15157,7 @@
       <struct>BuckyWagon_01_B.s117_Sum</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations|Odometer</group>
       <table>1</table>
-      <item>475</item>
+      <item>474</item>
    </VarDec>
    <VarDec>
       <name>Min_Speed_Allow_Coast_NegT</name>
@@ -15197,7 +15179,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>476</item>
+      <item>475</item>
    </VarDec>
    <VarDec>
       <name>minPumpRunTime</name>
@@ -15219,7 +15201,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>477</item>
+      <item>476</item>
    </VarDec>
    <VarDec>
       <name>minTime</name>
@@ -15241,7 +15223,7 @@
       <update>BACKGND</update>
       <type>uint16</type>
       <table>1</table>
-      <item>478</item>
+      <item>477</item>
    </VarDec>
    <VarDec>
       <name>minTimer</name>
@@ -15261,7 +15243,7 @@
       <struct>BuckyWagon_01_B.s193_minTimer</struct>
       <group>BuckyWagon_01|Foreground|MiniViewDisplay|GetFaultName</group>
       <table>1</table>
-      <item>479</item>
+      <item>478</item>
    </VarDec>
    <VarDec>
       <name>ModuleCapability</name>
@@ -15290,7 +15272,7 @@
          <default>Capability Unknown</default>
       </enum>
       <table>1</table>
-      <item>480</item>
+      <item>479</item>
    </VarDec>
    <VarDec>
       <name>MotoHawkBuildGUID</name>
@@ -15305,7 +15287,7 @@
       <help>GUID identifying the MotoHawk build session</help>
       <group>System | Version</group>
       <table>1</table>
-      <item>481</item>
+      <item>480</item>
    </VarDec>
    <VarDec>
       <name>MotoHawkModelGUID</name>
@@ -15320,7 +15302,7 @@
       <help>GUID identifying the MotoHawk model</help>
       <group>System | Version</group>
       <table>1</table>
-      <item>482</item>
+      <item>481</item>
    </VarDec>
    <VarDec>
       <name>MotoHawkModelName</name>
@@ -15335,7 +15317,7 @@
       <help>Simulink model name used for the MotoHawk build</help>
       <group>System | Version</group>
       <table>1</table>
-      <item>483</item>
+      <item>482</item>
    </VarDec>
    <VarDec>
       <name>MotoHawkModelSecondsInUse</name>
@@ -15357,7 +15339,7 @@
       <update>BACKGND</update>
       <type>uint32</type>
       <table>1</table>
-      <item>484</item>
+      <item>483</item>
    </VarDec>
    <VarDec>
       <name>MotoHawkTable2D</name>
@@ -15377,7 +15359,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>485</item>
+      <item>484</item>
    </VarDec>
    <VarDec>
       <name>MotoHawkTable2DMap</name>
@@ -15402,7 +15384,7 @@
       <row_prelookup>StateOfChargePctIdxArr</row_prelookup>
       <row_len>4</row_len>
       <table>1</table>
-      <item>486</item>
+      <item>485</item>
    </VarDec>
    <VarDec>
       <name>MotoHawkTokenGUID</name>
@@ -15417,7 +15399,7 @@
       <help>GUID identifying the token inserted during the build.  May be empty if no token was available</help>
       <group>System | Version</group>
       <table>1</table>
-      <item>487</item>
+      <item>486</item>
    </VarDec>
    <VarDec>
       <name>MotoHawkVersionTxt</name>
@@ -15432,7 +15414,7 @@
       <help>MotoHawk version used to build the application.</help>
       <group>System | Version</group>
       <table>1</table>
-      <item>488</item>
+      <item>487</item>
    </VarDec>
    <VarDec>
       <name>Motor_Derate</name>
@@ -15452,7 +15434,7 @@
       <struct>BuckyWagon_01_B.s223_Derate</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>489</item>
+      <item>488</item>
    </VarDec>
    <VarDec>
       <name>Motor_Not_Enabled</name>
@@ -15472,7 +15454,7 @@
       <struct>BuckyWagon_01_B.s223_Not_Enabled</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>490</item>
+      <item>489</item>
    </VarDec>
    <VarDec>
       <name>Motor_Not_Enabled_History</name>
@@ -15492,7 +15474,7 @@
       <struct>BuckyWagon_01_B.s223_Not_Enabled_Histroy</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>491</item>
+      <item>490</item>
    </VarDec>
    <VarDec>
       <name>Motor_Shutdown</name>
@@ -15512,7 +15494,7 @@
       <struct>BuckyWagon_01_B.s223_Shutdown</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>492</item>
+      <item>491</item>
    </VarDec>
    <VarDec>
       <name>Motor_Stalled</name>
@@ -15532,7 +15514,7 @@
       <struct>BuckyWagon_01_B.s223_Motor_Stalled</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>493</item>
+      <item>492</item>
    </VarDec>
    <VarDec>
       <name>motor_Torque</name>
@@ -15552,7 +15534,7 @@
       <struct>BuckyWagon_01_B.s145_Sum1</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy</group>
       <table>1</table>
-      <item>494</item>
+      <item>493</item>
    </VarDec>
    <VarDec>
       <name>motor_torque_Ovr_new</name>
@@ -15572,7 +15554,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>495</item>
+      <item>494</item>
    </VarDec>
    <VarDec>
       <name>motor_torque_Ovr_ovr</name>
@@ -15597,7 +15579,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>496</item>
+      <item>495</item>
    </VarDec>
    <VarDec>
       <name>MotorSpdIdx</name>
@@ -15618,7 +15600,7 @@
       <update>BACKGND</update>
       <type>uint16</type>
       <table>1</table>
-      <item>497</item>
+      <item>496</item>
    </VarDec>
    <VarDec>
       <name>MotorSpdIdxArr</name>
@@ -15641,7 +15623,7 @@
       <input>MotorSpdIn</input>
       <index>MotorSpdIdx</index>
       <table>1</table>
-      <item>498</item>
+      <item>497</item>
    </VarDec>
    <VarDec>
       <name>MotorSpdIn</name>
@@ -15661,7 +15643,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>499</item>
+      <item>498</item>
    </VarDec>
    <VarDec>
       <name>MPRD</name>
@@ -15687,7 +15669,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>500</item>
+      <item>499</item>
    </VarDec>
    <VarDec>
       <name>MPRD_KeepAlive</name>
@@ -15713,7 +15695,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>501</item>
+      <item>500</item>
    </VarDec>
    <VarDec>
       <name>MPRD_new</name>
@@ -15740,7 +15722,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>502</item>
+      <item>501</item>
    </VarDec>
    <VarDec>
       <name>MPRD_ovr</name>
@@ -15765,7 +15747,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>503</item>
+      <item>502</item>
    </VarDec>
    <VarDec>
       <name>noErrText</name>
@@ -15787,7 +15769,7 @@
       <type>char</type>
       <text_len>10</text_len>
       <table>1</table>
-      <item>504</item>
+      <item>503</item>
    </VarDec>
    <VarDec>
       <name>NonVolatileCRC</name>
@@ -15808,7 +15790,7 @@
       <help>Calculated NonVolatile CRC</help>
       <group>System | NonVolatile Storage</group>
       <table>1</table>
-      <item>505</item>
+      <item>504</item>
    </VarDec>
    <VarDec>
       <name>NonVolatileFormatID</name>
@@ -15829,7 +15811,7 @@
       <help>Unique identifier of the NonVolatile memory format.  Used to validate whether stored variables are in the correct form for the program</help>
       <group>System | NonVolatile Storage</group>
       <table>1</table>
-      <item>506</item>
+      <item>505</item>
    </VarDec>
    <VarDec>
       <name>NonVolatileRestoreOnFirstStartup</name>
@@ -15855,7 +15837,7 @@
          <default>Illegal</default>
       </enum>
       <table>1</table>
-      <item>507</item>
+      <item>506</item>
    </VarDec>
    <VarDec>
       <name>NonVolatileRestoreOnStartup</name>
@@ -15881,7 +15863,7 @@
          <default>Illegal</default>
       </enum>
       <table>1</table>
-      <item>508</item>
+      <item>507</item>
    </VarDec>
    <VarDec>
       <name>NonVolatileStatus</name>
@@ -15912,7 +15894,7 @@
          <default>Illegal</default>
       </enum>
       <table>1</table>
-      <item>509</item>
+      <item>508</item>
    </VarDec>
    <VarDec>
       <name>offTime</name>
@@ -15934,7 +15916,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>510</item>
+      <item>509</item>
    </VarDec>
    <VarDec>
       <name>ONE_SECOND_EVENT_RunCnt</name>
@@ -15955,7 +15937,7 @@
       <help>The number of times to execute ONE_SECOND_EVENT before pausing.  -1 means run forever</help>
       <group>System | Debug | Event Pause Counters</group>
       <table>1</table>
-      <item>511</item>
+      <item>510</item>
    </VarDec>
    <VarDec>
       <name>onTime</name>
@@ -15977,7 +15959,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>512</item>
+      <item>511</item>
    </VarDec>
    <VarDec>
       <name>OSErrorCnt</name>
@@ -15998,7 +15980,7 @@
       <help>Number of errors observed by the OS</help>
       <group>System | Status | OS</group>
       <table>1</table>
-      <item>513</item>
+      <item>512</item>
    </VarDec>
    <VarDec>
       <name>OSStatus</name>
@@ -16023,7 +16005,7 @@
          <default>Status Unknown</default>
       </enum>
       <table>1</table>
-      <item>514</item>
+      <item>513</item>
    </VarDec>
    <VarDec>
       <name>OutputCurrent</name>
@@ -16043,7 +16025,7 @@
       <struct>BuckyWagon_01_B.s217_OutputCurrent</struct>
       <group>Sensors | EatonCharger</group>
       <table>1</table>
-      <item>515</item>
+      <item>514</item>
    </VarDec>
    <VarDec>
       <name>OutputCurrent_new</name>
@@ -16063,7 +16045,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>516</item>
+      <item>515</item>
    </VarDec>
    <VarDec>
       <name>OutputCurrent_ovr</name>
@@ -16088,7 +16070,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>517</item>
+      <item>516</item>
    </VarDec>
    <VarDec>
       <name>OutputVoltage</name>
@@ -16108,7 +16090,7 @@
       <struct>BuckyWagon_01_B.s217_OutputVoltage</struct>
       <group>Sensors | EatonCharger</group>
       <table>1</table>
-      <item>518</item>
+      <item>517</item>
    </VarDec>
    <VarDec>
       <name>OutputVoltage_new</name>
@@ -16128,7 +16110,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>519</item>
+      <item>518</item>
    </VarDec>
    <VarDec>
       <name>OutputVoltage_ovr</name>
@@ -16153,7 +16135,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>520</item>
+      <item>519</item>
    </VarDec>
    <VarDec>
       <name>Over_Bus_Current</name>
@@ -16173,7 +16155,7 @@
       <struct>BuckyWagon_01_B.s223_Over_Bus_Current</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>521</item>
+      <item>520</item>
    </VarDec>
    <VarDec>
       <name>Over_Bus_Current_History</name>
@@ -16193,7 +16175,7 @@
       <struct>BuckyWagon_01_B.s223_Over_Bus_Current_History</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>522</item>
+      <item>521</item>
    </VarDec>
    <VarDec>
       <name>Over_Leg_Current</name>
@@ -16213,7 +16195,7 @@
       <struct>BuckyWagon_01_B.s223_Over_Leg_Current</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>523</item>
+      <item>522</item>
    </VarDec>
    <VarDec>
       <name>Over_Leg_Current_History</name>
@@ -16233,7 +16215,7 @@
       <struct>BuckyWagon_01_B.s223_Over_Leg_Current_History</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>524</item>
+      <item>523</item>
    </VarDec>
    <VarDec>
       <name>Over_Phase_Advance</name>
@@ -16253,7 +16235,7 @@
       <struct>BuckyWagon_01_B.s223_Over_Phase_Advance</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>525</item>
+      <item>524</item>
    </VarDec>
    <VarDec>
       <name>Over_Phase_Advance_History</name>
@@ -16273,7 +16255,7 @@
       <struct>BuckyWagon_01_B.s223_Over_Phase_Advance_History</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>526</item>
+      <item>525</item>
    </VarDec>
    <VarDec>
       <name>Over_SOC_Shutdown_Thresh</name>
@@ -16293,7 +16275,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>527</item>
+      <item>526</item>
    </VarDec>
    <VarDec>
       <name>Over_SOCAlertThresh</name>
@@ -16313,7 +16295,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>528</item>
+      <item>527</item>
    </VarDec>
    <VarDec>
       <name>Over_Speed_Alarm</name>
@@ -16333,7 +16315,7 @@
       <struct>BuckyWagon_01_B.s223_Over_Speed_Alarm</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>529</item>
+      <item>528</item>
    </VarDec>
    <VarDec>
       <name>Over_Speed_Alarm_History</name>
@@ -16353,7 +16335,7 @@
       <struct>BuckyWagon_01_B.s223_Over_Speed_Alarm_History</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>530</item>
+      <item>529</item>
    </VarDec>
    <VarDec>
       <name>Over_Speed_Warning</name>
@@ -16373,7 +16355,7 @@
       <struct>BuckyWagon_01_B.s223_Over_Speed_Warning</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>531</item>
+      <item>530</item>
    </VarDec>
    <VarDec>
       <name>Over_Speed_Warning_History</name>
@@ -16393,7 +16375,7 @@
       <struct>BuckyWagon_01_B.s223_Over_Speed_Warning_History</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>532</item>
+      <item>531</item>
    </VarDec>
    <VarDec>
       <name>Over_Voltage_Alarm</name>
@@ -16413,7 +16395,7 @@
       <struct>BuckyWagon_01_B.s223_Over_Voltage_Alarm</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>533</item>
+      <item>532</item>
    </VarDec>
    <VarDec>
       <name>Over_Voltage_Alarm_History</name>
@@ -16433,7 +16415,7 @@
       <struct>BuckyWagon_01_B.s223_Over_Voltage_Alarm_History</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>534</item>
+      <item>533</item>
    </VarDec>
    <VarDec>
       <name>Over_Voltage_Warning</name>
@@ -16453,7 +16435,7 @@
       <struct>BuckyWagon_01_B.s223_Over_Voltage_Warning</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>535</item>
+      <item>534</item>
    </VarDec>
    <VarDec>
       <name>Over_Voltage_Warning_History</name>
@@ -16473,7 +16455,7 @@
       <struct>BuckyWagon_01_B.s223_Over_Voltage_Warning_History</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>536</item>
+      <item>535</item>
    </VarDec>
    <VarDec>
       <name>Overheat_PumpFan_Speed</name>
@@ -16493,7 +16475,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>537</item>
+      <item>536</item>
    </VarDec>
    <VarDec>
       <name>Overheat_Threshold</name>
@@ -16513,7 +16495,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>538</item>
+      <item>537</item>
    </VarDec>
    <VarDec>
       <name>OverheatClip_InvTemp</name>
@@ -16533,7 +16515,7 @@
       <struct>BuckyWagon_01_B.s223_Inverter_Temperature</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Overheat Clip</group>
       <table>1</table>
-      <item>539</item>
+      <item>538</item>
    </VarDec>
    <VarDec>
       <name>OverheatClip_On</name>
@@ -16553,7 +16535,7 @@
       <struct>BuckyWagon_01_B.s136_out</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Overheat Clip</group>
       <table>1</table>
-      <item>540</item>
+      <item>539</item>
    </VarDec>
    <VarDec>
       <name>OverheatClip_tq_In</name>
@@ -16573,7 +16555,7 @@
       <struct>BuckyWagon_01_B.s134_Switch</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Overheat Clip</group>
       <table>1</table>
-      <item>541</item>
+      <item>540</item>
    </VarDec>
    <VarDec>
       <name>OverheatClip_tq_Out</name>
@@ -16593,7 +16575,7 @@
       <struct>BuckyWagon_01_B.s132_Switch1</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Overheat Clip</group>
       <table>1</table>
-      <item>542</item>
+      <item>541</item>
    </VarDec>
    <VarDec>
       <name>OverHeatClipDisable</name>
@@ -16613,7 +16595,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>543</item>
+      <item>542</item>
    </VarDec>
    <VarDec>
       <name>PartNumber</name>
@@ -16627,7 +16609,7 @@
       <struct>g_ConfigCopyObj.psPartNumber</struct>
       <group>System | Status| Module Config</group>
       <table>1</table>
-      <item>544</item>
+      <item>543</item>
    </VarDec>
    <VarDec>
       <name>PasswordTxt</name>
@@ -16642,7 +16624,7 @@
       <help>Password protection for this calibration</help>
       <group>System | System Config</group>
       <table>1</table>
-      <item>545</item>
+      <item>544</item>
    </VarDec>
    <VarDec>
       <name>PeakHeapBytesUsed</name>
@@ -16663,7 +16645,7 @@
       <help>The peak number of bytes seen on the heap.</help>
       <group>System | Status | OS</group>
       <table>1</table>
-      <item>546</item>
+      <item>545</item>
    </VarDec>
    <VarDec>
       <name>Phase_Current_Sensor_Error</name>
@@ -16683,7 +16665,7 @@
       <struct>BuckyWagon_01_B.s223_Phase_Current_Sensor_Error</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>547</item>
+      <item>546</item>
    </VarDec>
    <VarDec>
       <name>PluggedInHistTimeeaton</name>
@@ -16705,7 +16687,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>548</item>
+      <item>547</item>
    </VarDec>
    <VarDec>
       <name>PluggedInMainsThesEaton</name>
@@ -16727,7 +16709,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>549</item>
+      <item>548</item>
    </VarDec>
    <VarDec>
       <name>Power_Switches_Off</name>
@@ -16747,7 +16729,7 @@
       <struct>BuckyWagon_01_B.s223_Power_Switches_Off</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>550</item>
+      <item>549</item>
    </VarDec>
    <VarDec>
       <name>pre_Filter_Torque_Request</name>
@@ -16767,7 +16749,7 @@
       <struct>BuckyWagon_01_B.s9_Motor_Torque</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy</group>
       <table>1</table>
-      <item>551</item>
+      <item>550</item>
    </VarDec>
    <VarDec>
       <name>ProcessorReboot</name>
@@ -16793,7 +16775,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>552</item>
+      <item>551</item>
    </VarDec>
    <VarDec>
       <name>protocol_register_CAN_1</name>
@@ -16907,7 +16889,7 @@
          <default>Illegal Error</default>
       </enum>
       <table>1</table>
-      <item>553</item>
+      <item>552</item>
    </VarDec>
    <VarDec>
       <name>pwm_create_Fan_Pin_PWMOutput</name>
@@ -17021,7 +17003,7 @@
          <default>Illegal Error</default>
       </enum>
       <table>1</table>
-      <item>554</item>
+      <item>553</item>
    </VarDec>
    <VarDec>
       <name>pwm_set_Fan_Pin_PWMOutput</name>
@@ -17135,7 +17117,7 @@
          <default>Illegal Error</default>
       </enum>
       <table>1</table>
-      <item>555</item>
+      <item>554</item>
    </VarDec>
    <VarDec>
       <name>quadIndex</name>
@@ -17157,7 +17139,7 @@
       <col_len>1</col_len>
       <row_len>4</row_len>
       <table>1</table>
-      <item>556</item>
+      <item>555</item>
    </VarDec>
    <VarDec>
       <name>RadiatorFanSpeed_out</name>
@@ -17177,7 +17159,7 @@
       <struct>BuckyWagon_01_B.s110_Switch1</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Cooling</group>
       <table>1</table>
-      <item>557</item>
+      <item>556</item>
    </VarDec>
    <VarDec>
       <name>Raw_Regen_Tq_Request</name>
@@ -17197,7 +17179,7 @@
       <struct>BuckyWagon_01_B.s124_Product</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving|Regen</group>
       <table>1</table>
-      <item>558</item>
+      <item>557</item>
    </VarDec>
    <VarDec>
       <name>RearDiffRatio</name>
@@ -17218,7 +17200,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>559</item>
+      <item>558</item>
    </VarDec>
    <VarDec>
       <name>Regen_Full</name>
@@ -17240,7 +17222,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>560</item>
+      <item>559</item>
    </VarDec>
    <VarDec>
       <name>Regen_SOC_Speed_Ramp_ovr_new</name>
@@ -17260,7 +17242,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>561</item>
+      <item>560</item>
    </VarDec>
    <VarDec>
       <name>Regen_SOC_Speed_Ramp_ovr_ovr</name>
@@ -17285,7 +17267,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>562</item>
+      <item>561</item>
    </VarDec>
    <VarDec>
       <name>Regen_SOCSpd_Ramp_probe_preOVR</name>
@@ -17305,7 +17287,7 @@
       <struct>BuckyWagon_01_B.s124_Saturation1</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving|Regen</group>
       <table>1</table>
-      <item>563</item>
+      <item>562</item>
    </VarDec>
    <VarDec>
       <name>Regen_Start</name>
@@ -17327,7 +17309,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>564</item>
+      <item>563</item>
    </VarDec>
    <VarDec>
       <name>Regen_Switch_Open</name>
@@ -17347,7 +17329,7 @@
       <struct>BuckyWagon_01_B.s223_Regen_Switch_Open</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>565</item>
+      <item>564</item>
    </VarDec>
    <VarDec>
       <name>Regen_tq_Accel</name>
@@ -17367,7 +17349,7 @@
       <struct>BuckyWagon_01_B.s133_motohawk_interpolation_2d</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Regen</group>
       <table>1</table>
-      <item>566</item>
+      <item>565</item>
    </VarDec>
    <VarDec>
       <name>Regen_tq_Brake</name>
@@ -17387,7 +17369,7 @@
       <struct>BuckyWagon_01_B.s133_motohawk_interpolation_2d1</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Regen</group>
       <table>1</table>
-      <item>567</item>
+      <item>566</item>
    </VarDec>
    <VarDec>
       <name>Regen_tq_In</name>
@@ -17407,7 +17389,7 @@
       <struct>BuckyWagon_01_B.s131_Switch</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Regen</group>
       <table>1</table>
-      <item>568</item>
+      <item>567</item>
    </VarDec>
    <VarDec>
       <name>Regen_tq_Max</name>
@@ -17427,7 +17409,7 @@
       <struct>BuckyWagon_01_B.s133_MinMax</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Regen</group>
       <table>1</table>
-      <item>569</item>
+      <item>568</item>
    </VarDec>
    <VarDec>
       <name>Regen_tq_Out</name>
@@ -17447,7 +17429,7 @@
       <struct>BuckyWagon_01_B.s133_Switch</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Regen</group>
       <table>1</table>
-      <item>570</item>
+      <item>569</item>
    </VarDec>
    <VarDec>
       <name>RegenAccel</name>
@@ -17467,7 +17449,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>571</item>
+      <item>570</item>
    </VarDec>
    <VarDec>
       <name>RegenAccelMap</name>
@@ -17492,7 +17474,7 @@
       <row_prelookup>AccelPedalPreIdxArr</row_prelookup>
       <row_len>17</row_len>
       <table>1</table>
-      <item>572</item>
+      <item>571</item>
    </VarDec>
    <VarDec>
       <name>RegenBrake</name>
@@ -17512,7 +17494,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>573</item>
+      <item>572</item>
    </VarDec>
    <VarDec>
       <name>RegenBrakeMap</name>
@@ -17537,7 +17519,7 @@
       <row_prelookup>BrakePedalPreIdxArr</row_prelookup>
       <row_len>17</row_len>
       <table>1</table>
-      <item>574</item>
+      <item>573</item>
    </VarDec>
    <VarDec>
       <name>RegenDisableTq</name>
@@ -17557,27 +17539,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>575</item>
-   </VarDec>
-   <VarDec>
-      <name>RemyMechPowerkW</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
-      <struct>VolatileWork_BSS.RemyMechPowerkW</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <table>1</table>
-      <item>576</item>
+      <item>574</item>
    </VarDec>
    <VarDec>
       <name>resource_allocation</name>
@@ -17691,7 +17653,7 @@
          <default>Illegal Error</default>
       </enum>
       <table>1</table>
-      <item>577</item>
+      <item>575</item>
    </VarDec>
    <VarDec>
       <name>RestoreNVFactoryDefaults</name>
@@ -17717,7 +17679,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>578</item>
+      <item>576</item>
    </VarDec>
    <VarDec>
       <name>revAccThres</name>
@@ -17739,7 +17701,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>579</item>
+      <item>577</item>
    </VarDec>
    <VarDec>
       <name>Reverse_Polarity</name>
@@ -17761,7 +17723,7 @@
       <update>BACKGND</update>
       <type>uint8</type>
       <table>1</table>
-      <item>580</item>
+      <item>578</item>
    </VarDec>
    <VarDec>
       <name>Reverse_Speed_Limit</name>
@@ -17781,7 +17743,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>581</item>
+      <item>579</item>
    </VarDec>
    <VarDec>
       <name>Reverse_Switch</name>
@@ -17803,7 +17765,7 @@
       <help>Display output in engineering units</help>
       <group>Sensors | Reverse | Reverse_Switch</group>
       <table>1</table>
-      <item>582</item>
+      <item>580</item>
    </VarDec>
    <VarDec>
       <name>Reverse_Switch_new</name>
@@ -17825,7 +17787,7 @@
       <update>BACKGND</update>
       <type>uint8</type>
       <table>1</table>
-      <item>583</item>
+      <item>581</item>
    </VarDec>
    <VarDec>
       <name>Reverse_Switch_ovr</name>
@@ -17850,7 +17812,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>584</item>
+      <item>582</item>
    </VarDec>
    <VarDec>
       <name>Reverse_Switch_Pin</name>
@@ -17915,7 +17877,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>585</item>
+      <item>583</item>
    </VarDec>
    <VarDec>
       <name>Reverse_Switch_Pin_ref</name>
@@ -17941,7 +17903,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>586</item>
+      <item>584</item>
    </VarDec>
    <VarDec>
       <name>Reverse_Switch_Raw</name>
@@ -17963,7 +17925,7 @@
       <help>Display output in engineering units</help>
       <group>Sensors | Reverse | Reverse_Switch</group>
       <table>1</table>
-      <item>587</item>
+      <item>585</item>
    </VarDec>
    <VarDec>
       <name>Reverse_SwitchPt</name>
@@ -17985,7 +17947,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>588</item>
+      <item>586</item>
    </VarDec>
    <VarDec>
       <name>Reverse_TQ_Negative_Enable</name>
@@ -18010,7 +17972,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>589</item>
+      <item>587</item>
    </VarDec>
    <VarDec>
       <name>ReverseIndFlash_Period</name>
@@ -18032,7 +17994,7 @@
       <update>BACKGND</update>
       <type>int16</type>
       <table>1</table>
-      <item>590</item>
+      <item>588</item>
    </VarDec>
    <VarDec>
       <name>ReverseOut_Pin</name>
@@ -18097,7 +18059,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>591</item>
+      <item>589</item>
    </VarDec>
    <VarDec>
       <name>RevIndType</name>
@@ -18123,7 +18085,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>592</item>
+      <item>590</item>
    </VarDec>
    <VarDec>
       <name>RevOut_</name>
@@ -18145,7 +18107,7 @@
       <help>Display output in engineering units</help>
       <group>Actuators | Reverse | ReverseOut</group>
       <table>1</table>
-      <item>593</item>
+      <item>591</item>
    </VarDec>
    <VarDec>
       <name>RevOut__new</name>
@@ -18167,7 +18129,7 @@
       <update>BACKGND</update>
       <type>uint8</type>
       <table>1</table>
-      <item>594</item>
+      <item>592</item>
    </VarDec>
    <VarDec>
       <name>RevOut__ovr</name>
@@ -18192,7 +18154,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>595</item>
+      <item>593</item>
    </VarDec>
    <VarDec>
       <name>RevOut__Polarity</name>
@@ -18214,7 +18176,7 @@
       <update>BACKGND</update>
       <type>uint8</type>
       <table>1</table>
-      <item>596</item>
+      <item>594</item>
    </VarDec>
    <VarDec>
       <name>revSpdThres</name>
@@ -18236,7 +18198,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>597</item>
+      <item>595</item>
    </VarDec>
    <VarDec>
       <name>Rotor_Over_Temperature</name>
@@ -18256,7 +18218,7 @@
       <struct>BuckyWagon_01_B.s223_Rotor_Over_Temperature</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>598</item>
+      <item>596</item>
    </VarDec>
    <VarDec>
       <name>Rotor_Over_Temperature_History</name>
@@ -18276,7 +18238,7 @@
       <struct>BuckyWagon_01_B.s223_Rotor_Over_Temperature_History</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>599</item>
+      <item>597</item>
    </VarDec>
    <VarDec>
       <name>Rotor_Temp</name>
@@ -18296,7 +18258,7 @@
       <struct>BuckyWagon_01_B.s223_Rotor_Temp</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>600</item>
+      <item>598</item>
    </VarDec>
    <VarDec>
       <name>Rotor_Temp_Enable</name>
@@ -18321,7 +18283,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>601</item>
+      <item>599</item>
    </VarDec>
    <VarDec>
       <name>Rotor_Temp_Offset</name>
@@ -18341,7 +18303,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>602</item>
+      <item>600</item>
    </VarDec>
    <VarDec>
       <name>SaturationLwrLim</name>
@@ -18362,7 +18324,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>603</item>
+      <item>601</item>
    </VarDec>
    <VarDec>
       <name>SaturationUprLim</name>
@@ -18383,7 +18345,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>604</item>
+      <item>602</item>
    </VarDec>
    <VarDec>
       <name>screen</name>
@@ -18403,7 +18365,7 @@
       <update>BACKGND</update>
       <type>uint8</type>
       <table>1</table>
-      <item>605</item>
+      <item>603</item>
    </VarDec>
    <VarDec>
       <name>scrollIndex</name>
@@ -18423,7 +18385,7 @@
       <struct>BuckyWagon_01_B.s193_scrollIndex</struct>
       <group>BuckyWagon_01|Foreground|MiniViewDisplay|GetFaultName</group>
       <table>1</table>
-      <item>606</item>
+      <item>604</item>
    </VarDec>
    <VarDec>
       <name>scrollTime</name>
@@ -18445,7 +18407,7 @@
       <update>BACKGND</update>
       <type>uint16</type>
       <table>1</table>
-      <item>607</item>
+      <item>605</item>
    </VarDec>
    <VarDec>
       <name>scrollTimer</name>
@@ -18465,7 +18427,7 @@
       <struct>BuckyWagon_01_B.s193_scrollTimer</struct>
       <group>BuckyWagon_01|Foreground|MiniViewDisplay|GetFaultName</group>
       <table>1</table>
-      <item>608</item>
+      <item>606</item>
    </VarDec>
    <VarDec>
       <name>SHUTDOWN_EVENT_RunCnt</name>
@@ -18486,7 +18448,7 @@
       <help>The number of times to execute SHUTDOWN_EVENT before pausing.  -1 means run forever</help>
       <group>System | Debug | Event Pause Counters</group>
       <table>1</table>
-      <item>609</item>
+      <item>607</item>
    </VarDec>
    <VarDec>
       <name>Shutdown_Req</name>
@@ -18506,7 +18468,7 @@
       <update>BACKGND</update>
       <type>uint8</type>
       <table>1</table>
-      <item>610</item>
+      <item>608</item>
    </VarDec>
    <VarDec>
       <name>singleIndex</name>
@@ -18526,7 +18488,7 @@
       <update>BACKGND</update>
       <type>uint8</type>
       <table>1</table>
-      <item>611</item>
+      <item>609</item>
    </VarDec>
    <VarDec>
       <name>SOC_new</name>
@@ -18546,7 +18508,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>612</item>
+      <item>610</item>
    </VarDec>
    <VarDec>
       <name>SOC_ovr</name>
@@ -18571,7 +18533,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>613</item>
+      <item>611</item>
    </VarDec>
    <VarDec>
       <name>SOC_tq_Charge</name>
@@ -18591,7 +18553,7 @@
       <struct>BuckyWagon_01_B.s134_motohawk_interpolation_2d1</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|SOC Clip</group>
       <table>1</table>
-      <item>614</item>
+      <item>612</item>
    </VarDec>
    <VarDec>
       <name>SOC_tq_Discharge</name>
@@ -18611,7 +18573,7 @@
       <struct>BuckyWagon_01_B.s134_motohawk_interpolation_2d</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|SOC Clip</group>
       <table>1</table>
-      <item>615</item>
+      <item>613</item>
    </VarDec>
    <VarDec>
       <name>SOC_tq_In</name>
@@ -18631,7 +18593,7 @@
       <struct>BuckyWagon_01_B.s133_Switch</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|SOC Clip</group>
       <table>1</table>
-      <item>616</item>
+      <item>614</item>
    </VarDec>
    <VarDec>
       <name>SOC_tq_Out</name>
@@ -18651,7 +18613,7 @@
       <struct>BuckyWagon_01_B.s134_Switch</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|SOC Clip</group>
       <table>1</table>
-      <item>617</item>
+      <item>615</item>
    </VarDec>
    <VarDec>
       <name>SOCClipDisable</name>
@@ -18671,7 +18633,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>618</item>
+      <item>616</item>
    </VarDec>
    <VarDec>
       <name>SOCPreIdx</name>
@@ -18692,7 +18654,7 @@
       <update>BACKGND</update>
       <type>uint16</type>
       <table>1</table>
-      <item>619</item>
+      <item>617</item>
    </VarDec>
    <VarDec>
       <name>SOCPreIdxArr</name>
@@ -18715,7 +18677,7 @@
       <input>SOCPreIn</input>
       <index>SOCPreIdx</index>
       <table>1</table>
-      <item>620</item>
+      <item>618</item>
    </VarDec>
    <VarDec>
       <name>SOCPreIn</name>
@@ -18735,7 +18697,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>621</item>
+      <item>619</item>
    </VarDec>
    <VarDec>
       <name>Software_Release_Major_Version</name>
@@ -18755,7 +18717,7 @@
       <struct>BuckyWagon_01_B.s223_Software_Release_Major_Version</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>622</item>
+      <item>620</item>
    </VarDec>
    <VarDec>
       <name>Software_Release_Minor_Version</name>
@@ -18775,7 +18737,7 @@
       <struct>BuckyWagon_01_B.s223_Software_Release_Minor_Version</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>623</item>
+      <item>621</item>
    </VarDec>
    <VarDec>
       <name>Software_Release_Sub_Version</name>
@@ -18795,7 +18757,7 @@
       <struct>BuckyWagon_01_B.s223_Software_Release_Sub_Version</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>624</item>
+      <item>622</item>
    </VarDec>
    <VarDec>
       <name>Stall_Safety_Percentage</name>
@@ -18815,7 +18777,7 @@
       <struct>BuckyWagon_01_B.s223_Stall_Safety_Percentage</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>625</item>
+      <item>623</item>
    </VarDec>
    <VarDec>
       <name>StallSpd</name>
@@ -18837,7 +18799,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>626</item>
+      <item>624</item>
    </VarDec>
    <VarDec>
       <name>StallTrqThres</name>
@@ -18859,7 +18821,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>627</item>
+      <item>625</item>
    </VarDec>
    <VarDec>
       <name>STARTUP_EVENT_RunCnt</name>
@@ -18880,7 +18842,7 @@
       <help>The number of times to execute STARTUP_EVENT before pausing.  -1 means run forever</help>
       <group>System | Debug | Event Pause Counters</group>
       <table>1</table>
-      <item>628</item>
+      <item>626</item>
    </VarDec>
    <VarDec>
       <name>startupCount</name>
@@ -18900,7 +18862,7 @@
       <update>BACKGND</update>
       <type>uint32</type>
       <table>1</table>
-      <item>629</item>
+      <item>627</item>
    </VarDec>
    <VarDec>
       <name>startupDelay</name>
@@ -18922,7 +18884,7 @@
       <update>BACKGND</update>
       <type>uint16</type>
       <table>1</table>
-      <item>630</item>
+      <item>628</item>
    </VarDec>
    <VarDec>
       <name>StateOfChargePctIdx</name>
@@ -18943,7 +18905,7 @@
       <update>BACKGND</update>
       <type>uint16</type>
       <table>1</table>
-      <item>631</item>
+      <item>629</item>
    </VarDec>
    <VarDec>
       <name>StateOfChargePctIdxArr</name>
@@ -18966,7 +18928,7 @@
       <input>StateOfChargePctIn</input>
       <index>StateOfChargePctIdx</index>
       <table>1</table>
-      <item>632</item>
+      <item>630</item>
    </VarDec>
    <VarDec>
       <name>StateOfChargePctIn</name>
@@ -18986,7 +18948,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>633</item>
+      <item>631</item>
    </VarDec>
    <VarDec>
       <name>Stator_Over_Temperature</name>
@@ -19006,7 +18968,7 @@
       <struct>BuckyWagon_01_B.s223_Stator_Over_Temperature</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>634</item>
+      <item>632</item>
    </VarDec>
    <VarDec>
       <name>Stator_Over_Temperature_History</name>
@@ -19026,7 +18988,7 @@
       <struct>BuckyWagon_01_B.s223_Stator_Over_Temperature_History</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>635</item>
+      <item>633</item>
    </VarDec>
    <VarDec>
       <name>Stator_Temp</name>
@@ -19046,7 +19008,7 @@
       <struct>BuckyWagon_01_B.s223_Stator_Temp</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>636</item>
+      <item>634</item>
    </VarDec>
    <VarDec>
       <name>Stator_Temp_Enable</name>
@@ -19071,7 +19033,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>637</item>
+      <item>635</item>
    </VarDec>
    <VarDec>
       <name>Stator_Temp_Offset</name>
@@ -19091,7 +19053,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>638</item>
+      <item>636</item>
    </VarDec>
    <VarDec>
       <name>Status_A</name>
@@ -19111,7 +19073,7 @@
       <struct>BuckyWagon_01_B.s223_Status_A</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>639</item>
+      <item>637</item>
    </VarDec>
    <VarDec>
       <name>Status_C</name>
@@ -19131,7 +19093,7 @@
       <struct>BuckyWagon_01_B.s223_Status_C</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>640</item>
+      <item>638</item>
    </VarDec>
    <VarDec>
       <name>stopSpeed</name>
@@ -19153,7 +19115,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>641</item>
+      <item>639</item>
    </VarDec>
    <VarDec>
       <name>StoreNV</name>
@@ -19179,7 +19141,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>642</item>
+      <item>640</item>
    </VarDec>
    <VarDec>
       <name>Suge_Limit</name>
@@ -19199,7 +19161,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>643</item>
+      <item>641</item>
    </VarDec>
    <VarDec>
       <name>SWISRCurrQueueSize</name>
@@ -19221,7 +19183,7 @@
       <help>Current size of the Software ISR Queue</help>
       <group>System | Status | OS</group>
       <table>1</table>
-      <item>644</item>
+      <item>642</item>
    </VarDec>
    <VarDec>
       <name>System_Disabled_In_Motrion</name>
@@ -19241,7 +19203,7 @@
       <struct>BuckyWagon_01_B.s223_System_Disabled_In_Motion</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>645</item>
+      <item>643</item>
    </VarDec>
    <VarDec>
       <name>SystemFrequency</name>
@@ -19263,7 +19225,7 @@
       <help>The operating CPU frequency.</help>
       <group>System | Version</group>
       <table>1</table>
-      <item>646</item>
+      <item>644</item>
    </VarDec>
    <VarDec>
       <name>Temp_ped_switchOver</name>
@@ -19283,7 +19245,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>647</item>
+      <item>645</item>
    </VarDec>
    <VarDec>
       <name>TimeSinceKeyOn</name>
@@ -19303,7 +19265,7 @@
       <struct>BuckyWagon_01_B.s359_Sum</struct>
       <group>BuckyWagon_01</group>
       <table>1</table>
-      <item>648</item>
+      <item>646</item>
    </VarDec>
    <VarDec>
       <name>TireSize</name>
@@ -19325,7 +19287,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>649</item>
+      <item>647</item>
    </VarDec>
    <VarDec>
       <name>Torque_Desired</name>
@@ -19345,7 +19307,7 @@
       <struct>BuckyWagon_01_B.s223_Torque_Desired</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>650</item>
+      <item>648</item>
    </VarDec>
    <VarDec>
       <name>TorqueClipLwrLim</name>
@@ -19367,7 +19329,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>651</item>
+      <item>649</item>
    </VarDec>
    <VarDec>
       <name>TorqueClipUprLim</name>
@@ -19389,7 +19351,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>652</item>
+      <item>650</item>
    </VarDec>
    <VarDec>
       <name>TorqueRequestLP</name>
@@ -19411,7 +19373,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>653</item>
+      <item>651</item>
    </VarDec>
    <VarDec>
       <name>totalOnTime</name>
@@ -19431,7 +19393,7 @@
       <update>BACKGND</update>
       <type>uint32</type>
       <table>1</table>
-      <item>654</item>
+      <item>652</item>
    </VarDec>
    <VarDec>
       <name>TPUMaskType</name>
@@ -19498,7 +19460,7 @@
          <default>Unsupported TPU Mask</default>
       </enum>
       <table>1</table>
-      <item>655</item>
+      <item>653</item>
    </VarDec>
    <VarDec>
       <name>TPUMaskVers</name>
@@ -19519,7 +19481,7 @@
       <help>Describes the version of the TPU Mask selected.</help>
       <group>System | Version</group>
       <table>1</table>
-      <item>656</item>
+      <item>654</item>
    </VarDec>
    <VarDec>
       <name>TqManagement_tq_Out</name>
@@ -19539,7 +19501,7 @@
       <struct>BuckyWagon_01_B.s140_MinMax1</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management</group>
       <table>1</table>
-      <item>657</item>
+      <item>655</item>
    </VarDec>
    <VarDec>
       <name>Turbo_Mode</name>
@@ -19559,7 +19521,7 @@
       <struct>BuckyWagon_01_B.s223_Turbo_Mode</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>658</item>
+      <item>656</item>
    </VarDec>
    <VarDec>
       <name>Under_SOC_Shutdown_Thresh</name>
@@ -19579,7 +19541,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>659</item>
+      <item>657</item>
    </VarDec>
    <VarDec>
       <name>Under_SOCAlertThresh</name>
@@ -19600,7 +19562,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>660</item>
+      <item>658</item>
    </VarDec>
    <VarDec>
       <name>Under_Voltage_Warning</name>
@@ -19620,7 +19582,7 @@
       <struct>BuckyWagon_01_B.s223_Under_Voltage_Warning</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>661</item>
+      <item>659</item>
    </VarDec>
    <VarDec>
       <name>Under_Voltage_Warning_History</name>
@@ -19640,7 +19602,7 @@
       <struct>BuckyWagon_01_B.s223_Under_Voltage_Warning_History</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>662</item>
+      <item>660</item>
    </VarDec>
    <VarDec>
       <name>Unused</name>
@@ -19661,7 +19623,7 @@
       <help>Unused Table Entry</help>
       <group>System | Version</group>
       <table>1</table>
-      <item>663</item>
+      <item>661</item>
    </VarDec>
    <VarDec>
       <name>UQM_Direction</name>
@@ -19686,7 +19648,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>664</item>
+      <item>662</item>
    </VarDec>
    <VarDec>
       <name>UQM_Direction_new</name>
@@ -19711,7 +19673,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>665</item>
+      <item>663</item>
    </VarDec>
    <VarDec>
       <name>UQM_Direction_ovr</name>
@@ -19736,7 +19698,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>666</item>
+      <item>664</item>
    </VarDec>
    <VarDec>
       <name>UQM_Enable</name>
@@ -19756,7 +19718,7 @@
       <struct>BuckyWagon_01_B.s85_Merge</struct>
       <group>Actuators | UQM</group>
       <table>1</table>
-      <item>667</item>
+      <item>665</item>
    </VarDec>
    <VarDec>
       <name>UQM_Enable_new</name>
@@ -19776,7 +19738,7 @@
       <update>BACKGND</update>
       <type>uint8</type>
       <table>1</table>
-      <item>668</item>
+      <item>666</item>
    </VarDec>
    <VarDec>
       <name>UQM_Enable_ovr</name>
@@ -19801,7 +19763,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>669</item>
+      <item>667</item>
    </VarDec>
    <VarDec>
       <name>UQM_Torque</name>
@@ -19821,7 +19783,7 @@
       <struct>BuckyWagon_01_B.s86_Merge</struct>
       <group>Actuators | UQM</group>
       <table>1</table>
-      <item>670</item>
+      <item>668</item>
    </VarDec>
    <VarDec>
       <name>UQM_Torque_new</name>
@@ -19841,7 +19803,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>671</item>
+      <item>669</item>
    </VarDec>
    <VarDec>
       <name>UQM_Torque_ovr</name>
@@ -19866,7 +19828,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>672</item>
+      <item>670</item>
    </VarDec>
    <VarDec>
       <name>UQM_TurboMode</name>
@@ -19892,7 +19854,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>673</item>
+      <item>671</item>
    </VarDec>
    <VarDec>
       <name>Use_Raw_Speed</name>
@@ -19912,7 +19874,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>674</item>
+      <item>672</item>
    </VarDec>
    <VarDec>
       <name>Using_Raw_Speed</name>
@@ -19932,7 +19894,7 @@
       <struct>BuckyWagon_01_B.s223_Using_Raw_Speed</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>675</item>
+      <item>673</item>
    </VarDec>
    <VarDec>
       <name>VDO_Gauge_Brightness</name>
@@ -19952,7 +19914,7 @@
       <update>BACKGND</update>
       <type>uint16</type>
       <table>1</table>
-      <item>676</item>
+      <item>674</item>
    </VarDec>
    <VarDec>
       <name>VDO_Gauge_StartupDelay</name>
@@ -19972,7 +19934,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>677</item>
+      <item>675</item>
    </VarDec>
    <VarDec>
       <name>Veh_Speed_Regen_Filter</name>
@@ -19994,7 +19956,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>678</item>
+      <item>676</item>
    </VarDec>
    <VarDec>
       <name>Vehicle_Odometer</name>
@@ -20014,7 +19976,7 @@
       <struct>BuckyWagon_01_B.s117_Sum1</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations|Odometer</group>
       <table>1</table>
-      <item>679</item>
+      <item>677</item>
    </VarDec>
    <VarDec>
       <name>Vehicle_Speed</name>
@@ -20034,7 +19996,7 @@
       <struct>BuckyWagon_01_B.s364_Merge</struct>
       <group>Sensors | Vehicle Speed</group>
       <table>1</table>
-      <item>680</item>
+      <item>678</item>
    </VarDec>
    <VarDec>
       <name>Vehicle_Speed_new</name>
@@ -20054,7 +20016,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>681</item>
+      <item>679</item>
    </VarDec>
    <VarDec>
       <name>Vehicle_Speed_ovr</name>
@@ -20079,7 +20041,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>682</item>
+      <item>680</item>
    </VarDec>
    <VarDec>
       <name>VehicleSpeedPreIdx</name>
@@ -20100,7 +20062,7 @@
       <update>BACKGND</update>
       <type>uint16</type>
       <table>1</table>
-      <item>683</item>
+      <item>681</item>
    </VarDec>
    <VarDec>
       <name>VehicleSpeedPreIdxArr</name>
@@ -20123,7 +20085,7 @@
       <input>VehicleSpeedPreIn</input>
       <index>VehicleSpeedPreIdx</index>
       <table>1</table>
-      <item>684</item>
+      <item>682</item>
    </VarDec>
    <VarDec>
       <name>VehicleSpeedPreIn</name>
@@ -20143,7 +20105,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>685</item>
+      <item>683</item>
    </VarDec>
    <VarDec>
       <name>Voltage_Limit</name>
@@ -20163,7 +20125,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>686</item>
+      <item>684</item>
    </VarDec>
    <VarDec>
       <name>Voltage_Limit_Override_new</name>
@@ -20183,7 +20145,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>687</item>
+      <item>685</item>
    </VarDec>
    <VarDec>
       <name>Voltage_Limit_Override_ovr</name>
@@ -20208,7 +20170,7 @@
          <default>Unknown</default>
       </enum>
       <table>1</table>
-      <item>688</item>
+      <item>686</item>
    </VarDec>
    <VarDec>
       <name>Voltage_Limit_Probe</name>
@@ -20228,7 +20190,7 @@
       <struct>BuckyWagon_01_B.s70_Merge</struct>
       <group>Actuators | EatonCharger</group>
       <table>1</table>
-      <item>689</item>
+      <item>687</item>
    </VarDec>
    <VarDec>
       <name>Watchdog_Error</name>
@@ -20248,7 +20210,7 @@
       <struct>BuckyWagon_01_B.s223_Watchdog_Error</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>690</item>
+      <item>688</item>
    </VarDec>
    <VarDec>
       <name>Watchdog_Reset_Num</name>
@@ -20268,7 +20230,7 @@
       <update>BACKGND</update>
       <type>real32</type>
       <table>1</table>
-      <item>691</item>
+      <item>689</item>
    </VarDec>
    <VarDec>
       <name>Watchdog_Status</name>
@@ -20288,7 +20250,7 @@
       <struct>BuckyWagon_01_B.s223_Command_Watchdog_Status</struct>
       <group>Sensors | UQMController</group>
       <table>1</table>
-      <item>692</item>
+      <item>690</item>
    </VarDec>
    <VarDec>
       <name>WhPerMileKeyCycle</name>
@@ -20308,7 +20270,7 @@
       <struct>BuckyWagon_01_B.s118_Divide</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
       <table>1</table>
-      <item>693</item>
+      <item>691</item>
    </VarDec>
    <VarDec>
       <name>WhPerMileKeyCycle_without_12v_dcdc_current</name>
@@ -20328,6 +20290,6 @@
       <struct>BuckyWagon_01_B.s118_Divide3</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
       <table>1</table>
-      <item>694</item>
+      <item>692</item>
    </VarDec>
 </VarDecs>

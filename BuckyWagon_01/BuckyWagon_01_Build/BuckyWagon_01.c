@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BuckyWagon_01'.
  *
- * Model version                  : 1.1570
+ * Model version                  : 1.1575
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Wed Apr 17 19:04:03 2019
+ * C/C++ source code generated on : Thu Apr 18 08:31:45 2019
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -80,7 +80,6 @@ void BuckyWagon_01_initialize(boolean_T firstTime)
     BuckyWagon_01_B.s110_Switch = 0.0;
     BuckyWagon_01_B.s69_Merge = 0.0;
     BuckyWagon_01_B.s70_Merge = 0.0;
-    BuckyWagon_01_B.s72_Merge = 0.0;
     BuckyWagon_01_B.s84_Switch = 0.0;
     BuckyWagon_01_B.s86_Merge = 0.0;
     BuckyWagon_01_B.s219_Sum1 = 0.0;

@@ -4,7 +4,7 @@
 % motohawk_version             2011a_sp0.184
 % motohawk_component_version   0.0.7
 % matlab_version               7.12.0
-% build_version                182
+% build_version                184
 % module_type                  ECU565-128
 % layout_type                  DEV
 % processor_family             PPC
@@ -28,8 +28,8 @@
 % bgnd_base_period_ms          50
 % root_build_dir               C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01
 % build_dir                    C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build
-% dll_name                     BuckyWago_182
-% srz_name                     BuckyWagon_01_182
+% dll_name                     BuckyWago_184
+% srz_name                     BuckyWagon_01_184
 % fgnd_stack_size              3072
 % fgnd_angle_stack_size        0
 % bgnd_stack_size              2048
@@ -46,5 +46,5 @@
 % toolchain_dir                C:\Program Files (x86)\Woodward\DevelopmentTools\Toolchains\GCC\powerpc-eabi\4_4_0\
 % matlab_root                  C:\Program Files (x86)\MATLAB\R2011a
 % model_guid                   3c32a120-d49a-4164-87-fe-ac-4b-55-ed-6f
-% build_guid                   38ba9199-da5c-45bc-a3-2a-ec-41-da-ad-73
+% build_guid                   df5fc22c-1498-48ea-89-0c-9e-4e-62-43-4f
 % token_guid                   DD8AD11F95A6FC42BFF9AC780840E4B4

@@ -3,9 +3,9 @@
  *
  * Code generation for model "BuckyWagon_01.mdl".
  *
- * Model version              : 1.1570
+ * Model version              : 1.1575
  * Simulink Coder version : 8.0 (R2011a) 09-Mar-2011
- * C source code generated on : Wed Apr 17 19:04:03 2019
+ * C source code generated on : Thu Apr 18 08:31:45 2019
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified

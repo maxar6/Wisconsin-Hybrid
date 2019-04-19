@@ -648,9 +648,9 @@
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:255.000000 Format:3.0 UpdateID:BACKGND Group:"Actuators | EatonCharger" Help:""  EnumDec:VarDecEnum_14 */
 
-/* Name: Charge_Complete_Probe ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BuckyWagon_01 Struct:BuckyWagon_01_B.s72_Merge Mask:FFFFFFFF
-   Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"Actuators | EatonCharger" Help:""   */
+/* Name: Charge_Complete_Probe ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BuckyWagon_01 Struct:BuckyWagon_01_B.s72_Merge Mask:FFFFFFFF
+   Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
+   Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"Actuators | EatonCharger" Help:""   */
 
 /* Name: Charge_Enable_Probe ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BuckyWagon_01 Struct:BuckyWagon_01_B.s73_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000

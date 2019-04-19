@@ -1285,6 +1285,16 @@
                <Default>0.0</Default>
                <Name>Charger_Temp_Offset</Name>
              </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Eaton_HV_Charger_Temperature_ovr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Eaton_HV_Charger_Temperature_new</Name>
+             </DataStore>
             <DataStore ref="Constant">
                <DataType>uint8</DataType>
                <Default>1U</Default>
@@ -1405,8 +1415,13 @@
                <Default>0</Default>
                <Name>Charge_Complete_Override_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
+               <Default>98.0</Default>
+               <Name>ChargeComplete_SOC</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>boolean</DataType>
                <Default>0.0</Default>
                <Name>Charge_Complete_Override_new</Name>
              </DataStore>
@@ -1638,16 +1653,6 @@
             <DataStore ref="Volatile">
                <DataType>boolean</DataType>
                <Default>0</Default>
-               <Name>Eaton_HV_Charger_Temperature_ovr</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>Eaton_HV_Charger_Temperature_new</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>boolean</DataType>
-               <Default>0</Default>
                <Name>OutputCurrent_ovr</Name>
              </DataStore>
             <DataStore ref="Volatile">
@@ -1694,21 +1699,6 @@
                <DataType>real32</DataType>
                <Default>400.0</Default>
                <Name>Downsample</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>EngPowerkW</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>GenEfficiencyPct</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>RemyMechPowerkW</Name>
              </DataStore>
             <DataStore ref="NonVolatile">
                <DataType>real32</DataType>
@@ -7209,6 +7199,37 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Eaton_HV_Charger_Temperature_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>Sensors | EatonCharger | Eaton_HV_Charger_Temperature Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Eaton_HV_Charger_Temperature_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Eaton_HV_Charger_Temperature_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>Sensors | EatonCharger | Eaton_HV_Charger_Temperature Override</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Eaton_HV_Charger_Temperature_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="Rotor_Temp_Enable">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
@@ -7595,15 +7616,32 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Charge_Complete_Override_new">
+			    <DataStoreVarDec ref="ChargeComplete_SOC">
         		                <access>RW RW RW RW</access>
         		                <class>VAR</class>
         		                <exp>1.0</exp>
         		                <format>4.2</format>
         		                <gain>1.0</gain>
+        		                <group>Actuators | EatonCharger</group>
+        		                <help>Max SOC that causes charger shutdown</help>
+        		                <max>100.000000</max>
+        		                <min>0.000000</min>
+        		                <name>ChargeComplete_SOC</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>%</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Charge_Complete_Override_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
         		                <group>Actuators | EatonCharger | Charge_Complete_Override Override</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
         		                <name>Charge_Complete_Override_new</name>
         		                <offset>0.0</offset>
         		                <storage>RAM</storage>
@@ -8322,37 +8360,6 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Eaton_HV_Charger_Temperature_ovr">
-        		                <access>RW RW RW RW</access>
-        		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
-        		                <exp>1.0</exp>
-        		                <format>1.0</format>
-        		                <gain>1.0</gain>
-        		                <group>Sensors | EatonCharger | Eaton_HV_Charger_Temperature Override</group>
-        		                <max>1.000000</max>
-        		                <min>0.000000</min>
-        		                <name>Eaton_HV_Charger_Temperature_ovr</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Eaton_HV_Charger_Temperature_new">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>Sensors | EatonCharger | Eaton_HV_Charger_Temperature Override</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>Eaton_HV_Charger_Temperature_new</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="OutputCurrent_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
@@ -8505,51 +8512,6 @@
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
         		                <units>Sec</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="EngPowerkW">
-        		                <access>RO RO RO RO</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>EngPowerkW</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="GenEfficiencyPct">
-        		                <access>RO RO RO RO</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>GenEfficiencyPct</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="RemyMechPowerkW">
-        		                <access>RO RO RO RO</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>RemyMechPowerkW</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>

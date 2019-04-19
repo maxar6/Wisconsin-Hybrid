@@ -559,13 +559,13 @@
 		<access>RO RO RO RO</access>
 		<storage>RAM</storage>
 		<update>BACKGND</update>
-		<type>real32</type>
+		<type>uint8</type>
 		<gain>1.0</gain>
 		<offset>0.0</offset>
 		<exp>1.0</exp>
-		<max>100000000000000000.000000</max>
-		<min>-100000000000000000.000000</min>
-		<format>4.2</format>
+		<max>1.000000</max>
+		<min>0.000000</min>
+		<format>1.0</format>
 		<mask>0xFFFFFFFF</mask>
 		<ctype>BlockIO_BuckyWagon_01</ctype>
 		<struct>BuckyWagon_01_B.s72_Merge</struct>
