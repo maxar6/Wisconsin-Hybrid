@@ -55,8 +55,8 @@ static boolean_T MHCAN_handler_miniview_button_down(S_CANMessage *messageObj)
       /* Handle CAN Slot Triggers */
       if (new_message) {
         {
-          extern void Trigger_CAN_Slot_miniview_button_down_10204p0002(void);
-          Trigger_CAN_Slot_miniview_button_down_10204p0002();
+          extern void Trigger_CAN_Slot_miniview_button_down_2080p0004(void);
+          Trigger_CAN_Slot_miniview_button_down_2080p0004();
         }
       }
     }
@@ -88,8 +88,8 @@ static boolean_T MHCAN_handler_miniview_button_menu(S_CANMessage *messageObj)
       /* Handle CAN Slot Triggers */
       if (new_message) {
         {
-          extern void Trigger_CAN_Slot_miniview_button_menu_10463p0005(void);
-          Trigger_CAN_Slot_miniview_button_menu_10463p0005();
+          extern void Trigger_CAN_Slot_miniview_button_menu_2338p0004(void);
+          Trigger_CAN_Slot_miniview_button_menu_2338p0004();
         }
       }
     }
@@ -121,8 +121,8 @@ static boolean_T MHCAN_handler_miniview_button_up(S_CANMessage *messageObj)
       /* Handle CAN Slot Triggers */
       if (new_message) {
         {
-          extern void Trigger_CAN_Slot_miniview_button_up_10714p0004(void);
-          Trigger_CAN_Slot_miniview_button_up_10714p0004();
+          extern void Trigger_CAN_Slot_miniview_button_up_2589p0005(void);
+          Trigger_CAN_Slot_miniview_button_up_2589p0005();
         }
       }
     }

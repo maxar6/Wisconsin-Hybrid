@@ -35,7 +35,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s339_Merge</struct>
+      <struct>BuckyWagon_01_B.s337_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>Sensors | Accel | Accel_Pedal</group>
    </VarDec>
@@ -54,7 +54,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s84_Switch</struct>
+      <struct>BuckyWagon_01_B.s93_Switch</struct>
       <group>Actuators | UQM | Counter</group>
    </VarDec>
    <VarDec>
@@ -72,7 +72,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Inverter_Fault_History</struct>
+      <struct>BuckyWagon_01_B.s221_Inverter_Fault_History</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -90,7 +90,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Over_Speed_Alarm_History</struct>
+      <struct>BuckyWagon_01_B.s221_Over_Speed_Alarm_History</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -108,7 +108,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_RelationalOperator</struct>
+      <struct>BuckyWagon_01_B.s221_RelationalOperator</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -126,7 +126,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Accurate_Speed</struct>
+      <struct>BuckyWagon_01_B.s221_Accurate_Speed</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -144,7 +144,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s216_EMP_Pump_Mode</struct>
+      <struct>BuckyWagon_01_B.s214_EMP_Pump_Mode</struct>
       <group>Sensors | EMP Cooling Fan</group>
    </VarDec>
    <VarDec>
@@ -162,44 +162,8 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s212_bcm_dis_buf</struct>
+      <struct>BuckyWagon_01_B.s210_bcm_dis_buf</struct>
       <group>Sensors | BCM</group>
-   </VarDec>
-   <VarDec>
-      <name>SOC_tq_Charge</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s134_motohawk_interpolation_2d1</struct>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|SOC Clip</group>
-   </VarDec>
-   <VarDec>
-      <name>Regen_tq_In</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s131_Switch</struct>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Regen</group>
    </VarDec>
    <VarDec>
       <name>Flash_Reverse_Lights_Probe</name>
@@ -216,7 +180,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s43_Merge</struct>
+      <struct>BuckyWagon_01_B.s51_Merge</struct>
       <group>Actuators | Reverse</group>
    </VarDec>
    <VarDec>
@@ -234,8 +198,27 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s114_LogicalOperator</struct>
+      <struct>BuckyWagon_01_B.s123_LogicalOperator</struct>
       <group>Actuators | BCM</group>
+   </VarDec>
+   <VarDec>
+      <name>BGND_BASEx10_PERIODIC_RunCnt</name>
+      <class>var</class>
+      <access>NA NA RW RW</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>int32</type>
+      <gain>1</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>2147483646</max>
+      <min>-1</min>
+      <format>5.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>int32_T</ctype>
+      <struct>BGND_BASEx10_PERIODIC_RunCnt</struct>
+      <help>The number of times to execute BGND_BASEx10_PERIODIC before pausing.  -1 means run forever</help>
+      <group>System | Debug | Event Pause Counters</group>
    </VarDec>
    <VarDec>
       <name>FgndTimeStackMargin</name>
@@ -291,7 +274,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s219_Sum1</struct>
+      <struct>BuckyWagon_01_B.s217_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>Sensors | LVVolt | LVVolt</group>
    </VarDec>
@@ -310,7 +293,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s193_scrollIndex</struct>
+      <struct>BuckyWagon_01_B.s191_scrollIndex</struct>
       <group>BuckyWagon_01|Foreground|MiniViewDisplay|GetFaultName</group>
    </VarDec>
    <VarDec>
@@ -328,7 +311,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Motor_Stalled</struct>
+      <struct>BuckyWagon_01_B.s221_Motor_Stalled</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -346,7 +329,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_ADC_Calibration_Problem_History</struct>
+      <struct>BuckyWagon_01_B.s221_ADC_Calibration_Problem_History</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -364,7 +347,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Over_Voltage_Alarm</struct>
+      <struct>BuckyWagon_01_B.s221_Over_Voltage_Alarm</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -382,7 +365,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Under_Voltage_Warning</struct>
+      <struct>BuckyWagon_01_B.s221_Under_Voltage_Warning</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -400,7 +383,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s212_bcm_soc_j</struct>
+      <struct>BuckyWagon_01_B.s210_bcm_soc_j</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -418,26 +401,8 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s233_Merge</struct>
+      <struct>BuckyWagon_01_B.s231_Merge</struct>
       <group>Sensors | BCM</group>
-   </VarDec>
-   <VarDec>
-      <name>Regen_tq_Out</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s133_Switch</struct>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Regen</group>
    </VarDec>
    <VarDec>
       <name>hsc_bcm_leakage_enable</name>
@@ -454,7 +419,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s20_LogicalOperator</struct>
+      <struct>BuckyWagon_01_B.s28_LogicalOperator</struct>
       <group>Actuators | BCM</group>
    </VarDec>
    <VarDec>
@@ -549,7 +514,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s12_motohawk_ain1</struct>
+      <struct>BuckyWagon_01_B.s20_motohawk_ain1</struct>
       <help>Singal measured directly from sensor</help>
       <group>Sensors | Brake | Brake_Pedal</group>
    </VarDec>
@@ -568,7 +533,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s72_Merge</struct>
+      <struct>BuckyWagon_01_B.s81_Merge</struct>
       <group>Actuators | EatonCharger</group>
    </VarDec>
    <VarDec>
@@ -586,7 +551,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Phase_Current_Sensor_Error</struct>
+      <struct>BuckyWagon_01_B.s221_Phase_Current_Sensor_Error</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -604,7 +569,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Using_Raw_Speed</struct>
+      <struct>BuckyWagon_01_B.s221_Using_Raw_Speed</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -622,7 +587,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Limp_Home_Mode</struct>
+      <struct>BuckyWagon_01_B.s221_Limp_Home_Mode</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -640,7 +605,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Over_Leg_Current</struct>
+      <struct>BuckyWagon_01_B.s221_Over_Leg_Current</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -658,7 +623,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Leg_Current</struct>
+      <struct>BuckyWagon_01_B.s221_Leg_Current</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -676,7 +641,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Accurate_Torque</struct>
+      <struct>BuckyWagon_01_B.s221_Accurate_Torque</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -694,7 +659,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s215_EMP_Pump_Status</struct>
+      <struct>BuckyWagon_01_B.s213_EMP_Pump_Status</struct>
       <group>Sensors | EMP Coolant Pump</group>
    </VarDec>
    <VarDec>
@@ -712,7 +677,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s212_bcm_chga_ena</struct>
+      <struct>BuckyWagon_01_B.s210_bcm_chga_ena</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -730,7 +695,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s212_bcm_alarm</struct>
+      <struct>BuckyWagon_01_B.s210_bcm_alarm</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -749,7 +714,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s39_LogicalOperator</struct>
+      <struct>BuckyWagon_01_B.s47_LogicalOperator</struct>
       <help>Display output in engineering units</help>
       <group>Actuators | DC/DC | InhibitDCDC_Out</group>
    </VarDec>
@@ -807,7 +772,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s218_Saturation</struct>
+      <struct>BuckyWagon_01_B.s216_Saturation</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>Sensors | Accel | Accel_Pedal</group>
    </VarDec>
@@ -827,7 +792,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s244_Merge</struct>
+      <struct>BuckyWagon_01_B.s242_Merge</struct>
       <help>Display output in engineering units</help>
       <group>Sensors | Reverse | Reverse_Switch</group>
    </VarDec>
@@ -846,7 +811,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s110_Switch1</struct>
+      <struct>BuckyWagon_01_B.s119_Switch1</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Cooling</group>
    </VarDec>
    <VarDec>
@@ -864,7 +829,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s9_Motor_Torque</struct>
+      <struct>BuckyWagon_01_B.s17_Motor_Torque</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy</group>
    </VarDec>
    <VarDec>
@@ -882,7 +847,7 @@
       <format>1.3</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s193_scrollTimer</struct>
+      <struct>BuckyWagon_01_B.s191_scrollTimer</struct>
       <group>BuckyWagon_01|Foreground|MiniViewDisplay|GetFaultName</group>
    </VarDec>
    <VarDec>
@@ -900,7 +865,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Iverter_Fault_Occured_History</struct>
+      <struct>BuckyWagon_01_B.s221_Iverter_Fault_Occured_History</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -918,7 +883,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Over_Speed_Warning</struct>
+      <struct>BuckyWagon_01_B.s221_Over_Speed_Warning</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -936,7 +901,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Inverter_Over_Temperature_History</struct>
+      <struct>BuckyWagon_01_B.s221_Inverter_Over_Temperature_History</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -954,7 +919,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Low_Bound</struct>
+      <struct>BuckyWagon_01_B.s221_Low_Bound</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -972,7 +937,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s214_EHPAS_Input_Voltage</struct>
+      <struct>BuckyWagon_01_B.s212_EHPAS_Input_Voltage</struct>
       <group>Sensors | EHPAS</group>
    </VarDec>
    <VarDec>
@@ -990,7 +955,7 @@
       <format>8.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s214_AgeCount</struct>
+      <struct>BuckyWagon_01_B.s212_AgeCount</struct>
       <group>Sensors | EHPAS</group>
    </VarDec>
    <VarDec>
@@ -1008,7 +973,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s212_bcm_chg_max</struct>
+      <struct>BuckyWagon_01_B.s210_bcm_chg_max</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -1026,7 +991,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s212_bcm_vbat</struct>
+      <struct>BuckyWagon_01_B.s210_bcm_vbat</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -1044,7 +1009,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s212_bcm_hvil_mon</struct>
+      <struct>BuckyWagon_01_B.s210_bcm_hvil_mon</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -1067,25 +1032,6 @@
       <group>System | NonVolatile Storage</group>
    </VarDec>
    <VarDec>
-      <name>BGND_BASEx20_PERIODIC_RunCnt</name>
-      <class>var</class>
-      <access>NA NA RW RW</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>int32</type>
-      <gain>1</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>2147483646</max>
-      <min>-1</min>
-      <format>5.0</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>int32_T</ctype>
-      <struct>BGND_BASEx20_PERIODIC_RunCnt</struct>
-      <help>The number of times to execute BGND_BASEx20_PERIODIC before pausing.  -1 means run forever</help>
-      <group>System | Debug | Event Pause Counters</group>
-   </VarDec>
-   <VarDec>
       <name>ONE_SECOND_EVENT_RunCnt</name>
       <class>var</class>
       <access>NA NA RW RW</access>
@@ -1102,6 +1048,25 @@
       <ctype>int32_T</ctype>
       <struct>ONE_SECOND_EVENT_RunCnt</struct>
       <help>The number of times to execute ONE_SECOND_EVENT before pausing.  -1 means run forever</help>
+      <group>System | Debug | Event Pause Counters</group>
+   </VarDec>
+   <VarDec>
+      <name>BGND_BASEx20_PERIODIC_RunCnt</name>
+      <class>var</class>
+      <access>NA NA RW RW</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>int32</type>
+      <gain>1</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>2147483646</max>
+      <min>-1</min>
+      <format>5.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>int32_T</ctype>
+      <struct>BGND_BASEx20_PERIODIC_RunCnt</struct>
+      <help>The number of times to execute BGND_BASEx20_PERIODIC before pausing.  -1 means run forever</help>
       <group>System | Debug | Event Pause Counters</group>
    </VarDec>
    <VarDec>
@@ -1157,7 +1122,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s69_Merge</struct>
+      <struct>BuckyWagon_01_B.s78_Merge</struct>
       <group>Actuators | EatonCharger</group>
    </VarDec>
    <VarDec>
@@ -1175,7 +1140,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_System_Disabled_In_Motion</struct>
+      <struct>BuckyWagon_01_B.s221_System_Disabled_In_Motion</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -1193,7 +1158,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Limp_Home_Mode_History</struct>
+      <struct>BuckyWagon_01_B.s221_Limp_Home_Mode_History</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -1211,7 +1176,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Over_Leg_Current_History</struct>
+      <struct>BuckyWagon_01_B.s221_Over_Leg_Current_History</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -1229,7 +1194,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Software_Release_Sub_Version</struct>
+      <struct>BuckyWagon_01_B.s221_Software_Release_Sub_Version</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -1247,7 +1212,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s215_EMP_Pump_Power</struct>
+      <struct>BuckyWagon_01_B.s213_EMP_Pump_Power</struct>
       <group>Sensors | EMP Coolant Pump</group>
    </VarDec>
    <VarDec>
@@ -1265,44 +1230,8 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s214_EHPAS_Fault</struct>
+      <struct>BuckyWagon_01_B.s212_EHPAS_Fault</struct>
       <group>Sensors | EHPAS</group>
-   </VarDec>
-   <VarDec>
-      <name>OverheatClip_On</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s136_out</struct>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Overheat Clip</group>
-   </VarDec>
-   <VarDec>
-      <name>DriveDemand_tq_Forward</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s131_motohawk_interpolation_2d</struct>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|DriverDemandBase</group>
    </VarDec>
    <VarDec>
       <name>table_5_rev</name>
@@ -1338,7 +1267,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s217_InputCurrentLimitMax</struct>
+      <struct>BuckyWagon_01_B.s215_InputCurrentLimitMax</struct>
       <group>Sensors | EatonCharger</group>
    </VarDec>
    <VarDec>
@@ -1356,7 +1285,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s217_MessageCounter</struct>
+      <struct>BuckyWagon_01_B.s215_MessageCounter</struct>
       <group>Sensors | EatonCharger</group>
    </VarDec>
    <VarDec>
@@ -1374,7 +1303,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s118_Saturation</struct>
+      <struct>BuckyWagon_01_B.s127_Saturation</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
    </VarDec>
    <VarDec>
@@ -1392,7 +1321,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_ABC_Phase_Order</struct>
+      <struct>BuckyWagon_01_B.s221_ABC_Phase_Order</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -1410,7 +1339,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Over_Speed_Warning_History</struct>
+      <struct>BuckyWagon_01_B.s221_Over_Speed_Warning_History</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -1428,7 +1357,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Inverter_Over_Temperature</struct>
+      <struct>BuckyWagon_01_B.s221_Inverter_Over_Temperature</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -1446,7 +1375,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Torque_Desired</struct>
+      <struct>BuckyWagon_01_B.s221_Torque_Desired</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -1464,7 +1393,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s214_EHPAS_Pump_Speed</struct>
+      <struct>BuckyWagon_01_B.s212_EHPAS_Pump_Speed</struct>
       <group>Sensors | EHPAS</group>
    </VarDec>
    <VarDec>
@@ -1482,7 +1411,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s212_bcm_chg_buf</struct>
+      <struct>BuckyWagon_01_B.s210_bcm_chg_buf</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -1500,7 +1429,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s212_bcm_chga_mon</struct>
+      <struct>BuckyWagon_01_B.s210_bcm_chga_mon</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -1518,7 +1447,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s159_Merge</struct>
+      <struct>BuckyWagon_01_B.s157_Merge</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Reverse</group>
    </VarDec>
    <VarDec>
@@ -1536,7 +1465,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s66_Merge</struct>
+      <struct>BuckyWagon_01_B.s75_Merge</struct>
       <group>Actuators | EMP Cooling Fan</group>
    </VarDec>
    <VarDec>
@@ -1631,7 +1560,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s355_Merge</struct>
+      <struct>BuckyWagon_01_B.s353_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>Sensors | Brake | Brake_Pedal</group>
    </VarDec>
@@ -1650,7 +1579,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s316_pluggedIn</struct>
+      <struct>BuckyWagon_01_B.s314_pluggedIn</struct>
       <group>Sensors | EatonCharger</group>
    </VarDec>
    <VarDec>
@@ -1668,7 +1597,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s118_Gain4</struct>
+      <struct>BuckyWagon_01_B.s127_Gain4</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
    </VarDec>
    <VarDec>
@@ -1686,7 +1615,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Bad_Switch</struct>
+      <struct>BuckyWagon_01_B.s221_Bad_Switch</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -1704,7 +1633,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Inverter_Fault_Occured</struct>
+      <struct>BuckyWagon_01_B.s221_Inverter_Fault_Occured</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -1722,7 +1651,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s215_EMP_Speed_Percent</struct>
+      <struct>BuckyWagon_01_B.s213_EMP_Speed_Percent</struct>
       <group>Sensors | EMP Coolant Pump</group>
    </VarDec>
    <VarDec>
@@ -1740,7 +1669,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s212_bcm_cell_undervolt</struct>
+      <struct>BuckyWagon_01_B.s210_bcm_cell_undervolt</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -1758,26 +1687,8 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s212_bcm_vbat</struct>
+      <struct>BuckyWagon_01_B.s210_bcm_vbat</struct>
       <group>Sensors</group>
-   </VarDec>
-   <VarDec>
-      <name>Regen_tq_Max</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s133_MinMax</struct>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Regen</group>
    </VarDec>
    <VarDec>
       <name>EMP_Speed</name>
@@ -1794,7 +1705,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s60_Merge</struct>
+      <struct>BuckyWagon_01_B.s69_Merge</struct>
       <group>Actuators | EMP Coolant Pump</group>
    </VarDec>
    <VarDec>
@@ -1813,7 +1724,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s38_LogicalOperator</struct>
+      <struct>BuckyWagon_01_B.s46_LogicalOperator</struct>
       <help>Display output in engineering units</help>
       <group>Actuators | Reverse | ReverseOut</group>
    </VarDec>
@@ -1852,7 +1763,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s213_DataTypeConversion</struct>
+      <struct>BuckyWagon_01_B.s211_DataTypeConversion</struct>
       <help>Display output in engineering units</help>
       <group>Sensors | Reverse | Reverse_Switch</group>
    </VarDec>
@@ -1871,7 +1782,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Current_Transducer_Fault_IbusIleg</struct>
+      <struct>BuckyWagon_01_B.s221_Current_Transducer_Fault_IbusIleg</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -1889,7 +1800,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_CAN_Limits_In_Effect</struct>
+      <struct>BuckyWagon_01_B.s221_CAN_Limits_In_Effect</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -1907,7 +1818,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Not_Enabled_Histroy</struct>
+      <struct>BuckyWagon_01_B.s221_Not_Enabled_Histroy</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -1925,7 +1836,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Stator_Temp</struct>
+      <struct>BuckyWagon_01_B.s221_Stator_Temp</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -1943,7 +1854,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s216_EMP_Pump_Power</struct>
+      <struct>BuckyWagon_01_B.s214_EMP_Pump_Power</struct>
       <group>Sensors | EMP Cooling Fan</group>
    </VarDec>
    <VarDec>
@@ -1961,7 +1872,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s216_EMP_Board_Temp</struct>
+      <struct>BuckyWagon_01_B.s214_EMP_Board_Temp</struct>
       <group>Sensors | EMP Cooling Fan</group>
    </VarDec>
    <VarDec>
@@ -1979,7 +1890,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s212_bcm_t_coolant</struct>
+      <struct>BuckyWagon_01_B.s210_bcm_t_coolant</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -1997,26 +1908,8 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s212_bcm_mod_ena</struct>
+      <struct>BuckyWagon_01_B.s210_bcm_mod_ena</struct>
       <group>Sensors | BCM</group>
-   </VarDec>
-   <VarDec>
-      <name>DriveDemand_tq_Out</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s131_Switch</struct>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|DriverDemandBase</group>
    </VarDec>
    <VarDec>
       <name>Brake_Raw</name>
@@ -2034,7 +1927,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s220_Saturation</struct>
+      <struct>BuckyWagon_01_B.s218_Saturation</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>Sensors | Brake | Brake_Pedal</group>
    </VarDec>
@@ -2053,7 +1946,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s217_InputCurrent</struct>
+      <struct>BuckyWagon_01_B.s215_InputCurrent</struct>
       <group>Sensors | EatonCharger</group>
    </VarDec>
    <VarDec>
@@ -2071,7 +1964,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s217_OutputVoltage</struct>
+      <struct>BuckyWagon_01_B.s215_OutputVoltage</struct>
       <group>Sensors | EatonCharger</group>
    </VarDec>
    <VarDec>
@@ -2089,7 +1982,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s118_Gain1</struct>
+      <struct>BuckyWagon_01_B.s127_Gain1</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
    </VarDec>
    <VarDec>
@@ -2107,7 +2000,7 @@
       <format>1.3</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s145_Sum1</struct>
+      <struct>BuckyWagon_01_B.s143_Sum1</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy</group>
    </VarDec>
    <VarDec>
@@ -2125,7 +2018,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s86_Merge</struct>
+      <struct>BuckyWagon_01_B.s95_Merge</struct>
       <group>Actuators | UQM</group>
    </VarDec>
    <VarDec>
@@ -2143,7 +2036,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Forced_Open_Loop</struct>
+      <struct>BuckyWagon_01_B.s221_Forced_Open_Loop</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -2161,7 +2054,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Inverter_Fault</struct>
+      <struct>BuckyWagon_01_B.s221_Inverter_Fault</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -2179,7 +2072,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Over_Voltage_Warning</struct>
+      <struct>BuckyWagon_01_B.s221_Over_Voltage_Warning</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -2197,7 +2090,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Shutdown</struct>
+      <struct>BuckyWagon_01_B.s221_Shutdown</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -2215,7 +2108,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s215_EMP_Pump_Speed</struct>
+      <struct>BuckyWagon_01_B.s213_EMP_Pump_Speed</struct>
       <group>Sensors | EMP Coolant Pump</group>
    </VarDec>
    <VarDec>
@@ -2233,26 +2126,8 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s230_Merge</struct>
+      <struct>BuckyWagon_01_B.s228_Merge</struct>
       <group>Sensors | BCM</group>
-   </VarDec>
-   <VarDec>
-      <name>SOC_tq_In</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s133_Switch</struct>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|SOC Clip</group>
    </VarDec>
    <VarDec>
       <name>EHPAS_Operating_Mode_Command</name>
@@ -2269,8 +2144,27 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s15_OperatingMode_cmd</struct>
+      <struct>BuckyWagon_01_B.s23_OperatingMode_cmd</struct>
       <group>Actuators | EHPAS</group>
+   </VarDec>
+   <VarDec>
+      <name>FGND_2XRTI_PERIODIC_RunCnt</name>
+      <class>var</class>
+      <access>NA NA RW RW</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>int32</type>
+      <gain>1</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>2147483646</max>
+      <min>-1</min>
+      <format>5.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>int32_T</ctype>
+      <struct>FGND_2XRTI_PERIODIC_RunCnt</struct>
+      <help>The number of times to execute FGND_2XRTI_PERIODIC before pausing.  -1 means run forever</help>
+      <group>System | Debug | Event Pause Counters</group>
    </VarDec>
    <VarDec>
       <name>FGND_RTI_PERIODIC_RunCnt</name>
@@ -2307,7 +2201,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s347_Merge</struct>
+      <struct>BuckyWagon_01_B.s345_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>Sensors | LVVolt | LVVolt</group>
    </VarDec>
@@ -2326,7 +2220,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s217_FaultSeverityIndicator</struct>
+      <struct>BuckyWagon_01_B.s215_FaultSeverityIndicator</struct>
       <group>Sensors | EatonCharger</group>
    </VarDec>
    <VarDec>
@@ -2344,7 +2238,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s217_OutputCurrent</struct>
+      <struct>BuckyWagon_01_B.s215_OutputCurrent</struct>
       <group>Sensors | EatonCharger</group>
    </VarDec>
    <VarDec>
@@ -2362,7 +2256,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s70_Merge</struct>
+      <struct>BuckyWagon_01_B.s79_Merge</struct>
       <group>Actuators | EatonCharger</group>
    </VarDec>
    <VarDec>
@@ -2380,7 +2274,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Over_Voltage_Alarm_History</struct>
+      <struct>BuckyWagon_01_B.s221_Over_Voltage_Alarm_History</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -2398,7 +2292,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Over_Voltage_Warning_History</struct>
+      <struct>BuckyWagon_01_B.s221_Over_Voltage_Warning_History</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -2416,7 +2310,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Stator_Over_Temperature</struct>
+      <struct>BuckyWagon_01_B.s221_Stator_Over_Temperature</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -2434,7 +2328,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Software_Release_Minor_Version</struct>
+      <struct>BuckyWagon_01_B.s221_Software_Release_Minor_Version</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -2452,7 +2346,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Rotor_Temp</struct>
+      <struct>BuckyWagon_01_B.s221_Rotor_Temp</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -2470,7 +2364,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s216_EMP_Speed_Percent</struct>
+      <struct>BuckyWagon_01_B.s214_EMP_Speed_Percent</struct>
       <group>Sensors | EMP Cooling Fan</group>
    </VarDec>
    <VarDec>
@@ -2488,7 +2382,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s214_EHPAS_Input_Current_NA</struct>
+      <struct>BuckyWagon_01_B.s212_EHPAS_Input_Current_NA</struct>
       <group>Sensors | EHPAS</group>
    </VarDec>
    <VarDec>
@@ -2506,44 +2400,8 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s212_bcm_chg_done</struct>
+      <struct>BuckyWagon_01_B.s210_bcm_chg_done</struct>
       <group>Sensors | BCM</group>
-   </VarDec>
-   <VarDec>
-      <name>SOC_tq_Discharge</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s134_motohawk_interpolation_2d</struct>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|SOC Clip</group>
-   </VarDec>
-   <VarDec>
-      <name>Regen_tq_Accel</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s133_motohawk_interpolation_2d</struct>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Regen</group>
    </VarDec>
    <VarDec>
       <name>FanOut_DutyCycle</name>
@@ -2561,7 +2419,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s52_MinMax1</struct>
+      <struct>BuckyWagon_01_B.s60_MinMax1</struct>
       <help>Actual duty cycle of actuator</help>
       <group>Actuators | Fan | FanOut</group>
    </VarDec>
@@ -2580,7 +2438,7 @@
       <format>1.3</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s364_Merge</struct>
+      <struct>BuckyWagon_01_B.s362_Merge</struct>
       <group>Sensors | Vehicle Speed</group>
    </VarDec>
    <VarDec>
@@ -2598,7 +2456,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s217_ChargerState</struct>
+      <struct>BuckyWagon_01_B.s215_ChargerState</struct>
       <group>Sensors | EatonCharger</group>
    </VarDec>
    <VarDec>
@@ -2616,7 +2474,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s217_IgnitionStatus</struct>
+      <struct>BuckyWagon_01_B.s215_IgnitionStatus</struct>
       <group>Sensors | EatonCharger</group>
    </VarDec>
    <VarDec>
@@ -2634,7 +2492,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s110_Switch</struct>
+      <struct>BuckyWagon_01_B.s119_Switch</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Cooling</group>
    </VarDec>
    <VarDec>
@@ -2652,7 +2510,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s117_Sum1</struct>
+      <struct>BuckyWagon_01_B.s126_Sum1</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations|Odometer</group>
    </VarDec>
    <VarDec>
@@ -2670,7 +2528,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s118_Divide</struct>
+      <struct>BuckyWagon_01_B.s127_Divide</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
    </VarDec>
    <VarDec>
@@ -2688,7 +2546,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s118_Gain3</struct>
+      <struct>BuckyWagon_01_B.s127_Gain3</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
    </VarDec>
    <VarDec>
@@ -2706,7 +2564,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s118_Divide3</struct>
+      <struct>BuckyWagon_01_B.s127_Divide3</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
    </VarDec>
    <VarDec>
@@ -2725,7 +2583,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s99_LogicalOperator</struct>
+      <struct>BuckyWagon_01_B.s108_LogicalOperator</struct>
       <help>Accel pedal has been at zero position since key-up</help>
       <group>Diagnostic &amp; Protection</group>
    </VarDec>
@@ -2744,7 +2602,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Invalid_Power_Supply</struct>
+      <struct>BuckyWagon_01_B.s221_Invalid_Power_Supply</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -2762,7 +2620,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Regen_Switch_Open</struct>
+      <struct>BuckyWagon_01_B.s221_Regen_Switch_Open</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -2780,7 +2638,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Over_Bus_Current_History</struct>
+      <struct>BuckyWagon_01_B.s221_Over_Bus_Current_History</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -2798,7 +2656,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Over_Bus_Current</struct>
+      <struct>BuckyWagon_01_B.s221_Over_Bus_Current</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -2816,7 +2674,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Software_Release_Major_Version</struct>
+      <struct>BuckyWagon_01_B.s221_Software_Release_Major_Version</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -2834,7 +2692,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s216_EMP_Pump_Status</struct>
+      <struct>BuckyWagon_01_B.s214_EMP_Pump_Status</struct>
       <group>Sensors | EMP Cooling Fan</group>
    </VarDec>
    <VarDec>
@@ -2852,26 +2710,27 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s212_bcm_cpwr_cmd</struct>
+      <struct>BuckyWagon_01_B.s210_bcm_cpwr_cmd</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
-      <name>OverheatClip_tq_In</name>
+      <name>BGND_BASEx2_PERIODIC_RunCnt</name>
       <class>var</class>
-      <access>RO RO RO RO</access>
+      <access>NA NA RW RW</access>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
+      <type>int32</type>
+      <gain>1</gain>
       <offset>0.0</offset>
       <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
+      <max>2147483646</max>
+      <min>-1</min>
+      <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s134_Switch</struct>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Overheat Clip</group>
+      <ctype>int32_T</ctype>
+      <struct>BGND_BASEx2_PERIODIC_RunCnt</struct>
+      <help>The number of times to execute BGND_BASEx2_PERIODIC before pausing.  -1 means run forever</help>
+      <group>System | Debug | Event Pause Counters</group>
    </VarDec>
    <VarDec>
       <name>InterruptStackMargin</name>
@@ -2945,7 +2804,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s118_Gain8</struct>
+      <struct>BuckyWagon_01_B.s127_Gain8</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
    </VarDec>
    <VarDec>
@@ -2963,7 +2822,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Status_A</struct>
+      <struct>BuckyWagon_01_B.s221_Status_A</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -2981,7 +2840,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Command_Watchdog_Status</struct>
+      <struct>BuckyWagon_01_B.s221_Command_Watchdog_Status</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -2999,7 +2858,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Inverter_Temperature</struct>
+      <struct>BuckyWagon_01_B.s221_Inverter_Temperature</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -3017,7 +2876,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s216_EMP_Pump_Speed</struct>
+      <struct>BuckyWagon_01_B.s214_EMP_Pump_Speed</struct>
       <group>Sensors | EMP Cooling Fan</group>
    </VarDec>
    <VarDec>
@@ -3035,7 +2894,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s212_bcm_lvbat</struct>
+      <struct>BuckyWagon_01_B.s210_bcm_lvbat</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -3053,7 +2912,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s212_bcm_cell_vmin</struct>
+      <struct>BuckyWagon_01_B.s210_bcm_cell_vmin</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -3071,26 +2930,8 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s212_bcm_cpwr_mon</struct>
+      <struct>BuckyWagon_01_B.s210_bcm_cpwr_mon</struct>
       <group>Sensors | BCM</group>
-   </VarDec>
-   <VarDec>
-      <name>DriveDemand_tq_Reverse</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s131_motohawk_interpolation_2d1</struct>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|DriverDemandBase</group>
    </VarDec>
    <VarDec>
       <name>hsc_bcm_epo</name>
@@ -3107,7 +2948,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s13_Switch</struct>
+      <struct>BuckyWagon_01_B.s21_Switch</struct>
       <group>Actuators | BCM</group>
    </VarDec>
    <VarDec>
@@ -3164,7 +3005,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s12_motohawk_ain5</struct>
+      <struct>BuckyWagon_01_B.s20_motohawk_ain5</struct>
       <help>Singal measured directly from sensor</help>
       <group>Sensors | LVVolt | LVVolt</group>
    </VarDec>
@@ -3183,7 +3024,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s217_MessageChecksum</struct>
+      <struct>BuckyWagon_01_B.s215_MessageChecksum</struct>
       <group>Sensors | EatonCharger</group>
    </VarDec>
    <VarDec>
@@ -3201,7 +3042,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s118_Gain5</struct>
+      <struct>BuckyWagon_01_B.s127_Gain5</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
    </VarDec>
    <VarDec>
@@ -3219,7 +3060,7 @@
       <format>1.3</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s193_minTimer</struct>
+      <struct>BuckyWagon_01_B.s191_minTimer</struct>
       <group>BuckyWagon_01|Foreground|MiniViewDisplay|GetFaultName</group>
    </VarDec>
    <VarDec>
@@ -3237,7 +3078,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Turbo_Mode</struct>
+      <struct>BuckyWagon_01_B.s221_Turbo_Mode</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -3255,7 +3096,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Forced_Voltage_Control</struct>
+      <struct>BuckyWagon_01_B.s221_Forced_Voltage_Control</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -3273,7 +3114,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Rotor_Over_Temperature_History</struct>
+      <struct>BuckyWagon_01_B.s221_Rotor_Over_Temperature_History</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -3291,7 +3132,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Rotor_Over_Temperature</struct>
+      <struct>BuckyWagon_01_B.s221_Rotor_Over_Temperature</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -3309,7 +3150,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Under_Voltage_Warning_History</struct>
+      <struct>BuckyWagon_01_B.s221_Under_Voltage_Warning_History</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -3327,7 +3168,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Over_Phase_Advance_History</struct>
+      <struct>BuckyWagon_01_B.s221_Over_Phase_Advance_History</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -3345,7 +3186,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Stall_Safety_Percentage</struct>
+      <struct>BuckyWagon_01_B.s221_Stall_Safety_Percentage</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -3363,7 +3204,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Accurate_Voltage</struct>
+      <struct>BuckyWagon_01_B.s221_Accurate_Voltage</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -3381,7 +3222,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s215_EMP_Board_Temp</struct>
+      <struct>BuckyWagon_01_B.s213_EMP_Board_Temp</struct>
       <group>Sensors | EMP Coolant Pump</group>
    </VarDec>
    <VarDec>
@@ -3399,7 +3240,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s214_EHPAS_TempCur</struct>
+      <struct>BuckyWagon_01_B.s212_EHPAS_TempCur</struct>
       <group>Sensors | EHPAS</group>
    </VarDec>
    <VarDec>
@@ -3417,26 +3258,8 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s212_bcm_cell_vmax</struct>
+      <struct>BuckyWagon_01_B.s210_bcm_cell_vmax</struct>
       <group>Sensors | BCM</group>
-   </VarDec>
-   <VarDec>
-      <name>OverheatClip_InvTemp</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Inverter_Temperature</struct>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Overheat Clip</group>
    </VarDec>
    <VarDec>
       <name>Raw_Regen_Tq_Request</name>
@@ -3453,7 +3276,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s124_Product</struct>
+      <struct>BuckyWagon_01_B.s132_Product</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving|Regen</group>
    </VarDec>
    <VarDec>
@@ -3476,6 +3299,25 @@
       <group>System | NonVolatile Storage</group>
    </VarDec>
    <VarDec>
+      <name>FGND_10XRTI_PERIODIC_RunCnt</name>
+      <class>var</class>
+      <access>NA NA RW RW</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>int32</type>
+      <gain>1</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>2147483646</max>
+      <min>-1</min>
+      <format>5.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>int32_T</ctype>
+      <struct>FGND_10XRTI_PERIODIC_RunCnt</struct>
+      <help>The number of times to execute FGND_10XRTI_PERIODIC before pausing.  -1 means run forever</help>
+      <group>System | Debug | Event Pause Counters</group>
+   </VarDec>
+   <VarDec>
       <name>Acceleration_Limited</name>
       <class>var</class>
       <access>RO RO RO RO</access>
@@ -3490,7 +3332,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Acceleration_Limited</struct>
+      <struct>BuckyWagon_01_B.s221_Acceleration_Limited</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -3508,7 +3350,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Watchdog_Error</struct>
+      <struct>BuckyWagon_01_B.s221_Watchdog_Error</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -3526,7 +3368,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Status_C</struct>
+      <struct>BuckyWagon_01_B.s221_Status_C</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -3544,7 +3386,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Angular_Distance</struct>
+      <struct>BuckyWagon_01_B.s221_Angular_Distance</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -3562,7 +3404,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Accurate_Current</struct>
+      <struct>BuckyWagon_01_B.s221_Accurate_Current</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -3580,7 +3422,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s212_bcm_veh_mon</struct>
+      <struct>BuckyWagon_01_B.s210_bcm_veh_mon</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -3598,7 +3440,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s212_bcm_cell_tmin</struct>
+      <struct>BuckyWagon_01_B.s210_bcm_cell_tmin</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -3616,7 +3458,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s212_bcm_cool_req</struct>
+      <struct>BuckyWagon_01_B.s210_bcm_cool_req</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -3634,26 +3476,8 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s229_Merge</struct>
+      <struct>BuckyWagon_01_B.s227_Merge</struct>
       <group>Sensors | BCM</group>
-   </VarDec>
-   <VarDec>
-      <name>OverheatClip_tq_Out</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s132_Switch1</struct>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Overheat Clip</group>
    </VarDec>
    <VarDec>
       <name>ProductID</name>
@@ -3690,7 +3514,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s359_Sum</struct>
+      <struct>BuckyWagon_01_B.s357_Sum</struct>
       <group>BuckyWagon_01</group>
    </VarDec>
    <VarDec>
@@ -3709,7 +3533,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s12_motohawk_ain</struct>
+      <struct>BuckyWagon_01_B.s20_motohawk_ain</struct>
       <help>Singal measured directly from sensor</help>
       <group>Sensors | Accel | Accel_Pedal</group>
    </VarDec>
@@ -3728,7 +3552,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s217_Eaton_HV_Charger_Temperature</struct>
+      <struct>BuckyWagon_01_B.s215_Eaton_HV_Charger_Temperature</struct>
       <group>Sensors | EatonCharger</group>
    </VarDec>
    <VarDec>
@@ -3746,7 +3570,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s118_Gain6</struct>
+      <struct>BuckyWagon_01_B.s127_Gain6</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
    </VarDec>
    <VarDec>
@@ -3764,7 +3588,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Bad_Position_Signal</struct>
+      <struct>BuckyWagon_01_B.s221_Bad_Position_Signal</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -3782,7 +3606,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_ADC_Calibration_Problem</struct>
+      <struct>BuckyWagon_01_B.s221_ADC_Calibration_Problem</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -3800,7 +3624,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Over_Speed_Alarm</struct>
+      <struct>BuckyWagon_01_B.s221_Over_Speed_Alarm</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -3818,7 +3642,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Not_Enabled</struct>
+      <struct>BuckyWagon_01_B.s221_Not_Enabled</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -3836,7 +3660,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s215_EMP_Pump_Mode</struct>
+      <struct>BuckyWagon_01_B.s213_EMP_Pump_Mode</struct>
       <group>Sensors | EMP Coolant Pump</group>
    </VarDec>
    <VarDec>
@@ -3854,7 +3678,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s214_EHPAS_TempMax</struct>
+      <struct>BuckyWagon_01_B.s212_EHPAS_TempMax</struct>
       <group>Sensors | EHPAS</group>
    </VarDec>
    <VarDec>
@@ -3872,7 +3696,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s231_Merge</struct>
+      <struct>BuckyWagon_01_B.s229_Merge</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -3890,26 +3714,8 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s212_bcm_cell_tmax</struct>
+      <struct>BuckyWagon_01_B.s210_bcm_cell_tmax</struct>
       <group>Sensors | BCM</group>
-   </VarDec>
-   <VarDec>
-      <name>Regen_tq_Brake</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s133_motohawk_interpolation_2d1</struct>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Regen</group>
    </VarDec>
    <VarDec>
       <name>Coast_Down_Tq_Probe</name>
@@ -3926,7 +3732,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s124_Product2</struct>
+      <struct>BuckyWagon_01_B.s132_Product2</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving|Regen</group>
    </VarDec>
    <VarDec>
@@ -3944,7 +3750,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s217_InputVoltage</struct>
+      <struct>BuckyWagon_01_B.s215_InputVoltage</struct>
       <group>Sensors | EatonCharger</group>
    </VarDec>
    <VarDec>
@@ -3962,7 +3768,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s118_Gain</struct>
+      <struct>BuckyWagon_01_B.s127_Gain</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations</group>
    </VarDec>
    <VarDec>
@@ -3980,7 +3786,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s106_Switch1</struct>
+      <struct>BuckyWagon_01_B.s115_Switch1</struct>
       <group>Diagnostics and Protection</group>
    </VarDec>
    <VarDec>
@@ -3998,7 +3804,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Over_Phase_Advance</struct>
+      <struct>BuckyWagon_01_B.s221_Over_Phase_Advance</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -4016,7 +3822,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Derate</struct>
+      <struct>BuckyWagon_01_B.s221_Derate</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -4034,7 +3840,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_High_Bound</struct>
+      <struct>BuckyWagon_01_B.s221_High_Bound</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -4052,7 +3858,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s214_EHPAS_Op_State</struct>
+      <struct>BuckyWagon_01_B.s212_EHPAS_Op_State</struct>
       <group>Sensors | EHPAS</group>
    </VarDec>
    <VarDec>
@@ -4070,7 +3876,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s212_bcm_dis_max</struct>
+      <struct>BuckyWagon_01_B.s210_bcm_dis_max</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -4088,26 +3894,8 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s212_bcm_epo</struct>
+      <struct>BuckyWagon_01_B.s210_bcm_epo</struct>
       <group>Sensors | BCM</group>
-   </VarDec>
-   <VarDec>
-      <name>TqManagement_tq_Out</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s140_MinMax1</struct>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management</group>
    </VarDec>
    <VarDec>
       <name>Regen_SOCSpd_Ramp_probe_preOVR</name>
@@ -4124,7 +3912,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s124_Saturation1</struct>
+      <struct>BuckyWagon_01_B.s132_Saturation1</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving|Regen</group>
    </VarDec>
    <VarDec>
@@ -4161,7 +3949,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s225_Merge</struct>
+      <struct>BuckyWagon_01_B.s223_Merge</struct>
       <group>BuckyWagon_01|Foreground|Sensors</group>
    </VarDec>
    <VarDec>
@@ -4179,7 +3967,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s117_Sum</struct>
+      <struct>BuckyWagon_01_B.s126_Sum</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|Calculations|Odometer</group>
    </VarDec>
    <VarDec>
@@ -4197,7 +3985,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s85_Merge</struct>
+      <struct>BuckyWagon_01_B.s94_Merge</struct>
       <group>Actuators | UQM</group>
    </VarDec>
    <VarDec>
@@ -4215,7 +4003,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s73_Merge</struct>
+      <struct>BuckyWagon_01_B.s82_Merge</struct>
       <group>Actuators | EatonCharger</group>
    </VarDec>
    <VarDec>
@@ -4233,7 +4021,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Power_Switches_Off</struct>
+      <struct>BuckyWagon_01_B.s221_Power_Switches_Off</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -4251,7 +4039,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s223_Stator_Over_Temperature_History</struct>
+      <struct>BuckyWagon_01_B.s221_Stator_Over_Temperature_History</struct>
       <group>Sensors | UQMController</group>
    </VarDec>
    <VarDec>
@@ -4269,7 +4057,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s212_bcm_ibat</struct>
+      <struct>BuckyWagon_01_B.s210_bcm_ibat</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
@@ -4287,26 +4075,27 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s212_bcm_gfd</struct>
+      <struct>BuckyWagon_01_B.s210_bcm_gfd</struct>
       <group>Sensors | BCM</group>
    </VarDec>
    <VarDec>
-      <name>SOC_tq_Out</name>
+      <name>IDLE_EVENT_RunCnt</name>
       <class>var</class>
-      <access>RO RO RO RO</access>
+      <access>NA NA RW RW</access>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
+      <type>int32</type>
+      <gain>1</gain>
       <offset>0.0</offset>
       <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
+      <max>2147483646</max>
+      <min>-1</min>
+      <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s134_Switch</struct>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|SOC Clip</group>
+      <ctype>int32_T</ctype>
+      <struct>IDLE_EVENT_RunCnt</struct>
+      <help>The number of times to execute IDLE_EVENT before pausing.  -1 means run forever</help>
+      <group>System | Debug | Event Pause Counters</group>
    </VarDec>
    <VarDec>
       <name>table_0_rev</name>
@@ -4344,7 +4133,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>29</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/Eaton HV Charger/motohawk_override_abs3/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/Eaton HV Charger/motohawk_override_abs1/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000018</name>
@@ -4352,7 +4141,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>18</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/EMP Coolant Pump/motohawk_override_abs1/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/Analog Out/Discrete Actuator Characterization2/Override in Engineering Units/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000007</name>
@@ -4360,7 +4149,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>7</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/A123 Battery Controller/motohawk_override_abs8/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/A123 Battery Controller/motohawk_override_abs6/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000019</name>
@@ -4368,7 +4157,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>19</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/EMP Coolant Pump/motohawk_override_abs1/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/Analog Out/PWM Characterization2/motohawk_override_abs2/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000008</name>
@@ -4376,7 +4165,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>8</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/Analog Out/Cruise Control Indicator/motohawk_override_abs3/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/A123 Battery Controller/motohawk_override_abs6/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000009</name>
@@ -4384,7 +4173,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>9</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/Analog Out/Cruise Control Indicator/motohawk_override_abs3/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/A123 Battery Controller/motohawk_override_abs7/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000030</name>
@@ -4392,7 +4181,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>30</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/Eaton HV Charger/motohawk_override_abs4/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/Eaton HV Charger/motohawk_override_abs1/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000031</name>
@@ -4400,7 +4189,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>31</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/Eaton HV Charger/motohawk_override_abs4/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/Eaton HV Charger/motohawk_override_abs2/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000020</name>
@@ -4408,7 +4197,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>20</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/EMP Coolant Pump/motohawk_override_abs4/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/Analog Out/PWM Characterization2/motohawk_override_abs2/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000021</name>
@@ -4416,7 +4205,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>21</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/EMP Coolant Pump/motohawk_override_abs4/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/EHPAS Power Steering Pump Controller/motohawk_override_abs4/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000010</name>
@@ -4424,7 +4213,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>10</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/Analog Out/Discrete Actuator Characterization1/Override in Engineering Units/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/A123 Battery Controller/motohawk_override_abs7/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000022</name>
@@ -4432,7 +4221,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>22</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/EMP Cooling Fan/motohawk_override_abs1/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/EHPAS Power Steering Pump Controller/motohawk_override_abs4/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000011</name>
@@ -4440,7 +4229,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>11</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/Analog Out/Discrete Actuator Characterization1/Override in Engineering Units/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/A123 Battery Controller/motohawk_override_abs8/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000000</name>
@@ -4448,7 +4237,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>0</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/A123 Battery Controller/motohawk_override_abs5/NewValue</false_text>
+            <false_text>BuckyWagon_01/CCP CAN Protocol/CCP CAN Protocol External Trig1/CCP Command Driver</false_text>
          </item>
          <item>
             <name>CodeCover000023</name>
@@ -4456,7 +4245,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>23</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/EMP Cooling Fan/motohawk_override_abs1/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/EMP Coolant Pump/motohawk_override_abs1/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000012</name>
@@ -4464,7 +4253,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>12</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/Analog Out/Discrete Actuator Characterization2/Override in Engineering Units/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/A123 Battery Controller/motohawk_override_abs8/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000001</name>
@@ -4472,7 +4261,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>1</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/A123 Battery Controller/motohawk_override_abs5/OldValue</false_text>
+            <false_text>BuckyWagon_01/CCP CAN Protocol/CCP CAN Protocol External Trig1/CCP Command Driver/While new CCP Command</false_text>
          </item>
          <item>
             <name>CodeCover000024</name>
@@ -4480,7 +4269,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>24</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/Eaton HV Charger/motohawk_override_abs1/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/EMP Coolant Pump/motohawk_override_abs1/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000013</name>
@@ -4488,7 +4277,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>13</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/Analog Out/Discrete Actuator Characterization2/Override in Engineering Units/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/Analog Out/Cruise Control Indicator/motohawk_override_abs3/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000002</name>
@@ -4496,7 +4285,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>2</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/A123 Battery Controller/motohawk_override_abs6/NewValue</false_text>
+            <false_text>BuckyWagon_01/CCP CAN Protocol/CCP CAN Protocol External Trig1/CCP Command Driver/While new CCP Command/Adjust ID</false_text>
          </item>
          <item>
             <name>CodeCover000025</name>
@@ -4504,7 +4293,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>25</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/Eaton HV Charger/motohawk_override_abs1/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/EMP Coolant Pump/motohawk_override_abs4/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000014</name>
@@ -4512,7 +4301,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>14</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/Analog Out/PWM Characterization2/motohawk_override_abs2/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/Analog Out/Cruise Control Indicator/motohawk_override_abs3/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000003</name>
@@ -4520,7 +4309,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>3</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/A123 Battery Controller/motohawk_override_abs6/OldValue</false_text>
+            <false_text>BuckyWagon_01/CCP CAN Protocol/CCP CAN Protocol External Trig1/CCP Daq Processing</false_text>
          </item>
          <item>
             <name>CodeCover000026</name>
@@ -4528,7 +4317,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>26</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/Eaton HV Charger/motohawk_override_abs2/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/EMP Coolant Pump/motohawk_override_abs4/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000015</name>
@@ -4536,7 +4325,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>15</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/Analog Out/PWM Characterization2/motohawk_override_abs2/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/Analog Out/Discrete Actuator Characterization1/Override in Engineering Units/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000004</name>
@@ -4544,7 +4333,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>4</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/A123 Battery Controller/motohawk_override_abs7/NewValue</false_text>
+            <false_text>BuckyWagon_01/CCP CAN Protocol/CCP CAN Protocol External Trig1/CCP IDLE Processing</false_text>
          </item>
          <item>
             <name>CodeCover000027</name>
@@ -4552,7 +4341,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>27</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/Eaton HV Charger/motohawk_override_abs2/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/EMP Cooling Fan/motohawk_override_abs1/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000016</name>
@@ -4560,7 +4349,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>16</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/EHPAS Power Steering Pump Controller/motohawk_override_abs4/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/Analog Out/Discrete Actuator Characterization1/Override in Engineering Units/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000005</name>
@@ -4568,7 +4357,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>5</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/A123 Battery Controller/motohawk_override_abs7/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/A123 Battery Controller/motohawk_override_abs5/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000028</name>
@@ -4576,7 +4365,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>28</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/Eaton HV Charger/motohawk_override_abs3/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/EMP Cooling Fan/motohawk_override_abs1/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000017</name>
@@ -4584,7 +4373,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>17</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/EHPAS Power Steering Pump Controller/motohawk_override_abs4/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/Analog Out/Discrete Actuator Characterization2/Override in Engineering Units/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000006</name>
@@ -4592,7 +4381,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>6</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/A123 Battery Controller/motohawk_override_abs8/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/A123 Battery Controller/motohawk_override_abs5/OldValue</false_text>
          </item>
       </bits>
    </VarDec>
@@ -4613,7 +4402,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>28</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/Analog Switch1/Override in Engineering Units/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/A123 Battery Inputs/motohawk_override_abs2/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000061</name>
@@ -4621,7 +4410,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>29</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/Analog Switch1/Override in Engineering Units/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/A123 Battery Inputs/motohawk_override_abs4/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000050</name>
@@ -4629,7 +4418,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>18</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/A123 Battery Inputs/motohawk_override_abs/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Control Strategy/HV Controller/motohawk_override_abs2/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000062</name>
@@ -4637,7 +4426,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>30</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EHPAS Power Steering Pump Inputs/motohawk_override_abs1/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/A123 Battery Inputs/motohawk_override_abs4/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000051</name>
@@ -4645,7 +4434,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>19</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/A123 Battery Inputs/motohawk_override_abs/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Control Strategy/Reverse/motohawk_override_abs/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000040</name>
@@ -4653,7 +4442,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>8</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Control Strategy/Drive/Normal Driving/Regen/motohawk_override_abs/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/UQM Motor/motohawk_override_abs1/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000063</name>
@@ -4661,7 +4450,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>31</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EHPAS Power Steering Pump Inputs/motohawk_override_abs1/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/A123 Battery Inputs/motohawk_override_abs5/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000052</name>
@@ -4669,7 +4458,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>20</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/A123 Battery Inputs/motohawk_override_abs1/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Control Strategy/Reverse/motohawk_override_abs/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000041</name>
@@ -4677,7 +4466,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>9</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Control Strategy/Drive/Normal Driving/Regen/motohawk_override_abs/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/UQM Motor/motohawk_override_abs2/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000053</name>
@@ -4685,7 +4474,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>21</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/A123 Battery Inputs/motohawk_override_abs1/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Control Strategy/motohawk_override_abs/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000042</name>
@@ -4693,7 +4482,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>10</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Control Strategy/EHPAS_PercentControl/motohawk_override_abs1/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/UQM Motor/motohawk_override_abs2/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000054</name>
@@ -4701,7 +4490,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>22</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/A123 Battery Inputs/motohawk_override_abs2/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Control Strategy/motohawk_override_abs/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000043</name>
@@ -4709,7 +4498,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>11</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Control Strategy/EHPAS_PercentControl/motohawk_override_abs1/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/UQM Motor/motohawk_override_abs5/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000032</name>
@@ -4717,7 +4506,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>0</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/Eaton HV Charger/motohawk_override_abs5/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/Eaton HV Charger/motohawk_override_abs2/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000055</name>
@@ -4725,7 +4514,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>23</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/A123 Battery Inputs/motohawk_override_abs2/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/A123 Battery Inputs/motohawk_override_abs/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000044</name>
@@ -4733,7 +4522,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>12</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Control Strategy/HV Controller/motohawk_override_abs2/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/UQM Motor/motohawk_override_abs5/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000033</name>
@@ -4741,7 +4530,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>1</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/Eaton HV Charger/motohawk_override_abs5/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/Eaton HV Charger/motohawk_override_abs3/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000056</name>
@@ -4749,7 +4538,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>24</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/A123 Battery Inputs/motohawk_override_abs4/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/A123 Battery Inputs/motohawk_override_abs/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000045</name>
@@ -4757,7 +4546,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>13</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Control Strategy/HV Controller/motohawk_override_abs2/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Control Strategy/Drive/Normal Driving/Regen/motohawk_override_abs/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000034</name>
@@ -4765,7 +4554,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>2</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/UQM Motor/motohawk_override_abs1/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/Eaton HV Charger/motohawk_override_abs3/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000057</name>
@@ -4773,7 +4562,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>25</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/A123 Battery Inputs/motohawk_override_abs4/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/A123 Battery Inputs/motohawk_override_abs1/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000046</name>
@@ -4781,7 +4570,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>14</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Control Strategy/Reverse/motohawk_override_abs/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Control Strategy/Drive/Normal Driving/Regen/motohawk_override_abs/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000035</name>
@@ -4789,7 +4578,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>3</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/UQM Motor/motohawk_override_abs1/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/Eaton HV Charger/motohawk_override_abs4/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000058</name>
@@ -4797,7 +4586,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>26</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/A123 Battery Inputs/motohawk_override_abs5/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/A123 Battery Inputs/motohawk_override_abs1/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000047</name>
@@ -4805,7 +4594,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>15</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Control Strategy/Reverse/motohawk_override_abs/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Control Strategy/EHPAS_PercentControl/motohawk_override_abs1/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000036</name>
@@ -4813,7 +4602,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>4</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/UQM Motor/motohawk_override_abs2/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/Eaton HV Charger/motohawk_override_abs4/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000059</name>
@@ -4821,7 +4610,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>27</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/A123 Battery Inputs/motohawk_override_abs5/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/A123 Battery Inputs/motohawk_override_abs2/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000048</name>
@@ -4829,7 +4618,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>16</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Control Strategy/motohawk_override_abs/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Control Strategy/EHPAS_PercentControl/motohawk_override_abs1/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000037</name>
@@ -4837,7 +4626,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>5</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/UQM Motor/motohawk_override_abs2/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/Eaton HV Charger/motohawk_override_abs5/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000049</name>
@@ -4845,7 +4634,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>17</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Control Strategy/motohawk_override_abs/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Control Strategy/HV Controller/motohawk_override_abs2/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000038</name>
@@ -4853,7 +4642,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>6</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/UQM Motor/motohawk_override_abs5/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/Eaton HV Charger/motohawk_override_abs5/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000039</name>
@@ -4861,7 +4650,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>7</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Actuators/UQM Motor/motohawk_override_abs5/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Actuators/UQM Motor/motohawk_override_abs1/NewValue</false_text>
          </item>
       </bits>
    </VarDec>
@@ -4882,7 +4671,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>26</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Fan Inputs/motohawk_override_abs10/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Coolant Pump Inputs/motohawk_override_abs8/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000091</name>
@@ -4890,7 +4679,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>27</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Fan Inputs/motohawk_override_abs10/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Coolant Pump Inputs/motohawk_override_abs9/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000080</name>
@@ -4898,7 +4687,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>16</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Coolant Pump Inputs/motohawk_override_abs2/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EHPAS Power Steering Pump Inputs/motohawk_override_abs9/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000092</name>
@@ -4906,7 +4695,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>28</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Fan Inputs/motohawk_override_abs2/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Coolant Pump Inputs/motohawk_override_abs9/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000081</name>
@@ -4914,7 +4703,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>17</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Coolant Pump Inputs/motohawk_override_abs2/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Coolant Pump Inputs/motohawk_override_abs1/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000070</name>
@@ -4922,7 +4711,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>6</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EHPAS Power Steering Pump Inputs/motohawk_override_abs7/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EHPAS Power Steering Pump Inputs/motohawk_override_abs10/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000093</name>
@@ -4930,7 +4719,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>29</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Fan Inputs/motohawk_override_abs2/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Fan Inputs/motohawk_override_abs1/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000082</name>
@@ -4938,7 +4727,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>18</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Coolant Pump Inputs/motohawk_override_abs3/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Coolant Pump Inputs/motohawk_override_abs1/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000071</name>
@@ -4946,7 +4735,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>7</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EHPAS Power Steering Pump Inputs/motohawk_override_abs7/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EHPAS Power Steering Pump Inputs/motohawk_override_abs2/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000094</name>
@@ -4954,7 +4743,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>30</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Fan Inputs/motohawk_override_abs3/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Fan Inputs/motohawk_override_abs1/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000083</name>
@@ -4962,7 +4751,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>19</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Coolant Pump Inputs/motohawk_override_abs3/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Coolant Pump Inputs/motohawk_override_abs10/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000072</name>
@@ -4970,7 +4759,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>8</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EHPAS Power Steering Pump Inputs/motohawk_override_abs8/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EHPAS Power Steering Pump Inputs/motohawk_override_abs2/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000095</name>
@@ -4978,7 +4767,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>31</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Fan Inputs/motohawk_override_abs3/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Fan Inputs/motohawk_override_abs10/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000084</name>
@@ -4986,7 +4775,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>20</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Coolant Pump Inputs/motohawk_override_abs8/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Coolant Pump Inputs/motohawk_override_abs10/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000073</name>
@@ -4994,7 +4783,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>9</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EHPAS Power Steering Pump Inputs/motohawk_override_abs8/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EHPAS Power Steering Pump Inputs/motohawk_override_abs3/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000085</name>
@@ -5002,7 +4791,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>21</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Coolant Pump Inputs/motohawk_override_abs8/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Coolant Pump Inputs/motohawk_override_abs2/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000074</name>
@@ -5010,7 +4799,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>10</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EHPAS Power Steering Pump Inputs/motohawk_override_abs9/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EHPAS Power Steering Pump Inputs/motohawk_override_abs3/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000086</name>
@@ -5018,7 +4807,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>22</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Coolant Pump Inputs/motohawk_override_abs9/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Coolant Pump Inputs/motohawk_override_abs2/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000075</name>
@@ -5026,7 +4815,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>11</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EHPAS Power Steering Pump Inputs/motohawk_override_abs9/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EHPAS Power Steering Pump Inputs/motohawk_override_abs7/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000064</name>
@@ -5034,7 +4823,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>0</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EHPAS Power Steering Pump Inputs/motohawk_override_abs10/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/A123 Battery Inputs/motohawk_override_abs5/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000087</name>
@@ -5042,7 +4831,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>23</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Coolant Pump Inputs/motohawk_override_abs9/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Coolant Pump Inputs/motohawk_override_abs3/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000076</name>
@@ -5050,7 +4839,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>12</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Coolant Pump Inputs/motohawk_override_abs1/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EHPAS Power Steering Pump Inputs/motohawk_override_abs7/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000065</name>
@@ -5058,7 +4847,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>1</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EHPAS Power Steering Pump Inputs/motohawk_override_abs10/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/Analog Switch1/Override in Engineering Units/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000088</name>
@@ -5066,7 +4855,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>24</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Fan Inputs/motohawk_override_abs1/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Coolant Pump Inputs/motohawk_override_abs3/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000077</name>
@@ -5074,7 +4863,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>13</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Coolant Pump Inputs/motohawk_override_abs1/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EHPAS Power Steering Pump Inputs/motohawk_override_abs8/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000066</name>
@@ -5082,7 +4871,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>2</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EHPAS Power Steering Pump Inputs/motohawk_override_abs2/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/Analog Switch1/Override in Engineering Units/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000089</name>
@@ -5090,7 +4879,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>25</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Fan Inputs/motohawk_override_abs1/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Coolant Pump Inputs/motohawk_override_abs8/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000078</name>
@@ -5098,7 +4887,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>14</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Coolant Pump Inputs/motohawk_override_abs10/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EHPAS Power Steering Pump Inputs/motohawk_override_abs8/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000067</name>
@@ -5106,7 +4895,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>3</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EHPAS Power Steering Pump Inputs/motohawk_override_abs2/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EHPAS Power Steering Pump Inputs/motohawk_override_abs1/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000079</name>
@@ -5114,7 +4903,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>15</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Coolant Pump Inputs/motohawk_override_abs10/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EHPAS Power Steering Pump Inputs/motohawk_override_abs9/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000068</name>
@@ -5122,7 +4911,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>4</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EHPAS Power Steering Pump Inputs/motohawk_override_abs3/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EHPAS Power Steering Pump Inputs/motohawk_override_abs1/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000069</name>
@@ -5130,7 +4919,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>5</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EHPAS Power Steering Pump Inputs/motohawk_override_abs3/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EHPAS Power Steering Pump Inputs/motohawk_override_abs10/NewValue</false_text>
          </item>
       </bits>
    </VarDec>
@@ -5151,7 +4940,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>21</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs9/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs7/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000106</name>
@@ -5159,7 +4948,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>10</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs4/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs1/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000118</name>
@@ -5167,7 +4956,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>22</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/Linear Sensor Characterization/Override/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs7/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000107</name>
@@ -5175,7 +4964,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>11</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs4/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs2/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000119</name>
@@ -5183,7 +4972,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>23</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/Linear Sensor Characterization/Override/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs8/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000108</name>
@@ -5191,7 +4980,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>12</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs5/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs2/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000109</name>
@@ -5199,7 +4988,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>13</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs5/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs3/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000096</name>
@@ -5207,7 +4996,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>0</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Fan Inputs/motohawk_override_abs8/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Fan Inputs/motohawk_override_abs10/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000097</name>
@@ -5215,7 +5004,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>1</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Fan Inputs/motohawk_override_abs8/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Fan Inputs/motohawk_override_abs2/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000120</name>
@@ -5223,7 +5012,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>24</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/Linear Sensor Characterization1/Override/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs8/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000098</name>
@@ -5231,7 +5020,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>2</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Fan Inputs/motohawk_override_abs9/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Fan Inputs/motohawk_override_abs2/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000121</name>
@@ -5239,7 +5028,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>25</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/Linear Sensor Characterization1/Override/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs9/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000110</name>
@@ -5247,7 +5036,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>14</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs6/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs3/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000099</name>
@@ -5255,7 +5044,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>3</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Fan Inputs/motohawk_override_abs9/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Fan Inputs/motohawk_override_abs3/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000122</name>
@@ -5263,7 +5052,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>26</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/Linear Sensor Characterization2/Override/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs9/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000111</name>
@@ -5271,7 +5060,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>15</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs6/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs4/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000100</name>
@@ -5279,7 +5068,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>4</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs1/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Fan Inputs/motohawk_override_abs3/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000123</name>
@@ -5287,7 +5076,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>27</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/Linear Sensor Characterization2/Override/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/Linear Sensor Characterization/Override/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000112</name>
@@ -5295,7 +5084,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>16</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs7/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs4/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000101</name>
@@ -5303,7 +5092,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>5</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs1/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Fan Inputs/motohawk_override_abs8/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000124</name>
@@ -5311,7 +5100,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>28</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/Vehicle Speed/motohawk_override_abs/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/Linear Sensor Characterization/Override/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000113</name>
@@ -5319,7 +5108,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>17</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs7/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs5/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000102</name>
@@ -5327,7 +5116,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>6</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs2/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Fan Inputs/motohawk_override_abs8/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000125</name>
@@ -5335,7 +5124,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>29</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/Vehicle Speed/motohawk_override_abs/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/Linear Sensor Characterization1/Override/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000114</name>
@@ -5343,7 +5132,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>18</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs8/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs5/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000103</name>
@@ -5351,7 +5140,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>7</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs2/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Fan Inputs/motohawk_override_abs9/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000126</name>
@@ -5359,7 +5148,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>30</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/motohawk_override_abs1/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/Linear Sensor Characterization1/Override/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000115</name>
@@ -5367,7 +5156,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>19</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs8/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs6/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000104</name>
@@ -5375,7 +5164,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>8</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs3/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/EMP Fan Inputs/motohawk_override_abs9/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000127</name>
@@ -5383,7 +5172,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>31</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/motohawk_override_abs1/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/Linear Sensor Characterization2/Override/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000116</name>
@@ -5391,7 +5180,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>20</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs9/NewValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs6/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000105</name>
@@ -5399,7 +5188,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>9</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs3/OldValue</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/Eaton HV Charger/motohawk_override_abs1/NewValue</false_text>
          </item>
       </bits>
    </VarDec>
@@ -5420,7 +5209,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>11</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Main Power Relay/Background/motohawk_override_abs/OldValue</false_text>
+            <false_text>BuckyWagon_01/Main Power Relay/Background/Save NV Vars one tick before MPRD off</false_text>
          </item>
          <item>
             <name>CodeCover000128</name>
@@ -5428,7 +5217,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>0</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Main Power Relay/Background</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/Linear Sensor Characterization2/Override/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000129</name>
@@ -5436,7 +5225,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>1</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Main Power Relay/Background/Display Variable Event Function-Call/Clear</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/Vehicle Speed/motohawk_override_abs/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000140</name>
@@ -5444,7 +5233,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>12</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Main Power Relay/Background/motohawk_restore_nvmem</false_text>
+            <false_text>BuckyWagon_01/Main Power Relay/Background/Save NV Vars one tick before MPRD off/Save NV Vars one tick before MPRD off</false_text>
          </item>
          <item>
             <name>CodeCover000141</name>
@@ -5452,7 +5241,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>13</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Main Power Relay/Background/motohawk_store_nvmem</false_text>
+            <false_text>BuckyWagon_01/Main Power Relay/Background/Shutdown power on ECU565-128</false_text>
          </item>
          <item>
             <name>CodeCover000130</name>
@@ -5460,7 +5249,15 @@
             <help>Determines if this subsystem has run</help>
             <bit>2</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Main Power Relay/Background/Display Variable Event Function-Call1/Clear</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/Vehicle Speed/motohawk_override_abs/OldValue</false_text>
+         </item>
+         <item>
+            <name>CodeCover000142</name>
+            <group>System | Code Coverage</group>
+            <help>Determines if this subsystem has run</help>
+            <bit>14</bit>
+            <true_text>-</true_text>
+            <false_text>BuckyWagon_01/Main Power Relay/Background/Shutdown power on ECU565-128/Shutdown power on ECU565-128</false_text>
          </item>
          <item>
             <name>CodeCover000131</name>
@@ -5468,7 +5265,15 @@
             <help>Determines if this subsystem has run</help>
             <bit>3</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Main Power Relay/Background/Post Shutdown two ticks before MPRD off</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/motohawk_override_abs1/NewValue</false_text>
+         </item>
+         <item>
+            <name>CodeCover000143</name>
+            <group>System | Code Coverage</group>
+            <help>Determines if this subsystem has run</help>
+            <bit>15</bit>
+            <true_text>-</true_text>
+            <false_text>BuckyWagon_01/Main Power Relay/Background/motohawk_override_abs/NewValue</false_text>
          </item>
          <item>
             <name>CodeCover000132</name>
@@ -5476,7 +5281,15 @@
             <help>Determines if this subsystem has run</help>
             <bit>4</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Main Power Relay/Background/Post Shutdown two ticks before MPRD off/Post Shutdown two ticks before MPRD off</false_text>
+            <false_text>BuckyWagon_01/Foreground/Sensors/motohawk_override_abs1/OldValue</false_text>
+         </item>
+         <item>
+            <name>CodeCover000144</name>
+            <group>System | Code Coverage</group>
+            <help>Determines if this subsystem has run</help>
+            <bit>16</bit>
+            <true_text>-</true_text>
+            <false_text>BuckyWagon_01/Main Power Relay/Background/motohawk_override_abs/OldValue</false_text>
          </item>
          <item>
             <name>CodeCover000133</name>
@@ -5484,7 +5297,15 @@
             <help>Determines if this subsystem has run</help>
             <bit>5</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Main Power Relay/Background/Processor Reboot</false_text>
+            <false_text>BuckyWagon_01/Main Power Relay/Background</false_text>
+         </item>
+         <item>
+            <name>CodeCover000145</name>
+            <group>System | Code Coverage</group>
+            <help>Determines if this subsystem has run</help>
+            <bit>17</bit>
+            <true_text>-</true_text>
+            <false_text>BuckyWagon_01/Main Power Relay/Background/motohawk_restore_nvmem</false_text>
          </item>
          <item>
             <name>CodeCover000134</name>
@@ -5492,7 +5313,15 @@
             <help>Determines if this subsystem has run</help>
             <bit>6</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Main Power Relay/Background/Save NV Vars one tick before MPRD off</false_text>
+            <false_text>BuckyWagon_01/Main Power Relay/Background/Display Variable Event Function-Call/Clear</false_text>
+         </item>
+         <item>
+            <name>CodeCover000146</name>
+            <group>System | Code Coverage</group>
+            <help>Determines if this subsystem has run</help>
+            <bit>18</bit>
+            <true_text>-</true_text>
+            <false_text>BuckyWagon_01/Main Power Relay/Background/motohawk_store_nvmem</false_text>
          </item>
          <item>
             <name>CodeCover000135</name>
@@ -5500,7 +5329,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>7</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Main Power Relay/Background/Save NV Vars one tick before MPRD off/Save NV Vars one tick before MPRD off</false_text>
+            <false_text>BuckyWagon_01/Main Power Relay/Background/Display Variable Event Function-Call1/Clear</false_text>
          </item>
          <item>
             <name>CodeCover000136</name>
@@ -5508,7 +5337,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>8</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Main Power Relay/Background/Shutdown power on ECU565-128</false_text>
+            <false_text>BuckyWagon_01/Main Power Relay/Background/Post Shutdown two ticks before MPRD off</false_text>
          </item>
          <item>
             <name>CodeCover000137</name>
@@ -5516,7 +5345,7 @@
             <help>Determines if this subsystem has run</help>
             <bit>9</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Main Power Relay/Background/Shutdown power on ECU565-128/Shutdown power on ECU565-128</false_text>
+            <false_text>BuckyWagon_01/Main Power Relay/Background/Post Shutdown two ticks before MPRD off/Post Shutdown two ticks before MPRD off</false_text>
          </item>
          <item>
             <name>CodeCover000138</name>
@@ -5524,7 +5353,45 @@
             <help>Determines if this subsystem has run</help>
             <bit>10</bit>
             <true_text>-</true_text>
-            <false_text>BuckyWagon_01/Main Power Relay/Background/motohawk_override_abs/NewValue</false_text>
+            <false_text>BuckyWagon_01/Main Power Relay/Background/Processor Reboot</false_text>
+         </item>
+      </bits>
+   </VarDec>
+   <VarDec>
+      <name>CCP_CCP1_Access</name>
+      <class>bitfield</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <ctype>S_CCPHandlerInstance</ctype>
+      <struct>mh_CCP1_CCPHandlerInstance.UnlockStatus</struct>
+      <help>Current Access Code for CCP Handler CCP1</help>
+      <group>System | CCP | CCP1</group>
+      <bits>
+         <item>
+            <name>CCP_CCP1_CAL</name>
+            <group>System | CCP | CCP1</group>
+            <help>Calibration Authentication Status for CCP Handler CCP1</help>
+            <bit>0</bit>
+            <true_text>Calibration Unlocked</true_text>
+            <false_text>Calibration Locked</false_text>
+         </item>
+         <item>
+            <name>CCP_CCP1_DAQ</name>
+            <group>System | CCP | CCP1</group>
+            <help>Data Acquisition Authentication Status for CCP Handler CCP1</help>
+            <bit>1</bit>
+            <true_text>Data Acquisition Unlocked</true_text>
+            <false_text>Data Acquisition Locked</false_text>
+         </item>
+         <item>
+            <name>CCP_CCP1_PGM</name>
+            <group>System | CCP | CCP1</group>
+            <help>Programming Authentication Status for CCP Handler CCP1</help>
+            <bit>6</bit>
+            <true_text>Programming Unlocked</true_text>
+            <false_text>Programming Locked</false_text>
          </item>
       </bits>
    </VarDec>
@@ -5814,118 +5681,6 @@
       <struct>ain_create_LV_Voltage_Pin</struct>
       <help>Debug Variable</help>
       <group>System | Debug | Resources | AnalogIn</group>
-      <enum name="E_NativeFWError">
-         <item name="Normal Operation" value="0"/>
-         <item name="Bad Resource ID" value="1"/>
-         <item name="Hardware Not Supported" value="2"/>
-         <item name="Behaviour Not Supported" value="3"/>
-         <item name="Bad Attribute Data" value="4"/>
-         <item name="Fail On Create" value="5"/>
-         <item name="Fail On Set Attributes" value="6"/>
-         <item name="Resource Not Created" value="7"/>
-         <item name="Missing Attribute" value="8"/>
-         <item name="Behaviour Method Not Supported" value="9"/>
-         <item name="A Service Failed" value="10"/>
-         <item name="Failed to destroy a resource" value="11"/>
-         <item name="Resource Was Created" value="12"/>
-         <item name="Resource Conflict" value="13"/>
-         <item name="Invalid Encoder Type" value="14"/>
-         <item name="2-Strike Not Supported" value="15"/>
-         <item name="720degCA Pattern Not Supported" value="16"/>
-         <item name="CAM Pattern Not Supported" value="17"/>
-         <item name="Unknown CAM Pattern Supplied" value="18"/>
-         <item name="Engine Speed Present" value="19"/>
-         <item name="Hardware Interface Not Supported" value="20"/>
-         <item name="Service Already Started" value="21"/>
-         <item name="Register Write Failed to verify" value="22"/>
-         <item name="Register access was denied" value="23"/>
-         <item name="Out of free store memory" value="24"/>
-         <item name="Software Q Overrun" value="25"/>
-         <item name="Hardware Q Overrun" value="26"/>
-         <item name="Feature unsupported in archive" value="27"/>
-         <item name="Insufficient FW resource" value="28"/>
-         <item name="OS Resource conflict" value="29"/>
-         <item name="Driver Mode conflict" value="30"/>
-         <item name="RTC time is illegal" value="31"/>
-         <item name="FFS unmounted" value="32"/>
-         <item name="Access from an ISR" value="33"/>
-         <item name="FFS internal" value="34"/>
-         <item name="Operation timed out" value="35"/>
-         <item name="Task Kernel API Usage" value="36"/>
-         <item name="Operation aborted" value="37"/>
-         <item name="File not Found" value="38"/>
-         <item name="Invalid characters in filename" value="39"/>
-         <item name="Duplicate filename" value="40"/>
-         <item name="Filename is too long" value="41"/>
-         <item name="Dir not empty on remove" value="42"/>
-         <item name="Dir not found" value="43"/>
-         <item name="Dir name invalid" value="44"/>
-         <item name="Dir exists" value="45"/>
-         <item name="Dir too deep" value="46"/>
-         <item name="Illegal Handle" value="47"/>
-         <item name="End of File" value="48"/>
-         <item name="Media Full" value="49"/>
-         <item name="Media Write" value="50"/>
-         <item name="Media Read" value="51"/>
-         <item name="Media Write Protected" value="52"/>
-         <item name="File Read Only" value="53"/>
-         <item name="FS Media Changed" value="54"/>
-         <item name="Internal USB" value="55"/>
-         <item name="Voltage too high for USB IC" value="56"/>
-         <item name="Encoder not created" value="57"/>
-         <item name="TPU Chan Conflict" value="64"/>
-         <item name="TPU Func Unavailable" value="65"/>
-         <item name="TPU Config" value="66"/>
-         <item name="TPU Primative Usage" value="67"/>
-         <item name="TPU Primitive Count" value="68"/>
-         <item name="TPU Restricted TPU channel" value="69"/>
-         <item name="TPU Not Created" value="70"/>
-         <item name="TPU Self Modify constant write err" value="71"/>
-         <item name="TPU Error 0x48" value="72"/>
-         <item name="TPU Error 0x49" value="73"/>
-         <item name="TPU Error 0x4A" value="74"/>
-         <item name="TPU Error 0x4B" value="75"/>
-         <item name="TPU Error 0x4C" value="76"/>
-         <item name="TPU Error 0x4D" value="77"/>
-         <item name="TPU Error 0x4E" value="78"/>
-         <item name="TPU Error 0x4F" value="79"/>
-         <item name="TPU Error 0x50" value="80"/>
-         <item name="TPU Error 0x51" value="81"/>
-         <item name="TPU Error 0x52" value="82"/>
-         <item name="TPU Error 0x53" value="83"/>
-         <item name="TPU Error 0x54" value="84"/>
-         <item name="TPU Error 0x55" value="85"/>
-         <item name="TPU Error 0x56" value="86"/>
-         <item name="TPU Error 0x57" value="87"/>
-         <item name="TPU Error 0x58" value="88"/>
-         <item name="TPU Error 0x59" value="89"/>
-         <item name="TPU Error 0x5A" value="90"/>
-         <item name="TPU Error 0x5B" value="91"/>
-         <item name="TPU Error 0x5C" value="92"/>
-         <item name="TPU Error 0x5D" value="93"/>
-         <item name="TPU Error 0x5E" value="94"/>
-         <item name="TPU Error 0x5F" value="95"/>
-         <default>Illegal Error</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>dout_create_DOut180p0011</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>0.0</max>
-      <min>0.0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>E_NativeFWError</ctype>
-      <struct>dout_create_DOut180p0011</struct>
-      <help>Debug Variable</help>
-      <group>System | Debug | Resources | DiscreteOut</group>
       <enum name="E_NativeFWError">
          <item name="Normal Operation" value="0"/>
          <item name="Bad Resource ID" value="1"/>
@@ -6402,7 +6157,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s141_PumpState</struct>
+      <struct>BuckyWagon_01_B.s139_PumpState</struct>
       <group>BuckyWagon_01|Foreground|Control Strategy|EHPAS_PercentControl</group>
       <enum name="VarDecEnum_13">
          <item name="Off" value="0"/>
@@ -6636,6 +6391,30 @@
          <item name="TPU Error 0x5E" value="94"/>
          <item name="TPU Error 0x5F" value="95"/>
          <default>Illegal Error</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>CCP_CCP1_ConnectionStatus</name>
+      <class>enum</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <gain>1.0</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>255</max>
+      <min>0.000000</min>
+      <format>1.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>S_CCPHandlerInstance</ctype>
+      <struct>mh_CCP1_CCPHandlerInstance.Connected</struct>
+      <help>CCP Handler CCP1 connection status</help>
+      <group>System | CCP | CCP1 </group>
+      <enum name="VarDecEnum_0">
+         <item name="Not Connected" value="0"/>
+         <item name="Connected" value="1"/>
+         <default>Unknown</default>
       </enum>
    </VarDec>
    <VarDec>
@@ -7113,118 +6892,6 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>dout_create_DOut1023p0011</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>0.0</max>
-      <min>0.0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>E_NativeFWError</ctype>
-      <struct>dout_create_DOut1023p0011</struct>
-      <help>Debug Variable</help>
-      <group>System | Debug | Resources | DiscreteOut</group>
-      <enum name="E_NativeFWError">
-         <item name="Normal Operation" value="0"/>
-         <item name="Bad Resource ID" value="1"/>
-         <item name="Hardware Not Supported" value="2"/>
-         <item name="Behaviour Not Supported" value="3"/>
-         <item name="Bad Attribute Data" value="4"/>
-         <item name="Fail On Create" value="5"/>
-         <item name="Fail On Set Attributes" value="6"/>
-         <item name="Resource Not Created" value="7"/>
-         <item name="Missing Attribute" value="8"/>
-         <item name="Behaviour Method Not Supported" value="9"/>
-         <item name="A Service Failed" value="10"/>
-         <item name="Failed to destroy a resource" value="11"/>
-         <item name="Resource Was Created" value="12"/>
-         <item name="Resource Conflict" value="13"/>
-         <item name="Invalid Encoder Type" value="14"/>
-         <item name="2-Strike Not Supported" value="15"/>
-         <item name="720degCA Pattern Not Supported" value="16"/>
-         <item name="CAM Pattern Not Supported" value="17"/>
-         <item name="Unknown CAM Pattern Supplied" value="18"/>
-         <item name="Engine Speed Present" value="19"/>
-         <item name="Hardware Interface Not Supported" value="20"/>
-         <item name="Service Already Started" value="21"/>
-         <item name="Register Write Failed to verify" value="22"/>
-         <item name="Register access was denied" value="23"/>
-         <item name="Out of free store memory" value="24"/>
-         <item name="Software Q Overrun" value="25"/>
-         <item name="Hardware Q Overrun" value="26"/>
-         <item name="Feature unsupported in archive" value="27"/>
-         <item name="Insufficient FW resource" value="28"/>
-         <item name="OS Resource conflict" value="29"/>
-         <item name="Driver Mode conflict" value="30"/>
-         <item name="RTC time is illegal" value="31"/>
-         <item name="FFS unmounted" value="32"/>
-         <item name="Access from an ISR" value="33"/>
-         <item name="FFS internal" value="34"/>
-         <item name="Operation timed out" value="35"/>
-         <item name="Task Kernel API Usage" value="36"/>
-         <item name="Operation aborted" value="37"/>
-         <item name="File not Found" value="38"/>
-         <item name="Invalid characters in filename" value="39"/>
-         <item name="Duplicate filename" value="40"/>
-         <item name="Filename is too long" value="41"/>
-         <item name="Dir not empty on remove" value="42"/>
-         <item name="Dir not found" value="43"/>
-         <item name="Dir name invalid" value="44"/>
-         <item name="Dir exists" value="45"/>
-         <item name="Dir too deep" value="46"/>
-         <item name="Illegal Handle" value="47"/>
-         <item name="End of File" value="48"/>
-         <item name="Media Full" value="49"/>
-         <item name="Media Write" value="50"/>
-         <item name="Media Read" value="51"/>
-         <item name="Media Write Protected" value="52"/>
-         <item name="File Read Only" value="53"/>
-         <item name="FS Media Changed" value="54"/>
-         <item name="Internal USB" value="55"/>
-         <item name="Voltage too high for USB IC" value="56"/>
-         <item name="Encoder not created" value="57"/>
-         <item name="TPU Chan Conflict" value="64"/>
-         <item name="TPU Func Unavailable" value="65"/>
-         <item name="TPU Config" value="66"/>
-         <item name="TPU Primative Usage" value="67"/>
-         <item name="TPU Primitive Count" value="68"/>
-         <item name="TPU Restricted TPU channel" value="69"/>
-         <item name="TPU Not Created" value="70"/>
-         <item name="TPU Self Modify constant write err" value="71"/>
-         <item name="TPU Error 0x48" value="72"/>
-         <item name="TPU Error 0x49" value="73"/>
-         <item name="TPU Error 0x4A" value="74"/>
-         <item name="TPU Error 0x4B" value="75"/>
-         <item name="TPU Error 0x4C" value="76"/>
-         <item name="TPU Error 0x4D" value="77"/>
-         <item name="TPU Error 0x4E" value="78"/>
-         <item name="TPU Error 0x4F" value="79"/>
-         <item name="TPU Error 0x50" value="80"/>
-         <item name="TPU Error 0x51" value="81"/>
-         <item name="TPU Error 0x52" value="82"/>
-         <item name="TPU Error 0x53" value="83"/>
-         <item name="TPU Error 0x54" value="84"/>
-         <item name="TPU Error 0x55" value="85"/>
-         <item name="TPU Error 0x56" value="86"/>
-         <item name="TPU Error 0x57" value="87"/>
-         <item name="TPU Error 0x58" value="88"/>
-         <item name="TPU Error 0x59" value="89"/>
-         <item name="TPU Error 0x5A" value="90"/>
-         <item name="TPU Error 0x5B" value="91"/>
-         <item name="TPU Error 0x5C" value="92"/>
-         <item name="TPU Error 0x5D" value="93"/>
-         <item name="TPU Error 0x5E" value="94"/>
-         <item name="TPU Error 0x5F" value="95"/>
-         <default>Illegal Error</default>
-      </enum>
-   </VarDec>
-   <VarDec>
       <name>protocol_register_CAN_1</name>
       <class>enum</class>
       <access>RO RO RO RO</access>
@@ -7561,118 +7228,6 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>dout_create_DOut179p0011</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>0.0</max>
-      <min>0.0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>E_NativeFWError</ctype>
-      <struct>dout_create_DOut179p0011</struct>
-      <help>Debug Variable</help>
-      <group>System | Debug | Resources | DiscreteOut</group>
-      <enum name="E_NativeFWError">
-         <item name="Normal Operation" value="0"/>
-         <item name="Bad Resource ID" value="1"/>
-         <item name="Hardware Not Supported" value="2"/>
-         <item name="Behaviour Not Supported" value="3"/>
-         <item name="Bad Attribute Data" value="4"/>
-         <item name="Fail On Create" value="5"/>
-         <item name="Fail On Set Attributes" value="6"/>
-         <item name="Resource Not Created" value="7"/>
-         <item name="Missing Attribute" value="8"/>
-         <item name="Behaviour Method Not Supported" value="9"/>
-         <item name="A Service Failed" value="10"/>
-         <item name="Failed to destroy a resource" value="11"/>
-         <item name="Resource Was Created" value="12"/>
-         <item name="Resource Conflict" value="13"/>
-         <item name="Invalid Encoder Type" value="14"/>
-         <item name="2-Strike Not Supported" value="15"/>
-         <item name="720degCA Pattern Not Supported" value="16"/>
-         <item name="CAM Pattern Not Supported" value="17"/>
-         <item name="Unknown CAM Pattern Supplied" value="18"/>
-         <item name="Engine Speed Present" value="19"/>
-         <item name="Hardware Interface Not Supported" value="20"/>
-         <item name="Service Already Started" value="21"/>
-         <item name="Register Write Failed to verify" value="22"/>
-         <item name="Register access was denied" value="23"/>
-         <item name="Out of free store memory" value="24"/>
-         <item name="Software Q Overrun" value="25"/>
-         <item name="Hardware Q Overrun" value="26"/>
-         <item name="Feature unsupported in archive" value="27"/>
-         <item name="Insufficient FW resource" value="28"/>
-         <item name="OS Resource conflict" value="29"/>
-         <item name="Driver Mode conflict" value="30"/>
-         <item name="RTC time is illegal" value="31"/>
-         <item name="FFS unmounted" value="32"/>
-         <item name="Access from an ISR" value="33"/>
-         <item name="FFS internal" value="34"/>
-         <item name="Operation timed out" value="35"/>
-         <item name="Task Kernel API Usage" value="36"/>
-         <item name="Operation aborted" value="37"/>
-         <item name="File not Found" value="38"/>
-         <item name="Invalid characters in filename" value="39"/>
-         <item name="Duplicate filename" value="40"/>
-         <item name="Filename is too long" value="41"/>
-         <item name="Dir not empty on remove" value="42"/>
-         <item name="Dir not found" value="43"/>
-         <item name="Dir name invalid" value="44"/>
-         <item name="Dir exists" value="45"/>
-         <item name="Dir too deep" value="46"/>
-         <item name="Illegal Handle" value="47"/>
-         <item name="End of File" value="48"/>
-         <item name="Media Full" value="49"/>
-         <item name="Media Write" value="50"/>
-         <item name="Media Read" value="51"/>
-         <item name="Media Write Protected" value="52"/>
-         <item name="File Read Only" value="53"/>
-         <item name="FS Media Changed" value="54"/>
-         <item name="Internal USB" value="55"/>
-         <item name="Voltage too high for USB IC" value="56"/>
-         <item name="Encoder not created" value="57"/>
-         <item name="TPU Chan Conflict" value="64"/>
-         <item name="TPU Func Unavailable" value="65"/>
-         <item name="TPU Config" value="66"/>
-         <item name="TPU Primative Usage" value="67"/>
-         <item name="TPU Primitive Count" value="68"/>
-         <item name="TPU Restricted TPU channel" value="69"/>
-         <item name="TPU Not Created" value="70"/>
-         <item name="TPU Self Modify constant write err" value="71"/>
-         <item name="TPU Error 0x48" value="72"/>
-         <item name="TPU Error 0x49" value="73"/>
-         <item name="TPU Error 0x4A" value="74"/>
-         <item name="TPU Error 0x4B" value="75"/>
-         <item name="TPU Error 0x4C" value="76"/>
-         <item name="TPU Error 0x4D" value="77"/>
-         <item name="TPU Error 0x4E" value="78"/>
-         <item name="TPU Error 0x4F" value="79"/>
-         <item name="TPU Error 0x50" value="80"/>
-         <item name="TPU Error 0x51" value="81"/>
-         <item name="TPU Error 0x52" value="82"/>
-         <item name="TPU Error 0x53" value="83"/>
-         <item name="TPU Error 0x54" value="84"/>
-         <item name="TPU Error 0x55" value="85"/>
-         <item name="TPU Error 0x56" value="86"/>
-         <item name="TPU Error 0x57" value="87"/>
-         <item name="TPU Error 0x58" value="88"/>
-         <item name="TPU Error 0x59" value="89"/>
-         <item name="TPU Error 0x5A" value="90"/>
-         <item name="TPU Error 0x5B" value="91"/>
-         <item name="TPU Error 0x5C" value="92"/>
-         <item name="TPU Error 0x5D" value="93"/>
-         <item name="TPU Error 0x5E" value="94"/>
-         <item name="TPU Error 0x5F" value="95"/>
-         <default>Illegal Error</default>
-      </enum>
-   </VarDec>
-   <VarDec>
       <name>can_create_CAN_2</name>
       <class>enum</class>
       <access>RO RO RO RO</access>
@@ -7802,118 +7357,6 @@
       <struct>ain_read_Reverse_Switch_Pin</struct>
       <help>Debug Variable</help>
       <group>System | Debug | Resources | AnalogIn</group>
-      <enum name="E_NativeFWError">
-         <item name="Normal Operation" value="0"/>
-         <item name="Bad Resource ID" value="1"/>
-         <item name="Hardware Not Supported" value="2"/>
-         <item name="Behaviour Not Supported" value="3"/>
-         <item name="Bad Attribute Data" value="4"/>
-         <item name="Fail On Create" value="5"/>
-         <item name="Fail On Set Attributes" value="6"/>
-         <item name="Resource Not Created" value="7"/>
-         <item name="Missing Attribute" value="8"/>
-         <item name="Behaviour Method Not Supported" value="9"/>
-         <item name="A Service Failed" value="10"/>
-         <item name="Failed to destroy a resource" value="11"/>
-         <item name="Resource Was Created" value="12"/>
-         <item name="Resource Conflict" value="13"/>
-         <item name="Invalid Encoder Type" value="14"/>
-         <item name="2-Strike Not Supported" value="15"/>
-         <item name="720degCA Pattern Not Supported" value="16"/>
-         <item name="CAM Pattern Not Supported" value="17"/>
-         <item name="Unknown CAM Pattern Supplied" value="18"/>
-         <item name="Engine Speed Present" value="19"/>
-         <item name="Hardware Interface Not Supported" value="20"/>
-         <item name="Service Already Started" value="21"/>
-         <item name="Register Write Failed to verify" value="22"/>
-         <item name="Register access was denied" value="23"/>
-         <item name="Out of free store memory" value="24"/>
-         <item name="Software Q Overrun" value="25"/>
-         <item name="Hardware Q Overrun" value="26"/>
-         <item name="Feature unsupported in archive" value="27"/>
-         <item name="Insufficient FW resource" value="28"/>
-         <item name="OS Resource conflict" value="29"/>
-         <item name="Driver Mode conflict" value="30"/>
-         <item name="RTC time is illegal" value="31"/>
-         <item name="FFS unmounted" value="32"/>
-         <item name="Access from an ISR" value="33"/>
-         <item name="FFS internal" value="34"/>
-         <item name="Operation timed out" value="35"/>
-         <item name="Task Kernel API Usage" value="36"/>
-         <item name="Operation aborted" value="37"/>
-         <item name="File not Found" value="38"/>
-         <item name="Invalid characters in filename" value="39"/>
-         <item name="Duplicate filename" value="40"/>
-         <item name="Filename is too long" value="41"/>
-         <item name="Dir not empty on remove" value="42"/>
-         <item name="Dir not found" value="43"/>
-         <item name="Dir name invalid" value="44"/>
-         <item name="Dir exists" value="45"/>
-         <item name="Dir too deep" value="46"/>
-         <item name="Illegal Handle" value="47"/>
-         <item name="End of File" value="48"/>
-         <item name="Media Full" value="49"/>
-         <item name="Media Write" value="50"/>
-         <item name="Media Read" value="51"/>
-         <item name="Media Write Protected" value="52"/>
-         <item name="File Read Only" value="53"/>
-         <item name="FS Media Changed" value="54"/>
-         <item name="Internal USB" value="55"/>
-         <item name="Voltage too high for USB IC" value="56"/>
-         <item name="Encoder not created" value="57"/>
-         <item name="TPU Chan Conflict" value="64"/>
-         <item name="TPU Func Unavailable" value="65"/>
-         <item name="TPU Config" value="66"/>
-         <item name="TPU Primative Usage" value="67"/>
-         <item name="TPU Primitive Count" value="68"/>
-         <item name="TPU Restricted TPU channel" value="69"/>
-         <item name="TPU Not Created" value="70"/>
-         <item name="TPU Self Modify constant write err" value="71"/>
-         <item name="TPU Error 0x48" value="72"/>
-         <item name="TPU Error 0x49" value="73"/>
-         <item name="TPU Error 0x4A" value="74"/>
-         <item name="TPU Error 0x4B" value="75"/>
-         <item name="TPU Error 0x4C" value="76"/>
-         <item name="TPU Error 0x4D" value="77"/>
-         <item name="TPU Error 0x4E" value="78"/>
-         <item name="TPU Error 0x4F" value="79"/>
-         <item name="TPU Error 0x50" value="80"/>
-         <item name="TPU Error 0x51" value="81"/>
-         <item name="TPU Error 0x52" value="82"/>
-         <item name="TPU Error 0x53" value="83"/>
-         <item name="TPU Error 0x54" value="84"/>
-         <item name="TPU Error 0x55" value="85"/>
-         <item name="TPU Error 0x56" value="86"/>
-         <item name="TPU Error 0x57" value="87"/>
-         <item name="TPU Error 0x58" value="88"/>
-         <item name="TPU Error 0x59" value="89"/>
-         <item name="TPU Error 0x5A" value="90"/>
-         <item name="TPU Error 0x5B" value="91"/>
-         <item name="TPU Error 0x5C" value="92"/>
-         <item name="TPU Error 0x5D" value="93"/>
-         <item name="TPU Error 0x5E" value="94"/>
-         <item name="TPU Error 0x5F" value="95"/>
-         <default>Illegal Error</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>dout_create_DOut178p0011</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>0.0</max>
-      <min>0.0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>E_NativeFWError</ctype>
-      <struct>dout_create_DOut178p0011</struct>
-      <help>Debug Variable</help>
-      <group>System | Debug | Resources | DiscreteOut</group>
       <enum name="E_NativeFWError">
          <item name="Normal Operation" value="0"/>
          <item name="Bad Resource ID" value="1"/>
@@ -8471,7 +7914,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s71_Merge</struct>
+      <struct>BuckyWagon_01_B.s80_Merge</struct>
       <group>Actuators | EatonCharger</group>
       <enum name="VarDecEnum_14">
          <item name="No Ventilation" value="0"/>
@@ -8968,7 +8411,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BuckyWagon_01</ctype>
-      <struct>BuckyWagon_01_B.s87_Merge</struct>
+      <struct>BuckyWagon_01_B.s96_Merge</struct>
       <group>Actuators | UQM</group>
       <enum name="VarDecEnum_18">
          <item name="Reverse" value="0"/>
@@ -9197,6 +8640,342 @@
       </enum>
    </VarDec>
    <VarDec>
+      <name>dout_create_DOut177p001</name>
+      <class>enum</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <gain>1.0</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>0.0</max>
+      <min>0.0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>E_NativeFWError</ctype>
+      <struct>dout_create_DOut177p001</struct>
+      <help>Debug Variable</help>
+      <group>System | Debug | Resources | DiscreteOut</group>
+      <enum name="E_NativeFWError">
+         <item name="Normal Operation" value="0"/>
+         <item name="Bad Resource ID" value="1"/>
+         <item name="Hardware Not Supported" value="2"/>
+         <item name="Behaviour Not Supported" value="3"/>
+         <item name="Bad Attribute Data" value="4"/>
+         <item name="Fail On Create" value="5"/>
+         <item name="Fail On Set Attributes" value="6"/>
+         <item name="Resource Not Created" value="7"/>
+         <item name="Missing Attribute" value="8"/>
+         <item name="Behaviour Method Not Supported" value="9"/>
+         <item name="A Service Failed" value="10"/>
+         <item name="Failed to destroy a resource" value="11"/>
+         <item name="Resource Was Created" value="12"/>
+         <item name="Resource Conflict" value="13"/>
+         <item name="Invalid Encoder Type" value="14"/>
+         <item name="2-Strike Not Supported" value="15"/>
+         <item name="720degCA Pattern Not Supported" value="16"/>
+         <item name="CAM Pattern Not Supported" value="17"/>
+         <item name="Unknown CAM Pattern Supplied" value="18"/>
+         <item name="Engine Speed Present" value="19"/>
+         <item name="Hardware Interface Not Supported" value="20"/>
+         <item name="Service Already Started" value="21"/>
+         <item name="Register Write Failed to verify" value="22"/>
+         <item name="Register access was denied" value="23"/>
+         <item name="Out of free store memory" value="24"/>
+         <item name="Software Q Overrun" value="25"/>
+         <item name="Hardware Q Overrun" value="26"/>
+         <item name="Feature unsupported in archive" value="27"/>
+         <item name="Insufficient FW resource" value="28"/>
+         <item name="OS Resource conflict" value="29"/>
+         <item name="Driver Mode conflict" value="30"/>
+         <item name="RTC time is illegal" value="31"/>
+         <item name="FFS unmounted" value="32"/>
+         <item name="Access from an ISR" value="33"/>
+         <item name="FFS internal" value="34"/>
+         <item name="Operation timed out" value="35"/>
+         <item name="Task Kernel API Usage" value="36"/>
+         <item name="Operation aborted" value="37"/>
+         <item name="File not Found" value="38"/>
+         <item name="Invalid characters in filename" value="39"/>
+         <item name="Duplicate filename" value="40"/>
+         <item name="Filename is too long" value="41"/>
+         <item name="Dir not empty on remove" value="42"/>
+         <item name="Dir not found" value="43"/>
+         <item name="Dir name invalid" value="44"/>
+         <item name="Dir exists" value="45"/>
+         <item name="Dir too deep" value="46"/>
+         <item name="Illegal Handle" value="47"/>
+         <item name="End of File" value="48"/>
+         <item name="Media Full" value="49"/>
+         <item name="Media Write" value="50"/>
+         <item name="Media Read" value="51"/>
+         <item name="Media Write Protected" value="52"/>
+         <item name="File Read Only" value="53"/>
+         <item name="FS Media Changed" value="54"/>
+         <item name="Internal USB" value="55"/>
+         <item name="Voltage too high for USB IC" value="56"/>
+         <item name="Encoder not created" value="57"/>
+         <item name="TPU Chan Conflict" value="64"/>
+         <item name="TPU Func Unavailable" value="65"/>
+         <item name="TPU Config" value="66"/>
+         <item name="TPU Primative Usage" value="67"/>
+         <item name="TPU Primitive Count" value="68"/>
+         <item name="TPU Restricted TPU channel" value="69"/>
+         <item name="TPU Not Created" value="70"/>
+         <item name="TPU Self Modify constant write err" value="71"/>
+         <item name="TPU Error 0x48" value="72"/>
+         <item name="TPU Error 0x49" value="73"/>
+         <item name="TPU Error 0x4A" value="74"/>
+         <item name="TPU Error 0x4B" value="75"/>
+         <item name="TPU Error 0x4C" value="76"/>
+         <item name="TPU Error 0x4D" value="77"/>
+         <item name="TPU Error 0x4E" value="78"/>
+         <item name="TPU Error 0x4F" value="79"/>
+         <item name="TPU Error 0x50" value="80"/>
+         <item name="TPU Error 0x51" value="81"/>
+         <item name="TPU Error 0x52" value="82"/>
+         <item name="TPU Error 0x53" value="83"/>
+         <item name="TPU Error 0x54" value="84"/>
+         <item name="TPU Error 0x55" value="85"/>
+         <item name="TPU Error 0x56" value="86"/>
+         <item name="TPU Error 0x57" value="87"/>
+         <item name="TPU Error 0x58" value="88"/>
+         <item name="TPU Error 0x59" value="89"/>
+         <item name="TPU Error 0x5A" value="90"/>
+         <item name="TPU Error 0x5B" value="91"/>
+         <item name="TPU Error 0x5C" value="92"/>
+         <item name="TPU Error 0x5D" value="93"/>
+         <item name="TPU Error 0x5E" value="94"/>
+         <item name="TPU Error 0x5F" value="95"/>
+         <default>Illegal Error</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>dout_create_DOut178p001</name>
+      <class>enum</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <gain>1.0</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>0.0</max>
+      <min>0.0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>E_NativeFWError</ctype>
+      <struct>dout_create_DOut178p001</struct>
+      <help>Debug Variable</help>
+      <group>System | Debug | Resources | DiscreteOut</group>
+      <enum name="E_NativeFWError">
+         <item name="Normal Operation" value="0"/>
+         <item name="Bad Resource ID" value="1"/>
+         <item name="Hardware Not Supported" value="2"/>
+         <item name="Behaviour Not Supported" value="3"/>
+         <item name="Bad Attribute Data" value="4"/>
+         <item name="Fail On Create" value="5"/>
+         <item name="Fail On Set Attributes" value="6"/>
+         <item name="Resource Not Created" value="7"/>
+         <item name="Missing Attribute" value="8"/>
+         <item name="Behaviour Method Not Supported" value="9"/>
+         <item name="A Service Failed" value="10"/>
+         <item name="Failed to destroy a resource" value="11"/>
+         <item name="Resource Was Created" value="12"/>
+         <item name="Resource Conflict" value="13"/>
+         <item name="Invalid Encoder Type" value="14"/>
+         <item name="2-Strike Not Supported" value="15"/>
+         <item name="720degCA Pattern Not Supported" value="16"/>
+         <item name="CAM Pattern Not Supported" value="17"/>
+         <item name="Unknown CAM Pattern Supplied" value="18"/>
+         <item name="Engine Speed Present" value="19"/>
+         <item name="Hardware Interface Not Supported" value="20"/>
+         <item name="Service Already Started" value="21"/>
+         <item name="Register Write Failed to verify" value="22"/>
+         <item name="Register access was denied" value="23"/>
+         <item name="Out of free store memory" value="24"/>
+         <item name="Software Q Overrun" value="25"/>
+         <item name="Hardware Q Overrun" value="26"/>
+         <item name="Feature unsupported in archive" value="27"/>
+         <item name="Insufficient FW resource" value="28"/>
+         <item name="OS Resource conflict" value="29"/>
+         <item name="Driver Mode conflict" value="30"/>
+         <item name="RTC time is illegal" value="31"/>
+         <item name="FFS unmounted" value="32"/>
+         <item name="Access from an ISR" value="33"/>
+         <item name="FFS internal" value="34"/>
+         <item name="Operation timed out" value="35"/>
+         <item name="Task Kernel API Usage" value="36"/>
+         <item name="Operation aborted" value="37"/>
+         <item name="File not Found" value="38"/>
+         <item name="Invalid characters in filename" value="39"/>
+         <item name="Duplicate filename" value="40"/>
+         <item name="Filename is too long" value="41"/>
+         <item name="Dir not empty on remove" value="42"/>
+         <item name="Dir not found" value="43"/>
+         <item name="Dir name invalid" value="44"/>
+         <item name="Dir exists" value="45"/>
+         <item name="Dir too deep" value="46"/>
+         <item name="Illegal Handle" value="47"/>
+         <item name="End of File" value="48"/>
+         <item name="Media Full" value="49"/>
+         <item name="Media Write" value="50"/>
+         <item name="Media Read" value="51"/>
+         <item name="Media Write Protected" value="52"/>
+         <item name="File Read Only" value="53"/>
+         <item name="FS Media Changed" value="54"/>
+         <item name="Internal USB" value="55"/>
+         <item name="Voltage too high for USB IC" value="56"/>
+         <item name="Encoder not created" value="57"/>
+         <item name="TPU Chan Conflict" value="64"/>
+         <item name="TPU Func Unavailable" value="65"/>
+         <item name="TPU Config" value="66"/>
+         <item name="TPU Primative Usage" value="67"/>
+         <item name="TPU Primitive Count" value="68"/>
+         <item name="TPU Restricted TPU channel" value="69"/>
+         <item name="TPU Not Created" value="70"/>
+         <item name="TPU Self Modify constant write err" value="71"/>
+         <item name="TPU Error 0x48" value="72"/>
+         <item name="TPU Error 0x49" value="73"/>
+         <item name="TPU Error 0x4A" value="74"/>
+         <item name="TPU Error 0x4B" value="75"/>
+         <item name="TPU Error 0x4C" value="76"/>
+         <item name="TPU Error 0x4D" value="77"/>
+         <item name="TPU Error 0x4E" value="78"/>
+         <item name="TPU Error 0x4F" value="79"/>
+         <item name="TPU Error 0x50" value="80"/>
+         <item name="TPU Error 0x51" value="81"/>
+         <item name="TPU Error 0x52" value="82"/>
+         <item name="TPU Error 0x53" value="83"/>
+         <item name="TPU Error 0x54" value="84"/>
+         <item name="TPU Error 0x55" value="85"/>
+         <item name="TPU Error 0x56" value="86"/>
+         <item name="TPU Error 0x57" value="87"/>
+         <item name="TPU Error 0x58" value="88"/>
+         <item name="TPU Error 0x59" value="89"/>
+         <item name="TPU Error 0x5A" value="90"/>
+         <item name="TPU Error 0x5B" value="91"/>
+         <item name="TPU Error 0x5C" value="92"/>
+         <item name="TPU Error 0x5D" value="93"/>
+         <item name="TPU Error 0x5E" value="94"/>
+         <item name="TPU Error 0x5F" value="95"/>
+         <default>Illegal Error</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>dout_create_DOut3919p0004</name>
+      <class>enum</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <gain>1.0</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>0.0</max>
+      <min>0.0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>E_NativeFWError</ctype>
+      <struct>dout_create_DOut3919p0004</struct>
+      <help>Debug Variable</help>
+      <group>System | Debug | Resources | DiscreteOut</group>
+      <enum name="E_NativeFWError">
+         <item name="Normal Operation" value="0"/>
+         <item name="Bad Resource ID" value="1"/>
+         <item name="Hardware Not Supported" value="2"/>
+         <item name="Behaviour Not Supported" value="3"/>
+         <item name="Bad Attribute Data" value="4"/>
+         <item name="Fail On Create" value="5"/>
+         <item name="Fail On Set Attributes" value="6"/>
+         <item name="Resource Not Created" value="7"/>
+         <item name="Missing Attribute" value="8"/>
+         <item name="Behaviour Method Not Supported" value="9"/>
+         <item name="A Service Failed" value="10"/>
+         <item name="Failed to destroy a resource" value="11"/>
+         <item name="Resource Was Created" value="12"/>
+         <item name="Resource Conflict" value="13"/>
+         <item name="Invalid Encoder Type" value="14"/>
+         <item name="2-Strike Not Supported" value="15"/>
+         <item name="720degCA Pattern Not Supported" value="16"/>
+         <item name="CAM Pattern Not Supported" value="17"/>
+         <item name="Unknown CAM Pattern Supplied" value="18"/>
+         <item name="Engine Speed Present" value="19"/>
+         <item name="Hardware Interface Not Supported" value="20"/>
+         <item name="Service Already Started" value="21"/>
+         <item name="Register Write Failed to verify" value="22"/>
+         <item name="Register access was denied" value="23"/>
+         <item name="Out of free store memory" value="24"/>
+         <item name="Software Q Overrun" value="25"/>
+         <item name="Hardware Q Overrun" value="26"/>
+         <item name="Feature unsupported in archive" value="27"/>
+         <item name="Insufficient FW resource" value="28"/>
+         <item name="OS Resource conflict" value="29"/>
+         <item name="Driver Mode conflict" value="30"/>
+         <item name="RTC time is illegal" value="31"/>
+         <item name="FFS unmounted" value="32"/>
+         <item name="Access from an ISR" value="33"/>
+         <item name="FFS internal" value="34"/>
+         <item name="Operation timed out" value="35"/>
+         <item name="Task Kernel API Usage" value="36"/>
+         <item name="Operation aborted" value="37"/>
+         <item name="File not Found" value="38"/>
+         <item name="Invalid characters in filename" value="39"/>
+         <item name="Duplicate filename" value="40"/>
+         <item name="Filename is too long" value="41"/>
+         <item name="Dir not empty on remove" value="42"/>
+         <item name="Dir not found" value="43"/>
+         <item name="Dir name invalid" value="44"/>
+         <item name="Dir exists" value="45"/>
+         <item name="Dir too deep" value="46"/>
+         <item name="Illegal Handle" value="47"/>
+         <item name="End of File" value="48"/>
+         <item name="Media Full" value="49"/>
+         <item name="Media Write" value="50"/>
+         <item name="Media Read" value="51"/>
+         <item name="Media Write Protected" value="52"/>
+         <item name="File Read Only" value="53"/>
+         <item name="FS Media Changed" value="54"/>
+         <item name="Internal USB" value="55"/>
+         <item name="Voltage too high for USB IC" value="56"/>
+         <item name="Encoder not created" value="57"/>
+         <item name="TPU Chan Conflict" value="64"/>
+         <item name="TPU Func Unavailable" value="65"/>
+         <item name="TPU Config" value="66"/>
+         <item name="TPU Primative Usage" value="67"/>
+         <item name="TPU Primitive Count" value="68"/>
+         <item name="TPU Restricted TPU channel" value="69"/>
+         <item name="TPU Not Created" value="70"/>
+         <item name="TPU Self Modify constant write err" value="71"/>
+         <item name="TPU Error 0x48" value="72"/>
+         <item name="TPU Error 0x49" value="73"/>
+         <item name="TPU Error 0x4A" value="74"/>
+         <item name="TPU Error 0x4B" value="75"/>
+         <item name="TPU Error 0x4C" value="76"/>
+         <item name="TPU Error 0x4D" value="77"/>
+         <item name="TPU Error 0x4E" value="78"/>
+         <item name="TPU Error 0x4F" value="79"/>
+         <item name="TPU Error 0x50" value="80"/>
+         <item name="TPU Error 0x51" value="81"/>
+         <item name="TPU Error 0x52" value="82"/>
+         <item name="TPU Error 0x53" value="83"/>
+         <item name="TPU Error 0x54" value="84"/>
+         <item name="TPU Error 0x55" value="85"/>
+         <item name="TPU Error 0x56" value="86"/>
+         <item name="TPU Error 0x57" value="87"/>
+         <item name="TPU Error 0x58" value="88"/>
+         <item name="TPU Error 0x59" value="89"/>
+         <item name="TPU Error 0x5A" value="90"/>
+         <item name="TPU Error 0x5B" value="91"/>
+         <item name="TPU Error 0x5C" value="92"/>
+         <item name="TPU Error 0x5D" value="93"/>
+         <item name="TPU Error 0x5E" value="94"/>
+         <item name="TPU Error 0x5F" value="95"/>
+         <default>Illegal Error</default>
+      </enum>
+   </VarDec>
+   <VarDec>
       <name>ApplicationInitStatus</name>
       <class>enum</class>
       <access>NA NA RO RO</access>
@@ -9244,6 +9023,118 @@
          <item name="Disabled" value="0"/>
          <item name="Enabled" value="1"/>
          <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>dout_create_DOut179p001</name>
+      <class>enum</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <gain>1.0</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>0.0</max>
+      <min>0.0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>E_NativeFWError</ctype>
+      <struct>dout_create_DOut179p001</struct>
+      <help>Debug Variable</help>
+      <group>System | Debug | Resources | DiscreteOut</group>
+      <enum name="E_NativeFWError">
+         <item name="Normal Operation" value="0"/>
+         <item name="Bad Resource ID" value="1"/>
+         <item name="Hardware Not Supported" value="2"/>
+         <item name="Behaviour Not Supported" value="3"/>
+         <item name="Bad Attribute Data" value="4"/>
+         <item name="Fail On Create" value="5"/>
+         <item name="Fail On Set Attributes" value="6"/>
+         <item name="Resource Not Created" value="7"/>
+         <item name="Missing Attribute" value="8"/>
+         <item name="Behaviour Method Not Supported" value="9"/>
+         <item name="A Service Failed" value="10"/>
+         <item name="Failed to destroy a resource" value="11"/>
+         <item name="Resource Was Created" value="12"/>
+         <item name="Resource Conflict" value="13"/>
+         <item name="Invalid Encoder Type" value="14"/>
+         <item name="2-Strike Not Supported" value="15"/>
+         <item name="720degCA Pattern Not Supported" value="16"/>
+         <item name="CAM Pattern Not Supported" value="17"/>
+         <item name="Unknown CAM Pattern Supplied" value="18"/>
+         <item name="Engine Speed Present" value="19"/>
+         <item name="Hardware Interface Not Supported" value="20"/>
+         <item name="Service Already Started" value="21"/>
+         <item name="Register Write Failed to verify" value="22"/>
+         <item name="Register access was denied" value="23"/>
+         <item name="Out of free store memory" value="24"/>
+         <item name="Software Q Overrun" value="25"/>
+         <item name="Hardware Q Overrun" value="26"/>
+         <item name="Feature unsupported in archive" value="27"/>
+         <item name="Insufficient FW resource" value="28"/>
+         <item name="OS Resource conflict" value="29"/>
+         <item name="Driver Mode conflict" value="30"/>
+         <item name="RTC time is illegal" value="31"/>
+         <item name="FFS unmounted" value="32"/>
+         <item name="Access from an ISR" value="33"/>
+         <item name="FFS internal" value="34"/>
+         <item name="Operation timed out" value="35"/>
+         <item name="Task Kernel API Usage" value="36"/>
+         <item name="Operation aborted" value="37"/>
+         <item name="File not Found" value="38"/>
+         <item name="Invalid characters in filename" value="39"/>
+         <item name="Duplicate filename" value="40"/>
+         <item name="Filename is too long" value="41"/>
+         <item name="Dir not empty on remove" value="42"/>
+         <item name="Dir not found" value="43"/>
+         <item name="Dir name invalid" value="44"/>
+         <item name="Dir exists" value="45"/>
+         <item name="Dir too deep" value="46"/>
+         <item name="Illegal Handle" value="47"/>
+         <item name="End of File" value="48"/>
+         <item name="Media Full" value="49"/>
+         <item name="Media Write" value="50"/>
+         <item name="Media Read" value="51"/>
+         <item name="Media Write Protected" value="52"/>
+         <item name="File Read Only" value="53"/>
+         <item name="FS Media Changed" value="54"/>
+         <item name="Internal USB" value="55"/>
+         <item name="Voltage too high for USB IC" value="56"/>
+         <item name="Encoder not created" value="57"/>
+         <item name="TPU Chan Conflict" value="64"/>
+         <item name="TPU Func Unavailable" value="65"/>
+         <item name="TPU Config" value="66"/>
+         <item name="TPU Primative Usage" value="67"/>
+         <item name="TPU Primitive Count" value="68"/>
+         <item name="TPU Restricted TPU channel" value="69"/>
+         <item name="TPU Not Created" value="70"/>
+         <item name="TPU Self Modify constant write err" value="71"/>
+         <item name="TPU Error 0x48" value="72"/>
+         <item name="TPU Error 0x49" value="73"/>
+         <item name="TPU Error 0x4A" value="74"/>
+         <item name="TPU Error 0x4B" value="75"/>
+         <item name="TPU Error 0x4C" value="76"/>
+         <item name="TPU Error 0x4D" value="77"/>
+         <item name="TPU Error 0x4E" value="78"/>
+         <item name="TPU Error 0x4F" value="79"/>
+         <item name="TPU Error 0x50" value="80"/>
+         <item name="TPU Error 0x51" value="81"/>
+         <item name="TPU Error 0x52" value="82"/>
+         <item name="TPU Error 0x53" value="83"/>
+         <item name="TPU Error 0x54" value="84"/>
+         <item name="TPU Error 0x55" value="85"/>
+         <item name="TPU Error 0x56" value="86"/>
+         <item name="TPU Error 0x57" value="87"/>
+         <item name="TPU Error 0x58" value="88"/>
+         <item name="TPU Error 0x59" value="89"/>
+         <item name="TPU Error 0x5A" value="90"/>
+         <item name="TPU Error 0x5B" value="91"/>
+         <item name="TPU Error 0x5C" value="92"/>
+         <item name="TPU Error 0x5D" value="93"/>
+         <item name="TPU Error 0x5E" value="94"/>
+         <item name="TPU Error 0x5F" value="95"/>
+         <default>Illegal Error</default>
       </enum>
    </VarDec>
    <VarDec>

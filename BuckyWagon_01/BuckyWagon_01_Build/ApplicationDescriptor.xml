@@ -4,7 +4,7 @@
 	<Name>BuckyWagon_01</Name>
 	<Author>maxar</Author>
 	<Copyright>2019 Woodward.</Copyright>
-	<CreateDate>18-Apr-2019</CreateDate>
+	<CreateDate>29-Apr-2019</CreateDate>
 	<MemoryLayout>DEV</MemoryLayout>
 	<Module>ClassicModule-MPC565</Module>
 	<Memory/>
@@ -25,9 +25,9 @@
 			</TableDatabase>
 			<ProjectID>6</ProjectID>
 			<ProductID>1</ProductID>
-			<SwIdTxt>BuckyWago_184</SwIdTxt>
-			<SwRevisionTxt>BuckyWagon_01_184</SwRevisionTxt>
-			<CalIdTxt>BuckyWagon_01_184_000</CalIdTxt>
+			<SwIdTxt>BuckyWago_187</SwIdTxt>
+			<SwRevisionTxt>BuckyWagon_01_187</SwRevisionTxt>
+			<CalIdTxt>BuckyWagon_01_187_000</CalIdTxt>
 		</VarDecs>
 		<DatabaseBuild>
 			<Toolchain>
@@ -38,10 +38,10 @@
 			</Toolchain>
 		</DatabaseBuild>
 		<Command>
-			<Description>Copy BuckyWago_184.dll and BuckyWagon_01_184.srz</Description>
+			<Description>Copy BuckyWago_187.dll and BuckyWagon_01_187.srz</Description>
 			<Order>99</Order>
-			<Execute>@if exist C:\ECUFiles\TDBDLL\\*.* copy /Y .\TDB\BuckyWago_184.dll C:\ECUFiles\TDBDLL\ &gt; NUL</Execute>
-			<Execute>@if exist C:\ECUFiles\Programs\*.* copy /Y .\Target\BuckyWagon_01_184.srz C:\ECUFiles\Programs &gt; NUL</Execute>
+			<Execute>@if exist C:\ECUFiles\TDBDLL\\*.* copy /Y .\TDB\BuckyWago_187.dll C:\ECUFiles\TDBDLL\ &gt; NUL</Execute>
+			<Execute>@if exist C:\ECUFiles\Programs\*.* copy /Y .\Target\BuckyWagon_01_187.srz C:\ECUFiles\Programs &gt; NUL</Execute>
 		</Command>
 	</ToolInterface>
 	<Build>
@@ -71,21 +71,34 @@
 			<File>MotoHawk_DataStores.c</File>
 			<File>MotoHawk_IO.c</File>
 			<File>TableLookupFunctions.c</File>
-			<File>Trigger_BGND_BASE_PERIODIC_1070p0009.c</File>
-			<File>Trigger_BGND_BASEx20_PERIODIC_1080p0009.c</File>
+			<File>Trigger_BGND_BASE_PERIODIC_15453p0001.c</File>
+			<File>Trigger_BGND_BASE_PERIODIC_3967p0004.c</File>
+			<File>Trigger_BGND_BASEx10_PERIODIC_15455p0001.c</File>
+			<File>Trigger_BGND_BASEx20_PERIODIC_3977p0004.c</File>
+			<File>Trigger_BGND_BASEx2_PERIODIC_15454p0001.c</File>
 			<File>Trigger_CAN_RX_BusCAN_1_Buf1.c</File>
 			<File>Trigger_CAN_RX_BusCAN_1_Buf14.c</File>
 			<File>Trigger_CAN_RX_BusCAN_2_Buf1.c</File>
 			<File>Trigger_CAN_RX_BusCAN_2_Buf14.c</File>
-			<File>Trigger_CAN_Slot_miniview_button_down_10204p0002.c</File>
-			<File>Trigger_CAN_Slot_miniview_button_menu_10463p0005.c</File>
-			<File>Trigger_CAN_Slot_miniview_button_up_10714p0004.c</File>
-			<File>Trigger_FGND_20XRTI_PERIODIC_878p0011.c</File>
-			<File>Trigger_FGND_RTI_PERIODIC_1078p0009.c</File>
-			<File>Trigger_FGND_RTI_PERIODIC_877p0013.c</File>
-			<File>Trigger_SHUTDOWN_EVENT_1081p0009.c</File>
-			<File>Trigger_STARTUP_EVENT_1079p0009.c</File>
+			<File>Trigger_CAN_Slot_miniview_button_down_2080p0004.c</File>
+			<File>Trigger_CAN_Slot_miniview_button_menu_2338p0004.c</File>
+			<File>Trigger_CAN_Slot_miniview_button_up_2589p0005.c</File>
+			<File>Trigger_FGND_10XRTI_PERIODIC_15451p0001.c</File>
+			<File>Trigger_FGND_20XRTI_PERIODIC_15452p0001.c</File>
+			<File>Trigger_FGND_20XRTI_PERIODIC_3774p0004.c</File>
+			<File>Trigger_FGND_2XRTI_PERIODIC_15449p0001.c</File>
+			<File>Trigger_FGND_RTI_PERIODIC_15450p0001.c</File>
+			<File>Trigger_FGND_RTI_PERIODIC_3773p0006.c</File>
+			<File>Trigger_FGND_RTI_PERIODIC_3975p0004.c</File>
+			<File>Trigger_IDLE_EVENT_15443p0001.c</File>
+			<File>Trigger_IDLE_EVENT_15467p0004.c</File>
+			<File>Trigger_ONE_SECOND_EVENT_15456p0001.c</File>
+			<File>Trigger_SHUTDOWN_EVENT_3978p0004.c</File>
+			<File>Trigger_STARTUP_EVENT_15418p0001.c</File>
+			<File>Trigger_STARTUP_EVENT_3976p0004.c</File>
 			<File>VarDecs.c</File>
+			<File>mh_ccp_protocol.c</File>
+			<File>mh_ccp_protocol_CCP1.c</File>
 			<File>rt_nonfinite.c</File>
 			<File>BuckyWagon_01.c</File>
 		</Source>
@@ -107,7 +120,7 @@
 		</Command>
 		<Command>
 			<Description>Call MotoConvert</Description>
-			<Execute>@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\BuckyWagon_01.map -srec=.\Target\BuckyWagon_01.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=BuckyWagon_01.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x000FFFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\BuckyWagon_01_184.srz</Execute>
+			<Execute>@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\BuckyWagon_01.map -srec=.\Target\BuckyWagon_01.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=BuckyWagon_01.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x000FFFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\BuckyWagon_01_187.srz</Execute>
 			<Order>55</Order>
 		</Command>
 		<Compiler>
@@ -141,5 +154,5 @@
 			<Execute>@if exist .\rtwtypes.h del /Q /F .\rtwtypes.h &gt; NUL</Execute>
 		</Command>
 	</Build>
-	<Signature>c3af1222-05fb-445f-86-2a-4a-f0-57-6b-de</Signature>
+	<Signature>c9613dd0-94ad-4603-a2-20-06-ec-95-e3-f8</Signature>
 </Application>

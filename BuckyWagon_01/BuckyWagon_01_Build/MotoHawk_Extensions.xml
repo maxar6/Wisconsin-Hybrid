@@ -6,6 +6,36 @@
 	<Extension>	
 		<Add xpath="Application/Memory">
             <DataStore ref="Volatile">
+               <DataType>S_CCPDAQ</DataType>
+               <Default> </Default>
+               <Name>mh_CCP1_CCPHandlerInstanceDAQs</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>S_CCPODT</DataType>
+               <Default> </Default>
+               <Name>mh_CCP1_CCPHandlerInstanceODTs</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>uint16</DataType>
+               <Default>49U</Default>
+               <Name>CCP1_StationAddr</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>uint32</DataType>
+               <Default>418328834U</Default>
+               <Name>CCP1TxID</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>uint32</DataType>
+               <Default>418316849U</Default>
+               <Name>CCP1RxID</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>uint32</DataType>
+               <Default>0U</Default>
+               <Name>CCP1RxIDMask</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>ProcessorReboot</Name>
@@ -348,27 +378,27 @@
             <DataStore ref="Volatile">
                <DataType>real32</DataType>
                <Default>0.0</Default>
-               <Name>AccelPedalMapIn</Name>
+               <Name>AccelPedalMap_v2In</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
-               <Default>0.0 0.01 0.02 0.03 0.04 0.05 0.06 0.07 0.08 0.09 0.1 0.11 0.12 0.13 0.14 0.15 0.16 0.17 0.18 0.19 0.2 0.21 0.22 0.23 0.24 0.25 0.26 0.27 0.28 0.29 0.3 0.31 0.32 0.33 0.34 0.35000000000000003 0.36 0.37 0.38 0.39 0.4 0.41000000000000003 0.42 0.43 0.44 0.45 0.46 0.47000000000000003 0.48 0.49 0.5 0.51 0.52 0.53 0.54 0.55 0.56 0.57000000000000006 0.58000000000000007 0.59 0.6 0.61 0.62 0.63 0.64 0.64999999999999991 0.65999999999999992 0.66999999999999993 0.67999999999999994 0.69 0.7 0.71 0.72 0.73 0.74 0.75 0.76 0.77 0.78 0.79 0.8 0.81 0.82000000000000006 0.83 0.84 0.85 0.86 0.87 0.88 0.89 0.9 0.91 0.92 0.92999999999999994 0.94 0.95 0.96 0.97 0.98 0.99 1.0 </Default>
-               <Name>AccelPedalMapIdxArr</Name>
+               <Default>0.0 0.05 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.95 1.0 </Default>
+               <Name>AccelPedalMap_v2IdxArr</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>uint16</DataType>
                <Default>0U</Default>
-               <Name>AccelPedalMapIdx</Name>
+               <Name>AccelPedalMap_v2Idx</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>real32</DataType>
                <Default>0.0</Default>
-               <Name>AccelPedalMap</Name>
+               <Name>AccelPedalMap_v2</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
-               <Default>0.0 0.0 0.0 0.015 0.03 0.045 0.06 0.075 0.09 0.105 0.12 0.135 0.15 0.165 0.18 0.195 0.21 0.225 0.24 0.255 0.27 0.285 0.3 0.315 0.33 0.345 0.36 0.375 0.39 0.405 0.42 0.435 0.45 0.465 0.48 0.495 0.51 0.525 0.54 0.555 0.57 0.585 0.6 0.615 0.63 0.645 0.66 0.675 0.69 0.7 0.707106781 0.714142843 0.721110255 0.728010989 0.734846923 0.741619849 0.748331477 0.754983444 0.761577311 0.768114575 0.774596669 0.781024968 0.787400787 0.793725393 0.8 0.806225775 0.81240384 0.818535277 0.824621125 0.830662386 0.836660027 0.842614977 0.848528137 0.854400375 0.860232527 0.866025404 0.871779789 0.877496439 0.883176087 0.888819442 0.894427191 0.9 0.905538514 0.911043358 0.916515139 0.921954446 0.92736185 0.932737905 0.938083152 0.943398113 0.948683298 0.953939201 0.959166305 0.964365076 0.969535971 0.974679434 0.979795897 0.98488578 0.989949494 0.994987437 1.0 </Default>
-               <Name>AccelPedalMapTbl</Name>
+               <Default>0.0 0.0 0.15 0.3 0.45 0.55 0.65 0.72 0.79 0.86 0.93 1.0 1.0 </Default>
+               <Name>AccelPedalMap_v2Tbl</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
@@ -408,12 +438,12 @@
             <DataStore ref="Volatile">
                <DataType>real32</DataType>
                <Default>0.0</Default>
-               <Name>MotoHawkTable2D</Name>
+               <Name>RegenBatteryLimits</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0 0.05 0.15 0.2 0.35 0.5 1.0 1.0 ;0.0 0.05 0.15 0.2 0.35 0.5 1.0 1.0 ;0.0 0.05 0.15 0.2 0.35 0.5 0.5 0.5 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 </Default>
-               <Name>MotoHawkTable2DMap</Name>
+               <Name>RegenBatteryLimitsMap</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
@@ -431,13 +461,13 @@
                <Name>Regen_Full</Name>
              </DataStore>
             <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
+               <DataType>boolean</DataType>
+               <Default>0</Default>
                <Name>Enable_Regen</Name>
              </DataStore>
             <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
+               <DataType>boolean</DataType>
+               <Default>0</Default>
                <Name>Enable_Coast_Neg_Torque</Name>
              </DataStore>
             <DataStore ref="Constant">
@@ -467,16 +497,6 @@
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
-               <Default>1.0</Default>
-               <Name>SaturationUprLim</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>SaturationLwrLim</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
                <Default>0.005</Default>
                <Name>Temp_ped_switchOver</Name>
              </DataStore>
@@ -487,207 +507,47 @@
              </DataStore>
             <DataStore ref="Constant">
                <DataType>uint8</DataType>
-               <Default>1U</Default>
-               <Name>DriveMode</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>AccelPedalPreIn</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>0.0 1.0 2.0 3.0 4.0 5.0 10.0 15.0 20.0 30.0 40.0 50.0 60.0 70.0 80.0 90.0 100.0 </Default>
-               <Name>AccelPedalPreIdxArr</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>uint16</DataType>
-               <Default>0U</Default>
-               <Name>AccelPedalPreIdx</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>VehicleSpeedPreIn</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>0.0 0.5 1.0 1.5 2.0 2.5 3.0 4.0 5.0 10.0 15.0 20.0 25.0 30.0 35.0 40.0 45.0 </Default>
-               <Name>VehicleSpeedPreIdxArr</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>uint16</DataType>
-               <Default>0U</Default>
-               <Name>VehicleSpeedPreIdx</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>DriverDemandBaseReverse</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 </Default>
-               <Name>DriverDemandBaseReverseMap</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>DriverDemandBaseForward</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 </Default>
-               <Name>DriverDemandBaseForwardMap</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>RegenDisableTq</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>RegenAccel</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 </Default>
-               <Name>RegenAccelMap</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>BrakePedalPreIn</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>0.0 1.0 2.0 3.0 4.0 5.0 10.0 15.0 20.0 30.0 40.0 50.0 60.0 70.0 80.0 90.0 100.0 </Default>
-               <Name>BrakePedalPreIdxArr</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>uint16</DataType>
-               <Default>0U</Default>
-               <Name>BrakePedalPreIdx</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>RegenBrake</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 </Default>
-               <Name>RegenBrakeMap</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>SOCClipDisable</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>SOCPreIn</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>0.0 1.0 2.0 3.0 4.0 5.0 10.0 15.0 20.0 30.0 40.0 50.0 60.0 70.0 80.0 90.0 100.0 </Default>
-               <Name>SOCPreIdxArr</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>uint16</DataType>
-               <Default>0U</Default>
-               <Name>SOCPreIdx</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>ChargeClip</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 </Default>
-               <Name>ChargeClipMap</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>DischargeClip</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ;0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 </Default>
-               <Name>DischargeClipMap</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>OverHeatClipDisable</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>43.0</Default>
-               <Name>InverterOverheatLow</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>45.0</Default>
-               <Name>InverterOverheatHigh</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>TorqueClipLwrLim</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>1.0</Default>
-               <Name>TorqueClipUprLim</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>uint8</DataType>
                <Default>0U</Default>
                <Name>Reverse_TQ_Negative_Enable</Name>
              </DataStore>
             <DataStore ref="Constant">
-               <DataType>uint16</DataType>
-               <Default>1U</Default>
+               <DataType>real32</DataType>
+               <Default>1.0</Default>
                <Name>EHPAS_stoppingEn</Name>
              </DataStore>
             <DataStore ref="Constant">
-               <DataType>uint16</DataType>
-               <Default>1U</Default>
+               <DataType>real32</DataType>
+               <Default>1.0</Default>
                <Name>EHPAS_slowingEn</Name>
              </DataStore>
             <DataStore ref="Constant">
-               <DataType>uint16</DataType>
-               <Default>1U</Default>
+               <DataType>real32</DataType>
+               <Default>1.0</Default>
                <Name>EHPAS_driveNbrakeEn</Name>
              </DataStore>
             <DataStore ref="Constant">
-               <DataType>uint16</DataType>
-               <Default>1U</Default>
+               <DataType>real32</DataType>
+               <Default>1.0</Default>
                <Name>EHPAS_keyUpEn</Name>
              </DataStore>
             <DataStore ref="Constant">
-               <DataType>uint16</DataType>
-               <Default>1U</Default>
+               <DataType>real32</DataType>
+               <Default>1.0</Default>
                <Name>EHPAS_brakeEn</Name>
              </DataStore>
             <DataStore ref="Constant">
-               <DataType>uint16</DataType>
-               <Default>1U</Default>
+               <DataType>real32</DataType>
+               <Default>1.0</Default>
                <Name>EHPAS_driveEn</Name>
              </DataStore>
             <DataStore ref="Constant">
-               <DataType>uint16</DataType>
-               <Default>1U</Default>
+               <DataType>real32</DataType>
+               <Default>1.0</Default>
                <Name>EHPAS_lowSpeedEn</Name>
              </DataStore>
             <DataStore ref="Constant">
-               <DataType>uint16</DataType>
-               <Default>0U</Default>
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
                <Name>EHPAS_IdleEn</Name>
              </DataStore>
             <DataStore ref="Volatile">
@@ -1542,7 +1402,7 @@
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
-               <Default>101.0</Default>
+               <Default>102.0</Default>
                <Name>Over_SOC_Shutdown_Thresh</Name>
              </DataStore>
             <DataStore ref="Constant">
@@ -1838,7 +1698,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut1023p0011</Name>
+               <Name>init_resource_DOut3919p0004</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -1848,7 +1708,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut178p0011</Name>
+               <Name>init_resource_DOut177p001</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
@@ -1868,7 +1728,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut179p0011</Name>
+               <Name>init_resource_DOut178p001</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -1878,7 +1738,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut180p0011</Name>
+               <Name>init_resource_DOut179p001</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -2015,6 +1875,150 @@
                <Default>0</Default>
                <Name>MotoHawkModelSecondsInUse</Name>
              </DataStore>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT0</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT1</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT2</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT3</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT4</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT5</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT6</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT7</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT8</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT9</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT10</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT11</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT12</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT13</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT14</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT15</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT16</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT17</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT18</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT19</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT20</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT21</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT22</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT23</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT24</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT25</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT26</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT27</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT28</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT29</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT30</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceODTs</Container>
+           		<Name>ODT31</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceDAQs</Container>
+           		<Name>DAQ0</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceDAQs</Container>
+           		<Name>DAQ1</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceDAQs</Container>
+           		<Name>DAQ2</Name>
+     		</StructInstance>
+			<StructInstance>
+           		<Container>mh_CCP1_CCPHandlerInstanceDAQs</Container>
+           		<Name>DAQ3</Name>
+     		</StructInstance>
 			<StructInstance>
            		<Container>Actions</Container>
            		<Name>Bat_limit_high</Name>
@@ -3209,6 +3213,72 @@
 		<Add xpath="Application/Types">
                 <StructDef>
 				    <Field>
+        		        <DataType>uint8</DataType>
+        		        <Default>0</Default>
+        		        <Name>DAQStatus</Name>
+        		        <Order>3</Order>
+        			</Field>
+				    <Field>
+        		        <DataType>uint8</DataType>
+        		        <Default>0</Default>
+        		        <Name>EventChannelNumber</Name>
+        		        <Order>5</Order>
+        			</Field>
+				    <Field>
+        		        <DataType>uint8</DataType>
+        		        <Default>0</Default>
+        		        <Name>LastODTNumber</Name>
+        		        <Order>4</Order>
+        			</Field>
+				    <Field>
+        		        <DataType>uint16</DataType>
+        		        <Default>0</Default>
+        		        <Name>Prescaler</Name>
+        		        <Order>2</Order>
+        			</Field>
+				    <Field>
+        		        <DataType>uint32</DataType>
+        		        <Default>0</Default>
+        		        <Name>TxID</Name>
+        		        <Order>1</Order>
+        			</Field>
+        		    <Name>S_CCPDAQ</Name>
+                </StructDef>
+                
+                <StructDef>
+				    <Field>
+        		        <DataType>uint8</DataType>
+        		        <Default>0</Default>
+        		        <Name>DataSize</Name>
+        		        <Order>2</Order>
+        			</Field>
+				    <Field>
+        		        <DataType>reference</DataType>
+        		        <Default>0</Default>
+        		        <Name>pData</Name>
+        		        <Order>1</Order>
+        			</Field>
+        		    <Name>S_CCPODTItem</Name>
+                </StructDef>
+                
+                <StructDef>
+				    <Field>
+        		        <DataType>S_CCPODTItem</DataType>
+        		        <Default>{NULL} {NULL} {NULL} {NULL} {NULL} {NULL} {NULL} </Default>
+        		        <Name>ODTList</Name>
+        		        <Order>2</Order>
+        			</Field>
+				    <Field>
+        		        <DataType>uint8</DataType>
+        		        <Default>0</Default>
+        		        <Name>ODTSize</Name>
+        		        <Order>1</Order>
+        			</Field>
+        		    <Name>S_CCPODT</Name>
+                </StructDef>
+                
+                <StructDef>
+				    <Field>
         		        <DataType>uint16</DataType>
         		        <Default>7</Default>
         		        <Name>action1</Name>
@@ -3530,21 +3600,15 @@
                 </Enum>
                 
                 <Enum>
-                    <Name>VarDecEnum_0</Name>
-                    <Item name="Run" value="0" symbol="VARDECENUM_0_RUN"/>
-                    <Item name="Reboot" value="1" symbol="VARDECENUM_0_REBOOT"/>
-                </Enum>
-                
-                <Enum>
                     <Name>VarDecEnum_1</Name>
-                    <Item name="Pass-Through" value="0" symbol="VARDECENUM_1_PASSDASHTHROUGH"/>
-                    <Item name="Override" value="1" symbol="VARDECENUM_1_OVERRIDE"/>
+                    <Item name="Run" value="0" symbol="VARDECENUM_1_RUN"/>
+                    <Item name="Reboot" value="1" symbol="VARDECENUM_1_REBOOT"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_10</Name>
-                    <Item name="Torque_Management" value="0" symbol="VARDECENUM_10_TORQUE_MANAGEMENT"/>
-                    <Item name="Normal" value="1" symbol="VARDECENUM_10_NORMAL"/>
+                    <Item name="Power_Off" value="0" symbol="VARDECENUM_10_POWER_OFF"/>
+                    <Item name="Power_On" value="1" symbol="VARDECENUM_10_POWER_ON"/>
                 </Enum>
                 
                 <Enum>
@@ -3609,8 +3673,8 @@
                 
                 <Enum>
                     <Name>VarDecEnum_2</Name>
-                    <Item name="Off" value="0" symbol="VARDECENUM_2_OFF"/>
-                    <Item name="On" value="1" symbol="VARDECENUM_2_ON"/>
+                    <Item name="Pass-Through" value="0" symbol="VARDECENUM_2_PASSDASHTHROUGH"/>
+                    <Item name="Override" value="1" symbol="VARDECENUM_2_OVERRIDE"/>
                 </Enum>
                 
                 <Enum>
@@ -3860,45 +3924,45 @@
                 
                 <Enum>
                     <Name>VarDecEnum_3</Name>
-                    <Item name="Run" value="0" symbol="VARDECENUM_3_RUN"/>
-                    <Item name="Restore To Defaults" value="1" symbol="VARDECENUM_3_RESTORETODEFAULTS"/>
+                    <Item name="Off" value="0" symbol="VARDECENUM_3_OFF"/>
+                    <Item name="On" value="1" symbol="VARDECENUM_3_ON"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_4</Name>
                     <Item name="Run" value="0" symbol="VARDECENUM_4_RUN"/>
-                    <Item name="Store To EEPROM" value="1" symbol="VARDECENUM_4_STORETOEEPROM"/>
+                    <Item name="Restore To Defaults" value="1" symbol="VARDECENUM_4_RESTORETODEFAULTS"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_5</Name>
-                    <Item name="Disabled" value="0" symbol="VARDECENUM_5_DISABLED"/>
-                    <Item name="Enabled" value="1" symbol="VARDECENUM_5_ENABLED"/>
+                    <Item name="Run" value="0" symbol="VARDECENUM_5_RUN"/>
+                    <Item name="Store To EEPROM" value="1" symbol="VARDECENUM_5_STORETOEEPROM"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_6</Name>
-                    <Item name="Disable on low ECUP" value="0" symbol="VARDECENUM_6_DISABLEONLOWECUP"/>
-                    <Item name="Keep alive" value="1" symbol="VARDECENUM_6_KEEPALIVE"/>
+                    <Item name="Disabled" value="0" symbol="VARDECENUM_6_DISABLED"/>
+                    <Item name="Enabled" value="1" symbol="VARDECENUM_6_ENABLED"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_7</Name>
-                    <Item name="Flash" value="0" symbol="VARDECENUM_7_FLASH"/>
-                    <Item name="Solid" value="1" symbol="VARDECENUM_7_SOLID"/>
+                    <Item name="Disable on low ECUP" value="0" symbol="VARDECENUM_7_DISABLEONLOWECUP"/>
+                    <Item name="Keep alive" value="1" symbol="VARDECENUM_7_KEEPALIVE"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_8</Name>
-                    <Item name="Off" value="0" symbol="VARDECENUM_8_OFF"/>
-                    <Item name="Normal" value="1" symbol="VARDECENUM_8_NORMAL"/>
-                    <Item name="Reverse" value="2" symbol="VARDECENUM_8_REVERSE"/>
+                    <Item name="Flash" value="0" symbol="VARDECENUM_8_FLASH"/>
+                    <Item name="Solid" value="1" symbol="VARDECENUM_8_SOLID"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_9</Name>
-                    <Item name="Power_Off" value="0" symbol="VARDECENUM_9_POWER_OFF"/>
-                    <Item name="Power_On" value="1" symbol="VARDECENUM_9_POWER_ON"/>
+                    <Item name="Off" value="0" symbol="VARDECENUM_9_OFF"/>
+                    <Item name="Normal" value="1" symbol="VARDECENUM_9_NORMAL"/>
+                    <Item name="Reverse" value="2" symbol="VARDECENUM_9_REVERSE"/>
                 </Enum>
                 
         </Add>
@@ -3915,10 +3979,74 @@
 		<Add xpath="Application">
 		
 		    <VarDecs>
+			    <DataStoreVarDec ref="CCP1_StationAddr">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>5.0</format>
+        		                <gain>1.0</gain>
+        		                <group>System | CCP | CCP1</group>
+        		                <help>Station ID for CCP handler&#58; CCP1</help>
+        		                <max>65535.000000</max>
+        		                <min>0.000000</min>
+        		                <name>CCP1_StationAddr</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="CCP1TxID">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>8.0</format>
+        		                <gain>1.0</gain>
+        		                <group>System | CCP | CCP1</group>
+        		                <help>Transmit CAN ID for CCP handler&#58; CCP1</help>
+        		                <max>4294967295.000000</max>
+        		                <min>0.000000</min>
+        		                <name>CCP1TxID</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="CCP1RxID">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>8.0</format>
+        		                <gain>1.0</gain>
+        		                <group>System | CCP | CCP1</group>
+        		                <help>Receive CAN ID for CCP handler&#58; CCP1</help>
+        		                <max>4294967295.000000</max>
+        		                <min>0.000000</min>
+        		                <name>CCP1RxID</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="CCP1RxIDMask">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>8.0</format>
+        		                <gain>1.0</gain>
+        		                <group>System | CCP | CCP1</group>
+        		                <help>Receive CAN ID Mask for CCP handler&#58; CCP1</help>
+        		                <max>4294967295.000000</max>
+        		                <min>0.000000</min>
+        		                <name>CCP1RxIDMask</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="ProcessorReboot">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_0</enum_name>
+        		                <enum_name>VarDecEnum_1</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -3952,7 +4080,7 @@
 			    <DataStoreVarDec ref="MPRD_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -3968,7 +4096,7 @@
 			    <DataStoreVarDec ref="MPRD_new">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_2</enum_name>
+        		                <enum_name>VarDecEnum_3</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -3986,7 +4114,7 @@
 			    <DataStoreVarDec ref="RestoreNVFactoryDefaults">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_3</enum_name>
+        		                <enum_name>VarDecEnum_4</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -4003,7 +4131,7 @@
 			    <DataStoreVarDec ref="StoreNV">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_4</enum_name>
+        		                <enum_name>VarDecEnum_5</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -4020,7 +4148,7 @@
 			    <DataStoreVarDec ref="MPRD">
         		                <access>RO RO RO RO</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_5</enum_name>
+        		                <enum_name>VarDecEnum_6</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -4037,7 +4165,7 @@
 			    <DataStoreVarDec ref="MPRD_KeepAlive">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_6</enum_name>
+        		                <enum_name>VarDecEnum_7</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -4069,7 +4197,7 @@
 			    <DataStoreVarDec ref="hsc_bcm_enable_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -4100,7 +4228,7 @@
 			    <DataStoreVarDec ref="hsc_bcm_epo_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -4131,7 +4259,7 @@
 			    <DataStoreVarDec ref="hsc_bcm_leakage_enable_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -4192,7 +4320,7 @@
 			    <DataStoreVarDec ref="hsc_bcm_mainc_enable_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -4238,7 +4366,7 @@
 			    <DataStoreVarDec ref="Flash_Reverse_Lights_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -4337,7 +4465,7 @@
 			    <DataStoreVarDec ref="RevOut__ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -4353,7 +4481,7 @@
 			    <DataStoreVarDec ref="RevIndType">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_7</enum_name>
+        		                <enum_name>VarDecEnum_8</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -4421,7 +4549,7 @@
 			    <DataStoreVarDec ref="FanOut_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -4539,7 +4667,7 @@
 			    <DataStoreVarDec ref="InhibitDCDC_Out__ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -4618,7 +4746,7 @@
 			    <DataStoreVarDec ref="EHPAS_Operating_Mode_Cmd_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -4649,7 +4777,7 @@
 			    <DataStoreVarDec ref="EMP_Speed_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -4680,7 +4808,7 @@
 			    <DataStoreVarDec ref="EMP_Mode_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -4711,7 +4839,7 @@
 			    <DataStoreVarDec ref="Fan_Mode">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_8</enum_name>
+        		                <enum_name>VarDecEnum_9</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -4727,7 +4855,7 @@
 			    <DataStoreVarDec ref="Fan_Hold_Mode">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_9</enum_name>
+        		                <enum_name>VarDecEnum_10</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -4743,7 +4871,7 @@
 			    <DataStoreVarDec ref="EMP_Fan_Speed_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -4841,12 +4969,12 @@
         		                <gain>1.0</gain>
         		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving|Regen</group>
         		                <help>Max tq regen can apply WARNING&#58; CHECK PEDAL AT MAX TQ</help>
-        		                <max>240.000000</max>
+        		                <max>1000.000000</max>
         		                <min>0.000000</min>
         		                <name>Max_Regen_Tq</name>
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
-        		                <units>%</units>
+        		                <units>nM</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -4942,12 +5070,12 @@
         		                <gain>1.0</gain>
         		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving|Regen</group>
         		                <help>Changing this will change the amount of drag on the vehile when coasting</help>
-        		                <max>240.000000</max>
+        		                <max>1000.000000</max>
         		                <min>0.000000</min>
         		                <name>Max_Coast_Tq</name>
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
-        		                <units>%</units>
+        		                <units>NM</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -4971,7 +5099,7 @@
 			    <DataStoreVarDec ref="Regen_SOC_Speed_Ramp_ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -4996,38 +5124,6 @@
         		                <name>Regen_SOC_Speed_Ramp_ovr_new</name>
         		                <offset>0.0</offset>
         		                <storage>RAM</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="SaturationUprLim">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Overheat Clip</group>
-        		                <help>Upper Limit Value</help>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>SaturationUprLim</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="SaturationLwrLim">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Overheat Clip</group>
-        		                <help>Lower Limit Value</help>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>SaturationLwrLim</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -5063,131 +5159,6 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="DriveMode">
-        		                <access>RW RW RW RW</access>
-        		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_10</enum_name>
-        		                <exp>1.0</exp>
-        		                <format>3.0</format>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive</group>
-        		                <max>255.000000</max>
-        		                <min>0.000000</min>
-        		                <name>DriveMode</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="RegenDisableTq">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Regen</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>RegenDisableTq</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="SOCClipDisable">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|SOC Clip</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>SOCClipDisable</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="OverHeatClipDisable">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Overheat Clip</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>OverHeatClipDisable</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="InverterOverheatLow">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Overheat Clip</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>InverterOverheatLow</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="InverterOverheatHigh">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Overheat Clip</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>InverterOverheatHigh</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="TorqueClipLwrLim">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management</group>
-        		                <help>Lower Limit Value</help>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>TorqueClipLwrLim</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <units>Nm</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="TorqueClipUprLim">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management</group>
-        		                <help>Upper Limit Value</help>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>TorqueClipUprLim</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <units>Nm</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="Reverse_TQ_Negative_Enable">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
@@ -5208,12 +5179,12 @@
         		                <access>RW RW RW RW</access>
         		                <class>VAR</class>
         		                <exp>1.0</exp>
-        		                <format>5.0</format>
+        		                <format>4.2</format>
         		                <gain>1.0</gain>
         		                <group>BuckyWagon_01|Foreground|Control Strategy|EHPAS_PercentControl</group>
         		                <help>Percent Duty cycle for pump under given condition</help>
-        		                <max>65535.000000</max>
-        		                <min>0.000000</min>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
         		                <name>EHPAS_stoppingEn</name>
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
@@ -5225,12 +5196,12 @@
         		                <access>RW RW RW RW</access>
         		                <class>VAR</class>
         		                <exp>1.0</exp>
-        		                <format>5.0</format>
+        		                <format>4.2</format>
         		                <gain>1.0</gain>
         		                <group>BuckyWagon_01|Foreground|Control Strategy|EHPAS_PercentControl</group>
         		                <help>Percent Duty cycle for pump under given condition</help>
-        		                <max>65535.000000</max>
-        		                <min>0.000000</min>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
         		                <name>EHPAS_slowingEn</name>
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
@@ -5242,12 +5213,12 @@
         		                <access>RW RW RW RW</access>
         		                <class>VAR</class>
         		                <exp>1.0</exp>
-        		                <format>5.0</format>
+        		                <format>4.2</format>
         		                <gain>1.0</gain>
         		                <group>BuckyWagon_01|Foreground|Control Strategy|EHPAS_PercentControl</group>
         		                <help>Percent Duty cycle for pump under given condition</help>
-        		                <max>65535.000000</max>
-        		                <min>0.000000</min>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
         		                <name>EHPAS_driveNbrakeEn</name>
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
@@ -5259,12 +5230,12 @@
         		                <access>RW RW RW RW</access>
         		                <class>VAR</class>
         		                <exp>1.0</exp>
-        		                <format>5.0</format>
+        		                <format>4.2</format>
         		                <gain>1.0</gain>
         		                <group>BuckyWagon_01|Foreground|Control Strategy|EHPAS_PercentControl</group>
         		                <help>Percent Duty cycle for pump under given condition</help>
-        		                <max>65535.000000</max>
-        		                <min>0.000000</min>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
         		                <name>EHPAS_keyUpEn</name>
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
@@ -5276,12 +5247,12 @@
         		                <access>RW RW RW RW</access>
         		                <class>VAR</class>
         		                <exp>1.0</exp>
-        		                <format>5.0</format>
+        		                <format>4.2</format>
         		                <gain>1.0</gain>
         		                <group>BuckyWagon_01|Foreground|Control Strategy|EHPAS_PercentControl</group>
         		                <help>Percent Duty cycle for pump under given condition</help>
-        		                <max>65535.000000</max>
-        		                <min>0.000000</min>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
         		                <name>EHPAS_brakeEn</name>
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
@@ -5293,12 +5264,12 @@
         		                <access>RW RW RW RW</access>
         		                <class>VAR</class>
         		                <exp>1.0</exp>
-        		                <format>5.0</format>
+        		                <format>4.2</format>
         		                <gain>1.0</gain>
         		                <group>BuckyWagon_01|Foreground|Control Strategy|EHPAS_PercentControl</group>
         		                <help>Percent Duty cycle for pump under given condition</help>
-        		                <max>65535.000000</max>
-        		                <min>0.000000</min>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
         		                <name>EHPAS_driveEn</name>
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
@@ -5310,12 +5281,12 @@
         		                <access>RW RW RW RW</access>
         		                <class>VAR</class>
         		                <exp>1.0</exp>
-        		                <format>5.0</format>
+        		                <format>4.2</format>
         		                <gain>1.0</gain>
         		                <group>BuckyWagon_01|Foreground|Control Strategy|EHPAS_PercentControl</group>
         		                <help>Percent Duty cycle for pump under given condition</help>
-        		                <max>65535.000000</max>
-        		                <min>0.000000</min>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
         		                <name>EHPAS_lowSpeedEn</name>
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
@@ -5327,12 +5298,12 @@
         		                <access>RW RW RW RW</access>
         		                <class>VAR</class>
         		                <exp>1.0</exp>
-        		                <format>5.0</format>
+        		                <format>4.2</format>
         		                <gain>1.0</gain>
         		                <group>BuckyWagon_01|Foreground|Control Strategy|EHPAS_PercentControl</group>
         		                <help>Percent Duty cycle for pump under given condition</help>
-        		                <max>65535.000000</max>
-        		                <min>0.000000</min>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
         		                <name>EHPAS_IdleEn</name>
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
@@ -5343,7 +5314,7 @@
 			    <DataStoreVarDec ref="Contactor_Shutdown_Test_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -5436,7 +5407,7 @@
 			    <DataStoreVarDec ref="In_Reverse_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -5569,7 +5540,7 @@
 			    <DataStoreVarDec ref="bcm_mainc_stat_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -5600,7 +5571,7 @@
 			    <DataStoreVarDec ref="bcm_ready_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -5631,7 +5602,7 @@
 			    <DataStoreVarDec ref="bcm_chargec_stat_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -5662,7 +5633,7 @@
 			    <DataStoreVarDec ref="SOC_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -5693,7 +5664,7 @@
 			    <DataStoreVarDec ref="bcm_cell_overvolt_ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -5724,7 +5695,7 @@
 			    <DataStoreVarDec ref="EHPAS_Pump_Speed_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -5755,7 +5726,7 @@
 			    <DataStoreVarDec ref="EHPAS_Op_State_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -5786,7 +5757,7 @@
 			    <DataStoreVarDec ref="EHPAS_Input_Current_NA_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -5817,7 +5788,7 @@
 			    <DataStoreVarDec ref="EHPAS_Input_Voltage_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -5848,7 +5819,7 @@
 			    <DataStoreVarDec ref="EHPAS_Fault_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -5879,7 +5850,7 @@
 			    <DataStoreVarDec ref="EHPAS_TempMax_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -5910,7 +5881,7 @@
 			    <DataStoreVarDec ref="EHPAS_TempCur_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -5957,7 +5928,7 @@
 			    <DataStoreVarDec ref="EMP_Pump_Speed_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -5988,7 +5959,7 @@
 			    <DataStoreVarDec ref="EMP_Speed_Percent_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -6019,7 +5990,7 @@
 			    <DataStoreVarDec ref="EMP_Pump_Mode_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -6050,7 +6021,7 @@
 			    <DataStoreVarDec ref="EMP_Pump_Status_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -6081,7 +6052,7 @@
 			    <DataStoreVarDec ref="EMP_Board_Temp_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -6112,7 +6083,7 @@
 			    <DataStoreVarDec ref="EMP_Pump_Power_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -6159,7 +6130,7 @@
 			    <DataStoreVarDec ref="EMP_Cooling_Fan_Speed_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -6190,7 +6161,7 @@
 			    <DataStoreVarDec ref="EMP_Cooling_Fan_Speed_Percent_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -6221,7 +6192,7 @@
 			    <DataStoreVarDec ref="EMP_Cooling_Fan_Mode_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -6252,7 +6223,7 @@
 			    <DataStoreVarDec ref="EMP_Cooling_Fan_Status_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -6283,7 +6254,7 @@
 			    <DataStoreVarDec ref="EMP_Cooling_Fan_Board_Temp_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -6314,7 +6285,7 @@
 			    <DataStoreVarDec ref="EMP_Cooling_Fan_Power_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -6478,7 +6449,7 @@
 			    <DataStoreVarDec ref="DisplayFaults">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_5</enum_name>
+        		                <enum_name>VarDecEnum_6</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -6651,7 +6622,7 @@
 			    <DataStoreVarDec ref="InputVoltage_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -6682,7 +6653,7 @@
 			    <DataStoreVarDec ref="motor_torque_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -6698,7 +6669,7 @@
 			    <DataStoreVarDec ref="Estop_switch_ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -6744,7 +6715,7 @@
 			    <DataStoreVarDec ref="Vehicle_Speed_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -6824,7 +6795,7 @@
 			    <DataStoreVarDec ref="Reverse_Switch_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -6891,7 +6862,7 @@
 			    <DataStoreVarDec ref="Accel_Pedal_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -6992,7 +6963,7 @@
 			    <DataStoreVarDec ref="Brake_Pedal_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -7140,7 +7111,7 @@
 			    <DataStoreVarDec ref="Inverter_Temp_Enable">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_5</enum_name>
+        		                <enum_name>VarDecEnum_6</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -7171,7 +7142,7 @@
 			    <DataStoreVarDec ref="Charger_Temp_Enable">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_5</enum_name>
+        		                <enum_name>VarDecEnum_6</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -7202,7 +7173,7 @@
 			    <DataStoreVarDec ref="Eaton_HV_Charger_Temperature_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -7233,7 +7204,7 @@
 			    <DataStoreVarDec ref="Rotor_Temp_Enable">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_5</enum_name>
+        		                <enum_name>VarDecEnum_6</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -7264,7 +7235,7 @@
 			    <DataStoreVarDec ref="Stator_Temp_Enable">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_5</enum_name>
+        		                <enum_name>VarDecEnum_6</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -7295,7 +7266,7 @@
 			    <DataStoreVarDec ref="EHPAS_PumpStateEnable_ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -7478,7 +7449,7 @@
 			    <DataStoreVarDec ref="Current_Limit_Override_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -7524,7 +7495,7 @@
 			    <DataStoreVarDec ref="Voltage_Limit_Override_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -7570,7 +7541,7 @@
 			    <DataStoreVarDec ref="Charge_Falt_Override_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -7586,7 +7557,7 @@
 			    <DataStoreVarDec ref="Charge_Falt_Override_new">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_5</enum_name>
+        		                <enum_name>VarDecEnum_6</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -7603,7 +7574,7 @@
 			    <DataStoreVarDec ref="Charge_Complete_Override_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -7651,7 +7622,7 @@
 			    <DataStoreVarDec ref="Charge_Enable_Override_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -7790,7 +7761,7 @@
 			    <DataStoreVarDec ref="UQM_Enable_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -7821,7 +7792,7 @@
 			    <DataStoreVarDec ref="UQM_Torque_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -7852,7 +7823,7 @@
 			    <DataStoreVarDec ref="UQM_Direction_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -7944,7 +7915,7 @@
 			    <DataStoreVarDec ref="Limits_Control_Mode">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_5</enum_name>
+        		                <enum_name>VarDecEnum_6</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
@@ -8101,7 +8072,7 @@
 			    <DataStoreVarDec ref="LVVolt_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -8270,7 +8241,7 @@
 			    <DataStoreVarDec ref="FaultSeverityIndicator_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -8301,7 +8272,7 @@
 			    <DataStoreVarDec ref="ChargerState_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -8332,7 +8303,7 @@
 			    <DataStoreVarDec ref="IgnitionStatus_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -8363,7 +8334,7 @@
 			    <DataStoreVarDec ref="OutputCurrent_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -8394,7 +8365,7 @@
 			    <DataStoreVarDec ref="OutputVoltage_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -8425,7 +8396,7 @@
 			    <DataStoreVarDec ref="InputCurrentLimitMax_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -8456,7 +8427,7 @@
 			    <DataStoreVarDec ref="InputCurrent_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <enum_name>VarDecEnum_2</enum_name>
         		                <exp>1.0</exp>
         		                <format>1.0</format>
         		                <gain>1.0</gain>
@@ -8872,7 +8843,7 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="MotoHawkTable2DMap">
+			    <DataStoreVarDec ref="RegenBatteryLimitsMap">
         		                <access>RW RW RW RW</access>
         		                <class>interpolation_2d</class>
         		                <col_len>8</col_len>
@@ -8883,16 +8854,16 @@
         		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving|Regen</group>
         		                <max>100000000000000000.000000</max>
         		                <min>-100000000000000000.000000</min>
-        		                <name>MotoHawkTable2DMap</name>
+        		                <name>RegenBatteryLimitsMap</name>
         		                <offset>0.0</offset>
-        		                <output>MotoHawkTable2D</output>
+        		                <output>RegenBatteryLimits</output>
         		                <row_len>4</row_len>
         		                <row_prelookup>StateOfChargePctIdxArr</row_prelookup>
         		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="MotoHawkTable2D">
+			    <DataStoreVarDec ref="RegenBatteryLimits">
         		                <access>RO RO RO RO</access>
         		                <class>var</class>
         		                <exp>1.0</exp>
@@ -8901,433 +8872,31 @@
         		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving|Regen</group>
         		                <max>100000000000000000.000000</max>
         		                <min>-100000000000000000.000000</min>
-        		                <name>MotoHawkTable2D</name>
+        		                <name>RegenBatteryLimits</name>
         		                <offset>0.0</offset>
         		                <storage>RAM</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="AccelPedalPreIdxArr">
-        		                <access>RW RW RW RW</access>
-        		                <class>prelookup</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management</group>
-        		                <index>AccelPedalPreIdx</index>
-        		                <input>AccelPedalPreIn</input>
-        		                <len>17</len>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>AccelPedalPreIdxArr</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="AccelPedalPreIdx">
-        		                <access>RO RO RO RO</access>
-        		                <class>VAR</class>
-        		                <exp>1</exp>
-        		                <format>4.2</format>
-        		                <gain>0.001953125</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management</group>
-        		                <max>127.998047</max>
-        		                <min>0.000000</min>
-        		                <name>AccelPedalPreIdx</name>
-        		                <offset>0</offset>
-        		                <storage>RAM</storage>
-        		                <units>idx.frac</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="AccelPedalPreIn">
-        		                <access>RO RO RO RO</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>AccelPedalPreIn</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="VehicleSpeedPreIdxArr">
-        		                <access>RW RW RW RW</access>
-        		                <class>prelookup</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management</group>
-        		                <index>VehicleSpeedPreIdx</index>
-        		                <input>VehicleSpeedPreIn</input>
-        		                <len>17</len>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>VehicleSpeedPreIdxArr</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="VehicleSpeedPreIdx">
-        		                <access>RO RO RO RO</access>
-        		                <class>VAR</class>
-        		                <exp>1</exp>
-        		                <format>4.2</format>
-        		                <gain>0.001953125</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management</group>
-        		                <max>127.998047</max>
-        		                <min>0.000000</min>
-        		                <name>VehicleSpeedPreIdx</name>
-        		                <offset>0</offset>
-        		                <storage>RAM</storage>
-        		                <units>idx.frac</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="VehicleSpeedPreIn">
-        		                <access>RO RO RO RO</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>VehicleSpeedPreIn</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="DriverDemandBaseReverseMap">
-        		                <access>RW RW RW RW</access>
-        		                <class>interpolation_2d</class>
-        		                <col_len>17</col_len>
-        		                <col_prelookup>VehicleSpeedPreIdxArr</col_prelookup>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|DriverDemandBase</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>DriverDemandBaseReverseMap</name>
-        		                <offset>0.0</offset>
-        		                <output>DriverDemandBaseReverse</output>
-        		                <row_len>17</row_len>
-        		                <row_prelookup>AccelPedalPreIdxArr</row_prelookup>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="DriverDemandBaseReverse">
-        		                <access>RO RO RO RO</access>
-        		                <class>var</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|DriverDemandBase</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>DriverDemandBaseReverse</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="DriverDemandBaseForwardMap">
-        		                <access>RW RW RW RW</access>
-        		                <class>interpolation_2d</class>
-        		                <col_len>17</col_len>
-        		                <col_prelookup>VehicleSpeedPreIdxArr</col_prelookup>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|DriverDemandBase</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>DriverDemandBaseForwardMap</name>
-        		                <offset>0.0</offset>
-        		                <output>DriverDemandBaseForward</output>
-        		                <row_len>17</row_len>
-        		                <row_prelookup>AccelPedalPreIdxArr</row_prelookup>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="DriverDemandBaseForward">
-        		                <access>RO RO RO RO</access>
-        		                <class>var</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|DriverDemandBase</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>DriverDemandBaseForward</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="RegenAccelMap">
-        		                <access>RW RW RW RW</access>
-        		                <class>interpolation_2d</class>
-        		                <col_len>17</col_len>
-        		                <col_prelookup>VehicleSpeedPreIdxArr</col_prelookup>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Regen</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>RegenAccelMap</name>
-        		                <offset>0.0</offset>
-        		                <output>RegenAccel</output>
-        		                <row_len>17</row_len>
-        		                <row_prelookup>AccelPedalPreIdxArr</row_prelookup>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="RegenAccel">
-        		                <access>RO RO RO RO</access>
-        		                <class>var</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Regen</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>RegenAccel</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="BrakePedalPreIdxArr">
-        		                <access>RW RW RW RW</access>
-        		                <class>prelookup</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management</group>
-        		                <index>BrakePedalPreIdx</index>
-        		                <input>BrakePedalPreIn</input>
-        		                <len>17</len>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>BrakePedalPreIdxArr</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="BrakePedalPreIdx">
-        		                <access>RO RO RO RO</access>
-        		                <class>VAR</class>
-        		                <exp>1</exp>
-        		                <format>4.2</format>
-        		                <gain>0.001953125</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management</group>
-        		                <max>127.998047</max>
-        		                <min>0.000000</min>
-        		                <name>BrakePedalPreIdx</name>
-        		                <offset>0</offset>
-        		                <storage>RAM</storage>
-        		                <units>idx.frac</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="BrakePedalPreIn">
-        		                <access>RO RO RO RO</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>BrakePedalPreIn</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="RegenBrakeMap">
-        		                <access>RW RW RW RW</access>
-        		                <class>interpolation_2d</class>
-        		                <col_len>17</col_len>
-        		                <col_prelookup>VehicleSpeedPreIdxArr</col_prelookup>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Regen</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>RegenBrakeMap</name>
-        		                <offset>0.0</offset>
-        		                <output>RegenBrake</output>
-        		                <row_len>17</row_len>
-        		                <row_prelookup>BrakePedalPreIdxArr</row_prelookup>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="RegenBrake">
-        		                <access>RO RO RO RO</access>
-        		                <class>var</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Regen</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>RegenBrake</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="SOCPreIdxArr">
-        		                <access>RW RW RW RW</access>
-        		                <class>prelookup</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management</group>
-        		                <index>SOCPreIdx</index>
-        		                <input>SOCPreIn</input>
-        		                <len>17</len>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>SOCPreIdxArr</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="SOCPreIdx">
-        		                <access>RO RO RO RO</access>
-        		                <class>VAR</class>
-        		                <exp>1</exp>
-        		                <format>4.2</format>
-        		                <gain>0.001953125</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management</group>
-        		                <max>127.998047</max>
-        		                <min>0.000000</min>
-        		                <name>SOCPreIdx</name>
-        		                <offset>0</offset>
-        		                <storage>RAM</storage>
-        		                <units>idx.frac</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="SOCPreIn">
-        		                <access>RO RO RO RO</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>SOCPreIn</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="ChargeClipMap">
-        		                <access>RW RW RW RW</access>
-        		                <class>interpolation_2d</class>
-        		                <col_len>17</col_len>
-        		                <col_prelookup>VehicleSpeedPreIdxArr</col_prelookup>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|SOC Clip</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>ChargeClipMap</name>
-        		                <offset>0.0</offset>
-        		                <output>ChargeClip</output>
-        		                <row_len>17</row_len>
-        		                <row_prelookup>SOCPreIdxArr</row_prelookup>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="ChargeClip">
-        		                <access>RO RO RO RO</access>
-        		                <class>var</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|SOC Clip</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>ChargeClip</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="DischargeClipMap">
-        		                <access>RW RW RW RW</access>
-        		                <class>interpolation_2d</class>
-        		                <col_len>17</col_len>
-        		                <col_prelookup>VehicleSpeedPreIdxArr</col_prelookup>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|SOC Clip</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>DischargeClipMap</name>
-        		                <offset>0.0</offset>
-        		                <output>DischargeClip</output>
-        		                <row_len>17</row_len>
-        		                <row_prelookup>SOCPreIdxArr</row_prelookup>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="DischargeClip">
-        		                <access>RO RO RO RO</access>
-        		                <class>var</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|SOC Clip</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>DischargeClip</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="AccelPedalMapIdxArr">
+			    <DataStoreVarDec ref="AccelPedalMap_v2IdxArr">
         		                <access>RW RW RW RW</access>
         		                <class>prelookup</class>
         		                <exp>1.0</exp>
         		                <format>4.2</format>
         		                <gain>1.0</gain>
         		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving</group>
-        		                <index>AccelPedalMapIdx</index>
-        		                <input>AccelPedalMapIn</input>
-        		                <len>101</len>
+        		                <index>AccelPedalMap_v2Idx</index>
+        		                <input>AccelPedalMap_v2In</input>
+        		                <len>13</len>
         		                <max>100000000000000000.000000</max>
         		                <min>-100000000000000000.000000</min>
-        		                <name>AccelPedalMapIdxArr</name>
+        		                <name>AccelPedalMap_v2IdxArr</name>
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="AccelPedalMapIdx">
+			    <DataStoreVarDec ref="AccelPedalMap_v2Idx">
         		                <access>RO RO RO RO</access>
         		                <class>VAR</class>
         		                <exp>1</exp>
@@ -9336,14 +8905,14 @@
         		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving</group>
         		                <max>127.998047</max>
         		                <min>0.000000</min>
-        		                <name>AccelPedalMapIdx</name>
+        		                <name>AccelPedalMap_v2Idx</name>
         		                <offset>0</offset>
         		                <storage>RAM</storage>
         		                <units>idx.frac</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="AccelPedalMapIn">
+			    <DataStoreVarDec ref="AccelPedalMap_v2In">
         		                <access>RO RO RO RO</access>
         		                <class>VAR</class>
         		                <exp>1.0</exp>
@@ -9351,31 +8920,31 @@
         		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving</group>
         		                <max>100000000000000000.000000</max>
         		                <min>-100000000000000000.000000</min>
-        		                <name>AccelPedalMapIn</name>
+        		                <name>AccelPedalMap_v2In</name>
         		                <offset>0.0</offset>
         		                <storage>RAM</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="AccelPedalMapTbl">
+			    <DataStoreVarDec ref="AccelPedalMap_v2Tbl">
         		                <access>RW RW RW RW</access>
         		                <class>interpolation_1d</class>
         		                <exp>1.0</exp>
         		                <format>1.4</format>
         		                <gain>1.0</gain>
         		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving</group>
-        		                <len>101</len>
+        		                <len>13</len>
         		                <max>100000000000000000.000000</max>
         		                <min>-100000000000000000.000000</min>
-        		                <name>AccelPedalMapTbl</name>
+        		                <name>AccelPedalMap_v2Tbl</name>
         		                <offset>0.0</offset>
-        		                <output>AccelPedalMap</output>
-        		                <prelookup>AccelPedalMapIdxArr</prelookup>
+        		                <output>AccelPedalMap_v2</output>
+        		                <prelookup>AccelPedalMap_v2IdxArr</prelookup>
         		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="AccelPedalMap">
+			    <DataStoreVarDec ref="AccelPedalMap_v2">
         		                <access>RO RO RO RO</access>
         		                <class>var</class>
         		                <exp>1.0</exp>
@@ -9384,7 +8953,7 @@
         		                <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving</group>
         		                <max>100000000000000000.000000</max>
         		                <min>-100000000000000000.000000</min>
-        		                <name>AccelPedalMap</name>
+        		                <name>AccelPedalMap_v2</name>
         		                <offset>0.0</offset>
         		                <storage>RAM</storage>
         		                <update>BACKGND</update>
@@ -9620,7 +9189,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut178p0011</help>
+        		                <help>Digital output pin selection for DOut177p001</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>ReverseOut_Pin</name>
@@ -9654,7 +9223,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut179p0011</help>
+        		                <help>Digital output pin selection for DOut178p001</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>DCDCInhibit_Out_Pin</name>
@@ -9671,7 +9240,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut180p0011</help>
+        		                <help>Digital output pin selection for DOut179p001</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>Brake_Light_Out</name>
@@ -10057,6 +9626,21 @@
 			    <Directory>C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\MOTOCO~1\..\ControlCoreClassic\Framework\MultiTask\Source\TPU\Generic\Archives\gcc-powerpc-eabi\4_4_0</Directory>
 			    <File>TPU_ISDL.a</File>
 		    </Library>
+                <Command>
+                    <Description>Dumping DLL to XML</Description>
+                    <Order>10000</Order>
+                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\motohawk_dumpdll.exe" -xml  "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\TDB\BuckyWago_187.dll" > "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\TDB\BuckyWago_187.xml"</Execute>
+                </Command>
+                <Command>
+                    <Description>Generating ASAP2 file</Description>
+                    <Order>10001</Order>
+                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\ASAP2.exe" -m  "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\TDB\BuckyWago_187.xml" -o  "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\TDB\BuckyWago_187.a2l" -u VirtualCalSpace -asap1b "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\mh_asap1b_ccp_CCP1.xml"</Execute>
+                </Command>
+                <Command>
+                    <Description>Installing ASAP2 file in C:\ECUFiles\TDBDLL\</Description>
+                    <Order>10002</Order>
+                    <Execute>@copy "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\TDB\BuckyWago_187.a2l" "C:\ECUFiles\TDBDLL\" > NUL</Execute>
+                </Command>
         </Add>
     
 	</Extension>

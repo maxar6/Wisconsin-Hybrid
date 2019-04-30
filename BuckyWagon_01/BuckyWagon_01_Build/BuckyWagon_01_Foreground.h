@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BuckyWagon_01'.
  *
- * Model version                  : 1.1575
+ * Model version                  : 1.1586
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Thu Apr 18 08:31:45 2019
+ * C/C++ source code generated on : Mon Apr 29 19:20:54 2019
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -31,19 +31,19 @@
 /* Child system includes */
 #include "BuckyWagon_01_MiniViewDisplay.h"
 
-/* Block signals for system '<S118>/Downsapmle' */
+/* Block signals for system '<S127>/Downsapmle' */
 typedef struct {
-  real_T s119_Out_1;                   /* '<S118>/Downsapmle' */
-  real_T s119_Out_2;                   /* '<S118>/Downsapmle' */
+  real_T s128_Out_1;                   /* '<S127>/Downsapmle' */
+  real_T s128_Out_2;                   /* '<S127>/Downsapmle' */
 } rtB_Downsapmle_BuckyWagon_01;
 
-/* Block states (auto storage) for system '<S118>/Downsapmle' */
+/* Block states (auto storage) for system '<S127>/Downsapmle' */
 typedef struct {
-  real_T s119_count;                   /* '<S118>/Downsapmle' */
-  real_T s119_Val1;                    /* '<S118>/Downsapmle' */
-  real_T s119_Val2;                    /* '<S118>/Downsapmle' */
-  uint8_T s119_is_active_c11_BuckyWagon_01;/* '<S118>/Downsapmle' */
-  uint8_T s119_is_c11_BuckyWagon_01;   /* '<S118>/Downsapmle' */
+  real_T s128_count;                   /* '<S127>/Downsapmle' */
+  real_T s128_Val1;                    /* '<S127>/Downsapmle' */
+  real_T s128_Val2;                    /* '<S127>/Downsapmle' */
+  uint8_T s128_is_active_c11_BuckyWagon_01;/* '<S127>/Downsapmle' */
+  uint8_T s128_is_c11_BuckyWagon_01;   /* '<S127>/Downsapmle' */
 } rtDW_Downsapmle_BuckyWagon_01;
 
 extern void BuckyWagon_01_Downsapmle_Init(rtB_Downsapmle_BuckyWagon_01 *localB,

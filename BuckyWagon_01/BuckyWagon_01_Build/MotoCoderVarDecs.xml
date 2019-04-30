@@ -1,6 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <VarDecs>
    <VarDec>
+      <name>CCP1_StationAddr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>65535</max>
+      <min>0</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Station ID for CCP handler: CCP1</help>
+      <group>System | CCP | CCP1</group>
+      <struct>ConstantWork.CCP1_StationAddr</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint16</type>
+   </VarDec>
+   <VarDec>
+      <name>CCP1TxID</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>4.294967295E9</max>
+      <min>0</min>
+      <format>8.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Transmit CAN ID for CCP handler: CCP1</help>
+      <group>System | CCP | CCP1</group>
+      <struct>ConstantWork.CCP1TxID</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint32</type>
+   </VarDec>
+   <VarDec>
+      <name>CCP1RxID</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>4.294967295E9</max>
+      <min>0</min>
+      <format>8.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Receive CAN ID for CCP handler: CCP1</help>
+      <group>System | CCP | CCP1</group>
+      <struct>ConstantWork.CCP1RxID</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint32</type>
+   </VarDec>
+   <VarDec>
+      <name>CCP1RxIDMask</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>4.294967295E9</max>
+      <min>0</min>
+      <format>8.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Receive CAN ID Mask for CCP handler: CCP1</help>
+      <group>System | CCP | CCP1</group>
+      <struct>ConstantWork.CCP1RxIDMask</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint32</type>
+   </VarDec>
+   <VarDec>
       <name>ProcessorReboot</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -1184,11 +1260,11 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>240</max>
+      <max>1000</max>
       <min>0</min>
       <format>1.2</format>
       <mask>0xFFFFFFFF</mask>
-      <units>%</units>
+      <units>nM</units>
       <ctype>const Constant_T</ctype>
       <help>Max tq regen can apply WARNING: CHECK PEDAL AT MAX TQ</help>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving|Regen</group>
@@ -1247,7 +1323,7 @@
       <max>1</max>
       <min>0</min>
       <format>1.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <mask>0x000000FF</mask>
       <units>%</units>
       <ctype>const Constant_T</ctype>
       <help>Pedal Position where regen is Full</help>
@@ -1256,7 +1332,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>Enable_Coast_Neg_Torque</name>
@@ -1267,7 +1343,7 @@
       <max>1</max>
       <min>0</min>
       <format>1.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <help>This allows neg. torque to be applied, depending on vehcild speed, when going from gas to brake</help>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving|Regen</group>
@@ -1275,7 +1351,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>Min_Speed_Allow_Coast_NegT</name>
@@ -1303,11 +1379,11 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>240</max>
+      <max>1000</max>
       <min>0</min>
       <format>1.2</format>
       <mask>0xFFFFFFFF</mask>
-      <units>%</units>
+      <units>NM</units>
       <ctype>const Constant_T</ctype>
       <help>Changing this will change the amount of drag on the vehile when coasting</help>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving|Regen</group>
@@ -1379,44 +1455,6 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>SaturationUprLim</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <help>Upper Limit Value</help>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Overheat Clip</group>
-      <struct>ConstantWork.SaturationUprLim</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>SaturationLwrLim</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <help>Lower Limit Value</help>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Overheat Clip</group>
-      <struct>ConstantWork.SaturationLwrLim</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
       <name>Temp_ped_switchOver</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -1455,159 +1493,6 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>DriveMode</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>255</max>
-      <min>0</min>
-      <format>3.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive</group>
-      <struct>ConstantWork.DriveMode</struct>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Torque_Management" value="0"/>
-         <item name="Normal" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>RegenDisableTq</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Regen</group>
-      <struct>ConstantWork.RegenDisableTq</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>SOCClipDisable</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|SOC Clip</group>
-      <struct>ConstantWork.SOCClipDisable</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>OverHeatClipDisable</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Overheat Clip</group>
-      <struct>ConstantWork.OverHeatClipDisable</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>InverterOverheatLow</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Overheat Clip</group>
-      <struct>ConstantWork.InverterOverheatLow</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>InverterOverheatHigh</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Overheat Clip</group>
-      <struct>ConstantWork.InverterOverheatHigh</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>TorqueClipLwrLim</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>Nm</units>
-      <ctype>const Constant_T</ctype>
-      <help>Lower Limit Value</help>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management</group>
-      <struct>ConstantWork.TorqueClipLwrLim</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>TorqueClipUprLim</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>Nm</units>
-      <ctype>const Constant_T</ctype>
-      <help>Upper Limit Value</help>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management</group>
-      <struct>ConstantWork.TorqueClipUprLim</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
       <name>Reverse_TQ_Negative_Enable</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -1636,10 +1521,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>65535</max>
-      <min>0</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
       <units>%</units>
       <ctype>const Constant_T</ctype>
       <help>Percent Duty cycle for pump under given condition</help>
@@ -1648,7 +1533,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>uint16</type>
+      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>EHPAS_slowingEn</name>
@@ -1656,10 +1541,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>65535</max>
-      <min>0</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
       <units>%</units>
       <ctype>const Constant_T</ctype>
       <help>Percent Duty cycle for pump under given condition</help>
@@ -1668,7 +1553,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>uint16</type>
+      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>EHPAS_driveNbrakeEn</name>
@@ -1676,10 +1561,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>65535</max>
-      <min>0</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
       <units>%</units>
       <ctype>const Constant_T</ctype>
       <help>Percent Duty cycle for pump under given condition</help>
@@ -1688,7 +1573,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>uint16</type>
+      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>EHPAS_keyUpEn</name>
@@ -1696,10 +1581,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>65535</max>
-      <min>0</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
       <units>%</units>
       <ctype>const Constant_T</ctype>
       <help>Percent Duty cycle for pump under given condition</help>
@@ -1708,7 +1593,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>uint16</type>
+      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>EHPAS_brakeEn</name>
@@ -1716,10 +1601,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>65535</max>
-      <min>0</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
       <units>%</units>
       <ctype>const Constant_T</ctype>
       <help>Percent Duty cycle for pump under given condition</help>
@@ -1728,7 +1613,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>uint16</type>
+      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>EHPAS_driveEn</name>
@@ -1736,10 +1621,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>65535</max>
-      <min>0</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
       <units>%</units>
       <ctype>const Constant_T</ctype>
       <help>Percent Duty cycle for pump under given condition</help>
@@ -1748,7 +1633,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>uint16</type>
+      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>EHPAS_lowSpeedEn</name>
@@ -1756,10 +1641,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>65535</max>
-      <min>0</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
       <units>%</units>
       <ctype>const Constant_T</ctype>
       <help>Percent Duty cycle for pump under given condition</help>
@@ -1768,7 +1653,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>uint16</type>
+      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>EHPAS_IdleEn</name>
@@ -1776,10 +1661,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>65535</max>
-      <min>0</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
       <units>%</units>
       <ctype>const Constant_T</ctype>
       <help>Percent Duty cycle for pump under given condition</help>
@@ -1788,7 +1673,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>uint16</type>
+      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>Contactor_Shutdown_Test_ovr</name>
@@ -6262,7 +6147,7 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>MotoHawkTable2DMap</name>
+      <name>RegenBatteryLimitsMap</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -6273,19 +6158,19 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>const Constant_T</ctype>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving|Regen</group>
-      <struct>ConstantWork.MotoHawkTable2DMap.data</struct>
+      <struct>ConstantWork.RegenBatteryLimitsMap.data</struct>
       <class>interpolation_2d</class>
       <storage>FLASH</storage>
       <update>REMOTE</update>
       <type>real32</type>
-      <output>MotoHawkTable2D</output>
+      <output>RegenBatteryLimits</output>
       <col_prelookup>MotorSpdIdxArr</col_prelookup>
       <col_len>8</col_len>
       <row_prelookup>StateOfChargePctIdxArr</row_prelookup>
       <row_len>4</row_len>
    </VarDec>
    <VarDec>
-      <name>MotoHawkTable2D</name>
+      <name>RegenBatteryLimits</name>
       <access>RO RO RO RO</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -6296,492 +6181,14 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving|Regen</group>
-      <struct>VolatileWork_BSS.MotoHawkTable2D</struct>
+      <struct>VolatileWork_BSS.RegenBatteryLimits</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>AccelPedalPreIdxArr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management</group>
-      <struct>ConstantWork.AccelPedalPreIdxArr</struct>
-      <class>prelookup</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <len>17</len>
-      <input>AccelPedalPreIn</input>
-      <index>AccelPedalPreIdx</index>
-   </VarDec>
-   <VarDec>
-      <name>AccelPedalPreIdx</name>
-      <access>RO RO RO RO</access>
-      <gain>0.001953125</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>127.998046875</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0x0000FFFF</mask>
-      <units>idx.frac</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management</group>
-      <struct>VolatileWork_BSS.AccelPedalPreIdx</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint16</type>
-   </VarDec>
-   <VarDec>
-      <name>AccelPedalPreIn</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management</group>
-      <struct>VolatileWork_BSS.AccelPedalPreIn</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>VehicleSpeedPreIdxArr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management</group>
-      <struct>ConstantWork.VehicleSpeedPreIdxArr</struct>
-      <class>prelookup</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <len>17</len>
-      <input>VehicleSpeedPreIn</input>
-      <index>VehicleSpeedPreIdx</index>
-   </VarDec>
-   <VarDec>
-      <name>VehicleSpeedPreIdx</name>
-      <access>RO RO RO RO</access>
-      <gain>0.001953125</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>127.998046875</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0x0000FFFF</mask>
-      <units>idx.frac</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management</group>
-      <struct>VolatileWork_BSS.VehicleSpeedPreIdx</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint16</type>
-   </VarDec>
-   <VarDec>
-      <name>VehicleSpeedPreIn</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management</group>
-      <struct>VolatileWork_BSS.VehicleSpeedPreIn</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>DriverDemandBaseReverseMap</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|DriverDemandBase</group>
-      <struct>ConstantWork.DriverDemandBaseReverseMap.data</struct>
-      <class>interpolation_2d</class>
-      <storage>FLASH</storage>
-      <update>REMOTE</update>
-      <type>real32</type>
-      <output>DriverDemandBaseReverse</output>
-      <col_prelookup>VehicleSpeedPreIdxArr</col_prelookup>
-      <col_len>17</col_len>
-      <row_prelookup>AccelPedalPreIdxArr</row_prelookup>
-      <row_len>17</row_len>
-   </VarDec>
-   <VarDec>
-      <name>DriverDemandBaseReverse</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|DriverDemandBase</group>
-      <struct>VolatileWork_BSS.DriverDemandBaseReverse</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>DriverDemandBaseForwardMap</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|DriverDemandBase</group>
-      <struct>ConstantWork.DriverDemandBaseForwardMap.data</struct>
-      <class>interpolation_2d</class>
-      <storage>FLASH</storage>
-      <update>REMOTE</update>
-      <type>real32</type>
-      <output>DriverDemandBaseForward</output>
-      <col_prelookup>VehicleSpeedPreIdxArr</col_prelookup>
-      <col_len>17</col_len>
-      <row_prelookup>AccelPedalPreIdxArr</row_prelookup>
-      <row_len>17</row_len>
-   </VarDec>
-   <VarDec>
-      <name>DriverDemandBaseForward</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|DriverDemandBase</group>
-      <struct>VolatileWork_BSS.DriverDemandBaseForward</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>RegenAccelMap</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Regen</group>
-      <struct>ConstantWork.RegenAccelMap.data</struct>
-      <class>interpolation_2d</class>
-      <storage>FLASH</storage>
-      <update>REMOTE</update>
-      <type>real32</type>
-      <output>RegenAccel</output>
-      <col_prelookup>VehicleSpeedPreIdxArr</col_prelookup>
-      <col_len>17</col_len>
-      <row_prelookup>AccelPedalPreIdxArr</row_prelookup>
-      <row_len>17</row_len>
-   </VarDec>
-   <VarDec>
-      <name>RegenAccel</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Regen</group>
-      <struct>VolatileWork_BSS.RegenAccel</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>BrakePedalPreIdxArr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management</group>
-      <struct>ConstantWork.BrakePedalPreIdxArr</struct>
-      <class>prelookup</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <len>17</len>
-      <input>BrakePedalPreIn</input>
-      <index>BrakePedalPreIdx</index>
-   </VarDec>
-   <VarDec>
-      <name>BrakePedalPreIdx</name>
-      <access>RO RO RO RO</access>
-      <gain>0.001953125</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>127.998046875</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0x0000FFFF</mask>
-      <units>idx.frac</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management</group>
-      <struct>VolatileWork_BSS.BrakePedalPreIdx</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint16</type>
-   </VarDec>
-   <VarDec>
-      <name>BrakePedalPreIn</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management</group>
-      <struct>VolatileWork_BSS.BrakePedalPreIn</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>RegenBrakeMap</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Regen</group>
-      <struct>ConstantWork.RegenBrakeMap.data</struct>
-      <class>interpolation_2d</class>
-      <storage>FLASH</storage>
-      <update>REMOTE</update>
-      <type>real32</type>
-      <output>RegenBrake</output>
-      <col_prelookup>VehicleSpeedPreIdxArr</col_prelookup>
-      <col_len>17</col_len>
-      <row_prelookup>BrakePedalPreIdxArr</row_prelookup>
-      <row_len>17</row_len>
-   </VarDec>
-   <VarDec>
-      <name>RegenBrake</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|Regen</group>
-      <struct>VolatileWork_BSS.RegenBrake</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>SOCPreIdxArr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management</group>
-      <struct>ConstantWork.SOCPreIdxArr</struct>
-      <class>prelookup</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <len>17</len>
-      <input>SOCPreIn</input>
-      <index>SOCPreIdx</index>
-   </VarDec>
-   <VarDec>
-      <name>SOCPreIdx</name>
-      <access>RO RO RO RO</access>
-      <gain>0.001953125</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>127.998046875</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0x0000FFFF</mask>
-      <units>idx.frac</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management</group>
-      <struct>VolatileWork_BSS.SOCPreIdx</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint16</type>
-   </VarDec>
-   <VarDec>
-      <name>SOCPreIn</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management</group>
-      <struct>VolatileWork_BSS.SOCPreIn</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>ChargeClipMap</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|SOC Clip</group>
-      <struct>ConstantWork.ChargeClipMap.data</struct>
-      <class>interpolation_2d</class>
-      <storage>FLASH</storage>
-      <update>REMOTE</update>
-      <type>real32</type>
-      <output>ChargeClip</output>
-      <col_prelookup>VehicleSpeedPreIdxArr</col_prelookup>
-      <col_len>17</col_len>
-      <row_prelookup>SOCPreIdxArr</row_prelookup>
-      <row_len>17</row_len>
-   </VarDec>
-   <VarDec>
-      <name>ChargeClip</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|SOC Clip</group>
-      <struct>VolatileWork_BSS.ChargeClip</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>DischargeClipMap</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|SOC Clip</group>
-      <struct>ConstantWork.DischargeClipMap.data</struct>
-      <class>interpolation_2d</class>
-      <storage>FLASH</storage>
-      <update>REMOTE</update>
-      <type>real32</type>
-      <output>DischargeClip</output>
-      <col_prelookup>VehicleSpeedPreIdxArr</col_prelookup>
-      <col_len>17</col_len>
-      <row_prelookup>SOCPreIdxArr</row_prelookup>
-      <row_len>17</row_len>
-   </VarDec>
-   <VarDec>
-      <name>DischargeClip</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Torque Management|SOC Clip</group>
-      <struct>VolatileWork_BSS.DischargeClip</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>AccelPedalMapIdxArr</name>
+      <name>AccelPedalMap_v2IdxArr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -6792,17 +6199,17 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>const Constant_T</ctype>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving</group>
-      <struct>ConstantWork.AccelPedalMapIdxArr</struct>
+      <struct>ConstantWork.AccelPedalMap_v2IdxArr</struct>
       <class>prelookup</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
-      <len>101</len>
-      <input>AccelPedalMapIn</input>
-      <index>AccelPedalMapIdx</index>
+      <len>13</len>
+      <input>AccelPedalMap_v2In</input>
+      <index>AccelPedalMap_v2Idx</index>
    </VarDec>
    <VarDec>
-      <name>AccelPedalMapIdx</name>
+      <name>AccelPedalMap_v2Idx</name>
       <access>RO RO RO RO</access>
       <gain>0.001953125</gain>
       <offset>0</offset>
@@ -6814,14 +6221,14 @@
       <units>idx.frac</units>
       <ctype>Volatile_BSS_T</ctype>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving</group>
-      <struct>VolatileWork_BSS.AccelPedalMapIdx</struct>
+      <struct>VolatileWork_BSS.AccelPedalMap_v2Idx</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint16</type>
    </VarDec>
    <VarDec>
-      <name>AccelPedalMapIn</name>
+      <name>AccelPedalMap_v2In</name>
       <access>RO RO RO RO</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -6832,14 +6239,14 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving</group>
-      <struct>VolatileWork_BSS.AccelPedalMapIn</struct>
+      <struct>VolatileWork_BSS.AccelPedalMap_v2In</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>AccelPedalMapTbl</name>
+      <name>AccelPedalMap_v2Tbl</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -6850,17 +6257,17 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>const Constant_T</ctype>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving</group>
-      <struct>ConstantWork.AccelPedalMapTbl</struct>
+      <struct>ConstantWork.AccelPedalMap_v2Tbl</struct>
       <class>interpolation_1d</class>
       <storage>FLASH</storage>
       <update>REMOTE</update>
       <type>real32</type>
-      <len>101</len>
-      <output>AccelPedalMap</output>
-      <prelookup>AccelPedalMapIdxArr</prelookup>
+      <len>13</len>
+      <output>AccelPedalMap_v2</output>
+      <prelookup>AccelPedalMap_v2IdxArr</prelookup>
    </VarDec>
    <VarDec>
-      <name>AccelPedalMap</name>
+      <name>AccelPedalMap_v2</name>
       <access>RO RO RO RO</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -6871,7 +6278,7 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>Volatile_BSS_T</ctype>
       <group>BuckyWagon_01|Foreground|Control Strategy|Drive|Normal Driving</group>
-      <struct>VolatileWork_BSS.AccelPedalMap</struct>
+      <struct>VolatileWork_BSS.AccelPedalMap_v2</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -7767,7 +7174,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut178p0011</help>
+      <help>Digital output pin selection for DOut177p001</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.ReverseOut_Pin</struct>
       <storage>FLASH</storage>
@@ -7895,7 +7302,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut179p0011</help>
+      <help>Digital output pin selection for DOut178p001</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.DCDCInhibit_Out_Pin</struct>
       <storage>FLASH</storage>
@@ -7958,7 +7365,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut180p0011</help>
+      <help>Digital output pin selection for DOut179p001</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.Brake_Light_Out</struct>
       <storage>FLASH</storage>

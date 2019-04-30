@@ -6,7 +6,6 @@
 #include "c2_BuckyWagon_01.h"
 #include "c3_BuckyWagon_01.h"
 #include "c4_BuckyWagon_01.h"
-#include "c5_BuckyWagon_01.h"
 #include "c6_BuckyWagon_01.h"
 #include "c9_BuckyWagon_01.h"
 #include "c11_BuckyWagon_01.h"
@@ -55,11 +54,6 @@ unsigned int sf_BuckyWagon_01_method_dispatcher(SimStruct *simstructPtr,
 
   if (chartFileNumber==4) {
     c4_BuckyWagon_01_method_dispatcher(simstructPtr, method, data);
-    return 1;
-  }
-
-  if (chartFileNumber==5) {
-    c5_BuckyWagon_01_method_dispatcher(simstructPtr, method, data);
     return 1;
   }
 
@@ -121,10 +115,10 @@ unsigned int sf_BuckyWagon_01_process_check_sum_call( int nlhs, mxArray * plhs[]
       ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(0U);
       ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(0U);
     } else if (!strcmp(commandName,"makefile")) {
-      ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(3920871809U);
-      ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(3721775303U);
-      ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(3357918396U);
-      ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(2966319527U);
+      ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(302377740U);
+      ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(566039829U);
+      ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(482434304U);
+      ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(1784377793U);
     } else if (nrhs==3 && !strcmp(commandName,"chart")) {
       unsigned int chartFileNumber;
       chartFileNumber = (unsigned int)mxGetScalar(prhs[2]);
@@ -154,13 +148,6 @@ unsigned int sf_BuckyWagon_01_process_check_sum_call( int nlhs, mxArray * plhs[]
         {
           extern void sf_c4_BuckyWagon_01_get_check_sum(mxArray *plhs[]);
           sf_c4_BuckyWagon_01_get_check_sum(plhs);
-          break;
-        }
-
-       case 5:
-        {
-          extern void sf_c5_BuckyWagon_01_get_check_sum(mxArray *plhs[]);
-          sf_c5_BuckyWagon_01_get_check_sum(plhs);
           break;
         }
 
@@ -214,10 +201,10 @@ unsigned int sf_BuckyWagon_01_process_check_sum_call( int nlhs, mxArray * plhs[]
       return 0;
     }
   } else {
-    ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(1219751935U);
-    ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(3863451111U);
-    ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(1248149661U);
-    ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(2790332880U);
+    ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(3031618584U);
+    ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(179756041U);
+    ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(2303778252U);
+    ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(2433036612U);
   }
 
   return 1;
@@ -275,13 +262,6 @@ unsigned int sf_BuckyWagon_01_autoinheritance_info( int nlhs, mxArray * plhs[],
       {
         extern mxArray *sf_c4_BuckyWagon_01_get_autoinheritance_info(void);
         plhs[0] = sf_c4_BuckyWagon_01_get_autoinheritance_info();
-        break;
-      }
-
-     case 5:
-      {
-        extern mxArray *sf_c5_BuckyWagon_01_get_autoinheritance_info(void);
-        plhs[0] = sf_c5_BuckyWagon_01_get_autoinheritance_info();
         break;
       }
 
@@ -399,17 +379,6 @@ unsigned int sf_BuckyWagon_01_get_eml_resolved_functions_info( int nlhs, mxArray
         break;
       }
 
-     case 5:
-      {
-        extern const mxArray
-          *sf_c5_BuckyWagon_01_get_eml_resolved_functions_info(void);
-        mxArray *persistentMxArray = (mxArray *)
-          sf_c5_BuckyWagon_01_get_eml_resolved_functions_info();
-        plhs[0] = mxDuplicateArray(persistentMxArray);
-        mxDestroyArray(persistentMxArray);
-        break;
-      }
-
      case 6:
       {
         extern const mxArray
@@ -483,7 +452,7 @@ unsigned int sf_BuckyWagon_01_get_eml_resolved_functions_info( int nlhs, mxArray
 void BuckyWagon_01_debug_initialize(void)
 {
   _BuckyWagon_01MachineNumber_ = sf_debug_initialize_machine("BuckyWagon_01",
-    "sfun",0,10,0,0,0);
+    "sfun",0,9,0,0,0);
   sf_debug_set_machine_event_thresholds(_BuckyWagon_01MachineNumber_,0,0);
   sf_debug_set_machine_data_thresholds(_BuckyWagon_01MachineNumber_,0);
 }

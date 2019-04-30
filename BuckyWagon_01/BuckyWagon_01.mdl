@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1576"
+    ComputedModelVersion    "1.1587"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -26,42 +26,42 @@ Model {
   InitFcn		  "try, eval([bdroot '_setup']); catch, eval('model_setup', ''); end"
   UserBdParams		  "MotoHawkBuildVersion;MotoHawkBuildStats;MotoHawkModelSavedName;MotoHawkModelGUID;MotoHawkModelOpenT"
   "ime;MotoHawkModelElapsedTime;MotoHawkBuildInfo;MotoHawkBuildGUID"
-  MotoHawkBuildVersion	  "185"
+  MotoHawkBuildVersion	  "188"
   MotoHawkBuildStats	  "struct('TotalFLASH',{281540},'TotalEEPROM',{370},'TotalRAM',{18696},'AppFLASH',{71914},'AppEEP"
-  "ROM',{196},'AppRAM',{2166},'HeapRAM',{4096},'BuildSuccessCount',{188},'BuildErrorCount',{29},'OSRAM',{4754},'StackRA"
+  "ROM',{196},'AppRAM',{2166},'HeapRAM',{4096},'BuildSuccessCount',{191},'BuildErrorCount',{29},'OSRAM',{4754},'StackRA"
   "M',{7680},'FgndTimeStackSize',{3072},'FgndAngleStackSize',{0},'BgndStackSize',{2048},'IdleStackSize',{1024},'Interru"
   "ptStackSize',{1536},'RTWBlockIOSize',{852},'RTWDWorkSize',{364},'RTWPrevZCSize',{0},'VolatileSize',{272},'NonVolatil"
   "eSize',{196},'ConstantSize',{2208})"
   MotoHawkModelSavedName  "BuckyWagon_01"
   MotoHawkModelGUID	  "3c32a120-d49a-4164-87-fe-ac-4b-55-ed-6f"
-  MotoHawkModelOpenTime	  "2019 4 17 14 50 33.484 "
-  MotoHawkModelElapsedTime "-3182712.697"
+  MotoHawkModelOpenTime	  "2019 4 29 16 2 37.731 "
+  MotoHawkModelElapsedTime "-3143405.299"
   MotoHawkBuildInfo	  "struct('model_name',{'BuckyWagon_01'},'motohawk_version',{'2011a_sp0.184'},'motohawk_component_"
-  "version',{'0.0.7'},'matlab_version',{'7.12.0'},'build_version',{'184'},'module_type',{'ECU565-128'},'layout_type',{'"
+  "version',{'0.0.7'},'matlab_version',{'7.12.0'},'build_version',{'187'},'module_type',{'ECU565-128'},'layout_type',{'"
   "DEV'},'processor_family',{'PPC'},'processor_type',{'MPC565'},'toolchain_vendor',{'gcc-powerpc-eabi'},'toolchain_vers"
   "ion',{'4.4.0'},'component',{0},'archive_file',{'PCM128.a'},'enable_build',{1},'fptype',{0},'flash_size',{1048576},'e"
   "e_size',{8192},'ram_size',{36864},'decram_size',{4096},'module_memory_def',{'MPC565_ModMemoryDef_Dev'},'eri_table0_r"
   "ev',{9},'max_eri_table_size',{65535},'use_debug_vardecs',{1},'use_info_vardecs',{1},'fgnd_base_period_ms',{5},'bgnd_"
   "base_period_ms',{50},'root_build_dir',{'C:\\Users\\maxar\\Documents\\GitHub\\Wisconsin-Hybrid\\BuckyWagon_01'},'buil"
   "d_dir',{'C:\\Users\\maxar\\Documents\\GitHub\\Wisconsin-Hybrid\\BuckyWagon_01\\BuckyWagon_01_Build'},'dll_name',{'Bu"
-  "ckyWago_184'},'srz_name',{'BuckyWagon_01_184'},'fgnd_stack_size',{3072},'fgnd_angle_stack_size',{0},'bgnd_stack_size"
+  "ckyWago_187'},'srz_name',{'BuckyWagon_01_187'},'fgnd_stack_size',{3072},'fgnd_angle_stack_size',{0},'bgnd_stack_size"
   "',{2048},'idle_stack_size',{1024},'irq_stack_size',{1536},'heap_size',{4096},'heap_margin',{409},'install_dll_dir',{"
   "'C:\\ECUFiles\\TDBDLL\\'},'install_srz_dir',{'C:\\ECUFiles\\Programs'},'app_int_stack_size',{1024},'shutdown_stack_s"
   "ize',{1024},'mingw_dir',{'C:\\PROGRA~2\\Woodward\\DEVELO~1\\TOOLCH~1\\GCC\\win32-pe\\4_4_0\\'},'motohawk_dir',{'C:\\"
   "PROGRA~2\\Woodward\\MCS\\MotoHawk\\2011A_~1.184'},'toolchain_dir',{'C:\\Program Files (x86)\\Woodward\\DevelopmentTo"
   "ols\\Toolchains\\GCC\\powerpc-eabi\\4_4_0\\'},'matlab_root',{'C:\\Program Files (x86)\\MATLAB\\R2011a'},'model_guid'"
-  ",{'3c32a120-d49a-4164-87-fe-ac-4b-55-ed-6f'},'build_guid',{'df5fc22c-1498-48ea-89-0c-9e-4e-62-43-4f'},'token_guid',{"
+  ",{'3c32a120-d49a-4164-87-fe-ac-4b-55-ed-6f'},'build_guid',{'683b644b-5f35-4334-8b-a4-97-61-ca-b7-60'},'token_guid',{"
   "'DD8AD11F95A6FC42BFF9AC780840E4B4'})"
-  MotoHawkBuildGUID	  "df5fc22c-1498-48ea-89-0c-9e-4e-62-43-4f"
+  MotoHawkBuildGUID	  "683b644b-5f35-4334-8b-a4-97-61-ca-b7-60"
   Created		  "Mon May 16 15:00:08 2005"
   Creator		  "Danny"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "maxar"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Apr 18 08:33:15 2019"
-  RTWModifiedTimeStamp	  477428739
-  ModelVersionFormat	  "1.%<AutoIncrement:1576>"
+  LastModifiedDate	  "Mon Apr 29 19:23:23 2019"
+  RTWModifiedTimeStamp	  478454805
+  ModelVersionFormat	  "1.%<AutoIncrement:1587>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1582,9 +1582,9 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "108"
+    ZoomFactor		    "55"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "4477"
+    SIDHighWatermark	    "4483"
     Block {
       BlockType		      SubSystem
       Name		      "Build Toolchain (GCC)"
@@ -1750,6 +1750,41 @@ Model {
       mototune_group	      "'System | System Config | Communication Config'"
     }
     Block {
+      BlockType		      Reference
+      Name		      "CCP CAN Protocol"
+      SID		      "4478"
+      Ports		      []
+      Position		      [930, 33, 1320, 279]
+      LibraryVersion	      "MotoHawk 0.2.3"
+      SourceBlock	      "MotoHawk_lib/CCP Slave/CCP CAN Protocol"
+      SourceType	      "MotoHawk CCP CAN Protocol Handler"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      GeneratePreprocessorConditionals off
+      image_file	      "'ccp.jpg'"
+      mtninstance	      "'CCP1'"
+      stataddr		      "hex2dec('31')"
+      channel_name	      "'CAN_1'"
+      channel		      "-2"
+      rxid		      "hex2dec('18ef0231')"
+      rxidtype		      "1"
+      rxidmasknom	      "hex2dec('1fffffff')"
+      txid		      "hex2dec('18ef3102')"
+      txidtype		      "1"
+      daqs		      "4"
+      odts		      "8"
+      nvodt		      "0"
+      send_cpb_resp	      off
+      use_mototune_group      off
+      mototune_group	      "['System | CCP | ', motohawk_get_param_ws(gcb, 'mtninstance')]"
+    }
+    Block {
       BlockType		      SubSystem
       Name		      "Foreground"
       SID		      "4"
@@ -1804,7 +1839,7 @@ Model {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "Actuators"
-	    Location		    [231, 82, 1331, 725]
+	    Location		    [274, 83, 1347, 698]
 	    Open		    off
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    229
@@ -4130,10 +4165,10 @@ Model {
 	      Ports		      [1, 1]
 	      Position		      [165, 241, 170, 279]
 	      ShowName		      off
-	      OutputSignals	      "EHPAS_enable"
+	      OutputSignals	      "EHPAS_speed"
 	      Port {
 		PortNumber		1
-		Name			"<EHPAS_enable>"
+		Name			"<EHPAS_speed>"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
@@ -4184,7 +4219,7 @@ Model {
 	      MaskHideContents	      off
 	      System {
 		Name			"EHPAS Power Steering Pump Controller"
-		Location		[0, -1006, 1687, -21]
+		Location		[274, 83, 1347, 698]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	229
@@ -4196,34 +4231,67 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"82"
+		ZoomFactor		"100"
 		Block {
 		  BlockType		  Inport
-		  Name			  "Enable"
+		  Name			  "EHPAS Speed"
 		  SID			  "1820"
-		  Position		  [20, 183, 50, 197]
+		  Position		  [25, 183, 55, 197]
 		  IconDisplay		  "Port number"
-		  OutDataTypeStr	  "boolean"
 		}
 		Block {
 		  BlockType		  EnablePort
 		  Name			  "Enable1"
 		  SID			  "3958"
 		  Ports			  []
-		  Position		  [200, 280, 220, 300]
+		  Position		  [305, 280, 325, 300]
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Compare\nTo Constant"
+		  SID			  "4480"
+		  Ports			  [1, 1]
+		  Position		  [100, 175, 130, 205]
+		  LibraryVersion	  "1.236"
+		  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+		  SourceType		  "Compare To Constant"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  GeneratePreprocessorConditionals off
+		  relop			  ">"
+		  const			  "0"
+		  LogicOutDataTypeMode	  "uint8"
+		  ZeroCross		  on
+		}
+		Block {
+		  BlockType		  MinMax
+		  Name			  "MinMax"
+		  SID			  "4481"
+		  Ports			  [2, 1]
+		  Position		  [525, 407, 555, 438]
+		  Function		  "min"
+		  Inputs		  "2"
+		  InputSameDT		  off
+		  SaturateOnIntegerOverflow off
 		}
 		Block {
 		  BlockType		  Constant
 		  Name			  "Operating Mode - Activate"
 		  SID			  "1822"
-		  Position		  [45, 105, 75, 135]
+		  Position		  [150, 115, 180, 145]
 		  OutDataTypeStr	  "uint8"
 		}
 		Block {
 		  BlockType		  Constant
 		  Name			  "Operating Mode - Disabled"
 		  SID			  "1823"
-		  Position		  [45, 220, 75, 250]
+		  Position		  [150, 220, 180, 250]
 		  Value			  "0"
 		  OutDataTypeStr	  "uint8"
 		}
@@ -4232,7 +4300,7 @@ Model {
 		  Name			  "Send CAN Messages"
 		  SID			  "1538"
 		  Ports			  [2]
-		  Position		  [530, 72, 1340, 543]
+		  Position		  [635, 72, 1445, 543]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/CAN Blocks/Send CAN Messages"
@@ -4247,7 +4315,7 @@ Model {
 		  BlockType		  Switch
 		  Name			  "Switch"
 		  SID			  "1821"
-		  Position		  [115, 175, 145, 205]
+		  Position		  [220, 175, 250, 205]
 		  Criteria		  "u2 ~= 0"
 		  InputSameDT		  off
 		  SaturateOnIntegerOverflow off
@@ -4263,7 +4331,7 @@ Model {
 		  Name			  "motohawk_calibration2"
 		  SID			  "1540"
 		  Ports			  [0, 1]
-		  Position		  [210, 404, 385, 446]
+		  Position		  [170, 464, 345, 506]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
@@ -4302,7 +4370,7 @@ Model {
 		  Name			  "motohawk_override_abs4"
 		  SID			  "1541"
 		  Ports			  [1, 1]
-		  Position		  [235, 177, 385, 203]
+		  Position		  [340, 177, 490, 203]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_override_abs"
@@ -4349,7 +4417,7 @@ Model {
 		  Name			  "motohawk_probe5"
 		  SID			  "1546"
 		  Ports			  [1]
-		  Position		  [235, 147, 385, 173]
+		  Position		  [340, 147, 490, 173]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
@@ -4376,24 +4444,12 @@ Model {
 		  mototune_group	  "'Actuators | EHPAS'"
 		}
 		Line {
-		  SrcBlock		  "motohawk_calibration2"
-		  SrcPort		  1
-		  DstBlock		  "Send CAN Messages"
-		  DstPort		  2
-		}
-		Line {
 		  Name			  "EHPAS_Operating_Mode_Cmd"
 		  Labels		  [0, 0]
 		  SrcBlock		  "motohawk_override_abs4"
 		  SrcPort		  1
 		  DstBlock		  "Send CAN Messages"
 		  DstPort		  1
-		}
-		Line {
-		  SrcBlock		  "Enable"
-		  SrcPort		  1
-		  DstBlock		  "Switch"
-		  DstPort		  2
 		}
 		Line {
 		  SrcBlock		  "Operating Mode - Activate"
@@ -4424,6 +4480,43 @@ Model {
 		    DstBlock		    "motohawk_probe5"
 		    DstPort		    1
 		  }
+		}
+		Line {
+		  SrcBlock		  "Compare\nTo Constant"
+		  SrcPort		  1
+		  DstBlock		  "Switch"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "EHPAS Speed"
+		  SrcPort		  1
+		  Points		  [10, 0]
+		  Branch {
+		    DstBlock		    "Compare\nTo Constant"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 225]
+		    DstBlock		    "MinMax"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "MinMax"
+		  SrcPort		  1
+		  DstBlock		  "Send CAN Messages"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "motohawk_calibration2"
+		  SrcPort		  1
+		  Points		  [80, 0; 0, -55]
+		  DstBlock		  "MinMax"
+		  DstPort		  2
+		}
+		Annotation {
+		  Name			  " "
+		  Position		  [1114, 722]
 		}
 	      }
 	    }
@@ -4994,7 +5087,7 @@ Model {
 	      System {
 		Name			"Eaton HV Charger"
 		Location		[274, 83, 1310, 698]
-		Open			on
+		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	310
 		ScreenColor		"white"
@@ -7376,14 +7469,6 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
-	      Name		      "<EHPAS_enable>"
-	      Labels		      [0, 0]
-	      SrcBlock		      "Bus\nSelector4"
-	      SrcPort		      1
-	      DstBlock		      "EHPAS Power Steering Pump Controller"
-	      DstPort		      1
-	    }
-	    Line {
 	      Name		      "<InReverse>"
 	      Labels		      [0, 0]
 	      SrcBlock		      "Bus\nSelector2"
@@ -7463,6 +7548,14 @@ Model {
 	      SrcPort		      3
 	      DstBlock		      "UQM Motor"
 	      DstPort		      3
+	    }
+	    Line {
+	      Name		      "<EHPAS_speed>"
+	      Labels		      [0, 0; 0, 0]
+	      SrcBlock		      "Bus\nSelector4"
+	      SrcPort		      1
+	      DstBlock		      "EHPAS Power Steering Pump Controller"
+	      DstPort		      1
 	    }
 	  }
 	}
@@ -7650,7 +7743,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "204"
+		    ZoomFactor		    "133"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "CurrentSOC"
@@ -7941,7 +8034,7 @@ Model {
 		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
 		    SourceType		    "MotoHawk Calibration"
 		    nam			    "'Over_SOC_Shutdown_Thresh'"
-		    val			    "101"
+		    val			    "102"
 		    storage		    "Calibration"
 		    show_more		    on
 		    name_source		    "Use Parameter"
@@ -9964,13 +10057,13 @@ Model {
 	    PortNumber		    1
 	    Name		    "Hybrid"
 	    PropagatedSignals	    "Legacy, InReverse, Motor_Torque, CoolantPumpSpeed, Contactor Command, Drive Enable, EHPAS_"
-	    "enable, DC/DC Enable, FanDutyCycle, Brake, Sensor Bus"
+	    "speed, DC/DC Enable, FanDutyCycle, Brake, Sensor Bus"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
 	  System {
 	    Name		    "Control Strategy"
-	    Location		    [-1718, -548, -2, 516]
+	    Location		    [274, 75, 1347, 690]
 	    Open		    off
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    229
@@ -9982,7 +10075,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "71"
+	    ZoomFactor		    "110"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Inputs"
@@ -10163,9 +10256,9 @@ Model {
 	      System {
 		Name			"Calculations"
 		Location		[90, 171, 1219, 811]
-		Open			on
+		Open			off
 		ModelBrowserVisibility	on
-		ModelBrowserWidth	200
+		ModelBrowserWidth	272
 		ScreenColor		"white"
 		PaperOrientation	"landscape"
 		PaperPositionMode	"auto"
@@ -13710,8 +13803,9 @@ Model {
 	      BlockType		      SubSystem
 	      Name		      "Drive"
 	      SID		      "3469"
-	      Ports		      [7, 1]
-	      Position		      [345, 382, 520, 518]
+	      Ports		      [6, 1]
+	      Position		      [345, 372, 520, 508]
+	      NamePlacement	      "alternate"
 	      LibraryVersion	      "1.216"
 	      TreatAsAtomicUnit	      on
 	      MinAlgLoopOccurrences   off
@@ -13735,7 +13829,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"128"
+		ZoomFactor		"97"
 		Block {
 		  BlockType		  Inport
 		  Name			  "Reverse"
@@ -13784,27 +13878,10 @@ Model {
 		  IconDisplay		  "Port number"
 		}
 		Block {
-		  BlockType		  Inport
-		  Name			  "Sensors"
-		  SID			  "4119"
-		  Position		  [155, 328, 185, 342]
-		  Port			  "7"
-		  IconDisplay		  "Port number"
-		}
-		Block {
-		  BlockType		  Switch
-		  Name			  "Drive Mode"
-		  SID			  "4102"
-		  Position		  [475, 115, 525, 155]
-		  Threshold		  "1"
-		  InputSameDT		  off
-		  SaturateOnIntegerOverflow off
-		}
-		Block {
 		  BlockType		  Gain
 		  Name			  "Gain"
 		  SID			  "4388"
-		  Position		  [805, 120, 835, 150]
+		  Position		  [775, 105, 805, 135]
 		  Gain			  "-1"
 		  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
 		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
@@ -13815,7 +13892,7 @@ Model {
 		  Name			  "Logical\nOperator"
 		  SID			  "4391"
 		  Ports			  [2, 1]
-		  Position		  [850, 217, 880, 248]
+		  Position		  [725, 144, 755, 211]
 		  AllPortsSameDT	  off
 		  OutDataTypeStr	  "boolean"
 		}
@@ -14498,13 +14575,13 @@ Model {
 		    vector_style	    "Wide Row"
 		    use_help_units	    on
 		    help		    "'Max tq regen can apply WARNING: CHECK PEDAL AT MAX TQ'"
-		    units		    "'%'"
+		    units		    "'nM'"
 		    use_header_enum	    off
 		    row_header_enum	    "{}"
 		    col_header_enum	    "{}"
 		    use_min_max		    on
 		    min_val		    "0"
-		    max_val		    "240"
+		    max_val		    "1000"
 		    use_precision	    off
 		    precision		    "'1.2'"
 		    gain		    "1"
@@ -14528,7 +14605,7 @@ Model {
 		    storage		    "Calibration"
 		    show_more		    on
 		    name_source		    "Use Parameter"
-		    data_type		    "Inherit from 'Default Value'"
+		    data_type		    "boolean"
 		    read_level		    "1"
 		    write_level		    "1"
 		    ovr_cals		    on
@@ -14567,7 +14644,7 @@ Model {
 		    storage		    "Calibration"
 		    show_more		    on
 		    name_source		    "Use Parameter"
-		    data_type		    "Inherit from 'Default Value'"
+		    data_type		    "boolean"
 		    read_level		    "1"
 		    write_level		    "1"
 		    ovr_cals		    on
@@ -14654,13 +14731,13 @@ Model {
 		    vector_style	    "Wide Row"
 		    use_help_units	    on
 		    help		    "'Changing this will change the amount of drag on the vehile when coasting'"
-		    units		    "'%'"
+		    units		    "'NM'"
 		    use_header_enum	    off
 		    row_header_enum	    "{}"
 		    col_header_enum	    "{}"
 		    use_min_max		    on
 		    min_val		    "0"
-		    max_val		    "240"
+		    max_val		    "1000"
 		    use_precision	    off
 		    precision		    "'1.2'"
 		    gain		    "1"
@@ -14861,7 +14938,7 @@ Model {
 		    RTWMemSecDataInternal   "Inherit from model"
 		    RTWMemSecDataParameters "Inherit from model"
 		    GeneratePreprocessorConditionals off
-		    nam			    "'MotoHawkTable2D'"
+		    nam			    "'RegenBatteryLimits'"
 		    row_nam		    "'StateOfChargePct'"
 		    col_nam		    "'MotorSpd'"
 		    row_breakpoint_data	    "[0 85 90 93]"
@@ -15315,17 +15392,10 @@ Model {
 		    RTWMemSecDataInternal   "Inherit from model"
 		    RTWMemSecDataParameters "Inherit from model"
 		    GeneratePreprocessorConditionals off
-		    nam			    "'AccelPedalMap'"
+		    nam			    "'AccelPedalMap_v2'"
 		    bp_nam		    "''"
-		    breakpoint_data	    "[0:.01:1]\n"
-		    table_data		    "[0	0	0	0.015	0.03	0.045	0.06	0.075	0.09	0.105	0.12	0.135	0.15	0.165	0.18	0.195	0.21	0.225	0.24	"
-		    "0.255	0.27	0.285	0.3	0.315	0.33	0.345	0.36	0.375	0.39	0.405	0.42	0.435	0.45	0.465	0.48	0.495	0.51	0.525	0.54	0.5"
-		    "55	0.57	0.585	0.6	0.615	0.63	0.645	0.66	0.675	0.69	0.7	0.707106781	0.714142843	0.721110255	0.728010989	0.7348469"
-		    "23	0.741619849	0.748331477	0.754983444	0.761577311	0.768114575	0.774596669	0.781024968	0.787400787	0.793725393	0"
-		    ".8	0.806225775	0.81240384	0.818535277	0.824621125	0.830662386	0.836660027	0.842614977	0.848528137	0.854400375	0."
-		    "860232527	0.866025404	0.871779789	0.877496439	0.883176087	0.888819442	0.894427191	0.9	0.905538514	0.911043358	0."
-		    "916515139	0.921954446	0.92736185	0.932737905	0.938083152	0.943398113	0.948683298	0.953939201	0.959166305	0.96436"
-		    "5076	0.969535971	0.974679434	0.979795897	0.98488578	0.989949494	0.994987437	1]"
+		    breakpoint_data	    "[0 0.05 .1 .2 .3 .4 .5 .6 .7 .8 .9 .95 1]"
+		    table_data		    "[0 0 .15 .30 .45 .55 .65 .72 .79 .86 .93 1 1]"
 		    show_more		    on
 		    bp_data_type	    "Inherit from 'Breakpoint Data'"
 		    bp_storage		    "Constant"
@@ -15483,2342 +15553,17 @@ Model {
 		  BlockType		  Switch
 		  Name			  "Switch"
 		  SID			  "4389"
-		  Position		  [930, 215, 980, 255]
+		  Position		  [840, 86, 885, 274]
 		  Threshold		  "1"
 		  InputSameDT		  off
 		  SaturateOnIntegerOverflow off
-		}
-		Block {
-		  BlockType		  SubSystem
-		  Name			  "Torque Management"
-		  SID			  "4104"
-		  Ports			  [2, 1]
-		  Position		  [230, 291, 375, 469]
-		  MinAlgLoopOccurrences	  off
-		  PropExecContextOutsideSubsystem off
-		  RTWSystemCode		  "Auto"
-		  FunctionWithSeparateData off
-		  Opaque		  off
-		  RequestExecContextInheritance	off
-		  MaskHideContents	  off
-		  System {
-		    Name		    "Torque Management"
-		    Location		    [274, 75, 1364, 690]
-		    Open		    off
-		    ModelBrowserVisibility  on
-		    ModelBrowserWidth	    272
-		    ScreenColor		    "white"
-		    PaperOrientation	    "landscape"
-		    PaperPositionMode	    "auto"
-		    PaperType		    "usletter"
-		    PaperUnits		    "inches"
-		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-		    TiledPageScale	    1
-		    ShowPageBoundaries	    off
-		    ZoomFactor		    "80"
-		    Block {
-		    BlockType		    Inport
-		    Name		    "Sensors"
-		    SID			    "4107"
-		    Position		    [85, 243, 115, 257]
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    Inport
-		    Name		    "Reverse"
-		    SID			    "4149"
-		    Position		    [625, 138, 655, 152]
-		    Port		    "2"
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    BusSelector
-		    Name		    "Bus\nSelector"
-		    SID			    "4120"
-		    Ports		    [1, 4]
-		    Position		    [195, 59, 205, 436]
-		    ShowName		    off
-		    OutputSignals	    "VehicleSpeed,Accel,Brake,SOC"
-		    Port {
-		    PortNumber		    1
-		    Name		    "<VehicleSpeed>"
-		    RTWStorageClass	    "Auto"
-		    DataLoggingNameMode	    "SignalName"
-		    }
-		    Port {
-		    PortNumber		    2
-		    Name		    "<Accel>"
-		    RTWStorageClass	    "Auto"
-		    DataLoggingNameMode	    "SignalName"
-		    }
-		    Port {
-		    PortNumber		    3
-		    Name		    "<Brake>"
-		    RTWStorageClass	    "Auto"
-		    DataLoggingNameMode	    "SignalName"
-		    }
-		    Port {
-		    PortNumber		    4
-		    Name		    "<SOC>"
-		    RTWStorageClass	    "Auto"
-		    DataLoggingNameMode	    "SignalName"
-		    }
-		    }
-		    Block {
-		    BlockType		    SubSystem
-		    Name		    "DriverDemandBase"
-		    SID			    "4150"
-		    Ports		    [3, 1]
-		    Position		    [710, 96, 855, 154]
-		    MinAlgLoopOccurrences   off
-		    PropExecContextOutsideSubsystem off
-		    RTWSystemCode	    "Auto"
-		    FunctionWithSeparateData off
-		    Opaque		    off
-		    RequestExecContextInheritance off
-		    MaskHideContents	    off
-		    System {
-		    Name		    "DriverDemandBase"
-		    Location		    [352, 82, 1918, 1010]
-		    Open		    off
-		    ModelBrowserVisibility  on
-		    ModelBrowserWidth	    200
-		    ScreenColor		    "white"
-		    PaperOrientation	    "landscape"
-		    PaperPositionMode	    "auto"
-		    PaperType		    "usletter"
-		    PaperUnits		    "inches"
-		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-		    TiledPageScale	    1
-		    ShowPageBoundaries	    off
-		    ZoomFactor		    "169"
-		    Block {
-		    BlockType		    Inport
-		    Name		    "VehicleSpeedPre"
-		    SID			    "4151"
-		    Position		    [45, 103, 75, 117]
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    Inport
-		    Name		    "AccelPre"
-		    SID			    "4155"
-		    Position		    [45, 63, 75, 77]
-		    Port		    "2"
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    Inport
-		    Name		    "Reverse"
-		    SID			    "4164"
-		    Position		    [385, 53, 415, 67]
-		    Port		    "3"
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    Switch
-		    Name		    "Switch"
-		    SID			    "4166"
-		    Position		    [440, 16, 495, 104]
-		    Criteria		    "u2 > Threshold"
-		    InputSameDT		    off
-		    SaturateOnIntegerOverflow off
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_interpolation_2d"
-		    SID			    "4154"
-		    Ports		    [2, 1]
-		    Position		    [165, 51, 335, 129]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Lookup Tables/motohawk_interpolation_2d"
-		    SourceType		    "MotoHawk Interpolation (2-D)"
-		    nam			    "'DriverDemandBaseForward'"
-		    table_data		    "zeros(17)"
-		    show_more		    on
-		    data_type		    "Inherit from 'Table Data'"
-		    storage		    "NonAdaptive"
-		    read_level		    "1"
-		    write_level		    "1"
-		    ovr_cals		    on
-		    use_help		    off
-		    help		    "''"
-		    units		    "''"
-		    use_min_max		    off
-		    min_val		    "-inf"
-		    max_val		    "inf"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_links		    off
-		    row_prelookup_block	    "''"
-		    col_prelookup_block	    "''"
-		    output_name		    "''"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_interpolation_2d1"
-		    SID			    "4165"
-		    Ports		    [2, 1]
-		    Position		    [165, 181, 335, 259]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Lookup Tables/motohawk_interpolation_2d"
-		    SourceType		    "MotoHawk Interpolation (2-D)"
-		    nam			    "'DriverDemandBaseReverse'"
-		    table_data		    "zeros(17)"
-		    show_more		    on
-		    data_type		    "Inherit from 'Table Data'"
-		    storage		    "NonAdaptive"
-		    read_level		    "1"
-		    write_level		    "1"
-		    ovr_cals		    on
-		    use_help		    off
-		    help		    "''"
-		    units		    "''"
-		    use_min_max		    off
-		    min_val		    "-inf"
-		    max_val		    "inf"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_links		    off
-		    row_prelookup_block	    "''"
-		    col_prelookup_block	    "''"
-		    output_name		    "''"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_probe"
-		    SID			    "4189"
-		    Ports		    [1]
-		    Position		    [555, 17, 705, 43]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
-		    SourceType		    "MotoHawk Probe"
-		    nam			    "'DriveDemand_tq_Out'"
-		    show_more		    off
-		    name_source		    "Use Parameter"
-		    read_level		    "1"
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    off
-		    help		    "''"
-		    units		    "''"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_probe1"
-		    SID			    "4191"
-		    Ports		    [1]
-		    Position		    [425, 142, 575, 168]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
-		    SourceType		    "MotoHawk Probe"
-		    nam			    "'DriveDemand_tq_Forward'"
-		    show_more		    off
-		    name_source		    "Use Parameter"
-		    read_level		    "1"
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    off
-		    help		    "''"
-		    units		    "''"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_probe2"
-		    SID			    "4192"
-		    Ports		    [1]
-		    Position		    [425, 207, 575, 233]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
-		    SourceType		    "MotoHawk Probe"
-		    nam			    "'DriveDemand_tq_Reverse'"
-		    show_more		    off
-		    name_source		    "Use Parameter"
-		    read_level		    "1"
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    off
-		    help		    "''"
-		    units		    "''"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Outport
-		    Name		    "TorqueOut"
-		    SID			    "4152"
-		    Position		    [575, 53, 605, 67]
-		    IconDisplay		    "Port number"
-		    }
-		    Line {
-		    SrcBlock		    "AccelPre"
-		    SrcPort		    1
-		    Points		    [55, 0]
-		    Branch {
-		    DstBlock		    "motohawk_interpolation_2d"
-		    DstPort		    1
-		    }
-		    Branch {
-		    Points		    [0, 130]
-		    DstBlock		    "motohawk_interpolation_2d1"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "VehicleSpeedPre"
-		    SrcPort		    1
-		    Points		    [40, 0]
-		    Branch {
-		    DstBlock		    "motohawk_interpolation_2d"
-		    DstPort		    2
-		    }
-		    Branch {
-		    Points		    [0, 130]
-		    DstBlock		    "motohawk_interpolation_2d1"
-		    DstPort		    2
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "motohawk_interpolation_2d"
-		    SrcPort		    1
-		    Points		    [60, 0]
-		    Branch {
-		    DstBlock		    "Switch"
-		    DstPort		    3
-		    }
-		    Branch {
-		    Points		    [0, 65]
-		    DstBlock		    "motohawk_probe1"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "Reverse"
-		    SrcPort		    1
-		    DstBlock		    "Switch"
-		    DstPort		    2
-		    }
-		    Line {
-		    SrcBlock		    "motohawk_interpolation_2d1"
-		    SrcPort		    1
-		    Points		    [35, 0]
-		    Branch {
-		    Points		    [0, -190]
-		    DstBlock		    "Switch"
-		    DstPort		    1
-		    }
-		    Branch {
-		    DstBlock		    "motohawk_probe2"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "Switch"
-		    SrcPort		    1
-		    Points		    [40, 0]
-		    Branch {
-		    DstBlock		    "TorqueOut"
-		    DstPort		    1
-		    }
-		    Branch {
-		    DstBlock		    "motohawk_probe"
-		    DstPort		    1
-		    }
-		    }
-		    }
-		    }
-		    Block {
-		    BlockType		    SubSystem
-		    Name		    "Overheat Clip"
-		    SID			    "4130"
-		    Ports		    [2, 1]
-		    Position		    [1660, 209, 1760, 251]
-		    MinAlgLoopOccurrences   off
-		    PropExecContextOutsideSubsystem off
-		    RTWSystemCode	    "Auto"
-		    FunctionWithSeparateData off
-		    Opaque		    off
-		    RequestExecContextInheritance off
-		    MaskHideContents	    off
-		    System {
-		    Name		    "Overheat Clip"
-		    Location		    [433, 403, 931, 703]
-		    Open		    off
-		    ModelBrowserVisibility  on
-		    ModelBrowserWidth	    200
-		    ScreenColor		    "white"
-		    PaperOrientation	    "landscape"
-		    PaperPositionMode	    "auto"
-		    PaperType		    "usletter"
-		    PaperUnits		    "inches"
-		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-		    TiledPageScale	    1
-		    ShowPageBoundaries	    off
-		    ZoomFactor		    "141"
-		    Block {
-		    BlockType		    Inport
-		    Name		    "Sensors"
-		    SID			    "4135"
-		    Position		    [105, 158, 135, 172]
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    Inport
-		    Name		    "TorqueIn"
-		    SID			    "4131"
-		    Position		    [20, 298, 50, 312]
-		    Port		    "2"
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    BusSelector
-		    Name		    "Bus\nSelector1"
-		    SID			    "4136"
-		    Ports		    [1, 1]
-		    Position		    [205, 146, 210, 184]
-		    ShowName		    off
-		    OutputSignals	    "InverterTemp"
-		    Port {
-		    PortNumber		    1
-		    Name		    "<InverterTemp>"
-		    RTWStorageClass	    "Auto"
-		    DataLoggingNameMode	    "SignalName"
-		    }
-		    }
-		    Block {
-		    BlockType		    SubSystem
-		    Name		    "Inverter Overheat Logic"
-		    SID			    "4140"
-		    Ports		    [3, 1]
-		    Position		    [285, 138, 375, 302]
-		    LibraryVersion	    "1.235"
-		    ErrorFcn		    "Stateflow.Translate.translate"
-		    PermitHierarchicalResolution "ExplicitOnly"
-		    TreatAsAtomicUnit	    on
-		    MinAlgLoopOccurrences   off
-		    PropExecContextOutsideSubsystem off
-		    RTWSystemCode	    "Auto"
-		    FunctionWithSeparateData off
-		    Opaque		    off
-		    RequestExecContextInheritance off
-		    MaskHideContents	    off
-		    MaskType		    "Stateflow"
-		    MaskDescription	    "Stateflow diagram"
-		    MaskSelfModifiable	    on
-		    MaskDisplay		    "plot(sf('Private','sfblk','xIcon'),sf('Private','sfblk','yIcon'));text(0.5,0,sf('Private', 'sf"
-		    "blk', 'tIcon'),'HorizontalAl','Center','VerticalAl','Bottom');"
-		    MaskIconFrame	    off
-		    MaskIconOpaque	    off
-		    MaskIconRotate	    "none"
-		    MaskPortRotate	    "default"
-		    MaskIconUnits	    "autoscale"
-		    System {
-		    Name		    "Inverter Overheat Logic"
-		    Location		    [257, 457, 812, 717]
-		    Open		    off
-		    ModelBrowserVisibility  on
-		    ModelBrowserWidth	    200
-		    ScreenColor		    "white"
-		    PaperOrientation	    "landscape"
-		    PaperPositionMode	    "auto"
-		    PaperType		    "usletter"
-		    PaperUnits		    "inches"
-		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-		    TiledPageScale	    1
-		    ShowPageBoundaries	    off
-		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "20"
-		    Block {
-		    BlockType		    Inport
-		    Name		    "invTemp"
-		    SID			    "4140::17"
-		    Position		    [20, 101, 40, 119]
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    Inport
-		    Name		    "low"
-		    SID			    "4140::18"
-		    Position		    [20, 136, 40, 154]
-		    Port		    "2"
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    Inport
-		    Name		    "high"
-		    SID			    "4140::19"
-		    Position		    [20, 171, 40, 189]
-		    Port		    "3"
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    Demux
-		    Name		    " Demux "
-		    SID			    "4140::14"
-		    Ports		    [1, 1]
-		    Position		    [270, 180, 320, 220]
-		    Outputs		    "1"
-		    }
-		    Block {
-		    BlockType		    S-Function
-		    Name		    " SFunction "
-		    SID			    "4140::13"
-		    Tag			    "Stateflow S-Function BuckyWagon_01 5"
-		    Ports		    [3, 2]
-		    Position		    [180, 100, 230, 180]
-		    FunctionName	    "sf_sfun"
-		    PortCounts		    "[3 2]"
-		    EnableBusSupport	    on
-		    Port {
-		    PortNumber		    2
-		    Name		    "out"
-		    RTWStorageClass	    "Auto"
-		    DataLoggingNameMode	    "SignalName"
-		    }
-		    }
-		    Block {
-		    BlockType		    Terminator
-		    Name		    " Terminator "
-		    SID			    "4140::16"
-		    Position		    [460, 191, 480, 209]
-		    }
-		    Block {
-		    BlockType		    Outport
-		    Name		    "out"
-		    SID			    "4140::20"
-		    Position		    [460, 101, 480, 119]
-		    IconDisplay		    "Port number"
-		    }
-		    Line {
-		    SrcBlock		    "invTemp"
-		    SrcPort		    1
-		    DstBlock		    " SFunction "
-		    DstPort		    1
-		    }
-		    Line {
-		    SrcBlock		    "low"
-		    SrcPort		    1
-		    DstBlock		    " SFunction "
-		    DstPort		    2
-		    }
-		    Line {
-		    SrcBlock		    "high"
-		    SrcPort		    1
-		    DstBlock		    " SFunction "
-		    DstPort		    3
-		    }
-		    Line {
-		    Name		    "out"
-		    Labels		    [0, 0]
-		    SrcBlock		    " SFunction "
-		    SrcPort		    2
-		    DstBlock		    "out"
-		    DstPort		    1
-		    }
-		    Line {
-		    SrcBlock		    " Demux "
-		    SrcPort		    1
-		    DstBlock		    " Terminator "
-		    DstPort		    1
-		    }
-		    Line {
-		    SrcBlock		    " SFunction "
-		    SrcPort		    1
-		    DstBlock		    " Demux "
-		    DstPort		    1
-		    }
-		    }
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "Overheat Clip1"
-		    SID			    "4133"
-		    Ports		    [1, 1]
-		    Position		    [560, 139, 595, 171]
-		    BackgroundColor	    "[0.815686, 0.976471, 0.674510]"
-		    LibraryVersion	    "1.490"
-		    SourceBlock		    "motohawk_control_primitives_lib/Saturation (Tunable)"
-		    SourceType		    "Saturation (Tunable)"
-		    ShowPortLabels	    "FromPortIcon"
-		    SystemSampleTime	    "-1"
-		    FunctionWithSeparateData off
-		    RTWMemSecFuncInitTerm   "Inherit from model"
-		    RTWMemSecFuncExecute    "Inherit from model"
-		    RTWMemSecDataConstants  "Inherit from model"
-		    RTWMemSecDataInternal   "Inherit from model"
-		    RTWMemSecDataParameters "Inherit from model"
-		    GeneratePreprocessorConditionals off
-		    prefix		    "'Saturation'"
-		    units		    "''"
-		    grp			    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Switch
-		    Name		    "Switch"
-		    SID			    "4134"
-		    Position		    [665, 150, 715, 190]
-		    Criteria		    "u2 > Threshold"
-		    InputSameDT		    off
-		    SaturateOnIntegerOverflow off
-		    }
-		    Block {
-		    BlockType		    Switch
-		    Name		    "Switch1"
-		    SID			    "4163"
-		    Position		    [800, 135, 850, 175]
-		    Criteria		    "u2 > Threshold"
-		    InputSameDT		    off
-		    SaturateOnIntegerOverflow off
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_calibration"
-		    SID			    "4138"
-		    Ports		    [0, 1]
-		    Position		    [100, 255, 250, 295]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
-		    SourceType		    "MotoHawk Calibration"
-		    nam			    "'InverterOverheatHigh'"
-		    val			    "45"
-		    storage		    "Calibration"
-		    show_more		    off
-		    name_source		    "Use Parameter"
-		    data_type		    "Inherit from 'Default Value'"
-		    read_level		    "1"
-		    write_level		    "1"
-		    ovr_cals		    on
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    off
-		    help		    "''"
-		    units		    "''"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_min_max		    off
-		    min_val		    "-inf"
-		    max_val		    "inf"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_calibration1"
-		    SID			    "4139"
-		    Ports		    [0, 1]
-		    Position		    [100, 200, 250, 240]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
-		    SourceType		    "MotoHawk Calibration"
-		    nam			    "'InverterOverheatLow'"
-		    val			    "43"
-		    storage		    "Calibration"
-		    show_more		    off
-		    name_source		    "Use Parameter"
-		    data_type		    "Inherit from 'Default Value'"
-		    read_level		    "1"
-		    write_level		    "1"
-		    ovr_cals		    on
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    off
-		    help		    "''"
-		    units		    "''"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_min_max		    off
-		    min_val		    "-inf"
-		    max_val		    "inf"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_calibration2"
-		    SID			    "4162"
-		    Ports		    [0, 1]
-		    Position		    [560, 80, 710, 120]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
-		    SourceType		    "MotoHawk Calibration"
-		    nam			    "'OverHeatClipDisable'"
-		    val			    "0"
-		    storage		    "Calibration"
-		    show_more		    off
-		    name_source		    "Use Parameter"
-		    data_type		    "Inherit from 'Default Value'"
-		    read_level		    "1"
-		    write_level		    "1"
-		    ovr_cals		    on
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    off
-		    help		    "''"
-		    units		    "''"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_min_max		    off
-		    min_val		    "-inf"
-		    max_val		    "inf"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_probe"
-		    SID			    "4193"
-		    Ports		    [1]
-		    Position		    [255, 87, 405, 113]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
-		    SourceType		    "MotoHawk Probe"
-		    nam			    "'OverheatClip_InvTemp'"
-		    show_more		    off
-		    name_source		    "Use Parameter"
-		    read_level		    "1"
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    off
-		    help		    "''"
-		    units		    "''"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_probe1"
-		    SID			    "4194"
-		    Ports		    [1]
-		    Position		    [500, 37, 650, 63]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
-		    SourceType		    "MotoHawk Probe"
-		    nam			    "'OverheatClip_On'"
-		    show_more		    off
-		    name_source		    "Use Parameter"
-		    read_level		    "1"
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    off
-		    help		    "''"
-		    units		    "''"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_probe2"
-		    SID			    "4195"
-		    Ports		    [1]
-		    Position		    [260, 342, 410, 368]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
-		    SourceType		    "MotoHawk Probe"
-		    nam			    "'OverheatClip_tq_In'"
-		    show_more		    off
-		    name_source		    "Use Parameter"
-		    read_level		    "1"
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    off
-		    help		    "''"
-		    units		    "''"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_probe3"
-		    SID			    "4196"
-		    Ports		    [1]
-		    Position		    [895, 207, 1045, 233]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
-		    SourceType		    "MotoHawk Probe"
-		    nam			    "'OverheatClip_tq_Out'"
-		    show_more		    off
-		    name_source		    "Use Parameter"
-		    read_level		    "1"
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    off
-		    help		    "''"
-		    units		    "''"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Outport
-		    Name		    "TorqueOut"
-		    SID			    "4132"
-		    Position		    [885, 148, 915, 162]
-		    IconDisplay		    "Port number"
-		    }
-		    Line {
-		    SrcBlock		    "Overheat Clip1"
-		    SrcPort		    1
-		    DstBlock		    "Switch"
-		    DstPort		    1
-		    }
-		    Line {
-		    SrcBlock		    "TorqueIn"
-		    SrcPort		    1
-		    Points		    [185, 0]
-		    Branch {
-		    Points		    [280, 0]
-		    Branch {
-		    Points		    [0, -120]
-		    Branch {
-		    Points		    [0, -30]
-		    DstBlock		    "Overheat Clip1"
-		    DstPort		    1
-		    }
-		    Branch {
-		    DstBlock		    "Switch"
-		    DstPort		    3
-		    }
-		    }
-		    Branch {
-		    Points		    [245, 0; 0, -165]
-		    DstBlock		    "Switch1"
-		    DstPort		    1
-		    }
-		    }
-		    Branch {
-		    Points		    [0, 50]
-		    DstBlock		    "motohawk_probe2"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "Sensors"
-		    SrcPort		    1
-		    DstBlock		    "Bus\nSelector1"
-		    DstPort		    1
-		    }
-		    Line {
-		    Name		    "<InverterTemp>"
-		    Labels		    [0, 0; 0, 0]
-		    SrcBlock		    "Bus\nSelector1"
-		    SrcPort		    1
-		    Points		    [20, 0]
-		    Branch {
-		    DstBlock		    "Inverter Overheat Logic"
-		    DstPort		    1
-		    }
-		    Branch {
-		    Points		    [0, -65]
-		    DstBlock		    "motohawk_probe"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "motohawk_calibration"
-		    SrcPort		    1
-		    DstBlock		    "Inverter Overheat Logic"
-		    DstPort		    3
-		    }
-		    Line {
-		    SrcBlock		    "motohawk_calibration1"
-		    SrcPort		    1
-		    DstBlock		    "Inverter Overheat Logic"
-		    DstPort		    2
-		    }
-		    Line {
-		    SrcBlock		    "Inverter Overheat Logic"
-		    SrcPort		    1
-		    Points		    [65, 0]
-		    Branch {
-		    Points		    [200, 0; 0, -50]
-		    DstBlock		    "Switch"
-		    DstPort		    2
-		    }
-		    Branch {
-		    Points		    [0, -170]
-		    DstBlock		    "motohawk_probe1"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "Switch1"
-		    SrcPort		    1
-		    Points		    [10, 0]
-		    Branch {
-		    DstBlock		    "TorqueOut"
-		    DstPort		    1
-		    }
-		    Branch {
-		    Points		    [0, 65]
-		    DstBlock		    "motohawk_probe3"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "Switch"
-		    SrcPort		    1
-		    DstBlock		    "Switch1"
-		    DstPort		    3
-		    }
-		    Line {
-		    SrcBlock		    "motohawk_calibration2"
-		    SrcPort		    1
-		    Points		    [35, 0; 0, 55]
-		    DstBlock		    "Switch1"
-		    DstPort		    2
-		    }
-		    }
-		    }
-		    Block {
-		    BlockType		    SubSystem
-		    Name		    "Regen"
-		    SID			    "4157"
-		    Ports		    [5, 1]
-		    Position		    [965, 114, 1100, 216]
-		    MinAlgLoopOccurrences   off
-		    PropExecContextOutsideSubsystem off
-		    RTWSystemCode	    "Auto"
-		    FunctionWithSeparateData off
-		    Opaque		    off
-		    RequestExecContextInheritance off
-		    MaskHideContents	    off
-		    System {
-		    Name		    "Regen"
-		    Location		    [433, 403, 931, 703]
-		    Open		    off
-		    ModelBrowserVisibility  on
-		    ModelBrowserWidth	    200
-		    ScreenColor		    "white"
-		    PaperOrientation	    "landscape"
-		    PaperPositionMode	    "auto"
-		    PaperType		    "usletter"
-		    PaperUnits		    "inches"
-		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-		    TiledPageScale	    1
-		    ShowPageBoundaries	    off
-		    ZoomFactor		    "163"
-		    Block {
-		    BlockType		    Inport
-		    Name		    "TorqueIn"
-		    SID			    "4158"
-		    Position		    [110, 168, 140, 182]
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    Inport
-		    Name		    "Reverse"
-		    SID			    "4171"
-		    Position		    [600, 123, 630, 137]
-		    Port		    "2"
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    Inport
-		    Name		    "AccelPre"
-		    SID			    "4169"
-		    Position		    [110, 228, 140, 242]
-		    Port		    "3"
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    Inport
-		    Name		    "BrakePre"
-		    SID			    "4170"
-		    Position		    [110, 323, 140, 337]
-		    Port		    "4"
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    Inport
-		    Name		    "VehicleSpeedPre"
-		    SID			    "4168"
-		    Position		    [110, 268, 140, 282]
-		    Port		    "5"
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    Sum
-		    Name		    "Add"
-		    SID			    "4179"
-		    Ports		    [2, 1]
-		    Position		    [655, 242, 685, 273]
-		    InputSameDT		    off
-		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
-		    SaturateOnIntegerOverflow off
-		    }
-		    Block {
-		    BlockType		    Logic
-		    Name		    "Logical\nOperator"
-		    SID			    "4174"
-		    Ports		    [2, 1]
-		    Position		    [705, 77, 735, 108]
-		    Operator		    "OR"
-		    AllPortsSameDT	    off
-		    OutDataTypeStr	    "boolean"
-		    }
-		    Block {
-		    BlockType		    MinMax
-		    Name		    "MinMax"
-		    SID			    "4178"
-		    Ports		    [2, 1]
-		    Position		    [520, 247, 550, 278]
-		    Function		    "max"
-		    Inputs		    "2"
-		    InputSameDT		    off
-		    SaturateOnIntegerOverflow off
-		    }
-		    Block {
-		    BlockType		    Switch
-		    Name		    "Switch"
-		    SID			    "4172"
-		    Position		    [805, 170, 855, 210]
-		    Criteria		    "u2 > Threshold"
-		    InputSameDT		    off
-		    SaturateOnIntegerOverflow off
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_calibration"
-		    SID			    "4173"
-		    Ports		    [0, 1]
-		    Position		    [480, 65, 630, 105]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
-		    SourceType		    "MotoHawk Calibration"
-		    nam			    "'RegenDisableTq'"
-		    val			    "0"
-		    storage		    "Calibration"
-		    show_more		    off
-		    name_source		    "Use Parameter"
-		    data_type		    "Inherit from 'Default Value'"
-		    read_level		    "1"
-		    write_level		    "1"
-		    ovr_cals		    on
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    off
-		    help		    "''"
-		    units		    "''"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_min_max		    off
-		    min_val		    "-inf"
-		    max_val		    "inf"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_interpolation_2d"
-		    SID			    "4176"
-		    Ports		    [2, 1]
-		    Position		    [245, 216, 415, 294]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Lookup Tables/motohawk_interpolation_2d"
-		    SourceType		    "MotoHawk Interpolation (2-D)"
-		    nam			    "'RegenAccel'"
-		    table_data		    "zeros(17)"
-		    show_more		    on
-		    data_type		    "Inherit from 'Table Data'"
-		    storage		    "NonAdaptive"
-		    read_level		    "1"
-		    write_level		    "1"
-		    ovr_cals		    on
-		    use_help		    off
-		    help		    "''"
-		    units		    "''"
-		    use_min_max		    off
-		    min_val		    "-inf"
-		    max_val		    "inf"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_links		    off
-		    row_prelookup_block	    "''"
-		    col_prelookup_block	    "''"
-		    output_name		    "''"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_interpolation_2d1"
-		    SID			    "4177"
-		    Ports		    [2, 1]
-		    Position		    [245, 311, 415, 389]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Lookup Tables/motohawk_interpolation_2d"
-		    SourceType		    "MotoHawk Interpolation (2-D)"
-		    nam			    "'RegenBrake'"
-		    table_data		    "zeros(17)"
-		    show_more		    on
-		    data_type		    "Inherit from 'Table Data'"
-		    storage		    "NonAdaptive"
-		    read_level		    "1"
-		    write_level		    "1"
-		    ovr_cals		    on
-		    use_help		    off
-		    help		    "''"
-		    units		    "''"
-		    use_min_max		    off
-		    min_val		    "-inf"
-		    max_val		    "inf"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_links		    off
-		    row_prelookup_block	    "''"
-		    col_prelookup_block	    "''"
-		    output_name		    "''"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_probe1"
-		    SID			    "4198"
-		    Ports		    [1]
-		    Position		    [880, 112, 1030, 138]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
-		    SourceType		    "MotoHawk Probe"
-		    nam			    "'Regen_tq_Out'"
-		    show_more		    off
-		    name_source		    "Use Parameter"
-		    read_level		    "1"
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    off
-		    help		    "''"
-		    units		    "''"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_probe2"
-		    SID			    "4197"
-		    Ports		    [1]
-		    Position		    [230, 117, 380, 143]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
-		    SourceType		    "MotoHawk Probe"
-		    nam			    "'Regen_tq_In'"
-		    show_more		    off
-		    name_source		    "Use Parameter"
-		    read_level		    "1"
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    off
-		    help		    "''"
-		    units		    "''"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_probe3"
-		    SID			    "4199"
-		    Ports		    [1]
-		    Position		    [535, 327, 685, 353]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
-		    SourceType		    "MotoHawk Probe"
-		    nam			    "'Regen_tq_Accel'"
-		    show_more		    off
-		    name_source		    "Use Parameter"
-		    read_level		    "1"
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    off
-		    help		    "''"
-		    units		    "''"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_probe4"
-		    SID			    "4200"
-		    Ports		    [1]
-		    Position		    [535, 362, 685, 388]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
-		    SourceType		    "MotoHawk Probe"
-		    nam			    "'Regen_tq_Brake'"
-		    show_more		    off
-		    name_source		    "Use Parameter"
-		    read_level		    "1"
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    off
-		    help		    "''"
-		    units		    "''"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_probe5"
-		    SID			    "4201"
-		    Ports		    [1]
-		    Position		    [615, 292, 765, 318]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
-		    SourceType		    "MotoHawk Probe"
-		    nam			    "'Regen_tq_Max'"
-		    show_more		    off
-		    name_source		    "Use Parameter"
-		    read_level		    "1"
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    off
-		    help		    "''"
-		    units		    "''"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Outport
-		    Name		    "TorqueOut"
-		    SID			    "4159"
-		    Position		    [915, 183, 945, 197]
-		    IconDisplay		    "Port number"
-		    }
-		    Line {
-		    SrcBlock		    "Switch"
-		    SrcPort		    1
-		    Points		    [5, 0]
-		    Branch {
-		    DstBlock		    "TorqueOut"
-		    DstPort		    1
-		    }
-		    Branch {
-		    DstBlock		    "motohawk_probe1"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "TorqueIn"
-		    SrcPort		    1
-		    Points		    [65, 0]
-		    Branch {
-		    Points		    [405, 0]
-		    Branch {
-		    DstBlock		    "Switch"
-		    DstPort		    1
-		    }
-		    Branch {
-		    Points		    [0, 75]
-		    DstBlock		    "Add"
-		    DstPort		    1
-		    }
-		    }
-		    Branch {
-		    Points		    [0, -45]
-		    DstBlock		    "motohawk_probe2"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "motohawk_calibration"
-		    SrcPort		    1
-		    DstBlock		    "Logical\nOperator"
-		    DstPort		    1
-		    }
-		    Line {
-		    SrcBlock		    "Reverse"
-		    SrcPort		    1
-		    Points		    [25, 0; 0, -30]
-		    DstBlock		    "Logical\nOperator"
-		    DstPort		    2
-		    }
-		    Line {
-		    SrcBlock		    "Logical\nOperator"
-		    SrcPort		    1
-		    Points		    [45, 0; 0, 95]
-		    DstBlock		    "Switch"
-		    DstPort		    2
-		    }
-		    Line {
-		    SrcBlock		    "VehicleSpeedPre"
-		    SrcPort		    1
-		    Points		    [60, 0]
-		    Branch {
-		    DstBlock		    "motohawk_interpolation_2d"
-		    DstPort		    2
-		    }
-		    Branch {
-		    Points		    [0, 95]
-		    DstBlock		    "motohawk_interpolation_2d1"
-		    DstPort		    2
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "AccelPre"
-		    SrcPort		    1
-		    DstBlock		    "motohawk_interpolation_2d"
-		    DstPort		    1
-		    }
-		    Line {
-		    SrcBlock		    "BrakePre"
-		    SrcPort		    1
-		    DstBlock		    "motohawk_interpolation_2d1"
-		    DstPort		    1
-		    }
-		    Line {
-		    SrcBlock		    "motohawk_interpolation_2d"
-		    SrcPort		    1
-		    Points		    [75, 0]
-		    Branch {
-		    DstBlock		    "MinMax"
-		    DstPort		    1
-		    }
-		    Branch {
-		    Points		    [0, 85]
-		    DstBlock		    "motohawk_probe3"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "motohawk_interpolation_2d1"
-		    SrcPort		    1
-		    Points		    [40, 0]
-		    Branch {
-		    Points		    [0, -80]
-		    DstBlock		    "MinMax"
-		    DstPort		    2
-		    }
-		    Branch {
-		    Points		    [0, 25]
-		    DstBlock		    "motohawk_probe4"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "MinMax"
-		    SrcPort		    1
-		    Points		    [35, 0]
-		    Branch {
-		    DstBlock		    "Add"
-		    DstPort		    2
-		    }
-		    Branch {
-		    Points		    [0, 40]
-		    DstBlock		    "motohawk_probe5"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "Add"
-		    SrcPort		    1
-		    Points		    [50, 0; 0, -55]
-		    DstBlock		    "Switch"
-		    DstPort		    3
-		    }
-		    }
-		    }
-		    Block {
-		    BlockType		    SubSystem
-		    Name		    "SOC Clip"
-		    SID			    "4141"
-		    Ports		    [3, 1]
-		    Position		    [1440, 219, 1540, 261]
-		    MinAlgLoopOccurrences   off
-		    PropExecContextOutsideSubsystem off
-		    RTWSystemCode	    "Auto"
-		    FunctionWithSeparateData off
-		    Opaque		    off
-		    RequestExecContextInheritance off
-		    MaskHideContents	    off
-		    System {
-		    Name		    "SOC Clip"
-		    Location		    [433, 403, 931, 703]
-		    Open		    off
-		    ModelBrowserVisibility  on
-		    ModelBrowserWidth	    200
-		    ScreenColor		    "white"
-		    PaperOrientation	    "landscape"
-		    PaperPositionMode	    "auto"
-		    PaperType		    "usletter"
-		    PaperUnits		    "inches"
-		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-		    TiledPageScale	    1
-		    ShowPageBoundaries	    off
-		    ZoomFactor		    "100"
-		    Block {
-		    BlockType		    Inport
-		    Name		    "TorqueIn"
-		    SID			    "4142"
-		    Position		    [610, 184, 645, 196]
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    Inport
-		    Name		    "SpeedPre"
-		    SID			    "4145"
-		    Position		    [170, 233, 200, 247]
-		    Port		    "2"
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    Inport
-		    Name		    "SOCPre"
-		    SID			    "4144"
-		    Position		    [170, 193, 200, 207]
-		    Port		    "3"
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "Saturation"
-		    SID			    "4153"
-		    Ports		    [3, 1]
-		    Position		    [770, 216, 840, 274]
-		    BackgroundColor	    "[0.815686, 0.976471, 0.674510]"
-		    LibraryVersion	    "1.490"
-		    SourceBlock		    "motohawk_control_primitives_lib/Saturation"
-		    SourceType		    "Saturation"
-		    ShowPortLabels	    "FromPortIcon"
-		    SystemSampleTime	    "-1"
-		    FunctionWithSeparateData off
-		    RTWMemSecFuncInitTerm   "Inherit from model"
-		    RTWMemSecFuncExecute    "Inherit from model"
-		    RTWMemSecDataConstants  "Inherit from model"
-		    RTWMemSecDataInternal   "Inherit from model"
-		    RTWMemSecDataParameters "Inherit from model"
-		    GeneratePreprocessorConditionals off
-		    }
-		    Block {
-		    BlockType		    Switch
-		    Name		    "Switch"
-		    SID			    "4160"
-		    Position		    [910, 210, 960, 250]
-		    Criteria		    "u2 > Threshold"
-		    InputSameDT		    off
-		    SaturateOnIntegerOverflow off
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_calibration"
-		    SID			    "4161"
-		    Ports		    [0, 1]
-		    Position		    [690, 135, 840, 175]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
-		    SourceType		    "MotoHawk Calibration"
-		    nam			    "'SOCClipDisable'"
-		    val			    "0"
-		    storage		    "Calibration"
-		    show_more		    off
-		    name_source		    "Use Parameter"
-		    data_type		    "Inherit from 'Default Value'"
-		    read_level		    "1"
-		    write_level		    "1"
-		    ovr_cals		    on
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    off
-		    help		    "''"
-		    units		    "''"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_min_max		    off
-		    min_val		    "-inf"
-		    max_val		    "inf"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_interpolation_2d"
-		    SID			    "4146"
-		    Ports		    [2, 1]
-		    Position		    [320, 181, 490, 259]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Lookup Tables/motohawk_interpolation_2d"
-		    SourceType		    "MotoHawk Interpolation (2-D)"
-		    nam			    "'DischargeClip'"
-		    table_data		    "zeros(17)"
-		    show_more		    on
-		    data_type		    "Inherit from 'Table Data'"
-		    storage		    "NonAdaptive"
-		    read_level		    "1"
-		    write_level		    "1"
-		    ovr_cals		    on
-		    use_help		    off
-		    help		    "''"
-		    units		    "''"
-		    use_min_max		    off
-		    min_val		    "-inf"
-		    max_val		    "inf"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_links		    off
-		    row_prelookup_block	    "''"
-		    col_prelookup_block	    "''"
-		    output_name		    "''"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_interpolation_2d1"
-		    SID			    "4147"
-		    Ports		    [2, 1]
-		    Position		    [320, 296, 490, 374]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Lookup Tables/motohawk_interpolation_2d"
-		    SourceType		    "MotoHawk Interpolation (2-D)"
-		    nam			    "'ChargeClip'"
-		    table_data		    "zeros(17)"
-		    show_more		    on
-		    data_type		    "Inherit from 'Table Data'"
-		    storage		    "NonAdaptive"
-		    read_level		    "1"
-		    write_level		    "1"
-		    ovr_cals		    on
-		    use_help		    off
-		    help		    "''"
-		    units		    "''"
-		    use_min_max		    off
-		    min_val		    "-inf"
-		    max_val		    "inf"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_links		    off
-		    row_prelookup_block	    "''"
-		    col_prelookup_block	    "''"
-		    output_name		    "''"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_probe1"
-		    SID			    "4203"
-		    Ports		    [1]
-		    Position		    [1010, 172, 1160, 198]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
-		    SourceType		    "MotoHawk Probe"
-		    nam			    "'SOC_tq_Out'"
-		    show_more		    off
-		    name_source		    "Use Parameter"
-		    read_level		    "1"
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    off
-		    help		    "''"
-		    units		    "''"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_probe2"
-		    SID			    "4204"
-		    Ports		    [1]
-		    Position		    [575, 52, 725, 78]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
-		    SourceType		    "MotoHawk Probe"
-		    nam			    "'SOC_tq_Discharge'"
-		    show_more		    off
-		    name_source		    "Use Parameter"
-		    read_level		    "1"
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    off
-		    help		    "''"
-		    units		    "''"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_probe3"
-		    SID			    "4202"
-		    Ports		    [1]
-		    Position		    [690, 97, 840, 123]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
-		    SourceType		    "MotoHawk Probe"
-		    nam			    "'SOC_tq_In'"
-		    show_more		    off
-		    name_source		    "Use Parameter"
-		    read_level		    "1"
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    off
-		    help		    "''"
-		    units		    "''"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_probe4"
-		    SID			    "4205"
-		    Ports		    [1]
-		    Position		    [600, 367, 750, 393]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
-		    SourceType		    "MotoHawk Probe"
-		    nam			    "'SOC_tq_Charge'"
-		    show_more		    off
-		    name_source		    "Use Parameter"
-		    read_level		    "1"
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    off
-		    help		    "''"
-		    units		    "''"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Outport
-		    Name		    "TorqueOut"
-		    SID			    "4143"
-		    Position		    [1030, 223, 1060, 237]
-		    IconDisplay		    "Port number"
-		    }
-		    Line {
-		    SrcBlock		    "SOCPre"
-		    SrcPort		    1
-		    Points		    [90, 0]
-		    Branch {
-		    DstBlock		    "motohawk_interpolation_2d"
-		    DstPort		    1
-		    }
-		    Branch {
-		    Points		    [0, 115]
-		    DstBlock		    "motohawk_interpolation_2d1"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "SpeedPre"
-		    SrcPort		    1
-		    Points		    [75, 0]
-		    Branch {
-		    DstBlock		    "motohawk_interpolation_2d"
-		    DstPort		    2
-		    }
-		    Branch {
-		    Points		    [0, 115]
-		    DstBlock		    "motohawk_interpolation_2d1"
-		    DstPort		    2
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "TorqueIn"
-		    SrcPort		    1
-		    Points		    [0, 5]
-		    Branch {
-		    Points		    [0, 30; 90, 0]
-		    Branch {
-		    DstBlock		    "Saturation"
-		    DstPort		    1
-		    }
-		    Branch {
-		    Points		    [0, -10]
-		    DstBlock		    "Switch"
-		    DstPort		    1
-		    }
-		    }
-		    Branch {
-		    Points		    [0, -85]
-		    DstBlock		    "motohawk_probe3"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "motohawk_interpolation_2d1"
-		    SrcPort		    1
-		    Points		    [45, 0]
-		    Branch {
-		    Points		    [190, 0; 0, -90]
-		    DstBlock		    "Saturation"
-		    DstPort		    2
-		    }
-		    Branch {
-		    Points		    [0, 45]
-		    DstBlock		    "motohawk_probe4"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "motohawk_interpolation_2d"
-		    SrcPort		    1
-		    Points		    [45, 0]
-		    Branch {
-		    Points		    [105, 0; 0, 45]
-		    DstBlock		    "Saturation"
-		    DstPort		    3
-		    }
-		    Branch {
-		    Points		    [0, -155]
-		    DstBlock		    "motohawk_probe2"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "Saturation"
-		    SrcPort		    1
-		    DstBlock		    "Switch"
-		    DstPort		    3
-		    }
-		    Line {
-		    SrcBlock		    "Switch"
-		    SrcPort		    1
-		    Points		    [25, 0]
-		    Branch {
-		    DstBlock		    "TorqueOut"
-		    DstPort		    1
-		    }
-		    Branch {
-		    Points		    [0, -45]
-		    DstBlock		    "motohawk_probe1"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "motohawk_calibration"
-		    SrcPort		    1
-		    Points		    [45, 0; 0, 75]
-		    DstBlock		    "Switch"
-		    DstPort		    2
-		    }
-		    }
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "Torque Total Clip"
-		    SID			    "4126"
-		    Ports		    [1, 1]
-		    Position		    [1825, 214, 1860, 246]
-		    BackgroundColor	    "[0.815686, 0.976471, 0.674510]"
-		    LibraryVersion	    "1.490"
-		    SourceBlock		    "motohawk_control_primitives_lib/Saturation (Tunable)"
-		    SourceType		    "Saturation (Tunable)"
-		    ShowPortLabels	    "FromPortIcon"
-		    SystemSampleTime	    "-1"
-		    FunctionWithSeparateData off
-		    RTWMemSecFuncInitTerm   "Inherit from model"
-		    RTWMemSecFuncExecute    "Inherit from model"
-		    RTWMemSecDataConstants  "Inherit from model"
-		    RTWMemSecDataInternal   "Inherit from model"
-		    RTWMemSecDataParameters "Inherit from model"
-		    GeneratePreprocessorConditionals off
-		    prefix		    "'TorqueClip'"
-		    units		    "'Nm'"
-		    grp			    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_prelookup"
-		    SID			    "4121"
-		    Ports		    [1, 1]
-		    Position		    [295, 67, 465, 143]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Lookup Tables/motohawk_prelookup"
-		    SourceType		    "MotoHawk Prelookup Index Search"
-		    nam			    "'VehicleSpeedPre'"
-		    breakpoint_data	    "[0,0.5,1,1.5,2,2.5,3,4,5,10,15,20,25,30,35,40,45]"
-		    show_more		    off
-		    data_type		    "Inherit from 'Table Data'"
-		    storage		    "Constant"
-		    read_level		    "1"
-		    write_level		    "1"
-		    ovr_cals		    on
-		    use_help		    off
-		    help		    "''"
-		    units		    "''"
-		    use_min_max		    off
-		    min_val		    "-inf"
-		    max_val		    "inf"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_links		    off
-		    input_name		    "''"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_prelookup1"
-		    SID			    "4123"
-		    Ports		    [1, 1]
-		    Position		    [295, 162, 465, 238]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Lookup Tables/motohawk_prelookup"
-		    SourceType		    "MotoHawk Prelookup Index Search"
-		    nam			    "'AccelPedalPre'"
-		    breakpoint_data	    "[0,1,2,3,4,5,10,15,20,30,40,50,60,70,80,90,100]"
-		    show_more		    off
-		    data_type		    "Inherit from 'Table Data'"
-		    storage		    "Constant"
-		    read_level		    "1"
-		    write_level		    "1"
-		    ovr_cals		    on
-		    use_help		    off
-		    help		    "''"
-		    units		    "''"
-		    use_min_max		    off
-		    min_val		    "-inf"
-		    max_val		    "inf"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_links		    off
-		    input_name		    "''"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_prelookup2"
-		    SID			    "4124"
-		    Ports		    [1, 1]
-		    Position		    [295, 257, 465, 333]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Lookup Tables/motohawk_prelookup"
-		    SourceType		    "MotoHawk Prelookup Index Search"
-		    nam			    "'BrakePedalPre'"
-		    breakpoint_data	    "[0,1,2,3,4,5,10,15,20,30,40,50,60,70,80,90,100]"
-		    show_more		    off
-		    data_type		    "Inherit from 'Table Data'"
-		    storage		    "Constant"
-		    read_level		    "1"
-		    write_level		    "1"
-		    ovr_cals		    on
-		    use_help		    off
-		    help		    "''"
-		    units		    "''"
-		    use_min_max		    off
-		    min_val		    "-inf"
-		    max_val		    "inf"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_links		    off
-		    input_name		    "''"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_prelookup3"
-		    SID			    "4125"
-		    Ports		    [1, 1]
-		    Position		    [295, 352, 465, 428]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Lookup Tables/motohawk_prelookup"
-		    SourceType		    "MotoHawk Prelookup Index Search"
-		    nam			    "'SOCPre'"
-		    breakpoint_data	    "[0,1,2,3,4,5,10,15,20,30,40,50,60,70,80,90,100]"
-		    show_more		    off
-		    data_type		    "Inherit from 'Table Data'"
-		    storage		    "Constant"
-		    read_level		    "1"
-		    write_level		    "1"
-		    ovr_cals		    on
-		    use_help		    off
-		    help		    "''"
-		    units		    "''"
-		    use_min_max		    off
-		    min_val		    "-inf"
-		    max_val		    "inf"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_links		    off
-		    input_name		    "''"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_probe"
-		    SID			    "4188"
-		    Ports		    [1]
-		    Position		    [1885, 142, 2035, 168]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
-		    SourceType		    "MotoHawk Probe"
-		    nam			    "'TqManagement_tq_Out'"
-		    show_more		    off
-		    name_source		    "Use Parameter"
-		    read_level		    "1"
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    off
-		    help		    "''"
-		    units		    "''"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Outport
-		    Name		    "Torque"
-		    SID			    "4106"
-		    Position		    [1920, 223, 1950, 237]
-		    IconDisplay		    "Port number"
-		    }
-		    Line {
-		    SrcBlock		    "Sensors"
-		    SrcPort		    1
-		    Points		    [35, 0]
-		    Branch {
-		    DstBlock		    "Bus\nSelector"
-		    DstPort		    1
-		    }
-		    Branch {
-		    Points		    [0, -205; 1440, 0; 0, 175]
-		    DstBlock		    "Overheat Clip"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    Name		    "<VehicleSpeed>"
-		    Labels		    [0, 0; 0, 0]
-		    SrcBlock		    "Bus\nSelector"
-		    SrcPort		    1
-		    DstBlock		    "motohawk_prelookup"
-		    DstPort		    1
-		    }
-		    Line {
-		    Name		    "<Accel>"
-		    Labels		    [0, 0; 0, 0]
-		    SrcBlock		    "Bus\nSelector"
-		    SrcPort		    2
-		    DstBlock		    "motohawk_prelookup1"
-		    DstPort		    1
-		    }
-		    Line {
-		    Name		    "<Brake>"
-		    Labels		    [0, 0; 0, 0]
-		    SrcBlock		    "Bus\nSelector"
-		    SrcPort		    3
-		    DstBlock		    "motohawk_prelookup2"
-		    DstPort		    1
-		    }
-		    Line {
-		    Name		    "<SOC>"
-		    Labels		    [0, 0; 0, 0]
-		    SrcBlock		    "Bus\nSelector"
-		    SrcPort		    4
-		    DstBlock		    "motohawk_prelookup3"
-		    DstPort		    1
-		    }
-		    Line {
-		    SrcBlock		    "motohawk_prelookup"
-		    SrcPort		    1
-		    Points		    [120, 0]
-		    Branch {
-		    DstBlock		    "DriverDemandBase"
-		    DstPort		    1
-		    }
-		    Branch {
-		    Points		    [0, 135; 345, 0]
-		    Branch {
-		    DstBlock		    "SOC Clip"
-		    DstPort		    2
-		    }
-		    Branch {
-		    Points		    [0, -35]
-		    DstBlock		    "Regen"
-		    DstPort		    5
-		    }
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "Torque Total Clip"
-		    SrcPort		    1
-		    Points		    [10, 0]
-		    Branch {
-		    DstBlock		    "Torque"
-		    DstPort		    1
-		    }
-		    Branch {
-		    Points		    [-5, 0]
-		    DstBlock		    "motohawk_probe"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "Overheat Clip"
-		    SrcPort		    1
-		    DstBlock		    "Torque Total Clip"
-		    DstPort		    1
-		    }
-		    Line {
-		    SrcBlock		    "SOC Clip"
-		    SrcPort		    1
-		    DstBlock		    "Overheat Clip"
-		    DstPort		    2
-		    }
-		    Line {
-		    SrcBlock		    "motohawk_prelookup3"
-		    SrcPort		    1
-		    Points		    [930, 0; 0, -135]
-		    DstBlock		    "SOC Clip"
-		    DstPort		    3
-		    }
-		    Line {
-		    SrcBlock		    "motohawk_prelookup1"
-		    SrcPort		    1
-		    Points		    [80, 0]
-		    Branch {
-		    Points		    [0, -75]
-		    DstBlock		    "DriverDemandBase"
-		    DstPort		    2
-		    }
-		    Branch {
-		    Points		    [335, 0; 0, -35]
-		    DstBlock		    "Regen"
-		    DstPort		    3
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "Reverse"
-		    SrcPort		    1
-		    Points		    [25, 0]
-		    Branch {
-		    DstBlock		    "DriverDemandBase"
-		    DstPort		    3
-		    }
-		    Branch {
-		    Points		    [0, 25; 185, 0; 0, -25]
-		    DstBlock		    "Regen"
-		    DstPort		    2
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "DriverDemandBase"
-		    SrcPort		    1
-		    DstBlock		    "Regen"
-		    DstPort		    1
-		    }
-		    Line {
-		    SrcBlock		    "motohawk_prelookup2"
-		    SrcPort		    1
-		    Points		    [435, 0; 0, -110]
-		    DstBlock		    "Regen"
-		    DstPort		    4
-		    }
-		    Line {
-		    SrcBlock		    "Regen"
-		    SrcPort		    1
-		    Points		    [160, 0; 0, 60]
-		    DstBlock		    "SOC Clip"
-		    DstPort		    1
-		    }
-		    Annotation {
-		    Name		    "TODO: Driveline lash"
-		    Position		    [1260, 94]
-		    }
-		  }
-		}
-		Block {
-		  BlockType		  Reference
-		  Name			  "motohawk_calibration"
-		  SID			  "4103"
-		  Ports			  [0, 1]
-		  Position		  [230, 230, 380, 270]
-		  ShowName		  off
-		  LibraryVersion	  "MotoHawk 0.2.3"
-		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
-		  SourceType		  "MotoHawk Calibration"
-		  nam			  "'DriveMode'"
-		  val			  "1"
-		  storage		  "Calibration"
-		  show_more		  on
-		  name_source		  "Use Parameter"
-		  data_type		  "uint8"
-		  read_level		  "1"
-		  write_level		  "1"
-		  ovr_cals		  on
-		  view_as		  "Enumeration"
-		  enum_struct		  "{'Torque_Management' , 'Normal'}"
-		  vector_style		  "Wide Row"
-		  use_help_units	  off
-		  help			  "''"
-		  units			  "''"
-		  use_header_enum	  off
-		  row_header_enum	  "{}"
-		  col_header_enum	  "{}"
-		  use_min_max		  off
-		  min_val		  "-inf"
-		  max_val		  "inf"
-		  use_precision		  off
-		  precision		  "''"
-		  gain			  "1"
-		  offset		  "0"
-		  exp			  "1"
-		  use_mototune_group	  off
-		  mototune_group	  "motohawk_vardec_path(gcb)"
 		}
 		Block {
 		  BlockType		  Reference
 		  Name			  "motohawk_calibration1"
 		  SID			  "4390"
 		  Ports			  [0, 1]
-		  Position		  [545, 204, 780, 246]
+		  Position		  [445, 139, 680, 181]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
@@ -17856,7 +15601,8 @@ Model {
 		  BlockType		  Outport
 		  Name			  "Motor Torque"
 		  SID			  "3575"
-		  Position		  [1045, 228, 1075, 242]
+		  Position		  [955, 173, 985, 187]
+		  NamePlacement		  "alternate"
 		  IconDisplay		  "Port number"
 		  OutputWhenDisabled	  "reset"
 		  InitialOutput		  "[0]"
@@ -17894,16 +15640,9 @@ Model {
 		    DstPort		    5
 		  }
 		  Branch {
-		    Points		    [0, 260; 95, 0]
-		    Branch {
-		    DstBlock		    "Torque Management"
-		    DstPort		    2
-		    }
-		    Branch {
-		    Points		    [0, 75; 290, 0; 0, -240; 305, 0; 0, -20]
+		    Points		    [0, 65; 445, 0; 0, -35]
 		    DstBlock		    "Logical\nOperator"
 		    DstPort		    2
-		    }
 		  }
 		}
 		Line {
@@ -17913,30 +15652,18 @@ Model {
 		  DstPort		  6
 		}
 		Line {
-		  SrcBlock		  "motohawk_calibration"
-		  SrcPort		  1
-		  Points		  [45, 0; 0, -115]
-		  DstBlock		  "Drive Mode"
-		  DstPort		  2
-		}
-		Line {
-		  SrcBlock		  "Torque Management"
-		  SrcPort		  1
-		  Points		  [80, 0]
-		  DstBlock		  "Drive Mode"
-		  DstPort		  3
-		}
-		Line {
-		  SrcBlock		  "Sensors"
-		  SrcPort		  1
-		  DstBlock		  "Torque Management"
-		  DstPort		  1
-		}
-		Line {
 		  SrcBlock		  "Normal Driving"
 		  SrcPort		  1
-		  DstBlock		  "Drive Mode"
-		  DstPort		  1
+		  Points		  [55, 0]
+		  Branch {
+		    Points		    [0, 120]
+		    DstBlock		    "Switch"
+		    DstPort		    3
+		  }
+		  Branch {
+		    DstBlock		    "Gain"
+		    DstPort		    1
+		  }
 		}
 		Line {
 		  SrcBlock		  "Logical\nOperator"
@@ -17957,23 +15684,8 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  SrcBlock		  "Drive Mode"
-		  SrcPort		  1
-		  Points		  [5, 0]
-		  Branch {
-		    DstBlock		    "Gain"
-		    DstPort		    1
-		  }
-		  Branch {
-		    Points		    [-5, 0; 0, 150; 375, 0; 0, -35]
-		    DstBlock		    "Switch"
-		    DstPort		    3
-		  }
-		}
-		Line {
 		  SrcBlock		  "Gain"
 		  SrcPort		  1
-		  Points		  [75, 0]
 		  DstBlock		  "Switch"
 		  DstPort		  1
 		}
@@ -17995,10 +15707,10 @@ Model {
 	      MaskHideContents	      off
 	      System {
 		Name			"EHPAS_PercentControl"
-		Location		[-1718, -548, -2, 516]
-		Open			off
+		Location		[274, 75, 1347, 690]
+		Open			on
 		ModelBrowserVisibility	on
-		ModelBrowserWidth	200
+		ModelBrowserWidth	272
 		ScreenColor		"white"
 		PaperOrientation	"landscape"
 		PaperPositionMode	"auto"
@@ -18007,7 +15719,7 @@ Model {
 		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"100"
+		ZoomFactor		"75"
 		Block {
 		  BlockType		  Inport
 		  Name			  "Sensors"
@@ -18304,7 +16016,7 @@ Model {
 		  Inputs		  "8"
 		  zeroidx		  on
 		  InputSameDT		  off
-		  OutDataTypeStr	  "uint16"
+		  OutDataTypeStr	  "double"
 		  SaturateOnIntegerOverflow off
 		}
 		Block {
@@ -18428,7 +16140,7 @@ Model {
 		  storage		  "Calibration"
 		  show_more		  on
 		  name_source		  "Use Parameter"
-		  data_type		  "uint16"
+		  data_type		  "double"
 		  read_level		  "1"
 		  write_level		  "1"
 		  ovr_cals		  on
@@ -18467,7 +16179,7 @@ Model {
 		  storage		  "Calibration"
 		  show_more		  on
 		  name_source		  "Use Parameter"
-		  data_type		  "uint16"
+		  data_type		  "double"
 		  read_level		  "1"
 		  write_level		  "1"
 		  ovr_cals		  on
@@ -18506,7 +16218,7 @@ Model {
 		  storage		  "Calibration"
 		  show_more		  on
 		  name_source		  "Use Parameter"
-		  data_type		  "uint16"
+		  data_type		  "double"
 		  read_level		  "1"
 		  write_level		  "1"
 		  ovr_cals		  on
@@ -18545,7 +16257,7 @@ Model {
 		  storage		  "Calibration"
 		  show_more		  on
 		  name_source		  "Use Parameter"
-		  data_type		  "uint16"
+		  data_type		  "double"
 		  read_level		  "1"
 		  write_level		  "1"
 		  ovr_cals		  on
@@ -18584,7 +16296,7 @@ Model {
 		  storage		  "Calibration"
 		  show_more		  on
 		  name_source		  "Use Parameter"
-		  data_type		  "uint16"
+		  data_type		  "double"
 		  read_level		  "1"
 		  write_level		  "1"
 		  ovr_cals		  on
@@ -18818,7 +16530,7 @@ Model {
 		  storage		  "Calibration"
 		  show_more		  on
 		  name_source		  "Use Parameter"
-		  data_type		  "uint16"
+		  data_type		  "double"
 		  read_level		  "1"
 		  write_level		  "1"
 		  ovr_cals		  on
@@ -18857,7 +16569,7 @@ Model {
 		  storage		  "Calibration"
 		  show_more		  on
 		  name_source		  "Use Parameter"
-		  data_type		  "uint16"
+		  data_type		  "double"
 		  read_level		  "1"
 		  write_level		  "1"
 		  ovr_cals		  on
@@ -18935,7 +16647,7 @@ Model {
 		  storage		  "Calibration"
 		  show_more		  on
 		  name_source		  "Use Parameter"
-		  data_type		  "uint16"
+		  data_type		  "double"
 		  read_level		  "1"
 		  write_level		  "1"
 		  ovr_cals		  on
@@ -21863,17 +19575,17 @@ Model {
 	      OutDataTypeStr	      "boolean"
 	    }
 	    Block {
-	      BlockType		      Logic
-	      Name		      "Logical\nOperator2"
-	      SID		      "3978"
+	      BlockType		      Product
+	      Name		      "Product"
+	      SID		      "4479"
 	      Ports		      [2, 1]
-	      Position		      [1305, 412, 1335, 443]
-	      ShowName		      off
-	      AllPortsSameDT	      off
-	      OutDataTypeStr	      "boolean"
+	      Position		      [1290, 412, 1320, 443]
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+	      SaturateOnIntegerOverflow	off
 	      Port {
 		PortNumber		1
-		Name			"EHPAS_enable"
+		Name			"EHPAS_speed"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
@@ -22788,30 +20500,22 @@ Model {
 		}
 	      }
 	      Branch {
-		Points			[0, -10]
+		Points			[0, -80]
 		Branch {
-		  Points		  [0, -70]
+		  DstBlock		  "Reverse"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [0, -135]
 		  Branch {
-		    DstBlock		    "Reverse"
+		    DstBlock		    "Bus\nSelector1"
 		    DstPort		    1
 		  }
 		  Branch {
-		    Points		    [0, -135]
-		    Branch {
-		    DstBlock		    "Bus\nSelector1"
-		    DstPort		    1
-		    }
-		    Branch {
 		    Points		    [0, -50]
 		    DstBlock		    "Bus\nSelector2"
 		    DstPort		    1
-		    }
 		  }
-		}
-		Branch {
-		  Points		  [0, 10; 225, 0; 0, 140]
-		  DstBlock		  "Drive"
-		  DstPort		  7
 		}
 	      }
 	    }
@@ -22897,7 +20601,7 @@ Model {
 	    Line {
 	      SrcBlock		      "Drive"
 	      SrcPort		      1
-	      Points		      [0, -55]
+	      Points		      [0, -45]
 	      DstBlock		      "Product1"
 	      DstPort		      3
 	    }
@@ -23077,30 +20781,6 @@ Model {
 	      }
 	    }
 	    Line {
-	      Name		      "EHPAS_enable"
-	      Labels		      [0, 0]
-	      SrcBlock		      "Logical\nOperator2"
-	      SrcPort		      1
-	      DstBlock		      "Bus\nCreator"
-	      DstPort		      7
-	    }
-	    Line {
-	      Name		      "EHPAS Enable"
-	      Labels		      [0, 0]
-	      SrcBlock		      "HV Controller"
-	      SrcPort		      4
-	      Points		      [120, 0; 0, 270]
-	      DstBlock		      "Logical\nOperator2"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "EHPAS_PercentControl"
-	      SrcPort		      1
-	      Points		      [600, 0; 0, -265]
-	      DstBlock		      "Logical\nOperator2"
-	      DstPort		      2
-	    }
-	    Line {
 	      SrcBlock		      "EHPAS_PercentControl"
 	      SrcPort		      2
 	      DstBlock		      "Data Type Conversion"
@@ -23193,6 +20873,33 @@ Model {
 	      SrcPort		      2
 	      DstBlock		      "Cooling"
 	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "EHPAS_PercentControl"
+	      SrcPort		      1
+	      Points		      [600, 0; 0, -265]
+	      DstBlock		      "Product"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "EHPAS_speed"
+	      Labels		      [0, 0; 0, 0]
+	      SrcBlock		      "Product"
+	      SrcPort		      1
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      7
+	    }
+	    Line {
+	      Name		      "EHPAS Enable"
+	      Labels		      [0, 0]
+	      SrcBlock		      "HV Controller"
+	      SrcPort		      4
+	      Points		      [120, 0; 0, 270]
+	      DstBlock		      "Product"
+	      DstPort		      1
+	    }
+	    Annotation {
+	      Position		      [1116, 727]
 	    }
 	  }
 	}
@@ -25648,7 +23355,7 @@ Model {
 		  SourceType		  "MotoHawk CAN Receive  SlotTrigger"
 		  slot			  "'miniview_button_down'"
 		  inherited		  on
-		  function_name		  "Trigger_CAN_Slot_miniview_button_down_10204p0002"
+		  function_name		  "Trigger_CAN_Slot_miniview_button_down_2080p0004"
 		}
 		Block {
 		  BlockType		  Demux
@@ -28715,7 +26422,7 @@ Model {
 		  SourceType		  "MotoHawk CAN Receive  SlotTrigger"
 		  slot			  "'miniview_button_menu'"
 		  inherited		  on
-		  function_name		  "Trigger_CAN_Slot_miniview_button_menu_10463p0005"
+		  function_name		  "Trigger_CAN_Slot_miniview_button_menu_2338p0004"
 		}
 		Block {
 		  BlockType		  Demux
@@ -31112,7 +28819,7 @@ Model {
 		  SourceType		  "MotoHawk CAN Receive  SlotTrigger"
 		  slot			  "'miniview_button_up'"
 		  inherited		  on
-		  function_name		  "Trigger_CAN_Slot_miniview_button_up_10714p0004"
+		  function_name		  "Trigger_CAN_Slot_miniview_button_up_2589p0005"
 		}
 		Block {
 		  BlockType		  Demux
@@ -32616,7 +30323,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "64"
+	    ZoomFactor		    "100"
 	    Block {
 	      BlockType		      SubSystem
 	      Name		      "A123 Battery Inputs"
@@ -48099,7 +45806,7 @@ Model {
 	  SourceBlock		  "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 	  SourceType		  "MotoHawk Function Trigger"
 	  trigger		  "FGND_RTI_PERIODIC"
-	  function_name		  "Trigger_FGND_RTI_PERIODIC_877p0013"
+	  function_name		  "Trigger_FGND_RTI_PERIODIC_3773p0006"
 	  priority_order	  "200"
 	  inherited		  on
 	  run_disabled		  off
@@ -48121,7 +45828,7 @@ Model {
 	  SourceBlock		  "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 	  SourceType		  "MotoHawk Function Trigger"
 	  trigger		  "FGND_20XRTI_PERIODIC"
-	  function_name		  "Trigger_FGND_20XRTI_PERIODIC_878p0011"
+	  function_name		  "Trigger_FGND_20XRTI_PERIODIC_3774p0004"
 	  priority_order	  "200"
 	  inherited		  on
 	  run_disabled		  off
@@ -50147,7 +47854,7 @@ Model {
 	  SourceBlock		  "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 	  SourceType		  "MotoHawk Function Trigger"
 	  trigger		  "BGND_BASE_PERIODIC"
-	  function_name		  "Trigger_BGND_BASE_PERIODIC_1070p0009"
+	  function_name		  "Trigger_BGND_BASE_PERIODIC_3967p0004"
 	  priority_order	  "255"
 	  inherited		  on
 	  run_disabled		  on
@@ -50290,7 +47997,7 @@ Model {
       SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
       SourceType	      "MotoHawk Function Trigger"
       trigger		      "FGND_RTI_PERIODIC"
-      function_name	      "Trigger_FGND_RTI_PERIODIC_1078p0009"
+      function_name	      "Trigger_FGND_RTI_PERIODIC_3975p0004"
       priority_order	      "0"
       inherited		      off
       run_disabled	      off
@@ -50312,7 +48019,7 @@ Model {
       SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
       SourceType	      "MotoHawk Function Trigger"
       trigger		      "STARTUP_EVENT"
-      function_name	      "Trigger_STARTUP_EVENT_1079p0009"
+      function_name	      "Trigger_STARTUP_EVENT_3976p0004"
       priority_order	      "0"
       inherited		      off
       run_disabled	      off
@@ -50334,7 +48041,7 @@ Model {
       SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
       SourceType	      "MotoHawk Function Trigger"
       trigger		      "BGND_BASEx20_PERIODIC"
-      function_name	      "Trigger_BGND_BASEx20_PERIODIC_1080p0009"
+      function_name	      "Trigger_BGND_BASEx20_PERIODIC_3977p0004"
       priority_order	      "0"
       inherited		      off
       run_disabled	      off
@@ -50357,7 +48064,7 @@ Model {
       SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
       SourceType	      "MotoHawk Function Trigger"
       trigger		      "SHUTDOWN_EVENT"
-      function_name	      "Trigger_SHUTDOWN_EVENT_1081p0009"
+      function_name	      "Trigger_SHUTDOWN_EVENT_3978p0004"
       priority_order	      "0"
       inherited		      off
       run_disabled	      off
@@ -50865,7 +48572,7 @@ Stateflow {
     name		    "BuckyWagon_01"
     created		    "26-Sep-2006 06:03:50"
     isLibrary		    0
-    firstTarget		    557
+    firstTarget		    546
     sfVersion		    75014001
   }
   chart {
@@ -58541,193 +56248,15 @@ Stateflow {
   }
   chart {
     id			    399
-    name		    "Foreground/Control Strategy/Drive/Torque Management/Overheat Clip/Inverter Overheat Logic"
-    windowPosition	    [184.5 282 417 348.75]
-    viewLimits		    [0 373.5 0 312.75]
-    screen		    [1 1 1920 1080 1.333333333333333]
-    treeNode		    [0 400 0 0]
-    firstTransition	    402
-    viewObj		    399
-    machine		    1
-    ssIdHighWaterMark	    9
-    decomposition	    CLUSTER_CHART
-    firstData		    405
-    chartFileNumber	    5
-    userSpecifiedStateTransitionExecutionOrder 1
-    disableImplicitCasting  1
-  }
-  state {
-    id			    400
-    labelString		    "Off\nduring: out=0;"
-    position		    [110.875 67.875 90 60]
-    fontSize		    12
-    chart		    399
-    treeNode		    [399 0 0 401]
-    subviewer		    399
-    ssIdNumber		    5
-    type		    OR_STATE
-    decomposition	    CLUSTER_STATE
-  }
-  state {
-    id			    401
-    labelString		    "On\nduring: out=1;"
-    position		    [106.25 197.25 90 60]
-    fontSize		    12
-    chart		    399
-    treeNode		    [399 0 400 0]
-    subviewer		    399
-    ssIdNumber		    6
-    type		    OR_STATE
-    decomposition	    CLUSTER_STATE
-  }
-  transition {
-    id			    402
-    labelPosition	    [119.6 46.266 8.246 14.971]
-    fontSize		    12
-    src {
-      intersection	      [0 0 1 0 134 37.875 0 0]
-    }
-    dst {
-      id		      400
-      intersection	      [1 0 -1 0.2569 134 67.875 0 0]
-    }
-    midPoint		    [134 49.2665]
-    chart		    399
-    linkNode		    [399 0 403]
-    dataLimits		    [131.6 136.4 37.875 67.875]
-    subviewer		    399
-    drawStyle		    SMART
-    executionOrder	    1
-    ssIdNumber		    7
-  }
-  transition {
-    id			    403
-    labelString		    "[invTemp>=high]"
-    labelPosition	    [41.875 145.875 86.958 14.971]
-    fontSize		    12
-    src {
-      id		      400
-      intersection	      [3 0 1 0.8014 128.75 127.875 0 27.875]
-    }
-    dst {
-      id		      401
-      intersection	      [1 0 -1 0.25 128.75 197.25 0 -27.125]
-    }
-    midPoint		    [128.75 159.8099]
-    chart		    399
-    linkNode		    [399 402 404]
-    dataLimits		    [126.35 131.15 127.875 197.25]
-    stampAngle		    NaN
-    subviewer		    399
-    drawStyle		    SMART
-    executionOrder	    1
-    ssIdNumber		    8
-  }
-  transition {
-    id			    404
-    labelString		    "[invTemp<=low]"
-    labelPosition	    [163.25 150.75 82.46 14.971]
-    fontSize		    12
-    src {
-      id		      401
-      intersection	      [1 0 -1 0.6583 165.5 197.25 0 20.25]
-    }
-    dst {
-      id		      400
-      intersection	      [3 0 1 0.3931 165.5 127.875 0 -14.25]
-    }
-    midPoint		    [165.5 165.3151]
-    chart		    399
-    linkNode		    [399 403 0]
-    dataLimits		    [163.1 167.9 127.875 197.25]
-    stampAngle		    NaN
-    subviewer		    399
-    drawStyle		    SMART
-    executionOrder	    1
-    ssIdNumber		    9
-  }
-  data {
-    id			    405
-    ssIdNumber		    1
-    name		    "invTemp"
-    linkNode		    [399 0 406]
-    scope		    INPUT_DATA
-    machine		    1
-    props {
-      type {
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-    }
-    dataType		    "double"
-  }
-  data {
-    id			    406
-    ssIdNumber		    2
-    name		    "low"
-    linkNode		    [399 405 407]
-    scope		    INPUT_DATA
-    machine		    1
-    props {
-      type {
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-    }
-    dataType		    "double"
-  }
-  data {
-    id			    407
-    ssIdNumber		    3
-    name		    "high"
-    linkNode		    [399 406 408]
-    scope		    INPUT_DATA
-    machine		    1
-    props {
-      type {
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-    }
-    dataType		    "double"
-  }
-  data {
-    id			    408
-    ssIdNumber		    4
-    name		    "out"
-    linkNode		    [399 407 0]
-    scope		    OUTPUT_DATA
-    machine		    1
-    props {
-      type {
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-      frame		      SF_FRAME_NO
-    }
-    dataType		    "double"
-  }
-  instance {
-    id			    409
-    name		    "Foreground/Control Strategy/Drive/Torque Management/Overheat Clip/Inverter Overheat Logic"
-    machine		    1
-    chart		    399
-  }
-  chart {
-    id			    410
     name		    "Foreground/Actuators/Analog Out/Cruise Control Indicator/Chart"
     windowPosition	    [332.25 7.5 500.25 484.5]
     viewLimits		    [11.379 547.603 6.121 532.66]
     zoomFactor		    1.174
     screen		    [1 1 1366 768 1.333333333333333]
-    treeNode		    [0 411 0 0]
-    firstTransition	    421
-    firstJunction	    418
-    viewObj		    410
+    treeNode		    [0 400 0 0]
+    firstTransition	    410
+    firstJunction	    407
+    viewObj		    399
     machine		    1
     subviewS {
       x1		      11.379
@@ -58736,336 +56265,336 @@ Stateflow {
     }
     ssIdHighWaterMark	    29
     decomposition	    CLUSTER_CHART
-    firstData		    434
+    firstData		    423
     chartFileNumber	    6
     disableImplicitCasting  1
     supportVariableSizing   0
   }
   state {
-    id			    411
+    id			    400
     labelString		    "Off\nentry:light = 0;"
     position		    [205.25 45 90 60]
     fontSize		    12
-    chart		    410
-    treeNode		    [410 0 0 412]
-    subviewer		    410
+    chart		    399
+    treeNode		    [399 0 0 401]
+    subviewer		    399
     ssIdNumber		    1
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    412
+    id			    401
     labelString		    "FlashOne\nentry:light = 1;\ntimer = 0;\nduring:timer++;"
     position		    [206.875 163.125 90 60]
     fontSize		    12
-    chart		    410
-    treeNode		    [410 0 411 414]
-    subviewer		    410
+    chart		    399
+    treeNode		    [399 0 400 403]
+    subviewer		    399
     ssIdNumber		    2
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    413
+    id			    402
     labelString		    "FlashTwo\nentry:light = 1;\ntimer = 0;\nduring:timer++;"
     position		    [205.5 357 90 60]
     fontSize		    12
-    chart		    410
-    treeNode		    [410 0 414 415]
-    subviewer		    410
+    chart		    399
+    treeNode		    [399 0 403 404]
+    subviewer		    399
     ssIdNumber		    3
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    414
+    id			    403
     labelString		    "OffOne\nentry:light = 0;\ntimer = 0;\nduring:timer++;"
     position		    [204.125 260.625 90 60]
     fontSize		    12
-    chart		    410
-    treeNode		    [410 0 412 413]
-    subviewer		    410
+    chart		    399
+    treeNode		    [399 0 401 402]
+    subviewer		    399
     ssIdNumber		    4
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    415
+    id			    404
     labelString		    "OffTwo\nentry:light = 0;\ntimer = 0;\nduring:timer++;"
     position		    [206.9687 463.7812 90 60]
     fontSize		    12
-    chart		    410
-    treeNode		    [410 0 413 0]
-    subviewer		    410
+    chart		    399
+    treeNode		    [399 0 402 0]
+    subviewer		    399
     ssIdNumber		    5
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   junction {
-    id			    416
+    id			    405
     position		    [138.9167 288.4375 7]
-    chart		    410
-    linkNode		    [410 419 420]
-    subviewer		    410
-    quantum		    [0 426 0 0]
+    chart		    399
+    linkNode		    [399 408 409]
+    subviewer		    399
+    quantum		    [0 415 0 0]
     ssIdNumber		    19
     type		    CONNECTIVE_JUNCTION
   }
   junction {
-    id			    417
+    id			    406
     position		    [138.9167 491.9063 7]
-    chart		    410
-    linkNode		    [410 420 0]
-    subviewer		    410
-    quantum		    [0 427 0 0]
+    chart		    399
+    linkNode		    [399 409 0]
+    subviewer		    399
+    quantum		    [0 416 0 0]
     ssIdNumber		    20
     type		    CONNECTIVE_JUNCTION
   }
   junction {
-    id			    418
+    id			    407
     position		    [138.9167 80 7]
-    chart		    410
-    linkNode		    [410 0 419]
-    subviewer		    410
-    quantum		    [0 430 0 0]
+    chart		    399
+    linkNode		    [399 0 408]
+    subviewer		    399
+    quantum		    [0 419 0 0]
     ssIdNumber		    21
     type		    CONNECTIVE_JUNCTION
   }
   junction {
-    id			    419
+    id			    408
     position		    [390.7917 191.875 7]
-    chart		    410
-    linkNode		    [410 418 416]
-    subviewer		    410
-    quantum		    [0 0 0 431]
+    chart		    399
+    linkNode		    [399 407 405]
+    subviewer		    399
+    quantum		    [0 0 0 420]
     ssIdNumber		    22
     type		    CONNECTIVE_JUNCTION
   }
   junction {
-    id			    420
+    id			    409
     position		    [390.7917 487.2188 7]
-    chart		    410
-    linkNode		    [410 416 417]
-    subviewer		    410
-    quantum		    [0 0 0 432]
+    chart		    399
+    linkNode		    [399 405 406]
+    subviewer		    399
+    quantum		    [0 0 0 421]
     ssIdNumber		    23
     type		    CONNECTIVE_JUNCTION
   }
   transition {
-    id			    421
+    id			    410
     labelPosition	    [235.6 22.326 7.921 15.818]
     fontSize		    12
     src {
       intersection	      [0 0 1 0 250 15 0 0]
     }
     dst {
-      id		      411
+      id		      400
       intersection	      [1 0 -1 0.4972 250 45 0 0]
     }
     midPoint		    [250 25.3263]
-    chart		    410
-    linkNode		    [410 0 430]
+    chart		    399
+    linkNode		    [399 0 419]
     dataLimits		    [250 250 15 37]
-    subviewer		    410
+    subviewer		    399
     drawStyle		    SMART
     executionOrder	    1
     ssIdNumber		    6
   }
   transition {
-    id			    422
+    id			    411
     labelString		    "[cCOn]"
     labelPosition	    [252.813 120 37.843 15.818]
     fontSize		    12
     src {
-      id		      411
+      id		      400
       intersection	      [3 0 1 0.4924 250.9375 105 0 -0.6875]
     }
     dst {
-      id		      412
+      id		      401
       intersection	      [1 -0 -1 0.4896 250.9375 163.125 0 0.6875]
     }
     midPoint		    [250.9375 131.0654]
-    chart		    410
-    linkNode		    [410 429 431]
+    chart		    399
+    linkNode		    [399 418 420]
     dataLimits		    [250.938 250.938 105 155.125]
     stampAngle		    -1
-    subviewer		    410
+    subviewer		    399
     drawStyle		    SMART
     executionOrder	    1
     ssIdNumber		    7
   }
   transition {
-    id			    423
+    id			    412
     labelString		    "[timer >= onTime]"
     labelPosition	    [229.375 228.75 92.408 15.818]
     fontSize		    12
     src {
-      id		      412
+      id		      401
       intersection	      [3 0 1 0.7396 230.3125 223.125 0 21.5625]
     }
     dst {
-      id		      414
+      id		      403
       intersection	      [1 -0 -1 0.291 230.3125 260.625 0 -21.5625]
     }
     midPoint		    [230.3125 238.4295]
-    chart		    410
-    linkNode		    [410 433 426]
+    chart		    399
+    linkNode		    [399 422 415]
     dataLimits		    [230.313 230.313 223.125 252.625]
     stampAngle		    -1
-    subviewer		    410
+    subviewer		    399
     drawStyle		    SMART
     executionOrder	    1
     ssIdNumber		    8
   }
   transition {
-    id			    424
+    id			    413
     labelString		    "[timer >= offShortTime]"
     labelPosition	    [227.5 328.125 118.81 15.818]
     fontSize		    12
     src {
-      id		      414
+      id		      403
       intersection	      [3 0 1 0.7507 226.5625 320.625 0 21.625]
     }
     dst {
-      id		      413
+      id		      402
       intersection	      [1 -0 -1 0.234 226.5625 357 0 -22.5625]
     }
     midPoint		    [226.5625 335.3426]
-    chart		    410
-    linkNode		    [410 428 425]
+    chart		    399
+    linkNode		    [399 417 414]
     dataLimits		    [226.563 226.563 320.625 349]
     stampAngle		    -1
-    subviewer		    410
+    subviewer		    399
     drawStyle		    SMART
     executionOrder	    1
     ssIdNumber		    9
   }
   transition {
-    id			    425
+    id			    414
     labelString		    "[timer >= onTime]"
     labelPosition	    [228.438 421.875 92.408 15.818]
     fontSize		    12
     src {
-      id		      413
+      id		      402
       intersection	      [3 0 1 0.7434 228.5938 417 0 22.0625]
     }
     dst {
-      id		      415
+      id		      404
       intersection	      [1 -0 -1 0.2403 228.5938 463.7812 0 -23]
     }
     midPoint		    [228.5938 437.1469]
-    chart		    410
-    linkNode		    [410 424 432]
+    chart		    399
+    linkNode		    [399 413 421]
     dataLimits		    [228.594 228.594 417 455.781]
     stampAngle		    -1
-    subviewer		    410
+    subviewer		    399
     drawStyle		    SMART
     executionOrder	    1
     ssIdNumber		    10
   }
   transition {
-    id			    426
+    id			    415
     labelString		    "[~cCOn]"
     labelPosition	    [159.646 272.844 44.884 15.818]
     fontSize		    12
     src {
-      id		      414
+      id		      403
       intersection	      [4 -1 0 0.5365 204.125 288.4375 0 0]
     }
     dst {
-      id		      416
+      id		      405
       intersection	      [0 1 0 -1 145.9167 288.4375 0 0]
     }
     midPoint		    [178.0161 288.4375]
-    chart		    410
-    linkNode		    [410 423 428]
+    chart		    399
+    linkNode		    [399 412 417]
     dataLimits		    [153.917 204.125 288.438 288.438]
-    subviewer		    410
+    subviewer		    399
     drawStyle		    SMART
     executionOrder	    2
     ssIdNumber		    11
   }
   transition {
-    id			    427
+    id			    416
     labelString		    "[~cCOn]"
     labelPosition	    [157.146 475.969 44.884 15.818]
     fontSize		    12
     src {
-      id		      415
+      id		      404
       intersection	      [4 -1 0 0.5312 206.9687 491.9063 0 0]
     }
     dst {
-      id		      417
+      id		      406
       intersection	      [0 1 0 -1 145.9167 491.9063 0 0]
     }
     midPoint		    [179.3762 491.9063]
-    chart		    410
-    linkNode		    [410 432 0]
+    chart		    399
+    linkNode		    [399 421 0]
     dataLimits		    [153.917 206.969 491.906 491.906]
-    subviewer		    410
+    subviewer		    399
     drawStyle		    SMART
     executionOrder	    2
     ssIdNumber		    12
   }
   transition {
-    id			    428
+    id			    417
     labelPosition	    [138.917 374.861 7.921 15.818]
     fontSize		    12
     src {
-      id		      417
+      id		      406
       intersection	      [0 0 -1 -1 138.9167 484.9063 0 0]
     }
     dst {
-      id		      416
+      id		      405
       intersection	      [0 0 1 -1 138.9167 295.4375 0 0]
     }
     midPoint		    [138.9167 390.3137]
-    chart		    410
-    linkNode		    [410 426 424]
+    chart		    399
+    linkNode		    [399 415 413]
     dataLimits		    [138.917 138.917 303.438 484.906]
-    subviewer		    410
+    subviewer		    399
     drawStyle		    SMART
     executionOrder	    1
     ssIdNumber		    13
   }
   transition {
-    id			    429
+    id			    418
     labelPosition	    [138.917 168.368 7.921 15.818]
     fontSize		    12
     src {
-      id		      416
+      id		      405
       intersection	      [0 0 -1 -1 138.9167 281.4375 0 0]
     }
     dst {
-      id		      418
+      id		      407
       intersection	      [0 0 1 -1 138.9167 87 0 0]
     }
     midPoint		    [138.9167 184.2526]
-    chart		    410
-    linkNode		    [410 430 422]
+    chart		    399
+    linkNode		    [399 419 411]
     dataLimits		    [138.917 138.917 95 281.437]
-    subviewer		    410
+    subviewer		    399
     drawStyle		    SMART
     executionOrder	    1
     ssIdNumber		    14
   }
   transition {
-    id			    430
+    id			    419
     labelPosition	    [176.749 80 7.921 15.818]
     fontSize		    12
     src {
-      id		      418
+      id		      407
       intersection	      [0 1 0 -1 145.9167 80 0 0]
     }
     dst {
-      id		      411
+      id		      400
       intersection	      [4 -1 0 0.4167 205.25 80 0 0]
     }
     midPoint		    [172.6125 80]
-    chart		    410
-    linkNode		    [410 421 429]
+    chart		    399
+    linkNode		    [399 410 418]
     dataLimits		    [145.917 197.25 80 80]
-    subviewer		    410
+    subviewer		    399
     drawStyle		    SMART
     slide {
       sticky		      DST_STICK
@@ -59074,22 +56603,22 @@ Stateflow {
     ssIdNumber		    15
   }
   transition {
-    id			    431
+    id			    420
     labelPosition	    [336.17 191.875 7.921 15.818]
     fontSize		    12
     src {
-      id		      419
+      id		      408
       intersection	      [0 -1 0 -1 383.7917 191.875 0 0]
     }
     dst {
-      id		      412
+      id		      401
       intersection	      [2 1 0 0.4792 296.875 191.875 0 0]
     }
     midPoint		    [342.7045 191.875]
-    chart		    410
-    linkNode		    [410 422 433]
+    chart		    399
+    linkNode		    [399 411 422]
     dataLimits		    [304.875 383.792 191.875 191.875]
-    subviewer		    410
+    subviewer		    399
     drawStyle		    SMART
     slide {
       sticky		      SRC_STICK
@@ -59098,53 +56627,53 @@ Stateflow {
     ssIdNumber		    16
   }
   transition {
-    id			    432
+    id			    421
     labelString		    "[timer >= offLongTime]"
     labelPosition	    [310.896 494.719 116.17 15.818]
     fontSize		    12
     src {
-      id		      415
+      id		      404
       intersection	      [2 1 0 0.3906 296.9687 487.2188 0 0]
     }
     dst {
-      id		      420
+      id		      409
       intersection	      [0 -1 0 -1 383.7917 487.2188 0 0]
     }
     midPoint		    [338.007 487.2188]
-    chart		    410
-    linkNode		    [410 425 427]
+    chart		    399
+    linkNode		    [399 414 416]
     dataLimits		    [296.969 375.792 487.219 487.219]
-    subviewer		    410
+    subviewer		    399
     drawStyle		    SMART
     executionOrder	    1
     ssIdNumber		    17
   }
   transition {
-    id			    433
+    id			    422
     labelPosition	    [390.792 314.25 7.921 15.818]
     fontSize		    12
     src {
-      id		      420
+      id		      409
       intersection	      [0 0 -1 -1 390.7917 480.2188 0 0]
     }
     dst {
-      id		      419
+      id		      408
       intersection	      [0 0 1 -1 390.7917 198.875 0 0]
     }
     midPoint		    [390.7917 337.6914]
-    chart		    410
-    linkNode		    [410 431 423]
+    chart		    399
+    linkNode		    [399 420 412]
     dataLimits		    [390.792 390.792 206.875 480.219]
-    subviewer		    410
+    subviewer		    399
     drawStyle		    SMART
     executionOrder	    1
     ssIdNumber		    18
   }
   data {
-    id			    434
+    id			    423
     ssIdNumber		    24
     name		    "cCOn"
-    linkNode		    [410 0 435]
+    linkNode		    [399 0 424]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -59162,10 +56691,10 @@ Stateflow {
     dataType		    "Inherit: Same as Simulink"
   }
   data {
-    id			    435
+    id			    424
     ssIdNumber		    25
     name		    "light"
-    linkNode		    [410 434 436]
+    linkNode		    [399 423 425]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -59179,10 +56708,10 @@ Stateflow {
     dataType		    "boolean"
   }
   data {
-    id			    436
+    id			    425
     ssIdNumber		    26
     name		    "offLongTime"
-    linkNode		    [410 435 437]
+    linkNode		    [399 424 426]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -59200,10 +56729,10 @@ Stateflow {
     dataType		    "Inherit: Same as Simulink"
   }
   data {
-    id			    437
+    id			    426
     ssIdNumber		    27
     name		    "offShortTime"
-    linkNode		    [410 436 438]
+    linkNode		    [399 425 427]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -59221,10 +56750,10 @@ Stateflow {
     dataType		    "Inherit: Same as Simulink"
   }
   data {
-    id			    438
+    id			    427
     ssIdNumber		    28
     name		    "onTime"
-    linkNode		    [410 437 439]
+    linkNode		    [399 426 428]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -59242,10 +56771,10 @@ Stateflow {
     dataType		    "Inherit: Same as Simulink"
   }
   data {
-    id			    439
+    id			    428
     ssIdNumber		    29
     name		    "timer"
-    linkNode		    [410 438 0]
+    linkNode		    [399 427 0]
     scope		    LOCAL_DATA
     machine		    1
     props {
@@ -59258,328 +56787,331 @@ Stateflow {
     dataType		    "uint16"
   }
   instance {
-    id			    440
+    id			    429
     name		    "Foreground/Actuators/Analog Out/Cruise Control Indicator/Chart"
     machine		    1
-    chart		    410
+    chart		    399
   }
   chart {
-    id			    441
+    id			    430
     name		    "Foreground/Control Strategy/EHPAS_PercentControl/Chart"
-    windowPosition	    [0 22.5 1024.5 496.5]
-    viewLimits		    [0 1342.989 279.973 910.397]
-    zoomFactor		    1.369
+    windowPosition	    [18.75 22.5 1024.5 496.5]
+    viewLimits		    [30.789 1257.039 182.725 758.35]
+    zoomFactor		    1.25
     screen		    [1 1 1366 768 1.333333333333333]
-    treeNode		    [0 446 0 0]
-    firstTransition	    458
-    viewObj		    441
+    treeNode		    [0 435 0 0]
+    firstTransition	    447
+    viewObj		    430
     machine		    1
     subviewS {
+      y1		      279.973
       zoomFactor	      1.369
     }
-    ssIdHighWaterMark	    113
+    ssIdHighWaterMark	    116
     decomposition	    CLUSTER_CHART
-    firstData		    484
+    firstData		    473
     chartFileNumber	    9
     userSpecifiedStateTransitionExecutionOrder 1
     disableImplicitCasting  1
   }
   state {
-    id			    442
+    id			    431
     labelString		    "LowSpeedManeuvering\nen:counts=0\ndu:\nPumpState=1"
-    position		    [10.75 198.375 368.75 192.75]
+    position		    [142.625 203.0625 479.0625 203.0625]
     fontSize		    12
-    chart		    441
-    treeNode		    [441 449 443 447]
-    firstTransition	    460
-    subviewer		    441
+    chart		    430
+    treeNode		    [430 438 432 436]
+    firstTransition	    449
+    subviewer		    430
     ssIdNumber		    18
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    443
+    id			    432
     labelString		    "NormalDriving"
-    position		    [1225.625 135.75 601.086 340.0275]
+    position		    [1467.8125 140.4375 601.086 340.0275]
     fontSize		    12
-    chart		    441
-    treeNode		    [441 454 451 442]
-    firstTransition	    459
-    subviewer		    441
+    chart		    430
+    treeNode		    [430 443 440 431]
+    firstTransition	    448
+    visible		    0
+    subviewer		    430
     ssIdNumber		    20
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    444
+    id			    433
     labelString		    "Driving\ndu:\nPumpState=2"
-    position		    [1248.0843 227.0637 178.1765 110.5107]
+    position		    [1490.2718 231.7512 178.1765 110.5107]
     fontSize		    12
     arrowSize		    8.932
-    chart		    441
-    treeNode		    [443 0 454 450]
-    subviewer		    441
+    chart		    430
+    treeNode		    [432 0 443 439]
+    visible		    0
+    subviewer		    430
     ssIdNumber		    21
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    445
+    id			    434
     labelString		    "Braking\nen: counts=0\ndu:\ncounts=counts+1\nPumpState=3"
-    position		    [718.0348 704.8246 243 165]
+    position		    [960.2223 709.5121 243 165]
     fontSize		    12
-    chart		    441
-    treeNode		    [441 0 453 0]
-    subviewer		    441
+    chart		    430
+    treeNode		    [430 0 442 441]
+    subviewer		    430
     ssIdNumber		    76
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    446
+    id			    435
     labelString		    "KeyUp\nen:counts=0\ndu:\ncounts=counts+1\nPumpState=4"
-    position		    [619.711 33.3647 384.0071 143.7929]
+    position		    [861.8985 38.0522 384.0071 143.7929]
     fontSize		    12
-    chart		    441
-    treeNode		    [441 455 0 451]
+    chart		    430
+    treeNode		    [430 444 0 440]
     visible		    0
-    subviewer		    441
+    subviewer		    430
     ssIdNumber		    23
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    447
+    id			    436
     labelString		    "Idle\ndu:PumpState=0"
-    position		    [734.3422 208.8674 199.75 147.75]
+    position		    [976.5297 213.5549 199.75 147.75]
     fontSize		    12
-    chart		    441
-    treeNode		    [441 0 442 452]
+    chart		    430
+    treeNode		    [430 0 431 446]
     superState		    GROUPED
-    subviewer		    441
+    subviewer		    430
     ssIdNumber		    39
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    448
+    id			    437
     labelString		    "Creeping\nen: counts=0\ndu: counts=counts+1"
-    position		    [25.25 292.5 115.375 70.875]
+    position		    [178.5313 306.0937 134.2813 72.2813]
     fontSize		    12
-    chart		    441
-    treeNode		    [442 0 449 0]
-    subviewer		    441
+    chart		    430
+    treeNode		    [431 0 438 0]
+    subviewer		    430
     ssIdNumber		    31
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    449
+    id			    438
     labelString		    "Reversing\nen:counts=0"
-    position		    [217.5 291 127.75 77.25]
+    position		    [470.1563 297.0937 127.75 77.25]
     fontSize		    12
-    chart		    441
-    treeNode		    [442 0 0 448]
-    subviewer		    441
+    chart		    430
+    treeNode		    [431 0 0 437]
+    subviewer		    430
     ssIdNumber		    32
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    450
+    id			    439
     labelString		    "DrivingAndBrake\nen: brakeCounts=0\ndu:\nbrakeCounts=brakeCounts+1\nPumpState=5"
-    position		    [1596.8016 236.3189 199 96.75]
+    position		    [1838.9891 241.0064 199 96.75]
     fontSize		    12
-    chart		    441
-    treeNode		    [443 0 444 0]
+    chart		    430
+    treeNode		    [432 0 433 0]
     visible		    0
-    subviewer		    441
+    subviewer		    430
     ssIdNumber		    74
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    451
+    id			    440
     labelString		    "want to make sure that keeping pump on longer than min pump run time"
-    position		    [1130.75 44.625 317.4285 18.8465]
-    chart		    441
-    treeNode		    [441 0 446 443]
+    position		    [1372.9375 49.3125 317.4285 18.8465]
+    chart		    430
+    treeNode		    [430 0 435 432]
     superState		    GROUPED
     isNoteBox		    1
     noteBox		    [0 0 0 1]
     visible		    0
-    subviewer		    441
+    subviewer		    430
     ssIdNumber		    63
     type		    GROUP_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    452
+    id			    441
     labelString		    "low speed maneuvering should watch to see if at low speed\n	but not stopped even without the bra"
     "ke on and\n	then turn the pump on"
-    position		    [120.6055 228.375 264.0633 43.4404]
-    chart		    441
-    treeNode		    [441 0 447 457]
+    position		    [362.793 233.0625 264.0633 43.4404]
+    chart		    430
+    treeNode		    [430 0 434 0]
     superState		    GROUPED
     isNoteBox		    1
     noteBox		    [0 0 0 1]
-    visible		    0
-    subviewer		    441
+    subviewer		    430
     ssIdNumber		    65
     type		    GROUP_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    453
+    id			    442
     labelString		    "pump will be on while braking"
-    position		    [823.9063 674.5313 132.7029 18.8465]
-    chart		    441
-    treeNode		    [441 0 456 445]
+    position		    [1066.0938 679.2188 132.7029 18.8465]
+    chart		    430
+    treeNode		    [430 0 445 434]
     superState		    GROUPED
     isNoteBox		    1
     noteBox		    [0 0 0 1]
-    subviewer		    441
+    subviewer		    430
     ssIdNumber		    66
     type		    GROUP_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    454
+    id			    443
     labelString		    "during normal driving, pump will be off\n\nexit criteria:\n   if the brake is hit hard\n   if th"
     "e brake is on for more than brakeTime"
-    position		    [1489.3837 150.1269 200.4356 68.0344]
+    position		    [1731.5712 154.8144 200.4356 68.0344]
     fontSize		    10.048
     arrowSize		    8.932
-    chart		    441
-    treeNode		    [443 0 0 444]
+    chart		    430
+    treeNode		    [432 0 0 433]
     superState		    GROUPED
     isNoteBox		    1
     noteBox		    [0 0 0 1]
     visible		    0
-    subviewer		    441
+    subviewer		    430
     ssIdNumber		    69
     type		    GROUP_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    455
+    id			    444
     labelString		    "want the pump to be on right away when we key on"
-    position		    [766.4111 38.0606 229.1707 18.8465]
-    chart		    441
-    treeNode		    [446 0 0 0]
+    position		    [1008.5986 42.7481 229.1707 18.8465]
+    chart		    430
+    treeNode		    [435 0 0 0]
     superState		    GROUPED
     isNoteBox		    1
     noteBox		    [0 0 0 1]
     visible		    0
-    subviewer		    441
+    subviewer		    430
     ssIdNumber		    71
     type		    GROUP_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    456
+    id			    445
     labelString		    "SlowingDown\nen:\ndu:\ncounts=counts+1\nPumpState=6"
-    position		    [755.0933 538.6294 164.5 101.25]
+    position		    [997.2808 543.3169 164.5 101.25]
     fontSize		    12
-    chart		    441
-    treeNode		    [441 0 457 453]
-    subviewer		    441
+    chart		    430
+    treeNode		    [430 0 446 442]
+    subviewer		    430
     ssIdNumber		    96
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    457
+    id			    446
     labelString		    "Stopping\nen:\ndu:\ncounts=counts+1\nPumpState=7"
-    position		    [888.0351 382.7852 164.5 101.25]
+    position		    [1130.2226 387.4727 164.5 101.25]
     fontSize		    12
-    chart		    441
-    treeNode		    [441 0 452 456]
-    subviewer		    441
+    chart		    430
+    treeNode		    [430 0 436 445]
+    subviewer		    430
     ssIdNumber		    98
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   transition {
-    id			    458
-    labelPosition	    [778.823 11.756 9.236 17.421]
+    id			    447
+    labelPosition	    [1020.993 16.443 8.433 16.842]
     fontSize		    12
     src {
-      intersection	      [0 0 1 0 793.2232 16.4257 0 0]
+      intersection	      [0 0 1 0 1035.4107 21.1132 0 0]
     }
     dst {
-      id		      446
-      intersection	      [1 0 -1 0.4518 793.2232 33.3647 0 0]
+      id		      435
+      intersection	      [1 0 -1 0.4518 1035.3929 38.0522 0 0]
     }
-    midPoint		    [793.2232 21.0027]
-    chart		    441
-    linkNode		    [441 0 466]
-    dataLimits		    [790.823 795.623 16.426 33.365]
-    subviewer		    441
+    midPoint		    [1035.4107 25.6902]
+    chart		    430
+    linkNode		    [430 0 455]
+    visible		    0
+    dataLimits		    [1032.993 1037.793 21.113 38.052]
+    subviewer		    430
     drawStyle		    SMART
     executionOrder	    1
     ssIdNumber		    25
   }
   transition {
-    id			    459
-    labelPosition	    [1314.394 201.139 9.236 17.421]
+    id			    448
+    labelPosition	    [1556.582 205.826 8.433 16.842]
     fontSize		    12
     arrowSize		    8.932
     src {
-      intersection	      [0 0 1 0 1332.0585 192.3995 0 0]
+      intersection	      [0 0 1 0 1574.246 197.087 0 0]
     }
     dst {
-      id		      444
-      intersection	      [1 0 -1 0.4713 1332.0585 227.0637 0 0]
+      id		      433
+      intersection	      [1 0 -1 0.4713 1574.2464 231.7512 0 0]
     }
-    midPoint		    [1332.0585 205.7284]
-    chart		    441
-    linkNode		    [443 0 472]
-    dataLimits		    [1329.379 1334.738 192.399 227.064]
-    subviewer		    441
+    midPoint		    [1574.246 210.4159]
+    chart		    430
+    linkNode		    [432 0 461]
+    dataLimits		    [1571.567 1576.926 197.087 231.751]
+    subviewer		    430
     drawStyle		    SMART
     executionOrder	    1
     ssIdNumber		    33
   }
   transition {
-    id			    460
-    labelPosition	    [46.109 270.891 9.236 17.421]
+    id			    449
+    labelPosition	    [205.168 284.485 8.433 16.842]
     fontSize		    12
     src {
-      intersection	      [0 0 1 0 60.5086 269.25 0 0]
+      intersection	      [0 0 1 0 219.5676 282.8437 0 0]
     }
     dst {
-      id		      448
-      intersection	      [1 0 -1 0.3056 60.5086 292.5 0 0]
+      id		      437
+      intersection	      [1 0 -1 0.3056 219.5676 306.0937 0 0]
     }
-    midPoint		    [60.5086 277.1197]
-    chart		    441
-    linkNode		    [442 0 474]
-    dataLimits		    [58.109 62.909 269.25 292.5]
-    subviewer		    441
+    midPoint		    [219.5676 290.7135]
+    chart		    430
+    linkNode		    [431 0 463]
+    dataLimits		    [217.168 221.968 282.844 306.094]
+    subviewer		    430
     drawStyle		    SMART
     executionOrder	    1
     ssIdNumber		    34
   }
   transition {
-    id			    461
+    id			    450
     labelString		    "[!onBrake&&vehSpeed<creepSpeed]"
-    labelPosition	    [497.57 691.56 207.303 17.421]
+    labelPosition	    [739.679 697.985 198.654 16.842]
     fontSize		    12
     src {
-      id		      445
-      intersection	      [4 -1 0 0.4682 718.0348 792.5746 0 -87.75]
+      id		      434
+      intersection	      [4 -1 0 0.4682 960.2223 797.2591 0 -87.747]
     }
     dst {
-      id		      442
-      intersection	      [3 0 1 0.1756 314.75 391.125 0 64.75]
+      id		      431
+      intersection	      [3 0 1 0.1352 556.935 406.125 0 64.7525]
     }
-    midPoint		    [435.342 657.1096]
-    chart		    441
-    linkNode		    [441 468 477]
-    dataLimits		    [312.35 718.035 391.125 792.575]
+    midPoint		    [678.3907 666.347]
+    chart		    430
+    linkNode		    [430 457 466]
+    dataLimits		    [554.535 960.222 406.125 797.259]
     stampAngle		    NaN
-    subviewer		    441
+    subviewer		    430
     drawStyle		    SMART
     slide {
       mode		      MIRROR_SLIDE
@@ -59589,24 +57121,25 @@ Stateflow {
     ssIdNumber		    79
   }
   transition {
-    id			    462
+    id			    451
     labelString		    "[vehSpeed>creepSpeed&&counts>(keyOnRunTime*200)]"
-    labelPosition	    [1180.48 66.902 324.296 17.421]
+    labelPosition	    [1422.652 71.588 310.162 16.842]
     fontSize		    12
     src {
-      id		      446
-      intersection	      [2 1 0 0.4265 1003.7181 94.6856 0 -41.0644]
+      id		      435
+      intersection	      [2 1 0 0.4265 1245.9056 99.3799 0 -41.0644]
     }
     dst {
-      id		      443
-      intersection	      [1 0 -1 0.0898 1279.625 135.75 0 54]
+      id		      432
+      intersection	      [1 0 -1 0.0898 1521.79 140.4375 0 54]
     }
-    midPoint		    [1183.952 75.9798]
-    chart		    441
-    linkNode		    [441 466 481]
-    dataLimits		    [1003.718 1282.025 75.177 135.75]
+    midPoint		    [1426.1395 80.6673]
+    chart		    430
+    linkNode		    [430 455 470]
+    visible		    0
+    dataLimits		    [1245.906 1524.19 79.863 140.437]
     stampAngle		    NaN
-    subviewer		    441
+    subviewer		    430
     drawStyle		    SMART
     slide {
       mode		      MIRROR_SLIDE
@@ -59616,71 +57149,75 @@ Stateflow {
     ssIdNumber		    37
   }
   transition {
-    id			    463
+    id			    452
     labelString		    "[!onBrake]"
-    labelPosition	    [1475.221 324.174 58.496 17.421]
+    labelPosition	    [1717.408 328.862 57.16 16.842]
     fontSize		    12
     arrowSize		    8.932
     src {
-      id		      450
-      intersection	      [4 -1 -0 0.1516 1596.8016 318.3995 0 -29.9556]
+      id		      439
+      intersection	      [4 -1 0 0.1516 1838.9891 323.0883 0 -29.9556]
     }
     dst {
-      id		      444
-      intersection	      [2 1 0 0.8265 1426.2608 318.3995 0 33.7056]
+      id		      433
+      intersection	      [2 1 0 0.8265 1668.4483 323.0883 0 33.7056]
     }
-    midPoint		    [1512.5806 318.3995]
-    chart		    441
-    linkNode		    [443 472 0]
-    dataLimits		    [1426.261 1596.802 315.72 321.079]
+    midPoint		    [1754.7681 323.087]
+    chart		    430
+    linkNode		    [432 461 0]
+    dataLimits		    [1668.448 1838.989 320.409 325.768]
     stampAngle		    NaN
-    subviewer		    441
+    subviewer		    430
     drawStyle		    SMART
+    slide {
+    }
     executionOrder	    1
     ssIdNumber		    82
   }
   transition {
-    id			    464
-    labelString		    "[!inReverse]"
-    labelPosition	    [142.688 357.378 68.759 17.421]
+    id			    453
+    labelString		    "[!inReverse && !onBrake]"
+    labelPosition	    [322.887 371.098 136.809 16.842]
     fontSize		    12
     src {
-      id		      449
-      intersection	      [4 -1 -0 0.1844 217.5 354.003 0 -12.375]
+      id		      438
+      intersection	      [4 -1 0 0.11 470.1563 365.8484 0 -12.375]
     }
     dst {
-      id		      448
-      intersection	      [2 1 0 0.8678 140.625 354.003 0 10.875]
+      id		      437
+      intersection	      [2 1 0 0.8267 312.8125 365.8484 0 10.875]
     }
-    midPoint		    [181.652 354.003]
-    chart		    441
-    linkNode		    [442 474 0]
-    dataLimits		    [140.625 217.5 351.603 356.403]
+    midPoint		    [392.3246 365.8484]
+    chart		    430
+    linkNode		    [431 463 0]
+    dataLimits		    [312.813 470.156 363.448 368.248]
     stampAngle		    NaN
-    subviewer		    441
+    subviewer		    430
     drawStyle		    SMART
+    slide {
+    }
     executionOrder	    1
     ssIdNumber		    54
   }
   transition {
-    id			    465
+    id			    454
     labelString		    "[!onBrake&&counts>(minPumpRunTime*200)]"
-    labelPosition	    [982.341 788.42 262.721 17.421]
+    labelPosition	    [1224.528 793.103 249.254 16.842]
     fontSize		    12
     src {
-      id		      445
-      intersection	      [2 1 0 0.4997 961.0348 787.2802 0 82.4556]
+      id		      434
+      intersection	      [2 1 0 0.4997 1203.2223 791.9626 0 82.4556]
     }
     dst {
-      id		      443
-      intersection	      [3 0 1 0.5854 1474.8648 475.7775 0 -249.2398]
+      id		      432
+      intersection	      [3 0 1 0.5854 1717.0228 480.465 0 -249.2398]
     }
-    midPoint		    [1306.403 703.8656]
-    chart		    441
-    linkNode		    [441 477 473]
-    dataLimits		    [961.035 1477.265 475.777 787.28]
+    midPoint		    [1548.5905 708.5531]
+    chart		    430
+    linkNode		    [430 462 464]
+    dataLimits		    [1203.222 1719.423 480.465 791.963]
     stampAngle		    NaN
-    subviewer		    441
+    subviewer		    430
     drawStyle		    SMART
     slide {
       mode		      MIRROR_SLIDE
@@ -59690,24 +57227,24 @@ Stateflow {
     ssIdNumber		    92
   }
   transition {
-    id			    466
+    id			    455
     labelString		    "[inReverse]"
-    labelPosition	    [526.767 42.465 65.68 17.421]
+    labelPosition	    [767.038 47.391 61.845 16.842]
     fontSize		    12
     src {
-      id		      446
-      intersection	      [4 -1 0 0.7858 619.711 64.1628 0 112.9947]
+      id		      435
+      intersection	      [4 -1 0 0.7858 861.8985 68.8526 0 112.9925]
     }
     dst {
-      id		      442
-      intersection	      [1 0 -1 0.0674 35.589 198.375 0 -343.911]
+      id		      431
+      intersection	      [1 0 -1 0.2821 277.7912 203.0625 0 -343.8963]
     }
-    midPoint		    [237.0895 53.3546]
-    chart		    441
-    linkNode		    [441 458 462]
-    dataLimits		    [33.189 619.711 42.8 198.375]
+    midPoint		    [479.2866 58.0451]
+    chart		    430
+    linkNode		    [430 447 451]
+    dataLimits		    [275.391 861.898 55.645 203.062]
     stampAngle		    NaN
-    subviewer		    441
+    subviewer		    430
     drawStyle		    SMART
     slide {
       mode		      MIRROR_SLIDE
@@ -59717,47 +57254,49 @@ Stateflow {
     ssIdNumber		    43
   }
   transition {
-    id			    467
+    id			    456
     labelString		    "[vehSpeed<stopSpeed&&counts>(keyOnRunTime*200)]"
-    labelPosition	    [479.839 181.931 317.112 17.421]
+    labelPosition	    [722.017 186.618 303.603 16.842]
     fontSize		    12
     src {
-      id		      446
-      intersection	      [3 0 1 0.4966 813.0135 177.1575 0 -4.5]
+      id		      435
+      intersection	      [3 0 1 0.4966 1055.1912 181.8451 0 -4.5]
     }
     dst {
-      id		      447
-      intersection	      [1 0 -1 0.3938 813.0135 208.8674 0 4.5]
+      id		      436
+      intersection	      [1 0 -1 0.3938 1055.1912 213.5549 0 4.5]
     }
-    midPoint		    [813.0135 189.4411]
-    chart		    441
-    linkNode		    [441 481 470]
-    dataLimits		    [810.614 815.414 177.158 208.867]
+    midPoint		    [1055.201 194.1286]
+    chart		    430
+    linkNode		    [430 470 459]
+    dataLimits		    [1052.791 1057.591 181.845 213.555]
     stampAngle		    NaN
-    subviewer		    441
+    subviewer		    430
     drawStyle		    SMART
+    slide {
+    }
     executionOrder	    4
     ssIdNumber		    44
   }
   transition {
-    id			    468
+    id			    457
     labelString		    "[vehSpeed>creepSpeed&&counts>(minPumpRunTime*200)]"
-    labelPosition	    [24.103 609.512 344.821 17.421]
+    labelPosition	    [272.092 624.007 326.092 16.842]
     fontSize		    12
     src {
-      id		      442
-      intersection	      [3 0 1 0.9017 47 391.125 0 428.875]
+      id		      431
+      intersection	      [3 0 1 0.6833 294.3419 406.125 0 428.8769]
     }
     dst {
-      id		      443
-      intersection	      [3 0 1 0.3842 1595.7861 475.7775 0 -551.1886]
+      id		      432
+      intersection	      [3 0 1 0.3756 1843.1175 480.465 0 -551.1763]
     }
-    midPoint		    [860.9791 910.5983]
-    chart		    441
-    linkNode		    [441 476 461]
-    dataLimits		    [47 1598.186 391.125 910.397]
+    midPoint		    [1111.4761 920.0061]
+    chart		    430
+    linkNode		    [430 465 450]
+    dataLimits		    [294.342 1845.518 406.125 919.963]
     stampAngle		    NaN
-    subviewer		    441
+    subviewer		    430
     drawStyle		    SMART
     slide {
       mode		      MIRROR_SLIDE
@@ -59768,116 +57307,124 @@ Stateflow {
     ssIdNumber		    57
   }
   transition {
-    id			    469
+    id			    458
     labelString		    "[onBrake&&vehSpeed<creepSpeed]"
-    labelPosition	    [910.285 663.21 204.224 17.421]
+    labelPosition	    [1152.469 667.897 195.843 16.842]
     fontSize		    12
     src {
-      id		      445
-      intersection	      [1 0 -1 0.7556 901.6541 704.8246 0 64.3108]
+      id		      434
+      intersection	      [1 0 -1 0.7556 1143.8339 709.5121 0 64.3108]
     }
     dst {
-      id		      456
-      intersection	      [3 0 1 0.1091 901.6541 639.8794 0 -64.3108]
+      id		      445
+      intersection	      [3 0 1 0.1091 1143.8339 644.5669 0 -64.3108]
     }
-    midPoint		    [901.6541 675.2008]
-    chart		    441
-    linkNode		    [441 480 0]
-    dataLimits		    [899.254 904.054 639.879 704.825]
+    midPoint		    [1143.8416 679.8883]
+    chart		    430
+    linkNode		    [430 469 0]
+    dataLimits		    [1141.434 1146.234 644.567 709.512]
     stampAngle		    NaN
-    subviewer		    441
+    subviewer		    430
     drawStyle		    SMART
+    slide {
+    }
     executionOrder	    2
     ssIdNumber		    46
   }
   transition {
-    id			    470
+    id			    459
     labelString		    "[counts>(lowSpeedManTime*200)]"
-    labelPosition	    [440.467 220.214 197.041 17.421]
+    labelPosition	    [683.404 224.907 187.409 16.842]
     fontSize		    12
     src {
-      id		      442
-      intersection	      [2 1 0 0.2242 379.5 241.5886 0 -15]
+      id		      431
+      intersection	      [2 1 0 0.2128 621.6875 246.2815 0 -15]
     }
     dst {
-      id		      447
-      intersection	      [4 -1 0 0.7785 734.3422 241.5886 0 13.5]
+      id		      436
+      intersection	      [4 -1 -0 0.7785 976.5297 246.2815 0 13.5]
     }
-    midPoint		    [560.3744 241.5886]
-    chart		    441
-    linkNode		    [441 467 482]
-    dataLimits		    [379.5 734.342 239.189 243.989]
+    midPoint		    [802.5619 246.2815]
+    chart		    430
+    linkNode		    [430 456 471]
+    dataLimits		    [621.687 976.53 243.882 248.682]
     stampAngle		    NaN
-    subviewer		    441
+    subviewer		    430
     drawStyle		    SMART
+    slide {
+    }
     executionOrder	    2
     ssIdNumber		    47
   }
   transition {
-    id			    471
+    id			    460
     labelString		    "[vehSpeed>stopSpeed]"
-    labelPosition	    [504.217 319.697 133.413 17.421]
+    labelPosition	    [746.957 324.382 127.438 16.842]
     fontSize		    12
     src {
-      id		      447
-      intersection	      [4 -1 0 0.2881 734.3422 314.053 0 -31.3106]
+      id		      436
+      intersection	      [4 -1 -0 0.2881 976.5297 318.7381 0 -31.3106]
     }
     dst {
-      id		      442
-      intersection	      [2 1 0 0.6001 379.5 314.053 0 31.3106]
+      id		      431
+      intersection	      [2 1 0 0.5697 621.6875 318.7381 0 31.3106]
     }
-    midPoint		    [553.4678 314.053]
-    chart		    441
-    linkNode		    [441 483 478]
-    dataLimits		    [379.5 734.342 311.653 316.453]
+    midPoint		    [795.6553 318.7381]
+    chart		    430
+    linkNode		    [430 472 467]
+    dataLimits		    [621.687 976.53 316.338 321.138]
     stampAngle		    NaN
-    subviewer		    441
+    subviewer		    430
     drawStyle		    SMART
+    slide {
+    }
     executionOrder	    1
     ssIdNumber		    48
   }
   transition {
-    id			    472
+    id			    461
     labelString		    "[onBrake]"
-    labelPosition	    [1481.977 236.179 55.418 17.421]
+    labelPosition	    [1724.165 240.866 54.349 16.842]
     fontSize		    12
     src {
-      id		      444
-      intersection	      [2 1 0 0.3243 1426.2608 262.8995 0 -21.7944]
+      id		      433
+      intersection	      [2 1 0 0.3242 1668.4483 267.5836 0 -21.7944]
     }
     dst {
-      id		      450
-      intersection	      [4 -1 -0 0.7253 1596.8016 262.8995 0 24.0444]
+      id		      439
+      intersection	      [4 -1 0 0.7253 1838.9891 267.5836 0 24.0444]
     }
-    midPoint		    [1510.9779 262.8995]
-    chart		    441
-    linkNode		    [443 459 463]
-    dataLimits		    [1426.261 1596.802 260.5 265.299]
+    midPoint		    [1753.1654 267.587]
+    chart		    430
+    linkNode		    [432 448 452]
+    dataLimits		    [1668.448 1838.989 265.184 269.984]
     stampAngle		    NaN
-    subviewer		    441
+    subviewer		    430
     drawStyle		    SMART
+    slide {
+    }
     executionOrder	    1
     ssIdNumber		    81
   }
   transition {
-    id			    473
+    id			    462
     labelString		    "[brakeCounts>brakeTime||hardBrake]"
-    labelPosition	    [1227.187 501.778 213.461 17.421]
+    labelPosition	    [1469.354 506.465 202.402 16.842]
     fontSize		    12
     src {
-      id		      443
-      intersection	      [3 0 1 0.7768 1359.8085 475.7775 0 -134.1835]
+      id		      432
+      intersection	      [3 0 1 0.7768 1601.9749 480.465 0 -134.1835]
     }
     dst {
-      id		      445
-      intersection	      [2 1 0 0.1679 961.0348 732.5302 0 27.7056]
+      id		      434
+      intersection	      [2 1 0 0.1679 1203.2223 737.2156 0 27.7056]
     }
-    midPoint		    [1213.4328 669.1213]
-    chart		    441
-    linkNode		    [441 465 475]
-    dataLimits		    [961.035 1359.809 475.777 734.93]
+    midPoint		    [1455.6203 673.8088]
+    chart		    430
+    linkNode		    [430 466 454]
+    dataLimits		    [1203.222 1601.975 480.465 739.616]
     stampAngle		    NaN
-    subviewer		    441
+    subviewer		    430
     drawStyle		    SMART
     slide {
       mode		      MIRROR_SLIDE
@@ -59887,70 +57434,74 @@ Stateflow {
     ssIdNumber		    88
   }
   transition {
-    id			    474
-    labelString		    "[inReverse]"
-    labelPosition	    [152.5 292.128 65.68 17.421]
+    id			    463
+    labelString		    "[inReverse || onBrake]"
+    labelPosition	    [334.545 320.719 119.942 16.842]
     fontSize		    12
     src {
-      id		      448
-      intersection	      [2 1 0 0.4762 140.625 326.253 0 -16.875]
+      id		      437
+      intersection	      [2 1 0 0.4864 312.8125 341.2507 0 -16.875]
     }
     dst {
-      id		      449
-      intersection	      [4 -1 -0 0.5437 217.5 326.253 0 16.875]
+      id		      438
+      intersection	      [4 -1 0 0.4284 470.1563 341.2507 0 16.875]
     }
-    midPoint		    [176.473 326.253]
-    chart		    441
-    linkNode		    [442 460 464]
-    dataLimits		    [140.625 217.5 323.853 328.653]
+    midPoint		    [390.6442 341.2507]
+    chart		    430
+    linkNode		    [431 449 453]
+    dataLimits		    [312.813 470.156 338.851 343.651]
     stampAngle		    NaN
-    subviewer		    441
+    subviewer		    430
     drawStyle		    SMART
+    slide {
+    }
     executionOrder	    1
     ssIdNumber		    53
   }
   transition {
-    id			    475
+    id			    464
     labelString		    "[vehSpeed<stopSpeed]"
-    labelPosition	    [766.871 492.73 133.413 17.421]
+    labelPosition	    [1009.059 497.417 127.438 16.842]
     fontSize		    12
     src {
-      id		      456
-      intersection	      [1 0 -1 0.8747 898.9743 538.6294 0 6.75]
+      id		      445
+      intersection	      [1 0 -1 0.8747 1141.1619 543.3169 0 6.75]
     }
     dst {
-      id		      457
-      intersection	      [3 0 1 0.9335 898.9743 484.0352 0 -6.75]
+      id		      446
+      intersection	      [3 0 1 0.9335 1141.1619 488.7227 0 -6.75]
     }
-    midPoint		    [898.9743 514.4061]
-    chart		    441
-    linkNode		    [441 473 480]
-    dataLimits		    [896.574 901.374 484.035 538.629]
+    midPoint		    [1141.1618 519.0936]
+    chart		    430
+    linkNode		    [430 454 469]
+    dataLimits		    [1138.762 1143.562 488.723 543.317]
     stampAngle		    NaN
-    subviewer		    441
+    subviewer		    430
     drawStyle		    SMART
+    slide {
+    }
     executionOrder	    1
     ssIdNumber		    97
   }
   transition {
-    id			    476
+    id			    465
     labelString		    "[!onBrake||counts<(minPumpRunTime*200)]"
-    labelPosition	    [480.963 585.414 252.458 17.421]
+    labelPosition	    [723.282 590.131 238.01 16.842]
     fontSize		    12
     src {
-      id		      456
-      intersection	      [4 -1 0 0.5357 755.0933 585.6424 0 -47.0131]
+      id		      445
+      intersection	      [4 -1 0 0.5357 997.2808 590.3273 0 -47.0104]
     }
     dst {
-      id		      442
-      intersection	      [2 1 0 0.8578 379.5 363.714 0 -27.411]
+      id		      431
+      intersection	      [2 1 0 0.8431 621.6875 374.2673 0 -31.8577]
     }
-    midPoint		    [547.5142 515.8045]
-    chart		    441
-    linkNode		    [441 479 468]
-    dataLimits		    [379.5 755.093 361.314 585.642]
+    midPoint		    [790.3129 523.3717]
+    chart		    430
+    linkNode		    [430 468 457]
+    dataLimits		    [621.687 997.281 371.867 590.327]
     stampAngle		    NaN
-    subviewer		    441
+    subviewer		    430
     drawStyle		    SMART
     slide {
       mode		      MIRROR_SLIDE
@@ -59961,24 +57512,24 @@ Stateflow {
     ssIdNumber		    100
   }
   transition {
-    id			    477
+    id			    466
     labelString		    "[vehSpeed>creepSpeed&&counts>(minPumpRunTime*200)]"
-    labelPosition	    [976.963 551.438 344.821 17.421]
+    labelPosition	    [1219.148 556.126 326.092 16.842]
     fontSize		    12
     src {
-      id		      456
-      intersection	      [2 1 0 0.6273 919.5933 602.1424 0 63.5131]
+      id		      445
+      intersection	      [2 1 0 0.6273 1161.7808 606.831 0 63.513]
     }
     dst {
-      id		      443
-      intersection	      [4 -1 0 0.1244 1225.625 433.464 0 42.3135]
+      id		      432
+      intersection	      [4 -1 0 0.1244 1467.8125 438.1656 0 42.3135]
     }
-    midPoint		    [1074.5304 512.3063]
-    chart		    441
-    linkNode		    [441 461 465]
-    dataLimits		    [919.593 1225.625 431.064 602.142]
+    midPoint		    [1316.7179 516.9938]
+    chart		    430
+    linkNode		    [430 450 462]
+    dataLimits		    [1161.781 1467.813 435.766 606.831]
     stampAngle		    NaN
-    subviewer		    441
+    subviewer		    430
     drawStyle		    SMART
     slide {
       mode		      MIRROR_SLIDE
@@ -59988,24 +57539,24 @@ Stateflow {
     ssIdNumber		    101
   }
   transition {
-    id			    478
+    id			    467
     labelString		    "[counts>(minPumpRunTime*200)]"
-    labelPosition	    [435.832 336.499 196.014 17.421]
+    labelPosition	    [677.549 351.321 184.598 16.842]
     fontSize		    12
     src {
-      id		      456
-      intersection	      [4 -1 0 0.8622 755.0933 552.5852 0 -13.9558]
+      id		      445
+      intersection	      [4 -1 0 0.8622 997.2808 557.2691 0 -13.9523]
     }
     dst {
-      id		      442
-      intersection	      [2 1 0 0.7333 379.5 339.714 0 -51.411]
+      id		      431
+      intersection	      [2 1 0 0.7468 621.6875 354.7186 0 -51.4064]
     }
-    midPoint		    [626.6042 425.805]
-    chart		    441
-    linkNode		    [441 471 479]
-    dataLimits		    [379.5 755.093 337.314 552.585]
+    midPoint		    [867.6704 434.6559]
+    chart		    430
+    linkNode		    [430 460 468]
+    dataLimits		    [621.687 997.281 352.319 557.269]
     stampAngle		    NaN
-    subviewer		    441
+    subviewer		    430
     drawStyle		    SMART
     slide {
       mode		      MIRROR_SLIDE
@@ -60016,47 +57567,49 @@ Stateflow {
     ssIdNumber		    104
   }
   transition {
-    id			    479
+    id			    468
     labelString		    "[counts>(minPumpRunTime*200)]"
-    labelPosition	    [917.535 368.956 196.014 17.421]
+    labelPosition	    [1159.725 373.643 184.598 16.842]
     fontSize		    12
     src {
-      id		      457
-      intersection	      [1 0 -1 0.1102 906.1601 382.7852 0 -29.5943]
+      id		      446
+      intersection	      [1 0 -1 0.1102 1148.3505 387.4727 0 -29.5943]
     }
     dst {
-      id		      447
-      intersection	      [3 0 1 0.1398 906.1601 356.6174 0 32.5943]
+      id		      436
+      intersection	      [3 0 1 0.1398 1148.3505 361.3049 0 32.5943]
     }
-    midPoint		    [906.1601 373.3931]
-    chart		    441
-    linkNode		    [441 478 476]
-    dataLimits		    [903.76 908.56 356.617 382.785]
+    midPoint		    [1148.3476 378.0806]
+    chart		    430
+    linkNode		    [430 467 465]
+    dataLimits		    [1145.95 1150.751 361.305 387.473]
     stampAngle		    NaN
-    subviewer		    441
+    subviewer		    430
     drawStyle		    SMART
+    slide {
+    }
     executionOrder	    1
     ssIdNumber		    106
   }
   transition {
-    id			    480
+    id			    469
     labelString		    "[vehSpeed>stopSpeed]"
-    labelPosition	    [930.355 504.357 133.413 17.421]
+    labelPosition	    [1172.542 509.046 127.438 16.842]
     fontSize		    12
     src {
-      id		      457
-      intersection	      [3 0 1 0.4861 972.5768 484.0352 0 -52.9835]
+      id		      446
+      intersection	      [3 0 1 0.4861 1214.7592 488.7227 0 -52.9835]
     }
     dst {
-      id		      456
-      intersection	      [2 1 0 0.2125 919.5933 560.1424 0 21.5131]
+      id		      445
+      intersection	      [2 1 0 0.2125 1161.7808 564.8325 0 21.513]
     }
-    midPoint		    [960.692 535.6358]
-    chart		    441
-    linkNode		    [441 475 469]
-    dataLimits		    [919.593 972.577 484.035 562.542]
+    midPoint		    [1202.8795 540.3233]
+    chart		    430
+    linkNode		    [430 464 458]
+    dataLimits		    [1161.781 1214.759 488.723 567.233]
     stampAngle		    NaN
-    subviewer		    441
+    subviewer		    430
     drawStyle		    SMART
     slide {
       mode		      MIRROR_SLIDE
@@ -60066,24 +57619,24 @@ Stateflow {
     ssIdNumber		    107
   }
   transition {
-    id			    481
+    id			    470
     labelString		    "[(vehSpeed>stopSpeed)&&(vehSpeed<creepSpeed)]"
-    labelPosition	    [307.47 103.958 298.64 17.421]
+    labelPosition	    [548.301 108.725 283.925 16.842]
     fontSize		    12
     src {
-      id		      446
-      intersection	      [4 -1 0 0.3146 619.711 131.9187 0 45.2388]
+      id		      435
+      intersection	      [4 -1 0 0.3146 861.8985 136.6079 0 45.2372]
     }
     dst {
-      id		      442
-      intersection	      [1 0 -1 0.6437 248.0961 198.375 0 -131.4039]
+      id		      431
+      intersection	      [1 0 -1 0.7257 490.3019 203.0625 0 -131.3856]
     }
-    midPoint		    [376.7415 113.9044]
-    chart		    441
-    linkNode		    [441 462 467]
-    dataLimits		    [245.696 619.711 111.179 198.375]
+    midPoint		    [618.9409 118.5951]
+    chart		    430
+    linkNode		    [430 451 456]
+    dataLimits		    [487.902 861.898 118.595 203.062]
     stampAngle		    NaN
-    subviewer		    441
+    subviewer		    430
     drawStyle		    SMART
     slide {
       mode		      MIRROR_SLIDE
@@ -60093,56 +57646,60 @@ Stateflow {
     ssIdNumber		    109
   }
   transition {
-    id			    482
-    labelString		    "[inReverse]"
-    labelPosition	    [426.748 273.59 65.68 17.421]
+    id			    471
+    labelString		    "[inReverse || onBrake]"
+    labelPosition	    [669.598 278.281 119.942 16.842]
     fontSize		    12
     src {
-      id		      447
-      intersection	      [4 -1 0 0.4577 734.3422 288.9892 0 -6.2468]
+      id		      436
+      intersection	      [4 -1 -0 0.4577 976.5297 293.6797 0 -6.2468]
     }
     dst {
-      id		      442
-      intersection	      [2 1 0 0.4701 379.5 288.9892 0 6.2468]
+      id		      431
+      intersection	      [2 1 0 0.4463 621.6875 293.6797 0 6.2468]
     }
-    midPoint		    [553.4678 288.9892]
-    chart		    441
-    linkNode		    [441 470 483]
-    dataLimits		    [379.5 734.342 286.589 291.389]
+    midPoint		    [795.6553 293.6797]
+    chart		    430
+    linkNode		    [430 459 472]
+    dataLimits		    [621.687 976.53 291.28 296.08]
     stampAngle		    NaN
-    subviewer		    441
+    subviewer		    430
     drawStyle		    SMART
+    slide {
+    }
     executionOrder	    2
     ssIdNumber		    112
   }
   transition {
-    id			    483
+    id			    472
     labelString		    "[vehSpeed>creepSpeed]"
-    labelPosition	    [1003.893 271.024 140.597 17.421]
+    labelPosition	    [1246.081 275.71 133.998 16.842]
     fontSize		    12
     src {
-      id		      447
-      intersection	      [2 1 0 0.577 934.0922 294.1222 0 11.3798]
+      id		      436
+      intersection	      [2 1 0 0.577 1176.2797 298.8066 0 11.3798]
     }
     dst {
-      id		      443
-      intersection	      [4 -1 0 0.5342 1225.625 294.1222 0 -11.3798]
+      id		      432
+      intersection	      [4 -1 0 0.5342 1467.8125 298.8066 0 -11.3798]
     }
-    midPoint		    [1081.9356 294.1222]
-    chart		    441
-    linkNode		    [441 482 471]
-    dataLimits		    [934.092 1225.625 291.722 296.522]
+    midPoint		    [1324.1231 298.8097]
+    chart		    430
+    linkNode		    [430 471 460]
+    dataLimits		    [1176.28 1467.813 296.407 301.207]
     stampAngle		    NaN
-    subviewer		    441
+    subviewer		    430
     drawStyle		    SMART
+    slide {
+    }
     executionOrder	    3
     ssIdNumber		    113
   }
   data {
-    id			    484
+    id			    473
     ssIdNumber		    1
     name		    "onBrake"
-    linkNode		    [441 0 485]
+    linkNode		    [430 0 474]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -60155,10 +57712,10 @@ Stateflow {
     dataType		    "boolean"
   }
   data {
-    id			    485
+    id			    474
     ssIdNumber		    2
     name		    "vehSpeed"
-    linkNode		    [441 484 486]
+    linkNode		    [430 473 475]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -60171,10 +57728,10 @@ Stateflow {
     dataType		    "double"
   }
   data {
-    id			    486
+    id			    475
     ssIdNumber		    3
     name		    "inReverse"
-    linkNode		    [441 485 487]
+    linkNode		    [430 474 476]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -60187,10 +57744,10 @@ Stateflow {
     dataType		    "boolean"
   }
   data {
-    id			    487
+    id			    476
     ssIdNumber		    17
     name		    "counts"
-    linkNode		    [441 486 488]
+    linkNode		    [430 475 477]
     scope		    LOCAL_DATA
     machine		    1
     props {
@@ -60203,10 +57760,10 @@ Stateflow {
     dataType		    "uint32"
   }
   data {
-    id			    488
+    id			    477
     ssIdNumber		    28
     name		    "keyOnRunTime"
-    linkNode		    [441 487 489]
+    linkNode		    [430 476 478]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -60219,10 +57776,10 @@ Stateflow {
     dataType		    "uint16"
   }
   data {
-    id			    489
+    id			    478
     ssIdNumber		    35
     name		    "lowSpeedManTime"
-    linkNode		    [441 488 490]
+    linkNode		    [430 477 479]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -60235,10 +57792,10 @@ Stateflow {
     dataType		    "uint16"
   }
   data {
-    id			    490
+    id			    479
     ssIdNumber		    58
     name		    "PumpState"
-    linkNode		    [441 489 491]
+    linkNode		    [430 478 480]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -60252,10 +57809,10 @@ Stateflow {
     dataType		    "uint8"
   }
   data {
-    id			    491
+    id			    480
     ssIdNumber		    60
     name		    "hardBrake"
-    linkNode		    [441 490 492]
+    linkNode		    [430 479 481]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -60273,10 +57830,10 @@ Stateflow {
     dataType		    "Inherit: Same as Simulink"
   }
   data {
-    id			    492
+    id			    481
     ssIdNumber		    61
     name		    "stopSpeed"
-    linkNode		    [441 491 493]
+    linkNode		    [430 480 482]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -60294,10 +57851,10 @@ Stateflow {
     dataType		    "Inherit: Same as Simulink"
   }
   data {
-    id			    493
+    id			    482
     ssIdNumber		    62
     name		    "minPumpRunTime"
-    linkNode		    [441 492 494]
+    linkNode		    [430 481 483]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -60315,10 +57872,10 @@ Stateflow {
     dataType		    "Inherit: Same as Simulink"
   }
   data {
-    id			    494
+    id			    483
     ssIdNumber		    64
     name		    "creepSpeed"
-    linkNode		    [441 493 495]
+    linkNode		    [430 482 484]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -60331,10 +57888,10 @@ Stateflow {
     dataType		    "double"
   }
   data {
-    id			    495
+    id			    484
     ssIdNumber		    73
     name		    "brakeTime"
-    linkNode		    [441 494 496]
+    linkNode		    [430 483 485]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -60347,10 +57904,10 @@ Stateflow {
     dataType		    "double"
   }
   data {
-    id			    496
+    id			    485
     ssIdNumber		    78
     name		    "brakeCounts"
-    linkNode		    [441 495 0]
+    linkNode		    [430 484 0]
     scope		    LOCAL_DATA
     machine		    1
     props {
@@ -60363,21 +57920,21 @@ Stateflow {
     dataType		    "double"
   }
   instance {
-    id			    497
+    id			    486
     name		    "Foreground/Control Strategy/EHPAS_PercentControl/Chart"
     machine		    1
-    chart		    441
+    chart		    430
   }
   chart {
-    id			    498
+    id			    487
     name		    "Foreground/Control Strategy/Calculations/kW calculation1/Downsapmle"
     windowPosition	    [33.75 -63.75 1024.5 496.5]
     viewLimits		    [72.807 1491.333 348.88 1014.763]
     zoomFactor		    1.446
     screen		    [1 1 1366 768 1.333333333333333]
-    treeNode		    [0 502 0 0]
-    firstTransition	    508
-    viewObj		    498
+    treeNode		    [0 491 0 0]
+    firstTransition	    497
+    viewObj		    487
     machine		    1
     subviewS {
       x1		      72.807
@@ -60386,100 +57943,100 @@ Stateflow {
     }
     ssIdHighWaterMark	    87
     decomposition	    CLUSTER_CHART
-    firstData		    510
+    firstData		    499
     chartFileNumber	    11
     userSpecifiedStateTransitionExecutionOrder 1
     disableImplicitCasting  1
   }
   state {
-    id			    499
+    id			    488
     labelString		    "Value_2\ndu: count ++\nen: Val2 = Val_In\ncount = 0\nstate = 4"
     position		    [674.6386 829.8627 314.0987 156.8998]
     fontSize		    12
     arrowSize		    24.168
-    chart		    498
-    treeNode		    [498 0 501 500]
+    chart		    487
+    treeNode		    [487 0 490 489]
     superState		    GROUPED
-    subviewer		    498
+    subviewer		    487
     ssIdNumber		    31
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    500
+    id			    489
     labelString		    "downsample_2\ndu: count ++\nen:count = 0\nstate = 3"
     position		    [132.967 841.1262 314.0987 156.8998]
     fontSize		    12
     arrowSize		    24.168
-    chart		    498
-    treeNode		    [498 0 499 0]
+    chart		    487
+    treeNode		    [487 0 488 0]
     superState		    GROUPED
-    subviewer		    498
+    subviewer		    487
     ssIdNumber		    30
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    501
+    id			    490
     labelString		    "Out\nen:state =5\ncount = 0\nOut_1= Val1\nOut_2=Val2\ndu: count++"
     position		    [1219.4239 697.0671 211.75 195.75]
     fontSize		    12
-    chart		    498
-    treeNode		    [498 0 503 499]
+    chart		    487
+    treeNode		    [487 0 492 488]
     superState		    GROUPED
-    subviewer		    498
+    subviewer		    487
     ssIdNumber		    48
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    502
+    id			    491
     labelString		    "downsample\ndu:count++\nen: count = 0\nstate = 1"
     position		    [141.3016 614.786 314.0987 156.8998]
     fontSize		    12
     arrowSize		    24.168
-    chart		    498
-    treeNode		    [498 0 0 503]
+    chart		    487
+    treeNode		    [487 0 0 492]
     superState		    GROUPED
-    subviewer		    498
+    subviewer		    487
     ssIdNumber		    22
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    503
+    id			    492
     labelString		    "Value_1\ndu:count ++\nen: Val1 = Val_In\ncount = 0\nstate = 2"
     position		    [674.0413 636.4675 314.0987 156.8998]
     fontSize		    12
     arrowSize		    24.168
-    chart		    498
-    treeNode		    [498 0 502 501]
+    chart		    487
+    treeNode		    [487 0 491 490]
     superState		    GROUPED
-    subviewer		    498
+    subviewer		    487
     ssIdNumber		    29
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   transition {
-    id			    504
+    id			    493
     labelString		    "[count >= 2]"
     labelPosition	    [505.12 798.946 63.955 17.318]
     fontSize		    12
     arrowSize		    24.168
     src {
-      id		      503
+      id		      492
       intersection	      [4 -1 0 0.2795 674.0413 749.5111 0 43.8562]
     }
     dst {
-      id		      500
+      id		      489
       intersection	      [1 0 -1 0.8615 403.5475 841.1262 0 -43.5182]
     }
     midPoint		    [571.0542 792.1253]
-    chart		    498
-    linkNode		    [498 505 509]
+    chart		    487
+    linkNode		    [487 494 498]
     dataLimits		    [403.548 674.041 749.511 816.958]
     stampAngle		    NaN
-    subviewer		    498
+    subviewer		    487
     drawStyle		    SMART
     slide {
       mode		      MIRROR_SLIDE
@@ -60490,55 +58047,55 @@ Stateflow {
     ssIdNumber		    40
   }
   transition {
-    id			    505
+    id			    494
     labelString		    "[count >= numb_downsamp]"
     labelPosition	    [460.541 644.803 150.673 17.318]
     fontSize		    12
     arrowSize		    24.168
     src {
-      id		      502
+      id		      491
       intersection	      [2 1 -0 0.2979 455.4003 661.5289 0 -26.6734]
     }
     dst {
-      id		      503
+      id		      492
       intersection	      [4 -1 0 0.8403 674.0413 661.5289 0 26.6734]
     }
     midPoint		    [556.6023 661.5289]
-    chart		    498
-    linkNode		    [498 507 504]
+    chart		    487
+    linkNode		    [487 496 493]
     dataLimits		    [455.4 649.873 661.529 661.529]
     stampAngle		    NaN
-    subviewer		    498
+    subviewer		    487
     drawStyle		    SMART
     executionOrder	    1
     ssIdNumber		    34
   }
   transition {
-    id			    506
+    id			    495
     labelString		    "[count >= numb_downsamp]"
     labelPosition	    [458.505 879.761 150.673 17.318]
     fontSize		    12
     arrowSize		    24.168
     src {
-      id		      500
+      id		      489
       intersection	      [2 1 0 0.3561 447.0657 897.0001 0 -10.125]
     }
     dst {
-      id		      499
+      id		      488
       intersection	      [4 -1 -0 0.5721 674.6386 897.0001 0 10.125]
     }
     midPoint		    [552.9278 897.0001]
-    chart		    498
-    linkNode		    [498 509 0]
+    chart		    487
+    linkNode		    [487 498 0]
     dataLimits		    [447.066 650.471 897 897]
     stampAngle		    NaN
-    subviewer		    498
+    subviewer		    487
     drawStyle		    SMART
     executionOrder	    1
     ssIdNumber		    42
   }
   transition {
-    id			    507
+    id			    496
     labelPosition	    [214.662 537.054 8.672 17.318]
     fontSize		    12
     arrowSize		    24.168
@@ -60546,38 +58103,38 @@ Stateflow {
       intersection	      [0 0 1 0 222.2912 481.0292 0 0]
     }
     dst {
-      id		      502
+      id		      491
       intersection	      [1 0 -1 0.2578 222.2912 614.786 0 0]
     }
     midPoint		    [222.2912 537.9438]
-    chart		    498
-    linkNode		    [498 508 505]
+    chart		    487
+    linkNode		    [487 497 494]
     dataLimits		    [222.291 222.291 481.029 590.618]
-    subviewer		    498
+    subviewer		    487
     drawStyle		    SMART
     executionOrder	    1
     ssIdNumber		    75
   }
   transition {
-    id			    508
+    id			    497
     labelString		    "[count >= 2]"
     labelPosition	    [789.901 365.616 63.955 17.318]
     fontSize		    12
     arrowSize		    24.168
     src {
-      id		      501
+      id		      490
       intersection	      [1 0 -1 0.4652 1317.93 697.0671 0 98.5]
     }
     dst {
-      id		      502
+      id		      491
       intersection	      [1 0 -1 0.4049 268.4698 614.786 0 -71.6875]
     }
     midPoint		    [773.969 377.7606]
-    chart		    498
-    linkNode		    [498 0 507]
+    chart		    487
+    linkNode		    [487 0 496]
     dataLimits		    [268.47 1317.93 376.124 697.067]
     stampAngle		    NaN
-    subviewer		    498
+    subviewer		    487
     slide {
       mode		      MIRROR_SLIDE
       sticky		      BOTH_STICK
@@ -60587,24 +58144,24 @@ Stateflow {
     ssIdNumber		    51
   }
   transition {
-    id			    509
+    id			    498
     labelString		    "[count >=2]"
     labelPosition	    [1065.079 896.058 60.703 17.318]
     fontSize		    12
     src {
-      id		      499
+      id		      488
       intersection	      [2 1 0 0.7378 988.7373 945.6282 0 115.7655]
     }
     dst {
-      id		      501
+      id		      490
       intersection	      [4 -1 0 0.417 1219.4239 811.1844 0 18.6783]
     }
     midPoint		    [1104.4408 874.025]
-    chart		    498
-    linkNode		    [498 504 506]
+    chart		    487
+    linkNode		    [487 493 495]
     dataLimits		    [988.737 1211.424 811.184 945.628]
     stampAngle		    NaN
-    subviewer		    498
+    subviewer		    487
     drawStyle		    SMART
     slide {
       mode		      MIRROR_SLIDE
@@ -60614,10 +58171,10 @@ Stateflow {
     ssIdNumber		    78
   }
   data {
-    id			    510
+    id			    499
     ssIdNumber		    63
     name		    "count"
-    linkNode		    [498 0 511]
+    linkNode		    [487 0 500]
     scope		    LOCAL_DATA
     machine		    1
     props {
@@ -60630,10 +58187,10 @@ Stateflow {
     dataType		    "double"
   }
   data {
-    id			    511
+    id			    500
     ssIdNumber		    67
     name		    "state"
-    linkNode		    [498 510 512]
+    linkNode		    [487 499 501]
     scope		    LOCAL_DATA
     machine		    1
     props {
@@ -60646,10 +58203,10 @@ Stateflow {
     dataType		    "double"
   }
   data {
-    id			    512
+    id			    501
     ssIdNumber		    79
     name		    "Out_1"
-    linkNode		    [498 511 513]
+    linkNode		    [487 500 502]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -60663,10 +58220,10 @@ Stateflow {
     dataType		    "double"
   }
   data {
-    id			    513
+    id			    502
     ssIdNumber		    80
     name		    "Out_2"
-    linkNode		    [498 512 514]
+    linkNode		    [487 501 503]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -60680,10 +58237,10 @@ Stateflow {
     dataType		    "double"
   }
   data {
-    id			    514
+    id			    503
     ssIdNumber		    82
     name		    "Val_In"
-    linkNode		    [498 513 515]
+    linkNode		    [487 502 504]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -60696,10 +58253,10 @@ Stateflow {
     dataType		    "double"
   }
   data {
-    id			    515
+    id			    504
     ssIdNumber		    84
     name		    "numb_downsamp"
-    linkNode		    [498 514 516]
+    linkNode		    [487 503 505]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -60712,10 +58269,10 @@ Stateflow {
     dataType		    "double"
   }
   data {
-    id			    516
+    id			    505
     ssIdNumber		    85
     name		    "Val1"
-    linkNode		    [498 515 517]
+    linkNode		    [487 504 506]
     scope		    LOCAL_DATA
     machine		    1
     props {
@@ -60728,10 +58285,10 @@ Stateflow {
     dataType		    "double"
   }
   data {
-    id			    517
+    id			    506
     ssIdNumber		    86
     name		    "Val2"
-    linkNode		    [498 516 0]
+    linkNode		    [487 505 0]
     scope		    LOCAL_DATA
     machine		    1
     props {
@@ -60744,21 +58301,21 @@ Stateflow {
     dataType		    "double"
   }
   instance {
-    id			    518
+    id			    507
     name		    "Foreground/Control Strategy/Calculations/kW calculation1/Downsapmle"
     machine		    1
-    chart		    498
+    chart		    487
   }
   chart {
-    id			    519
+    id			    508
     name		    "Foreground/Control Strategy/Calculations/kW calculation1/Downsapmle1"
     windowPosition	    [33.75 -21 1024.5 496.5]
     viewLimits		    [73.008 1491.133 348.974 1014.668]
     zoomFactor		    1.446
     screen		    [1 1 1366 768 1.333333333333333]
-    treeNode		    [0 523 0 0]
-    firstTransition	    529
-    viewObj		    519
+    treeNode		    [0 512 0 0]
+    firstTransition	    518
+    viewObj		    508
     machine		    1
     subviewS {
       x1		      73.008
@@ -60767,100 +58324,100 @@ Stateflow {
     }
     ssIdHighWaterMark	    87
     decomposition	    CLUSTER_CHART
-    firstData		    531
+    firstData		    520
     chartFileNumber	    24
     userSpecifiedStateTransitionExecutionOrder 1
     disableImplicitCasting  1
   }
   state {
-    id			    520
+    id			    509
     labelString		    "Value_2\ndu: count ++\nen: Val2 = Val_In\ncount = 0\nstate = 4"
     position		    [674.6386 829.8627 314.0987 156.8998]
     fontSize		    12
     arrowSize		    24.168
-    chart		    519
-    treeNode		    [519 0 522 521]
+    chart		    508
+    treeNode		    [508 0 511 510]
     superState		    GROUPED
-    subviewer		    519
+    subviewer		    508
     ssIdNumber		    31
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    521
+    id			    510
     labelString		    "downsample_2\ndu: count ++\nen:count = 0\nstate = 3"
     position		    [132.967 841.1262 314.0987 156.8998]
     fontSize		    12
     arrowSize		    24.168
-    chart		    519
-    treeNode		    [519 0 520 0]
+    chart		    508
+    treeNode		    [508 0 509 0]
     superState		    GROUPED
-    subviewer		    519
+    subviewer		    508
     ssIdNumber		    30
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    522
+    id			    511
     labelString		    "Out\nen:state =5\ncount = 0\nOut_1= Val1\nOut_2=Val2\ndu: count++"
     position		    [1219.4239 697.0671 211.75 195.75]
     fontSize		    12
-    chart		    519
-    treeNode		    [519 0 524 520]
+    chart		    508
+    treeNode		    [508 0 513 509]
     superState		    GROUPED
-    subviewer		    519
+    subviewer		    508
     ssIdNumber		    48
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    523
+    id			    512
     labelString		    "downsample\ndu:count++\nen: count = 0\nstate = 1"
     position		    [141.3016 614.786 314.0987 156.8998]
     fontSize		    12
     arrowSize		    24.168
-    chart		    519
-    treeNode		    [519 0 0 524]
+    chart		    508
+    treeNode		    [508 0 0 513]
     superState		    GROUPED
-    subviewer		    519
+    subviewer		    508
     ssIdNumber		    22
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    524
+    id			    513
     labelString		    "Value_1\ndu:count ++\nen: Val1 = Val_In\ncount = 0\nstate = 2"
     position		    [674.0413 636.4675 314.0987 156.8998]
     fontSize		    12
     arrowSize		    24.168
-    chart		    519
-    treeNode		    [519 0 523 522]
+    chart		    508
+    treeNode		    [508 0 512 511]
     superState		    GROUPED
-    subviewer		    519
+    subviewer		    508
     ssIdNumber		    29
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   transition {
-    id			    525
+    id			    514
     labelString		    "[count >= 2]"
     labelPosition	    [505.12 798.946 63.936 17.313]
     fontSize		    12
     arrowSize		    24.168
     src {
-      id		      524
+      id		      513
       intersection	      [4 -1 0 0.2795 674.0413 749.5111 0 43.8562]
     }
     dst {
-      id		      521
+      id		      510
       intersection	      [1 0 -1 0.8615 403.5475 841.1262 0 -43.5182]
     }
     midPoint		    [571.0542 792.1253]
-    chart		    519
-    linkNode		    [519 526 530]
+    chart		    508
+    linkNode		    [508 515 519]
     dataLimits		    [403.548 674.041 749.511 816.958]
     stampAngle		    NaN
-    subviewer		    519
+    subviewer		    508
     drawStyle		    SMART
     slide {
       mode		      MIRROR_SLIDE
@@ -60871,55 +58428,55 @@ Stateflow {
     ssIdNumber		    40
   }
   transition {
-    id			    526
+    id			    515
     labelString		    "[count >= numb_downsamp]"
     labelPosition	    [460.541 644.803 150.63 17.313]
     fontSize		    12
     arrowSize		    24.168
     src {
-      id		      523
+      id		      512
       intersection	      [2 1 -0 0.2979 455.4003 661.5289 0 -26.6734]
     }
     dst {
-      id		      524
+      id		      513
       intersection	      [4 -1 0 0.8403 674.0413 661.5289 0 26.6734]
     }
     midPoint		    [556.6023 661.5289]
-    chart		    519
-    linkNode		    [519 528 525]
+    chart		    508
+    linkNode		    [508 517 514]
     dataLimits		    [455.4 649.873 661.529 661.529]
     stampAngle		    NaN
-    subviewer		    519
+    subviewer		    508
     drawStyle		    SMART
     executionOrder	    1
     ssIdNumber		    34
   }
   transition {
-    id			    527
+    id			    516
     labelString		    "[count >= numb_downsamp]"
     labelPosition	    [458.505 879.761 150.63 17.313]
     fontSize		    12
     arrowSize		    24.168
     src {
-      id		      521
+      id		      510
       intersection	      [2 1 0 0.3561 447.0657 897.0001 0 -10.125]
     }
     dst {
-      id		      520
+      id		      509
       intersection	      [4 -1 -0 0.5721 674.6386 897.0001 0 10.125]
     }
     midPoint		    [552.9278 897.0001]
-    chart		    519
-    linkNode		    [519 530 0]
+    chart		    508
+    linkNode		    [508 519 0]
     dataLimits		    [447.066 650.471 897 897]
     stampAngle		    NaN
-    subviewer		    519
+    subviewer		    508
     drawStyle		    SMART
     executionOrder	    1
     ssIdNumber		    42
   }
   transition {
-    id			    528
+    id			    517
     labelPosition	    [214.662 537.054 8.669 17.313]
     fontSize		    12
     arrowSize		    24.168
@@ -60927,38 +58484,38 @@ Stateflow {
       intersection	      [0 0 1 0 222.2912 481.0292 0 0]
     }
     dst {
-      id		      523
+      id		      512
       intersection	      [1 0 -1 0.2578 222.2912 614.786 0 0]
     }
     midPoint		    [222.2912 537.9438]
-    chart		    519
-    linkNode		    [519 529 526]
+    chart		    508
+    linkNode		    [508 518 515]
     dataLimits		    [222.291 222.291 481.029 590.618]
-    subviewer		    519
+    subviewer		    508
     drawStyle		    SMART
     executionOrder	    1
     ssIdNumber		    75
   }
   transition {
-    id			    529
+    id			    518
     labelString		    "[count >= 2]"
     labelPosition	    [789.901 365.616 63.936 17.313]
     fontSize		    12
     arrowSize		    24.168
     src {
-      id		      522
+      id		      511
       intersection	      [1 0 -1 0.4652 1317.93 697.0671 0 98.5]
     }
     dst {
-      id		      523
+      id		      512
       intersection	      [1 0 -1 0.4049 268.4698 614.786 0 -71.6875]
     }
     midPoint		    [773.969 377.7606]
-    chart		    519
-    linkNode		    [519 0 528]
+    chart		    508
+    linkNode		    [508 0 517]
     dataLimits		    [268.47 1317.93 376.124 697.067]
     stampAngle		    NaN
-    subviewer		    519
+    subviewer		    508
     slide {
       mode		      MIRROR_SLIDE
       sticky		      BOTH_STICK
@@ -60968,24 +58525,24 @@ Stateflow {
     ssIdNumber		    51
   }
   transition {
-    id			    530
+    id			    519
     labelString		    "[count >=2]"
     labelPosition	    [1065.079 896.058 60.685 17.313]
     fontSize		    12
     src {
-      id		      520
+      id		      509
       intersection	      [2 1 0 0.7378 988.7373 945.6282 0 115.7655]
     }
     dst {
-      id		      522
+      id		      511
       intersection	      [4 -1 0 0.417 1219.4239 811.1844 0 18.6783]
     }
     midPoint		    [1104.4408 874.025]
-    chart		    519
-    linkNode		    [519 525 527]
+    chart		    508
+    linkNode		    [508 514 516]
     dataLimits		    [988.737 1211.424 811.184 945.628]
     stampAngle		    NaN
-    subviewer		    519
+    subviewer		    508
     drawStyle		    SMART
     slide {
       mode		      MIRROR_SLIDE
@@ -60995,10 +58552,10 @@ Stateflow {
     ssIdNumber		    78
   }
   data {
-    id			    531
+    id			    520
     ssIdNumber		    63
     name		    "count"
-    linkNode		    [519 0 532]
+    linkNode		    [508 0 521]
     scope		    LOCAL_DATA
     machine		    1
     props {
@@ -61011,10 +58568,10 @@ Stateflow {
     dataType		    "double"
   }
   data {
-    id			    532
+    id			    521
     ssIdNumber		    67
     name		    "state"
-    linkNode		    [519 531 533]
+    linkNode		    [508 520 522]
     scope		    LOCAL_DATA
     machine		    1
     props {
@@ -61027,10 +58584,10 @@ Stateflow {
     dataType		    "double"
   }
   data {
-    id			    533
+    id			    522
     ssIdNumber		    79
     name		    "Out_1"
-    linkNode		    [519 532 534]
+    linkNode		    [508 521 523]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -61044,10 +58601,10 @@ Stateflow {
     dataType		    "double"
   }
   data {
-    id			    534
+    id			    523
     ssIdNumber		    80
     name		    "Out_2"
-    linkNode		    [519 533 535]
+    linkNode		    [508 522 524]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -61061,10 +58618,10 @@ Stateflow {
     dataType		    "double"
   }
   data {
-    id			    535
+    id			    524
     ssIdNumber		    82
     name		    "Val_In"
-    linkNode		    [519 534 536]
+    linkNode		    [508 523 525]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -61077,10 +58634,10 @@ Stateflow {
     dataType		    "double"
   }
   data {
-    id			    536
+    id			    525
     ssIdNumber		    84
     name		    "numb_downsamp"
-    linkNode		    [519 535 537]
+    linkNode		    [508 524 526]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -61093,10 +58650,10 @@ Stateflow {
     dataType		    "double"
   }
   data {
-    id			    537
+    id			    526
     ssIdNumber		    85
     name		    "Val1"
-    linkNode		    [519 536 538]
+    linkNode		    [508 525 527]
     scope		    LOCAL_DATA
     machine		    1
     props {
@@ -61109,10 +58666,10 @@ Stateflow {
     dataType		    "double"
   }
   data {
-    id			    538
+    id			    527
     ssIdNumber		    86
     name		    "Val2"
-    linkNode		    [519 537 0]
+    linkNode		    [508 526 0]
     scope		    LOCAL_DATA
     machine		    1
     props {
@@ -61125,21 +58682,21 @@ Stateflow {
     dataType		    "double"
   }
   instance {
-    id			    539
+    id			    528
     name		    "Foreground/Control Strategy/Calculations/kW calculation1/Downsapmle1"
     machine		    1
-    chart		    519
+    chart		    508
   }
   chart {
-    id			    540
+    id			    529
     name		    "Foreground/Sensors/Eaton HV Charger/PluggedInDetect/Chart"
     windowPosition	    [193.5 77.25 475.5 412.5]
     viewLimits		    [0 401.76 12.615 362.76]
     zoomFactor		    0.93
     screen		    [1 1 1366 768 1.333333333333333]
-    treeNode		    [0 541 0 0]
-    firstTransition	    545
-    viewObj		    540
+    treeNode		    [0 530 0 0]
+    firstTransition	    534
+    viewObj		    529
     machine		    1
     subviewS {
       y1		      12.615
@@ -61147,98 +58704,98 @@ Stateflow {
     }
     ssIdHighWaterMark	    15
     decomposition	    CLUSTER_CHART
-    firstData		    552
+    firstData		    541
     chartFileNumber	    32
     disableImplicitCasting  1
     supportVariableSizing   0
   }
   state {
-    id			    541
+    id			    530
     labelString		    "Off\nentry:pluggedIn = 0;"
     position		    [95.875 51.375 140.375 52.125]
     fontSize		    12
-    chart		    540
-    treeNode		    [540 0 0 542]
-    subviewer		    540
+    chart		    529
+    treeNode		    [529 0 0 531]
+    subviewer		    529
     ssIdNumber		    1
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    542
+    id			    531
     labelString		    "countUp\nduring:timer++;"
     position		    [31.25 174 97.625 64.875]
     fontSize		    12
-    chart		    540
-    treeNode		    [540 0 541 543]
-    subviewer		    540
+    chart		    529
+    treeNode		    [529 0 530 532]
+    subviewer		    529
     ssIdNumber		    2
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    543
+    id			    532
     labelString		    "CountDown\nduring:timer--;"
     position		    [221.75 176.25 90 60]
     fontSize		    12
-    chart		    540
-    treeNode		    [540 0 542 544]
-    subviewer		    540
+    chart		    529
+    treeNode		    [529 0 531 533]
+    subviewer		    529
     ssIdNumber		    3
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
-    id			    544
+    id			    533
     labelString		    "On\nentry:pluggedIn = 1;"
     position		    [96.125 301.875 140.375 52.125]
     fontSize		    12
-    chart		    540
-    treeNode		    [540 0 543 0]
-    subviewer		    540
+    chart		    529
+    treeNode		    [529 0 532 0]
+    subviewer		    529
     ssIdNumber		    4
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   transition {
-    id			    545
+    id			    534
     labelPosition	    [152.832 29.766 8.366 16.011]
     fontSize		    12
     src {
       intersection	      [0 0 1 0 167.2323 21.375 0 0]
     }
     dst {
-      id		      541
+      id		      530
       intersection	      [1 0 -1 0.5083 167.2323 51.375 0 0]
     }
     midPoint		    [167.2323 32.7665]
-    chart		    540
-    linkNode		    [540 0 546]
+    chart		    529
+    linkNode		    [529 0 535]
     dataLimits		    [167.232 167.232 21.375 43.375]
-    subviewer		    540
+    subviewer		    529
     drawStyle		    SMART
     executionOrder	    1
     ssIdNumber		    5
   }
   transition {
-    id			    546
+    id			    535
     labelString		    "[mainsOn]"
     labelPosition	    [91.25 125.25 57.864 16.011]
     fontSize		    12
     src {
-      id		      541
+      id		      530
       intersection	      [3 0 1 0.8085 122.75 103.5 0 -26.875]
     }
     dst {
-      id		      542
+      id		      531
       intersection	      [1 0 -1 0.338 64.25 174 0 -31.625]
     }
     midPoint		    [91.5936 135.7929]
-    chart		    540
-    linkNode		    [540 545 549]
+    chart		    529
+    linkNode		    [529 534 538]
     dataLimits		    [64.25 122.75 103.5 166]
     stampAngle		    -1
-    subviewer		    540
+    subviewer		    529
     drawStyle		    SMART
     slide {
       mode		      MIRROR_SLIDE
@@ -61248,70 +58805,70 @@ Stateflow {
     ssIdNumber		    6
   }
   transition {
-    id			    547
+    id			    536
     labelString		    "[!mainsOn]"
     labelPosition	    [142.375 172.125 62.047 16.011]
     fontSize		    12
     src {
-      id		      542
+      id		      531
       intersection	      [2 1 0 0.185 128.875 186 0 -19.5]
     }
     dst {
-      id		      543
+      id		      532
       intersection	      [4 -1 -0 0.8375 221.75 186 0 20.25]
     }
     midPoint		    [173.0708 186]
-    chart		    540
-    linkNode		    [540 549 548]
+    chart		    529
+    linkNode		    [529 538 537]
     dataLimits		    [128.875 213.75 186 186]
     stampAngle		    -1
-    subviewer		    540
+    subviewer		    529
     drawStyle		    SMART
     executionOrder	    1
     ssIdNumber		    7
   }
   transition {
-    id			    548
+    id			    537
     labelString		    "[mainsOn]"
     labelPosition	    [153.5 213 57.864 16.011]
     fontSize		    12
     src {
-      id		      543
+      id		      532
       intersection	      [4 -1 -0 0.225 221.75 222.75 0 -17.25]
     }
     dst {
-      id		      542
+      id		      531
       intersection	      [2 1 0 0.7514 128.875 222.75 0 16.5]
     }
     midPoint		    [177.5542 222.75]
-    chart		    540
-    linkNode		    [540 547 551]
+    chart		    529
+    linkNode		    [529 536 540]
     dataLimits		    [136.875 221.75 222.75 222.75]
     stampAngle		    -1
-    subviewer		    540
+    subviewer		    529
     drawStyle		    SMART
     executionOrder	    2
     ssIdNumber		    8
   }
   transition {
-    id			    549
+    id			    538
     labelString		    "[timer <= 0]"
     labelPosition	    [232.25 132 64.836 16.011]
     fontSize		    12
     src {
-      id		      543
+      id		      532
       intersection	      [1 0 -1 0.425 260 176.25 0 23.75]
     }
     dst {
-      id		      541
+      id		      530
       intersection	      [3 0 1 0.2102 206.75 103.5 0 29.5]
     }
     midPoint		    [231.6397 142.743]
-    chart		    540
-    linkNode		    [540 546 547]
+    chart		    529
+    linkNode		    [529 535 536]
     dataLimits		    [206.75 260 111.5 176.25]
     stampAngle		    -1
-    subviewer		    540
+    subviewer		    529
     drawStyle		    SMART
     slide {
       mode		      MIRROR_SLIDE
@@ -61321,24 +58878,24 @@ Stateflow {
     ssIdNumber		    9
   }
   transition {
-    id			    550
+    id			    539
     labelString		    "[!mainsOn]"
     labelPosition	    [233.75 265.875 62.047 16.011]
     fontSize		    12
     src {
-      id		      544
+      id		      533
       intersection	      [1 0 -1 0.8896 221 301.875 0 -15.5]
     }
     dst {
-      id		      543
+      id		      532
       intersection	      [3 0 1 0.7167 247.25 236.25 0 -10.75]
     }
     midPoint		    [234.9804 271.9514]
-    chart		    540
-    linkNode		    [540 551 0]
+    chart		    529
+    linkNode		    [529 540 0]
     dataLimits		    [221 247.25 244.25 301.875]
     stampAngle		    -1
-    subviewer		    540
+    subviewer		    529
     drawStyle		    SMART
     slide {
       mode		      MIRROR_SLIDE
@@ -61348,24 +58905,24 @@ Stateflow {
     ssIdNumber		    10
   }
   transition {
-    id			    551
+    id			    540
     labelString		    "[timer >= histTime]"
     labelPosition	    [101.75 252.375 105.272 16.011]
     fontSize		    12
     src {
-      id		      542
+      id		      531
       intersection	      [3 0 1 0.4699 83 238.875 0 13.125]
     }
     dst {
-      id		      544
+      id		      533
       intersection	      [1 0 -1 0.2271 128 301.875 0 31.875]
     }
     midPoint		    [106.9665 267.3274]
-    chart		    540
-    linkNode		    [540 548 550]
+    chart		    529
+    linkNode		    [529 537 539]
     dataLimits		    [83 128 238.875 293.875]
     stampAngle		    -1
-    subviewer		    540
+    subviewer		    529
     drawStyle		    SMART
     slide {
       mode		      MIRROR_SLIDE
@@ -61375,10 +58932,10 @@ Stateflow {
     ssIdNumber		    11
   }
   data {
-    id			    552
+    id			    541
     ssIdNumber		    12
     name		    "histTime"
-    linkNode		    [540 0 553]
+    linkNode		    [529 0 542]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -61396,10 +58953,10 @@ Stateflow {
     dataType		    "Inherit: Same as Simulink"
   }
   data {
-    id			    553
+    id			    542
     ssIdNumber		    13
     name		    "mainsOn"
-    linkNode		    [540 552 554]
+    linkNode		    [529 541 543]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -61417,10 +58974,10 @@ Stateflow {
     dataType		    "Inherit: Same as Simulink"
   }
   data {
-    id			    554
+    id			    543
     ssIdNumber		    14
     name		    "pluggedIn"
-    linkNode		    [540 553 555]
+    linkNode		    [529 542 544]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -61434,10 +58991,10 @@ Stateflow {
     dataType		    "boolean"
   }
   data {
-    id			    555
+    id			    544
     ssIdNumber		    15
     name		    "timer"
-    linkNode		    [540 554 0]
+    linkNode		    [529 543 0]
     scope		    LOCAL_DATA
     machine		    1
     props {
@@ -61450,24 +59007,24 @@ Stateflow {
     dataType		    "int16"
   }
   instance {
-    id			    556
+    id			    545
     name		    "Foreground/Sensors/Eaton HV Charger/PluggedInDetect/Chart"
     machine		    1
-    chart		    540
+    chart		    529
   }
   target {
-    id			    557
+    id			    546
     name		    "sfun"
     codeFlags		    ""
     machine		    1
-    linkNode		    [1 0 558]
+    linkNode		    [1 0 547]
   }
   target {
-    id			    558
+    id			    547
     name		    "rtw"
     codeFlags		    " comments=1 statebitsets=1 databitsets=1 emitlogicalops=1 elseifdetection=1 constantfolding=1 redu"
     "ndantloadelimination=0 preservenames=0 preservenameswithparent=0 exportcharts=0"
     machine		    1
-    linkNode		    [1 557 0]
+    linkNode		    [1 546 0]
   }
 }
