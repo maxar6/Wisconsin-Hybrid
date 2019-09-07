@@ -4,16 +4,16 @@
 ###  Starting MotoHawk Build              ###
 ###  MotoHawk version: 2011a_sp0.184      ###
 ###    MATLAB version: 7.12.0.635 (R2011a)###
-###        29-Apr-2019 19:19:40           ###
+###        07-Sep-2019 17:35:10           ###
 ###                                       ###
 #############################################
  
 Target Module:   ECU565-128 (DEV)
-DEV Executable:  BuckyWagon_01_187.srz
-MotoTune DLL:    BuckyWago_187.dll
+DEV Executable:  BuckyWagon_01_190.srz
+MotoTune DLL:    BuckyWago_190.dll
  
 Project GUID:    3c32a120-d49a-4164-87-fe-ac-4b-55-ed-6f
-Build GUID:      683b644b-5f35-4334-8b-a4-97-61-ca-b7-60
+Build GUID:      11aa7585-78d1-4f6a-92-71-ad-e2-c4-8e-af
  
 ### Starting build procedure for model: BuckyWagon_01
 ### Generating code into build folder: C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build
@@ -29,20 +29,11 @@ Build GUID:      683b644b-5f35-4334-8b-a4-97-61-ca-b7-60
 {Warning: The 'tokenize' option for regexprep is now the default behavior.} 
 {Warning: The 'tokenize' option for regexprep is now the default behavior.} 
 {Warning: The 'tokenize' option for regexprep is now the default behavior.} 
-{Warning: In CAN message specification: 'Status'
-The maximum value for payload field 'Eaton_HV_Charger_Temperature' has been
-changed from 125 to 87.5, to fit into the size of the field.
-(msg.fields{6}.maximum)} 
-{Warning: Matching "From" for "Goto" '<a href="matlab:open_and_hilite_system ('BuckyWagon_01/Foreground/Control Strategy/Calculations/Goto4')">BuckyWagon_01/Foreground/Control
-Strategy/Calculations/Goto4</a>' not found} 
-{Warning: Matching "From" for "Goto" '<a href="matlab:open_and_hilite_system ('BuckyWagon_01/Foreground/Gauges/Goto')">BuckyWagon_01/Foreground/Gauges/Goto</a>' not
-found} 
-{Warning: Unconnected line found in 'BuckyWagon_01/Foreground/Control
-Strategy/EHPAS_PercentControl' (outside of current view)} 
-{Warning: Output port 12 of '<a href="matlab:open_and_hilite_system ('BuckyWagon_01/Foreground/Control Strategy/Calculations/kW calculation1')">BuckyWagon_01/Foreground/Control
-Strategy/Calculations/kW calculation1</a>' is not connected.} 
-{Warning: Input port 1 of '<a href="matlab:open_and_hilite_system ('BuckyWagon_01/Foreground/Control Strategy/Calculations/kW calculation1/Instantaneous DC-DC Watts')">BuckyWagon_01/Foreground/Control
-Strategy/Calculations/kW calculation1/Instantaneous DC-DC Watts</a>' is not
+{Warning: Matching "From" for "Goto" '<a href="matlab:open_and_hilite_system ('BuckyWagon_01/Foreground/Control Strategy/Calculations/Goto4')">BuckyWagon_01/Foreground/Control Strategy/Calculations/Goto4</a>' not found} 
+{Warning: Matching "From" for "Goto" '<a href="matlab:open_and_hilite_system ('BuckyWagon_01/Foreground/Gauges/Goto')">BuckyWagon_01/Foreground/Gauges/Goto</a>' not found} 
+{Warning: Unconnected line found in 'BuckyWagon_01/Foreground/Control Strategy/EHPAS_PercentControl' (outside of current view)} 
+{Warning: Output port 12 of '<a href="matlab:open_and_hilite_system ('BuckyWagon_01/Foreground/Control Strategy/Calculations/kW calculation1')">BuckyWagon_01/Foreground/Control Strategy/Calculations/kW calculation1</a>' is not connected.} 
+{Warning: Input port 1 of '<a href="matlab:open_and_hilite_system ('BuckyWagon_01/Foreground/Control Strategy/Calculations/kW calculation1/Instantaneous DC-DC Watts')">BuckyWagon_01/Foreground/Control Strategy/Calculations/kW calculation1/Instantaneous DC-DC Watts</a>' is not
 connected.} 
 ### Invoking Target Language Compiler on BuckyWagon_01.rtw
 ### Using System Target File: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tlc
@@ -72,7 +63,7 @@ connected.}
 ...............................................................................
 ...............................................................................
 ...............................................................................
-................................
+....................................
 ### Writing source file BuckyWagon_01.c
 ### Writing header file BuckyWagon_01_private.h
 .
@@ -87,14 +78,13 @@ connected.}
 .
 ### Writing header file rtwtypes.h
 ### Writing header file rt_nonfinite.h
-.
 ### Writing source file rt_nonfinite.c
-### Writing source file BuckyWagon_01_data.c
 .
+### Writing source file BuckyWagon_01_data.c
 ### TLC code generation complete.
 ...............................................................................
 ...............................................................................
-.............................................................................
+...............................................................................
 ### Processing Template Makefile: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tmf
 ### BuckyWagon_01.mk which is generated from C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tmf is up to date
 ### Building BuckyWagon_01: .\BuckyWagon_01.bat
@@ -157,31 +147,31 @@ compile:
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\MotoHawk_IO.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\rt_nonfinite.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\TableLookupFunctions.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_BGND_BASEx10_PERIODIC_15455p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_BGND_BASEx20_PERIODIC_3977p0004.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_BGND_BASEx2_PERIODIC_15454p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_BGND_BASE_PERIODIC_15453p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_BGND_BASE_PERIODIC_3967p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_BGND_BASEx10_PERIODIC_11681p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_BGND_BASEx20_PERIODIC_3503p0009.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_BGND_BASEx2_PERIODIC_11680p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_BGND_BASE_PERIODIC_11679p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_BGND_BASE_PERIODIC_3493p0009.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_CAN_RX_BusCAN_1_Buf1.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_CAN_RX_BusCAN_1_Buf14.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_CAN_RX_BusCAN_2_Buf1.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_CAN_RX_BusCAN_2_Buf14.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_CAN_Slot_miniview_button_down_2080p0004.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_CAN_Slot_miniview_button_menu_2338p0004.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_CAN_Slot_miniview_button_up_2589p0005.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_FGND_10XRTI_PERIODIC_15451p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_FGND_20XRTI_PERIODIC_15452p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_FGND_20XRTI_PERIODIC_3774p0004.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_FGND_2XRTI_PERIODIC_15449p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_FGND_RTI_PERIODIC_15450p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_FGND_RTI_PERIODIC_3773p0006.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_FGND_RTI_PERIODIC_3975p0004.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_IDLE_EVENT_15443p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_IDLE_EVENT_15467p0004.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_ONE_SECOND_EVENT_15456p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_SHUTDOWN_EVENT_3978p0004.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_STARTUP_EVENT_15418p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_STARTUP_EVENT_3976p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_CAN_Slot_miniview_button_down_1606p0006.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_CAN_Slot_miniview_button_menu_1864p0006.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_CAN_Slot_miniview_button_up_2115p0011.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_FGND_10XRTI_PERIODIC_11677p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_FGND_20XRTI_PERIODIC_11678p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_FGND_20XRTI_PERIODIC_3300p0009.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_FGND_2XRTI_PERIODIC_11675p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_FGND_RTI_PERIODIC_11676p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_FGND_RTI_PERIODIC_3299p0011.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_FGND_RTI_PERIODIC_3501p0009.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_IDLE_EVENT_11606p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_IDLE_EVENT_3547p0009.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_ONE_SECOND_EVENT_11682p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_SHUTDOWN_EVENT_3504p0009.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_STARTUP_EVENT_11581p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\Trigger_STARTUP_EVENT_3502p0009.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\VarDecs.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\TDB\TableDB.c 
  
@@ -195,32 +185,32 @@ s-records:
  
 BUILD SUCCEEDED 
  
-Total time: 25 seconds. 
+Total time: 11 seconds. 
  
 ### Call MotoConvert 
 Project format is MPC5xx 
 Toolchain format is GCC 
 Transforming range 0x00400000-0x0041FFFF into 64 byte pages... 
 Transforming range 0x00000000-0x000FFFFF into 64 byte pages... 
-Searching for Table Database address 'EriRequestTableList'...Found at 0x0004CAD0 
+Searching for Table Database address 'EriRequestTableList'...Found at 0x0004CB40 
 Searching for CRC Table address 'g_pCRCBlockPtr' ...Found at 0x00010000 
 Calculating Application defined CRC's...OK. 
 Searching for initialised section '.fixed_ramcals' aliased to '.fixed_romcals' ... 
 Searching for initialised section '.ramcals' aliased to '.romcals' ... 
-    Adding RAM[0x003F8288], ROM[0x00053D78], Length[0x0000003C] 
+    Adding RAM[0x003F8288], ROM[0x00053DF8], Length[0x0000003C] 
 Searching for initialised section '.sdata' aliased to '.romsdata' ... 
-    Adding RAM[0x003F7000], ROM[0x00053DE4], Length[0x00000019] 
+    Adding RAM[0x003F7000], ROM[0x00053E64], Length[0x00000019] 
 Searching for initialised section '.data' aliased to '.romdata' ... 
-    Ignoring zero length section at RAM[0x003F8288], ROM[0x00053E00] 
+    Ignoring zero length section at RAM[0x003F8288], ROM[0x00053E80] 
 Complete. 
 Writing file sr://BuckyWagon_01.sr... 
-Encrypting 'sr://BuckyWagon_01.sr' into 'srz://.\Target\BuckyWagon_01_187.srz' ... 
+Encrypting 'sr://BuckyWagon_01.sr' into 'srz://.\Target\BuckyWagon_01_190.srz' ... 
 Done. 
 ### Creating Build Statistics 
 Memory Summary:
-	FLASH:                     274239 bytes   28% of 982784
+	FLASH:                     274371 bytes   28% of 982784
 	    NonVolatileDefault:        60 bytes    0% of 982784
-	    BuckyWagon_01_Foreground:22408 bytes    2% of 982784
+	    BuckyWagon_01_Foreground:22524 bytes    2% of 982784
 	DECRAM:                      4096 bytes  100% of   4096
 	    FgndTimeStack:           3072 bytes   75% of   4096
 	    IdleStack:               1024 bytes   25% of   4096
@@ -233,28 +223,26 @@ Memory Summary:
 	    BuckyWagon_01_DWork:      308 bytes    0% of  1024K
 	    BuckyWagon_01_M_:           4 bytes    0% of  1024K
 	    VolatileWork:              12 bytes    0% of  1024K
-	CAL_SPACE:                   1992 bytes    3% of  65536
-	    ConstantWork:            1836 bytes    3% of  65536
+	CAL_SPACE:                   2000 bytes    3% of  65536
+	    ConstantWork:            1844 bytes    3% of  65536
 	EEPROM_SPACE:                  63 bytes    1% of   8192
 
-### Copy BuckyWago_187.dll and BuckyWagon_01_187.srz 
+### Copy BuckyWago_190.dll and BuckyWagon_01_190.srz 
 ### Dumping DLL to XML 
 ### Generating ASAP2 file 
 ### Installing ASAP2 file in C:\ECUFiles\TDBDLL\ 
 ### Successful Build with MotoCoder 
-Elapsed Build Time: 4 minutes, 4.8 seconds  (244.8 seconds)
-{Warning: Block diagram 'BuckyWagon_01' contains one or more parameterized library
-links.  To find the parameterized links use the Model Advisor.  The diagram has
-been saved but may not behave as you intended.} 
-{Warning: Block diagram 'BuckyWagon_01' contains disabled library links.  Use
-Model Advisor to find the disabled links in non-library models.  The diagram has
-been saved but may not contain what you intended.} 
+Elapsed Build Time: 2 minutes, 5.7 seconds  (125.7 seconds)
+{Warning: Block diagram 'BuckyWagon_01' contains one or more parameterized library links.  To find the parameterized links use the Model
+Advisor.  The diagram has been saved but may not behave as you intended.} 
+{Warning: Block diagram 'BuckyWagon_01' contains disabled library links.  Use Model Advisor to find the disabled links in non-library models.
+The diagram has been saved but may not contain what you intended.} 
  
 #############################################################################
 ###
 ### Target Module: ECU565-128
-### Created Development Executable: BuckyWagon_01_187.srz
-### Created MotoTune DLL: BuckyWago_187.dll
+### Created Development Executable: BuckyWagon_01_190.srz
+### Created MotoTune DLL: BuckyWago_190.dll
 ###
 ### Successful MotoHawk Build for model: BuckyWagon_01
 ###

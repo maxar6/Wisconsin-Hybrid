@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BuckyWagon_01'.
  *
- * Model version                  : 1.1586
+ * Model version                  : 1.1596
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Mon Apr 29 19:20:54 2019
+ * C/C++ source code generated on : Sat Sep 07 17:36:03 2019
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -550,12 +550,12 @@ void BuckyWagon_01_Foreground_Enable(void)
 {
   /* Level2 S-Function Block: '<S3>/motohawk_trigger1' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_FGND_20XRTI_PERIODIC_3774p0004 */
+  /* Enable for Trigger_FGND_20XRTI_PERIODIC_3300p0009 */
   BuckyWagon_01_DWork.s3_motohawk_trigger1_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S3>/motohawk_trigger' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_FGND_RTI_PERIODIC_3773p0006 */
+  /* Enable for Trigger_FGND_RTI_PERIODIC_3299p0011 */
   BuckyWagon_01_DWork.s3_motohawk_trigger_DWORK1 = 1;
 }
 
@@ -577,11 +577,11 @@ void BuckyWagon_01_Foreground_Disable(void)
   /* End of Disable for SubSystem: '<S106>/Time Since Enabled (With Input)1' */
 
   /* Level2 S-Function Block: '<S3>/motohawk_trigger1' (motohawk_sfun_trigger) */
-  /* Disable for Trigger_FGND_20XRTI_PERIODIC_3774p0004 */
+  /* Disable for Trigger_FGND_20XRTI_PERIODIC_3300p0009 */
   BuckyWagon_01_DWork.s3_motohawk_trigger1_DWORK1 = 0;
 
   /* Level2 S-Function Block: '<S3>/motohawk_trigger' (motohawk_sfun_trigger) */
-  /* Disable for Trigger_FGND_RTI_PERIODIC_3773p0006 */
+  /* Disable for Trigger_FGND_RTI_PERIODIC_3299p0011 */
   BuckyWagon_01_DWork.s3_motohawk_trigger_DWORK1 = 0;
 
   /* Disable for Enabled SubSystem: '<S20>/Time Since Enabled (With Input)1' */
@@ -638,13 +638,13 @@ void BuckyWagon_01_Foreground_Start(void)
     GaugeChain_EZLinkOutput_Create();
   }
 
-  /* Clear enable/disable state for embedded trigger Trigger_FGND_20XRTI_PERIODIC_3774p0004 */
+  /* Clear enable/disable state for embedded trigger Trigger_FGND_20XRTI_PERIODIC_3300p0009 */
   BuckyWagon_01_DWork.s3_motohawk_trigger1_DWORK1 = 0;
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S3>/motohawk_trigger' */
   BuckyWagon_01_MiniViewDisplay_Start();
 
-  /* Clear enable/disable state for embedded trigger Trigger_FGND_RTI_PERIODIC_3773p0006 */
+  /* Clear enable/disable state for embedded trigger Trigger_FGND_RTI_PERIODIC_3299p0011 */
   BuckyWagon_01_DWork.s3_motohawk_trigger_DWORK1 = 0;
 
   /* Start for Enabled SubSystem: '<S20>/Time Since Enabled (With Input)1' */
@@ -767,6 +767,7 @@ void BuckyWagon_01_Foreground(void)
   real_T rtb_Merge_k;
   boolean_T rtb_RelationalOperator_k;
   int32_T rtb_DataTypeConversion_i;
+  boolean_T rtb_LogicalOperator4_a;
   boolean_T rtb_LogicalOperator1_jo;
   real_T rtb_Sum1;
   real_T rtb_Sum1_o;
@@ -790,10 +791,10 @@ void BuckyWagon_01_Foreground(void)
   /* MotoHawk Read CAN Message */
   {
     S_CANMessage messageObj;
-    extern MHCAN_directslot MHCAN_directslot_RxSlot_2774p0006;
+    extern MHCAN_directslot MHCAN_directslot_RxSlot_2300p0012;
     extern boolean_T MHCAN_getdirect(MHCAN_directslot *directslot, S_CANMessage *
       messageObj);
-    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_2774p0006,
+    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_2300p0012,
       &messageObj);
     if ((BuckyWagon_01_B.s210_AgeCount + 1) > BuckyWagon_01_B.s210_AgeCount)
       BuckyWagon_01_B.s210_AgeCount++;
@@ -1022,10 +1023,10 @@ void BuckyWagon_01_Foreground(void)
   /* MotoHawk Read CAN Message */
   {
     S_CANMessage messageObj;
-    extern MHCAN_directslot MHCAN_directslot_RxSlot_2776p0005;
+    extern MHCAN_directslot MHCAN_directslot_RxSlot_2302p0011;
     extern boolean_T MHCAN_getdirect(MHCAN_directslot *directslot, S_CANMessage *
       messageObj);
-    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_2776p0005,
+    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_2302p0011,
       &messageObj);
     if ((BuckyWagon_01_B.s210_AgeCount_e + 1) > BuckyWagon_01_B.s210_AgeCount_e)
       BuckyWagon_01_B.s210_AgeCount_e++;
@@ -1093,10 +1094,10 @@ void BuckyWagon_01_Foreground(void)
   /* MotoHawk Read CAN Message */
   {
     S_CANMessage messageObj;
-    extern MHCAN_directslot MHCAN_directslot_RxSlot_2775p0005;
+    extern MHCAN_directslot MHCAN_directslot_RxSlot_2301p0011;
     extern boolean_T MHCAN_getdirect(MHCAN_directslot *directslot, S_CANMessage *
       messageObj);
-    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_2775p0005,
+    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_2301p0011,
       &messageObj);
     if ((BuckyWagon_01_B.s210_AgeCount_k + 1) > BuckyWagon_01_B.s210_AgeCount_k)
       BuckyWagon_01_B.s210_AgeCount_k++;
@@ -1199,10 +1200,10 @@ void BuckyWagon_01_Foreground(void)
   /* MotoHawk Read CAN Message */
   {
     S_CANMessage messageObj;
-    extern MHCAN_directslot MHCAN_directslot_RxSlot_3095p0004;
+    extern MHCAN_directslot MHCAN_directslot_RxSlot_2621p0012;
     extern boolean_T MHCAN_getdirect(MHCAN_directslot *directslot, S_CANMessage *
       messageObj);
-    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_3095p0004,
+    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_2621p0012,
       &messageObj);
     if ((BuckyWagon_01_B.s215_AgeCount + 1) > BuckyWagon_01_B.s215_AgeCount)
       BuckyWagon_01_B.s215_AgeCount++;
@@ -1234,8 +1235,8 @@ void BuckyWagon_01_Foreground(void)
       BuckyWagon_01_B.s215_InputCurrentLimitMax = ((real_T) tmp2) / ((real_T) 2);
       BuckyWagon_01_B.s215_InputCurrent = ((real_T) tmp3) / ((real_T) 2);
       BuckyWagon_01_B.s215_OutputCurrent = ((real_T) tmp4) / ((real_T) 2);
-      BuckyWagon_01_B.s215_Eaton_HV_Charger_Temperature = (((real_T) tmp5) /
-        ((real_T) 2)) + ((real_T) -40);
+      BuckyWagon_01_B.s215_Eaton_HV_Charger_Temperature = ((real_T) tmp5) +
+        ((real_T) -40);
       BuckyWagon_01_B.s215_IgnitionStatus = (real_T) tmp6;
       BuckyWagon_01_B.s215_ChargerState = (real_T) tmp7;
       BuckyWagon_01_B.s215_FaultSeverityIndicator = (real_T) tmp8;
@@ -1376,10 +1377,10 @@ void BuckyWagon_01_Foreground(void)
   /* MotoHawk Read CAN Message */
   {
     S_CANMessage messageObj;
-    extern MHCAN_directslot MHCAN_directslot_RxSlot_3457p0001;
+    extern MHCAN_directslot MHCAN_directslot_RxSlot_2983p001;
     extern boolean_T MHCAN_getdirect(MHCAN_directslot *directslot, S_CANMessage *
       messageObj);
-    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_3457p0001,
+    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_2983p001,
       &messageObj);
     if ((BuckyWagon_01_B.s221_AgeCount + 1) > BuckyWagon_01_B.s221_AgeCount)
       BuckyWagon_01_B.s221_AgeCount++;
@@ -1451,10 +1452,10 @@ void BuckyWagon_01_Foreground(void)
   /* MotoHawk Read CAN Message */
   {
     S_CANMessage messageObj;
-    extern MHCAN_directslot MHCAN_directslot_RxSlot_3460p0001;
+    extern MHCAN_directslot MHCAN_directslot_RxSlot_2986p001;
     extern boolean_T MHCAN_getdirect(MHCAN_directslot *directslot, S_CANMessage *
       messageObj);
-    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_3460p0001,
+    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_2986p001,
       &messageObj);
     if ((BuckyWagon_01_B.s221_AgeCount_l + 1) > BuckyWagon_01_B.s221_AgeCount_l)
       BuckyWagon_01_B.s221_AgeCount_l++;
@@ -1492,10 +1493,10 @@ void BuckyWagon_01_Foreground(void)
   /* MotoHawk Read CAN Message */
   {
     S_CANMessage messageObj;
-    extern MHCAN_directslot MHCAN_directslot_RxSlot_3459p0001;
+    extern MHCAN_directslot MHCAN_directslot_RxSlot_2985p001;
     extern boolean_T MHCAN_getdirect(MHCAN_directslot *directslot, S_CANMessage *
       messageObj);
-    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_3459p0001,
+    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_2985p001,
       &messageObj);
     if ((BuckyWagon_01_B.s221_AgeCount_j + 1) > BuckyWagon_01_B.s221_AgeCount_j)
       BuckyWagon_01_B.s221_AgeCount_j++;
@@ -1547,10 +1548,10 @@ void BuckyWagon_01_Foreground(void)
   /* MotoHawk Read CAN Message */
   {
     S_CANMessage messageObj;
-    extern MHCAN_directslot MHCAN_directslot_RxSlot_3455p0001;
+    extern MHCAN_directslot MHCAN_directslot_RxSlot_2981p001;
     extern boolean_T MHCAN_getdirect(MHCAN_directslot *directslot, S_CANMessage *
       messageObj);
-    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_3455p0001,
+    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_2981p001,
       &messageObj);
     if (msg_valid) {
       uint8_T tmp0 = 0;
@@ -1583,10 +1584,10 @@ void BuckyWagon_01_Foreground(void)
   /* MotoHawk Read CAN Message */
   {
     S_CANMessage messageObj;
-    extern MHCAN_directslot MHCAN_directslot_RxSlot_3456p0001;
+    extern MHCAN_directslot MHCAN_directslot_RxSlot_2982p001;
     extern boolean_T MHCAN_getdirect(MHCAN_directslot *directslot, S_CANMessage *
       messageObj);
-    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_3456p0001,
+    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_2982p001,
       &messageObj);
     if (msg_valid) {
       uint8_T tmp0 = 0;
@@ -1602,10 +1603,10 @@ void BuckyWagon_01_Foreground(void)
   /* MotoHawk Read CAN Message */
   {
     S_CANMessage messageObj;
-    extern MHCAN_directslot MHCAN_directslot_RxSlot_3458p0001;
+    extern MHCAN_directslot MHCAN_directslot_RxSlot_2984p001;
     extern boolean_T MHCAN_getdirect(MHCAN_directslot *directslot, S_CANMessage *
       messageObj);
-    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_3458p0001,
+    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_2984p001,
       &messageObj);
     if (msg_valid) {
       uint8_T tmp0 = 0;
@@ -2014,11 +2015,11 @@ void BuckyWagon_01_Foreground(void)
     && rtb_RelationalOperator_k));
 
   /* Logic: '<S123>/Logical Operator3' */
-  rtb_UnitDelay_if = (rtb_LogicalOperator4_f && rtb_LogicalOperator2_e);
+  rtb_LogicalOperator2_e = (rtb_LogicalOperator4_f && rtb_LogicalOperator2_e);
 
   /* Logic: '<S123>/Logical Operator4' */
-  rtb_LogicalOperator2_e = (BuckyWagon_01_B.s221_RelationalOperator &&
-    rtb_UnitDelay_if);
+  rtb_LogicalOperator4_a = (BuckyWagon_01_B.s221_RelationalOperator &&
+    rtb_LogicalOperator2_e);
 
   /* Logic: '<S123>/Logical Operator5' */
   rtb_LogicalOperator5_k = (rtb_LogicalOperator4_f || BuckyWagon_01_B.s228_Merge);
@@ -2757,7 +2758,7 @@ void BuckyWagon_01_Foreground(void)
   /* End of Outputs for SubSystem: '<S17>/Drive' */
 
   /* Product: '<S17>/Product1' */
-  BuckyWagon_01_B.s17_Motor_Torque = (rtb_LogicalOperator2_e ? (real_T)
+  BuckyWagon_01_B.s17_Motor_Torque = (rtb_LogicalOperator4_a ? (real_T)
     rtb_BelowLoTarget : 0.0) * rtb_Merge_k;
 
   /* S-Function Block: <S122>/motohawk_delta_time */
@@ -3152,6 +3153,13 @@ void BuckyWagon_01_Foreground(void)
     rtb_RelationalOperator_fj = GetFaultActionStatus(6);
   }
 
+  /* Logic: '<S119>/Logical Operator' incorporates:
+   *  Logic: '<S119>/Logical Operator1'
+   *  S-Function (motohawk_sfun_calibration): '<S119>/motohawk_calibration3'
+   */
+  rtb_UnitDelay_if = (BuckyWagon_01_B.s314_pluggedIn && (!(((uint8_T)
+    (Charger_Temp_Enable_DataStore())) != 0)));
+
   /* Sum: '<S119>/Sum' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S119>/motohawk_calibration'
    */
@@ -3244,32 +3252,41 @@ void BuckyWagon_01_Foreground(void)
 
   /* Switch: '<S119>/Switch1' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S119>/motohawk_calibration9'
-   *  S-Function (motohawk_sfun_interpolation_1d): '<S119>/motohawk_interpolation_1d1'
-   *  S-Function (motohawk_sfun_prelookup): '<S119>/motohawk_prelookup1'
    */
   if (rtb_RelationalOperator_fj) {
     BuckyWagon_01_B.s119_Switch1 = (Overheat_PumpFan_Speed_DataStore());
   } else {
-    /* S-Function Block: <S119>/motohawk_prelookup1 */
-    {
-      extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
-        ordarr[], uint32_T sz, uint16_T prev);
-      (Coolant_FanIn_DataStore()) = rtb_MinMax_e;
-      (Coolant_FanIdx_DataStore()) = TablePrelookup_real_T(rtb_MinMax_e,
-        (Coolant_FanIdxArr_DataStore()), 10, (Coolant_FanIdx_DataStore()));
-      rtb_motohawk_prelookup1 = (Coolant_FanIdx_DataStore());
+    /* Switch: '<S119>/Switch3' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S119>/motohawk_calibration11'
+     *  S-Function (motohawk_sfun_interpolation_1d): '<S119>/motohawk_interpolation_1d1'
+     *  S-Function (motohawk_sfun_prelookup): '<S119>/motohawk_prelookup1'
+     */
+    if (rtb_UnitDelay_if) {
+      BuckyWagon_01_B.s119_Switch1 = (Charger_Fan_Speed_DataStore());
+    } else {
+      /* S-Function Block: <S119>/motohawk_prelookup1 */
+      {
+        extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
+          ordarr[], uint32_T sz, uint16_T prev);
+        (Coolant_FanIn_DataStore()) = rtb_MinMax_e;
+        (Coolant_FanIdx_DataStore()) = TablePrelookup_real_T(rtb_MinMax_e,
+          (Coolant_FanIdxArr_DataStore()), 10, (Coolant_FanIdx_DataStore()));
+        rtb_motohawk_prelookup1 = (Coolant_FanIdx_DataStore());
+      }
+
+      /* S-Function Block: <S119>/motohawk_interpolation_1d1 */
+      {
+        extern real_T TableInterpolation1D_real_T(uint16_T idx, real_T *tbl_data,
+          uint32_T sz);
+        rtb_FanDutyCycle = TableInterpolation1D_real_T(rtb_motohawk_prelookup1,
+          (real_T *) ((Coolant_FanTbl_DataStore())), 10);
+        (Coolant_Fan_DataStore()) = rtb_FanDutyCycle;
+      }
+
+      BuckyWagon_01_B.s119_Switch1 = rtb_FanDutyCycle;
     }
 
-    /* S-Function Block: <S119>/motohawk_interpolation_1d1 */
-    {
-      extern real_T TableInterpolation1D_real_T(uint16_T idx, real_T *tbl_data,
-        uint32_T sz);
-      rtb_FanDutyCycle = TableInterpolation1D_real_T(rtb_motohawk_prelookup1,
-        (real_T *) ((Coolant_FanTbl_DataStore())), 10);
-      (Coolant_Fan_DataStore()) = rtb_FanDutyCycle;
-    }
-
-    BuckyWagon_01_B.s119_Switch1 = rtb_FanDutyCycle;
+    /* End of Switch: '<S119>/Switch3' */
   }
 
   /* End of Switch: '<S119>/Switch1' */
@@ -3703,9 +3720,9 @@ void BuckyWagon_01_Foreground(void)
 
   /* Update for S-Function (motohawk_sfun_dout): '<S22>/motohawk_dout1' */
 
-  /* S-Function Block: DOut177p001 */
+  /* S-Function Block: DOut178p0011 */
   {
-    DOut177p001_DiscreteOutput_Set(BuckyWagon_01_B.s46_LogicalOperator);
+    DOut178p0011_DiscreteOutput_Set(BuckyWagon_01_B.s46_LogicalOperator);
   }
 
   /* Update for S-Function (motohawk_sfun_pwm): '<S22>/motohawk_pwm2' */
@@ -3716,16 +3733,16 @@ void BuckyWagon_01_Foreground(void)
 
   /* Update for S-Function (motohawk_sfun_dout): '<S22>/motohawk_dout2' */
 
-  /* S-Function Block: DOut178p001 */
+  /* S-Function Block: DOut179p0011 */
   {
-    DOut178p001_DiscreteOutput_Set(BuckyWagon_01_B.s47_LogicalOperator);
+    DOut179p0011_DiscreteOutput_Set(BuckyWagon_01_B.s47_LogicalOperator);
   }
 
   /* Update for S-Function (motohawk_sfun_dout): '<S22>/motohawk_dout3' */
 
-  /* S-Function Block: DOut179p001 */
+  /* S-Function Block: DOut180p0011 */
   {
-    DOut179p001_DiscreteOutput_Set(rtb_LogicalOperator1_p);
+    DOut180p0011_DiscreteOutput_Set(rtb_LogicalOperator1_p);
   }
 
   /* End of Outputs for SubSystem: '<S15>/Analog Out' */
@@ -4150,7 +4167,7 @@ void BuckyWagon_01_Foreground(void)
   /* End of MultiPortSwitch: '<S121>/Multiport Switch1' */
 
   /* Product: '<S17>/Product' */
-  rtb_Merge_k = (real_T)rtb_UnitDelay_if * rtb_Product_h;
+  rtb_Merge_k = (real_T)rtb_LogicalOperator2_e * rtb_Product_h;
 
   /* Outputs for Enabled SubSystem: '<S15>/EHPAS Power Steering Pump Controller' incorporates:
    *  EnablePort: '<S23>/Enable1'
@@ -4273,33 +4290,42 @@ void BuckyWagon_01_Foreground(void)
 
   /* Switch: '<S119>/Switch' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S119>/motohawk_calibration9'
-   *  S-Function (motohawk_sfun_interpolation_1d): '<S119>/motohawk_interpolation_1d'
-   *  S-Function (motohawk_sfun_prelookup): '<S119>/motohawk_prelookup'
    */
   if (rtb_RelationalOperator_fj) {
     BuckyWagon_01_B.s119_Switch = (Overheat_PumpFan_Speed_DataStore());
   } else {
-    /* S-Function Block: <S119>/motohawk_prelookup */
-    {
-      extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
-        ordarr[], uint32_T sz, uint16_T prev);
-      (Coolant_PumpIn_DataStore()) = rtb_MinMax_e;
-      (Coolant_PumpIdx_DataStore()) = TablePrelookup_real_T(rtb_MinMax_e,
-        (Coolant_PumpIdxArr_DataStore()), 10, (Coolant_PumpIdx_DataStore()));
-      rtb_motohawk_prelookup_m = (Coolant_PumpIdx_DataStore());
+    /* Switch: '<S119>/Switch2' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S119>/motohawk_calibration10'
+     *  S-Function (motohawk_sfun_interpolation_1d): '<S119>/motohawk_interpolation_1d'
+     *  S-Function (motohawk_sfun_prelookup): '<S119>/motohawk_prelookup'
+     */
+    if (rtb_UnitDelay_if) {
+      BuckyWagon_01_B.s119_Switch = (Charger_Pump_Speed_DataStore());
+    } else {
+      /* S-Function Block: <S119>/motohawk_prelookup */
+      {
+        extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
+          ordarr[], uint32_T sz, uint16_T prev);
+        (Coolant_PumpIn_DataStore()) = rtb_MinMax_e;
+        (Coolant_PumpIdx_DataStore()) = TablePrelookup_real_T(rtb_MinMax_e,
+          (Coolant_PumpIdxArr_DataStore()), 10, (Coolant_PumpIdx_DataStore()));
+        rtb_motohawk_prelookup_m = (Coolant_PumpIdx_DataStore());
+      }
+
+      /* S-Function Block: <S119>/motohawk_interpolation_1d */
+      {
+        extern real_T TableInterpolation1D_real_T(uint16_T idx, real_T *tbl_data,
+          uint32_T sz);
+        rtb_CoolantPumpSpeed = TableInterpolation1D_real_T
+          (rtb_motohawk_prelookup_m, (real_T *) ((Coolant_PumpTbl_DataStore())),
+           10);
+        (Coolant_Pump_DataStore()) = rtb_CoolantPumpSpeed;
+      }
+
+      BuckyWagon_01_B.s119_Switch = rtb_CoolantPumpSpeed;
     }
 
-    /* S-Function Block: <S119>/motohawk_interpolation_1d */
-    {
-      extern real_T TableInterpolation1D_real_T(uint16_T idx, real_T *tbl_data,
-        uint32_T sz);
-      rtb_CoolantPumpSpeed = TableInterpolation1D_real_T
-        (rtb_motohawk_prelookup_m, (real_T *) ((Coolant_PumpTbl_DataStore())),
-         10);
-      (Coolant_Pump_DataStore()) = rtb_CoolantPumpSpeed;
-    }
-
-    BuckyWagon_01_B.s119_Switch = rtb_CoolantPumpSpeed;
+    /* End of Switch: '<S119>/Switch2' */
   }
 
   /* End of Switch: '<S119>/Switch' */
@@ -4881,7 +4907,7 @@ void BuckyWagon_01_Foreground(void)
     /* Outputs for IfAction SubSystem: '<S94>/OldValue' incorporates:
      *  ActionPort: '<S101>/Action Port'
      */
-    BuckyWagon_01_B.s94_Merge = rtb_LogicalOperator2_e;
+    BuckyWagon_01_B.s94_Merge = rtb_LogicalOperator4_a;
 
     /* S-Function (motohawk_sfun_code_cover): '<S101>/motohawk_code_coverage' */
     /* Code Coverage Test: BuckyWagon_01/Foreground/Actuators/UQM Motor/motohawk_override_abs1/OldValue */
@@ -5692,10 +5718,10 @@ void BuckyWagon_01_Foreground(void)
   /* MotoHawk Read CAN Message */
   {
     S_CANMessage messageObj;
-    extern MHCAN_directslot MHCAN_directslot_RxSlot_3017p0005;
+    extern MHCAN_directslot MHCAN_directslot_RxSlot_2543p0011;
     extern boolean_T MHCAN_getdirect(MHCAN_directslot *directslot, S_CANMessage *
       messageObj);
-    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_3017p0005,
+    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_2543p0011,
       &messageObj);
     if ((BuckyWagon_01_B.s214_AgeCount + 1) > BuckyWagon_01_B.s214_AgeCount)
       BuckyWagon_01_B.s214_AgeCount++;
@@ -5949,10 +5975,10 @@ void BuckyWagon_01_Foreground(void)
   /* MotoHawk Read CAN Message */
   {
     S_CANMessage messageObj;
-    extern MHCAN_directslot MHCAN_directslot_RxSlot_2967p0005;
+    extern MHCAN_directslot MHCAN_directslot_RxSlot_2493p0011;
     extern boolean_T MHCAN_getdirect(MHCAN_directslot *directslot, S_CANMessage *
       messageObj);
-    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_2967p0005,
+    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_2493p0011,
       &messageObj);
     if ((BuckyWagon_01_B.s213_AgeCount + 1) > BuckyWagon_01_B.s213_AgeCount)
       BuckyWagon_01_B.s213_AgeCount++;
@@ -6206,10 +6232,10 @@ void BuckyWagon_01_Foreground(void)
   /* MotoHawk Read CAN Message */
   {
     S_CANMessage messageObj;
-    extern MHCAN_directslot MHCAN_directslot_RxSlot_2911p0005;
+    extern MHCAN_directslot MHCAN_directslot_RxSlot_2437p0011;
     extern boolean_T MHCAN_getdirect(MHCAN_directslot *directslot, S_CANMessage *
       messageObj);
-    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_2911p0005,
+    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_2437p0011,
       &messageObj);
     if ((BuckyWagon_01_B.s212_AgeCount + 1) > BuckyWagon_01_B.s212_AgeCount)
       BuckyWagon_01_B.s212_AgeCount++;
@@ -6738,13 +6764,13 @@ void BuckyWagon_01_Foreground(void)
   /* End of If: '<S312>/If' */
 
   /* S-Function (motohawk_sfun_trigger): '<S3>/motohawk_trigger1' */
-  /* Enable for Trigger_FGND_20XRTI_PERIODIC_3774p0004 */
+  /* Enable for Trigger_FGND_20XRTI_PERIODIC_3300p0009 */
   if (BuckyWagon_01_DWork.s3_motohawk_trigger1_DWORK1 == 0) {
     BuckyWagon_01_DWork.s3_motohawk_trigger1_DWORK1 = 1;
   }
 
   /* S-Function (motohawk_sfun_trigger): '<S3>/motohawk_trigger' */
-  /* Enable for Trigger_FGND_RTI_PERIODIC_3773p0006 */
+  /* Enable for Trigger_FGND_RTI_PERIODIC_3299p0011 */
   if (BuckyWagon_01_DWork.s3_motohawk_trigger_DWORK1 == 0) {
     BuckyWagon_01_DWork.s3_motohawk_trigger_DWORK1 = 1;
   }

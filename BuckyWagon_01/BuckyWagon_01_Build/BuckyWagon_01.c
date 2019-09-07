@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BuckyWagon_01'.
  *
- * Model version                  : 1.1586
+ * Model version                  : 1.1596
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Mon Apr 29 19:20:54 2019
+ * C/C++ source code generated on : Sat Sep 07 17:36:03 2019
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -68,61 +68,61 @@ void BuckyWagon_01_CCPDaqProcessing(int_T controlPortIdx)
 void BuckyWagon_01_step(void)
 {
   /* S-Function (motohawk_sfun_trigger): '<S2>/motohawk_trigger1' */
-  /* Enable for Trigger_IDLE_EVENT_15467p0004 */
+  /* Enable for Trigger_IDLE_EVENT_3547p0009 */
   if (BuckyWagon_01_DWork.s2_motohawk_trigger1_DWORK1 == 0) {
     BuckyWagon_01_DWork.s2_motohawk_trigger1_DWORK1 = 1;
   }
 
   /* S-Function (motohawk_sfun_trigger): '<S9>/motohawk_trigger1' */
-  /* Enable for Trigger_FGND_RTI_PERIODIC_15450p0001 */
+  /* Enable for Trigger_FGND_RTI_PERIODIC_11676p0004 */
   if (BuckyWagon_01_DWork.s9_motohawk_trigger1_DWORK1 == 0) {
     BuckyWagon_01_DWork.s9_motohawk_trigger1_DWORK1 = 1;
   }
 
   /* S-Function (motohawk_sfun_trigger): '<S9>/motohawk_trigger' */
-  /* Enable for Trigger_FGND_2XRTI_PERIODIC_15449p0001 */
+  /* Enable for Trigger_FGND_2XRTI_PERIODIC_11675p0004 */
   if (BuckyWagon_01_DWork.s9_motohawk_trigger_DWORK1 == 0) {
     BuckyWagon_01_DWork.s9_motohawk_trigger_DWORK1 = 1;
   }
 
   /* S-Function (motohawk_sfun_trigger): '<S9>/motohawk_trigger2' */
-  /* Enable for Trigger_FGND_10XRTI_PERIODIC_15451p0001 */
+  /* Enable for Trigger_FGND_10XRTI_PERIODIC_11677p0004 */
   if (BuckyWagon_01_DWork.s9_motohawk_trigger2_DWORK1 == 0) {
     BuckyWagon_01_DWork.s9_motohawk_trigger2_DWORK1 = 1;
   }
 
   /* S-Function (motohawk_sfun_trigger): '<S9>/motohawk_trigger3' */
-  /* Enable for Trigger_FGND_20XRTI_PERIODIC_15452p0001 */
+  /* Enable for Trigger_FGND_20XRTI_PERIODIC_11678p0004 */
   if (BuckyWagon_01_DWork.s9_motohawk_trigger3_DWORK1 == 0) {
     BuckyWagon_01_DWork.s9_motohawk_trigger3_DWORK1 = 1;
   }
 
   /* S-Function (motohawk_sfun_trigger): '<S9>/motohawk_trigger4' */
-  /* Enable for Trigger_BGND_BASE_PERIODIC_15453p0001 */
+  /* Enable for Trigger_BGND_BASE_PERIODIC_11679p0004 */
   if (BuckyWagon_01_DWork.s9_motohawk_trigger4_DWORK1 == 0) {
     BuckyWagon_01_DWork.s9_motohawk_trigger4_DWORK1 = 1;
   }
 
   /* S-Function (motohawk_sfun_trigger): '<S9>/motohawk_trigger5' */
-  /* Enable for Trigger_BGND_BASEx2_PERIODIC_15454p0001 */
+  /* Enable for Trigger_BGND_BASEx2_PERIODIC_11680p0004 */
   if (BuckyWagon_01_DWork.s9_motohawk_trigger5_DWORK1 == 0) {
     BuckyWagon_01_DWork.s9_motohawk_trigger5_DWORK1 = 1;
   }
 
   /* S-Function (motohawk_sfun_trigger): '<S9>/motohawk_trigger6' */
-  /* Enable for Trigger_BGND_BASEx10_PERIODIC_15455p0001 */
+  /* Enable for Trigger_BGND_BASEx10_PERIODIC_11681p0004 */
   if (BuckyWagon_01_DWork.s9_motohawk_trigger6_DWORK1 == 0) {
     BuckyWagon_01_DWork.s9_motohawk_trigger6_DWORK1 = 1;
   }
 
   /* S-Function (motohawk_sfun_trigger): '<S9>/motohawk_trigger7' */
-  /* Enable for Trigger_ONE_SECOND_EVENT_15456p0001 */
+  /* Enable for Trigger_ONE_SECOND_EVENT_11682p0004 */
   if (BuckyWagon_01_DWork.s9_motohawk_trigger7_DWORK1 == 0) {
     BuckyWagon_01_DWork.s9_motohawk_trigger7_DWORK1 = 1;
   }
 
   /* S-Function (motohawk_sfun_trigger): '<S8>/motohawk_trigger1' */
-  /* Enable for Trigger_IDLE_EVENT_15443p0001 */
+  /* Enable for Trigger_IDLE_EVENT_11606p0004 */
   if (BuckyWagon_01_DWork.s8_motohawk_trigger1_DWORK1 == 0) {
     BuckyWagon_01_DWork.s8_motohawk_trigger1_DWORK1 = 1;
   }
@@ -368,52 +368,52 @@ void BuckyWagon_01_initialize(boolean_T firstTime)
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S2>/motohawk_trigger1' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_IDLE_EVENT_15467p0004 */
+  /* Clear enable/disable state for embedded trigger Trigger_IDLE_EVENT_3547p0009 */
   BuckyWagon_01_DWork.s2_motohawk_trigger1_DWORK1 = 0;
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S9>/motohawk_trigger1' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_FGND_RTI_PERIODIC_15450p0001 */
+  /* Clear enable/disable state for embedded trigger Trigger_FGND_RTI_PERIODIC_11676p0004 */
   BuckyWagon_01_DWork.s9_motohawk_trigger1_DWORK1 = 0;
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S9>/motohawk_trigger' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_FGND_2XRTI_PERIODIC_15449p0001 */
+  /* Clear enable/disable state for embedded trigger Trigger_FGND_2XRTI_PERIODIC_11675p0004 */
   BuckyWagon_01_DWork.s9_motohawk_trigger_DWORK1 = 0;
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S9>/motohawk_trigger2' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_FGND_10XRTI_PERIODIC_15451p0001 */
+  /* Clear enable/disable state for embedded trigger Trigger_FGND_10XRTI_PERIODIC_11677p0004 */
   BuckyWagon_01_DWork.s9_motohawk_trigger2_DWORK1 = 0;
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S9>/motohawk_trigger3' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_FGND_20XRTI_PERIODIC_15452p0001 */
+  /* Clear enable/disable state for embedded trigger Trigger_FGND_20XRTI_PERIODIC_11678p0004 */
   BuckyWagon_01_DWork.s9_motohawk_trigger3_DWORK1 = 0;
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S9>/motohawk_trigger4' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_BGND_BASE_PERIODIC_15453p0001 */
+  /* Clear enable/disable state for embedded trigger Trigger_BGND_BASE_PERIODIC_11679p0004 */
   BuckyWagon_01_DWork.s9_motohawk_trigger4_DWORK1 = 0;
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S9>/motohawk_trigger5' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_BGND_BASEx2_PERIODIC_15454p0001 */
+  /* Clear enable/disable state for embedded trigger Trigger_BGND_BASEx2_PERIODIC_11680p0004 */
   BuckyWagon_01_DWork.s9_motohawk_trigger5_DWORK1 = 0;
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S9>/motohawk_trigger6' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_BGND_BASEx10_PERIODIC_15455p0001 */
+  /* Clear enable/disable state for embedded trigger Trigger_BGND_BASEx10_PERIODIC_11681p0004 */
   BuckyWagon_01_DWork.s9_motohawk_trigger6_DWORK1 = 0;
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S9>/motohawk_trigger7' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_ONE_SECOND_EVENT_15456p0001 */
+  /* Clear enable/disable state for embedded trigger Trigger_ONE_SECOND_EVENT_11682p0004 */
   BuckyWagon_01_DWork.s9_motohawk_trigger7_DWORK1 = 0;
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S8>/motohawk_trigger1' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_IDLE_EVENT_15443p0001 */
+  /* Clear enable/disable state for embedded trigger Trigger_IDLE_EVENT_11606p0004 */
   BuckyWagon_01_DWork.s8_motohawk_trigger1_DWORK1 = 0;
 
   /* Start for function-call system: '<S4>/Background' */
@@ -449,52 +449,52 @@ void BuckyWagon_01_initialize(boolean_T firstTime)
 
   /* Level2 S-Function Block: '<S2>/motohawk_trigger1' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_IDLE_EVENT_15467p0004 */
+  /* Enable for Trigger_IDLE_EVENT_3547p0009 */
   BuckyWagon_01_DWork.s2_motohawk_trigger1_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S9>/motohawk_trigger1' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_FGND_RTI_PERIODIC_15450p0001 */
+  /* Enable for Trigger_FGND_RTI_PERIODIC_11676p0004 */
   BuckyWagon_01_DWork.s9_motohawk_trigger1_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S9>/motohawk_trigger' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_FGND_2XRTI_PERIODIC_15449p0001 */
+  /* Enable for Trigger_FGND_2XRTI_PERIODIC_11675p0004 */
   BuckyWagon_01_DWork.s9_motohawk_trigger_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S9>/motohawk_trigger2' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_FGND_10XRTI_PERIODIC_15451p0001 */
+  /* Enable for Trigger_FGND_10XRTI_PERIODIC_11677p0004 */
   BuckyWagon_01_DWork.s9_motohawk_trigger2_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S9>/motohawk_trigger3' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_FGND_20XRTI_PERIODIC_15452p0001 */
+  /* Enable for Trigger_FGND_20XRTI_PERIODIC_11678p0004 */
   BuckyWagon_01_DWork.s9_motohawk_trigger3_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S9>/motohawk_trigger4' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_BGND_BASE_PERIODIC_15453p0001 */
+  /* Enable for Trigger_BGND_BASE_PERIODIC_11679p0004 */
   BuckyWagon_01_DWork.s9_motohawk_trigger4_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S9>/motohawk_trigger5' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_BGND_BASEx2_PERIODIC_15454p0001 */
+  /* Enable for Trigger_BGND_BASEx2_PERIODIC_11680p0004 */
   BuckyWagon_01_DWork.s9_motohawk_trigger5_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S9>/motohawk_trigger6' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_BGND_BASEx10_PERIODIC_15455p0001 */
+  /* Enable for Trigger_BGND_BASEx10_PERIODIC_11681p0004 */
   BuckyWagon_01_DWork.s9_motohawk_trigger6_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S9>/motohawk_trigger7' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_ONE_SECOND_EVENT_15456p0001 */
+  /* Enable for Trigger_ONE_SECOND_EVENT_11682p0004 */
   BuckyWagon_01_DWork.s9_motohawk_trigger7_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S8>/motohawk_trigger1' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_IDLE_EVENT_15443p0001 */
+  /* Enable for Trigger_IDLE_EVENT_11606p0004 */
   BuckyWagon_01_DWork.s8_motohawk_trigger1_DWORK1 = 1;
 }
 

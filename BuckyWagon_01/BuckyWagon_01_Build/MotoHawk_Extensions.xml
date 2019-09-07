@@ -350,6 +350,11 @@
                <Default>0.0 0.0 0.0 15.0 30.0 50.0 70.0 80.0 90.0 100.0 </Default>
                <Name>Coolant_FanTbl</Name>
              </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>80.0</Default>
+               <Name>Charger_Fan_Speed</Name>
+             </DataStore>
             <DataStore ref="Volatile">
                <DataType>real32</DataType>
                <Default>0.0</Default>
@@ -374,6 +379,11 @@
                <DataType>real32</DataType>
                <Default>0.0 0.0 0.0 15.0 30.0 50.0 70.0 80.0 90.0 100.0 </Default>
                <Name>Coolant_PumpTbl</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>80.0</Default>
+               <Name>Charger_Pump_Speed</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>real32</DataType>
@@ -1128,17 +1138,17 @@
             <DataStore ref="Constant">
                <DataType>uint8</DataType>
                <Default>1U</Default>
+               <Name>Charger_Temp_Enable</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>uint8</DataType>
+               <Default>1U</Default>
                <Name>Inverter_Temp_Enable</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>Inverter_Temp_Offset</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>uint8</DataType>
-               <Default>1U</Default>
-               <Name>Charger_Temp_Enable</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
@@ -1698,7 +1708,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut3919p0004</Name>
+               <Name>init_resource_DOut3445p0009</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -1708,7 +1718,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut177p001</Name>
+               <Name>init_resource_DOut178p0011</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
@@ -1728,7 +1738,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut178p001</Name>
+               <Name>init_resource_DOut179p0011</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -1738,7 +1748,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut179p001</Name>
+               <Name>init_resource_DOut180p0011</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -4946,6 +4956,36 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Charger_Fan_Speed">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BuckyWagon_01|Foreground|Control Strategy|Cooling</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Charger_Fan_Speed</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Charger_Pump_Speed">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BuckyWagon_01|Foreground|Control Strategy|Cooling</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Charger_Pump_Speed</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="Max_Slect_Tq_drive">
         		                <access>RW RW RW RW</access>
         		                <class>VAR</class>
@@ -7108,6 +7148,22 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Charger_Temp_Enable">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_6</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>3.0</format>
+        		                <gain>1.0</gain>
+        		                <group>BuckyWagon_01|Foreground|Control Strategy|Cooling</group>
+        		                <max>255.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Charger_Temp_Enable</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="Inverter_Temp_Enable">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
@@ -7134,22 +7190,6 @@
         		                <max>100000000000000000.000000</max>
         		                <min>-100000000000000000.000000</min>
         		                <name>Inverter_Temp_Offset</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Charger_Temp_Enable">
-        		                <access>RW RW RW RW</access>
-        		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_6</enum_name>
-        		                <exp>1.0</exp>
-        		                <format>3.0</format>
-        		                <gain>1.0</gain>
-        		                <group>BuckyWagon_01|Foreground|Control Strategy|Cooling</group>
-        		                <max>255.000000</max>
-        		                <min>0.000000</min>
-        		                <name>Charger_Temp_Enable</name>
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
@@ -9189,7 +9229,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut177p001</help>
+        		                <help>Digital output pin selection for DOut178p0011</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>ReverseOut_Pin</name>
@@ -9223,7 +9263,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut178p001</help>
+        		                <help>Digital output pin selection for DOut179p0011</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>DCDCInhibit_Out_Pin</name>
@@ -9240,7 +9280,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut179p001</help>
+        		                <help>Digital output pin selection for DOut180p0011</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>Brake_Light_Out</name>
@@ -9629,17 +9669,17 @@
                 <Command>
                     <Description>Dumping DLL to XML</Description>
                     <Order>10000</Order>
-                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\motohawk_dumpdll.exe" -xml  "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\TDB\BuckyWago_187.dll" > "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\TDB\BuckyWago_187.xml"</Execute>
+                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\motohawk_dumpdll.exe" -xml  "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\TDB\BuckyWago_190.dll" > "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\TDB\BuckyWago_190.xml"</Execute>
                 </Command>
                 <Command>
                     <Description>Generating ASAP2 file</Description>
                     <Order>10001</Order>
-                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\ASAP2.exe" -m  "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\TDB\BuckyWago_187.xml" -o  "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\TDB\BuckyWago_187.a2l" -u VirtualCalSpace -asap1b "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\mh_asap1b_ccp_CCP1.xml"</Execute>
+                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\ASAP2.exe" -m  "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\TDB\BuckyWago_190.xml" -o  "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\TDB\BuckyWago_190.a2l" -u VirtualCalSpace -asap1b "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\mh_asap1b_ccp_CCP1.xml"</Execute>
                 </Command>
                 <Command>
                     <Description>Installing ASAP2 file in C:\ECUFiles\TDBDLL\</Description>
                     <Order>10002</Order>
-                    <Execute>@copy "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\TDB\BuckyWago_187.a2l" "C:\ECUFiles\TDBDLL\" > NUL</Execute>
+                    <Execute>@copy "C:\Users\maxar\Documents\GitHub\Wisconsin-Hybrid\BuckyWagon_01\BuckyWagon_01_Build\TDB\BuckyWago_190.a2l" "C:\ECUFiles\TDBDLL\" > NUL</Execute>
                 </Command>
         </Add>
     

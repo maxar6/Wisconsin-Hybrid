@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1587"
+    ComputedModelVersion    "1.1597"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -26,42 +26,42 @@ Model {
   InitFcn		  "try, eval([bdroot '_setup']); catch, eval('model_setup', ''); end"
   UserBdParams		  "MotoHawkBuildVersion;MotoHawkBuildStats;MotoHawkModelSavedName;MotoHawkModelGUID;MotoHawkModelOpenT"
   "ime;MotoHawkModelElapsedTime;MotoHawkBuildInfo;MotoHawkBuildGUID"
-  MotoHawkBuildVersion	  "188"
+  MotoHawkBuildVersion	  "191"
   MotoHawkBuildStats	  "struct('TotalFLASH',{281540},'TotalEEPROM',{370},'TotalRAM',{18696},'AppFLASH',{71914},'AppEEP"
-  "ROM',{196},'AppRAM',{2166},'HeapRAM',{4096},'BuildSuccessCount',{191},'BuildErrorCount',{29},'OSRAM',{4754},'StackRA"
+  "ROM',{196},'AppRAM',{2166},'HeapRAM',{4096},'BuildSuccessCount',{194},'BuildErrorCount',{31},'OSRAM',{4754},'StackRA"
   "M',{7680},'FgndTimeStackSize',{3072},'FgndAngleStackSize',{0},'BgndStackSize',{2048},'IdleStackSize',{1024},'Interru"
   "ptStackSize',{1536},'RTWBlockIOSize',{852},'RTWDWorkSize',{364},'RTWPrevZCSize',{0},'VolatileSize',{272},'NonVolatil"
   "eSize',{196},'ConstantSize',{2208})"
   MotoHawkModelSavedName  "BuckyWagon_01"
   MotoHawkModelGUID	  "3c32a120-d49a-4164-87-fe-ac-4b-55-ed-6f"
-  MotoHawkModelOpenTime	  "2019 4 29 16 2 37.731 "
-  MotoHawkModelElapsedTime "-3143405.299"
+  MotoHawkModelOpenTime	  "2019 9 7 16 51 52.966 "
+  MotoHawkModelElapsedTime "-3121809.655"
   MotoHawkBuildInfo	  "struct('model_name',{'BuckyWagon_01'},'motohawk_version',{'2011a_sp0.184'},'motohawk_component_"
-  "version',{'0.0.7'},'matlab_version',{'7.12.0'},'build_version',{'187'},'module_type',{'ECU565-128'},'layout_type',{'"
+  "version',{'0.0.7'},'matlab_version',{'7.12.0'},'build_version',{'190'},'module_type',{'ECU565-128'},'layout_type',{'"
   "DEV'},'processor_family',{'PPC'},'processor_type',{'MPC565'},'toolchain_vendor',{'gcc-powerpc-eabi'},'toolchain_vers"
   "ion',{'4.4.0'},'component',{0},'archive_file',{'PCM128.a'},'enable_build',{1},'fptype',{0},'flash_size',{1048576},'e"
   "e_size',{8192},'ram_size',{36864},'decram_size',{4096},'module_memory_def',{'MPC565_ModMemoryDef_Dev'},'eri_table0_r"
   "ev',{9},'max_eri_table_size',{65535},'use_debug_vardecs',{1},'use_info_vardecs',{1},'fgnd_base_period_ms',{5},'bgnd_"
   "base_period_ms',{50},'root_build_dir',{'C:\\Users\\maxar\\Documents\\GitHub\\Wisconsin-Hybrid\\BuckyWagon_01'},'buil"
   "d_dir',{'C:\\Users\\maxar\\Documents\\GitHub\\Wisconsin-Hybrid\\BuckyWagon_01\\BuckyWagon_01_Build'},'dll_name',{'Bu"
-  "ckyWago_187'},'srz_name',{'BuckyWagon_01_187'},'fgnd_stack_size',{3072},'fgnd_angle_stack_size',{0},'bgnd_stack_size"
+  "ckyWago_190'},'srz_name',{'BuckyWagon_01_190'},'fgnd_stack_size',{3072},'fgnd_angle_stack_size',{0},'bgnd_stack_size"
   "',{2048},'idle_stack_size',{1024},'irq_stack_size',{1536},'heap_size',{4096},'heap_margin',{409},'install_dll_dir',{"
   "'C:\\ECUFiles\\TDBDLL\\'},'install_srz_dir',{'C:\\ECUFiles\\Programs'},'app_int_stack_size',{1024},'shutdown_stack_s"
   "ize',{1024},'mingw_dir',{'C:\\PROGRA~2\\Woodward\\DEVELO~1\\TOOLCH~1\\GCC\\win32-pe\\4_4_0\\'},'motohawk_dir',{'C:\\"
   "PROGRA~2\\Woodward\\MCS\\MotoHawk\\2011A_~1.184'},'toolchain_dir',{'C:\\Program Files (x86)\\Woodward\\DevelopmentTo"
-  "ols\\Toolchains\\GCC\\powerpc-eabi\\4_4_0\\'},'matlab_root',{'C:\\Program Files (x86)\\MATLAB\\R2011a'},'model_guid'"
-  ",{'3c32a120-d49a-4164-87-fe-ac-4b-55-ed-6f'},'build_guid',{'683b644b-5f35-4334-8b-a4-97-61-ca-b7-60'},'token_guid',{"
-  "'DD8AD11F95A6FC42BFF9AC780840E4B4'})"
-  MotoHawkBuildGUID	  "683b644b-5f35-4334-8b-a4-97-61-ca-b7-60"
+  "ols\\Toolchains\\GCC\\powerpc-eabi\\4_4_0\\'},'matlab_root',{'E:\\MATLAB\\2011a'},'model_guid',{'3c32a120-d49a-4164-"
+  "87-fe-ac-4b-55-ed-6f'},'build_guid',{'11aa7585-78d1-4f6a-92-71-ad-e2-c4-8e-af'},'token_guid',{'DD8AD11F95A6FC42BFF9A"
+  "C780840E4B4'})"
+  MotoHawkBuildGUID	  "11aa7585-78d1-4f6a-92-71-ad-e2-c4-8e-af"
   Created		  "Mon May 16 15:00:08 2005"
   Creator		  "Danny"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "maxar"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Apr 29 19:23:23 2019"
-  RTWModifiedTimeStamp	  478454805
-  ModelVersionFormat	  "1.%<AutoIncrement:1587>"
+  LastModifiedDate	  "Sat Sep 07 17:37:08 2019"
+  RTWModifiedTimeStamp	  489777248
+  ModelVersionFormat	  "1.%<AutoIncrement:1597>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1570,7 +1570,7 @@ Model {
   }
   System {
     Name		    "BuckyWagon_01"
-    Location		    [231, 75, 1288, 701]
+    Location		    [274, 75, 1331, 701]
     Open		    off
     ModelBrowserVisibility  on
     ModelBrowserWidth	    272
@@ -1584,7 +1584,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "55"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "4483"
+    SIDHighWatermark	    "4490"
     Block {
       BlockType		      SubSystem
       Name		      "Build Toolchain (GCC)"
@@ -10165,10 +10165,10 @@ Model {
 	      BlockType		      BusSelector
 	      Name		      "Bus\nSelector5"
 	      SID		      "2397"
-	      Ports		      [1, 2]
-	      Position		      [285, 627, 290, 683]
+	      Ports		      [1, 3]
+	      Position		      [285, 632, 290, 688]
 	      ShowName		      off
-	      OutputSignals	      "InverterTemp,Eaton HV Charger.Eaton_HV_Charger_Temperature"
+	      OutputSignals	      "InverterTemp,Eaton HV Charger.Eaton_HV_Charger_Temperature,Eaton HV Charger.EatonPluggedIn"
 	      Port {
 		PortNumber		1
 		Name			"<InverterTemp>"
@@ -10178,6 +10178,12 @@ Model {
 	      Port {
 		PortNumber		2
 		Name			"<Eaton_HV_Charger_Temperature>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"<EatonPluggedIn>"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
@@ -12641,8 +12647,8 @@ Model {
 	      BlockType		      SubSystem
 	      Name		      "Cooling"
 	      SID		      "4337"
-	      Ports		      [2, 2]
-	      Position		      [695, 623, 910, 687]
+	      Ports		      [3, 2]
+	      Position		      [695, 628, 910, 692]
 	      NamePlacement	      "alternate"
 	      MinAlgLoopOccurrences   off
 	      PropExecContextOutsideSubsystem off
@@ -12666,9 +12672,9 @@ Model {
 	      System {
 		Name			"Cooling"
 		Location		[202, 75, 1364, 707]
-		Open			off
+		Open			on
 		ModelBrowserVisibility	on
-		ModelBrowserWidth	200
+		ModelBrowserWidth	272
 		ScreenColor		"white"
 		PaperOrientation	"landscape"
 		PaperPositionMode	"auto"
@@ -12692,6 +12698,33 @@ Model {
 		  Position		  [135, 298, 165, 312]
 		  Port			  "2"
 		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "Charger Plugged"
+		  SID			  "4488"
+		  Position		  [1285, 118, 1315, 132]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Logic
+		  Name			  "Logical\nOperator"
+		  SID			  "4489"
+		  Ports			  [2, 1]
+		  Position		  [1400, 117, 1430, 148]
+		  AllPortsSameDT	  off
+		  OutDataTypeStr	  "boolean"
+		}
+		Block {
+		  BlockType		  Logic
+		  Name			  "Logical\nOperator1"
+		  SID			  "4490"
+		  Ports			  [1, 1]
+		  Position		  [1205, 319, 1235, 351]
+		  Operator		  "NOT"
+		  AllPortsSameDT	  off
+		  OutDataTypeStr	  "boolean"
 		}
 		Block {
 		  BlockType		  MinMax
@@ -12809,7 +12842,7 @@ Model {
 		  BlockType		  Switch
 		  Name			  "Switch"
 		  SID			  "4475"
-		  Position		  [1380, 145, 1430, 185]
+		  Position		  [1800, 130, 1850, 170]
 		  Threshold		  "1"
 		  InputSameDT		  off
 		  SaturateOnIntegerOverflow off
@@ -12818,7 +12851,25 @@ Model {
 		  BlockType		  Switch
 		  Name			  "Switch1"
 		  SID			  "4476"
-		  Position		  [1380, 235, 1430, 275]
+		  Position		  [1800, 220, 1850, 260]
+		  Threshold		  "1"
+		  InputSameDT		  off
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Switch
+		  Name			  "Switch2"
+		  SID			  "4484"
+		  Position		  [1480, 145, 1530, 185]
+		  Threshold		  "1"
+		  InputSameDT		  off
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Switch
+		  Name			  "Switch3"
+		  SID			  "4485"
+		  Position		  [1480, 235, 1530, 275]
 		  Threshold		  "1"
 		  InputSameDT		  off
 		  SaturateOnIntegerOverflow off
@@ -12882,6 +12933,84 @@ Model {
 		  write_level		  "1"
 		  ovr_cals		  on
 		  view_as		  "Enumeration"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  vector_style		  "Wide Row"
+		  use_help_units	  off
+		  help			  "''"
+		  units			  "''"
+		  use_header_enum	  off
+		  row_header_enum	  "{}"
+		  col_header_enum	  "{}"
+		  use_min_max		  off
+		  min_val		  "-inf"
+		  max_val		  "inf"
+		  use_precision		  off
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_mototune_group	  off
+		  mototune_group	  "motohawk_vardec_path(gcb)"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_calibration10"
+		  SID			  "4486"
+		  Ports			  [0, 1]
+		  Position		  [1265, 15, 1415, 55]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
+		  SourceType		  "MotoHawk Calibration"
+		  nam			  "'Charger_Pump_Speed'"
+		  val			  "80"
+		  storage		  "Calibration"
+		  show_more		  off
+		  name_source		  "Use Parameter"
+		  data_type		  "Inherit from 'Default Value'"
+		  read_level		  "1"
+		  write_level		  "1"
+		  ovr_cals		  on
+		  view_as		  "Number"
+		  enum_struct		  "{'Disabled', 'Enabled'}"
+		  vector_style		  "Wide Row"
+		  use_help_units	  off
+		  help			  "''"
+		  units			  "''"
+		  use_header_enum	  off
+		  row_header_enum	  "{}"
+		  col_header_enum	  "{}"
+		  use_min_max		  off
+		  min_val		  "-inf"
+		  max_val		  "inf"
+		  use_precision		  off
+		  precision		  "''"
+		  gain			  "1"
+		  offset		  "0"
+		  exp			  "1"
+		  use_mototune_group	  off
+		  mototune_group	  "motohawk_vardec_path(gcb)"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "motohawk_calibration11"
+		  SID			  "4487"
+		  Ports			  [0, 1]
+		  Position		  [1265, 60, 1415, 100]
+		  ShowName		  off
+		  LibraryVersion	  "MotoHawk 0.2.3"
+		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
+		  SourceType		  "MotoHawk Calibration"
+		  nam			  "'Charger_Fan_Speed'"
+		  val			  "80"
+		  storage		  "Calibration"
+		  show_more		  off
+		  name_source		  "Use Parameter"
+		  data_type		  "Inherit from 'Default Value'"
+		  read_level		  "1"
+		  write_level		  "1"
+		  ovr_cals		  on
+		  view_as		  "Number"
 		  enum_struct		  "{'Disabled', 'Enabled'}"
 		  vector_style		  "Wide Row"
 		  use_help_units	  off
@@ -13179,7 +13308,7 @@ Model {
 		  Name			  "motohawk_calibration9"
 		  SID			  "4477"
 		  Ports			  [0, 1]
-		  Position		  [1145, 85, 1295, 125]
+		  Position		  [1565, 60, 1715, 100]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
@@ -13262,7 +13391,7 @@ Model {
 		  Name			  "motohawk_fault_action"
 		  SID			  "4474"
 		  Ports			  [0, 1]
-		  Position		  [1105, 14, 1275, 56]
+		  Position		  [1525, 14, 1695, 56]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Fault Management Blocks/motohawk_fault_action"
@@ -13457,7 +13586,7 @@ Model {
 		  Name			  "motohawk_probe"
 		  SID			  "4348"
 		  Ports			  [1]
-		  Position		  [1480, 152, 1630, 178]
+		  Position		  [1900, 137, 2050, 163]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
@@ -13488,7 +13617,7 @@ Model {
 		  Name			  "motohawk_probe2"
 		  SID			  "4349"
 		  Ports			  [1]
-		  Position		  [1480, 242, 1630, 268]
+		  Position		  [1900, 227, 2050, 253]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  SourceBlock		  "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
@@ -13518,14 +13647,14 @@ Model {
 		  BlockType		  Outport
 		  Name			  "Pump_Speed"
 		  SID			  "4339"
-		  Position		  [1495, 118, 1525, 132]
+		  Position		  [1915, 103, 1945, 117]
 		  IconDisplay		  "Port number"
 		}
 		Block {
 		  BlockType		  Outport
 		  Name			  "Fan_Speed"
 		  SID			  "4342"
-		  Position		  [1490, 203, 1520, 217]
+		  Position		  [1910, 188, 1940, 202]
 		  Port			  "2"
 		  IconDisplay		  "Port number"
 		}
@@ -13576,8 +13705,16 @@ Model {
 		Line {
 		  SrcBlock		  "motohawk_calibration3"
 		  SrcPort		  1
-		  DstBlock		  "Product1"
-		  DstPort		  1
+		  Points		  [30, 0]
+		  Branch {
+		    DstBlock		    "Product1"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 85]
+		    DstBlock		    "Logical\nOperator1"
+		    DstPort		    1
+		  }
 		}
 		Line {
 		  SrcBlock		  "motohawk_data_read"
@@ -13703,7 +13840,7 @@ Model {
 		Line {
 		  SrcBlock		  "motohawk_fault_action"
 		  SrcPort		  1
-		  Points		  [45, 0; 0, 130]
+		  Points		  [45, 0; 0, 115]
 		  Branch {
 		    DstBlock		    "Switch"
 		    DstPort		    2
@@ -13715,25 +13852,9 @@ Model {
 		  }
 		}
 		Line {
-		  Name			  "CoolantPumpSpeed"
-		  Labels		  [0, 0; 0, 0]
-		  SrcBlock		  "motohawk_interpolation_1d"
-		  SrcPort		  1
-		  DstBlock		  "Switch"
-		  DstPort		  3
-		}
-		Line {
-		  Name			  "FanDutyCycle"
-		  Labels		  [0, 0; 0, 0]
-		  SrcBlock		  "motohawk_interpolation_1d1"
-		  SrcPort		  1
-		  DstBlock		  "Switch1"
-		  DstPort		  3
-		}
-		Line {
 		  SrcBlock		  "motohawk_calibration9"
 		  SrcPort		  1
-		  Points		  [65, 0; 0, 45]
+		  Points		  [65, 0; 0, 55]
 		  Branch {
 		    DstBlock		    "Switch"
 		    DstPort		    1
@@ -13771,6 +13892,75 @@ Model {
 		    DstBlock		    "Fan_Speed"
 		    DstPort		    1
 		  }
+		}
+		Line {
+		  Name			  "CoolantPumpSpeed"
+		  Labels		  [0, 0; 0, 0]
+		  SrcBlock		  "motohawk_interpolation_1d"
+		  SrcPort		  1
+		  DstBlock		  "Switch2"
+		  DstPort		  3
+		}
+		Line {
+		  Name			  "FanDutyCycle"
+		  Labels		  [0, 0; 0, 0]
+		  SrcBlock		  "motohawk_interpolation_1d1"
+		  SrcPort		  1
+		  DstBlock		  "Switch3"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "Switch3"
+		  SrcPort		  1
+		  DstBlock		  "Switch1"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "Switch2"
+		  SrcPort		  1
+		  DstBlock		  "Switch"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "motohawk_calibration10"
+		  SrcPort		  1
+		  Points		  [45, 0]
+		  DstBlock		  "Switch2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "motohawk_calibration11"
+		  SrcPort		  1
+		  Points		  [45, 0]
+		  DstBlock		  "Switch3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Logical\nOperator"
+		  SrcPort		  1
+		  Points		  [15, 0; 0, 30]
+		  Branch {
+		    DstBlock		    "Switch2"
+		    DstPort		    2
+		  }
+		  Branch {
+		    Points		    [0, 90]
+		    DstBlock		    "Switch3"
+		    DstPort		    2
+		  }
+		}
+		Line {
+		  SrcBlock		  "Charger Plugged"
+		  SrcPort		  1
+		  DstBlock		  "Logical\nOperator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Logical\nOperator1"
+		  SrcPort		  1
+		  Points		  [145, 0]
+		  DstBlock		  "Logical\nOperator"
+		  DstPort		  2
 		}
 	      }
 	    }
@@ -15708,7 +15898,7 @@ Model {
 	      System {
 		Name			"EHPAS_PercentControl"
 		Location		[274, 75, 1347, 690]
-		Open			on
+		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	272
 		ScreenColor		"white"
@@ -20853,7 +21043,7 @@ Model {
 	      Labels		      [0, 0]
 	      SrcBlock		      "Cooling"
 	      SrcPort		      1
-	      Points		      [115, 0; 0, -300]
+	      Points		      [115, 0; 0, -305]
 	      DstBlock		      "Bus\nCreator"
 	      DstPort		      4
 	    }
@@ -20862,7 +21052,7 @@ Model {
 	      Labels		      [0, 0]
 	      SrcBlock		      "Cooling"
 	      SrcPort		      2
-	      Points		      [160, 0; 0, -180]
+	      Points		      [160, 0; 0, -185]
 	      DstBlock		      "Bus\nCreator"
 	      DstPort		      9
 	    }
@@ -20897,6 +21087,14 @@ Model {
 	      Points		      [120, 0; 0, 270]
 	      DstBlock		      "Product"
 	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<EatonPluggedIn>"
+	      Labels		      [0, 0; 0, 0]
+	      SrcBlock		      "Bus\nSelector5"
+	      SrcPort		      3
+	      DstBlock		      "Cooling"
+	      DstPort		      3
 	    }
 	    Annotation {
 	      Position		      [1116, 727]
@@ -23355,7 +23553,7 @@ Model {
 		  SourceType		  "MotoHawk CAN Receive  SlotTrigger"
 		  slot			  "'miniview_button_down'"
 		  inherited		  on
-		  function_name		  "Trigger_CAN_Slot_miniview_button_down_2080p0004"
+		  function_name		  "Trigger_CAN_Slot_miniview_button_down_1606p0006"
 		}
 		Block {
 		  BlockType		  Demux
@@ -26422,7 +26620,7 @@ Model {
 		  SourceType		  "MotoHawk CAN Receive  SlotTrigger"
 		  slot			  "'miniview_button_menu'"
 		  inherited		  on
-		  function_name		  "Trigger_CAN_Slot_miniview_button_menu_2338p0004"
+		  function_name		  "Trigger_CAN_Slot_miniview_button_menu_1864p0006"
 		}
 		Block {
 		  BlockType		  Demux
@@ -28819,7 +29017,7 @@ Model {
 		  SourceType		  "MotoHawk CAN Receive  SlotTrigger"
 		  slot			  "'miniview_button_up'"
 		  inherited		  on
-		  function_name		  "Trigger_CAN_Slot_miniview_button_up_2589p0005"
+		  function_name		  "Trigger_CAN_Slot_miniview_button_up_2115p0011"
 		}
 		Block {
 		  BlockType		  Demux
@@ -45806,7 +46004,7 @@ Model {
 	  SourceBlock		  "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 	  SourceType		  "MotoHawk Function Trigger"
 	  trigger		  "FGND_RTI_PERIODIC"
-	  function_name		  "Trigger_FGND_RTI_PERIODIC_3773p0006"
+	  function_name		  "Trigger_FGND_RTI_PERIODIC_3299p0011"
 	  priority_order	  "200"
 	  inherited		  on
 	  run_disabled		  off
@@ -45828,7 +46026,7 @@ Model {
 	  SourceBlock		  "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 	  SourceType		  "MotoHawk Function Trigger"
 	  trigger		  "FGND_20XRTI_PERIODIC"
-	  function_name		  "Trigger_FGND_20XRTI_PERIODIC_3774p0004"
+	  function_name		  "Trigger_FGND_20XRTI_PERIODIC_3300p0009"
 	  priority_order	  "200"
 	  inherited		  on
 	  run_disabled		  off
@@ -47854,7 +48052,7 @@ Model {
 	  SourceBlock		  "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 	  SourceType		  "MotoHawk Function Trigger"
 	  trigger		  "BGND_BASE_PERIODIC"
-	  function_name		  "Trigger_BGND_BASE_PERIODIC_3967p0004"
+	  function_name		  "Trigger_BGND_BASE_PERIODIC_3493p0009"
 	  priority_order	  "255"
 	  inherited		  on
 	  run_disabled		  on
@@ -47997,7 +48195,7 @@ Model {
       SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
       SourceType	      "MotoHawk Function Trigger"
       trigger		      "FGND_RTI_PERIODIC"
-      function_name	      "Trigger_FGND_RTI_PERIODIC_3975p0004"
+      function_name	      "Trigger_FGND_RTI_PERIODIC_3501p0009"
       priority_order	      "0"
       inherited		      off
       run_disabled	      off
@@ -48019,7 +48217,7 @@ Model {
       SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
       SourceType	      "MotoHawk Function Trigger"
       trigger		      "STARTUP_EVENT"
-      function_name	      "Trigger_STARTUP_EVENT_3976p0004"
+      function_name	      "Trigger_STARTUP_EVENT_3502p0009"
       priority_order	      "0"
       inherited		      off
       run_disabled	      off
@@ -48041,7 +48239,7 @@ Model {
       SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
       SourceType	      "MotoHawk Function Trigger"
       trigger		      "BGND_BASEx20_PERIODIC"
-      function_name	      "Trigger_BGND_BASEx20_PERIODIC_3977p0004"
+      function_name	      "Trigger_BGND_BASEx20_PERIODIC_3503p0009"
       priority_order	      "0"
       inherited		      off
       run_disabled	      off
@@ -48064,7 +48262,7 @@ Model {
       SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
       SourceType	      "MotoHawk Function Trigger"
       trigger		      "SHUTDOWN_EVENT"
-      function_name	      "Trigger_SHUTDOWN_EVENT_3978p0004"
+      function_name	      "Trigger_SHUTDOWN_EVENT_3504p0009"
       priority_order	      "0"
       inherited		      off
       run_disabled	      off
@@ -56861,7 +57059,7 @@ Stateflow {
     position		    [960.2223 709.5121 243 165]
     fontSize		    12
     chart		    430
-    treeNode		    [430 0 442 441]
+    treeNode		    [430 0 442 0]
     subviewer		    430
     ssIdNumber		    76
     type		    OR_STATE
@@ -56886,7 +57084,7 @@ Stateflow {
     position		    [976.5297 213.5549 199.75 147.75]
     fontSize		    12
     chart		    430
-    treeNode		    [430 0 431 446]
+    treeNode		    [430 0 431 441]
     superState		    GROUPED
     subviewer		    430
     ssIdNumber		    39
@@ -56951,7 +57149,7 @@ Stateflow {
     "ke on and\n	then turn the pump on"
     position		    [362.793 233.0625 264.0633 43.4404]
     chart		    430
-    treeNode		    [430 0 434 0]
+    treeNode		    [430 0 436 446]
     superState		    GROUPED
     isNoteBox		    1
     noteBox		    [0 0 0 1]
@@ -57025,7 +57223,7 @@ Stateflow {
     position		    [1130.2226 387.4727 164.5 101.25]
     fontSize		    12
     chart		    430
-    treeNode		    [430 0 436 445]
+    treeNode		    [430 0 441 445]
     subviewer		    430
     ssIdNumber		    98
     type		    OR_STATE
@@ -57045,7 +57243,6 @@ Stateflow {
     midPoint		    [1035.4107 25.6902]
     chart		    430
     linkNode		    [430 0 455]
-    visible		    0
     dataLimits		    [1032.993 1037.793 21.113 38.052]
     subviewer		    430
     drawStyle		    SMART
@@ -57136,7 +57333,6 @@ Stateflow {
     midPoint		    [1426.1395 80.6673]
     chart		    430
     linkNode		    [430 455 470]
-    visible		    0
     dataLimits		    [1245.906 1524.19 79.863 140.437]
     stampAngle		    NaN
     subviewer		    430
@@ -57169,8 +57365,6 @@ Stateflow {
     stampAngle		    NaN
     subviewer		    430
     drawStyle		    SMART
-    slide {
-    }
     executionOrder	    1
     ssIdNumber		    82
   }
@@ -57194,8 +57388,6 @@ Stateflow {
     stampAngle		    NaN
     subviewer		    430
     drawStyle		    SMART
-    slide {
-    }
     executionOrder	    1
     ssIdNumber		    54
   }
@@ -57214,7 +57406,7 @@ Stateflow {
     }
     midPoint		    [1548.5905 708.5531]
     chart		    430
-    linkNode		    [430 462 464]
+    linkNode		    [430 466 462]
     dataLimits		    [1203.222 1719.423 480.465 791.963]
     stampAngle		    NaN
     subviewer		    430
@@ -57273,8 +57465,6 @@ Stateflow {
     stampAngle		    NaN
     subviewer		    430
     drawStyle		    SMART
-    slide {
-    }
     executionOrder	    4
     ssIdNumber		    44
   }
@@ -57326,8 +57516,6 @@ Stateflow {
     stampAngle		    NaN
     subviewer		    430
     drawStyle		    SMART
-    slide {
-    }
     executionOrder	    2
     ssIdNumber		    46
   }
@@ -57351,8 +57539,6 @@ Stateflow {
     stampAngle		    NaN
     subviewer		    430
     drawStyle		    SMART
-    slide {
-    }
     executionOrder	    2
     ssIdNumber		    47
   }
@@ -57376,8 +57562,6 @@ Stateflow {
     stampAngle		    NaN
     subviewer		    430
     drawStyle		    SMART
-    slide {
-    }
     executionOrder	    1
     ssIdNumber		    48
   }
@@ -57401,8 +57585,6 @@ Stateflow {
     stampAngle		    NaN
     subviewer		    430
     drawStyle		    SMART
-    slide {
-    }
     executionOrder	    1
     ssIdNumber		    81
   }
@@ -57421,7 +57603,7 @@ Stateflow {
     }
     midPoint		    [1455.6203 673.8088]
     chart		    430
-    linkNode		    [430 466 454]
+    linkNode		    [430 454 464]
     dataLimits		    [1203.222 1601.975 480.465 739.616]
     stampAngle		    NaN
     subviewer		    430
@@ -57453,8 +57635,6 @@ Stateflow {
     stampAngle		    NaN
     subviewer		    430
     drawStyle		    SMART
-    slide {
-    }
     executionOrder	    1
     ssIdNumber		    53
   }
@@ -57473,13 +57653,11 @@ Stateflow {
     }
     midPoint		    [1141.1618 519.0936]
     chart		    430
-    linkNode		    [430 454 469]
+    linkNode		    [430 462 469]
     dataLimits		    [1138.762 1143.562 488.723 543.317]
     stampAngle		    NaN
     subviewer		    430
     drawStyle		    SMART
-    slide {
-    }
     executionOrder	    1
     ssIdNumber		    97
   }
@@ -57526,7 +57704,7 @@ Stateflow {
     }
     midPoint		    [1316.7179 516.9938]
     chart		    430
-    linkNode		    [430 450 462]
+    linkNode		    [430 450 454]
     dataLimits		    [1161.781 1467.813 435.766 606.831]
     stampAngle		    NaN
     subviewer		    430
@@ -57586,8 +57764,6 @@ Stateflow {
     stampAngle		    NaN
     subviewer		    430
     drawStyle		    SMART
-    slide {
-    }
     executionOrder	    1
     ssIdNumber		    106
   }
@@ -57665,8 +57841,6 @@ Stateflow {
     stampAngle		    NaN
     subviewer		    430
     drawStyle		    SMART
-    slide {
-    }
     executionOrder	    2
     ssIdNumber		    112
   }
@@ -57690,8 +57864,6 @@ Stateflow {
     stampAngle		    NaN
     subviewer		    430
     drawStyle		    SMART
-    slide {
-    }
     executionOrder	    3
     ssIdNumber		    113
   }
@@ -58690,13 +58862,14 @@ Stateflow {
   chart {
     id			    529
     name		    "Foreground/Sensors/Eaton HV Charger/PluggedInDetect/Chart"
-    windowPosition	    [193.5 77.25 475.5 412.5]
+    windowPosition	    [612 169.5 475.5 412.5]
     viewLimits		    [0 401.76 12.615 362.76]
     zoomFactor		    0.93
-    screen		    [1 1 1366 768 1.333333333333333]
+    screen		    [1 1 1920 1080 1.333333333333333]
     treeNode		    [0 530 0 0]
     firstTransition	    534
     viewObj		    529
+    visible		    1
     machine		    1
     subviewS {
       y1		      12.615
@@ -58771,7 +58944,7 @@ Stateflow {
     midPoint		    [167.2323 32.7665]
     chart		    529
     linkNode		    [529 0 535]
-    dataLimits		    [167.232 167.232 21.375 43.375]
+    dataLimits		    [164.832 169.632 21.375 51.375]
     subviewer		    529
     drawStyle		    SMART
     executionOrder	    1
@@ -58793,7 +58966,7 @@ Stateflow {
     midPoint		    [91.5936 135.7929]
     chart		    529
     linkNode		    [529 534 538]
-    dataLimits		    [64.25 122.75 103.5 166]
+    dataLimits		    [61.85 122.75 103.5 174]
     stampAngle		    -1
     subviewer		    529
     drawStyle		    SMART
@@ -58820,7 +58993,7 @@ Stateflow {
     midPoint		    [173.0708 186]
     chart		    529
     linkNode		    [529 538 537]
-    dataLimits		    [128.875 213.75 186 186]
+    dataLimits		    [128.875 221.75 183.6 188.4]
     stampAngle		    -1
     subviewer		    529
     drawStyle		    SMART
@@ -58842,8 +59015,8 @@ Stateflow {
     }
     midPoint		    [177.5542 222.75]
     chart		    529
-    linkNode		    [529 536 540]
-    dataLimits		    [136.875 221.75 222.75 222.75]
+    linkNode		    [529 536 539]
+    dataLimits		    [128.875 221.75 220.35 225.15]
     stampAngle		    -1
     subviewer		    529
     drawStyle		    SMART
@@ -58866,7 +59039,7 @@ Stateflow {
     midPoint		    [231.6397 142.743]
     chart		    529
     linkNode		    [529 535 536]
-    dataLimits		    [206.75 260 111.5 176.25]
+    dataLimits		    [204.35 260 103.5 176.25]
     stampAngle		    -1
     subviewer		    529
     drawStyle		    SMART
@@ -58892,8 +59065,8 @@ Stateflow {
     }
     midPoint		    [234.9804 271.9514]
     chart		    529
-    linkNode		    [529 540 0]
-    dataLimits		    [221 247.25 244.25 301.875]
+    linkNode		    [529 537 540]
+    dataLimits		    [221 249.65 236.25 301.875]
     stampAngle		    -1
     subviewer		    529
     drawStyle		    SMART
@@ -58919,8 +59092,8 @@ Stateflow {
     }
     midPoint		    [106.9665 267.3274]
     chart		    529
-    linkNode		    [529 537 539]
-    dataLimits		    [83 128 238.875 293.875]
+    linkNode		    [529 539 0]
+    dataLimits		    [83 130.4 238.875 301.875]
     stampAngle		    -1
     subviewer		    529
     drawStyle		    SMART
